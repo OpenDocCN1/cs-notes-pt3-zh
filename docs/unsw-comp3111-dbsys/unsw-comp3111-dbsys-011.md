@@ -1,4 +1,4 @@
-# 数据库系统：第11讲：使用Python连接PostgreSQL
+# 011：使用Python连接PostgreSQL
 
 ![](img/52aace0517cb6a72fe6716c69e3ed751_1.png)
 

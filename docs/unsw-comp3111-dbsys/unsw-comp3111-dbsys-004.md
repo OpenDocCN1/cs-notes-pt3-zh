@@ -1,4 +1,4 @@
-# 数据库系统：P4：SQL DDL与ER模型映射 🗄️
+# 004：SQL DDL与ER模型映射 🗄️
 
 ![](img/95adf977d5e76779e3e04cc002d41681_1.png)
 

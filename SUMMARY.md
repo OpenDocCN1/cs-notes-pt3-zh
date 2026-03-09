@@ -71,6 +71,7 @@
 +   [NUS CS1101S：SICP JavaScript 描述](docs/nus-cs1101s-sicp-js/README.md)
 +   [NybblesIO x86 汇编笔记](docs/nybbles-x86asm/README.md)
 +   [NYU CS2270 研究生计算机图形学笔记](docs/nyu-cs2270-cg/README.md)
++   [PavelMavrin 数据结构算法笔记](docs/pavel-mavrin-dsal/README.md)
 +   [普林斯顿算法分析笔记](docs/prct-algo-anls/README.md)
 +   [普林斯顿计算机组成笔记](docs/prct-comp-arch/README.md)
 +   [普林斯顿计算机科学：算法、理论和机器](docs/prct-cs-algo-thr-mchn/README.md)

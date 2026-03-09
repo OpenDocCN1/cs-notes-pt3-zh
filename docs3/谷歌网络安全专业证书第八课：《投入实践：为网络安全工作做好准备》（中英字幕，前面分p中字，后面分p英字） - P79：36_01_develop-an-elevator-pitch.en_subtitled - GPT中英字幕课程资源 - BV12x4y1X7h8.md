@@ -1,0 +1,63 @@
+# 谷歌网络安全专业证书第八课：《投入实践：为网络安全工作做好准备》（中英字幕，前面分p中字，后面分p英字） - P79：36_01_develop-an-elevator-pitch.en_subtitled - GPT中英字幕课程资源 - BV12x4y1X7h8
+
+![](img/701b204e77a9d77a52631ff570b5fc28_0.png)
+
+Now， let's discuss a concept that can help you identify your strengths and allow you to highlight those strengths to others。
+
+ an elevator pitch。An elevator pitch is a brief summary of your experience， skills， and background。
+
+It's called an elevator pitch because it should be short enough to say in 60 seconds or less。
+
+ which is the average amount of time you might spend talking with someone on an elevator。
+
+Elevator pitches allow you to demonstrate who you are to potential employers in a very short time span。
+
+They can be used at job fairs， career expos， and other networking situations like professional conferences and social media job sites such as LinkedIn。
+
+Now let's examine how to create an elevator pitch。Your elevator pitch needs to be short and persuasive。
+
+There is no need to list all of your previous experiences and accomplishments。Instead。
+
+ explain who you are and why you care about being a security professional。
+
+ as well as the qualifications and skills you have that are specifically related to getting a job as a security analyst。
+
+ For example， critical thinking， problem solving and the ability to build collaborative relationships with others are transferable skills that most organizations are looking for。
+
+So highlight those in your elevator pitch。You could also mention technical skills you've learned in this certificate program。
+
+ such as using various SIM tools and programming languages like SQL and Python to identify and respond to risks。
+
+Now we'll cover a few things to avoid when delivering your elevator pitch。
+
+It's important to avoid rambling or sharing irrelevant details during your elevator pitch。
+
+Potential employers only want to know who you are and why they should consider you for a security role。
+
+As you develop your elevator pitch， you're going to want to pracise it several times。 However。
+
+ don't pracise it so much that you end up sounding ingenuine or robotic when it's time to share your pitch with a possible decision maker。
+
+Instead， speak naturally like you're having a conversation when you give your elevator pitch。
+
+That will help keep people engaged and interested in what you're saying。
+
+Another thing to avoid speaking too quickly。Because an elevator pitch is fairly short。
+
+ it can be easy to rush through it。But that can cause people to miss out on some key skills you have to offer simply because you sped past them。
+
+
+
+![](img/701b204e77a9d77a52631ff570b5fc28_2.png)
+
+One last tip。 Search the internet for elevator pitches to find examples that may help you generate ideas for your own pitch。
+
+In essence， your elevator pitch is a way to tell people why you are an amazing candidate for a security position with great skills and a clear direction for what you want to do in your career。
+
+😊，While it's natural to be nervous when speaking to potential employers， just remember。
+
+Take a deep breath。 Ga your composure and deliver your pitch with confidence， conviction。
+
+ and at a normal pace。 You'll be just fine。😊。
+
+![](img/701b204e77a9d77a52631ff570b5fc28_4.png)

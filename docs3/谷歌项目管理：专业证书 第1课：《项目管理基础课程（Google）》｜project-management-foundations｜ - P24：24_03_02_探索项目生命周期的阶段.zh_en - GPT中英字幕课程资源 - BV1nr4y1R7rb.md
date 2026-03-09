@@ -1,0 +1,116 @@
+# 谷歌项目管理：专业证书 第1课：《项目管理基础课程（Google）》｜project-management-foundations｜ - P24：24_03_02_探索项目生命周期的阶段.zh_en - GPT中英字幕课程资源 - BV1nr4y1R7rb
+
+![](img/a52160575fb0c59903b122b27d3b9ddd_0.png)
+
+No two projects are exactly the same， which means there are many different ways to manage them。
+
+Each project comes with its own needs and factors that impact how you'll take action and achieve your goals。
+
+There are many ways to manage projects and not always one right way to do so。 pictureture this。
+
+ your project managing a political campaign for a local candidate to make it happen。
+
+ you need to think about things like your available resources， the people you'll be working with。
+
+ the election date。And the location。You need to be aware of lots of details to successfully complete your project。
+
+Because so many different things can impact a project。
+
+ it's important to understand its basic structure。We call this structure the project life cycle。
+
+The life cycle is a great way to guide your project in the right direction so that you and your project stay on track and end up in the right place。
+
+Most project life cycles have four major phases， each with their own set of tasks and concerns。
+
+ Check it out。The main phases of a project are， initiate the project。Make a plan。
+
+Execute and complete tasks。And finally， close the project。 Let's talk about the first phase。
+
+ initiate the project。This is the launchpa for the entire process of your project。 In this phase。
+
+ you'll define project goals and deliverables。Identify the budget and resources you'll need。
+
+The people involved in your project。And any other details that can impact the successful completion of your project。
+
+You'll document all this information in one place to showcase the project's value and hopefully get approval to move forward with it。
+
+ once the project is approved， it's time to get rolling。 Next。
+
+ you'll make a plan for how you'll meet the goals of your project。
+
+ There are all kinds of ways to plan your project。 and we'll get into some different methods and techniques later on。
+
+ But right now， the important thing to know is that for every single project creating a plan of how you're going to meet your goals is absolutely 100 per cent essential。
+
+ Think about it。 You can't hire a contractor to build a house without planning what it'll look like。
+
+ or how much you have to spend。😊，These same considerations apply to any project that you manage。
+
+To be effective， your plan needs to include a lot of things， for example， a budget。
+
+ a breakdown of all the tasks that you need to be completed。
+
+ ways to communicate team roles and responsibilities。A schedule。
+
+ resources and what to do in case your project encounters problems or needs to change。
+
+ And that's just to name a few。Once you have your plan in place。
+
+ it's time to execute and complete those tasks。 It's important to point out that your project team has the job of completing the project tasks。
+
+ Now， as a project manager， your role is a little different。
+
+While you might be in charge of completing certain tasks in the project。
+
+ your primary tasks as the project manager are to monitor progress and keep your team motivated。
+
+You'll also remove any obstacles that might come up so that the tasks are executed well and on time。
+
+Finally， when all the tasks have been completed， all the resources have been accounted for。
+
+ and the project has crossed the finish line。It's time to close the project。
+
+Why is it important to close Well， one big reason is so your team has a moment to celebrate all of their hard work。
+
+ but closing the project is also a chance to evaluate how the project went。
+
+You can make note of what worked and what didn't so you can plan better for next time。
+
+Even if the project was a massive success， it's helpful to take time to reflect。
+
+ Cling the project is also a great way to connect with anyone outside your team who may have had interest in the project's goal。
+
+ You can let everyone know what was completed and what you accomplished。
+
+ Some projects like the campaign example， will have a firm end date。 Once the project is finished。
+
+ That's it。 There's no more work to do。😊，Other projects have different finish lines。For example。
+
+ a project where you're implementing a new ordering system at a restaurant is complete after the system is set up and the employees know how it works。
+
+
+
+![](img/a52160575fb0c59903b122b27d3b9ddd_2.png)
+
+At that point， your goals are completed。 Now， it's time to hand over the project to another group whose job it is to provide support and make sure the system stays running on a day to day basis。
+
+Another example of this is I onces project managed the creation of a dashboard that would be used by various stakeholders in my organization。
+
+This dashboard would show pertinent information to each stakeholder depending on the team that they were a part of in our broader organization。
+
+I project managed the beginning from writing out the vision for the project to the end。
+
+ where we delivered the dashboard。Now， once I passed off the final product。
+
+ I transition the continued update of each team's data and the corresponding dashboard page to the respective teams。
+
+ Think of it like turning over the keys of a newly built house to its new owner。
+
+ The project of building the house is complete。 And now it's up to the owner to take care of the house's maintenance and the upkeep。
+
+ So there you have it。😊，The project lifecycle， the exact name for each phase might change depending on the type of project or organization you work for。
+
+But the general idea stays the same， and following the project processes you will learn in this course will set you up for project management success。
+
+Next， we'll take a closer look into what happens during each phase of the traditional project lifecycle。
+

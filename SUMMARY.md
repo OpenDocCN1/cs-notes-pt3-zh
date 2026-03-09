@@ -29,6 +29,7 @@
 +   [杜克大学 Rust 编程、Linux 命令行与 LLMOps 笔记](docs/duke-rs-prog-linuxcli-llmops/README.md)
 +   [EngineeringClinic 网络模拟器 3 教程笔记](docs/engi-clnc-netsimu3/README.md)
 +   [ETHZ 计算机体系结构基础笔记](docs/ethz-comp-arch-bsc/README.md)
++   [ETHZ 计算机体系结构研讨会 2025 笔记](docs/ethz-comp-arch-sem-2025/README.md)
 +   [ETHZ 数字设计与计算机体系结构笔记](docs/ethz-ddca/README.md)
 +   [佛罗里达 COP3402 系统软件笔记](docs/flrd-cop3402-syssw/README.md)
 +   [GAMES 图形学系列笔记](docs/games/README.md)
@@ -161,4 +162,5 @@
 +   [编写你自己的操作系统笔记](docs/wrt-yrwn-sys/README.md)
 +   [威斯康星 CS536 编程语言与编译器笔记](docs/wscs-cs536-pl-cmpl/README.md)
 +   [威斯康星 CS537 操作系统笔记](docs/wscs-cs537-os/README.md)
++   [滑铁卢大学 CS341 算法笔记](docs/wtl-cs341-algo/README.md)
 +   [滑铁卢 CS452 实时编程讲座笔记](docs/wtl-cs452/README.md)

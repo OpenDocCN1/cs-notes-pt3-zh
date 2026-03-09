@@ -1,0 +1,102 @@
+# 谷歌网络安全专业证书第五课：《资产、威胁和漏洞》（中英字幕，前面分p中字，后面分p英字） - P71：25_04_common-vulnerabilities-and-exposures.en_subtitled - GPT中英字幕课程资源 - BV1QM4y1H7sh
+
+![](img/3fb8f04c39cffbbf844d433f462a6aef_0.png)
+
+We've discussed before that security is a team effort。
+
+Did you know the group extends well beyond a single security team。
+
+Protecting information is a global effort。When it comes to vulnerabilities。
+
+ there are actually online public libraries。 Individuals and organizations use them to share and document common vulnerabilities and exposures。
+
+ We've been focusing a lot on vulnerabilities。Exposures are similar， but they have a key difference。
+
+While a vulnerability is a weakness of a system， an exposure is a mistake that can be exploited by a threat。
+
+For example， imagine you're asked to protect an important document。
+
+Documents are vulnerable to being misplaced。If you laid the document down near an open window。
+
+ it could be exposed to being blown away。One of the most popular libraries of vulnerabilities and exposures is the C VE list。
+
+The common vulnerabilities and exposures list or CV VE list is an openly accessible dictionary of known vulnerabilities and exposures。
+
+ It is a popular resource。😊，Many organizations use the CV V E list to find ways to improve their defenses。
+
+ The CV E list was originally created by MIre Corporation in 1999。
+
+ Mire is a collection of nonprofit research and development centers。
+
+ They sponsored by the US government。 Their focus is on improving security technologies around the world。
+
+The main purpose of the C VE list is to offer a standard way of identifying and categorizing known vulnerabilities and exposures。
+
+ Most Cves in the list are reported by independent researchers。
+
+ technology vendors and ethical hackers， but anyone can report one。
+
+Before a CVE can make it onto the CVE list， it first goes through a strict review process by a CVE numbering authority or CNA。
+
+A C And A is an organization that volunteers to analyze and distribute information on eligible CVs。
+
+ All of these groups have an established record of researching vulnerabilities and demonstrating security。
+
+ advisory capabilities when a vulnerability or exposure is reported to them a rigorous testing process takes place。
+
+😊，The CV V E lists tests four criteria that a vulnerability must have before its assigned an I D。
+
+ First， it must be independent of other issues。 In other words。
+
+ the vulnerability should be able to be fixed without having to fix something else。 Second。
+
+ it must be recognized as a potential security risk by whoever reports it。Third。
+
+ the vulnerability must be submitted with supporting evidence。And finally。
+
+ the reported of vulnerability can only affect one code base， or， in other words。
+
+ only one program source code。😊，For instance， the desktop version of Chrome may be vulnerable。
+
+ but the Android application may not be。 If the reported flaw passes all of these tests。
+
+ it is assigned a CV VE I D Vulnerabilities added to the CV V E lists are often reviewed by other online vulnerability databases。
+
+These organizations put them through additional tests to reveal how significant the flaws are and to determine what kind of threat they pose。
+
+ One of the most popular is the N National vulnerabilityilities database。
+
+The NIS National vulnerilities databasebase uses what's known as the common vulnerability scoring system。
+
+ or CSS， which is a measurement system that scores the severity of a vulnerability。
+
+Security teams use CVSS as a way of calculating the impact a vulnerability could have on a system。
+
+They also use them to determine how quickly a vulnerability should be patched。
+
+The NIST National vulnerabilities databasebase provide a base score of CVEs on a scale of 0 to 10。
+
+Base scores reflect the moment of vulnerability is evaluated so that they don't change over time。
+
+In general， a CVSS that scores below a 4。0 is considered to be low risk and doesn't require immediate attention。
+
+However， anything above a 9。0 is considered to be a critical risk to company assets that should be addressed right away。
+
+ Security teams commonly use the CVE lists and CVSS scores as part of their vulnerability management strategy。
+
+ These references provide recommendations for prioritizing security fixes。
+
+ like installing software updates before patches。
+
+![](img/3fb8f04c39cffbbf844d433f462a6aef_2.png)
+
+Libraries like the CBE list help organizations answer questions。
+
+ I a vulnerability dangerous to our business。 If so， how soon should we address it。
+
+These online libraries bring together diverse perspectives from across the world。
+
+ contributingtriing to this effort is one of my favorite parts of working in this field。
+
+ Keep gaining experience， and I hope youll participate， too。😊。
+

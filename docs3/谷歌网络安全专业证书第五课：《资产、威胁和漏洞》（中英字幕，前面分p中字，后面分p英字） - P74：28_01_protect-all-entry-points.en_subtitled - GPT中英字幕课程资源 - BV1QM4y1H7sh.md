@@ -1,0 +1,93 @@
+# 谷歌网络安全专业证书第五课：《资产、威胁和漏洞》（中英字幕，前面分p中字，后面分p英字） - P74：28_01_protect-all-entry-points.en_subtitled - GPT中英字幕课程资源 - BV1QM4y1H7sh
+
+![](img/2c03dd2ba2e3df3078094d68281d7440_0.png)
+
+There's a wide range of vulnerabilities and systems that need to be found。
+
+ Assessing those weaknesses is a time consuming process to position themselves of head of threats and make the most of their limited resources。
+
+ companies start by understanding the environment surrounding their operations。
+
+ An important part of this is getting a sense of their attack surface。
+
+An a attack surface is all the potential vulnerabilities that a threat actor could exploit。
+
+Analyzing the attack surface is usually the first thing security teams do。For example。
+
+ imagine being part of a security team of an old castle。
+
+ Your team would need to decide how to allocate resources to defenses。Giant walls。
+
+ stone towers and wooden gates are a few common security controls of these structures。
+
+ While these are all designed to protect the assets inside from attacks。
+
+ they don't exactly account for all the possibilities。 What if the castle were near the ocean。
+
+ If it were， these defenses would be vulnerable to long rage attacks by ship。
+
+ A proper understanding of the attack surface would mean your security team equip the castle with catapults that could deal with these kinds of threats。
+
+ Modern organizations need to concern themselves with both a physical and digital attack surface。
+
+ The physical attack surface is made up of people in their devices。
+
+ This surface can be attacked from both inside and outside the organization。 which makes it unique。
+
+For example， let's consider an unattended laptop in a public space like a coffee shop。
+
+The person responsible for it walked away while sensitive company information was visible on the screen。
+
+This information is vulnerable to external threats， like a business competitor。
+
+ who can easily record the information and exploit it。 An eternal threat of this attack surface。
+
+ On the other hand， is often angry employees。 These employees might share an organization's private information on purpose。
+
+ In general， the physical attack surface should be filled with obstacles that deter attacks from happening。
+
+ We call this process security hardening。 Security hardening。
+
+ is the process of strengthening a system to reduce its vulnerabilities and a tax surface。😊。
+
+In other words， hardening is the act of minimizing the attack surface by limiting its points of entry。
+
+We do this a lot in security because the smaller the attack surface， the easier it is to protect。
+
+ In fact， some security controls that we've explored previously。
+
+ like organization policies and access controls are common ways that organizations harden their physical attack surface。
+
+ The digital attack surface is a bit tougher to harden。
+
+The digital attack surface includes everything that's beyond an organization's firewall。
+
+ In other words， it includes anything that connects to an organization online。In the past。
+
+ organizations stored their data in a single location。
+
+ This mainly consists of servers that were managed on site。😊。
+
+Accessing the information stored on those servers required connecting to the network。
+
+ the workplace managed。 These days， information is accessed outside of the organization's network because it's stored in the cloud。
+
+ information can be accessed from anywhere in the world a person can be in one part of the world。
+
+ fly to another place and continue working All while outside of their organization's network。
+
+
+
+![](img/2c03dd2ba2e3df3078094d68281d7440_2.png)
+
+Cloud computing has essentially expanded the digital attack surface。
+
+ Quicker access to information is something we all benefit from， but it comes with a costs。
+
+ Organizations of all sizes are under more pressure to defend against threats coming from different entry points。
+
+When we get together next time， we'll explore why this is such a challenge。
+
+
+
+![](img/2c03dd2ba2e3df3078094d68281d7440_4.png)

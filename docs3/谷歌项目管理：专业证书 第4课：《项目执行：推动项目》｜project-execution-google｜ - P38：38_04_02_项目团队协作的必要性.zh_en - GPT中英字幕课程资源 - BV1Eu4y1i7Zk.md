@@ -1,0 +1,82 @@
+# 谷歌项目管理：专业证书 第4课：《项目执行：推动项目》｜project-execution-google｜ - P38：38_04_02_项目团队协作的必要性.zh_en - GPT中英字幕课程资源 - BV1Eu4y1i7Zk
+
+![](img/c4991384834cc542157c1fb19bedd486_0.png)
+
+Think of a leader who you admire and respect。What qualities do they have that make them a good leader。
+
+Maybe they're an active listener。Maybe they're great at fostering a sense of community for people around them。
+
+As a project manager， leadership is a big part of the job。
+
+ but being a great project manager is about more than simply leading a team to complete a project。
+
+It's about supporting the people on your team to do their best work and enabling people to build things they're proud of in this video。
+
+ we'll define teamwork and explain why it's important for successful project management。
+
+The best leaders are able to get people to work together。
+
+ That's why a project manager's ability to develop and lead teams that work well together is so important。
+
+😊，But before we go further， let's pause and consider what exactly is a team？
+
+Though there are many different definitions of the word team。
+
+ here's how we describe it here at Google。A team is a group of people who plan， solve problems。
+
+ make decisions， and review progress in service of a specific project or objective。
+
+Team members rely on each other to get things done。 For example。
+
+ a software engineering team might be tasked with creating one seamless software experience that meets users needs。
+
+Beyond coordinating with the project manager， members of the software engineering team will also coordinate with one another as they work toward their shared goal。
+
+ Teams differ from work groups， which we define as being based on organizational or managerial hierarchy。
+
+ though people within a work group might be working toward a common goal。
+
+ Their work is more likely to be coordinated， controlled or assigned by a single person or entity。
+
+For example， a work group focused on quality assurance testing might be tasked with running a set of test plans。
+
+ The group manager might split up that work and assign each quality assurance tester a plan to review。
+
+But unlike a team， the testers will work independently of one another to complete their tasks and will coordinate mainly with the manager and the development team of the feature they're testing。
+
+Teams and work groups each have unique benefits within a larger organization。
+
+ But for the purpose of this program， we'll focus on teams。 More specifically。
+
+ we'll discuss how project managers develop and lead effective teams by fostering a culture of teamwork。
+
+Teamwork is an effective， collaborative way of working in which each person is committed to and heading toward a shared goal。
+
+Teamwork maximizes the individual strength of each team member to bring out the best in each person。
+
+As you might imagine， teamwork is a crucial part of successful project management。
+
+There are a few reasons for this。For one， teamwork fosters creativity。
+
+A team might leverage the diverse perspectives， skills and experiences of their members to devise better solutions and build products that address more diverse user needs than they might have if they were working independently of each other。
+
+Teamwork also encourages accountability。 The knowledge that the execution of your tasks directly impacts the tasks of the rest of the team can be a powerful motivator。
+
+And most importantly， teamwork helps you get stuff done。 Big， complex projects need smart。
+
+ capable people to complete task and to reach milestones to meet the project goals。
+
+
+
+![](img/c4991384834cc542157c1fb19bedd486_2.png)
+
+As the project manager， it's your job to encourage others to actively engage in working together as a team to foster creativity。
+
+ encourage accountability， and to get stuff done。Teamwork is an effective。
+
+ collaborative way of working。 and when done right。
+
+ it can positively impact both measurable team results and the team culture。Coming up。
+
+ we'll take you through the elements of effective teams。 Meet you there。
+

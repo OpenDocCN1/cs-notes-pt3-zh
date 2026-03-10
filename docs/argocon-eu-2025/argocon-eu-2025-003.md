@@ -1,4 +1,4 @@
-# Argo 项目入门：P03：Argo 知识问答！
+# 003：Argo 知识问答！
 
 ![](img/8cd6feef33a57a58b9df3efa6977de5f_0.png)
 

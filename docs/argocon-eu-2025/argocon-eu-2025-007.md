@@ -1,4 +1,4 @@
-# ArgoCon 2025 Europe 大会：P07：Argo CD 临时访问实战 - 在运行中汲取的经验教训
+# 007：Argo CD 临时访问实战 - 在运行中汲取的经验教训
 
 ![](img/a11cb57346bab896f7615c77afac68fb_0.png)
 

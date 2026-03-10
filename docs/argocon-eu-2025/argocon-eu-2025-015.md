@@ -1,4 +1,4 @@
-# ArgoCD 多租户安全：P15：缓解 Argo CD 中的权限提升风险
+# 015：缓解 Argo CD 中的权限提升风险
 
 ![](img/8448fcb9ae03828fff6397ce05a29d19_1.png)
 

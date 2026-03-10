@@ -1,4 +1,4 @@
-# ArgoCon 2025 Europe 大会课程：P09：一键自动化 - 使用 Argo CD Autopilot 简化一切
+# 009：一键自动化 - 使用 Argo CD Autopilot 简化一切
 
 ![](img/649e179bf4e0e8396281df0b5d06c6b0_1.png)
 

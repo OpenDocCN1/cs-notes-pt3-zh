@@ -1,4 +1,4 @@
-# ArgoCD 性能优化：P10：从症状到解决方案的 ArgoCD 扩容指南
+# 010：从症状到解决方案的 ArgoCD 扩容指南
 
 ![](img/60f5db5d4f4d8aedbdbfa1a27faf07f9_1.png)
 

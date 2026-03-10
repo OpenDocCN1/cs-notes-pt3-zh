@@ -1,4 +1,4 @@
-# GitOps与多集群管理：P19：使用Argo CD Agent与Open Cluster Management实现可扩展的GitOps
+# 019：使用Argo CD Agent与Open Cluster Management实现可扩展的GitOps
 
 ![](img/1efb83fffc64d6d91e576f65cdfb4e2d_1.png)
 

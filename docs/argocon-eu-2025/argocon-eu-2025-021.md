@@ -1,4 +1,4 @@
-# ArgoCD 原生 OCI 集成教程：P21：利用 Argo CD 管理 OCI 源内容
+# 021：利用 Argo CD 管理 OCI 源内容
 
 ![](img/30878e14fa38af885ce292a142e1ae8d_1.png)
 

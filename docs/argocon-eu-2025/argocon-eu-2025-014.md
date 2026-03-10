@@ -1,4 +1,4 @@
-# ArgoCon 2025 Europe 大会分享：P14：如何确保工作流有效？使用验证性 Webhook 双重检查你的 Workflow Spec 🛡️
+# 014：如何确保工作流有效？使用验证性 Webhook 双重检查你的 Workflow Spec 🛡️
 
 ![](img/8843cfd0cd3bcecf95d86d163a9dbb1e_1.png)
 

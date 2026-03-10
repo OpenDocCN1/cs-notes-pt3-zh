@@ -1,4 +1,4 @@
-# ArgoCon 2025 Europe 大会课程：P01：为 ArgoCD 定义 SLO 与 SLI —— 一种基于指标的可观测性方法
+# 001：为 ArgoCD 定义 SLO 与 SLI —— 一种基于指标的可观测性方法
 
 ![](img/52160f5530432da3049416e24ec82725_1.png)
 

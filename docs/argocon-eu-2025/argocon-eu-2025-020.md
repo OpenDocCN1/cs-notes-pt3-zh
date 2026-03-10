@@ -1,4 +1,4 @@
-# ArgoCon 2025 Europe 大会课程：P20：使用 Argo Events 实现实时事件自动修复 🛡️
+# 020：使用 Argo Events 实现实时事件自动修复 🛡️
 
 ![](img/f8a659f7c0e2e0f03953875216411856_1.png)
 

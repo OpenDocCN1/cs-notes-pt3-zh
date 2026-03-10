@@ -1,4 +1,4 @@
-# ArgoCon 2025 Europe 大会课程：P02：使用 Argo Rollouts 和 Kubernetes Gateway API 实现多向流量渐进式交付
+# 002：使用 Argo Rollouts 和 Kubernetes Gateway API 实现多向流量渐进式交付
 
 ![](img/e453ee4ab046a6d41dfa31908f66f191_1.png)
 

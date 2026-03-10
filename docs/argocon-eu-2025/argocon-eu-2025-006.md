@@ -1,4 +1,4 @@
-# ArgoCD 多集群架构演进：P06：重新定义 ArgoCD 的多集群故事
+# 006：重新定义 ArgoCD 的多集群故事
 
 ![](img/25907c7979de528b5662bad4de5d6dc9_0.png)
 

@@ -1,4 +1,4 @@
-# 程序的形式化推理：第6讲：求解Büchi与Parity游戏
+# 006：求解Büchi与Parity游戏
 
 ![](img/302b8d8e7da3d4183f7113beea8f0228_0.png)
 

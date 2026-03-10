@@ -1,4 +1,4 @@
-# 程序的形式化推理：第13讲：在Coq中定义WHILE语言
+# 013：在Coq中定义WHILE语言
 
 ![](img/0e9edc63321743a43db1b8dc00704da2_0.png)
 

@@ -75,7 +75,7 @@
 +   [MIT 6.045 自动机、可计算与复杂性笔记](docs/mit-6045-atmt-comp-cplx/README.md)
 +   [MIT 6.046J 数据结构与算法设计笔记](docs/mit-6046j-dsal/README.md)
 +   [MIT 6.100L 计算机科学与 Python 编程笔记](docs/mit-6100l-cs-py-prog/README.md)
-+   [MIT 6.824 2025 分布式系统工程笔记](docs/mit-6824-dist-2015sp/README.md)
++   [MIT 6.824 2015 分布式系统工程笔记](docs/mit-6824-dist-2015sp/README.md)
 +   [MIT 6.824 2021 分布式系统笔记](docs/mit-6824-dist-2021/README.md)
 +   [MIT 6.851 高级数据结构笔记](docs/mit-6851-adv-dast/README.md)
 +   [MIT 6.962 Web 开发笔记](docs/mit-6962-webdev/README.md)

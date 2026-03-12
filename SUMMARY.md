@@ -50,6 +50,7 @@
 +   [谷歌项目管理 VI 笔记](docs/ggl-pjmgt-6/README.md)
 +   [GopherCon UK 2025 笔记](docs/gophercon-uk-2025/README.md)
 +   [GPU 架构基础笔记](docs/gpu-arch-fund/README.md)
++   [GrpConf 2025 笔记](docs/grpconf-2025/README.md)
 +   [哈佛 CS153 编译器笔记](docs/hav-cs153-cmpl/README.md)
 +   [哈佛 CS224 高级算法笔记](docs/hav-cs224-adv-algo/README.md)
 +   [哈佛 CS50 中文官方笔记](docs/hav-cs50/README.md)

@@ -1,4 +1,4 @@
-# 从零编写Linux操作系统：P11：System V Init 与网络配置 🖥️
+# 011：System V Init 与网络配置 🖥️
 
 ![](img/575f8c16fd63c7fa2e9aed94f4bd5043_0.png)
 

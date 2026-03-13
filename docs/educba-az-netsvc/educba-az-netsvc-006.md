@@ -1,4 +1,4 @@
-# Azure网络服务：p06：建立ExpressRoute线路 第1部分
+# 006：建立ExpressRoute线路 第1部分
 
 ![](img/2d36b503fd73bfb8ad3de05af5272946_0.png)
 

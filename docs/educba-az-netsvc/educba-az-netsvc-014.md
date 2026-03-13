@@ -1,4 +1,4 @@
-# Azure网络服务：14：什么是 Azure Bastion
+# 014：什么是 Azure Bastion
 
 ## 概述
 在本节课中，我们将要学习 Azure Bastion 服务。我们将了解它的定义、核心功能、不同服务层级（SKU）的对比，以及如何创建和使用它来安全地连接到虚拟机。

@@ -1,4 +1,4 @@
-# Azure网络服务：p11：Azure虚拟网络中的DNS解析
+# 011：Azure虚拟网络中的DNS解析
 
 ![](img/e1efafd4a611c86d4b1039aff4850547_0.png)
 

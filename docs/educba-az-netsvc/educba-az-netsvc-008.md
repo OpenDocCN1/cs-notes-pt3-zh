@@ -1,4 +1,4 @@
-# Azure网络服务：08：排查与监控ExpressRoute连接 🔍
+# 008：排查与监控ExpressRoute连接 🔍
 
 ![](img/a9befd1b93e471b0bab5297e9e0b5176_0.png)
 

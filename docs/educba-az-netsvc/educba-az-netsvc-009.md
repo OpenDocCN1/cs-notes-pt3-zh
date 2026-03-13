@@ -1,4 +1,4 @@
-# Azure网络服务：09：Azure DNS简介
+# 009：Azure DNS简介
 
 ![](img/2936f0eb70fe01d8a9c3bb3f6d8b31bf_0.png)
 

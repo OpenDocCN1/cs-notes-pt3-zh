@@ -1,4 +1,4 @@
-# Azure网络服务：02：Azure虚拟中心
+# 002：Azure虚拟中心
 
 ![](img/4e68a9d929bbf2c9527755bccab8601c_0.png)
 

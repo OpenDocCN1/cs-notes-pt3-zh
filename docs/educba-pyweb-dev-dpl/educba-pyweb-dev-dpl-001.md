@@ -1,4 +1,4 @@
-# Python GUI 编程入门：P01：使用 wxPython 创建图形界面
+# 001：使用 wxPython 创建图形界面
 
 ![](img/218ebc301368c1f1e0a7c8d90ff09af7_0.png)
 

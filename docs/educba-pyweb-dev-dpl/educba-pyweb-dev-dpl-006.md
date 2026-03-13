@@ -1,4 +1,4 @@
-# Python Web开发与部署：06：Beautiful Soup与CGI编程
+# 006：Beautiful Soup与CGI编程
 
 ## 概述
 在本节课中，我们将学习两个重要的Python Web开发工具：Beautiful Soup库和CGI（通用网关接口）编程。首先，我们将了解如何使用Beautiful Soup从杂乱的HTML/XML文档中提取所需数据。接着，我们将探索如何使用CGI创建动态网页，处理用户输入并生成响应。

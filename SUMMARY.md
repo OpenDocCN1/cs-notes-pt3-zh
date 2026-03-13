@@ -78,6 +78,7 @@
 +   [从零编写 Linux 操作系统笔记](docs/linux-os-scr/README.md)
 +   [LLVM 入门笔记](docs/llvm-intro/README.md)
 +   [LLVM 和 MLIR 编译器构建笔记](docs/llvm-mlir-cmpl/README.md)
++   [LLVMCon 2024 笔记](docs/llvmcon-2024/README.md)
 +   [LLVMCon EU 2025 笔记](docs/llvmcon-eu-2025/README.md)
 +   [LLVMCon US 2025 笔记](docs/llvmcon-us-2025/README.md)
 +   [鹿特丹数字治理笔记](docs/ltd-digigov/README.md)

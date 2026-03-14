@@ -171,6 +171,7 @@
 +   [特伦托大学编程基础笔记](docs/tlt-prog-fund/README.md)
 +   [多伦多大学编程学习笔记](docs/trt-lrn-prog/README.md)
 +   [慕尼黑工业大学 C++ 系统编程笔记](docs/tum-cpp-sys-prog/README.md)
++   [慕尼黑工业大学 IN2377 C++ 编程笔记](docs/tum-in2377-cpp-prog/README.md)
 +   [UCB CS10 计算之美与乐趣](docs/ucb-cs10-bty-joy-comp/README.md)
 +   [UCB CS149 嵌入式系统笔记](docs/ucb-cs149-embsys/README.md)
 +   [UCB CS162 操作系统笔记](docs/ucb-cs162-os/README.md)

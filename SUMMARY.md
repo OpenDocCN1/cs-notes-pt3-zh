@@ -3,6 +3,7 @@
 +   [Unix 环境高级编程笔记](docs/apue/README.md)
 +   [ArgoCon EU 2025 笔记](docs/argocon-eu-2025/README.md)
 +   [AWS 基础笔记](docs/aws-abc/README.md)
++   [AWSCon 2024 笔记](docs/awscon-2024/README.md)
 +   [Bash 基础笔记](docs/bash-bsc/README.md)
 +   [BoardInfinity Java 全栈开发笔记](docs/board-inf-java-flstk/README.md)
 +   [从零开始编写 C 语言游戏笔记](docs/c-gm-scr/README.md)

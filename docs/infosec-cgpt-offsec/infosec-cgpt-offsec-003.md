@@ -1,4 +1,4 @@
-# 信息安全：攻击性安全中的ChatGPT：3.1.1.3：NLP、LLM与生成式AI入门 🧠
+# 003：NLP、LLM与生成式AI入门 🧠
 
 ![](img/6d2430182fa44dc89cdf22b29924aeef_0.png)
 

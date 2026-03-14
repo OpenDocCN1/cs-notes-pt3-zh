@@ -1,4 +1,4 @@
-# 信息安全：ChatGPT用于攻击性安全：第10章：利用ChatGPT进行应用程序功能利用
+# 010：利用ChatGPT进行应用程序功能利用
 
 ![](img/5e9757ce7b4d9af8d431211cce9dd9eb_0.png)
 

@@ -1,0 +1,6 @@
++   [IHES 数据科学统计与计算机科学笔记](README.md)
++   [001：入门与部分成果](ihes-ds-stat-cs-001.md)
++   [002：理论洞见与应用](ihes-ds-stat-cs-002.md)
++   [003：图与嵌入的无监督对齐](ihes-ds-stat-cs-003.md)
++   [004：机器学习遇见极值理论](ihes-ds-stat-cs-004.md)
++   [005：预算约束与公平应用下的上下文随机老虎机 🎰](ihes-ds-stat-cs-005.md)

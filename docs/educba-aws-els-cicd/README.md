@@ -1,1 +1,0 @@
-# EDUCBA AWS ElaxticSearch CICD 笔记

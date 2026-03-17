@@ -1,4 +1,4 @@
-# 分布式交易与区块链架构：第7讲：Diem (原Libra) 核心原理 🧱
+# 007：Diem (原Libra) 核心原理 🧱
 
 ![](img/4c8fbb90e7fb14aa4dace0533eb6bd2d_0.png)
 

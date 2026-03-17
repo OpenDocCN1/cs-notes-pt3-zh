@@ -1,4 +1,4 @@
-# 分布式交易与区块链架构：11：Hedera Hashgraph 核心原理 🧩
+# 015：Hedera Hashgraph 核心原理 🧩
 
 ![](img/2bd4d7d3793738757aa516b3c6695c70_0.png)
 

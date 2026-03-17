@@ -66,6 +66,7 @@
 +   [UNSW COMP6771 高级 C++ 笔记](docs/unsw-comp6771-adv-cpp/README.md)
 +   [UNSW COMP9315 PostgreSQL 笔记](docs/unsw-comp9315-pgsql/README.md)
 +   [宾夕法尼亚大学 Python 与 Java 入门笔记](docs/upenn-py-java-intro/README.md)
++   [USC CSCE611 高级数字设计笔记](docs/usc-csce611-adv-digidsn/README.md)
 +   [悉尼大学 COMP2022 计算模型笔记](docs/usyd-comp2022-compmdl/README.md)
 +   [弗吉尼亚 CS3330 计算机体系结构笔记](docs/uva-cs3330-comp-arch/README.md)
 +   [弗吉尼亚 CS4414 操作系统笔记](docs/uva-cs4414-os/README.md)

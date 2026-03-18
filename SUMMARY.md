@@ -1,5 +1,7 @@
 +   [APNA C++ 数据结构笔记](docs/apna-cpp-dast/README.md)
 +   [BoardInfinity Java 全栈开发笔记](docs/board-inf-java-flstk/README.md)
++   [加州理工 CS420 软件工程笔记](docs/caltech-cs420-swe/README.md)
++   [加州理工 CS367 C 语言系统编程笔记](docs/caltech-cs467-c-sysprog/README.md)
 +   [剑桥分布式系统笔记](docs/camb-distsys-lec/README.md)
 +   [辛辛那提 MATH1071 离散数学笔记](docs/ccnt-math1701-disc/README.md)
 +   [康奈尔 CS3110 数据结构与函数式编程讲义](docs/crnl-cs3110-dsat-fp/README.md)

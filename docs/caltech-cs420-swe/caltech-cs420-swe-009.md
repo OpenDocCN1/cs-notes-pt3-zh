@@ -1,4 +1,4 @@
-# 软件工程：第9讲：Leap Motion 2 SDK 🖐️
+# 009：Leap Motion 2 SDK 🖐️
 
 ![](img/5049913ffa70bf6c040a94dd526c1c21_1.png)
 

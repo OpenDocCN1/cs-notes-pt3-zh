@@ -1,4 +1,4 @@
-# C++ for Java Programmers: Lecture 7: Vector 🧮
+# 007：C++ for Java Programmers: Lecture 7: Vector 🧮
 
 在本节课中，我们将要学习C++标准模板库中的容器，并重点介绍`vector`。`vector`是一个动态数组，类似于Java中的`ArrayList`，它极大地简化了数组操作。我们将学习如何创建、初始化、访问和修改`vector`，并了解其基本操作和特性。
 

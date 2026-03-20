@@ -86,6 +86,8 @@
 +   [华盛顿大学 CSE341 编程语言 ABC 笔记](docs/uwash-cse341-prog-abc/README.md)
 +   [华盛顿大学 CSE474 嵌入式系统笔记](docs/uwash-cse474-embsys-prog/README.md)
 +   [威廉玛丽 CSCI654 计算机组成笔记](docs/wm-csci654-comp-arch/README.md)
++   [威斯康星 CS354 C 底层编程笔记](docs/wscs-cs354-c-undl-prcp/README.md)
++   [威斯康星 CS368c 系统编程笔记](docs/wscs-cs368c-sysprog/README.md)
 +   [威斯康星 CS536 编程语言与编译器笔记](docs/wscs-cs536-pl-cmpl/README.md)
 +   [威斯康星 CS537 操作系统笔记](docs/wscs-cs537-os/README.md)
 +   [滑铁卢大学 CS341 算法笔记](docs/wtl-cs341-algo/README.md)

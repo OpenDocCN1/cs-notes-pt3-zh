@@ -49,6 +49,7 @@
 +   [普林斯顿计算机科学：算法、理论和机器](docs/prct-cs-algo-thr-mchn/README.md)
 +   [普林斯顿计算机科学：目的导向编程](docs/prct-cs-prog-pps/README.md)
 +   [普林斯顿编程和算法讲义](docs/prct-prog-algo/README.md)
++   [PSU COMPSC431 数据库管理系统笔记](docs/psu-compsc431-dbms/README.md)
 +   [史蒂文斯 CS615 系统管理笔记](docs/stvs-cs615-sysadm/README.md)
 +   [特伦托大学编程基础笔记](docs/tlt-prog-fund/README.md)
 +   [多伦多大学 APS105 C 语言编程笔记](docs/trt-aps105-c-prog/README.md)

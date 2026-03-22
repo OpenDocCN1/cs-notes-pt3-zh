@@ -1,0 +1,126 @@
+# 艾伯塔大学软件产品管理课程2：《软件流程与敏捷实践》｜software-processes-and-agile-practices｜ - P4：3_第2.1.1a节 流程和实践.zh - GPT中英字幕课程资源 - BV1Xz4y1G74t
+
+🎼。😊。
+
+![](img/33a3bb305dafe56f1cd2cc27fb938ced_1.png)
+
+Tasks also relate to roles。A role is a duty that a person takes on or plays。
+
+Examples of some software engineering roles are a programmer， a tester， a CEO， a client。
+
+ or a product manager。
+
+![](img/33a3bb305dafe56f1cd2cc27fb938ced_3.png)
+
+An actual person can play a role， and in doing so， perform associated tasks for that role。In short。
+
+ a role performs a task。Each person on a team has specific responsibilities or tasks to perform while in a role。
+
+For example， a programmer may take on the task of writing code for a certain feature。
+
+A tester may be assigned to test that feature。And the product manager may review that feature once it's complete to ensure it works as the client expects。
+
+You can see how roles help to organize work based on the team members involved。
+
+Consider an application in which users can share and view recipes。
+
+A user has the option to create an account with a personal profile or use a guest account。
+
+Both the account holders and guests can browse recipes。
+
+ but a user must be logged in to their personal account in order to post recipes。
+
+Both types of users can also browse and search recipes from the main page。
+
+Which of the following tasks could be performed by a guest role。
+
+A add optional information to their profile。B， create an account。 C， search recipes。
+
+D browse recipes and or E post a recipe。As specified earlier。
+
+ a user needs to log into an account in order to post a recipe。Therefore， option E is incorrect。
+
+Similarly， to have a profile， a user would need to have an account。 therefore。
+
+ answer A is also incorrect。It was specified that both user types can search and browse recipes。
+
+Which means that those tasks could be performed by a guest role。Also。
+
+ a guest would be able to create an account to become an account holder， therefore。
+
+ the corrected answers are B， C， and D。The next element that we will examine is a work product。
+
+A word product is the output that a task produces。This output could be anything involved in the development。
+
+ not just the final product。Work products do include the final product。
+
+ but they also include other intermediate outputs such as designs， requirements， source code。
+
+ test cases， and internal documentation。Since work products are outputs of tasks。
+
+ we can say that a task produces a work product。😊，However。
+
+ sometimes tasks use work products as input。For example。
+
+ the tasks of writing source code for a feature will refer to the feature's design。
+
+That design was the output of a previous task to create a design。Therefore。
+
+ a task also uses work products。Finally， for any task to be completed， it needs resources。
+
+Resources are anything that improves， advances， or funds work to be done。
+
+These could be things such as time， money， technology， knowledge or staff。Therefore。
+
+ we can say that a task consumes a resource。To put this diagram into perspective。
+
+ let's look at an example。Say we are developing an application your client requires that the user is able to upload a profile picture。
+
+ change their name and update their personal description。 These are our requirements。😊。
+
+A task we have to do is write a test for uploading their profile picture。
+
+An activity containing this task would be creating tests。
+
+This task will be performed by a tester role。The task consumes many resources such as time， money。
+
+ and technology。The work product that this task produces are test cases。
+
+The task also uses the requirements document as a work product。
+
+ since you want to verify that the product does with the requirements specified in this case。
+
+ we want to test that the user is able to upload a profile picture。
+
+You have been assigned to a new project。In this project。
+
+ your team is developing a new database and checkout system for the local library。
+
+It uses a mobile app to check out books to the user's account。
+
+Theodore is a programmer on your development team。He has been assigned to writing source code for adding new books to the database。
+
+ establishing the database， writing the text for the help page。
+
+ and executing tests for creating an account。Which of these assignments is an activity and not a task？
+
+A， writing source code for adding new books to the database。
+
+
+
+![](img/33a3bb305dafe56f1cd2cc27fb938ced_5.png)
+
+B， establishing the database。C， writing the text for the Help page or D。
+
+ executinging tests for creating an account。Answer B is the most correct answer。
+
+ since setting up a database has many tasks involved。
+
+Theodore will have to do tasks such as design the database and write code for the database。
+
+He will also have to do tasks such as host the database and transfer the current database to the new one。
+
+Tasks are low level specific actions like those in A， C， and D。
+
+There could be many low level tasks in the high level activity of establishing a database。
+

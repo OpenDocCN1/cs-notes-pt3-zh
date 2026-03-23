@@ -1,4 +1,4 @@
-# 数据库构建块系列研讨会：07：使用FDAP技术栈构建InfluxDB 3.0：Apache Flight、DataFusion、Arrow与Parquet
+# 007：Apache Flight、DataFusion、Arrow与Parquet
 
 ![](img/43d41d11438ff8a292e69a5017bd8cfd_1.png)
 

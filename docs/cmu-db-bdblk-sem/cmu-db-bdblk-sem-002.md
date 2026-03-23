@@ -1,4 +1,4 @@
-# 数据库构建块系列研讨会：02：使用Apache DataFusion Comet加速Apache Spark工作负载
+# 002：使用Apache DataFusion Comet加速Apache Spark工作负载
 
 ![](img/ffcc43b01ff76a6ce6bf497479b3b769_1.png)
 

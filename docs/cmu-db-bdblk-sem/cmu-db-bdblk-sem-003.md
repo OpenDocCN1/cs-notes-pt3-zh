@@ -1,4 +1,4 @@
-# 数据库构建块系列研讨会：03：ParadeDB – 专为搜索与分析打造的Postgres
+# 003：ParadeDB – 专为搜索与分析打造的Postgres
 
 ![](img/b36d9a9e65622aa80282e164288f1607_1.png)
 

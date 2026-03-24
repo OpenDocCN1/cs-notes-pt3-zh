@@ -28,6 +28,7 @@
 +   [ETHZ 计算机体系结构研讨会 2025 笔记](docs/ethz-comp-arch-sem-2025/README.md)
 +   [ETHZ 数字设计与计算机体系结构笔记](docs/ethz-ddca/README.md)
 +   [ETHZ 信息检索笔记](docs/ethz-info-rtv/README.md)
++   [ETHZ SAFARI 研讨会 2025 笔记](docs/ethz-safari-sem-2025/README.md)
 +   [范德堡大学 CS428 C++ 标准模板库笔记](docs/fdb-cs428-cpp-stl/README.md)
 +   [佛罗里达 COP3402 系统软件笔记](docs/flrd-cop3402-syssw/README.md)
 +   [GAMES 图形学系列笔记](docs/games/README.md)

@@ -95,6 +95,7 @@
 +   [密西根大学每个人的 Web 开发笔记](docs/umich-webdev-evrn/README.md)
 +   [明尼苏达人力资源管理笔记](docs/uminn-hr-mgt/README.md)
 +   [UNC COMP290 计算机科学开发工具链笔记](docs/unc-comp290-cs-dev-tlchn/README.md)
++   [UNC CMOP426 现代 Web 编程笔记](docs/unc-comp426-mdn-web-prog/README.md)
 +   [UNSW COMP1531 软件工程基础笔记](docs/unsw-comp1531-swe-fund/README.md)
 +   [UNSW COMP3111 数据库系统笔记](docs/unsw-comp3111-dbsys/README.md)
 +   [UNSW COMP3142 软件测试笔记](docs/unsw-comp3142-swtst/README.md)

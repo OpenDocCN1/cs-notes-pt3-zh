@@ -89,6 +89,7 @@
 +   [密西根大学每个人的增强现实笔记](docs/umich-ar-evrn/README.md)
 +   [密西根大学每个人的 C 语言笔记](docs/umich-c-evrn/README.md)
 +   [密西根大学 CIS150 C++ 编程笔记](docs/umich-cis150-cpp-prog/README.md)
++   [密西根大学 CIS297 C# 游戏开发笔记](docs/umich-cis297-csp-gmdev/README.md)
 +   [密西根大学每个人的 Django 笔记](docs/umich-dj-evrn/README.md)
 +   [密西根大学 EECS281 数据结构算法笔记](docs/umich-eecs281-dast-algo/README.md)
 +   [密西根大学 EECS373 嵌入式系统笔记](docs/umich-eecs373-emb-sys/README.md)

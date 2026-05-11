@@ -123,3 +123,4 @@
 +   [威斯康星 CS537 操作系统笔记](docs/wscs-cs537-os/README.md)
 +   [滑铁卢大学 CS341 算法笔记](docs/wtl-cs341-algo/README.md)
 +   [滑铁卢 CS452 实时编程讲座笔记](docs/wtl-cs452/README.md)
++   [奥克兰 COMPSCI 111 计算机实践参考手册](docs/奥克兰_COMPSCI_111_计算机实践参考手册/README.md)

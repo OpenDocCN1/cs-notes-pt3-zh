@@ -17,6 +17,7 @@
 +   [康奈尔 CS3110 数据结构与函数式编程讲义](docs/crnl-cs3110-dsat-fp/README.md)
 +   [康奈尔 CSS10 OCaml 编程笔记](docs/crnl-cs3110-ocaml/README.md)
 +   [康奈尔 CS6120 高级编译器笔记](docs/crnl-cs6120-adv-cmpl/README.md)
++   [CUNY CSci335 软件设计与分析 3 讲义](docs/CUNY_CSci335_软件设计与分析_3_讲义/README.md)
 +   [杜克大学爱丽丝编程与动画入门笔记](docs/duke-alice-prog-anm-intro/README.md)
 +   [杜克大学 C 语言入门笔记](docs/duke-c-intro/README.md)
 +   [杜克大学 Java 编程与软件工程基础笔记](docs/duke-java-prog-swe-bsc/README.md)

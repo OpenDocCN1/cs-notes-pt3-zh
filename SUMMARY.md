@@ -126,3 +126,4 @@
 +   [滑铁卢 CS452 实时编程讲座笔记](docs/wtl-cs452/README.md)
 +   [华盛顿 CSE341 编程语言讲义](docs/华盛顿_CSE341_编程语言讲义/README.md)
 +   [奥克兰 COMPSCI 111 计算机实践参考手册](docs/奥克兰_COMPSCI_111_计算机实践参考手册/README.md)
++   [模块 1.1 结构化与算法化方面](docs/康奈尔_CS1130_面向编程过渡讲义/README.md)

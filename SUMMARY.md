@@ -110,6 +110,7 @@
 +   [UNSW COMP9315 PostgreSQL 笔记](docs/unsw-comp9315-pgsql/README.md)
 +   [宾夕法尼亚大学 Python 与 Java 入门笔记](docs/upenn-py-java-intro/README.md)
 +   [USC CSCE611 高级数字设计笔记](docs/usc-csce611-adv-digidsn/README.md)
++   [USC CSCI104 数据结构和面向对象设计讲义](docs/USC_CSCI104_数据结构和面向对象设计讲义/README.md)
 +   [USF MSDS626 实时编程笔记](docs/usf-msds626-lvcd/README.md)
 +   [悉尼大学 COMP2022 计算模型笔记](docs/usyd-comp2022-compmdl/README.md)
 +   [弗吉尼亚 CS3330 计算机体系结构笔记](docs/uva-cs3330-comp-arch/README.md)

@@ -56,6 +56,7 @@
 +   [KAIST CS580 计算机图形学笔记](docs/kaist-cs580-cg/README.md)
 +   [科罗拉多嵌入式系统 FPGA 笔记](docs/klld-fpga-embsys/README.md)
 +   [克莱姆森数据库管理系统笔记](docs/krms-dbms/README.md)
++   [linux.do 文档共建](docs/linux-do-wiki/README.md)
 +   [鹿特丹数字治理笔记](docs/ltd-digigov/README.md)
 +   [鹿特丹严肃博弈笔记](docs/ltd-srsgm/README.md)
 +   [鲁汶大学高级编程语言概念笔记](docs/lvn-adv-pl-ccpt/README.md)

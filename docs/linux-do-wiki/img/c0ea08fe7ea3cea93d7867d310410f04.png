@@ -1,0 +1,1233 @@
+<!DOCTYPE HTML>
+<html class="no-js" >
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<title>Obsidian 配置篇 - 未央花博客</title>
+<link rel="canonical" href="https://www.pslanys.com/archives/obsidian-setting.html" /><meta property="og:title" content="Obsidian 配置篇" />
+<meta property="og:site_name" content="未央花博客" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="引在使用 Obsidian 以前，我一直是 Typora 用户，Typora 界面简洁、清爽，用来仅仅写一写 markdown 是真的好用。不过，随着笔记越来越多，Typora 管理起来不是很方..." />
+<meta property="og:url" content="https://www.pslanys.com/archives/obsidian-setting.html" />
+<meta property="article:published_time" content="2025-03-26T14:17:00+08:00" />
+<meta property="article:modified_time" content="2025-04-01T16:35:10+08:00" />
+<meta name="promote_title" content="Obsidian 配置篇">
+<meta name="twitter:title" content="Obsidian 配置篇" />
+<meta name="twitter:description" content="引在使用 Obsidian 以前，我一直是 Typora 用户，Typora 界面简洁、清爽，用来仅仅写一写 markdown 是真的好用。不过，随着笔记越来越多，Typora 管理起来不是很方..." /><meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://webpcdn.wyhaxx.com/A-floral-garland-unsplash.jpg?imageView2/2/w/980/q/75" />
+<meta name="promote_image" content="https://webpcdn.wyhaxx.com/A-floral-garland-unsplash.jpg?imageView2/2/w/980/q/75" />
+<meta property="og:image" content="https://webpcdn.wyhaxx.com/A-floral-garland-unsplash.jpg?imageView2/2/w/980/q/75" /><meta name="description" content="引在使用 Obsidian 以前，我一直是 Typora 用户，Typora 界面简洁、清爽，用来仅仅写一写 markdown 是真的好用。不过，随着笔记越来越多，Typora 管理起来不是很方..." />
+<meta name="template" content="Mirages" />
+<link rel="pingback" href="https://www.pslanys.com/action/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.pslanys.com/action/xmlrpc?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.pslanys.com/action/xmlrpc?wlw" />
+<link rel="alternate" type="application/rss+xml" title="Obsidian 配置篇 &raquo; 未央花博客 &raquo; RSS 2.0" href="https://www.pslanys.com/feed/archives/obsidian-setting.html" />
+<link rel="alternate" type="application/rdf+xml" title="Obsidian 配置篇 &raquo; 未央花博客 &raquo; RSS 1.0" href="https://www.pslanys.com/feed/rss/archives/obsidian-setting.html" />
+<link rel="alternate" type="application/atom+xml" title="Obsidian 配置篇 &raquo; 未央花博客 &raquo; ATOM 1.0" href="https://www.pslanys.com/feed/atom/archives/obsidian-setting.html" />
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-513'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-513'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<script type="text/javascript">
+(function () {
+    var event = document.addEventListener ? {
+        add: 'addEventListener',
+        triggers: ['scroll', 'mousemove', 'keyup', 'touchstart'],
+        load: 'DOMContentLoaded'
+    } : {
+        add: 'attachEvent',
+        triggers: ['onfocus', 'onmousemove', 'onkeyup', 'ontouchstart'],
+        load: 'onload'
+    }, added = false;
+
+    document[event.add](event.load, function () {
+        var r = document.getElementById('respond-post-513'),
+            input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = '_';
+        input.value = (function () {
+    var _O79W6JA = 'f'//'f'
++'NCt'//'NCt'
++//'q'
+'f6'+'6d'//'j'
++''///*'x'*/'x'
++//'u'
+'b'+//'I'
+'4b3'+//'N'
+'4f6'+//'F'
+'fb'+'c'//'v'
++//'Z'
+'54'+//'oG'
+'3ad'+//'4q'
+'af2'+'b9'//'si'
++'03'//'Io'
++//'Wwq'
+'8'+'P'//'P'
++/* 'o1s'//'o1s' */''+//'XoT'
+'XoT'+//'w'
+'5'+'da4'//'FOK'
++/* '8I9'//'8I9' */''+'2'//'t'
+, _Gzq82o = [[0,1],[0,3],[27,28],[27,30]];
+    
+    for (var i = 0; i < _Gzq82o.length; i ++) {
+        _O79W6JA = _O79W6JA.substring(0, _Gzq82o[i][0]) + _O79W6JA.substring(_Gzq82o[i][1]);
+    }
+
+    return _O79W6JA;
+})();
+
+        if (null != r) {
+            var forms = r.getElementsByTagName('form');
+            if (forms.length > 0) {
+                function append() {
+                    if (!added) {
+                        forms[0].appendChild(input);
+                        added = true;
+                    }
+                }
+            
+                for (var i = 0; i < event.triggers.length; i ++) {
+                    var trigger = event.triggers[i];
+                    document[event.add](trigger, append);
+                    window[event.add](trigger, append);
+                }
+            }
+        }
+    });
+})();
+</script>
+<link rel="amphtml" href="https://www.pslanys.com/amp/obsidian-setting.html">
+<link rel="miphtml" href="https://www.pslanys.com/mip/obsidian-setting.html">
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "n971tofdfa");
+</script><style type="text/css">
+        /* Font - Open Sans */
+    @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 300;
+        font-display: fallback;
+        src: local('Open Sans Light'),
+        local('OpenSans-Light'),
+        url(https://www.pslanys.com/usr/themes/Mirages/fonts/OpenSans/300.woff2) format('woff2'),
+        url(https://www.pslanys.com/usr/themes/Mirages/fonts/OpenSans/300.woff) format('woff');
+    }
+    @font-face {
+        font-family: 'Open Sans';
+        font-style: italic;
+        font-weight: 300;
+        font-display: fallback;
+        src: local('Open Sans Light Italic'),
+        local('OpenSansLight-Italic'),
+        url(https://www.pslanys.com/usr/themes/Mirages/fonts/OpenSans/300i.woff2) format('woff2'),
+        url(https://www.pslanys.com/usr/themes/Mirages/fonts/OpenSans/300i.woff) format('woff');
+    }
+    @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-display: fallback;
+        src: local('Open Sans'),
+        local('OpenSans'),
+        url(https://www.pslanys.com/usr/themes/Mirages/fonts/OpenSans/400.woff2) format('woff2'),
+        url(https://www.pslanys.com/usr/themes/Mirages/fonts/OpenSans/400.woff) format('woff');
+    }
+    @font-face {
+        font-family: 'Open Sans';
+        font-style: italic;
+        font-weight: 400;
+        font-display: fallback;
+        src: local('Open Sans Italic'),
+        local('OpenSans-Italic'),
+        url(https://www.pslanys.com/usr/themes/Mirages/fonts/OpenSans/400i.woff2) format('woff2'),
+        url(https://www.pslanys.com/usr/themes/Mirages/fonts/OpenSans/400i.woff) format('woff');
+    }
+        /* Lora */
+    @font-face {
+        font-family: 'Lora';
+        font-style: normal;
+        font-weight: 400;
+        font-display: fallback;
+        src:
+                local('Lora Regular'),
+                local('Lora-Regular'),
+                url(https://www.pslanys.com/usr/themes/Mirages/fonts/Lora/400.woff2) format('woff2'),
+                url(https://www.pslanys.com/usr/themes/Mirages/fonts/Lora/400.woff) format('woff');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+        font-family: 'Lora';
+        font-style: normal;
+        font-weight: 700;
+        font-display: fallback;
+        src:
+                local('Lora Bold'),
+                local('Lora-Bold'),
+                url(https://www.pslanys.com/usr/themes/Mirages/fonts/Lora/700.woff2) format('woff2'),
+                url(https://www.pslanys.com/usr/themes/Mirages/fonts/Lora/700.woff) format('woff');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+</style>
+<link rel="stylesheet" href="https://www.pslanys.com/usr/themes/Mirages/css/7.10.6/mirages.min.css">
+<script type="text/javascript">
+    window['LocalConst'] = {
+        THEME_VERSION: "7.10.6",
+        BUILD: 1531,
+        BASE_SCRIPT_URL: "https://www.pslanys.com/usr/themes/Mirages/",
+        IS_MOBILE: false,
+        IS_PHONE: false,
+        IS_TABLET: false,
+        HAS_LOGIN: false,
+        IS_HTTPS: true,
+        ENABLE_PJAX: false,
+        ENABLE_WEBP: false,
+        SHOW_TOC: false,
+        ENABLE_IMAGE_SIZE_OPTIMIZE: true,
+        THEME_COLOR: '#2D9460',
+        DISQUS_SHORT_NAME: '',
+        COMMENT_SYSTEM: 0,
+        OWO_API: 'https://www.pslanys.com/mirages-api/owo/owo.json',
+        COMMENT_SYSTEM_DISQUS: 1,
+        COMMENT_SYSTEM_DUOSHUO: 2,
+        COMMENT_SYSTEM_EMBED: 0,
+        PJAX_LOAD_STYLE: 0,
+        PJAX_LOAD_STYLE_SIMPLE: 0,
+        PJAX_LOAD_STYLE_CIRCLE: 1,
+        AUTO_NIGHT_SHIFT_FROM: 22,
+        AUTO_NIGHT_SHIFT_TO: 5,
+        USE_MIRAGES_DARK: false,
+        PREFERS_DARK_MODE: false,
+        LIGHT_THEME_CLASS: "theme-white",
+        TOC_AT_LEFT: false,
+        SERIF_LOAD_NOTICE: '加载 Serif 字体可能需要 10 秒钟左右，请耐心等待',
+        ROOT_FONT_SIZE: '100',
+        BIAOQING_PAOPAO_PATH: '',
+        BIAOQING_ARU_PATH: '',
+        CDN_TYPE_OTHERS: -1,
+        CDN_TYPE_QINIU: 1,
+        CDN_TYPE_UPYUN: 2,
+        CDN_TYPE_LOCAL: 3,
+        CDN_TYPE_ALIYUN_OSS: 4,
+        CDN_TYPE_QCLOUD_CI: 5,
+        KEY_CDN_TYPE: '',
+        UPYUN_SPLIT_TAG: '!',
+        ENABLE_COMMENT_LOCATION: true,
+        COMMENT_LOCATION_API: 'https://www.pslanys.com/mirages-api/comment-location/query',
+        COMMENTS_ORDER: 'DESC',
+        ENABLE_MATH_JAX: false,
+        MATH_JAX_USE_DOLLAR: false,
+        ENABLE_FLOW_CHART: false,
+        ENABLE_MERMAID: false,
+        ENABLE_STATE: 'cHNsYW55cy5jb20vZmFkZTIyYzg6ZmMwOTFmNmU6MDYxNmY3M2MwNzExMjQwMDZhMTk1Zjg0ZWJjOGUxNmM=;d3loYXh4LmNvbS9hZGM4NjUwNjphZWZhOWMxMjo0N2E3MWE5NjcyNzcwZGMyYzg5ZThkMGMyNzVlN2ZmMQ==',
+        HIDE_CODE_LINE_NUMBER: false,
+        TRIM_LAST_LINE_BREAK_IN_CODE_BLOCK: true    };
+    var Mlog = function (message) {
+            };
+                    LocalConst.BIAOQING_PAOPAO_PATH = 'https://www.pslanys.com/usr/plugins/Mirages/biaoqing/paopao/';
+        LocalConst.BIAOQING_ARU_PATH = 'https://www.pslanys.com/usr/plugins/Mirages/biaoqing/aru/';
+        var BIAOQING_PAOPAO_PATH = LocalConst.BIAOQING_PAOPAO_PATH;
+        var BIAOQING_ARU_PATH = LocalConst.BIAOQING_ARU_PATH;
+                LocalConst.KEY_CDN_TYPE = 'mirages-cdn-type';
+        LocalConst.UPYUN_SPLIT_TAG = '!';
+    </script>
+    <script>
+        var hour = new Date().getHours();
+        if (hour <= LocalConst.AUTO_NIGHT_SHIFT_TO || hour >= LocalConst.AUTO_NIGHT_SHIFT_FROM) {
+            LocalConst.USE_MIRAGES_DARK = true;
+        }
+    </script>
+
+<link rel="stylesheet" href="https://www.pslanys.com/usr/themes/Mirages/usr/css/custom.css?v=7.10.6">
+    <link rel="shortcut icon" href="https://www.pslanys.com/usr/uploads/2024/07/542714777.ico">
+
+
+
+<script type="text/javascript">
+    var autoHideElements = {};
+    var CSS = function (css) {
+        var link = document.createElement('link');
+        link.setAttribute('rel', 'stylesheet');
+        link.href = css;
+        document.head.appendChild(link);
+    };
+    var STYLE = function (style, type) {
+        type = type || 'text/css';
+        var s = document.createElement('style');
+        s.type = type;
+        s.textContent = style;
+        document.head.appendChild(s);
+    };
+    var JS = function (js, async) {
+        async = async || false;
+        var sc = document.createElement('script'), s = document.scripts[0];
+        sc.src = js; sc.async = async;
+        s.parentNode.insertBefore(sc, s);
+    };
+    var registAutoHideElement = function (selector) {
+        var tmp = autoHideElements[selector];
+        if (typeof(tmp) !== 'undefined') {
+            return;
+        }
+        var element = document.querySelector(selector);
+        if (element && typeof(Headroom) !== "undefined") {
+            var headroom = new Headroom(element, {
+                tolerance: 5,
+                offset : 5,
+                classes: {
+                    initial: "show",
+                    pinned: "show",
+                    unpinned: "hide"
+                }
+            });
+            headroom.init();
+            autoHideElements[selector] = headroom;
+        }
+    };
+    var getImageAddon = function (cdnType, width, height) {
+        if (!LocalConst.ENABLE_IMAGE_SIZE_OPTIMIZE) {
+            return "";
+        }
+        if (cdnType == LocalConst.CDN_TYPE_LOCAL || cdnType == LocalConst.CDN_TYPE_OTHERS) {
+            return "";
+        }
+        var addon = "?";
+        if (cdnType == LocalConst.CDN_TYPE_UPYUN) {
+            addon = LocalConst.UPYUN_SPLIT_TAG;
+        }
+        var ratio = window.devicePixelRatio || 1;
+        width = width || window.innerWidth;
+        height = height || window.innerHeight;
+        width = width || 0;
+        height = height || 0;
+        if (width == 0 && height == 0) {
+            return "";
+        }
+        var format = "";
+        if (LocalConst.ENABLE_WEBP) {
+            if (cdnType == LocalConst.CDN_TYPE_ALIYUN_OSS) {
+                format = "/format,webp"
+            } else {
+                format = "/format/webp";
+            }
+        }
+        if (width >= height) {
+            if (cdnType == LocalConst.CDN_TYPE_UPYUN) {
+                addon += "/fw/" + parseInt(width * ratio) + "/quality/75" + format;
+            } else if(cdnType == LocalConst.CDN_TYPE_ALIYUN_OSS) {
+                addon += "x-oss-process=image/resize,w_" + parseInt(width * ratio) + "/quality,Q_75" + format;
+            } else {
+                addon += "imageView2/2/w/" + parseInt(width * ratio) + "/q/75" + format;
+            }
+        } else {
+            if (cdnType == LocalConst.CDN_TYPE_UPYUN) {
+                addon += "/fh/" + parseInt(width * ratio) + "/quality/75" + format;
+            } else if(cdnType == LocalConst.CDN_TYPE_ALIYUN_OSS) {
+                addon += "x-oss-process=image/resize,h_" + parseInt(width * ratio) + "/quality,Q_75" + format;
+            } else {
+                addon += "imageView2/2/h/" + parseInt(height * ratio) + "/q/75" + format;
+            }
+        }
+        return addon;
+    };
+    var getBgHeight = function(windowHeight, bannerHeight, mobileBannerHeight){
+        windowHeight = windowHeight || 560;
+        if (windowHeight > window.screen.availHeight) {
+            windowHeight = window.screen.availHeight;
+        }
+        bannerHeight = bannerHeight.trim();
+        mobileBannerHeight = mobileBannerHeight.trim();
+        if (window.innerHeight > window.innerWidth) {
+            bannerHeight = parseFloat(mobileBannerHeight);
+        } else {
+            bannerHeight = parseFloat(bannerHeight);
+        }
+        bannerHeight = Math.round(windowHeight * bannerHeight / 100);
+        return bannerHeight;
+    };
+    var registLoadBanner = function () {
+        if (window.asyncBannerLoadNum >= 0) {
+            window.asyncBannerLoadNum ++;
+            Mlog("Loading Banner: " + window.asyncBannerLoadNum);
+        }
+    };
+    var remove = function (element) {
+        if (element) {
+            if (typeof element['remove'] === 'function') {
+                element.remove();
+            } else if (element.parentNode) {
+                element.parentNode.removeChild(element);
+            }
+        }
+    };
+    var loadBannerDirect = function (backgroundImage, backgroundPosition, wrap, cdnType, width, height) {
+        var background = wrap.querySelector('.blog-background');
+        var imageSrc = backgroundImage + getImageAddon(cdnType, width, height);
+
+        Mlog("Start Loading Banner Direct... url: " + imageSrc + "  cdnType: " + cdnType);
+
+        if (typeof(backgroundPosition) === 'string' && backgroundPosition.length > 0) {
+            background.style.backgroundPosition = backgroundPosition;
+        }
+
+        background.style.backgroundImage = 'url("' + imageSrc + '")';
+    };
+    var loadBanner = function (img, backgroundImage, backgroundPosition, wrap, cdnType, width, height, blured) {
+        var background = wrap.querySelector('.blog-background');
+        var container = wrap.querySelector('.lazyload-container');
+
+        if (!background) {
+            console.warn("background is null", background);
+            return;
+        }
+        if (!container) {
+            console.warn("container is null", container);
+            return;
+        }
+
+        var imageSrc = backgroundImage + getImageAddon(cdnType, width, height);
+
+        Mlog("Start Loading Banner... url: " + imageSrc + "  cdnType: " + cdnType);
+
+
+        background.classList.add("loading");
+
+        remove(img);
+        if (typeof(backgroundPosition) === 'string' && backgroundPosition.length > 0) {
+            container.style.backgroundPosition = backgroundPosition;
+            background.style.backgroundPosition = backgroundPosition;
+        }
+        container.style.backgroundImage = 'url("' + img.src + '")';
+        container.classList.add('loaded');
+
+        blured = blured || false;
+        if (blured) {
+            return;
+        }
+
+        // load Src background image
+        var largeImage = new Image();
+        largeImage.src = imageSrc;
+        largeImage.onload = function() {
+            remove(this);
+            if (typeof imageLoad !== 'undefined' && imageLoad >= 1) {
+                background.classList.add('bg-failed');
+            } else {
+                background.style.backgroundImage = 'url("' + imageSrc + '")';
+                background.classList.remove('loading');
+                container.classList.remove('loaded');
+            }
+            setTimeout(function () {
+                remove(container);
+                if (window.asyncBannerLoadCompleteNum >= 0) {
+                    window.asyncBannerLoadCompleteNum ++;
+                    Mlog("Loaded Banner: " + window.asyncBannerLoadCompleteNum);
+                    if (window.asyncBannerLoadCompleteNum === window.asyncBannerLoadNum) {
+                        window.asyncBannerLoadNum = -1170;
+                        window.asyncBannerLoadCompleteNum = -1170;
+                        $('body').trigger("ajax-banner:done");
+                    } else if (window.asyncBannerLoadCompleteNum > window.asyncBannerLoadNum) {
+                        console.error("loaded num is large than load num.");
+                        setTimeout(function () {
+                            window.asyncBannerLoadNum = -1170;
+                            window.asyncBannerLoadCompleteNum = -1170;
+                            $('body').trigger("ajax-banner:done");
+                        }, 1170);
+                    }
+                }
+            }, 1001);
+        };
+    };
+    var loadPrefersDarkModeState = function () {
+        if (typeof window.matchMedia === 'function') {
+            LocalConst.PREFERS_DARK_MODE = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        }
+    };
+</script>
+<style type="text/css">
+    body, button, input, optgroup, select, textarea {
+        font-family: 'Mirages Custom', 'Merriweather', 'Open Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei',  'Segoe UI Emoji', 'Segoe UI Symbol', Helvetica, Arial, sans-serif;
+    }
+    .github-box, .github-box .github-box-title h3 {
+        font-family: 'Mirages Custom', 'Merriweather', 'Open Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei',  'Segoe UI Emoji', 'Segoe UI Symbol', Helvetica, Arial, sans-serif !important;
+    }
+    .aplayer {
+        font-family: 'Mirages Custom', 'Myriad Pro', 'Myriad Set Pro', 'Open Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei',  Helvetica, arial, sans-serif !important;
+    }
+    /* Serif */
+    body.content-lang-en.content-serif .post-content {
+        font-family: 'Lora', 'PT Serif', 'Source Serif Pro', Georgia, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei',  serif;
+    }
+    body.content-lang-en.content-serif.serif-fonts .post-content,
+    body.content-lang-en.content-serif.serif-fonts #toc-content{
+        font-family: 'Lora', 'PT Serif', 'Source Serif Pro', 'Noto Serif CJK SC', 'Noto Serif CJK', 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif', 'source-han-serif-sc', 'PT Serif', 'SongTi SC', 'MicroSoft Yahei',  serif;
+    }
+    body.serif-fonts .post-content,
+    body.serif-fonts .blog-title,
+    body.serif-fonts .post-title,
+    body.serif-fonts #toc-content {
+        font-family: 'Noto Serif CJK SC', 'Noto Serif CJK', 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif', 'source-han-serif-sc', 'PT Serif', 'SongTi SC', 'MicroSoft Yahei',  Georgia, serif;
+    }
+</style>
+<style type="text/css">
+    /** 页面样式调整 */
+        .post-buttons a {
+        width: -webkit-calc(100% / 2 - .3125rem);
+        width: calc(100% / 2 - .3125rem);
+    }
+    
+        .post .post-content>*:not(pre) code {
+        color: #233333;
+    }
+    </style>
+<!-- 主题主色调 -->
+<style type="text/css">
+    /* Color - Custom */
+    body.color-custom a {
+        color: #2D9460;
+    }
+    body.color-custom *::selection {
+        background: #2D9460;
+        color: #fff;
+    }
+    body.color-custom #index article a, body.color-custom #post article a, body.color-custom #archive article a {
+        color: #2D9460;
+    }
+    body.color-custom #footer a:after, body.color-custom #header .nav li a:after, body.color-custom #post .post-meta a:after, body.color-custom #index .comments a:after, body.color-custom #index .post-content a:after, body.color-custom #post .post-content a:after, body.color-custom #archive .post-content a:after, body.color-custom #archive .comments a:after, body.color-custom #comments a:after {
+        border-color: #2D9460;
+    }
+    body.color-custom .post-content a {
+        color: #2D9460;
+    }
+    body.color-custom .post-near {
+        color: #2D9460;
+    }
+    body.color-custom #nav .search-box .search{
+        color: #2D9460;
+    }
+    body.color-custom #comments .comment-list a, body.color-custom #comments .respond a  {
+        color: #2D9460;
+    }
+    body.color-custom #comments .widget-title {
+        color: #2D9460;
+    }
+    body.color-custom .color-main {
+        color: #2D9460 !important;
+    }
+    body.color-custom #disqus_thread a {
+        color: #2D9460;
+    }
+    body.color-custom #footer a {
+        color: #2D9460;
+    }
+    body.color-custom .github-box .github-box-download .download:hover{
+        border-color: #2D9460 !important;
+        background-color: rgba(45, 148, 96, 0.4) !important;
+    }
+    body.color-custom .sp-progress {
+        background: linear-gradient(45deg, rgba(45, 148, 96, 0), rgba(45, 148, 96, 0.1) 25%, rgba(45, 148, 96, 0.35) 50%, rgb(45, 148, 96) 75%, rgba(45, 148, 96, 0.1));
+    }
+
+    li.index-menu-item.current>a.index-menu-link, body.color-custom li.index-menu-item.current>a.index-menu-link{
+        color: #2D9460;
+        border-left: .125rem solid #2D9460;
+    }
+
+    body.color-custom .post-content .content-file:hover .content-file-icon,
+    body.color-custom .post-content .content-file:hover .content-file-filename,
+    body.color-custom .comment-content .content-file:hover .content-file-icon,
+    body.color-custom .comment-content .content-file:hover .content-file-filename,
+    body.color-custom.theme-sunset .post-content .content-file:hover .content-file-icon,
+    body.color-custom.theme-sunset .post-content .content-file:hover .content-file-filename,
+    body.color-custom.theme-sunset .comment-content .content-file:hover .content-file-icon,
+    body.color-custom.theme-sunset .comment-content .content-file:hover .content-file-filename {
+        color: #2D9460;
+    }
+
+    body.color-custom .post-content .content-file:hover,
+    body.color-custom .comment-content .content-file:hover,
+    body.color-custom.theme-sunset .post-content .content-file:hover,
+    body.color-custom.theme-sunset .comment-content .content-file:hover {
+        border-color: #2D9460;
+    }
+
+    /* Color - Custom Dark */
+    body.theme-dark a {
+        color: #2D9460;
+    }
+    body.theme-dark.color-custom *::selection {
+        background: #2D9460;
+        color: #fff;
+    }
+    body.theme-dark.color-custom #index article a, body.theme-dark.color-custom #post article a, body.theme-dark.color-custom #archive article a {
+        color: #2D9460;
+    }
+    body.theme-dark.color-custom #footer a:after,
+    body.theme-dark.color-custom #header .nav li a:after,
+    body.theme-dark.color-custom #post .post-meta a:after,
+    body.theme-dark.color-custom #index .comments a:after,
+    body.theme-dark.color-custom #index .post-content a:after,
+    body.theme-dark.color-custom #post .post-content a:after,
+    body.theme-dark.color-custom #archive .post-content a:after,
+    body.theme-dark.color-custom #archive .comments a:after,
+    body.theme-dark.color-custom #comments a:after
+    {
+        border-color: #2D9460;
+    }
+    body.theme-dark.color-custom .post-content a {
+        color: #2D9460;
+    }
+    body.theme-dark.color-custom .post-near {
+        color: #2D9460;
+    }
+    body.theme-dark.color-custom #nav .search-box .search {
+        color: #2D9460;
+    }
+    body.theme-dark.color-custom #comments .comment-list a, body.theme-dark.color-custom #comments .respond a  {
+        color: #2D9460;
+    }
+    body.theme-dark.color-custom #comments .widget-title {
+        color: #2D9460;
+    }
+    body.theme-dark.color-custom .color-main {
+        color: #2D9460 !important;
+    }
+    body.theme-dark.color-custom #disqus_thread a {
+        color: #2D9460;
+    }
+    body.theme-dark.color-custom #footer a {
+        color: #2D9460;
+    }
+    body.theme-dark.color-custom .github-box .github-box-download .download:hover{
+        border-color: #2D9460 !important;
+        background-color: rgba(45, 148, 96, 0.4) !important;
+    }
+    body.color-custom.theme-dark #index .post-content a:not(.no-icon), body.color-custom.theme-dark #archive .post-content a:not(.no-icon),body.color-custom.theme-dark #post .post-content a:not(.no-icon) {
+        color: #2D9460;
+    }
+    body.color-custom.theme-dark li.index-menu-item.current>a.index-menu-link {
+        color: #2D9460;
+        border-left: .125rem solid #2D9460;
+    }
+    body.color-custom.theme-dark .sp-progress {
+        background: linear-gradient(45deg, rgba(45, 148, 96, 0), rgba(45, 148, 96, 0.1) 25%, rgba(45, 148, 96, 0.35) 50%, rgb(45, 148, 96) 75%, rgba(45, 148, 96, 0.1));
+    }
+
+    body.color-custom.theme-dark .post-content .content-file:hover .content-file-icon,
+    body.color-custom.theme-dark .post-content .content-file:hover .content-file-filename,
+    body.color-custom.theme-dark .comment-content .content-file:hover .content-file-icon,
+    body.color-custom.theme-dark .comment-content .content-file:hover .content-file-filename {
+        color: #2D9460;
+    }
+    body.color-custom.theme-dark .post-content .content-file:hover,
+    body.color-custom.theme-dark .comment-content .content-file:hover {
+        border-color: #2D9460;
+    }
+
+    /*桌面端*/
+    body.color-custom #index .post .post-title:hover,body.color-custom #archive .post .post-title:hover {
+        color: #2D9460;
+    }
+    body.color-custom.theme-dark #index .post .post-title:hover,body.color-custom.theme-dark #archive .post .post-title:hover {
+        color: #2D9460;
+    }
+</style>
+<style type=text/css>img.biaoqing.quyin {margin-bottom: -.3125rem;min-height: 3.25rem;height: 1em;}</style>
+<link rel="stylesheet" href="https://www.pslanys.com/usr/uploads/2024/07/4127055876.css" type="text/css"><script>
+    var _czc = _czc || [];
+    var _hmt = _hmt || [];
+</script>
+</head>
+<body class="theme-white color-custom card  desktop not-safari open use-navbar">
+    <script>
+        loadPrefersDarkModeState();
+        if (LocalConst.USE_MIRAGES_DARK || LocalConst.PREFERS_DARK_MODE) {
+            var body = document.querySelector("body");
+            body.classList.remove('theme-white');
+            body.classList.add('theme-dark');
+            body.classList.add('dark-mode');
+
+            if (LocalConst.USE_MIRAGES_DARK) {
+                body.classList.remove('dark-mode');
+            } else if (LocalConst.PREFERS_DARK_MODE) {
+                body.classList.add('os-dark-mode');
+            }
+        }
+    </script>
+<!--[if lt IE 9]>
+<div class="browse-happy" role="dialog">It's Strongly Recommended to <a href="http://browsehappy.com/">Upgrade Your Browser</a> to <strong>GET a Better Experience</strong>.</div>
+<![endif]-->
+<div class="sp-progress"></div>
+<div id="wrap">
+    <span id="backtop" class="waves-effect waves-button"><i class="fa fa-angle-up"></i></span>
+    <header>
+    <a id="toggle-nav" class="btn btn-primary" href="javascript:void(0);"><span>MENU</span></a>
+<nav id="site-navigation" class="sidebar no-user-select" role="navigation">
+    <div id="nav">
+        <div class="author navbar-header">
+            <a href="https://www.pslanys.com/about.html">
+                <img src="https://webpcdn.wyhaxx.com/2024/avatar2.jpg" alt="Avatar" width="100" height="100"/>
+            </a>
+        </div>
+        <div class="search-box navbar-header">
+            <form class="form" id="search-form" action="https://www.pslanys.com/"  role="search">
+                <input id="search" type="text" name="s" required placeholder="Search..." class="search search-form-input">
+                <button id="search_btn" type="submit" class="search-btn"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <ul id="menu-menu-1" class="menu navbar-nav" data-content="291">
+                        <li class="menu-item"><a href="https://www.pslanys.com">Home</a></li>
+            <li>
+                <a class="slide-toggle">Category</a>
+                <div class="category-list hide">
+                                        <ul class="list"><li class="category-level-0 category-parent"><a href="https://www.pslanys.com/category/default/">默认分类</a></li><li class="category-level-0 category-parent"><a href="https://www.pslanys.com/category/life/">生活随笔</a></li><li class="category-level-0 category-parent"><a href="https://www.pslanys.com/category/record/">学习记录</a></li><li class="category-level-0 category-parent"><a href="https://www.pslanys.com/category/back-end/">后端</a></li><li class="category-level-0 category-parent"><a href="https://www.pslanys.com/category/front-end/">前端</a></li><li class="category-level-0 category-parent"><a href="https://www.pslanys.com/category/weekly/">周刊</a></li></ul>                </div>
+            </li>
+                                                <li class="menu-item"><a class="" href="https://www.pslanys.com/archives.html" title="Archives">Archives</a></li>
+                                    <li class="menu-item"><a class="" href="https://www.pslanys.com/links.html" title="友链">友链</a></li>
+                                    <li class="menu-item"><a class="" href="https://www.pslanys.com/now.html" title="此刻">此刻</a></li>
+                                    <li class="menu-item"><a class="" href="https://www.pslanys.com/about.html" title="关于我">关于我</a></li>
+                    </ul>
+    </div>
+                <div id="nav-toolbar">
+            <div class="side-toolbar">
+                <ul class="side-toolbar-list">
+                                            <li><a id="side-toolbar-rss" href="https://www.pslanys.com/feed" title="RSS"><i class="fa fa-feed"></i></a></li>
+                                        <li><a id="side-toolbar-rss" href="https://www.pslanys.com/feed" title="RSS" target="_blank"><i class="fa fa-rss"></i></a></li><li><a id="side-toolbar-github" href="https://github.com/Emt-lin" title="Github" target="_blank"><i class="fa fa-github"></i></a></li>                                            <li><a id="side-toolbar-read-settings" href="javascript:void(0);" title="阅读设置"><i class="fa fa-font"></i></a></li>
+                                    </ul>
+                <div class="read-settings-container animated">
+                    <div class="read-settings animated">
+                        <div class="font-size-controls animated">
+                            <button type="button" class="font-size-control control-btn-smaller waves-effect waves-button" data-mode="smaller" title="减小字体字号">A</button>
+                            <button type="button" class="font-size-display" disabled>100%</button>
+                            <button type="button" class="font-size-control control-btn-larger waves-effect waves-button" data-mode="larger" title="增大字体字号">A</button>
+                        </div>
+                        <div class="background-color-controls animated">
+                            <ul>
+                                <li><a href="javascript:void(0)" title="Auto Mode" class="background-color-control auto selected" data-mode="auto"><i class="fa fa-adjust"></i></a></li>
+                                <li><a href="javascript:void(0)" title="Daytime Mode" class="background-color-control white " data-mode="white"><i class="fa fa-check-circle"></i></a></li>
+                                <li><a href="javascript:void(0)" title="日落模式" class="background-color-control sunset " data-mode="sunset"><i class="fa fa-check-circle"></i></a></li>
+                                <li><a href="javascript:void(0)" title="Night Mode" class="background-color-control dark " data-mode="dark"><i class="fa fa-check-circle"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="font-family-controls">
+                            <button type="button" class="font-family-control  control-btn-serif" data-mode="serif">Serif</button>
+                            <button type="button" class="font-family-control selected control-btn-sans-serif" data-mode="sans-serif">Sans Serif</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<!-- Fixed navbar -->
+<nav id="navbar" class="navbar navbar-expand-md navbar-color navbar-md fixed-top no-user-select">
+    <div class="container-fluid">
+                <a class="navbar-brand " href="https://www.pslanys.com"><img src="https://www.pslanys.com/usr/uploads/2024/07/542714777.ico" alt="Logo" height="40"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                                                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dashboard-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Category                    </a>
+                                        <ul class="dropdown-menu"><li class="dropdown-item category-level-0 category-parent"><a href="https://www.pslanys.com/category/default/">默认分类</a></li><li class="dropdown-item category-level-0 category-parent"><a href="https://www.pslanys.com/category/life/">生活随笔</a></li><li class="dropdown-item category-level-0 category-parent"><a href="https://www.pslanys.com/category/record/">学习记录</a></li><li class="dropdown-item category-level-0 category-parent"><a href="https://www.pslanys.com/category/back-end/">后端</a></li><li class="dropdown-item category-level-0 category-parent"><a href="https://www.pslanys.com/category/front-end/">前端</a></li><li class="dropdown-item category-level-0 category-parent"><a href="https://www.pslanys.com/category/weekly/">周刊</a></li></ul>                </li>
+                                                                                                        <li class="nav-item"><a class="nav-link" href="https://www.pslanys.com/archives.html" title="Archives">Archives</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="https://www.pslanys.com/links.html" title="友链">友链</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="https://www.pslanys.com/now.html" title="此刻">此刻</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="https://www.pslanys.com/about.html" title="关于我">关于我</a></li>
+                                            </ul>
+
+
+            <ul class="navbar-nav side-toolbar-list">
+                <li class="navbar-search-container">
+                    <a id="navbar-search" class="search-form-input" href="javascript:void(0);" title="Search..."><i class="fa fa-search"></i></a>
+                    <form class="search-form" action="https://www.pslanys.com/" role="search">
+                        <input type="text" name="s" required placeholder="Search..." class="search">
+                    </form>
+                </li>
+                <li><a id="nav-side-toolbar-rss" href="https://www.pslanys.com/feed" title="RSS" target="_blank"><i class="fa fa-rss"></i></a></li><li><a id="nav-side-toolbar-github" href="https://github.com/Emt-lin" title="Github" target="_blank"><i class="fa fa-github"></i></a></li>                                    <li>
+                        <a id="nav-side-toolbar-read-settings"  href="javascript:void(0);" title="阅读设置"><i class="fa fa-font"></i></a>
+                        <div class="read-settings-container animated">
+                            <div class="read-settings animated">
+                                <div class="font-size-controls animated">
+                                    <button type="button" class="font-size-control control-btn-smaller waves-effect waves-button" data-mode="smaller" title="减小字体字号">A</button>
+                                    <button type="button" class="font-size-display" disabled>100%</button>
+                                    <button type="button" class="font-size-control control-btn-larger waves-effect waves-button" data-mode="larger" title="增大字体字号">A</button>
+                                </div>
+                                <div class="background-color-controls animated">
+                                    <ul>
+                                        <li><a href="javascript:void(0)" title="Auto Mode" class="background-color-control auto selected" data-mode="auto"><i class="fa fa-adjust"></i></a></li>
+                                        <li><a href="javascript:void(0)" title="Daytime Mode" class="background-color-control white " data-mode="white"><i class="fa fa-check-circle"></i></a></li>
+                                        <li><a href="javascript:void(0)" title="日落模式" class="background-color-control sunset " data-mode="sunset"><i class="fa fa-check-circle"></i></a></li>
+                                        <li><a href="javascript:void(0)" title="Night Mode" class="background-color-control dark " data-mode="dark"><i class="fa fa-check-circle"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="font-family-controls">
+                                    <button type="button" class="font-family-control  control-btn-serif" data-mode="serif">Serif</button>
+                                    <button type="button" class="font-family-control selected control-btn-sans-serif" data-mode="sans-serif">Sans Serif</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                            </ul>
+        </div>
+    </div>
+</nav>    </header>
+    
+    <div id="body">
+        <style type="text/css">
+    /** 页面样式调整 */
+                div#comments{
+        margin-top: 0;
+    }
+                .post-buttons, #qr-box {
+        display: none;
+    }
+    #body-bottom {
+        margin-top: 0;
+    }
+                #footer{
+        padding: 1.25rem 0;
+    }
+        
+                .inner {
+        background-color: rgba(0,0,0,0.25);
+    }
+        #masthead {
+        min-height: 12.5rem;
+    }
+                </style>
+<style type="text/css">
+    </style>        <script type="text/javascript">
+            var wrap = document.querySelector('#wrap');
+            var navbar = document.querySelector('#navbar');
+            wrap.classList.remove('display-menu-tree');
+            var body = document.querySelector('body');
+            body.classList.remove('display-menu-tree');
+            LocalConst.TOC_AT_LEFT = false;
+            LocalConst.ENABLE_MATH_JAX = false;
+            LocalConst.ENABLE_FLOW_CHART = false;
+            LocalConst.ENABLE_MERMAID = false;
+            
+                        if (body.classList.contains('no-banner')) {
+                body.classList.remove('no-banner');
+            }                        if (body.classList.contains('content-lang-en')) {
+                body.classList.remove('content-lang-en');
+            }                        if (body.classList.contains('content-serif')) {
+                body.classList.remove('content-serif');
+            }                        if (body.classList.contains('serif-fonts')) {
+                body.classList.remove('serif-fonts');
+            }            LocalConst.SHOW_TOC = false;
+                    </script>
+                            <a id="toggle-menu-tree" class="revert" href="javascript:void(0);"><i class="fa fa-angle-left"></i></a>
+            <div id="post-menu">
+                <div id="toc-wrap">
+                    <div id="toc-content">
+                        <h2 id="post-menu-title">Catalog</h2>
+                        <div class="index-menu"><ul class="index-menu-list"><li class="index-menu-item"><a data-scroll class="index-menu-link" href="javascript:void(0)" data-index="menu_index_1" title="引"><span class="menu-content">引</span></a></li><li class="index-menu-item"><a data-scroll class="index-menu-link" href="javascript:void(0)" data-index="menu_index_2" title="理念"><span class="menu-content">理念</span></a></li><li class="index-menu-item"><a data-scroll class="index-menu-link" href="javascript:void(0)" data-index="menu_index_3" title="使用"><span class="menu-content">使用</span></a><ul class="index-menu-list"><li class="index-menu-item"><a data-scroll class="index-menu-link" href="javascript:void(0)" data-index="menu_index_4" title="基本编辑"><span class="menu-content">基本编辑</span></a></li><li class="index-menu-item"><a data-scroll class="index-menu-link" href="javascript:void(0)" data-index="menu_index_5" title="Daily Notes"><span class="menu-content">Daily Notes</span></a></li><li class="index-menu-item"><a data-scroll class="index-menu-link" href="javascript:void(0)" data-index="menu_index_6" title="网页标注和网页剪藏"><span class="menu-content">网页标注和网页剪藏</span></a></li><li class="index-menu-item"><a data-scroll class="index-menu-link" href="javascript:void(0)" data-index="menu_index_7" title="Tasks"><span class="menu-content">Tasks</span></a></li><li class="index-menu-item"><a data-scroll class="index-menu-link" href="javascript:void(0)" data-index="menu_index_8" title="Weread"><span class="menu-content">Weread</span></a></li><li class="index-menu-item"><a data-scroll class="index-menu-link" href="javascript:void(0)" data-index="menu_index_9" title="Copilot"><span class="menu-content">Copilot</span></a></li><li class="index-menu-item"><a data-scroll class="index-menu-link" href="javascript:void(0)" data-index="menu_index_10" title="Image auto upload"><span class="menu-content">Image auto upload</span></a></li><li class="index-menu-item"><a data-scroll class="index-menu-link" href="javascript:void(0)" data-index="menu_index_11" title="所有插件"><span class="menu-content">所有插件</span></a></li></ul></li><li class="index-menu-item"><a data-scroll class="index-menu-link" href="javascript:void(0)" data-index="menu_index_12" title="参考"><span class="menu-content">参考</span></a></li></ul></div>                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                LocalConst.SHOW_TOC = true;
+            </script>
+                        <header id="masthead" class="align-center align-middle " style="
+            height:
+        60;">
+            <div class="blog-background"></div>
+                        <script type="text/javascript">
+                var head = document.querySelector("#masthead");
+                var bgHeight = getBgHeight(window.innerHeight, '60', '40');
+                head.style.height = bgHeight + "px";
+                                    var banner = 'https://webpcdn.wyhaxx.com/A-floral-garland-unsplash.jpg' + getImageAddon("-1", window.screen.availWidth, window.screen.availHeight);
+                    var position = '';
+                    var bg = head.querySelector(".blog-background");
+                    bg.style.backgroundImage = 'url("' + banner + '")';
+                    if (position.length > 0) {
+                        bg.style.backgroundPosition = position;
+                    }
+                            </script>
+                        <div class="inner">
+                <div class="container">
+                    <h1 class="blog-title" style="">
+                        Obsidian 配置篇                    </h1>
+                    <h2 class="blog-description font-mono" style="">
+                        March 26, 2025 • Read: 13747 • <a href="https://www.pslanys.com/category/default/">默认分类</a>                    </h2>
+                </div>
+
+            </div>
+                    </header>
+                    <div class="container">
+            <div class="row">
+
+
+
+<div id="post" role="main">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<!--        <div class="display-none" itemscope itemprop="author" itemtype="http://schema.org/Person">-->
+<!--            <meta itemprop="name" content="--><!--"/>-->
+<!--            <meta itemprop="url" content="--><!--"/>-->
+<!--        </div>-->
+<!--        <div class="display-none" itemscope itemprop="publisher" itemtype="http://schema.org/Organization">-->
+<!--            <meta itemprop="name" content="--><!--"/>-->
+<!--            <div itemscope itemprop="logo" itemtype="http://schema.org/ImageObject">-->
+<!--                <meta itemprop="url" content="--><!--">-->
+<!--            </div>-->
+<!--        </div>-->
+        <meta itemprop="url mainEntityOfPage" content="https://www.pslanys.com/archives/obsidian-setting.html" />
+        <meta itemprop="datePublished" content="2025-03-26T14:17:00+08:00">
+        <meta itemprop="dateModified" content="2025-04-01T16:35:10+08:00">
+        <meta itemprop="headline" content="Obsidian 配置篇">
+        <meta itemprop="image" content="https://webpcdn.wyhaxx.com/A-floral-garland-unsplash.jpg">
+                <div class="post-content" itemprop="articleBody">
+                        <span id="menu_index_1" class="index-menu-anchor" data-title="引"></span><h2>引</h2><p>在使用 Obsidian 以前，我一直是 Typora 用户，Typora 界面简洁、清爽，用来仅仅写一写 markdown 是真的好用。不过，随着笔记越来越多，Typora 管理起来不是很方便，就萌生了需要找个合适的笔记管理软件，这个时候 Obsidian 映入我的眼前。（现在好像也有 <a href="https://github.com/obgnail/typora_plugin">Typora 插件</a>，支持类似 Obsidian 这种布局了）</p><p>不过，真正开始觉得 Obsidian 很好用是从 <strong>程序员的喵</strong> 的这篇文章开始：<a href="https://catcoding.me/p/obsidian-for-programmer/">我的 Obsidian 使用经验</a></p><span id="menu_index_2" class="index-menu-anchor" data-title="理念"></span><h2>理念</h2><p>为啥不选择 Notion 之类的在线的呢？<strong>因为我不喜欢打开一个文档需要等待加载的过程</strong>，我想直接看到内容，看到我知识库的所有结构。所以只有 <strong>本地优先</strong> 的笔记软件适合我了。</p><p>还有关于文件与数据库的 <a href="https://xlrocket.blog/2024/11/13/%e6%96%87%e4%bb%b6%e4%bc%98%e5%85%88%ef%bc%8c%e6%9c%ac%e5%9c%b0%e4%bc%98%e5%85%88%ef%bc%8c%e6%88%91%e5%af%b9-file-over-app-%e7%90%86%e5%bf%b5%e7%9a%84%e7%90%86%e8%a7%a3/#:~:text=%E4%BA%BA%E9%83%BD%E8%83%BD%E7%9C%8B%E5%88%B0%E3%80%82-,%E6%96%87%E4%BB%B6%20VS%20%E6%95%B0%E6%8D%AE%E5%BA%93,-File%20Over%20App">“效率”与“反效率”</a> 这一点，个人目前的使用下来，搜索体验很好，当然可能也是自己文件太少，不过大部分人的文档应该都不会太多吧。而且对于性能这个因素，Obsidian 反而是主流笔记软件里面对海量笔记（1w+）性能最好的一档。感兴趣的可以看看这个帖子：<a href="https://x.com/kepano/status/1900971833677279611">opening files in Obsidian, not sped up — ez</a></p><p>另一个点是我很喜欢 <a href="https://x.com/kepano">Obsidan CEO kepano</a> 的 <a href="https://stephango.com/file-over-app">File over app</a> 的理念：文件应该是一等公民，文件应该属于用户，而不是把文件仅仅依存于那 <code>短暂生命周期的应用</code>。</p><p>我个人是带有一点理想主义观念的，世界就需要一些这样的理想主义者，可能他们能够让我们的世界变得更美好一点。正如我在 <a href="https://wyhaxx.com/archives/don-t-be-evil.html">Don't be evil</a> 最后写的那样：</p><p><img alt="beliefs" title="beliefs" data-mirages-cdn-type="-1" data-src="https://webpcdn.wyhaxx.com/beliefs.png" data-shadow="true"></p><span id="menu_index_3" class="index-menu-anchor" data-title="使用"></span><h2>使用</h2><p>对于 Obsidan 的上手使用，看到论坛很多帖子认为使用它需要下载很多插件，但其实并不需要复杂的插件，对于我个人来说，几个插件就能满足我几乎所有的需求。</p><span id="menu_index_4" class="index-menu-anchor" data-title="基本编辑"></span><h3>基本编辑</h3><p>很喜欢 Typora 那种实时预览的编辑方式，Obsidian 也是这样，所以我从 Typora 完全无缝切换到了 Obsidian。Obsidian 基本的功能已经够用，所以可以直接上手使用了。</p><p>下面这些插件是用来进一步提高我的编辑效率的：</p><p><a href="https://github.com/zolrath/obsidian-auto-link-title">Auto Link Title</a>，在当你粘贴网络链接到 Markdown 文档后，<strong>自动拉取网址的标题</strong>，很方便。</p><p><a href="https://github.com/platers/obsidian-linter">Linter</a>，用来格式化写的 Markdown 文档，<code>最常用的是</code>：确保中日韩文与英文数字之间有一个空格。</p><p><a href="https://github.com/tadashi-aikawa/obsidian-various-complements-plugin">Various Complements</a>，用在写的文档时候的一点简单补全，是以前的插件，没有用到 AI。</p><p><a href="https://github.com/vrtmrz/obsidian-livesync">Self-hosted LiveSync</a>，用来多端同步的一个插件，需要服务器。我没有用 git 来同步，个人更喜欢这种。</p><span id="menu_index_5" class="index-menu-anchor" data-title="Daily Notes"></span><h3>Daily Notes</h3><p>核心插件：日记，推荐使用方式：绑定快捷键 <code>Ctrl+D</code> 到 <code>日记：打开/创建今天的日记</code>，然后设置一个存放目录。</p><p><strong>为什么一定要快捷键打开今天的日记页</strong>：<strong>因为「灵感」总是稍纵即逝的</strong>，我需要快速记录下来，减少打开的阻力。</p><blockquote>ps: 配合 Keyboard Maestro 设置的快捷键，option+2、Ctrl+D 两个操作就能快速打开日记记录。</blockquote><p>插件设置：</p><p><img alt="daily-setting" title="daily-setting" data-mirages-cdn-type="-1" data-src="https://webpcdn.wyhaxx.com/daily-setting.png" data-shadow="true"></p><p>Template 的参考来源：<a href="https://x.com/tisoga/status/1769430407404261515">My goal -- don't drown in nonsense.</a>，日记效果：</p><p><img alt="daily-actual-effect" title="daily-actual-effect" data-mirages-cdn-type="-1" data-src="https://webpcdn.wyhaxx.com/daily-actual-effect.png" data-shadow="true"></p><span id="menu_index_6" class="index-menu-anchor" data-title="网页标注和网页剪藏"></span><h3>网页标注和网页剪藏</h3><p><code>网页标注</code> 和 <code>网页剪藏</code> 都是非常好的概念，这是我打通输入输出的必要工具。</p><p>以前我自己也是很喜欢收藏浏览器书签，微信公众号文章等。但是这样收藏并没有写上自己的标注和理解，而且输入和输出是隔离的，导致后来回头看到这个文章时，只剩下满脸的疑惑，不知道当时为什么要收藏。</p><p>就像我最近看的一本书——《第二大脑》——里面描述的那样，你不对网页信息进行提炼，那这个网页你收藏了并没有任何用处，只有你提炼后，这个内容才对你有益处，后面如果你对信息想进一步深入了解，也可以从你提炼点开始。</p><p>「网页标注」我用的是 <a href="https://sspai.com/post/63033">开源、可定制的网页批注工具——Hypothesis</a>，通过 Hypothesis 我可以把网页的某些内容高亮或者添加注释，然后通过插件 <a href="https://github.com/weichenw/obsidian-hypothesis-plugin">obsidian-hypothesis-plugin</a> 自动同步到 Obsidian。</p><p>比如浏览下面这个网页时，可以对其中 <code>有触动的</code> 内容进行标注和高亮，打上标签便于后面输出相关内容。</p><p><img alt="Hypothes-record" title="Hypothes-record" data-mirages-cdn-type="-1" data-src="https://webpcdn.wyhaxx.com/Hypothes-record.png" data-shadow="true"></p><p>然后在 Obsidian 里面能看到到内容，还有自己打的标签，有了这些输入，以后想写博文输出时，就能容易搜索到相关内容，这样就构成 <code>输入和输出的闭环</code>。</p><p><img alt="Hypothesis-Obsidan-show" title="Hypothesis-Obsidan-show" data-mirages-cdn-type="-1" data-src="https://webpcdn.wyhaxx.com/Hypothesis-Obsidan-show.png" data-shadow="true"></p><p>「网页剪藏」就推荐 Obsidian CEO kepano 开发的 <code>网页剪藏</code> 功能的浏览器插件：<a href="https://obsidian.md/clipper">Obsidian Web Clipper</a>，<strong>利用现在的 AI 帮你总结文章内容，如果你觉得部分内容不错，也可以对其高亮，然后和总结一起保存到本地。</strong></p><p><img alt="web-clipper-page-show" title="web-clipper-page-show" data-mirages-cdn-type="-1" data-src="https://webpcdn.wyhaxx.com/web-clipper-page-show.png" data-shadow="true"></p><p>现在插件不仅支持 Obsidian，还支持导出到本地电脑，所以<strong>任何本地优先的笔记软件都可以用了</strong>。</p><p><img alt="web-clipper-obsidian-show" title="web-clipper-obsidian-show" data-mirages-cdn-type="-1" data-src="https://webpcdn.wyhaxx.com/web-clipper-obsidian-show.png" data-shadow="true"></p><p>更多 <strong>Web Clipper</strong> 的使用可以看这篇文章：<a href="https://anotherdayu.com/2025/6670/">高亮、总结、剪藏-本地优先的浏览器插件 </a></p><p>目前我两者都使用，互为补充，毕竟 AI 现在很好用，能帮助节省不少时间。</p><span id="menu_index_7" class="index-menu-anchor" data-title="Tasks"></span><h3>Tasks</h3><p>我主要使用三种状态： To Do、Done、Cancelled，它还能给你完成的任务加上时间，方便后面利用 AI 来进行回顾。</p><p><img alt="task-plugin-show" title="task-plugin-show" data-mirages-cdn-type="-1" data-src="https://webpcdn.wyhaxx.com/task-plugin-show.png" data-shadow="true"></p><p>其还有更多状态和自定义状态，这些状态样式和主题有关，推荐主题：<a href="https://github.com/Akifyss/obsidian-border">Border</a>。（不过，我自己用的 Typora-Vue 主题，从 Typora 一直用过来的）</p><p>更多状态样式：</p><p><img alt="Checkboxes" title="Checkboxes" data-mirages-cdn-type="-1" data-src="https://webpcdn.wyhaxx.com/Checkboxes.png" data-shadow="true"></p><span id="menu_index_8" class="index-menu-anchor" data-title="Weread"></span><h3>Weread</h3><p>从去年开始使用 <code>微信读书</code>，一用起来就把我迷上了，真的超级好用，推荐使用。还有去年写的 <a href="https://www.pslanys.com/archives/2024-yearly-review.html">年度读书总结</a>，感兴趣的可以看看呢。</p><p>最近看的一本书（<em>想起来最近好像没怎么写书籍引读贴呢，这篇写完就写</em>）：</p><p><img alt="think-show" title="think-show" data-mirages-cdn-type="-1" data-src="https://webpcdn.wyhaxx.com/think-show.png" data-shadow="true"></p><p>以前一直看纸质书，当要写想法的时候，真的一点都不方便，而且也不方便随时查看（有时候在路上想到一个触动点，需要看想法记录）。但微信读书就完美解决了我的这个烦恼，不仅写想法简单，还能同步到 Obsidian 方便我写东西时搜索和查看，真是一举两得。</p><p>一些被同步了想法的书籍：</p><p><img alt="Weread-sync-book" title="Weread-sync-book" data-mirages-cdn-type="-1" data-src="https://webpcdn.wyhaxx.com/Weread-sync-book.png" data-shadow="true"></p><span id="menu_index_9" class="index-menu-anchor" data-title="Copilot"></span><h3>Copilot</h3><p>一个 AI 插件，用来解决当前 deepseek 或 chatgpt 与 Obsidian 结合不够紧密的问题，有了这个插件我就不用再将文档来回倒腾的过程了。</p><p><img alt="copilot-show" title="copilot-show" data-mirages-cdn-type="-1" data-src="https://webpcdn.wyhaxx.com/copilot-show.png" data-shadow="true"></p><p>我很喜欢这种将聊天窗口放到我写东西旁边的设计，<code>因为不想要它过多的干扰我写东西的过程，而是希望其更多作为一个旁观者，在我需要的时候，能给予我想要的帮助。</code></p><p>现在有些笔记提供的 AI 太过于烦杂了。就像 Randy's Blog 在 <a href="https://lutaonan.com/blog/ai-writing/">AI 和写作</a> 里面说的那样：</p><p><img alt="copilot-writting" title="copilot-writting" data-mirages-cdn-type="-1" data-src="https://webpcdn.wyhaxx.com/copilot-writting.png" data-shadow="true"></p><span id="menu_index_10" class="index-menu-anchor" data-title="Image auto upload"></span><h3>Image auto upload</h3><p>如果你有图床或者写博客的需求，可以看看这篇文章：<a href="https://www.pseudoyu.com/zh/2024/06/30/free_image_hosting_system_using_r2_webp_cloud_and_picgo/">从零开始搭建你的免费图床系统（Cloudflare R2 + WebP Cloud + PicGo） · Pseudoyu</a>，再加上 <a href="https://github.com/renmu123/obsidian-image-auto-upload-plugin">Image Auto Upload Plugin</a><br>插件，你就能一键上传文档中所有的图片，完全不需要其他的手动上传图片，非常方便。</p><p>使用概览：</p><p><img alt="image-auto-upload-use-show" title="image-auto-upload-use-show" data-mirages-cdn-type="-1" data-src="https://webpcdn.wyhaxx.com/image-auto-upload-use-show.png" data-shadow="true"></p><span id="menu_index_11" class="index-menu-anchor" data-title="所有插件"></span><h3>所有插件</h3><p>来一个 <strong>插件总览：</strong></p><p><img alt="plugin-overview" title="plugin-overview" data-mirages-cdn-type="-1" data-src="https://webpcdn.wyhaxx.com/plugin-overview.png" data-shadow="true"></p><p>最后来一个我的笔记系统的展示：</p><p><img alt="obsidian-knowledge-show" title="obsidian-knowledge-show" data-mirages-cdn-type="-1" data-src="https://webpcdn.wyhaxx.com/obsidian-knowledge-show.png" data-shadow="true"></p><span id="menu_index_12" class="index-menu-anchor" data-title="参考"></span><h2>参考</h2><ol><li><a href="https://catcoding.me/p/obsidian-for-programmer/">我的 Obsidian 使用经验 | CatCoding</a></li><li><a href="https://stephango.com/file-over-app">File over app — Steph Ango</a></li><li><a href="https://xlrocket.blog/2024/11/13/%e6%96%87%e4%bb%b6%e4%bc%98%e5%85%88%ef%bc%8c%e6%9c%ac%e5%9c%b0%e4%bc%98%e5%85%88%ef%bc%8c%e6%88%91%e5%af%b9-file-over-app-%e7%90%86%e5%bf%b5%e7%9a%84%e7%90%86%e8%a7%a3/">文件优先，本地优先，我对 File over App 理念的理解</a></li><li><a href="https://x.com/FarzaTV/status/1767955761551069192">My goal -- don't drown in nonsense.</a></li><li><a href="https://anotherdayu.com/2025/6670/">高亮、总结、剪藏-本地优先的浏览器插件 - Another Dayu</a></li><li><a href="https://lutaonan.com/blog/ai-writing/">AI 和写作 | Randy's Blog</a></li></ol>                    </div>
+        <div class="tags">
+			<div itemprop="keywords" class="keywords 71ZPNv aut"></div>
+                        <div class="modify-time">Last Modified: April 1, 2025</div>
+                    </div>
+            </article>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8009316080181658"
+     crossorigin="anonymous"></script>
+<!-- 横向1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8009316080181658"
+     data-ad-slot="2114097520"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+</div>
+<div id="body-bottom">
+<div class="container">
+            <div class="post-near">
+            <nav>
+                <span class="prev"><a href="https://www.pslanys.com/archives/read-a-book.html" title="读一本书的过程"><span class="post-near-span"><span class="prev-t no-user-select color-main">Next: </span><br><span>读一本书的过程</span></span></a></span>
+                <span class="next"><a href="https://www.pslanys.com/archives/my-BC.html" title="属于自己的&quot;公元前&quot;——凝固在时光褶皱里的记忆"><span class="post-near-span"><span class="prev-t no-user-select color-main">Prev: </span><br><span>属于自己的&quot;公元前&quot;——凝固在时光褶皱里的记忆</span></span></a></span>
+            </nav>
+        </div>
+            
+    <div id="comments">
+                        <div id="respond-post-513" class="respond">
+            <div class="cancel-comment-reply">
+                <a id="cancel-comment-reply-link" href="https://www.pslanys.com/archives/obsidian-setting.html#respond-post-513" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>            </div>
+            <span id="response" class="widget-title text-left">Leave a Comment</span>
+            <form method="post" action="https://www.pslanys.com/archives/obsidian-setting.html/comment" id="comment-form">
+                                <p>
+                    <textarea rows="5" name="text" id="textarea" placeholder="Input your comment here..." style="resize:none;" required></textarea>
+                </p>
+                                    <input class="comment-input" type="text" name="author" id="author" placeholder="Name *" value="" required />
+                    <input class="comment-input" type="email" name="mail" id="mail" placeholder="Email *" value=""  required />
+                    <input class="comment-input" type="url" name="url" id="url" placeholder="Website" value=""  />
+                                <p style="margin-top: 10px">
+                    <span class="OwO"></span>
+                                        <span class="comment-mail-me">
+                        <input name="banmail" type="checkbox" value="stop" id="comment-ban-mail">
+                        <label for="comment-ban-mail">
+                        <strong>DO NOT</strong> Send me reply emails</label>
+                    </span>
+                                    </p>
+                <p><input type="submit" value="Submit" data-now="刚刚" data-init="Submit" data-posting="提交评论中..." data-posted="评论提交成功" data-empty-comment="必须填写评论内容" class="button" id="submit"></p>
+            </form>
+        </div>
+                            <div class="comment-separator">
+                <div class="comment-tab-current">
+                    <span class="comment-num">8 Comments</span>
+                </div>
+            </div>
+            <ol class="comment-list">        <li itemscope itemtype="http://schema.org/UserComments" id="pingback-244" class="comment-body comment-parent comment-odd">
+            <div class="comment-author" itemprop="creator" itemscope itemtype="http://schema.org/Person">
+                <span
+                        itemprop="image">
+                                    </span>
+                <cite class="fn color-main" itemprop="name"><a href="https://www.pslanys.com/archives/obsidian-copilot.html" rel="external nofollow">一站式搞定知识库：Obsidian + Copilot - 未央花博客</a></cite>
+                    <span class="comment-ua">
+    &nbsp;&nbsp;<i class="ua-icon icon-linux"></i>&nbsp;&nbsp;Linux&nbsp;/&nbsp;    <i class="ua-icon icon-chrome"></i>&nbsp;&nbsp;Google Chrome</span>
+            </div>
+            <div class="comment-reply">
+                <a href="https://www.pslanys.com/archives/obsidian-setting.html?replyTo=244#respond-post-513" rel="nofollow" onclick="return TypechoComment.reply('pingback-244', 244);">Reply</a>            </div>
+            <div class="comment-meta">
+                <a href="https://www.pslanys.com/archives/obsidian-setting.html#pingback-244">
+                    <time itemprop="commentTime"
+                          datetime="2026-01-26T08:18:17+08:00">8 Months Ago</time>
+                                            <span class="comment-location"></span>
+                                    </a>
+                            </div>
+            <div class="comment-content" itemprop="commentText">
+                                <p>[...]引日常看到有意思的博文和帖子，都会使用 Obsidian Web clipper 进行 剪切收藏，然后加上一些 Highlights 、对应的评论、还有 tag，方便以后查询和使用。对于当时知识库中已经有归类的，就会收集到对应位置，通过 P.A. R. A 方法，建立自己的 知识库，以便未来更方便的使用。一个未来可能用上的装修知识的搜集总之，利用这些工具和 P.A.R.A 理论，让我能够更无痛的收[...]</p>            </div>
+                    </li>
+                <li itemscope itemtype="http://schema.org/UserComments" id="comment-231" class="comment-body comment-parent comment-even">
+            <div class="comment-author" itemprop="creator" itemscope itemtype="http://schema.org/Person">
+                <span
+                        itemprop="image">
+                    <img class="avatar" src="https://www.pslanys.com/usr/themes/Mirages/images/spinner.svg" data-src="https://www.pslanys.com/mirages-api/comment-avatar/231_100.json" data-type="json" alt="衿心" width="100" height="100" />                </span>
+                <cite class="fn color-main" itemprop="name">衿心</cite>
+                    <span class="comment-ua">
+    &nbsp;&nbsp;<i class="ua-icon icon-win2"></i>&nbsp;&nbsp;Windows 10&nbsp;/&nbsp;    <i class="ua-icon icon-chrome""></i>&nbsp;&nbsp;Google Chrome</span>
+            </div>
+            <div class="comment-reply">
+                <a href="https://www.pslanys.com/archives/obsidian-setting.html?replyTo=231#respond-post-513" rel="nofollow" onclick="return TypechoComment.reply('comment-231', 231);">Reply</a>            </div>
+            <div class="comment-meta">
+                <a href="https://www.pslanys.com/archives/obsidian-setting.html#comment-231">
+                    <time itemprop="commentTime"
+                          datetime="2025-11-22T01:43:30+08:00">10 Months Ago</time>
+                                            <span class="comment-location"></span>
+                                    </a>
+                            </div>
+            <div class="comment-content" itemprop="commentText">
+                                <p>主播，第一个的插件没找到，在哪找啊？</p>            </div>
+                            <div class="comment-children" itemprop="discusses">
+                    <ol class="comment-list">        <li itemscope itemtype="http://schema.org/UserComments" id="comment-232" class="comment-body comment-child comment-level-odd comment-odd comment-by-author">
+            <div class="comment-author" itemprop="creator" itemscope itemtype="http://schema.org/Person">
+                <span
+                        itemprop="image">
+                    <img class="avatar" src="https://www.pslanys.com/usr/themes/Mirages/images/spinner.svg" data-src="https://www.pslanys.com/mirages-api/comment-avatar/232_100.json" data-type="json" alt="未央花" width="100" height="100" />                </span>
+                <cite class="fn color-main" itemprop="name"><a href="https://www.pslanys.com/" rel="external nofollow">未央花</a></cite>
+                    <span class="comment-ua">
+    &nbsp;&nbsp;<i class="ua-icon icon-win2"></i>&nbsp;&nbsp;Windows 10&nbsp;/&nbsp;    <i class="ua-icon icon-chrome""></i>&nbsp;&nbsp;Google Chrome</span>
+            </div>
+            <div class="comment-reply">
+                <a href="https://www.pslanys.com/archives/obsidian-setting.html?replyTo=232#respond-post-513" rel="nofollow" onclick="return TypechoComment.reply('comment-232', 232);">Reply</a>            </div>
+            <div class="comment-meta">
+                <a href="https://www.pslanys.com/archives/obsidian-setting.html#comment-232">
+                    <time itemprop="commentTime"
+                          datetime="2025-11-22T03:18:38+08:00">10 Months Ago</time>
+                                            <span class="comment-location"></span>
+                                    </a>
+                            </div>
+            <div class="comment-content" itemprop="commentText">
+                                <p><span class="comment-reply-author">@衿心</span>直接搜索 auto 就能看到啦</p>            </div>
+                    </li>
+                <li itemscope itemtype="http://schema.org/UserComments" id="comment-233" class="comment-body comment-child comment-level-odd comment-even">
+            <div class="comment-author" itemprop="creator" itemscope itemtype="http://schema.org/Person">
+                <span
+                        itemprop="image">
+                    <img class="avatar" src="https://www.pslanys.com/usr/themes/Mirages/images/spinner.svg" data-src="https://www.pslanys.com/mirages-api/comment-avatar/233_100.json" data-type="json" alt="衿心" width="100" height="100" />                </span>
+                <cite class="fn color-main" itemprop="name">衿心</cite>
+                    <span class="comment-ua">
+    &nbsp;&nbsp;<i class="ua-icon icon-win2"></i>&nbsp;&nbsp;Windows 10&nbsp;/&nbsp;    <i class="ua-icon icon-chrome""></i>&nbsp;&nbsp;Google Chrome</span>
+            </div>
+            <div class="comment-reply">
+                <a href="https://www.pslanys.com/archives/obsidian-setting.html?replyTo=233#respond-post-513" rel="nofollow" onclick="return TypechoComment.reply('comment-233', 233);">Reply</a>            </div>
+            <div class="comment-meta">
+                <a href="https://www.pslanys.com/archives/obsidian-setting.html#comment-233">
+                    <time itemprop="commentTime"
+                          datetime="2025-11-22T07:41:03+08:00">10 Months Ago</time>
+                                            <span class="comment-location"></span>
+                                    </a>
+                            </div>
+            <div class="comment-content" itemprop="commentText">
+                                <p><span class="comment-reply-author">@未央花</span>怎么使用啊？他可以做到我写了哪些文档，然后自动的加入在里面吗？还是说就是单纯的启动后创建一个文档</p>            </div>
+                    </li>
+        </ol>                </div>
+                    </li>
+                <li itemscope itemtype="http://schema.org/UserComments" id="pingback-200" class="comment-body comment-parent comment-odd">
+            <div class="comment-author" itemprop="creator" itemscope itemtype="http://schema.org/Person">
+                <span
+                        itemprop="image">
+                                    </span>
+                <cite class="fn color-main" itemprop="name"><a href="https://www.pslanys.com/archives/read-a-book.html" rel="external nofollow">读一本书的过程 - 未央花博客</a></cite>
+                    <span class="comment-ua">
+    &nbsp;&nbsp;<i class="ua-icon icon-linux"></i>&nbsp;&nbsp;Linux&nbsp;/&nbsp;    <i class="ua-icon icon-chrome"></i>&nbsp;&nbsp;Google Chrome</span>
+            </div>
+            <div class="comment-reply">
+                <a href="https://www.pslanys.com/archives/obsidian-setting.html?replyTo=200#respond-post-513" rel="nofollow" onclick="return TypechoComment.reply('pingback-200', 200);">Reply</a>            </div>
+            <div class="comment-meta">
+                <a href="https://www.pslanys.com/archives/obsidian-setting.html#pingback-200">
+                    <time itemprop="commentTime"
+                          datetime="2025-04-14T15:27:55+08:00">April 14, 2025</time>
+                                            <span class="comment-location"></span>
+                                    </a>
+                            </div>
+            <div class="comment-content" itemprop="commentText">
+                                <p>[...]引最近分享欲旺盛，所以就多多分享啦。接上一篇最后的预告：【书籍引读】如何创业呢？创业可以从社区开始本篇的参考内容主要来自《如何阅读一本书》，再加上我自己的一些实践想法，希望可以给你带来帮助。看书来源在 b 站 看一些 up 主的推荐俗女序诗：她的分享很有趣，做了很多期的 阅读分享，推荐大家去看看，我在 L 站分享过 《东京八平米》 就是从她的阅读分享中看到的，推荐一期分享：阅读分享04｜写作者剥开[...]</p>            </div>
+                    </li>
+                <li itemscope itemtype="http://schema.org/UserComments" id="comment-197" class="comment-body comment-parent comment-even">
+            <div class="comment-author" itemprop="creator" itemscope itemtype="http://schema.org/Person">
+                <span
+                        itemprop="image">
+                    <img class="avatar" src="https://www.pslanys.com/usr/themes/Mirages/images/spinner.svg" data-src="https://secure.gravatar.com/avatar/826f52e5853ce0ee454f9c9843be2c04?s=100&amp;r=G" alt="一叶竹" width="100" height="100" />                </span>
+                <cite class="fn color-main" itemprop="name"><a href="https://iyyz.org" rel="external nofollow">一叶竹</a></cite>
+                    <span class="comment-ua">
+    &nbsp;&nbsp;<i class="ua-icon icon-android"></i>&nbsp;&nbsp;Android&nbsp;/&nbsp;    <i class="ua-icon icon-chrome""></i>&nbsp;&nbsp;Google Chrome</span>
+            </div>
+            <div class="comment-reply">
+                <a href="https://www.pslanys.com/archives/obsidian-setting.html?replyTo=197#respond-post-513" rel="nofollow" onclick="return TypechoComment.reply('comment-197', 197);">Reply</a>            </div>
+            <div class="comment-meta">
+                <a href="https://www.pslanys.com/archives/obsidian-setting.html#comment-197">
+                    <time itemprop="commentTime"
+                          datetime="2025-04-01T08:20:46+08:00">April 1, 2025</time>
+                                            <span class="comment-location"></span>
+                                    </a>
+                            </div>
+            <div class="comment-content" itemprop="commentText">
+                                <p>最近也是尝试了很多笔记软件，最后在Logseq和Obsidan犹豫了好久还是选择了后者，主要还是Logseq的大纲式目录 用着有点不习惯。</p>            </div>
+                            <div class="comment-children" itemprop="discusses">
+                    <ol class="comment-list">        <li itemscope itemtype="http://schema.org/UserComments" id="comment-198" class="comment-body comment-child comment-level-odd comment-odd comment-by-author">
+            <div class="comment-author" itemprop="creator" itemscope itemtype="http://schema.org/Person">
+                <span
+                        itemprop="image">
+                    <img class="avatar" src="https://www.pslanys.com/usr/themes/Mirages/images/spinner.svg" data-src="https://www.pslanys.com/mirages-api/comment-avatar/198_100.json" data-type="json" alt="未央花" width="100" height="100" />                </span>
+                <cite class="fn color-main" itemprop="name"><a href="https://www.pslanys.com/" rel="external nofollow">未央花</a></cite>
+                    <span class="comment-ua">
+    &nbsp;&nbsp;<i class="ua-icon icon-mac"></i>&nbsp;&nbsp;MacOS&nbsp;/&nbsp;    <i class="ua-icon icon-chrome""></i>&nbsp;&nbsp;Google Chrome</span>
+            </div>
+            <div class="comment-reply">
+                <a href="https://www.pslanys.com/archives/obsidian-setting.html?replyTo=198#respond-post-513" rel="nofollow" onclick="return TypechoComment.reply('comment-198', 198);">Reply</a>            </div>
+            <div class="comment-meta">
+                <a href="https://www.pslanys.com/archives/obsidian-setting.html#comment-198">
+                    <time itemprop="commentTime"
+                          datetime="2025-04-01T16:37:16+08:00">April 1, 2025</time>
+                                            <span class="comment-location"></span>
+                                    </a>
+                            </div>
+            <div class="comment-content" itemprop="commentText">
+                                <p><span class="comment-reply-author">@一叶竹</span>对的，可以都试试，哪个用的爽，就用哪个，不要 all in one 一个工具。</p><p>我的笔记软件搭配：电脑端用 obsidian，手机用 flomo 来随时快速记录想法，然后经常整理到 obsidian 中</p>            </div>
+                    </li>
+                <li itemscope itemtype="http://schema.org/UserComments" id="comment-199" class="comment-body comment-child comment-level-odd comment-even">
+            <div class="comment-author" itemprop="creator" itemscope itemtype="http://schema.org/Person">
+                <span
+                        itemprop="image">
+                    <img class="avatar" src="https://www.pslanys.com/usr/themes/Mirages/images/spinner.svg" data-src="https://secure.gravatar.com/avatar/cc38267b10cc25dfc62209f8ca34589e?s=100&amp;r=G" alt="1900" width="100" height="100" />                </span>
+                <cite class="fn color-main" itemprop="name"><a href="https://1900.live" rel="external nofollow">1900</a></cite>
+                    <span class="comment-ua">
+    &nbsp;&nbsp;<i class="ua-icon icon-win2"></i>&nbsp;&nbsp;Windows 10&nbsp;/&nbsp;    <i class="ua-icon icon-chrome""></i>&nbsp;&nbsp;Google Chrome</span>
+            </div>
+            <div class="comment-reply">
+                <a href="https://www.pslanys.com/archives/obsidian-setting.html?replyTo=199#respond-post-513" rel="nofollow" onclick="return TypechoComment.reply('comment-199', 199);">Reply</a>            </div>
+            <div class="comment-meta">
+                <a href="https://www.pslanys.com/archives/obsidian-setting.html#comment-199">
+                    <time itemprop="commentTime"
+                          datetime="2025-04-14T09:24:55+08:00">April 14, 2025</time>
+                                            <span class="comment-location"></span>
+                                    </a>
+                            </div>
+            <div class="comment-content" itemprop="commentText">
+                                <p><span class="comment-reply-author">@一叶竹</span>我logseq用了一年多转的obsidian，理由也是大纲笔记格式、插件对源笔记都有很严重的修改，脱离平台后基本上就没法再展现了。</p>            </div>
+                    </li>
+        </ol>                </div>
+                    </li>
+        </ol>                        </div>
+
+
+
+    </div>
+</div>
+</div><!-- end #body -->
+</div><!-- end #wrap -->
+<footer id="footer" role="contentinfo">
+    <div class="container"  data-index="495">
+        <p>Copyright &copy; 2026 <a href="https://www.pslanys.com/">未央花博客</a> • Powered by <a href="http://typecho.org" target="_blank">Typecho</a> • Theme <a href="https://get233.com/archives/mirages-intro.html" target="_blank">Mirages</a></p>    </div>
+</footer>
+
+
+    <script src="https://www.pslanys.com/usr/themes/Mirages/static/jquery/2.2.4/jquery.min.js" type="text/javascript"></script>
+<script src="https://www.pslanys.com/usr/themes/Mirages/js/7.10.6/mirages.main.min.js" type="text/javascript"></script>
+<script>window.SNOW_CONFIG = {"particleCount":5000,"snowSpeed":1,"windForce":0.02,"sizeMin":3,"sizeMax":12,"zIndex":9999,"useFallback":"auto","workerUrl":"https:\/\/www.pslanys.com\/usr\/plugins\/WebGPUSnow\/assets\/snow.worker.js"};</script>
+<link rel="stylesheet" href="https://www.pslanys.com/usr/plugins/WebGPUSnow/assets/snow.css">
+<script type="module" src="https://www.pslanys.com/usr/plugins/WebGPUSnow/assets/snow.js"></script>
+<script type="text/javascript">Mirages.highlightCodeBlock();</script>
+
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+        pangu.spacingElementByClassName('post-content');
+        pangu.spacingElementByClassName('comment-content');
+        pangu.spacingElementById('toc-content');
+    });
+</script>
+<script type="text/javascript">pangu.spacingElementByClassName('post-content');</script>
+<script type="text/javascript">Waves.init();</script>
+
+<script src="https://www.pslanys.com/usr/themes/Mirages/usr/js/qicaidazidonghua.js?v=7.10.6" type="text/javascript"></script>
+<script src="https://www.pslanys.com/usr/themes/Mirages/usr/js/custom.js?v=7.10.6" type="text/javascript"></script>
+<script type="text/javascript">
+    (function ($) {
+                if (typeof registCommentEvent === 'function') {
+            registCommentEvent();
+        }
+                        Mirages.setupLazyLoadImage();
+                        Mirages.setupCDNImageOptimize();
+                Mirages.setupPage();
+            })(jQuery);
+    </script>
+<script src="https://www.pslanys.com/usr/uploads/2024/07/289999971.js" type="module"></script>
+</body>
+</html>

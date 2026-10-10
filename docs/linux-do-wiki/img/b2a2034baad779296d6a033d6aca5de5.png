@@ -1,0 +1,108 @@
+<html dir="ltr">
+<head>
+    <title>Just a moment...</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHZlcnNpb249IjEuMiIgYmFzZVByb2ZpbGU9InRpbnktcHMiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+TElOVVggRE8gTG9nbzwvdGl0bGU+PGNsaXBQYXRoIGlkPSJhIj48Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NyIvPjwvY2xpcFBhdGg+PGNpcmNsZSBmaWxsPSIjZjBmMGYwIiBjeD0iNjAiIGN5PSI2MCIgcj0iNTAiLz48cmVjdCBmaWxsPSIjMWMxYzFlIiBjbGlwLXBhdGg9InVybCgjYSkiIHg9IjEwIiB5PSIxMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIzMCIvPjxyZWN0IGZpbGw9IiNmMGYwZjAiIGNsaXAtcGF0aD0idXJsKCNhKSIgeD0iMTAiIHk9IjQwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjQwIi8+PHJlY3QgZmlsbD0iI2ZmYjAwMyIgY2xpcC1wYXRoPSJ1cmwoI2EpIiB4PSIxMCIgeT0iODAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMzAiLz48L3N2Zz4="/>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            width: 100%;
+        }
+
+        @keyframes enlarge-appear {
+            0% {
+                opacity: 0;
+                transform: scale(75%);
+            }
+            to {
+                opacity: 1;
+                transform: scale(100%);
+            }
+        }
+
+        .logo {
+            color: #8e8ea0;
+        }
+
+        .scale-appear {
+            border-radius: 18px;
+        }
+
+        .data:empty {
+			display: none;
+        }
+
+        .data {
+            border-radius: 5px;
+            color: #8e8ea0;
+            max-width: 420px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .data ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .blocked-icon {
+            color: #ef4444;
+        }
+
+        .message {
+            align-items: center;
+            display: flex;
+            font-size: 1.5rem;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .explanation {
+            font-size: .9rem;
+            line-height: 1.5;
+            max-width: 420px;
+            opacity: 50%;
+            text-align: center;
+            width: 100%;
+        }
+
+        .explanation a {
+            color: #000;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #2d303e;
+                color: #eee;
+            }
+
+            .logo {
+                color: #acacbe;
+            }
+
+            .explanation a {
+                color: #fff;
+            }
+        }
+    </style>
+<meta http-equiv="refresh" content="360"></head>
+<body>
+<div class="container">
+    <div class="logo">
+        <img class="scale-appear"
+             src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHZlcnNpb249IjEuMiIgYmFzZVByb2ZpbGU9InRpbnktcHMiIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+TElOVVggRE8gTG9nbzwvdGl0bGU+PGNsaXBQYXRoIGlkPSJhIj48Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSI0NyIvPjwvY2xpcFBhdGg+PGNpcmNsZSBmaWxsPSIjZjBmMGYwIiBjeD0iNjAiIGN5PSI2MCIgcj0iNTAiLz48cmVjdCBmaWxsPSIjMWMxYzFlIiBjbGlwLXBhdGg9InVybCgjYSkiIHg9IjEwIiB5PSIxMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIzMCIvPjxyZWN0IGZpbGw9IiNmMGYwZjAiIGNsaXAtcGF0aD0idXJsKCNhKSIgeD0iMTAiIHk9IjQwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjQwIi8+PHJlY3QgZmlsbD0iI2ZmYjAwMyIgY2xpcC1wYXRoPSJ1cmwoI2EpIiB4PSIxMCIgeT0iODAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMzAiLz48L3N2Zz4="/>
+    </div>
+	<div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script>(function(){window._cf_chl_opt = {cFPWv: 'g',cH: 'mhXVWDxTFNXL9DXQyo7SzQ5CnY.sipn5zRjPYPOyxsQ-1791590923-1.2.1.1-GiUtBA.Dx.rngxge8LuQNTgiq5ikUm1G9ijrmauc_oyMWJAPIKPAQ2H3TkINxNRF',cITimeS: '1791590923',cRay: 'a48164671ae7dd67',cTplB: '0',cTplC:1,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:"/images/emoji/twemoji/iphone.png?v=12\u0026__cf_chl_tk=21fesifDvoEtXf0RMCa54.GTa_xx0dNcouImS2WFGsM-1791590923-1.0.1.1-NryugG4WuZsqOrhqEfJ_kL704WrZb_kYYUY2k27bUgE",cvId: '3',cZone: 'linux.do',fa:"/images/emoji/twemoji/iphone.png?v=12\u0026__cf_chl_f_tk=21fesifDvoEtXf0RMCa54.GTa_xx0dNcouImS2WFGsM-1791590923-1.0.1.1-NryugG4WuZsqOrhqEfJ_kL704WrZb_kYYUY2k27bUgE",md: '6G9zxx_l8tiaGzaCY9VO6EjreweEKWrGRAjuONiY4MU-1791590923-1.2.1.1-r1N2vvwciZ1AxsVlv1S9c5JENpVvdrpu3bCQMaBJJjthbWWOBKaNGSvo9duJuYWgc14zY8eFUdbvii5FwdwZWI_5hOWvYZ6l2wCs_EDNbmmcsl1gJ4SHtTbjil8k6H94kH9gReAEKhyQk9wRHZdnGbdJ5My6BXCi3l_3uTAeg6.ngcgz23hMgSokzNyGounEmsjvr.Xjs6P1u7L28SSgfixuB_EYF6871Huii_VemS5jp0sPBc2E4JkrbW1pbvlMbIw.JcEOL5w.OFK_K1VCtTGokjbVy0lBuVQKcfAzyJo8xGoxLTRmzQQUzzb5f2DIdMjOTLxjIrBXiqiCfkT0sOdW5xWG70cQNWC2NxA5PyoE5Wi92L0ftCnOImEzw270FpEyLzG2R3PNvCEgwpV9japkVhyKtOLr3s0_0qOgdHlqalNsEIWNX6QB4Wekqp5k7TNiMmRSqre6CFOSCSbv9bkL0NYJVEtV2nt.Lx_zXbzVdh8kF_qD9Zgk2WFCh2_Hfknxz5JPz06arGcjzjsffn9w1Lgt4At8jyBdX3QfXWfQzMSVx0vvrZQkijSG815DGb7cUw8ZKMbIqnGRBteEDrXZATqH1eFgTCNIQUPWGnc6_.CmxBwnwECt9MrP0lMO378utYK88JHd2Lw0c6UkVqnWABJumtANl4e8kGAcDoJNKPzSMillf6H6EfJl7cbFi5d6fZi5AkYJDbofoOowx.RLg9lxmpFmmDmoGV0EZtZ2ufMSFLlQ9lw0mJJsB4E2q9LNws.s2mca_C3We0m74U_sCy66kdWFlvrhkHSLoBomZqQf1POwvtgtXd_Sa8zM98kttbI3MnQcOubzSJPmr_zMqT5sFGQBTRV5lpXpdckjrXv8NBU3XCDTp.f50J3PYGph_asaB.mwYdSEUJDoYOfD34VkW.BE02Kd9gpSP87WjfwdULFpseUPrhJlE88zL53bA_Bcmzsbz52qncpGwXz8n7jCMWvc_SxTu0tY.nTPVEkO94Ylxkx28a3CTdo0TVVlmzOqU09m5n7sGWqSlUxivmxUJ89TpESe1EoJTbgw9q7bsNx5JOVZHuxxgc5eqctVt0_fXCd.GUHWTVhvdA',mdrd: 'BAHOcxBnzCH8SmfHJTqiqrNm5non21sVVoEzNoRmrZI-1791590923-1.2.1.1-hmG3Fspr00J1bn3UDmbXWXuGETns4Mi.3SQpaaj7i4uppuMRYcvZej0maNtUCaX.le8zAo5dG6cKmepoNG_Vj2WZgOlv01cyyVjw7H5dny5FS2rXjSMNEC6w6AsXUX_7Mmas6XFPcdV2IuBU_Aipz137pfogz3WAh.OgHkDpysrhFWweQMnNxpFE4Onx0A9D3JaPeprMPYdoZvVtSwJp_RcIg4aVH9yspsth10OXMhNRM0uW5r_1bZcyAQFdO9Qv',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=a48164671ae7dd67';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"/images/emoji/twemoji/iphone.png?v=12\u0026__cf_chl_rt_tk=21fesifDvoEtXf0RMCa54.GTa_xx0dNcouImS2WFGsM-1791590923-1.0.1.1-NryugG4WuZsqOrhqEfJ_kL704WrZb_kYYUY2k27bUgE"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script>
+</div>
+</body>
+</html>
+

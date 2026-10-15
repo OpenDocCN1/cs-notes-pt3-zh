@@ -1,0 +1,1 @@
+# Bounded Minimalisation Operator

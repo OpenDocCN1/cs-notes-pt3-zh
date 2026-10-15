@@ -1,0 +1,11 @@
+# Topological sort algorithm
+
++   - Run depth-first search.
++   - Return vertices in reverse postorder.
+
+![](bbox=[0.15, 0.35, 0.68, 0.88])
+
+postorder
+4 1 2
+
+visit 0

@@ -1,0 +1,182 @@
+
+
+# 函数调用
+
+- 调用带参数的函数时就需要为这些参数提供实参（实际参数）。
+  - 形式参数表 ↔ 实际参数表
+  - int gcd(int x1, int x2) ↔ x = gcd(379, 542);
+
+- Example:
+
+```
+int abs( int iobj );
+int min( int p1, int p2 );
+int gcd( int v1, int v2 );
+int main(){
+    int i, j;
+    ...
+    cout << "\nmin: " << min(i,j) << endl;
+    i = abs(i);
+    j = abs(j);
+    cout << "gcd: " << gcd(i,j) << endl;
+}
+```
+
+# 函数：按值调用
+
+```
+// call-by-value (send the function a copy of the argument's value)
+int f(int a) { a = a+1; return a; }
+```
+
+```
+int main()
+{
+    int xx = 0;
+    cout << f(xx) << endl; // writes 1
+    cout << xx << endl; // writes 0; f() doesn't change xx
+    int yy = 7;
+    cout << f(yy) << endl; // writes 8; f() doesn't change yy
+    cout << yy << endl; // writes 7
+}
+```
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_213_0.png)
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_213_1.png)
+
+// call-by-reference (pass a reference to the argument)
+int f(int& a) { a = a+1; return a; }
+
+int main()
+{
+    int xx = 0;
+    cout << f(xx) << endl; // writes 1
+    // f() changed the value of xx
+    cout << xx << endl;    // writes 1
+    int yy = 7;
+    cout << f(yy) << endl; // writes 8
+    // f() changes the value of yy
+    cout << yy << endl;    // writes 8
+}
+
+a:
+1st call (refer to xx)
+xx: 0
+2nd call (refer to yy)
+yy: 7
+
+# 函数
+
+- 尽量避免(非常量)引用参数
+  - 在你忘记那些引元可以修改时，它们会导致难以琢磨的缺陷
+  - `int incr1(int a) { return a+1; }`
+  - `void incr2(int& a) { ++a; }`
+  - `int x = 7;`
+  - `x = incr1(x); // pretty obvious`
+  - `incr2(x); // pretty obscure`
+
+- 那么为什么需要引用参数呢?
+  - 有时，它们很有用
+    - 例如，用于修改多个值
+    - 用于操作容器，例如vector
+  - 常量引用参数显得很有用
+
+# 按值/常量引用/引用调用
+
+```
+```cpp
+void f(int a, int& r, const int& cr) { ++a; ++r; ++cr; } // error: cr is const
+void g(int a, int& r, const int& cr) { ++a; ++r; int x = cr; ++x; } // ok
+
+int main()
+{
+    int x = 0;
+    int y = 0;
+    int z = 0;
+    g(x,y,z); // x==0; y==1; z==0
+    g(1,2,3); // error: reference argument r needs a variable to refer to
+    g(1,y,3); // ok: since cr is const we can pass “a temporary”
+}
+```
+```
+
+const references are very useful for passing large objects
+
+- 对非常小的对象使用按值传递
+- 对大对象使用按常量引用传递
+- 优先使用返回结果而不是通过引用参数来修改对象
+- 只有在必需时才使用按引用调用
+- 例如
+  class Image { /* objects are potentially huge */ };
+  void f(Image i); ... f(my_image); // oops: this could be s-l-o-o-o-w
+  void f(Image& i); ... f(my_image); // no copy, but f() can modify my_image
+  void f(const Image&); ... f(my_image); // f() won"t mess with my_image
+
+```
+class Image { /* objects are potentially huge */ };
+void f(Image i); ... f(my_image); // oops: this could be s-l-o-o-o-w
+void f(Image& i); ... f(my_image); // no copy, but f() can modify my_image
+void f(const Image&); ... f(my_image); // f() won"t mess with my_image
+```
+
+- 形式：
+  - 用在返回类型为void 的函数——return;（可以被省略）
+  - 用在返回类型不为void 的函数中： return expression;
+
+# Example：return
+
+```
+```cpp
+bool is_equal( const Matrix &m1, const Matrix &m2 ){
+    if ( m1.colSize() != m2.colSize() )
+        return;
+
+    if ( m1.rowSize() != m2.rowSize() )
+        return;
+
+    //遍历每个 matrix 直到不相等,或所有元素都检查完毕
+    for ( int row = 0; row < m1.rowSize(); ++row )
+        for ( int col = 0; col < m1.colSize(); ++col )
+            if ( m1[row][col] != m2[row][col] )
+                return false;
+
+    //return true is necessary!
+}
+```
+```
+
+# 返回
+
+- 返回多个值
+  - 方法1: 将某些函数参数声明为引用
+  - 方法2: 函数的返回类型是一个可以包含一组返回值的类（如指针）或某种容器类型
+
+# 返回
+
+- 缺省情况下，函数的返回值是按值传递的
+- 一个函数可以被声明为返回一个指针或一个引用
+
+- 如果：返回一个指向局部对象的引用
+
+```
+Matrix& add( Matrix &m1, Matrix &m2 ){
+    Matrix result;
+    if( m1.isZero() )
+        return m2;
+    if( m2.isZero() )
+        return m1;
+    ...// 将两个Matrix对象的内容相加
+    return result;
+}
+```
+
+- 函数可以通过两种机制进行通信
+  - 使用函数参数表和返回值
+  - 使用全局对象具有如下缺点
+    - 使用全局对象的函数依赖于全局对象的存在和类型，这使得在不同上下文环境中重用该函数更加困难
+    - 如果程序必须被修改，则全局依赖增加了引入错误的可能性，而且即使只对局部做修改也要求程序员必须理解整个程序
+    - 如果全局对象得到一个不正确的值，则必须查找整个程序以判断错误发生的位置
+    - 当一个函数使用全局对象时，递归更加难以正确完成，递归在程序调用自身时才发生
+    - 在线程存在的情况下，我们必须做特殊的编码，以便同步各个线程对于全局对象的读和写操作
+

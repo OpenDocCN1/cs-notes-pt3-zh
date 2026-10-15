@@ -1,0 +1,9 @@
+# Decidability and Undecidability
+
+A predicate $M(\mathbf{x})$ is decidable if its characteristic function $c_M(\mathbf{x})$ given by
+
+$c_M(\mathbf{x}) = \begin{cases} 1, & \text{if } M(\mathbf{x}) \text{ holds}, \\ 0, & \text{if } M(\mathbf{x}) \text{ does not hold}. \end{cases}$
+
+is computable.
+
+The predicate $M(\mathbf{x})$ is undecidable if it is not decidable.

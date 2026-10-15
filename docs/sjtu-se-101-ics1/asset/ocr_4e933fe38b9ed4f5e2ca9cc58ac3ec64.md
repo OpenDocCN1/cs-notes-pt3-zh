@@ -1,0 +1,29 @@
+# Source Code and Assembly Code
+
+```
+int accum = 0;
+int sum(int x, int y)
+{
+    int t = x+y;
+    accum += t;
+    return t;
+}
+```
+
+```
+_sum:
+    pushl %ebp
+    movl %esp,%ebp
+    movl 12(%ebp),%eax
+    addl 8(%ebp),%eax
+    addl %eax, accum
+    movl %ebp,%esp
+    popl %ebp
+    ret
+```
+
+*Obtain with command*
+
+gcc -O2 -S code.c
+
+*Assembly file code.s*

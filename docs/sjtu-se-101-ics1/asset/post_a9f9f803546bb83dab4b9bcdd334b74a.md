@@ -1,0 +1,214 @@
+
+## VERSION CONTROL
+
+- APT (Advanced Package Tools)
+  - example: *install vim*
+
+- >su  root user
+- >apt-get update  update apt list
+- >apt-cache search vim  search in cache
+- >apt-get install vim  install vim
+- >man vim  manual of vim
+
+```
+$ apt-cache search vim
+...
+vim - Vi IMproved - enhanced vi editor
+vim-doc - Vi IMproved - HTML documentation
+...
+```
+
+Pre-requisite
+
+Linux
+
+Tools
+
+C Language
+
+Lab
+
+Software Installer
+
+Compressing and Archiving
+
+Remote Login
+
+Text Editor
+
+## COMPRESSING
+
+- GZIP (Gnu ZIP)
+  - **gzip** file format
+  - Compress just single file
+  - Replace the original file with .gz file
+
+```
+e.g. >gzip test.txt
+>gunzip test.txt.gz
+```
+
+## ARCHIVING
+
+- TAR (Tape ARchive)
+  - tar file format
+  - Suffix:
+    - .tar
+      e.g. >tar -cf src.tar src/
+    - .tgz/.tar.gz
+      e.g. >tar -zxf src.tar.gz
+    - .tbz/.tar.bz2
+      e.g. >tar -jcf src.tbz src/
+
+## ARCHIVING
+
+- CPIO (CoPy files In and Out archives)
+  - cpio file format
+  - Suffix:
+    - .cpio
+      e.g. >cpio -id < test.cpio
+    - .cpgz / .cpio.gz
+      e.g. >find . -depth -print | cpio -o > x.cpio
+      >gzip -9 x.cpio
+
+- * TAR vs CPIO:
+  http://rightsock.com/~kjw/Ramblings/tar_v_cpio.html
+
+Pre-requisite
+Linux
+Tools
+C Language
+Lab
+
+Software Installer
+Compressing and Archiving
+Remote Login
+Text Editor
+
+## REMOTE LOGIN
+
+- Telnet (Teletype network)
+  - A network protocol over TCP for remote access
+  - Birth in 1969, and supported by various OSes
+    - Including Windows
+  - e.g. >telnet bbs.fudan.edu.cn
+    >telnet 10.132.143.112
+
+## REMOTE LOGIN
+
+- SSH (Secure SHell)
+  - A Replacement for Telnet
+  - Communication through a **secure** channel
+  - Tatu Ylönen, 1995
+  - OpenSSH (OpenBSD Secure Shell), 1999
+  - e.g. >ssh -l root 10.132.143.112
+  - SCP, A Replacement for FTP
+    - e.g. >scp b.txt root@10.132.143.112:~/test/
+    - >scp root@10.132.143.112:~/test/b.txt ./
+
+## REMOTE LOGIN
+
+- Remote Login from Windows
+  - Command-Line Interface
+    - PuTTY
+      - act as a client for SSH and Telnet
+      - Developed by Microsoft
+  - Graphical User Interface
+    - VNC (Virtual Network Client)
+      - Platform Independent
+      - Client-Sever Model
+
+Pre-requisite
+
+Linux
+
+Tools
+
+C Language
+
+Lab
+
+Software Installer
+
+Compressing and Archiving
+
+Remote Login
+
+Text Editor
+
+## TEXT EDITOR
+
+- vi (Visual Editor)
+  - /'vi: 'ai/, not /'siks/ 😊
+  - Extension: vim, vile, xvi, ...
+  - Simple and Convenient
+  - BOOK: "learning the vi editor"
+    http://www.china-pub.com/computers/common/info.asp?id=9208
+  - Cheat Sheet (Chinese version)
+    http://jserv.sayya.org/misc/vi-vim-cheat-sheet.png
+  - ">vimtutor" to get a simple tutorial
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1322_0.png)
+
+## TEXT EDITOR
+
+- Emacs (Editing MACroS)
+  - /'imæks/
+  - More powerful than IDE!
+    - Emacs List
+  - BOOK: "Learning GNU Emacs"
+    http://www.china-pub.com/computers/common/info.asp?id=13395
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1323_0.png)
+
+## Thanks
+
+## Tutorial-1 (Spring 2012)
+
+- Rooms
+  - 5103: 5100309118 ~ 5110379048
+    TA: LYC & HJ
+  - 5120: 5110379049 ~ 5110379104
+    TA: CL & MSD
+- Tasks
+  - Install Linux
+  - Shell http://ipads.se.sjtu.edu.cn/courses/ics/tutorials/shell.html
+
+## Tutorial Lesson
+
+## Tools
+
+Institute of Parallel and Distributed System (iPads)
+Shanghai Jiao Tong University
+
+Rong Chen
+
+rongchen@sjtu.edu.cn
+
+## OUTLINE
+
+- Pre-requisite
+- SVN
+- Toolchain
+
+Pre-requisite
+
+SVN
+
+Toolchain
+
+## VERSION CONTROL
+
+- APT (Advanced Package Tools)
+  - A management system for software packages
+  - Package resource list for APT:
+    - `/etc/apt/sources.list`
+
+```
+$ cat /etc/apt/sources.list
+...
+deb http://ftp.sjtu.edu.cn/debian/ squeeze main
+deb-src http://ftp.sjtu.edu.cn/debian/ squeeze main
+type URI of source dist comp
+URI type: http, ftp, cdrom, file, ssh ...
+```

@@ -1,0 +1,12 @@
+# Ackermann is not Primitive Recursive
+
+Now suppose ψ(x,y) was primitive recursive.
+By composition ψ(x,x) would be primitive recursive.
+
+According to the Lemma 6
+
+ψ(n,n) < ψ(J,n)
+
+for some J and all n, which would lead to the contradiction
+
+ψ(J,J) < ψ(J,J).

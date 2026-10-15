@@ -1,0 +1,9 @@
+# Roadmap
+
++   - What is Dynamic Programming
++   - How to write DP paradigm
++     - Knapsack problem
++     - Longest common subsequence
++     - Matrix chain multiplication
++   - When to apply Dynamic Programming
++   - Practice

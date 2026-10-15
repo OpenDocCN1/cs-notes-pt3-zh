@@ -1,0 +1,10 @@
+# Beginning of Cycle 3
+
+![](bbox=[0.12, 0.25, 0.88, 0.38])
+
+| Cycle | Instruction |
+|---|---|
+| Cycle 1: | 0x000: irmovl $0x100,%ebx  # %ebx←0x100 |
+| Cycle 2: | 0x006: irmovl $0x200,%edx  # %edx←0x200 |
+| Cycle 3: | 0x00c: addl %edx,%ebx  # %ebx←0x300 CC←000 |
+| Cycle 4: | 0x00e: je dest  # Not taken |

@@ -1,0 +1,10 @@
+# Church-Turing Thesis
+
+# **Church-Turing Thesis.**
+
+The functions definable in all computation models are the same. They are precisely the computable functions.
+
++   1. Church believed that all computable functions are λ-definable.
++   2. Kleene termed it Church Thesis.
++   3. Gödel accepted it only after he saw Turing’s equivalence proof.
++   4. Church-Turing Thesis is now universally accepted.

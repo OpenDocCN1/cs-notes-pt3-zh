@@ -1,0 +1,212 @@
+
+
+## Memory mountain 主程序
+
+```
+int main()
+{
+    int size;                  /* Working set size (in bytes) */
+    int stride;                /* Stride (in array elements) */
+    double Mhz;                /* Clock frequency */
+    init_data(data, MAXELEMS); /* Initialize each element in data to 1 */
+    Mhz = mhz(0);              /* Estimate the clock frequency */
+```
+
+```
+for (size = MAXBYTES; size >= MINBYTES; size >>= 1) {
+    for (stride = 1; stride <= MAXSTRIDE; stride++)
+        printf("%.1f\t", run(size, stride, Mhz));
+    printf("\n");
+}
+exit(0);
+}
+```
+
+## Memory mountain 测试函数
+
+```
+/* The test function */
+void test (int elems, int stride) {
+    int i ;
+    data result = 0.0 ;
+    volatile data sink;
+
+    for (i = 0; i < elems; i += stride)
+        result += data[i];
+    sink = result;        /* So compiler doesn't optimize away the loop */
+}
+```
+
+```
+/* Run test (elems, stride) and return read throughput (MB/s) */
+double run (int size, int stride, double Mhz)
+{
+    double cycles;
+    int elems = size / sizeof(int);
+
+    test (elems, stride);                 /* warm up the cache */
+    cycles = fcyc2(test, elems, stride, 0);   /* call test (elems,stride) */
+    return (size / stride) / (cycles / Mhz);   /* convert cycles to MB/s */
+}
+```
+
+## The Memory Mountain
+
+- Data
+  - Size
+    - MAXBYTES(64M) bytes or MAXELEMS(8M) doubles
+  - Partially accessed
+    - Working set: from 64MB to 2KB
+    - Stride: from 1 to 64
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1266_0.png)
+
+Read throughput (MB/s)
+
+Stride (x8 bytes)
+
+Size (bytes)
+
+s1 s3 s5 s7 s9 s11 s13 s15 s32 64M 16M 4M 1M 256k 64k 16k 4k
+
+L1
+
+L2
+
+L3
+
+Mem
+
+Slopes of spatial locality
+
+Ridges of temporal locality
+
+Core i7
+2.67 GHz
+32 KB L1 d-cache
+256 KB L2 cache
+8 MB L3 cache
+
+## Ridges of temporal locality
+
+- Slice through the memory mountain with stride=16
+  - illuminates read throughputs of different caches and memory
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1268_0.png)
+
+## A slope of spatial locality
+
+- Slice through memory mountain with size=4M
+  - shows cache block size.
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1270_0.png)
+
+## Tutorial Lesson
+
+## Linux & Tools
+
+Institute of Parallel and Distributed System (iPads)
+Shanghai Jiao Tong University
+
+Rong Chen
+
+rongchen@sjtu.edu.cn
+
+## BIRTH of TUTORIAL LESSON
+
+ICS introduces the Computer Systems, then WHO introduces ICS ?
+
+- A new environment: Linux
+- Many new tools: svn, ...
+
+ICS Book does not contain them
+
+## OUTLINE
+
+- Pre-requisite
+- Linux
+- Tools
+
+## Pre-requisite
+
+Linux
+
+Tools
+
+## TASKS
+
+## Labs (35%)
+
+- 1: Bits
+- 2: Bomb *
+- 3: Y86 Assembler
+- 4: Buffer Overflow *
+- 5: Y86 Compiler
+
+* Online Test
+
+## Exams (60%)
+
+- Middle
+- Final
+
+## Homework (5%)
+
+## HARD RULES
+
+Deadline: No Extension
+
+- Multiple submissions
+
+Plagiarism: No Tolerance
+
+- Forbid C&P and Typo
+  - from Network
+  - from Classmates
+- Punishment
+  - 0 point for ALL
+
+## Cheating will not be tolerated
+
+All homework, labs and exams are to be done individually.
+
+It is your responsibility to ensure that your passwords are well-guarded, directories protected, and printouts do not fall into other hands
+
+Pre-requisite
+
+Linux
+
+Tools
+
+Introduction
+
+Installation
+
+Shell
+
+## BACKGROUND
+
+- The History of Linux
+  - Linus Torvalds, 1991
+  - Unix-like Operating Systems
+
+> "Unix is not so much an operating system as an oral history"
+
+Heirs: Linux, BSD, Solaris, MacOS X, ...
+
+Principle: KISS
+Keep It Simple, Stupid !
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1279_0.png)
+
+## COMPARISON
+
+- Differences between Windows and Linux
+  - One Kernel and Multiple Distribution
+    - 2.6.x kernel (newest: 3.2.x)
+    - RedHat / Fedora, Debian
+    - Suse, Gentoo, Arch, Ubuntu, ...
+  - Powerful Command Line Interface
+  - Directories Organization
+  - ...
+

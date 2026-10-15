@@ -1,0 +1,222 @@
+
+
+## 跳转指令
+```
+1   xorl  %eax, %eax      Set %eax to 0
+2   jmp   .L1             Goto .L1
+3   movl  (%eax), %edx    Null pointer dereference
+4   .L1:
+5   popl  %edx
+```
+
+## 无条件跳转
+- 无条件跳转
+- 直接跳转：jmp  label
+  - jmp .L
+- 间接跳转：jmp  *Operand
+  - jmp  *%eax
+  - jmp  *(%eax)
+
+## 条件跳转
+- 要么跳转，要么在代码序列的下一条指令处继续执行
+  - 取决于条件码的某种组合
+- 全部为直接跳转
+
+## 跳转指令
+```
+1   jle .L2
+2   .L5:
+3   movl %edx, %eax
+4   sarl $1, %eax
+5   subl %eax, %edx
+6   leal (%edx, %edx, 2), %edx
+7   testl %edx, %edx
+8   jg  .L5
+9   .L2:
+10  movl %edx, %eax
+```
+
+## 跳转示例
+```
+1   8: 7e 0d          jle  17<silly+0x17>
+2   a: 89 d0          mov  %edx, %eax  dest1:
+3   c: c1 f8          sar  %eax
+4   e: 29 c2          sub  %eax, %edx
+5   10: 8d 14 52       lea  (%edx, %edx, 2), %edx
+6   13: 85 d2          test %edx, %edx
+7   15: 7f f3          jg   a<silly+0x10>
+8   17: 89 d0          movl %edx, %eax  dest2:
+
+d+a = 17
+17+f3(-d) = a
+```
+
+## 跳转示例
+```
+1   804839:   7e 0d          jle     17<silly+0x17>
+2   804839e:  89 d0          mov     %edx, %eax          dest1:
+3   80483a0:  c1 f8          sar     %eax
+4   80483a2:  29 c2          sub     %eax, %edx
+5   80483a4:  8d 14 52       lea     (%edx, %edx, 2), %edx
+6   80483a7:  85 d2          test    %edx, %edx
+7   80483a9:  7f f3          jg      a<silly+0x10>
+8   80483ab:  89 d0          movl    %edx, %eax          dest2:
+```
+
+d+804849e = 80483ab
+
+80483ab+f3(-d) = 804839e
+
+## C 中的控制结构
+- Gotos
+  - goto L
+  - break
+  - continue
+- 分支
+  - if () { } else { }
+  - switch () { }
+
+## C 中的控制结构
+- 循环
+  - while () {    }
+  - do {    } while ()
+  - for (init; test; incr){    }
+
+## 翻译条件分支
+```
+if ( test-expr )
+    then-statement
+else
+    else-statement
+```
+
+```
+t = test-expr ;
+if ( t )
+    goto true ;
+else-statement
+goto done
+
+true:
+    then-statement
+
+done:
+```
+
+## 翻译条件分支
+```
+int absdiff(int x, int y)
+{
+    if (x < y)
+        return y - x;
+    else
+        return x - y;
+}
+```
+
+```
+int absdiff(int x, int y)
+{
+    int rval;
+    if (x < y)
+        goto less
+    rval = x - y;
+    goto done;
+less:
+    rval = y - x;
+done:
+    return rval;
+}
+```
+
+## 跳转指令
+```
+1.     movl 8(%ebp), %edx        get x
+2.     movl 12(%ebp), %eax       get y
+3.     cmpl %eax, %edx           cal x - y
+4.     jl .L3                    if x < y goto less
+5.     subl %eax, %edx            compute x - y
+6.     movl %edx, %eax            set return val
+7.     jmp .L5                   goto done
+8. .L3:                           less:
+9.     subl %edx, %eax            compute y − x
+10. .L5:                          done: Begin Completion code
+```
+
+## Do-while 翻译
+```
+do
+    body-statement
+while (test-expr)
+```
+
+```
+loop:
+    body-statement
+    t = test-expr;
+    if ( t )
+        goto loop ;
+```
+
+## Do-while 翻译
+```
+int fib_dw(int n)
+{
+    int i = 0;
+    int val = 0 ;
+    int nval = 1 ;
+
+    do {
+        int t = val + nval ;
+        val = nval ;
+        nval = t ;
+        i++;
+    } while ( i<n) ;
+    return val ;
+}
+```
+
+```
+.L6:
+    lea (%ebx, %edx), %eax
+    movl %edx, %ebx
+    movl %eax, %edx
+    incl %ecx
+    cmpl %esi, %ecx
+    jl .L6
+    movl %ebx, %eax
+```
+
+| register | value | initially |
+|---|---|---|
+| %ecx | i | 0 |
+| %esi | n | n |
+| %ebx | val | 0 |
+| %edx | nval | 1 |
+| %eax | t | - |
+
+## While 循环翻译
+```
+while (test-expr)
+    body-statement
+```
+
+```
+loop:
+    t = test-expr
+    if (!t)
+        goto done;
+    body-statement
+    goto loop;
+done:
+```
+
+```
+if (!test-expr)
+    goto done;
+do
+    body-statement
+while(test-expr)
+done:
+```
+

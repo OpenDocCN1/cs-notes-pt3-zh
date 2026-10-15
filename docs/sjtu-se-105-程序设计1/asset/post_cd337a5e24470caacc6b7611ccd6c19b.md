@@ -1,0 +1,173 @@
+
+MaxIntSet.java
+public boolean query(int v){
+    return (indexOf(v) != MAXELTS);
+}
+// EFFECTS: returns true if v is in set, false otherwise
+
+public int size(){
+    return numElts;
+}
+// EFFECTS: returns |set|
+
+public IntSet getIntSet(){
+    return new MaxIntSet();
+}
+// EFFECTS: returns instance of IntSet
+}
+
+## Poly.Java
+
+```
+package PolyJava;
+
+public class Poly {
+    public static void main(String[] args) {
+        try{
+            IntSet s = new MaxIntSet();
+            s.insert(3);
+            System.out.printf(new Boolean(s.query(3)).toString());
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+IntSet.java
+package PolyJava;
+public interface IntSet {
+    public void insert(int v) throws IntSetException;
+    // MODIFIES: this
+    // EFFECTS: set = set + {v} if room, throws IntSetFull otherwise
+    public void remove(int v) throws IntSetException;
+    // MODIFIES: this
+    // EFFECTS: set = set - {v}
+    public boolean query(int v);
+    // EFFECTS: returns true if v is in set, false otherwise
+    public int size();
+    // EFFECTS: returns |set|
+    public IntSet getIntSet();
+    // EFFECTS: returns instance of IntSet
+}
+
+MaxIntSet.java
+package PolyJava;
+public class MaxIntSet implements IntSet {
+...................
+
+- 程序设计 I
+- *Programming I*
+
+Thank You!
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_804_0.png)
+
+## 程序设计 1
+
+*Programming and Data Structure I*
+
+## 第20课
+
+## 一个显示模型
+
+Episode Twenty
+
+## A display model
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_805_0.png)
+
+- 为什么要使用图形用户界面?
+- 一个图形模型
+- 例子
+
+## 为什么要讲图形？
+
+- 图形很常用
+  - 常规PC应用程序的必备
+- 图形的确很有用
+  - 即时反馈
+  - 绘图功能
+  - 显示结果
+- 可用以说明一些有用的概念及技术
+
+## 为什么要讲图形?
+
+- 设计实例丰富,可供学习设计策略与设计技术
+- 图形提供了很多有趣的代码实例
+- 利于解释面向对象程序设计的关键概念及语言特征
+  - 图形不是魔法,其实是一些非常易于理解的面向对象设计
+  - 因此值得教学
+- 图形很有趣!
+
+## 为什么要使用图形用户界面？
+
+- WYSIWYG
+  - What you see (in your code) is what you get (on your screen)
+  - 所见即所得
+- 概念、代码和输出三者之间的直接一致性
+
+## 一个显示模型
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_810_0.png)
+
+- 对象Objects (如Shape) 被附着到Windows对象
+- “显示引擎” 为Windows中的对象调用draw()指令 (例如 “从点x到点y画一条直线”)
+- 对象（如Square）包含一组lines、text等，需要绘制在窗口中
+
+- 一个例子
+```
+int main()
+{
+    using namespace Graph_lib;        // use our graphics interface library
+    
+    Point tl(100,200);               // a point (obviously)
+    Simple_window win(tl,600,400,"Canvas"); // make a simple window
+    
+    Polygon poly;                    // make a shape (a polygon, obviously)
+    poly.add(Point(300,200)); // add three points
+    poly.add(Point(350,100));
+    poly.add(Point(400,200));
+    
+    poly.set_color(Color::red); // make the polygon red (obviously)
+    win.attach(poly);    // connect poly to the window
+    
+    win.wait_for_button();    // give control to the display engine
+}
+```
+
+- 你将会用到GUI库中已经写好的一些接口类
+  - 使用流行的GUI 工具包
+    - GUI == Graphical User Interface
+    - FLTK: www.fltk.org // Fast Light Tool Kit
+  - 安装等事宜
+    - 参考附录D+多问多学
+      - FLTK
+      - 我们的GUI 和图形类
+      - 工程设置
+- 该模型比一般的工具包接口要简单得多
+  - 最简单的FLTK 文档也达370页
+  - 我们的接口类<20 个类，不到500 行代码
+  - 可以用这些类写很多代码
+    - 你能创造些什么？
+
+- 代码可方便地移植到任何使用FLTK的平台
+  - Windows, Unix, Mac等
+- 该模型易于扩展到大多数常用图形及GUI应用
+- 所给出的这些概念可用于任何一个流行的GUI工具包
+  - 一旦理解了这些图形类，就会很容易学会任何其他的GUI/图形库
+    - 通常这些库都很庞大
+
+Our code
+
+Our interface library
+
+A graphics/GUI library
+(here FLTK)
+
+The operating system
+(e.g. Windows or Linux)
+
+Our screen
+
+即所谓的“分层体系结构”

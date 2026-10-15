@@ -1,0 +1,2 @@
++   - Struts
++     - MVC architecture

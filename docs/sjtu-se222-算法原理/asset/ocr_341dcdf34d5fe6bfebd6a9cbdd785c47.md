@@ -1,0 +1,5 @@
+# Where are we?
+
++   - Why study Algorithms
++   - **Outline of the course**
++   - Course Policies

@@ -1,0 +1,187 @@
+
+
+## Horn 公式
+
+Problem: HornFormula
+Input: Horn formula
+Output: a satisfying assignment, if one exists
+
+(w ∧ y ∧ z) ⇒ x, (x ∧ z) ⇒ w, x ⇒ y,
+⇒ x, (x ∧ y) ⇒ w, (¬w ∨ ¬x ∨ ¬y), (¬z).
+
+- 1. set all variables to false
+- 2. while there is an implication that is not satisfied:
+- 3. set the right-hand variable of the implication to true
+- 4. if all pure negative clauses are satisfied:
+- 5. return the assignment
+- 6. else:
+- 7. return "formula is not satisfiable"
+
+## Correctness
+
+> **Theorem**
+> 
+> If a certain set of variables is set to true, then they must be true in any satisfying assignment.
+
+## Conclusion
+
+- Minimum spanning tree
+- How to design greedy algorithms
+  - Change-making problem
+  - Activity selection problem
+  - Huffman code
+  - Knapsack problem
+
+## Lecture 10 Dynamic programming
+
+- What is Dynamic Programming
+- How to write Dynamic Programming paradigm
+- When to apply Dynamic Programming
+
+## Roadmap
+
+- What is Dynamic Programming
+- How to write DP paradigm
+  - Knapsack problem
+  - Longest common subsequence
+  - Matrix chain multiplication
+- When to apply Dynamic Programming
+- Practice
+
+## Techniques Based on Recursion
+
+- Induction or Tail recursion
+- Non-overlapping subproblems
+- Overlapping subproblems
+
+## An Introductory Example
+
+Fib(0) = 0
+Fib(1) = 1
+Fib(n) = Fib(n−1) + Fib(n−2)
+
+![](img/a8f1b433a70f1e5c410c8b43e41b650e_789_0.png)
+
+19th century statue of Fibonacci in Camposanto, Pisa.
+(Source from Wikipedia)
+
+Problem: Fibonacci
+Input: A positive integer n
+Output: Fib(n)
+
+## Quiz
+
+Problem: Fibonacci
+Input: A positive integer n
+Output: Fib(n)
+
+Give your solution of Fibonacci and explain the time/space complexity.
+
+## Recursion implementation
+
+```
+int fib_rec (int n){
+    if (n==1 || n==2) {
+        return 1;
+    }
+    else {
+        return fib_rec(n-1) + fib_rec(n-2);
+    }
+}
+```
+
+T(n) = T(n−1) + T(n−2) + 2,  T(1), T(2) < 3
+T(n) > Fib_n
+S(n) = O(n)
+
+## O(n) time, O(n) space
+
+```
+int fib (int n) {
+    int* array = new int[n];
+    array[0] = 0;
+    array[1] = 1;
+    for (int i = 2; i <= n; i++)
+        array[i] = array[i-1] + array[i-2];
+    return array[n];
+}
+```
+
+T(n) = n + 1
+S(n) = n + 1
+
+## O(n) time, O(1) space
+
+```
+int fib (int n){
+    if (n < 2) return n;
+
+    int f0 = 0;
+    int f1 = 1;
+    int i = 2;
+    while (i <= n) {
+        f1 = f1 + f0;
+        f0 = f1 - f0;
+        i++;
+    }
+    return f1;
+}
+```
+
+T(n) < 3n
+S(n) = 3
+
+We can do even better: T(n) = O(log n)
+
+## O(log n) time, O(1) space
+
+\begin{pmatrix} f_n & f_{n-1} \\ f_{n-1} & f_{n-2} \end{pmatrix} = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix} \times \begin{pmatrix} f_{n-1} & f_{n-2} \\ f_{n-2} & f_{n-3} \end{pmatrix}
+
+\begin{pmatrix} f_n & f_{n-1} \\ f_{n-1} & f_{n-2} \end{pmatrix} = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}^{n-2} \times \begin{pmatrix} f_2 & f_1 \\ f_1 & f_0 \end{pmatrix}
+
+T(n) = T(n/2) + Θ(1)
+T(n) = Θ(log n)
+
+Use Divide-and-conquer
+
+## Fibonacci
+
+Fib(0) = 0
+Fib(1) = 1
+Fib(n) = Fib(n−1) + Fib(n−2)
+
+Overlapping subproblems
+
+![](img/a8f1b433a70f1e5c410c8b43e41b650e_795_0.png)
+
+19th century statue of Fibonacci in Camposanto, Pisa.
+(Source from Wikipedia)
+
+Recursion? No, thanks.
+
+## Dynamic programming
+
+Non-recursively handle recursive problems
+
+Time-Memory tradeoff
+
+- 1. Find smaller subproblems
+- 2. Write the relation expression
+- 3. Use an array to save the intermediate results
+- 4. Update the array iteratively.
+
+## All-pairs shortest path
+
+Define dᵏᵢ,ⱼ to be the length of a shortest path from i to j that does not pass any vertex in {k + 1, k + 2, ..., n}. Clearly
+
+```
+dᵏᵢ,ⱼ = { l[i,j]               if k = 0
+          min{dᵏ⁻¹ᵢ,ⱼ , dᵏ⁻¹ᵢ,ₖ + dᵏ⁻¹ₖ,ⱼ}   if 1 ≤ k ≤ n }
+```
+
+all intermediate vertices in {1, 2, ..., k − 1}    all intermediate vertices in {1, 2, ..., k − 1}
+
+![](img/a8f1b433a70f1e5c410c8b43e41b650e_797_0.png)
+
+p: all intermediate vertices in {1, 2, ..., k}
+

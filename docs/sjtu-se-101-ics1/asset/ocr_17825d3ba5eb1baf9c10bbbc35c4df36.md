@@ -1,0 +1,5 @@
+# ✓ Storage technologies and trends
+
++   - Locality
++   - The memory hierarchy
++   - Cache memories

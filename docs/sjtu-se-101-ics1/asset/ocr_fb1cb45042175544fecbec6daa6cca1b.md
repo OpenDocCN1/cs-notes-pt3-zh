@@ -1,0 +1,28 @@
+```
+$gdb bomb
+(gdb) break *0x80483dc
+Breakpoint 1 at 0x80483dc
+(gdb) break *0x80483f7
+Breakpoint 2 at 0x80483f7
+(gdb) break *0x8048403
+Breakpoint 3 at 0x8048403
+(gdb) break *0x8048411
+Breakpoint 4 at 0x8048411
+(gdb) run
+Starting program: /home/rong/tut1/bomb
+Breakpoint 1, 0x080483dc in main ()
+
+(gdb) print/c *0x8048538
+$3 = 105 'i'
+(gdb) print/c *0x8048539
+$4 = 110 'n'
+(gdb) print/s (char *)0x8048538
+$5 = 0x8048538 "input password:"
+```
+
+```
+0x80483dc "password"
+0x80483f7 "compare"
+0x8048403 "survive"
+0x8048411 "bomb"
+```

@@ -1,0 +1,15 @@
+# Effective Denumerable Set
+
+ℕ × ℕ
+
+ℕ⁺ × ℕ⁺ × ℕ⁺
+
+⋃_{k>0} ℕ^k
+
+ℐ is effectively denumerable.
+
+𝒫 is effectively denumerable.
+
+γ(P) = τ(β(I₁), …, β(I_z))
+
+The value γ(P) is called the Gödel number of P.

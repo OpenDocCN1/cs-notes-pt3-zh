@@ -1,0 +1,40 @@
+# Key-indexed counting demo
+
+Goal. Sort an array a[] of N integers between 0 and R - 1.
+
++   - Count frequencies of each letter using key as index.
++   - Compute frequency cumulates which specify destinations.
++   - Access cumulates using key as index to move items.
++   - Copy back into original array.
+
+```
+int N = a.length;
+int[] count = new int[R+1];
+
+for (int i = 0; i < N; i++)
+    count[a[i]+1]++;
+
+for (int r = 0; r < R; r++)
+    count[r+1] += count[r];
+
+for (int i = 0; i < N; i++)
+    aux[count[a[i]]++] = a[i];
+
+for (int i = 0; i < N; i++)
+    a[i] = aux[i];
+```
+
+| i | a[i] |   | r | count[r] |   | i | aux[i] |
+|---|------|---|---|----------|---|----|--------|
+| 0 | a    |   | a | 2        |   | 0  | a      |
+| 1 | a    |   | b | 5        |   | 1  | a      |
+| 2 | b    |   | c | 6        |   | 2  | b      |
+| 3 | b    |   | d | 8        |   | 3  | b      |
+| 4 | b    |   | e | 9        |   | 4  | b      |
+| 5 | c    |   | f | 12       |   | 5  | c      |
+| 6 | d    |   | - | 12       |   | 6  | d      |
+| 7 | d    |   |   |          |   | 7  | d      |
+| 8 | e    |   |   |          |   | 8  | e      |
+| 9 | f    |   |   |          |   | 9  | f      |
+|10 | f    |   |   |          |   |10  | f      |
+|11 | f    |   |   |          |   |11  | f      |

@@ -1,0 +1,24 @@
+# Tracing the Precedence Parser
+
+```
+int main() {
+Expression *readE(TokenScanner & scanner, int prec) {
+Expression *readE(TokenScanner & scanner, int prec) {
+Expression *readE(TokenScanner & scanner, int prec) {
+Expression *readT(TokenScanner & scanner) {
+string token = scanner.nextToken();
+TokenType type = scanner.getTokenType(token);
+if (type == WORD) return new IdentifierExp(token);
+if (type == NUMBER) return new ConstantExp(stringToInteger(token));
+if (token != "(") error("Illegal term in expression");
+Expression *exp = readE(scanner);
+if (scanner.nextToken() != ")") {
+error("Unbalanced parentheses in expression");
+}
+return exp;
+}
+}
+```
+
+| scanner | type | token | exp |
+| odd = 2 * n + 1 | NUMBER | 1 |  |

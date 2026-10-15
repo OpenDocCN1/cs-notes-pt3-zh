@@ -1,0 +1,3 @@
+# State Machine Example
+
+![](bbox=[0.12, 0.24, 0.88, 0.9])

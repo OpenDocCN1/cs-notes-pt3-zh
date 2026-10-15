@@ -1,0 +1,38 @@
+# Review: Context Switch in xv6
+
+```
+5 # Save current register context in old
+6 # and then load register context from new.
+7
+8 .globl swtch          # Context switch
+9 swtch:                #
+10     movl 4(%esp), %eax   # void swtch(struct context **old, struct context *new);
+11     movl 8(%esp), %edx   #
+12
+13 # Save old callee-save registers
+14 pushl %ebp
+15 pushl %ebx
+16 pushl %esi
+17 pushl %edi
+18
+19 # Switch stacks
+20 movl %esp, (%eax)
+21 movl %edx, %esp
+22
+23 # Load new callee-save registers
+24 popl %edi
+25 popl %esi
+26 popl %ebx
+27 popl %ebp
+28 ret
+```
+
+```
+# Context switch
+#
+# void swtch(struct context **old, struct context *new);
+```
+
+![](bbox=[0.6, 0.42, 0.78, 0.78])
+
+![](bbox=[0.8, 0.42, 0.9, 0.78])

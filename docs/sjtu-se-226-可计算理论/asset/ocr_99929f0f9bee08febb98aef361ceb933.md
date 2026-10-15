@@ -1,0 +1,3 @@
+# Quiz
+
+LCM(x, y)

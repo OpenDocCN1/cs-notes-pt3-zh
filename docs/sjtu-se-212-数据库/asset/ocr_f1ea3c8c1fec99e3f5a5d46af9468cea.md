@@ -1,0 +1,16 @@
+# Block Nested-Loop Join
+
++   - Variant of nested-loop join in which every block of inner relation is paired with every block of outer relation.
+
+```
+for each block B_r of r do begin
+  for each block B_s of s do begin
+    for each tuple t_r in B_r do begin
+      for each tuple t_s in B_s do begin
+        Check if (t_r, t_s) satisfy the join condition
+        if they do, add t_r · t_s to the result.
+      end
+    end
+  end
+end
+```

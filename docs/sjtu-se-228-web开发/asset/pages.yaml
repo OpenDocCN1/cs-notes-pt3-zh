@@ -1,0 +1,6314 @@
+- pgno: 0
+  md: '# Principles and Techniques of DBMS 0 Overview
+
+
+    Haopeng Chen
+
+
+    *REliable, INtelligent and Scalable Systems Group (REINS)*
+
+
+    Shanghai Jiao Tong University
+
+
+    Shanghai, China
+
+
+    [http://reins.se.sjtu.edu.cn/~chenhp](http://reins.se.sjtu.edu.cn/~chenhp)
+
+
+    e-mail: chen-hp@sjtu.edu.cn'
+  merge: -1
+  img_proc: false
+- pgno: 1
+  md: '# Syllabus
+
+
+    +   - What are Web Application? 1
+
+    +     - Features of web applications
+
+    +     - Notions of web applications
+
+
+    +   - Access Database via PHP - LAMP 1
+
+    +     - Get connection to DB
+
+    +     - Send SQL statement and receive result
+
+    +     - Front-end and Back-end
+
+
+    +   - Access Database via Java EE 2
+
+    +     - Java EE and JDBC Specification
+
+    +     - DriverManager vs. DataSource
+
+    +     - JNDI (Java Naming and Directory Interface)
+
+    +     - Statements and Results
+
+    +     - Call stored procedures
+
+    +     - Call functions'
+  merge: -1
+  img_proc: false
+- pgno: 2
+  md: '+   - Development with JSP and Servlet  2
+
+    +     - JSP and Servlet
+
+    +     - Session management
+
+    +     - Forward and redirect
+
+    +     - Integrate with JDBC reading
+
+    +   - Development with SSH frameworks  4
+
+    +     - Struts - MVC
+
+    +     - Spring - IoC
+
+    +     - Hibernate - ORM
+
+    +   - App Servers  1
+
+    +     - Tomcat
+
+    +     - JBoss'
+  merge: -1
+  img_proc: false
+- pgno: 3
+  md: '+   - Development with .NET 1
+
+    +     - C# .NET
+
+    +     - Access DB via ODBC
+
+    +     - ORM - NHibernate
+
+    +   - Representation layer 1
+
+    +     - JS - Jquery, Ext JS,
+
+    +     - ActionScript - flex
+
+    +   - XML DB & NoSQL DB 2
+
+    +     - Sedna - XML DB
+
+    +     - MongoDB - NoSQL DB
+
+    +   - Review 1
+
+    +     - And conclusion'
+  merge: -1
+  img_proc: false
+- pgno: 4
+  md: '+   - 3 iterations
+
+    +     - 5th week: LAMP version – commit to elearning
+
+    +     - 10th week: Java EE version – JSP and Servlet – Face-to-face check
+
+    +     - 16th week: Java EE version – SSH+RIA – Face-to-face check
+
+    +   - Requirement:
+
+    +     - To develop a web application: Book store.
+
+    +     - User management: registration, login/logout, remove, query
+
+    +     - Book selling: the registered users can browse the books, add them to the
+    shopping cart, and pay for them.
+
+    +     - Sales statistics: by user, by day/month/year, by categories
+
+    +     - We will publish the specific requirements in every class.'
+  merge: -1
+  img_proc: false
+- pgno: 5
+  md: '+   - Schedule
+
+    +     - Weekly: Thursday 08:00-09:40 下院307
+
+    +     - Office hour: Wednesday 14:00-16:00 Software Building 1111
+
+    +   - TA
+
+    +     - 张祺智 mclaren1992@163.com
+
+    +     - 孙健俞 sjy801@qq.com
+
+    +   - Textbook
+
+    +     - No textbook
+
+    +     - References will be given in classes
+
+    +   - Website
+
+    +     - http://reins.se.sjtu.edu.cn/courses/se223-spring-2015'
+  merge: -1
+  img_proc: false
+- pgno: 6
+  md: <!-- no content -->
+  merge: -1
+  img_proc: false
+- pgno: 7
+  md: '# Principles and Techniques of DBMS 1
+
+    Web Applications
+
+
+    Haopeng Chen
+
+
+    REliable, INtelligent and Scalable Systems Group (REINS)
+
+
+    Shanghai Jiao Tong University
+
+
+    Shanghai, China
+
+
+    http://reins.se.sjtu.edu.cn/~chenhp
+
+
+    e-mail: chen-hp@sjtu.edu.cn'
+  merge: -1
+  img_proc: false
+- pgno: 8
+  md: '+   - Web applications are
+
+    +     - computer programs allowing website visitors to submit and retrieve data
+    to/from a database over the Internet using their preferred web browser.
+
+
+    ![](bbox=[0.07, 0.44, 0.92, 0.92])'
+  merge: -1
+  img_proc: false
+- pgno: 9
+  md: '# What is web application ?
+
+
+    # Company Network
+
+
+    Router
+
+
+    Firewall
+
+
+    Switch
+
+
+    Wireless Access Point
+
+
+    # Web Servers
+
+
+    Web Application Server
+
+
+    # Database Servers
+
+
+    Database
+
+
+    User Submits Shopping Cart Order on Website
+
+
+    Internet
+
+
+    # Flow
+
+
+    +   1. User submits shopping cart order on Website via port 80/443.
+
+    +   2. Web Server receives shopping cart data from User and sends it to the Web
+    Application Server.
+
+    +   3. Web Application Server receives data from Web Server and sends it to the
+    Database Server. Database is also updated.
+
+    +   4. Web Application Server dynamically generates a web page and sends it to
+    the Web Server.
+
+    +   5. Web Server sends the generated page to the User informing him of his successful
+    transaction.
+
+
+    # Legend
+
+
+    Data exchanged between User and Web Server via port 80/443.
+
+
+    Data exchanged between Web Server, Web Application Server, Database Server and
+    Database.
+
+
+    Two-Way traffic between User and Web Server.
+
+
+    User does not have access to any network asset beyond the Web Server.'
+  merge: -1
+  img_proc: false
+- pgno: 10
+  md: '# Web 1.0
+
+
+    +   - Traditional web client server interaction model
+
+    +     - User enters interacts with a web page
+
+    +     - Browser sends data to web server
+
+    +     - Server sends data back to browser
+
+    +     - Browser receives the data and updates the page
+
+    +     - Page refresh may be intrusive and irritating'
+  merge: -1
+  img_proc: false
+- pgno: 11
+  md: '+   - JavaScript is used extensively in the browser
+
+    +   - Single web-page applications are possible
+
+    +     - Entire page need not be refreshed
+
+    +     - Browser interacts with server by sending and receiving small chunks of
+    data
+
+    +     - These update individual components or data items on a page
+
+    +     - This is also known as AJAX (misleading but widely used term) (Asynchronous
+    JavaScript and XML)
+
+    +   - Two advantages
+
+    +     - Speed: fewer data items are exchanged
+
+    +       - Faster network transfer, less work for server and browser
+
+    +     - Smoother experience for user – less clunky'
+  merge: -1
+  img_proc: false
+- pgno: 12
+  md: '+   The Java EE application parts shown in left figure are presented in Java
+    EE Components.
+
+    +   - Client-tier components
+
+    +     - run on the client machine.
+
+    +   - Web-tier components
+
+    +     - run on the Java EE server.
+
+    +   - Business-tier components
+
+    +     - run on the Java EE server.
+
+    +   - Enterprise information system (EIS)-tier software
+
+    +     - runs on the EIS server.
+
+
+    ![](bbox=[0.48, 0.25, 0.99, 0.88])'
+  merge: -1
+  img_proc: false
+- pgno: 13
+  md: 'The Java EE application parts shown in left figure are presented in Java EE
+    Components.
+
+
+    +   - Client-tier components
+
+    +     - run on the client machine.
+
+    +   - Web-tier components
+
+    +     - run on the Java EE server.
+
+    +   - Business-tier components
+
+    +     - run on the Java EE server.
+
+    +   - Enterprise information system (EIS)-tier software
+
+    +     - runs on the EIS server.
+
+
+    ![](bbox=[0.48, 0.29, 0.96, 0.88])'
+  merge: -1
+  img_proc: false
+- pgno: 14
+  md: '# Containers
+
+
+    +   - are the interface between a component and the low-level platform-specific
+    functionality that supports the component.
+
+    +   - Before it can be executed, a web, enterprise bean, or application client
+    component must be assembled into a Java EE module and deployed into its container.
+
+    +   - Container settings customize the underlying support provided by the Java
+    EE server, including such services as
+
+    +     - Security
+
+    +     - Transaction management
+
+    +     - Java Naming and Directory Interface (JNDI) API lookups,
+
+    +     - and remote connectivity.'
+  merge: -1
+  img_proc: false
+- pgno: 15
+  md: '+   - Container types
+
+
+    ![](bbox=[0.24, 0.3, 0.78, 0.92])'
+  merge: -1
+  img_proc: false
+- pgno: 16
+  md: <!-- no content -->
+  merge: -1
+  img_proc: false
+- pgno: 17
+  md: '+   - Java EE APIs in the Web Container
+
+
+    ![](bbox=[0.09, 0.35, 0.47, 0.78])
+
+
+    ![](bbox=[0.55, 0.35, 0.92, 0.78])'
+  merge: -1
+  img_proc: false
+- pgno: 18
+  md: '+   - Java EE APIs in the EJB Container
+
+
+    | EJB Container |  | Java SE |
+
+    |---|---|---|
+
+    | EJB Container | Concurrency Utilities | |
+
+    |  | Batch | |
+
+    |  | JSON-P | |
+
+    |  | CDI | |
+
+    |  | Dependency Injection | |
+
+    |  | JavaMail | |
+
+    |  | Java Persistence | |
+
+    |  | JTA | |
+
+    |  | Connectors | |
+
+    | EJB | JMS | |
+
+    |  | Management | |
+
+    |  | WS Metadata | |
+
+    |  | Web Services | |
+
+    |  | JACC | |
+
+    |  | JASPIC | |
+
+    |  | Bean Validation | |
+
+    |  | JAX-RS | |
+
+    |  | JAX-WS | |
+
+    |  |  | |
+
+    |  | New in Java EE 7 |'
+  merge: -1
+  img_proc: false
+- pgno: 19
+  md: '+   - Java EE APIs in the Application Client Container
+
+
+    ![](bbox=[0.26, 0.32, 0.72, 0.86])'
+  merge: -1
+  img_proc: false
+- pgno: 20
+  md: '# Java EE Platform
+
+
+    +   - Technologies required by Java EE platform:
+
+    +     - Enterprise JavaBeans Technology
+
+    +       - session bean
+
+    +       - message-driven bean
+
+    +     - Java Servlet Technology
+
+    +     - JavaServer Faces Technology
+
+    +     - JavaServer Pages Technology
+
+    +     - JavaServer Pages Standard Tag Library
+
+    +     - Java Persistence API
+
+    +     - Java Transaction API
+
+    +     - Java API for RESTful Web Services
+
+    +     - Managed Beans
+
+    +     - Contexts and Dependency Injection for Java EE
+
+    +     - (to be continued)'
+  merge: -1
+  img_proc: false
+- pgno: 21
+  md: '+   Technologies required by Java EE platform:
+
+    +   - Dependency Injection for Java
+
+    +   - Bean Validation
+
+    +   - Java Message Service API
+
+    +   - Java EE Connector Architecture
+
+    +   - JavaMail API
+
+    +   - Java Authorization Contract for Containers
+
+    +   - Java Authentication Service Provider Interface for Containers
+
+    +   - Java API for WebSocket
+
+    +   - Java API for JSON Processing
+
+    +   - Concurrency Utilities for Java EE
+
+    +   - Batch Applications for the Java Platform'
+  merge: -1
+  img_proc: false
+- pgno: 22
+  md: '+   - Java EE 7 APIs in the Java Platform, Standard Edition 7
+
+    +     - Java Database Connectivity API
+
+    +     - Java Naming and Directory Interface API
+
+    +     - JavaBeans Activation Framework
+
+    +     - Java API for XML Processing
+
+    +     - Java Architecture for XML Binding
+
+    +     - Java API for XML Web Services
+
+    +     - SOAP with Attachments API for Java
+
+    +     - Java Authentication and Authorization Service
+
+    +     - Common Annotations for the Java Platform'
+  merge: -1
+  img_proc: false
+- pgno: 23
+  md: '+   - Java EE without EJB
+
+    +     - Spring – IoC
+
+    +     - Struts – MVC
+
+    +     - Hibernate – ORM
+
+    +     - LAMP: Linux+Apache+Mysql/MariaDB+Perl/PHP/Python'
+  merge: -1
+  img_proc: false
+- pgno: 24
+  md: '# What is Enterprise Application
+
+
+    +   - Enterprise applications
+
+    +     - usually involve persistent data
+
+    +     - usually have a lot of data
+
+    +     - usually many people access data concurrently
+
+    +     - usually have a lot of user interface screens
+
+    +     - usually they need to integrate with other enterprise applications scattered
+    around the enterprise
+
+    +     - conceptual dissonance with the data
+
+    +     - complex business "illogic"'
+  merge: -1
+  img_proc: false
+- pgno: 25
+  md: '# Enterprise Applications
+
+
+    An enterprise system is one that has the following qualities:
+
+
+    +   - Shares some or all of the resources used by the application
+
+    +   - Is intended for internal use
+
+    +   - Must work within existing architecture
+
+    +   - Will be deployed and supported by internal IT staff
+
+    +   - Requires greater robustness, both in terms of exception-handling and scalability
+
+    +   - Must fail gracefully
+
+    +   - Must gracefully handle evolution over time'
+  merge: -1
+  img_proc: false
+- pgno: 26
+  md: '# Higher technical complexity
+
+    - Embedded, real-time, distributed, fault-tolerant
+
+    - Custom, unprecedented, architecture reengineering
+
+    - High performance
+
+
+    An average software project
+
+    - 5-10 people
+
+    - 3-9 month duration
+
+    - 3-5 external interfaces
+
+    - Some unknowns & risks
+
+
+    # Lower management complexity
+
+    - Small scale
+
+    - Informal
+
+    - Single stakeholder
+
+    - “Products”
+
+
+    # Higher management complexity
+
+    - Large scale
+
+    - Contractual
+
+    - Many stake holders
+
+    - “Projects”
+
+
+    # Lower technical complexity
+
+    - Mostly 4GL, or component-based
+
+    - Application reengineering
+
+    - Interactive performance'
+  merge: -1
+  img_proc: false
+- pgno: 27
+  md: '+   - Web Applications: What are They? What of Them?
+
+    +     - http://www.acunetix.com/websitesecurity/web-applications/
+
+    +   - The Java EE 7 Tutorial
+
+    +     - http://docs.oracle.com/javaee/7/tutorial/doc/javaeetutorial7.pdf'
+  merge: -1
+  img_proc: false
+- pgno: 28
+  md: '# Thank You!
+
+
+    ![](bbox=[0.66, 0.08, 0.9, 0.2])'
+  merge: -1
+  img_proc: false
+- pgno: 29
+  md: '# Principles and Techniques of DBMS 2
+
+    PHP Applications
+
+
+    Haopeng Chen
+
+
+    REliable, INtelligent and Scalable Systems Group (REINS)
+
+    Shanghai Jiao Tong University
+
+    Shanghai, China
+
+    http://reins.se.sjtu.edu.cn/~chenhp
+
+    e-mail: chen-hp@sjtu.edu.cn'
+  merge: -1
+  img_proc: false
+- pgno: 30
+  md: '+   - PHP & Apache HTTP Server
+
+    +     - Deploying,
+
+    +     - Configuring,
+
+    +     - and Testing of PHP & Apache HTTP Server
+
+    +   - Access RDBMS via PHP
+
+    +     - Get connection
+
+    +     - Develop PHP in Eclipse
+
+    +     - Execute SQL statement
+
+    +   - PHP + jQuery
+
+    +   - Yii Framework'
+  merge: -1
+  img_proc: false
+- pgno: 31
+  md: '+   - **The Apache HTTP Server**
+
+    +     - commonly referred to as **Apache** (/əˈpætʃiː/ ə-PA-chee)
+
+    +     - is a web server application notable for playing a key role in the initial
+    growth of the World Wide Web User enters interacts with a web page.
+
+    +   - The Apache HTTP Server Project itself does not provide binary releases of
+    software, only source code.
+
+    +     - You can obtain a binary package from numerous binary distributions available
+    on the Internet.
+
+    +     - Popular options for deploying Apache httpd, and, optionally, PHP and MySQL,
+    on Microsoft Windows, include:
+
+    +       - [ApacheHaus](ApacheHaus)
+
+    +       - [Apache Lounge](Apache Lounge)
+
+    +       - [BitNami WAMP Stack](BitNami WAMP Stack)
+
+    +       - [WampServer](WampServer)
+
+    +       - [XAMPP](XAMPP)
+
+
+    ![](bbox=[0.65, 0.72, 0.99, 0.82])'
+  merge: -1
+  img_proc: false
+- pgno: 32
+  md: '+   - Download a binary version
+
+    +     - Unzip it on your disk
+
+
+    ![](bbox=[0.08, 0.42, 0.88, 0.92])'
+  merge: -1
+  img_proc: false
+- pgno: 33
+  md: '+   - Append the followings to `conf/httpd.conf`
+
+
+    ```
+
+    PHPIniDir "E:/php-5.5.8/"
+
+    LoadModule php5_module "E:/php-5.5.8/php5apache2_4.dll"
+
+    AddType application/x-httpd-php .php
+
+    ```
+
+
+    +   - where,
+
+    +     - PHPIniDir is the directory of PHP home.
+
+    +     - LoadModule is in the directory of PHP home, which allows the support to
+    PHP is loaded as a module of Apache HTTP Server.'
+  merge: -1
+  img_proc: false
+- pgno: 34
+  md: '+   - Run `bin/httpd.exe`
+
+    +     - The Apache HTTP Server will be running in a command window.
+
+    +   - Browse http://localhost
+
+    +     - If the Apache HTTP Server is correctly deployed, you will see:
+
+
+    ![](bbox=[0.18, 0.52, 0.82, 0.92])'
+  merge: -1
+  img_proc: false
+- pgno: 35
+  md: '+   - PHP
+
+    +     - Hypertext Preprocessor
+
+    +     - PHP is a popular general-purpose scripting language that is especially
+    suited to web development.
+
+    +     - Fast, flexible and pragmatic, PHP powers everything from your blog to
+    the most popular websites in the world.
+
+
+    > From http://www.php.net/
+
+
+    ![](bbox=[0.75, 0.7, 0.9, 0.85])'
+  merge: -1
+  img_proc: false
+- pgno: 36
+  md: '+   - Download a binary version
+
+    +     - http://windows.php.net/download/
+
+    +     - php-5.5.8-Win32-VC11-x64.zip (VC11 x64 Thread Safe)
+
+    +     - Unzip it on your disk
+
+
+    ![](bbox=[0.35, 0.38, 0.88, 0.9])'
+  merge: -1
+  img_proc: false
+- pgno: 37
+  md: '# Configuring
+
+
+    +   - Rename `php.ini-production` to `php.ini`
+
+    +   - Modify the followings in `php-5.5.8/php.ini`
+
+
+    ```
+
+    ;;;;;;;;;;;;;;;;;;;;;;;
+
+    ; Paths and Directories ;
+
+    ;;;;;;;;;;;;;;;;;;;;;;;
+
+    ; On windows:
+
+    extension_dir = "E:/php-5.5.8/ext"
+
+    ;;;;;;;;;;;;;;;;;;;;;;;
+
+    ; Dynamic Extensions ;
+
+    ;;;;;;;;;;;;;;;;;;;;;;;
+
+    ; Windows Extensions
+
+    extension=php_curl.dll
+
+    extension=php_gd2.dll
+
+    extension=php_mbstring.dll
+
+    extension=php_mysql.dll
+
+    extension=php_mysqli.dll
+
+    extension=php_pdo_mysql.dll
+
+    extension=php_pdo_odbc.dll
+
+    extension=php_xmlrpc.dll
+
+    [Session]
+
+    session.save_path = "E:/php-5.5.8/tmp"; // this directory needs to be writeable
+
+    ```'
+  merge: -1
+  img_proc: false
+- pgno: 38
+  md: '+   - Environment Variable
+
+    +     - Add an entry to Path
+
+    +     - PHP_HOME/ext
+
+    +     - For example:
+
+    +       - E:/php-5.5.8/ext
+
+    +   - Copy php5ts.dll to system32'
+  merge: -1
+  img_proc: false
+- pgno: 39
+  md: "+   - Edit test.php and deploy it into Apache_HOME/htdocs\n+   ```html\n+ \
+    \  <html>\n+   <head><title>test</title></head>\n+   <body>\n+   <?php phpinfo();?>\
+    \ \n+   </body>\n+   </html>\n+   ```\n\n+   - Browse http://localhost/test.php\n\
+    +     - If the PHP is correctly deployed, you will see:\n\n![](bbox=[0.24, 0.65,\
+    \ 0.78, 0.88])"
+  merge: -1
+  img_proc: false
+- pgno: 40
+  md: "# Access RDBMS – get connection\n\n+   - Edit testDB.php and deploy it into\
+    \ Apache_HOME/htdocs\n\n```\n<html>\n<head><title>test</title></head>\n<body>\n\
+    <?php\n$dbhost = 'localhost'; //the ip of RDBMS server\n$dbuser = 'root'; //username\n\
+    $dbpassword= '12345678'; //password\n$connect = mysql_connect($dbhost,$dbuser,$dbpassword);\n\
+    if ($connect) {\n    echo 'Succeed!<br>';\n} else {\n    echo 'Failed!<br>';\n\
+    }\n\n$dbname = 'sample_one'; //the name of DB\n$db = mysql_select_db($dbname);\n\
+    if ($db) {\n    echo 'Succeed!';\n} else {\n    echo 'Failed!';\n}\n?>\n</body>\n\
+    </html>\n```"
+  merge: -1
+  img_proc: false
+- pgno: 41
+  md: '+   - Create database `sample_one` in MySQL.
+
+    +   - Browse http://localhost/test.php
+
+    +     - If all the configuration are correct, you will see:
+
+
+    ![](bbox=[0.15, 0.55, 0.85, 0.75])'
+  merge: -1
+  img_proc: false
+- pgno: 42
+  md: "+   - Append the followings to conf/httpd.conf\n\n```\nAlias /Workspace/ \"\
+    E:/Projects/PHP/\"\n<Directory \"E:/Projects/PHP/\">\n    Options Indexes MultiViews\n\
+    \    AllowOverride None\n    Require all granted\n</Directory>\n```\n\n+   - where,\n\
+    +     - Workspace is the alias of the workspace of Eclipse."
+  merge: -1
+  img_proc: false
+- pgno: 43
+  md: '+   - Window->Preferences->PHP->PHP Executables->Add
+
+    +     Name: PHP 5.5.8
+
+    +     Executable Path: E:/PHP-5.5.8/php.exe
+
+    +     PHP ini file(optional): D:/PHP-5.5.8/php.ini
+
+    +     PHP debugger: Zend Debugger
+
+    +   - Window->Preferences->PHP->PHP Server
+
+    +     - Change Default PHP Web Server
+
+    +       to http://localhost/Workspace
+
+    +     - Where
+
+    +       - Workspace is the alias configured in conf/httpd.conf'
+  merge: -1
+  img_proc: false
+- pgno: 44
+  md: '# Develop PHP in Eclipse
+
+
+    +   - New a project HelloWorld
+
+    +   - Edit test.php
+
+    +     ```php
+
+    +     <?php
+
+    +         phpinfo();
+
+    +     ?>
+
+    +     ```
+
+    +   - Right Click on test.php and Run as ->PHP Web Page
+
+    +     - The URL will be http://localhost/Workspace/HelloWorld/test.php
+
+
+    ![](bbox=[0.27, 0.62, 0.78, 0.86])'
+  merge: -1
+  img_proc: false
+- pgno: 45
+  md: '+   - Get connection:
+
+    +     $dbhost = ''localhost''; //the ip of RDBMS server
+
+    +     $dbuser = ''root''; //username
+
+    +     $dbpassword= ''12345678''; //password
+
+    +     $connect = mysql_connect($dbhost,$dbuser,$dbpassword);
+
+    +   - Select a database:
+
+    +     $dbname = ''sample_one''; //the name of DB
+
+    +     $db = mysql_select_db($dbname);
+
+    +   - Execute SQL statement:
+
+    +     $mysql_command = <statement>;
+
+    +     $result = mysql_query($mysql_command);
+
+    +   - Create a database:
+
+    +     $mysql_command = "create database testDB";
+
+    +   - Drop a database:
+
+    +     $mysql_command = "drop database if exists testDB";'
+  merge: -1
+  img_proc: false
+- pgno: 46
+  md: '+   - Create a table:
+
+    +     `$mysql_command = "create table testOne (
+
+    +         id int not null primary key auto_increment,
+
+    +         column1 varchar(128))";`
+
+    +   - Drop a table:
+
+    +     `$mysql_command = "drop table testOne";`
+
+    +   - Get server information:
+
+    +     `echo mysql_get_server_info();`
+
+    +   - Close connection:
+
+    +     `mysql_close($connect);`
+
+    +   - die() and mysql_error():
+
+    +     `$result = mysql_query($mysql_command)
+
+    +         or die(mysql_error());`
+
+    +   - Client encoding:
+
+    +     `mysql_client_encoding();`'
+  merge: -1
+  img_proc: false
+- pgno: 47
+  md: '+   - Create records:
+
+    +     ```php
+
+    +     $count = 10;
+
+    +     while($count >= 1){
+
+    +         $mysql_command = "insert into `testOne` values
+
+    +             ($count, ''Zhang San{$count}'')";
+
+    +         $result = mysql_query($mysql_command);
+
+    +         $count --;
+
+    +     }
+
+    +     ```
+
+    +   - Retrieve records:
+
+    +     ```php
+
+    +     $mysql_command = "select * from testOne";
+
+    +     $result = mysql_query($mysql_command);
+
+    +     while($row = mysql_fetch_object($result)){
+
+    +         echo json_encode($row);
+
+    +         echo ''<br>'';
+
+    +     }
+
+    +     ```'
+  merge: -1
+  img_proc: false
+- pgno: 48
+  md: '+   - Update records:
+
+    +     `$mysql_command = "update testOne set name = ''Zhang San 5'' WHERE id <=
+    10 or id >=1";`
+
+    +   - Delete records:
+
+    +     `$mysql_command = "delete from testOne WHERE id = 10";`
+
+    +   - Error information:
+
+    +     `mysql_error()`
+
+    +     `mysql_errno()`
+
+    +   - Persistent connection:
+
+    +     `$connect = mysql_pconnect($dbhost,$dbuser,$dbpassword);`
+
+    +   - Other functions
+
+    +     - http://www.w3school.com.cn/php/index.asp'
+  merge: -1
+  img_proc: false
+- pgno: 49
+  md: '# PHP + jQuery
+
+
+    +   - jQuery
+
+    +     - is a fast, small, and feature-rich JavaScript library.
+
+    +     - jQuery v2.1.0
+
+
+    ![](bbox=[0.58, 0.34, 0.88, 0.53])
+
+
+    +   - jQuery EasyUI framework
+
+    +     - helps you build your web pages easily
+
+    +     - jQuery EasyUI v1.3.5
+
+
+    ![](bbox=[0.54, 0.76, 0.91, 0.88])'
+  merge: -1
+  img_proc: false
+- pgno: 50
+  md: '+   - New a PHP project in Eclipse
+
+    +     - The structure of project is as the left figure
+
+    +   - This is a demo given by jQuery EasyUI
+
+    +     - You can download it at demo
+
+    +   - index.html
+
+
+    ```
+
+    <title>jQuery EasyUI CRUD Demo</title>
+
+    <link rel="stylesheet" type="text/css" href="css/easyui.css">
+
+    <link rel="stylesheet" type="text/css" href="css/icon.css">
+
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+
+    ```
+
+
+    ![](bbox=[0.68, 0.24, 0.88, 0.7])'
+  merge: -1
+  img_proc: false
+- pgno: 51
+  md: "```\n• index.html\n<script type=\"text/javascript\" src=\"jquery-2.1.0.js\"\
+    ></script>\n<script type=\"text/javascript\" src=\"jquery-easyui-1.3.5/jquery.easyui.min.js\"\
+    ></script>\n\n<script type=\"text/javascript\">\n    var url;\n    function newUser(){\n\
+    \        $('#dlg').dialog('open').dialog('setTitle','New User');\n        $('#fm').form('clear');\n\
+    \        url = 'save_user.php';\n    }\n\n    function editUser(){\n        var\
+    \ row = $('#dg').datagrid('getSelected');\n        if (row){\n            $('#dlg').dialog('open').dialog('setTitle','Edit\
+    \ User');\n            $('#fm').form('load',row);\n            url = 'update_user.php?id='+row.id;\n\
+    \        }\n    }\n\n```"
+  merge: -1
+  img_proc: false
+- pgno: 52
+  md: '+   - index.html
+
+    +     ```javascript
+
+    +     function saveUser(){
+
+    +         $(''#fm'').form(''submit'',{
+
+    +             url: url,
+
+    +             onSubmit: function(){
+
+    +                 return $(this).form(''validate'');
+
+    +             },
+
+    +             success: function(result){
+
+    +                 var result = eval(''(''+result+'')'');
+
+    +                 if (result.success){
+
+    +                     $(''#dlg'').dialog(''close'');
+
+    +                     $(''#dg'').datagrid(''reload'');
+
+    +                 } else {
+
+    +                     $.messager.show({
+
+    +                         title: ''Error'',
+
+    +                         msg: result.msg
+
+    +                     });
+
+    +                 }
+
+    +             }
+
+    +         });
+
+    +     }
+
+    +     ```'
+  merge: -1
+  img_proc: false
+- pgno: 53
+  md: '+   - index.html
+
+    +     ```javascript
+
+    +     function removeUser(){
+
+    +         var row = $(''#dg'').datagrid(''getSelected'');
+
+    +         if (row){
+
+    +             $.messager.confirm(''Confirm'',''Are you sure you want to remove
+    this user?'',function(r){
+
+    +             if (r){
+
+    +                 $.post(''remove_user.php'',{id:row.id},function(result){
+
+    +                     if (result.success){
+
+    +                         $(''#dg'').datagrid(''reload'');
+
+    +                     } else {
+
+    +                         $.messager.show({
+
+    +                             title: ''Error'', msg: result.msg
+
+    +                         });
+
+    +                     }
+
+    +                 }},''json'');
+
+    +             }
+
+    +         });
+
+    +         }
+
+    +     }
+
+    +     </script>'
+  merge: -1
+  img_proc: false
+- pgno: 54
+  md: "# PHP + jQuery\n\n+   - conn.php\n\n```\n```php\n<?php\n\n$conn = @mysql_connect('127.0.0.1','root','12345678');\n\
+    if (!$conn) {\n        die('Could not connect: ' . mysql_error());\n}\nmysql_select_db('sample_one',\
+    \ $conn);\n\n?>\n```\n```"
+  merge: -1
+  img_proc: false
+- pgno: 55
+  md: "+   - save_user.php\n\n```\n<?php\n\n$firstname = $_REQUEST['firstname'];\n\
+    $lastname = $_REQUEST['lastname'];\n$phone = $_REQUEST['phone'];\n$email = $_REQUEST['email'];\n\
+    \ninclude 'conn.php';\n\n$sql = \"insert into users(firstname,lastname,phone,email)\
+    \ values('$firstname','$lastname','$phone','$email')\";\n$result = @mysql_query($sql);\n\
+    if ($result){\n    echo json_encode(array('success'=>true));\n} else {\n    echo\
+    \ json_encode(array('msg'=>'Some errors occured.'));\n}\n?>\n```"
+  merge: -1
+  img_proc: false
+- pgno: 56
+  md: "+   - remove_user.php\n+   \n+   ```php\n+   <?php\n+   \n+   $id = intval($_REQUEST['id']);\n\
+    +   \n+   include 'conn.php';\n+   \n+   $sql = \"delete from users where id=$id\"\
+    ;\n+   $result = @mysql_query($sql);\n+   if ($result){\n+       echo json_encode(array('success'=>true));\n\
+    +   } else {\n+       echo json_encode(array('msg'=>'Some errors occured.'));\n\
+    +   }\n+   ?>\n+   ```"
+  merge: -1
+  img_proc: false
+- pgno: 57
+  md: <!-- no content -->
+  merge: -1
+  img_proc: false
+- pgno: 58
+  md: <!-- no content -->
+  merge: -1
+  img_proc: false
+- pgno: 59
+  md: '+   - Browse http://localhost/Workspace/UserList/index.html
+
+
+    ![](bbox=[0.11, 0.35, 0.91, 0.88])'
+  merge: -1
+  img_proc: false
+- pgno: 60
+  md: '+   - Yii is a high-performance PHP framework best for developing Web 2.0 applications.
+
+    +   - Download Yii v1.1.14
+
+    +     - And unzip the archive,
+
+    +     - Copy the directory `/framework` and `/requirements` to
+
+    +       - `Apache/htdocs`, or
+
+    +       - `Eclipse/Workspace`
+
+    +     - Run yiic.bat in `/framework` to generate your web application
+
+    +       - `yiic webapp <app-path> [<vcs>]`
+
+    +     - Where,
+
+    +       - app-path: required, the directory where the new application will be
+    created.
+
+    +       - vcs: optional, version control system you''re going to use in the new
+    project.
+
+
+    ![](bbox=[0.65, 0.33, 0.92, 0.44])'
+  merge: -1
+  img_proc: false
+- pgno: 61
+  md: '+   - Uncomment
+
+    +     `extension=php-pdo-sqlite`
+
+    +     in `php.ini`
+
+    +   - Modify
+
+    +     - `webapp/protected/views/layouts/main.php(51)`
+
+    +       - Add `date_default_timezone_set(''Asia/Shanghai'');`
+
+    +     - `webapp/protected/config/main.php`
+
+    +       - Uncomment line(24) `gii` part
+
+    +       - Uncomment line(50) `db` part
+
+    +     - `webapp/protected/config/console.php`
+
+    +       - Uncomment line(19) `db` part
+
+    +   - Remember,
+
+    +     - The directory of `session.save_path` should be writeable.'
+  merge: -1
+  img_proc: false
+- pgno: 62
+  md: '+   - You first web application
+
+    +     - http://localhost/sampleone/index.php (in the case of Apache), or
+
+    +     - http://localhost/Workspace/sampleone/index.php (in the case of Eclipse)
+
+
+    ![](bbox=[0.04, 0.42, 0.96, 0.85])'
+  merge: -1
+  img_proc: false
+- pgno: 63
+  md: '+   - Use gii to generate code
+
+    +     - http://localhost/Workspace/sampleone/index.php?r=gii
+
+    +     - After logged in, you will see:
+
+
+    ![](bbox=[0.05, 0.48, 0.95, 0.82])'
+  merge: -1
+  img_proc: false
+- pgno: 64
+  md: '+   - Create a table
+
+    +   ```sql
+
+    +   create table tbl_user (
+
+    +       id integer not null primary key auto_increment,
+
+    +       username varchar(128) not null,
+
+    +       password varchar(128) not null,
+
+    +       email varchar(128) not null);
+
+    +   ```
+
+    +   - Generate code with the Model Generator and CRUD Generator
+
+
+    ![](bbox=[0.14, 0.54, 0.89, 0.87])'
+  merge: -1
+  img_proc: false
+- pgno: 65
+  md: '+   - To develop a Book Store with PHP
+
+    +     - jQuery UI
+
+    +     - MySQL DB
+
+    +     - Apache HTTP Server
+
+    +     - To implement the CRUD of book, order and user.
+
+    +     - You can design the structure of book, order and user tables as your will.'
+  merge: -1
+  img_proc: false
+- pgno: 66
+  md: '+   - PHP Documentation, http://www.php.net/manual/en/
+
+    +   - Using Apache HTTP Server on Microsoft Windows, http://httpd.apache.org/docs/2.4/en/platform/windows.html
+
+    +   - Windows7 下安装配置Apache2.2+PHP5.4+MySQL5.5环境, http://www.54xue.com/w/23/n-31523.html
+
+    +   - 搭建Eclipse PHP开发环境, http://blog.csdn.net/zhoudaxia/article/details/5271250
+
+    +   - PHP 教程, http://www.w3school.com.cn/php/index.asp
+
+    +   - Build CRUD Application with jQuery EasyUI, http://www.jeasyui.com/tutorial/app/crud.php
+
+    +   - Yii framework, http://www.yiiframework.com/'
+  merge: -1
+  img_proc: false
+- pgno: 67
+  md: '![](bbox=[0.65, 0.08, 0.9, 0.22])
+
+
+    # Thank You!'
+  merge: -1
+  img_proc: false
+- pgno: 68
+  md: '# Principles and Techniques of DBMS 3
+
+    DB Access I
+
+
+    Haopeng Chen
+
+
+    REliable, INtelligent and Scalable Systems Group (REINS)
+
+
+    Shanghai Jiao Tong University
+
+
+    Shanghai, China
+
+
+    http://reins.se.sjtu.edu.cn/~chenhp
+
+
+    e-mail: chen-hp@sjtu.edu.cn'
+  merge: -1
+  img_proc: false
+- pgno: 69
+  md: '# Overview
+
+
+    +   - Access Database via JDBC Reading
+
+    +     - JDBC Specification
+
+    +     - DriverManager vs. DataSource
+
+    +     - JNDI (Java Naming and Directory Interface)
+
+    +     - DataSource in Tomcat
+
+    +     - Statements'
+  merge: -1
+  img_proc: false
+- pgno: 70
+  md: <!-- no content -->
+  merge: -1
+  img_proc: false
+- pgno: 71
+  md: '+   - Establishing Connection
+
+    +     - The JDBC API defines the Connection interface to represent a connection
+    to an underlying data source.
+
+    +       - DriverManager or Datasource
+
+    +   - Executing SQL Statements and Manipulating Results
+
+    +     - DatabaseMetadata
+
+    +     - Statement, PreparedStatement, and CallableStatement.
+
+    +     - ResultSet and RowSet'
+  merge: -1
+  img_proc: false
+- pgno: 72
+  md: '+   - To obtain a connection, the application may interact with either:
+
+    +     - the `DriverManager` class working with one or more Driver implementations
+
+    +       OR
+
+    +     - a `DataSource` implementation'
+  merge: -1
+  img_proc: false
+- pgno: 73
+  md: "# Establishing Connection\n\n+   - DriverManager\n+     - registerDriver and\
+    \ getConnection\n\n```\npackage sample;\n\nimport java.sql.Connection;\nimport\
+    \ java.sql.DriverManager;\nimport java.sql.SQLException;\n\npublic class AccessDB\
+    \ {\n\n    public static void main(String[] args) throws\n            ClassNotFoundException,\
+    \ SQLException\n    {\n        Class.forName(\"com.mysql.jdbc.Driver\");\n\n \
+    \       String url = \"jdbc:mysql://localhost:3306\";\n        String user = \"\
+    root\";\n        String passwd = \"12345678\";\n\n        Connection con = DriverManager.getConnection(url,\
+    \ user, passwd);\n        System.out.println(con.getTransactionIsolation());\n\
+    \    }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 74
+  md: '# Necessary Configuration
+
+
+    ![](bbox=[0.18, 0.27, 0.82, 0.88])'
+  merge: -1
+  img_proc: false
+- pgno: 75
+  md: '+   - Necessary Configuration
+
+
+    ![](bbox=[0.26, 0.35, 0.75, 0.86])'
+  merge: -1
+  img_proc: false
+- pgno: 76
+  md: '+   - Necessary Configuration
+
+
+    ![](bbox=[0.27, 0.32, 0.78, 0.82])'
+  merge: -1
+  img_proc: false
+- pgno: 77
+  md: '+   - Necessary Configuration
+
+
+    ![](bbox=[0.22, 0.28, 0.79, 0.83])'
+  merge: -1
+  img_proc: false
+- pgno: 78
+  md: '+   - **DataSource**
+
+    +     - A logical name is mapped to a DataSource object via a naming service that
+    uses the Java Naming and Directory Interface™ (JNDI).
+
+
+    | Property Name | Type | Description |
+
+    |---|---|---|
+
+    | databaseName | String | name of a particular database on a server |
+
+    | dataSourceName | String | a data source name |
+
+    | description | String | description of this data source |
+
+    | networkProtocol | String | network protocol used to communicate with the server
+    |
+
+    | password | String | a database password |
+
+    | portNumber | int | port number where a server is listening for requests |
+
+    | roleName | String | the initial SQL rolename |
+
+    | serverName | String | database server name |
+
+    | user | String | user''s account name |'
+  merge: -1
+  img_proc: false
+- pgno: 79
+  md: "# DataSource\n\nA logical name is mapped to a DataSource object via a naming\
+    \ service that uses the Java Naming and Directory Interface™ (JNDI).\n\n```\n\
+    package sample;\nimport java.sql.SQLException;\nimport javax.naming.Context;\n\
+    import javax.naming.InitialContext;\nimport javax.naming.NamingException;\nimport\
+    \ com.mysql.jdbc.jdbc2.optional.MysqlDataSource;\npublic class Server {\n    public\
+    \ static void main(String[] args) throws ClassNotFoundException,\n        SQLException,\
+    \ NamingException\n    {\n        MysqlDataSource ds = new MysqlDataSource();\n\
+    \        ds.setServerName(\"localhost\");\n        ds.setPortNumber(3306);\n \
+    \       ds.setUser(\"root\");\n        ds.setPassword(\"12345678\");\n\n     \
+    \   Context namingContext = new InitialContext();\n        namingContext.bind(\"\
+    rmi://localhost:1099/datasource\", ds);\n    }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 80
+  md: "+   - **DataSource**\n+     - A logical name is mapped to a DataSource object\
+    \ via a naming service that uses the Java Naming and Directory Interface™ (JNDI).\n\
+    \n```\npackage sample;\nimport java.rmi.RemoteException;\nimport java.sql.Connection;\n\
+    import java.sql.SQLException;\nimport javax.naming.Context;\nimport javax.naming.InitialContext;\n\
+    import javax.naming.NamingException;\nimport com.mysql.jdbc.jdbc2.optional.MysqlDataSource;\n\
+    \npublic class Client {\n    public static void main(String[] args) throws\n \
+    \       NamingException, RemoteException, SQLException\n    {\n        Context\
+    \ namingContext = new InitialContext();\n        String url = \"rmi://localhost:1099/datasource\"\
+    ;\n        MysqlDataSource ds = (MysqlDataSource) namingContext.lookup(url);\n\
+    \        Connection con = ds.getConnection(\"root\",\"12345678\");\n        System.out.println(con.getTransactionIsolation());\n\
+    \    }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 81
+  md: '# Establishing Connection
+
+
+    +   - Necessary Configuration
+
+    +   - Run the rmiregistry
+
+    +     - `rmiregistry`
+
+    +   - Run the Server
+
+    +   - Run the Client'
+  merge: -1
+  img_proc: false
+- pgno: 82
+  md: '# Java Naming and Directory Interface
+
+
+    Java Application
+
+
+    JNDI API
+
+
+    Naming Manager
+
+
+    JNDI SPI
+
+
+    LDAP
+
+
+    DNS
+
+
+    NIS
+
+
+    NDS
+
+
+    RMI
+
+
+    CORBA
+
+
+    JNDI Implementation Possibilities'
+  merge: -1
+  img_proc: false
+- pgno: 83
+  md: '# Concepts
+
+
+    +   - **Name**
+
+    +     - A people-friendly identifier for identifying an object or a reference
+    to an object.
+
+    +   - **Binding**
+
+    +     - The association of an atomic name with an object.
+
+    +   - **Context**
+
+    +     - An object whose state is a set of bindings that have distinct atomic names.
+
+    +   - **InitialContext**
+
+    +     - The starting point for resolution of names for naming and directory operations.
+
+    +   - **ContextFactory**
+
+    +     - A specialization of an object factory. It accepts information about how
+    to create a context, such as a reference, and returns an instance of the context.'
+  merge: -1
+  img_proc: false
+- pgno: 84
+  md: '# Get InitialContext
+
+
+    +   - Hardcode - Weblogic
+
+    +   ```
+
+    +   Hashtable env = new Hashtable();
+
+    +   env.put(Context.INITIAL_CONTEXT_FACTORY,
+
+    +       "weblogic.jndi.WLInitialContextFactory");
+
+    +   env.put(Context.PROVIDER_URL,"t3://localhost:7001");
+
+    +   InitialContext ctx = new InitialContext(env);
+
+    +   ```
+
+    +   - jndi.properties - JBoss
+
+    +   ```
+
+    +   java.naming.factory.initial=
+
+    +       org.jnp.interfaces.NamingContextFactory
+
+    +   java.naming.provider.url=jnp://localhost:1099
+
+    +   ```'
+  merge: -1
+  img_proc: false
+- pgno: 85
+  md: '# DataSource in Tomcat
+
+
+    +   - Download Tomcat and configure it in Eclipse
+
+
+    ![](bbox=[0.22, 0.295, 0.79, 0.885])'
+  merge: -1
+  img_proc: false
+- pgno: 86
+  md: '+   - Create a Dynamic Web Project
+
+
+    ![](bbox=[0.26, 0.35, 0.74, 0.86])'
+  merge: -1
+  img_proc: false
+- pgno: 87
+  md: "# DataSource in Tomcat\n\n+   - Test.jsp\n\n```\n```jsp\n<%@ page language=\"\
+    java\" contentType=\"text/html; charset=ISO-8859-1\"\n    pageEncoding=\"ISO-8859-1\"\
+    %>\n<%@ taglib uri=\"http://java.sun.com/jsp/jstl/sql\" prefix=\"sql\" %>\n<%@\
+    \ taglib uri=\"http://java.sun.com/jsp/jstl/core\" prefix=\"c\" %>\n<!DOCTYPE\
+    \ html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\"http://www.w3.org/TR/html4/loose.dtd\"\
+    >\n\n<sql:query var=\"rs\" dataSource=\"jdbc/sample\">\n    select id, username,\
+    \ password, email from tbl_user\n</sql:query>\n\n<html>\n  <head>\n    <title>DB\
+    \ Test</title>\n  </head>\n  <body>\n\n        <h2>Results</h2>\n\n        <c:forEach\
+    \ var=\"row\" items=\"${rs.rows}\">\n                ID ${row.id}<br/>\n     \
+    \           Name ${row.username}<br/>\n                Password ${row.password}<br/>\n\
+    \                email ${row.email}<br/>\n        </c:forEach>\n  </body>\n</html>\n\
+    ```\n```"
+  merge: -1
+  img_proc: false
+- pgno: 88
+  md: "+   - context.xml\n\n```\n<Context>\n  <Resource name=\"jdbc/sample\"\n   \
+    \ auth=\"Container\"\n    type=\"javax.sql.DataSource\"\n    maxActive=\"100\"\
+    \n    maxIdle=\"30\"\n    maxWait=\"10000\"\n    username=\"root\"\n    password=\"\
+    12345678\"\n    driverClassName=\"com.mysql.jdbc.Driver\"\n    url=\"jdbc:mysql://localhost:3306/sample_one\"\
+    />\n</Context>\n```"
+  merge: -1
+  img_proc: false
+- pgno: 89
+  md: "```\nweb.xml\n<web-app xmlns=\"http://java.sun.com/xml/ns/j2ee\"\n    xmlns:xsi=\"\
+    http://www.w3.org/2001/XMLSchema-instance\"\n    xsi:schemaLocation=\"http://java.sun.com/xml/ns/j2ee\
+    \ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd\"\n    version=\"2.4\">\n<description>MySQL\
+    \ Test App</description>\n\n<resource-ref>\n    <description>DB Connection</description>\n\
+    \    <res-ref-name>jdbc/sample</res-ref-name>\n    <res-type>javax.sql.DataSource</res-type>\n\
+    \    <res-auth>Container</res-auth>\n</resource-ref>\n\n<welcome-file-list>\n\
+    \    <welcome-file>Test.jsp</welcome-file>\n</welcome-file-list>\n\n</web-app>\n\
+    ```"
+  merge: -1
+  img_proc: false
+- pgno: 90
+  md: '+   - Copy the necessary .jar to %TOMCAT%/bin
+
+
+    ![](bbox=[0.24, 0.38, 0.78, 0.82])'
+  merge: -1
+  img_proc: false
+- pgno: 91
+  md: '# DataSource in Tomcat
+
+
+    +   - Run the web project on Tomcat
+
+
+    ![](bbox=[0.05, 0.29, 0.44, 0.63])
+
+
+    ![](bbox=[0.5, 0.47, 0.95, 0.88])'
+  merge: -1
+  img_proc: false
+- pgno: 92
+  md: '+   - Statement
+
+    +     - defines methods for executing SQL statements that do not contain parameter
+    markers
+
+    +   - PreparedStatement
+
+    +     - adds methods for setting input parameters
+
+    +   - CallableStatement
+
+    +     - adds methods for retrieving output parameter values returned from stored
+    procedures'
+  merge: -1
+  img_proc: false
+- pgno: 93
+  md: "# Statement\n\n```\n// get a connection from the DataSource object ds\nConnection\
+    \ con = ds.getConnection(user, passwd);\n```\n\n```\n// create two instances of\
+    \ Statement\nStatement stmt1 = con.createStatement();\nStatement stmt2 = con.createStatement();\n\
+    ```\n\n```\n// Setting ResultSet Characteristics\nStatement stmt = con.createStatement(\n\
+    \    ResultSet.TYPE_SCROLL_INSENSITIVE,\n    ResultSet.CONCUR_UPDATABLE,\n   \
+    \ ResultSet.HOLD_CURSORS_OVER_COMMIT);\n```"
+  merge: -1
+  img_proc: false
+- pgno: 94
+  md: "```\n// Executing Statement and return ResultSet\nResultSet rs = stmt.executeQuery(\n\
+    \    \"select id, username, password, email from tbl_user\");\nwhile (rs.next()){\n\
+    \    ...\n}\n\n// Returning an Update Count\nStatement stmt = con.createStatement();\n\
+    int rows = stmt.executeUpdate(\" update tbl_user\n    set username = 'ADMIN' \"\
+    \ + \"where id = 1\");\nif (rows > 0) {\n    ...\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 95
+  md: "```\n// Using execute method\nString sql;\n...\nStatement stmt = conn.createStatement();\n\
+    boolean b = stmt.execute(sql);\nif (b == true) {\n    // b is true if a ResultSet\
+    \ is returned\n    ResultSet rs;\n    rs = stmt.getResultSet();\n    while (rs.next())\
+    \ {\n        ...\n    }\n    rs.close();\n}\nelse {\n    // b is false if a UpdateCount\
+    \ is returned\n    int rows = stmt.getUpdateCount();\n    if (rows > 0) {\n  \
+    \      ...\n    }\n}\nstmt.close();\nconn.close();\n```"
+  merge: -1
+  img_proc: false
+- pgno: 96
+  md: "```\n// Creating a PreparedStatement\nPreparedStatement ps = con.prepareStatement(\"\
+    INSERT INTO\n    tbl_user (id, username, password, email)\n    VALUES (?, ?, ?,\
+    \ ?)\");\n// Setting Parameters\nps.setInt(1, 3);\nps.setString(2, \"Guest\");\n\
+    ps.setString(3, \"guest\");\nps.setString(4, \"haha@163.com\");\nps.execute();\n\
+    ```"
+  merge: -1
+  img_proc: false
+- pgno: 97
+  md: "# PreparedStatement\n\n```\n// ParameterMetaData\nPreparedStatement pstmt =\
+    \ con.prepareStatement(\n\"SELECT * FROM tbl_user WHERE id = ?\n    and username\
+    \ = ?\");\npstmt.setInt(1, 3);\npstmt.setString(2, \"Guest\");\npstmt.execute();\n\
+    ParameterMetaData pmd = pstmt.getParameterMetaData();\nint number = pmd.getParameterCount();\n\
+    ```"
+  merge: -1
+  img_proc: false
+- pgno: 98
+  md: "```\n// ResultSetMetaData\nResultSetMetaData rsmd = pstmt.getMetaData();\n\
+    int colCount = rsmd.getColumnCount();\nint colType;\nString colLabel;\nfor (int\
+    \ i = 1; i <= colCount; i++) {\n    colType = rsmd.getColumnType(i);\n    colLabel\
+    \ = rsmd.getColumnLabel(i);\n    System.out.println(colType + \":\" + colLabel);\n\
+    }\n```"
+  merge: -1
+  img_proc: false
+- pgno: 99
+  md: "# CallableStatement\n\n```\nCREATE DEFINER=`root`@`localhost`\n    PROCEDURE\
+    \ `insert_user`(\n        in id int,\n        inout username varchar(20),\n  \
+    \      in password varchar(20),\n        in email varchar(20))\nBEGIN\n    insert\
+    \ tbl_user (id,username,password,email)\n        Values(id,username,password,email);\n\
+    \    select username from tbl_user where id = id;\nEND\n```"
+  merge: -1
+  img_proc: false
+- pgno: 100
+  md: "# CallableStatement\n\n```\nCallableStatement cstmt =\n    con.prepareCall(\"\
+    {CALL insert_user(?, ?, ?, ?)}\");\ncstmt.registerOutParameter(2, java.sql.Types.INTEGER);\n\
+    cstmt.setInt(1, 4);\ncstmt.setString(2, \"Host\");\ncstmt.setString(3, \"Host\"\
+    );\ncstmt.setString(4, \"Host@sjtu.edu.cn\");\n\ncstmt.execute();\n\n// Retrieve\
+    \ OUT parameters\nString username = cstmt.getNString(2);\nSystem.out.println(username);\n\
+    ```"
+  merge: -1
+  img_proc: false
+- pgno: 101
+  md: '# References
+
+
+    +   - JDBCTM 3.0 Specification Final Release,
+
+    +     - Jon Ellis & Linda Ho with Maydene Fisher
+
+    +   - JNDI™ 1.2.1 Javadoc,
+
+    +     - http://java.sun.com/products/jndi/1.2/javadoc/
+
+    +   - Introduction to ODBC,
+
+    +     - http://msdn.microsoft.com/en-us/library/ms715408(v=vs.85).aspx
+
+    +   - HIBERNATE - Relational Persistence for Idiomatic Java,
+
+    +     - http://docs.jboss.org/hibernate/orm/4.1/manual/en-US/html_single/#preface'
+  merge: -1
+  img_proc: false
+- pgno: 102
+  md: '# Thank You!'
+  merge: -1
+  img_proc: false
+- pgno: 103
+  md: '# Principles and Techniques of DBMS 4
+
+    DB Access II
+
+
+    Haopeng Chen
+
+
+    REliable, INtelligent and Scalable Systems Group (REINS)
+
+
+    Shanghai Jiao Tong University
+
+
+    Shanghai, China
+
+
+    http://reins.se.sjtu.edu.cn/~chenhp
+
+
+    e-mail: chen-hp@sjtu.edu.cn'
+  merge: -1
+  img_proc: false
+- pgno: 104
+  md: '+   - Access Database via JDBC Reading
+
+    +     - RowSet vs. ResultSet
+
+    +   - Basics of ORM
+
+    +   - Pros and Cons of
+
+    +     - JDBC/ODBC Reading and ORM'
+  merge: -1
+  img_proc: false
+- pgno: 105
+  md: '+   - **ResultSet**
+
+    +     - Types
+
+    +       1. TYPE_FORWARD_ONLY
+
+    +       2. TYPE_SCROLL_INSENSITIVE
+
+    +       3. TYPE_SCROLL_SENSITIVE
+
+    +     - Concurrency
+
+    +       1. CONCUR_READ_ONLY
+
+    +       2. CONCUR_UPDATABLE
+
+    +     - Holdability
+
+    +       1. HOLD_CURSORS_OVER_COMMIT
+
+    +       2. CLOSE_CURSORS_AT_COMMIT'
+  merge: -1
+  img_proc: false
+- pgno: 106
+  md: "# ResultSet\n\n```\nStatement stmt = conn.createStatement();\nResultSet rs\
+    \ = stmt.executeQuery(\"select author, title, isbn\" +\"from booklist\");\n```\n\
+    \n+   - next()\n+   - previous()\n+   - first()\n+   - last()\n+   - beforeFirst()\n\
+    +   - afterLast()\n+   - relative(int rows)\n+   - absolute(int row)\n\n```\n\
+    int colIdx = rs.findColumn(\"ISBN\");\n```\n\n```\nResultSetMetaData rsmd = rs.getMetaData();\n\
+    int colType [] = new int[rsmd.getColumnCount()];\nfor (int idx = 0, int col =\
+    \ 1; idx < colType.length; idx++, col++)\n    colType[idx] = rsmd.getColumnType(col);\n\
+    ```"
+  merge: -1
+  img_proc: false
+- pgno: 107
+  md: "# Manipulate result\n\n+   - Resultset\n\n```\n```java\n// Update a row: two-phase\
+    \ process\nStatement stmt =\n    conn.createStatement(ResultSet.TYPE_FORWARD_ONLY,\n\
+    \                         ResultSet.CONCUR_UPDATABLE);\nResultSet rs = stmt.executeQuery(\"\
+    select author from\n                                  booklist \" + \"where isbn\
+    \ = 140185852\");\nrs.next();\nrs.updateString(\"author\", \"Zamyatin, Evgenii\
+    \ Ivanovich\");\nrs.updateRow();\n\n// Delete a row\nrs.absolute(4);\nrs.deleteRow();\n\
+    ```\n```"
+  merge: -1
+  img_proc: false
+- pgno: 108
+  md: '+   - ResultSet
+
+
+    ```
+
+    // Insert a row: three steps
+
+    // select all the columns from the table booklist
+
+    ResultSet rs = stmt.executeQuery("select author, title, isbn " + "from booklist");
+
+
+    rs.moveToInsertRow();
+
+    // set values for each column
+
+    rs.updateString(1, "Huxley, Aldous");
+
+    rs.updateString(2, "Doors of Perception and Heaven and Hell");
+
+    rs.updateLong(3, 60900075);
+
+    // insert the row
+
+    rs.insertRow();
+
+    // move the cursor back to its position in the result set
+
+    rs.moveToCurrentRow();
+
+    ```'
+  merge: -1
+  img_proc: false
+- pgno: 109
+  md: '# RowSet
+
+
+    +   - A `javax.sql.RowSet` object encapsulates a set of rows that have been retrieved
+    from a tabular data source.
+
+    +   - JdbcRowSet - online
+
+    +   - CachedRowSet
+
+    +     - WebRowSet
+
+    +     - FilteredRowSet
+
+    +     - JoinRowSet
+
+
+    ![](bbox=[0.35, 0.27, 0.95, 0.88])'
+  merge: -1
+  img_proc: false
+- pgno: 110
+  md: "+   - RowSet\n+     - JdbcRowSet – online\n\n```\npublic class AccessDB {\n\
+    \    private JdbcRowSet rowset;\n    public AccessDB(String url, String user,\
+    \ String pwd)\n        throws SQLException {\n        RowSetFactory rowSetFactory\
+    \ =\n            RowSetProvider.newFactory();\n        JdbcRowSet rowset =\n \
+    \           rowSetFactory.createJdbcRowSet();\n        rowset.setUrl(\n      \
+    \      \"jdbc:mysql://localhost:3306/sample_one\");\n        rowset.setUsername(\"\
+    root\");\n        rowset.setPassword(\"12345678\");\n        rowset.setCommand(\"\
+    SELECT * FROM tbl_user\");\n        rowset.execute();\n    }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 111
+  md: "# Manipulate result\n\n+   - RowSet\n+     - JdbcRowSet – online\n\n```\npublic\
+    \ List<User> get() throws SQLException {\n    List<User> records = new ArrayList<>();\n\
+    \    rowset.beforeFirst();\n    while (rowset.next()) {\n        User record =\
+    \ new User();\n        record.setId(rowset.getLong(1));\n        record.setUsername(rowset.getString(2));\n\
+    \        record.setPassword(rowset.getString(3));\n        record.setEmail(rowset.getString(4));\n\
+    \        records.add(record);\n    }\n    return records;\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 112
+  md: "+   - RowSet\n+     - JdbcRowSet – online\n\n```\npublic void add(User user)\
+    \ throws SQLException {\n    rowset.moveToInsertRow();\n    rowset.updateInt(1,\
+    \ (int)user.getId());\n    rowset.updateString(2, user.getUsername());\n    rowset.updateString(3,\
+    \ user.getPassword());\n    rowset.updateString(4, user.getEmail());\n    rowset.insertRow();\n\
+    }\n```"
+  merge: -1
+  img_proc: false
+- pgno: 113
+  md: "+   - RowSet\n+     - JdbcRowSet - online\n\n```\npublic class User {\n\n \
+    \   private long id;\n    private String username;\n    private String password;\n\
+    \    private String email;\n\n    public long getId(){return this.id;}\n    public\
+    \ String getUsername(){return this.username;}\n    public String getPassword(){return\
+    \ this.password;}\n    public String getEmail(){return this.email;}\n\n    public\
+    \ void setId(long id) {this.id = id;}\n    public void setUsername(String username)\
+    \ {this.username = username;}\n    public void setPassword(String password) {this.password\
+    \ = password;}\n    public void setEmail(String email) {this.email = email;}\n\
+    }\n```"
+  merge: -1
+  img_proc: false
+- pgno: 114
+  md: "# Manipulate result\n\n+   - RowSet\n+     - JdbcRowSet – online\n\n```\npublic\
+    \ static void main(String[] args) throws SQLException {\n    AccessDB ad = new\
+    \ AccessDB(url,user,pwd);\n\n    List<User> records = ad.get();\n    Iterator<User>\
+    \ it = records.iterator();\n    while(it.hasNext()){\n        User use = it.next();\n\
+    \        ....\n    }\n\n    User usertoadd = new User();\n    usertoadd.setId(10);\n\
+    \    ....\n    ad.add(usertoadd);\n\n    records = ad.get();\n    it = records.iterator();\n\
+    \    while(it.hasNext()){\n        User use = it.next();\n        ....\n    }\n\
+    }\n```"
+  merge: -1
+  img_proc: false
+- pgno: 115
+  md: '# Manipulate result
+
+
+    +   - **RowSet**
+
+    +     - CachedRowSet
+
+    +       ```java
+
+    +       RowSetFactory rowSetFactory =
+
+    +           RowSetProvider.newFactory();
+
+    +       rowset = rowSetFactory.createCachedRowSet();
+
+    +       ```
+
+    +     - WebRowSet
+
+    +       ```java
+
+    +       RowSetFactory rowSetFactory =
+
+    +           RowSetProvider.newFactory();
+
+    +       rowset = rowSetFactory.createWebRowSet();
+
+    +       rowset.execute();
+
+    +       rowset.writeXml(System.out);
+
+    +       ```'
+  merge: -1
+  img_proc: false
+- pgno: 116
+  md: "+   - RowSet\n+     - FilteredRowSet\n+       ```\n+       RowSetFactory rowSetFactory\
+    \ = \n+           RowSetProvider.newFactory();\n+       rowset = rowSetFactory.createFilteredRowSet();\n\
+    +       Range range = new Range();\n+       rowset.setFilter(range);\n+      \
+    \ ```"
+  merge: -1
+  img_proc: false
+- pgno: 117
+  md: <!-- no content -->
+  merge: -1
+  img_proc: false
+- pgno: 118
+  md: '# RowSet
+
+
+    +   - Rowsets can generate three different types of events:
+
+    +     1. Cursor movement events
+
+    +     2. Row change events
+
+    +     3. Rowset change events
+
+    +   - To add a listener to Rowset
+
+
+    ```
+
+    Listener listener = new Listener();
+
+    rowset.addRowSetListener(listener);
+
+    ```'
+  merge: -1
+  img_proc: false
+- pgno: 119
+  md: "+   - **RowSet**\n+     - RowSetListener:\n+       ```java\n+       public\
+    \ class Listener implements RowSetListener {\n+   \n+           @Override\n+ \
+    \          public void cursorMoved(RowSetEvent arg0) {\n+               System.out.println(\"\
+    The cursor is moved\");\n+           }\n+   \n+           @Override\n+       \
+    \    public void rowChanged(RowSetEvent arg0) {\n+               System.out.println(\"\
+    A row is changed\");\n+           }\n+   \n+           @Override\n+          \
+    \ public void rowSetChanged(RowSetEvent arg0) {\n+               System.out.println(\"\
+    The rowset is changed\");\n+           }\n+   \n+       }\n+       ```"
+  merge: -1
+  img_proc: false
+- pgno: 120
+  md: '+   - ODBC is a specification for a database API.
+
+    +     - This API is independent of any one DBMS or operating system; although
+    this manual uses C, the ODBC API is language-independent.
+
+    +   - The functions in the ODBC API are implemented by developers of DBMS-specific
+    drivers.
+
+    +     - Applications call the functions in these drivers to access data in a DBMS-independent
+    manner.
+
+    +     - A Driver Manager manages communication between applications and drivers.
+
+    +   - It is important to understand that ODBC is designed to expose database capabilities,
+    not supplement them.'
+  merge: -1
+  img_proc: false
+- pgno: 121
+  md: '+   - The ODBC architecture has four components:
+
+    +     - **Application** Performs processing and calls ODBC functions to submit
+    SQL statements and retrieve results.
+
+    +     - **Driver Manager** Loads and unloads drivers on behalf of an application.
+    Processes ODBC function calls or passes them to a driver.
+
+    +     - **Driver** Processes ODBC function calls, submits SQL requests to a specific
+    data source, and returns results to the application. If necessary, the driver
+    modifies an application''s request so that the request conforms to syntax supported
+    by the associated DBMS.
+
+    +     - **Data Source** Consists of the data the user wants to access and its
+    associated operating system, DBMS, and network platform (if any) used to access
+    the DBMS.'
+  merge: -1
+  img_proc: false
+- pgno: 122
+  md: '# Basic ODBC Application Steps
+
+
+    +   - Step 1: Connect to the Data Source
+
+    +   - Step 2: Initialize the Application
+
+    +   - Step 3: Build and Execute an SQL Statement
+
+    +   - Step 4a: Fetch the Results
+
+    +   - Step 4b: Fetch the Row Count
+
+    +   - Step 5: Commit the Transaction
+
+    +   - Step 6: Disconnect from the Data Source
+
+
+    ![](bbox=[0.55, 0.18, 0.99, 0.88])'
+  merge: -1
+  img_proc: false
+- pgno: 123
+  md: "```\nstring MyConString = \"DRIVER={MySQL ODBC 3.51 Driver};\" +\n    \"SERVER=localhost;\"\
+    \ + \"DATABASE=inv;\" +\n    \"UID=root;\" + \"PASSWORD=831025;\" + \"OPTION=3\"\
+    ;\nOdbcConnection MyConnection = new OdbcConnection(MyConString);\nMyConnection.Open();\n\
+    \nstring query = \"insert into test values( 'hello', 'lucas', 'liu')\";\nOdbcCommand\
+    \ cmd = new OdbcCommand(query, MyConnection);\n\ntry{\n    cmd.ExecuteNonQuery();\n\
+    }\ncatch(Exception ex){\n    Console.WriteLine(\"record duplicate.\");\n}finally{\n\
+    \    cmd.Dispose();\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 124
+  md: "```\nstring tmp1 = null;\nstring tmp2 = null;\nstring tmp3 = null;\nquery =\
+    \ \"select * from test \";\nOdbcCommand cmd2 = new OdbcCommand(query, MyConnection);\n\
+    OdbcDataReader reader = cmd2.ExecuteReader();\n\nwhile (reader.Read())\n{\n  \
+    \  tmp1 = reader[0].ToString();\n    tmp2 = reader[1].ToString();\n    tmp3 =\
+    \ reader[2].ToString();\n}\n\nOdbcDataAdapter oda = new OdbcDataAdapter(\"select\
+    \ * from customer \", MyConnection);\nDataSet ds = new DataSet();\n\noda.Fill(ds,\
+    \ \"employee\");\nDataGridView dgv = new DataGridView();\ndgv.DataSource = ds.Tables[\"\
+    employee\"];\nMyConnection.Close();\n```"
+  merge: -1
+  img_proc: false
+- pgno: 125
+  md: '+   - JDBC/ODBC reading
+
+    +     - Advantages:
+
+    +       - Good performance, especially for accessing massive data
+
+    +       - Take advantage of various functions provided by DBMS
+
+    +       - Use stored procedures to implement complex logics
+
+    +     - Disadvantages:
+
+    +       - Coupling with DBMS
+
+    +       - Coupling with data structure
+
+    +       - Programming is complicate
+
+    +     - How to avoid the disadvantages?'
+  merge: -1
+  img_proc: false
+- pgno: 126
+  md: '+   - Working with both Object-Oriented software and Relational Databases can
+    be
+
+    +     - cumbersome and time consuming.
+
+    +   - Development costs are significantly higher due to
+
+    +     - a paradigm mismatch between how data is represented in objects versus
+    relational databases.
+
+    +   - The term Object/Relational Mapping refers to
+
+    +     - the technique of mapping data from an object model representation to a
+    relational data model representation (and visa versa)'
+  merge: -1
+  img_proc: false
+- pgno: 127
+  md: "+   - User.class\n\n```\npublic class User {\n    private Long id;\n\n    private\
+    \ String username;\n    private String password;\n    private String email;\n\n\
+    \    public User() {}\n\n    public Long getId() { return id; }\n    public void\
+    \ setId(Long id) { this.id = id; }\n\n    public String getUsername() { return\
+    \ username; }\n    public void setUsername(String username) { this.username =\
+    \ username; }\n\n    public String getPassword() { return password; }\n    public\
+    \ void setPassword(String password) { this.password = password; }\n\n    public\
+    \ String getEmail() { return email; }\n    public void setEmail(String email)\
+    \ { this.email = email; }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 128
+  md: "+   - User.hbm.xml\n\n```\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE\
+    \ hibernate-mapping PUBLIC\n    \"-//Hibernate/Hibernate Mapping DTD 3.0//EN\"\
+    \n    \"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd\">\n\nhibernate-mapping\
+    \ package=\"sample\">\n    <class name=\"User\" table=\"tbl_user\">\n        <id\
+    \ name=\"id\" column=\"id\">\n            <generator class=\"native\"/>\n    \
+    \    </id>\n        <property name=\"username\" />\n        <property name=\"\
+    password\"/>\n        <property name=\"email\"/>\n    </class>\n</hibernate-mapping>\n\
+    ```"
+  merge: -1
+  img_proc: false
+- pgno: 129
+  md: "# Hibernate – configuration\n\n+   - `hibernate.cfg.xml`\n\n```\n```xml\n<hibernate-configuration>\n\
+    \    <session-factory>\n        <property name=\"connection.driver_class\">\n\
+    \            com.mysql.jdbc.Driver\n        </property>\n        <property name=\"\
+    connection.url\">\n            jdbc:mysql://localhost:3306/sample_one\n      \
+    \  </property>\n        <property name=\"connection.username\">root</property>\n\
+    \        <property name=\"connection.password\">12345678</property>\n        <property\
+    \ name=\"connection.pool_size\">1</property>\n        <property name=\"dialect\"\
+    >\n            org.hibernate.dialect.MySQL5Dialect\n        </property>\n    \
+    \    <property name=\"current_session_context_class\">thread</property>\n```\n\
+    ```"
+  merge: -1
+  img_proc: false
+- pgno: 130
+  md: "```\n<property name=\"cache.provider_class\">\n    org.hibernate.cache.internal.NoCacheProvider\n\
+    </property>\n\n<!-- Echo all executed SQL to stdout -->\n<property name=\"show_sql\"\
+    >true</property>\n\n<!-- Drop and re-create the database schema on startup -->\n\
+    <property name=\"hbm2ddl.auto\">update</property>\n    <mapping resource=\"sample/User.hbm.xml\"\
+    />\n</session-factory>\n</hibernate-configuration>\n```"
+  merge: -1
+  img_proc: false
+- pgno: 131
+  md: "# Helper class\n\n```\npublic class HibernateUtil {\n    private static final\
+    \ SessionFactory sessionFactory = buildSessionFactory();\n    private static SessionFactory\
+    \ buildSessionFactory() {\n        try {\n            // Create the SessionFactory\
+    \ from hibernate.cfg.xml\n            return new Configuration().configure().buildSessionFactory();\n\
+    \        } catch (Throwable ex) {\n            // Make sure you log the exception,\
+    \ as it might be\n            System.err.println(\"Initial SessionFactory creation\
+    \ failed.\" + ex);\n            throw new ExceptionInInitializerError(ex);\n \
+    \       }\n    }\n    public static SessionFactory getSessionFactory() {\n   \
+    \     return sessionFactory;\n    }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 132
+  md: "```\npublic class UserManagerServlet extends HttpServlet {\n    private static\
+    \ final long serialVersionUID = 1L;\n    public UserManagerServlet() {\n     \
+    \   super();\n    }\n\n    protected void doGet(HttpServletRequest request, HttpServletResponse\
+    \ response)\n        throws ServletException, IOException {\n        try {\n \
+    \           HibernateUtil.getSessionFactory().\n                getCurrentSession().beginTransaction();\n\
+    \            PrintWriter out = response.getWriter();\n            out.println(\"\
+    <html><head><title>\n                User Manager</title></head><body>\");\n \
+    \           listUser(out);\n\n            out.println(\"</body></html>\");\n \
+    \           out.flush();\n            out.close();\n            HibernateUtil.getSessionFactory().\n\
+    \                getCurrentSession().getTransaction().commit();\n        }\n \
+    \   }\n```"
+  merge: -1
+  img_proc: false
+- pgno: 133
+  md: "```\ncatch (Exception ex) {\n    HibernateUtil.getSessionFactory()\n      \
+    \  .getCurrentSession().getTransaction().rollback();\n    if ( ServletException.class.isInstance(\
+    \ ex ) ) {\n        throw ( ServletException ) ex;\n    }\n    else {\n      \
+    \  throw new ServletException( ex );\n    }\n}\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 134
+  md: "```\nprivate void listUser(PrintWriter out) {\n    List result = HibernateUtil.getSessionFactory()\n\
+    \        .getCurrentSession().createCriteria(User.class).list();\n    if (result.size()\
+    \ > 0) {\n        out.println(\"<h2>Users in database:</h2>\");\n        out.println(\"\
+    <table border='1'>\");\n        out.println(\"<tr>\");\n        out.println(\"\
+    <th>id</th>\");\n        out.println(\"<th>Username</th>\");\n        out.println(\"\
+    <th>Password</th>\");\n        out.println(\"<th>email</th>\");\n        out.println(\"\
+    </tr>\");\n        Iterator it = result.iterator();\n        while (it.hasNext())\
+    \ {\n            User user = (User) it.next();\n            out.println(\"<tr>\"\
+    );\n            out.println(\"<td>\" + user.getId() + \"</td>\");\n          \
+    \  out.println(\"<td>\" + user.getUsername() + \"</td>\");\n            out.println(\"\
+    <td>\" + user.getPassword() + \"</td>\");\n            out.println(\"<td>\" +\
+    \ user.getEmail() + \"</td>\");\n            out.println(\"</tr>\");\n       \
+    \ }\n        out.println(\"</table>\");\n    }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 135
+  md: '+   - ORM
+
+    +     - Advantages:
+
+    +       - Independent of DBMS
+
+    +       - Independent of data structure
+
+    +       - OOP
+
+    +     - Disadvantages:
+
+    +       - Impact on performance
+
+    +       - Can NOT utilize the extra functions in addition to standard functions
+    defined in specification.
+
+    +       - Mapping between O and R maybe complex.
+
+    +       - Can NOT invoke stored procedures.'
+  merge: -1
+  img_proc: false
+- pgno: 136
+  md: '+   - JDBC/ODBC reading or ORM?
+
+    +     - Requirements Driven
+
+    +     - Requirement 1:
+
+    +       - To list all records about courses selection of a certain semester.
+
+    +       - It could be a big records set with over 150,000 records selected from
+    millions of records
+
+    +     - Requirement 2:
+
+    +       - To get the average age of all undergraduate students
+
+    +     - Requirement3:
+
+    +       - To ensure that the database could be moved from ORACLE to DB2'
+  merge: -1
+  img_proc: false
+- pgno: 137
+  md: '# Project
+
+
+    +   - To develop a Book Store with PHP
+
+    +     - jQuery UI
+
+    +     - MySQL DB
+
+    +     - Apache HTTP Server
+
+    +     - To implement the CRUD of book, order and user.
+
+    +     - You can design the structure of book, order and user tables as your will.'
+  merge: -1
+  img_proc: false
+- pgno: 138
+  md: '# References
+
+
+    +   - Java 6 RowSet 使用完全剖析
+
+    +     - http://www.ibm.com/developerworks/cn/java/j-lo-java6rowset/
+
+    +   - Introduction to ODBC,
+
+    +     - http://msdn.microsoft.com/en-us/library/ms715408(v=vs.85).aspx
+
+    +   - HIBERNATE - Relational Persistence for Idiomatic Java,
+
+    +     - http://docs.jboss.org/hibernate/orm/4.1/manual/en-US/html_single/#preface'
+  merge: -1
+  img_proc: false
+- pgno: 139
+  md: '![](bbox=[0.65, 0.1, 0.9, 0.22])
+
+
+    # Thank You!'
+  merge: -1
+  img_proc: false
+- pgno: 140
+  md: '# Principles and Techniques of DBMS 5
+
+    Servlet
+
+
+    Haopeng Chen
+
+
+    *RE*liable, *IN*telligent and *S*calable Systems Group (REINS)
+
+
+    Shanghai Jiao Tong University
+
+
+    Shanghai, China
+
+
+    http://reins.se.sjtu.edu.cn/~chenhp
+
+
+    e-mail: chen-hp@sjtu.edu.cn'
+  merge: -1
+  img_proc: false
+- pgno: 141
+  md: '+   - Servlet
+
+    +     - What is Servlet
+
+    +     - Servlet API
+
+    +     - Examples
+
+    +     - Web Application Structure'
+  merge: -1
+  img_proc: false
+- pgno: 142
+  md: '# What is servlet?
+
+
+    +   - A servlet is a Java programming language class used to extend the capabilities
+    of servers that host applications accessed by means of a request-response programming
+    model.
+
+    +     - Although servlets can respond to any type of request, they are commonly
+    used to extend the applications hosted by web servers.
+
+    +     - For such applications, Java Servlet technology defines HTTP-specific servlet
+    classes.
+
+
+    +   - The javax.servlet and javax.servlet.http packages provide interfaces and
+    classes for writing servlets.
+
+    +     - All servlets must implement the Servlet interface, which defines lifecycle
+    methods.
+
+    +     - When implementing a generic service, you can use or extend the GenericServlet
+    class provided with the Java Servlet API.
+
+    +     - The HttpServlet class provides methods, such as doGet and doPost, for
+    handling HTTP-specific services.'
+  merge: -1
+  img_proc: false
+- pgno: 143
+  md: '+   - Container types
+
+
+    ![](bbox=[0.22, 0.35, 0.88, 0.75])'
+  merge: -1
+  img_proc: false
+- pgno: 144
+  md: '# An Example
+
+
+    +   - The following is a typical sequence of events:
+
+    +     1. A client (e.g., a Web browser) accesses a Web server and makes an HTTP
+    request.
+
+    +     2. The request is received by the Web server and handed off to the servlet
+    container.
+
+    +        - The servlet container can be running in the same process as the host
+    Web server, in a different process on the same host, or on a different host from
+    the Web server for which it processes requests.
+
+    +     3. The servlet container determines which servlet to invoke based on the
+    configuration of its servlets, and calls it with objects representing the request
+    and response.
+
+    +     4. The servlet uses the request object to find out who the remote user is,
+    what HTTP POST parameters may have been sent as part of this request, and other
+    relevant data.
+
+    +        - The servlet performs whatever logic it was programmed with, and generates
+    data to send back to the client. It sends this data back to the client via the
+    response object.
+
+    +     5. Once the servlet has finished processing the request, the servlet container
+    ensures that the response is properly flushed, and returns control back to the
+    host Web server.'
+  merge: -1
+  img_proc: false
+- pgno: 145
+  md: '# Servlet Lifecycle
+
+
+    The lifecycle of a servlet is controlled by the container in which the servlet
+    has been deployed. When a request is mapped to a servlet, the container performs
+    the following steps.
+
+
+    +   1. If an instance of the servlet does not exist, the web container
+
+    +      - Loads the servlet class.
+
+    +      - Creates an instance of the servlet class.
+
+    +      - Initializes the servlet instance by calling the `init` method.
+
+    +   2. Invokes the `service` method, passing request and response objects.
+
+
+    If it needs to remove the servlet, the container finalizes the servlet by calling
+    the servlet''s `destroy` method.'
+  merge: -1
+  img_proc: false
+- pgno: 146
+  md: '# Creating a Servlet
+
+
+    +   - Use the `@WebServlet` annotation to define a servlet component in a web
+    application.
+
+    +     - The annotated servlet must specify at least one URL pattern.
+
+    +     - This is done by using the `urlPatterns` or value attribute on the annotation.
+
+    +     ```
+
+    +     import javax.servlet.annotation.WebServlet;
+
+    +     import javax.servlet.http.HttpServlet;
+
+    +     @WebServlet("/report")
+
+    +     public class MoodServlet extends HttpServlet {
+
+    +         ...
+
+    +     ```
+
+    +   - The web container initializes a servlet after loading and instantiating
+    the servlet class and before delivering requests from clients.'
+  merge: -1
+  img_proc: false
+- pgno: 147
+  md: '# The Servlet Interface
+
+
+    +   - The `Servlet` interface is the central abstraction of the Java Servlet API.
+
+    +     - All servlets implement this interface either directly, or more commonly,
+    by extending a class that implements the interface.
+
+    +     - The two classes in the Java Servlet API that implement the Servlet interface
+    are `GenericServlet` and `HttpServlet`.
+
+    +     - For most purposes, Developers will extend `HttpServlet` to implement their
+    servlets.'
+  merge: -1
+  img_proc: false
+- pgno: 148
+  md: '+   - `HttpServlet` class has methods to aid in processing HTTP-based requests:
+
+    +     - `doGet` for handling HTTP GET requests
+
+    +     - `doPost` for handling HTTP POST requests
+
+    +     - `doPut` for handling HTTP PUT requests
+
+    +     - `doDelete` for handling HTTP DELETE requests
+
+    +     - `doHead` for handling HTTP HEAD requests
+
+    +     - `doOptions` for handling HTTP OPTIONS requests
+
+    +     - `doTrace` for handling HTTP TRACE requests
+
+    +   - Typically when developing HTTP-based servlets, a Servlet Developer will
+    only concern himself with the `doGet` and `doPost` methods.'
+  merge: -1
+  img_proc: false
+- pgno: 149
+  md: "```\n@WebServlet(\"/report\")\npublic class MoodServlet extends HttpServlet\
+    \ {\n    protected void processRequest(HttpServletRequest request, HttpServletResponse\
+    \ response)\n        throws ServletException, IOException {\n        response.setContentType(\"\
+    text/html;charset=UTF-8\");\n        PrintWriter out = response.getWriter();\n\
+    \        try {\n            out.println(\"<html lang=\\\"en\\\">\");\n       \
+    \     out.println(\"<head>\");\n            out.println(\"<title>Servlet MoodServlet</title>\"\
+    );\n            out.println(\"</head>\");\n            out.println(\"<body>\"\
+    );\n            out.println(\"<h1>Servlet MoodServlet at \\\" + request.getContextPath()\
+    \ + \\\"</h1>\");\n            request.setAttribute(\"mood\", \"sleep\");\n  \
+    \          String mood = {String} request.getAttribute(\"mood\");\n          \
+    \  out.println(\"<p>Duke's mood is: \" + mood + \"</p>\");\n            if (mood.equals(\"\
+    sleepy\")) {\n                out.println(\"<img src=\\\"resources/images/duke.snooze.gif\\\
+    \" alt=\\\"Duke sleeping\\\"/><br/>\");\n            } else{\n               \
+    \ ....\n            }\n            out.println(\"</body>\");\n            out.println(\"\
+    </html>\");\n        } finally {\n            out.close();\n        }\n    }\n\
+    }\n```"
+  merge: -1
+  img_proc: false
+- pgno: 150
+  md: "# An Example: mood\n\n```\n@Override\nprotected void doGet(HttpServletRequest\
+    \ request, HttpServletResponse response)\n    throws ServletException, IOException\
+    \ {\n    response.setContentType(\"text/html;charset=UTF-8\");\n    processRequest(request,\
+    \ response);\n}\n\n@Override\nprotected void doPost(HttpServletRequest request,\
+    \ HttpServletResponse response)\n    throws ServletException, IOException {\n\
+    \    processRequest(request, response);\n}\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 151
+  md: "+   - The generated html page:\n\n```\n<html lang=\"en\">\n    <head>\n   \
+    \     <title>Servlet MoodServlet</title>\n    </head>\n    <body>\n        <h1>Servlet\
+    \ MoodServlet at /ServletMood</h1>\n        <p>Duke's mood is: sleepy</p>\n  \
+    \      <img src=\"resources/images/duke.snooze.gif\" alt=\"Duke sleeping\"/><br/>\n\
+    \    </body>\n</html>\n```"
+  merge: -1
+  img_proc: false
+- pgno: 152
+  md: '# An Example: mood
+
+
+    +   - ServletMood
+
+    +   - JAX-WS Web Services
+
+    +   - Deployment Descriptor: ServletMood
+
+    +   - Java Resources
+
+    +     - src
+
+    +       - mood
+
+    +         - MoodServlet.java
+
+    +   - Libraries
+
+    +   - JavaScript Resources
+
+    +   - build
+
+    +   - WebContent
+
+    +     - META-INF
+
+    +     - resources
+
+    +     - WEB-INF
+
+    +       - lib
+
+
+    http://localhost:8080/ServletMood/report
+
+
+    Servlet MoodServlet at /ServletMood
+
+
+    Duke''s mood is: sleepy'
+  merge: -1
+  img_proc: false
+- pgno: 153
+  md: '+   - A **filter** is an object that can transform the header and content (or
+    both) of a request or response.
+
+    +     - Filters differ from web components in that filters usually do not themselves
+    create a response.
+
+    +     - Instead, a filter provides functionality that can be "attached" to any
+    kind of web resource.
+
+    +     - Consequently, a filter should not have any dependencies on a web resource
+    for which it is acting as a filter; this way, it can be composed with more than
+    one type of web resource.
+
+    +   - The main tasks that a filter can perform are as follows:
+
+    +     - Query the request and act accordingly.
+
+    +     - Block the request-and-response pair from passing any further.
+
+    +     - Modify the request headers and data. You do this by providing a customized
+    version of the request.
+
+    +     - Modify the response headers and data. You do this by providing a customized
+    version of the response.
+
+    +     - Interact with external resources.'
+  merge: -1
+  img_proc: false
+- pgno: 154
+  md: "# Programming Filters\n\n+   - You define a filter by implementing the `Filter`\
+    \ interface.\n\n```\nimport javax.servlet.Filter;\nimport javax.servlet.annotation.WebFilter;\n\
+    import javax.servlet.annotation.WebInitParam;\n\n@WebFilter(filterName = \"TimeOfDayFilter\"\
+    ,\n    urlPatterns = {\"/*\"},\n    initParams = {\n        @WebInitParam(name\
+    \ = \"mood\", value = \"awake\")}\n)\npublic class TimeOfDayFilter implements\
+    \ Filter { ....\n```"
+  merge: -1
+  img_proc: false
+- pgno: 155
+  md: "# Programming Filters\n\n```\npublic class TimeOfDayFilter implements Filter\
+    \ {\n    String mood = null;\n    @Override\n    public void init(FilterConfig\
+    \ filterConfig) throws ServletException {\n        mood = filterConfig.getInitParameter(\"\
+    mood\");\n    }\n    @Override\n    public void doFilter(ServletRequest req, ServletResponse\
+    \ res, FilterChain chain)\n            throws IOException, ServletException {\n\
+    \        Calendar cal = GregorianCalendar.getInstance();\n        switch (cal.get(Calendar.HOUR_OF_DAY))\
+    \ {\n            case 23:case 24:case 1:case 2:case 3:case 4:case 5:case 6:\n\
+    \                mood = \"sleepy\";\n                break;\n            ........\n\
+    \        }\n        req.setAttribute(\"mood\", mood);\n        chain.doFilter(req,\
+    \ res);\n    }\n    @Override\n    public void destroy() {\n    }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 156
+  md: '# An Example: mood
+
+
+    ServletMood
+
+    JAX-WS Web Services
+
+    Java Resources
+
+    src
+
+    mood
+
+    MoodServlet.java
+
+    TimeOfDayFilter.java
+
+    Libraries
+
+    JavaScript Resources
+
+    build
+
+    WebContent
+
+    META-INF
+
+    resources
+
+    WEB-INF
+
+    lib
+
+
+    Servlet MoodServlet at /ServletMood
+
+    Duke''s mood is: thoughtful'
+  merge: -1
+  img_proc: false
+- pgno: 157
+  md: '![](bbox=[0.22, 0.28, 0.82, 0.78])'
+  merge: -1
+  img_proc: false
+- pgno: 158
+  md: '# Handling Servlet Lifecycle Events
+
+
+    | Object | Event | Listener Interface and Event |
+
+    |---|---|---|
+
+    | Web context | Initialization and destruction | javax.servlet.ServletContextListener
+    and ServletContextEvent |
+
+    | Web context | Attribute added, removed, or replaced | javax.servlet.ServletContextAttributeListener
+    and ServletContextAttributeEvent |
+
+    | Session | Creation, invalidation, activation, passivation, and timeout | javax.servlet.http.HttpSessionListener,
+    javax.servlet.http.HttpSessionActivationListener, and HttpSessionEvent |
+
+    | Session | Attribute added, removed, or replaced | javax.servlet.http.HttpSessionAttributeListener
+    and HttpSessionBindingEvent |
+
+    | Request | A servlet request has started being processed by web components |
+    javax.servlet.ServletRequestListener and ServletRequestEvent |
+
+    | Request | Attribute added, removed, or replaced | javax.servlet.ServletRequestAttributeListener
+    and ServletRequestAttributeEvent |'
+  merge: -1
+  img_proc: false
+- pgno: 159
+  md: "# Handling Servlet Lifecycle Events\n\n```\n@WebListener()\npublic class SimpleServletListener\
+    \ implements ServletContextListener,\n    ServletContextAttributeListener {\n\n\
+    \    static final Logger log =\n        Logger.getLogger(\"mood.web.SimpleServletListener\"\
+    );\n\n    @Override\n    public void attributeAdded(ServletContextAttributeEvent\
+    \ event) {\n        log.log(Level.INFO, \"Attribute {0} has been added, with value:\
+    \ {1}\",\n            new Object[]{event.getName(), event.getValue()});\n    }\n\
+    \n    @Override\n    public void attributeRemoved(ServletContextAttributeEvent\
+    \ event) {\n        log.log(Level.INFO, \"Attribute {0} has been removed\",\n\
+    \            event.getName());\n    }\n\n    @Override\n    public void attributeReplaced(ServletContextAttributeEvent\
+    \ event) {\n        log.log(Level.INFO, \"Attribute {0} has been replaced, with\
+    \ value: {1}\",\n            new Object[]{event.getName(), event.getValue()});\n\
+    \    }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 160
+  md: "+   - HttpRequest Attribute\n+     `request.setAttribute(\"mood\", \"sleepy\"\
+    );`\n+     `String mood = (String) request.getAttribute(\"mood\");`\n+     `http://localhost:8080/ServletMood/report`\n\
+    +   \n+   - HttpRequest Parameter\n+     `request.setParameter(\"mood\", \"sleepy\"\
+    );`\n+     or\n+     `http://localhost:8080/ServletMood/report?mood=sleepy`\n\
+    +     `String mood = (String) request.getParameter(\"mood\");`"
+  merge: -1
+  img_proc: false
+- pgno: 161
+  md: '# Maintaining Client State
+
+
+    +   - Many applications require that a series of requests from a client be associated
+    with one another.
+
+    +     - For example, a web application can save the state of a user''s shopping
+    cart across requests.
+
+    +     - Web-based applications are responsible for maintaining such state, called
+    a **session**, because **HTTP is stateless**.
+
+    +     - To support applications that need to maintain state, Java Servlet technology
+    provides an API for managing sessions and allows several mechanisms for implementing
+    sessions.'
+  merge: -1
+  img_proc: false
+- pgno: 162
+  md: '+   - Sessions are represented by an HttpSession object.
+
+    +     - You access a session by calling the getSession method of a request object.
+
+    +     - This method returns the current session associated with this request;
+    or, if the request does not have a session, this method creates one.
+
+
+    ![](bbox=[0.18, 0.45, 0.86, 0.86])'
+  merge: -1
+  img_proc: false
+- pgno: 163
+  md: '# Associating Objects with a Session
+
+
+    +   - You can associate object-valued attributes with a session by name.
+
+    +     - Such attributes are accessible by any web component that belongs to the
+    same web context and is handling a request that is part of the same session.
+
+
+    ```
+
+    HttpSession hs = request.getSession();
+
+    Shoppingcart cart = new Shoppingcart();
+
+    hs.setAttribute("cart", cart);
+
+    cart.add(item);
+
+    ```
+
+
+    ```
+
+    HttpSession hs = request.getSession();
+
+    Shoppingcart cart = hs.getAttribute("cart");
+
+    List<Object> ls = cart.getItems();
+
+    ```'
+  merge: -1
+  img_proc: false
+- pgno: 164
+  md: '+   - The web container may determine that a servlet should be removed from
+    service
+
+    +     - for example, when a container wants to reclaim memory resources or when
+    it is being shut down.
+
+    +     - In such a case, the container calls the `destroy` method of the `Servlet`
+    interface.
+
+    +     - In this method, you release any resources the servlet is using and save
+    any persistent state. The `destroy` method releases the database object created
+    in the `init` method.
+
+    +   - A servlet''s service methods should all be complete when a servlet is removed.
+
+    +     - The server tries to ensure this by calling the destroy method only after
+    all service requests have returned or after a server-specific grace period, whichever
+    comes first.'
+  merge: -1
+  img_proc: false
+- pgno: 165
+  md: '+   - Supporting file uploads is a very basic and common requirement for many
+    web applications.
+
+    +   - `javax.servlet.annotation.MultipartConfig` is used to indicate that the
+    servlet on which it is declared expects requests to made using the `multipart/form-data`
+    MIME type.
+
+    +     - Servlets that are annotated with `@MultipartConfig` can retrieve the Part
+    components of a given multipart/form-data request by calling the `request.getPart(String
+    name)` or `request.getParts()` method.
+
+    +   - `multipart/form-data` MIME type
+
+    +     - A method for uploading files with forms in Browser
+
+    +     - Scenario: the attachment of an email is attached with form, that is, the
+    attachment is uploaded to server in multipart/form-data MIME type'
+  merge: -1
+  img_proc: false
+- pgno: 166
+  md: '+   - The @MultipartConfig annotation supports the following optional attributes:
+
+    +     - location:
+
+    +       - An absolute path to a directory on the file system.
+
+    +       - The default location is "".
+
+    +     - fileSizeThreshold:
+
+    +       - The file size in bytes after which the file will be temporarily stored
+    on disk.
+
+    +       - The default size is 0 bytes.
+
+    +     - MaxFileSize:
+
+    +       - The maximum size allowed for uploaded files, in bytes.
+
+    +       - If the size of any uploaded file is greater than this size, the web
+    container will throw an exception (IllegalStateException).
+
+    +       - The default size is unlimited.
+
+    +     - maxRequestSize:
+
+    +       - The maximum size allowed for a multipart/form-data request, in bytes.
+
+    +       - The web container will throw an exception if the overall size of all
+    uploaded files exceeds this threshold.
+
+    +       - The default size is unlimited.'
+  merge: -1
+  img_proc: false
+- pgno: 167
+  md: '+   - For, example, the @MultipartConfig annotation could be constructed as
+    follows:
+
+    +   ```
+
+    +   @MultipartConfig(location="/tmp",
+
+    +     fileSizeThreshold=1024*1024,
+
+    +     maxFileSize=1024*1024*5,
+
+    +     maxRequestSize=1024*1024*5*5)
+
+    +   ```
+
+    +   - Instead of using the @MultipartConfig annotation to hard-code these attributes
+    in your file upload servlet, you could add the following as a child element of
+    the servlet configuration element in the web.xml file.
+
+    +   ```
+
+    +   <multipart-config>
+
+    +     <location>/tmp</location>
+
+    +     <max-file-size>20848820</max-file-size>
+
+    +     <max-request-size>418018841</max-request-size>
+
+    +     <file-size-threshold>1048576</file-size-threshold>
+
+    +   </multipart-config>
+
+    +   ```'
+  merge: -1
+  img_proc: false
+- pgno: 168
+  md: '+   - The Servlet specification supports two additional HttpServletRequest
+    methods:
+
+    +     ```
+
+    +     Collection<Part> getParts()
+
+    +     Part getPart(String name)
+
+    +     ```
+
+    +   - The javax.servlet.http.Part interface is a simple one, providing methods
+    that allow introspection of each Part. The methods do the following:
+
+    +     - Retrieve the name, size, and content-type of the Part
+
+    +     - Query the headers submitted with a Part
+
+    +     - Delete a Part
+
+    +     - Write a Part out to disk'
+  merge: -1
+  img_proc: false
+- pgno: 169
+  md: '+   - Index.html
+
+    +   ```html
+
+    +   <!DOCTYPE html>
+
+    +   <html lang="en">
+
+    +   <head>
+
+    +   <title>File Upload</title>
+
+    +   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    +   </head>
+
+    +   <body>
+
+    +   <form method="POST" action="upload" enctype="multipart/form-data">
+
+    +   File:
+
+    +   <input type="file" name="file" id="file" /> <br/>
+
+    +   Destination:
+
+    +   <input type="text" value="/tmp" name="destination"/>
+
+    +   <br>
+
+    +   <input type="submit" value="Upload" name="upload" id="upload" />
+
+    +   </form>
+
+    +   </body>
+
+    +   </html>
+
+    +   ```'
+  merge: -1
+  img_proc: false
+- pgno: 170
+  md: "# Uploading Files\n\n```\nFileUploadServlet.java\n@WebServlet(name = \"FileUploadServlet\"\
+    , urlPatterns = {\"/upload\"})\n@MultipartConfig\npublic class FileUploadServlet\
+    \ extends HttpServlet {\n\n    private final static Logger LOGGER =\n        Logger.getLogger(FileUploadServlet.class.getCanonicalName());\n\
+    \n    protected void processRequest(HttpServletRequest request,\n        HttpServletResponse\
+    \ response)\n        throws ServletException, IOException {\n    response.setContentType(\"\
+    text/html;charset=UTF-8\");\n\n    // Create path components to save the file\n\
+    \    final String path = request.getParameter(\"destination\");\n    final Part\
+    \ filePart = request.getPart(\"file\");\n    final String fileN = getFileName(filePart);\n\
+    \    File file = new File(fileN);\n    final String fileName = file.getName();\n\
+    \n    OutputStream out = null;\n    InputStream filecontent = null;\n    final\
+    \ PrintWriter writer = response.getWriter();\n```"
+  merge: -1
+  img_proc: false
+- pgno: 171
+  md: "```\nFileUploadServlet.java\n    try {\n        out = new FileOutputStream(new\
+    \ File(path + File.separator + fileName));;\n        filecontent = filePart.getInputStream();\n\
+    \n        int read;\n        final byte[] bytes = new byte[1024];\n\n        while\
+    \ ((read = filecontent.read(bytes)) != -1) { out.write(bytes, 0, read); }\n  \
+    \      writer.println(\"New file \" + fileName + \" created at \" + path);\n \
+    \       LOGGER.log(Level.INFO, \"File {0} being uploaded to {1}\",\n         \
+    \   new Object[]{fileName, path});\n    } catch (FileNotFoundException fne) {\n\
+    \        writer.println(\"You either did not specify a file to upload or are \"\
+    \n            + \"trying to upload a file to a protected or nonexistent \"\n \
+    \           + \"location.\");\n        writer.println(\"<br/> ERROR: \" + fne.getMessage());\n\
+    \        LOGGER.log(Level.SEVERE, \"Problems during file upload. Error: {0}\"\
+    ,\n            new Object[]{fne.getMessage()});\n    } finally {\n        if (out\
+    \ != null) { out.close(); }\n        if (filecontent != null) { filecontent.close();\
+    \ }\n        if (writer != null) { writer.close(); }\n    }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 172
+  md: "# Uploading Files\n\n+   - FileUploadServlet.java\n\n```\nprivate String getFileName(final\
+    \ Part part) {\n    final String partHeader = part.getHeader(\"content-disposition\"\
+    );\n    LOGGER.log(Level.INFO, \"Part Header = {0}\", partHeader);\n    for (String\
+    \ content : part.getHeader(\"content-disposition\").split(\";\")) {\n        if\
+    \ (content.trim().startsWith(\"filename\")) {\n            return content.substring(\n\
+    \                content.indexOf('=') + 1).trim().replace(\"\\\"\", \"\");\n \
+    \       }\n    }\n    return null;\n}\n\n@Override\nprotected void doGet(HttpServletRequest\
+    \ request, HttpServletResponse response)\n    throws ServletException, IOException\
+    \ {\n    processRequest(request, response);\n}\n\n@Override\nprotected void doPost(HttpServletRequest\
+    \ request, HttpServletResponse response)\n    throws ServletException, IOException\
+    \ {\n    processRequest(request, response);\n}\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 173
+  md: '![](bbox=[0.1, 0.22, 0.42, 0.6])
+
+
+    ![](bbox=[0.5, 0.23, 0.9, 0.52])
+
+
+    ![](bbox=[0.35, 0.7, 0.85, 0.85])'
+  merge: -1
+  img_proc: false
+- pgno: 174
+  md: <!-- no content -->
+  merge: -1
+  img_proc: false
+- pgno: 175
+  md: '+   - An example:
+
+    +     - /index.html
+
+    +     - /howto.jsp
+
+    +     - /feedback.jsp
+
+    +     - /images/banner.gif
+
+    +     - /images/jumping.gif
+
+    +     - /WEB-INF/web.xml
+
+    +     - /WEB-INF/lib/jspbean.jar
+
+    +     - /WEB-INF/classes/com/mycorp/servlets/MyServlet.class
+
+    +     - /WEB-INF/classes/com/mycorp/util/MyUtils.class'
+  merge: -1
+  img_proc: false
+- pgno: 176
+  md: '# References
+
+
+    +   - Java EE 7 tutorial
+
+    +     - http://docs.oracle.com/javaee/7/tutorial/doc/servlets001.htm
+
+    +   - Java Servlet Specification
+
+    +     - http://download.oracle.com/otn-pub/jcp/servlet-3_1-fr-eval-spec/servlet-3_1-final.pdf?AuthParam=1396178605
+    99ca893c1d2485541a2baf6a88414bf8'
+  merge: -1
+  img_proc: false
+- pgno: 177
+  md: '# Thank You!'
+  merge: -1
+  img_proc: false
+- pgno: 178
+  md: '# Principles and Techniques of DBMS 6
+
+    JSP & Servlet
+
+
+    Haopeng Chen
+
+
+    *REliable, INtelligent and Scalable Systems Group (REINS)*
+
+
+    Shanghai Jiao Tong University
+
+
+    Shanghai, China
+
+
+    [http://reins.sjtu.edu.cn/~chenhp](http://reins.sjtu.edu.cn/~chenhp)
+
+
+    e-mail: chen-hp@sjtu.edu.cn'
+  merge: -1
+  img_proc: false
+- pgno: 179
+  md: '# Overview
+
+
+    +   - Servlet
+
+    +     - Servlet + JDBC reading
+
+    +   - JSP
+
+    +     - JSP concept
+
+    +     - JSP + JavaBean'
+  merge: -1
+  img_proc: false
+- pgno: 180
+  md: '+   - Index.html
+
+    +     <HTML>
+
+    +     <BODY>
+
+    +     <FORM METHOD=POST ACTION="SaveUser">
+
+    +     What''s your name?
+
+    +     <INPUT TYPE=TEXT NAME=username SIZE=20 ><BR>
+
+    +     What''s your e-mail address?
+
+    +     <INPUT TYPE=TEXT NAME=email SIZE=20 ><BR>
+
+    +     What''s your password?
+
+    +     <INPUT TYPE=TEXT NAME=password SIZE=4 >
+
+    +     <P>
+
+    +     <INPUT TYPE=SUBMIT>
+
+    +     </FORM>
+
+    +     </BODY>
+
+    +     </HTML>'
+  merge: -1
+  img_proc: false
+- pgno: 181
+  md: "+   - UserServlet.java\n\n```\n@WebServlet(\"/SaveUser\")\npublic class UserServlet\
+    \ extends HttpServlet {\n    private static final long serialVersionUID = 18925377774889413L;\n\
+    \n    @Resource(name=\"jdbc/sample\")\n    DataSource ds;\n\n    protected void\
+    \ processRequest(HttpServletRequest request,\n            HttpServletResponse\
+    \ response)\n            throws ServletException, IOException {\n        response.setContentType(\"\
+    text/html;charset=UTF-8\");\n        PrintWriter out = response.getWriter();\n\
+    \        try {\n            out.println(\"<html lang=\\\"en\\\">\");\n       \
+    \     out.println(\"<head>\");\n            out.println(\"<title>Servlet UserServlet</title>\"\
+    );\n            out.println(\"</head>\");\n            out.println(\"<body>\"\
+    );\n            out.println(\"<h1>Servlet UserServlet at \"\n                +\
+    \ request.getContextPath() + \"</h1>\");\n\n            String user = (String)\
+    \ request.getParameter(\"username\");\n            String email = (String) request.getParameter(\"\
+    email\");\n            String password = (String) request.getParameter(\"password\"\
+    );\n```"
+  merge: -1
+  img_proc: false
+- pgno: 182
+  md: "# Servlet access DB\n\n+   - UserServlet.java\n\n```\nConnection con = ds.getConnection();\n\
+    PreparedStatement ps = con.prepareStatement(\"SELECT * FROM tbl_user WHERE username\
+    \ = ?\");\nps.setString(1, user);\nResultSet rs = ps.executeQuery();\nrs.last();\n\
+    int count = rs.getRow();\n\nif ( count == 0) {\n    PreparedStatement pst = con.prepareStatement(\"\
+    INSERT INTO tbl_user VALUES (?, ?, ?, ?)\");\n    Random rand = new Random();\n\
+    \    int id = rand.nextInt();\n    pst.setInt(1, id);\n    pst.setString(2,user);\n\
+    \    pst.setString(3,password);\n    pst.setString(4,email);\n    boolean b =\
+    \ pst.execute();\n    out.println(\"<p>\" + user + \" \" + email + \" \" + password);\n\
+    } else{\n    out.println(\"<p>\" + \"existing user\");\n}\n\nout.println(\"</body>\"\
+    );\nout.println(\"</html>\");\n\n} catch (SQLException e){\ne.printStackTrace();\n\
+    }\nfinally {\n    out.close();\n}\n}\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 183
+  md: "+   - UserServlet.java\n\n```\n@Override\nprotected void doGet(HttpServletRequest\
+    \ request,\n    HttpServletResponse response)\n    throws ServletException, IOException\
+    \ {\n    response.setContentType(\"text/html;charset=UTF-8\");\n    processRequest(request,\
+    \ response);\n}\n\n@Override\nprotected void doPost(HttpServletRequest request,\n\
+    \    HttpServletResponse response)\n    throws ServletException, IOException {\n\
+    \    processRequest(request, response);\n}\n\n@Override\npublic String getServletInfo()\
+    \ {\n    return \"Short description\";\n}// </editor-fold>\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 184
+  md: '+   - Context.xml
+
+    +     <Context>
+
+    +       <Resource name="jdbc/sample" auth="Container" type="javax.sql.DataSource"
+    maxActive="100" maxIdle="30" maxWait="10000" username="root" password="12345678"
+    driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/sample_one"/>
+
+    +     </Context>'
+  merge: -1
+  img_proc: false
+- pgno: 185
+  md: '# First JSP
+
+
+    +   - JSP simply puts Java inside HTML pages.
+
+    +     - You can take any existing HTML page and change its extension to ".jsp"
+    instead of ".html".
+
+    +     - In fact, this is the perfect exercise for your first JSP.
+
+    +     - Take the following HTML file. Change its extension from ".html" to ".jsp".
+
+    +     - Now load the new file, with the ".jsp" extension, in your browser.
+
+
+    ```
+
+    <HTML>
+
+    <BODY> Hello, world </BODY>
+
+    </HTML>
+
+    ```'
+  merge: -1
+  img_proc: false
+- pgno: 186
+  md: '+   - You will see the same output, but it will take longer! But only the first
+    time.
+
+    +     - If you reload it again, it will load normally.
+
+    +   - What is happening behind the scenes is that
+
+    +     - your JSP is being turned into a Java file, compiled and loaded.
+
+    +     - This compilation only happens once, so after the first load, the file
+    doesn''t take long to load anymore.
+
+    +     - (But everytime you change the JSP file, it will be re-compiled again.)'
+  merge: -1
+  img_proc: false
+- pgno: 187
+  md: '+   - Put the following text in a file with .jsp, place it in your JSP directory,
+    and view it in a browser.
+
+    +   ```
+
+    +   <HTML>
+
+    +     <BODY>
+
+    +       Hello!  The time is now <%= new java.util.Date() %>
+
+    +     </BODY>
+
+    +   </HTML>
+
+    +   ```
+
+    +   - Notice that each time you reload the page in the browser, it comes up with
+    the current time.
+
+    +   - The character sequences <%= and %> enclose Java expressions, which are evaluated
+    at run time.'
+  merge: -1
+  img_proc: false
+- pgno: 188
+  md: '+   - JSP also allows you to write blocks of Java code inside the JSP.
+
+    +     - You do this by placing your Java code between `<%` and `%>` characters
+
+    +     - just like expressions, but without the `=` sign at the start of the sequence.
+
+    +     - This block of code is known as a "scriptlet".
+
+    +     - A scriptlet contains Java code that is executed every time the JSP is
+    invoked.
+
+
+    ```
+
+    <HTML>
+
+    <BODY>
+
+    <%
+
+    System.out.println( "Evaluating date now" );
+
+    java.util.Date date = new java.util.Date();
+
+    %>
+
+    Hello!  The time is now <%= date %>
+
+    </BODY>
+
+    </HTML>
+
+    ```'
+  merge: -1
+  img_proc: false
+- pgno: 189
+  md: "+   - By itself a scriptlet does not generate HTML.\n+     - If a scriptlet\
+    \ wants to generate HTML, it can use a variable called \"out\".\n+     - This\
+    \ variable does not need to be declared.\n+     - It is already predefined for\
+    \ scriptlets, along with some other variables.\n\n```\n<HTML>\n<BODY>\n<%\n  \
+    \  System.out.println( \"Evaluating date now\" );\n    java.util.Date date = new\
+    \ java.util.Date();\n%>\nHello!  The time is now\n<%\n    out.println( String.valueOf(\
+    \ date ));\n%>\n</BODY>\n</HTML>\n```"
+  merge: -1
+  img_proc: false
+- pgno: 190
+  md: "+   - Another very very useful pre-defined variable is \"request\".\n+    \
+    \ - The JSP \"request\" variable is used to obtain information from the request\
+    \ as sent by the browser.\n\n```\n<HTML>\n  <BODY>\n    <%\n    // This scriptlet\
+    \ declares and initializes \"date\"\n    System.out.println( \"Evaluating date\
+    \ now\" );\n    java.util.Date date = new java.util.Date();\n    %>\n    Hello!\
+    \  The time is now\n    <%\n    out.println( date );\n    out.println( \"<BR>Your\
+    \ machine's address is \" );\n    out.println( request.getRemoteHost());\n   \
+    \ %>\n  </BODY>\n</HTML>\n```"
+  merge: -1
+  img_proc: false
+- pgno: 191
+  md: '# Scriptlets
+
+
+    +   - A similar variable is "response".
+
+    +     - This can be used to affect the response being sent to the browser.
+
+    +     - For instance, you can call response.sendRedirect( anotherUrl ); to send
+    a response to the browser that it should load a different URL.
+
+    +     - This response will actualy go all the way to the browser.
+
+    +     - The browser will then send a different request, to "anotherUrl".
+
+
+    ```
+
+    <HTML>
+
+    <BODY>
+
+    <%
+
+    // This scriptlet declares and initializes "date"
+
+    response.sendRedirect("index3.jsp");
+
+    %>
+
+    </BODY>
+
+    </HTML>
+
+    ```'
+  merge: -1
+  img_proc: false
+- pgno: 192
+  md: '+   - For more complicated HTML, using the out variable all the time loses
+    some of the advantages of JSP programming.
+
+    +   ```
+
+    +   <TABLE BORDER=2>
+
+    +       <%
+
+    +           int n = 10;
+
+    +           for ( int i = 0; i < n; i++ ) {
+
+    +   %>
+
+    +   <TR>
+
+    +       <TD>Number</TD>
+
+    +       <TD><%= i+1 %></TD>
+
+    +   </TR>
+
+    +       <%
+
+    +           }
+
+    +   %>
+
+    +   </TABLE>
+
+    +   ```'
+  merge: -1
+  img_proc: false
+- pgno: 193
+  md: '+   - It is possible to use "import" statements in JSPs,
+
+    +     - but the syntax is a little different from normal Java.
+
+    +     ```
+
+    +     <%@ page import="java.util.*" %>
+
+    +     <HTML>
+
+    +     <BODY>
+
+    +     <%
+
+    +         System.out.println( "Evaluating date now" );
+
+    +         Date date = new Date();
+
+    +     %>
+
+    +     Hello!  The time is now <%= date %>
+
+    +     </BODY>
+
+    +     </HTML>
+
+    +     ```
+
+
+    +   - The first line in the above example is called a "directive".
+
+    +     - A JSP "directive" starts with <%@ characters.
+
+    +     - <%@ page import="java.util.*,java.text.*" %>'
+  merge: -1
+  img_proc: false
+- pgno: 194
+  md: '# JSP Directives
+
+
+    +   - The include directive is used to physically include the contents of another
+    file.
+
+    +     - The included file can be HTML or JSP or anything else
+
+    +     - the result is as if the original JSP file actually contained the included
+    text.
+
+    +   ```
+
+    +   <HTML>
+
+    +   <BODY>
+
+    +       Going to include index.jsp...<BR>
+
+    +       <%@ include file="index.jsp" %>
+
+    +   </BODY>
+
+    +   </HTML>
+
+    +   ```'
+  merge: -1
+  img_proc: false
+- pgno: 195
+  md: "+   - The JSP you write turns into a class definition.\n+     - To add a declaration,\
+    \ you must use the `<%!` and ` %>` sequences to enclose your declarations, as\
+    \ shown below.\n\n```\n<%@ page import=\"java.util.*\" %>\n<HTML>\n  <BODY>\n\
+    \    <%!\n      Date theDate = new Date();\n      Date getDate(){\n        System.out.println(\
+    \ \"In getDate() method\" );\n        return theDate;\n      }\n    %>\n    Hello!\
+    \  The time is now <%= getDate() %>\n  </BODY>\n</HTML>\n```"
+  merge: -1
+  img_proc: false
+- pgno: 196
+  md: "+   - A JSP tag is somewhat like an HTML tag.\n+     - JSP tags can have a\
+    \ \"start tag\", a \"tag body\" and an \"end tag\".\n+     - JSP tags do not use\
+    \ `<%`, but just the `<` character.\n\n```\n<some:tag>\n  body\n</some:tag>\n\
+    ```\n\n```\n<some:tag/>\n```\n\n```\n<HTML>\n  <BODY> Going to include index.jsp...<BR>\n\
+    \    <jsp:include page=\"index.jsp\"/>\n  </BODY>\n</HTML>\n```"
+  merge: -1
+  img_proc: false
+- pgno: 197
+  md: '+   - On a typical web site, a visitor might visit several pages and perform
+    several interactions.
+
+    +     - If you are programming the site, it is very helpful to be able to associate
+    some data with each visitor.
+
+    +     - For this purpose, "session"s can be used in JSP.
+
+    +   - A session is an object associated with a visitor.
+
+    +     - Data can be put in the session and retrieved from it, much like a Hashtable.
+
+    +     - A different set of data is kept for each visitor to the site.'
+  merge: -1
+  img_proc: false
+- pgno: 198
+  md: '+   - First we have a form, let us call it GetName.html
+
+
+    ```
+
+    <HTML>
+
+    <BODY>
+
+    <FORM METHOD=POST ACTION="SaveName.jsp">
+
+    What''s your name?
+
+    <INPUT TYPE=TEXT NAME=username SIZE=20>
+
+    <P>
+
+    <INPUT TYPE=SUBMIT>
+
+    </FORM>
+
+    </BODY>
+
+    </HTML>
+
+    ```'
+  merge: -1
+  img_proc: false
+- pgno: 199
+  md: "+   - The target of the form is \"SaveName.jsp\", which saves the user's name\
+    \ in the session.\n\n```\n<%\n    String name = request.getParameter( \"username\"\
+    \ );\n    session.setAttribute( \"theName\", name );\n%>\n<HTML>\n    <BODY>\n\
+    \        <A HREF=\"NextPage.jsp\">Continue</A>\n    </BODY>\n</HTML>\n```\n\n\
+    +   - The SaveName.jsp saves the user's name in the session, and puts a link to\
+    \ another page, NextPage.jsp."
+  merge: -1
+  img_proc: false
+- pgno: 200
+  md: '+   - NextPage.jsp shows how to retrieve the saved name.
+
+    +     ```html
+
+    +     <HTML>
+
+    +     <BODY> Hello, <%= session.getAttribute( "theName" ) %>
+
+    +     </BODY>
+
+    +     </HTML>
+
+    +     ```
+
+    +   - If you bring up two different browsers (not different windows of the same
+    browser),
+
+    +     - or run two browsers from two different machines, you can put one name
+    in one browser and another name in another browser, and both names will be kept
+    track of.
+
+    +   - The session is kept around until a timeout period.
+
+    +     - Then it is assumed the user is no longer visiting the site, and the session
+    is discarded.'
+  merge: -1
+  img_proc: false
+- pgno: 201
+  md: "+   - The standard way of handling forms in JSP is to define a \"bean\".\n\
+    +     - You just need to define a class that has a field corresponding to each\
+    \ field in the form.\n+     - The class fields must have \"setters\" that match\
+    \ the names of the form fields.\n\n```\n<HTML>\n  <BODY>\n  <FORM METHOD=POST\
+    \ ACTION=\"NewSaveName.jsp\">\n    What's your name?\n    <INPUT TYPE=TEXT NAME=username\
+    \ SIZE=20><BR>\n    What's your e-mail address?\n    <INPUT TYPE=TEXT NAME=email\
+    \ SIZE=20><BR>\n    What's your password?\n    <INPUT TYPE=TEXT NAME=password\
+    \ SIZE=4>\n    <P>\n    <INPUT TYPE=SUBMIT>\n  </FORM>\n  </BODY>\n</HTML>\n```"
+  merge: -1
+  img_proc: false
+- pgno: 202
+  md: "+   - The User Bean.\n\n```\npackage user;\n\npublic class User {\n    String\
+    \ username;\n    String email;\n    String password;\n\n    public void setUsername(\
+    \ String value ) { username = value; }\n\n    public void setEmail( String value\
+    \ ) { email = value; }\n\n    public void setAge( String value ) { password =\
+    \ value; }\n\n    public String getUsername() { return username; }\n\n    public\
+    \ String getEmail() { return email; }\n\n    public String getPassword() { return\
+    \ password; }\n\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 203
+  md: '+   - Now let us change “NewSaveName.jsp” to use a bean to collect the data.
+
+
+    ```
+
+    <jsp:useBean id="user" class="user.User" scope="session"/>
+
+    <jsp:setProperty name="user" property="*"/>
+
+    <HTML>
+
+    <BODY>
+
+    <A HREF="NextPage.jsp">Continue</A>
+
+    </BODY>
+
+    </HTML>
+
+    ```'
+  merge: -1
+  img_proc: false
+- pgno: 204
+  md: '+   Let us modify NewNextPage.jsp to retrieve the data from bean..
+
+
+    ```
+
+    <jsp:useBean id="user" class="user.User" scope="session"/>
+
+    <HTML>
+
+    <BODY> You entered
+
+    <BR> Name: <%= user.getUsername() %>
+
+    <BR> Email: <%= user.getEmail() %>
+
+    <BR> Password: <%= user.getPassword() %>
+
+    <BR>
+
+    </BODY>
+
+    </HTML>
+
+    ```'
+  merge: -1
+  img_proc: false
+- pgno: 205
+  md: '+   - Sometimes, some pre-processing needs to be done after the user has submitted
+    a form.
+
+    +     - The result of this pre-processing decides where the control flow should
+    go next.
+
+    +     - Such pre-processing code is frequently referred to as a "controller".
+
+    +       ```
+
+    +       <jsp:useBean id="user" class="user.UserData" scope="session"/>
+
+    +       <jsp:setProperty name="user" property="*"/>
+
+    +       <%
+
+    +           String tgtPage = null;
+
+    +           if ( user.choice.equals( "choice1" ))
+
+    +               tgtPage = "tgt1.jsp";
+
+    +           else if ( user.choice.equals( "choice2" ))
+
+    +               tgtPage = "tgt2.jsp";
+
+    +           else tgtPage = "tgtDefault.jsp";
+
+    +           response.sendRedirect( tgtPage );
+
+    +       %>
+
+    +       ```'
+  merge: -1
+  img_proc: false
+- pgno: 206
+  md: "# Tag Libraries\n\n+   - JSP introduces a method of extending JSP tags, called\
+    \ \"tag libraries\".\n+     - These libraries allow addition of tags similar to\
+    \ `jsp:include` or `jsp:forward`,\n+     - but with different prefixes other than\
+    \ `jsp:` and with additional features.\n\n```\n```jsp\n<%@ page language=\"java\"\
+    \ contentType=\"text/html; charset=ISO-8859-1\"\n    pageEncoding=\"ISO-8859-1\"\
+    %>\n<%@ taglib uri=\"http://java.sun.com/jsp/jstl/sql\" prefix=\"sql\" %>\n<%@\
+    \ taglib uri=\"http://java.sun.com/jsp/jstl/core\" prefix=\"c\" %>\n<!DOCTYPE\
+    \ html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"\
+    >\n\n<sql:query var=\"rs\" dataSource=\"jdbc/sample\">\n    select id, username,\
+    \ password, email from tbl_user\n</sql:query>\n<head>\n    <title>DB Test</title>\n\
+    </head>\n<body>\n    <h2>Results</h2>\n    <c:forEach var=\"row\" items=\"${rs.rows}\"\
+    >\n        ID ${row.id}<br/>\n        Name ${row.username}<br/>\n        Password\
+    \ ${row.password}<br/>\n        email ${row.email}<br/>\n    </c:forEach>\n</body>\n\
+    </html>\n```\n```"
+  merge: -1
+  img_proc: false
+- pgno: 207
+  md: '# References
+
+
+    +   - Java EE 7 tutorial
+
+    +     - http://docs.oracle.com/javaee/7/tutorial/doc/servlets001.htm
+
+    +   - Java Servlet Specification
+
+    +     - http://download.oracle.com/otn-pub/jcp/servlet-3_1-fr-eval-spec/servlet-3_1-final.pdf?AuthParam=1396178605_99ca893c1d2485541a2baf6a88414bf8
+
+    +   - JSP Tutorial
+
+    +     - http://www.jsptut.com/'
+  merge: -1
+  img_proc: false
+- pgno: 208
+  md: '# Thank You!'
+  merge: -1
+  img_proc: false
+- pgno: 209
+  md: '# Principles and Techniques of DBMS 7
+
+    Object-Relation Mapping I
+
+
+    Haopeng Chen
+
+
+    REliable, INtelligent and Scalable Systems Group (REINS)
+
+
+    Shanghai Jiao Tong University
+
+
+    Shanghai, China
+
+
+    http://reins.se.sjtu.edu.cn/~chenhp
+
+
+    e-mail: chen-hp@sjtu.edu.cn'
+  merge: -1
+  img_proc: false
+- pgno: 210
+  md: '+   - O/R mapping
+
+    +     - Basic O/R Mapping
+
+    +     - Relationship Mapping
+
+    +     - Work with Objects
+
+    +     - Id Mapping
+
+    +     - Id Generator'
+  merge: -1
+  img_proc: false
+- pgno: 211
+  md: '+   - The term Object/Relational Mapping refers to
+
+    +     - the technique of mapping data from an object model representation to a
+    relational data model representation (and visa versa)
+
+
+    +   - Hibernate is an Object/Relational Mapping solution for Java environments.'
+  merge: -1
+  img_proc: false
+- pgno: 212
+  md: '# Mapping Persistent Classes to Tables
+
+
+    +   - In a relational database
+
+    +     - Every row is regarded as an object
+
+    +     - A column in a table is equivalent to a persistent attribute of a class
+
+
+    ![](bbox=[0.12, 0.45, 0.93, 0.78])'
+  merge: -1
+  img_proc: false
+- pgno: 213
+  md: "+   - Event.class\n\n```\nimport java.util.Date;\npublic class Event {\n  \
+    \  private Long id;\n    private String title;\n    private Date date;\n\n   \
+    \ public Event() {}\n    public Long getId() { return id; }\n    private void\
+    \ setId(Long id) { this.id = id; }\n    public Date getDate() { return date; }\n\
+    \    public void setDate(Date date) { this.date = date; }\n    public String getTitle()\
+    \ { return title; }\n    public void setTitle(String title) { this.title = title;\
+    \ }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 214
+  md: "+   - Event.hbm.xml\n\n```\n<hibernate-mapping package=\"Sample.Entity\">\n\
+    \    <class name=\"Event\" table=\"EVENTS\">\n        <id name=\"id\" column=\"\
+    EVENT_ID\">\n            <generator class=\"native\"/>\n        </id>\n      \
+    \  <property name=\"date\" type=\"timestamp\" column=\"EVENT_DATE\"/>\n      \
+    \  <property name=\"title\"/>\n    </class>\n</hibernate-mapping>\n```"
+  merge: -1
+  img_proc: false
+- pgno: 215
+  md: "+   - hibernate.cfg.xml\n+   ```xml\n+   <hibernate-configuration>\n+     \
+    \  <session-factory>\n+           <!-- Database connection settings -->\n+   \
+    \        <property name=\"connection.driver_class\">com.mysql.jdbc.Driver</property>\n\
+    +           <property name=\"connection.url\">jdbc:mysql://localhost:3306/test</property>\n\
+    +           <property name=\"connection.username\">root</property>\n+        \
+    \   <property name=\"connection.password\">12345678</property>\n+   \n+      \
+    \     <!-- JDBC connection pool (use the built-in) -->\n+           <property\
+    \ name=\"connection.pool_size\">1</property>\n+   \n+           <!-- SQL dialect\
+    \ -->\n+           <property name=\"dialect\">org.hibernate.dialect.MySQL5Dialect</property>\n\
+    +   \n+           <!-- Enable Hibernate's automatic session context management\
+    \ -->\n+           <property name=\"current_session_context_class\">thread</property>\n\
+    +       </session-factory>\n+   </hibernate-configuration>\n+   ```"
+  merge: -1
+  img_proc: false
+- pgno: 216
+  md: "+   - hibernate.cfg.xml\n\n```\n<!-- Disable the second-level cache -->\n<property\
+    \ name=\"cache.provider_class\">\n    org.hibernate.cache.internal.NoCacheProvider\n\
+    </property>\n\n<!-- Echo all executed SQL to stdout -->\n<property name=\"show_sql\"\
+    >true</property>\n\n<!-- Drop and re-create the database schema on startup -->\n\
+    <property name=\"hbm2ddl.auto\">update</property>\n\n<mapping resource=\"Sample/Entity/User.hbm.xml\"\
+    />\n\n</session-factory>\n\n</hibernate-configuration>\n```"
+  merge: -1
+  img_proc: false
+- pgno: 217
+  md: "# Helper class\n\n```\nimport org.hibernate.SessionFactory;\nimport org.hibernate.cfg.Configuration;\n\
+    \npublic class HibernateUtil {\n    private static final SessionFactory sessionFactory\
+    \ = buildSessionFactory();\n    private static SessionFactory buildSessionFactory()\
+    \ {\n        try {\n            // Create the SessionFactory from hibernate.cfg.xml\n\
+    \            return new Configuration().configure().buildSessionFactory();\n \
+    \       } catch (Throwable ex) {\n            // Make sure you log the exception,\
+    \ as it might be\n            System.err.println(\"Initial SessionFactory creation\
+    \ failed.\" + ex);\n            throw new ExceptionInInitializerError(ex);\n \
+    \       }\n    }\n    public static SessionFactory getSessionFactory() {\n   \
+    \     return sessionFactory;\n    }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 218
+  md: "```\n@WebServlet(\"/EventServlet\")\npublic class EventServlet extends HttpServlet\
+    \ {\n    protected void processRequest(HttpServletRequest request,\n        HttpServletResponse\
+    \ response) throws ServletException, IOException {\n        ........\n       \
+    \ try {\n            String title = (String) request.getParameter(\"title\");\n\
+    \            SimpleDateFormat sdf = new SimpleDateFormat(\"yyyy-MM-dd\");\n  \
+    \          String datestr = (String) request.getParameter(\"date\");\n       \
+    \     Date date=sdf.parse(datestr);\n            Session session =\n         \
+    \       HibernateUtil.getSessionFactory().getCurrentSession();\n            session.beginTransaction();\n\
+    \            Event t = new Event();\n            t.setDate(date);\n          \
+    \  t.setTitle(title);\n            session.save(t);\n            session.getTransaction().commit();\n\
+    ```"
+  merge: -1
+  img_proc: false
+- pgno: 219
+  md: "# Servlet - loading object\n\n```\nout.println(\"<h1>The event has been inserted!</h1><br>\"\
+    );\n\nsession = HibernateUtil.getSessionFactory().getCurrentSession();\nsession.beginTransaction();\n\
+    List events = session.createQuery(\"from Event\").list();\nsession.getTransaction().commit();\n\
+    for (int i = 0; i < events.size(); i++) {\n    Event theEvent = (Event) events.get(i);\n\
+    \    out.println(\"id: \" + theEvent.getId() + \"<br>\" + \"title: \"\n      \
+    \  + theEvent.getTitle() + \"<br>\" + \"date: \" + theEvent.getDate()\n      \
+    \  + \"<br><br>\");\n}\n.........\n```"
+  merge: -1
+  img_proc: false
+- pgno: 220
+  md: "+   - Person.class\n\n```\npackage org.hibernate.tutorial.domain;\npublic class\
+    \ Person {\n    private Long id;\n    private int age;\n    private String firstname;\n\
+    \    private String lastname;\n    public Person() {}\n    //Accessor methods\
+    \ for all properties, private setter for 'id'\n    .......\n    private Set events\
+    \ = new HashSet();\n    public Set getEvents() { return events; }\n    public\
+    \ void setEvents(Set events) { this.events = events; }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 221
+  md: '+   - Person.hbm.xml
+
+    +   ```xml
+
+    +   <class name="Person" table="PERSON">
+
+    +       <id name="id" column="PERSON_ID">
+
+    +           <generator class="native"/>
+
+    +       </id>
+
+    +       <property name="age"/>
+
+    +       <property name="firstname"/>
+
+    +       <property name="lastname"/>
+
+    +       <set name="events" table="PERSON_EVENT">
+
+    +           <key column="PERSON_ID"/>
+
+    +           <many-to-many column="EVENT_ID" class="Event"/>
+
+    +       </set>
+
+    +   </class>
+
+    +   ```
+
+    +   - Hibernate’s configuration
+
+    +   ```xml
+
+    +   <mapping resource="org/hibernate/tutorial/domain/Event.hbm.xml"/>
+
+    +   <mapping resource="org/hibernate/tutorial/domain/Person.hbm.xml"/>
+
+    +   ```'
+  merge: -1
+  img_proc: false
+- pgno: 222
+  md: '![](bbox=[0.14, 0.35, 0.87, 0.68])'
+  merge: -1
+  img_proc: false
+- pgno: 223
+  md: "# Working the association\n\n```\n```java\n@WebServlet(\"/PersonServlet\")\n\
+    public class PersonServlet extends HttpServlet {\n    protected void processRequest(HttpServletRequest\
+    \ request,\n            HttpServletResponse response) throws ServletException,\
+    \ IOException {\n        .....\n        String event = (String) request.getParameter(\"\
+    event\");\n        String person = (String) request.getParameter(\"person\");\n\
+    \        long eventId = new Long(event);\n        long personId = new Long(person);\n\
+    \n        Session session = HibernateUtil.getSessionFactory().getCurrentSession();\n\
+    \        session.beginTransaction();\n        Person aPerson = (Person) session.createQuery(\n\
+    \                \"select p from Person p left join fetch p.events where p.id\
+    \ = :pid\")\n                .setParameter(\"pid\", personId).uniqueResult();\n\
+    \        Event anEvent = (Event) session.load(Event.class, eventId);\n       \
+    \ session.getTransaction().commit();\n\n        aPerson.getEvents().add(anEvent);\n\
+    \n        session = HibernateUtil.getSessionFactory().getCurrentSession();\n \
+    \       session.beginTransaction();\n        session.update(aPerson);\n      \
+    \  session.getTransaction().commit();\n    }\n}\n```\n```"
+  merge: -1
+  img_proc: false
+- pgno: 224
+  md: '# Database Schema
+
+
+    | EVENTS |
+
+    |---|
+
+    | *EVENTS_ID |
+
+    | EVENTS_DATE |
+
+    | TITLE |
+
+
+    | PERSON_EVENT |
+
+    |---|
+
+    | *EVENTS_ID |
+
+    | *PERSON_ID |
+
+
+    | PERSON |
+
+    |---|
+
+    | *PERSON_ID |
+
+    | AGE |
+
+    | FIRSTNAME |
+
+    | LASTNAME |
+
+
+    | PERSON_EMAIL |
+
+    |---|
+
+    | *PERSON_ID |
+
+    | *EMAIL_ADDR |
+
+
+    ![](bbox=[0.028, 0.345, 0.98, 0.677])'
+  merge: -1
+  img_proc: false
+- pgno: 225
+  md: "+   - Person.class\n\n```\npublic class Person {\n    private Long id;\n  \
+    \  private int age;\n    private String firstname;\n    private String lastname;\n\
+    \    public Person() {}\n    // Accessor methods for all properties, private setter\
+    \ for 'id'\n\n    private Set events = new HashSet();\n    public Set getEvents()\
+    \ { return events; }\n    public void setEvents(Set events) { this.events = events;\
+    \ }\n\n    private Set emailAddresses = new HashSet();\n    public Set getEmailAddresses()\
+    \ { return emailAddresses; }\n    public void setEmailAddresses(Set emailAddresses)\n\
+    \    { this.emailAddresses = emailAddresses; }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 226
+  md: "# Unidirectional association\n\n+   - Person.hbm.xml\n\n```\n<class name=\"\
+    Person\" table=\"PERSON\">\n    <id name=\"id\" column=\"PERSON_ID\">\n      \
+    \  <generator class=\"native\"/>\n    </id>\n    <property name=\"age\"/>\n  \
+    \  <property name=\"firstname\"/>\n    <property name=\"lastname\"/>\n    <set\
+    \ name=\"events\" table=\"PERSON_EVENT\">\n        <key column=\"PERSON_ID\"/>\n\
+    \        <many-to-many column=\"EVENT_ID\" class=\"Event\"/>\n    </set>\n   \
+    \ <set name=\"emailAddresses\" table=\"PERSON_EMAIL\">\n        <key column=\"\
+    PERSON_ID\"/>\n        <element type=\"string\" column=\"EMAIL_ADDRESS\"/>\n \
+    \   </set>\n</class>\n```"
+  merge: -1
+  img_proc: false
+- pgno: 227
+  md: "```\n```java\nprivate void addEmailToPerson(Long personId, String emailAddress)\
+    \ {\n    Session session = HibernateUtil.getSessionFactory().getCurrentSession();\n\
+    \    session.beginTransaction();\n    Person aPerson = (Person) session.load(Person.class,\
+    \ personId);\n    session.getTransaction().commit();\n\n    session = HibernateUtil.getSessionFactory().getCurrentSession();\n\
+    \    session.beginTransaction();\n    session.refresh(aPerson);\n    aPerson.getEmailAddresses().add(\"\
+    new@new.com\");\n    session.getTransaction().commit();\n}\n```\n```"
+  merge: -1
+  img_proc: false
+- pgno: 228
+  md: "# Bi-directional association\n\n+   - Event.class\n\n```\npublic class Event\
+    \ {\n    private Long id;\n    private String title;\n    private Date date;\n\
+    \    public Event() {}\n    public Long getId() { return id; }\n    private void\
+    \ setId(Long id) { this.id = id; }\n    public Date getDate() { return date; }\n\
+    \    public void setDate(Date date) { this.date = date; }\n    public String getTitle()\
+    \ { return title; }\n    public void setTitle(String title) { this.title = title;\
+    \ }\n\n    private Set participants = new HashSet();\n    public Set getParticipants()\
+    \ { return participants; }\n    public void setParticipants(Set participants)\
+    \ {\n        this.participants = participants;\n    }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 229
+  md: "+   - Event.hbm.xml\n\n```\n<hibernate-mapping package=\"org.hibernate.tutorial.domain\"\
+    >\n    <class name=\"Event\" table=\"EVENTS\">\n        <id name=\"id\" column=\"\
+    EVENT_ID\">\n            <generator class=\"native\"/>\n        </id>\n      \
+    \  <property name=\"date\" type=\"timestamp\" column=\"EVENT_DATE\"/>\n      \
+    \  <property name=\"title\"/>\n        <set name=\"participants\" table=\"PERSON_EVENT\"\
+    \ inverse=\"true\">\n            <key column=\"EVENT_ID\"/>\n            <many-to-many\
+    \ column=\"PERSON_ID\" class=\"Person\"/>\n        </set>\n    </class>\n</hibernate-mapping>\n\
+    ```"
+  merge: -1
+  img_proc: false
+- pgno: 230
+  md: "# Collection of values\n\n```\nprivate void addEmailToPerson(Long personId,\
+    \ String emailAddress) {\n    Session session =\n        HibernateUtil.getSessionFactory().getCurrentSession();\n\
+    \    session.beginTransaction();\n    Person aPerson = (Person) session.load(Person.class,\
+    \ personId);\n    session.getTransaction().commit();\n\n    session = HibernateUtil.getSessionFactory().getCurrentSession();\n\
+    \    session.beginTransaction();\n    session.refresh(anEvent);\n    Set participants\
+    \ = anEvent.getParticipants();\n    Iterator iter = participants.iterator();\n\
+    \    while(iter.hasNext()){\n        Person thePerson = (Person)iter.next();\n\
+    \        out.println(\"Participant: \" + thePerson.getFirstname() + \" \" + thePerson.getLastname()\
+    \ + \"<br><br>\");\n    }\n    session.getTransaction().commit();\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 231
+  md: '![](bbox=[0.02, 0.15, 0.99, 0.92])'
+  merge: -1
+  img_proc: false
+- pgno: 232
+  md: '+   - SessionFactory (org.hibernate.SessionFactory)
+
+    +   - Session (org.hibernate.Session)
+
+    +   - Persistent objects and collections
+
+    +   - Transient and detached objects and collections
+
+    +   - Transaction (org.hibernate.Transaction)(Optional)
+
+    +   - ConnectionProvider (org.hibernate.connection.ConnectionProvider)(Optional)
+
+    +   - TransactionFactory (org.hibernate.TransactionFactory)(Optional)
+
+    +   - *Extension Interfaces*'
+  merge: -1
+  img_proc: false
+- pgno: 233
+  md: "+   - An entity is a regular Java object (aka POJO) which will be persisted\
+    \ by Hibernate.\n\n```\n@Entity\npublic class Flight implements Serializable {\n\
+    \n    Long id;\n\n    @Id\n    public Long getId() { return id; }\n    public\
+    \ void setId(Long id) { this.id = id; }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 234
+  md: "# Entity\n\n```\n@Entity\n@Table(name=\"TBL_FLIGHT\",\n    schema=\"AIR_COMMAND\"\
+    ,\n    uniqueConstraints=\n        @UniqueConstraint(\n            name=\"flight_number\"\
+    ,\n            columnNames={\"comp_prefix\",\"flight_number\"} ) )\npublic class\
+    \ Flight implements Serializable {\n\n    @Column(name=\"comp_prefix\")\n    public\
+    \ String getCompagnyPrefix() {\n        return companyPrefix;\n    }\n\n    @Column(name=\"\
+    flight_number\")\n    public String getNumber() { return number; }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 235
+  md: '```
+
+    name="ClassName"
+
+    table="tableName"
+
+    discriminator-value="discriminator_value"
+
+    mutable="true|false"
+
+    schema="owner"
+
+    catalog="catalog"
+
+    proxy="ProxyInterface"
+
+    dynamic-update="true|false"
+
+    dynamic-insert="true|false"
+
+    select-before-update="true|false"
+
+    polymorphism="implicit|explicit"
+
+    where="arbitrary sql where condition"
+
+    persister="PersisterClass"
+
+    batch-size="N"
+
+    optimistic-lock="none|version|dirty|all"
+
+    lazy="true|false"
+
+    entity-name="EntityName"
+
+    check="arbitrary sql check condition"
+
+    rowxml:id="rowid"
+
+    subselect="SQL expression"
+
+    abstract="true|false"
+
+    node="element-name"
+
+    ```'
+  merge: -1
+  img_proc: false
+- pgno: 236
+  md: "```\n```java\n@Entity\npublic class Person {\n    @Id Integer getId() { ...\
+    \ }\n    ...\n}\n```\n```\n\n```\n```xml\n<id\n    name=\"propertyName\"\n   \
+    \ type=\"typename\"\n    column=\"column_name\"\n    unsaved-value=\"null|any|none|undefined|id_value\"\
+    \n    access=\"field|property|ClassName\" >\n    node=\"element-name|@attribute-name|element/@attribute|.\"\
+    \n    <generator class=\"generatorClass\"/>\n</id>\n```\n```"
+  merge: -1
+  img_proc: false
+- pgno: 237
+  md: "+   - id as a property using a component type\n\n```\n@Entity\nclass User {\n\
+    \    @EmbeddedId\n    @AttributeOverride(\n        name=\"firstName\", column=@Column(name=\"\
+    fld_firstname\")\n    UserId id;\n    Integer age;\n}\n```\n\n```\n@Embeddable\n\
+    class UserId implements Serializable {\n    String firstName;\n    String lastName;\n\
+    }\n```"
+  merge: -1
+  img_proc: false
+- pgno: 238
+  md: "+   - id as a property using a component type\n\n```\n@Entity\nclass Customer\
+    \ {\n    @EmbeddedId\n    CustomerId id;\n    boolean preferredCustomer;\n\n \
+    \   @MapsId(\"userId\")\n    @JoinColumns({\n        @JoinColumn(name=\"userfirstname_fk\"\
+    , referencedColumnName=\"firstName\"),\n        @JoinColumn(name=\"userlastname_fk\"\
+    , referencedColumnName=\"lastName\")\n    })\n    @OneToOne\n    User user;\n\
+    }\n\n@Embeddable\nclass CustomerId implements Serializable {\n    UserID userId;\n\
+    \    String customerNumber;\n    //implements equals and hashCode\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 239
+  md: "# Composite identifier\n\n+   - Multiple id properties without identifier type\n\
+    \n```\n@Entity\nclass Customer implements Serializable {\n    @Id\n    @OneToOne\n\
+    \    @JoinColumns({\n        @JoinColumn(name=\"userfirstname_fk\",\n        \
+    \            referencedColumnName=\"firstName\"),\n        @JoinColumn(name=\"\
+    userlastname_fk\",\n                    referencedColumnName=\"lastName\")\n \
+    \   })\n    User user;\n\n    @Id\n    String customerNumber;\n    boolean preferredCustomer;\n\
+    \    //implements equals and hashCode\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 240
+  md: "+   - Multiple id properties with a dedicated identifier type\n\n```\n@Entity\n\
+    @IdClass(CustomerId.class)\nclass Customer implements Serializable {\n    @Id\n\
+    \    @OneToOne\n    @JoinColumns({\n        @JoinColumn(name=\"userfirstname_fk\"\
+    , referencedColumnName=\"firstName\"),\n        @JoinColumn(name=\"userlastname_fk\"\
+    , referencedColumnName=\"lastName\")\n    })\n    User user;\n\n    @Id\n    String\
+    \ customerNumber;\n    boolean preferredCustomer;\n}\n\nclass CustomerId implements\
+    \ Serializable {\n    UserId user;\n    String customerNumber\n    //implements\
+    \ equals and hashCode\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 241
+  md: "+   - IDENTITY\n+   - SEQUENCE (called seqhilo in Hibernate)\n+   - TABLE (called\
+    \ MultipleHiLoPerTableGenerator in Hibernate)\n+   - AUTO\n\n```\n@Entity\npublic\
+    \ class Customer {\n    @Id\n    @GeneratedValue\n    Integer getId() { ... };\n\
+    }\n```\n\n```\n@Entity\npublic class Invoice {\n    @Id\n    @GeneratedValue(strategy=GenerationType.IDENTITY)\n\
+    \    Integer getId() { ... };\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 242
+  md: '# References
+
+
+    +   - HIBERNATE - Relational Persistence for Idiomatic Java,
+
+    +     - http://docs.jboss.org/hibernate/orm/4.1/manual/en-US/html_single/#preface'
+  merge: -1
+  img_proc: false
+- pgno: 243
+  md: '# Thank You!'
+  merge: -1
+  img_proc: false
+- pgno: 244
+  md: '# Principles and Techniques of DBMS 8
+
+    Object-Relation Mapping II
+
+
+    Haopeng Chen
+
+
+    REliable, INtelligent and Scalable Systems Group (REINS)
+
+
+    Shanghai Jiao Tong University
+
+
+    Shanghai, China
+
+
+    http://reins.se.sjtu.edu.cn/~chenhp
+
+
+    e-mail: chen-hp@sjtu.edu.cn'
+  merge: -1
+  img_proc: false
+- pgno: 245
+  md: '+   - O/R mapping
+
+    +     - Inheritance strategy
+
+    +     - Work with object'
+  merge: -1
+  img_proc: false
+- pgno: 246
+  md: "# # Inheritance strategy\n\n+   - Single table per class hierarchy strategy\n\
+    \n```\npublic class Plane {\n    private Long id;\n    private String type;\n\
+    \    private String manufacturer;\n\n    public Plane() {}\n\n    public Long\
+    \ getId() { return id; }\n    private void setId(Long id) { this.id = id; }\n\n\
+    \    public String getType() { return type; }\n    public void setType(String\
+    \ type) { this.type = type; }\n\n    public String getManufacturer() { return\
+    \ manufacturer; }\n    public void setManufacturer(String manufacturer) {\n  \
+    \      this.manufacturer = manufacturer;\n    }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 247
+  md: "+   - Single table per class hierarchy strategy\n\n```\npublic class Airbus\
+    \ extends Plane{\n    private String capacity;\n\n    public Airbus() {}\n\n \
+    \   public String getCapacity() { return capacity; }\n    private void setCapacity(String\
+    \ capacity) { this.capacity = capacity; }\n}\n\npublic class Boeing extends Plane{\n\
+    \    private String comfort;\n\n    public Boeing() {}\n\n    public String getComfort()\
+    \ { return comfort; }\n    private void setComfort(String comfort) { this.comfort\
+    \ = comfort; }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 248
+  md: "+   - Single table per class hierarchy strategy\n\n```\n<hibernate-mapping\
+    \ package=\"Sample.Entity\" discriminator-value=\"0\" >\n    <class name=\"Plane\"\
+    \ table=\"planes\">\n        <id name=\"id\" column=\"ID\">\n            <generator\
+    \ class=\"native\"/>\n        </id>\n        <discriminator column=\"DISC\" type=\"\
+    string\"/>\n        <property name=\"type\"/>\n        <property name=\"manufacturer\"\
+    />\n\n        <subclass name=\"Airbus\" discriminator-value=\"1\">\n         \
+    \   <property name=\"capacity\" />\n        </subclass>\n        <subclass name=\"\
+    Boeing\" discriminator-value=\"2\">\n            <property name=\"comfort\" />\n\
+    \        </subclass>\n    </class>\n</hibernate-mapping>\n```"
+  merge: -1
+  img_proc: false
+- pgno: 249
+  md: "+   - Single table per class hierarchy strategy\n\n```\nString manufacturer\
+    \ = (String) request.getParameter(\"manufacturer\");\n\nSession session =\n  \
+    \  HibernateUtil.getSessionFactory().getCurrentSession();\nsession.beginTransaction();\n\
+    List planes = session.createQuery(\n    \"from Plane as p where p.manufacturer\
+    \ = :manu\").\n    setParameter(\"manu\", manufacturer).list();\nsession.getTransaction().commit();\n\
+    \nfor (int i = 0; i < planes.size(); i++) {\n    Plane thePlane = (Plane) planes.get(i);\n\
+    \    out.println(\"id: \" + thePlane.getId() + \"<br>\" +\n        \"type: \"\
+    \ + thePlane.getType() + \"<br>\" +\n        \"manufacturer: \" + thePlane.getManufacturer()\
+    \ +\n        \"<br><br>\");\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 250
+  md: '# Inheritance strategy
+
+
+    +   - Single table per class hierarchy strategy
+
+
+    ```
+
+    Airbus airbus = new Airbus();
+
+    airbus.setManufacturer("Airbus");
+
+    airbus.setType("320");
+
+    airbus.setCapacity("320");
+
+    session.save(airbus);
+
+    ```
+
+
+    ```
+
+    Boeing boeing = new Boeing();
+
+    boeing.setManufacturer("Boeing");
+
+    boeing.setType("777");
+
+    boeing.setComfort("Great");
+
+    session.save(boeing);
+
+    ```
+
+
+    ```
+
+    Plane plane = new Plane();
+
+    plane.setManufacturer("Il");
+
+    plane.setType("78");
+
+    session.save(plane);
+
+    ```'
+  merge: -1
+  img_proc: false
+- pgno: 251
+  md: "+   - Joined subclass strategy\n\n```\npublic class Cat {\n\n    private Long\
+    \ uid;\n    private Date birthday;\n    private String color;\n    private String\
+    \ sex;\n    private int weight;\n\n    public Cat() {}\n\n    public Long getUid()\
+    \ { return uid; }\n    private void setUid(Long uid) { this.uid = uid; }\n\n \
+    \   public Date getBirthday() { return birthday; }\n    public void setBirthday(Date\
+    \ birthday) { this.birthday = birthday; }\n\n    public String getColor() { return\
+    \ color; }\n    public void setColor(String color) { this.color = color; }\n\n\
+    \    public String getSex() { return sex; }\n    public void setSex(String sex)\
+    \ { this.sex = sex; }\n\n    public int getWeight() { return weight; }\n    public\
+    \ void setWeight(int weight) { this.weight = weight; }\n\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 252
+  md: "+   - Joined subclass strategy\n\n```\npublic class DomesticCat extends Cat\
+    \ {\n    private String name;\n\n    public DomesticCat() {}\n\n    public String\
+    \ getName() { return name; }\n    public void setName(String name) { this.name\
+    \ = name; }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 253
+  md: "+   - Joined subclass strategy\n\n```\n<hibernate-mapping package=\"Sample.Entity\"\
+    >\n    <class name=\"Cat\" table=\"CATS\">\n        <id name=\"uid\" column=\"\
+    UID\">\n            <generator class=\"native\"/>\n        </id>\n        <property\
+    \ name=\"birthday\" type=\"date\"/>\n        <property name=\"color\"/>\n    \
+    \    <property name=\"sex\"/>\n        <property name=\"weight\"/>\n        <joined-subclass\
+    \ name=\"DomesticCat\" table=\"DOMESTIC_CATS\">\n            <key column=\"CAT\"\
+    />\n            <property name=\"name\" type=\"string\"/>\n        </joined-subclass>\n\
+    \    </class>\n</hibernate-mapping>\n```"
+  merge: -1
+  img_proc: false
+- pgno: 254
+  md: "+   - Joined subclass strategy\n\n```\nSession session = HibernateUtil.getSessionFactory().getCurrentSession();\n\
+    session.beginTransaction();\nList cats = session.createQuery(\"from Cat\").list();\n\
+    session.getTransaction().commit();\n\nfor (int i = 0; i < cats.size(); i++) {\n\
+    \    Cat theCat = (Cat)cats.get(i);\n    out.println(\"id: \" + theCat.getUid()\
+    \ + \"<br>\" +\n        \"birthday: \" + theCat.getBirthday() + \"<br>\" +\n \
+    \       \"color: \" + theCat.getColor() + \"<br>\" +\n        \"weight: \" + theCat.getWeight()\
+    \ + \"<br>\");\n    if (theCat instanceof DomesticCat) {\n        DomesticCat\
+    \ aCat = (DomesticCat)theCat;\n        out.println(\"name: \" + aCat.getName()\
+    \ + \"<br>\");\n    }\n    out.println(\"<br>\");\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 255
+  md: "+   - Joined subclass strategy\n\n```\nSession session = HibernateUtil.getSessionFactory().getCurrentSession();\n\
+    \    session.beginTransaction();\nList cats = session.createQuery(\"from Cat\"\
+    ).list();\nDomesticCat domesticCat = new DomesticCat();\nDate birthday = new Date();\n\
+    domesticCat.setUid(new Long(3));\ndomesticCat.setBirthday(birthday);\ndomesticCat.setColor(\"\
+    blue\");\ndomesticCat.setName(\"Doraemon\");\ndomesticCat.setSex(\"male\");\n\
+    domesticCat.setWeight(20);\nsession.save(domesticCat);\nsession.getTransaction().commit();\n\
+    ```"
+  merge: -1
+  img_proc: false
+- pgno: 256
+  md: "+   - Table per class strategy\n\n```\npublic class Fruit {\n    private Long\
+    \ uid;\n    private String shape;\n    private String flavor;\n    private String\
+    \ color;\n\n    public Fruit() {}\n\n    public Long getUid() { return uid; }\n\
+    \    public void setUid(Long uid) { this.uid = uid; }\n\n    public String getShape()\
+    \ { return shape; }\n    public void setShape(String shape) { this.shape = shape;\
+    \ }\n\n    public String getFlavor() { return flavor; }\n    public void setFlavor(String\
+    \ flavor) { this.flavor = flavor; }\n\n    public String getColor() { return color;\
+    \ }\n    public void setColor(String color) { this.color = color; }\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 257
+  md: "+   - Table per class strategy\n\n```\npublic class Apple extends Fruit {\n\
+    \n    private int weight;\n\n    public Apple() {}\n\n    public int getWeight()\
+    \ { return weight; }\n    public void setWeight(int weight) { this.weight = weight;\
+    \ }\n\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 258
+  md: "+   - Table per class strategy\n\n```\n<hibernate-mapping package=\"Sample.Entity\"\
+    >\n    <class name=\"Fruit\" table=\"FRUITS\">\n        <id name=\"uid\" column=\"\
+    UID\" />\n        <property name=\"shape\"/>\n        <property name=\"flavor\"\
+    />\n        <property name=\"color\"/>\n        <union-subclass name=\"Apple\"\
+    \ table=\"APPLES\">\n            <property name=\"weight\"/>\n        </union-subclass>\n\
+    \    </class>\n</hibernate-mapping>\n```"
+  merge: -1
+  img_proc: false
+- pgno: 259
+  md: "+   - Table per class strategy\n\n```\n@WebServlet(\"/FruitServlet\")\npublic\
+    \ class FruitServlet extends HttpServlet {\n    protected void processRequest(HttpServletRequest\
+    \ request,\n        HttpServletResponse response)\n        throws ServletException,\
+    \ IOException {\n        ....\n        Session session = HibernateUtil.getSessionFactory().getCurrentSession();\n\
+    \        session.beginTransaction();\n\n        Apple apple = new Apple();\n \
+    \       apple.setUid(new Long(5));\n        apple.setShape(\"round\");\n     \
+    \   apple.setFlavor(\"so-so\");\n        apple.setColor(\"yellow\");\n       \
+    \ apple.setWeight(9);\n        session.save(apple);\n```"
+  merge: -1
+  img_proc: false
+- pgno: 260
+  md: "+   - Table per class strategy\n\n```\n@WebServlet(\"/FruitServlet\")\npublic\
+    \ class FruitServlet extends HttpServlet {\n    protected void processRequest(HttpServletRequest\
+    \ request,\n                                 HttpServletResponse response)\n \
+    \       throws ServletException, IOException {\n        ....\n        List fruits\
+    \ = session.createQuery(\"from Fruit\").list();\n        session.getTransaction().commit();\n\
+    \n        for (int i = 0; i < fruits.size(); i++) {\n            Fruit theFruit\
+    \ = (Fruit)fruits.get(i);\n            out.println(\"id: \" + theFruit.getUid()\
+    \ + \"<br>\" +\n            ....\n            if (theFruit instanceof Apple) {\n\
+    \                Apple aFruit = (Apple)theFruit;\n                out.println(\"\
+    weight: \" + aFruit.getWeight() + \"<br>\");\n            }\n        }\n    }\n\
+    }\n```"
+  merge: -1
+  img_proc: false
+- pgno: 261
+  md: '# Modeling Inheritance
+
+
+    +   - A data model does not support modeling inheritance in a direct way
+
+    +   - Three Strategies
+
+    +     - table per subclass
+
+    +     - table per concrete class
+
+    +     - table per class hierarchy'
+  merge: -1
+  img_proc: false
+- pgno: 262
+  md: '![](bbox=[0.22, 0.24, 0.78, 0.68])'
+  merge: -1
+  img_proc: false
+- pgno: 263
+  md: '# Person
+
+
+    person_ID : SMALLINT
+
+    age : SMALLINT
+
+    name : VARCHAR(32)
+
+    type : SMALLINT
+
+    <<PK>> PK_Person0()
+
+    <<Unique>> TC_Person0()
+
+
+    # Citizen
+
+
+    passportNumber : SMALLINT
+
+    person_ID : SMALLINT
+
+    <<PK>> PK_Citizen1()
+
+    <<FK>> FK_Citizen0()
+
+
+    # Resident
+
+
+    nationality : VARCHAR(255)
+
+    visaType : VARCHAR(255)
+
+    person_ID : SMALLINT
+
+    <<PK>> PK_Resident2()
+
+    <<FK>> FK_Resident1()
+
+
+    # Person table
+
+
+    | person_ID | type | name | age |
+
+    |---|---|---|---|
+
+    | 1 | citizen | John | 19 |
+
+    | 2 | resident | Mike | 73 |
+
+    | 3 | person | Julie | 20 |
+
+
+    # Citizen table
+
+
+    | person_ID | passportNumber |
+
+    |---|---|
+
+    | 1 | 123-456 |
+
+
+    # Resident table
+
+
+    | person_ID | nationality | visaType |
+
+    |---|---|---|
+
+    | 2 | China | H-1 |'
+  merge: -1
+  img_proc: false
+- pgno: 264
+  md: '# Table per concrete class
+
+
+    ![](bbox=[0.099, 0.249, 0.819, 0.799])
+
+
+    ### Person table
+
+
+    | person_ID | name  | age |
+
+    |---|---|---|
+
+    | 3 | Julie | 20 |
+
+
+    ### Resident table
+
+
+    | person_ID | name | age | nationality | visaType |
+
+    |---|---|---|---|---|
+
+    | 2 | Mike | 73 | China | H-1 |
+
+
+    ### Citizen table
+
+
+    | person_ID | name | age | passportNumber |
+
+    |---|---|---|---|
+
+    | 1 | John | 19 | 123-456 |'
+  merge: -1
+  img_proc: false
+- pgno: 265
+  md: '# Person table
+
+
+    | person_ID | type | name | age | passportNumber | nationality | visaType |
+
+    |---|---|---|---|---|---|---|
+
+    | 1 | citizen | John | 19 | 123-456 |  |  |
+
+    | 2 | resident | Mike | 73 |  | China | H-1 |
+
+    | 3 | person | Julie | 20 |  |  |  |
+
+
+    # Person
+
+
+    person_ID : SMALLINT
+
+    age : SMALLINT
+
+    name : VARCHAR(32)
+
+    type : SMALLINT
+
+    passportNumber : SMALLINT
+
+    nationality : VARCHAR(255)
+
+    visaType : VARCHAR(255)
+
+
+    <<PK>> PK_Person0()
+
+    <<Unique>> TC_Person0()'
+  merge: -1
+  img_proc: false
+- pgno: 266
+  md: '+   - Hibernate defines and supports the following object states:
+
+    +     - *Transient*
+
+    +       - an object is transient if it has just been instantiated using the new
+    operator, and it is not associated with a Hibernate Session.
+
+    +     - *Persistent*
+
+    +       - a persistent instance has a representation in the database and an identifier
+    value.
+
+    +     - *Detached*
+
+    +       - a detached instance is an object that has been persistent, but its Session
+    has been closed.'
+  merge: -1
+  img_proc: false
+- pgno: 267
+  md: <!-- no content -->
+  merge: -1
+  img_proc: false
+- pgno: 268
+  md: "# Loading an object\n\n```\nCat fritz = (Cat) sess.load(Cat.class, generatedId);\n\
+    \n// you need to wrap primitive identifiers\nlong id = 1234;\nDomesticCat pk =\
+    \ (DomesticCat) sess.load( DomesticCat.class, new Long(id) );\n\nCat cat = new\
+    \ DomesticCat();\n// load pk's state into cat\nsess.load( cat, new Long(pkId)\
+    \ );\nSet kittens = cat.getKittens();\n\nCat cat = (Cat) sess.get(Cat.class, id);\n\
+    if (cat==null) {\n    cat = new Cat();\n    sess.save(cat, id);\n}\nreturn cat;\n\
+    \nsess.save(cat);\nsess.flush(); //force the SQL INSERT\nsess.refresh(cat); //re-read\
+    \ the state (after the trigger executes)\n```"
+  merge: -1
+  img_proc: false
+- pgno: 269
+  md: '# Executing queries
+
+
+    ```
+
+    List cats = session.createQuery(
+
+    "from Cat as cat where cat.birthdate < ?")
+
+    .setDate(0, date)
+
+    .list();
+
+    List mothers = session.createQuery(
+
+    "select mother from Cat as cat join cat.mother as mother where cat.name = ?")
+
+    .setString(0, name)
+
+    .list();
+
+    List kittens = session.createQuery(
+
+    "from Cat as cat where cat.mother = ?")
+
+    .setEntity(0, pk)
+
+    .list();
+
+    Cat mother = (Cat) session.createQuery(
+
+    "select cat.mother from Cat as cat where cat = ?")
+
+    .setEntity(0, izi)
+
+    .uniqueResult();
+
+    Query mothersWithKittens = (Cat) session.createQuery(
+
+    "select mother from Cat as mother left join fetch mother.kittens");
+
+    Set uniqueMothers = new HashSet(mothersWithKittens.list());
+
+    ```'
+  merge: -1
+  img_proc: false
+- pgno: 270
+  md: "```\nIterator kittensAndMothers = sess.createQuery(\n    \"select kitten, mother\
+    \ from Cat kitten join kitten.mother mother\")\n    .list()\n    .iterator();\n\
+    while ( kittensAndMothers.hasNext() ) {\n    Object[] tuple = (Object[]) kittensAndMothers.next();\n\
+    \    Cat kitten = (Cat) tuple[0];\n    Cat mother = (Cat) tuple[1];\n    ....\n\
+    }\n```\n\n```\nIterator results = sess.createQuery(\n    \"select cat.color, min(cat.birthdate),\
+    \ count(cat) from Cat cat \" + \"group by cat.color\")\n    .list()\n    .iterator();\n\
+    while ( results.hasNext() ) {\n    Object[] row = (Object[]) results.next();\n\
+    \    Color type = (Color) row[0];\n    Date oldest = (Date) row[1];\n    Integer\
+    \ count = (Integer) row[2];\n    ....\n}\n```"
+  merge: -1
+  img_proc: false
+- pgno: 271
+  md: "# Bind parameters\n\n```\n//named parameter (preferred)\nQuery q = sess.createQuery(\"\
+    from DomesticCat cat\n    where cat.name = :name\");\nq.setString(\"name\", \"\
+    Fritz\");\nIterator cats = q.iterate();\n\n//positional parameter\nQuery q = sess.createQuery(\"\
+    from DomesticCat cat\n    where cat.name = ?\");\nq.setString(0, \"Izi\");\nIterator\
+    \ cats = q.iterate();\n\n//named parameter list\nList names = new ArrayList();\n\
+    names.add(\"Izi\");\nnames.add(\"Fritz\");\nQuery q = sess.createQuery(\"from\
+    \ DomesticCat cat\n    where cat.name in (:namesList)\");\nq.setParameterList(\"\
+    namesList\", names);\nList cats = q.list();\n```"
+  merge: -1
+  img_proc: false
+- pgno: 272
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 273
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 274
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 275
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 276
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 277
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 278
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 279
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 280
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 281
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 282
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 283
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 284
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 285
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 286
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 287
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 288
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 289
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 290
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 291
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 292
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 293
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 294
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 295
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 296
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 297
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 298
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 299
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 300
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 301
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 302
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 303
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 304
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 305
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 306
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 307
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 308
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 309
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 310
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 311
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 312
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 313
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 314
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 315
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 316
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 317
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 318
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 319
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 320
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 321
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 322
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 323
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 324
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 325
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 326
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 327
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 328
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 329
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 330
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 331
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 332
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 333
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 334
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 335
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 336
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 337
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 338
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 339
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 340
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 341
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 342
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 343
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 344
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 345
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 346
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 347
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 348
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 349
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 350
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 351
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 352
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 353
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 354
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 355
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 356
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 357
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 358
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 359
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 360
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 361
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 362
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 363
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 364
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 365
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 366
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 367
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 368
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 369
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 370
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 371
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 372
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 373
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 374
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 375
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 376
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 377
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 378
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 379
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 380
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 381
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 382
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 383
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 384
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 385
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 386
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 387
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 388
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 389
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 390
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 391
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 392
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 393
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 394
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 395
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 396
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 397
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 398
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 399
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 400
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 401
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 402
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 403
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 404
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 405
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 406
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 407
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 408
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 409
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 410
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 411
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 412
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 413
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 414
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 415
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 416
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 417
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 418
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 419
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 420
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 421
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 422
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 423
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 424
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 425
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 426
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 427
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 428
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 429
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 430
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 431
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 432
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 433
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 434
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 435
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 436
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 437
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 438
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 439
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 440
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 441
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 442
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 443
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 444
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 445
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 446
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 447
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 448
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 449
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 450
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 451
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 452
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 453
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 454
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 455
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 456
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 457
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 458
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 459
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 460
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 461
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 462
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 463
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 464
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 465
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 466
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 467
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 468
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 469
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 470
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 471
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 472
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 473
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 474
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 475
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 476
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 477
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 478
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 479
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 480
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 481
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 482
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 483
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 484
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 485
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 486
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 487
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 488
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 489
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 490
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 491
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 492
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 493
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 494
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 495
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 496
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 497
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 498
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 499
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 500
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 501
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 502
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 503
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 504
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 505
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 506
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 507
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 508
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 509
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 510
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 511
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 512
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 513
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 514
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 515
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 516
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 517
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 518
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 519
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 520
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 521
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 522
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 523
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 524
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 525
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 526
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 527
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 528
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 529
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 530
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 531
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 532
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 533
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 534
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 535
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 536
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 537
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 538
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 539
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 540
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 541
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 542
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 543
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 544
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 545
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 546
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 547
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 548
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 549
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 550
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 551
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 552
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 553
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 554
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 555
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 556
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 557
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 558
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 559
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 560
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 561
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 562
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 563
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 564
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 565
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 566
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 567
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 568
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 569
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 570
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 571
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 572
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 573
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 574
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 575
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 576
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 577
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 578
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 579
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 580
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 581
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 582
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 583
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 584
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 585
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 586
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 587
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 588
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 589
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 590
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 591
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 592
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 593
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 594
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 595
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 596
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 597
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 598
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 599
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 600
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 601
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 602
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 603
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 604
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 605
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 606
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 607
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 608
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 609
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 610
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 611
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 612
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 613
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 614
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 615
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 616
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 617
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 618
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 619
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 620
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 621
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 622
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 623
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 624
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 625
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 626
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 627
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 628
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 629
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 630
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 631
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 632
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 633
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 634
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 635
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 636
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 637
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 638
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 639
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 640
+  md: ''
+  merge: -1
+  img_proc: false
+- pgno: 641
+  md: ''
+  merge: -1
+  img_proc: false

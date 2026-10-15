@@ -1,0 +1,17 @@
+Pre-requisite
+
+Linux
+
+Tools
+
+C Language
+
+Lab
+
+Software Installer
+
+Compressing and Archiving
+
+Remote Login
+
+Text Editor

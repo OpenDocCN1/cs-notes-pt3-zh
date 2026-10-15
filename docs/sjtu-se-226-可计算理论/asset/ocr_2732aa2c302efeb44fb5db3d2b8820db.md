@@ -1,0 +1,6 @@
+# An Exercise
+
+Let A,B ⊆ N. Define sets of A ⊕ B and A ⊗ B by
+
+A ⊕ B = {2x | x ∈ A} ∪ {2x + 1 | x ∈ B}
+A ⊗ B = {π(x,y) | x ∈ A ∧ y ∈ B}

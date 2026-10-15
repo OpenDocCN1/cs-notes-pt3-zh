@@ -1,0 +1,14 @@
+# 22 rules
+
+| | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| c1:Month in | M3 | M3 | M3 | M3 | M3 | M4 | M4 | M4 | M4 | M4 | M4 | M4 |
+| c2:Day in | D1 | D2 | D3 | D4 | D5 | D1 | D2 | D2 | D3 | D3 | D4 | D5 |
+| c3:Year in | — | — | — | — | — | — | Y1 | Y2 | Y1 | Y2 | — | — |
+| Actions | | | | | | | | | | | | |
+| a1:Impossible | | | | | | | | | | X | X | X |
+| a2:Increment day | X | X | X | X | | X | X | | | | | |
+| a3:Reset day | | | | | X | | | X | X | | | |
+| a4:Increment month | | | | | | | | X | X | | | |
+| a5:Reset month | | | | | X | | | | | | | |
+| a6:Increment year | | | | | X | | | | | | | |

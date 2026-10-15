@@ -1,0 +1,6 @@
+# Class co-P and co-NP
+
+The *complement* of a [decision problem]( ) is the decision problem resulting from reversing the yes and no answers.
+If problem π is in P (NP), then its complement is in co-P (co-NP).
+
+![](bbox=[0.17, 0.52, 0.83, 0.95])

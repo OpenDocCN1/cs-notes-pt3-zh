@@ -1,0 +1,4204 @@
+- pgno: 0
+  md: '# 数理逻辑
+
+    （Mathematical Logic）
+
+
+    上海交通大学软件学院
+
+
+    吴刚
+
+
+    2013年春'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# 离散数学简介
+
+
+    +   - 离散数学(Discrete Mathematics)
+
+    +     - 是数学的几个分支的总称，以研究离散量的结构和相互间的关系为主要目标，其研究对象一般是有限个或可数无穷个元素；因此它充分描述了计算机科学离散性的特点。'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# 离散数学简介
+
+
+    +   - 研究对象
+
+    +     - 离散个体及其结构
+
+    +   - 研究思想
+
+    +     - 以集合和映射为工具、体现公理化和结构的思想
+
+    +   - 研究内容：包含不同的数学分支
+
+    +     - 集合论：离散结构的表示、描述工具
+
+    +     - 数理逻辑：符号化的推理和证明
+
+    +     - 代数结构：离散结构的代数模型
+
+    +     - 图论：离散结构的关系模型
+
+    +     - 组合数学：离散结构的存在性、计数、枚举、优化、设计
+
+    +     - 计算建模：有限状态机、图灵机
+
+    +     - 离散概率：二项分布、泊松分布、超几何分布'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "# 学习数理逻辑的方法\n\n+   了解问题背景\n+   ↓\n+   弄清基本概念\n+   ↓\n+   掌握基本方法\n\n+   把握四个环节：\n\
+    +   \n+   - 课前（浏览预习，只求了解）\n+   - 课堂（认真听讲，当场消化）\n+   - 课后（立即复习，融会贯通）\n+   - 课余（多做习题，举一反三）\n\
+    \n勤动脑、勤动手"
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# 数理逻辑
+
+
+    +   - What is Logic
+
+    +   - What is Mathematical Logic
+
+    +   - A Reasoning Example
+
+    +     - 如果你好好弹琴，爸爸下午带你去科技馆
+
+    +     - "如果我不好好弹琴，爸爸就不带我去了"
+
+    +   - Paradox（悖论）
+
+    +     - 理发师只帮那些不为自己理发的人理发'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# 课程内容
+
+
+    +   - 朴素集合论
+
+    +   - 命题逻辑
+
+    +   - 谓词逻辑
+
+    +   - 逻辑理论'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# # 课程安排
+
+
+    +   - **教材：**
+
+    +     - 离散数学及其应用（英文精编版·第6版）
+
+    +       - 《离散数学及其应用》第6版
+
+    +       - Discrete Mathematics and Its Applications
+
+    +         - Kenneth H. Rosen
+
+    +       - 机械工业出版社（影印版）
+
+    +     - 《面向计算机科学的数理逻辑》第二版，陆钟万，科学出版社，2002'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 课程安排
+
+
+    +   - 成绩构成
+
+    +     - 平时成绩40%：课堂、作业、课堂小测验
+
+    +     - 期末考试60%'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: +   - Enjoy the course!
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Logic & Proof (1)
+
+
+    Wu Gang
+
+    School of Software, SJTU'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Logic
+
+
+    +   - Logic gives precise meaning to mathematical statements, and allows consistent
+    math reasoning
+
+    +     - Many applications in CS, construction and verification computer programs,
+    circuit design, etc
+
+    +   - Contents
+
+    +     - Propositions
+
+    +     - Propositional Equivalence
+
+    +     - Predicates and Quantifiers
+
+    +     - Nested Quantifiers'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Propositions
+
+
+    +   - **Definition**
+
+    +     - A declarative statement that is either true (T) or false (F), use *p,q,r*
+    to denote proposition usually
+
+    +   - **Examples**
+
+    +     - 1+1=2
+
+    +     - 1+1=3
+
+    +     - Expo2014 will be held in Shanghai
+
+    +     - What is your name?
+
+    +     - Be quiet
+
+    +     - 1+X =5'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# Compound Propositions
+
+
+    +   - **Definition**
+
+    +     - New propositions formed by existing propositions and logical operators
+
+
+    +   - **Logical Operators**
+
+    +     - ¬ — not
+
+    +     - ∧ — and
+
+    +     - ∨ — or
+
+    +     - ⊕ — xor
+
+    +     - → — implies
+
+    +     - ↔ — biconditional
+
+    +     - *(negation/conjunction/disjunction/exclusive or/implication/biconditional
+    implication)*'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# True Table
+
+
+    +   Let "p,q" be propositions
+
+
+    | P | ¬P |
+
+    |---|---|
+
+    | T | F |
+
+    | F | T |
+
+
+    | P | Q | P ∧ Q | P ∨ Q | P ⊕ Q |
+
+    |---|---|---|---|---|
+
+    | T | T | T | T | F |
+
+    | T | F | F | T | T |
+
+    | F | T | F | T | T |
+
+    | F | F | F | F | F |'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# OR and XOR
+
+
+    +   - **Examples**
+
+    +     1. Soup or salad comes with an entrée
+
+    +     2. We want a student who can play piano or violin
+
+    +     3. I will go to the moon or the mars tomorrow
+
+
+    +   - **How to express them**
+
+    +     - OR, inclusive or: 2
+
+    +     - XOR, exclusive or: 1, 3'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Implications
+
+
+    +   - Implication: P → Q , P IMPLIES Q.
+
+    +     - P is hypothesis, Q is consequence.
+
+    +     - Some ways: if P then Q, Q when P, Q follows from P, P only if Q, Q is
+    the necessary for P
+
+    +     - example: If you make no mistakes, then you’ll get an A.
+
+    +   - Bidirectional implication: P ↔ Q ,
+
+    +     - P if and only if (iff) Q
+
+    +     - (P→Q and Q→P)
+
+    +   - Implications are often used in mathematical proofs'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# Implications
+
+
+    | P | Q | P → Q | P ↔ Q |
+
+    |---|---|---|---|
+
+    | T | T | T | T |
+
+    | T | F | F | F |
+
+    | F | T | T | F |
+
+    | F | F | T | T |
+
+
+    weird?
+
+
+    Consider: P → Q.
+
+
+    +   1. converse: Q → P.
+
+    +   2. contra-positive: (NOT Q) → (NOT P) (equiv.)
+
+    +   3. inverse: (NOT P) → (NOT Q).'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# Precedence of logical operators
+
+
+    +   - Order of precedence: NOT, AND, OR, XOR, →, ↔
+
+    +   - example: P→Q AND NOT R = P→ (Q AND (NOT R)).
+
+    +   - We usually use parentheses to make the proposition clear'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# Other logical operators
+
+
+    +   - ↑、↓、↛: not and、 not or、 not implies
+
+    +   - How many operators we could have
+
+    +   - How many operators are enough?
+
+
+    | P | Q | Operator |
+
+    |---|---|---|
+
+    | T | T | U1 |
+
+    | T | F | U2 |
+
+    | F | T | U3 |
+
+    | F | F | U4 |
+
+
+    +   - T、F、P、Q;
+
+    +   - ¬、→、↔: each one covers 2 results
+
+    +   - ∧、∨、⊕、↔、↑、↓'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# Using logic (1)
+
+
+    +   - Search engine
+
+    +   - System specification
+
+    +     - Promotion rules
+
+    +     - Send the email
+
+    +     - The specifications in one system should be consistent'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "# Using Logic(2)\n\n+   - Logic Puzzles (using logical reasoning)\n+     -\
+    \ Two kinds of inhabitants in a island. Knights always tell the truth, knaves\
+    \ always lie. You meet 2 people A & B.\n+   \n+       A says “B is a knight”,\
+    \ B says “the two of us are opposite types”. Who is knave?\n+     - “This statement\
+    \ is false”\n+   \n+       logical paradox"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# Logic and bit operations
+
+
+    +   - Bits are units of information. 1=T, 0=F.
+
+    +   - Bit-strings are sequences of bits:
+
+    +     00011100101010
+
+    +   - Computer bit operations correspond to the logical connectives
+
+    +   - Bitwise OR, bitwise AND, bitwise XOR
+
+    +     - 2 strings of the same length
+
+    +     - Corresponding bits’ OR/AND/XOR
+
+    +     - Example: interrupt register and interrupt mask register'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# homework1
+
+
+    +   1. Find 3 sets of logical operators
+
+    +      - The operator in each set can not be expressed by others in the same set
+
+    +      - The operators in each set can express all the other operators'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Translation
+
+
+    +   - He is not a freshman.
+
+    +   - You will get a ticket if you live in Rm.405 or Rm. 406.
+
+    +   - if you are available, we can play basketball on this afternoon, unless it
+    were running at that time.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# Logic & Proof (2)
+
+
+    Wu Gang
+
+
+    School of Software, SJTU
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_29_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# Propositional Equivalence
+
+
+    +   - **Tautology:** *Proposition that is always true.* for example: P OR (NOT
+    P).
+
+    +   - **Contradiction:** *Proposition that is always false.* for example: P AND
+    (NOT P).
+
+    +   - Others: *Contingencies.*'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# # Logical equivalences
+
+
+    +   - Two propositions are *logically equivalent* if P ↔ Q is always true (tautology).
+
+    +   - This is denoted by P ≡ Q'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# Logical equivalences
+
+
+    +   - Example: De Morgan’s Law
+
+
+    $(P \lor Q) \equiv \neg P \land \neg Q$
+
+
+    | $P$ | $Q$ | $\neg(P \lor Q)$ | $\neg P \land \neg Q$ |
+
+    |---|---|---|---|
+
+    | T | T | F | F |
+
+    | T | F | F | F |
+
+    | F | T | F | F |
+
+    | F | F | T | T |'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# Logical equivalences
+
+
+    +   - Identity laws: p∧T ≡ p, p∨F ≡ p
+
+    +   - Domination laws: p∧F ≡ F, p∨T ≡ T
+
+    +   - Idempotent laws: p∧p ≡ p, p∨p ≡ p
+
+    +   - Double negation law: ¬(¬ p)≡ p
+
+    +   - Commutative laws: p∨q ≡ q∨p
+
+    +   - Associative laws: (p∨q)∨r ≡ p∨(q∨r)
+
+    +   - Distributive laws: p∨(q∧ r)≡ (p∨q)∧(p∨r)
+
+    +   - De Morgen’s laws: ¬(p∨q) ≡ ¬p ∧ ¬ q
+
+    +   - Absorption laws: p∨(p ∧ q) ≡ p
+
+    +   - Negation laws: p ∨ ¬p ≡ T'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# Logical equivalences
+
+
+    +   - The Dual of a compound prop. that contains only ¬, ∧, ∨ is the prop. obtained
+    by replacing each ∧ by ∨, each ∨ by ∧, each T by F, each F by T, denoted by $p^*$
+
+    +   - If $p \equiv q$ then $p^* \equiv q^*$'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# Logical equivalences
+
+
+    +   - p → q ≡ ¬p ∨ q
+
+    +   - p ↔ q ≡ (p → q) ∧ (q → p)
+
+    +   - p ∨ q ≡ ¬p → q
+
+    +   - p ∧ q ≡ ¬ (p → ¬q)
+
+    +   - (p → q) ∧ (p → r) ≡ p → (q ∧ r)
+
+    +   - (p → r) ∨ (q → r) ≡ (p ∧ q) → r'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# Normal Form
+
+
+    +   - Disjunctive Normal Form
+
+    +     - p ∨ (¬p ∧ q) ∨ (p ∧ q ∧ ¬r)
+
+    +   - Full disjunctive normal form
+
+    +     - (p ∧ q ∧ r) ∨ (¬p ∧ q ∧ r) ∨ (¬p ∧ q ∧ ¬r)
+
+    +   - Conjunctive Normal Form'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# Predicates
+
+
+    +   - consider statements with *variables*: x > 3
+
+    +     - x is the subject.
+
+    +     - >3 is the *predicate* or property of the subject.
+
+    +   - We introduce a *propositional function* P(x), that denotes >3.
+
+    +   - If x is a specific number, the function becomes a proposition (T or F).
+    For example: P(2) = F, P(4) = T.
+
+    +   - P is called a *predicate*'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# Predicates
+
+
+    +   - More generally, we can have “functions” of more than one variable.
+
+    +   - For each input value it assigns either T or F.
+
+    +   - example: Q(x,y) = (x=y+3).
+
+    +     Q(1,2) = (1=2+3) = F
+
+    +     Q(3,0) = (3=0+3)=T'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# # Quantifiers
+
+
+    +   - We do not always have to insert specific values. We can make propositions
+    for general values in a *domain* (or *universe of discourse*):
+
+    +   - This is called: *quantification.*
+
+
+    +   - **_Universal Quantification:_** P(x) is true for all values of x in the
+    domain: ∀x P(x)
+
+
+    +   - **_Existential Quantification:_** There exists an element x in the domain
+    such that P(x) is true: ∃x P(x)'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# Quantifiers
+
+
+    +   - example: domain x is real numbers. P(x) is x > -1.
+
+    +     - ∀ x P(x)  (F)  *counter-example : x=-2*
+
+    +     - ∃ x P(x)  (T)
+
+
+    +   - example: domain is positive real numbers, P(x) is x>-1.
+
+    +     - ∀ x P(x)  (T)
+
+    +     - ∃ x P(x)  (T)'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# Binding Variables
+
+
+    +   - A variable is _bound_ if it has a value or a quantifier is "acting" on it.
+
+    +   - A statement can only become a proposition if all variables are bound.
+
+    +   - example: ∃ x P(x,y), x is bound, y is free.'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# Scope of a quantifier
+
+
+    +   - The *scope* of a quantifier is the part of the statement on which it is
+    acting.
+
+    +   - example
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_43_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# Negation of a quantified Prop.
+
+
+    +   - We can also negate propositions with quantifiers.
+
+    +   - Two important equivalences:
+
+    +     - ¬∀x P(x) ≡ ∃x ¬P(x), It is not the case that for all x P(x) is true ≡
+    there must be an x for which P(x) is not true
+
+    +     - ¬∃x P(x) ≡ ∀x ¬P(x), It is not true that there exists an x for which P(x)
+    is true ≡ P(x) must be false for all x'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# Using Predictions and Quantifiers
+
+
+    +   - Translation sentence into logical expression
+
+    +   - Example: every students in this class has studied c language
+
+    +     - ∀ x C(x) the universe of discourse for x is the students in this class
+
+    +     - ∀ x (S(x) →C(x)) the universe of discourse for x is all the people
+
+    +     - ∀ x (S(x) →L(x, c))'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# Using Predictions and Quantifiers
+
+
+    +   - Logic programming
+
+    +     - Prolog language
+
+    +     - Facts and rules
+
+    +     - Example:
+
+    +       - instructor (john, math202)
+
+    +       - enrolled (tom, math202)
+
+    +       - enrolled (jack, math202)
+
+    +       - teacher (P,S) :- instructor (P,C), enrolled (S,C)
+
+    +       - ?enrolled (tom, math202)      yes
+
+    +       - ?enrolled (X, math202)
+
+    +       - ?teacher (X, tom)'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# homework2
+
+
+    (1) Use 2 ways to prove that
+
+
+    \[(p \lor q) \land (\neg p \lor r) \to (q \lor r)\]
+
+
+    is a tautology'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# homework2
+
+
+    (2) Page 37, No.6,8
+
+
+    *Page 47, No.11,16 ver6*
+
+
+    +   - No.11: let P(x) be the statement “x=x²”, if the domain consists of the integers,
+    what are the truth values? P(0); P(1); P(2); P(-1); ∃x P(x); ∀x P(x)
+
+
+    +   - No.16: determine the truth value of each statements if the domain consists
+    of real number? ∃x(x²=2); ∃x(x²=-1); ∀x(x²+2≥1); ∀x(x²≠x)'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "# homework2\n\n(3) Page 39, No.21, 22\n\n*Page 49, No.41,43   verb6*\n\nNo.\
+    \ 41: Express each of these system specifications\n\n+   a) At least one mail\
+    \ message, among the nonempty set of messages, can be saved if there is a disk\
+    \ with more than 10 kilobytes of free space\n+   \n+   b) whenever there is an\
+    \ active alert, all queued messages are transmitted.\n+   \n+   c) The diagnostic\
+    \ monitor tracks the status of all systems except the main console\n+   \n+  \
+    \ d) each participant on the conference call whom the host the call did not put\
+    \ on a special list was billed"
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# homework2
+
+
+    (3)
+
+
+    +   No. 43: Determine whether ∀x(P(x) → Q(x)) and ∀xP(x) → ∀xQ(x) are logically
+    equivalent. Justify your answer.'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# Quiz
+
+
+    +   - How to prove the equivalence of two logical statements
+
+    +   - Determine whether ∃x(P(x) → Q(x)) and ∃xP(x) → ∃xQ(x) are logically equivalent.
+    Justify your answer.
+
+    +   - ¬(∀x∃y P(x) → ¬Q(y))
+
+    +     let the Negation act on the predicts directly'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# Nested Quantifiers
+
+
+    +   - **Nested Quantifier:** *Quantifier that appears within the scope of another
+    quantifier*
+
+    +   - Examples: x,y,z are real numbers
+
+    +     - ∀ x ∃ y (x+y=0)
+
+    +     - ∀ x ∀ y ∀ z (x+(y+z) = (x+y)+z)
+
+    +     - ∀ x ∀ y (x>0) ∧ (y<0) → (xy<0)
+
+    +       - For all x and for all y if x is positive and y is negative then their
+    product must be negative.
+
+    +       - The product of a positive and a negative real number is negative.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# Using nested quantifiers
+
+
+    +   - Translate this sentence into a logical expressions.
+
+    +     - "If a person is female and is a parent, then she is someone’s mother."
+
+    +   - F(x) is "x is female", P(x) is "x is someone’s parent", M(x,y), "x is the
+    mother of y"
+
+    +     - ∀x ∃y (F(x) ∧ P(x)) → M(x,y)'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# Negating nested quntifiers
+
+
+    +   - ∀x∃y (x+y=0)
+
+    +   - ¬∀x∃y (x+y=0)
+
+    +     ≡ ∃x ¬∃y (x+y=0)
+
+    +     ≡ ∃x∀y ¬(x+y=0)
+
+    +     ≡ ∃x∀y (x+y≠0)'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# Order of quantifiers
+
+
+    +   - The following compound propositions are always true, Left and right are
+    equivalent.
+
+    +     - ∀ x ∀ y p(x,y) ↔ ∀ y ∀ x p(x,y)
+
+    +     - ∃ x ∃ y p(x,y) ↔ ∃ y ∃ x p(x,y)'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# Thinking quantification as loop
+
+
+    +   - **Tip:** You can think of expression with quantifiers as executing "loops"
+    in a computer program
+
+    +     - ∃ y ∀ x p(x,y)
+
+    +     - First loop over y and for every y loop over x; For every value of y, check
+    if p(x,y) is true for all x. If you found one "y", the proposition must be true.'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# Logic & Proof (3)
+
+
+    Wu Gang
+
+    School of Software, SJTU'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# Proof (Pythagorean theorem)
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_59_0.png)
+
+
+    $a^2+b^2=c^2$'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# Proof (Pythagorean theorem)
+
+
+    +   - A cool proof
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_60_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# Proof (Pythagorean theorem)
+
+
+    +   - A cool proof
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_62_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# Proof
+
+
+    +   - What’s wrong with this?
+
+    +     $a, b$ positive integers
+
+    +     $a = b \iff$
+
+    +     $a^2 = ab \iff$
+
+    +     $a^2 - b^2 = ab - b^2 \iff$
+
+    +     $(a - b)(a + b) = b(a - b) \iff$
+
+    +     $a + b = b \iff$
+
+    +     $2b = b \iff$
+
+    +     $2 = 1$'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# Proof
+
+
+    +   What’s wrong with this?
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_64_0.png)
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_64_1.png)
+
+
+    Yes, Profit!'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# Proof
+
+
+    # Definitions
+
+
+    +   - *Theorem*: statement that can be proved
+
+    +   - *Proof*: a sequence of statements to demonstrate that a theorem is true
+
+    +   - *Axioms/postulates*: the basic assumptions on which the proof is based
+
+    +   - *Rules of inference*: used to draw conclusions from other assertions'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# Proof
+
+
+    +   - Definitions
+
+    +     - _Lemma_: a simple theorem used to proof other theorem
+
+    +     - _Corollary_: Result that is directly follows from a theorem you just proved
+
+    +     - _conjecture_: Statement with unknown truth value'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# Rule of inference (Proposition Logic)
+
+
+    +   Base: modus ponens (law of detachment)
+
+
+    +   (p ∧ (p → q)) → q is a tautology
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_67_0.png)
+
+
+    That is: if the premises p and p→q are both true, then q can only be true.'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# Rule of inference
+
+
+    +   - **Examples**
+
+    +     - it snows today
+
+    +     - If it snows today we go skiing
+
+    +     - Therefore: we go skiing
+
+
+    ```
+
+    p
+
+    p → q
+
+    ────
+
+    ∴ q
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# Rules of inference
+
+
+    p → (p ∨ q)
+
+
+    p
+
+    ────
+
+    ∴ p ∨ q
+
+
+    addition
+
+
+    (p) ∧ (q) → (p ∧ q)
+
+
+    p
+
+    q
+
+    ────
+
+    ∴ p ∧ q
+
+
+    conjunction
+
+
+    p ∧ q → p
+
+
+    p ∧ q
+
+    ────
+
+    ∴ p
+
+
+    simplification
+
+
+    [¬q ∧ (p → q)] → ¬p
+
+
+    ¬q
+
+    p → q
+
+    ────
+
+    ∴ ¬p
+
+
+    modus tollens
+
+
+    [(p → q) ∧ (q → r)] → (p → r)
+
+
+    p → q
+
+    q → r
+
+    ────
+
+    ∴ p → r
+
+
+    hypothetical syllogism
+
+
+    [(p ∨ q) ∧ ¬p] → q
+
+
+    p ∨ q
+
+    ¬p
+
+    ────────
+
+    ∴ q
+
+
+    disjunctive syllogism
+
+
+    [(p ∨ q) ∧ (¬p ∨ r)] → (q ∨ r)
+
+
+    p ∨ q
+
+    ¬p ∨ r
+
+    ────────────
+
+    ∴ q ∨ r
+
+
+    resolution'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '# Valid arguments
+
+
+    +   - An argument form is called valid If whenever all the hypotheses are true,
+    the conclusion is also true
+
+    +     - Showing q follows from the hypotheses p₁,p₂,...,pₙ is the same as showing
+    that the implication (p₁ ∧ p₂ ∧... ∧ pₙ) → q is true
+
+
+    *For an argument to be true all the premises must be true;*
+
+    *Several rules of inference need to be used*'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# Valid arguments (example)
+
+
+    +   - Hypotheses
+
+    +     - If you love me, then you will go with me
+
+    +     - If you don’t love me, then you will go with him
+
+    +     - If you go with him, then I will cry
+
+    +   - Conclusion
+
+    +     - You didn’t go with me, then I will cry'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# Valid arguments (example)
+
+
+    +   - p: you love me
+
+    +   - q: you will go with me
+
+    +   - r: you will go with him
+
+    +   - s: I will cry
+
+    +   - Hypotheses: p→q, ¬p→r, r→s
+
+    +   - Conclusion: ¬q→s'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# Valid arguments (example)
+
+
+    +   - Hypotheses: p→q, ¬p→r, r→s
+
+    +   - Conclusion: ¬q→s
+
+
+    |  |  |  |
+
+    |---|---|---|
+
+    | 1 | p→q | hypothesis |
+
+    | 2 | ¬q→¬p | contrapositive of step1 |
+
+    | 3 | ¬p→r | hypothesis |
+
+    | 4 | ¬q→r | hypothetical syllogism(2,3) |
+
+    | 5 | r→s | hypothesis |
+
+    | 6 | ¬q→s | hypothetical syllogism(4,5) |'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# Resolution (rule of inference)
+
+
+    +   - Tautology ((p ∨ q) ∧ (¬p ∨ r)) → (q ∨ r)
+
+    +   - Important in Programming languages based on rules of logic, like Prolog
+
+    +   - *Clause*: disjunction of variables or their negations
+
+    +   - Example: prove (p ∧ q) ∨ r, r → s imply p ∨ s
+
+    +     - (p ∨ r) ∧ (q ∨ r) ∧ (¬r ∨ s)'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '# Fallacies
+
+
+    +   - Not based on tautology
+
+    +   - Normal fallacies
+
+    +     - fallacy of denying hypothesis
+
+    +     - fallacy of affirming conclusion
+
+
+    p → q
+
+    p
+
+    ____
+
+    ∴ q
+
+    correct
+
+
+    p → q
+
+    ¬p
+
+    ____
+
+    ∴ ¬q
+
+    wrong
+
+
+    p → q
+
+    q
+
+    ____
+
+    ∴ p
+
+    wrong'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# Inference for Quantified Statements
+
+
+    ∀x P(x)
+
+    ∴ P(c) for arbitrary c
+
+
+    Universal instantiation
+
+
+    P(c) for arbitrary c
+
+    ∴ ∀x P(x)
+
+
+    Universal generalization
+
+
+    ∃x P(x)
+
+    ∴ P(c) for some element c
+
+
+    Existential instantiation
+
+
+    P(c) for some element c
+
+    ∴ ∃x P(x)
+
+
+    Existential generalization'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# Example1
+
+
+    +   - Prove
+
+    +     - Everyone in this math class has taken a CS course; Marla is in this math
+    class; Therefore Marla has taken a CS course
+
+
+    +   - Let
+
+    +     - D(x) = x has taken this math class
+
+    +     - C(x) = x has taken a CS class.
+
+    +     - premises: ∀x (D(x)→C(x));   D(Marla)
+
+    +     - conclusion: C(Marla)
+
+
+    +   1. ∀x(D(x) → C(x))    Premise
+
+    +   2. D(Marla) → C(Marla)    Universal instantiation (1)
+
+    +   3. D(Marla)    Premise
+
+    +   4. C(Marla)    Modus ponens (2)(3)'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '# Example2
+
+
+    +   - Prove
+
+    +     - “A student is this class has not read the book” and “Everyone in this
+    class passed the quiz” imply “someone who passed the quiz has not read the book”
+
+    +   - Let
+
+    +     - C(x)=x is in this class;
+
+    +     - B(x)=x has read the book;
+
+    +     - P(x)=x passed the quiz;
+
+    +     - Premises: ∃x(C(x) ∧ ¬B(x)); ∀x(C(x)→P(x))
+
+    +     - Conclusion: ∃x(P(x) ∧ ¬B(x));'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '# Example2
+
+
+    +   - Premises: ∃ x(C(x) ∧ ¬B(x)); ∀ x(C(x)→P(x))
+
+    +   - Conclusion: ∃ x(P(x) ∧ ¬B(x));
+
+
+    +   1. ∃ x (C(x) ∧ ¬B(x)) premise
+
+    +   2. C(a) ∧ ¬B(a) existential instantiation (1)
+
+    +   3. ∀ x (C(x)→P(x)) premise
+
+    +   4. C(a)→P(a) universal instantiation (3)
+
+    +   5. C(a) simplification from (2)
+
+    +   6. P(a) modus ponens (4)(5)
+
+    +   7. ¬B(a) simplification (2)
+
+    +   8. P(a) ∧ ¬B(a) conjunction (6)(7)
+
+    +   9. ∃ x (P(x) ∧ ¬B(x)) existential generalization(8)'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '# Method of Proving theorems
+
+
+    +   - To proof the implication p → q
+
+    +     - Direct Proof: Assume p is true and use rules of inference to prove that
+    q must be true.
+
+    +     - Indirect Proof: ¬q → ¬p ≡ p → q, proof by contraposition
+
+    +     - Vacuous Proof: to proof p is always false
+
+    +     - Trivial Proof: to proof q is always true'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# Method of Proving theorems
+
+
+    +   - Proof by contradiction
+
+    +     - If ¬p→F can be proved, then p is true
+
+    +   - Proof by cases
+
+    +     - (p₁∨p₂∨...∨pₙ)→q
+
+    +       ≡(p₁→q)∧(p₂→q)∧...∧(pₙ→q)
+
+    +   - Proof of equivalence
+
+    +     - p↔q ≡ (p→q)∧(q→p)'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# Method of Proving theorems
+
+
+    +   - Existence proofs
+
+    +     - Constructive
+
+    +     - Non constructive
+
+    +   - Uniqueness proofs
+
+    +     - Existence & Uniqueness
+
+    +   - Counter examples
+
+    +     - To show ∀ x P(x) is false'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '# Proof strategy
+
+
+    +   - Include
+
+    +     - Forward and backward reasoning
+
+    +     - Leveraging proof by cases
+
+    +     - Adapting existing proofs
+
+    +     - Conjecture\proof\counterexample
+
+    +   - Read by yourself!'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# Homework
+
+
+    (1) Page 58, No.3
+
+
+    Page 72, No.5 verb6
+
+
+    Use rules of inference to show that the hypotheses “Randy works hard,” “if Randy
+    works hard then he is a dull boy” “If Randy is a dull boy, then he will not get
+    the job” imply the conclusion “Randy will not get the job”'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# Homework
+
+
+    (2) Page 58, No.7 ver5 OR Page 73, No.13 ver6
+
+
+    +   - For each argument, explain which rules of inference are used, give the steps
+
+    +     - Doug, a student in this class, knows how to write programs in Java. Everyone
+    who knows how to write programs in Java can get a high-paying job. Therefore someone
+    in this class can get a high-paying job.
+
+    +     - Someone in this class enjoys whale watching. Every person who enjoy whale
+    watching cares about ocean pollution. Therefore there is a person in this class
+    who cares about ocean pollution.
+
+    +     - Each of the 93 students in this class owns a PC. Everyone who owns a PC
+    can use a word processing program. Therefore, Zeke, a students in this class,
+    can use a word processing program.
+
+    +     - Everyone is NJ lives within 50 miles of the ocean. Someone in NJ has never
+    seen the ocean. Therefore someone who lives within 50 miles of the ocean has never
+    seen the ocean.'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# Homework
+
+
+    (3) Page 59, No.9
+
+
+    Page 74, No.17 ver6
+
+
+    What is wrong with the argument?
+
+
+    Let H(x) be “x is happy”, Given the premise ∃ x H(x), we conclude that H(Lola).
+    Therefore Lola is happy.'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '# Homework
+
+
+    (4) Page 69, No.9
+
+
+    Page 85, No.17 ver6
+
+
+    Show that if n is an integer and n³+5 is odd, then n is even using
+
+
+    +   - A proof by contraposition
+
+    +   - A proof by contradiction'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# Basic Structures (1)
+
+
+    Wu Gang
+
+
+    School of Software, SJTU
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_88_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '# Basic Discrete Structures
+
+
+    +   - Sets
+
+    +   - Functions'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# Sets
+
+
+    +   - Definition
+
+    +     - An unordered collection of objects
+
+    +     - Georg Cantor 1895, Naïve set theory
+
+    +     - Russell’s Paradoxes, logical inconsistence
+
+    +     - Axiom set theory
+
+    +     - Usually use uppercase letters to denote the set, as "A,B,C..."'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '# # Set and elements
+
+
+    +   - The objects in a set are called the **elements**, usually use lowercase
+    letters to denote them, as “a,b,c...”
+
+    +   - `a ∈ A`: a is an element of the set A, or A contains a
+
+    +   - `a ∉ A`: a is not an element of the set A'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '# Methods to describe a set
+
+
+    +   - List all the elements between braces
+
+    +     - A= {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+    +     - B= {a, b, c, ..., x, y, z}
+
+    +     - C= {1, 2, 3, 4, ...}
+
+    +     - D= {{1,2}, {3,4,5}}
+
+    +   - Set builder notation
+
+    +     - A= {x|x is the natural number less than 10}
+
+    +     - B= {x|x is the English alphabet}
+
+    +     - C= {x| P(x) }
+
+    +   - Venn diagrams
+
+    +     - Usually used to indicate the relationship between sets'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '# Relationship between sets
+
+
+    +   - Equality
+
+    +     - Have the same elements
+
+    +     - {1,2,3}, {2,1,3}, {1,1,3,2,2}
+
+    +   - Subset
+
+    +     - A is a subset of B if and only if every element of A is also a element
+    of B
+
+    +     - A ⊆ B if and only if ∀ x (x ∈ A → x ∈ B)
+
+    +     - Theorem: For any set A, ∅ ⊆ A and A ⊆ A
+
+    +     - Proper subset A ⊂ B: A ⊆ B & A ≠ B
+
+    +   - A = B iff A ⊆ B & B ⊆ A "∀ x (x ∈ A ↔ x ∈ B)"'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '# Vann Diagram
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_95_0.png)
+
+
+    A = B
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_95_1.png)
+
+
+    A ⊂ B'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# Power set
+
+
+    Definition
+
+
+    +   - Given a set S, the power set of S is a set of all subsets of S, denoted
+    by P(S)
+
+    +   - S={1,2} then P(S)={∅ , {1}, {2}, {1,2}}
+
+    +   - S= ∅  then P(S)={ ∅ }
+
+    +   - S={∅ } then P(S)={∅ , {∅ }}
+
+    +   - If S has n elements, then P(S) has 2ⁿ elements'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# Cartesian Products
+
+
+    +   - Ordered n-tuples
+
+    +     - (a₁,a₂,...,aₙ)
+
+    +     - (a₁,a₂,...,aₙ)=(b₁,b₂,...,bₙ) iff aᵢ=bᵢ for i=1,2,...,n
+
+    +     - Ordered pair: (a,b), (c,d)
+
+
+    +   - Cartesian product of sets A and B
+
+    +     - Denoted by A×B
+
+    +     - A×B = {(a,b) | a ∈ A ∧ b ∈ B} It is a Set of ordered pairs
+
+    +     - Rene Descartes'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '# Cartesian Products
+
+
+    +   - Cartesian product of sets A₁,A₂,...,Aₙ
+
+    +     - Denoted by A₁xA₂x...xAₙ
+
+    +     - A₁xA₂x...xAₙ = {(a₁,a₂,...,aₙ) | aᵢ ∈ Aᵢ for i=1,2,...,n}
+
+
+    +   - Example
+
+    +     - A={1,2}, B={a,b,c}
+
+    +       AxB={(1,a), (1,b), (1,c), (2,a), (2,b), (2,c)}
+
+    +       BxA={(a,1), (b,1), (c,1), (a,2), (b,2), (c,2)}
+
+    +     - A= ∅  then AxB = ∅'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# # Set operations
+
+
+    +   - Let A and B are sets
+
+    +     - **Union** of A&B, denoted by A ∪ B
+
+    +       - A ∪ B = {x | x ∈ A ∨ x ∈ B}
+
+    +     - **Intersection** of A&B, denoted by A ∩ B
+
+    +       - A ∩ B = {x | x ∈ A ∧ x ∈ B}
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_100_0.png)
+
+
+    Venn Diagram for A ∪ B'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# Set Operations
+
+
+    +   - Let A and B are sets
+
+    +     - _Difference_ of A&B, denoted by A-B
+
+    +       A-B = {x | x ∈ A ∧ x ∉ B}
+
+    +   - Let U be the universal set
+
+    +     - _Complement_ of set A, denoted by
+
+    +       Ā = {x | x ∉ A}'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '# Set Operations
+
+
+    +   - Two sets are called _disjoint_ if their intersection is the empty set
+
+    +   - Cardinality of the union of sets (Principle of inclusion-exclusion)
+
+    +     $|A \cup B| = |A| + |B| - |A \cap B|$'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: '# Set Identities
+
+
+    +   - Identity laws: A ∩ U = A, A ∪ ∅ = A
+
+    +   - Domination laws: A ∩ ∅ = ∅ , A ∪ U = U
+
+    +   - Idempotent laws: A ∩ A = A, A ∪ A = A
+
+    +   - Complementiation law: \overline{\overline{A}} = A
+
+    +   - Commutative laws: A ∪ B = B ∪ A
+
+    +   - Associative laws: (A ∪ B) ∪ C = A ∪ (B ∪ C)
+
+    +   - Distributive laws: A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)
+
+    +   - De Morgen’s laws: \overline{A ∪ B} = \overline{A} ∩ \overline{B}
+
+    +   - Absorption laws: A ∪ (A ∩ B) = A
+
+    +   - Complement laws: A ∪ \overline{A} = U'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '# Proof of the set identities
+
+
+    $\overline{A \cap B} = \{x \mid x \notin A \cap B\}$
+
+
+    $\neg(x \in (A \cap B))$
+
+
+    $\neg(x \in A \land x \in B)$
+
+
+    $x \notin A \lor x \notin B$
+
+
+    $x \in \overline{A} \lor x \in \overline{B}$
+
+
+    $x \in \overline{A} \cup \overline{B}$
+
+
+    > De Morgen’s laws
+
+    > for logical equivalence'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: '# Generalized Unions and intersection
+
+
+    +   - **Generalized Union**: The union of a collection of sets
+
+    +     \[
+
+    +     \bigcup_{i=1}^{n} A_i = A_1 \cup A_2 \cup \cdots \cup A_n
+
+    +     \]
+
+
+    +   - **Generalized intersection**: The intersection of a collection of sets
+
+    +     \[
+
+    +     \bigcap_{i=1}^{n} A_i = A_1 \cap A_2 \cap \cdots \cap A_n
+
+    +     \]
+
+
+    +   - **Example**
+
+    +     - \(A_i = \{i, i+1, i+2, \ldots\}\)
+
+    +     - \(\displaystyle\bigcup_{i=1}^{n} A_i = \{1,2,3,\ldots\}\)
+
+    +     - \(\displaystyle\bigcap_{i=1}^{n} A_i = \{n,n+1,n+2,\ldots\}\)'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: '# Computer representation of sets
+
+
+    +   - Store the elements of the set in an unordered fashion
+
+    +     - Computing Union/intersection/difference of two sets would be time-consuming
+
+
+    +   - Store elements using an arbitrary ordering of the elements of the universal
+    set U, for instance a₁,a₂,...,aₙ
+
+    +     - Represent a subset of U with a bit string of length n (bitmap)'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '# Computer representation of sets
+
+
+    +   - Examples
+
+    +     - Let U={1,2,3,4,5,6,7,8,9}, the ordering of elements has the elements in
+    increasing order
+
+    +     - A={1,3,5,7,9} 101010101
+
+    +     - B={2,4,5,6} 010111000
+
+    +     - A ∪ B bitwise or 111111101
+
+    +     - A ∩ B bitwise and 000010000'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '# homework
+
+
+    (1) Page 97, No.3 (what about {2}?)
+
+
+    Page 120, No.5, 6 ver6
+
+
+    +   For each of the following sets, determine whether 2 is the element of it.
+
+
+    +   a) {x ∈ R | x is an integer greater than 1}
+
+
+    +   b) {x ∈ R | x is the square of an integer}
+
+
+    +   c) {2,{2}}
+
+
+    +   d) {{2},{{2}}}
+
+
+    +   e) {{2},{2, {2}}}
+
+
+    +   f) {{{2}}}
+
+
+    +   Determine whether {2} is the element of above sets'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '# homework
+
+
+    (2) Page 97, No.15, 16
+
+
+    *Page 120, No.29, 31 ver6*
+
+
+    +   - How many different elements does A×B have if A has m elements and B has
+    n elements
+
+    +   - Explain why A×B×C and (A×B)×C are not the same'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: '# homework
+
+
+    (3) Page 106, No.10, 15
+
+
+    *Page 131, No.19, 29 ver6*
+
+
+    +   - Show that if A and B are sets, then
+
+    +     $A - B = A \cap \overline{B}$
+
+
+    +   - What can you say about the sets A and B if we know that
+
+    +     - $A \cup B = A?$ $A \cap B = A?$ $A - B = A?$
+
+    +     - $A \cap B = B \cap A?$ $A - B = B - A?$'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: '# Basic Structures (2)
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_112_0.png)
+
+
+    Wu Gang
+
+
+    School of Software, SJTU'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: '# Functions
+
+
+    +   - Definition
+
+    +     - *The assignment of exactly one element of the set B to each element of
+    the set A. f:A→B or f(a)=b.*
+
+    +     - *Function f maps A to B*'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: '# Functions
+
+
+    +   - A is the domain of f.
+
+    +   - B is the co-domain of f.
+
+    +   - b is the image of a.
+
+    +   - a is the pre-image of b.
+
+    +   - range of f: set of all images of elements of A.
+
+
+    Example: f:Z→Z, f(x)=x^2
+
+    domain/co-domain: Z
+
+    range: {0,1,4,9,...}
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_114_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '# Functions
+
+
+    +   - If f1 and f2 are two functions from A to **R** (real numbers), then g=f1+f2
+    and h=f1*f2 are also functions from A to **R** defined by:
+
+    +     - (f1+f2)(x) = f1(x) + f2(x)
+
+    +     - (f1*f2)(x) = f1(x)*f2(x)
+
+
+    +   - Example: f1(x) = x, f2(x) = x^2.
+
+    +     - (f1+f2)(x) = x+x^2
+
+    +     - (f1*f2)(x) = x^3.'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: '# Functions
+
+
+    +   f:A → B, and S is a subset of A. Then we can define f′: S → Image(S)=f(S)
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_116_0.png)
+
+
+    f(S) = {f(s) | s ∈ S}'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: '# One-to-one function
+
+
+    # ▪ **One-to-one or injective function:**
+
+
+    +   ▪ A function *f* is one-to-one if and only if *f(x)=f(y)* implies *x=y* for
+    all *x, y* in the domain of *f*.
+
+
+    $\forall x\forall y(f(x)=f(y)\to x=y)$
+
+
+    $\forall x\forall y(x\ne y\to f(x)\ne f(y))$
+
+
+    equivalent since:  $(p\to q)\equiv(\neg q\to\neg p)$
+
+
+    Example: f:ℤ→ℤ, f(x)=x^2 one-to-one?
+
+    No! x=-1 & x=1 map both to f(1)=f(-1)=1.'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: '# One-to-one function
+
+
+    ∀x∀y(x < y → f(x) < f(y))    strictly increasing
+
+
+    ∀x∀y(x < y → f(x) > f(y))    strictly decreasing
+
+
+    x,y real number
+
+
+    decreasing    increasing
+
+
+    f(x) > f(y)
+
+
+    f(a)=f(b)
+
+
+    x < y
+
+
+    x'' < y''
+
+
+    f(y'') > f(x'')
+
+
+    Strictly increasing and strictly decreasing functions are one-to-one'
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: '# Onto function
+
+
+    # Onto or surjective functions:
+
+
+    +   A function f from A to B is onto if for every element b in B there is an element
+    a in A with f(a)=b.
+
+
+    ∀y∃x (f(x)=y)
+
+
+    Example: F:Z→Z, f(x)=x^2
+
+    onto?
+
+    No, y=-1 has no pre-image.
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_119_0.png)
+
+
+    There is no element without incoming arrows'
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: '# One-to-one correspondence
+
+
+    +   - **One-to-one correspondence or bijection:**
+
+    +     - *A function f is in one-to-one correspondence if it is both one-to-one
+    and onto.*
+
+    +   - Example: f:R→R, f(x)= -x   bijection!'
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '# Inverse function
+
+
+    f⁻¹ : B → A, f⁻¹(b) = a
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_123_0.png)
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_123_1.png)
+
+
+    If a function is not a bijection it is not invertible
+
+
+    example: f:r→R, f(x)=x^2.'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: '# Composition of the functions
+
+
+    # Composition:
+
+
+    +   A composition of 2 functions g:A→B and f:B→C is defined by:
+
+
+    ( f ∘ g )( x ) = f( g( x ) )'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: '# Composition of the functions
+
+
+    Range of g must be
+
+    subset of domain of f
+
+
+    ( f ∘ g)(x) = f(g(x))
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_125_0.png)
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_125_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: '# Graph of a function
+
+
+    # Graph of a function:
+
+
+    +   - The graph of a function f is the set of ordered pairs {(a,b)|a in A, f(a)=b}.
+
+    +   - This is a subset of the Cartesian product AXB (i.e. it is a “relation”).'
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: '# Some important functions
+
+
+    ⌊x⌋ = largest integer smaller or equal to x :Floor
+
+
+    ⌈x⌉ = smallest integer larger or equal to x: Ceiling.
+
+
+    n! = 1·2·3....n : Factorial.
+
+
+    bⁿ = b·b·b·....·b (n times): Exponential.
+
+
+    log_b(x) = inverse of exponential (x > 0).'
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: '# Q&A 1
+
+
+    +   Let A1={a,b}, B1={1,2,3},
+
+    +   A2={a,b,c}, B2={1,2},
+
+    +   A3={a,b,c}, B3={1,2,3},
+
+
+    How many one-to-one/onto/bijection functions can be defined from A1→B1, A2→B2,
+    A3→B3'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: '# Q&A 2
+
+
+    +   Let A1={a,b}, B1={1,{2},3}, A2={{a,b}}, B2={1,2},
+
+
+    Give the Cartesian Product
+
+    A1xB1, A2xB2, A2xA1xB2'
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: '# homework
+
+
+    +   - Page118 3, 6, 13
+
+    +   - Page146 5, 15,29 ver6
+
+
+    Find the domain and range of the functions. Note that in each case, to find the
+    domain, determine the set of elements assigned values by the function
+
+
+    +   (a) The function that assigns to each bit string the number of ones minus
+    the number of zeros
+
+    +   (b) The function that assigns to each bit string twice the number of zeros
+    in that string
+
+    +   (c) The function that assigns to each bit string the number of bits left over
+    when a bit string is split into bytes
+
+    +   (d) The function that assigns to each positive integer the largest perfect
+    square not exceeding this integer'
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: '# homework
+
+
+    +   Determine whether the function f: ZxZ → Z is onto if
+
+    +   (a) f(m,n)=m+n
+
+    +   (b) f(m,n)=m²+n²
+
+    +   (c) f(m,n)=m
+
+    +   (d) f(m,n)=|n|
+
+    +   (e) f(m,n)=m-n'
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: '# homework
+
+
+    +   - Suppose that \(g\) is a function from A to B and \(f\) is a function from
+    B to C
+
+    +     (a) Show that if both \(f\) and \(g\) are one-to-one functions, then \(f
+    \circ g\) is also one-to-one
+
+    +     (a) Show that if both \(f\) and \(g\) are onto functions, then \(f \circ
+    g\) is also onto'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: '# Relations (1)
+
+
+    Wu Gang
+
+
+    School of Software, SJTU
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_133_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: '# Relations
+
+
+    +   - Binary relation
+
+    +     - Let A and B be sets, a binary relation from A to B is a subset of A×B
+
+    +     - It is a set R of ordered pairs
+
+    +     - Notation aRb to denote that (a,b) ∈ R, a is said to be related to b by
+    R'
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: '# Binary relation
+
+
+    +   - Examples
+
+    +     - A: set of the students in this class, B: set of the courses, R is the
+    relation to say Student a enrolled in Course b.
+
+    +       (Obama, CS112), (Bush, CS911)
+
+    +     - Let A={0,1,2} B={a,b}, then {(0,a), (0,b), (1,a), (2,b)} is a relation
+    from A to B'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: '# Functions & Relations
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_137_0.png)
+
+
+    It is a relation but not a function'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: '# Relations on a set
+
+
+    +   - Relation on the set A is a relation from A to A
+
+    +   - Example
+
+    +     - A={1,2,3,4}, Give the relation R on set A
+
+    +       R={(a,b)|a divides b}
+
+    +       R={(1,1), (1,2), (1,3), (1,4), (2,2), (2,4), (3,3), (4,4)}
+
+    +     - How many relations are there on a set with n elements??'
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: '# Properties of relations on a set
+
+
+    relation R on the set A
+
+
+    +   - Reflexive
+
+    +     - ∀ a ((a,a) ∈ R), a ∈ A
+
+    +   - Irreflexive
+
+    +     - ∀ a ((a,a) ∉ R), a ∈ A
+
+    +   - Symmetric
+
+    +     - ∀ a ∀ b ((a,b) ∈ R → (b,a) ∈ R)  a,b ∈ A
+
+    +   - Antisymmetric
+
+    +     - ∀ a ∀ b ((a,b) ∈ R ∧ (b,a) ∈ R → (a=b))  a,b ∈ A'
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: '# Properties of relations on a set
+
+
+    relation R on the set A
+
+
+    +   - Transitive
+
+    +     - ∀a∀b∀c ((a,b)∈R ∧ (b,c)∈R → (a,c)∈R)
+
+    +       a,b,c∈A'
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: '# Properties of relations on a set
+
+
+    +   Examples
+
+    +   - Relations “ = ”、 “ > ”、 “ ≥ ” on **N**
+
+    +   - Relation on ∅
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_141_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: '# Combining relations
+
+
+    +   - R1 and R2 are relations from A to B
+
+    +     - R1 ∪ R2
+
+    +     - R1 ∩ R2
+
+    +     - R1-R2
+
+    +     - R2-R1'
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: '# Combining relations
+
+
+    +   - R is a relation from A to B, S is a relation from B to C, then
+
+    +     - The composite of R and S is the relation from A to C denoted as S∘R, for
+    each (a,c) ∈ S∘R, there exits an element b ∈ B such as (a,b) ∈ R, (b,c) ∈ S'
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: '# N-ary relations
+
+
+    +   - Which trains start from shanghai to beijing after 9pm?
+
+    +   - who in your class get more than 2 A''s in last semester?
+
+    +   - N-ary relations and computer database'
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: '# # N-ary relations
+
+
+    +   - **Definition**
+
+    +     - Let A1, A2, … An be sets, an n-ary relation on these sets is a subset
+    of A1×A2×…×An, A1, A2, … An are called domains of the relation, n is called its
+    degree
+
+    +     - **Examples**
+
+    +       - (D, 305, shanghai, beijing, 9:00pm)
+
+    +       - (Zhangsan, G10101, english, A, 2009, Fall)'
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: '# Operations on N-ary relations
+
+
+    +   - Selection operator sC
+
+    +     - Maps the n-ary relation R to the n-ary relation of all n-tuples from R
+    that satisfy the condition C
+
+    +   - Projection operator P_i1,i2,...,im
+
+    +     - Maps the n-tuple(a1,a2,...an) to the m-tuple(a_i1,a_i2,...,a_im), where
+    m≤n'
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: '# Operations on N-ary relations
+
+
+    # Join operator $J_p(R,S)$
+
+
+    Let $R$ be a relation of degree $m$, $S$ a relation of degree $n$, $p\le m,p\le
+    n$. $J_p(R,S)$ is a relation of degree $m+n-p$ that consists of all $(m+n-p)$-tuples
+    $(a_1,a_2,\ldots a_{m-p},c_1,c_2,\ldots c_p,b_1,b_2,\ldots b_{n-p})$, where $(a_1,a_2,\ldots
+    a_{m-p},c_1,c_2,\ldots c_p)$ belongs to $R$ and $(c_1,c_2,\ldots c_p,b_1,b_2,\ldots
+    b_{n-p})$ belongs to $S$'
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: '# homework
+
+
+    +   - Page253 11
+
+
+    *Page528 25 ver6*
+
+    let R be the relation R={(q,b)|a divides b} on the set of positive integers. Find
+    a) R⁻¹    b) R̄'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: '# homework
+
+
+    +   Page253 14
+
+
+    Page528 31 ver6
+
+
+    let R be the relation on the set of people consisting of pair(a,b), where a is
+    a parent of b. let S be the relation on the set of people consisting of pair(a,b),
+    where a and b are siblings(brothers or sisters). What are S∘R and R∘S'
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: '# homework
+
+
+    +   - Page253 23
+
+    +     *Page528 49 ver6*
+
+    +     show that the relation R on a set A is symmetric if and only if R=R⁻¹,where
+    R⁻¹ is the inverse relation'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: '# homework
+
+
+    +   - Page253 26
+
+    +     *Page528 55 ver6*
+
+    +     let R be a reflexive relation on a set A, show that Rⁿ is reflexive for
+    all positive integers n.'
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: '# Relations (2)
+
+
+    Wu Gang
+
+
+    School of Software, SJTU
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_154_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: '# Representing Relations
+
+
+    +   - Represent a relation between finite sets
+
+    +     - List its ordered pairs
+
+    +     - Use 0-1 matrices (used in computer programs)
+
+    +     - Directed graphs (for people to understand the relations better)'
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: '# Using matrices
+
+
+    +   - Suppose that R is a relation from A={a₁,a₂,…,aₘ} to B={b₁,b₂,…,bₙ}.
+
+    +     - the elements have been listed in an arbitrary order (if A=B, then the
+    order is the same).
+
+    +   - use matrix M_R=[mᵢⱼ] to represent R
+
+
+    $$M_{ij}=\begin{cases}1\ldots\text{if }(a_i,b_j)\in R\\0\ldots\text{if }(a_i,b_j)\notin
+    R\end{cases}$$'
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: '# Using matrices
+
+
+    +   - Example
+
+    +     - A={1,2,3} B={1,2}, R is the relation from A to B where a>b for every pair
+    (a,b)
+
+    +     - R={(2,1),(3,1),(3,2)}
+
+
+    $M_R = \begin{bmatrix}0 & 0\\1 & 0\\1 & 1\end{bmatrix}$'
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: '# Using matrices
+
+
+    +   - The matrix of a relation on a set is a square matrix. Can be used to determine
+    relation’s properties
+
+    +     - Reflexive “elements on main diagonal =1”
+
+    +     - Irreflexive
+
+    +     - Symmetric “M_R=(M_R)^t”
+
+    +     - Antisymmetric'
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: '# Using matrices
+
+
+    M_R = \begin{bmatrix} 1 & 1 & 0 \\ 1 & 1 & 1 \\ 0 & 1 & 1 \end{bmatrix}
+
+
+    | | |
+
+    |---|---|---|
+
+    | Reflexive? | YES |
+
+    | Symmetric ? | YES |
+
+    | Antisymmetric ? | NO |'
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: '# Using matrices
+
+
+    +   - Represent the union and intersection of two relations
+
+    +     - Using the 0-1 matrix’s boolean operations join ∨ and meet ∧
+
+    +     - M_R1 ∪ R2 = M_R1 ∨ M_R2
+
+    +     - M_R1 ∩ R2 = M_R1 ∧ M_R2'
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: "# Using matrices\n\n+   - Example\n\nM_R1 = ⎡1 0 1⎤\n         ⎢1 0 0⎥\n   \
+    \      ⎣0 1 0⎦      M_R2 = ⎡1 0 1⎤\n                         ⎢0 1 1⎥\n       \
+    \                  ⎣1 0 0⎦\n\nM_R1∪R2 = M_R1 ∨ M_R2 = ⎡1 0 1⎤\n              \
+    \           ⎢1 1 1⎥\n                         ⎣1 1 0⎦\n\nM_R1∩R2 = M_R1 ∧ M_R2\
+    \ = ⎡1 0 1⎤\n                         ⎢0 0 0⎥\n                         ⎣0 0 0⎦"
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: '# Using matrices
+
+
+    +   - Represent the composite of two relations
+
+
+    +   - Using the 0-1 matrix’s boolean product operations ⊙
+
+
+    +   - R is a relation from A to B, S is a relation from B to C, A/B/C have m/n/p
+    elements
+
+
+    +   - Mₛ∘ᴿ = Mᴿ ⊙ Mₛ
+
+
+    +   - the elements have been listed in an arbitrary order'
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: '# Using matrices
+
+
+    +   - Represent the powers Rⁿ
+
+    +     - use the 0-1matrix''s boolean powers operations
+
+
+    $M_{R^n} = M_R^{[n]}$'
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: '# Using directed graph
+
+
+    +   - A directed graph consists of a set _V_ of vertices (nodes) and a set _E_
+    of edges (arcs)
+
+    +     - Edge (a,b): a is initial vertex, b is terminal vertex
+
+    +     - Edge (a,a) is called a loop'
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: '# Using directed graph
+
+
+    +   - Using the directed graph of a relation to determine relation’s properties
+
+    +     - Reflexive “loops at every node”
+
+    +     - Irreflexive “no loops”
+
+    +     - Symmetric
+
+    +     - Antisymmetric'
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: '# Closures of relations
+
+
+    +   - Let R be a relation on a set A. Then R may or may not have some property
+    P, like reflexivity/symmetry/transitivity.
+
+    +     - If there is a relation S with property P containing R, such that S is
+    the subset of every relation with property P containing R
+
+    +     - S is called the closure of R with respect to P'
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: '# Closures
+
+
+    +   - Reflexive closure
+
+    +     - R ∪ △, where △ = {(a,a) | a ∈ A} is called diagonal relation on A
+
+    +   - Symmetric closure
+
+    +     - R ∪ R⁻¹
+
+    +   - Transitive closure
+
+    +     - More complicated'
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: '# Paths in directed graph
+
+
+    +   - A path from a to b in a directed graph is a sequence of edges
+
+    +     (a,x1)(x1,x2)(x2,x3)...(xn,b)
+
+
+    +   - The path is denoted by a,x1,x2,...,xn,b
+
+
+    +   - Its length is n+1
+
+
+    +   - If a=b, the path is called a circuit/cycle
+
+
+    +   - Attention: A path can pass through a node more than once, an edge can occur
+    more than once in a path'
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: '# Paths in directed graph
+
+
+    +   - Theorem
+
+    +     - Let R be a relation on a set A. there is a path of length n (positive
+    integer) from a to b iff (a,b) ∈ Rⁿ'
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: "# homework\n\n+   - **Page265 1** *(Page543 1 verb6)*\n+     Represent each\
+    \ of these relations on {1,2,3} with a matrix (the elements are in increasing\
+    \ order)\n+   \n+     a) {(1,1), (1,2), (1,3)}\n+   \n+     b) {(1,2), (2,1),\
+    \ (2,2), (3,3)}\n+   \n+     c) {(1,1), (1,2), (1,3), (2,2), (2,3), (3,3)}\n+\
+    \   \n+     d) {(1,3), (3,1)}\n\n+   - *Draw the directed graphs representing\
+    \ relations from above Exercise 1*"
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: '# homework
+
+
+    +   - Page265 8,9 (Page543 16,17 ver6)
+
+    +     Let R be a relation on a set A with n elements. If there are k nonzero entries
+    in M_R, the matrix representing R, how many nonzero entries are there in the matrix
+    of the inverse of R?
+
+    +     how many nonzero entries are there in the matrix of the complement of R?'
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: '# homework
+
+
+    +   Page265 14 (Page543 31 ver6)
+
+
+    Determine whether the relations represented by the following graphs are reflexive,
+    irreflexive, symmetric, antisymmetric, and/or transitive.
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_173_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: '# Relations (3)
+
+
+    Wu Gang
+
+
+    School of Software, SJTU'
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: '# Transitive closures
+
+
+    +   - Connective relation R*
+
+    +     - Let R be a relation on a set A
+
+    +     - R* consists of the pairs (a,b) such that there is a path of length at
+    least one from a to b in R
+
+
+    R* = ⋃_{n=1}^{∞} R^n'
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: '# examples
+
+
+    +   - Let R be the relation on the set of all people in the world that contains
+    (a,b) if a has met b
+
+    +     - What is Rⁿ? What is R*?
+
+    +     - (you, Obama) ∈ R*?'
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: '# examples
+
+
+    +   - Let R be the relation on the set of all subway stops in shanghai that contains
+    (a,b) if it is possible to travel from a to b without changing trains.
+
+    +   - What is Rⁿ? What is R*?
+
+    +   - (Dongchuan Road, Jianchuan Road) ∈ R⁵?
+
+    +   - (Dongchuan Road, Jianchuan Road) ∈ R⁴?'
+  merge: -1
+  img_proc: true
+- pgno: 178
+  md: '# Transitive closures
+
+
+    +   - Theorem
+
+    +     - The transitive closure of a relation R equals the connectivity relation
+    R*
+
+    +       - R* contains R
+
+    +       - R* is transitive
+
+    +       - If there is a S, which is transitive and contains R, then S contains
+    R*'
+  merge: -1
+  img_proc: true
+- pgno: 179
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 180
+  md: '# Transitive closures
+
+
+    +   R* = R ∪ R² ∪ R³ ∪ ... ∪ Rⁿ
+
+
+    M_{R*} = M_R ∨ M_R^{[2]} ∨ M_R^{[3]} ... ∨ M_R^{[n]}'
+  merge: -1
+  img_proc: true
+- pgno: 181
+  md: '# # Equivalence relations
+
+
+    +   - Definition: A relation on a set A is an equivalence relation if it is reflexive,
+    symmetric and transitive.
+
+
+    +   - Examples
+
+    +     - Let R be the relation on the set of students in this class, aRb iff a
+    and b come from the same province--- “Lao Xiang”
+
+    +     - Congruence Modulo.
+
+    +       - R={(a,b)|a≡b(mod m)}    m>1 is positive integer, a/b are integers'
+  merge: -1
+  img_proc: true
+- pgno: 182
+  md: '# Equivalence classes
+
+
+    +   - Let R be an equivalence relation on set A. The set of elements that are
+    related to an element a of A is called the equivalence class of a. denoted by
+    [a]_R
+
+    +   - [a]_R = {s | (a,s) ∈ R}
+
+    +   - If there is only one relation under consideration, it can be denoted by
+    [a]'
+  merge: -1
+  img_proc: true
+- pgno: 183
+  md: '# Equivalence classes
+
+
+    +   - Examples
+
+    +     - [zhangsan] for relation “Lao xiang”
+
+    +     - [0], [1], [5] for congruence modulo 4
+
+    +       - [0]={...-8,-4,0,4,8...}
+
+    +       - [1]={...-7,-3,1,5,9...}
+
+    +       - [5]=?
+
+    +     - Congruence classes modulo m, denoted by [a]ₘ, like [5]₄ and [1]₃'
+  merge: -1
+  img_proc: true
+- pgno: 184
+  md: '# Equivalence classes and partitions
+
+
+    +   Theorem1
+
+    +     Let R be an equivalence relation on set A, these statements are equivalent
+
+    +     (1) aRb;  (2) [a]=[b];  (3)[a]∩[b]≠∅'
+  merge: -1
+  img_proc: true
+- pgno: 185
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 186
+  md: '# Partial orderings
+
+
+    # Definition
+
+
+    +   - A relation R on a set S is called partial order if it is reflexive, antisymmetric
+    and transitive.
+
+    +   - A set S together with a partial order R is called a *partially ordered set*
+    or *poset*, denoted by (S,R)'
+  merge: -1
+  img_proc: true
+- pgno: 187
+  md: '# Partial orderings
+
+
+    +   - Examples
+
+    +     - (Z, ≥)
+
+    +     - Inclusion relation on the power set of set S, (P(S), ⊆)
+
+    +   - (S,R)
+
+    +     - It is not necessary that either aRb or bRa for every a and b in the set
+    S'
+  merge: -1
+  img_proc: true
+- pgno: 188
+  md: '# Partial orderings
+
+
+    +   - The elements a and b of a poset (S, ≤) are called Comparable if either a
+    ≤ b or b ≤ a, otherwise, incomparable
+
+    +   - Total ordering
+
+    +     - If (S, ≤) is a poset, and every two elements of S are comparable, S is
+    called totally ordered set or linearly ordered set
+
+    +     - (P(S), ⊆) Total ordering?'
+  merge: -1
+  img_proc: true
+- pgno: 189
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 190
+  md: '# Partial orderings
+
+
+    +   Lexicographic ordering
+
+
+    +   ≤ on Cartesian product of N posets
+
+    +   (A₁, ≤₁) (A₂, ≤₂)... (Aₙ, ≤ₙ)
+
+
+    +   (a₁,a₂,...aₙ)<(b₁,b₂...bₙ) if a₁<₁b₁ or there is an integer i>0 such that
+    a₁=b₁ a₂=b₂ ... aᵢ=bᵢ, and aᵢ₊₁<ᵢ₊₁bᵢ₊₁)
+
+
+    +   (a₁,a₂,...aₙ)=(b₁,b₂...bₙ) if aᵢ=bᵢ i=1,2,...n
+
+
+    +   How to compare 8-bit binary number?'
+  merge: -1
+  img_proc: true
+- pgno: 191
+  md: '# Partial orderings
+
+
+    +   - Lexicographic ordering of strings
+
+    +     - a₁a₂...aₘ, b₁b₂...bₙ
+
+    +     - let t be the minimum of m/n, then (a₁,a₂,...aₘ)<(b₁,b₂...bₙ) if (a₁,a₂,...aₜ)<ₜ(b₁,b₂...bₜ)
+    or (a₁,a₂,...aₜ)=(b₁,b₂...bₜ) and m<n
+
+    +   - How to compare “good”, “goodbye”, “gate”, “go”'
+  merge: -1
+  img_proc: true
+- pgno: 192
+  md: '# Hasse Diagrams
+
+
+    +   - Give a directed graph of a finite poset,
+
+    +     - Since every vertex has a loop, we can delete them (reflexive)
+
+    +     - Since many edges must be present because it is transtive, we can remove
+    them.
+
+    +     - Arrange each edge so that its initial vertex is below its terminal vertex,
+    we can remove the arrows
+
+    +   - Finally we get a hasse diagram'
+  merge: -1
+  img_proc: true
+- pgno: 193
+  md: '# Hasse Diagrams
+
+
+    +   - **Examples**
+
+    +     - \((\mathbb{Z}, \leq)\)
+
+    +     - \((\{2, 3, 6, 12, 24, 36\}, \mid)\)
+
+    +     - \((\text{power set of } \{a,b\}, \subseteq)\)'
+  merge: -1
+  img_proc: true
+- pgno: 194
+  md: '# Maximal and minimal elements
+
+
+    +   - Maximal element
+
+    +     - Poset (S, ≤), a ∈ S, there is no b ∈ S such that a < b
+
+    +   - Minimal element
+
+    +   - Greatest element
+
+    +     - Poset (S, ≤), a ∈ S, b ≤ a for every b ∈ S
+
+    +   - Least element'
+  merge: -1
+  img_proc: true
+- pgno: 195
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 196
+  md: '# Maximal and minimal elements
+
+
+    +   Examples
+
+
+    +   (S=power set of {a,b,c}, ⊆)
+
+
+    (1) A={{a,b}, {b,c}, {b}, {c}, ∅}
+
+
+    (2) A={{a}, {c}}
+
+
+    Give the Maximal/Minimal/Greatest/least element, and the Upper/lower/least upper/greatest
+    lower bound
+
+
+    +   Have upper bound, but no least upper bound???'
+  merge: -1
+  img_proc: true
+- pgno: 197
+  md: '# homework
+
+
+    +   - Page282 5 （Page563 9 verb）
+
+    +     - Suppose that A is a nonempty set, and f is a function that has A as its
+    domain. Let R be the relation on A consisting of all ordered pairs (x, y) such
+    that f(x)=f(y).
+
+    +       a) show that R is an equivalence relation on A
+
+    +       b) what are the equivalence classes of R?'
+  merge: -1
+  img_proc: true
+- pgno: 198
+  md: '# homework
+
+
+    +   - **Page282 8** *(Page563 15, ver6)*
+
+    +     - Let $R$ be the relation on the set of ordered pairs of positive integers
+    such that $((a,b),(c,d)) \in R$ if and only if $a+d=b+c$. Show that $R$ is an
+    equivalence relation.'
+  merge: -1
+  img_proc: true
+- pgno: 199
+  md: '# homework
+
+
+    +   - Page 294 2  (Page578 3 ver6)
+
+    +   - *Is (S,R) a poset if S is the set of all people in the world and (a,b) ∈
+    R, where a and b are people, if*
+
+    +     a) a is taller than b?
+
+    +     b) a is not taller than b?
+
+    +     c) a=b or a is an ancestor of b?
+
+    +     d) a and b have a common friend?'
+  merge: -1
+  img_proc: true
+- pgno: 200
+  md: '# 神经元的成分-神经生物学
+
+
+    +   - 图片说明：电池丢失了
+
+
+    个体发育是指在生物发育过程中，从受精卵开始到个体成熟所经历的一系列连续变化过程。
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_200_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 201
+  md: '# Lattices & Boolean Algebra
+
+
+    Wu Gang
+
+
+    School of Software, SJTU'
+  merge: -1
+  img_proc: true
+- pgno: 202
+  md: '# Lattice
+
+
+    +   - Poset (S, ≤)
+
+    +   - if Every pair of element has both a "least upper bound" and a "greatest
+    lower bound", then (S, ≤) is called Lattice'
+  merge: -1
+  img_proc: true
+- pgno: 203
+  md: '# Lattice
+
+
+    +   - Examples: which is lattice
+
+    +     - (Z⁺, |)
+
+    +     - ({1,2,3,4,5},|)
+
+    +     - ({1,2,4,8,16},|)
+
+    +     - (P(S), ⊆), S is a set'
+  merge: -1
+  img_proc: true
+- pgno: 204
+  md: '# Lattice
+
+
+    +   - Let (S, ≤) be a lattice, Define
+
+    +     - meet operation (∧): a ∧ b = glb(a,b)
+
+    +     - join operation (∨): a ∨ b = lub(a,b)
+
+    +   - for all elements x,y,z of lattice S
+
+    +     - x ∧ y = y ∧ x, x ∨ y = y ∨ x (commutative law)
+
+    +     - (x ∧ y) ∧ z = x ∧ (y ∧ z) (associative law)
+
+    +     - x ∧ (x ∨ y) = x, x ∨ (x ∧ y) = x (absorption law)
+
+    +     - x ∧ x = x, x ∨ x = x (idempotent law)'
+  merge: -1
+  img_proc: true
+- pgno: 205
+  md: '# Lattice & Algebra structure
+
+
+    +   - Lattice (S, ≤)
+
+    +   - (S, ∨, ∧) is a algebra structure derived from the lattice
+
+    +     - ∨, ∧ operations have the properties of commutative laws, associative laws,
+    absorption laws and idempotent laws'
+  merge: -1
+  img_proc: true
+- pgno: 206
+  md: '# Distributive Lattice
+
+
+    +   - Give a lattice (S, ≤), ∀ a,b,c ∈ S,
+
+    +     - a ∨ (b ∧ c) ≤ (a ∨ b) ∧ (a ∨ c)
+
+    +     - (a ∧ b) ∨ (a ∧ c) ≤ a ∧ (b ∨ c)
+
+    +   - if
+
+    +     - a ∨ (b ∧ c) = (a ∨ b) ∧ (a ∨ c)
+
+    +     - (a ∧ b) ∨ (a ∧ c) = a ∧ (b ∨ c)
+
+    +   then (S, ≤) is distributive'
+  merge: -1
+  img_proc: true
+- pgno: 207
+  md: '# Distributive Lattice
+
+
+    +   - Examples: which lattice is distributive
+
+    +     - (Z⁺, |)
+
+    +     - (P(S), ⊆), S is a set
+
+    +     - (S, ⊆), S={∅, {1}, {2}, {3}, {1,2}, {2,3},{1,2,3}}'
+  merge: -1
+  img_proc: true
+- pgno: 208
+  md: '# bounded Lattice
+
+
+    +   - Give a lattice (S, ≤),
+
+    +   - if there is an Upper Bound, denoted by 1, ∀ a ∈ S, such that a ≤ 1; and
+    if there is an Lower Bound, denoted by 0, ∀ a ∈ S, such that 0 ≤ a, this lattice
+    is bounded
+
+    +     - a ∨ 1 = 1; a ∧ 1 = a
+
+    +     - a ∨ 0 = a; a ∧ 0 = 0'
+  merge: -1
+  img_proc: true
+- pgno: 209
+  md: '# Complement &bounded lattice
+
+
+    +   - Give a Bounded lattice (S, ≤),
+
+    +   - Complement of an element a is an element b such that
+
+    +     - a ∨ b = 1; a ∧ b = 0
+
+    +   - a lattice is complemented if every element has a complement.'
+  merge: -1
+  img_proc: true
+- pgno: 210
+  md: '# Complement &bounded lattice
+
+
+    +   - Examples: is complemented?
+
+    +     - (P(S), ⊆), S is a finite set
+
+    +     - (S, ⊆), S={∅, {1}, {2}, {3}, {1,2}, {2,3},{1,2,3}}'
+  merge: -1
+  img_proc: true
+- pgno: 211
+  md: '# Lattice & Boolean Algebra
+
+
+    +   - A lattice is called Boolean Lattice if it is complemented and distributive.
+
+    +   - The algebra structure derived from the boolean lattice is called Boolean
+    Algebra (S, ∨, ∧, ~), "~" denotes a unary operation which compute the complement
+    of an element.'
+  merge: -1
+  img_proc: true
+- pgno: 212
+  md: '# Boolean Function
+
+
+    +   - Boolean set {0,1}
+
+    +   - 3 operations
+
+    +     - Complementaion  0̅=1  1̅=0
+
+    +     - Boolean sum "denoted by + or OR"
+
+    +       - 1+1=1  1+0=1  0+1=1  0+0=0
+
+    +     - Boolean product "denoted by . or AND"
+
+    +       - 1·1=1  1·0=0  0·1=0  0·0=0
+
+    +     - Rules of precedence: complementation, AND, OR'
+  merge: -1
+  img_proc: true
+- pgno: 213
+  md: '# Boolean Function
+
+
+    +   - Boolean variable
+
+    +   - Boolean function of degree n
+
+    +     - From Bⁿ to B
+
+    +     - B={0,1}, Bⁿ={(x₁,x₂,...xₙ)|xᵢ ∈ B}
+
+    +   - Boolean expression
+
+    +     - Are defined recursively as
+
+    +       - 0,1, x₁,x₂,...xₙ are boolean expression
+
+    +       - If E is boolean expression, the complement of E is boolean expression
+
+    +       - If E₁,E₂ are boolean expression then E₁E₂, E₁+E₂ are boolean expression'
+  merge: -1
+  img_proc: true
+- pgno: 214
+  md: '# Boolean Function
+
+
+    +   - Each boolean expression represents a boolean function
+
+    +     - F(x,y,z)=xy+~z  (using ~ as complement)
+
+    +   - Relationship between boolean expression and proposition logic expression
+
+    +   - Boolean value table'
+  merge: -1
+  img_proc: true
+- pgno: 215
+  md: '# Boolean Function
+
+
+    +   - Boolean functions F and G of n variables are equal if and only if F(b₁,b₂,...bₙ)=G(b₁,b₂,...bₙ).
+    Two different Boolean expression that represent the same function are called equivalent.
+    Like xy=xy+0
+
+    +   - How many different boolean functions of degree n are there?'
+  merge: -1
+  img_proc: true
+- pgno: 216
+  md: '# Boolean Function
+
+
+    +   - Boolean identities
+
+    +     - Table 5 on Page 753 of ver6
+
+    +     - Commutation laws, associative laws, distributive laws, De Morgan’s laws......
+
+    +   - Duality
+
+    +     - Interchanging Boolean sums and products, and interchanging 0s and 1s
+
+    +     - Duality principle'
+  merge: -1
+  img_proc: true
+- pgno: 217
+  md: '# Abstract definition of A Boolean algebra
+
+
+    Definition: A Boolean algebra is a set B with two binary operations ∨ and ∧, elements
+    0 and 1, and a unary operation ~ such that there propeties hold for all x,y,z
+    in B
+
+
+    +   - Identity laws
+
+    +   - Complement laws
+
+    +   - Associative laws
+
+    +   - Commutative laws
+
+    +   - Distributed laws'
+  merge: -1
+  img_proc: true
+- pgno: 218
+  md: '# Abstract definition of A Boolean algebra
+
+
+    +   - Boolean Algebra
+
+    +     - Boolean expressions
+
+    +     - Propositions
+
+    +     - Sets'
+  merge: -1
+  img_proc: true
+- pgno: 219
+  md: '# Representing boolean function
+
+
+    +   - Sum-of-Products expansions
+
+    +     - Example: how to constructing a boolean expression representing a function
+    with given values
+
+    +     - Definition: A *literal* is a boolean variable or its complement. A *minterm*
+    of the boolean variables x₁,x₂,...xₙ is a Boolean product y₁y₂...yₙ where yᵢ=xᵢ
+    or its complement
+
+    +       - The minterm has the value 1 for one and only one combination of values
+    of its variables'
+  merge: -1
+  img_proc: true
+- pgno: 220
+  md: '# Representing boolean function
+
+
+    +   - Sum-of-Products expansions
+
+    +     - The sum of minterms that represent the function is called the sum-of-products
+    expansion or disjunctive normal form
+
+    +     - Example: F(x,y,z)=(x+y)~z
+
+    +   - Product-of sum expansion or conjunctive normal form'
+  merge: -1
+  img_proc: true
+- pgno: 221
+  md: '# # Representing boolean function
+
+
+    # ■ Functional completeness
+
+
+    +   - Every boolean function can be expressed as a Boolean sum of minterm, each
+    minterm is the Boolean product of boolean variables or its complements. So boolean
+    operators set “sum, product, complement” is called functional complete
+
+    +   - Can we find a smaller set of functionally complete operators?'
+  merge: -1
+  img_proc: true
+- pgno: 222
+  md: '# Homework
+
+
+    +   - Page294 22（Page580, 43 ver6）
+
+
+    Determine whether the posts with these Hasse diagrams are lattices
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_222_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 223
+  md: '# Homework
+
+
+    +   - Page294 23 (*Page580, 45 ver6*)
+
+    +     Show that every nonempty finite subset of a lattice has a least upper bound
+    and a greatest lower bound.'
+  merge: -1
+  img_proc: true
+- pgno: 224
+  md: "# Homework\n\n+   Show that De Morgan’s laws hold in a boolean algebra. That\
+    \ is, show that for all x and y,\n+   \n+   $\\overline{(x \\vee y)} = \\bar{x}\
+    \ \\wedge \\bar{y}$\n+   \n+   $\\overline{(x \\wedge y)} = \\bar{x} \\vee \\\
+    bar{y}$"
+  merge: -1
+  img_proc: true
+- pgno: 225
+  md: '# Fundament of Logic (1)
+
+
+    ![](img/596a7ad0af4b255f7c4ff59547a2dbb3_225_0.png)
+
+
+    Wu Gang
+
+
+    School of Software, SJTU'
+  merge: -1
+  img_proc: true
+- pgno: 226
+  md: '# # Logic
+
+
+    +   - **deductive reasoning**（演绎推理）
+
+    +     - 前提和结论之间的可推导性
+
+    +   - **Inductive reasoning**（归纳推理）
+
+    +     - 样本到总体的一个推理
+
+    +     - 所有观察到的乌鸦都是黑的
+
+    +     - 所以，所有乌鸦都是黑的'
+  merge: -1
+  img_proc: true
+- pgno: 227
+  md: '# deductive reasoning
+
+
+    +   - 研究形式上的可推导性关系
+
+    +     - 所有大学生都听音乐之声（前提）
+
+    +     - 张三不听音乐之声（前提）
+
+    +     - 张三不是大学生（结论）
+
+    +     - 这个推导过程是正确的，虽然前提／结论不一定为真
+
+    +     - 推理是否正确与命题的真假无关，跟逻辑形式有关'
+  merge: -1
+  img_proc: true
+- pgno: 228
+  md: '# deductive reasoning
+
+
+    +   - 研究形式上的可推导性关系
+
+    +     - S中的元素都有性质R（前提）
+
+    +     - a没有性质R（前提）
+
+    +     - a不是S中的元素（结论）
+
+    +   - 这就是前面例子的逻辑形式，跟S到底是什么无关'
+  merge: -1
+  img_proc: true
+- pgno: 229
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 230
+  md: '# deductive reasoning
+
+
+    +   - 命题逻辑
+
+    +     - 命题： P、 Q、 R
+
+    +     - 逻辑连接词： ¬、 ∧、 ∨、 →、 ...
+
+    +   - 谓词逻辑
+
+    +     - 谓词： S(t)， t是项（term）
+
+    +     - 量词： ∀x、 ∃x
+
+    +     - 个体： a、 b、 c（常量）、 ...u、 v（变元）
+
+    +     - 个体函数： f、 g...
+
+    +     - 构造规则： 项的构造、 公式构造'
+  merge: -1
+  img_proc: true
+- pgno: 231
+  md: '# 形式语言
+
+
+    +   - 语法和语义
+
+    +     - 语法只涉及符号和表达式的形式结构
+
+    +     - 而给符号赋予某种解释时，就有语义了
+
+    +   - 谓词逻辑公式的解释（赋值）
+
+    +     - 论域
+
+    +     - 谓词函数
+
+    +     - 个体函数
+
+    +     - 命题真值'
+  merge: -1
+  img_proc: true
+- pgno: 232
+  md: '# 命题逻辑与谓词逻辑的性质
+
+
+    +   - the **soundness** property（可靠性）
+
+    +     - 语法的推演反映出的关系在语义上是成立的
+
+    +     - 形式推演对于语义的推理是可靠的
+
+    +     - 形式推演的可靠性
+
+    +   - The **completeness** property（完备性）
+
+    +     - 凡是语义推理成立的关系，语法的推演都是可以反映的
+
+    +     - 形式推演的完备性'
+  merge: -1
+  img_proc: true
+- pgno: 233
+  md: '# 可满足性与有效性
+
+
+    +   - 语义概念
+
+    +   - 可满足的：一个公式或者公式集合是可满足的，当且仅当有一个赋值（论域不为空）使得公式（或集合中每一个公式）为T。一般用Σ表示公式集合，大写字母A、B、P、Q标识公式
+
+    +   - 有效的：公式A是有效的，当且仅当任何赋值都使之为T（论域不为空）'
+  merge: -1
+  img_proc: true
+- pgno: 234
+  md: '# 可满足性与有效性
+
+
+    +   - 在论域D上是可满足的：当且仅当在论域D上有一个赋值使之为T
+
+    +   - 在论域D上是有效的：当且仅当在论域D上的任何赋值都使之为T
+
+
+    +   - Σ在论域D上是可满足的，则Σ是可满足的；
+
+    +   - A是有效的，则A在论域D上是有效的'
+  merge: -1
+  img_proc: true
+- pgno: 235
+  md: '# 可满足性与有效性
+
+
+    +   - **定理**
+
+    +     - A是可满足的，当且仅当¬A不是有效的
+
+    +     - A是有效的，当且仅当¬A是不可满足的
+
+    +     - A(u₁,u₂,...,uₙ)是可满足的，当且仅当 ∃x₁...∃xₙ A(x₁,...,xₙ)是可满足的
+
+    +     - A(u₁,u₂,...,uₙ)是有效的，当且仅当 ∀x₁...∀xₙ A(x₁,...,xₙ)是有效的'
+  merge: -1
+  img_proc: true
+- pgno: 236
+  md: '# 前束范式
+
+
+    +   - 谓词逻辑的一种范式
+
+    +     - Q₁x₁...Qₙxₙ A，其中Q₁...Qₙ为量词
+
+    +   - 一个公式可以变换为某个前束范式，且与之等值≡
+
+    +   - Prenex normal form'
+  merge: -1
+  img_proc: true
+- pgno: 237
+  md: '# 前束范式
+
+
+    +   - ¬ ∀ xA(x) ≡ ∃ x¬A(x)
+
+    +   - ¬ ∃ xA(x) ≡ ∀ x¬A(x)
+
+    +   - A ∧ QxB(x) ≡ Qx(A ∧ B(x)), x不在A中出现
+
+    +   - A ∨ QxB(x) ≡ Qx(A ∨ B(x)), x不在A中出现
+
+    +   - ∀ xA(x) ∧ ∀ xB(x) ≡ ∀ x (A(x) ∧ B(x))
+
+    +   - ∃ xA(x) ∨ ∃ xB(x) ≡ ∃ x (A(x) ∨ B(x))
+
+    +   - Q₁xA(x) ∨ Q₂yB(y) ≡ Q₁xQ₂y(A(x) ∨ B(y))
+
+    +   - Q₁xA(x) ∧ Q₂yB(y) ≡ Q₁xQ₂y(A(x) ∧ B(y))'
+  merge: -1
+  img_proc: true
+- pgno: 238
+  md: '# 前束范式的可满足性与有效性
+
+
+    +   - 定理
+
+    +     - A是可满足的，当且仅当A的前束范式是可满足的
+
+    +     - A是有效的，当且仅当A的前束范式是有效的'
+  merge: -1
+  img_proc: true
+- pgno: 239
+  md: '# Page 122, 3.6.1
+
+
+    +   - 将下列公式变换成前束范式
+
+    +   - $(\neg \exists xF(x) \lor \forall yG(y)) \land (F(u) \to \forall yG(y))$
+
+    +   - $\exists xF(u, x) \leftrightarrow \forall yG(y)$
+
+    +   - $\forall x(F(x) \to \exists y(G(y) \to F(x) \lor \forall zG(z)))$'
+  merge: -1
+  img_proc: true
+- pgno: 240
+  md: '![](img/596a7ad0af4b255f7c4ff59547a2dbb3_240_0.png)
+
+
+    # Fundament of Logic (2)
+
+
+    Wu Gang
+
+
+    School of Software, SJTU'
+  merge: -1
+  img_proc: true
+- pgno: 241
+  md: '# 可靠性（谓词逻辑、命题逻辑）
+
+
+    +   - 定理：设 Σ ⊆ Form(L)，A ∈ Form(L)。
+
+    +     - 若 Σ ⊢ A，则 Σ ⊨ A。
+
+    +     - 若 Φ ⊢ A，则 Φ ⊨ A。
+
+    +     - 即：所有形式可证明的公式都是有效的。
+
+    +     - 一阶逻辑有17条推理规则，要证明每一条规则都满足可靠性'
+  merge: -1
+  img_proc: true
+- pgno: 242
+  md: '# 17条推理规则
+
+
+    +   - A ⊢ A  (Ref)
+
+    +   - if Σ ⊢ A, then Σ, Σ′ ⊢ A  (+)
+
+    +   - if Σ, ¬A ⊢ B and Σ, ¬A ⊢ ¬B, then Σ ⊢ A  (¬ ¬)
+
+    +   - if Σ ⊢ A→B, Σ ⊢ A, then Σ ⊢ B (→ ¬)
+
+    +   - if Σ, A ⊢ B, then Σ ⊢ A→B  (→ +)
+
+    +   - if Σ ⊢ A∧B, then Σ ⊢ A and Σ ⊢ B (∧¬)
+
+    +   - if Σ ⊢ A and Σ ⊢ B, then Σ ⊢ A∧B (∧+)'
+  merge: -1
+  img_proc: true
+- pgno: 243
+  md: '# 17条推理规则
+
+
+    +   - if  Σ,A ⊢C and  Σ,B ⊢C, then  Σ,A∨B ⊢C  (∨−)
+
+    +   - if  Σ ⊢A, then Σ ⊢A∨B,  Σ ⊢B∨A  (∨+)
+
+    +   - if  Σ ⊢A↔B,  Σ ⊢A, then  Σ ⊢B  (↔−)
+
+    +   - if  Σ,A ⊢B,  Σ,B ⊢A, then  Σ ⊢A↔B  (↔+)
+
+    +   - if  Σ ⊢∀xA(x), then  Σ ⊢A(t)  (∀−)
+
+    +   - if  Σ ⊢A(u), u不在Σ中出现
+
+    +     then  Σ ⊢∀xA(x)  (∀+)'
+  merge: -1
+  img_proc: true
+- pgno: 244
+  md: '# 17条推理规则
+
+
+    +   - if Σ, A(u) ⊢ B, u不在Σ或B中出现
+
+    +     then Σ, ∃xA(x) ⊢ B
+
+    +     (∃−) 代入
+
+    +   - if Σ ⊢ A(t) then Σ ⊢ ∃xA(x) (∃+)
+
+    +     x替换t（可以只替换部分）
+
+    +   - if Σ ⊢ A(t₁), Σ ⊢ t₁≡t₂ then Σ ⊢ A(t₂)
+
+    +     t₂替换t₁（可以只替换部分） (≡−)
+
+    +   - Φ ⊢ u≡u (≡+)'
+  merge: -1
+  img_proc: true
+- pgno: 245
+  md: '# 证明可靠性定理
+
+
+    +   - (Ref): A ⊢ A 显然成立
+
+    +   - (+): if Σ ⊢ A, then Σ, Σ'' ⊢ A
+
+    +     要证： if Σ ⊨ A, then Σ, Σ'' ⊨ A
+
+    +   - (¬ ¬): 要证 if Σ, ¬A ⊢ B and Σ, ¬A ⊢ ¬B, then Σ ⊨ A  反证法
+
+    +   - (∨ ¬): 要证 if Σ, A ⊨ C and Σ, B ⊨ C, then Σ, A ∨ B ⊨ C'
+  merge: -1
+  img_proc: true
+- pgno: 246
+  md: '# 证明可靠性定理
+
+
+    +   (∃一): 要证if Σ, A(u) ⊨ B, u不在Σ或 B中出现, then Σ, ∃xA(x) ⊨ B
+
+
+    +   令v为以D为论域的任何赋值，使Σ^v, ∃xA(x)^v 均为真，则有a∈D，使A(a) 即A(u)^v(u=a) 为真；由于u不在Σ中出现，因此Σ^v(u=a)=
+    Σ^v 为真；因此Σ, A(u) 在解释v(u=a)下均为真，得到B^v(u=a)为真，又由于u不在B中出现，则'
+  merge: -1
+  img_proc: true
+- pgno: 247
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 248
+  md: '# 错误推理的说明
+
+
+    +   - 易证：
+
+    +     - A(u) ⊭ ∀xA(x)
+
+    +     - ∃xA(x) ⊭ A(u)
+
+
+    +   - 那么由可靠性定理得
+
+    +     - A(u) ⊬ ∀xA(x)
+
+    +     - ∃xA(x) ⊬ A(u)
+
+    +     - 意思是可以证明这是无法推出的！！'
+  merge: -1
+  img_proc: true
+- pgno: 249
+  md: '# 协调性
+
+
+    +   - 定义： Σ ⊆ Form(L) 是协调的，当且仅当不存在 A ∈ Form(L)，使得 Σ ⊢ A 并且 Σ ⊢ ¬A
+
+    +   - 语法概念'
+  merge: -1
+  img_proc: true
+- pgno: 250
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 251
+  md: '# 协调性的一个定理
+
+
+    +   - Σ ⊆ Form(L) 是协调的，当且仅当存在 A， 使得 Σ ⊬ A'
+  merge: -1
+  img_proc: true
+- pgno: 252
+  md: '# homework
+
+
+    +   - 证明上一页的定理
+
+    +   - 证明：可靠性定理证明中的
+
+    +     \((\rightarrow -)、(\wedge +)、(\forall +)\) 情况'
+  merge: -1
+  img_proc: true
+- pgno: 253
+  md: '# Fundament of Logic (3)
+
+
+    Wu Gang
+
+    School of Software, SJTU'
+  merge: -1
+  img_proc: true
+- pgno: 254
+  md: '# 极大协调性
+
+
+    +   - 定义：公式集Σ是极大协调的，当且仅当Σ满足以下两点，
+
+    +     - Σ是协调集
+
+    +     - 对于任何A∉Σ，Σ∪{A}是不协调的。
+
+    +       即不存在以Σ为真子集的协调集
+
+    +   - 如果对于任何A，Σ ⊢A蕴涵A∈Σ，称Σ是封闭于形式可推演的。'
+  merge: -1
+  img_proc: true
+- pgno: 255
+  md: '# 极大协调性
+
+
+    +   - 定理1：设Σ是极大协调集，那么对于任何A，Σ ⊢ A 当且仅当 A ∈ Σ
+
+    +     - 设 Σ ⊢ A，如果 A ∉ Σ，由 Σ 是极大协调的可知 Σ ∪ {A} 是不协调的。因此 Σ ⊢ ¬A，导出 Σ 不协调，矛盾！因此，A
+    ∉ Σ。
+
+    +     - 设 A ∈ Σ，则由推理规则可到 Σ ⊢ A
+
+    +   - 极大协调集 Σ 是封闭于形式可推演的'
+  merge: -1
+  img_proc: true
+- pgno: 256
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 257
+  md: '# 极大协调性
+
+
+    +   - 推论：设Σ是极大协调集，则对于任何A ， Σ ⊢¬A 当且仅当 Σ ⊢A
+
+    +   - Σ ⊢¬A，若 Σ ⊢A，Σ不协调，矛盾！
+
+    +   - Σ ⊢A，则 A ∉ Σ，则 ¬A ∈ Σ，则 Σ ⊢¬A'
+  merge: -1
+  img_proc: true
+- pgno: 258
+  md: '# 极大协调集
+
+
+    +   定理（Lindenbaum）：任何协调的公式集Σ能够扩充为极大协调集。记为Σ*
+
+
+    +   设Form(L)是可数无限集，令A₀, A₁, A₂,…是其一个排列。定义Σₙ (n≥0)如下：
+
+    +   Σ₀=Σ， Σₙ₊₁=Σₙ∪{Aₙ} (若Σₙ∪{Aₙ}协调)，
+
+    +   否则Σₙ₊₁=Σₙ
+
+
+    +   则有Σₙ⊆Σₙ₊₁，且Σₙ是协调的。
+
+
+    +   Σ* = ∪ₙ∈N Σₙ 先证Σ*是协调的；
+
+    +   再证Σ*是极大的'
+  merge: -1
+  img_proc: true
+- pgno: 259
+  md: '# 极大协调集
+
+
+    +   - 定理（Lindenbaum）：任何协调的公式集 Σ 能够扩充为极大协调集。记为 Σ*
+
+
+    +     - 注明：一阶语言不可数时，Form(L) 是不可数无限集。这种情况不做要求。'
+  merge: -1
+  img_proc: true
+- pgno: 260
+  md: '# 命题逻辑的完备性
+
+
+    +   - 完备性证明有多种不同的方法
+
+
+    +   - 方法一的引理
+
+    +     设A ∈ Form(L^p)含不同的原子公式p₁， p₂， ... ， pₙ， v是真假赋值。对于i=1,2,..., n, 令若pᵢ^v=1，则Aᵢ=pᵢ；否则，Aᵢ=¬pᵢ。则有
+
+
+    +   - 若A^v=1，则A₁，A₂，...，Aₙ ⊢ A。
+
+
+    +   - 若A^v=0，则A₁，A₂，...，Aₙ ⊢ ¬A'
+  merge: -1
+  img_proc: true
+- pgno: 261
+  md: '# 命题逻辑的完备性
+
+
+    +   - **方法一的定理**：设 $A\in\mathrm{Form}(L^p)$，$\Sigma\subseteq\mathrm{Form}(L^p)$，且
+    $\Sigma$ 是有限集，则
+
+    +     - 若 $\Phi\nvdash A$，则 $\Phi\nvdash A$（$A$ 是重言式的话，则 $A$ 是形式上可证明的）
+
+    +     - 若 $\Sigma\nvdash A$，则 $\Sigma\nvdash A$'
+  merge: -1
+  img_proc: true
+- pgno: 262
+  md: '# 命题逻辑的完备性
+
+
+    证明若 Φ ⊨ A，则 Φ ⊢ A：
+
+
+    设 A 含不同的原子公式 p₁,p₂,…,pₙ。令 v1，v2 是真假赋值，且 p₁ᵛ¹=1，p₁ᵛ²=0，p₂ᵛ¹= p₂ᵛ²=1，pᵢᵛ¹= pᵢᵛ²
+    (i=3, …, n)。由引理，由于 Aᵛ¹=1，所以 p₁，p₂，…，Aₙ ⊢ A。由于 Aᵛ²=1，所以 ¬p₁，p₂，…，Aₙ ⊢ A。可得，p₁ ∨
+    ¬p₁，p₂，…，Aₙ ⊢ A，p₂，…，Aₙ ⊢ (p₁ ∨ ¬p₁) → A，又因为 Φ ⊢ p₁ ∨ ¬p₁，所以 p₂，…，Aₙ ⊢ p₁ ∨ ¬p₁。可得，p₂，…，Aₙ
+    ⊢ A。
+
+
+    再令 u1，u2 是真假赋值，且 p₁ᵘ¹=1，p₁ᵘ²=0，p₂ᵘ¹= p₂ᵘ²=0，pᵢᵘ¹= pᵢᵘ²，i=3, …, n。同理可得，¬p₂，…，Aₙ
+    ⊢ A。
+
+
+    可得，A₃，…，Aₙ ⊢ A。进一步指定真假赋值，可得 Φ ⊢ A。'
+  merge: -1
+  img_proc: true
+- pgno: 263
+  md: '# 命题逻辑的完备性
+
+
+    +   方法二的引理：
+
+    +     Σ* ⊆ Form(Lρ) 是极大协调集，构造真假赋值 v 使得对任何原子公式 p，p^v = 1 当且仅当 p ∈ Σ*，于是对于任何的 A
+    ∈ Form(Lρ)，A^v = 1 当且仅当 A ∈ Σ*'
+  merge: -1
+  img_proc: true
+- pgno: 264
+  md: '# 命题逻辑的完备性
+
+
+    +   - 方法二的定理1：设 Σ⊆Form(Lᵖ)，A∈Form(Lᵖ)，则有
+
+    +     - 如果 Σ 是协调的，则 Σ 是可满足的；
+
+    +     - 如果 A 是协调的，则 A 是可满足的；
+
+
+    证明：Σ 是协调的，任取 B∈Σ，把 Σ 扩为极大协调集 Σ*，使用引理中的真假赋值 v，就有 Bᵛ=1。因此，v 满足 Σ。'
+  merge: -1
+  img_proc: true
+- pgno: 265
+  md: '# 命题逻辑的完备性
+
+
+    +   - 方法二的定理2：设 $\Sigma \subseteq \mathrm{Form}(L^p)$，$A \in \mathrm{Form}(L^p)$，则
+
+    +     - 若 $\Sigma \models A$，则 $\Sigma \vdash A$
+
+    +     - 若 $\Phi \models A$，则 $\Phi \vdash A$（$A$ 是重言式的话，则 $A$ 是形式上可证明的）
+
+
+    证明：$\Sigma \not\vdash A$，则 $\Sigma \cup \{\neg A\}$ 是不可满足的。又定理1可知 $\Sigma \cup
+    \{\neg A\}$ 是不协调的。因此 $\Sigma \vdash A$'
+  merge: -1
+  img_proc: true
+- pgno: 266
+  md: '# 一阶逻辑的完备性
+
+
+    +   - 经典一阶逻辑就是指谓词逻辑
+
+    +   - 我们只需要大家了解结论，不需要大家掌握证明。'
+  merge: -1
+  img_proc: true
+- pgno: 267
+  md: '# 一阶逻辑的完备性
+
+
+    +   - 一阶完备性定理1：设Σ ⊆ Form(L)，A ∈ Form(L)，则有
+
+    +     - 如果Σ是协调的，则Σ是可满足的；
+
+    +     - 如果A是协调的，则A是可满足的；'
+  merge: -1
+  img_proc: true
+- pgno: 268
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 269
+  md: '# homework
+
+
+    +   - 设Σ是封闭于形式可推演的，证明Σ是极大协调的，当且仅当对于任何的A，Σ包含且只包含A和¬A之一。
+
+
+    +   - 证明：命题逻辑完备性方法二引理中A=B∨C，和B→C的情况。'
+  merge: -1
+  img_proc: true
+- pgno: 270
+  md: '# Cardinality of Set
+
+
+    +   - Set A and Set B have the same cardinality if and only if there is a one-to-one
+    correspondence from A to B
+
+    +   - Finite Set, Infinite Set
+
+    +     - Infinite set has a subset with same cardinality'
+  merge: -1
+  img_proc: true
+- pgno: 271
+  md: '# Countable Set
+
+
+    +   - Countable: cardinality is Aleph0
+
+    +     - Finite Set
+
+    +     - Infinite Set with the same cardinality as the set of positive integers
+
+    +   - Examples
+
+    +     - Set of odd positive integers
+
+    +     - Set of positive rational numbers
+
+    +     - Set of Integers ?'
+  merge: -1
+  img_proc: true
+- pgno: 272
+  md: '# Uncountable Set
+
+
+    +   - Set of real numbers
+
+    +   - Diagonalization Argument
+
+    +   - (0,1) vs R
+
+    +     - Tan π (2x-1)/2
+
+    +   - (0,1) vs [0,1] ?
+
+    +   - Continuum hypothesis'
+  merge: -1
+  img_proc: true
+- pgno: 273
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true

@@ -1,0 +1,18 @@
+# Dijkstra algorithm
+
+```
+1. X ← {1}; Y ← V \ {1}; λ[1] ← 0
+2. for y ← 2 to n
+3.   if y is adjacent to 1 then λ[y] ← length[1, y]
+4.   else λ[y] ← ∞ end if
+5. end for
+6. for j ← 1 to n − 1
+7.   Let y ∈ Y be such that λ[y] is minimum
+8.   X ← X ∪ {y}
+9.   Y ← Y \ {y}
+10.  for each edge (y, w)
+11.   if w ∈ Y and λ[y] + length[y, w] < λ[w]
+12.   then λ[w] ← λ[y] + length[y, w]
+13.  end for
+14. end for
+```

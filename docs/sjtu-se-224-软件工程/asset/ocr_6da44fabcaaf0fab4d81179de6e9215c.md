@@ -1,0 +1,3 @@
+# Example: Define Dependencies (before)
+
+![](bbox=[0.12, 0.18, 0.88, 0.92])

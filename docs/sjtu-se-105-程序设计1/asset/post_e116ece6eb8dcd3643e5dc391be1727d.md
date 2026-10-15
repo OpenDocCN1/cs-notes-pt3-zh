@@ -1,0 +1,196 @@
+
+- 编译时错误
+  - 语法错误
+  - 类型错误
+- 连接时错误
+  - 库文件不存在等原因引起
+- 运行时错误
+  - 由计算机探测到 (崩溃)
+  - 由库探测到 (异常)
+  - 由用户代码探测到
+- 逻辑错误
+  - 由程序员探测到 (代码可以运行，但是产生不正确的输出)
+
+## 程序
+
+- 1. 应该对所有合法输入都产生想要的结果
+- 2. 应该对所有非法输入都给出合理的错误信息
+- 3. 不需要担心硬件故障
+- 4. 不需要担心系统软件故障
+- 5. 允许在发现错误之后终止
+
+• 3, 4, 和5 在初学者的代码中都能满足；但是，在真正的软件中我们却经常要担心
+
+## 错误的来源
+
+- 规格说明书(specification)不充分
+  - “这个软件要做什么?” – 自然语言内在的歧义性
+- 不完善的程序
+  - “但是明天之前我是不会有时间完善了” – 赶任务
+- 意外的引元
+  - “但是我们假设不会使用-1作为引元去调用sqrt()的” – 假设并不成立
+- 意外的输入
+  - “但是我们假设用户是会输入一个整数的” – 假设并不成立
+- 意外的状态
+  - “因此修正它!”
+- 逻辑错误
+  - “错误的输出结果!”
+
+## 编译时错误
+
+- 编译器只能发现十分简单的问题
+  - 拼写错误
+  - 语句不完整
+
+- 语法错误
+  - `int area(int length, int width);` // 计算矩形的面积
+  - `int s1 = area(7;` // error: ) 缺失
+  - `int s1 = area(7)` // error: ; 缺失
+  - `Int s3 = area(7);` // error: Int 不是一种类型
+  - `int s4 = area('7);` // error: 非终止字符 ' 缺失
+
+## 编译时错误
+
+- 编译器只能发现十分简单的问题
+  - 拼写错误
+  - 语句不完整
+- 类型错误
+  - int area(int length, int width); // 计算矩形的面积
+  - int x0 = arena(7); // error: 未声明的函数
+  - int x1 = area(7); // error: 错误的引元数量
+  - int x2 = area("seven",2); // error: 第一个引元类型错误
+
+## 编译时错误
+
+- 编译器只能发现十分简单的问题
+  - 拼写错误
+  - 语句不完整
+
+- 警告错误
+  - `int area(int length, int width);` // 计算矩形的面积
+
+```
+int x4 = area(10,-7); // OK: 但是宽度为-7的矩形面积是多少呢？
+int x5 = area(10.7,9.3); // OK: 会以area(10,9)的形式调用
+char x6 = area(100,9999); // OK: 但是会对结果截尾
+```
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_294_0.png)
+
+## 连接时错误
+
+- 程序由多个彼此分离的通过编译的部分构成
+  - 连接时会发生错误
+
+- 连接时错误
+  `int area(int length , int width); // 计算矩形面积`
+  
+  `int main()`
+  `{`
+  `    int x = area(2,3);`
+  `}`
+
+- area是库函数
+  - 如果找不到，就会报错
+
+- 没有编译时错误和连接时错误的程序就可以运行了
+
+```
+int area(int length, int width)      // 计算矩形面积
+{ return length*width; }
+int framed_area(int x, int y)        // 计算边框内的面积
+{ return area(x-2,y-2); }
+int main()
+{
+    int x = -1;
+    int y = 2;
+    int z = 4;
+    int area1 = area(x,y);
+    int area2 = framed_area(1,z);
+    int area3 = framed_area(y,z);
+    double ratio = double(area1)/area3; // 转型为double 执行浮点除法
+}
+```
+
+## 运行时错误
+
+- 处理area()的引元错误
+  - area()的调用者处理引元错误
+  - area()自身处理引元错误
+- 调用者处理引元错误
+  `if (x<=0) error("non-positive x");`
+  `if (y<=0) error("non-positive y");`
+  `int areal = area(x,y);`
+  
+  `if (z<=2)`
+  `    error("non-positive 2nd area() argument called by framed_areaO ");`
+  `int area2 = framed_area(l , z);`
+  `if (y<=2 || z<=2)`
+  `    error(" non-positive area() argument called by framed_areaO");`
+  `int areaJ = framed_area(y,z);`
+
+- 处理area()的引元错误
+  - area()的调用者处理引元错误
+  - area()自身处理引元错误
+- 被调用者处理引元错误
+  ```
+  int framed_area(int x, int y) //计算框内面积
+  {
+      const int frame_width = 2;
+      if (x-frame_width<=0 || y- frame_width<=0)
+          error(" non-positive area() argument called by framed_area()");
+      return area(x-frame_width, y-frame_width);
+  }
+  ```
+
+## 运行时错误
+
+- 报告错误
+  - 返回错误值
+  - 缺点
+    - 被调用函数和调用程序都需要进行测试
+    - 调用者可能会忘记测试
+    - 许多函数没有合适的值用来表示错误
+
+```
+int area(int length, int width)
+{
+    if (length<=0 || width <=0) return -1;
+    return length*width;
+}
+```
+
+- C++提供了异常机制 exception
+  - 用于处理错误
+- 异常处理非常普通
+  - 不能忘记异常：在异常没有得到处理时，程序将终止
+  - 每一种错误都可以用异常来报告 try catch
+- 必须为每一个异常设计处理方式
+  - 要处理程序中抛出 throw 的每一个异常
+  - 错误处理 Error handling 从来都不简单
+
+- try块
+  - 处理 “正常” 情况
+  - 潜在有错误倾向的代码
+- catch块
+  - 处理 “异常” 情况
+- 如果异常被成功处理(在catch 块中)
+  - 程序就会从catch语句块后的第一条语句继续执行
+- 否则，异常机会被传播到
+  - 外部语句块(如果有的话)
+  - 或者调用这段代码的函数，如果没有任何外部语句块
+
+- 如果异常被传播给了 main() 的调用者
+  - 程序就退出
+- 示例：
+  ```
+  void foo()
+  {
+    try {
+      <block>
+    }
+    catch(type var) {
+      <block>
+    }
+  }
+  ```

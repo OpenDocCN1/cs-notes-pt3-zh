@@ -1,0 +1,6 @@
+# Goals
+
++   - Given some sequence of malloc and free requests:
++     - $R_0, R_1, ..., R_k, ... , R_{n-1}$
++   - Want to maximize throughput and peak memory utilization.
++     - These goals are often conflicting

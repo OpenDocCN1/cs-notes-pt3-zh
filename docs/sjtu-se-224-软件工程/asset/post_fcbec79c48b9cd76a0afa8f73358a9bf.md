@@ -1,0 +1,157 @@
+
+## Software Engineering
+
+### Use a conceptual class category list
+
+| Category | Conceptual Classes |
+|---|---|
+| physical or tangible objects | Student, Professor, FulltimeStudent, ParttimeStudent |
+| form or abstract noun concepts | Course, Course Offering, Schedule |
+| organizations | Dept |
+
+### 面向对象分析
+
+### Finding conceptual classes with Noun Phrase
+
+- Use use-case flow of events as input
+- Underline noun phrases in the use-case flow of events
+- Remove redundant candidates
+- Remove vague candidates
+- Remove actors (out of scope)
+- Remove implementation constructs
+- Remove attributes (save for later)
+- Remove operations
+
+### Example: Candidate Conceptual Classes
+
+![](img/bd1e40ee9d51e0bf88db831d8e65a09d_58_0.png)
+
+### A Common Mistake in Identifying Conceptual Classes
+
+- Perhaps the most common mistake when creating a domain model is to represent something as an attribute when it should have been a concept.
+- A rule of thumb to help prevent this mistake:
+  - If we do not think of some conceptual class X as a number or text in the real world, X is probably a conceptual class, not an attribute.
+- Example
+  - Should store be an attribute of Sale, or a separate conceptual class Store?
+  - In the real world, a store is not considered a number or text - the term suggests a legal entity, an organization, and something occupies space.
+  - Therefore, Store should be a concept.
+
+### 面向对象分析的步骤
+
+1. 用例建模
+2. 建立概念模型
+   - 2.1 识别Conceptual Class
+   - 2.2 建立Conceptual Class之间的关系
+   - 2.3 增加Conceptual Class的属性
+3. 用例分析
+
+### Class relationships
+
+- Association
+  - Aggregation
+  - Composition
+- Generalization
+- Dependency
+
+### Relationships: Association
+
+- The semantic relationship between two or more classifiers that specifies connections among their instances.
+- A structural relationship specifying that objects of one thing are connected to objects of another thing.
+
+### What Is Multiplicity?
+
+- Multiplicity is the number of instances one class relates to ONE instance of another class.
+- For each association, there are two multiplicity decisions to make, one for each end of the association.
+  - For each instance of Professor, many Course Offerings may be taught.
+  - For each instance of Course Offering, there may be either one or zero Professor as the instructor.
+
+### Multiplicity Indicators
+
+| Multiplicity | Notation |
+|---|---|
+| Unspecified |  |
+| Exactly One | 1 |
+| Zero or More | 0..* |
+| Zero or More | * |
+| One or More | 1..* |
+| Zero or One (optional value) | 0..1 |
+| Specified Range | 2..4 |
+| Multiple, Disjoint Ranges | 2, 4, 6 |
+
+### Example: Multiplicity
+
+### What Are Roles?
+
+- The "face" that a class plays in the association
+
+### What Is Navigability?
+
+- Indicates that it is possible to navigate from an associating class to the target class using the association
+
+![](img/bd1e40ee9d51e0bf88db831d8e65a09d_60_0.png)
+
+### 两个类之间关联同时可以有多条
+
+![](img/bd1e40ee9d51e0bf88db831d8e65a09d_60_1.png)
+
+### What Is an Aggregation?
+
+- A special form of association that models a whole-part relationship between the aggregate (the whole) and its parts.
+  - An aggregation is an "is a part-of" relationship.
+- Multiplicity is represented like other associations.
+
+![](img/bd1e40ee9d51e0bf88db831d8e65a09d_60_2.png)
+
+### Example: Aggregation
+
+![](img/bd1e40ee9d51e0bf88db831d8e65a09d_60_3.png)
+
+### What Is Composition?
+
+- A form of aggregation with strong ownership and coincident lifetimes
+- The parts cannot survive the whole/aggregate
+
+![](img/bd1e40ee9d51e0bf88db831d8e65a09d_60_4.png)
+
+### Aggregation Vs. Composition
+
+![](img/bd1e40ee9d51e0bf88db831d8e65a09d_60_5.png)
+
+### 举例
+
+- 组合/部分
+- 容器/内容
+- 集合/成员
+
+### 练习
+
+- 汽车和轮胎是关联、聚合、还是组合？
+- 丈夫和妻子是关联、聚合、还是组合？
+
+### Relationships: Generalization
+
+- A relationship among classes where one class shares the structure and/or behavior of one or more classes.
+- Defines a hierarchy of abstractions where a subclass inherits from one or more superclasses.
+  - Single inheritance
+  - Multiple inheritance
+- Is an "is a kind of" relationship.
+
+### Example: Single Inheritance
+
+- One class inherits from another.
+
+### Example: Multiple Inheritance
+
+- A class can inherit from several other classes.
+
+Use multiple inheritance only when needed and always with caution!
+
+### What Is Inherited?
+
+- A subclass inherits its parent's attributes, operations, and relationships.
+- A subclass may:
+  - Add additional attributes, operations, relationships.
+  - Redefine inherited operations. (Use caution!)
+- Common attributes, operations, and/or relationships are shown at the highest applicable level in the hierarchy.
+
+Inheritance leverages the similarities among classes.

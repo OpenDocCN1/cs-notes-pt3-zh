@@ -1,0 +1,7 @@
+# Performance goals: peak memory utilization
+
++   - *Def: current heap size is denoted by Hₖ*
++     - Note that Hₖ is monotonically nondecreasing (can be relaxed)
++   - *Def: peak memory utilization:*
++     - After k requests, peak memory utilization is:
++       - *Uₖ = ( maxᵢ≤ₖ Pᵢ ) / Hₖ*

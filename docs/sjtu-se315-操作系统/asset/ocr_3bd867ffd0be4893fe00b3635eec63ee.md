@@ -1,0 +1,27 @@
+# Basic Implementation
+
+```
+readerStart() {
+    lock(lockRW);
+
+    while(numWriters > 0){
+        wait(lockRW, condRW);
+    };
+
+    numReaders++;
+
+    unlock(lockRW);
+}
+```
+
+```
+readerFinish() {
+    lock(lockRW);
+
+    numReaders--;
+
+    broadcast(lockRW, condWR);
+
+    unlock(lockRW);
+}
+```

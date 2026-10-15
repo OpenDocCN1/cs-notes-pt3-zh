@@ -1,0 +1,13 @@
+# Address Translation Example
+
+PA: 0x354
+
+CT CI CO
+
+| 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 0 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 0 |
+
+PPN PPO
+
+Offset: 0x0   CI: 0x05   CT: 0x0D   Hit? Yes   Byte: 0x36

@@ -1,0 +1,1 @@
+A is r.e. iff there is a partially decidable predicate R(x, y) such that x ∈ A iff ∃y.R(x, y).

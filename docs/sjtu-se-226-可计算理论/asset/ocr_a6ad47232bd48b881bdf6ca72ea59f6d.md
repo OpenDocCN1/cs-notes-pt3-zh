@@ -1,0 +1,7 @@
+# Examples
+
+The following predicates are partially decidable:
+
++   x ∈ E_j^{(n)}
+
++   W_i ≠ ∅

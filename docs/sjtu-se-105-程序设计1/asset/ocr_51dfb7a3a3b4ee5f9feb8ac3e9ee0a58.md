@@ -1,0 +1,10 @@
++   - 考虑新增一类图形：
++     - 从Figure类中导出Triangle类
++   - 函数center()继承自Figure
++     - 它在三角形中能工作吗？
++     - 它使用了draw()，而draw()对每种图形都是不一样的！
++     - 它将使用Figure::draw()，而这个函数不适用于三角形
++   - 我们希望继承的center()函数将使用
++     - Triangle::draw()而不是Figure::draw()
++   - 但是Triangle类编写Figure::center()的时候还不存在呢
++     - Figure::center()不知道三角形的存在！

@@ -1,0 +1,8 @@
+# Roadmap
+
++   - Approximation algorithms:
++     - Vertex cover problem
++     - Knapsack problem
++     - Euclidean traveling sales man problem
++   - Hardness result: Traveling sales man problem
++   - Easiness result: Subset Sum problem

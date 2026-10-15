@@ -1,0 +1,17 @@
+# Recap: synchronous metadata update?
+
+Xv6-rev0 strategy: carefully order disk writes to avoid dangling refs
+
++   1. initialize a new inode before creating dirent
++   2. delete dirent before marking inode free
++   3. mark block in-use before adding it to inode addrs[]
++   4. remove block from addrs[] before marking free
++   5. zero block before marking free
+
+Has some visible bugs:
+
+. and .. during mkdir(), link counts, sizes
+
+Has some invisible loose ends
+
+may lose freed blocks and inodes

@@ -1,0 +1,1 @@
+Assignment 2 is announced! (deadline Nov. 7)

@@ -1,0 +1,5953 @@
+- pgno: 0
+  md: '# 01 概述
+
+    Introduction'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# 数据库
+
+
+    +   - Database
+
+    +     - 长期储存在计算机内的、有组织的、可共享的、互相关联的数据的集合
+
+    +     - 是一个持久数据的集合
+
+    +     - A very large, integrated collection of data.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# 数据库管理系统
+
+
+    +   - DataBase Management System(DBMS)
+
+    +   - A software package designed to store and manage databases.
+
+    +   - Provide efficient, reliable, convenient, and safe multi-user storage of
+    and access to massive amounts of persistent data.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# DBMS
+
+
+    +   - Massive
+
+    +   - Persistent
+
+    +   - Safe
+
+    +   - Multi-user
+
+    +   - Convenient
+
+    +   - Efficient
+
+    +   - Reliable'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Key concepts
+
+
+    +   - Data model
+
+    +     - A collection of concepts for describing data
+
+    +     - A description of, in general, how the data is structured.
+
+    +   - Schema versus data
+
+    +     - A description of a particular collection of data, using the given data
+    model
+
+    +     - The schema sets up the structure of the database.
+
+    +   - Data definition language (DDL)
+
+    +   - Data manipulation or query language (DML)'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/5285b20d8f5a79969a3f150d38beebfc_7_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# 数据库应用
+
+
+    Whether you know it or not,
+
+    you''re using a database every day
+
+
+    ......'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 02 关系模型
+
+    Relational Model'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# 关系数据模型基础'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '+   - 关系模型是一种基于表的数据模型
+
+    +     - 用表的集合表示数据及数据间的联系
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_11_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: "+   - **Schema**\n+     -structural description of relations in database\n\
+    +   \n+     Student(sno, sname, age, gender, dept)\n\n+   - **Instance**\n+  \
+    \   -actual contents at given point in time\n+   \n+     Student(95001,\"张三\"\
+    ,21,\"M\",\"SE\")"
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '+   - Database = set of named **relations**(tables)
+
+    +   - Each relation has a set of named **attributes** (columns)
+
+    +   - Each **tuple**(row) has a value for each attribute
+
+    +   - Each attribute has a **type**(domain)'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '+   - **Key（键、码）**
+
+    +     - attribute whose value is unique in each tuple
+
+    +     - Or set of attributes whose combined values are unique
+
+    +   - Super Key（超码）
+
+    +   - Candidate Key（候选码）
+
+    +   - Primary Key（主码）
+
+    +   - Foreign key（外码）
+
+    +     - Value in one relation must appear in another
+
+    +     - Referencing relation
+
+    +     - Referenced relation'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '| student |
+
+    | sno | sname | age | gende | dept |
+
+    | 001 | 张三 | 21 | M | SE |
+
+    | 002 | 李四 | 20 | F | CS |
+
+
+    | course |
+
+    | cno | cname | credit |
+
+    | 222 | SE | 3 |
+
+    | 223 | DB | 3 |
+
+
+    | SC |
+
+    | sno | cno | grade |
+
+    | 001 | 223 | 80 |
+
+    | 002 | 222 | 86 |
+
+    | 001 | 222 | 82 |'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# Example: University
+
+
+    +   - 教师由个人唯一的标识号（ID）来标识
+
+    +     - 每位教师有姓名（name）
+
+    +     - 所在的系（dept name）
+
+    +     - 工资（salary）
+
+    +   - 学生由个人唯一的标识号（ID）来标识
+
+    +     - 每位学生有姓名（name）
+
+    +     - 主修的系（dept name）
+
+    +     - 已修学分数（tot_cred）'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Example: University
+
+
+    +   - 大学维护一个教室列表
+
+    +     - 楼名（building）
+
+    +     - 房间号（room_number）
+
+    +     - 容量（capacity）。
+
+    +   - 大学维护开设的所有课程（开课）的列表
+
+    +     - 每次开课由课程号（course id）、开课号（sec_id）、年（year）、学期（semester）来标识
+
+    +     - 与之相关联的有学期（semester）、年（year）、楼名（building）、房间号（room_number）、时段号（time_slot_id，即上课的时间）。'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# Example: University
+
+
+    +   - 系有一个教学任务列表，说明每位教师的授课情况。
+
+    +   - 大学有一个所有学生课程注册的列表，说明每位学生在哪些课程的哪次开课中注册了。
+
+    +   - 一个真正的大学数据库会比上述的设计复杂得多。然而，我们就用这个简化了的模型来帮助你理解概念思想，避免你迷失在复杂设计的细节中。'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# Example: University
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_20_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# Example: University
+
+
+    Classroom (building, room number, capacity)
+
+    Department (dept_name, building, budget)
+
+    Course (course id, title, dept_name, credits)
+
+    Instructor (ID, name, dept_name, salary)
+
+    Section (course id, sec id, semester, year, building, room_number, time_slot_id)
+
+    Teaches (ID, course id, sec id, semester, year) student (ID, name, dept_name,
+    tot_cred)
+
+    Takes (ID, course id, sec id, semester, year, grade)
+
+    Advisor (s_ID, i_ID)
+
+    time_slot (time slot id, day, start time, end_time)
+
+    Prereq (course id, prereq id)'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# 关系代数'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# 关系代数基础
+
+
+    +   - 关系数据模型的操作
+
+    +     - 查询、修改
+
+    +   - 查询语言
+
+    +     - 用户用来从数据库中请求获取信息的语言
+
+    +     - 过程化语言（what & how）
+
+    +     - 非过程化语言（what）
+
+    +   - 关系代数
+
+    +     - 过程化查询语言'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '+   - Set
+
+    +   - Bag
+
+    +   - List'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# 关系代数
+
+
+    +   - **Six basic operators**
+
+    +     - select:
+
+    +     - project:
+
+    +     - union:
+
+    +     - set difference: −
+
+    +     - Cartesian product: ×
+
+    +     - rename:
+
+
+    The operators take one or two relations as inputs and produce a new relation as
+    a result.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '•select:
+
+
+    p(r) = {t | t   r and p(t)}'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '+   - project: $\prod_{A_1,A_2,...,A_k}(r)$'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '+   - Cartesian product: ×
+
+    +     r × s = {t q | t   r and q   s}
+
+
+    将多个relation组合（join）在一起'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# 关系代数
+
+
+    additional operations
+
+
+    +   - Set intersection ∩
+
+    +   - Natural join ⋈
+
+    +   - Assignment
+
+    +   - Outer join ⟗'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '+   - Set intersection
+
+
+    E₁-E₂ = E₁-(E₁-E₂)'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '+   • Natural join ⋈ （自然连接）
+
+    +   r ⋈ s
+
+    +   = Π<sub>schema(r) ∪ schema(s)</sub> σ<sub>r.a₁=s.a₁ ∧ r.a₂=s.a₂ ∧...</sub>
+    (r×s)
+
+
+    schema(r) ∩ schema(s) = (a₁, a₂, ...)
+
+    （属性的交集上取等值）
+
+
+    +   • 试列出选过课程的学生学号、姓名
+
+
+    +   • 试列出没有选课记录的学生学号、姓名'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '+   - Theta join ⋈₍θ₎ or X₍θ₎
+
+    +     r ⋈₍θ₎ s = σ₍θ₎ (r X s)
+
+    +     （条件连接）'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '+   - Outer join 外连接，匹配连接 及 不匹配连接
+
+    +     左外
+
+    +     右外
+
+    +     全外
+
+    +     所有学生的选课情况
+
+    +     所有课程的被选情况'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '+   - Assignment
+
+    +     赋值
+
+    +     p    r⋈ s
+
+    +     insert r    r ∪ t₁
+
+    +     delete r    r - t1'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# Aggregate Functions and Operations
+
+
+    +   - **Aggregation function (聚集函数)** takes a collection of values and returns
+    a **single value** as a result.
+
+
+    +   avg: average value
+
+    +   min: minimum value
+
+    +   max: maximum value
+
+    +   sum: sum of values
+
+    +   count: number of values'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# Aggregate Functions and Operations
+
+
+    +   - Null,不参与
+
+    +   - for r(a,b),
+
+    +     - sum(a) - sum(b) = sum(a - b) ?
+
+    +     - count(*),count(a),count(b)?
+
+    +   - count(name),count(distinct name)?'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# SQL
+
+
+    (Structured Query Language)'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# History
+
+
+    +   - IBM Sequel language developed as part of System R project at the IBM San
+    Jose Research Laboratory
+
+    +   - Renamed Structured Query Language (SQL)
+
+    +   - ANSI and ISO standard SQL:
+
+    +     - SQL-86 (First formalized by ANSI)
+
+    +     - SQL-89 (integrity constraints)
+
+    +     - SQL-92 (Major revision)
+
+    +     - SQL:1999 (language name became Y2K compliant! ORDB)
+
+    +     - SQL:2003, SQL:2006 (XML)
+
+    +     - SQL:2008 (INSTEAD OF, TRUNCATE )
+
+    +     - SQL:2011 (temporal databases)
+
+    +   - Commercial systems offer most, if not all, SQL-92 features, plus varying
+    feature sets from later standards and special proprietary features.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# 数据库交互工具
+
+
+    +   - **Oracle**
+
+    +     - SQL*Plus (command line)
+
+    +     - iSQL*Plus (Web-based)
+
+    +   - **SQL Server**
+
+    +     - SQLCMD (command line)
+
+    +     - iSQL,OSQL
+
+    +   - **Sql server anywhere**
+
+    +     - Dbisqlc (command line style)
+
+    +     - Dbisql (GUI)
+
+    +   - **Mysql**
+
+    +     - MYSQL (command line)'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# SQL
+
+
+    +   - DDL
+
+    +     - For Schema
+
+    +     - Create, Alter, Drop
+
+    +   - DML
+
+    +     - For Data
+
+    +     - Modification: Insert, Update, Delete
+
+    +     - Query: Select
+
+    +     - Authorization: Grant, Revoke'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "# ODBC: Architecture\n\n+   - Application\n+   - ODBC driver manager\n+   -\
+    \ ODBC driver\n+   - DBMS\n+   \n+   - Windows ODBC\n+   - UnixODBC\n+   - iODBC\n\
+    \n![](img/5285b20d8f5a79969a3f150d38beebfc_51_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# ODBC:DSN
+
+
+    +   - DSN (Data Source Name) is a symbolic name that represents the ODBC connection.
+
+    +   - It stores the connection details like database name, directory, database
+    driver, UserID, password, etc. when making a connection to the ODBC.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: DDL
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "# DDL\n\nFor Schema (Create/Alter/Drop)\n\n```\nCreate table Student(\n  sno\
+    \      char(10) primary key,\n  sname    varchar(10),\n  age      smallint check(age>=0),\n\
+    \  gende    char(1),\n  dept     char(2)\n);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# DDL
+
+
+    ```
+
+    Alter table student add GPA int;
+
+    Alter table student drop GPA;
+
+
+    Drop table student;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# DDL: data type
+
+
+    +   - **char(n)**
+
+    +     - Fixed length character string, with user-specified length n.
+
+    +   - **varchar(n)**
+
+    +     - Variable length character strings, with user-specified maximum length
+    n.
+
+    +   - **Int**
+
+    +     - Integer (a finite subset of the integers that is machine-dependent).
+
+    +   - **Smallint**
+
+    +     - Small integer (a machine-dependent subset of the integer domain type).'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# DDL: data type
+
+
+    +   - **numeric(p,d)**
+
+    +     - Fixed point number, with user-specified precision of p digits, with d
+    digits to the right of decimal point.
+
+    +     - Eg. numeric(3,1), 44.5
+
+    +   - **real, double precision**
+
+    +     - Floating point and double-precision floating point numbers, with machine-dependent
+    precision.
+
+    +   - **float(n)**
+
+    +     - Floating point number, with user-specified precision of at least n digits.'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# DDL: data type
+
+
+    +   - **Date**
+
+    +     - Dates, containing a (4 digit) year, month and date
+
+    +     - Example: date ''2005-7-27''
+
+    +   - **Time**
+
+    +     - Time of day, in hours, minutes and seconds.
+
+    +     - Example: time ''09:00:30'' time ''09:00:30.75''
+
+    +   - **Timestamp**
+
+    +     - Date plus time of day
+
+    +     - Example: timestamp ''2005-7-27 09:00:30.75'''
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# DDL: data type
+
+
+    +   - **Interval**
+
+    +     - Period of time
+
+    +     - Example: interval ''1'' day
+
+    +     - Subtracting a date/time/timestamp value from another gives an interval
+    value
+
+    +     - Interval values can be added to date/time/timestamp values'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# Query'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# DML: Query
+
+
+    ```
+
+    ```sql
+
+    SELECT *
+
+    FROM   student
+
+    WHERE  dept = ''SE''
+
+    ```
+
+    ```
+
+
+    ```
+
+    ```sql
+
+    SELECT DISTINCT sname,dept
+
+    FROM   student
+
+    WHERE  age >= 21
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# DML: Query
+
+
+    ```
+
+    SELECT *
+
+    FROM  student
+
+    WHERE sname LIKE ''%明_''
+
+    ```
+
+
+    ```
+
+    SELECT sno, cno, SQRT(grade)*10
+
+    FROM  SC
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# DML: Query
+
+
+    列出软件学院所有学生的姓名、课名和成绩
+
+
+    ```
+
+    SELECT  sname,cname,grade
+
+    FROM    student,SC,course
+
+    WHERE   dept = ''SE''
+
+    ?
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: "# DML: Query\n\n找出与95001同龄的学生的学号、姓名、院系\n\n```\n```sql\nSELECT sno,sname,dept\n\
+    FROM    student s1,student s2\nWHERE   s1.sno = ‘95001’ and\n        s1.age =\
+    \ s2.age\n```\n```\n\n?\n\n元组变量：s1,s2"
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# DML: Query
+
+
+    +   • join-expression :
+
+    +   table-expr. join-operator table-expr. [ ON join-condition ]
+
+
+    +   – join-operator :
+
+    +   [ KEY | NATURAL ] [ join-type ] JOIN | CROSS JOIN
+
+
+    +   • join-type :
+
+    +   INNER
+
+    +   | LEFT [ OUTER ]
+
+    +   | RIGHT [ OUTER ]
+
+    +   | FULL [ OUTER ]'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '# DML: Query, Aggregation
+
+
+    统计软件学院男女生平均年龄及人数
+
+
+    ```
+
+    SELECT gende, AVG(age), COUNT(*)
+
+    FROM student
+
+    WHERE dept = ''SE''
+
+    GROUP BY dept, gende
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# DML: Query, Aggregation
+
+
+    +   - 容易混淆的问题
+
+    +     - Where? Having?
+
+    +     - 那些原始属性可以出现在 select 子句中?
+
+    +     - Null的角色'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# DML: Query, SET
+
+
+    +   - 列出所有师生的编号（工号或学号）、姓名
+
+
+    ```
+
+    ```sql
+
+    SELECT id,name
+
+    FROM instructor
+
+    Union
+
+    SELECT id,name
+
+    FROM student
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# DML: Query, MultiSet
+
+
+    +   - 列出所有师生的编号（工号或学号）、姓名
+
+
+    ```
+
+    SELECT id,name
+
+    FROM instructor
+
+    UNION ALL
+
+    SELECT id,name
+
+    FROM student
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: "# DML: Query, MultiSet\n\nr有m个元组，s有n个元组，\\n则结果集中的元组数：\n\n+   - `r union s`\
+    \  \n+     `m+n`\n+   - `r intersect s`  \n+     `min(m,n)`\n+   - `r except s`\
+    \  \n+     `max(0,m-n)`"
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# SubQuery
+
+
+    回忆一下：
+
+    找出与95001同龄的学生的学号、姓名、院系
+
+
+    # Tuple varible
+
+
+    自然思维方式？'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "# SubQuery\n\n+   - Select-from-where嵌入where,from中\n\n找出与95001同龄的学生的学号、姓名、院系\n\
+    \n```\nSELECT  sno,sname,dept\nFROM    student\nWHERE   age = ( SELECT  age\n\
+    \                FROM    student\n                WHERE   sno = '95001')\n```"
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "# SubQuery\n\n```\n```sql\nSELECT sno,sname,dept\nFROM   student\nWHERE  age\
+    \ = (  SELECT age\n                FROM   student\n                WHERE  sno\
+    \ = '95001')\n```\n```\n\n结果集中如何去除95001本人？\n\n# 关联变量（Correlation Variables）"
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "# SubQuery\n\n列出选过02号课程的学生姓名\n\n```\nSELECT  sname\nFROM    student\nWHERE\
+    \   sno in ( SELECT  sno\n                FROM    SC\n                WHERE  \
+    \ cno = '02' )\n```"
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: "# SubQuery\n\n找出年龄最大的学生\n\n```\nSELECT *\nFROM  student\nWHERE age >= ALL (\
+    \ SELECT  age\n                  FROM  student )\n```"
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# SubQuery
+
+
+    找出年龄不是最大的学生
+
+
+    ```
+
+    SELECT *
+
+    FROM  student
+
+    WHERE age <= SOME (SELECT  age
+
+    FROM  student )
+
+    ```
+
+
+    SOME = ANY'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: "# SubQuery\n\n找出选修了SE开设的所有课程的学生\n\n```\nSELECT   *\nFROM     student s\nWHERE\
+    \    not exist (SELECT cno\n                    FROM   course\n              \
+    \      WHERE  dept = 'SE')\n         except\n         (SELECT cno\n          FROM\
+    \   SC\n          WHERE  SC.sno = s.sno)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: "# SubQuery\n\nFind all courses taught in both the Fall 2009 semester and in\
+    \ the Spring 2010 semester.\n\n```\nselect course_id\nfrom  section as S\nwhere\
+    \ semester = 'Fall' and year= 2009 and\n    exists ( select *\n        from section\
+    \ as T\n        where semester = 'Spring' and\n            year= 2010 and\n  \
+    \          S.course_id= T.course_id);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# SubQuery
+
+
+    Select-from-where,可以出现在哪里？
+
+
+    +   - Where
+
+    +   - From
+
+
+    Find the average instructors'' salaries of those departments where the average
+    salary is greater than $42,000.
+
+
+    ```
+
+    select dept_name, avg_salary from
+
+    (select dept_name, avg(salary) as avg_salary
+
+    from instructor
+
+    group by dept_name
+
+    ) as dept_avg (dept_name, avg_salary)
+
+    where avg_salary > 42000;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '# DML: Modification'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# DML: Modification
+
+
+    +   - INSERT
+
+    +     - 单行整行
+
+    +     - 单行部分属性
+
+    +     - 多行'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '# DML: Modification
+
+
+    ```
+
+    INSERT INTO student Values
+
+    (''98001'',''张三'',21,''M'',''SE'')
+
+    ```
+
+
+    ```
+
+    INSERT INTO student (sno,sname)
+
+    Values(''99001'',''李四'')
+
+    ```
+
+
+    ```
+
+    INSERT INTO SC
+
+    SELECT sno,cno
+
+    FROM student as s,course as c
+
+    WHERE c.dept = ''SE''
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: "# DML: Modification\n\nDELETE 整元组删除\n\n```\nDELETE\nFROM student\nWHERE dept\
+    \ = 'SE'\n```\n\n```\nDELETE\nFROM   student\nFROM   SC\nWHERE  student.sno =\
+    \ SC.sno and\n       grade < 60\n```"
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: "# DML: Modification\n\nUPDATE\n\n修改相关元组中的指定属性\n\n```\nUPDATE student\n  SET\
+    \ age = age+1,\n      dept = 'SE'\nWHERE dept = 'MA'\n```"
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '# Authorization'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# Authorization
+
+
+    +   - DCL
+
+    +   - Grant授权
+
+    +   - Revoke回收
+
+
+    grant select on instructor to U₁, U₂, U₃
+
+    revoke select on branch from U₁, U₂, U₃'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '# Authorization
+
+
+    ```
+
+    grant select on department to Amit
+
+    with grant option;
+
+    revoke select on department from Amit, Satoshi cascade;
+
+    revoke select on department from Amit, Satoshi restrict;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '# View'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# View
+
+
+    +   - Create a view of department salary totals
+
+
+    ```
+
+    create view departments_total_salary(dept_name, total_salary) as
+
+    select dept_name, sum (salary)
+
+    from instructor
+
+    group by dept_name;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# View的存在形式及操作
+
+
+    +   - Virtual Table　　 Base Table
+
+    +   - View的定义被存储在Meta Data中
+
+    +   - 操作时，被转换成对BASE TABLE的处理'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '# # View的使用
+
+
+    ```
+
+    create view departments_total_salary(dept_name, total_salary) as
+
+    select dept_name, sum (salary)
+
+    from instructor
+
+    group by dept_name;
+
+    ```
+
+
+    ```
+
+    SELECT    dept_name, total_salary
+
+    FROM      departments_total_salary
+
+    WHERE     total_salary > 2,000,000
+
+    ```
+
+
+    查询：如同BaseTable，转换成对BaseTable的查询'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# # View的使用
+
+
+    ```
+
+    UPDATE departments_total_salary
+
+    SET total_salary = total_salary*1.5
+
+    WHERE total_salary < 2,000,000
+
+    ```
+
+
+    能成功转换成对BaseTable的运算吗？
+
+
+    对View的更新操作，必须慎重！'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# View的使用
+
+
+    +   - Most SQL implementations allow updates only on **simple views**
+
+    +     - The FROM clause has only one database relation.
+
+    +     - The SELECT clause contains only attribute names of the relation, and does
+    not have any expressions, aggregates, or DISTINCT specification.
+
+    +     - Any attribute not listed in the SELECT clause can be set to NULL
+
+    +     - The query does not have a GROUP BY or HAVING clause.'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '# Integrity Constraints'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: '# # Integrity Constraints
+
+
+    +   - Integrity constraints guard against accidental damage to the database, by
+    ensuring that authorized changes to the database do not result in a loss of data
+    consistency.
+
+    +     - A checking account must have a balance greater than $10,000.00.
+
+    +     - A salary of a bank employee must be at least $4.00 an hour.
+
+    +     - A customer must have a (non-null) phone number'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '# Constraints on a Single Relation
+
+
+    +   - not null
+
+    +   - primary key
+
+    +   - unique
+
+    +   - check (P)
+
+
+    +   - **unique (A1, A2, ..., Am)**
+
+    +     - The unique specification states that the attributes A1, A2, ... Am form
+    a candidate key.
+
+    +     - Candidate keys are permitted to be null (in contrast to primary keys).'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: '# Referential Integrity
+
+
+    +   - Ensures that a value that appears in one relation for a given set of attributes
+    also appears for a certain set of attributes in another relation.'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: "# Cascading Actions in Referential Integrity\n\n```\n```sql\ncreate table course\
+    \ (\n    course_id   char(5) primary key,\n    title        varchar(20),\n   \
+    \ dept_name    varchar(20) references department\n)\n```\n```\n\n```\n```sql\n\
+    create table course (\n    ...\n    dept_name varchar(20),\n    foreign key (dept_name)\
+    \ references department\n                         on delete cascade\n        \
+    \                 on update cascade,\n    ...\n)\n```\n```\n\nalternative actions\
+    \ to cascade: set null, set default"
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: '# Complex Check Clauses
+
+
+    +   - check (time_slot_id in (select time_slot_id from time_slot))
+
+    +     - why not use a foreign key here?
+
+    +   - Every section has at least one instructor teaching the section.
+
+    +     - how to write this?
+
+    +   - Unfortunately: subquery in check clause not supported by pretty much any
+    database
+
+    +     - Alternative: triggers (later)
+
+    +   - create assertion <assertion-name> check <predicate>;
+
+    +     - Also not supported by anyone'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '# 参照完整性中的违例及处理方式'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '# Trigger'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '# Trigger
+
+
+    +   - "Event-Condition-Action Rules"
+
+    +     - When event occurs
+
+    +     - Check condition; if true, do action'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: '# Trigger
+
+
+    Create Trigger name
+
+
+    Before|After|Instead Of events
+
+
+    [ referencing-variables ]
+
+
+    [ For Each Row ]
+
+
+    When ( condition )
+
+
+    action'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "# Trigger\n\nUse triggers on section and time_slot to enforce integrity constraints\n\
+    \nCreate Trigger timeslot_check1 after insert on section referencing new row as\
+    \ nrow\n\nfor each row\n\nwhen (nrow.time_slot_id not in (select time_slot_id\
+    \ from time_slot))\n\n```\nbegin\n    rollback\nend;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: "# Trigger\n\n```\ncreate trigger `timeslot_check2` after delete on time_slot\n\
+    referencing old row as orow\nfor each row\nwhen (orow.time_slot_id not in (\n\
+    \                         select time_slot_id\n                         from time_slot)\n\
+    \     and orow.time_slot_id in (\n                         select time_slot_id\n\
+    \                         from section))\nbegin\n    rollback\nend;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: "# Trigger\n\n```\ncreate trigger credits_earned after update of takes on (grade)\n\
+    referencing new row as nrow\nreferencing old row as orow\nfor each row\nwhen nrow.grade\
+    \ <> 'F' and nrow.grade is not null\n    and (orow.grade = 'F' or orow.grade is\
+    \ null)\nbegin atomic\n    update student\n    set tot_cred= tot_cred +\n    (select\
+    \ credits\n        from course\n        where course.course_id= nrow.course_id)\n\
+    \    where student.id = nrow.id;\nend;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '# Function &
+
+    Stored procedure'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: '# Procedure
+
+
+    +   - SQL provides a module language
+
+    +     - Permits definition of procedures in SQL, with if-then-else statements,
+    for and while loops, etc.
+
+    +   - Stored Procedures
+
+    +     - Can store procedures in the database
+
+    +     - then execute them using the call statement
+
+    +     - permit external applications to operate on the database without knowing
+    about internal details'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: '# Procedure
+
+
+    +   - SQL:1999 supports functions and procedures
+
+    +     - Functions/procedures can be written in SQL itself, or in an external programming
+    language.
+
+    +     - Functions are particularly useful with specialized data types such as
+    images and geometric objects.
+
+    +       - Example: functions to check if polygons overlap, or to compare images
+    for similarity.
+
+    +     - Some database systems support table-valued functions, which can return
+    a relation as a result.
+
+    +   - SQL:1999 also supports a rich set of imperative constructs, including
+
+    +     - Loops, if-then-else, assignment'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: "# Function\n\n+   - Define a function that, given the name of a department,\
+    \ returns the count of the number of instructors in that department.\n\n```\n\
+    Create Function `dept_count` (dept_name varchar(20))\nreturns integer\nbegin\n\
+    \    declare d_count integer;\n    select count(*) into d_count\n    from instructor\n\
+    \    where instructor.dept_name = dept_name\n    return d_count;\nend\n```"
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: '# Function
+
+
+    Find the department name and budget of all departments with more that 12 instructors.
+
+
+    ```
+
+    Select dept_name, budget
+
+    From   department
+
+    Where dept_count (dept_name ) > 12
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: "# Function\n\n+   • SQL:2003 added functions that return a relation as a result\n\
+    \n```\nCreate Function instructors_of (dept_name char(20))\n    returns table\
+    \ (ID varchar(5),\n                  name varchar(20),\n                  dept_name\
+    \ varchar(20),\n                  salary numeric(8,2))\n    return table(Select\
+    \ ID, name, dept_name, salary\n                From instructor\n             \
+    \   Where instructor.dept_name =\n                      instructors_of.dept_name)\n\
+    ```\n\n```\nSelect *\nFrom table (instructors_of ('Music'))\n```"
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: "# Stored Procedure\n\n+   - The dept_count function could instead be written\
+    \ as procedure:\n\n```\nCreate Procedure dept_count_proc (\n    in  dept_name\
+    \ varchar(20),\n    out d_count integer)\nBegin\n    select count(*) into d_count\n\
+    \    from  instructor\n    where instructor.dept_name =\n            dept_count_proc.dept_name\n\
+    End\n```"
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: '# Stored Procedure
+
+
+    +   - Procedures can be invoked either from an SQL procedure or from embedded
+    SQL, using the call statement.
+
+
+    ```
+
+    Declare d_count integer;
+
+    Call dept_count_proc(''Physics'', d_count);
+
+    ```
+
+
+    +   - Procedures and functions can be invoked also from dynamic SQL'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '# Cursor'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: '# Cursor
+
+
+    +   - A cursor is used to retrieve **rows** from a query that has multiple rows
+    in its result set. A cursor is a **handle** or an identifier for the SQL query
+    and a **position** within the result set.
+
+    +   - Cursors can be positioned in the following places:
+
+    +     - Before the first row of the result set.
+
+    +     - On a row in the result set.
+
+    +     - After the last row of the result set.'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: "# Cursor\n\n```\nCREATE PROCEDURE get_table_name(\nIN id_value INT, OUT tabname\
+    \ CHAR(128))\nBEGIN\n    DECLARE qry LONG VARCHAR;\n    SET qry = 'SELECT table_name\
+    \  FROM SYS.SYSTAB ' || 'WHERE table_id=' || string(id_value);\n    BEGIN\n  \
+    \      DECLARE crsr CURSOR USING qry;\n        OPEN crsr;\n        FETCH crsr\
+    \ INTO tabname;\n        CLOSE crsr;\n    END\nEND;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: "# Cursor\n\n```\nCREATE FUNCTION GetRowCount( IN qry LONG VARCHAR )\n    RETURNS\
+    \ INT\nBEGIN\n    DECLARE crsr CURSOR USING qry;\n    DECLARE rowcnt INT;\n  \
+    \  SET rowcnt = 0;\n    OPEN crsr;\n    lp: LOOP\n        FETCH crsr;\n      \
+    \  IF SQLCODE <> 0 THEN LEAVE lp END IF;\n        SET rowcnt = rowcnt + 1;\n \
+    \   END LOOP;\n    CLOSE crsr;\n    RETURN rowcnt;\nEND;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: '# Updates Through Cursors
+
+
+    +   Can update tuples fetched by cursor by declaring that the cursor is for update
+
+
+    ```
+
+    declare c cursor for
+
+    select *
+
+    from instructor
+
+    where dept_name = ''Music''
+
+    for update
+
+    ```
+
+
+    To update tuple at the current location of cursor c
+
+
+    ```
+
+    update instructor
+
+    set salary = salary + 100
+
+    where current of c
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: '# API & Application'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: '# JDBC and ODBC
+
+
+    +   - API (Application-Program Interface) for a program to interact with a database
+    server
+
+    +   - Application makes calls to
+
+    +     - Connect with the database server
+
+    +     - Send SQL commands to the database server
+
+    +     - Fetch tuples of result one-by-one into program variables
+
+    +   - ODBC (Open Database Connectivity) works with C, C++, C#, and Visual Basic
+
+    +     - Other API''s such as ADO.NET sit on top of ODBC
+
+    +   - JDBC (Java Database Connectivity) works with Java'
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: '# ODBC
+
+
+    +   - Open DataBase Connectivity(ODBC) standard
+
+    +   - standard for application program to communicate with a database server.
+
+    +   - application program interface (API) to
+
+    +     - open a connection with a database,
+
+    +     - send queries and updates,
+
+    +     - get back results.
+
+    +   - Applications such as GUI, spreadsheets, etc. can use ODBC'
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: "# ODBC\n\n```\nint ODBCexample()\n{\n    RETCODE error;\n    HENV    env; \
+    \     /* environment */\n    HDBC    conn;     /* database connection */\n   \
+    \ SQLAllocEnv(&env);\n    SQLAllocConnect(env, &conn);\n    SQLConnect(conn, \"\
+    db.yale.edu\", SQL_NTS, \"avi\", SQL_NTS, \"avipasswd\", SQL_NTS);\n    { ...\
+    \ Do actual work ... }\n\n    SQLDisconnect(conn);\n    SQLFreeConnect(conn);\n\
+    \    SQLFreeEnv(env);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: "# ODBC\n\n```\nchar deptname[80];\nfloat salary;\nint lenOut1, lenOut2;\nHSTMT\
+    \ stmt;\nchar * sqlquery = \"select dept_name, sum (salary)\n                \
+    \    from instructor\n                    group by dept_name\";\n\nSQLAllocStmt(conn,\
+    \ &stmt);\nerror = SQLExecDirect(stmt, sqlquery, SQL_NTS);\nif (error == SQL_SUCCESS)\
+    \ {\n    SQLBindCol(stmt, 1, SQL_C_CHAR, deptname, 80,\n    &lenOut1);\n    SQLBindCol(stmt,\
+    \ 2, SQL_C_FLOAT, &salary, 0,\n    &lenOut2);\n    while (SQLFetch(stmt) == SQL_SUCCESS)\
+    \ {\n        printf (\" %s %g\\n\", deptname, salary);\n    }\n}\nSQLFreeStmt(stmt,\
+    \ SQL_DROP);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: '# JDBC
+
+
+    +   - JDBC is a Java API for communicating with database systems supporting SQL.
+
+    +   - JDBC supports a variety of features for querying and updating data, and
+    for retrieving query results.
+
+    +   - JDBC also supports metadata retrieval, such as querying about relations
+    present in the database and the names and types of relation attributes.
+
+    +   - Model for communicating with the database:
+
+    +     - Open a connection
+
+    +     - Create a “statement” object
+
+    +     - Execute queries using the Statement object to send queries and fetch results
+
+    +     - Exception mechanism to handle errors'
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: '# SQLCA'
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: '# SQL Communication Area
+
+
+    +   - is an area of memory that is used on every database request for communicating
+    statistics and errors from the application to the database server and back to
+    the application.
+
+    +   - The SQLCA is used as a handle for the application-to-database communication
+    link. It is passed in to all database library functions that need to communicate
+    with the database server. It is implicitly passed on all embedded SQL statements.'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: '# SQLCA Fields
+
+
+    +   - **sqlcode** A 32-bit integer that specifies the error code when the database
+    detects an error on a request.
+
+    +   - Definitions for the error codes can be found in the header file `sqlerr.h`.
+
+    +     - The error code is 0 (zero) for a successful operation
+
+    +     - 100 for row not found
+
+    +     - Positive for a warning
+
+    +     - Negative for an error.'
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: '![](img/5285b20d8f5a79969a3f150d38beebfc_137_0.png)
+
+
+    # Chapter 7: Entity-Relationship Model'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: '# Chapter 7: Entity Relationship Model
+
+
+    +   - Design Process
+
+    +   - Modeling
+
+    +   - Constraints
+
+    +   - E-R Diagram
+
+    +   - Design Issues
+
+    +   - Weak Entity Sets
+
+    +   - Extended E-R Features
+
+    +   - Design of the Bank Database
+
+    +   - Reduction to Relation Schemas
+
+    +   - Database Design
+
+    +   - UML'
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: '# Modeling
+
+
+    +   - A *database* can be modeled as:
+
+    +     - a collection of entities,
+
+    +     - relationship among entities.
+
+    +   - An *entity* is an object that exists and is distinguishable from other objects.
+
+    +     - Example: specific person, company, event, plant
+
+    +   - Entities have *attributes*
+
+    +     - Example: people have names and addresses
+
+    +   - An *entity set* is a set of entities of the same type that share the same
+    properties.
+
+    +     - Example: set of all persons, companies, trees, holidays'
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: '# Entity Sets instructor and student
+
+
+    | instructor_ID | instructor_name |
+
+    |---|---|
+
+    | 76766 | Crick |
+
+    | 45565 | Katz |
+
+    | 10101 | Srinivasan |
+
+    | 98345 | Kim |
+
+    | 76543 | Singh |
+
+    | 22222 | Einstein |
+
+
+    instructor
+
+
+    | student-ID | student_name |
+
+    |---|---|
+
+    | 98988 | Tanaka |
+
+    | 12345 | Shankar |
+
+    | 00128 | Zhang |
+
+    | 76543 | Brown |
+
+    | 76653 | Aoi |
+
+    | 23121 | Chavez |
+
+    | 44553 | Peltier |
+
+
+    student'
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: '# Relationship Set advisor
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_142_0.png)
+
+
+    instructor
+
+
+    student'
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: '# Relationship Sets (Cont.)
+
+
+    +   - An *attribute* can also be property of a relationship set.
+
+    +   - For instance, the *advisor* relationship set between entity sets *instructor*
+    and *student* may have the attribute *date* which tracks when the student started
+    being associated with the advisor
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_143_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: '# Degree of a Relationship Set
+
+
+    +   - **binary relationship**
+
+    +     - involve two entity sets (or degree two).
+
+    +     - most relationship sets in a database system are binary.
+
+    +   - Relationships between more than two entity sets are rare. Most relationships
+    are binary. (More on this later.)
+
+    +     - Example: students work on research projects under the guidance of an instructor.
+
+    +     - relationship proj_guide is a ternary relationship between instructor,
+    student, and project'
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: '# Attributes
+
+
+    +   An entity is represented by a set of attributes, that is descriptive properties
+    possessed by all members of an entity set.
+
+    +   Example:
+
+    +     instructor = (ID, name, street, city, salary)
+
+    +     course = (course_id, title, credits)
+
+
+    Domain – the set of permitted values for each attribute
+
+
+    Attribute types:
+
+
+    Simple and composite attributes.
+
+
+    Single-valued and multivalued attributes
+
+
+    Example: multivalued attribute: phone_numbers
+
+
+    Derived attributes
+
+
+    Can be computed from other attributes
+
+
+    Example: age, given date_of_birth'
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: '# Mapping Cardinality Constraints
+
+
+    +   - Express the number of entities to which another entity can be associated
+    via a relationship set.
+
+    +   - Most useful in describing binary relationship sets.
+
+    +   - For a binary relationship set the mapping cardinality must be one of the
+    following types:
+
+    +     - One to one
+
+    +     - One to many
+
+    +     - Many to one
+
+    +     - Many to many'
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: '# Mapping Cardinalities
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_148_0.png)
+
+
+    (a)
+
+
+    One to
+
+    one
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_148_1.png)
+
+
+    (b)
+
+
+    One to many
+
+
+    Note: Some elements in A and B may not be mapped to any elements in the other
+    set'
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: '# Mapping Cardinalities
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_149_0.png)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_149_1.png)
+
+
+    (a)
+
+
+    Many to
+
+    one
+
+
+    (b)
+
+
+    Many to many
+
+
+    Note: Some elements in A and B may not be mapped to any elements in the other
+    set'
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: '# Keys
+
+
+    +   - A **super key** of an entity set is a set of one or more attributes whose
+    values uniquely determine each entity.
+
+    +   - A **candidate key** of an entity set is a minimal super key
+
+    +     - *ID* is candidate key of instructor
+
+    +     - *course_id* is candidate key of course
+
+    +   - Although several candidate keys may exist, one of the candidate keys is
+    selected to be the **primary key**.'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: '# Keys for Relationship Sets
+
+
+    +   - The combination of primary keys of the participating entity sets forms a
+    super key of a relationship set.
+
+    +     - `(s_id, i_id)` is the super key of `advisor`
+
+    +     - **NOTE:** this means a *pair of entity sets can have at most one relationship
+    in a particular relationship set.*
+
+    +       - Example: if we wish to track multiple meeting dates between a student
+    and her advisor, we cannot assume a relationship for each meeting. We can use
+    a multivalued attribute though
+
+    +   - Must consider the mapping cardinality of the relationship set when deciding
+    what are the candidate keys
+
+    +   - Need to consider semantics of relationship set in selecting the primary
+    key in case of more than one candidate key'
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: '# Redundant Attributes
+
+
+    +   - Suppose we have entity sets
+
+    +     - *instructor*, with attributes including *dept_name*
+
+    +     - *department*
+
+    +     and a relationship
+
+    +     - *inst_dept* relating *instructor* and *department*
+
+    +   - Attribute *dept_name* in entity *instructor* is redundant since there is
+    an explicit relationship *inst_dept* which relates instructors to departments
+
+    +     - The attribute replicates information present in the relationship, and
+    should be removed from *instructor*
+
+    +     - BUT: when converting back to tables, in some cases the attribute gets
+    reintroduced, as we will see.'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: '# E-R Diagrams
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_153_0.png)
+
+
+    +   - Peter Chen & IDEF1X
+
+    +   - Rectangles represent entity sets.
+
+    +   - Diamonds represent relationship sets.
+
+    +   - Attributes listed inside entity rectangle
+
+    +   - Underline indicates primary key attributes'
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: '# Entity with Composite, Multivalued, and Derived Attributes
+
+
+    | instructor |
+
+    |---|
+
+    | *ID* |
+
+    | *name* |
+
+    | &nbsp;&nbsp;&nbsp;&nbsp;*first_name* |
+
+    | &nbsp;&nbsp;&nbsp;&nbsp;*middle_initial* |
+
+    | &nbsp;&nbsp;&nbsp;&nbsp;*last_name* |
+
+    | *address* |
+
+    | &nbsp;&nbsp;&nbsp;&nbsp;*street* |
+
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*street_number* |
+
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*street_name* |
+
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*apt_number* |
+
+    | &nbsp;&nbsp;&nbsp;&nbsp;*city* |
+
+    | &nbsp;&nbsp;&nbsp;&nbsp;*state* |
+
+    | &nbsp;&nbsp;&nbsp;&nbsp;*zip* |
+
+    | {*phone_number*} |
+
+    | *date_of_birth* |
+
+    | *age( )* |'
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: '# Relationship Sets with Attributes
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_155_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: '# Roles
+
+
+    +   - Entity sets of a relationship need not be distinct
+
+    +     - Each occurrence of an entity set plays a “role” in the relationship
+
+    +   - The labels “course_id” and “prereq_id” are called roles.
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_156_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: '# Cardinality Constraints
+
+
+    +   - We express cardinality constraints by drawing either a directed line (→),
+    signifying “one,” or an undirected line (–), signifying “many,” between the relationship
+    set and the entity set.
+
+    +   - One-to-one relationship:
+
+    +     - A student is associated with at most one instructor via the relationship
+    advisor
+
+    +     - A student is associated with at most one department via stud_dept'
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: '# One-to-One Relationship
+
+
+    +   - one-to-one relationship between an instructor and a student
+
+    +     - an instructor is associated with at most one student via advisor
+
+    +     - and a student is associated with at most one instructor via advisor
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_158_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: '# One-to-Many Relationship
+
+
+    one-to-many relationship between an instructor and a student
+
+
+    +   - an instructor is associated with several (including 0) students via advisor
+
+    +   - a student is associated with at most one instructor via advisor,
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_159_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: '# Many-to-One Relationships
+
+
+    In a many-to-one relationship between an instructor and a student,
+
+
+    +   - an instructor is associated with at most one student via advisor,
+
+    +   - and a student is associated with several (including 0) instructors via advisor
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_160_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: '# Many-to-Many Relationship
+
+
+    +   - An instructor is associated with several (possibly 0) students via advisor
+
+    +   - A student is associated with several (possibly 0) instructors via advisor
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_161_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: '# Participation of an Entity Set in a Relationship Set
+
+
+    +   - Total participation (indicated by double line): every entity in the entity
+    set participates in at least one relationship in the relationship set
+
+    +     - E.g., participation of section in sec_course is total
+
+    +       - every section must have an associated course
+
+    +   - Partial participation: some entities may not participate in any relationship
+    in the relationship set
+
+    +     - Example: participation of instructor in advisor is partial
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_162_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: '# Alternative Notation for Cardinality Limits
+
+
+    +   - Cardinality limits can also express participation constraints
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_163_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: '# ER Diagram with a Ternary Relationship
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_164_0.png)
+
+
+    Entity: `instructor`
+
+
+    - **ID**
+
+    - name
+
+    - salary
+
+
+    Entity: `project`
+
+
+    - ...
+
+
+    Entity: `student`
+
+
+    - **ID**
+
+    - name
+
+    - tot_cred
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_164_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: '# Cardinality Constraints on Ternary Relationship
+
+
+    +   - We allow at most one arrow out of a ternary (or greater degree) relationship
+    to indicate a cardinality constraint
+
+    +   - E.g., an arrow from proj_guide to instructor indicates each student has
+    at most one guide for a project
+
+    +   - If there is more than one arrow, there are two ways of defining the meaning.
+
+    +     - E.g., a ternary relationship R between A, B and C with arrows to B and
+    C could mean
+
+    +       1. each A entity is associated with a unique entity from B and C or
+
+    +       2. each pair of entities from (A, B) is associated with a unique C entity,
+    and each pair (A, C) is associated with a unique B
+
+    +     - Each alternative has been used in different formalisms
+
+    +     - To avoid confusion we outlaw more than one arrow'
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: '![](img/5285b20d8f5a79969a3f150d38beebfc_166_0.png)
+
+
+    How about doing an ER design interactively on the board?
+
+    Suggest an application to be modeled.'
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: '# Weak Entity Sets
+
+
+    +   - An entity set that does not have a primary key is referred to as a **weak
+    entity set**.
+
+    +   - The existence of a weak entity set depends on the existence of a **identifying
+    entity set**
+
+    +     - It must relate to the identifying entity set via a total, one-to-many
+    relationship set from the identifying to the weak entity set
+
+    +     - **Identifying relationship** depicted using a double diamond
+
+    +   - The **discriminator** (or partial key) of a weak entity set is the set of
+    attributes that distinguishes among all the entities of a weak entity set.
+
+    +   - The primary key of a weak entity set is formed by the primary key of the
+    strong entity set on which the weak entity set is existence dependent, plus the
+    weak entity set’s discriminator.'
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: '# Weak Entity Sets (Cont.)
+
+
+    +   - We underline the discriminator of a weak entity set with a dashed line.
+
+    +   - We put the identifying relationship of a weak entity in a double diamond.
+
+    +   - Primary key for section – (course_id, sec_id, semester, year)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_168_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: '# Weak Entity Sets (Cont.)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_169_0.png)
+
+
+    +   - Note: the primary key of the strong entity set is not explicitly stored
+    with the weak entity set, since it is implicit in the identifying relationship.
+
+    +   - If course_id were explicitly stored, section could be made a strong entity,
+    but then the relationship between section and course would be duplicated by an
+    implicit relationship defined by the attribute course_id common to course and
+    section'
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: '# E-R Diagram for a University Enterprise
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_170_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: '![](img/5285b20d8f5a79969a3f150d38beebfc_171_0.png)
+
+
+    # Reduction to Relational Schemas'
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: '# Reduction to Relation Schemas
+
+
+    +   - Entity sets and relationship sets can be expressed uniformly as relation
+    schemas that represent the contents of the database.
+
+    +   - A database which conforms to an E-R diagram can be represented by a collection
+    of schemas.
+
+    +   - For each entity set and relationship set there is a unique schema that is
+    assigned the name of the corresponding entity set or relationship set.
+
+    +   - Each schema has a number of columns (generally corresponding to attributes),
+    which have unique names.'
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: '# Representing Entity Sets With Simple Attributes
+
+
+    +   A strong entity set reduces to a schema with the same attributes
+
+    +   student(ID, name, tot_cred)
+
+    +   A weak entity set becomes a table that includes a column for the primary key
+    of the identifying strong entity set
+
+    +   section ( course_id, sec_id, sem, year )
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_173_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: '# Representing Relationship Sets
+
+
+    +   - A many-to-many relationship set is represented as a schema with attributes
+    for the primary keys of the two participating entity sets, and any descriptive
+    attributes of the relationship set.
+
+    +   - Example: schema for relationship set advisor
+
+    +     advisor = (s_id, i_id)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_174_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: '# Redundancy of Schemas
+
+
+    +   - Many-to-one and one-to-many relationship sets that are total on the many-side
+    can be represented by adding an extra attribute to the “many” side, containing
+    the primary key of the “one” side
+
+    +   - Example: Instead of creating a schema for relationship set inst_dept, add
+    an attribute dept_name to the schema arising from entity set instructor
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_175_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: '# Composite and Multivalued Attributes
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_177_0.png)
+
+
+    +   - Composite attributes are flattened out by creating a separate attribute
+    for each component attribute
+
+    +     - Example: given entity set `instructor` with composite attribute `name`
+    with component attributes `first_name` and `last_name`, the schema corresponding
+    to the entity set has two attributes `name_first_name` and `name_last_name`
+
+    +       - Prefix omitted if there is no ambiguity
+
+    +   - Ignoring multivalued attributes, extended instructor schema is
+
+    +     - `instructor(ID, first_name, middle_initial, last_name, street_number,
+    street_name, apt_number, city, state, zip_code, date_of_birth)`'
+  merge: -1
+  img_proc: true
+- pgno: 178
+  md: '# Composite and Multivalued Attributes
+
+
+    +   - A multivalued attribute M of an entity E is represented by a separate schema
+    EM
+
+    +     - Schema EM has attributes corresponding to the primary key of E and an
+    attribute corresponding to multivalued attribute M
+
+    +     - Example: Multivalued attribute phone_number of instructor is represented
+    by a schema: inst_phone = ( ID, phone_number)
+
+    +     - Each value of the multivalued attribute maps to a separate tuple of the
+    relation on schema EM
+
+    +       - For example, an instructor entity with primary key 22222 and phone numbers
+    456-7890 and 123-4567 maps to two tuples: (22222, 456-7890) and (22222, 123-4567)'
+  merge: -1
+  img_proc: true
+- pgno: 179
+  md: '# Multivalued Attributes (Cont.)
+
+
+    +   - Special case: entity `time_slot` has only one attribute other than the primary-key
+    attribute, and that attribute is multivalued
+
+    +     - Optimization: Don’t create the relation corresponding to the entity, just
+    create the one corresponding to the multivalued attribute
+
+    +     - `time_slot(time_slot_id, day, start_time, end_time)`
+
+    +     - Caveat: `time_slot` attribute of `section` (from `sec_time_slot`) cannot
+    be a foreign key due to this optimization
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_179_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 180
+  md: '# Design Issues
+
+
+    +   - Use of entity sets vs. attributes
+
+    +   - Use of phone as an entity allows extra information about phone numbers (plus
+    multiple phone numbers)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_180_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 181
+  md: '# Design Issues
+
+
+    +   Use of entity sets vs. relationship sets
+
+    +   Possible guideline is to designate a relationship set to describe an action
+    that occurs between entities
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_181_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 182
+  md: "# Design Issues\n\n+   - **Binary versus n-ary relationship sets**  \n+   \
+    \  Although it is possible to replace any nonbinary (n-ary, for n > 2) relationship\
+    \ set by a number of distinct binary relationship sets, a n-ary relationship set\
+    \ shows more clearly that several entities participate in a single relationship.\n\
+    +   - **Placement of relationship attributes**\n+   - e.g., attribute *date* as\
+    \ attribute of *advisor* or as attribute of *student*"
+  merge: -1
+  img_proc: true
+- pgno: 183
+  md: '# Binary Vs. Non-Binary Relationships
+
+
+    +   - Some relationships that appear to be non-binary may be better represented
+    using binary relationships
+
+    +     - E.g., A ternary relationship *parents*, relating a child to his/her father
+    and mother, is best replaced by two binary relationships, *father* and *mother*
+
+    +       - Using two binary relationships allows partial information (e.g., only
+    mother being know)
+
+    +     - But there are some relationships that are naturally non-binary
+
+    +       - Example: *proj_guide*'
+  merge: -1
+  img_proc: true
+- pgno: 184
+  md: '# Converting Non-Binary Relationships to Binary Form
+
+
+    In general, any non-binary relationship can be represented using binary relationships
+    by creating an artificial entity set.
+
+
+    +   - Replace R between entity sets A, B and C by an entity set E, and three relationship
+    sets:
+
+    +     1. R_A relating E and A
+
+    +     2. R_B relating E and B
+
+    +     3. R_C relating E and C
+
+
+    +   - Create a special identifying attribute for E
+
+
+    +   - Add any attributes of R to E
+
+
+    +   - For each relationship (a_i, b_i, c_i) in R, create
+
+    +     1. a new entity e_i in the entity set E
+
+    +     2. add (e_i, a_i) to R_A
+
+    +     3. add (e_i, b_i) to R_B
+
+    +     4. add (e_i, c_i) to R_C
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_184_0.png)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_184_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 185
+  md: '# Converting Non-Binary Relationships (Cont.)
+
+
+    +   - Also need to translate constraints
+
+    +     - Translating all constraints may not be possible
+
+    +     - There may be instances in the translated schema that cannot correspond
+    to any instance of R
+
+    +       - Exercise: add constraints to the relationships R_A, R_B and R_C to ensure
+    that a newly created entity corresponds to exactly one entity in each of entity
+    sets A, B and C
+
+    +     - We can avoid creating an identifying attribute by making E a weak entity
+    set (described shortly) identified by the three relationship sets'
+  merge: -1
+  img_proc: true
+- pgno: 186
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 187
+  md: '# Extended E-R Features: Specialization
+
+
+    +   - Top-down design process; we designate subgroupings within an entity set
+    that are distinctive from other entities in the set.
+
+    +   - These subgroupings become lower-level entity sets that have attributes or
+    participate in relationships that do not apply to the higher-level entity set.
+
+    +   - Depicted by a triangle component labeled ISA (E.g., instructor “is a” person).
+
+    +   - Attribute inheritance – a lower-level entity set inherits all the attributes
+    and relationship participation of the higher-level entity set to which it is linked.'
+  merge: -1
+  img_proc: true
+- pgno: 188
+  md: '# Specialization Example
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_188_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 189
+  md: '![](img/5285b20d8f5a79969a3f150d38beebfc_189_0.png)
+
+
+    # # Extended ER Features: Generalization
+
+
+    +   - **A bottom-up design process** – combine a number of entity sets that share
+    the same features into a higher-level entity set.
+
+    +   - Specialization and generalization are simple inversions of each other; they
+    are represented in an E-R diagram in the same way.
+
+    +   - The terms specialization and generalization are used interchangeably.'
+  merge: -1
+  img_proc: true
+- pgno: 190
+  md: '# Specialization and Generalization (Cont.)
+
+
+    +   - Can have multiple specializations of an entity set based on different features.
+
+    +   - E.g., `permanent_employee` vs. `temporary_employee`, in addition to `instructor`
+    vs. `secretary`
+
+    +   - Each particular employee would be
+
+    +     - a member of one of `permanent_employee` or `temporary_employee`,
+
+    +     - and also a member of one of `instructor`, `secretary`
+
+    +   - The ISA relationship also referred to as **superclass – subclass** relationship'
+  merge: -1
+  img_proc: true
+- pgno: 191
+  md: '# Design Constraints on a Specialization/Generalization
+
+
+    +   - Constraint on which entities can be members of a given lower-level entity
+    set.
+
+    +     - condition-defined
+
+    +       - Example: all customers over 65 years are members of senior-citizen entity
+    set; senior-citizen ISA person.
+
+    +     - user-defined
+
+    +   - Constraint on whether or not entities may belong to more than one lower-level
+    entity set within a single generalization.
+
+    +     - Disjoint
+
+    +       - an entity can belong to only one lower-level entity set
+
+    +       - Noted in E-R diagram by having multiple lower-level entity sets link
+    to the same triangle
+
+    +     - Overlapping
+
+    +       - an entity can belong to more than one lower-level entity set'
+  merge: -1
+  img_proc: true
+- pgno: 192
+  md: '# Design Constraints on a Specialization/Generalization (Cont.)
+
+
+    +   - **Completeness constraint** -- specifies whether or not an entity in the
+    higher-level entity set must belong to at least one of the lower-level entity
+    sets within a generalization.
+
+    +     - **total**: an entity must belong to one of the lower-level entity sets
+
+    +     - **partial**: an entity need not belong to one of the lower-level entity
+    sets'
+  merge: -1
+  img_proc: true
+- pgno: 193
+  md: '# Aggregation
+
+
+    +   - Consider the ternary relationship proj_guide, which we saw earlier
+
+    +   - Suppose we want to record evaluations of a student by a guide on a project
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_193_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 194
+  md: '# Aggregation (Cont.)
+
+
+    +   - Relationship sets eval_for and proj_guide represent overlapping information
+
+    +     - Every eval_for relationship corresponds to a proj_guide relationship
+
+    +     - However, some proj_guide relationships may not correspond to any eval_for
+    relationships
+
+    +       - So we can''t discard the proj_guide relationship
+
+    +   - Eliminate this redundancy via aggregation
+
+    +     - Treat relationship as an abstract entity
+
+    +     - Allows relationships between relationships
+
+    +     - Abstraction of relationship into new entity'
+  merge: -1
+  img_proc: true
+- pgno: 195
+  md: '# Aggregation (Cont.)
+
+
+    Without introducing redundancy, the following diagram represents:
+
+
+    +   - A student is guided by a particular instructor on a particular project
+
+
+    +   - A student, associated e
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_195_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 196
+  md: '# Representing Specialization via Schemas
+
+
+    +   Method 1:
+
+    +   - Form a schema for the higher-level entity
+
+    +   - Form a schema for each lower-level entity set, include primary key of higher-level
+    entity set and local attributes
+
+    +   - Drawback: getting information about, an employee requires accessing two
+    relations, the one corresponding to the low-level schema and the one corresponding
+    to the high-level schema
+
+
+    | schema | attributes |
+
+    |---|---|
+
+    | person | ID, name, street, city |
+
+    | student | ID, tot_cred |
+
+    | employee | ID, salary |'
+  merge: -1
+  img_proc: true
+- pgno: 197
+  md: "# Representing Specialization as Schemas (Cont.)\n\n+   - **Method 2:**\n+\
+    \     - Form a schema for each entity set with all local and inherited attributes\n\
+    +   \n+       | schema | attributes |\n+       |---|---|\n+       | person | ID,\
+    \ name, street, city |\n+       | student | ID, name, street, city, tot_cred |\n\
+    +       | employee | ID, name, street, city, salary |\n+   \n+     - If specialization\
+    \ is total, the schema for the generalized entity set (person) not required to\
+    \ store information\n+     - Can be defined as a “view” relation containing union\
+    \ of specialization relations\n+     - But explicit schema may still be needed\
+    \ for foreign key constraints\n+     - Drawback: *name*, *street* and *city* may\
+    \ be stored redundantly for people who are both students and employees\n\n| schema\
+    \ | attributes |\n|---|---|\n| person | ID, name, street, city |\n| student |\
+    \ ID, name, street, city, tot_cred |\n| employee | ID, name, street, city, salary\
+    \ |"
+  merge: -1
+  img_proc: true
+- pgno: 198
+  md: '# Schemas Corresponding to Aggregation
+
+
+    +   - To represent aggregation, create a schema containing
+
+    +     - primary key of the aggregated relationship,
+
+    +     - the primary key of the associated entity set
+
+    +     - any descriptive attributes'
+  merge: -1
+  img_proc: true
+- pgno: 199
+  md: "# Schemas Corresponding to Aggregation (Cont.)\n\n+   - For example, to represent\
+    \ aggregation manages between relationship `works_on` and entity set `manager`,\
+    \ create a schema\n+   \n+     `eval_for (s_ID, project_id, i_ID, evaluation_id)`\n\
+    \n+   - Schema `proj_guide` is redundant provided we are willing to store null\
+    \ values for attribute `manager_name` in relation on schema `manages`\n\n![](img/5285b20d8f5a79969a3f150d38beebfc_199_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 200
+  md: '# E-R Design Decisions
+
+
+    +   - The use of an attribute or entity set to represent an object.
+
+    +   - Whether a real-world concept is best expressed by an entity set or a relationship
+    set.
+
+    +   - The use of a ternary relationship versus a pair of binary relationships.
+
+    +   - The use of a strong or weak entity set.
+
+    +   - The use of specialization/generalization – contributes to modularity in
+    the design.
+
+    +   - The use of aggregation – can treat the aggregate entity set as a single
+    unit without concern for the details of its internal structure.
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_200_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 201
+  md: '![](img/5285b20d8f5a79969a3f150d38beebfc_201_0.png)
+
+
+    # How about doing another ER design interactively on the board?'
+  merge: -1
+  img_proc: true
+- pgno: 202
+  md: '# Notation
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_202_0.png)
+
+
+    entity set
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_202_1.png)
+
+
+    relationship set
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_202_2.png)
+
+
+    identifying relationship set for weak entity set
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_202_3.png)
+
+
+    total participation of entity set in relationship
+
+
+    | E |
+
+    |---|
+
+    | A1 |
+
+    | A2 |
+
+    |   A2.1 |
+
+    |   A2.2 |
+
+    | {A3} |
+
+    | A4() |
+
+
+    attributes:
+
+    - simple (A1),
+
+    - composite (A2) and
+
+    - multivalued (A3)
+
+    - derived (A4)
+
+
+    | E |
+
+    |---|
+
+    | A1 |
+
+
+    primary key
+
+
+    | E |
+
+    |---|
+
+    | A1 |
+
+
+    discriminating attribute of weak entity set'
+  merge: -1
+  img_proc: true
+- pgno: 203
+  md: '# Symbols Used in E-R Notation (Cont.)
+
+
+    many-to-many relationship
+
+
+    many-to-one relationship
+
+
+    one-to-one relationship
+
+
+    cardinality limits
+
+
+    role-name
+
+
+    role indicator
+
+
+    ISA: generalization or specialization
+
+
+    total (disjoint) generalization
+
+
+    disjoint generalization'
+  merge: -1
+  img_proc: true
+- pgno: 204
+  md: '# Alternative ER Notations
+
+
+    +   Chen, IDE1FX, ...
+
+
+    entity set E with
+
+    simple attribute A1,
+
+    composite attribute A2,
+
+    multivalued attribute A3,
+
+    derived attribute A4,
+
+    and primary key A1
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_204_0.png)
+
+
+    weak entity set
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_204_1.png)
+
+
+    generalization
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_204_2.png)
+
+
+    total generalization
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_204_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 205
+  md: '# Alternative ER Notations
+
+
+    (Crows feet notation)
+
+
+    Chen
+
+
+    IDE1FX
+
+
+    many-to-many relationship
+
+
+    one-to-one relationship
+
+
+    many-to-one relationship
+
+
+    participation in R: total (E1) and partial (E2)'
+  merge: -1
+  img_proc: true
+- pgno: 206
+  md: '# UML
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_206_0.png)
+
+
+    +   - **UML**: Unified Modeling Language
+
+    +   - UML has many components to graphically model different aspects of an entire
+    software system
+
+    +   - UML Class Diagrams correspond to E-R Diagram, but several differences.'
+  merge: -1
+  img_proc: true
+- pgno: 207
+  md: '# ER vs. UML Class Diagrams
+
+
+    # ER Diagram Notation
+
+
+    # Equivalent in UML
+
+
+    | ER Diagram Notation | Equivalent in UML |
+
+    |---|---|
+
+    | **E** — entity with attributes (simple, composite, multivalued, derived) | **E**
+    — class with simple attributes and methods (attribute prefixes: `+` = public,
+    `−` = private, `#` = protected) |
+
+    | **E1** — `role1` — **R** — `role2` — **E2** — binary relationship | **E1** —
+    `role1` **R** `role2` — **E2** |
+
+    | **E1** — `role1` — **R** — `role2` — **E2**, with **A1** as relationship attribute
+    | **E1** — `role1` **R** `role2` — **E2**, with **R** containing **A1** |
+
+    | **E1** — `0..*` — **R** — `0..1` — **E2** — cardinality constraints | **E1**
+    — `0..1` — **R** — `0..*` — **E2** |
+
+
+    > *Note reversal of position in cardinality constraint depiction*'
+  merge: -1
+  img_proc: true
+- pgno: 208
+  md: '# ER vs. UML Class Diagrams
+
+
+    # ER Diagram Notation
+
+
+    # Equivalent in UML
+
+
+    n-ary relationships
+
+
+    overlapping generalization
+
+
+    overlapping
+
+
+    disjoint generalization
+
+
+    disjoint
+
+
+    *Generalization can use merged or separate arrows independent of disjoint/overlapping
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_208_0.png)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_208_1.png)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_208_2.png)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_208_3.png)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_208_4.png)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_208_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 209
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 210
+  md: '![](img/5285b20d8f5a79969a3f150d38beebfc_210_0.png)
+
+
+    # End of Chapter 7
+
+
+    Database System Concepts, 6th Ed.
+
+
+    ©Silberschatz, Korth and Sudarshan
+
+
+    See www.db-book.com for conditions on re-use'
+  merge: -1
+  img_proc: true
+- pgno: 211
+  md: '# Figure 7.01
+
+
+    | ID | Name |
+
+    |---|---|
+
+    | 76766 | Crick |
+
+    | 45565 | Katz |
+
+    | 10101 | Srinivasan |
+
+    | 98345 | Kim |
+
+    | 76543 | Singh |
+
+    | 22222 | Einstein |
+
+
+    *instructor*
+
+
+    | ID | Name |
+
+    |---|---|
+
+    | 98988 | Tanaka |
+
+    | 12345 | Shankar |
+
+    | 00128 | Zhang |
+
+    | 76543 | Brown |
+
+    | 76653 | Aoi |
+
+    | 23121 | Chavez |
+
+    | 44553 | Peltier |
+
+
+    *student*'
+  merge: -1
+  img_proc: true
+- pgno: 212
+  md: '# Figure 7.02
+
+
+    instructor
+
+
+    student
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_212_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 213
+  md: '# Figure 7.03
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_213_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 214
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 215
+  md: '# Figure 7.05
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_215_0.png)
+
+
+    (a)
+
+
+    (b)'
+  merge: -1
+  img_proc: true
+- pgno: 216
+  md: '# Figure 7.06
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_216_0.png)
+
+
+    (a)
+
+
+    (b)'
+  merge: -1
+  img_proc: true
+- pgno: 217
+  md: '# Figure 7.07
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_217_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 218
+  md: '# Figure 7.08
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_218_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 219
+  md: '# Figure 7.09
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_219_0.png)
+
+
+    (a)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_219_1.png)
+
+
+    (b)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_219_2.png)
+
+
+    (c)'
+  merge: -1
+  img_proc: true
+- pgno: 220
+  md: "# Figure 7.10\n\n![](img/5285b20d8f5a79969a3f150d38beebfc_220_0.png)\n\n| instructor\
+    \ | student |\n|---|---|\n| **ID**  \nname  \nsalary | **ID**  \nname  \ntot_cred\
+    \ |"
+  merge: -1
+  img_proc: true
+- pgno: 221
+  md: '# Figure 7.11
+
+
+    | instructor |
+
+    |---|
+
+    | ID |
+
+    | name |
+
+    | ├─ first_name |
+
+    | ├─ middle_initial |
+
+    | ├─ last_name |
+
+    | address |
+
+    | ├─ street |
+
+    | │  ├─ street_number |
+
+    | │  ├─ street_name |
+
+    | │  └─ apt_number |
+
+    | ├─ city |
+
+    | ├─ state |
+
+    | └─ zip |
+
+    | { phone_number } |
+
+    | date_of_birth |
+
+    | age( ) |'
+  merge: -1
+  img_proc: true
+- pgno: 222
+  md: '# Figure 7.12
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_222_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 223
+  md: '# Figure 7.13
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_223_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 224
+  md: '# Figure 7.14
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_224_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 225
+  md: '# Figure 7.15'
+  merge: -1
+  img_proc: true
+- pgno: 226
+  md: '# Figure 7.17
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_226_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 227
+  md: '# Figure 7.18
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_227_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 228
+  md: '# Figure 7.19
+
+
+    (a)
+
+
+    (b)'
+  merge: -1
+  img_proc: true
+- pgno: 229
+  md: '# Figure 7.20
+
+
+    |  | instructor |
+
+    |---|---|
+
+    | 76766 | Crick |
+
+    | 45565 | Katz |
+
+    | 10101 | Srinivasan |
+
+    | 98345 | Kim |
+
+    | 76543 | Singh |
+
+    | 22222 | Einstein |
+
+
+    instructor
+
+
+    |  |  |  |
+
+    |---|---|---|
+
+    | 98988 | Tanaka | May 2009 |
+
+    | 12345 | Shankar | June 2007 |
+
+    | 00128 | Zhang | June 2006 |
+
+    | 76543 | Brown | June 2009 |
+
+    | 76653 | Aoi | June 2007 |
+
+    | 23121 | Chavez | May 2007 |
+
+    | 44553 | Peltier | May 2006 |
+
+
+    student'
+  merge: -1
+  img_proc: true
+- pgno: 230
+  md: '# Figure 7.21
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_230_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 231
+  md: '# Figure 7.22
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_231_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 232
+  md: '# Figure 7.23
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_232_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 233
+  md: '# Figure 7.24
+
+
+    entity set
+
+
+    relationship set
+
+
+    identifying relationship set for weak entity set
+
+
+    total participation of entity set in relationship
+
+
+    many-to-many relationship
+
+
+    one-to-one relationship
+
+
+    role-name
+
+    role indicator
+
+
+    total (disjoint) generalization
+
+
+    attributes: simple (A1), composite (A2) and multivalued (A3) derived (A4)
+
+
+    primary key
+
+
+    discriminating attribute of weak entity set
+
+
+    many-to-one relationship
+
+
+    cardinality limits
+
+
+    ISA: generalization or specialization
+
+
+    disjoint generalization'
+  merge: -1
+  img_proc: true
+- pgno: 234
+  md: '# Figure 7.25
+
+
+    entity set E with simple attribute A1, composite attribute A2, multivalued attribute
+    A3, derived attribute A4, and primary key A1
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_234_0.png)
+
+
+    many-to-many relationship
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_234_1.png)
+
+
+    one-to-one relationship
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_234_2.png)
+
+
+    many-to-one relationship
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_234_3.png)
+
+
+    participation in R: total (E1) and partial (E2)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_234_4.png)
+
+
+    weak entity set
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_234_5.png)
+
+
+    generalization
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_234_6.png)
+
+
+    total generalization
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_234_7.png)'
+  merge: -1
+  img_proc: true
+- pgno: 235
+  md: '# Figure 7.26
+
+
+    # ER Diagram Notation
+
+
+    # Equivalent in UML
+
+
+    E entity with attributes (simple, composite, multivalued, derived)
+
+
+    E class with simple attributes and methods (attribute prefixes: + = public, –
+    = private, # = protected) –A1 +M10
+
+
+    E1 role1 R role2 E2 binary relationship
+
+
+    E1 role1 R role2 E2
+
+
+    A1 relationship attributes
+
+
+    R A1
+
+
+    E1 role1 role2 E2
+
+
+    E1 role1 role2 E2
+
+
+    E1 0..* R 0..1 E2 cardinality constraints
+
+
+    E1 0..1 R 0..* E2
+
+
+    E1 R E2 E3 n-ary relationships
+
+
+    E1 R E2 E3
+
+
+    E1 E2 E3 overlapping generalization
+
+
+    E1 E2 E3 overlapping
+
+
+    E1 E2 E3 disjoint generalization
+
+
+    E1 E2 E3 disjoint'
+  merge: -1
+  img_proc: true
+- pgno: 236
+  md: '# Figure 7.27
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_236_0.png)
+
+
+    (a)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_236_1.png)
+
+
+    (b)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_236_2.png)
+
+
+    (c)'
+  merge: -1
+  img_proc: true
+- pgno: 237
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 238
+  md: '# Figure 7.29
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_238_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 239
+  md: '# Relational Database Design'
+  merge: -1
+  img_proc: true
+- pgno: 240
+  md: '# BAD Design
+
+
+    +   - Design "anomalies"
+
+    +     - eg. student-course
+
+    +     - Redundancy
+
+    +     - Update anomaly
+
+    +     - Deletion anomaly'
+  merge: -1
+  img_proc: true
+- pgno: 241
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 242
+  md: '# FD
+
+
+    Let R be a relation schema
+
+    α ⊆ R and β ⊆ R
+
+
+    The functional dependency α → β holds on R if and only if for any legal relations
+    r(R), whenever any two tuples t₁ and t₂ of r agree on the attributes α, they also
+    agree on the attributes β.
+
+
+    That is,
+
+
+    t₁[α] = t₂ [α]
+
+    t₁[β] = t₂ [β]'
+  merge: -1
+  img_proc: true
+- pgno: 243
+  md: '# FD, Example
+
+
+    +   - Consider r ( A, B ) with the following instance of r.
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_243_0.png)
+
+
+    +   - On this instance, A → B does NOT hold, but B → A does hold
+
+
+    +   - FD实质是约束，描述属性间的约束'
+  merge: -1
+  img_proc: true
+- pgno: 244
+  md: '# FD, Example
+
+
+    +   - Stu(sno,sname,age,gende,ID,dept,cno,cname,grade)'
+  merge: -1
+  img_proc: true
+- pgno: 245
+  md: '# # Key
+
+
+    +   - K ⊆ R
+
+
+    +   - K is a superkey for relation schema R if and only if K → R
+
+
+    +   - K is a candidate key for R if and only if
+
+    +     - K → R, and
+
+    +     - for no K'' ⊂ K, K'' → R'
+  merge: -1
+  img_proc: true
+- pgno: 246
+  md: '# Trivial(平凡) FD
+
+
+    +   - A functional dependency is **trivial** if it is satisfied by all instances
+    of a relation
+
+
+    +   - Example:
+
+
+    ID, name → ID
+
+
+    +   - In general, α → β is trivial if β ⊆ α'
+  merge: -1
+  img_proc: true
+- pgno: 247
+  md: '# Armstrong''s Axioms
+
+
+    +   - if β ⊆  , then α → β （自反律）
+
+    +   - if α → β, then γα → γβ （增补律）
+
+    +   - if α → β, and β → γ, then α → γ （传递律）
+
+
+    +   - Additional rules:
+
+    +   - If  and  , then  （合并律）
+
+    +   - If  , then  and  （分解律）
+
+    +   - If  and  , then  （伪传递律）'
+  merge: -1
+  img_proc: true
+- pgno: 248
+  md: '# Closure(闭包)
+
+
+    +   - 根据相关定理，找出已知的FD所蕴涵的函数依赖
+
+    +     - 函数依赖集的闭包
+
+    +     - 属性的闭包'
+  merge: -1
+  img_proc: true
+- pgno: 249
+  md: '# Normal Form
+
+
+    +   - 1NF
+
+    +   - 2NF
+
+    +   - 3NF
+
+    +   - BCNF'
+  merge: -1
+  img_proc: true
+- pgno: 250
+  md: '# NF的分解
+
+
+    +   - 分解的要求
+
+    +     - Lossless-join decomposition
+
+    +       $R_1 \cap R_2 \rightarrow R_1$
+
+    +       $R_1 \cap R_2 \rightarrow R_2$
+
+    +     - Dependency preserving
+
+    +       $(F_1 \cup F_2 \cup \cdots \cup F_n)^+ = F^+$
+
+    +     - NF要求'
+  merge: -1
+  img_proc: true
+- pgno: 251
+  md: '# Canonincal Cover(正则覆盖)
+
+
+    +   - a canonical cover of F is a **“minimal”** set of functional dependencies
+    equivalent to F, having no redundant dependencies or redundant parts of dependencies
+
+    +   - Canonical Cover的特征
+
+    +     - 左边是唯一的，右边多属性合并
+
+    +     - 两边均不含无关属性(extraneous)
+
+    +   - 用于校验依赖保持'
+  merge: -1
+  img_proc: true
+- pgno: 252
+  md: '# 无关属性的判断
+
+
+    +   - For
+
+    +   - To test if attribute A is extraneous in
+
+    +     1. compute ({ } - A)+ using the dependencies in F
+
+    +     2. check that ({ } - A)+ contains ; if it does, A is extraneous in
+
+    +   - To test if attribute A is extraneous in
+
+    +     1. compute + using only the dependencies in F'' = (F - { }) { ( - A)}.
+
+    +     2. check that + contains A; if it does, A is extraneous in'
+  merge: -1
+  img_proc: true
+- pgno: 253
+  md: '# Canonical Cover(正则覆盖)
+
+
+    +   - R = (A, B, C)
+
+    +     F = {A BC, B C, A B, AB C}
+
+    +   - F = {A BC, B C, AB C}
+
+    +   - F = {A BC, B C}
+
+    +   - F = {A B, B C}'
+  merge: -1
+  img_proc: true
+- pgno: 254
+  md: '# 范式分解
+
+
+    +   1) For R，求Key，找出违反范式要求的FD，A B;
+
+    +   2) 求A⁺
+
+    +   3) R1 = {A⁺} √
+
+    +      R2 = {A ∪ ( R-A⁺ )}
+
+    +   4) 对R2重复1-3，直至均满足范式要求
+
+
+    +   • R1 ∩ R2 ⊆ R1, 无损连接
+
+    +   • 验证 (F₁ F₂ ... Fₙ)⁺ = F⁺
+
+    +   • 亦可验证Fc'
+  merge: -1
+  img_proc: true
+- pgno: 255
+  md: '# 范式分解
+
+
+    R = (A, B, C)
+
+    F = {A→B, B→C}
+
+
+    Can be decomposed in two different ways
+
+
+    – R1 = (A, B),    R2 = (B, C)
+
+
+    Lossless-join decomposition:
+
+
+    R1 ∩ R2 = {B} and B→BC
+
+
+    Dependency preserving
+
+
+    – R1 = (A, B),    R2 = (A, C)
+
+
+    Lossless-join decomposition:
+
+
+    R1 ∩ R2 = {A} and A→AB
+
+
+    Not dependency preserving
+
+    (cannot check B→C without computing R1 ⋈ R2)'
+  merge: -1
+  img_proc: true
+- pgno: 256
+  md: '# 范式分解
+
+
+    +   • R = (A, B, C)
+
+
+    F = {A→B, B→C, B→A)
+
+
+    +   - R1 = (A, B),   R2 = (A, C)
+
+
+    Lossless-join decomposition:
+
+
+    R1 ∩ R2 = {A} and A→AB
+
+
+    dependency preserving?
+
+
+    B→C ?
+
+
+    (F1   F2   ...   Fn)+ = F +'
+  merge: -1
+  img_proc: true
+- pgno: 257
+  md: '# 范式分解
+
+
+    R(T,S,C),每位教师T只上一门课C，每门课可能有多个教学班，S为学生。
+
+
+    T C,SC T
+
+
+    Key
+
+
+    SC,TS
+
+
+    分解
+
+
+    R1(T,C),R2(T,S)
+
+
+    无损连接，依赖保持？'
+  merge: -1
+  img_proc: true
+- pgno: 258
+  md: '# 例子
+
+
+    +   - 图书馆
+
+    +     - ISBM，分类号：TP311.13'
+  merge: -1
+  img_proc: true
+- pgno: 259
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 260
+  md: '# MVD
+
+
+    +   - inst_info(ID, child_name, phone_number)
+
+
+    | ID | Child_name | Phone_number |
+
+    |---|---|---|
+
+    | 99999 | David | 512-555-1234 |
+
+    | 99999 | David | 512-555-4321 |
+
+    | 99999 | William | 512-555-1234 |
+
+    | 99999 | William | 512-555-4321 |
+
+
+    +   - BCNF, why?
+
+    +   - 仍有冗余，仍有异常
+
+    +   - MVD
+
+    +     - ID →→ child_name
+
+    +     - ID →→ phone_number'
+  merge: -1
+  img_proc: true
+- pgno: 261
+  md: '# MVD
+
+
+    |  | α | β | R − α − β |
+
+    |---|---|---|---|
+
+    | t₁ | a₁ ... aᵢ | aᵢ₊₁ ... aⱼ | aⱼ₊₁ ... aₙ |
+
+    | t₂ | a₁ ... aᵢ | bᵢ₊₁ ... bⱼ | bⱼ₊₁ ... bₙ |
+
+    | t₃ | a₁ ... aᵢ | aᵢ₊₁ ... aⱼ | bⱼ₊₁ ... bₙ |
+
+    | t₄ | a₁ ... aᵢ | bᵢ₊₁ ... bⱼ | aⱼ₊₁ ... aₙ |'
+  merge: -1
+  img_proc: true
+- pgno: 262
+  md: '# MVD
+
+
+    +   - 平凡的MVD, α →→ β
+
+
+    = R
+
+
+    +   - If α → β then α →→ β
+
+
+    +   - If → then →→ R - -'
+  merge: -1
+  img_proc: true
+- pgno: 263
+  md: '# 4NF
+
+
+    +   - 对所有的非平凡多值依赖，其决定因子均来自超码。
+
+
+    | ID | Child_name | Phone_number |
+
+    |---|---|---|
+
+    | 99999 | David | 512-555-1234 |
+
+    | 99999 | David | 512-555-4321 |
+
+    | 99999 | William | 512-555-1234 |
+
+    | 99999 | William | 512-555-4321 |
+
+
+    +   - ID→→child_name
+
+    +   - ID→→phone_number
+
+    +   - R1(ID,child_name),R2(ID,phone_number)'
+  merge: -1
+  img_proc: true
+- pgno: 264
+  md: '# ER Model and Normalization
+
+
+    In a real (imperfect) design, there can be functional dependencies from non-key
+    attributes of an entity to other attributes of the entity
+
+
+    +   - Example: an *employee* entity with attributes *department_name* and *building*,
+    and a functional dependency
+
+    +     `department_name → building`
+
+
+    +   - Good design would have made department an entity'
+  merge: -1
+  img_proc: true
+- pgno: 265
+  md: '# Denormalization for Performance
+
+
+    +   - May want to use non-normalized schema for performance
+
+    +   - For example, displaying prereqs along with course_id, and title requires
+    join of course with prereq
+
+    +   - Use denormalized relation containing attributes of course as well as prereq
+    with all above attributes
+
+    +     - faster lookup
+
+    +     - extra space and extra execution time for updates
+
+    +     - extra coding work for programmer and possibility of error in extra code'
+  merge: -1
+  img_proc: true
+- pgno: 266
+  md: '# Transaction
+
+    (事务)'
+  merge: -1
+  img_proc: true
+- pgno: 267
+  md: '# # Transaction Concept
+
+
+    +   - A **transaction** is a unit of program execution that accesses and possibly
+    updates various data items
+
+    +   - SQL DML/C++ Java
+
+    +   - 操作的集合、逻辑工作单元
+
+    +   - 可能由多条语句构成'
+  merge: -1
+  img_proc: true
+- pgno: 268
+  md: '# Example of transaction
+
+
+    E.g. transaction to transfer $50 from account A to account B:
+
+
+    +   1. read(A)
+
+    +   2. A := A - 50
+
+    +   3. write(A)
+
+    +   4. read(B)
+
+    +   5. B := B + 50
+
+    +   6. write(B)'
+  merge: -1
+  img_proc: true
+- pgno: 269
+  md: '# ACID Properties
+
+
+    +   - Atomicity
+
+    +   - Consistency
+
+    +   - Isolation
+
+    +   - Durability'
+  merge: -1
+  img_proc: true
+- pgno: 270
+  md: '# Transaction
+
+
+    +   - Commit
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_270_0.png)
+
+
+    +   - Rollback
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_270_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 271
+  md: '# Transaction process
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_271_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 272
+  md: '# Transaction State
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_272_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 273
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 274
+  md: '# Schedules
+
+
+    +   - 指令执行的时间顺序
+
+    +   - 必须包含被调度的事务的所有指令，并保持指令在各事务中的原顺序
+
+    +   - 调度，实现事务的并发运行
+
+    +   - 可串行调度，多事务并发运行的结果，与串行运行一致'
+  merge: -1
+  img_proc: true
+- pgno: 275
+  md: '# Schedule 1
+
+
+    | T₁ | T₂ |
+
+    |---|---|
+
+    | read (A)
+
+    A := A - 50
+
+    write (A)
+
+    read (B)
+
+    B := B + 50
+
+    write (B)
+
+    commit | |
+
+    | | read (A)
+
+    temp := A * 0.1
+
+    A := A - temp
+
+    write (A)
+
+    read (B)
+
+    B := B + temp
+
+    write (B)
+
+    commit |
+
+
+    A serial schedule in which T₁ is followed by T₂'
+  merge: -1
+  img_proc: true
+- pgno: 276
+  md: '# Schedule 2
+
+
+    | T₁ | T₂ |
+
+    |---|---|
+
+    |  | read (A)
+
+    temp := A * 0.1
+
+    A := A - temp
+
+    write (A)
+
+    read (B)
+
+    B := B + temp
+
+    write (B)
+
+    commit |
+
+    | read (A)
+
+    A := A - 50
+
+    write (A)
+
+    read (B)
+
+    B := B + 50
+
+    write (B)
+
+    commit |  |
+
+
+    A serial schedule where T₂ is followed by T₁'
+  merge: -1
+  img_proc: true
+- pgno: 277
+  md: "# Schedule 3\n\n| $T_1$ | $T_2$ |\n|---|---|\n| read (A)  \n  $A := A - 50$\
+    \  \n  write (A)  \n  \n  read (B)  \n  $B := B + 50$  \n  write (B)  \n  commit\
+    \ |  \n  \n  \n  read (A)  \n  $temp := A * 0.1$  \n  $A := A - temp$  \n  write\
+    \ (A)  \n  \n  \n  read (B)  \n  $B := B + temp$  \n  write (B)  \n  commit |\n\
+    \nIn Schedules 1, 2 and 3, the sum A + B is preserved."
+  merge: -1
+  img_proc: true
+- pgno: 278
+  md: '# Schedule 4
+
+
+    | T₁ | T₂ |
+
+    |---|---|
+
+    | read (A)
+
+    A := A - 50
+
+
+    write (A)
+
+    read (B)
+
+    B := B + 50
+
+    write (B)
+
+    commit | read (A)
+
+    temp := A * 0.1
+
+    A := A - temp
+
+    write (A)
+
+    read (B)
+
+
+    B := B + temp
+
+    write (B)
+
+    commit |
+
+
+    This concurrent schedule does not preserve the value of (A + B).'
+  merge: -1
+  img_proc: true
+- pgno: 279
+  md: '# Lock'
+  merge: -1
+  img_proc: true
+- pgno: 280
+  md: '# 锁的机制
+
+
+    +   - 共享锁（Shared）、排它锁（exclusive）
+
+
+    |   | S | X |
+
+    |---|---|---|
+
+    | S | true | false |
+
+    | X | false | false |'
+  merge: -1
+  img_proc: true
+- pgno: 281
+  md: '# Lock & Transaction
+
+
+    +   - A transaction may be granted a lock on an item if the requested lock is
+    compatible with locks already held on the item by other transactions.
+
+    +   - Any number of transactions can hold shared locks on an item,
+
+    +     - but if any transaction holds an exclusive on the item no other transaction
+    may hold any lock on the item.
+
+    +   - If a lock cannot be granted, the requesting transaction is made to wait
+    till all incompatible locks held by other transactions have been released. The
+    lock is then granted.'
+  merge: -1
+  img_proc: true
+- pgno: 282
+  md: '# Lock
+
+
+    | T₃ | T₄ |
+
+    |---|---|
+
+    | lock-x (B)
+
+    read (B)
+
+    B := B - 50
+
+    write (B) | |
+
+    | | lock-s (A)
+
+    read (A)
+
+    lock-s (B) |
+
+    | lock-x (A) | |
+
+
+    +   - Neither T₃ nor T₄ can make progress — executing lock-S(B) causes T₄ to wait
+    for T₃ to release its lock on B, while executing lock-X(A) causes T₃ to wait for
+    T₄ to release its lock on A.
+
+    +   - Such a situation is called a deadlock.
+
+    +     - To handle a deadlock one of T₃ or T₄ must be rolled back and its locks
+    released.'
+  merge: -1
+  img_proc: true
+- pgno: 283
+  md: '# Isolation level'
+  merge: -1
+  img_proc: true
+- pgno: 284
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 285
+  md: '# 0 - Read uncommitted
+
+
+    +   - Read permitted on row with or without write lock
+
+    +   - No read locks are applied
+
+    +   - No guarantee that concurrent transaction will not modify row or roll back
+    changes to row
+
+    +   - Corresponds to table hints NOLOCK and READUNCOMMITTED
+
+    +   - Allow dirty reads, non-repeatable reads, and phantom rows'
+  merge: -1
+  img_proc: true
+- pgno: 286
+  md: '# 1 - Read committed
+
+
+    +   - Read only permitted on row with no write lock
+
+    +   - **Read lock acquired and held for read on current row only, but released
+    when cursor moves off the row**
+
+    +   - No guarantee that data will not change during transaction
+
+    +   - Corresponds to table hint READCOMMITTED
+
+    +   - Prevent dirty reads
+
+    +   - Allow non-repeatable reads and phantom rows'
+  merge: -1
+  img_proc: true
+- pgno: 287
+  md: '# 2 - Repeatable
+
+
+    +   - Read only permitted on row with no write lock
+
+    +   - Read lock acquired as each row in the result set is read, and held until
+    transaction ends
+
+    +   - Corresponds to table hint REPEATABLEREAD
+
+    +   - Prevent dirty reads and non-repeatable reads
+
+    +   - Allow phantom rows'
+  merge: -1
+  img_proc: true
+- pgno: 288
+  md: '# 3 - serializable
+
+
+    +   - Read only permitted on rows in result without write lock
+
+    +   - Read locks acquired when cursor is opened and held until transaction ends
+
+    +   - Corresponds to table hints HOLDLOCK and SERIALIZABLE
+
+    +   - Prevent dirty reads, non-repeatable reads, and phantom rows'
+  merge: -1
+  img_proc: true
+- pgno: 289
+  md: '# Isolation Level
+
+
+    Consistency
+
+    Low                                                                 High
+
+
+    Isolation Level 0
+
+
+    Isolation Level 1
+
+
+    Isolation Level 2
+
+
+    Isolation Level 3
+
+
+    Concurrency
+
+    High                                                                 Low'
+  merge: -1
+  img_proc: true
+- pgno: 290
+  md: '# Recovery System'
+  merge: -1
+  img_proc: true
+- pgno: 291
+  md: '# Failure Classification
+
+
+    +   - **Transaction failure:**
+
+    +     - Logical errors: transaction cannot complete due to some *internal error*
+    condition
+
+    +     - System errors: the database system must terminate an active transaction
+    due to an error condition (e.g., deadlock)
+
+    +   - **System crash:** a power failure or other hardware or software failure
+    causes the system to crash.
+
+    +   - **Disk failure:** a head crash or similar disk failure destroys all or part
+    of disk storage'
+  merge: -1
+  img_proc: true
+- pgno: 292
+  md: '# 恢复策略
+
+
+    +   - 即使发生故障，仍需保持数据库的基本特性ACID
+
+    +   - 在正常事务处理时采取措施，保障有足够的信息可用于故障恢复；
+
+    +   - 故障发生后，使数据库恢复到某一保证ACID的状态。'
+  merge: -1
+  img_proc: true
+- pgno: 293
+  md: '# Classification of Physical Storage Media
+
+
+    +   - Speed with which data can be accessed
+
+    +   - Cost per unit of data
+
+    +   - Reliability
+
+    +     - data loss on power failure or system crash
+
+    +     - physical failure of the storage device
+
+    +   - Can differentiate storage into:
+
+    +     - volatile storage:
+
+    +       - loses contents when power is switched off
+
+    +     - non-volatile storage:
+
+    +       - Contents persist even when power is switched off.
+
+    +       - Includes secondary and tertiary storage, as well as batter-backed up
+    main-memory.'
+  merge: -1
+  img_proc: true
+- pgno: 294
+  md: '# Physical Storage Media
+
+
+    +   - Cache – fastest and most costly form of storage; volatile; managed by the
+    computer system hardware.'
+  merge: -1
+  img_proc: true
+- pgno: 295
+  md: '# Physical Storage Media
+
+
+    +   - **Main memory:**
+
+    +     - fast access (10s to 100s of nanoseconds; 1 nanosecond = 10⁻⁹ seconds)
+
+    +     - generally too small (or too expensive) to store the entire database
+
+    +       - capacities of up to a few Gigabytes widely used currently
+
+    +       - Capacities have gone up and per-byte costs have decreased steadily and
+    rapidly (roughly factor of 2 every 2 to 3 years)
+
+    +     - Volatile — contents of main memory are usually lost if a power failure
+    or system crash occurs.'
+  merge: -1
+  img_proc: true
+- pgno: 296
+  md: '# Physical Storage Media (Cont.)
+
+
+    +   - **Flash memory**
+
+    +     - Data survives power failure
+
+    +     - Data can be written at a location only once, but location can be erased
+    and written to again
+
+    +     - Reads are roughly as fast as main memory
+
+    +     - But writes are slow (few microseconds), erase is slower
+
+    +     - Widely used in embedded devices such as digital cameras, phones, and USB
+    keys
+
+    +     - SSD (Solid-State Disk)'
+  merge: -1
+  img_proc: true
+- pgno: 297
+  md: '# Physical Storage Media (Cont.)
+
+
+    +   - **Magnetic-disk**
+
+    +     - Data is stored on spinning disk, and read/written magnetically
+
+    +     - Primary medium for the long-term storage of data; typically stores entire
+    database.
+
+    +     - Data must be moved from disk to main memory for access, and written back
+    for storage
+
+    +     - direct-access possible to read data on disk in any order, unlike magnetic
+    tape'
+  merge: -1
+  img_proc: true
+- pgno: 298
+  md: '# Physical Storage Media (Cont.)
+
+
+    +   - **Magnetic-disk**
+
+    +     - Capacities range up to roughly 1.5 TB as of 2009
+
+    +       - Much larger capacity and cost/byte than main memory/flash memory
+
+    +       - Growing constantly and rapidly with technology improvements (factor
+    of 2 to 3 every 2 years)
+
+    +     - Survives power failures and system crashes
+
+    +       - disk failure can destroy data, but is rare'
+  merge: -1
+  img_proc: true
+- pgno: 299
+  md: '# Physical Storage Media (Cont.)
+
+
+    +   - **Optical storage**
+
+    +     - non-volatile, data is read optically from a spinning disk using a laser
+
+    +     - CD-ROM (640 MB) and DVD (4.7 to 17 GB) most popular forms
+
+    +     - Blu-ray disks: 27 GB to 54 GB'
+  merge: -1
+  img_proc: true
+- pgno: 300
+  md: '# Physical Storage Media (Cont.)
+
+
+    +   - Optical storage
+
+    +     - Write-one, read-many (WORM) optical disks used for archival storage (CD-R,
+    DVD-R, DVD+R)
+
+    +     - Multiple write versions also available (CD-RW, DVD-RW, DVD+RW, and DVD-RAM)
+
+    +     - Reads and writes are slower than with magnetic disk
+
+    +     - Juke-box systems, with large numbers of removable disks, a few drives,
+    and a mechanism for automatic loading/unloading of disks available for storing
+    large volumes of data'
+  merge: -1
+  img_proc: true
+- pgno: 301
+  md: '# Physical Storage Media (Cont.)
+
+
+    +   - Tape storage
+
+    +     - non-volatile, used primarily for backup (to recover from disk failure),
+    and for archival data
+
+    +     - sequential-access - much slower than disk
+
+    +     - very high capacity (40 to 300 GB tapes available)'
+  merge: -1
+  img_proc: true
+- pgno: 302
+  md: '# Physical Storage Media (Cont.)
+
+
+    +   - Tape storage
+
+    +     - tape can be removed from drive storage costs much cheaper than disk, but
+    drives are expensive
+
+    +     - Tape jukeboxes available for storing massive amounts of data
+
+    +       - hundreds of terabytes (1 terabyte = 10⁹ bytes) to even multiple petabytes
+    (1 petabyte = 10¹² bytes)'
+  merge: -1
+  img_proc: true
+- pgno: 303
+  md: '# Storage Hierarchy
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_303_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 304
+  md: '# # Storage Hierarchy (Cont.)
+
+
+    +   - primary storage: Fastest media but volatile (cache, main memory).
+
+    +   - secondary storage: next level in hierarchy, non-volatile, moderately fast
+    access time
+
+    +     - also called on-line storage
+
+    +     - E.g. flash memory, magnetic disks
+
+    +   - tertiary storage: lowest level in hierarchy, non-volatile, slow access time
+
+    +     - also called off-line storage
+
+    +     - E.g. magnetic tape, optical storage'
+  merge: -1
+  img_proc: true
+- pgno: 305
+  md: '# Magnetic Hard Disk Mechanism
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_305_0.png)
+
+
+    NOTE: Diagram is schematic, and simplifies the structure of actual disk drives'
+  merge: -1
+  img_proc: true
+- pgno: 306
+  md: '# Magnetic Disks
+
+
+    +   - **Read-write head**
+
+    +     - Positioned very close to the platter surface (almost touching it)
+
+    +     - Reads or writes magnetically encoded information.
+
+    +   - **Surface of platter divided into circular tracks**
+
+    +     - Over 50K-100K tracks per platter on typical hard disks
+
+    +   - **Each track is divided into sectors.**
+
+    +     - A sector is the smallest unit of data that can be read or written.
+
+    +     - Sector size typically 512 bytes
+
+    +     - Typical sectors per track: 500 to 1000 (on inner tracks) to 1000 to 2000
+    (on outer tracks)
+
+    +   - **To read/write a sector**
+
+    +     - disk arm swings to position head on right track
+
+    +     - platter spins continually; data is read/written as sector passes under
+    head
+
+    +   - **Head-disk assemblies**
+
+    +     - multiple disk platters on a single spindle (1 to 5 usually)
+
+    +     - one head per platter, mounted on a common arm.
+
+    +   - **Cylinder i consists of ith track of all the platters**'
+  merge: -1
+  img_proc: true
+- pgno: 307
+  md: '# Magnetic Disks (Cont.)
+
+
+    +   - Earlier generation disks were susceptible to head-crashes
+
+    +     - Surface of earlier generation disks had metal-oxide coatings which would
+    disintegrate on head crash and damage all data on disk
+
+    +     - Current generation disks are less susceptible to such disastrous failures,
+    although individual sectors may get corrupted'
+  merge: -1
+  img_proc: true
+- pgno: 308
+  md: '# Magnetic Disks (Cont.)
+
+
+    +   - Disk controller – interfaces between the computer system and the disk drive
+    hardware.
+
+    +     - accepts high-level commands to read or write a sector
+
+    +     - initiates actions such as moving the disk arm to the right track and actually
+    reading or writing the data
+
+    +     - Computes and attaches checksums to each sector to verify that data is
+    read back correctly
+
+    +       - If data is corrupted, with very high probability stored checksum won’t
+    match recomputed checksum
+
+    +     - Ensures successful writing by reading back sector after writing it
+
+    +     - Performs remapping of bad sectors'
+  merge: -1
+  img_proc: true
+- pgno: 309
+  md: '# Disk Subsystem
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_309_0.png)
+
+
+    +   - Multiple disks connected to a computer system through a controller
+
+    +     - Controllers functionality (checksum, bad sector remapping) often carried
+    out by individual disks; reduces load on controller
+
+    +   - Disk interface standards families
+
+    +     - ATA (AT adaptor) range of standards
+
+    +     - SATA (Serial ATA)
+
+    +     - SCSI (Small Computer System Interconnect) range of standards
+
+    +     - SAS (Serial Attached SCSI)
+
+    +     - Several variants of each standard (different speeds and capabilities)'
+  merge: -1
+  img_proc: true
+- pgno: 310
+  md: '# Disk Subsystem
+
+
+    +   - Disks usually connected directly to computer system
+
+    +   - In Storage Area Networks (SAN), a large number of disks are connected by
+    a high-speed network to a number of servers
+
+    +   - In Network Attached Storage (NAS) networked storage provides a file system
+    interface using networked file system protocol, instead of providing a disk system
+    interface'
+  merge: -1
+  img_proc: true
+- pgno: 311
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 312
+  md: '# Performance Measures (Cont.)
+
+
+    +   - Mean time to failure (MTTF) - the average time the disk is expected to run
+    continuously without any failure.
+
+    +     - Typically 3 to 5 years
+
+    +     - Probability of failure of new disks is quite low, corresponding to a "theoretical
+    MTTF" of 500,000 to 1,200,000 hours for a new disk
+
+    +       - E.g., an MTTF of 1,200,000 hours for a new disk means that given 1000
+    relatively new disks, on an average one will fail every 1200 hours
+
+    +     - MTTF decreases as disk ages'
+  merge: -1
+  img_proc: true
+- pgno: 313
+  md: '# Optimization of Disk-Block Access
+
+
+    +   - **Block – a contiguous sequence of sectors from a single track**
+
+    +     - data is transferred between disk and main memory in blocks
+
+    +     - **sizes range from 512 bytes to several kilobytes**
+
+    +       - Smaller blocks: more transfers from disk
+
+    +       - Larger blocks: more space wasted due to partially filled blocks
+
+    +       - Typical block sizes today range from 4 to 16 kilobytes
+
+    +   - Disk-arm-scheduling algorithms order pending accesses to tracks so that
+    disk arm movement is minimized'
+  merge: -1
+  img_proc: true
+- pgno: 314
+  md: '# Optimization of Disk Block Access(Cont.)
+
+
+    +   - File organization - optimize block access time by organizing the blocks
+    to correspond to how data will be accessed
+
+    +     - E.g. Store related information on the same or nearby cylinders.
+
+    +     - Files may get fragmented over time
+
+    +       - E.g. if data is inserted to/deleted from the file
+
+    +       - Or free blocks on disk are scattered, and newly created file has its
+    blocks scattered over the disk
+
+    +       - Sequential access to a fragmented file results in increased disk arm
+    movement
+
+    +     - Some systems have utilities to defragment the file system, in order to
+    speed up file access'
+  merge: -1
+  img_proc: true
+- pgno: 315
+  md: '# Optimization of Disk Block Access(Cont.)
+
+
+    +   - Nonvolatile write buffers speed up disk writes by writing blocks to a non-volatile
+    RAM buffer immediately
+
+    +     - Non-volatile RAM: battery backed up RAM or flash memory
+
+    +       - Even if power fails, the data is safe and will be written to disk when
+    power returns
+
+    +     - Controller then writes to disk whenever the disk has no other requests
+    or request has been pending for some time
+
+    +     - Database operations that require data to be safely stored before continuing
+    can continue without waiting for data to be written to disk
+
+    +     - Writes can be reordered to minimize disk arm movement'
+  merge: -1
+  img_proc: true
+- pgno: 316
+  md: '# Optimization of Disk Block Access(Cont.)
+
+
+    +   - Log disk – a disk devoted to writing a sequential log of block updates
+
+    +     - Used exactly like nonvolatile RAM
+
+    +       - Write to log disk is very fast since no seeks are required
+
+    +       - No need for special hardware (NV-RAM)
+
+    +   - File systems typically reorder writes to disk to improve performance
+
+    +     - Journaling file systems write data in safe order to NV-RAM or log disk
+
+    +     - Reordering without journaling: risk of corruption of file system data'
+  merge: -1
+  img_proc: true
+- pgno: 317
+  md: '# Flash Storage
+
+
+    +   - NOR flash vs NAND flash
+
+    +   - NAND flash
+
+    +     - used widely for storage, since it is much cheaper than NOR flash
+
+    +     - requires page-at-a-time read (page: 512 bytes to 4 KB)
+
+    +     - transfer rate around 20 MB/sec
+
+    +     - solid state disks: use multiple flash storage devices to provide higher
+    transfer rate of 100 to 200 MB/sec'
+  merge: -1
+  img_proc: true
+- pgno: 318
+  md: '# Flash Storage
+
+
+    +   - NOR flash vs NAND flash
+
+    +   - NAND flash
+
+    +     - erase is very slow (1 to 2 millisecs)
+
+    +       - erase block contains multiple pages
+
+    +       - remapping of logical page addresses to physical page addresses avoids
+    waiting for erase
+
+    +         - translation table tracks mapping
+
+    +           - also stored in a label field of flash page
+
+    +         - remapping carried out by flash translation layer
+
+    +       - after 100,000 to 1,000,000 erases, erase block becomes unreliable and
+    cannot be used
+
+    +         - wear leveling'
+  merge: -1
+  img_proc: true
+- pgno: 319
+  md: '# Example of Data Access
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_319_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 320
+  md: '# Data Access
+
+
+    +   - **Physical blocks** are those blocks residing on the disk.
+
+    +   - **Buffer blocks** are the blocks residing temporarily in main memory.
+
+    +   - Block movements between disk and main memory are initiated through the following
+    two operations:
+
+    +     - **input(B)** transfers the physical block B to main memory.
+
+    +     - **output(B)** transfers the buffer block B to the disk, and replaces the
+    appropriate physical block there.'
+  merge: -1
+  img_proc: true
+- pgno: 321
+  md: '# # Data Access
+
+
+    +   - Each transaction Ti has its private work-area in which local copies of all
+    data items accessed and updated by it are kept.
+
+    +     - Ti''s local copy of a data item X is called xi.
+
+    +   - We assume, for simplicity, that each data item fits in, and is stored inside,
+    a single block.'
+  merge: -1
+  img_proc: true
+- pgno: 322
+  md: '# Data Access (Cont.)
+
+
+    +   - Transaction transfers data items between system buffer blocks and its private
+    work-area using the following operations:
+
+    +     - read(X) assigns the value of data item X to the local variable xi.
+
+    +     - write(X) assigns the value of local variable xi to data item {X} in the
+    buffer block.
+
+    +     - Both these commands may necessitate the issue of an input(BX) instruction
+    before the assignment, if the block BX in which X resides is not already in memory.'
+  merge: -1
+  img_proc: true
+- pgno: 323
+  md: '# Data Access (Cont.)
+
+
+    +   - Transactions
+
+    +     - Perform read(X) while accessing X for the first time;
+
+    +     - All subsequent accesses are to the local copy.
+
+    +     - After last access, transaction executes write(X).
+
+    +   - output(BX) need not immediately follow write(X). System can perform the
+    output operation when it deems fit.'
+  merge: -1
+  img_proc: true
+- pgno: 324
+  md: '# 基于Log的备份
+
+
+    +   - To ensure atomicity despite failures, we first output information describing
+    the modifications to stable storage without modifying the database itself.
+
+    +   - log-based recovery'
+  merge: -1
+  img_proc: true
+- pgno: 325
+  md: '# 基于Log的恢复
+
+
+    +   - A **log** is kept on stable storage.
+
+    +     - The log is a sequence of **log records**, and maintains a record of update
+    activities on the database
+
+    +   - Two approaches using logs
+
+    +     - Deferred database modification
+
+    +     - Immediate database modification'
+  merge: -1
+  img_proc: true
+- pgno: 326
+  md: "# Deferred Database Modification\n\n+   <T_0 start>  \n+   <T_0, A, 950>  \n\
+    +   <T_0, B, 2050>\n\n(a)\n\n+   <T_0 start>  \n+   <T_0, A, 950>  \n+   <T_0,\
+    \ B, 2050>  \n+   <T_0 commit>  \n+   <T_1 start>  \n+   <T_1, C, 600>\n\n(b)\n\
+    \n+   <T_0 start>  \n+   <T_0, A, 950>  \n+   <T_0, B, 2050>  \n+   <T_0 commit>\
+    \  \n+   <T_1 start>  \n+   <T_1, C, 600>  \n+   <T_1 commit>\n\n(c)"
+  merge: -1
+  img_proc: true
+- pgno: 327
+  md: '# Immediate database modification
+
+
+    ```
+
+    ⟨T₀ start⟩
+
+    ⟨T₀, A, 1000, 950⟩
+
+    ⟨T₀, B, 2000, 2050⟩
+
+    ```
+
+
+    (a)
+
+
+    ```
+
+    ⟨T₀ start⟩
+
+    ⟨T₀, A, 1000, 950⟩
+
+    ⟨T₀, B, 2000, 2050⟩
+
+    ⟨T₀ commit⟩
+
+    ⟨T₁ start⟩
+
+    ⟨T₁, C, 700, 600⟩
+
+    ```
+
+
+    (b)
+
+
+    ```
+
+    ⟨T₀ start⟩
+
+    ⟨T₀, A, 1000, 950⟩
+
+    ⟨T₀, B, 2000, 2050⟩
+
+    ⟨T₀ commit⟩
+
+    ⟨T₁ start⟩
+
+    ⟨T₁, C, 700, 600⟩
+
+    ⟨T₁ commit⟩
+
+    ```
+
+
+    (c)'
+  merge: -1
+  img_proc: true
+- pgno: 328
+  md: '# Immediate database modification
+
+
+    Log
+
+
+    Write
+
+
+    Output
+
+
+    <T₀ start>
+
+    <T₀, A, 1000, 950>
+
+    T₀, B, 2000, 2050
+
+    <T₀ commit>
+
+    <T₁ start>
+
+    <T₁, C, 700, 600>
+
+    <T₁ commit>
+
+
+    A = 950
+
+    B = 2050
+
+    C = 600
+
+
+    B_B, B_C
+
+    B_A
+
+
+    +   - Note: B_X denotes block containing X.'
+  merge: -1
+  img_proc: true
+- pgno: 329
+  md: '# checkpoint
+
+
+    +   - Problems in recovery procedure
+
+    +     1. searching the entire log is time-consuming
+
+    +     2. we might unnecessarily redo transactions which have already
+
+    +     3. output their updates to the database.
+
+    +   - Streamline recovery procedure by periodically performing checkpointing
+
+    +     1. Output all log records currently residing in main memory onto stable
+    storage.
+
+    +     2. Output all modified buffer blocks to the disk.
+
+    +     3. Write a log record < checkpoint> onto stable storage'
+  merge: -1
+  img_proc: true
+- pgno: 330
+  md: '# 日常备份策略
+
+
+    +   - Dump Database
+
+    +   - Dump Log
+
+    +   - Dump Log
+
+    +   - Recovery Database
+
+    +   - Recovery Log
+
+    +   - Recovery Log'
+  merge: -1
+  img_proc: true
+- pgno: 331
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 332
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 333
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 334
+  md: '# Query Processing
+
+    &
+
+    Performance Tuning'
+  merge: -1
+  img_proc: true
+- pgno: 335
+  md: '# # INDEX
+
+
+    +   - Primary mechanism to get improved performance on a database
+
+    +   - Indexing mechanisms used to speed up access to desired data
+
+
+    | search-key | pointer |
+
+    |---|---|
+
+
+    — **Search Key** - attribute or set of attributes used to look up records in a
+    file.'
+  merge: -1
+  img_proc: true
+- pgno: 336
+  md: '# INDEX
+
+
+    +   - Two basic kinds of indices:
+
+    +     - Ordered indices
+
+    +       - search keys are stored in sorted order
+
+    +       - Balanced trees
+
+    +     - Hash indices
+
+    +       - search keys are distributed uniformly across "buckets" using a "hash
+    function"
+
+    +       - Hash tables'
+  merge: -1
+  img_proc: true
+- pgno: 337
+  md: '# INDEX - Query
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_337_0.png)
+
+
+    No index:
+
+    read
+
+    every row
+
+    (table scan)
+
+
+    Read index:
+
+    go directly to
+
+    row in table'
+  merge: -1
+  img_proc: true
+- pgno: 338
+  md: '# INDEX - Modification
+
+
+    No index:
+
+    insert,
+
+    update,
+
+    delete
+
+    row only
+
+
+    Insert,
+
+    update,
+
+    delete row
+
+    and index
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_338_0.png)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_338_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 339
+  md: '# Ordered Indices
+
+
+    +   - In an **ordered index**, index entries are stored sorted on the search key
+    value.
+
+    +   - **Primary index**: in a sequentially ordered file, the index whose search
+    key specifies the sequential order of the file.
+
+    +     - Also called **clustering index**
+
+    +     - The search key of a primary index is usually but not necessarily the primary
+    key.'
+  merge: -1
+  img_proc: true
+- pgno: 340
+  md: '# Ordered Indices
+
+
+    +   - **Secondary index**: an index whose search key specifies an order different
+    from the sequential order of the file. Also called **non-clustering index**.
+
+    +   - **Index-sequential file**: ordered sequential file with a primary index.'
+  merge: -1
+  img_proc: true
+- pgno: 341
+  md: '# Dense Index Files
+
+
+    +   - Dense index — Index record appears for every search-key value in the file.
+
+    +   - E.g. index on ID attribute of instructor relation
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_341_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 342
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 343
+  md: '# Sparse Index Files
+
+
+    +   - **Sparse Index**: contains index records for only some search-key values.
+
+    +     - Applicable when records are sequentially ordered on search-key
+
+    +   - **To locate a record with search-key value K we:**
+
+    +     - Find index record with largest search-key value <= K
+
+    +     - Search file sequentially starting at the record to which the index record
+    points
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_343_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 344
+  md: '# Multilevel Index
+
+
+    +   - If primary index does not fit in memory, access becomes expensive.
+
+    +   - **Solution:** treat primary index kept on disk as a sequential file and
+    construct a sparse index on it.
+
+    +     - outer index – a sparse index of primary index
+
+    +     - inner index – the primary index file
+
+    +   - If even outer index is too large to fit in main memory, yet another level
+    of index can be created, and so on.
+
+    +   - Indices at all levels must be updated on insertion or deletion from the
+    file.'
+  merge: -1
+  img_proc: true
+- pgno: 345
+  md: '# Multilevel Index (Cont.)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_345_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 346
+  md: '# Multilevel Index (primary index)
+
+
+    Numbers indicate successive 2K I/Os
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_346_0.png)
+
+
+    Root
+
+
+    Data page
+
+
+    Index pages'
+  merge: -1
+  img_proc: true
+- pgno: 347
+  md: '# Multilevel Index (secondary index)
+
+
+    Numbers indicate
+
+    successive 2K I/Os
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_347_0.png)
+
+
+    Root
+
+
+    Index pages
+
+
+    Data page'
+  merge: -1
+  img_proc: true
+- pgno: 348
+  md: '# Multilevel Index (Cont.)
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_348_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 349
+  md: '# Covering indices (primary)
+
+
+    select * from employee
+
+    where emp_id like "E%"
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_349_0.png)
+
+
+    Root page
+
+
+    Intermediate
+
+
+    Root level
+
+    Data pages'
+  merge: -1
+  img_proc: true
+- pgno: 350
+  md: '# Covering indices (secondary)
+
+
+    ```
+
+    SELECT * FROM employee
+
+    WHERE employee_lname = "Green"
+
+    ```
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_350_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 351
+  md: "# Covering indices\n(Multiple Attributes)\n\n```\nselect emp_fname, emp_lname\n\
+    from employee\nwhere    emp_lname like “Gr%” and\n         emp_fname like “M%”\n\
+    ```\n\n![](img/5285b20d8f5a79969a3f150d38beebfc_351_0.png)\n\n| key | row ID |\
+    \ pg ptr |\n|---|---:|---:|\n| Bennet Chet | 1421,1 | 1007 |\n| Karson Kit | 1876,4\
+    \ | 1305 |\n| Smith Abe | 1242,2 | 1062 |\n\n| key | row ID | pg ptr |\n|---|---:|---:|\n\
+    | Bennet Chet | 1421,1 | 1132 |\n| Fox John | 1317,3 | 1133 |\n| Hunter Leon |\
+    \ 1242,1 | 1127 |\n\n| key | row ID |\n|---|---:|\n| Bennet Chet | 1421,1 |\n\
+    | Chan Greg | 1129,3 |\n| Dull Charles | 1409,1 |\n\n| key | row ID |\n|---|---:|\n\
+    | Fox John | 1317,3 |\n| Greane David | 1242,3 |\n| Green Mitch | 1421,2 |\n|\
+    \ Greene Joe | 1409,2 |\n\n| key | row ID |\n|---|---:|\n| Hunter Leon | 1242,1\
+    \ |\n| Jenkins Paul | 1241,4 |\n\n| key | row ID |\n|---|---:|\n| Karson Kit |\
+    \ 1876,1 |\n| Lam Pamela | 1451,1 |\n| Peters Mary | 1899,4 |\n\n| key | row ID\
+    \ |\n|---|---:|\n| O’Leary Chet | A1 |\n| Ringer Joan | A2 |\n| White Susan |\
+    \ A3 |\n| Jenkins Paul | C1 |\n\n| key | row ID |\n|---|---:|\n| Hunter Leon |\
+    \ E1 |\n| Smith Abe | E2 |\n| Greane David | E3 |\n\n| key | row ID |\n|---|---:|\n\
+    | Bennet Chet | E4 |\n| Green Mitch | M1 |\n| Ringer Anne | M2 |\n\n| key | row\
+    \ ID |\n|---|---:|\n| Dull Charles | M3 |\n| Greene Joe | M4 |\n| Patel Peter\
+    \ | M5 |\n\nRoot page\n\nIntermediate\n\nLeaf level\n\nData pages"
+  merge: -1
+  img_proc: true
+- pgno: 352
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 353
+  md: '# Query Processing'
+  merge: -1
+  img_proc: true
+- pgno: 354
+  md: '# Basic Steps in Query Processing
+
+
+    +   1. Parsing and translation
+
+    +   2. Optimization
+
+    +   3. Evaluation
+
+
+    ![](img/5285b20d8f5a79969a3f150d38beebfc_354_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 355
+  md: '# Measures of Query Cost
+
+
+    +   - Cost is generally measured as total elapsed time for answering query
+
+    +     - Many factors contribute to time cost
+
+    +       - disk accesses, CPU, or even network communication
+
+    +   - Typically disk access is the predominant cost, and is also relatively easy
+    to estimate. Measured by taking into account
+
+    +     - Number of seeks * average-seek-cost
+
+    +     - Number of blocks read * average-block-read-cost
+
+    +     - Number of blocks written * average-block-write-cost
+
+    +       - Cost to write a block is greater than cost to read a block
+
+    +         - data is read back after being written to ensure that the write was
+    successful'
+  merge: -1
+  img_proc: true
+- pgno: 356
+  md: '# Measures of Query Cost (Cont.)
+
+
+    +   - For simplicity we just use the number of block transfers from disk and the
+    number of seeks as the cost measures
+
+    +     - t_T - time to transfer one block
+
+    +     - t_S - time for one seek
+
+    +     - Cost for b block transfers plus S seeks
+
+    +       b * t_T + S * t_S
+
+    +   - We ignore CPU costs for simplicity
+
+    +     - Real systems do take CPU cost into account
+
+    +   - We do not include cost to writing output to disk in our cost formulae'
+  merge: -1
+  img_proc: true
+- pgno: 357
+  md: '# Measures of Query Cost (Cont.)
+
+
+    +   - Several algorithms can reduce disk IO by using extra buffer space
+
+    +     - Amount of real memory available to buffer depends on other concurrent
+    queries and OS processes, known only during execution
+
+    +     - We often use worst case estimates, assuming only the minimum amount of
+    memory needed for the operation is available
+
+    +   - Required data may be buffer resident already, avoiding disk I/O
+
+    +     - But hard to take into account for cost estimation'
+  merge: -1
+  img_proc: true
+- pgno: 358
+  md: '# Selection Operation'
+  merge: -1
+  img_proc: true
+- pgno: 359
+  md: '# File scan
+
+
+    +   - **Algorithm A1 (linear search).** Scan each file block and test all records
+    to see whether they satisfy the selection condition.
+
+    +     - Cost estimate = $b_r$ block transfers + 1 seek
+
+    +       - $b_r$ denotes number of blocks containing records from relation $r$
+
+    +     - If selection is on a key attribute, can stop on finding record
+
+    +       - cost = $(b_r / 2)$ block transfers + 1 seek'
+  merge: -1
+  img_proc: true
+- pgno: 360
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 361
+  md: '# Selections Using Indices
+
+
+    +   - **Index scan** - search algorithms that use an index
+
+    +     - selection condition must be on search-key of index.
+
+    +   - **A2** (**primary index, equality on key**). Retrieve a single record that
+    satisfies the corresponding equality condition
+
+    +     - *Cost* = ($h_i$ + 1) * ($t_T$ + $t_S$)
+
+    +   - **A3** (**primary index, equality on nonkey**) Retrieve multiple records.
+
+    +     - Records will be on consecutive blocks
+
+    +     - Let b = number of blocks containing matching records
+
+    +     - *Cost* = $h_i$ * ($t_T$ + $t_S$) + $t_S$ + $t_T$ * b'
+  merge: -1
+  img_proc: true
+- pgno: 362
+  md: '# Selections Using Indices
+
+
+    +   - A4 (secondary index, equality on nonkey).
+
+    +     - Retrieve a single record if the search-key is a candidate key
+
+    +       - Cost = (hᵢ + 1) * (tₜ + tₛ)
+
+    +     - Retrieve multiple records if search-key is not a candidate key
+
+    +       - each of n matching records may be on a different block
+
+    +       - Cost = (hᵢ + n) * (tₜ + tₛ)
+
+    +       - Can be very expensive!'
+  merge: -1
+  img_proc: true
+- pgno: 363
+  md: '# Selections Involving Comparisons
+
+
+    +   - Can implement selections of the form $A \vee (r)$ or $A \wedge (r)$ by using:
+
+    +     - a linear file scan,
+
+    +     - or by using indices in the following ways:
+
+
+    +   - **A5** *(primary index, comparison)*. (**Relation is sorted on $A$**)
+
+    +     - For $A \vee (r)$ use index to find first tuple $\geq v$ and scan relation
+    sequentially from there.
+
+    +     - For $A \wedge (r)$ just scan relation sequentially till first tuple $>
+    v$; do not use index.'
+  merge: -1
+  img_proc: true
+- pgno: 364
+  md: '# Selections Involving Comparisons
+
+
+    +   - A6 (secondary index, comparison).
+
+    +     - For A v(r) use index to find first index entry v and scan index sequentially
+    from there, to find pointers to records.
+
+    +     - For A v(r) just scan leaf pages of index finding pointers to records,
+    till first entry > v
+
+    +     - In either case, retrieve records that are pointed to
+
+    +       - requires an I/O for each record
+
+    +       - Linear file scan may be cheaper'
+  merge: -1
+  img_proc: true
+- pgno: 365
+  md: '# Implementation of Complex Selections
+
+
+    +   - Conjunction: σ₁ σ₂ ... σₙ(r)
+
+    +   - A7 (conjunctive selection using one index).
+
+    +     - Select a combination of σᵢ and algorithms A1 through A7 that results in
+    the least cost for σᵢ(r).
+
+    +     - Test other conditions on tuple after fetching it into memory buffer.
+
+    +   - A8 (conjunctive selection using composite index).
+
+    +     - Use appropriate composite (multiple-key) index if available.'
+  merge: -1
+  img_proc: true
+- pgno: 366
+  md: "# Implementation of Complex Selections\n\n+   - **Conjunction:**\n+     \n\
+    +     `1      2   ...   n(r)`\n\n+   - **A9** *(conjunctive selection by intersection\
+    \ of identifiers)*\n+     - Requires indices with record pointers.\n+     - Use\
+    \ corresponding index for each condition, and take intersection of all the obtained\
+    \ sets of record pointers.\n+     - Then fetch records from file.\n+     - If\
+    \ some conditions do not have appropriate indices, apply test in memory."
+  merge: -1
+  img_proc: true
+- pgno: 367
+  md: '# Algorithms for Complex Selections
+
+
+    +   - **Disjunction:** $1, 2, \ldots, n(r)$.
+
+    +   - **A10** *(disjunctive selection by union of identifiers)*
+
+    +     - Applicable if *all* conditions have available indices.
+
+    +       - Otherwise use linear scan.
+
+    +     - Use corresponding index for each condition, and take union of all the
+    obtained sets of record pointers.
+
+    +     - Then fetch records from file'
+  merge: -1
+  img_proc: true
+- pgno: 368
+  md: '# Algorithms for Complex Selections
+
+
+    +   - Negation: (r)
+
+    +     - Use linear scan on file
+
+    +     - If very few records satisfy , and an index is applicable to
+
+    +       - Find satisfying records using index and fetch from file'
+  merge: -1
+  img_proc: true
+- pgno: 369
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 370
+  md: '# Join Operation
+
+
+    +   - Several different algorithms to implement joins
+
+    +     - Nested-loop join
+
+    +     - Block nested-loop join
+
+    +     - Indexed nested-loop join
+
+    +     - Merge-join
+
+    +     - Hash-join
+
+    +   - Choice based on cost estimate
+
+    +   - Examples use the following information
+
+    +     - Number of **records** of *student*: 5,000
+
+    +       *takes*: 10,000
+
+    +     - Number of **blocks** of *student*: 100
+
+    +       *takes*: 400'
+  merge: -1
+  img_proc: true
+- pgno: 371
+  md: "# Nested-Loop Join\n\n•To compute the theta join r ⋈ s\nfor each tuple t_r\
+    \ in r do begin\n  for each tuple t_s in s do begin\n    test pair(t_r, t_s) to\
+    \ see if they satisfy the join condition\n    if they do, add t_r · t_s to the\
+    \ result.\n  end\nend\nr is called the outer relation and s the inner relation\
+    \ of the join.\nRequires no indices and can be used with any kind of join condition.\n\
+    Expensive since it examines every pair of tuples in the two relations."
+  merge: -1
+  img_proc: true
+- pgno: 372
+  md: '# Nested-Loop Join (Cont.)
+
+
+    +   - In the worst case, if there is enough memory only to hold one block of each
+    relation, the estimated cost is
+
+    +     $n_r \cdot b_s + b_r$ block transfers, plus
+
+    +     $n_r + b_r$ seeks
+
+    +   - If the smaller relation fits entirely in memory, use that as the inner relation.
+
+    +     - Reduces cost to $b_r + b_s$ block transfers and 2 seeks
+
+    +   - Assuming worst case memory availability cost estimate is
+
+    +     - with student as outer relation:
+
+    +       - 5000 × 400 + 100 = 2,000,100 block transfers,
+
+    +       - 5000 + 100 = 5100 seeks
+
+    +     - with takes as the outer relation
+
+    +       - 10000 × 100 + 400 = 1,000,400 block transfers and 10,400 seeks
+
+    +   - If smaller relation (student) fits entirely in memory, the cost estimate
+    will be 500 block transfers.
+
+    +   - Block nested-loops algorithm (next slide) is preferable.'
+  merge: -1
+  img_proc: true
+- pgno: 373
+  md: "# Block Nested-Loop Join\n\n+   - Variant of nested-loop join in which every\
+    \ block of inner relation is paired with every block of outer relation.\n\n```\n\
+    for each block B_r of r do begin\n  for each block B_s of s do begin\n    for\
+    \ each tuple t_r in B_r do begin\n      for each tuple t_s in B_s do begin\n \
+    \       Check if (t_r, t_s) satisfy the join condition\n        if they do, add\
+    \ t_r · t_s to the result.\n      end\n    end\n  end\nend\n```"
+  merge: -1
+  img_proc: true
+- pgno: 374
+  md: '# Block Nested-Loop Join (Cont.)
+
+
+    +   - Worst case estimate: $b_r * b_s + b_r$ block transfers + $2 * b_r$ seeks
+
+    +     - Each block in the inner relation $s$ is read once for each block in the
+    outer relation
+
+    +   - Best case: $b_r + b_s$ block transfers + 2 seeks.
+
+    +   - Improvements to nested loop and block nested loop algorithms:
+
+    +     - In block nested-loop, use $M - 2$ disk blocks as blocking unit for outer
+    relations, where $M =$ memory size in blocks; use remaining two blocks to buffer
+    inner relation and output
+
+    +       - Cost = $\lceil b_r / (M-2) \rceil * b_s + b_r$ block transfers + $2
+    \lceil b_r / (M-2) \rceil$ seeks
+
+    +     - If equi-join attribute forms a key or inner relation, stop inner loop
+    on first match
+
+    +     - Scan inner loop forward and backward alternately, to make use of the blocks
+    remaining in buffer (with LRU replacement)
+
+    +     - Use index on inner relation if available (next slide)'
+  merge: -1
+  img_proc: true
+- pgno: 375
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 376
+  md: '# # Example of Nested-Loop Join Costs
+
+
+    ⋈
+
+
+    +   - Compute *student* ⋈ *takes*, with *student* as the outer relation.
+
+    +   - Let *takes* have a primary B⁺-tree index on the attribute `/ID`, which contains
+    20 entries in each index node.
+
+    +   - Since *takes* has 10,000 tuples, the height of the tree is 4, and one more
+    access is needed to find the actual data.
+
+    +   - *student* has 5000 tuples
+
+    +   - Cost of block nested loops join
+
+    +     - 400*100 + 100 = 40,100 block transfers + 2 * 100 = 200 seeks
+
+    +       - assuming worst case memory
+
+    +       - may be significantly less with more memory
+
+    +   - Cost of indexed nested loops join
+
+    +     - 100 + 5000 * 5 = 25,100 block transfers and seeks.
+
+    +     - CPU cost likely to be less than that for block nested loops join'
+  merge: -1
+  img_proc: true

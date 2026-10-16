@@ -1,0 +1,11 @@
+# 例： i+i*i # 递归下降分析过程
+
+语法分析主程序： Begin ReadToken; E ; Match(#) end
+
+E→TE'
+E'→+TE' | ε
+T→FT'
+T'→*FT' | ε
+F→(E) | i
+
+![](bbox=[0.05, 0.18, 0.88, 0.95])

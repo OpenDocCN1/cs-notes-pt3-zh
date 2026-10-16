@@ -1,0 +1,9 @@
+举例：
+
+```
+DADD R1, R2, R3
+DSUB R4, R1, R5
+XOR R6, R1, R7
+AND R8, R1, R9
+OR R10, R1, R11
+```

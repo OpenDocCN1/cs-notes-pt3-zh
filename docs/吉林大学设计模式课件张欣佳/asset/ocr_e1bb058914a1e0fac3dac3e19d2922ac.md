@@ -1,0 +1,5 @@
+# 观察者模式
+
+# 观察者模式实例与解析
+
++   - LoginBean充当具体目标类，在这里我们没有定义抽象目标类，对观察者模式进行了一定的简化。在LoginBean中定义了抽象观察者LoginEventListener类型的对象lel和事件对象LoginEvent，提供了注册方法addLoginEventListener()用于添加观察者，在Java事件处理中，通常使用的是一对一的观察者模式，而不是一对多的观察者模式，也就是一个观察目标中只定义一个观察者对象，而不是定义一个观察者对象的集合。在LoginBean中还定义了一个通知方法fireLoginEvent(),

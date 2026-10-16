@@ -1,0 +1,72 @@
+
+
+## Sequences
+
+Rosen 7th ed., § 2.4
+
+### § 2.4: Sequences, Strings, & Summations
+
+- A *sequence* or *series* is just like an ordered *n*-tuple, except:
+  - Each element in the series has an associated *index* number.
+  - A sequence or series may be infinite.
+- A *string* is a sequence of *symbols* from some finite *alphabet*.
+- A *summation* is a compact notation for the sum of all terms in a (possibly infinite) series.
+
+### Sequences
+
+- A *sequence* or *series* $\{a_n\}$ is identified with a *generating function* $f:S\to A$ for some subset $S\subseteq\mathbf{N}$ and for some set $A$.
+  - Often we have $S=\mathbf{N}$ or $S=\mathbf{Z}^+=\mathbf{N}\setminus\{0\}$.
+  - Sequences may also be generalized to *indexed sets*, in which the set $S$ does not have to be a subset of $\mathbf{N}$.
+    - For general indexed sets, $S$ may not even be a set of numbers at all.
+- If $f$ is a generating function for a series $\{a_n\}$, then for $n\in S$, the symbol $a_n$ denotes $f(n)$, also called *term $n$* of the sequence.
+  - The *index* of $a_n$ is $n$. (Or, often $i$ is used.)
+- A series is sometimes denoted by listing its first and/or last few elements, and using ellipsis (...) notation.
+  - E.g., “$\{a_n\}$ = 0, 1, 4, 9, 16, 25, ...” is taken to mean $\forall n\in\mathbf{N}$, $a_n = n^2$.
+
+### Sequence Examples
+
+- Some authors write “the sequence $a_1$, $a_2$, ...” instead of $\{a_n\}$, to ensure that the set of indices is clear.
+  - Be careful: Our book often leaves the indices ambiguous.
+- An example of an infinite series:
+  - Consider the series $\{a_n\}$ = $a_1$, $a_2$, ..., where $(\forall n\ge1)$ $a_n = f(n) = 1/n$.
+  - Then, we have $\{a_n\}$ = 1, 1/2, 1/3, ...
+
+### Example with Repetitions
+
+- Like tuples, but unlike sets, a sequence may contain *repeated* instances of an element.
+- Consider the sequence $\{b_n\}$ = $b_0$, $b_1$, ... (note that 0 is an index) where $b_n = (-1)^n$.
+  - Thus, $\{b_n\}$ = 1, -1, 1, -1, ...
+    - Note repetitions!
+  - This $\{b_n\}$ denotes an infinite sequence of 1’s and −1’s, *not* the 2-element set $\{1, -1\}$.
+
+### Recognizing Sequences
+
+- Sometimes, you’re given the first few terms of a sequence,
+  - and you are asked to find the sequence’s generating function,
+  - or a procedure to enumerate the sequence.
+- Examples: What’s the next number?
+  - 1, 2, 3, 4, ...      5 (the 5th smallest number > 0)
+  - 1, 3, 5, 7, 9, ...   11 (the 6th smallest odd number > 0)
+  - 2, 3, 5, 7, 11, ...  13 (the 6th smallest prime number)
+- 0, 1, 2, 5, 12, 27, ...
+
+### The Trouble with Sequence Recognition
+
+- As you know, these problems are popular on IQ tests, but...
+- The problem of finding “the” generating function given just an initial subsequence is not a mathematically well defined problem.
+  - This is because there are *infinitely* many computable functions that will generate *any* given initial subsequence.
+- We implicitly are supposed to find the *simplest* such function (because this one is assumed to be most likely), but,
+  - how are we to objectively define the *simplicity* of a function?
+- We might define simplicity as the reciprocal of complexity, but...
+  - There are *many* different plausible, competing definitions of complexity, and this is an active research area.
+- So, these questions really have *no objective right answer*!
+  - Still, we will ask you to answer them anyway... (Because others will too.)
+
+### What are Strings, Really?
+
+- This book says “finite sequences of the form $a_1$, $a_2$, …, $a_n$ are called *strings*”,
+  - but *infinite* strings are also discussed sometimes.
+- Strings are normally restricted to sequences composed of *symbols* drawn from a finite *alphabet*, and are often indexed from 0 or 1.
+  - But these are really arbitrary restrictions also.
+- Either way, the *length* of a (finite) string is just its number of terms (or of distinct indices).
+

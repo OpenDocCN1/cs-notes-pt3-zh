@@ -1,0 +1,250 @@
+
+
+## 源语言的说明
+
+- 声明部分的文法
+  - P→ D; S
+  - D→ D; D
+  - D→ id: T
+  - D→ proc id; D; S
+  - T→integer | real
+  - | array [num] of T₁
+  - | ↑T₁
+  - | record D end
+
+- 所有名字必须先声明后引用
+
+- 变量声明、每个声明语句声明一个名字
+
+- 过程声明、过程声明允许嵌套
+
+## 一、过程中的声明语句
+
+- 假定
+  - 最内层过程
+  - 暂时不考虑记录结构的声明
+
+- 声明语句的文法
+  - P→D; S
+  - D→D; D
+  - D→id: T
+  - T→integer
+  - T→real
+  - T→array [num] of T₁
+  - T→↑T₁
+
+## 设计翻译方案的目的
+
+- 识别出被声明实体
+- 记录实体的名字、类型、在数据区中的位置
+
+![](img/12b57169bd1d5004c5e7193ff0d478d5_432_0.png)
+
+- 引入：
+  - 全局变量offset，记录下一个可用单元的相对地址
+  - T.width：记录实体的域宽
+  - T.type：记录实体的类型
+  - enter(id.name, T.type, offset)
+
+## 翻译方案1
+
+i: integer;
+x: real;
+A: array[10] of integer
+
+P → ▲ D;S
+{ offset=0 }
+
+P → MD
+M → ε   { offset=0 }
+
+D → D;D
+
+D → id:T   { enter(id.name, T.type, offset);
+offset=offset+T.width }
+
+T → integer   { T.type=integer; T.width=4 }
+
+T → real   { T.type=real; T.width=8 }
+
+T → array [num] of T₁   { T.type=array(num.val, T₁.type);
+T.width=num.val×T₁.width }
+
+T → ↑T₁   { T.type=pointer(T₁.type); T.width=4 }
+
+## 数据结构及过程
+
+■ 记录符号表嵌套关系的、便于操作的结构：栈
+
+![](img/12b57169bd1d5004c5e7193ff0d478d5_435_0.png)
+
+■ 过程：
+
+- maketable(previous)
+- enter(table,name,type,offset)
+- addwidth(table,width)
+- enterproc(table,name,newtable)
+
+## 翻译方案2
+
+```
+P→ M D; S { addwidth(top(tableptr), top(offset)); pop(tableptr); pop(offset) }
+```
+
+```
+M→ε { t= maketable(nil); push(t, tableptr); push(0, offset) }
+```
+
+```
+D→ D; D
+```
+
+```
+D→ id: T { enter(top(tableptr), id.name, T.type, top(offset)); top(offset)=top(offset)+T.width }
+```
+
+```
+D→ proc id; N D; S { t=top(tableptr); addwidth(t, top(offset)); pop(tableptr); pop(offset); enterproc(top(tableptr), id.name, t) }
+```
+
+```
+N→ε { t=maketable(top(tableptr)); push(t, tableptr); push(0, offset) }
+```
+
+## 三、记录声明的处理
+
+- 文法
+  - P→ D; S
+  - D→ D; D
+  - D→ id: T
+  - D→ proc id; D; S
+  - T→ record D end
+
+定位操作：
+创建符号表
+保存记录中各域的信息
+
+重定位操作：
+将各域的总域宽作为该记录型的域宽，
+返回记录声明所在过程的符号表
+
+## 翻译方案3
+
+```
+T→ record L D end { T.type=record(top(tableptr)); T.width=top(offset); pop(tableptr); pop(offset) }
+```
+
+```
+L→ε { t=mktable(nil); push(t, tableptr); push(0, offset) }
+```
+
+## 举例
+
+- 声明
+
+```
+x : integer;
+q : record
+  i: integer;
+  x: real
+end;
+y: real;
+```
+
+| i | integer | 0 |
+| x | real | 4 |
+
+|  |  |
+| t | 24 |
+tableptr offset
+
+| x | integer | 0 |
+| q | record(t') | 4 |
+| y | real | 16 |
+
+T.type=record(t')
+T.width=12
+
+## 6.4 类型检查
+
+- 静态类型检查：由编译程序完成的检查
+- 动态类型检查：目标程序运行时完成的检查
+  - 如果目标代码把每个对象的类型和该对象的值一起保存，那么任何检查都可以动态完成。
+- 一个健全的类型体制不需要动态检查类型错误
+- 如果一种语言的编译程序能够保证它所接受的程序不会有运行时的类型错误，则称这种语言是强类型语言。
+- 有些检查只能动态完成
+  - `char table[20];`
+  - `int i;`
+  - 计算table[i]
+
+## 静态类型检查
+
+设计类型检查程序时要考虑的因素：
+
+- 语法结构
+- 类型概念
+- 把类型指派给语言结构的规则
+
+Pascal、C语言报告中关于类型的描述：
+
+- 如果算术运算符加、减和乘的两个运算对象都是整型，那么结果是整型。
+- 一元运算符&的结果是指向运算对象所代表的实体的指针，如果运算对象的类型是‘…’，结果类型就是指向‘…’的指针。
+
+暗示的概念：
+
+- 每一个表达式有一个类型
+- 类型有结构
+
+## 类型体制
+
+- 把类型表达式指派到程序各部分的一组规则
+- 由类型检查程序实现
+- 同一语言的不同编译程序使用的类型体制可能不同
+  - 数组作为变元传递时，数组的下标集合可以指明，也可以不指明
+  - 原因：不同的Pascal语言编译程序实现的类型体制不同
+  - UNIX系统中，lint命令实现的类型体制比C语言编译程序本身所实现的更详细。
+
+## 一、类型表达式
+
+类型表达式的定义：
+
+- 基本类型是类型表达式
+  boolean、char、integer、和 real
+  错误类型type_error、回避类型void
+- 类型名是类型表达式，因为类型表达式可以命名。
+- 类型构造器作用于类型表达式的结果仍是类型表达式
+  - 数组：如果T是类型表达式，那么 array(I, T) 是元素类型为 T和下标集合为I的数组的类型表达式，I通常是一个整数域。
+    var A:array[1..10] of integer;
+    与A相关的类型表达式为： array(1..10,integer)
+  - 笛卡儿积：如果T₁和T₂是类型表达式，那么它们的笛卡儿积 T₁×T₂也是类型表达式，假设×是左结合的。
+  - 记录：记录类型是它的各域类型的笛卡儿积
+    把类型构造器 record 作用于由域名和与之相关的类型表达式组成的二元组，就形成记录的类型表达式
+
+如Pascal的程序片段：
+
+```
+type row=record
+  address: integer;
+  lexeme: array[1..15] of char
+end;
+var table: array[1..10] of row;
+```
+
+类型名row代表类型表达式：
+
+record((address×integer)×(lexeme×array(1..15,char)))
+
+和变量table相关的类型表达式为：
+
+array(1..10,row)
+
+- 指针：如果T是类型表达式，那么 pointer(T) 是类型“指向类型T的对象的指针”的类型表达式。
+
+```
+var p:↑row;
+```
+
+与P相关的类型表达式为：
+
+pointer(row)
+

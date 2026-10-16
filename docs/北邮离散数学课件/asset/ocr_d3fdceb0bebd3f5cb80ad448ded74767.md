@@ -1,0 +1,3 @@
+# FLEURY’s Algorithm
+
++   - **Step 2:** Suppose that $V_\pi : v_1, v_2, \dots, v_k$ and $E_\pi : e_1, e_2, \dots, e_{k-1}$ have been constructed so far, and that all of these edges and isolated vertices have been removed from $V$ and $E$ to form $G_{k-1}$. Since $v_k$ has even degree and $e_{k-1}$ ends there, there must be an edge $e_k$ in $G_{k-1}$ that also has $v_k$ as a vertex. If there is more than one such edge, select one that is not a bridge for $G_{k-1}$. Denote the vertex of $e_k$ other than $v$ by $v_{k+1}$ and extend $V_\pi$ and $E_\pi$ to $V_\pi : v_1, v_2, \dots, v_k, v_{k+1}$ and $E_\pi : e_1, e_2, \dots, e_{k-1}, e_k$

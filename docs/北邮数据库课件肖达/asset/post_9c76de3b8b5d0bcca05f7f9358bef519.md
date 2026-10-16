@@ -1,0 +1,242 @@
+
+### 定义模式（续）
+
+[例3]
+
+```
+CREATE SCHEMA TEST AUTHORIZATION ZHANG
+CREATE TABLE TAB1 ( COL1 SMALLINT,
+    COL2 INT,
+    COL3 CHAR(20),
+    COL4 NUMERIC(10, 3),
+    COL5 DECIMAL(5, 2)
+);
+```
+
+为用户ZHANG创建了一个模式TEST，并在其中定义了一个表TAB1。
+
+### 二、删除模式
+
+- `DROP SCHEMA <模式名> <CASCADE | RESTRICT>`
+  - `CASCADE`（级联）
+    - 删除模式的同时把该模式中所有的数据库对象全部删除
+  - `RESTRICT`（限制）
+    - 如果该模式中定义了下属的数据库对象（如表、视图等），则拒绝该删除语句的执行。
+    - 当该模式中没有任何下属的对象时才能执行。
+
+【例4】`DROP SCHEMA ZHANG CASCADE;`
+
+删除模式`ZHANG`
+
+同时该模式中定义的表`TAB1`也被删除
+
+## 数据定义
+
+- 模式的定义与删除
+- 基本表的定义、删除与修改
+- 索引的建立与删除
+
+## 基本表的定义、删除与修改
+
+### 一、定义基本表
+
+```
+CREATE TABLE <表名>
+( <列名> <数据类型> [ <列级完整性约束条件> ]
+[, <列名> <数据类型> [ <列级完整性约束条件> ]]...
+[, <表级完整性约束条件> ]);
+```
+
+如果完整性约束条件涉及到该表的多个属性列，则必须定义在表级上，否则既可以定义在列级也可以定义在表级。
+
+### 学生表Student
+
+[例5] 建立“学生”表Student，学号是主码，姓名取值唯一。
+
+```
+CREATE TABLE Student
+(Sno CHAR(9) PRIMARY KEY, /* 列级完整性约束条件 */
+Sname CHAR(20) UNIQUE, /* Sname取唯一值 */
+Ssex CHAR(2),
+Sage SMALLINT,
+Sdept CHAR(20)
+);
+```
+
+主码
+
+### 课程表Course
+
+[例6] 建立一个“课程”表Course
+
+```
+CREATE TABLE Course
+( Cno    CHAR(4) PRIMARY KEY,
+  Cname  CHAR(40),
+  Cpno   CHAR(4),
+  Ccredit SMALLINT,
+  FOREIGN KEY (Cpno) REFERENCES Course(Cno)
+);
+```
+
+先修课
+
+Cpno是外码
+被参照表是Course
+被参照列是Cno
+
+### 学生选课表SC
+
+[例7]　建立一个“学生选课”表SC
+
+```
+CREATE TABLE SC
+    (Sno CHAR(9),
+     Cno CHAR(4),
+     Grade SMALLINT,
+     PRIMARY KEY (Sno, Cno),
+     /* 主码由两个属性构成，必须作为表级完整性进行定义 */
+     FOREIGN KEY (Sno) REFERENCES Student(Sno),
+     /* 表级完整性约束条件，Sno是外码，被参照表是Student */
+     FOREIGN KEY (Cno) REFERENCES Course(Cno)
+     /* 表级完整性约束条件，Cno是外码，被参照表是Course */
+    );
+```
+
+### 二、数据类型
+
+- SQL中域的概念用数据类型来实现
+- 定义表的属性时需要指明其数据类型及长度
+- 选用哪种数据类型
+  - 取值范围
+  - 要做哪些运算
+
+| 数据类型 | 含义 |
+|---|---|
+| CHAR(n) | 长度为n的定长字符串 |
+| VARCHAR(n) | 最大长度为n的变长字符串 |
+| INT | 长整数（也可以写成INTEGER） |
+| SMALLINT | 短整数 |
+| NUMERIC(p, d) | 定点数，由p位数字（不包括符号、小数点）组成，小数后面有d位数字 |
+| REAL | 取决于机器精度的浮点数 |
+| Double Precision | 取决于机器精度的双精度浮点数 |
+| FLOAT(n) | 浮点数，精度至少为n位数字 |
+| DATE | 日期，包含年、月、日，格式为YYYY-MM-DD |
+| TIME | 时间，包含一日的时、分、秒，格式为HH:MM:SS |
+
+### 二、模式与表
+
+- 每一个基本表都属于某一个模式
+- 一个模式包含多个基本表
+- 定义基本表所属模式
+  - 方法一：在表名中明显地给出模式名
+
+    ```
+    Create table "S-T".Student(...); /*模式名为 S-T*/
+    Create table "S-T".Course(...);
+    Create table "S-T".SC(...);
+    ```
+
+  - 方法二：在创建模式语句中同时创建表
+  - 方法三：设置所属的模式，在创建表时表名中不必给出模式名。
+
+### 模式与表（续）
+
+- 创建基本表（其他数据库对象也一样）时，若没有指定模式，系统根据搜索路径来确定该对象所属的模式
+- RDBMS会使用模式列表中第一个存在的模式作为数据库对象的模式名
+- 若搜索路径中的模式名都不存在，系统将给出错误
+- 显示当前的搜索路径：`SHOW search_path;`
+- 搜索路径的当前默认值是：`$user, PUBLIC`
+
+- DBA用户可以设置搜索路径，然后定义基本表
+
+  ```
+  SET search_path TO "S-T", PUBLIC;
+
+  Create table Student(...);
+  ```
+
+结果建立了S-T.Student基本表。
+
+RDBMS发现搜索路径中第一个模式名S-T存在，就把该模式作为基本表Student所属的模式。
+
+### 四、修改基本表
+
+```
+ALTER TABLE <表名>
+[ADD <新列名> <数据类型> [完整性约束]]
+[DROP <完整性约束名>]
+[ALTER COLUMN <列名> <数据类型>];
+```
+
+### 修改基本表（续）
+
+[例8]向Student表增加“入学时间”列，其数据类型为日期型。
+
+```
+ALTER TABLE Student ADD S_entrance DATE;
+```
+
+- 不论基本表中原来是否已有数据，新增加的列一律为空值。
+
+[例9]将年龄的数据类型由字符型（假设原来的数据类型是字符型）改为整数。
+
+```
+ALTER TABLE Student ALTER COLUMN Sage INT;
+```
+
+[例10]增加课程名称必须取唯一值的约束条件。
+
+```
+ALTER TABLE Course ADD UNIQUE(Cname);
+```
+
+### 五、删除基本表
+
+```
+DROP TABLE <表名> [RESTRICT | CASCADE];
+```
+
+- RESTRICT: 删除表是有限制的。
+- 欲删除的基本表不能被其他表的约束所引用
+- 如果存在依赖该表的对象，则此表不能被删除
+- CASCADE: 删除该表没有限制。
+- 在删除基本表的同时，相关的依赖对象一起删除
+
+[例11] 删除Student表
+
+```
+DROP TABLE Student CASCADE;
+```
+
+- 基本表定义被删除，数据被删除
+- 表上建立的索引、视图、触发器等一般也将被删除
+
+### 删除基本表（续）
+
+[例12] 若表上建有视图，选择RESTRICT时表不能删除
+
+```
+CREATE VIEW IS_Student
+AS
+    SELECT Sno, Sname, Sage
+    FROM Student
+    WHERE Sdept='IS';
+```
+
+```
+DROP TABLE Student RESTRICT;
+--ERROR: cannot drop table Student because other objects depend on it
+```
+
+[例12] 如果选择CASCADE时可以删除表，视图也自动被删除
+
+```
+DROP TABLE Student CASCADE;
+--NOTICE: drop cascades to view IS_Student
+```
+
+```
+SELECT * FROM IS_Student;
+--ERROR: relation "IS_Student" does not exist
+```

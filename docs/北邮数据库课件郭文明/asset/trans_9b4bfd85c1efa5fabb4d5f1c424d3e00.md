@@ -1,0 +1,140 @@
+
+
+## 3.1.2 游标
+
+```c
+#define true 1
+#include <stdio.h>
+#include "prompt.h"
+exec sql include sqlca;  /*声明通讯区*/
+int main()
+{
+    char cid_prompt[]="请输入顾客号:";
+    exec sql begin declare section;
+        char cust_id[5],agent_id[4];
+        double dollar_sum;
+        char user_name[20],user_pwd[20];
+    exec sql end declare section; /*声明变量*/
+    exec sql declare agent_dollars cursor for
+        select aid,sum(dollars) from orders
+        where cid=:cust_id group by aid; /*游标*/
+    exec sql whenever sqlerror goto report_error;
+    exec sql whenever not found goto finish;
+        /*出错处理*/
+    strcpy(user_name,"mytest");
+    strcpy(user_pwd,"test");
+```
+
+```c
+exec sql connect :user_name
+    identified by :user_pwd; /*连接*/
+while((prompt(cid_prompt,1,cust_id,4))>=0){
+    exec sql open agent_dollars;
+    while (true) {
+        exec sql fetch agent_dollars into
+            :agent_id,:dollar_sum; /*游标取值*/
+        printf("%%s %%11.2f\n",
+            agent_id,dollar_sum);
+    }
+    continue;
+finish: exec sql close agent_dollars;
+    exec sql commit work; /*游标关闭*/
+} /*输入顾客ID的代理商和金额*/
+exec sql commit release; /*正常释放连接*/
+return 0;
+report_error:
+    print_dberror(); /*出错信息*/
+    exec sql rollback release; /*释放连接*/
+    return 1;
+}
+```
+
+## 3.1.3 通讯区
+
+- SQL语句执行信息反馈
+  - 良好的应用程序必须提供对错误的处理，应用程序需要知道SQL语句是否正确执行了，发生错误时的错误代码，执行时遇到特殊情况时的警告信息。
+  - SQL通讯区SQLCA是一个已被声明过的内存结构，每一嵌入SQL语句的执行情况在其执行完成后写入SQLCA结构中的各变量中，根据SQLCA中的内容可以获得每一嵌入SQL语句执行后的信息，应用程序就可以做相应的处理。
+  - 为了说明（SQLCA），必须在应用程序中包括：
+    - EXEC SQL INCLUDE SQLCA;
+- SQLCODE：SQLCODE是SQLCA的结构一个成员。它是一个每次执行完SQL语句都被更新的整型变量。
+  - 如果执行成功，SQLCODE为0；
+  - 如果语句没有产生错误，但遇到了没有数据，SQLCODE为100；
+  - 除去成功返回0或没有数据返回100的情况，其他都是某种错误并返回一个负数。
+- SQL-99和X/OpenSQL等标准提倡用SQLSTATE取代SQLCODE检测SQL的执行情况，并将SQLSTATE设置为标准，但在产品中还不一定支持。例如ORACLE中，预处理程序运行时必须设置MODE=ANSI才能支持SQLSTATE。
+- SQLSTATE：SQLSTATE作用与SQLCODE作用相同，但在标准方式下起作用。SQLCODE是一个整数，SQLSTATE是一个长度为5的只能由A到Z字符和0到9数字组成的字符串。5个字符分为两组，前两个为类码，后三个为子类码。SQL标准规定：分类码的第一个字符可为A到H或0到4，这样分类主要为了统一，第一个字符为I到Z或5到9的分类码留给软件开发者去定义。分类码00指成功，01指成功但产生一个警告，02指没有数据，等价于SQLCODE的100，非00、01和02指语句没有成功完成。可以查阅数据库系统产品的嵌入式SQL参考指南得到SQLSTATE、SQLCODE、SQLCA，确定主要的出错条件，以它们的报告方式。
+
+## 3.1.4 错误处理
+
+WHENEVER语句使我们在遇到出错和其他情况时，控制程序的运行：
+
+```
+EXEC SQL WHENEVER 条件 动作
+```
+
+条件可以是
+
+- SQLERROR： 执行错误，如连接不成功等；
+- NOT FOUND： 没有数据，如游标指针到头或到尾等；
+- SQLWARNING： 警告错误。
+
+动作可以是
+
+- CONTINUE： 继续正常流程；
+- GOTO 标号： 转移到标号行继续执行；
+- STOP： 结束程序，撤消当前事务，并断开数据库连接；
+- DO 函数： 触发一个对已经命名的函数的调用。
+
+- 没有WHENEVER语句时缺省动作是CONTINUE。
+- 如果SQLCODE为负，则SQLERROR为真，如果SQLCODE为100或SQLSTATE为02000，则NOT FOUND为真。抽取错误信息的确切代码依赖于所使用的数据库系统。
+- WHENEVER语句的主要价值在于减少处理错误的代码行数，另外WHENEVER的语法可以在不同数据库系统之间进行最大限度的移植。例如利用检测条件NOT FOUND在不同数据库产品中可能有不同的sqlca.sqlcode值，但NOT FOUND却始终表示没有发现记录这一错误。
+
+## 3.1.5 指示变量
+
+- 如果一个宿主变量所对应的数据库字段允许空值，或字符串类型的宿主变量的长度可能小于所对应的数据库字段的长度，则需要一个指示变量来指明数据库访问的返回状态。
+- 指示变量：是一个C变量，用来指示返回给宿主变量的值是否为null值，以及返回给宿主变量的字符串是否发生了截断。
+
+指示变量的返回值：
+
+- = 0：取到宿主变量的值不空，没有发生截断。
+- = -1：取到宿主变量的值为空值。
+- > 0：取到宿主变量的值发生了截断，指示变量的值是截断前的字符串的实际长度。
+
+- 指示变量的用法：声明与宿主变量的声明方式一样，在数据操纵语句中，在宿主变量和指示变量之间加（:）或关键字 indicator。
+
+  例：
+  ```
+  exec sql begin declare section
+  float cust_discnt;
+  short int cd_ind;
+  exec sql end declare section
+  exec sql select discnt into :cust_discnt
+  [indicator]:cd_ind
+  from customers where cid=:cust_id;
+  ```
+
+  在检索之后，如果 cd_ind 的值为 -1，则变量 cust_discnt 得到了一个空值；如果为 0，则 cust_discnt 中的值是正常的。
+
+- 不管读取数据还是更新数据，都可以用指示变量的值-1代表空值。
+
+  例：要将表 customers 的某一行的 discnt 值设置为空值，可以这样写：
+
+  ```
+  cd_ind=-1
+  exec sql update customers
+    set discnt=:cust_discnt
+        indicator :cd_ind
+    where cid=:cust_id;
+  ```
+
+- 实际上还可以进一步扩展指示变量的值，例如 DB2 UDB 的产品中，如果指示变量的值为-2，意味着是由于一个错误而不是数据库中存储的值而使检索到的值为空值。
+
+## 3.1.6 嵌入式SQL语句
+
+- **检索**：EXEC SQL SELECT [ALL|DISTINCT] 表达式 INTO 宿主变量 FROM 表名 WHERE 条件;
+- **游标定义**：EXEC SQL DECLARE 游标名 CURSOR FOR 子查询 [ORDER BY...] [FOR READ ONLY | UPDATE [OF 列名]];
+- **游标打开与关闭**：EXEC SQL OPEN|CLOSE 游标名;
+- **游标取值**：EXEC SQL FETCH [NEXT|PRIOR|FIRST|LAST|CURRENT|RELATIVE n|ABSOLUTE n] 游标名 INTO 宿主变量;
+- **删除**：EXEC SQL DELETE FROM 表名 [WHERE条件 | WHERE CURRENT OF 游标名];
+- **修改**：EXEC SQL UPDATE 表名 SET 列=表达式 [WHERE 条件|WHERE CURRENT OF 游标名];
+- **增加**：EXEC SQL INSERT INTO 表名 [(列名)] VALUES(表达式);
+

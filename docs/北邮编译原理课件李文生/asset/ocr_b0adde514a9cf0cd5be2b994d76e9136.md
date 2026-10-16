@@ -1,0 +1,25 @@
+# L属性定义翻译方案
+
+```
+S→L:=E { if (L.offset==null) /* L是简单变量 */
+    emit(L.place ':=' E.place);
+    else emit(L.place '[' L.offset ']' ':=' E.place) }
+```
+
+```
+E→E₁+E₂ { E.place=newtemp;
+    emit(E.place ':=' E₁.place '+' E₂.place) }
+```
+
+```
+E→(E₁) { E.place=E₁.place }
+```
+
+```
+E→L { if (L.offset == null) /* L是简单变量 */
+    E.place=L.place;
+    else {
+        E.place=newtemp;
+        emit(E.place ':=' L.place '[' L.offset ']'); } 
+}
+```

@@ -1,0 +1,4 @@
+# Another Fun Example
+
++   - Suppose that next June, the Marlins baseball team plays at least 1 game a day, but ≤45 games total. Show there must be some sequence of consecutive days in June during which they play *exactly* 14 games.
++     - **Proof:** Let $a_j$ be the number of games played on or before day $j$. Then, $a_1, ..., a_{30} \in \mathbf{Z}^+$ is a sequence of 30 distinct integers with $1 \le a_j \le 45$. Therefore $a_1+14, ..., a_{30}+14$ is a sequence of 30 distinct integers with $15 \le a_j+14 \le 59$. Thus, $(a_1, ..., a_{30}, a_1+14, ..., a_{30}+14)$ is a sequence of 60 integers from the set $\{1,..,59\}$. By the Pigeonhole Principle, two of them must be equal, but $a_i \neq a_j$ for $i \neq j$. So, $\exists i j: a_i = a_j+14$. Thus, 14 games were played on days $a_j+1, ..., a_i$.

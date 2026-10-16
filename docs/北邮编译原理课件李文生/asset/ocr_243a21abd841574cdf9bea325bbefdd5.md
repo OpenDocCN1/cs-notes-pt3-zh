@@ -1,0 +1,15 @@
+# 属性及函数设计
+
++   - **L 综合属性L.place和L.offset**
++     - 简单变量：
++       - L.offset=null        L.place=符号表入口指针
++     - 数组元素：
++       - L.offset=计算公式第一项        L.place=计算公式第二项
++   - **E 综合属性E.place，保存E值的变量在符号表中的位置**
++   - **Elist 继承属性array，综合属性ndim，place**
++     - Elist.array：数组名在符号表中的位置
++     - Elist.ndim：目前已经识别出的下标表达式的个数
++     - Elist.place：保存递推公式中eₘ值的临时变量在符号表中的位置
++   - **函数**
++     - limit(array, j)：返回array指向的数组第 j 维的长度
++     - invariant(array)：返回array指向的数组的地址计算公式中的不变项

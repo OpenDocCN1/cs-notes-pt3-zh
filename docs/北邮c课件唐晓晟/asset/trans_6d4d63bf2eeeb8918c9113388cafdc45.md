@@ -1,0 +1,183 @@
+
+
+## 14.6.3.1 异常的用户映射
+
+本段描述异常的默认 unexpected_handler 决定，它是通常 override 中 std::set_unexpected() 设置的
+
+重新定义 unexpected() 激活时，我们先使用资源申请即初始化技术。为 unexpected() 搞设定一个类 STC
+
+```
+typedef void(*unexpected_handler)();
+ unexpected_handler set_unexpected(unexpected_handler);
+ class STC{
+  unexpected_handler old;
+ public:
+  STC(unexpected_handler f){old=set_unexpected(f);}
+  ~STC(){set_unexpected(old);}
+ };
+```
+
+## 异常的用户映射示例
+
+假设 void g() throw(Yerr) 是可能调用 unexpected() 的函数。数据发送失败原因是发送到网络环境中...
+
+定义一个类，使它具有希望的 unexpected() 定义
+
+```
+class Yunexpected:public Yerr{};
+ void throwY() throw(Yunexpected){ throw Yunexpected();}
+ // 在使用 unexpected() 请设置时，throwY 抛出具有未预期异常类型为 Yunexpected
+ void networked_g() throw(Yerr){
+  // STC xx(&throwY); // 并且在反向描述 Yerr 产生的
+  // 因为 Yunexpected 是从 Yerr 派生的
+  g();
+ } // 现在 unexpected() 抛出 Yunexpected，但丢去了异常的类型
+```
+
+## 14.6.3.2 找回异常的类型
+
+```
+class `Unexpected:public Yerr{
+ public:
+  Network_exception* pe;
+  Yunexpected(Network_exception* p):pe(p?p->clone():0){}
+  ~Yunexpected(){delete pe;}
+ };
+// clone() 在有异常时为异常提供一个拷贝，当异常是对象时存在
+ void throwY() throw(Yunexpected){
+  try{
+   throwY(); // throw 出 Yunexpected 时
+   throw; // 需要保持原有异常
+  }
+  catch(Network_exception& p){
+   throw Yunexpected(&p);
+  }
+  catch(...){
+   throw Yunexpected(0);
+  }
+ }
+```
+
+实际的异常是 Network_exception
+
+## 14.7 未捕捉的异常
+
+如果抛出的一个异常未被捕捉，那么就会调用函数 std::terminate()
+
+未捕捉的异常由 _uncaught_handler 确定，它由 <exception> 里的 std::set_terminate() 设置
+
+提出 terminate() 的原因是，少数情况下，设强制能用不那么精确的错误处理技术终止异常处理过程
+
+如果希望在发生未捕捉异常时保证进行清理工作，可以为 main() 添加一个捕捉一切的处理器 (但是仍然无法捕捉在全局变量的构造和析构中抛出的异常)
+
+## 14.8 异常和效率
+
+- 原则上说，当没有异常时，异常处理的实现在运行时没有任何开销。此外，也可以做到使抛出错异常并不比调用函数的开销更大
+- 尽管异常处理会影响效率，但是，那些能够代替异常的条条也并不是没有代价的
+- 需要系统化地处理错误的地方，最好使用异常处理机制
+- 异常描述可能非常有助于改进所生成的代码
+
+## 14.9 处理错误的其他方式
+
+- 使用异常处理方式，需要一种整体策略
+- 异常处理策略最好在设计的初始阶段予以考虑，而且必须是很简单而明确的
+- 成功的计算机系统只能是多层次的，不可能有某种单一机制能够处理所有错误
+- 将系统划分为一些独立的子系统，使它们或是成功结束，或是以某种定义良好的方式失败，是至关重要的
+
+## 14.10 标准异常
+
+- 标准异常、抽出它们的函数、运算符和一般性功能
+
+| 标准异常(由语言抛出) |
+|---|---|---|---|
+| 名字 | 抛出 | 参考 | 头文件 |
+| bad_alloc | new | 6.2.6.2 19.4.5 | <new> |
+| bad_cast | dynamic_cast | 15.4.1.1 | <typeinfo> |
+| bad_typeid | typeid | 15.4.4 | <typeinfo> |
+| bad_exception | 异常描述 | 14.6.3 | <exception> |
+
+## 标准异常
+
+| 标准异常(由标准库抛出) |
+|---|---|---|---|
+| 名字 | 抛出 | 参考 | 头文件 |
+| out_of_range | at()\nbitset<>::operator[]() | 3.7.2 16.3.3\n20.3.3.1 | <stdexcept>\n<stdexcept> |
+| invalid_argument | 放置或读取构造数 | 17.5.3.1 | <stdexcept> |
+| overflow_error | bitset<>::to_ulong() | 17.5.3.3 | <stdexcept> |
+| ios_base::failure | ios_base::clear() | 21.3.6 | <ios> |
+
+## 标准异常
+
+所有异常都是同一个类层次结构中的部分，其根是标准异常类exception
+
+```
+class exception{
+public:
+    exception() throw();
+    exception(const exception&) throw();
+    exception& operator=(const exception&) throw();
+    virtual ~exception() throw();
+    virtual const char* what() const throw();
+private:
+    // ...
+};
+```
+
+## 标准异常类层次结构图
+
+![](img/9e3666dc2c45ec31b2bed73748eb38f1_133_0.png)
+
+## 14.11 忠告
+
+- [1] 用异常做错误处理
+- [2] 当更高层的控制机构足以应对时，不要使用异常
+- [3] 采用“资源申请即初始化”技术去管理资源
+- [4] 并不是每个程序都要求具有异常时的安全性
+- [5] 采用资源申请即初始化技术和异常处理器去维持不变式
+- [6] 尽可能少用 try...，用资源申请即初始化技术，而不要显示的处理器代码
+- [7] 并不是每个函数都需要处理每个可能的错误
+- [8] 在构造函数里通过抛出异常表明出现失败
+
+## 忠告
+
+- [9] 在从构造函数中抛出异常之前，使操作对象处于合法状态
+- [10] 避免从析构函数里抛出异常
+- [11] 让 main() 抛弃并报告所有的异常
+- [12] 使正常处理代码和错误处理代码相互分离
+- [13] 在构造资源里抛出异常之前，应保证释放在此构造资源里申请的所有资源
+- [14] 使资源管理具有层次性
+- [15] 对于主要界面使用异常描述
+
+## 忠告
+
+- [16] 当心通过 new 分配的内容在发生异常时没有释放，并由此而导致存储的流失
+- [17] 如果一函数可能抛出某个异常，就应限定它一定会抛出这个异常
+- [18] 不要假定所有异常都是由 exception 类派生出来
+- [19] 库不应该单方面终止程序。相反，应该抛出口异常，让调用者去做决定
+- [20] 库不应生成或向最终用户的错误信息。相反，它应该抛出异常，让调用者去做决定
+- [21] 在设计的前期开发出一种错误处理策略
+
+## C++编程(13)
+
+唐晓威
+北京邮电大学电信工程学院
+
+## 第15章 类层次结构
+
+- 引言和概述
+- 多重继承
+- 访问控制
+- 运行时类型信息
+- 指向成员的指针
+- 自由存储
+- 忠告
+
+## 15.1 引言和概述
+
+- 本章讨论派生类和虚函数如何与其他语言功能相互作用，例如访问控制、多重寄生、自存储管理、构造函数、指针和类型转换等
+
+## 15.2 多重继承
+
+- 一个类可以有多个直接基类，采用多个直接基类的情况通常称为多重继承
+- 假设Satellite从Task和Displayed多重继承，那么在实际应用中，就可以将一个Satellite传递给那些期望Task或者Displayed的函数
+

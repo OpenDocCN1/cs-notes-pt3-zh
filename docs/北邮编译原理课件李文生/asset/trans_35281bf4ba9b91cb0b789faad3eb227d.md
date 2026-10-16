@@ -1,0 +1,322 @@
+
+
+## 举例 翻译语句 X:=A [ y, z ]
+
+已知：
+
+设A为一个10×20的数组，即 n₁=10， n₂=20；
+并设域宽 w=4；
+数组的第一个元素为A[1,1]，
+则有 low₁=1， low₂=1
+
+所以：
+
+(low₁×n₂+low₂)×w = (1×20+1)×4 = 84
+
+问题：
+
+将赋值语句 x:=A[y,z] 翻译为三地址代码。
+
+X := E[\, y, z ]
+
+# 产生三地址代码：
+
+```
+t₁ := y × 20
+t₁ := t₁ + z
+t₂ := A - 84
+t₃ := 4 × t₁
+t₄ := t₂[t₃]
+x := t₄
+```
+
+![](img/12b57169bd1d5004c5e7193ff0d478d5_587_0.png)
+
+## 3. 涉及数组元素的赋值语句
+——S属性定义
+
+S→L:=E
+E→E₁+E₂
+E→(E₁)
+E→L
+L→id | id [ Elist ]
+Elist→Elist₁ , E | E
+
+语句 X:=A [ i, j ]的分析树
+
+![](img/12b57169bd1d5004c5e7193ff0d478d5_588_0.png)
+
+改写文法：
+L→id | Elist ]
+Elist→Elist₁ , E | id[E
+
+## 属性及函数设计
+
+- L 综合属性L.place和L.offset
+  - 简单变量：
+    - L.offset=null        L.place=符号表入口指针
+  - 数组元素：
+    - L.offset=计算公式第一项        L.place=计算公式第二项
+
+- E 综合属性E.place，保存E值的变量在符号表中的位置
+
+- Elist 综合属性Elist.array, ndim, place
+  - Elist.array: 数组名在符号表中的位置
+  - Elist.ndim: 目前已经识别出的下标表达式的个数
+  - Elist.place: 保存递推公式中eₘ值的临时变量在符号表中的位置
+
+- 函数
+  - limit(array, j): 返回array指向的数组第j维的长度
+  - invariant(array): 返回array指向的数组的地址计算公式中的不变项
+
+## S属性定义翻译方案
+
+```
+S→L:=E { if (L.offset==null) /* L是简单变量 */
+    emit(L.place ':=' E.place);
+    else emit(L.place '[' L.offset ']' ':=' E.place); }
+```
+
+```
+E→E₁+E₂ { E.place=newtemp;
+    emit(E.place ':=' E₁.place '+' E₂.place) }
+```
+
+```
+E→(E₁) { E.place=E₁.place }
+```
+
+```
+E→L { if (L.offset == null) /* L是简单变量 */
+    E.place=L.place;
+    else { E.place=newtemp;
+    emit(E.place ':=' L.place '[' L.offset ']'); } 
+}
+```
+
+```
+L→id { L.place=id.place; L.offset=null }
+```
+
+```
+Elist→id[E { Elist.place=E.place;
+Elist.ndim=1;
+Elist.array=id.place }
+```
+
+```
+e₁=i₁
+```
+
+```
+Elist→Elist₁,E { t=newtemp;
+m=Elist₁.ndim+1;
+emit(t ':=' Elist₁.place '×' limit(Elist₁.array,m));
+emit(t ':=' t '+' E.place);
+Elist.array=Elist₁.array;
+Elist.place=t;
+Elist.ndim=m }
+```
+
+```
+e₂=e₁×n₂+i₂
+e₃=e₂×n₃+i₃
+eₖ=eₖ₋₁×nₖ+iₖ
+```
+
+```
+L→Elist] { L.place=newtemp;
+emit( L.place ':=' Elist.array '-' invariant(Elist.array));
+L.offset=newtemp;
+emit(L.offset ':=' w '×' Elist.place) }
+```
+
+## 赋值语句 x:=A[y,z] 的分析树
+
+![](img/12b57169bd1d5004c5e7193ff0d478d5_592_0.png)
+
+S
+
+L.place=x
+.offset=null
+
+:=
+
+E.place=t₄
+
+x
+
+L.place=t₂
+.offset=t₃
+
+E.place=t₁
+.ndim=2
+.array=A
+
+E.place=y
+.ndim=1
+.array=A
+
+E.place=z
+
+A
+
+[
+
+E.place=y
+
+L.place=y
+.offset=null
+
+y
+
+L.place=z
+.offset=null
+
+z
+
+```
+t₁ := y * 20
+ t₁ := t₁ + z
+```
+
+```
+t₂ := A - 84
+ t₃ := 4 * t₁
+```
+
+```
+t₄ := t₂[t₃]
+```
+
+```
+x := t₄
+```
+
+## 三、记录中域的访问
+
+- 声明：
+  p: record
+   info: integer;
+   x: real
+  end;
+
+- 引用
+  p.info+1
+
+- 编译器的动作
+  lookup(p)
+  Gettype
+  根据t，找到记录的符号表
+  根据info在表中找
+
+![](img/12b57169bd1d5004c5e7193ff0d478d5_593_0.png)
+
+## 8.3 布尔表达式的翻译
+
+- 布尔表达式的作用
+  - 计算逻辑值
+  - 用作控制语句中的条件表达式
+- 产生布尔表达式的文法
+  - E→ E or E
+  - E→ E and E
+  - E→ not E
+  - E→ (E)
+  - E→ id relop id
+  - E→ true
+  - E→ false
+
+## 一、翻译布尔表达式的方法
+
+- 布尔表达式的值的表示方法
+  - 数值表示法：
+    - 1 — true    0 — false
+    - 非0 — true    0 — false
+  - 控制流表示法：
+    - 利用控制流到达程序中的位置来表示 true 或 false
+
+- 布尔表达式的翻译方法
+  - 数值方法
+  - 控制流方法
+
+## 二、数值表示法
+
+- 布尔表达式的求值类似于算术表达式的求值
+- 例如： a or b and not c
+  ① not c
+  ② b and t₁
+  ③ a or t₂
+
+- 三地址代码
+  t₁:=not c
+  t₂:=b and t₁
+  t₃:=a or t₂
+
+- 关系表达式 a<b
+  等价于：
+    if a<b
+    then 1
+    else 0
+
+- a<b的三地址代码：
+  100: if a<b goto 103
+  101: t:=0
+  102: goto 104
+  103: t:=1
+  104:
+
+## 翻译方案
+
+- 属性、函数及变量说明
+
+属性E.place：存放布尔表达式E的值的临时变量
+（临时变量在符号表中的入口位置）
+
+函数emit：产生并输出一条三地址语句
+
+变量nextstat：输出序列中下一条三地址语句的位置
+emit之后，nextstat自动加1。
+
+- 翻译方案
+
+E→ E₁ or E₂  { E.place=newtemp;
+emit(E.place ':=' E₁.place 'or' E₂.place) }
+
+E→ E₁ and E₂  { E.place=newtemp;
+emit(E.place ':=' E₁.place 'and' E₂.place) }
+
+E→ not E₁  { E.place=newtemp;
+emit(E.place ':=' 'not' E₁.place) }
+
+## 举例：`a<b` or `c<d` and `e<f`
+
+①
+
+②
+
+③
+
+④
+
+⑤
+
+```
+100: if a<b goto 103
+101: t₁:=0
+102: goto 104
+103: t₁:=1
+104: if c<d goto 107
+105: t₂:=0
+106: goto 108
+107: t₂:=1
+```
+
+```
+108: if e<f goto 111
+109: t₃:=0
+110: goto 112
+111: t₃:=1
+112: t₄:=t₂ and t₃
+113: t₅:=t₁ or t₄
+```
+

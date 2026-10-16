@@ -1,0 +1,117 @@
+
+## 4.4.2.2 数据文件设置
+
+- 根据ORACLE数据库结构特点，每个表空间至少要有一个数据文件，因此，应用系统的每个表空间均具有各自的数据文件。Oracle 7.2以后可以支持数据文件大小的重新定义，当表空间需要扩充时，不必为其增加数据文件，而简单地将其扩充即可，避免了预先分配过大的存储空间及过多数据文件的问题。同时可以支持数据文件的自动扩展，避免当表空间已满时，DBA手工扩充表空间对用户使用的影响。
+- 对于一个不太大的数据库，可以将数据库软件和数据文件都放置在一个磁盘上，将它们设计成不同的子目录即可。对于大型数据库，需要指定哪些文件放置在哪个磁盘上。
+
+- 表空间的磁盘分配：
+
+一般情况下，90%以上的I/O操作集中在系统表空间、数据表空间、回滚表空间、索引表空间这4个表空间上，所以这4个表空间应单独存储在不同的磁盘上。
+
+- 系统文件的规划：
+
+ORACLE有联机日志文件、归档日志文件、控制文件和系统软件文件等，如何放置这些系统文件也是一件重要的任务。
+
+- 1）联机日志文件：每个数据库至少要有两个联机日志文件，由于联机日志文件中保留了数据库的当前事务，所以它无法从备份中恢复，它们是ORACLE无法用备份工具恢复的唯一文件类型。这类文件应单独存储。
+- 2）控制文件：前面章节已经说明了控制文件的重要性，每个数据库应当至少有3个控制文件的拷贝，它们被分布在3个驱动器中。
+- 3）归档日志文件：如果归档日志文件和联机日志文件放在同一个磁盘上，当LGWR在写盘时，ARCH也在读同一磁盘，势必造成I/O冲突，所以归档日志文件和联机日志文件应分盘存储。
+- 4）ORACLE软件：Oracle软件是系统运行的核心，这些软件应放在独立的磁盘上。
+
+- 磁盘规划设计：
+
+磁盘规划设计可以依据下列准则：数据库必须可恢复；必须对联机日志文件进行镜像；必须最小化DBWR、LGWR、ARCH之间的冲突；必须最小化DBWR磁盘间的冲突；估计数据库文件的I/O量。
+
+在磁盘规划设计过程中需要做一些数据库测量，以估计其I/O量，以下给出一个参照的7磁盘设计方案：
+
+| 磁盘 | 存放内容 |
+| --- | --- |
+| 1 | Oracle软件 |
+| 2 | SYSTEM表空间，控制文件1 |
+| 3 | RBS，TEMP，TOOLS表空间，控制文件2 |
+| 4 | DATA表空间，控制文件3 |
+| 5 | INDEX表空间 |
+| 6 | 联机日志文件1，2，3，转储文件 |
+| 7 | 应用软件，归档日志文件 |
+
+- 表空间与数据文件设置举例：
+
+```sql
+connect system/manager
+create tablespace tsp_acct
+datafile 'd:\oracle\oradata\orcl\apacct.dbf'
+size 32M reuse autoextend on next 4M maxsize unlimited;
+create tablespace tsp_public
+datafile 'd:\oracle\oradata\orcl\appublic.dbf'
+size 100M reuse autoextend on next 16M maxsize unlimited;
+create tablespace tsp_temp
+datafile 'd:\oracle\oradata\orcl\atemp.dbf'
+size 500M reuse autoextend on next 32M maxsize unlimited;
+```
+
+![](img/ffd1e1f008d7fcbd0b52f1e6bcb7a952_483_0.png)
+
+## 4.4.2.3 段存储分配设置
+
+- 在数据库中，大量使用的段包括表段和索引段，还有回滚段、临时段。表的逻辑定义信息放在DBA_TABLES和DBA_TAB_COLUMNS中，索引的定义信息放在DBA_INDEXES和DBA_IND_COLUMNS中。从存储管理角度看，表和索引都属于段，只是类型不同而已，有关段及存储定义的系统数据字典有DBA_SEGMENTS和DBA_EXTENTS等。
+
+- 在应用系统中，对大量使用的段的规划主要是它们的存储方案的设计，每个段由区间组成。每个段使用的空间由它的存储参数决定，在 CREATE TABLE、CREATE INDEX、CREATE CLUSTER、CREATE ROLLBACK SEGMENT等命令中都涉及到 STORAGE 参数。
+
+- 如果在创建段的命令中不指定STORAGE参数，则使用它所在表空间的缺省参数。表空间的存储参数或段的存储参数设计不合理将直接影响数据库的性能，甚至直接影响到数据库的正常运行。
+
+对存储参数的确定问题，前面的讨论中已经说明，应根据实际初始数据量的估算和数据的动态变化情况以及段的性质等多方面来决定。
+
+注意，ORACLE数据库在创建回滚段之后，状态为脱机，因此必须由DBA将其状态改为联机，方可使用。
+
+- 段存储分配设置举例：
+
+```sql
+create table pat_master
+(pat_id varchar2(10), name varchar2(8), ...)
+pctfree 10 pctused 60
+storage (initial 16M next 16M minextents 1 maxextents unlimited pctincrease 0)
+tablespace tsp_acct;
+```
+
+创建pat_master表
+
+```sql
+create index pat_master_index
+on pat_master (pat_id) pctfree 20
+storage (initial 4M next 4M minextents 1 maxextents unlimited pctincrease 0)
+tablespace tsp_acct;
+```
+
+创建pat_master_index索引
+
+```sql
+create public rollback segment rbs_public
+tablespace tsp_public storage (initial 4M next 4M);
+Alter rollback segment rbs_public online;
+```
+
+创建回滚段
+
+## 4.4.2.4 数据块利用设置
+
+- 数据块空间利用参数可以控制表段和索引段中的空间使用。分两类：控制并发性的参数（INITRANS和MAXTRANS）、控制数据空间使用的参数（PCTFREE和PCTUSED）。
+- 可以使用INITRANS和MAXTRANS来确定一个数据块上活动事务的个数。
+- INITRANS是每个块的初始化事务入口数，数据段和索引段的INITRANS的缺省值分别为1和2，增大其值则允许多个事务同时操作数据块。MAXTRANS是在每个块的最大事务入口，缺省值为最大值255。
+- 通过选择适当的PCTFREE和PCTUSED可以提高性能和空间利用。对于改动较少的表，在设置数据块空间利用参数时，PCTFREE适当降低。对于经常改动的表，尤其是数据行长度增加的改动，应该适当提高PCTFREE的设置，以免发生行转移。数据行长度增加这类应用的一个例子：医疗信息系统中，病案首页表中行的信息开始长度可能不大（许多字段值为空），但随着病人住院的过程，行的信息不断增加。
+
+## 4.4.3 ORACLE安全设计
+
+- 在ORACLE中，DBA定义访问数据库的用户名，安全域定义作用于用户的有关安全方面的设置。
+- 安全域包括：验证机制、表空间限额、默认表空间、临时表空间、帐户锁、资源限制、直接权限、角色权限8个方面，如下图。ORACLE的安全性设计围绕用户的安全域展开。
+
+![](img/ffd1e1f008d7fcbd0b52f1e6bcb7a952_490_0.png)
+
+### 安全域内容
+
+- 1）验证机制：用户访问数据库可以通过数据库、操作系统、网络这三种方式中的一种进行验证，一个用户究竟使用何种验证方式，根据具体需求决定。
+- 2）表空间限额：表空间限额，可以控制一个数据库的用户对数据库中表空间的物理存储空间的分配数量。
+- 3）默认表空间：定义用户在创建段时的存储位置，当用户创建段时，如果指定存储表空间，则使用定义段时指定的表空间，否则使用这一默认表空间。
+- 4）临时表空间：当用户执行排序操作时，临时表空间定义临时段分配的位置。
+- 5）帐户锁：帐户锁可以防止非法用户对系统的登录。
+- 6）资源限制：对用户使用资源进行一定的限制。
+- 7）直接权限：通过GRANT直接授予用户的系统权限和对象权限。
+- 8）角色权限：通过GRANT将系统权限和对象权限授予角色，再将角色授予用户，使用户间接获得权限。

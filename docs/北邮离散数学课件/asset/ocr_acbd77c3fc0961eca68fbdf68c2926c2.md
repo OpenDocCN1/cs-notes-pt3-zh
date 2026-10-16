@@ -1,0 +1,4 @@
+# DEFINITION 3.
+
++   - The existential quantification of P(x) is the proposition
++   - “There exists an element x in the universe of discourse such that P(x) is true.”

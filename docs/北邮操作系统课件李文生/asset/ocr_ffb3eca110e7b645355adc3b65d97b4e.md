@@ -1,0 +1,16 @@
+# Example of Indexed Allocation
+
+directory
+
+| file | index block |
+|------|-------------|
+| jeep | 19 |
+
+9
+16
+1
+10
+25
+-1
+-1
+-1

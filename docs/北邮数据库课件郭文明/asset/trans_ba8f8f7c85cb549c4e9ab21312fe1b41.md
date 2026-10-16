@@ -1,0 +1,112 @@
+
+
+## 1.3.2.3 定义、删除与修改基本表
+- 删除基本表
+  DROP TABLE <表名>
+  基本表一旦删除，表中的数据、此表上建立的索引和视图都将自动被删除掉。因此执行删除基本表的操作一定要格外小心。
+- 注意：有的系统，如Oracle，删除基本表后建立在此表上的视图定义仍然保留在数据字典中。但是，当用户引用时就报错。
+
+## 1.3.2.4 建立与删除索引
+- 索引的功能表现在以下3方面。
+  (1) 使用索引可以明显地加快数据查询的速度
+  (2) 使用索引可保证数据的唯一性
+  (3) 使用索引可以加快连接速度
+- 建立索引的原则
+  (1) 索引的建立和维护由DBA和DBMS完成
+  (2) 大表应当建索引，小表则不必建索引
+  (3) 对于一个基本表，不要建立过多的索引
+  (4) 根据查询要求建索引
+
+## 1.3.2.4 建立与删除索引
+- CREATE [UNIQUE] [CLUSTER] INDEX <索引名> ON <表名>
+  (<列名>[<asc|desc>][, <列名>[<asc|desc>]]);
+- 如果数据增加删改频繁，系统会花费许多时间来维护索引。这时，可以删除一些不必要的索引。
+  DROP INDEX <索引名>;
+
+## 1.3.2.5 视图的创建和删除
+- 视图是关系数据库系统提供给用户以多种角度观察数据库中数据的重要机制。视图一经定义，就可以和基本表一样被查询、被删除，我们也可以在一个视图之上再定义新的视图，但对视图的更新（增加、删除、修改）操作则有一定的限制。
+- `CREATE VIEW <视图名>[(列名>[, <列名>]...)] AS <子查询> [WITH CHECK OPTION];`
+  其中子查询可以是任意复杂的SELECT语句，但通常不允许含有ORDER BY子句和DISTINCT短语。WITH CHECK OPTION表示对视图进行UPDATE、INSERT和DELETE操作时要保证更新、插入或删除的行满足视图定义中的谓词条件（即子查询中的条件表达式）。
+
+## 1.3.2.5 视图的创建和删除
+- DROP VIEW <视图名>;
+  视图删除后视图的定义将从数据字典中删除。但是由该视图导出的其他视图定义仍在数据字典中，不过该视图已失效。用户使用时会出错，要用DROP VIEW语句将它们一一删除。
+- DBMS执行CREATE VIEW语句的结果只把视图的定义存入数据字典，并不执行其中的SELECT。在关系数据库中，并不是所有的视图都是可更新的，因为有些视图的更新不能有意义地转换成对基本表的更新。行列子集视图是可更新的。各个DBMS对视图的更新有自己的规定。
+
+## 1.3.3 数据查询
+- 数据查询是数据库的核心操作。SQL语言的数据查询只有一条SELECT语句：
+```
+SELECT [ALL|DISTINCT] {*|<目标列表达式[[as]别名]>[, <目标列表达式[[as]别名]>]...}
+FROM<表名或视图名>[, <表名或视图名>]...
+[WHERE<条件表达式>]
+[GROUP BY<列名>[, <列名>][HAVING<条件表达式>]]
+[ORDER BY<列名>[ASC|DESC][, <列名>[ASC|DESC]] ...];
+```
+
+## 1.3.3 数据查询
+- Select语句的执行过程可以理解为：
+  首先，对FROM子句中的所有表做关系乘积
+  接着，删除不满足WHERE子句的行
+  根据GROUP BY子句对剩余的行进行分组
+  然后删除不满足HAVING子句的组
+  求出SELECT子句选择列表的表达式的值
+  若有关键词DISTINCT存在，则删除重复的行
+- Select中的标识符：一般的SQL标识符是大小写无关的。实际上SQL在解释以前会把它们转化为大写形式。一个标识符必须以一个字母打头，Entry SQL-92和Core SQL-99将一个标识符字节数限制在18个以内。
+
+## 1.3.3 数据查询
+- 表达式可以是数值表达式、字符串表达式和日期表达式等。
+  数值表达式由常数、表属性、算术运算符、算术函数所组成。
+  字符串表达式由常数、表属性、字符串运算符、字符串函数所组成。
+  日期表达式由常数、表属性、日期运算符、日期函数所组成
+- WHERE中使用谓词来表示条件。一般情况谓词运算结果为TRUE或FALSE,但如果遇到空值时，可能为UNKNOWN。
+- SQL查询的一个争议点即：对于同一个查询会存在众多不同的构造方法。
+
+## 1.3.3 ORACLE、INFORMIX、DB2 UDB 中的一些数学函数
+
+| 名称 | 描述 | 结果 |
+|---|---|---|
+| abs(n) | n的绝对值，n为数值型 | 数值类型 |
+| mod(n, b) | n被b除后得到的余数。n, b为整数 | 整数 |
+| sqrt(n) | n的平方根，n为整数或浮点数 | 浮点 |
+| 另外，三角函数、指数函数、对数函数、幂函数和round(n) |  |  |
+
+## 1.3.3 一些标准的和特定产品的串处理函数
+
+| SQL-99中的描述 | ORACLE | DB2 UDB | INFORMIX |
+|---|---|---|---|
+| 返回串长度(整数个字符) CHAR_LENGTH(str) | length(str) | length(str) | length(str), char_length(str) |
+| 返回子串,从m个开始取n个 SUBSTRING (str) FORM m FOR(n) | substr(str,m[,n]) | substr(str,m[,n]) | substr(str,m[,n]), substring(str from m for n) |
+| 返回去掉或右空格后得到的包含空格的串 TRIM ([[LEADING|TRAILING|BOTH] [SET]FROM]str) | trim([[leading|trailing|both][set] from] str), ltrim(str[,set]), rtrim(str[,set]) | ltrim(str); rtrim(str) | trim([[leading|trailing|both][set] from]str); |
+| 返回子串str2在str1中位置,如果指定n,则从n开始 POSITION (str1 IN str2) | instr(str1,str2[,n]) | posstr(str1,str2[,n]) |  |
+| 字母小写 LOWER (str) | lower(str) | lcase(str) | lower(str) |
+| 字母大写 UPPER (str) | upper(str) | ucase(str) | upper(str) |
+
+## 1.3.3 SQL中的标准谓词
+
+| 谓词 | 形式 | 例子 |
+|---|---|---|
+| 比较谓词 | expr1 θ {expr2 | (subquery)} | p.price>(subquery) |
+| BETWEEN谓词 | expr1 [NOT] BETWEEN expr2 and expr3 | c.discnt between 10.0 and 12.0 |
+| 量化谓词 | expr θ [SOME|ANY|ALL] (subquery) | c.discnt >= all (subquery) |
+| IN谓词 | expr [NOT] IN (subquery) | pid in (select pid from orders) |
+| EXISTS谓词 | [NOT]EXISTS (subquery) | exist(select * ...) |
+| IS NULL谓词 | colname IS [NOT]NULL | c.discnt is null |
+| LIKE谓词 | clname [NOT] LIKE val [ESCAPE val] | cname like 'A%' |
+
+## 1.3.3.1 简单查询
+- 例：检索定货记录中所有 pid 值：
+  ```sql
+  select pid from orders  --结果中有重复的pid
+  select distinct pid from orders  --结果中pid唯一
+  ```
+  select 缺省为 all，distinct 没有出现时允许重复行，缺省情况不遵守行唯一性规则。
+- 例：在 orders 表上生成每笔业务的利润 profit（收入减去60%的成本、顾客的折扣以及代理商的酬金）：
+  ```sql
+  select ordno, x.cid, x.aid, x.pid, .40*(x.qty*p.price)-
+      .01*(c.discnt+a.percent)*(x.qty*p.price) as profit
+  from orders as x, customer as c, agents as a, products as p
+  where c.cid=x.cid and a.aid=x.aid and p.pid=x.pid;
+  ```
+
+![](img/ffd1e1f008d7fcbd0b52f1e6bcb7a952_94_0.png)
+

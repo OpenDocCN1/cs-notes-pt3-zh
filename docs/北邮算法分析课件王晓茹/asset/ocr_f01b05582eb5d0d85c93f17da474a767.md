@@ -1,0 +1,11 @@
+# Binary search
+
+Find an element in a sorted array:
+
++   1. *Divide:* Check middle element.
++   2. *Conquer:* Recursively search 1 subarray.
++   3. *Combine:* Trivial.
+
+*Example:* Find 9
+
+3   5   7   8   9   12   15

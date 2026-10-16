@@ -1,0 +1,196 @@
+
+
+## DNS资源记录（RR）(3)
+
+RR 格式: (name, TTL, , class, type, value)
+
+| Owner name | TTL | Class | RRType | RData |
+|---|---|---|---|---|
+| bupt.edu.cn | 86400 | IN | NS | ns.buptnet.edu.cn |
+| ns.buptnet.edu.cn | 86400 | IN | A | 202.112.10.37 |
+| www.bupt.edu.cn | 86400 | IN | CNAME | vn.bupt.edu.cn |
+| bupt.edu.cn | 86400 | IN | MX | mx1.bupt.edu.cn |
+| www.bupt.edu.cn | 86400 | IN | A | 10.3.9.161 |
+
+查询资源记录的命令：nslookup
+
+```
+C>nslookup –query=ns bupt.edu.cn
+```
+
+## nslookup示例
+
+```
+C:\Users\cheng>nslookup -query=mx bupt.edu.cn
+服务器: UnKnown
+Address:  10.3.9.4
+
+非权威应答:
+bupt.edu.cn      MX preference = 5, mail exchanger = mx3.bupt.edu.cn
+bupt.edu.cn      MX preference = 5, mail exchanger = mx2.bupt.edu.cn
+bupt.edu.cn      MX preference = 5, mail exchanger = mx1.bupt.edu.cn
+
+C:\Users\cheng>nslookup www.bupt.edu.cn
+服务器: UnKnown
+Address:  10.3.9.4
+
+DNS request timed out.
+    timeout was 2 seconds.
+DNS request timed out.
+    timeout was 2 seconds.
+非权威应答:
+名称:  vn.bupt.edu.cn
+Addresses:  2001:da8:215:4038::161
+          10.3.9.161
+Aliases:    www.bupt.edu.cn
+```
+
+## DNS协议消息
+
+DNS协议包含请求(query)和应答(reply)两个消息，其消息格式相同。
+
+消息头(12字节)
+
+- 标识（ID）：16位，一对请求和应答消息使用同样的标识
+- 标志（Flag）：
+  - 消息是请求或应答
+  - 是否使用递归查询
+  - 递归查询是否可行
+  - 应答是否是权威的
+
+| 2字节 | 2字节 |
+|---|---|
+| 标识 | 标志 |
+| 问题个数 | 回答个数 |
+| 权威回答个数 | 附加回答个数 |
+| 问题段（由Resolver添加在请求消息中） | |
+| 回答段（由服务器添加在应答消息中） | |
+| 权威回答段（由服务器添加在应答消息中） | |
+| 附加回答段（由服务器添加在应答消息中） | |
+
+## 在DNS数据库中增加资源记录
+
+- 示例：一个新创建的公司 "Network Utopia"
+- 需要向DNS注册机构（如CNNIC，中国互联网络信息中心）注册域名networkutopia.com.cn
+- 应提供域名、公司的权威DNS服务器的IP地址
+- 注册机构将在.cn名字服务器中增加两条资源记录：
+
+```
+(networkutopia.com.cn, dns1.networkutopia.com.cn, NS)
+(dns1.networkutopia.com.cn, 212.212.212.1, A)
+```
+
+- 同时需要在该公司的权威DNS服务器中为 www.networkutopia.com.cn 创建类型为A的资源记录；为邮件服务器 mail.networkutopia.com.cn 创建类型为MX的资源记录和类型为A的资源记录
+
+## 小结：DNS概要
+
+- 层次化、分布式的域名系统
+- 实现名字解析（域名←→IP地址）的协议，因特网各应用的支撑协议
+  - 采用C/S模型
+    - Client: Resolver
+    - Server: 名字服务器
+  - 一般使用UDP，服务器端口号为53
+  - 请求/应答消息
+  - 迭代查询vs 递归查询
+- 资源记录（RR）
+
+## DNS的安全性问题
+
+- 名字服务器易受攻击，名字数据库被非法主机修改
+  - DNS伪冒(spoofing)
+  - DNS缓存毒化(Cache poisoning)
+  - DOS(Denial of Service)、缓存溢出(Buffer overrun)、重放(Replay)攻击...
+- 改进策略：DNSSEC
+  - RFC 4033
+  - 数字签名、公共密钥
+    - 对DNS请求/应答消息进行身份认证
+
+## 主要内容
+
+- 2.1 网络应用概述
+- 2.2 DNS
+- 2.3 WWW应用和HTTP
+  - WWW的体系结构
+  - URL
+  - 网页类型
+  - HTTP：操作过程、消息格式
+  - 持久连接与非持久连接
+  - Cookies和Proxy
+- 2.4 Email应用
+- 2.5 FTP
+- 2.6 远程登录协议：Telnet
+- 2.7 应用层安全隐患
+
+## WWW概述（2）
+
+- 如何标识分布在整个因特网上的页面
+  - URL(Universal Resource Locater)唯一标识
+    - `protocol :// domain_name : port / item_name`
+      - 访问协议
+      - Web服务器的域名
+      - 端口号
+      - 网页文件的目录和名字
+
+- 用什么协议实现通过WWW上的各种链接获取信息
+  - HTTP( Hyper-Text Transfer Protocol)
+
+- 如何使不同风格的页面在不同主机上显示，并标识超链
+  - HTML(Hyper-Text Markup Language)
+
+- 如何使用户能方便找到所需的信息
+  - 搜索引擎
+
+## WWW应用的客户端：浏览器(Browser)
+
+- WWW应用的用户接口
+- 功能
+  - 向Web服务器发送请求消息
+  - 接收Web服务器的应答消息
+  - 解释网页文档的源代码，将网页呈现给用户
+  - 是通用的客户端，支持Email、文件传输、BBS、电子商务等应用
+- 不同的浏览器对于同一网页文件的呈现结果不同
+
+## WWW应用的客户端：Web服务器
+
+- 保存Web网页文档
+- 接收客户端的请求消息
+- 返回响应消息：状态信息和网页数据
+- 可选功能
+  - 保存访问用户信息
+  - 对于访问用户进行身份认证
+  - 对于网页数据进行权限管理
+  - ……
+
+## WWW应用的编址：URL
+
+- 统一资源定位符，唯一标识一个资源，对资源进行定位和访问
+  协议名:// 主机:端口号 /文件路径及文件名
+  例如: http://www.abc.com:8080/example/example.html
+
+- 和网页上的链接相关联
+
+- 缺省值:
+  - 协议名：http
+  - 端口号：80
+  - 文件名：index.html
+  例如: www.abc.com 等同于 http://www.abc.com:80/index.html
+
+## 静态网页原理
+
+![](img/ec5c59e5ed61c3b45834fc86d9ef22ae_198_0.png)
+
+[Forouzan]
+
+## 动态网页原理
+
+a. Request for running a program
+
+b. Running the program and creating the document
+
+c. Response
+
+![](img/ec5c59e5ed61c3b45834fc86d9ef22ae_199_0.png)
+
+[Forouzan]
+
+

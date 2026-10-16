@@ -1,0 +1,11 @@
+# IP 地址中的网络号字段和主机号字段
+
+A 类地址 0 net-id 8 位 host-id 24 位
+
+B 类地址 10 net-id 16 位 host-id 16 位
+
+C 类地址 110 net-id 24 位 host-id 8 位
+
+D 类地址 C 类地址的主机号字段 host-id 为 1 字节
+
+E 类地址 1111 保留为今后使用

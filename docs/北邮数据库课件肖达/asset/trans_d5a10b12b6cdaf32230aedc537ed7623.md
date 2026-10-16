@@ -1,0 +1,270 @@
+
+
+# 授权与回收（续）
+
+## 二、REVOKE
+
+- 授予的权限可以由DBA或其他授权者用REVOKE语句收回
+- REVOKE语句的一般格式为：
+REVOKE <权限>[,<权限>]...
+[ON <对象类型> <对象名>]
+FROM <用户>[,<用户>]...;
+
+## REVOKE （续）
+
+[例8] 把用户U4修改学生学号的权限收回
+
+```
+REVOKE UPDATE(Sno)
+ON TABLE Student
+FROM U4;
+```
+
+[例9] 收回所有用户对表SC的查询权限
+
+```
+REVOKE SELECT
+ON TABLE SC
+FROM PUBLIC;
+```
+
+## REVOKE（续）
+
+[例10] 把用户U5对SC表的INSERT权限收回
+
+```
+REVOKE INSERT
+ON TABLE SC
+FROM U5 CASCADE ;
+```
+
+- 将用户U5的INSERT权限收回的时候必须级联（CASCADE）收回
+- 系统只收回直接或间接从U5处获得的权限
+
+## REVOKE（续）
+
+执行 [例8] 到 [例10] 的语句后，学生-课程数据库中的用户权限定义表
+
+| 授权用户名 | 被授权用户名 | 数据库对象名 | 操作类型 | 能否转让权 |
+|---|---|---|---|---|
+| DBA | U1 | 关系Student | SELECT | 不能 |
+| DBA | U2 | 关系Student | ALL | 不能 |
+| DBA | U2 | 关系Course | ALL | 不能 |
+| DBA | U3 | 关系Student | ALL | 不能 |
+| DBA | U3 | 关系Course | ALL | 不能 |
+| DBA | U4 | 关系Student | SELECT | 不能 |
+
+# 授权与回收（续）
+
+## 三、创建数据库模式的权限
+
+- DBA在创建用户时实现
+- CREATE USER语句格式
+
+```
+CREATE USER <username>
+[WITH]  [DBA | RESOURCE | CONNECT]
+```
+
+# 数据库安全性控制
+
+用户标识与鉴别
+
+存取控制
+
+授权与回收
+
+数据库角色
+
+## 数据库角色
+
+- 数据库角色：被命名的一组与数据库操作相关的权限
+  - 角色是权限的集合
+  - 可以为一组具有相同权限的用户创建一个角色
+  - 简化授权的过程
+  - 类比： Windows操作系统中的用户组
+
+## 数据库角色
+
+- 一、角色的创建
+  CREATE ROLE <角色名>
+- 二、给角色授权
+  GRANT <权限> [, <权限>] ...
+  ON <对象类型>对象名
+  TO <角色> [, <角色>] ...
+
+## 数据库角色
+
+- 三、将一个角色授予其他的角色或用户
+  
+  `GRANT <角色1> [, <角色2>] ...`
+  
+  `TO <角色3> [, <用户1>] ...`
+  
+  `[WITH ADMIN OPTION]`
+
+- 四、角色权限的收回
+  
+  `REVOKE <权限> [, <权限>] ...`
+  
+  `ON <对象类型> <对象名>`
+  
+  `FROM <角色> [, <角色>] ...`
+
+## 数据库角色（续）
+
+3. 将这个角色授予王平，张明，赵玲。使他们具有角色R1所包含的全部权限
+
+```
+GRANT R1
+TO 王平，张明，赵玲;
+```
+
+4. 可以一次性通过R1来回收王平的这3个权限
+
+```
+REVOKE R1
+FROM 王平;
+```
+
+## 数据库角色（续）
+
+[例12] 角色的权限修改
+
+```
+GRANT DELETE
+ON TABLE Student
+TO R1
+```
+
+[例13]
+
+```
+REVOKE SELECT
+ON TABLE Student
+FROM R1;
+```
+
+# SQL Server的安全体系结构
+
+(1) Windows NT操作系统的安全防线: 网络管理员负责建立用户组，设置帐号并注册，同时决定不同的用户对不同系统资源的访问级别。
+
+(2) SQL Server的运行安全防线: 通过另一种帐号设置来创建附加安全层。
+
+(3) SQL Server数据库的安全防线: 特定数据库都有自己的用户和角色，该数据库只能由它的用户或角色访问，其他用户无权访问其数据。
+
+(4) SQL Server数据库对象的安全防线: 对权限进行管理，TSQL的DCL功能保证合法用户即使进入了数据库也不能有超越权限的数据存取操作，即合法用户必须在自己的权限范围内进行数据操作。
+
+## 用户认证
+
+- 数据库管理系统级安全性控制—SQL Server 的登录认证
+  - SQL Server支持两种认证方式
+    - Windows认证模式
+    - 混合认证模式
+
+## 用户认证
+
+## Windows认证模式
+
+- 利用Windows本身具有的管理登录、验证用户合法性的能力，以Windows的安全性来确定用户登录的账号是否正确
+- 连接SQL Server时不需在输入账号和密码
+- 在安装SQL Server后，系统中预设了两个个账户，分别为
+  - BUILTIN\Administrators
+  - sa
+
+## 用户认证
+
+## 混合认证模式
+
+- 由SQL Server自身来执行验证工作
+- Windows认证和SQL Server 认证两种认证模式都可用
+
+## SQL Server 认证模式
+
+- SQL Server 自己执行认证处理
+- 用户在连接SQL Server 时必须提供登录名和密码
+- 登录信息存储在系统表syslogins中
+- 若输入的登录信息与系统表syslogins 中的某条记录相匹配则表明登录成功
+
+# SQL Server的权限管理
+
+- 权限分类
+  - 对象权限和语句权限
+- 对象权限
+  - 针对表、视图、存储过程
+  - 决定了能对表、视图、存储过程执行哪些操作，包括UPDATE、DELETE、INSERT、EXECUTE
+- 语句权限
+  - 用户是否具有权限来执行某一语句
+  - 这些语句通常是一些具有管理性的操作，如创建数据库、表、存储过程等
+
+# SQL Server的权限管理
+
+对象权限
+
+| 对象 | 操作类型 |
+| --- | --- |
+| 表 | SELECT、INSERT、UPDATE、DELETE、REFERENCES |
+| 视图 | SELECT、UPDATE、INSERT、DELETE |
+| 存储过程 | EXECUTE |
+| 列 | SELECT、UPDATE |
+
+语句权限
+
+|  |  |
+| CREATE DATABASE | 创建数据库 |
+| CREATE TABLE | 创建表 |
+| CREATE VIEW | 创建视图 |
+| CREATE RULE | 创建规则 |
+| CREATE DEFAULT | 创建默认值 |
+| CREATE PROCEDURE | 创建存储过程 |
+| BACKUP DATABASE | 备份数据库 |
+| BACKUP LOG | 备份日志 |
+
+# 数据库用户的管理
+
+## (1) dbo用户
+
+dbo用户即数据库拥有者或数据库创建者，dbo在其所拥有的数据库中拥有所有的操作权限。dbo的身份可被重新分配给另一个用户，系统管理员Sa可以作为他所管理系统的任何数据库的dbo用户。
+
+## (2) guest用户
+
+如果guest用户在数据库存在，则允许任意一个登录用户作为guest用户访问数据库，其中包括那些不是数据库用户的SQL服务器用户。除系统数据库master和临时数据库tempdb的guest用户不能被删除外，其他数据库都可以将自己guest用户删除，以防止非数据库用户的登录用户对数据库进行访问。
+
+# 数据库用户的管理
+
+- guest用户
+
+登录用户是否合法的数据库用户账号
+
+有
+
+允许其以该用户账号访问数据库
+
+无
+
+是否有guest用户
+
+有
+
+允许登录用户以guest 用户来访问数据库
+
+无
+
+该登录用户被拒绝
+
+# 角色管理
+
+- 用角色统一授予和管理权限
+- 服务器角色
+
+| 固定服务器角色名 | 角色的权限 |
+|---|---|
+| Sysadmin | 可在SQL Server 中执行任何操作 |
+| Serveradmin | SQL Server服务器范围内的配置 |
+| setupadmin | 增加、删除连接服务器，并执行某些系统存储过程 |
+| Securityadmin | 管理管理数据库登录 |
+| processadmin | 管理SQL Server进程 |
+| dbcreator | 创建数据库并修改数据库 |
+| diskadmin | 管理磁盘文件 |
+| Bulkadmin | 执行BULK INSERT（大容量插入）操作 |
+

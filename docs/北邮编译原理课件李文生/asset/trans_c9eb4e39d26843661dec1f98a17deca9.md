@@ -1,0 +1,265 @@
+
+
+## 三、控制流表示法
+
+### ▪ 控制语句
+
++   S→ if E then S₁  
++   　| if E then S₁ else S₂  
++   　| while E do S₁
+
+### ▪ 代码结构
+
+![](img/12b57169bd1d5004c5e7193ff0d478d5_600_0.png)
+
+## 属性说明
+
++   - 继承属性：三地址语句标号
++     - E.true： E值为真时应执行的第一条语句的标号
++     - E.false： E值为假时应执行的第一条语句的标号
++     - S.next： 紧跟在语句S之后的
+三地址语句的标号
++     - S.begin： 语句S的第一条三地址语句的标号
+
+## 布尔表达式的控制流翻译
+
++   - 布尔表达式被翻译为一系列条件转移和无条件转移三地址语句
++   - 这些语句转移到的位置是E.true、E.false之一
++   - 例如 a<b 翻译为：
++     if a<b goto E.true
++     goto E.false
++   - 属性说明
++     - 继承属性
++       E.true: E为真时转移到的三地址语句的标号
++       E.false: E为假时转移到的三地址语句的标号
+
+## 布尔表达式的代码结构
+
+E→ E₁ or E₂
+
+E→ not E₁
+
+E→ E₁ and E₂
+
+E→ id₁ relop id₂
+
+![](img/12b57169bd1d5004c5e7193ff0d478d5_603_0.png)
+
+![](img/12b57169bd1d5004c5e7193ff0d478d5_603_1.png)
+
+![](img/12b57169bd1d5004c5e7193ff0d478d5_603_2.png)
+
+```
+'if' id₁.place relop.op id₂.place 'goto' E.true
+'goto' E.false
+```
+
+## 例：用控制流方法翻译布尔表达式
+a<b or c<d and e<f
+
+![](img/12b57169bd1d5004c5e7193ff0d478d5_604_0.png)
+
+```
+if a<b goto Ltrue
+goto L1
+L1: if c<d goto L2
+goto Lfalse
+L2: if e<f goto Ltrue
+goto Lfalse
+```
+
+## 布尔表达式的翻译
+
++   两遍扫描的翻译技术
++   1. 生成分析树
++   2. 为分析树加注释——翻译
+
++   一遍扫描的分析和翻译技术
++   问题：当生成某些转移指令时，目标地址可能还不知道
+
+解决办法
+
+回填技术（backpatching）
+
++   先产生没有填写目标标号的转移指令；
++   建立一个链表，把转向这个目标的所有转移指令的标号填入该链表；
++   目标地址确定后，再把该地址填入该链表中记录的所有转移指令中。
+
+## 利用回填技术翻译布尔表达式
+
++   - 说明
++     - 为明确起见，生成的中间代码用四元式表示
++     - 四元式存放在数组中
++     - 用数组下标表示三地址语句的标号
++   - 综合属性
++     - E.truelist：记录转移到E的真出口的指令链表的指针
++     - E.falselist：记录转移到E的假出口的指令链表的指针
++     - M.quad：M所标识的三地址语句的地址
++   - 变量
++     - nextquad：下一个可用的四元式地址
+       （产生的下一条三地址语句在数组中的位置）
+
+## 函数说明
+
++   - **makelist(i):**
++     - 建立新链表，其中只包括四元式指令在数组中的下标i;
++     - 返回所建链表的指针。
+
++   - **merge(p₁,p₂):**
++     - 合并由指针p₁和p₂所指向的两个链表
++     - 返回结果链表的指针。
+
++   - **backpatch(p,i):**
++     - 用目标地址i回填 p所指链表中记录的每一条转移指令。
+
++   - **emit(S)**
++     - 产生一条三地址语句S，并写入输出数组中
++     - 该函数执行完后，变量 nextquad 加 1
+
+## 例：
+
+.truelist={100, 104}
+.falselist={103, 105}
+
+a<b or c<d and e<f
+① ② ③
+④
+⑤
+
+a<b的代码
+c<d的代码
+e<f的代码
+Ltrue
+Lfalse
+L1 t
+L2 t
+
+```
+100: if a<b goto —
+101: goto 102
+102: if c<d goto 104
+103: goto —
+104: if c<d goto —
+105: goto —
+```
+
+## 翻译方案
+
+## 布尔表达式的文法
+
++   - E→E₁ or M E₂
++   - E→E₁ and M E₂
++   - E→not E₁
++   - E→(E₁)
++   - E→id₁ relop id₂
++   - E→true
++   - E→false
++   - M→ε
+
+## 标记非终结符号M
+
++   - 标识布尔表达式E₂的开始位置
++   - 用属性M.quad记录其所标识的布尔表达式的第一条三地址语句的地址
++   - 相应于产生式M→ε的动作：
++     M.quad=nextquad
+
+E→E₁ or M E₂ { backpatch(E₁.falselist, M.quad);
+E.truelist= merge(E₁.truelist, E₂.truelist);
+E.falselist=E₂.falselist }
+
+E→E₁ and M E₂ { backpatch(E₁.truelist, M.quad);
+E.truelist=E₂.truelist;
+E.falselist= merge(E₁,falselist, E₂.falselist) }
+
+E→not E₁ { E.truelist=E₁.falselist;   E.falselist=E₁.truelist }
+
+E→(E₁) { E.truelist=E₁.truelist;   E.falselist=E₁.falselist }
+
+E→id₁ relop id₂ { E.truelist=makelist(nextquad);
+E.falselist=makelist(nextquad+1);
+emit('if' id₁.place relop.op id₂.place 'goto —');
+emit('goto —') }
+
+E→true { E.truelist=makelist(nextquad);   emit('goto —') }
+
+E→false { E.flaselist=makelist(nextquad);   emit('goto —') }
+
+M→ε { M.quad=nextquad }
+
+## 利用翻译方案翻译布尔表达式
+a<b or c<d and e<f
+
+假设变量nextquad的初值为100
+
+```
+100: if a<b goto —
+101: goto 102
+102: if c<d goto 104
+103: goto —
+104: if e<f goto —
+105: goto —
+```
+
+![](img/12b57169bd1d5004c5e7193ff0d478d5_611_0.png)
+
+## 8.4 控制语句的翻译
+
+## 文法
+
+S→if E then M S₁
+
+S→if E then M₁ S₁ N else M₂ S₂
+
+S→while M₁ E do M₂ S₁
+
+S→begin L end
+
+S→A
+
+L→L₁; M S
+
+L→S
+
+M→ε
+
+N→ε
+
+属性：
+E.truelist
+E.falselist
+M.quad
+N.nextlist
+S.nextlist
+
+变量： nextquad
+
+函数：
+makelist
+backpatch
+merge
+emit
+
+转移到下一条语句的指令链表的指针
+
+▲ 记录变量 nextquad 的当前，以便回填转移到此的指令
+
+◆ 产生一条不完整的goto指令，并记录下它的位置
+
+S→if E then M S₁ { backpatch(E.truelist, M.quad); S.nextlist=merge(E.falselist, S₁.nextlist) }
+
+S→if E then M₁ S₁ N else M₂ S₂ { backpatch(E.truelist, M₁.quad); backpatch(E.falselist, M₂.quad); S.nextlist=merge(S₁.nextlist, N.nextlist, S₂.nextlist) }
+
+M→ε { M.quad=nextquad }
+
+N→ε { N.nextlist=makelist(nextquad); emit('goto —') }
+
+S→while M₁ E do M₂ S₁ { backpatch(S₁.nextlist, M₁.quad); backpatch(E.truelist, M₂.quad); S.nextlist=E.falselist; emit('goto' M₁.quad) }
+
+S→begin L end { S.nextlist=L.nextlist }
+
+S→A { S.nextlist=makelist() }
+
+L→L₁; M S { backpatch(L₁.nextlist, M.quad); L.nextlist=S.nextlist }
+
+L→S { L.nextlist=S.nextlist }
+

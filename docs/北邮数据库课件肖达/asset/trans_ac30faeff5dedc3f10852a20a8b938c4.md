@@ -1,0 +1,204 @@
+
+
+- Product(maker,model, type)
+- Laptop(model, speed, ram, hd, screen, price)
+
+查询所有这样的制造商：对于制造商B生产的笔记本所含的内存容量，该制造商所生产的笔记本中都有。
+
+思路：寻找这样的制造商x：不存在这样的内存容量y，制造商B生产的笔记本含有容量y，而制造商x生产的笔记本不含有容量y。
+
+```
+select DISTINCT x.maker
+from Product x
+where not exists
+    (select *
+    from Laptop y
+    where 'B' in
+        (select P1.maker
+        from Product P1, Laptop L1
+        where P1.model=L1.model and L1.ram=y.ram) and
+        x.maker not in
+        (select P2.maker
+        from Product P2, Laptop L2
+        where P2.model=L2.model and L2.ram=y.ram));
+```
+
+- Product(maker,model, type)
+- Laptop(model, speed, ram, hd, screen, price)
+
+查询所有这样的制造商：对于制造商B生产的笔记本所含的内存容量，该制造商所生产的笔记本中都有。
+
+思路：寻找这样的制造商x：不存在这样的内存容量y，制造商B生产的笔记本含有容量y，而制造商x生产的笔记本不含有容量y。
+
+```
+select DISTINCT x.maker
+from Product x
+where not exists
+  (select *
+  from Laptop y
+  where 'B' in
+    (select P1.maker
+    from Product P1, Laptop L1
+    where P1.model=L1.model and L1.ram=y.ram) and
+    x.maker not in
+    (select P2.maker
+    from Product P2, Laptop L2
+    where P2.model=L2.model and L2.ram=y.ram));
+```
+
+- Product(maker,model, type)
+- Laptop(model, speed, ram, hd, screen, price)
+
+查询所有这样的制造商：对于制造商B生产的笔记本所含的内存容量，该制造商所生产的笔记本中都有。
+
+思路2：制造商B生产的笔记本含有，而制造商x生产的笔记本不含有的内存容量的另一种表述：制造商B生产的笔记本含有的内存容量和制造商x生产的笔记本含有的内存容量的差集。
+
+```
+select DISTINCT x.maker
+from Product x
+where not exists
+((select L1.ram
+from Laptop L1, Product P1
+where L1.model = P1.model and P1.maker = 'B')
+except
+(select L2.ram
+from Laptop L2, Product P2
+where L2.model = P2.model and P2.maker=x.maker));
+```
+
+- Product(maker, model, type)
+- PC(model, speed, ram, hd, price)
+- Laptop(model, speed, ram, hd, screen, price)
+
+查询至少生产了两款速度不小于2.80的计算机（PC或笔记本）的制造商。
+
+思路：翻译关系代数表达式。
+
+```
+ρ_R( π_maker,model ( σ_speed ≥ 2.8 (Product ▷◁ ( π_model,speed (PC) ∪ π_model,speed (Laptop))))) π_maker (ρ_R1(R) ▷◁_R1.maker = R2.maker AND R1.model ≠ R2.model ρ_R2(R))
+```
+
+```
+select DISTINCT P.maker
+from Product P, Product P1,
+where P.maker = P1.maker
+and P.model in
+    // 速度不小于2.80的计算机型号
+    (select PC.model
+    from PC
+    where PC.speed > 2.80
+    UNION
+    select LP.model
+    from Laptop LP
+    where Lp.speed > 2.80)
+and P1.model in
+    // 速度不小于2.80的计算机型号
+    (select PC.model
+    from PC
+    where PC.speed > 2.80
+    UNION
+    select LP.model
+    from Laptop LP
+    where Lp.speed > 2.80)
+and P.model <> P1.model
+```
+
+## 数据库技术与应用
+
+![](img/ef3eda0c8c755c94cf60f8794999a1a7_134_0.png)
+
+北京邮电大学计算机学院 肖达
+
+xiaoda99@gmail.com
+
+## 第一章 绪论
+
+- 1.1 数据库系统概述
+- 1.2 数据模型
+- 1.3 数据库系统结构
+- 1.4 数据库系统的组成
+- 1.5 小结
+
+## 1.3 数据库系统结构
+
+从数据库最终用户角度看（数据库系统外部的体系结构），数据库系统的结构分为：
+
+- 单用户结构
+- 主从式结构
+- 分布式结构
+- 客户 / 服务器
+- 浏览器 / 应用服务器 / 数据库服务器多层结构等
+
+从数据库管理系统角度看，数据库系统通常采用三级模式结构，是数据库系统内部的系统结构。
+
+## DBS的四种体系结构
+
+![](img/ef3eda0c8c755c94cf60f8794999a1a7_137_0.png)
+
+## 单用户数据库系统
+
+- 整个数据库系统(应用程序、DBMS、数据)装在一台计算机上，为一个用户独占，不同机器之间不能共享数据。
+- 早期的最简单的数据库系统
+
+![](img/ef3eda0c8c755c94cf60f8794999a1a7_138_0.png)
+
+## 主从式结构的数据库系统
+
+- 一个主机带多个终端的多用户结构
+  - 数据库系统，包括应用程序、DBMS、数据，都集中存放在主机上，所有处理任务都由主机来完成
+  - 各个用户通过主机的终端并发地存取数据库，共享数据资源
+
+![](img/ef3eda0c8c755c94cf60f8794999a1a7_140_0.png)
+
+主机
+
+应用程序
+
+数据库管理系统（DBMS）
+
+数据库
+
+终端
+
+终端
+
+终端
+
+终端
+
+## 主从式结构的数据库系统（续）
+
+- 优点
+  - 易于管理、控制与维护。
+- 缺点
+  - 当终端用户数目增加到一定程度后，主机的任务会过分繁重，成为瓶颈，从而使系统性能下降。
+  - 系统的可靠性依赖主机，当主机出现故障时，整个系统都不能使用。
+
+## 分布式结构的数据库系统
+
+- 数据库中的数据在逻辑上是一个整体，但物理地分布在计算机网络的不同结点上。
+  - 网络中的每个结点都可以独立处理本地数据库中的数据，执行局部应用
+  - 同时也可以同时存取和处理多个异地数据库中的数据，执行全局应用
+  - 例子：中国工商银行（ICBC）数据库
+
+## 分布式结构的数据库系统（续）
+
+![](img/ef3eda0c8c755c94cf60f8794999a1a7_143_0.png)
+
+## 优点
+
+- 适应了地理上分散的公司、团体和组织对于数据库应用的需求。
+
+## 缺点
+
+- 数据的分布存放给数据的处理、管理与维护带来困难。
+- 当用户需要经常访问远程数据时，系统效率会明显地受到网络传输的制约。
+
+## 客户 / 服务器结构的数据库系统
+
+- 把DBMS功能和应用分开
+  - 网络中某个（些）结点上的计算机专门用于执行DBMS功能，称为数据库服务器，简称服务器
+  - 其他结点上的计算机安装DBMS的外围应用开发工具，用户的应用系统，称为客户机
+  - Sybase公司最先提出
+  - 例子：票务系统
+

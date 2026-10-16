@@ -1,0 +1,7 @@
+# 11.4 Allocation Methods
+
++   - An allocation method refers to how disk blocks are allocated for files.
+
++   - Contiguous allocation
++   - Linked allocation
++   - Indexed allocation

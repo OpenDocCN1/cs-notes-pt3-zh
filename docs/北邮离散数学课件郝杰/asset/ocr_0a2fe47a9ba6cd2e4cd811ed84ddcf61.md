@@ -1,0 +1,7 @@
+# # 版权说明
+
++   本讲义中有部分图片来源于下列教材所附讲义：
++   
++   - Andrew S. Tanenbaum, Computer Networks, Fourth Edition, 清华大学出版社（影印版），2004，引用时标记为[Tanenbaum]；
++   - 谢希仁，计算机网络，第五版，电子工业出版社，2008年1月，引用时标记为[谢]；
++   - Behrouz A. Forouzan, Data Communications and Networking, Fourth Edition, McGraw-Hill Higher Education, 2007年1月，引用时标记为[Forouzan]

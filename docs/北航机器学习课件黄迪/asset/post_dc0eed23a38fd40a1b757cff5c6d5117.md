@@ -1,0 +1,199 @@
+
+## 最大似然估计
+
+$$
+p(\mathbf{t}|\mathbf{x},\mathbf{w},\beta)=\prod_{n=1}^{N}\mathcal{N}(t_n|y(x_n,\mathbf{w}),\beta^{-1})
+$$
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_148_0.png)
+
+## MAP: 离贝叶斯更进一步
+
+$$
+p(\mathbf{w}|\alpha)=\mathcal{N}(\mathbf{w}|\mathbf{0},\alpha^{-1}\mathbf{I})=\left(\frac{\alpha}{2\pi}\right)^{(M+1)/2}\exp\left\{-\frac{\alpha}{2}\mathbf{w}^{\mathrm{T}}\mathbf{w}\right\}
+$$
+
+$$
+p(\mathbf{w}|\mathbf{x},\mathbf{t},\alpha,\beta)\propto p(\mathbf{t}|\mathbf{x},\mathbf{w},\beta)p(\mathbf{w}|\alpha)
+$$
+
+$$
+\beta\widetilde{E}(\mathbf{w})=\frac{\beta}{2}\sum_{n=1}^{N}\{y(x_n,\mathbf{w})-t_n\}^{2}+\frac{\alpha}{2}\mathbf{w}^{\mathrm{T}}\mathbf{w}
+$$
+
+Determine $\mathbf{w}_{MAP}$ by minimizing regularized sum-of-squares error, $\widetilde{E}(\mathbf{w})$.
+
+$$
+\lambda=\alpha/\beta.
+$$
+
+## 贝叶斯曲线拟合
+
+$$
+p(t\mid x,\mathbf{x},\mathbf{t})=\int p(t\mid x,\mathbf{w})p(\mathbf{w}\mid\mathbf{x},\mathbf{t})\,d\mathbf{w}.
+$$
+
+$$
+p(t\mid x,\mathbf{w},\beta)=\mathcal{N}\left(t\mid y(x,\mathbf{w}),\beta^{-1}\right)
+$$
+
+$$
+p(\mathbf{w}\mid\mathbf{x},\mathbf{t},\alpha,\beta)\propto p(\mathbf{t}\mid\mathbf{x},\mathbf{w},\beta)p(\mathbf{w}\mid\alpha).
+$$
+
+$$
+p(t\mid x,\mathbf{x},\mathbf{t})=\mathcal{N}\left(t\mid m(x),s^2(x)\right)
+$$
+
+$$
+p(t\mid x,\mathbf{x},\mathbf{t})=\int p(t\mid x,\mathbf{w})p(\mathbf{w}\mid\mathbf{x},\mathbf{t})\,d\mathbf{w}=\mathcal{N}(t\mid m(x),s^2(x))
+$$
+
+$$
+p(\mathbf{w}|\mathbf{x},\mathbf{t},\alpha,\beta)\propto p(\mathbf{t}|\mathbf{x},\mathbf{w},\beta)p(\mathbf{w}|\alpha)
+$$
+
+$$
+y(\mathbf{x},\mathbf{w})=\sum_{j=0}^{M-1}w_j\phi_j(\mathbf{x})=\mathbf{w}^{\mathrm{T}}\boldsymbol{\phi}(\mathbf{x})
+$$
+
+$$
+m(x)=\beta\boldsymbol{\phi}(x)^{\mathrm{T}}\mathbf{S}\sum_{n=1}^{N}\boldsymbol{\phi}(x_n)t_n\qquad s^2(x)=\beta^{-1}+\boldsymbol{\phi}(x)^{\mathrm{T}}\mathbf{S}\boldsymbol{\phi}(x)
+$$
+
+$$
+\mathbf{S}^{-1}=\alpha\mathbf{I}+\beta\sum_{n=1}^{N}\boldsymbol{\phi}(x_n)\boldsymbol{\phi}(x_n)^{\mathrm{T}}\qquad \boldsymbol{\phi}(x_n)=(x_n^0,\ldots,x_n^M)^{\mathrm{T}}
+$$
+
+$$
+p(t\mid x,\mathbf{x},\mathbf{t})=\mathcal{N}\left(t\mid m(x),s^2(x)\right)
+$$
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_152_0.png)
+
+## 非参数估计
+
+### 🔴 直接用样本估计总体分布
+
+基本思路：要估计 $x_i$ 点的密度 $p(x_i)$，可把所有样本在该点上的“贡献”相加近似作为其概率密度，进而得到 $\hat{p}(x)$。
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_153_0.png)
+
+$p(x)$ 为 $x$ 的总体概率密度函数，$N$ 个样本 $x=\{x_1,x_2,\ldots,x_N\}$ 从密度为 $p(x)$ 的总体中独立抽取，估计 $\hat{p}(x)$ 近似 $p(x)$。
+
+考虑随机向量 $x$ 落入区域 $\mathfrak{R}$ 的概率
+
+$$
+P_R = \int_{\mathfrak{R}} p(x)dx
+$$
+
+$k$ 个样本落入该区域的概率符合二项分布
+
+$$
+P_k = C_N^k P_R^k (1 - P_R)^{N-k}
+$$
+
+$$
+E[k] = N P_R \rightarrow \hat{P}_R \doteq \frac{k}{N}
+$$
+
+设 $p(x)$ 连续，且区域体积 $V$ 足够小，则有
+
+$$
+P_R = \int_{\mathfrak{R}} p(x)dx = p(x)V
+$$
+
+$$
+\hat{p}(x) = \frac{k}{N V}
+$$
+
+与总样本数、区域的体积及落入的样本数有关。
+
+$$
+\hat{p}(x) = \frac{k}{N V} \rightarrow \hat{p}_N(x) = \frac{k_N}{N V_N}
+$$
+
+$$
+\lim_{N\to\infty} V_N = 0
+$$
+
+$$
+\lim_{N\to\infty} k_N = \infty \rightarrow \hat{p}_N(x) \text{ 收敛于 } p(x)
+$$
+
+$$
+\lim_{N\to\infty} \frac{k_N}{N} = 0
+$$
+
+- **Parzen窗估计**：使区域体积序列 $V_N$ 以 $N$ 的某个函数的关系不断缩小，同时限制 $k_N$ 和 $k_N/N$。有限的 $N$，$V_i$ 选择很敏感。
+- **$k_N$ 近邻估计**：使落入区域样本数 $k_N$ 为 $N$ 的某个函数，$V_N$ 使区域包含 $x$ 的 $k_N$ 个近邻，动态变化 $V$ 的取值。
+
+## 机器学习
+
+Machine Learning
+
+北京航空航天大学计算机学院智能识别与图像处理实验室
+IRIP Lab, School of Computer Science and Engineering, Beihang University
+
+黄迪  刘庆杰
+
+2019年秋季学期
+Fall 2019
+
+## 课前回顾
+
+## 机器学习算法
+
+### 机器学习主要问题
+
+|  | Supervised Learning | Unsupervised Learning |
+|---|---|---|
+| Discrete | Classification or Categorization | Clustering |
+| Continuous | Regression | Dimensionality Reduction |
+
+## 回归模型
+
+### 如何表示 f？
+
+线性回归：
+假设函数 $f$ 为输入 $x$ 的线性函数
+
+$$
+f(x) = w_0 + w_1 x_1 + \ldots + w_m x_m = w_0 + \sum_{j=1}^{m} w_j x_j
+$$
+
+写成向量形式：
+增加一维 $x_0=1$，表示截距项
+
+$$
+f(x) = \mathbf{w}^{\mathrm{T}}\mathbf{x}
+$$
+
+训练集 $(x_i, y_i)$
+
+学习算法
+
+变量(特征) $x \rightarrow f \rightarrow$ 计算 $y$
+
+$$
+f(x) = w_0 + w_1 x_1 + \ldots + w_m x_m = w_0 + \sum_{i=1}^{m} w_i x_i = \sum_{i=0}^{m} w_i x_i \quad (x_0=1)
+$$
+
+$$
+y(\mathbf{x},\mathbf{w}) = \sum_{j=0}^{M-1} w_j \phi_j(\mathbf{x}) = \mathbf{w}^{\mathrm{T}}\boldsymbol{\phi}(\mathbf{x})
+$$
+
+最简单的情况下：$\phi_j(x)=x_j$
+
+- **多项式基函数**：$\phi_j(x)=x^j$
+
+  ![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_160_0.png)
+
+- **高斯基函数**：$\phi_j(x)=\exp\left\{-\frac{(x-\mu_j)^2}{2s^2}\right\}$
+
+  ![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_160_1.png)
+
+- **Sigmoid基函数**：$\phi_j(x)=\sigma\left(\frac{x-\mu_j}{s}\right)$，$\sigma(a)=\frac{1}{1+\exp(-a)}$
+
+  ![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_160_2.png)
+

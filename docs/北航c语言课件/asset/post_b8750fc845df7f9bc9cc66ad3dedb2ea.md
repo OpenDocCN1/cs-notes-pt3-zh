@@ -1,0 +1,270 @@
+
+# 我们还可以用这种方法实现对变量的改变：
+
+```
+*ptr = 15;
+```
+
+![](img/7e3448331bc3f721cf3127b2b2f06002_502_0.png)
+
+*ptr=15； 等价于 i=15；
+
+由此可见： 通过指针运算符 “*” 可以引用一个变量。
+
+如： 当ptr已经指向变量i后，*ptr就等同于i。
+
+When a pointer of ‘ptr’ is pointed to a valuable ‘i’, then ‘*ptr’ is equivalent to ‘i’.
+
+```
+`*ptr = 15;`
+```
+
+![](img/7e3448331bc3f721cf3127b2b2f06002_503_0.png)
+
+进一步理解“&”和“*”： “&”运算和“*”运算是一对互逆运算。
+
+![](img/7e3448331bc3f721cf3127b2b2f06002_503_1.png)
+
+## （二）指针的赋值运算（=） Assignment to pointer
+
+指针的赋值运算：就是把地址赋值给指针变量。
+
+指针的赋值运算可以是以下三种方式：
+
+- (1) 使用取地址运算符，把地址值赋值给指针变量。
+
+```
+如： int i, *pi ;  pi=&i ;
+```
+
+- (2) 把指针变量的值赋给另一个指针变量。
+
+```
+如： int i,*pa,*pb;  pa=&i ; pb=pa;
+```
+
+- (3) 给指针变量赋值为符号常量NULL。
+
+```
+如： int *pi ;  pi=NULL ;
+```
+
+说明：NULL是一个空指针，表示该指针变量的值没有意义。作用是为了避免对没有被初始化的指针变量的非法引用。NULL 的定义在 “stdio.h”中。
+
+## 说明：
+
+(1)在定义指针变量时，可以立即将一个地址值赋给指针变量，这就是指针变量的初始化。指针变量的初始化也是指针的赋值运算。
+
+```
+如： float flt, *f_ptr=&flt;
+注意： 这不是给*f_ptr赋值。
+float flt,*f_ptr;
+f_ptr=&flt;
+```
+
+(2)指针变量间的赋值和引用应保证基类型相同。
+
+```
+若有定义： int *p , i; float *q , x;
+则： q=&i; ×   p=&x; ×
+```
+
+## (三) 移动指针的运算 Pointer operation
+
+- • 指针的加减运算（+、−） plus and minus
+- • 指针的自加自减运算（++，--，+=，-=） increment and decrement
+
+## 1. 指针的+、−运算
+
++、− {
+指针±整数 pointer ± integer
+指针—指针 pointer1-pointer2
+
+## 说明：
+
+(1)指针与整型值加减的结果是指针，表示使该指针指向该指针下移或上移该整型值个数的存储单元之后的内存地址。存储单元的大小就是该指针的数据类型所需的内存大小。
+
+例如： ptr+n (指针ptr， n为整数)这个指针值代表的内存单元的地址是： ptr+n*d(其中d是指针所指向变量的数据类型所占内存字节数)，即指针移动了n个元素。
+如果 ptr指向某个数组a[m]，则ptr+i指向数组a的第i个数组元素，即指向a[i]。
+
+(2)指针与指针的加运算毫无意义，所以指针与指针没有加运算。同样，指针与指针也没有相乘、相除等运算。
+
+(3)指针与指针的减运算要求相减的两个指针属于同一类型，其结果是整数，表示两个指针之间的数据的个数。其结果值的计算公式是：
+
+```
+ptr1-ptr2=(ptr1的值 - ptr2的值)/指针的数据类型所占的字节数
+```
+
+```
+例如：
+int *ptr1,*ptr2,*ptr3, x;
+int ary[5]={2,4,8,16,32};
+ptr1 = &ary[0];
+ptr2 = &ary[3];
+ptr3 = ary;
+x=ptr2-ptr1;
+```
+
+![](img/7e3448331bc3f721cf3127b2b2f06002_508_0.png)
+
+## 2. 指针的++、--、+=、-= 运算
+
+++、 += ：是移动指针到下一个或下几个存储单元。
+
+--、 -= ：是移动指针到上一个或上几个存储单元。
+
+例如： int *ptr, ary[5]={2,4,6,8,10} ;
+ptr=ary; ptr+=3; ptr--;
+
+![](img/7e3448331bc3f721cf3127b2b2f06002_509_0.png)
+
+![](img/7e3448331bc3f721cf3127b2b2f06002_509_1.png)
+
+![](img/7e3448331bc3f721cf3127b2b2f06002_509_2.png)
+
+想一想： *ptr++和 (*ptr) ++有什么区别？
+
+## (四)指针表达式Pointer expression
+
+像其它变量一样，指针变量也可以用于表达式。
+
+Like other variables, pointer variables can be used in expressions. For example, if p1 and p2 are properly declared and initialized pointers, then the following statements are valid.
+
+```
+y=*p1**p2;//equal to (*p1)*(*p2)
+sum=sum+*p1;
+z=5*-*p2/ *p1;//equal to 5*(-*p2)/(*p1)
+*p2=*p2+10;
+```
+
+The following are wrong.
+
+```
+z=5*-*p2/*p1;
+p1/p2 or p1*p2 or p1/3 or p1+p2
+```
+
+## 三、指针变量作为函数参数
+
+指针可以用作函数参数，这在希望通过调用函数来改变主调函数的参数值时非常有用。
+
+例如：用指针变量编写实现两个数的交换的函数
+
+```
+void swap(int *p1, int *p2);
+main()
+{int x1=100,x2=200;
+printf("x1=%d,x2=%d\n",x1,x2);
+swap(&x1,&x2);
+printf("x1=%d,x2=%d\n",x1,x2);
+}
+```
+
+```
+void swap(int *p1, int *p2)
+{
+    int temp;
+    temp=*p1;
+    *p1=*p2;
+    *p2=temp;
+}
+```
+
+## 图示交换过程中存储单元内容的变化：
+
+①
+x1
+100
+x2
+200
+x1=100 , x2=200
+
+②
+p1 &x1
+p2 &x2
+temp
+x1 100
+x2 200
+进入 swap 函数
+
+③
+p1 &x1
+p2 &x2
+temp 100
+x1 100
+x2 200
+temp=*p1;
+
+④
+p1 &x1
+p2 &x2
+temp 100
+x1 200
+x2 200
+*p1=*p2;
+
+⑤
+p1 &x1
+p2 &x2
+temp 100
+x1 200
+x2 100
+*p2=temp;
+
+⑥
+x1 200
+x2 100
+退出 swap 函数
+
+## 想一想：如果函数的参数不用指针而用整型变量，能否实现值的交换？为什么？
+
+## 通过函数调用得n个要改变的值的方法：
+
+- 1. 在主调函数中设n个变量，将这n个变量的地址传给所调用的函数的形参指针；
+- 
+- 2. 通过形参指针变量，通过取值运算符“*”改变该n个变量的值；
+- 
+- 3. 回到主调函数中就可以使用这些改变了值的变量。
+
+> 注意：不能企图通过改变指针形参的值而使指针实参的值改变。
+> 
+> 如：上例swap函数中不能写成：
+> 
+> ```
+> int* temp; temp=p1; p1=p2; ;p2=temp;
+> ```
+
+## § 10.3 数组的指针和指向数组的指针变量
+
+The constant pointer of the array and the pointer variable pointing to the array
+
+## 一、概念
+
+```
+```c
+int a[5];
+```
+```
+
+数组的指针：是数组的起始地址。A⇔&a[0]
+
+The constant pointer of the array is the first element (index 0) of the array.
+
+数组元素的指针：是数组元素的地址。&a[0], &a[3]
+当指针变量指向数组或数组元素时，它就是指向数组的指针变量。
+
+Pointer to array elements: is the address of an array element.
+
+## C规定：
+
+- (1)数组名代表数组的首地址（起始地址），它也是数组第一个元素的地址。
+- 
+- (2)当指针变量p指向数组的某个元素时，p+1指向该元素的下一个元素。假设一个整型元素占四个字节，p+1是使p的地址加4个字节。
+
+```
+如： int a[10], *p ;
+则： p=a ; 与 p=&a[0];等价
+称指针变量p指向数组元素a[0]
+```
+
+p+i、 a+i、 &a[i] 都是a[i]的地址。

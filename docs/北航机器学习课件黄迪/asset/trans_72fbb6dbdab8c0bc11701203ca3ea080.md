@@ -1,0 +1,205 @@
+
+
+## 生成对抗网络 (GAN)
+
+### 生成网络 (学生)
+
+### 判别网络 (教师)
+
+对抗过程
+
+生成网络 v1
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_780_0.png)
+
+判别网络 v1
+
+无眼睛
+
+生成网络 v2
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_780_1.png)
+
+判别网络 v2
+
+无嘴巴
+
+生成网络 v3
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_780_2.png)
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_780_3.png)
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_781_0.png)
+
+100 次更新
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_781_1.png)
+
+1000 次更新
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_783_0.png)
+
+10,000 次更新
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_783_1.png)
+
+50,000 次更新
+
+## 机器学习
+机器学习
+
+北京航空航天大学计算机学院智能识别与图像处理实验室
+IRIP实验室，计算机科学与工程学院，北京航空航天大学
+黄迪 刘庆杰
+
+2019年秋季学期
+2019年秋季
+
+## 课前回顾
+
+## Adagrad
+
+- 对稀疏参数进行大幅更新和对频繁参数进行小幅更新
+- 适合处理稀疏数据
+
+$$\eta^\tau = \frac{1}{\sqrt{\sum_{t=1}^{\tau} \Delta E^2(\mathbf{w}^t)+\epsilon}} \cdot \eta^0$$
+
+$$\mathbf{w}^{(\tau+1)} = \mathbf{w}^{\tau} - \eta^{\tau}\Delta E(\mathbf{w}^{(\tau)})$$
+
+## Adadelta
+
+- 使用前一次的梯度开方 $\sqrt{\mathbf{w}^{(\tau-1)}} + \epsilon$ 代替 $\eta^0$
+
+$$\eta^{\tau} = \frac{\sqrt{\mathbf{w}^{(\tau-1)}} + \epsilon}{\sqrt{g^{(\tau)}} + \epsilon}$$
+
+$$\mathbf{w}^{(\tau+1)} = \mathbf{w}^{\tau} - \frac{\sqrt{\mathbf{w}^{(\tau-1)}} + \epsilon}{\sqrt{g^{(\tau)}} + \epsilon} \Delta E(\mathbf{w}^{(\tau)})$$
+
+## 动量SGD
+
+- SGD 在遇到局部极值和鞍点时容易震荡
+- 引入动量（momentum），抑制梯度的震荡
+
+$$w^{(\tau+1)} = w^{\tau} - \eta \frac{1}{m} \sum_{i=1}^{m} \Delta E(x_i; w^{(\tau)})$$
+
+$$\nabla_w E^{(\tau)}$$
+
+$g^{(\tau)}$ 表示 $\tau$ 时刻的优化方向，且 $g^{(0)} = \nabla_w E^{(0)}$
+
+$\tau$ 时刻的优化方向为：
+
+$$g^{(\tau)} = \alpha g^{(\tau-1)} + \eta \nabla_w E^{(\tau)}$$
+
+$$w^{(\tau+1)} = w^{\tau} - g^{\tau}$$
+
+## Nesterov梯度（NAG）
+
+- 具有一定的预测性
+
+$$\mathbf{w}^{\tau'} = \mathbf{w}^{\tau} + \beta\nabla_{\mathbf{w}}E^{(\tau-1)}$$
+
+$$g^{(\tau)} = \alpha g^{(\tau-1)} + \eta\nabla_{\mathbf{w}}E^{(\tau')}$$
+
+$$\mathbf{w}^{(\tau+1)} = \mathbf{w}^{\tau} - g^{\tau}$$
+
+### NAG梯度（Nesterov Accelerated Gradient, NAG）
+
+- 具有一定的预测性
+
+动量梯度
+
+动量方向
+
+梯度方向
+
+实际优化方向
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_792_0.png)
+
+Nesterov 梯度
+
+梯度方向
+
+动量方向
+
+实际优化方向
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_792_1.png)
+
+## 各种优化的对比
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_794_0.png)
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_795_0.png)
+
+## 残差神经网络（残差 CNN）
+
+- 残差模块（残差块）
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_797_0.png)
+
+在输入和输出之间加入 “捷径”连接（捷径连接）
+
+$$y = \mathcal{H}(x)$$
+
+$$\mathcal{F}(x) := \mathcal{H}(x) - x$$
+
+- 残差神经网络（残差神经网络）
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_798_0.png)
+
+- 构造更深的神经网络，易收敛，不退化
+- 深达千层
+- 块内部取消池化
+- 用更小的卷积核
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_799_0.png)
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_799_1.png)
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_800_0.png)
+
+$$F(x)$$
+
+$$F(x) + x$$
+
+$$x^{l+1} = x^{l} + F(x^{l})$$
+
+$$x^{l+2} = x^{l+1} + F(x^{l+1})$$
+
+$$= x^{l} + F(x^{l}) + F(x^{l+1})$$
+
+$$= x^{l} + \sum_{i=l}^{l+1} F(x^{i})$$
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_802_0.png)
+
+损失函数：$E$，求 $\frac{\partial E}{\partial x^l}$
+
+$$\frac{\partial E}{\partial x^l} = \frac{\partial E}{\partial x^L} \frac{\partial x^L}{\partial x^l}$$
+
+$$= \frac{\partial E}{\partial x^L} \left( 1 + \frac{\partial \sum_{i=l}^{L-1} \mathcal{F}(x^i)}{\partial x^l} \right)$$
+
+## 循环神经网络（循环神经网络，RNN）
+
+- RNN 处理序列问题
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_803_0.png)
+
+- 既能处理序列输入，也能得到序列输出
+
+- RNN 由输入、隐状态、及输出三部分组成
+
+![](img/292e77b9b7b40db2ea6f49ac62f8aa0f_804_0.png)
+
+当前输入：$x_t$
+
+上一刻状态（历史信息）：$h_{t-1}$
+
+更新当前状态：$h_t$
+
+$$h_t = \sigma\left(W^{(hh)}h_{t-1} + W^{(hx)}x_t\right)$$
+
+输出：$y_t$
+
+$$y_t = \operatorname{softmax}\left(W^{(S)}h_t\right)$$
+

@@ -1,0 +1,193 @@
+
+
+## 4.4 谓词Horn逻辑中的自动推理
+
+```
+{ if (f≠g) then return “无法合一”;
+else
+  { θ₁ = Unify(t₁, s₁);
+    θ = θ ∘ θ₁;
+    θ₂ = Unify(Substitution(t₂, θ), Substitution(s₂, θ));
+    θ = θ ∘ θ₂;
+    ...
+    θₙ = Unify(Substitution(tₙ, θ), Substitution(sₙ, θ));
+    θ = θ ∘ θₙ;
+    return θ;
+  }
+}
+```
+
+例：Horn逻辑程序（知识库）如下，
+
++   father(z, y), father(y, x)→grandfather(z, x),
++   
++   →father(John, Peter),
++   
++   →father(Smith, John)。
+
+目标为grandfather(Smith, Peter)→，即查询Smith是否是Peter的祖父？
+
+推理过程如下；
+
++   1. 首先通过合一置换θ={Peter/x, Smith/z}，将目标与知识库中第一条规则的规则头匹配，得到新目标
+
+```
+father(Smith, y), father(y, Peter) →
+```
+
++   2. 考察知识库中第二条和第三条规则，通过合一置换σ={John/y}与知识库中的事实匹配
+
+```
+→ father(Smith, John), → father(John, Peter)
+```
+
+因此查询目标成立，并且返回置换
+
+```
+θ ∘ σ={Peter/x, John/y, Smith/z}
+```
+
++   - 考察某个原子A的算法TorF(A)如下
+
+TorF(A)输入A(s₁,...,sₙ), 返回置换数组Θ, 其中数组元素Θ[i]是一个置换。
+
+```
+TorF(A)
+{
+    i=0;
+    Θ=空集;
+    while(i<n)    //n是此Horn逻辑程序内子句的个数
+    {if(第i条规则的头部=A(t₁,...,tₙ)  //t₁,...,tₙ是项)
+        { //用第i条规则考察A
+            θ = Unify(A(t₁,...,tₙ), A(s₁,...,sₙ));
+            if θ = “无法合一”, goto L₁
+            if(第i条规则的体是空的，即事实)
+                then Θ=Θ∪{θ};
+            else{// A₁... Aₘ 是第i条规则体内所有原子， m>0
+                // 下面i₁, i₂,...,iₘ 初值均为1
+                while(TorF(A₁θ)[i₁]!=NULL)
+                {θ₁=TorF(A₁θ)[i₁];
+                i₁=i₁+1;
+```
+
+```
+while(TorF(A₂θ₁)[i₂]!=NULL)
+{...
+    while(TorF(Aₘθₘ₋₁)[iₘ]!=NULL)
+    { θₘ=TorF(A₁θ)[iₘ];
+        λ=θ ⊙ θ₁ ⊙ ... ⊙ θₘ;
+        Θ=Θ∪{λ};
+        iₘ = iₘ +1;
+    }
+    ...
+}
+}
+}
+}
+L₁ : i=i+1; //考察下一条规则
+}
+return Θ;
+}
+```
+
+## 计算理论
+
+## 第四章 推理与计算
+
++   - 抽象数据类型
++   - 重写规则
+
++   - 数据类型：
++     - 若干数据域和其上的若干操作的集合。
++   - 抽象数据类型：
++     - 一类数据类型，各类型可以有不同的数据表示，但其上的操作有共同的抽象性质。
+
+## 标记：
+
++   - 标记是一个二元组 (S, Σ)，其中S是类型集合，Σ为操作符号集合， Σ∈P({f| f:ω→s, ω∈S*, s∈S})。
+
+## 例：自然数栈的规范可用标记表示为：
+
++   - S = {bool, nat, stack, error}
++   - Σ = {true:→bool, false:→bool, not: bool→bool, or: bool bool→bool 0:→nat, succ: nat →nat, eq: nat nat →bool creat: →stack, pop: stack→stack, empty: stack→bool, read: stack→nat∪error push: stack nat → stack}
+
++   - **项**：设 $(S,\ \Sigma)$ 是一个标记，对任意 $s\in S$，$X_s$ 表示类型 $s$ 的变量集合。
+
++   - $X=\{X_s\mid s\in S\}$ 称为标记 $(S,\ \Sigma)$ 的**变量集合**。
+
++   - **类型 $s$ 的项集合** $T_{\Sigma,s}(X)$ 定义如下：
++     - $X_s\subseteq T_{\Sigma,s}(X)$
++     - 任一 $f:s_1\cdots s_n\to s$，若 $t_1\cdots t_n$ 分别是类型 $s_1\cdots s_n$ 的项，即 $t_i\in T_{\Sigma,s_i}(X)$，$i=1,\cdots,n$，则 $f(t_1,\cdots,t_n)\in T_{\Sigma,s}(X)$
+
++   - $T_{\Sigma}(X)=\{T_{\Sigma,s}(X)\mid s\in S\}$ 称为标记的**项集合**。
+
+## 公理：
+
+设（S, Σ）是标记，一个类型s的Σ—等式e是二元组(L, R),其中s∈S, L, R∈ TΣ,s(X).
+
+通常将（L, R）记为L=R.若L, R ∈ TΣ,s，则称e是一基等式。称E={e1,...,en}是由n个Σ—等式e1,...,en组成的一组公理。
+
++   - **代数规范 (S, Σ, E) :**
++   
++     由一个标记 (S, Σ) 和其上的一组 Σ - 等式组成的公理集 E 构成。
+
++   - **代数规范的扩展:**
++   
++     代数规范 (S, Σ, E) 称为是另一个代数规范 (S₁, Σ₁, E₁) 的扩展，如果：
+     (S, Σ, E) = (S₁+S, Σ₁+Σ, E₁+E)
+     +表示集合上的不相交并。
+
+## Bool =
+
++   - S: bool
++   - Σ: true:→bool
++     false: →bool
++     not: bool →bool
++     or: bool bool →bool
++   - E: not(true)=false; not(false)= true;
++     or(true,x)=true; or(false,x)=x
+
+## 对表达式的求值：
+
+(not(true) or false) or (true or not(false)
+
+(not(true) or false) = not(true),
+= false
+
+(true or not(false) = true
+
+原式匹配为 false or true = true
+
++   - 项重写：
+
+用等式匹配的方法进行表达式求值的机制通常称为**项重写**。即可以用规则对项进行代换或重写。
+
++   - 字符串重写，图重写等。
+
++   - 项重写系统（简写为trs）是重写规则组成的集合，可以应用的领域有：
++     - 定理证明
++     - （数据类型，程序等的）代数说明
++     - 计算机代数学
++     - λ演算
++     - 声明语言的实现
++     - 程序设计语言的操作语义
+
+## 例：Ackerman函数 f：N×N→N
+
++   - **(R1)**  f(0,y)=y+1
++   - **(R2)**  f(x+1,0)=f(x,1)
++   - **(R3)**  f(x+1,y+1)=f(x,f(x+1,y))
+
+对所有的x,y∈N。
+
+## 计算 f(2,1)?
+
++   - f(2,1)
++   - =f(1,f(2,0))  (R3,x→1,y →0)
++   - =f(1,f(1,1))  (R2,x →1)
++   - =f(1,f(0,f(1,0)))  (R3,x →0,y →0)
++   - =f(1,f(0,f(0,1)))  (R2,x →0)
++   - =f(1,f(0,2))  (R1,y →1)
++   - =f(1,3)  (R1,y →2)
++   - =...
+

@@ -1,0 +1,10 @@
+# 计算机组成原理与汇编语言
+(2006级)
+
+北航计算机学院      刘旭东©
+
+Tel  : 82316285
+
+Mail : liuxd@buaa.edu.cn
+
+liuxd@act.buaa.edu.cn

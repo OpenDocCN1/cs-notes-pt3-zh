@@ -1,0 +1,17 @@
+# 最小二乘准则
+
+● 求使 $J_S(a)$ 最小的 $a^*$ (最小二乘近似解/伪逆解/MSE解)
+
+$a^* = Y^+ b \quad Y^+ = (Y^T Y)^{-1} Y^T$
+
+问题：①要求 $Y^T Y$ 非奇异；②求 $Y^+$ 计算量大同时可能引入较大误差。
+
+采用梯度下降法求解：$\nabla J_S(a) = 2Y^T(Ya - b)$
+
+$\begin{cases} a(1), \text{Random} \\ a(k+1) = a(k) - \rho_k Y^T(Ya - b) \end{cases}$
+
+可以证明，选择 $\rho_k = \frac{\rho_1}{k}$，$\rho_1$ 是任意常数
+
+该算法权向量收敛于使 $\nabla J_S(a) = 2Y^T(Ya - b) = 0$ 的权向量 $a^*$
+
+不要求 $Y^T Y$ 奇异与否，只计算 $\hat{d} \times \hat{d}$ 方阵 $Y^T Y$，比 $\hat{d} \times N$ 矩阵 $Y^+$ 计算量小

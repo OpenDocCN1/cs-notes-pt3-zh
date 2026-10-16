@@ -1,0 +1,5 @@
+# 5.5 表单组件
+
+jQuery Mobile框架支持标准的HTML表单，在支持的设备上会自动使用AJAX处理，同时标准表单控件的外观也为触摸操作进行了优化。
+
+所谓标准表单指的是位于form元素内的一组表单控件，如input、textarea以及select元素等。表单的数据将被发送到该form元素的action属性所指向的URL。

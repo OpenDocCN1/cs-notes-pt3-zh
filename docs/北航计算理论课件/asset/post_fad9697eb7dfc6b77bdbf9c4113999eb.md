@@ -1,0 +1,173 @@
+
+## 1970年图灵奖获奖者 James Hardy Wilkinson
+
+![](img/ffda313724bb0d18f2f606b4f770e807_383_0.png)
+
+因在利用数值分析方法来促进高速数字计算机的应用方面的研究而获奖。
+
+1919～1986
+
+### 重要论文有：
+
+- Rounding Errors in Algebraic Processes, Prentice-Hall, 1964
+- The Algebraic Eigenvalue Problem, Clarendon Pr., 1965
+- Handbook for Automatic Computation, Vol. 2, Linear Algebra, Springer, 1971
+
+### 图灵演讲：
+
+Some Comments from a Numerical Analyst
+
+![](img/ffda313724bb0d18f2f606b4f770e807_383_1.png)
+
+## 1971年图灵奖获奖者 John McCarthy
+
+![](img/ffda313724bb0d18f2f606b4f770e807_384_0.png)
+
+因对人工智能的贡献被授予图灵奖。
+
+1927～
+
+### 重要论文有：
+
+- Automata Studies, Princeton Uni. Pr., 1956
+- Information: A Scientific American Book, Freeman, 1966
+- Formalizing Common Sense: Papers by John McCarthy, Ablex Pub. Co., 1990
+
+### 图灵演讲：
+
+The Present State of Research on Artificial Intelligence
+
+![](img/ffda313724bb0d18f2f606b4f770e807_384_1.png)
+
+## 1972年图灵奖获奖者 Edsger Wybe Dijkstra
+
+![](img/ffda313724bb0d18f2f606b4f770e807_385_0.png)
+
+ALGOL的推广者，率先实现了ALGOL 60的编译器。他还在图论、算法和操作系统有很大的贡献。图论中的求最短路径的方法之一就是Dijkstra算法。还有操作系统中的PV操作也是他提出的。
+
+1930～2002
+
+### 重要论文有：
+
+- A Primer of ALGOL 60 Programming, Academic Pr., 1962
+- A Discipline of Programming, Prentice-Hall, 1976
+- The Teaching of Programming, i.e. the Teaching of Thinking, Springer, 1976
+- Selected Writings on Computing: A Personal Perspective, Springer, 1982
+- A Method of Programming, Addison-Wesley, 1988
+- Formal Development of Programs and Proofs, Addison-Wesley, 1990
+- Predicate Calculus and Program Semantics, Springer, 1990
+
+### 图灵演讲：
+
+The Humble Programmer
+
+## 1974年图灵奖获奖者 Donald Ervin Knuth
+
+![](img/ffda313724bb0d18f2f606b4f770e807_387_0.png)
+
+1938～
+
+因在算法分析和编程语言设计方面的贡献而获奖。他著有巨作“The Art of Computer Programming”。字符串匹配中KMP算法的K就是他。编译中学到的LR(k)文法也是他提出的。他还给整个西文印刷行业带来产生革命性变革的TeX排版软件。
+
+### Knuth的重要著述有：
+
+- The Art of Computer Programming, Vols. 1, 2, 3, Addison-Wesley
+- Computers and Typesetting
+- Surreal Numbers, Addison-Wesley, 1974
+- Concrete Mathematics, Addison-Wesley, 1989
+- Mathematical Writing, MAA, 1989
+- Mathematics for the Analysis of Algorithms, Birkhäuser, 1990
+- Axioms and Hulls, Springer, 1992
+- The Stanford GraphBase: A Platform for Combinatorial Computing, ACM Pr., 1993
+
+### 图灵演说：
+
+Computer Programming as an Art
+
+## 1975年图灵奖获奖者 Herbert Alexander Simon & Allen Newell
+
+![](img/ffda313724bb0d18f2f606b4f770e807_388_0.png)
+
+他们在人工智能、认知心理学、表处理等方面的贡献。同第一届图灵奖得主Alan J. Perlis并称为CMU三驾马车。Simon还获得了1978年诺贝尔经济学奖。
+
+![](img/ffda313724bb0d18f2f606b4f770e807_388_1.png)
+
+### Herbert Alexander Simon和Allen Newell合著的重要著述有：
+
+- The Logic Theory Machine: A Complex Information Processing System, RAND, 1956
+- Human Problem Solving, Prentice-Hall, 1972
+
+### 图灵演讲：
+
+Computer Science as Empirical Inquiry: Symbols and Search
+
+## 1977年图灵奖获奖者 John Warner Backus
+
+![](img/ffda313724bb0d18f2f606b4f770e807_390_0.png)
+
+1924～
+
+FORTRAN语言和Backus范式(BNF)的发明人。因对可用的高级编程系统设计有深远和重大的影响而获奖。
+
+### 重要论文有：
+
+- Reduction Languages and Variable Free Programming, 1972
+
+### 图灵演讲：
+
+Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs
+
+## 1978年图灵奖获奖者 Robert W. Floyd
+
+![](img/ffda313724bb0d18f2f606b4f770e807_391_0.png)
+
+因其在软件编程的算法方面的深远影响，并开创了包括剖析理论、编程语言的语义、自动程序检验、自动程序合成和算法分析在内的多项计算机子学科而被授予该奖。
+
+1936～
+
+### 重要论文有：
+
+- Assigning Meanings to Programs, 1967
+
+### 图灵演说：
+
+The Paradigms of Programming
+
+## 1979年图灵奖获奖者 Kenneth Eugene Iverson
+
+![](img/ffda313724bb0d18f2f606b4f770e807_392_0.png)
+
+1920～
+
+因对程序设计语言理论、互动式系统及APL的贡献被授予该奖。
+
+### 重要著述有：
+
+- A Programming Language, John Wiley & Sons, 1962
+- Elementary Functions, SRA, 1966
+- Algebra: Algebra Analysis, APL Pr., 1976
+- Automatic Data Processing, John Wiley & Sons, 1963, 1969
+- An Introduction to APL for Scientists and Engineers, APL Pr., 1966
+
+### 图灵演说：
+
+Notation as a Tool of Thought
+
+## 1980年图灵奖获奖者 Charles Richard Hoare
+
+![](img/ffda313724bb0d18f2f606b4f770e807_393_0.png)
+
+1934～
+
+因对程序设计语言的定义和设计所做的贡献而获奖。著名的快速排序算法和case语句都是他的杰作。
+
+### Hoare的重要论文有：
+
+- Operating Systems Techniques, Academic Pr., 1982
+- Mathematical Logic and Programming Languages, Prentice-Hall, 1992
+- Developments in Concurrency and Communication, Addison-Wesley, 1990
+- Mechanized Reasoning and Hardware Design, Prentice-Hall, 1992
+
+### 图灵演说：
+
+The Emperor’s Old Clothes

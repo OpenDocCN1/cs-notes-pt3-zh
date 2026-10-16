@@ -1,0 +1,135 @@
+
+
+# ■ 招聘问题的分析
+
+```
+HIRE-ASSISTANT(n)                                      cost    times
+best ← 0 // candidate 0 is a least-qualified dummy candidate
+for i ← 1 to n
+    do interview candidate i                              c_i       n
+        if candidate i is better than candidate best
+            then best ← i
+                 hire candidate i                         c_h       m
+
+T(n) = n c_i + m c_h
+```
+
+我们需要计算 Pr{ candidate i is hired }？
+
+- i is hired ⇔ i is better than each of candidates 1, 2, …, i−1.
+- Assumption that the candidates arrive in random order => any one of these candidates is equally likely to be the best one. （若候选人随机到来，则每一个候选人为最佳人选的概率相等）
+- Thus, E[X_i] = Pr{ candidate i is the best so far } = 1/i ?
+
+Then
+
+E[X] = E[∑ᵢ₌₁ⁿ Xᵢ] = ∑ᵢ₌₁ⁿ E[Xᵢ] = ∑ᵢ₌₁ⁿ 1/i = ln n
+
+Thus, the expected hiring cost is n cᵢ + (ln n)cₕ, which is much better than the worst-case cost of n cᵢ + n cₕ.
+
+(n cᵢ + m cₕ): 30 + 3.4*10 = 64 vs 30 + 30*10 = 330. (ln 30 = 3.4…)
+
+## 5.3 随机化算法
+
+### 5.3.1 招聘问题
+
+对于招聘问题，该算法是确定性的。
+
+- For any given input, the number of times we hire a new office assistant will always be the same. (给定输入，则雇佣的人数确定)
+- The number of times we hire a new office assistant depends only on the input. (雇佣的人数〔资源消耗〕依赖于输入)
+- Some rank orderings will always produce a high hiring cost. Example: <1,2,3,4,5,6>, where each is hired.
+- Some will always produce a low hiring cost. Example: <6,*,*,*,*,*>, where only the first is hired.
+- Some may be in between.
+
+![](img/09c68ab421cfce4995ddad1430ef2637_213_0.png)
+
+### 5.3.1 招聘问题
+
+Instead of always interviewing the candidates in the order presented, what if we first randomly permuted this order.
+
+- The randomization is now in the algorithm, not in the input distribution. （随机化过程在算法中，而不是在输入中体现）
+- Given a particular input, we can no longer say what its hiring cost will be. Each time we run the algorithm, we can get a different hiring cost. （算法的运行时间与输入无关）
+- No particular input always elicits worst-case behavior. （算法的最坏运算时间不取决于特定的输入）
+- Bad behavior occurs only if we get “unlucky” numbers from the random-number generator. （只有当随机数产生器产生很不幸的数时，算法的运算时间最坏）
+
+### 5.3.1 招聘问题
+
+#### Algorithm for randomized hiring problem
+
+```
+RANDOMIZED-HIRE-ASSISTANT(n)
+Randomly permute the list of candidates
+HIRE-ASSISTANT(n)
+```
+
+Lemma
+
+The expected hiring cost of RANDOMIZED-HIRE-ASSISTANT is $n c_i + (\ln n) c_h$.
+
+# Proof
+
+After permuting the input array, we have a situation identical to the probabilistic analysis of deterministic HIRE-ASSISTANT.
+
+（对输入矩阵进行随机置换后，情况同 HIRE-ASSISTANT 相同）
+
+### 5.3.2 随机置换一个数组
+
+**Goal:**
+
+**Produce a uniform random permutation (each of the n! permutations is equally likely to be produced),**
+
+**that is**
+
+$A = \langle 1, 2, 3, \ldots, n \rangle$
+
+The numbers of permutation of A is $P_n^n = n!$, each of that is equally likely to be produced.
+
+![](img/09c68ab421cfce4995ddad1430ef2637_216_0.png)
+
+### 5.3.2 随机置换一个数组
+
+#### (1) Permute-by-sorting
+
+The method is not very good
+
+- Assume the given array A contains the element 1 through n.
+  （设数组 A = <1, 2, ..., n>）
+- Assign each element A[i] a random priority P[i], then sort the elements of A according to these priorities. Example
+  （为每个元素 A[i] 分配一个随机数 P[i] 作为其优先权，然后依据这些优先权对数组 A 进行排序。）
+- If initial array is A=<1,2,3,4>, choose random priorities P=<36,3,97,19>, then produce an array B=<2,4,1,3>
+
+```
+PERMUTE-BY-SORTING(A)
+n = length[A]
+for(i=1; i<=n; i++)
+    P[i] = RANDOM(1, n³)
+sort A, using P as sort keys
+return A
+```
+
+We use a range of 1 to n³ in RANDOM to make it likely that all the priorities in P are unique.( Exercise 5.3-5 )
+
+### 5.3.2 随机置换一个数组
+
+#### (2) RANDOMIZE-IN-PLACE
+
+![](img/09c68ab421cfce4995ddad1430ef2637_218_0.png)
+
+```
+RANDOMIZE-IN-PLACE(A, n)
+for (i = 1; i ≤ n; i++)
+    swap(A[i], A[RANDOM(i, n)])
+```
+
+![](img/09c68ab421cfce4995ddad1430ef2637_218_1.png)
+
+# Idea:
+
+- In iteration *i*, choose *A[i]* randomly from *A[i .. n]*.
+- Will never alter *A[i]* after iteration *i*.（第 *i* 次迭代后不再改变 *A[i]*）
+
+# Merit:
+
+- It runs in linear time without requiring sorting (*O(n)*).
+- It needs fewer random bits (*n* random numbers in the range 1 to *n* rather than the range 1 to *n³*)（仅需要小范围的随机数产生器）
+- No auxiliary array is required.（不需要辅助空间）
+

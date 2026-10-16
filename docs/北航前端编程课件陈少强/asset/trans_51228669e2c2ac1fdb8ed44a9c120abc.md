@@ -1,0 +1,152 @@
+
+
+## 3.3.7 层叠样式单和动态HTML
+
+层叠样式单（Cascading Style Sheets，CSS）指定了HTML文档的视觉表现。使用CSS和JavaScript，可以创造出各种视觉效果，这些视觉效果统称为动态HTML（DHTML）。
+
+### 1、使用脚本控制样式
+
+文档对象模型允许将应用到每个文档元素上的样式进行脚本化，利用脚本化CSS样式的能力，可以动态地改变颜色、字体等。更重要的是，可以用它设置和改变元素的位置，甚至隐藏或显示元素。这意味着可以用DHTML技术创造出动画效果。
+
+一旦获取了想应用样式的元素的引用，就可以使用元素的style属性获取那个元素的CSSProperties对象。这个JavaScript对象拥有与CSS的每个样式对应的JavaScript属性。设置这些属性与设置HTML元素的style属性中的相应样式的效果一样。读取这些属性将返回HTML元素的style属性中设置的CSS属性（如果存在）。即设置和读取的都是HTML元素的内联样式，而不是应用到该元素的样式表的样式信息。设置对象的这个属性后，就定义了元素的内联样式，它能有效地覆盖样式表样式。例如：
+
+```javascript
+var imgs = document.getElementsByTagName("img");
+for(var i = 0; i < imgs.length; i++) {
+    var img=imgs[i];
+    if (img.width == 468 && img.height == 60) //标题广告尺寸
+        img.style.visibility = "hidden"; //占位但不可见
+}
+```
+
+#### （1）CSS属性在JavaScript中的命名惯例
+
+许多CSS样式名中都包含连字符，例如：font-family。在JavaScript中连字符被解释为减号，因此，CSSProperties对象的属性名和真正的CSS属性名有点不同：
+
+- 如果一个CSS属性名包含一个或多个连字符，那么CSS2Properties属性名删除了连字符，且原来紧接在连字符后的字母改为大写。例如，可以用下列代码访问font-family属性：
+
+  ```javascript
+  element.style.fontFamily = "sans-serif";
+  ```
+
+- float是JavaScript的保留关键字。在JavaScript中，CSS的float样式名对应CSS2Properties的cssFloat属性。
+
+#### （2）使用样式属性
+
+在使用CSSProperties对象的属性时，要记住，所有值必须是字符串，而且必须是有单位的。不论是设置还是读取。
+
+```javascript
+e.style.marginLeft = "30px";
+var totalMarginWidth = parseInt(e.style.marginLeft) + parseInt(e.style.marginRight); //相同单位时
+```
+
+有些CSS属性是其它属性的简化形式，CSSProperties对象也有对应于这些简化属性的属性。例如：
+
+```javascript
+e.style.margin = topMargin + "px " + rightMargin + "px " + bottomMargin + "px " + leftMargin + "px";
+```
+
+但使用简化属性通常并不方便。
+
+再次强调：CSSProperties对象只能设置单个元素的内联属性，也只能读取单个元素的内联属性（包括由CSSProperties对象设置的）。它没有提供查询CSS级联样式的方法，也没有提供判断应用到给定元素的完整样式集合的方法。
+
+#### （3）DHTML动画
+
+用JavaScript和CSS能够实现的最强大的DHTML功能是动画。DHTML动画没有什么特殊之处，所需要做的只是周期性地改变元素的一个或多个样式属性。例如：
+
+```html
+<div id="urgent">
+<h1>Red Alert!</h1>The Web server is under attack!
+</div>
+<script>
+var e = document.getElementById("urgent");
+var colors = ["white", "yellow", "orange", "red"]; //特殊色
+var nextColor = 0;
+setInterval("e.style.backgroundColor=colors[nextColor++%colors.length];", 500);
+</script>
+```
+
+所有DHTML动画都要使用window对象的setInterval()或setTimeout()方法。
+
+#### （4）DHTML动画举例
+
+由于代码较长，请参看：3-8.html。
+
+此例演示了下列功能：
+
+- 1. 具有动画功能的HTML标签 `<marquee>`。它不属于W3C标准，可酌情使用。
+- 2. 使用CSS进行剪切
+- 3. 使用JavaScript和CSS实现动画效果。
+- 4. 使用JavaScript的事件处理实现动画控制。
+
+### 2、关于样式和样式表的其它DOM API
+
+对于想创建DHTML的脚本作者，使用CSSProperties对象的属性控制HTML元素的内联样式通常就足够了，但这毕竟只是CSS的DOM API的一部分。其它DOM API则提供了诸如确定元素的完整样式集合、处理或创建CSS样式表单，甚至覆盖内联样式的接口。使用时可以查询相关文档。
+
+## 4.1.2 jQuery的优点
+
+- 1. 功能强大，易扩展，代码量小，免费使用
+- 2. 充分利用CSS的概念和语法
+
+  使得熟悉CSS的设计人员有顺畅的切入点。
+- 3. 屏蔽浏览器的不一致性
+- 4. 总是面向集合
+
+  查询结果和操作对象都是集合。这样就可以通过所谓的隐式迭代避免臃肿的循环结构，大幅减少代码。
+- 5. 将多重操作集于一行
+
+  这被称为连缀（chaining）：对一个jQuery对象的操作结果还是一个jQuery对象。这样可以避免使用临时变量和重复代码。
+
+所有这些得益于jQuery优秀的设计理念。
+
+## 4.1.3 第一个jQuery驱动的页面
+
+- 1. 下载jQuery到本地
+- 2. 在HTML中包含jQuery
+
+```html
+...
+<head>
+    <meta charset="utf-8">
+    <title>Through the Looking-Glass</title>
+    <link rel="stylesheet" href="4-1-1.css" type="text/css" />
+    <script src="jquery.js"></script>
+    <script src="4-1-1.js"></script>
+</head>
+...
+```
+
+详细代码见例4-1-1.html
+
+- 3. 编写jQuery代码（4-1-1.js）
+
+```javascript
+$(document).ready(function() {
+    $('div.poem-stanza').addClass('highlight');
+});
+```
+
+说明：
+
+- ① 在jQuery中，总是使用$(document).ready()方法。通常，它比onload事件处理程序更有优势，不必等待页面所有内容加载完毕，只要DOM已经就绪。
+- ② 尽量使用匿名函数（即函数常量或称lambda函数）。
+
+- 4. 查看效果
+- 5. 与纯JavaScript比较
+
+```javascript
+window.onload = function() {
+    var divs = document.getElementsByTagName('div');
+    for (var i = 0; i < divs.length; i++) {
+        if (hasClass(divs[i], 'poem-stanza')
+            && !hasClass(divs[i], 'highlight')) {
+            divs[i].className += ' highlight';
+        }
+    }
+    function hasClass( elem, cls ) {
+        var reClass = new RegExp(' ' + cls + ' ');
+        return reClass.test(' ' + elem.className + ' ');
+    }
+};
+```
+

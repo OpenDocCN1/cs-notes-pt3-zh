@@ -1,0 +1,27 @@
+# 2.3.2 Analyzing divide-and-conquer algorithms
+
+T(n) = { Θ(1) if n ≤ c
+  aT(n / b) + D(n) + C(n) otherwise }
+
+How to set up the recurrence for T(n), the worst-case running time of merge sort on n numbers?
+
++   - If one element n=1, takes constant time.
++   - When n>1,
+
++   - **Divide**: The step just computes the middle of the subarray, one step. Thus, D(n)=Θ(1).
+
++   - **Conquer**: Recursively solve two subprolems, each of size n/2, which contributes 2T(n/2) to the running time.
+
++   - **Combine**: MERGE procedure shows C(n)=Θ(n).
+
+T(n) = { Θ(1) if n = 1
+  2T(n / 2) + Θ(n) if n > 1 }
+
+```
+MERGE-SORT(A, p, r)
+1   if p < r
+2       Then q ← ⌊(p + r) / 2⌋
+3           MERGE-SORT(A, p, q)
+4           MERGE-SORT(A, q+1, r)
+5           MERGE(A, p, q, r)
+```

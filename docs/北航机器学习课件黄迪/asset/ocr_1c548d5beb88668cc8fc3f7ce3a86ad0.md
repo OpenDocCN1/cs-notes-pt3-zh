@@ -1,0 +1,12 @@
+# 机器学习目标
+
++   Supervised: Low E-out or maximize probabilistic terms
+
+error = 1/N Σ_{n=1}^{N} [y_n ≠ g(x_n)]
+
+E-in: for training set
+E-out: for testing set
+
+Eout(g) ≤ Ein(g) ± O( sqrt( d_VC / N ) ln N )
+
++   Unsupervised: Minimum quantization error, Minimum distance, MAP, MLE(maximum likelihood estimation)

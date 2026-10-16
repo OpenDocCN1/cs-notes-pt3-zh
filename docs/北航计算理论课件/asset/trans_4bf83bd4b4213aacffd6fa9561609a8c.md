@@ -1,0 +1,201 @@
+
+- \(F\) 为函数符号的集合；\(X\) 为变量的集合；\(F\) 和 \(X\) 不相交。则 \(F\) 和 \(X\) 上的项的集合 \(T(F,X)\) 定义为：
+  - 每个 0 元的函数符号都是项；
+  - 每个变量是项；
+  - 如果 \(t_1,\ldots,t_n\) 是项，且 \(f\) 为 \(n\) 元（\(n\ge 1\)）的函数符号，则 \(f(t_1,\ldots,t_n)\) 是项。
+  - 0 元的函数符号通常称为常量符号。
+
+### 项 \(t\) 中的变量
+
+- 已知一个项 \(t\)，用 \(\mathrm{Var}(t)\) 来表示 \(t\) 中所有出现的变量组成的集合；如果 \(\mathrm{Var}(t)=\emptyset\)，则称 \(t\) 为基项。
+- 例：如果 \(t=f(x,g(y,x),z)\)，那么 \(\mathrm{Var}(t)=\{x,y,z\}\)。
+
+### 子项
+
+- 已知项 \(t\)，用 \(\mathrm{Sub}(t)\) 表示 \(t\) 的所有子项的集合。
+- 例：如果 \(t=f(x,g(y,x),z)\)，那么
+  \[
+  \mathrm{Sub}(t)=\{t,x,y,z,g(y,x)\}
+  \]
+
+### 项重写规则
+
+项的有序对 \(r=(t_1,t_2)\)，也可记为 \(r:t_1\to t_2\)，其中：
+- \(t_1\) 不是一个变量；
+- \(\mathrm{Var}(t_2)\subseteq \mathrm{Var}(t_1)\)。
+
+\(t_1\)（或 \(t_2\)）称为 \(r\) 的左端（或右端），也可以用 \(\mathrm{lhs}(r)\)（或 \(\mathrm{rhs}(r)\)）表示。
+
+一个非空的重写规则集就称为项重写系统。
+
+### 例
+
+- \(f(x+1,0)\to f(x,1)\) 为一个重写规则；
+- \(x\to f(a,a)\)、\(f(x,y)\to f(0,z)\) 不是重写规则。
+
+### 代换
+
+- 代换：从 \(X\) 到 \(T(F,X)\) 的函数。
+- 例：\(\sigma:X\to T(F,X)\)，可以有
+  - \(\sigma(x)=f(x,x)\)，
+  - \(\sigma(y)=a\)，
+  - \(\sigma(z)=z\)，
+  对所有的 \(z\ne x\) 且 \(z\ne y\)。
+- 代换 \(\sigma\) 记为集合：
+  \[
+  \{x_1\to \sigma(x_1),\ldots,x_n\to \sigma(x_n)\}
+  \]
+- 对项 \(t\) 的代换 \(\sigma(t)\) 通常记为：
+  \[
+  t[x_1/\sigma(x_1),\ldots,x_n/\sigma(x_n)]
+  \]
+
+### 合一
+
+对代换 \(\sigma\) 和项 \(t_1,t_2\)，如果 \(\sigma(t_1)=\sigma(t_2)\)，则称 \(\sigma\) 为 \(t_1\) 和 \(t_2\) 的合一子，且 \(t_1\) 和 \(t_2\) 为可合一的。
+
+例：设 \(\sigma:X\to T(F,X)\)，有 \(\sigma(x)=a\)，\(\sigma(y)=a\)，\(\sigma(z)=z\)，其中 \(z\ne x\) 且 \(z\ne y\)。对项 \(t_1=f(x,x)\)、\(t_2=f(a,a)\) 和 \(t_3=f(a,b)\)（\(b\ne a\)），\(\sigma\) 是 \(t_1\) 和 \(t_2\) 的合一，不是 \(t_1\) 和 \(t_3\) 的合一。
+
+### 重写 \(\Rightarrow_R\)
+
+- 设 \(R\) 为 TRS，定义项上的二元关系 \(t_1\Rightarrow_R t_2\) 满足：若 \(t_1=ut_0v\)，其中分解项 \(ut_0v\) 表示 \(t_0\) 是 \(t_1\) 的子项；存在规则 \(r:t\to t'\in R\)，及 \(t_0\) 与 \(t\) 的合一 \(\sigma\)，且
+  \[
+  t_2=u\sigma(t')v
+  \]
+- \(\Rightarrow_R^+\) 为 \(\Rightarrow_R\) 的传递闭包；
+- \(\Rightarrow_R^*\) 为 \(\Rightarrow_R\) 的自反、传递闭包。
+
+### 例
+
+设 \(R=\{r_1:f(0,y)\to y+1,\ r_2:f(x+1,0)\to f(x,1),\ r_3:f(x+1,y+1)\to f(x,f(x+1,y))\}\)，则
+
+\[
+f(2,1)\Rightarrow_R f(1,f(2,0))\Rightarrow_R f(1,f(1,1))\Rightarrow_R f(1,f(0,f(1,0)))\Rightarrow_R f(1,f(0,f(0,1)))\Rightarrow_R f(1,f(0,2))
+\]
+
+即：
+
+\[
+f(2,1)\Rightarrow_R^* f(1,f(0,2))
+\]
+
+### 例
+
+设 \(R=\{A\to B,\ AB\to AAB\}\)。对项 \(AAAB\) 有：
+
+\[
+AAAB\Rightarrow_R AABB\Rightarrow_R ABBB\Rightarrow_R BBBB
+\]
+
+\[
+AAAB\Rightarrow_R AAAAB\Rightarrow_R AAAAAB\Rightarrow_R AAAAAAB\Rightarrow_R AAAAAAAB\Rightarrow_R\dots
+\]
+
+### 终止性与合流性
+
+- 设 \(R\) 为 TRS，如果不存在无穷的项序列 \(t_1,t_2,\ldots\) 满足 \(t_i\Rightarrow_R t_{i+1}\)（\(i\ge 1\)），则称 \(R\) 为可终止的。
+- 如果有
+  \[
+  (\forall t,t_1,t_2)(t\Rightarrow_R^* t_1\land t\Rightarrow_R^* t_2\Rightarrow(\exists t')(t_1\Rightarrow_R^* t'\land t_2\Rightarrow_R^* t'))
+  \]
+  称 \(R\) 为合流的。
+
+- 如果 \(R\) 既是可终止的，又是合流的，则称 \(R\) 为**典范的或完备的**。
+- **典范重写系统应满足：**
+  - 对每个表达式 \(E\) 和 \(F\)，\(E\) 与 \(F\) 相等当且仅当存在 \(N\)，使得 \(E\Rightarrow_R^* N\) 且 \(F\Rightarrow_R^* N\)。
+
+### 不可约简式与范式
+
+- 设 \(R\) 为 TRS，\(t\) 为项。
+- 如果不存在 \(t'\) 使得 \(t\Rightarrow_R t'\)，则称 \(t\) 在 \(R\) 中是不可约简式、范式或约简式。
+- 如果在 \(R\) 中有 \(t\Rightarrow_R^* t'\) 且 \(t'\) 为范式，则称 \(t'\) 为 \(t\) 的范式（或约简式）。
+
+### 例
+
+设 \(R=\{r_1:f(0,y)\to y+1,\ r_2:f(x+1,0)\to f(x,1),\ r_3:f(x+1,y+1)\to f(x,f(x+1,y))\}\)，则
+
+- \(2\) 为范式；
+- \(f(1,0)\Rightarrow_{r_2} f(0,1)\Rightarrow_{r_1} 2\)，因此，\(2\) 为 \(f(1,0)\) 的范式。
+
+### 定理 1
+
+如果 \(R\) 为典范的项重写系统，则任意项 \(t\) 都有一个唯一的范式。
+
+**证明：** 根据终止性质，每个项至少有一个范式。如果 \(t\) 是项，\(t_1\) 和 \(t_2\) 为 \(t\) 的范式，那么根据合流性 \(t_1=t_2\)。
+
+在典范的 TRS \(R\) 中的项 \(t\) 的唯一范式称为 \(t\) 的典范式，用符号 \(\|t\|_R\) 表示。
+
+### 定理 2
+
+如果 \(R\) 为典范项重写系统，则对任何项 \(t_1\) 和 \(t_2\)，有：
+
+\[
+R\models t_1=t_2 \iff \|t_1\|_R=\|t_2\|_R
+\]
+
+判定两个项 \(t_1\) 和 \(t_2\) 是否相等，只要利用 \(R\) 中的等式推导证明它们的典范式是否相等即可。
+
+### 定理 3
+
+对有限项重写系统 \(R\) 和项 \(t\)，从 \(t\) 开始的所有计算是否可终止是不可判定的。
+
+### 定理 4
+
+对有限项重写系统 \(R\)，\(R\) 是否可终止是不可判定的。
+
+### 等式与重写的区别
+
+- 等式表示的是一个关系，没有方向，且对等式两端都没有限制。
+- 重写规则是方向性的动作（action），如 \(X\to Y\) 表示 \(X\) 可被 \(Y\) 代替，但反之不成立。而且对 \(X\) 和 \(Y\) 都有限制，如 \(X\) 不能为一个变量，\(Y\) 不能包含不在 \(X\) 中出现的变量。
+
+## 程序理论基础
+
+![](img/ffda313724bb0d18f2f606b4f770e807_299_0.png)
+
+### § 3.1 CCS演算
+
+- CCS：通信与并发系统。Milner 给出的一种描述动态并发机制的演算。
+- CCS 是一种函数式语言，进程间的通信通过其端口上的通道，一对通信原语与环境进行通信。
+
+CCS 的语法：
+
+```text
+进程 P ::= nil |
+    (ε→P) | (α!a→P) |
+    (α?x→P) | (b→P) |
+    P + P | P||P |
+    P\L | P[f] |
+    P(a₁, ..., aₖ)
+```
+
+其中 \(nil\) 表示空进程，\(L\) 是通道名字集合，\(f\) 是重命名函数，\(P(a_1, ..., a_k)\) 表示含有参数 \(a_1, ..., a_k\) 的进程。
+
+CCS 进程的执行规则：
+
+- \((\varepsilon \to P) \to P\)
+- \((\alpha?x \to P) \xrightarrow{\alpha?\eta} P[\eta/x]\)
+- \[
+  \frac{a \to \eta}{(\alpha!a \to P) \xrightarrow{\alpha!\eta} P}
+  \]
+- \[
+  \frac{b \to \mathrm{true}\quad P \xrightarrow{\lambda} P'}{(b \to P) \xrightarrow{\lambda} P'}
+  \]
+- \[
+  \frac{P_0 \xrightarrow{\lambda} P'_0}{P_0+P_1 \xrightarrow{\lambda} P'_0}
+  \]
+- \[
+  \frac{P_1 \xrightarrow{\lambda} P'_1}{P_0+P_1 \xrightarrow{\lambda} P'_1}
+  \]
+- \[
+  \frac{P_0 \xrightarrow{\lambda} P_0'}{P_0 \parallel P_1 \xrightarrow{\lambda} P_0' \parallel P_1}
+  \]
+- \[
+  \frac{P_1 \xrightarrow{\lambda} P_1'}{P_0 \parallel P_1 \xrightarrow{\lambda} P_0 \parallel P_1'}
+  \]
+- \[
+  \frac{P_0 \xrightarrow{\alpha!n} P_0' \quad P_1 \xrightarrow{\alpha?n} P_1'}{P_0 \parallel P_1 \xrightarrow{\varepsilon} P_0' \parallel P_1'}
+  \]
+- \[
+  \frac{P_0 \xrightarrow{\alpha?n} P_0' \quad P_1 \xrightarrow{\alpha!n} P_1'}{P_0 \parallel P_1 \xrightarrow{\varepsilon} P_0' \parallel P_1'}
+  \]
+

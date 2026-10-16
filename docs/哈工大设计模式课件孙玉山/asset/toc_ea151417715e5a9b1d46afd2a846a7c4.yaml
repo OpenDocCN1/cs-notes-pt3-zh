@@ -1,0 +1,1494 @@
+- - '##'
+  - Introduction to Software Architecture
+- - '###'
+  - 建筑设计的例子1
+- - '###'
+  - 建筑设计的例子3
+- - '###'
+  - 房屋设计的例子1
+- - '###'
+  - 房屋设计的例子2
+- - '###'
+  - 二手车拍卖系统程序设计的例子
+- - '###'
+  - JPANEL
+- - '###'
+  - CarAuctionGUI
+- - '###'
+  - 二手车拍卖系统的类图设计-单独一个类的情况
+- - '###'
+  - MVC pattern demo-Car auction
+- - '###'
+  - Honda Civic
+- - '###'
+  - 'Question: which design is better?'
+- - '###'
+  - 'Question: What is a design pattern?'
+- - '###'
+  - 'Definition of a pattern （软件设计模式的定义）:'
+- - '###'
+  - Why use software patterns （为什么使用设计模式）？
+- - '###'
+  - Definition of Software Architecture
+- - '###'
+  - Architecture of an Integrated Software Development Environment
+- - '###'
+  - Java EE Architecture
+- - '###'
+  - 为什么软件体系结构对于大型、复杂的系统是重要的？
+- - '###'
+  - 其它参考书与材料（Reference books）
+- - '###'
+  - 作业与项目
+- - '###'
+  - 期末考试
+- - '###'
+  - Content of This Lecture
+- - '###'
+  - Evolution of Program Design
+- - '###'
+  - 1. Evolution of Program Design
+- - '####'
+  - Language history
+- - '####'
+  - Dennis Ritchie
+- - '####'
+  - Brief history of C and Unix (developed by AT&T Bell Labs)
+- - '####'
+  - Ken Thompson, Dennis Ritchie
+- - '####'
+  - Brief History of Microsoft
+- - '####'
+  - 1969年发射的Apollo 11号控制系统
+- - '####'
+  - 非结构化编程的样式
+- - '###'
+  - Call and Return Architecture
+- - '###'
+  - 2. Call and Return Architecture
+- - '###'
+  - Main Program and Subroutine
+- - '###'
+  - 2. Main Program and Subroutine
+- - '####'
+  - Main Program/Subroutine Pattern
+- - '####'
+  - Structured design uses
+- - '####'
+  - 'Steps in structured design:'
+- - '####'
+  - 'Example: a medicine cost computation problem'
+- - '####'
+  - 'Medicine cost computation DFD: layer 1'
+- - '####'
+  - 'Medicine cost computation DFD: layer 2'
+- - '####'
+  - 'Medicine cost computation DFD: layer 3'
+- - '####'
+  - 'Advantage:'
+- - '####'
+  - 'Disadvantage:'
+- - '####'
+  - Problems with top-down functional design
+- - '####'
+  - 1) The functional viewpoint is difficult to evolve
+- - '####'
+  - 2) Real systems are hard to characterize functionally
+- - '####'
+  - 3) The functional focus loses sight of the data
+- - '####'
+  - 4) Functional orientation produces less reusable code
+- - '###'
+  - Object-oriented Design
+- - '###'
+  - 3. Object-oriented Design
+- - '####'
+  - 'System design:'
+- - '####'
+  - 'Principle of Object-oriented design:'
+- - '####'
+  - What is an Object?
+- - '####'
+  - Characteristics of Object oriented design
+- - '####'
+  - Other Characteristics of OOD
+- - '####'
+  - Advantages of OOD
+- - '####'
+  - Difference Between Structured Design and OO Design
+- - '###'
+  - 4. Case Study
+- - '####'
+  - 'Project Name: Key Words in Context'
+- - '####'
+  - 'Requirement Specification:'
+- - '####'
+  - After Circular Shift
+- - '####'
+  - After Alphabetizer
+- - '####'
+  - 'Case Study 1: Design of KWIC Problem in Main Program and Subroutine Architecture'
+- - '####'
+  - KWIC Implemented with Main/Subroutine Architectural Style Architecture
+- - '####'
+  - Main Program and Subroutine Design of the KWIC Program
+- - '####'
+  - Data Representation
+- - '####'
+  - Processing Algorithm
+- - '####'
+  - Case Study 2
+- - '####'
+  - KWIC Implemented with OO Architectural Style
+- - '####'
+  - How this OO design works?
+- - '##'
+  - Lecture 1. Java Concept that is Related to OO Design
+- - '###'
+  - 本次课内容
+- - '###'
+  - Class and Object
+- - '###'
+  - Class Relations (类间关系)
+- - '###'
+  - Java Abstract Class
+- - '####'
+  - Characteristics of Abstract Classes
+- - '####'
+  - Form of an Abstract Class
+- - '####'
+  - How to use Abstract classes?
+- - '####'
+  - Abstract Class and Inheritance
+- - '###'
+  - Difference Between an Abstract Class and a Concrete Class
+- - '###'
+  - Concrete class (实体类)
+- - '###'
+  - Abstract class (抽象类)
+- - '###'
+  - Form of a Class Hierarchy
+- - '###'
+  - Java Interface
+- - '###'
+  - Java Interface(Java接口)
+- - '###'
+  - Java Interface(**Java 接口**)
+- - '###'
+  - 'Properties of Java interface:'
+- - '###'
+  - Java Interface(Java 接口)
+- - '###'
+  - Java Interface(Java接口)
+- - '###'
+  - Why use interface?
+- - '###'
+  - Java Interface(Java接口)
+- - '###'
+  - Java Interface(Java接口)
+- - '###'
+  - Object Oriented Design principles
+- - '###'
+  - Design Principles
+- - '###'
+  - 1. Interface segregation principle
+- - '###'
+  - Example of interface
+- - '###'
+  - 2. Open/closed principle
+- - '###'
+  - 3. Dependency inversion principle
+- - '##'
+  - Lecture 2. Dataflow Systems
+- - '###'
+  - Content of the lecture
+- - '###'
+  - 1. Basic characteristics of the dataflow architecture
+- - '####'
+  - Definition of data flow system
+- - '####'
+  - About Control flow
+- - '####'
+  - Development Methodology
+- - '####'
+  - 1960年代-1970年代数据处理的例子
+- - '###'
+  - Batch sequential dataflow system
+- - '###'
+  - 2. Batch sequential dataflow system
+- - '####'
+  - 'Properties of a Batch sequential system:'
+- - '####'
+  - 批处理系统的性质
+- - '####'
+  - How to work?
+- - '####'
+  - Example 1. Batch sequential database
+- - '####'
+  - Dataflow diagram for Batch Databases
+- - '####'
+  - 1. Raw data
+- - '####'
+  - 2. Edit data
+- - '####'
+  - Ejected data, wrong format
+- - '####'
+  - Example 2. Year 2000 problem and political issues.
+- - '####'
+  - 'Original txt file:'
+- - '####'
+  - 'After Political Issue (in Tape 4) :'
+- - '####'
+  - Problem with Batch sequential System
+- - '###'
+  - Pipes and Filters architecture
+- - '###'
+  - 3. Pipes and Filters architecture
+- - '####'
+  - 'Functionalities of Filters:'
+- - '####'
+  - 'Functionalities of a Pipe:'
+- - '####'
+  - Overall operations
+- - '####'
+  - 'Example 4: Compiler example'
+- - '####'
+  - Functionalities of each filter
+- - '####'
+  - Comparison of batch sequential architecture and Pipes and Filters architecture
+- - '####'
+  - 'Difference 1 (the way for data processing is different):'
+- - '####'
+  - 'Difference 2 (data amount is different) :'
+- - '####'
+  - Digital Image Processing
+- - '###'
+  - 'Example Pipe-and-Filter System: Khors—An Image-Processing Workbench'
+- - '###'
+  - Image Processing Workbench (IPW)
+- - '###'
+  - 4. Process-control Paradigms
+- - '####'
+  - 'Example 9: Room heater design I'
+- - '####'
+  - Room heater logic
+- - '####'
+  - 'Example 10: Room heater Design II'
+- - '####'
+  - General process-control diagram
+- - '####'
+  - Definitions on process-control system
+- - '####'
+  - Example of Beer production lines
+- - '####'
+  - Open Loop Temperature Control
+- - '####'
+  - Closed Loop Temperature Control
+- - '####'
+  - Feedback control system
+- - '####'
+  - Feedback Control
+- - '####'
+  - Feedback control system
+- - '####'
+  - 过程控制软件模型 / A Software Paradigm for Process Control
+- - '##'
+  - Lecture 2. Abstract Factory Pattern
+- - '###'
+  - Contents of this lecture
+- - '###'
+  - Introduction of the Factory Method Pattern
+- - '###'
+  - Introduction to Factory Method Pattern
+- - '####'
+  - Functionalities of the factory method (工厂方法的功能)
+- - '####'
+  - Advantages of the factory method (工厂方法的优点)
+- - '###'
+  - 以下给出两种不同的工厂方法模式
+- - '###'
+  - Theory of the Simple Factory Method Pattern and Design Examples
+- - '####'
+  - The Simple Factory Method Pattern
+- - '####'
+  - Creator (工厂类)
+- - '####'
+  - Example of Auto Insurance Policies (汽车保险的例子——简单工厂方法模式)
+- - '####'
+  - 用户图形界面的监听器代码
+- - '####'
+  - Advantages of the Simple Factory method Pattern (简单工厂方法模式的优点)
+- - '####'
+  - d) Extensibility issue
+- - '####'
+  - Disadvantages of the Simple Factory method Pattern (简单工厂方法模式的缺点)
+- - '#####'
+  - a) Adding a new concrete subclass to Product class hierarchy is difficult.
+- - '###'
+  - Theory of the Factory Method Pattern
+- - '###'
+  - Factory Method Pattern
+- - '###'
+  - Example of Auto Insurance Policies
+- - '###'
+  - 工厂方法模式-汽车保险的例子
+- - '###'
+  - 保险产品层次类
+- - '###'
+  - 工厂层次类
+- - '###'
+  - Source Code
+- - '###'
+  - 汽车保险的例子
+- - '###'
+  - Further Discussion of the Factory Method Pattern
+- - '###'
+  - Comparison of Simple Factory Method Pattern and a Factory Method Pattern
+- - '###'
+  - Simple Factory method pattern
+- - '###'
+  - Comparison of Simple Factory Method Pattern and a Factory Method Pattern (比较)
+- - '###'
+  - Factory method pattern
+- - '###'
+  - b) 工厂方法不同，一个静态，一个动态。
+- - '###'
+  - Comparison of Simple Factory Pattern and a Factory Pattern （比较）
+- - '###'
+  - c) 工厂方法模式的可扩展性（Extensibilities）
+- - '###'
+  - Comparison of Simple Factory Method Pattern and a Factory Method Pattern (比较)
+- - '###'
+  - Comparison of Simple Factory Method Pattern and a Factory Method Pattern (比较)
+- - '###'
+  - Comparison of Simple Factory Pattern and a Factory Pattern （比较）
+- - '###'
+  - When to Use a Factory Pattern
+- - '###'
+  - 工厂方法模式的几种实现方法
+- - '###'
+  - 2. Product class contains all default methods and is only subclassed for cases
+    where the default methods are insufficient.
+- - '##'
+  - Lecture 3. Case Study on Dataflow System
+- - '###'
+  - Case study 1. Legacy File Update
+- - '####'
+  - Four filters with in-ports and out-ports
+- - '####'
+  - 过滤器的结构（Structure of the filters）
+- - '####'
+  - 'Design issue 1: How to make the 4 filter objects work simultaneously?'
+- - '####'
+  - 'Solution:'
+- - '####'
+  - 'Design of the pipe class:'
+- - '####'
+  - 在管道设计的时候，要回答问题：怎样使得数据像水流一样从左向右移动？
+- - '####'
+  - 一串管道是怎样搬运数据的呢？
+- - '####'
+  - Pipe p1 = new Pipe()
+- - '####'
+  - How Pipe object works?
+- - '####'
+  - Some issues about a pipe
+- - '####'
+  - Some issues about a pipe (cont)
+- - '####'
+  - 'Advantages:'
+- - '####'
+  - 'Disadvantages:'
+- - '###'
+  - 'Case study 3. Cruise Control: Process-Control Architecture'
+- - '###'
+  - 巡航控制器-过程控制体系结构
+- - '###'
+  - Case study 3. Cruise Control
+- - '####'
+  - Cruise Control System
+- - '####'
+  - FIGURE 3.16 Booch Block Diagram for Cruise Control
+- - '####'
+  - FIGURE 3.19 State Machine for Activation
+- - '###'
+  - 问题：
+- - '###'
+  - Case study 2. Instrumentation Software 仪器软件
+- - '####'
+  - Functionalities of an Oscilloscope?
+- - '####'
+  - 'Problems with existing oscilloscopes software:'
+- - '####'
+  - 'Solution 1: pipes-and-filters architecture'
+- - '####'
+  - Advantages of using pipes-and-filters architecture
+- - '####'
+  - Solution 2. A Parameterized Pipe and Filter Model
+- - '####'
+  - Parameterized Pipe and Filter Model-structure
+- - '####'
+  - Advantages of Parameterized Pipe and Filter Model
+- - '####'
+  - Disadvantages of Parameterized Pipe and Filter Model
+- - '####'
+  - Solution 3. A Parameterized Pipe-and-Filter
+- - '####'
+  - Further Specifications
+- - '##'
+  - Lecture 4. Event-based Software Architecture
+- - '###'
+  - Content of the lecture
+- - '###'
+  - Definition of event-based system
+- - '###'
+  - 1. EVENT-BASED, IMPLICIT INVOCATION
+- - '####'
+  - What is a procedure（什么是过程）？
+- - '####'
+  - 事件广播机制
+- - '####'
+  - 'Event broadcast and processing mechanism:'
+- - '####'
+  - Structure of a component (部件结构)
+- - '####'
+  - 股票买卖的事件系统
+- - '####'
+  - 'Example: Integrated Development Environment'
+- - '####'
+  - 事件处理策略
+- - '###'
+  - '2. Styles of Event-based system:'
+- - '###'
+  - 2. Strategy of Events Handling
+- - '####'
+  - Strategy 1. Systems with Separate Dispatcher Module (有独立事件分发模块的系统)
+- - '####'
+  - 分遣模块以两种方式分发事件
+- - '####'
+  - Two ways to dispatch events
+- - '###'
+  - 2. Publish/Subscribe strategy
+- - '####'
+  - Strategy 2. Systems without a central dispatcher module（无独立事件分发模块的系统）
+- - '###'
+  - 用于实现事件分发策略的 观察者模式
+- - '###'
+  - 3. Observer Pattern
+- - '####'
+  - 'Note 1:'
+- - '####'
+  - 'Advantages of the Observer pattern:'
+- - '###'
+  - 4. Observable/Observer example
+- - '###'
+  - 5. Example of Observer pattern by using Java API
+- - '####'
+  - TemperatureGUI - Observable
+- - '####'
+  - Celsius - Observer 1
+- - '####'
+  - Fahrenheit - Observer 2
+- - '####'
+  - Kelvin - Observer 3
+- - '##'
+  - Lecture 4
+- - '###'
+  - Contents of this lecture
+- - '###'
+  - Interface of a Class
+- - '###'
+  - java.lang.Math类的接口声明. 包含所有方法、常数的声明
+- - '####'
+  - Field Summary
+- - '####'
+  - Method Summary
+- - '###'
+  - Introduction to the Adapter Pattern
+- - '###'
+  - Introduction to Adapter Pattern
+- - '####'
+  - Example 2. Insufficient Functionality-New Functionality is needed
+- - '###'
+  - 'Solution 2 (解决方案2):'
+- - '###'
+  - Class Adapter Pattern
+- - '###'
+  - Class Adapter Pattern-class Diagram (类适配器模式)
+- - '###'
+  - Class adapter pattern
+- - '###'
+  - 怎样使用适配器模式？
+- - '###'
+  - Adapter pattern in Java
+- - '###'
+  - Class adapter pattern-sample source code
+- - '###'
+  - 示意性代码
+- - '###'
+  - Class adapter pattern-sample source code
+- - '###'
+  - Class adapter pattern-sample source code
+- - '###'
+  - Class adapter pattern- question
+- - '###'
+  - Class adapter pattern- answer
+- - '###'
+  - 'Answer:'
+- - '###'
+  - Object Adapter Pattern
+- - '###'
+  - Object adapter pattern (对象适配器模式)
+- - '###'
+  - 'Question (same as before):'
+- - '###'
+  - Object adapter pattern（对象适配器模式）
+- - '###'
+  - Object adapter pattern-class diagram
+- - '###'
+  - How to design the object adapter pattern?
+- - '###'
+  - Object adapter pattern-sample source code
+- - '###'
+  - Object adapter pattern-sample source code
+- - '###'
+  - When to use the Adapter pattern?
+- - '###'
+  - 使用适配器模式进行设计的例子
+- - '####'
+  - 'The functions includes:'
+- - '####'
+  - 设计类图的解释
+- - '####'
+  - Customer
+- - '####'
+  - Unique interface
+- - '####'
+  - USAAddress
+- - '####'
+  - CAAddress
+- - '####'
+  - 使用类适配器模式进行的设计
+- - '####'
+  - How to use the pattern?
+- - '####'
+  - 也可以使用对象适配器进行设计
+- - '###'
+  - Further Discussion of the Adapter Pattern
+- - '###'
+  - Two types of adapter patterns
+- - '###'
+  - 'Difference between class adapter pattern and object adapter pattern:'
+- - '##'
+  - Lecture 5. MVC Design Pattern
+- - '###'
+  - Introductory Example to the MVC Design Pattern or Architecture
+- - '###'
+  - 网上二手车拍卖系统的设计
+- - '####'
+  - Honda Civic
+- - '####'
+  - 网上二手车拍卖系统的设计：方案1
+- - '####'
+  - 网上二手车拍卖系统的设计：方案2
+- - '####'
+  - 设计方案2的优点：实现了责任分离
+- - '####'
+  - 设计方案2的缺点
+- - '####'
+  - MVC Design Patterns
+- - '####'
+  - 新设计方案考虑：
+- - '####'
+  - Theory of the MVC design pattern
+- - '###'
+  - MVC Design Patterns
+- - '###'
+  - MVC模式架构图-交互情况
+- - '###'
+  - MVC的优点
+- - '###'
+  - MVC Frameworks
+- - '###'
+  - Design Examples Using the MVC Design Pattern
+- - '###'
+  - '网上二手车拍卖系统的设计: 方案3'
+- - '###'
+  - '方案3: 采用MVC模式-使用观察者机制的情况，用户输入界面和两个显示视图分别独立显示'
+- - '####'
+  - Car information- Observer 1
+- - '####'
+  - Honda Accord
+- - '####'
+  - 二手车信息显示界面原型 (Prototype)
+- - '####'
+  - Car Bit Info View- Observer 2
+- - '####'
+  - 二手车当前拍卖价格显示界面原型（Prototype）
+- - '####'
+  - CarAuctionGUI
+- - '####'
+  - Controller
+- - '####'
+  - CarModel
+- - '####'
+  - CarGUIInfoView
+- - '####'
+  - CarBitInfoView
+- - '####'
+  - 设计方案3工作原理
+- - '####'
+  - CarModel代码续
+- - '##'
+  - Lecture 5. Bridge Pattern
+- - '###'
+  - 桥接模式
+- - '###'
+  - Contents of this lecture
+- - '###'
+  - Introduction of the Bridge Pattern
+- - '###'
+  - Introductory Examples
+- - '###'
+  - Design 2 （设计2，增加新的层次）
+- - '###'
+  - Extendibility (可扩展性不好)
+- - '###'
+  - Coffee
+- - '###'
+  - MedSize
+- - '###'
+  - SuperSize
+- - '###'
+  - MMilkCoffee
+- - '###'
+  - MFragCoffee
+- - '###'
+  - MJavaCoffee
+- - '###'
+  - SMilkCoffee
+- - '###'
+  - SFragCoffee
+- - '###'
+  - SJavaCoffee
+- - '###'
+  - Theory of the Bridge Pattern
+- - '###'
+  - Structure of the bridge pattern
+- - '###'
+  - Bridge Pattern
+- - '###'
+  - 桥模式的组件（Participants）
+- - '###'
+  - Bridge Pattern
+- - '###'
+  - Typically
+- - '###'
+  - Advantages of Bridge Pattern
+- - '###'
+  - 桥模式的优点
+- - '###'
+  - Bridge Pattern
+- - '###'
+  - 何时使用桥模式？
+- - '###'
+  - When to use the bridge pattern?
+- - '###'
+  - Bridge Pattern
+- - '###'
+  - Bridge Pattern
+- - '###'
+  - Design Examples Using the Bridge Pattern
+- - '###'
+  - 应用桥模式设计的例子
+- - '###'
+  - 抽象接口类
+- - '###'
+  - 抽象部分子类
+- - '###'
+  - 应用桥模式设计的特工信息系统类图
+- - '###'
+  - 思考题
+- - '##'
+  - Lecture 6. Layered Architecture
+- - '###'
+  - 'Contents:'
+- - '###'
+  - Concept of the Layered Architecture
+- - '###'
+  - 1. Layered System (2.5)
+- - '###'
+  - 1. Layered System
+- - '####'
+  - 'Note:'
+- - '####'
+  - 典型应用领域 Typical Application Areas
+- - '####'
+  - 7. Application layer
+- - '####'
+  - 6. Presentation layer
+- - '####'
+  - 5. Session layer
+- - '####'
+  - 4. Transport layer
+- - '####'
+  - 3. Network Layer
+- - '####'
+  - 2. Data Link layer
+- - '####'
+  - 1. Physics layer
+- - '###'
+  - Layered Communication Protocols- OSI Model
+- - '###'
+  - Advantages of Layered systems
+- - '###'
+  - 3 Layer Software Architecture
+- - '###'
+  - Three Layer Software Architecture
+- - '###'
+  - 三层层次架构与MVC软件体系结构的比较
+- - '###'
+  - 3层层次架构与MVC架构
+- - '###'
+  - 三层层次架构与MVC架构访问数据库的情况
+- - '###'
+  - 使用观察者模式的3层层次架构与MVC架构
+- - '###'
+  - Case studies
+- - '###'
+  - 2. Case Studies
+- - '####'
+  - 'Case 1: Banking System'
+- - '####'
+  - 【例1】桌面版银行业务系统。
+- - '####'
+  - 显示层
+- - '####'
+  - BankAccount
+- - '####'
+  - SavingsAccount
+- - '####'
+  - CheckingAccount
+- - '####'
+  - 永久数据访问层
+- - '####'
+  - 'Case 2: A Testing Tool'
+- - '####'
+  - 'Case 3:'
+- - '####'
+  - 'Case study 3: Mobile Robotics'
+- - '####'
+  - 【例3】自动机器人控制系统
+- - '####'
+  - Solution Based on Layered Architecture
+- - '####'
+  - Supervisor
+- - '####'
+  - Global Planning
+- - '####'
+  - Control
+- - '####'
+  - Navigation
+- - '####'
+  - Real-world Modeling
+- - '####'
+  - Sensor Integration
+- - '####'
+  - Sensor Interpretation
+- - '####'
+  - Robot Control
+- - '####'
+  - Environment
+- - '###'
+  - 'Summary:'
+- - '##'
+  - Lecture 6
+- - '###'
+  - Facade Pattern 门面模式
+- - '###'
+  - Contents of this lecture
+- - '###'
+  - Concept of the Façade Pattern
+- - '###'
+  - Facade Pattern
+- - '###'
+  - 'Introductory example 1: companies and government sections'
+- - '###'
+  - 'Introductory Example 2: domain programmer'
+- - '###'
+  - 'Example: domain programmer'
+- - '###'
+  - Design Example Using the Façade Pattern
+- - '###'
+  - 【例1】(家庭安全系统) A Home Security System
+- - '###'
+  - A library for security system
+- - '###'
+  - 'Design 1: Home Security System design'
+- - '###'
+  - Facade Pattern-sample code
+- - '###'
+  - Facade Pattern - sample code
+- - '###'
+  - Facade Pattern-sample code
+- - '###'
+  - Properties of the Façade Pattern
+- - '###'
+  - Facade Pattern-theory
+- - '####'
+  - 门面模式的意图 (Intent of the Facade Pattern)
+- - '####'
+  - 什么情况下使用门面模式？ (When to use Facade Pattern?)
+- - '####'
+  - Façade pattern的优点(advantages)
+- - '####'
+  - 'Façade pattern的缺点(Disadvantages):'
+- - '###'
+  - More Design Examples in the Façade Pattern
+- - '####'
+  - Another Example-account management
+- - '####'
+  - 【例2】（信息验证系统）Information Validation
+- - '####'
+  - 在这样的设计下，客户类UserGUI的责任
+- - '####'
+  - 设计2. 使用门面模式的设计
+- - '####'
+  - 'About CustomerFacade:'
+- - '####'
+  - About UserGUI
+- - '####'
+  - About UserGUI 😊 哈哈，我的任务减轻了
+- - '####'
+  - Example of Ellipse
+- - '####'
+  - 【例3】椭圆问题，增加新功能。
+- - '####'
+  - Java 的Ellipse2D类没有提供足够的椭圆方法
+- - '####'
+  - EllipseDrawerGUI
+- - '####'
+  - GeneralizedEllipse
+- - '####'
+  - EllipseGraph
+- - '####'
+  - Ellipse2D.Double
+- - '####'
+  - EllipseOperations
+- - '####'
+  - Design of ellipse application using Façade pattern
+- - '###'
+  - 学生信息文档系统的例子
+- - '###'
+  - 门面模式和适配器模式的比较 / Comparison of façade pattern and adapter pattern
+- - '###'
+  - 几个例子的比较
+- - '##'
+  - 'Lecture 8: Client/Server Software Architecture'
+- - '###'
+  - 2.Evolution of client-server architecture
+- - '####'
+  - 'One tier Client/Server (mainframe, -1970’s):'
+- - '####'
+  - b) Time-sharing.
+- - '####'
+  - File Sharing Architecture （文件共享架构）
+- - '####'
+  - '2-Tier Client/Server: Databases replaced File Server'
+- - '####'
+  - Contents of 2-Tier Client/Server
+- - '####'
+  - '2-Tier Client/Server: Typically a GUI front-end'
+- - '####'
+  - 3-Tier Client/Server
+- - '####'
+  - Client Tier
+- - '####'
+  - Database Tier
+- - '###'
+  - 3. Comparison of 2- and 3-Tier client-server
+- - '####'
+  - 'Advantages (over 2 tier client server architecture):'
+- - '###'
+  - Comparison of 3-layered Architecture and 3-tiered client/server architecture
+- - '###'
+  - 三层架构与三层客户端-服务器软件体系结构的区别
+- - '###'
+  - 三层架构与三层客户端-服务器架构
+- - '###'
+  - 三层客户端-服务器架构
+- - '###'
+  - JaveEE Architecture
+- - '###'
+  - Summary
+- - '###'
+  - Question for Students
+- - '##'
+  - Lecture 7. Strategy Pattern Behavioral
+- - '###'
+  - Contents of this lecture
+- - '###'
+  - Introduction to the strategy pattern through Design of a sorting program
+- - '####'
+  - 'Drawbacks:'
+- - '####'
+  - The advantages of this design
+- - '###'
+  - Something About Code for Sorting
+- - '###'
+  - Theory of the Strategy Pattern
+- - '####'
+  - Structure
+- - '####'
+  - Context
+- - '####'
+  - When to use this pattern?
+- - '####'
+  - Context 的实现方式：
+- - '####'
+  - 通常情况下策略模式的交互
+- - '####'
+  - 策略模式的优点 Advantages of Strategy Pattern
+- - '####'
+  - 策略模式的缺点 Disadvantages of the strategy pattern
+- - '###'
+  - Design Example Using the Strategy Pattern
+- - '###'
+  - Example of design using strategy pattern
+- - '####'
+  - 本例子中Context类的设计说明：
+- - '####'
+  - 本设计的优点：
+- - '####'
+  - 本设计的缺点
+- - '####'
+  - 为什么要使用策略模式进行设计？
+- - '####'
+  - 为什么在本设计中省略了Context类？
+- - '###'
+  - Further discussion of the strategy pattern
+- - '###'
+  - 策略模式的可扩展与可维护性讨论
+- - '###'
+  - 情况2. Context类负责创建策略子类的对象的情况。
+- - '##'
+  - Lecture 8. P2P architecture
+- - '###'
+  - Introduction to P2P
+- - '###'
+  - Problems with traditional C-S architecture
+- - '###'
+  - THE NAPSTER STORY
+- - '###'
+  - 'Actions:'
+- - '###'
+  - 'Peer to peer idea:'
+- - '###'
+  - Client/Server
+- - '###'
+  - 'Peer-to-Peer: the Third Generation of the Internet!'
+- - '###'
+  - What is Peer-to-Peer (P2P)?
+- - '###'
+  - Advantage of P2P Architecture
+- - '###'
+  - 2. P2P Architecture with Directory Server - 1st Generation P2P
+- - '###'
+  - One Example P2P Architecture
+- - '###'
+  - Detailed description of How one peer interacts with another peer?
+- - '###'
+  - Step 2. 开始通讯  Opening the lines of communication
+- - '###'
+  - Pure P2P Architecture –
+- - '###'
+  - 3. Pure P2P Architecture – 2nd Generation P2P
+- - '###'
+  - Pure P2P architecture
+- - '###'
+  - Characteristics of Pure P2P Architecture
+- - '###'
+  - 'Gnutella: Example of Pure P2P Architecture'
+- - '###'
+  - Gnutella History
+- - '####'
+  - Limitations/Difficulties
+- - '####'
+  - Gnutella Protocol (cont)
+- - '####'
+  - Properties of Gnutella
+- - '###'
+  - 4. Unstructured hierarchical P2P architecture– 3rd Generation P2P
+- - '####'
+  - 'Unstructured hierarchical P2P architecture– 3rd Generation P2P: Gnutella v0.6
+    network topology'
+- - '####'
+  - Explanation of the architecture
+- - '###'
+  - Peer Node Architecture
+- - '###'
+  - 5. Peer Node Architecture
+- - '####'
+  - 一个节点软件的功能
+- - '####'
+  - 节点软件的架构
+- - '####'
+  - Core components
+- - '####'
+  - Buddy Manager
+- - '####'
+  - Functionalities
+- - '####'
+  - Module Container
+- - '###'
+  - Data Transfer Mechanism
+- - '###'
+  - 6. Data Transfer Mechanism from Node to Node
+- - '####'
+  - Functionalities of a filter
+- - '####'
+  - Functionalities of a pipe
+- - '###'
+  - JXTA-P2P Protocol
+- - '###'
+  - 'JXTA Java™ Standard Edition v2.5:'
+- - '###'
+  - 7. JXTA-P2P Protocol
+- - '###'
+  - JXTA™ Architecture
+- - '##'
+  - Lecture 6. State Pattern
+- - '###'
+  - 状态模式
+- - '###'
+  - Contents of this lecture
+- - '###'
+  - Example of State Related System
+- - '###'
+  - 【例1】 Silkworm example
+- - '###'
+  - How do you think
+- - '###'
+  - 'Drawbacks of the design:'
+- - '###'
+  - New Design
+- - '###'
+  - Silkworm
+- - '###'
+  - 'Advantages:'
+- - '###'
+  - Egg
+- - '###'
+  - Worm
+- - '###'
+  - Pupa
+- - '###'
+  - Moth
+- - '###'
+  - Examples Leading to the State Pattern
+- - '####'
+  - 【例2】 Monkey example.
+- - '####'
+  - 'First design: use a single class to encapsulate behaviors'
+- - '####'
+  - 'Drawbacks of the design:'
+- - '####'
+  - How to improve the design?
+- - '####'
+  - 'New design:'
+- - '###'
+  - The State Design Pattern
+- - '####'
+  - Structure of State Pattern
+- - '####'
+  - Participants
+- - '####'
+  - When to use state pattern?
+- - '####'
+  - 协作关系 (Collaborations)
+- - '####'
+  - 关于状态的转换问题：
+- - '####'
+  - 状态模式的优点：Advantages
+- - '###'
+  - Design Example Using the State Pattern
+- - '####'
+  - 【例2】交通信号控制软件的例子
+- - '####'
+  - 本程序的交互情况
+- - '####'
+  - 第4步的进一步解释
+- - '####'
+  - 本设计的特点
+- - '####'
+  - 本设计的优点：
+- - '####'
+  - BankAcctClientUI
+- - '####'
+  - BankContext
+- - '####'
+  - State
+- - '####'
+  - NoTransactionFeeState
+- - '####'
+  - TransactionFeeState
+- - '####'
+  - OverDrawnState
+- - '####'
+  - BankContext class
+- - '####'
+  - State 类：
+- - '####'
+  - State 子类：
+- - '###'
+  - Further discussion of the state design pattern
+- - '###'
+  - Comparison of the state design pattern and the strategy pattern
+- - '##'
+  - Lecture 9. Grid Computing (网格计算)
+- - '###'
+  - Lecture 8. Grid Computing (网格计算)
+- - '###'
+  - 1. Basic Concepts of Grid Computing
+- - '####'
+  - 方案：使用百万台、千万台计算机通过互联网连接共同计算
+- - '####'
+  - 中心服务器集群
+- - '####'
+  - 网格计算的功能（Functions of grid computing）
+- - '####'
+  - 资源供应技术（Provisioning of Resources）
+- - '####'
+  - 资源的多样性（Diversity of resources）
+- - '####'
+  - 供应的内容（Contents of the provisioning）
+- - '####'
+  - Multi-dimension of Grid Computing
+- - '###'
+  - 2. Grid Middleware
+- - '###'
+  - 3. Comparison of Grid Computing with P2P Computing
+- - '###'
+  - P2P Computing
+- - '###'
+  - 5. standard of Grid Computing
+- - '###'
+  - 6. Grid Examples
+- - '####'
+  - China Grid
+- - '####'
+  - Ministry of Education. Grid Points Distribution in China
+- - '####'
+  - TeraGrid
+- - '####'
+  - Example Grids
+- - '####'
+  - TERAGRID
+- - '###'
+  - References
+- - '##'
+  - Lecture 9. Visitor Pattern
+- - '###'
+  - 访问者模式
+- - '###'
+  - Contents of the lecture
+- - '###'
+  - Introduction of the Visitor Pattern
+- - '####'
+  - 'Example 1: Animal class'
+- - '####'
+  - 'Example 2: Tax Computation Problem (税收问题)'
+- - '####'
+  - Tax computation
+- - '####'
+  - 本设计的缺点 (Problems in this design (drawbacks))
+- - '####'
+  - Problems (drawbacks) (cont.)
+- - '####'
+  - One possible solution to improve these
+- - '####'
+  - 新设计：Pack tax calculation methods into TaxCalculator
+- - '####'
+  - 新设计引入
+- - '####'
+  - 新设计的解释
+- - '####'
+  - In the improved design
+- - '####'
+  - 类ElectronicTax 中的accept 方法
+- - '####'
+  - Official Diagram of the Visitor Pattern
+- - '####'
+  - Visitor pattern class diagram
+- - '###'
+  - 访问者模式构件的解释
+- - '####'
+  - ConcreteVisitor
+- - '####'
+  - Element
+- - '####'
+  - ConcreteElement (ElementA, ElementB)
+- - '####'
+  - ObjectStructure (Program) (can be omitted)
+- - '###'
+  - '例2: E-bike parts store (电动自行车配件商店)'
+- - '####'
+  - 设计要点：
+- - '###'
+  - Design 2. using the visitor design pattern
+- - '####'
+  - 'Example 2: E-bike parts store-code'
+- - '###'
+  - 计算机部件销售的例子
+- - '####'
+  - 设计要点：
+- - '####'
+  - 关于CompositeStructure：
+- - '###'
+  - 计算机部件销售的例子-代码
+- - '###'
+  - Further discussion of the Visitor Pattern
+- - '###'
+  - Visitor Pattern - when to use?
+- - '####'
+  - 何时使用访问者模式？
+- - '####'
+  - Use the Visitor pattern when
+- - '####'
+  - Visitor Pattern-Collaborations
+- - '####'
+  - Visitor Pattern-Consequences
+- - '####'
+  - 访问者模式的优点（Advantages）
+- - '####'
+  - 访问者模式的缺点（Disadvantages）
+- - '###'
+  - 讨论：访问者模式的重点
+- - '##'
+  - Lecture 10. Mediator Pattern Behavioral
+- - '###'
+  - Contents of this lecture
+- - '###'
+  - Introductory Example to the Mediator Pattern
+- - '###'
+  - Introductory example to the mediator pattern
+- - '####'
+  - 【例1】：机场指挥塔的功能
+- - '###'
+  - 'Wang wants to build a house:'
+- - '###'
+  - Theory of the Mediator Pattern
+- - '###'
+  - Mediator Pattern
+- - '###'
+  - 中介者模式的主要思想：解耦
+- - '###'
+  - Advantages of Mediator Pattern
+- - '###'
+  - 'Advantages of Mediator pattern:'
+- - '####'
+  - 'Advantages of Mediator pattern (cont):'
+- - '###'
+  - Example Design Using the Mediator Pattern
+- - '###'
+  - Example of Mediator Pattern
+- - '####'
+  - Hotel information GUI
+- - '####'
+  - Airline information GUI
+- - '####'
+  - Tour information GUI
+- - '####'
+  - Class diagram using mediator design pattern
+- - '####'
+  - Typical Interactions
+- - '###'
+  - Source code for the mediator class
+- - '###'
+  - Implementation Details of the Mediator Pattern
+- - '####'
+  - Implementation details of the mediator pattern
+- - '####'
+  - 1. Write a Mediator class
+- - '##'
+  - 'Lecture 10: Cloud Computing'
+- - '###'
+  - Introduction to Cloud Computing
+- - '###'
+  - Concept of Cloud Computing
+- - '####'
+  - The NIST Definition of Cloud Computing
+- - '####'
+  - 2）宽网访问 Broad network access.
+- - '####'
+  - 4）快速弹性Rapid elasticity.
+- - '####'
+  - 5）服务度量 Measured Service.
+- - '####'
+  - 容易理解的“云”的定义
+- - '###'
+  - SaaS
+- - '###'
+  - PaaS
+- - '###'
+  - IaaS
+- - '###'
+  - 云计算架构图
+- - '###'
+  - Cloud Delivery Models
+- - '####'
+  - SaaS (软件即服务)
+- - '####'
+  - PaaS (平台即服务)
+- - '####'
+  - IaaS (基础设施即服务)
+- - '####'
+  - 'Example: Google'
+- - '###'
+  - Data Center (数据中心)
+- - '###'
+  - Comparison of Grid Computing with Cloud Computing
+- - '####'
+  - Grid Computing (网格计算)
+- - '###'
+  - Key Technologies of Cloud Computing
+- - '####'
+  - '关键技术1: Virtualization (虚拟化)'
+- - '####'
+  - 关键技术2： 大规模分布式数据存储(big data)
+- - '####'
+  - '大规模分布式数据存储实例: GFS'
+- - '####'
+  - GFS架构图
+- - '####'
+  - 关键技术3： Mass Data Processing(海量数据处理)
+- - '####'
+  - 关键技术4：多租户架构 Multi-tenant Architecture (MTA)
+- - '####'
+  - SaaS 的4层成熟度模型 4-Level Maturity Model of SaaS
+- - '####'
+  - Level 1 - Ad-Hoc / Custom (专门的、定制的)
+- - '####'
+  - Level 2 – Configurable (可配置的)
+- - '####'
+  - Level 3 - Configurable, Multi-Tenant-Efficient
+- - '####'
+  - Level 4 - Scalable, Configurable, Multi-Tenant-Efficient
+- - '####'
+  - 关键技术5：多租户架构的资源隔离模式
+- - '####'
+  - Resource Isolation Patterns of Data Tier in MTA
+- - '###'
+  - Mainstream Platforms for Cloud Computing
+- - '###'
+  - Amazon云计算平台AWS
+- - '####'
+  - Amazon 云计算平台 AWS
+- - '####'
+  - PaaS 平台产品
+- - '####'
+  - SaaS 产品
+- - '####'
+  - Google 云计算平台
+- - '####'
+  - Google App Engine (PaaS)
+- - '####'
+  - Google Applications (SaaS)
+- - '####'
+  - 微软云计算平台 Azure
+- - '####'
+  - Salesforce.com 云计算平台
+- - '####'
+  - 开源云计算平台 Hadoop
+- - '####'
+  - 开源云计算集成平台 Ezilla
+- - '####'
+  - 结束
+- - '##'
+  - 'Lecture 11: SOA and Web Services'
+- - '###'
+  - B2B E-commerce （B2B电子商务）
+- - '###'
+  - B2B Electronic Commerce
+- - '###'
+  - Disadvantages of B2B
+- - '####'
+  - 'Drawbacks of B2B:'
+- - '###'
+  - SOA Software Architecture
+- - '###'
+  - SOA架构引言
+- - '###'
+  - Why do we Want SOA?
+- - '###'
+  - Definition of SOA
+- - '####'
+  - 空中加油机-采用动态绑定的方式加油
+- - '###'
+  - SOA Principle
+- - '####'
+  - 服务可以被发现，并且可以动态绑定
+- - '####'
+  - 'Example: TV station uses services provided by the Weather system'
+- - '###'
+  - SOA Architecture and Working Mechanism
+- - '####'
+  - How SOA Works?
+- - '####'
+  - The “Find-bind-execute” Paradigm
+- - '###'
+  - SOA Entities
+- - '####'
+  - 1. Service Consumer (服务消费者)
+- - '####'
+  - 2. Service Provider
+- - '####'
+  - 3. **Service Registry** （服务注册）
+- - '####'
+  - 4. Service Contract （服务合同）
+- - '####'
+  - 5. Service Proxy (服务代理)
+- - '###'
+  - Web Services
+- - '####'
+  - What is Web Services?
+- - '###'
+  - Basic Web Services
+- - '###'
+  - UDDI Services
+- - '###'
+  - SOAP
+- - '###'
+  - Java Support for Web Services
+- - '###'
+  - J2EE Supports Web Services
+- - '###'
+  - Java EE 5 application server
+- - '###'
+  - Project GlassFish for Web Services
+- - '###'
+  - Project GlassFish
+- - '###'
+  - Why use GlassFish?
+- - '###'
+  - 1. Client-server Architecture
+- - '###'
+  - Client/Server Architecture
+- - '###'
+  - 2. P2P Architecture
+- - '###'
+  - P2P Architecture
+- - '###'
+  - 3. Grid Computing Architecture
+- - '###'
+  - 4.Cloud computing
+- - '###'
+  - 5. SOA Architecture
+- - '###'
+  - Service Consumer
+- - '###'
+  - The “Find-bind-execute” Paradigm
+- - '##'
+  - Software Architecture
+- - '##'
+  - 软件体系结构

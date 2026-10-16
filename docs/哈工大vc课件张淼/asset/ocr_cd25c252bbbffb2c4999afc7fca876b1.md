@@ -1,0 +1,19 @@
+```
+```cpp
+BOOL CWinThread::PumpMessage()
+{
+    if (!::GetMessage(&m_msgCur, NULL, NULL, NULL))
+    {
+        return FALSE;
+    }
+    // 处理消息
+    if (m_msgCur.message != WM_KICKIDLE
+        && !PreTranslateMessage(&m_msgCur))
+    {
+        ::TranslateMessage(&m_msgCur);
+        ::DispatchMessage(&m_msgCur);
+    }
+    return TRUE;
+}
+```
+```

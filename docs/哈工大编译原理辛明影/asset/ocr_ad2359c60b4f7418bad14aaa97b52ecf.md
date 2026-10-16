@@ -1,0 +1,17 @@
+# 表达式文法的SLR(1)分析表
+
+求非终结符的 FIRST 集和 FOLLOW 集
+
++   - FIRST( F ) = { id, ( }
++   - FIRST( T ) = { id, ( }
++   - FIRST( E ) = { id, ( }
++   - FOLLOW( E ) = { ), +, # }
++   - FOLLOW( T ) = { ), +, #, * }
++   - FOLLOW( F ) = { ), +, #, * }
+
++   1) E → E + T
++   2) E → T
++   3) T → T * F
++   4) T → F
++   5) F → ( E )
++   6) F → id

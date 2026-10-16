@@ -1,0 +1,53 @@
+top
+
+4
+
+8
+
+44
+
+offset
+
+top
+
+tblptr
+
+# sort
+
+空 表头
+
+a array 0
+
+x integer 40
+
+readarray
+
+exchange
+
+指向readarray
+
+指向exchange
+
+readarrrary
+
+表头 4
+
+i integer 0
+
+exchange
+
+表头 0
+
+partition
+
+表头
+
+i integer 0
+
+quicksort
+
+表头
+
+k integer 0
+
+v integer 4

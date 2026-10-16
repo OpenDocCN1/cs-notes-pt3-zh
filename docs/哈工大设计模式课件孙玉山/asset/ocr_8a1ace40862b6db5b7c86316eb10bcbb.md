@@ -1,0 +1,1 @@
+# Official Diagram of the Visitor Pattern

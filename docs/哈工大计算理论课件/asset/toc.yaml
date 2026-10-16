@@ -1,0 +1,586 @@
+- - '##'
+  - The controller for an automatic door
+- - '##'
+  - The controller for an automatic door
+- - '##'
+  - The controller for an automatic door
+- - '##'
+  - The controller for an automatic door
+- - '##'
+  - 'Example:'
+- - '##'
+  - Finite Automata (FA)
+- - '##'
+  - Finite Automata
+- - '##'
+  - Finite Automata
+- - '##'
+  - 'State diagram:'
+- - '##'
+  - Finite Automata
+- - '##'
+  - Finite Automata
+- - '##'
+  - Formal Definition of FA
+- - '##'
+  - Formal Definition of FA
+- - '##'
+  - Formal Definition of FA
+- - '##'
+  - Closure under the regular operations
+- - '##'
+  - Regular expressions
+- - '##'
+  - Formal definition of a regular expressions
+- - '##'
+  - Regular expressions
+- - '##'
+  - Regular expressions
+- - '##'
+  - Regular expressions
+- - '##'
+  - Regular expressions
+- - '##'
+  - Regular expressions
+- - '##'
+  - Regular expressions vs FA
+- - '##'
+  - Regular expressions
+- - '##'
+  - Nonregular languages
+- - '##'
+  - Theory of Computation
+- - '##'
+  - Content of Lecture 4
+- - '##'
+  - Context-free Grammars
+- - '##'
+  - Context-free Grammars
+- - '##'
+  - Formal Definition of a context-free grammar
+- - '##'
+  - Context-free Grammars
+- - '##'
+  - Context-free Grammars
+- - '##'
+  - Context-free Grammars
+- - '##'
+  - Context-free Grammars
+- - '##'
+  - Context-free Grammars
+- - '##'
+  - Context-free Grammars
+- - '##'
+  - 'Example 2: a context-free grammar G₂'
+- - '##'
+  - Context-free Grammars
+- - '##'
+  - Theory of Computation
+- - '##'
+  - Content of Lecture 5
+- - '##'
+  - Turing Machines (TM)
+- - '##'
+  - Turing Machines
+- - '##'
+  - Alan Turing 1912~1954
+- - '##'
+  - Turing Machines
+- - '##'
+  - Turing Machines
+- - '##'
+  - Turing Machines
+- - '##'
+  - Turing Machines
+- - '##'
+  - Turing Machines
+- - '##'
+  - Turing Machines
+- - '##'
+  - Turing Machines
+- - '##'
+  - Formal definition of a Turing Machines
+- - '##'
+  - Formal definition of a Turing Machines
+- - '##'
+  - Formal definition of a Turing Machines
+- - '##'
+  - Formal definition of a Turing Machines
+- - '##'
+  - Formal definition of a Turing Machines
+- - '##'
+  - Formal definition of computation for a TM
+- - '##'
+  - Formal definition of a Turing Machines
+- - '##'
+  - Formal definition of a Turing Machines
+- - '##'
+  - Formal definition of a Turing Machines
+- - '##'
+  - Example of Turing machine
+- - '##'
+  - Example of Turing machine
+- - '##'
+  - Example of Turing machine
+- - '##'
+  - Example of Turing machine
+- - '##'
+  - Example of Turing machine
+- - '##'
+  - Example of Turing machine
+- - '##'
+  - Example of Turing machine
+- - '##'
+  - Example of Turing machine
+- - '##'
+  - Example of Turing machine
+- - '##'
+  - Variants of Turing machines
+- - '##'
+  - Variants of Turing machines
+- - '##'
+  - Multitape Turing machines (MTM)
+- - '##'
+  - Multitape Turing machines (MTM)
+- - '##'
+  - Multitape Turing machines (MTM)
+- - '##'
+  - Multitape Turing machines (MTM)
+- - '##'
+  - Multitape Turing machines (MTM)
+- - '##'
+  - Nondeterministic Turing machines (NTM)
+- - '##'
+  - Nondeterministic Turing machines (NTM)
+- - '##'
+  - Nondeterministic Turing machines (NTM)
+- - '##'
+  - Enumerators
+- - '##'
+  - Enumerators
+- - '##'
+  - Other equivalent variant
+- - '##'
+  - Other equivalent variant
+- - '##'
+  - Definition of Algorithm
+- - '##'
+  - Definition of Algorithm
+- - '##'
+  - Definition of Algorithm
+- - '##'
+  - Definition of Algorithm
+- - '##'
+  - Definition of Algorithm
+- - '##'
+  - Definition of Algorithm
+- - '##'
+  - Definition of Algorithm
+- - '##'
+  - Definition of Algorithm
+- - '##'
+  - Definition of Algorithm
+- - '##'
+  - Definition of Algorithm
+- - '##'
+  - Definition of Algorithm
+- - '##'
+  - Definition of Algorithm
+- - '##'
+  - Definition of Algorithm
+- - '##'
+  - Theory of Computation
+- - '##'
+  - 'Lecture 6: Decidability'
+- - '##'
+  - Content of Lecture 5
+- - '##'
+  - Decidable language
+- - '##'
+  - Decidable language
+- - '##'
+  - Decidable problems concerning regular languages
+- - '##'
+  - Acceptance problem for automata
+- - '##'
+  - Decidable problems concerning regular languages
+- - '##'
+  - Decidable problems concerning regular languages
+- - '##'
+  - Decidable problems concerning regular languages
+- - '##'
+  - Decidable problems concerning regular languages
+- - '##'
+  - Decidable problems concerning regular languages
+- - '##'
+  - Decidable problems concerning regular languages
+- - '##'
+  - Decidable problems concerning regular languages
+- - '##'
+  - Decidable problems concerning regular languages
+- - '##'
+  - Decidable problems concerning regular languages
+- - '##'
+  - Decidable problems concerning regular languages
+- - '##'
+  - Decidable problems concerning regular languages
+- - '##'
+  - Decidable problems concerning regular languages
+- - '##'
+  - Decidable problems concerning context-free languages
+- - '##'
+  - Decidable problems concerning context-free languages
+- - '##'
+  - The halting problem
+- - '##'
+  - The halting problem
+- - '##'
+  - The Diagonalization method
+- - '##'
+  - The Diagonalization method
+- - '##'
+  - The Diagonalization method
+- - '##'
+  - The Diagonalization method
+- - '##'
+  - The Diagonalization method
+- - '##'
+  - The Diagonalization method
+- - '##'
+  - The Diagonalization method
+- - '##'
+  - The Diagonalization method
+- - '##'
+  - The Diagonalization method
+- - '##'
+  - Turing-unrecognizable language
+- - '##'
+  - Turing-unrecognizable language
+- - '##'
+  - Turing-unrecognizable language
+- - '##'
+  - Turing-unrecognizable language
+- - '##'
+  - The Halting problem is undecidable
+- - '##'
+  - The Halting problem is undecidable
+- - '##'
+  - The Halting problem is undecidable
+- - '##'
+  - The Halting problem is undecidable
+- - '##'
+  - The Halting problem is undecidable
+- - '##'
+  - The Halting problem is undecidable
+- - '##'
+  - Co-Turing-recognizable language
+- - '##'
+  - Co-Turing-recognizable language
+- - '##'
+  - Co-Turing-recognizable language
+- - '##'
+  - Co-Turing-recognizable language
+- - '##'
+  - Theory of Computation
+- - '##'
+  - Recursion theorem
+- - '##'
+  - Recursion theorem
+- - '##'
+  - Self-reference
+- - '##'
+  - Recursion theorem
+- - '##'
+  - Recursion theorem
+- - '##'
+  - Recursion theorem
+- - '##'
+  - Turing reducibility
+- - '##'
+  - Turing reducibility
+- - '##'
+  - Turing reducibility
+- - '##'
+  - Turing reducibility
+- - '##'
+  - Definition of information
+- - '##'
+  - Definition of information
+- - '##'
+  - Definition of information
+- - '##'
+  - Minimal length descriptions
+- - '##'
+  - Minimal length descriptions
+- - '##'
+  - Optimality
+- - '##'
+  - Incompressible string
+- - '##'
+  - Randomness
+- - '##'
+  - Theory of Computation
+- - '##'
+  - Content of Lecture 9
+- - '##'
+  - Complexity theory
+- - '##'
+  - Time complexity
+- - '##'
+  - Time complexity
+- - '##'
+  - Time complexity
+- - '##'
+  - 'Asymptotic analysis: O(n) and o(n)'
+- - '##'
+  - 'Asymptotic analysis: $O(n)$ and $o(n)$'
+- - '##'
+  - 'Asymptotic analysis: O(n) and o(n)'
+- - '##'
+  - 'Asymptotic analysis: O(n) and o(n)'
+- - '##'
+  - 'Asymptotic analysis: O(n) and o(n)'
+- - '##'
+  - 'Asymptotic analysis: O(n) and o(n)'
+- - '##'
+  - 'Asymptotic analysis: O(n) and o(n)'
+- - '##'
+  - 'Asymptotic analysis: $O(n)$ and $o(n)$'
+- - '##'
+  - 'Asymptotic analysis: O(n) and o(n)'
+- - '##'
+  - 'Asymptotic analysis: O(n) and o(n)'
+- - '##'
+  - Analyzing algorithm
+- - '##'
+  - Analyzing algorithm
+- - '##'
+  - Complexity relationship among models
+- - '##'
+  - Notice
+- - '##'
+  - Complexity relationship among models
+- - '##'
+  - The class P
+- - '##'
+  - The class P
+- - '##'
+  - The class P
+- - '##'
+  - The class P
+- - '##'
+  - The class P
+- - '##'
+  - The class P
+- - '##'
+  - Example of problems in P
+- - '##'
+  - Example of problems in P
+- - '##'
+  - Example of problems in P
+- - '##'
+  - Example of problems in P
+- - '##'
+  - Example of problems in P
+- - '##'
+  - Example of problems in P
+- - '##'
+  - Theory of Computation
+- - '##'
+  - Content of Lecture 10
+- - '##'
+  - Class NP
+- - '##'
+  - Class NP
+- - '##'
+  - Class NP
+- - '##'
+  - Class NP
+- - '##'
+  - Class NP
+- - '##'
+  - Class NP
+- - '##'
+  - Class NP
+- - '##'
+  - Class NP
+- - '##'
+  - Class NP
+- - '##'
+  - Class NP
+- - '##'
+  - Examples of problems in NP
+- - '##'
+  - Examples of problems in NP
+- - '##'
+  - Examples of problems in NP
+- - '##'
+  - Examples of problems in NP
+- - '##'
+  - Examples of problems in NP
+- - '##'
+  - Examples of problems in NP
+- - '##'
+  - The **P** versus **NP** question
+- - '##'
+  - The P versus NP question
+- - '##'
+  - The P versus NP question
+- - '##'
+  - NP-completeness
+- - '##'
+  - NP-completeness
+- - '##'
+  - NP-completeness
+- - '##'
+  - NP-completeness
+- - '##'
+  - Polynomial time reducibility
+- - '##'
+  - Polynomial time reducibility
+- - '##'
+  - Polynomial time reducibility
+- - '##'
+  - Definition of **NP-completeness**
+- - '##'
+  - Definition of NP-completeness
+- - '##'
+  - Definition of NP-completeness
+- - '##'
+  - Definition of NP-completeness
+- - '##'
+  - Definition of NP-completeness
+- - '##'
+  - Definition of NP-completeness
+- - '##'
+  - Definition of NP-completeness
+- - '##'
+  - Definition of NP-completeness
+- - '##'
+  - Definition of NP-completeness
+- - '##'
+  - Definition of NP-completeness
+- - '##'
+  - Definition of NP-completeness
+- - '##'
+  - Definition of NP-completeness
+- - '##'
+  - Additional NP-complete problems
+- - '##'
+  - Additional NP-complete problems
+- - '##'
+  - The vertex cover problem
+- - '##'
+  - The vertex cover problem
+- - '##'
+  - The vertex cover problem
+- - '##'
+  - The vertex cover problem
+- - '##'
+  - The vertex cover problem
+- - '##'
+  - The vertex cover problem
+- - '##'
+  - The vertex cover problem
+- - '##'
+  - The vertex cover problem
+- - '##'
+  - The vertex cover problem
+- - '##'
+  - The Hamiltonian path problem
+- - '##'
+  - The Hamiltonian path problem
+- - '##'
+  - The Hamiltonian path problem
+- - '##'
+  - The Hamiltonian path problem
+- - '##'
+  - The Hamiltonian path problem
+- - '##'
+  - The Hamiltonian path problem
+- - '##'
+  - The Hamiltonian path problem
+- - '##'
+  - The Hamiltonian path problem
+- - '##'
+  - The Hamiltonian path problem
+- - '##'
+  - The Hamiltonian path problem
+- - '##'
+  - The Hamiltonian path problem
+- - '##'
+  - The Hamiltonian path problem
+- - '##'
+  - The Hamiltonian path problem
+- - '##'
+  - The Hamiltonian path problem
+- - '##'
+  - The Hamiltonian path problem
+- - '##'
+  - Theory of Computation
+- - '##'
+  - 'Lecture 11:'
+- - '##'
+  - Content of Lecture 11
+- - '##'
+  - Space Complexity
+- - '##'
+  - Theory of Computation
+- - '##'
+  - 'Lecture 12: Intractability'
+- - '##'
+  - Content of Lecture 12
+- - '##'
+  - Intractability
+- - '##'
+  - Hierarchy Theorems
+- - '##'
+  - Hierarchy Theorems
+- - '##'
+  - Hierarchy Theorems
+- - '##'
+  - Hierarchy Theorems
+- - '##'
+  - Space Hierarchy Theorem
+- - '##'
+  - Space Hierarchy Theorem
+- - '##'
+  - Space Hierarchy Theorem
+- - '##'
+  - Space Hierarchy Theorem
+- - '##'
+  - Space Hierarchy Theorem
+- - '##'
+  - Time Hierarchy Theorem
+- - '##'
+  - Time Hierarchy Theorem
+- - '##'
+  - Time Hierarchy Theorem
+- - '##'
+  - Exponential Space Completeness
+- - '##'
+  - Exponential Space Completeness
+- - '##'
+  - Exponential Space Completeness
+- - '##'
+  - Relativization
+- - '##'
+  - Relativization
+- - '##'
+  - Relativization
+- - '##'
+  - Relativization
+- - '##'
+  - Relativization
+- - '##'
+  - Relativization
+- - '##'
+  - Relativization
+- - '##'
+  - Relativization
+- - '##'
+  - Circuit Complexity
+- - '##'
+  - Circuit Complexity
+- - '##'
+  - Computational Theory

@@ -1,0 +1,14 @@
+# execve：加载并运行程序
+
++   - **int execve(char *filename, char *argv[], char *envp[])**
++   - 在当前进程中载入并运行程序：
++     - **filename**: 可执行文件
++       - 目标文件或脚本(用#!指明解释器,如 #!/bin/bash)
++     - **argv**: 参数列表,惯例： **argv[0]==filename**
++     - **envp**: 环境变量列表
++       - "name=value" strings (e.g., USER=droh)
++       - getenv, putenv, printenv
++   - 覆盖当前进程的代码、数据、栈
++     - 保留：有相同的PID, 继承已打开的文件描述符和信号上下文
++   - Called once and never returns(调用一次并从不返回)
++     - ...除非有错误，例如：指定的文件不存在

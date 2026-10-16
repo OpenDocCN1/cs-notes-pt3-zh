@@ -1,0 +1,7 @@
+# WNDCLASS
+
+# 窗口附加空间(cbWndExtra)
+
+Windows为每一个窗口管理一个内部数据结构，在注册一个窗口类时，应用程序能够指定一定字节的附加内存空间，称为窗口附加内存。在创建这类窗口时，Windows系统就为窗口结构分配和追加指定数目的窗口附加内存空间，应用程序可以用这部分内存存储窗口特有的数据。
+
+函数SetWindowWord和SetWindowLong可以把某一个值复制到附加内存，函数GetWindowWord和GetWindowLong可以检取这些值。

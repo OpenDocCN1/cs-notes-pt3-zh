@@ -1,0 +1,25 @@
+# 循环展开：使用分别的累加器 (2x2)
+
+```
+void unroll2a_combine(vec_ptr v, data_t *dest)
+{
+    long length = vec_length(v);
+    long limit = length-1;
+    data_t *d = get_vec_start(v);
+    data_t x0 = IDENT;
+    data_t x1 = IDENT;
+    long i;
+    /* Combine 2 elements at a time */
+    for (i = 0; i < limit; i+=2) {
+        x0 = x0 OP d[i];
+        x1 = x1 OP d[i+1];
+    }
+    /* Finish any remaining elements */
+    for (; i < length; i++) {
+        x0 = x0 OP d[i];
+    }
+    *dest = x0 OP x1;
+}
+```
+
+# 重组的不同形式

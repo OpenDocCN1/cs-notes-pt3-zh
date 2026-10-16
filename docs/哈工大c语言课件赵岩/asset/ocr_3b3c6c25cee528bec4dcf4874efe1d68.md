@@ -1,0 +1,11 @@
+# 修饰符
+
++   - short
++     - short int, 短整数, 一般占2字节。通常简写为 short
++   - long
++     - long int, 长整数, 一般占4字节。通常简写为 long
++     - long double, 高精度浮点数, 一般占12字节。
++   - signed
++     - 修饰 char, int, short, long, 说明他们是有符号的整数（正整数、0和负整数）。缺省都是有符号的, 所以这个修饰符常省略
++   - unsigned
++     - 修饰 char, int, short, long, 说明他们是无符号的整数（正整数和0）

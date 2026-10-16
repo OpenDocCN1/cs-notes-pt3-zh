@@ -1,0 +1,23 @@
+# 使用静态库
+
++   - 链接器对外部引用的解析算法要点如下:
++     - 按照命令行给出的顺序扫描.o和.a文件
++     - 扫描期间将当前未解析的引用记录到一个列表U中
++     - 每遇到一个新的.o或.a中的模块，都试图用其来解析U中的符号
++     - 如果扫描到最后，U中还有未被解析的符号，则发生错误
++   - 问题和对策
++     - 能否正确解析与命令行给出的顺序有关
++     - 好的做法：将静态库放在命令行的最后
++     libmine.a 是静态库
+
+假设调用关系：libtest.o→libfun.o(在libmine.a中)
+-lxxx=libxxx.a (main)→(libfun)
+
+```
+$ gcc -L. libtest.o -lmine
+$ gcc -L. -lmine libtest.o
+libtest.o: In function `main':
+libtest.o(.text+0x4): undefined reference to `libfun'
+```
+
+说明在libtest.o中的main调用了libfun这个在库libmine中的函数，所以，在命令行中，应该将libtest.o放在前面，像第一行中那样！

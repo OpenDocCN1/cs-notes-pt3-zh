@@ -1,0 +1,19 @@
+if B and M e<f then X=1 else X=2;
+
+M → ε
+
+{M.quad:=nextquad}
+
+M.quad=k+4
+
+B → E₁ relop E₂
+
+```
+{ B.truelist:=makelist(nextquad);
+B.falselist:=makelist(nextquad+1);
+gencode('if'E₁.addr relop E₂.addr 'goto-');
+gencode('goto-') }
+```
+
++   - k+4    (j<,e,f,  )
++   - k+5    (j , , ,  )

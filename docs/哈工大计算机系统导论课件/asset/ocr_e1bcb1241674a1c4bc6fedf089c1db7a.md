@@ -1,0 +1,11 @@
+# 字节序
+
++   - 有多个字节的“字” (word)，其各个字节在内存中的排列
++   - 惯例
++     - 大端序、大尾序（Big Endian）：Sun, PPC Mac, Internet
++       - 最低有效位字节的地址最□
++     - 小端序、小尾序（Little Endian）：x86、运行Android 的ARM处理器、iOS和Windows
++       - 最低有效位字节的地址最低
++   - 双端序(Bi-Endian)
++     - 机器可以配置成大端序或小端序
++     - 很多新近的处理器均支持双端序

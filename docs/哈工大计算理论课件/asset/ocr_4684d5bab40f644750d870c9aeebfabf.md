@@ -1,0 +1,3 @@
+# Context-free Grammars
+
++   E.g. Another important application of context-free grammar is the specification and compilation of programming languages. A grammar for a programming language often appears as a reference for learning the language syntax. So most compilers and interpreters contain parser which extracts the meaning of a program prior to generating the compiled code or performing the interpreted execution.

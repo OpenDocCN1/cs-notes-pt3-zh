@@ -1,0 +1,23 @@
+# 练习
+
+```
+mov $0xf,  %al
+and $0x3b, %al
+mov $0x6d, %al
+and $0x4a, %al
+mov $0xf,  %al
+or  $0x61, %al
+mov $0x94, %al
+xor $0x37, %al
+```
+
+```
+mov $0x7a ,% al
+not  %al
+mov $0x3d,  % al
+and $0x74,  % al
+mov $0x9b, % al
+or  $0x35, % al
+mov $0x72, % al
+xor $0xdc,  % al
+```

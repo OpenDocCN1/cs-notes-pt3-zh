@@ -1,0 +1,30 @@
+# 三、字符串操作指令
+
+# 串传送指令
+
+MOVSB|MOVSW|MOVSD|MOVSQ
+
+;串传送： ES:[EDI]←DS:[ESI]
+;然后： ESI←ESI±1/2/4,EDI←EDI±1/2/4
+
+[RDI]←[RSI]
+RSI←RSI±8,RDI←RDI±8
+
+STOSB|STOSW|STOSD
+
+;串存储： ES:[EDI]←AL/AX/EAX
+;然后： EDI←EDI±1/2/4
+
+[RDI]←RAX
+RDI←RDI±8
+
+LODSB|LODSW|LODSD
+
+;串读取： AL/AX/EAX←DS:[ESI]
+;然后： ESI←ESI±1/2/4
+
+RAX ←[RSI]
+RSI←RSI±8
+
+REP
+;执行一次串指令，ECX减1；直到ECX=0

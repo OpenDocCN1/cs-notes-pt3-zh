@@ -1,0 +1,329 @@
+
+
+## 构造
+析构函数
+
+```
+class aa {
+public:
+    aa(int a=1){id=a;}
+    int id;
+    ~aa(){cout<<"aa is completed.";}
+};
+void p()
+{ aa *s=new aa[9999];
+}
+int main()
+{ for(;;)
+    p();
+return 0;}
+//内存将被耗尽
+```
+
+## 构造
+析构函数
+
+```
+class aa {
+    public:
+        aa(int a=9){age =new int[a];}
+        int* age;
+};
+```
+
+```
+~aa(){delete [] age;}
+```
+
+```
+int main()
+{
+    aa * s = new aa;    //析构函数的需要性
+    s->age[0] = 20;
+    int * t = s->age;
+    delete s;
+    cout<<t[0];
+    return 0;
+}
+```
+
+## //对象数组
+
+```
+class Student{
+public:
+    Student()
+    { cin>>value;}
+    ~Student()
+    { cout<<value<<endl;}
+protected:
+    int value;
+};
+int main()
+{
+    Student *p=new Student[5];
+    cout<<"Delete Begin"<<endl;
+    delete [] p;
+    return 0;
+}
+```
+
+![](img/2a27c9e9d8641bba50c8f3e0109e4e84_175_0.png)
+
+对象数组不能通过参数传递初始化。要么默认构造函数，要么构造函数有默认参数。
+
+```
+Student a[10](20);
+```
+
+//错误
+
+```
+//建立动态数组
+int nextStudentID=1;
+class StudentID{
+public:
+    StudentID()
+    { value= nextStudentID ++;}
+    ~StudentID()
+    { --nextStudentID;}
+protected:
+    int value;
+};
+class Student{
+public:
+    Student(string pName="noName")
+    {name = pName;}
+protected:
+    string name;
+    StudentID id;
+};
+int main()
+{
+    int i, j;
+    string temp;
+    cin>>i;
+    Student **p=new Student *[ i ];
+    for(j=0;j<i;j++){
+        cin>>temp;
+        p[j]=new Student(temp);
+        cout<<nextStudentID;
+    }
+    for(j=i-1;j>=0;j--)
+        delete p[j];
+    delete[ ] p;
+    cout<<nextStudentID;
+    return 0;
+}
+```
+
+```
+int i;int a[i];//error
+int i;
+cin>>i;
+int* p=new int [i];
+delete[]p;
+```
+
+## 对象的赋值：
+
+```
+class Student{
+string name; int semesHours;
+public:
+    Student(string pName= "" ,int i=0){
+        name=pName; semesHours=i;
+    }
+};
+```
+
+Student a("jenny",50);
+Student b;
+b=a;
+
+一个已知对象赋值给另一个已知对象。
+
+通过对赋值运算符的重载实现的。
+
+对象的复制(拷贝)：用一个已知对象构造（初始化）一个新对象。
+
+例：一个对象构造（初始化）另一对象
+
+```
+Student s1("Jenny"); Student s2=s1;即Student s2(s1);
+```
+
+```
+Student fn(Student s){Student k;//...... ;return k}
+```
+
+```
+void main()
+{Student m,n; n=fn(m);}
+```
+
+使用Student (char* )不再合适，引入新的构造函数——拷贝构造函数：
+
+```
+Student (Student& s);或者是Student ( const Student& s);
+```
+
+## 构造、析构函数
+
+```
+//默认拷贝构造函数
+//默认赋值运算符（函数）
+class Student{
+public:
+    Student(int k):i(k){}
+    Student (){}
+    void p(){cout<<i<<endl;}
+protected:
+    int i;
+}; //一旦显性给出 默认不再提供
+```
+
+```
+int main()
+{
+    Student s(9818);
+    s.p();
+    Student t(s);
+    t.p();
+    Student m;
+    m=t;//赋值
+    m.p();
+    return 0;
+}
+```
+
+## 构造、析构函数
+
+```
+//拷贝构造函数
+class Student{
+public:
+    Student(int k):i(k){}
+    Student (){}
+    Student(Student const &m)
+    {i = m.i*(-1);}
+    void p(){cout<<i<<endl;}
+protected:
+    int i;
+};
+```
+
+```
+int main()
+{
+    Student s(9818);
+    s.p();
+    Student t(s);
+    t.p();
+    Student k=s;
+    k.p();
+    Student *p=new Student(s);
+    //也调用拷贝构造
+    p->p();
+    Student m;
+    m=s;
+    //调用赋值运算
+    m.p();
+    return 0;
+}
+```
+
+![](img/2a27c9e9d8641bba50c8f3e0109e4e84_181_0.png)
+
+## 构造
+
+## 析构函数
+
+```
+class aa {
+public:
+    aa(){f=new char[10];}
+    ~aa(){delete []f;}
+    char * f;
+};
+int main()
+{aa p;
+strcpy(p.f,"Computer");
+cout<<p.f<<endl;
+aa q(p);    // aa q=p;
+cout<<q.f<<endl;
+strcpy(p.f, "Software");
+cout<<q.f<<p.f<<endl;
+return 0;}
+```
+
+创建q时，
+对象p被复制给了q，
+但资源未复制，
+使得p和q指向
+同一个资源，
+这称为浅拷贝。
+
+同一个指针执行
+两遍delete操作，
+会发生什么？
+灾难，可能会破坏该堆及自由内存表
+
+构造
+析构函数
+
+```
+class aa {
+public:
+    aa(){f=new char[10];}
+    aa(aa const & s){
+    f=new char[10]; strcpy(f,s.f);}
+    ~aa(){delete []f;}
+    char * f;
+};
+int main()
+{aa p;
+strcpy(p.f,"Computer");
+cout<<p.f<<endl;
+aa q(p);
+cout<<q.f<<endl;
+strcpy(p.f," Software");
+cout<<p.f<<q.f<<endl;
+return 0;}
+```
+
+## 构造、析构函数
+
+```
+#include <iostream>
+using namespace std;
+class Student{
+public:
+    Student(int i)
+    { value=i; cout<<"Student"<<value<<endl; }
+    ~Student(){cout<<"~Student"<<value<<endl;}
+protected:
+    int value;
+};
+int main()
+{
+    Student(9);// 无名对象，正确
+    Student *p=&Student(8);//错误
+    Student &q=Student(7);//正确，无名对象将在它的引用离开作用域时销毁
+    Student i(6);
+    i = Student(5);//正确
+    return 0;
+}
+```
+
++   Student9
++   ~Student9
++   Student8
++   ~Student8
++   Student7
++   Student6
++   Student5
++   ~Student5
++   ~Student5
++   ~Student7
+

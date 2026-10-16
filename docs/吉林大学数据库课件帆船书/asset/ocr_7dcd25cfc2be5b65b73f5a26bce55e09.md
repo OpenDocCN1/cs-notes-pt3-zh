@@ -1,0 +1,20 @@
+![](bbox=[0.0, 0.0, 0.13, 0.16])
+
+# Magnetic Disks
+
++   - **Read-write head**
++     - Positioned very close to the platter surface (almost touching it)
++     - Reads or writes magnetically encoded information.
++   - **Surface of platter divided into circular tracks**
++     - Over 50K-100K tracks per platter on typical hard disks
++   - **Each track is divided into sectors.**
++     - A sector is the smallest unit of data that can be read or written.
++     - Sector size typically 512 bytes
++     - Typical sectors per track: 500 to 1000 (on inner tracks) to 1000 to 2000 (on outer tracks)
++   - **To read/write a sector**
++     - disk arm swings to position head on right track
++     - platter spins continually; data is read/written as sector passes under head
++   - **Head-disk assemblies**
++     - multiple disk platters on a single spindle (1 to 5 usually)
++     - one head per platter, mounted on a common arm.
++   - **Cylinder *i* consists of *i*th track of all the platters**

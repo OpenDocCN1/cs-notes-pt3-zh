@@ -1,0 +1,17 @@
+# Example
+
++   - Let R be a relation schema with a set of attributes that are partitioned into 3 nonempty subsets.
++   
++   Y, Z, W
+
++   - We say that Y→→Z (Y multidetermines Z) if and only if for all possible relations r(R)
++   
++   <y₁, z₁, w₁> ∈ r and <y₁, z₂, w₂> ∈ r
++   
++   then
++   
++   <y₁, z₁, w₂> ∈ r and <y₁, z₂, w₁> ∈ r
+
++   - Note that since the behavior of Z and W are identical it follows that Y→→Z if Y→→W
+
+![](bbox=[0.05, 0.05, 0.18, 0.18])

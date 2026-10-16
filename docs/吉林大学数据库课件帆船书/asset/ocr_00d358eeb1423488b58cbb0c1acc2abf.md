@@ -1,0 +1,15 @@
+# Lock-Based Protocols (Cont.)
+
++   Lock-compatibility matrix
+
+|  | S | X |
+|---|---|---|
+| S | true | false |
+| X | false | false |
+
++   A transaction may be granted a lock on an item if the requested lock is compatible with locks already held on the item by other transactions
+
++   Any number of transactions can hold shared locks on an item,
++   - But if any transaction holds an exclusive on the item no other transaction may hold any lock on the item.
+
++   If a lock cannot be granted, the requesting transaction is made to wait till all incompatible locks held by other transactions have been released. The lock is then granted.

@@ -1,0 +1,270 @@
+
+
+## 5. void 指针与 NULL 指针值
+
+(1) void 指针（void *p）空类型指针
+
+不指向任何类型，仅仅是一个地址。
+不能进行指针运算，也不能进行间接引用。*p
+其他类型指针可以赋值给空类型指针
+空类型指针经显示转换后方可赋给其他指针。
+
+```c
+int a=30; int *ip=&a;
+void *vp=ip; //ok 从int*到void*的隐式转换
+*vp=10;//error
+vp++;      //error
+int a;  void *p=&a;  char *q=(char *)p;
+```
+
+## 练习题
+
+```c
+char a[]="abcdefghij";
+char *q=a;
+int *p=(int *)a;
+while(*q)
+    *q++=*q+1;
+    p+=2;
+printf("%s",p);
+//sizeof(char)=1
+//sizeof(int)=4
+```
+
+## 6. 指针和常量
+
+### const 说明符
+
+const 为指定说明符（也称为常类型说明符），使用指定时，程序执行的过程中指定的内容不能被改变（冻结）。即一次初始化后，指定的内容始终不变。
+
++ (1) 定义一般常量
+
+使用const 说明常量： int const x=2; 或const int x=2;
+
+定义或说明一个常数组可采用如下格式：
+
+```
+<类型说明符> const <数组名>[<大小>]...
+```
+
+或者
+
+```
+const <类型说明符> <数组名>[<大小>]...
+```
+
+```
+double const a[2]={1.0,2.0}
+```
+
+常量定义时，应被初始化。
+
+```
+const int i=5; i++; (错误) ; const int i; 必须初始化;
+```
+
+C 中常量定义用#define PI 3.14159
+
+```
+c++中使用const double PI=3.1415;
+```
+
+积极使用const, 避免使用宏,可以用const、enum定义常量。
+
+### （2）指针常量和常量指针（指向常量的指针）
+
+指针常量：在指针定义语句的指针名前加const，表示指针本身是常量。
+
+```
+int a; int* const p=&a;      定义时必须初始化
+```
+
+指针值p不可以修改，指针指向的内容可以修改。
+
+即p是常量，不可以作为左值进行运算，*p可以修改
+
+左值：是对应内存数据的一个表达式，左值对应的内存空间的内容允许刷新。可以出现在赋值运算符的左侧。
+
+右值：右值指的是引用了一个存储在某个内存地址里的数据。出现在赋值运算符的右侧。
+
+要求左值运算：++，--，+=等
+
+### 常量指针：
+
+在指针的定义类型前加const，表示指向的对象是常量。
+
+如const int *pi 或 int const *pi; 均可。
+
+以上定义表明,*pi是常量，不能将*pi作为左值进行操作。
+
+定义指向常量的指针时，定义时不必须先初始化。
+
+### 例:指针常量
+
+```cpp
+int a[10];
+int * const p=a;
+int b[6];
+p=b; // 错误
+*p=6; // 正确
+*(p+6)=6; // 正确
+*p++ = 7; // 错误
+const int c=0;
+int *const q=&c; // 错误
+```
+
+### 例:常量指针
+
+```cpp
+const int a=78;
+const int b=28;
+int c=18;
+const int *pi=&a;
+pi=&b; //ok
+*pi=68; //error
+pi=&c; //ok
+*pi=88; //error
+c=98; //ok
+```
+
+错误 (a本身不能被修改就不允许外界提供修改的漏洞)
+
+### （3）指向常量的指针常量(常量指针常量)
+
+形式： const int *const p=&a; 定义时必须初始化
+p与*p都是常量。他们都不能作为左值进行操作
+
+```
+int b[10];
+const static int a[10]={0};
+int * const p=a;          错误
+const int *const p=a;    正确
+const int *const q=b;    正确
+p++;                     错误
+*p=1;                    错误
+*(a+2)=2;                错误
+*q=5;                    错误
+q++;                     错误
+b[0]=5;                  正确
+```
+
+### （4）常量的特殊用法： int f(int b) const;
+
+## 7. 堆内存的分配
+
++ 1. 堆内存(heap): 堆是一块内存区域，堆允许程序在运行时(而不是编译时)，申请某个大小的内存空间。堆内存又称为动态内存。
+
++ 2. 获得堆内存
++ c中用函数malloc()(在头文件malloc.h中)来获得堆内存；
++ c++中用操作符new来获得堆内存。
+
++ 3. 释放堆内存
++ c中用函数free()(在头文件malloc.h中)来释放堆内存；
++ c++中用操作符delete来释放堆内存。
+
+### 使用malloc申请空间
+
+`void *malloc(unsigned long size);`
+
+例：
+
+```c
+#include "stdio.h"
+
+#include "malloc.h"
+
+int main()
+{
+    int *p,i;
+
+    p=(int *)malloc(10*sizeof(int));
+    for(i=0;i<10;i++) scanf("%d",p++);
+    p=10;
+    for(i=0;i<10;i++) printf("%d",p[i]);
+    free(p);              //只能释放malloc申请的空间
+    return 0;
+}
+```
+
+### 使用new和delete进行动态内存分配和释放
+
+运算符new和delete是C++新增的运算符，提供了存储的动态分配和释放功能它的作用相当于C语言的函数malloc（）和free（），但是性能更为优越。使用new和delete：
+
+（1） new 类型（初始化值）；
+int *p;   p=new int（100）； //动态分配一个整数并初始化
+delete p;
+
+（2） new 类型[数组大小]
+int *p;  p=new int[10];  //分配一个含有10个整数的整形数组
+delete[] p;   //删除这个数组
+
+使用new较之使用malloc（）有以下的几个优点：
+
++ （1） new自动计算要分配类型的大小，不使用sizeof运算符，比较省事，可以避免错误。
++ （2） 自动地返回正确的指针类型，不用进行强制指针类型转换。
++ （3） 可以用new对分配的对象进行初始化。
++ （4） 不用使用头文件声明（malloc.h）,更简洁。
+
+```c
+include "stdio.h"
+int main()
+{
+int *p,i;
+p=new int[10];
+for(i=0;i<10;i++) scanf( "%d" ,p++);
+p-=10;
+for(i=0;i<10;i++) printf( "%d" ,p[i]);
+delete [] p; //只能释放new申请的空间
+return 0;
+}
+```
+
+new操作符若申请成功，返回首单元地址；否则返回NULL值。
+int *p=new int[10];
+if (p==NULL) //if (!p) 或者 if (p==0)
+{
+cout<< "can't allocate more memory!\n" ;
+exit(1);
+}
+//exit是在调用处强行退出程序
+//exit(1)表示异常退出. exit(0)表示正常退出
+
+### 动态空间 ： 动态申请二维数组
+
+```c
+#include "stdio.h"
+int main()
+{ int **p,i,j;
+p=new int *[3];
+for(i=0;i<3;i++)
+p[i]=new int[3];
+for(i=0;i<3;i++)
+for(j=0;j<3;j++)
+scanf("%d",*(p+i)+j);
+for(i=0;i<3;i++)
+for(j=0;j<3;j++)
+printf("%d",p[i][j]);
+for(i=0;i<3;i++)
+delete [] p[i];
+delete[] p;
+return 0;
+}
+```
+
+### (3)通过函数指针来调用函数
+
+例：
+int add(int a,int b){return a+b;}
+int main()
+{
+    int (*p)(int,int);
+    p=add; //p是与add等价的函数指针
+    cout<<add(3,5);
+    cout<<(*p)(3,5);        //四种调用形式效果等价
+    cout<<p(3,5);
+    cout<<(*add)(3,5);
+    return 0;
+}
+
+结果：8888
+

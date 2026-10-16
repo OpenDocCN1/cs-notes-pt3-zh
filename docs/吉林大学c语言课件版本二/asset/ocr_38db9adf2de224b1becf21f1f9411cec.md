@@ -1,0 +1,21 @@
+# # 程序片断如下
+
+```
+```c
+#define m 10
+#define n 20
+#define p 30
+float a [ m ][ p ], b [ p ][ n ], c [ m ][ n ];
+void matrixproduct ( void ) {
+	float e;
+	int i, j, k ;
+	for ( i=0 ; i<m ; i++ )
+	for ( j=0 ; j<n ; j++ ) {
+		e = 0 ;
+		for ( k=0 ; k<p ; k++ )
+			e = e + a[i][k] * b[k][j] ;
+		c[i][j] = e ;
+	}
+}
+```
+```

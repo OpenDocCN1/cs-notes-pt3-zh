@@ -1,0 +1,12 @@
+# 例10-2 创建某文本文件的副本，副本文件要有行号
+
+```
+int line=1;
+/* 复制 */
+fprintf( output, "%5d", line );   /*写入第一行行号*/
+while( (ch=fgetc(input))!=EOF){
+    fputc( ch,output );      /* 写入当前字符 */
+    if ( ch=='\n' || ch=='\r' )
+        fprintf( output, "%5d", line++ ); /*, 行号增1*/
+}
+```

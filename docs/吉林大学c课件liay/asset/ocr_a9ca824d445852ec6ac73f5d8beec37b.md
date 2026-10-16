@@ -1,0 +1,33 @@
+# test - 创天中文VC++
+
++   文件
++   编辑
++   查看
++   插入
++   工程
++   构建
++   工具
++   窗口
++   帮助
+
++   添加到工程
++   从属性...
++   设置...
++   Alt+F7
++   输出制作文件...
++   插入工程到工作区...
+
++   新建...
++   Key Folder...
++   Files...
++   Data Connection...
++   Components and Controls...
+
+[Globals]
+
+test classes
+
++   ClassV...
++   FileView
+
+编译 / 调试 / 查找文件 1 / 查找文件 2 / 结果 / SQL Debugging /

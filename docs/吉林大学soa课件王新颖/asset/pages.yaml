@@ -1,0 +1,11026 @@
+- pgno: 0
+  md: '# 基于SOA的方法与设计
+
+
+    # Service-Oriented Architecture
+
+
+    # 课程概述'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# 内容安排
+
+
+    +   - SOA概述
+
+    +   - SOA设计的基础概念
+
+    +   - SOA基本技术
+
+    +   - SOA分析与建模
+
+    +   - SOA的实现、部署与测试
+
+    +   - SOA实施案例'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# 考核方式
+
+
+    +   - 考勤+考试成绩
+
+    +   - 考勤：30分，缺席一次扣4分，扣完为止！
+
+    +   - 考试:
+
+    +     - 开卷考试：70分'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 基于SOA的方法与设计
+
+
+    # SOA概述
+
+
+    王新颖
+
+
+    xinying@jlu.edu.cn
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_3_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# What is SOA?
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_4_0.png)
+
+
+    # What is SOA?
+
+
+    # SOA
+
+
+    Modularly assembled
+
+    Easily reconfigurable'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# What is Service?
+
+
+    +   - *Services* may mean different things to different people:
+
+    +     - A piece of business logic accessible via the *Internet* using *open standards*
+    (Microsoft).
+
+    +     - Encapsulated, *loosely coupled*, contracted software functions, offered
+    via *standard protocols* over the *Web* (DestiCorp).
+
+    +     - *Loosely coupled* software components that interact with one another *dynamically*
+    via *standard Internet* technologies (Gartner).
+
+    +     - A software application identified by a URI, whose interfaces and binding
+    are capable of being defined, described, and discovered by XML artifacts and supports
+    direct interactions with other software applications using XML-based messages
+    via *Internet-based protocols* (W3C).'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# “服务”概念的演进
+
+
+    编程范例
+
+
+    分布技术
+
+
+    业务计算
+
+
+    C
+
+
+    Java/C#
+
+
+    J2EE/.NET
+
+
+    SOA
+
+
+    抽象层次不断提高，不断贴近业务
+
+
+    1950
+
+
+    1995
+
+
+    2002
+
+
+    2008+'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Service-Orientation的动机
+
+
+    Distributed Data
+
+    Distributed Computation
+
+    Distributed users
+
+    .....
+
+
+    +   Mainframe
+
+    +   COBOL
+
+    +   ASCII
+
+    +   Basic
+
+    +   DEC
+
+
+    +   Windows
+
+    +   WWW
+
+    +   Linux
+
+    +   Java
+
+    +   XML
+
+    +   EAI
+
+    +   CRM
+
+
+    +   EDI
+
+    +   Unix
+
+    +   VANS
+
+    +   RDBMS
+
+    +   LANs/WAN
+
+    +   Supply chain
+
+
+    +   ANX12
+
+    +   Spreadsheets
+
+    +   C/C++
+
+    +   EDIFACT
+
+    +   Client-Server
+
+    +   ... Notes
+
+
+    Research & Development
+
+
+    Accounting
+
+
+    Manufacturing
+
+
+    Customer Service
+
+
+    Distributed Business
+
+    Requires
+
+    Distributed Computing
+
+
+    60’s
+
+
+    70’s
+
+
+    80’s
+
+
+    90’s'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# 软件提供商
+
+
+    # 软件服务
+
+
+    Adobe
+
+    SAP
+
+    Microsoft
+
+    Sun microsystems
+
+    symantec
+
+    Novell
+
+
+    Office
+
+    NEWS
+
+    E MAIL
+
+    Google
+
+    YAHOO!
+
+    amazon.com
+
+    salesforce.com
+
+    facebook
+
+    IBM'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# OO～SO的演化
+
+
+    +   - 80年代： Object-Oriented
+
+    +     - 特点： 多态性、封装性、子类化
+
+    +     - 缺点： 多态实现的代价高，封装粒度详细——类爆炸
+
+    +   - 90年代： Component-Based
+
+    +     - 特点： 接口化、动态加载、原数据，如dll动态库
+
+    +     - 缺点： 不同的系统、旧有的系统的加载比较麻烦，动态加载和数据交换缺乏统一的标准
+
+    +   - 2000年： Service-Orientation
+
+    +     - 特点： 基于消息、基于Schema和Contract、基于Policy实现绑定'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# SO vs. OO
+
+
+    | Service-Orientation | Object-Orientation |
+
+    | --- | --- |
+
+    | Loose coupling between units of processing logic. | Based on predefined class
+    dependencies, resulting in more tightly bound objects. |
+
+    | Coarse-grained interfaces (service description)<br>Message-based communication
+    | Fine-grained interfaces (APIs), Communication based on RPC or local API calls.
+    |
+
+    | Large unit of processing logic (service), May vary significantly in scope. |
+    Unit of logic (object) tend to be smaller and More specific in scope. |
+
+    | Promotes the creation of activity-agnostic units of processing logic (services)
+    that are driven into action by intelligent units of communication (message). |
+    Encourages the binding of processing logic with data, resulting in highly intelligent
+    units (object). |
+
+    | Prefers that units of processing logic (services) be designed to remain as stateless
+    as possible. | Promotes binding of data and logic, resulting in the creation of
+    more stateful units (objects). |'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'Object-Oriented Concept & Architecture
+
+
+    # Programming Language
+
+
+    +   Simula
+
+    +   Smalltalk
+
+    +   Objective C
+
+    +   C++
+
+    +   Java
+
+
+    # Modeling
+
+
+    UML
+
+
+    # Technology & Methodology
+
+
+    +   Software Engineering
+
+    +   OOAD
+
+    +   OOT
+
+    +   OO Framework
+
+    +   OODB
+
+    +   OO Process model
+
+
+    Service-Oriented Concept & Architecture
+
+
+    # Standard Specification
+
+
+    +   XML
+
+    +   UDDI
+
+    +   ebXML
+
+    +   WSDL
+
+    +   SOAP
+
+    +   OWL
+
+
+    # Modeling
+
+
+    +   BPEL
+
+    +   WSFL
+
+    +   XLANG
+
+    +   BPEL4WS
+
+
+    # Technology & Methodology
+
+
+    +   System Engineering
+
+    +   MDA
+
+    +   SOT
+
+    +   SO Framework
+
+    +   Ontology DB
+
+    +   SO lifecycle process'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Service-Orientation的基本原则
+
+
+    +   1. 边界清晰
+
+    +   2. 共享schema和contract，而不是类
+
+    +   3. 基于策略的服务兼容性
+
+    +   4. 服务自制'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# 面向服务的设计特征
+
+
+    +   - 服务查找
+
+    +   - 服务安全性
+
+    +   - 面向服务的管
+
+    +   理
+
+    +   - 服务集成
+
+    +   - 事件驱动的架构 (EDA)
+
+    +   - 服务自动配置
+
+    +   - 服务呈现
+
+    +   - 服务开发和生命周期管理'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# SOA解析
+
+
+    +   - SOA: Service-Oriented Architecture
+
+    +     - S: 服务（Service）
+
+    +       反应消息的终点
+
+    +     - SO: 面向服务（Service-Orientation）
+
+    +       一种体系框图
+
+    +     - SOA: 面向服务的体系架构
+
+    +       一种反应面向服务原则的体系架构'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# What is SOA?
+
+
+    +   - Just like *object* a generation ago, *services* is now the killer buzzword.
+    However, SOA is a often misu
+
+
+    > "My a... pers insist... should be m... t isn’t what..."
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_15_0.png)
+
+
+    +   - "In computing, service-oriented architecture (SOA) provides a set of principles
+    of governing concepts used during phases of systems development and integration."'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# SOA的技术成熟度曲线
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_16_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# SOA的技术来源
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_17_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# SOA的特点
+
+
+    # 关注点
+
+
+    +   - SOA 服务专注于业务层面的活动和互动
+
+    +   - 以前，只专注于技术层面的子任务
+
+
+    # “用户”与“开发”的调和
+
+
+    +   - 业务人员和IT人员基于SOA讨论 (今天有63%的项目是由业务部门提出的)*
+
+    +   - 以前，业务人员与IT人员没有合适的沟通渠道和语言
+
+
+    # 标准
+
+
+    +   - 被广泛采用的 Web services 保证了有良好定义的接口.
+
+    +   - 以前，私有的 “标准 “限制了互操作性
+
+
+    # 连接
+
+
+    +   - SOA 服务是动态、灵活的连接
+
+    +   - 以前，服务之间的互操作是通过编程的且与应用本身相关的
+
+
+    # 重用性
+
+
+    +   - SOA 服务能被广泛的重用，从而提高资产利用率
+
+    +   - 以前，重用只能在某一应用内部实现'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# 面向服务的多层架构
+
+
+    表现层
+
+
+    服务层
+
+
+    业务逻辑层
+
+
+    数据访问层
+
+
+    企业层
+
+
+    流程层
+
+
+    中介层
+
+
+    基本层
+
+
+    服务
+
+
+    服务
+
+
+    业务对象
+
+
+    业务对象
+
+
+    业务对象
+
+
+    业务对象
+
+
+    业务对象
+
+
+    # 服务=黑盒子：
+
+
+    操作业务对象、给出结果，减少层间交互！'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# SOA的作用
+
+
+    平台异构
+
+
+    Linux
+
+    solaris
+
+    Java
+
+    Microsoft .net
+
+    HTTP
+
+    SOAP
+
+    RMI
+
+
+    数据异构
+
+
+    企业数据
+
+    例如：库存
+
+    应用C
+
+    应用B
+
+    应用A
+
+    数据结构
+
+    数据存储
+
+
+    以统一的形式描述异构的业务接口
+
+    标准化业务接口的封装
+
+
+    SCA服务封装
+
+    SCA服务封装'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# SOA应用的开发方法
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_21_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# Service-Orientation的优势
+
+
+    +   - 技术角度
+
+    +     - 一种新的应用软件的建模方式
+
+    +     - 松耦合，对以往紧的系统进行解耦
+
+    +     - 基于标准的互操作性，微软、IBM、Oracle等互操作
+
+    +   - IT行业管理
+
+    +     - 拓扑图独立，SO允许各系统的拓扑进行更新和变化
+
+    +     - 利用异构资源，独立的进行部署和管理
+
+    +   - 商业角度
+
+    +     - 提高业务的敏捷性，减少产品上市时间
+
+    +     - 通过重用提高效率'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# SOA技术的本质
+
+
+    +   - 一个中心
+
+    +   - 两个基本点
+
+    +   - 三个原则
+
+    +   - 四个变化
+
+
+    互操作标准化
+
+
+    标准化原则
+
+
+    松耦合原则
+
+
+    构建粗粒度化
+
+
+    构建方式快捷组编化
+
+
+    适合粒度封装原则
+
+
+    组织结构松散化
+
+
+    软件复用
+
+
+    软件互操作
+
+
+    业务敏捷性'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# SOA服务的部署
+
+
+    +   - 服务粒度
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_24_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# SOA服务的部署
+
+
+    +   - 服务的拓扑形式
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_25_0.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_25_1.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_25_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# SOA的应用
+
+
+    +   - 跨部门资产(资源)联合使用
+
+    +   - 组织内部或组织之间应用整合需要，可以适应未来变化，实现对已有资产(资源)的保护，简化开发
+
+    +   - 互联网环境下虚拟企业的建立，可以利用互联网上的服务进行组合提供新的业务服务
+
+    +   - 为用户提供多渠道支持服务，服务接口的统一，有利于服务展现方式和服务渠道的多样化'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# SOA基础架构
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_27_0.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_27_1.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_27_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# SOA的基本特征
+
+
+    +   1、独立的功能实体
+
+    +   - 企业通过Internet这样松散的环境进行控制，其结构会面临严重稳定性问题
+
+    +   - SOA非常强调架构中提供服务的功能实体的完全独立自主的能力，强调实体自我管理和恢复能力
+
+    +   2、大数据量低频率访问
+
+    +   - SOA采用大数据量的方式一次性进行信息交换
+
+    +   3、基于文本的消息传递
+
+    +   - 基于文本的消息本身是不包含任何处理逻辑和数据类型，保证异构系统间信息的兼容性'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# SOA的相关标准
+
+
+    +   - XML && XML Schema
+
+    +   - WSDL
+
+    +   - SOAP
+
+    +   - UDDI
+
+    +   - QOS
+
+
+    WebService三要素'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# SOA的优劣
+
+
+    +   - SOA通过互联网发布，突破企业内网限制，实现与供应链上下游伙伴业务的紧密结合；
+
+    +   - SOA的平台无关联性，减少了业务应用实现的限制；
+
+    +   - SOA具有低耦合性特点，增加和减少业务伙伴对整个业务系统的影响较低。
+
+    +   - SOA具有可按模块分阶段进行实施的优势；
+
+    +   - SOA的实施可能并不具有成本显著性。'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# SOA的切实效益
+
+
+    +   - 改良的集成及内在互操作性
+
+    +   - 内在的复用
+
+    +   - 改进的架构与方案
+
+    +   - 保护遗产系统
+
+    +   - 建立标准的XML数据表示
+
+    +   - 聚焦通信基础设施投资
+
+    +   - “最优供给”可替代
+
+    +   - 组织敏捷性'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# SOA的发展趋势
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_32_0.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_32_1.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_32_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# SOA在中国
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_33_0.png)
+
+
+    在中国，接受调查的企业中，有40.7%表示将会不同程度的部署SOA'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# 基于SOA的方法与设计
+
+
+    # SOA设计的基础概念
+
+
+    王新颖
+
+
+    xinying@jlu.edu.cn'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# SOA in Five Slides(1): SOA
+
+
+    +   - 面向服务的架构（SOA）是一个范式，其目的是实现和维护跨越了大部分分布式系统的业务流程
+
+    +   - SOA基于三个主要技术和概念
+
+    +     - 服务：一项自足的业务功能，集中关注借口的业务价值，填补“业务/IT”鸿沟。
+
+    +     - 企业服务总线：SOA基础设施，使得分布式系统和服务之家的高互操作性成为可能，简化了分布业务在不同平台和技术的众多系统间的工作流程。
+
+    +     - 松耦合：减少系统间的相互依赖，将个别系统的修改和故障对系统的影响降至最低。'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# SOA in Five Slides(2): 政策和过程
+
+
+    +   • 分布式处理不仅仅是个技术细节，系统引入新功能，涉及到多个系统和团队的必须协作。
+
+
+    +   • 构建一个SOA系统，需要清晰的定义角色、政策和过程。
+
+
+    > 做一个编程系统产品比做一个简单的程序的成本高9倍
+
+    > Fred Brooks 1974'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# SOA in Five Slides(3): Web Service
+
+
+    +   - Web Service 是实现SOA的有效技术手段之一
+
+    +   - Web Service自身的问题
+
+    +     - 标准不够成熟，不能保证互操作性
+
+    +     - 无法形成程度适当的松耦合
+
+    +   - 设计SOA的系统，不能掉进过于Web Service化的陷阱。 Web Service不会是系统集成的终极标准，因此只有当Web Service对特定的基础设施考量确实重要时，才应把它加进来发挥作用。'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# SOA in Five Slides(4): SOA实践
+
+
+    在理论上，理论和实践是一致的。在实践中则并非如此
+
+
+    L.Berra
+
+
+    +   - 在SOA付诸实施时，需要考虑性能、安全等因素
+
+    +   - SOA是针对出于维护中的现有系统的策略
+
+    +   - 从IT角度看，所有的系统都不一样
+
+    +   - 是否引入SOA并不重要，重要的是对于上下文环境和用户需求来说，引入到IT解决方案是否合适！！'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# SOA in Five Slides(5): SOA的监管★★
+
+
+    +   - 正确的监管方法和恰当的监管力度是SOA需要重要考虑的问题。
+
+    +     - 需要在集中化和分散化之间找到正确的平衡点
+
+    +     - 需要合适的人员作为“服务基础设施”的服务提供者
+
+    +     - 首先解决重要的事情，不要力图解决所有服务或提供所有的基础设施，“SOA系统是可以成长的！”
+
+    +     - SOA是影响公司整体战略的决策，需要公司管理层的支持，配以足够的时间和经费以支持长期的调研和开发'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# SOA设计的基础概念
+
+
+    # Lecture 1
+
+
+    # 服务（Service）'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# # 服务的故事
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_41_0.png)
+
+
+    农业时代，咖啡是自给自足的
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_41_1.png)
+
+
+    工业时代，咖啡馆，每杯2元
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_41_2.png)
+
+
+    星巴克，体验经济的咖啡，每杯25元
+
+
+    > 星巴克卖的不是咖啡，是‘寂寞’！'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# 服务的定义
+
+
+    +   - 能通过URL识别的软件程序，通过互联网协议用以支持网络间不同机器的互动操作(W3C)
+
+
+    +   - 服务独立于其运行的硬件平台、编程语言和操作系统，是由一系列自包含、可复用的软件模块组成。一个服务定义了一个与业务功能或业务数据相关的接口，在不同的系统中服务可以以一种统一的方式进行交互、相互理解(IBM)。'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# # 服务规范
+
+
+    +   - 服务规范有三个规范要素，根据服务的建模类型可对它们进行选择：
+
+    +     - 结构规范：定义了可以调用的操作和由这些操作销毁或创造出的消息。
+
+    +     - 行为规范：表示服务客户和所指定服务之间的任意预期的有意义的协议或会话。
+
+    +     - 策略规范：表示服务的策略主张和约束。策略主张可能包括安全性、可管理性等等。'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# SOA服务的基本特征
+
+
+    +   1. 服务的封装(encapsulation)
+
+    +   2. 服务的重用(reuse)
+
+    +   3. 服务的互操作(interoperability)
+
+    +   4. 服务是自治的(Autonomous)功能实体
+
+    +   5. 服务之间的松耦合度(Loosly Coupled)
+
+    +   6. 服务是位置透明的(location transparency)
+
+    +   7. 明确定义的接口(well defined interface)'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# 服务构成
+
+
+    # 策略是规则集
+
+
+    +   - 在这些条件和规则之下，服务提供者可以使服务可用于使用者，在功能和服务质量两个部分中都有策略功能。
+
+
+    # 安全性是规则集
+
+
+    +   - 用于验证服务使用者的身份验证、授权和访问控制。
+
+
+    # 事务是属性集
+
+
+    +   - 用于一组服务，以提供一致的结果。使用一组服务来完成一项业务功能时，要么所有的服务必须都完成，或者没有一个完成。
+
+
+    # 管理是属性集
+
+
+    +   - 应用于管理提供的服务或使用的服务。'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# SOA设计的基础概念
+
+
+    # Lecture 2
+
+
+    # Web Service vs. Web Services'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# Web Services和Web Service
+
+
+    +   - Web Services(Web服务技术)是整个架构Web服务的技术框架，包括
+
+    +     - XML
+
+    +     - SOAP
+
+    +     - WSDL
+
+    +     - UDDI
+
+    +   - Web Service是指使用Web Services而架构出来的Web服务实例，简称Web服务。'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# Web服务产生的背景
+
+
+    log (people per computer)
+
+
+    year
+
+
+    Mainframe
+
+
+    Minicomputer
+
+
+    Workstation
+
+
+    PC
+
+
+    Laptop
+
+
+    PDA
+
+
+    Motes
+
+
+    RFID
+
+
+    Number Crunching
+
+    Data Storage
+
+
+    Productivity
+
+    Interactive
+
+
+    Streaming information to/from physical world'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# Web服务发展简史
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_49_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# Web服务的定义
+
+
+    +   - IBM的定义
+
+    +     - Web服务是一种接口，它描述了一组操作，可以使用标准的XML消息传递技术，经由网络访问这些操作。
+
+    +   - Microsoft的定义
+
+    +     - Web服务是一个向其他应用提供数据和服务的应用逻辑单元。应用程序通过无处不在的Web协议和数据格式访问Web服务，如HTTP、XML和SOAP，而无需关心每个Web服务是如何实现的。
+
+    +   - SUN定义
+
+    +     - Web服务是软件构件。这类构件具有被发现、可组合和重组合的特性，用于解决用户的问题或要求，Java语言和XML是Web服务的最重要技术。'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# Web服务开发的生命周期
+
+
+    +   - 开发
+
+    +     - 开发和测试 Web 服务实现、定义服务接口描述和定义服务实现描述
+
+    +     - 通过创建新的 Web 服务、把现有的应用程序变成 Web 服务
+
+    +     - 由其它 Web 服务和应用程序组成新的 Web 服务提供 Web 服务的实现
+
+    +   - 部署
+
+    +     - 向服务请求者或服务注册中心发布服务接口和服务实现的定义
+
+    +     - 把Web 服务的可执行文件部署到执行环境 (Web 服务器) 中
+
+    +   - 运行
+
+    +     - 调用 Web 服务
+
+    +     - Web 服务完全部署、可操作并且服务提供者可以通过网络访问服务
+
+    +   - 管理
+
+    +     - 持续的管理和经营 Web 服务应用程序。安全性、可用性、性能、服务质量和业务流程'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# 基础Web服务协议栈
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_53_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# Web服务的实现
+
+
+    +   - 机密性
+
+    +   - 授权
+
+    +   - 数据完整性
+
+    +   - 原始性证明
+
+
+    +   - 服务描述
+
+    +   - 服务实现
+
+    +   - 服务发布、发现和绑定
+
+    +   - 服务调用和执行'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# # Web服务管理的衡量标准
+
+
+    +   - 性能：吞吐量和延迟
+
+    +   - 可用性：服务是否存在或已就绪可供立即使用
+
+    +   - 可靠性：能够维持服务和服务质量的程度
+
+    +   - 完整性：指 Web 服务如何维护交互的正确性
+
+    +   - 安全性：消息加密以及访问控制
+
+    +   - 常规性：遵循标准和已建立的服务级别协议
+
+    +   - 可访问性：能够为Web服务请求提供服务的程度
+
+    +   - 可伸缩性：始终如一地为请求提供服务的能力'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# Web服务的技术挑战
+
+
+    +   - 异构性
+
+    +   - 开放性
+
+    +   - 安全性
+
+    +   - 并发性
+
+    +   - 透明性
+
+    +   - 可扩展性
+
+    +   - 故障与容错
+
+
+    SOA'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# SOA设计的基础概念
+
+
+    # Lecture 3
+
+
+    # 服务计算及其形式化表示方法'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# 关于计算
+
+
+    +   - 分布式计算
+
+    +   - 并行计算
+
+    +   - 普遍计算
+
+    +   - 移动计算
+
+    +   - 网格计算
+
+    +   - 效用计算
+
+
+    +   - 云计算
+
+    +   - 虚拟计算
+
+    +   - 栅计算
+
+    +   - 服务计算
+
+    +   - ……'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# 服务计算的产生及发展
+
+
+    +   - 2001年， IBM倡导动态电子商务向Web Services转型
+
+    +   - 2002年6月，美国拉斯维加斯举行国际互联网计算会议
+
+    +   - 2003年6月，美国拉斯维加斯举行第一届Web服务国际会议
+
+    +   - 2003年11月， IEEE成立服务计算技术社区
+
+    +   - 2004年5月， 改名为服务计算技术指导委员会
+
+    +   - 2004年9月， 服务计算技术指导委员会在上海召开第一届服务计算专题国际会议'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# 服务科学
+
+
+    +   - 服务计算理论
+
+    +     - 模型
+
+    +     - 理论
+
+    +     - 实验
+
+    +     - 行为
+
+    +     - 规则
+
+
+    # 服务工程
+
+
+    +   - 服务系统的工程开发
+
+    +     - 规范、技术
+
+    +     - 方法、工具
+
+    +     - 自动化
+
+    +     - 度量性
+
+
+    # 服务管理
+
+
+    +   - 服务质量和性能
+
+    +     - 优化
+
+    +     - 效率
+
+    +     - 质量
+
+    +     - 最优化方法
+
+    +     - 管理经验
+
+
+    # 以服务为中心
+
+
+    工程
+
+
+    科学
+
+
+    管理'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# 服务计算带来分布式计算演进
+
+
+    1980''s
+
+
+    1990''s
+
+
+    2000''s
+
+
+    服务计算
+
+
+    互联网和电子商务
+
+
+    客户-服务器计算
+
+
+    主机计算
+
+
+    投资回报率
+
+    互操作性/灵活性
+
+    面市时间
+
+    基础设施的充分利用
+
+
+    # 时代特征
+
+
+    +   - 打包定制大型机应用
+
+    +   - 自上而下的程序开发
+
+    +   - 集中式计算模型
+
+    +   - 非分布的解决方案
+
+    +   - 基于新兴的PC技术
+
+
+    +   - 客户-服务器应用
+
+    +   - 面向对象的开发
+
+    +   - 企业为中心的计算
+
+    +   - Internet扩展
+
+    +   - 电子商务应用
+
+
+    +   - 企业Web应用程序及套件
+
+    +   - Web服务和软件组件技术
+
+    +   - 新一代集成
+
+    +   - 实时应用组装
+
+    +   - 快速部署与管理'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# 计算环境的演变
+
+
+    +   - 从Socket到RPC
+
+    +   - 通用对象请求代理架构CORBA
+
+    +   - 分布式组件对象模型DCOM
+
+    +   - 服务器组件模型EJB
+
+    +   - 面向服务端计算环境'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '![](img/431d4828d5c6073b7e23d9eca159cdeb_63_0.png)
+
+
+    基于服务总线技术的传输协议和位置透明的调用方式'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# 客户进程
+
+
+    # 服务器进程
+
+
+    本地过程调用
+
+
+    系统调用
+
+
+    客户函数
+
+
+    客户句柄
+
+
+    服务器函数
+
+
+    服务器句柄
+
+
+    网络调用
+
+
+    本地内核
+
+
+    远程内核
+
+
+    网络通信
+
+
+    # 远程过程调用流程图
+
+
+    (1)
+
+
+    (10)
+
+
+    (2)
+
+
+    (9)
+
+
+    (3)
+
+
+    (8)
+
+
+    (6)
+
+
+    (5)
+
+
+    (7)
+
+
+    (4)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_64_0.png)
+
+
+    协同
+
+
+    Collaboration
+
+
+    SOA
+
+
+    集成
+
+
+    Integration
+
+
+    随需应变
+
+
+    On-Demand'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# 服务计算带来中间件技术演进
+
+
+    +   趋势
+
+    +   - 数字化
+
+    +   - 网络化
+
+    +   - 智能化
+
+
+    对象
+
+    消息传递
+
+
+    构件
+
+    J2EE
+
+    CORBA
+
+
+    简单服务
+
+    MOM,XML-RPC
+
+
+    Web服务
+
+    SOAP,WSDL,
+
+    UDDI
+
+
+    函数
+
+    函数调用
+
+
+    客户/服务器
+
+
+    网络化技术
+
+
+    虚拟计算环境
+
+
+    单机,主机
+
+
+    规模
+
+    大型
+
+    小型
+
+
+    60年代 70 80 90 2000 2010'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# # London
+
+
+    London is the capital and largest city of England and the United Kingdom, with
+    a population of just over 9 million.
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_66_0.png)
+
+
+    London stands on the River Thames in southeast England, at the head of a 50-mile
+    (80 km) estuary down to the North Sea, and has been a major settlement for two
+    millennia.
+
+
+    The City of London, its ancient core and financial centre, was founded by the
+    Romans as Londinium and retains boundaries close to its original medieval limits.
+
+
+    As one of the world''s major global cities, London exerts a strong influence on
+    world arts, entertainment, fashion, commerce and finance, education, healthcare,
+    media, science and technology, tourism, and transport.'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# 服务计算中的服务
+
+
+    +   • 从外特性上看，一个服务被定义为显式的、独立于服务具体实现技术细节的接口。
+
+
+    +   • 从内特性上看，服务封装了可复用的业务功能
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_68_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# 服务计算的经典模型
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_69_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# 定义Services集
+
+
+    +   - **定义1——Services集：**
+
+    +     - 由XML元素名空间所确定的元素名构成的集合称为**元素名集合**，记为$S_e$。
+
+    +     - 由XML属性名空间所确定的属性名构成的集合称为**属性名集合**，记为$S_a$集合。
+
+    +     - 由XML属性值构成的集合称为**属性值集合**，记为$S_v$。
+
+    +   - **定义2——XML的元素：**
+
+    +     - 如果$e$是元素，且$e$没有子元素，则称$e$是**0型元素**。
+
+    +     - 如果$e$是元素，且$e$仅有0型子元素，则称$e$是**1型元素**。
+
+    +     - 如果$e$是元素，并且$e$至少有一个$n-1$型子元素，则称$e$是**n型元素**。'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# Services 集合示例
+
+
+    +   - <portType name="BookQuote">
+
+    +   -   <operation name="getBookPrice">
+
+    +   -     <input name="isbn"
+
+    +   -     message="GetBookPriceRequest"/>
+
+    +   -     <output name="price"
+
+    +   -     message="GetBookPriceResponse"/>
+
+    +   -     </operation>
+
+    +   - </portType>'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# Services 集合示例cont.
+
+
+    +   - S1={<input,name,"isbn">,
+
+    +     <input,message," GetBookPriceRequest">}
+
+    +   - S2={<output,name,"isbn">,
+
+    +     <output,message," GetBookPriceResponse">}
+
+    +   - S3={<operation,name,"getBookPrice">}∪{S1}∪{S2}
+
+    +   - S4={<portType,name,"BookQuote">}∪{S3}'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# Services集路径
+
+
+    +   - 路径表示了元素与子元素的层次关系，它蕴含了 services集合中元素集合与子元素集合之间的包含关系。
+
+    +   - 定义：如果 e₀ 是元素名，则 e₀ 是路径；如果 e₀\e₁\...\eₖ₋₁ 是路径，且 eₖ 是元素名，则 e₀\e₁\...\eₖ 是路径；所有路径集合表示为
+    Sₚ。
+
+    +   - 路径中元素的 services 集与其子元素的 services 集有包含关系，因此有下面关系：
+
+    +     Sₛ(eₙ) ⊆ ...... ⊆ Sₛ(e₁) ⊆ Sₛ(e₀)'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '# Services集路径示例
+
+
+    +   - S4={<portType,name,"BookQuote">,
+
+    +     {<operation,name,"getBookPrice">,
+
+    +       {<input,name,"isbn">,
+
+    +         <input,message," GetBookPriceRequest">
+
+    +       },
+
+    +       {<output,name,"isbn">,
+
+    +         <output,message," GetBookPriceResponse">}
+
+    +       }
+
+    +     }
+
+    +   }
+
+    +   portType\operation\input  S1⊆S3⊆S4
+
+    +   portType\operation\output  S2⊆S3⊆S4'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# Services集元操作
+
+
+    +   - Add函数(+): 添加元素
+
+    +   - Remove函数(-): 删除元素
+
+    +   - 滤波函数(λ): 按路径查找<元素,属,值>
+
+    +   - 选择函数(σ): 按路径查找子元素，属或值，返回一个字符串
+
+    +   - car函数(δ): 按路径查找子元素，返回<元素,属,值>
+
+    +   - cdr函数(θ): 查找元素的完整路径
+
+    +   - 连接函数(τ): 合并两个Services集合'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# Services语法
+
+
+    +   - 乔姆斯基文法 G = < V, T, P, S >
+
+    +     - 0型文法
+
+    +     - 1型文法(上下文有关文法)
+
+    +     - 2型文法(上下文无关文法)
+
+    +     - 3型文法(正则文法)
+
+
+    +   - XML文档文法 G = < V, T, P, S >
+
+    +     - XML文档文法元语言'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '# SOA的形式化表示
+
+
+    +   - 三个角色
+
+    +     - 提供者
+
+    +     - 使用者
+
+    +     - 注册中心
+
+    +   - 三个操作
+
+    +     - Publish
+
+    +     - Find
+
+    +     - Bind&invoke
+
+    +   - SoaRole=< Provider, Registry, Consumer>
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_78_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '# 面向服务视图
+
+
+    WSDL2JAVA
+
+
+    JAVA2WSDL
+
+
+    UDDI
+
+
+    发现与定位
+
+
+    发布
+
+
+    XML
+
+
+    XML
+
+
+    浏览器AJAX
+
+
+    发现与定位
+
+
+    客户端（机器）
+
+
+    运行时
+
+
+    操作服务
+
+
+    资源'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '# SOA设计的基础概念
+
+
+    # Lecture 4
+
+
+    # SOA方法学'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# SOA方法学
+
+
+    +   - 广义上讲，SOA方法学贯穿于IT生命周期的各个阶段和各个方面：IT系统项目的规划、系统分析和设计、系统的实施、系统的部署和维护，以及整个过程中的监控和管理等。
+
+    +   - 从实践角度说，已经出现的SOA方法学：
+
+    +     - 面向服务的分析和设计（SOAD）
+
+    +     - 面向服务的开发过程
+
+    +     - SOA的成熟度分析和迁移路线图
+
+    +     - SOA监管'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# 传统方法学
+
+
+    +   - 流程建模（BPM）
+
+    +   - 企业架构（EA）和方案架构（SA）
+
+    +   - 面向对象的分析和设计（OOAD）
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_82_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '# SOA方法学
+
+
+    +   - 面向服务的分析和设计贯穿项目开发的三个阶段和IT系统的三个领域
+
+    +   - 在操作层面，OOAD与其他方法学紧密相联。
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_83_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# 面向服务的建模和架构(SOMA)概述
+
+
+    服务发现
+
+
+    服务规约
+
+
+    服务实现
+
+
+    域分解
+
+
+    目标服务建模
+
+
+    现有系统分析
+
+
+    组件动态模型规约
+
+
+    子系统分析
+
+
+    服务流规约
+
+
+    信息模型规约
+
+
+    组件规约
+
+
+    服务规约
+
+
+    消息和事件规约
+
+
+    服务实现决策
+
+
+    服务分配到组件
+
+
+    组件层次化'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# 第3章 SOA基本技术
+
+
+    王新颖
+
+
+    xinying@jlu.edu.cn'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# SOA基本技术
+
+
+    # Lecture 1
+
+
+    # Web Evolution
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_86_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '# Web技术的演化
+
+
+
+
+    +   - HTML\XHTML
+
+
+    +   - 超链接
+
+
+
+
+    +   - 表现技术: Blog, TAG, SNS, RSS, Wiki等
+
+
+    +   - 依据XML、AJAX, REST等新理论和技术实现
+
+
+
+
+    +   - Web Services
+
+
+    +   - Web Science'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# Web1.0：以静态、单向预读为主
+
+
+    +   - Web1.0以编辑为特征，网站提供给用户的內容是网站编辑处理后提供的用户的，这个过程是网站到用户的单向行为
+
+    +   - 该时期的代表站点：新浪、搜狐、网易三大门户网站
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_88_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '# Web2.0：以分时为特征的实时网络
+
+
+    +   - Web2.0 加强了网站与用户之间的互动，实现了网站与用户之间的双向交流与参与
+
+    +   - Web1.0是一个图书馆，Web2.0是一个社交圈
+
+    +   - 这个时期的典型代表：baidu、google、博客中国，中华英才网、人人网、校内网等
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_89_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# Web2.0的特征
+
+
+    +   访问者可以对网页进行修改
+
+
+    +   亚马逊网站（Amazon）
+
+
+    +   通过页面将用户联系起来
+
+
+    +   Facebook和Mysapce等社交网络
+
+
+    +   高校的分享内容
+
+
+    +   YouTube, MetaCafe
+
+
+    +   获取信息的有效途径
+
+
+    +   RSS(Really Simple Syndication)
+
+
+    +   除计算机外，人们还可以利用其它设备上网
+
+
+    +   手机、视频游戏机、电视机......'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '# 语义网Web3.0
+
+
+    +   - Web3.0的最大价值不是提供信息，而且提供基于不同需求的过滤器，每一种过滤器都是基于一个市场需求
+
+    +   - Web2.0解决了个性解放的问题，Web3.0则是解决信息社会机制的问题，即最优化信息聚合的问题
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_91_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '# Web3.0特征分析
+
+
+    +   - Web3.0是建立在Web2.0基础上的，实现了更加“智能化的人与人、人与机器的交流”功能的互联网模式
+
+    +   - 从广播电视媒体网络化角度，划分其四大特征
+
+    +     - 微内容(Widget)的自由整合与有效聚合
+
+    +     - 适合多种终端平台，实现信息服务的普适性
+
+    +     - 良好的个性化用户体验，以及基础性的个性化配置
+
+    +     - 有效和有序的数字新技术
+
+    +   - Web3.0以网络化和个性化为特征，提供更多人工智能服务'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# Web3.0的发展趋势
+
+
+    +   - 基于用户的一个需求点，力图在一个平台上整合所有的互联网服务
+
+    +     - 例如博客中国向综合阵营的靠拢，腾讯转型为综合性门户等
+
+    +   - 在用户个别需求点上进行深度挖掘，纵深发展
+
+    +     - 淘宝、奇虎、Donews等公司仅就业务领域进行划分，并没有依据人群进行细分，其运作模式还是Web2.0的细微，信息散乱
+
+    +   - Web3.0关键在于提供用户偏好的个性化聚合服务'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '# Web4.0展望
+
+
+    +   - Web1.0——信息共享； Web2.0——信息共建；
+
+    +     Web3.0——知识传承； Web4.0——知识分配。
+
+    +   - Radar Networks公司的Nova Spivack绘制了一份未来25年的网络进化图，他没有明确指出Web4.0具体的来临日期和所需技术，但每个阶段的发展以10年为期限是真是而可信的。
+
+    +   - 互联网下一次显著进化将使其成为一个包含语义网络的平台，这一理念是合情理的。'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '# Lecture 1
+
+
+    # 软件体系结构'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '# 软件体系结构
+
+
+    +   - 分层体系结构 layers
+
+    +   - 管道和过滤器体系结构 pipes and filters
+
+    +   - 模型-视图-控制器（MVC）
+
+    +   - 微内核体系结构 micro kernel
+
+    +   - Service Oriented Architecture'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# SOA
+
+
+    企业向其客户暴露的一系列业务——“服务”
+
+
+    Roles
+
+
+    业务模型
+
+
+    一种体系结构风格，包括服务的提供者、服务的使用者与服务中介。
+
+
+    一组体系结构设计原则与模式，强调模块化、封装、松散耦合、分离关注点、可复用、可组合性、接口与实现分离等特性。
+
+
+    体系结构
+
+
+    一种编程模式，包括一系列的标准、开发工具、开发过程指南、运行时基础架构。
+
+
+    软件实现方式'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# SOA参考架构层次图
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_98_0.png)
+
+
+    Consumers
+
+    消费者层
+
+
+    Business Process
+
+    Composition, choreography, business state machines
+
+    业务流程层
+
+
+    Services
+
+    atomic and composite
+
+    服务层
+
+
+    Service Components
+
+    服务组件层
+
+
+    Existing Application Assets
+
+    现有应用资产层
+
+
+    Channel
+
+
+    B2B
+
+
+    Packaged Application
+
+
+    Custom Application
+
+
+    OO Application
+
+
+    Service Consumer
+
+
+    Service Provider
+
+
+    Integration (Enterprise Service Bus)
+
+    集成服务层
+
+
+    QoS (Security, Management & Monitoring Infrastructure & Services)
+
+    服务质量层
+
+
+    Data Architecture (meta-data) & Business Intelligence
+
+    数据架构层
+
+
+    Governance
+
+    治理层'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '# 企业服务总线
+
+
+    # Enterprise Service Bus
+
+
+    # Portal Service
+
+
+    # Collaboration Tools
+
+
+    # B2B Interactions
+
+
+    # Process Orchestration
+
+
+    # Business Intelligence Services
+
+
+    # Applications & Data
+
+
+    # Service Registry
+
+
+    # Common Runtime Environment'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# ESB拓扑结构
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_100_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# SOA Mode
+
+
+    +   - 实用技术
+
+    +     - XML
+
+    +     - SOAP
+
+    +     - WSDL
+
+    +     - UDDI
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_101_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '# Lecture 2
+
+    XML & XML Schema'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: '# Web服务的基础——XML
+
+
+    +   - XML（Extensible Markup Language，可扩展的标记语言）是W3C制定的作为Internet上数据交换和表示的标准语言，是一种允许用户定义自己的标记的元标记语言。
+
+    +   - XML与HTML的区别：XML是用来存储数据的，重在数据本身；而HTML用来定义页面的组织结构，重在数据的显示模式。'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: "# XML Sample\n\n```\n<?xml version=\"1.0\" encoding=\"ISO-8859\" standalone=\"\
+    yes\" ?>\n<?xml-stylesheet href=\"classic.xsl\" type=\"text/xml\"?>\n<note>\n\
+    \    <to>Tove</to>\n    <from>Jani</from>\n    <heading>Reminder</heading>\n \
+    \   <body>Don't forget me this weekend!</body>\n</note>\n```\n\n![](img/431d4828d5c6073b7e23d9eca159cdeb_104_0.png)\n\
+    \n![](img/431d4828d5c6073b7e23d9eca159cdeb_104_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: '# XML文档结构
+
+
+    +   - XML的声明:一般是XML文档的第一行
+
+    +     - version----文档符合XML1.0规范
+
+    +     - encoding----文档字符编码，默认使用 ''UTF-8''
+
+    +     - standalone----文档定义是否在一个文件内
+
+    +   - 样式处理指令xml-stylesheet,该指令必须出现在序言部分，在根元素之前
+
+    +   - 根元素
+
+    +   - CDATA标记----用于把整段文本解释为纯字符数据而不是标记的情况
+
+    +     <![CDATA[ <P>Paragraphs can contain <EM>other</EM> tags.</P> ]>'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: '# 元素、属性、注释、处理指令与实体
+
+
+    +   - XML 文档必须包含在一个单一元素中。这个单一元素称为根元素，它包含文档中所有文本和所有其它元素。
+
+    +   - 元素是开始标记、结束标记以及位于二者之间的所有子元素；
+
+    +   - 属性是一个元素的开始标记中的名称-值对
+
+    +   - 注释<!--......-->
+
+    +   - 处理指令<?.....?>
+
+    +   - 实体<!ENTITY dw "developerWorks">'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: '# XML Namespaces 解决名字冲突
+
+
+    ```
+
+    <h:table xmlns:h="http://www.w3.org/TR/html4/">
+
+    <h:tr>
+
+    <h:td>Apples</h:td>
+
+    <h:td>Bananas</h:td>
+
+    </h:tr>
+
+    </h:table>
+
+    ```
+
+
+    ```
+
+    <f:table xmlns:f="http://www.w3schools.com/furniture">
+
+    <f:name>African Coffee Table</f:name>
+
+    <f:width>80</f:width>
+
+    <f:length>120</f:length>
+
+    </f:table>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '# XML文档定义
+
+
+    +   - XML有两种方法定义数据元素：
+
+    +     - DTD
+
+    +     - XML Schema
+
+    +   - 文档类型定义(Document Type Definition， DTD)
+
+    +     - 元素(Element)的定义规则
+
+    +     - 元素之间的关系规则
+
+    +     - 属性(Attribute)的定义规则
+
+    +   - XML Schema： 是一种以XML语言为基础的，用于可替代DTD。'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '# XML Schema
+
+
+    +   - XML SCHEMA是W3C推荐的XML规范(2001.5)，是以XML语言为基础的，用于可替代DTD
+
+    +   - XML Schema内容比DTD丰富，功能也更强
+
+    +     - 基于XML语法，可以用处理XML文档的工具来处理
+
+    +     - 支持广泛的数据类型，支持自定义数据类型
+
+    +     - 支持开放内容模型和命名空间集成
+
+    +     - 支持元素的继承
+
+    +     - 支持属性组
+
+    +   - XML Schema也被称为XML Schema Definition (XSD)'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '# XML Schema结构
+
+
+    +   - 注释
+
+    +   - 声明
+
+    +     - 元素声明
+
+    +     - 属性声明
+
+    +     - 表示法声明
+
+    +   - 类型定义
+
+    +     - 简单类型
+
+    +     - 复杂类型
+
+    +   - 属性组
+
+    +   - 模型组
+
+
+    ```
+
+    <?xml version="1.0"?> (1)
+
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.w3schools.com"
+    xmlns="http://www.w3schools.com" elementFormDefault="qualified"> (2)
+
+    <xs:element name="note"> (3)
+
+    <xs:complexType> (4)
+
+    <xs:sequence> (5)
+
+    <xs:element name="to" type="xs:string"/> (6)
+
+    <xs:element name="from" type="xs:string"/> (7)
+
+    <xs:element name="heading" type="xs:string"/> (8)
+
+    <xs:element name="body" type="xs:string"/>
+
+    </xs:sequence>
+
+    </xs:complexType>
+
+    </xs:element>
+
+    </xs:schema>
+
+    ```
+
+
+    <!ELEMENT Note (to, from, heading, body)>
+
+    <!ELEMENT to (#PCDATA)>
+
+    <!ELEMENT from (#PCDATA)>
+
+    <!ELEMENT heading (#PCDATA)>
+
+    <!ELEMENT body (#PCDATA)>'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: "# # 元素\n\n+   - 简单元素\n+   \n+   ```xml\n+   <xs:element name=\"xxx\" type=\"\
+    yyy\"/>\n+   ```\n\n+   - 复合元素\n+   \n+   ```xml\n+   <xs:element name=\"employee\"\
+    >\n+   <xs:complexType>\n+   <xs:sequence>\n+   <xs:element name=\"firstname\"\
+    \ type=\"xs:string\"/>\n+   <xs:element name=\"lastname\" type=\"xs:string\"/>\n\
+    +   </xs:sequence>\n+   </xs:complexType>\n+   </xs:element>\n+   ```"
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "```\n<xsd:complexType name=\"PublicationType\">\n    <xsd:sequence>\n     \
+    \   <xsd:element name=\"Title\" type=\"xsd:string\"/>\n        <xsd:element name=\"\
+    Author\" type=\"xsd:string\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>\n     \
+    \   <xsd:element name=\"Date\" type=\"xsd:gYear\"/>\n    </xsd:sequence>\n</xsd:complexType>\n\
+    <xsd:complexType name=\"BookType\">\n    <xsd:complexContent>\n        <xsd:extension\
+    \ base=\"PublicationType\">\n            <xsd:sequence>\n                <xsd:element\
+    \ name=\"ISBN\" type=\"xsd:string\"/>\n                <xsd:element name=\"Publisher\"\
+    \ type=\"xsd:string\"/>\n            </xsd:sequence>\n        </xsd:extension>\n\
+    \    </xsd:complexContent>\n</xsd:complexType>\n<xsd:complexType name=\"MagazineType\"\
+    >\n    <xsd:complexContent>\n        <xsd:restriction base=\"PublicationType\"\
+    >\n            <xsd:sequence>\n                <xsd:element name=\"Title\" type=\"\
+    xsd:string\"/>\n                <xsd:element name=\"Date\" type=\"xsd:gYear\"\
+    />\n            </xsd:sequence>\n        </xsd:restriction>\n    </xsd:complexContent>\n\
+    </xsd:complexType>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: "```\n<?xml version=\"1.0\"?>\n<BookStore ...>\n    <Book>\n        <Title>Illusions:\
+    \ The Adventures of a Reluctant Messiah</Title>\n        <Author>Richard Bach</Author>\n\
+    \        <Date>1977</Date>\n        <ISBN>0-440-34319-4</ISBN>\n        <Publisher>Dell\
+    \ Publishing Co.</Publisher>\n    </Book>\n    <Magazine>\n        <Title>Natural\
+    \ Health</Title>\n        <Date>1999</Date>\n    </Magazine>\n    <Book>\n   \
+    \     <Title>The First and Last Freedom</Title>\n        <Author>J. Krishnamurti</Author>\n\
+    \        <Date>1954</Date>\n        <ISBN>0-06-064831-7</ISBN>\n        <Publisher>Harper\
+    \ &amp; Row</Publisher>\n    </Book>\n</BookStore>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: '# Lecture 3
+
+
+    # XSLT && XPath'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '# What is **XSL**
+
+
+    +   - XSL (Extensible Stylesheet Language)：扩展样式表语言，XML样式表，用于描述如何来显示 XML 文档
+
+    +   - XSL包括三部分规范：
+
+    +     - XSLT：一种用于转换 XML 文档的语言。
+
+    +     - XPath：一种用于在 XML 文档中导航的语言
+
+    +     - XSL-FO：一种用于格式化 XML 文档的语言。
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_115_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: '# 内容与设计分离的演化过程
+
+
+    HTML/JavaScript
+
+    Structure
+
+    Design
+
+    Data
+
+    Behavior
+
+
+    HTML (circa 1997)
+
+
+    HTML/XHTML
+
+    Structure
+
+    Data
+
+
+    CSS
+
+    Design
+
+
+    JavaScript/ECMA
+
+    Behavior
+
+
+    Web Standards Revolution
+
+
+    XML
+
+    Data
+
+
+    XSLT
+
+    Structure
+
+
+    CSS
+
+    Design
+
+
+    JavaScript/ECMA
+
+    Behavior
+
+
+    The Next Generation'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: '# XSLT的工作过程
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_117_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: '# XPath
+
+
+    | 表达式 | 描述 |
+
+    |---|---|
+
+    | nodename | 选取此节点的所有子节点。 |
+
+    | / | 从根节点选取。 |
+
+    | // | 从当前节点选择文档中的节点，而不考虑它们的位置。 |
+
+    | . | 选取当前节点。 |
+
+    | .. | 选取当前节点的父节点。 |
+
+    | @ | 选取属性。 |
+
+    | [] | 查找某个特定的节点或者包含某值的节点 |
+
+    | * | 通配符，匹配任何元素节点 |'
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: '# XML转换HTML
+
+
+    Middle Tier ActiveX
+
+
+    Middle Tier / EJBs
+
+
+    XML Document (Dynamic)
+
+
+    XSLT Stylesheet
+
+
+    XSL File (.xsl)
+
+
+    XML File (.xml)
+
+
+    XSLT Processor
+
+
+    HTML Output
+
+
+    CSS File
+
+
+    Display on IE or Netscape
+
+
+    Run MSXML or Xalan'
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: '# XSL Example -- The XML File
+
+
+    ```
+
+    ```xml
+
+    <?xml version="1.0"?>
+
+    <?xml:stylesheet type = "text/xsl" href = "menu.xsl"?>
+
+    <MENU>
+
+    <SECTION name="Coffee">
+
+    <ITEM>
+
+    <NAME>Columbian</NAME>
+
+    <PRICE>1.50</PRICE>
+
+    </ITEM>
+
+    <ITEM>
+
+    <NAME>Cafe Latte</NAME>
+
+    <PRICE>3.00</PRICE>
+
+    </ITEM>
+
+    <ITEM>
+
+    <NAME>Americano</NAME>
+
+    <PRICE>2.50</PRICE>
+
+    </ITEM>
+
+    </SECTION>
+
+    </MENU>
+
+    <SECTION name="Dessert">
+
+    <ITEM>
+
+    <NAME>Cheesecake with Fruit</NAME>
+
+    <PRICE>4.00</PRICE>
+
+    </ITEM>
+
+    <ITEM>
+
+    <NAME>Double Fudge Brownies</NAME>
+
+    <PRICE>2.25</PRICE>
+
+    </ITEM>
+
+    </SECTION>
+
+    <SECTION name="Beans">
+
+    <ITEM>
+
+    <NAME>Columbian</NAME>
+
+    <PRICE>8.99</PRICE>
+
+    </ITEM>
+
+    <ITEM>
+
+    <NAME>Mexican Dark Roast</NAME>
+
+    <PRICE>8.99</PRICE>
+
+    </ITEM>
+
+    </SECTION>
+
+    </MENU>
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: '# XSL Example – The XSL Template
+
+
+    ```
+
+    <?xml version="1.0"?>
+
+    <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <xsl:template match="/">
+
+    <HTML><BODY>
+
+    <TABLE border="2" bgcolor="yellow">      <!-- 添加HTML表头 -->
+
+    <TR><TH>Item</TH>
+
+    <TH>Price</TH>
+
+    </TR>
+
+    <xsl:for-each select="MENU/SECTION/ITEM">      <!-- 循环添加HTML表的具体内容 -->
+
+    <TR><TD><xsl:value-of select="NAME"/></TD>
+
+    <TD><xsl:value-of select="PRICE"/></TD>
+
+    </TR>
+
+    </xsl:for-each>
+
+    </TABLE>
+
+    </BODY></HTML>
+
+    </xsl:template>
+
+    </xsl:stylesheet>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: '# Lecture 4
+
+
+    # SOAP'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '# What is SOAP
+
+
+    +   - SOAP 指 简易对象访问协议
+
+    +   - SOAP 是一种 通信协议
+
+    +   - SOAP 用于 应用程序之间的通信
+
+    +   - SOAP 是一种用于 发送消息的格式
+
+    +   - SOAP 被设计用来 通过因特网进行通信
+
+    +   - SOAP 独立于平台
+
+    +   - SOAP 独立于语言
+
+    +   - SOAP 基于 XML
+
+    +   - SOAP 很简单并可扩展
+
+    +   - SOAP 允许您 绕过防火墙'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: '# SOAP的主要功能
+
+
+    +   - 定义通信单元的机制
+
+    +   - 错误处理机制
+
+    +   - 可扩展件机制
+
+    +   - 灵活的数据表示机制
+
+    +   - 支持以文档为中心的方法
+
+    +   - 将SOAP消息绑定到HTTP
+
+    +   - 远程过程调用(RPC)和作为响应的SOAP消息的约定'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: '# SOAP的组成
+
+
+    +   SOAP是基于XML的协议，由四部分组成：
+
+    +   - 信封（Envelope）
+
+    +   - 编码规则（Encoding Rules）
+
+    +   - 绑定（Binding）
+
+    +   - RPC
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_126_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: "```\n```xml\n<?xml version=\"1.0\"?>\n<soap:Envelope\nxmlns:soap=\"http://www.w3.org/2001/12/soap-envelope\"\
+    \nsoap:encodingStyle=\"http://www.w3.org/2001/12/soap-encoding\">\n\n<soap:Header>\n\
+    \    ...\n    ...\n</soap:Header>\n\n<soap:Body>\n    ...\n    ...\n    <soap:Fault>\n\
+    \        ...\n        ...\n    </soap:Fault>\n</soap:Body>\n\n</soap:Envelope>\n\
+    ```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: "```\n```xml\n<SOAP-ENV:Envelope\n    xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\"\
+    \n    SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\n\
+    \    <SOAP-ENV:Header>\n        <t:Trans xmlns:t=\"http://www.w3school.com.cn/transaction/\"\
+    \n                 SOAP-ENV:mustUnderstand=\"1\">5</t:Trans>\n    </SOAP-ENV:Header>\n\
+    \    <SOAP-ENV:Body>\n        <m:GetLastTradePrice xmlns:m=\"Some-URI\">\n   \
+    \         <symbol>DEF</symbol>\n        </m:GetLastTradePrice>\n    </SOAP-ENV:Body>\n\
+    </SOAP-ENV:Envelope>\n```\n```\n\n> From the: Simple Object Access Protocol (SOAP)\
+    \ 1.1 W3C Note 08 May 2000"
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: "```\n<?xml version=\"1.0\"?>\n<SOAP-ENV:Envelope SOAP-ENV:\n    encodingStyle=\"\
+    http://schemas.xmlsoap.org/soap/encoding/\"\n    xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\"\
+    \n    xmlns:xsd=\"http://www.w3.org/1999/XMLSchema\"\n    xmlns:xsi=\"http://www.w3.org/1999/XMLSchema-instance\"\
+    >\n    <SOAP-ENV:Body>\n        <SOAP-ENV:Fault>\n            <faultcode>SOAP-ENV:Client</faultcode>\n\
+    \            <faultstring>\n                Can't call getStateName because there\
+    \ are\n                too many parameters.\n            </faultstring>\n    \
+    \    </SOAP-ENV:Fault>\n    </SOAP-ENV:Body>\n</SOAP-ENV:Envelope>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: '# SOAP 的请求与响应
+
+
+    ```
+
+    POST /InStock HTTP/1.1
+
+    Host: www.xxxxx.net
+
+    Content-Type: application/soap+xml; charset=utf-8
+
+    Content-Length: XXX
+
+
+    <?xml version="1.0"?>
+
+    <soap:Envelope
+
+    xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+
+    soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+
+    <soap:Body xmlns:m="http://www.xxxxx.com/stock">
+
+    <m:GetStockPrice>
+
+    <m:StockName>IBM</m:StockName>
+
+    </m:GetStockPrice>
+
+    </soap:Body>
+
+    </soap:Envelope>
+
+    ```
+
+
+    请求
+
+
+    ```
+
+    HTTP/1.1 200 OK
+
+    Content-Type: application/soap+xml; charset=utf-8
+
+    Content-Length: XXX
+
+
+    <?xml version="1.0"?>
+
+    <soap:Envelope
+
+    xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+
+    soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+
+    <soap:Body xmlns:m="http://www.xxxxx.net/stock">
+
+    <m:GetStockPriceResponse>
+
+    <m:Price>34.5</m:Price>
+
+    </m:GetStockPriceResponse>
+
+    </soap:Body>
+
+    </soap:Envelope>
+
+    ```
+
+
+    响应'
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: '# SOAP HTTP Binding
+
+
+    +   - SOAP 方法指的是遵守 SOAP 编码规则的 HTTP 请求/响应：
+
+    +     HTTP + XML = SOAP
+
+    +   - SOAP 请求可能是 HTTP POST 或 HTTP GET 请求。
+
+    +   - SOAPAction字段： 用于指示SOAP HTTP请求的目的
+
+    +   - SOAP遵从用于在HTTP中表示通讯状态的语义
+
+    +   - HTTP扩展框架： SOAP消息可以与HTTP Extension Framework一起使用来标识SOAP HTTP请求'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: '# SOAP 与 HTTP
+
+
+    # 请求
+
+
+    ```
+
+    POST /InStock HTTP/1.1
+
+    Host: www.xxxxx.net
+
+    Content-Type: application/soap+xml; charset=utf-8
+
+    Content-Length: XXX
+
+    ```
+
+
+    ```
+
+    <? xml version="1.0"?>
+
+    <soap:Envelope xmlns:soap="http://www.w3.org/2001/12/soap-envelope" soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+
+    <soap:Body xmlns:m="http://www.xxxxx.com/stock">
+
+    <m:GetStockPrice>
+
+    <m:StockName>IBM</m:StockName>
+
+    </m:GetStockPrice>
+
+    </soap:Body>
+
+    </soap:Envelope>
+
+    ```
+
+
+    # 响应
+
+
+    ```
+
+    HTTP/1.1 200 OK
+
+    Content-Type: application/soap+xml; charset=utf-8
+
+    Content-Length: XXX
+
+    ```
+
+
+    ```
+
+    <? xml version="1.0"?>
+
+    <soap:Envelope xmlns:soap="http://www.w3.org/2001/12/soap-envelope" soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+
+    <soap:Body xmlns:m="http://www.xxxxx.com/stock">
+
+    <m:GetStockPriceResponse>
+
+    <m:Price>34.5</m:Price>
+
+    </m:GetStockPriceResponse>
+
+    </soap:Body>
+
+    </soap:Envelope>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: '# SERVICE REQUESTER
+
+
+    RPC call
+
+
+    SOAP engine
+
+
+    HTTP engine
+
+
+    # HTTP POST
+
+
+    SOAP Envelope
+
+
+    SOAP header
+
+
+    Transactional context
+
+
+    SOAP Body
+
+
+    Name of Procedure
+
+
+    Input parameter 1
+
+
+    Input parameter 2
+
+
+    # SERVICE PROVIDER
+
+
+    Procedure
+
+
+    SOAP engine
+
+
+    HTTP engine
+
+
+    # HTTP Acknowledgement
+
+
+    SOAP Envelope
+
+
+    SOAP header
+
+
+    Transactional context
+
+
+    SOAP Body
+
+
+    Return parameter'
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: '# Lecture 5
+
+
+    # WSDL'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: '# What is WSDL
+
+
+    +   - WSDL 指网络服务描述语言
+
+    +   - WSDL 使用 XML 编写
+
+    +   - WSDL 是一种 XML 文档
+
+    +   - WSDL 用于描述网络服务
+
+    +   - WSDL 也可用于定位网络服务
+
+    +   - WSDL 包含一系列描述某个 **web service** 的定义'
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: '# WSDL描述web服务的三个基本属性
+
+
+    +   - 服务做些什么？
+
+    +     - 服务所提供的操作(方法)
+
+    +   - 服务位于何处？
+
+    +     - 由特定协议决定的网络地址，如URL
+
+    +   - 如何访问服务？
+
+    +     - 数据格式以及访问服务操作的必要协议'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: "# WSDL 文档的主要结构\n\n```\n<definitions>\n  <types> definition of types.......\
+    \ </types>\n  <message> definition of a message.... </message>\n  <portType> definition\
+    \ of a port....... </portType>\n    <binding> definition of a binding.... </binding>\n\
+    </definitions>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: "```\n<types>\n  <schema...>\n    <element name=\"PO\" type=\"tns:POType\"/>\n\
+    \    <complexType name=\"POType\">\n      <element name=\"id\" type=\"string\"\
+    />\n      <element name=\"name\" type=\"string\"/>\n      <element name=\"items\"\
+    >\n        <complexType>\n          <element name=\"item\" type=\"tns:Item\" minOccurs=\"\
+    0\" maxOccurs=\"unbounded\"/>\n        </complexType>\n      </element>\n    </complexType>\n\
+    \    <complexType name=\"Item\">\n      <element name=\"quantity\" type=\"int\"\
+    />\n      <element name=\"product\" type=\"string\"/>\n    </complexType>\n  \
+    \  <element name=\"Customer\" type=\"tns:CustomerType\"/>\n    <complexType name=\"\
+    CustomerType\">\n      <element name=\"name\" type=\"string\"/>\n    </complexType>\n\
+    \  </schema>\n</types>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: "# WSDL文档示例\n\n```\n<message name=\"getTermRequest\">\n    <part name=\"term\"\
+    \ type=\"xs:string\"/>\n</message>\n\n<message name=\"getTermResponse\">\n   \
+    \ <part name=\"value\" type=\"xs:string\"/>\n</message>\n\n<portType name=\"glossaryTerms\"\
+    >\n    <operation name=\"getTerm\">\n        <input message=\"getTermRequest\"\
+    />\n        <output message=\"getTermResponse\"/>\n    </operation>\n</portType>\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: '# WSDL操作类型
+
+
+    | 类型 | 定义 |
+
+    | --- | --- |
+
+    | One-way * | 单向操作，服务访问端点接受消息，但不会返回响应 |
+
+    | Request-response* | 请求响应操作，服务访问端点接受一个请求并会返回一个响应 |
+
+    | Solicit-response | 要求应答操作，服务访问端点发送一个请求，并会等待一个响应 |
+
+    | Notification | 通知操作，服务访问端点发送一条消息，但不会等待响应 |'
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: '![](img/431d4828d5c6073b7e23d9eca159cdeb_143_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: "# One-Way 操作\n\n```\n<message name=\"newTermValues\">\n    <part name=\"term\"\
+    \ type=\"xs:string\"/>\n    <part name=\"value\" type=\"xs:string\"/>\n</message>\n\
+    \n<portType name=\"glossaryTerms\">\n    <operation name=\"setTerm\">\n      \
+    \  <input name=\"newTerm\" message=\"newTermValues\"/>\n    </operation>\n</portType>\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: "# Request-Response 操作\n\n```\n<message name=\"getTermRequest\">\n    <part\
+    \ name=\"term\" type=\"xs:string\"/>\n</message>\n\n<message name=\"getTermResponse\"\
+    >\n    <part name=\"value\" type=\"xs:string\"/>\n</message>\n\n<portType name=\"\
+    glossaryTerms\">\n    <operation name=\"getTerm\">\n        <input message=\"\
+    getTermRequest\"/>\n        <output message=\"getTermResponse\"/>\n    </operation>\n\
+    </portType>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: '# WSDL Service
+
+
+    服务是访问端口的集合，通过绑定指定唯一地址来定义一个访问端口（port）。
+
+
+    WSDL文档范围内，服务的name属性具有唯一性；访问端口的name属性也具有唯一性。
+
+
+    ```
+
+    <wsdl:service .... > *
+
+    <wsdl:port name="nmtoken" binding="qname">*
+
+    </wsdl:port>
+
+    </wsdl:service>
+
+    ```
+
+
+    一个<service>中可以包含一个或多个<port>。'
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: '# Types (type information for the document, e.g., XML Schema)
+
+
+    # Message 1
+
+
+    # Message 2
+
+
+    # Message 3
+
+
+    # Message 4
+
+
+    # Message 5
+
+
+    # Message 6
+
+
+    # Operation 1
+
+
+    # Operation 2
+
+
+    # Operation 3
+
+
+    # Interface (abstract service)
+
+
+    # Abstract description of the service
+
+
+    # binding 1
+
+
+    # endpoint 1
+
+
+    # binding 2
+
+
+    # endpoint 2
+
+
+    # binding 3
+
+
+    # endpoint 3
+
+
+    # binding 4
+
+
+    # endpoint 4
+
+
+    # Service (the interface in all its available implementations)
+
+
+    # Concrete description of the service'
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: '# 绑定到SOAP
+
+
+    ```
+
+    <binding type="glossaryTerms" name="b1">
+
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"
+    />
+
+    <operation>
+
+    <soap:operation soapAction="http://example.com/getTerm" />
+
+    <input>
+
+    <soap:body use="literal" />
+
+    </input>
+
+    <output>
+
+    <soap:body use="literal" />
+
+    </output>
+
+    </operation>
+
+    </binding>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: '# portType、binding与port的关系
+
+
+    +   - 一个portType可以对应多个bindng
+
+    +   - 一个binding可以对应多个port
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_150_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: "```\n<message name=\"getTermRequest\">\n    <part name=\"term\" type=\"xs:string\"\
+    \ />\n</message>\n\n<message name=\"getTermResponse\">\n    <part name=\"value\"\
+    \ type=\"xs:string\" />\n</message>\n\n<portType name=\"glossaryTerms\">\n   \
+    \ <operation name=\"getTerm\">\n        <input message=\"getTermRequest\" />\n\
+    \        <output message=\"getTermResponse\" />\n    </operation>\n</portType>\n\
+    \n<binding type=\"glossaryTerms\" name=\"b1\">\n<soap:binding style=\"document\"\
+    \ transport=\"http://schemas.xmlsoap.org/soap/http\" />\n<operation>\n    <soap:operation\
+    \ soapAction=\"http://example.com/getTerm\" />\n    <input>\n        <soap:body\
+    \ use=\"literal\" />\n    </input>\n    <output>\n        <soap:body use=\"literal\"\
+    \ />\n    </output>\n</operation>\n</binding>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: '# Lecture 6
+
+
+    # UDDI'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: '# What is UDDI ?
+
+
+    +   - UDDI (Universal Description, Discovery and Integration) 是一个独立于平台的框架，用于通过使用
+    Internet 来描述服务，发现企业，并对企业服务进行集成
+
+    +     - UDDI 指的是通用描述、发现与集成服务
+
+    +     - UDDI 是一种用于存储有关 web services 的信息的目录
+
+    +     - UDDI 是一种由 WSDL 描述的 web services 界面的目录
+
+    +     - UDDI 经由 SOAP 进行通信
+
+    +     - UDDI 被构建入了微软的 .NET 平台
+
+
+    Demo
+
+    http://www.webxml.com.cn/zh_cn/web_services.aspx'
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: '# # UDDI数据模型
+
+
+    UDDI 实体是一个XML文档的不同元素，主要包括：
+
+
+    +   - businessEntity: 提供服务的组织的描述
+
+    +   - businessService: businessEntity所提供的Web服务列表
+
+    +   - bindingTemplate: 描述服务的技术细节。
+
+    +   - tModel (technical model) : 一个通用的元素，可以用来存储更多的服务和技术的附加信息，如服务使用条件、认证等。'
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: '# UDDI data model
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_155_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: '# UDDI接口
+
+
+    | 接口 | 描述 |
+
+    |------|------|
+
+    | UDDI Inquiry | 定位和查找服务细节 |
+
+    | UDDI Publication | 发布和更新服务 |
+
+    | UDDI Security | UDDI注册表的访问控制 |
+
+    | UDDI Subscription | 允许客户端订阅UDDI注册表信息的变化 |
+
+    | UDDI Replication | 如何执行跨节点的信息复制 |
+
+    | UDDI Custody and Ownership transfer | 改变信息所有者，将其从一个节点转移到同以UDDI注册表中的另外节点 |
+
+    | UDDI Subscription Listener | 订阅信息API的客户端 |
+
+    | UDDI Value Set | 使用UDDI注册表提供的合法信息 |'
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: '# SOPA WSDL UDDI的关系
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_157_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: '# 各标准的层次关系
+
+
+    Discovery
+
+    UDDI
+
+    Description
+
+    WSDL
+
+    Messaging
+
+    SOAP
+
+    User Interface
+
+    HTML
+
+    XML
+
+    HTTP
+
+    TCP/IP'
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: '# 服务请求的过程
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_159_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: '# 第4章 SOA Analysis and Modeling
+
+
+    王新颖
+
+
+    xinying@jlu.edu.cn'
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: '# SOA的分析与建模
+
+
+    # Service-Oriented Analysis and Modeling: Method and Process'
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: '# The SOA Layers
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_163_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: '# The SOA Layers--1
+
+
+    +   - Layer 1: Operational systems layer
+
+    +     - Existing custom built applications, called legacy systems
+
+    +       - CRM and ERP packaged applications
+
+    +       - *older* object-oriented system implementations,
+
+    +       - business intelligence applications.
+
+    +     - To leverage existing systems and integrate them using service-oriented
+    integration techniques.'
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: '# The SOA Layers--2
+
+
+    Presentation
+
+
+    Portlets
+
+
+    WSRP
+
+
+    Business Process Choreography
+
+
+    Services
+
+
+    Composite Services
+
+
+    Enterprise Components
+
+
+    Project or Enterprise Components
+
+
+    Operational Systems
+
+
+    Mainframe
+
+
+    IBM AS/400
+
+
+    Object-oriented
+
+
+    CRM, ERP
+
+
+    Business Intelligence
+
+
+    Integration Architecture
+
+
+    QoS, Security, Monitoring
+
+
+    1
+
+
+    2
+
+
+    3
+
+
+    4
+
+
+    5
+
+
+    6
+
+
+    7
+
+
+    CIC S/COBOL'
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: '# The SOA Layers--2
+
+
+    +   - Layer 2: Enterprise components layer
+
+    +     - Enterprise components that are responsible for realizing functionality
+    and maintaining the QoS of the exposed services.
+
+    +     - Managed, governed set of enterprise assets that are funded at the enterprise
+    or the business unit level.
+
+    +     - Typically uses container-based technologies such as application servers
+    to implement the components, workload management, high-availability, and load
+    balancing.'
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: '# The SOA Layers--3
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_167_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: '# The SOA Layers--3
+
+
+    +   - Layer 3: Services layer.
+
+    +     - The services that the business chooses to find and expose
+
+    +     - Can be *discovered* or be statically bound and then invoked, or possibly,
+    choreographed into a composite service.
+
+    +     - Mechanism to take enterprise scale components, business unit specific
+    components, and in some cases, project-specific components, and externalizes a
+    subset of their interfaces in the form of service descriptions.
+
+    +     - Provide service realization at runtime using the functionality provided
+    by their interfaces.
+
+    +     - Exist in isolation or as a composite service.'
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: '# The SOA Layers--4
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_169_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: '# The SOA Layers--4
+
+
+    +   - Level 4: Business process composition or choreography layer
+
+    +     - Services are bundled into a flow through orchestration or choreography,
+    and thus act together as a single application.
+
+    +     - These applications support specific use cases and business processes.'
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: '# The SOA Layers—5、6、7
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_171_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: '# The SOA Layers—5、6、7
+
+
+    +   - Layer 5: Access or presentation layer.
+
+    +     - SOA decouples the user interface from the components, the layer provides
+    an access channel to a service or composition of services.
+
+    +   - Level 6: Integration (ESB).
+
+    +     - Enables the integration of services through the introduction of a reliable
+    set of capabilities, such as intelligent routing, protocol mediation, and other
+    transformation mechanisms, often described as the ESB.
+
+    +   - Level 7: QoS.
+
+    +     - The capabilities required to monitor, manage, and maintain QoS such as
+    security, performance, and availability.
+
+    +     - A background process through sense-and-respond mechanisms and tools that
+    monitor the health of SOA applications.'
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: '# Service-Oriented Modeling & Analysis
+
+
+    Modeling, analysis, design techniques and activities to define the foundations
+    of a SOA.
+
+
+    +   Define the **elements** in each of the SOA layers
+
+
+    +   Make **critical architectural decisions** at each level.
+
+
+    +   Hybrid approach
+
+
+    +   Top-down: business driven
+
+
+    +   Bottom-up: leverage legacy investments
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_173_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: '# Why OOAD, BPM, EA are not enough
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_174_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: '# Service-Oriented
+
+
+    Business Layer
+
+
+    Service Layer
+
+
+    Component Layer
+
+
+    Functional Domain
+
+
+    Business Process
+
+
+    Business Services
+
+
+    Software Services
+
+
+    Software Component
+
+
+    Human Resources
+
+
+    Manage Employees
+
+
+    Recruitment
+
+
+    Employee
+
+
+    Recruitment Service
+
+
+    Employee Service
+
+
+    Vacancy Component
+
+
+    Application Component
+
+
+    Emp. Record Component
+
+
+    Career Component
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_175_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: '# SOA Design Principles
+
+
+    +   - Service categorization and aggregation
+
+    +     服务分类和聚合
+
+    +   - Specification
+
+    +     服务规范制定
+
+    +   - Process: meet-in-the-middle
+
+    +     中间过程结合'
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: '# SOA: Method & Process
+
+
+    Identification
+
+
+    Domain Decomposition
+
+
+    Goal-Service Modeling
+
+
+    Existing System Analysis
+
+
+    Specification
+
+
+    Component Flow specification
+
+
+    Subsystem Analysis
+
+
+    Service specification
+
+
+    Service Flow specification
+
+
+    Information specification
+
+
+    Component specification
+
+
+    Message & event specification
+
+
+    Realization
+
+
+    Service realization decisions
+
+
+    Service allocation to components
+
+
+    Component layer'
+  merge: -1
+  img_proc: true
+- pgno: 178
+  md: '# # Service Identification
+
+
+    Identifies services through
+
+
+    +   - Domain decomposition (Top down analysis)
+
+
+    +   - Existing system analysis (Bottom up analysis)
+
+
+    +   - Goal service modeling
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_178_0.png)
+
+
+    Identification Specification Realization'
+  merge: -1
+  img_proc: true
+- pgno: 179
+  md: '# Service Specification
+
+
+    +   - Service categorization
+
+    +   - Service flow specification
+
+    +   - Message and events specification
+
+    +   - Subsystem analysis
+
+    +   - Component specification'
+  merge: -1
+  img_proc: true
+- pgno: 180
+  md: '# Service Realization
+
+
+    +   - Decision making of service realization approach
+
+    +   - Allocation services to components
+
+    +   - Allocation components to SOA layers'
+  merge: -1
+  img_proc: true
+- pgno: 181
+  md: '# SOA的分析与建模
+
+
+    # BMP & BPEL'
+  merge: -1
+  img_proc: true
+- pgno: 182
+  md: '# 基于SOA的业务流程管理
+
+
+    业务流程建模与分析
+
+
+    业务流程模拟及优化
+
+
+    业务流程快速装配和部署实施
+
+
+    业务流程绩效管理
+
+
+    业务创新和流程持续优化
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_182_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 183
+  md: '# 业务流程
+
+
+    +   按业务流程之间的协作方式可以分为单工作流模式和多工作流模式：
+
+
+    +   单工作流模式把一组相关的服务按一定顺序和条件组合执行，完成某项业务，流程执行过程中涉及的服务不属于其他业务流程；
+
+
+    +   多工作流模式是两个或两个以上的工作流程并行执行并进行交互的业务流程模式，多工作流模式侧重于业务流程之间的交互。
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_183_0.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_183_1.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_183_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 184
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 185
+  md: '# BPM Example
+
+
+    Example:
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_185_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 186
+  md: '# What is BPEL
+
+
+    +   - Business Process Execution Language (BPEL)
+
+    +     - BPEL is an OASIS standard executable language for specifying interactions
+    with Web Services.
+
+    +   - WS-BPEL extends the Web Services interaction model and enables it to support
+    business transactions.
+
+    +   - WS-BPEL provides a language for the specification of Executable and Abstract
+    business processes.'
+  merge: -1
+  img_proc: true
+- pgno: 187
+  md: '# WS-BPEL Process
+
+
+    +   - Made up of “Activities” – the individual steps of a process
+
+    +   - Activities are implemented by Web Services
+
+    +   - WS-BPEL process is itself represented as Web Services
+
+    +   - Specifies order in which participating Web Services should be invoked
+
+    +   - Error handling'
+  merge: -1
+  img_proc: true
+- pgno: 188
+  md: '![](img/431d4828d5c6073b7e23d9eca159cdeb_188_0.png)
+
+
+    # BPEL Process for Business Travels'
+  merge: -1
+  img_proc: true
+- pgno: 189
+  md: "# BPEL的基本结构\n\n```\n<process name=\"ncname\" targetNamespace=\"uri\"\n    queryLanguage=\"\
+    anyURI\"?\n    expressionLanguage=\"anyURI\"?\n    suppressJoinFailure=\"yes|no\"\
+    ?\n    enableInstanceCompensation=\"yes|no\"?\n    abstractProcess=\"yes|no\"\
+    ?>\n    <partnerLinks>? ... </partnerLinks>\n    <partners>? ... </partners>\n\
+    \    <variables>? ... </variables>\n    <correlationSets>? ... </correlationSets>\n\
+    \    <faultHandlers>? ... </faultHandlers>\n    <compensationHandlers>? ... </compensationHandlers>\n\
+    \    <eventHandlers>? ... </eventHandlers>\n    activity\n</process>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 190
+  md: '# 伙伴链接
+
+
+    process
+
+
+    Peer-to-peer conversational partner relationship
+
+
+    partner link
+
+
+    receive
+
+
+    invoke
+
+
+    Inbound request – service provided by the process
+
+
+    Outbound request – service required by the process
+
+
+    WSDL port type
+
+
+    Provided port type
+
+
+    myRole
+
+
+    partner link type
+
+
+    partnerRole
+
+
+    WSDL port type
+
+
+    Required port type'
+  merge: -1
+  img_proc: true
+- pgno: 191
+  md: '# 业务伙伴
+
+
+    WS-BPEL processes are exposed as Web services to business partners
+
+
+    WS-BPEL processes interact with Web services exposed by business partners
+
+
+    WSDL
+
+    Loan
+
+    Approval
+
+    PortType
+
+
+    Loan Approval Process
+
+
+    receive
+
+
+    invoke
+
+
+    reply
+
+
+    Web Service
+
+
+    Financial institution''s Web service implementation (Loan Approver)
+
+
+    Web Service'
+  merge: -1
+  img_proc: true
+- pgno: 192
+  md: '# 变量
+
+
+    process
+
+
+    Variables defined using WSDL messages
+
+
+    receive
+
+
+    invoke
+
+
+    xsl:transform
+
+
+    assign
+
+
+    reply
+
+
+    Variables defined using XML schema elements or types
+
+
+    request
+
+
+    response
+
+
+    WSDL messages
+
+
+    request
+
+
+    response
+
+
+    XML Schema elements / types'
+  merge: -1
+  img_proc: true
+- pgno: 193
+  md: '# Basic Activities
+
+
+    # Basic Activities
+
+
+    # Process
+
+
+    PartnerLinks
+
+
+    Variables
+
+
+    correlationSets
+
+
+    faultHandlers
+
+
+    compensationHandlers
+
+
+    eventHandlers
+
+
+    # Activities
+
+
+    Receive
+
+
+    Reply
+
+
+    Invoke
+
+
+    +   - receive
+
+    +   - reply
+
+    +   - invoke
+
+    +   - assign
+
+    +   - validate
+
+    +   - throw
+
+    +   - rethrow
+
+    +   - extensionActivity
+
+    +   - wait
+
+    +   - empty
+
+    +   - compensate
+
+    +   - compensateScope
+
+    +   - exit'
+  merge: -1
+  img_proc: true
+- pgno: 194
+  md: '# Structured Activities
+
+
+    Structured Activities
+
+
+    Process
+
+    PartnerLinks
+
+    Variables
+
+    correlationSets
+
+    faultHandlers
+
+    compensationHandlers
+
+    eventHandlers
+
+    Activities
+
+    Receive
+
+    Reply
+
+    Invoke
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_194_0.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_194_1.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_194_2.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_194_3.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_194_4.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_194_5.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_194_6.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_194_7.png)'
+  merge: -1
+  img_proc: true
+- pgno: 195
+  md: '# SOA的分析与建模
+
+
+    # WebSphere Business Modeler
+
+    (WBM)'
+  merge: -1
+  img_proc: true
+- pgno: 196
+  md: '# IBM WebSphere BPM
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_196_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 197
+  md: '# # Process Model
+
+
+    +   - Flexible palette which can be used to express complex behaviors in business
+    processes.
+
+    +   - Use of colors, labels, and swimlane view aid in visual identification of
+    hand-offs and the associated attributes of the model.
+
+    +   - It is important that standards and best practices be applied when developing
+    business process models as consistency when modeling ensures that consumers of
+    the process models are interpreting them in a consistent way.'
+  merge: -1
+  img_proc: true
+- pgno: 198
+  md: '# WBM Overview
+
+
+    WebSphere Business Modeler
+
+
+    WebSphere Process Server
+
+
+    WebSphere Service Registry & Repository
+
+
+    # Business Services
+
+
+    Supports enterprise business process and goals through businesses functional service
+
+
+    # Development Services
+
+
+    Integrated environment for design and creation of solution assets
+
+
+    WebSphere Integration Developer
+
+
+    # Interaction Services
+
+
+    Enables collaboration between people, processes & information
+
+
+    # Process Services
+
+
+    Orchestrate and automate business processes
+
+
+    # Information Services
+
+
+    Manages diverse data and content in a unified manner
+
+
+    # Enterprise Service Bus
+
+
+    # Partner Services
+
+
+    Connect with trading partners
+
+
+    # Business App Services
+
+
+    Build on a robust, scaleable, and secure services environment
+
+
+    # Access Services
+
+
+    Facilitate interactions with existing information and application assets
+
+
+    Apps & Info Assets
+
+
+    # Infrastructure Services
+
+
+    Optimizes throughput, availability and utilization
+
+
+    WebSphere Application Server
+
+
+    # Management Services
+
+
+    Manage and secure services, applications & resources'
+  merge: -1
+  img_proc: true
+- pgno: 199
+  md: '# Process Model
+
+    Drag & Drop to create the graphical view.
+
+
+    # Information Model
+
+    How data is used in a business process.
+
+
+    # Resource Model
+
+    Define resources used in the process
+
+
+    # Analysis Model
+
+    Analyze process behaviors
+
+
+    # Organization Model
+
+    Define organization units, location
+
+
+    # Business Measures Model
+
+    Define Performance Indicators and Metrics'
+  merge: -1
+  img_proc: true
+- pgno: 200
+  md: '# Business Modeling - Account Verification (To-Be) Complete - WebSphere Business
+    Modeler Advanced Edition Version 6.0 Early Evaluation Program
+
+
+    File Edit View Navigate Search Project Modeling Run Window Help
+
+
+    Elements
+
+
+    Connections
+
+
+    Annotation
+
+
+    Eligibility System
+
+
+    Account Coordinator
+
+
+    Account Manager
+
+
+    Decision Mgr System
+
+
+    Customer Application
+
+
+    Eligibility System
+
+
+    Validate Application
+
+
+    15 seconds
+
+
+    Customer Application
+
+
+    Account Coordinator
+
+
+    Initiate Application Review
+
+
+    5 minutes
+
+
+    Customer Application Needs Credit Report?
+
+
+    75.0% Yes Customers
+
+
+    25.0% No Customers
+
+
+    Swimlane editor – Layout by Role example
+
+
+    Diagram Specification Visual Attributes Technical Specification'
+  merge: -1
+  img_proc: true
+- pgno: 201
+  md: '# Information Model
+
+
+    +   - Data can be imported in from existing sources or upon export be used to
+    help develop or enhance systems.
+
+
+    +   - Ability to associate critical information required for the process execution
+    and to support the logic behind how the process behaves.
+
+
+    +   - Used in the analysis model for dynamic analysis of the process'
+  merge: -1
+  img_proc: true
+- pgno: 202
+  md: '# Customer Application
+
+
+    Parent template None
+
+
+    # Business item attributes
+
+
+    Attributes are properties or significant features. Inherited attributes can be
+    edited in the parent definition.
+
+
+    | Name |  | Type |
+
+    |---|---|---|
+
+    | applicationName | ✓ | String |
+
+    | companyName | ✓ | String |
+
+    | customerAddress1 | ✓ | String |
+
+    | customerAddress2 | ✓ | String |
+
+    | customerCity | ✓ | String |
+
+    | customerState | ✓ | String |
+
+    | customerCountry | ✓ | String |
+
+    | customerPostalCode | ✓ | String |
+
+    | contactFirstName | ✓ | String |
+
+    | contactLastName | ✓ | String |
+
+    | contactPhoneNumber | ✓ | String |
+
+    | requestAccountAmount | ✓ | String |
+
+    | creditReportNeeded |  | Boolean |
+
+    | creditScore |  | Integer |
+
+    | productName |  | String |
+
+    | pricingCode |  | Integer |
+
+    | applicationDecision |  | Boolean |
+
+    | comments |  | String |
+
+
+    Add Remove Move Up Move Down
+
+
+    # Attribute details
+
+
+    Edit the details of the selected attribute. Inherited attributes can only be edited
+    in the parent definition.
+
+
+    # Attribute description
+
+
+    If a credit report is older than N number of months (business rule will be used
+    to set this dynamically) on a credit report will be needed. [T...]
+
+
+    Templates can be used to inherit information that was modeled previously or that
+    are reusable across business items
+
+
+    Rules associated to business items can be evaluated during analysis
+
+
+    Change Icon...
+
+
+    Attributes Documentation'
+  merge: -1
+  img_proc: true
+- pgno: 203
+  md: '# Resource Model
+
+
+    +   - Defines all role, individual, and bulk resources that are used within the
+    business process and their associated costs
+
+    +   - Complex resource behaviors can be modeled in order to accurately reflect
+    those behaviors in the analysis model'
+  merge: -1
+  img_proc: true
+- pgno: 204
+  md: '# Business Modeling
+
+
+    # Account Coordinator
+
+
+    # Account Coordinator 1
+
+
+    # Scope dimension
+
+
+    Use this section to add scope dimensions. A scope dimension defines and measures
+    specific qualities and requirements for a role.
+
+
+    # Scope dimension details
+
+
+    Details of the selected scope dimension.
+
+
+    # Scope dimension value type
+
+
+    Language Spoken
+
+
+    String
+
+
+    # Instance of
+
+
+    # Resource attributes
+
+
+    Attributes of the resource definition. If the resource definition is updated,
+    refresh the table to synchronize this resource with the resource definition.
+
+
+    # Selected attribute values
+
+
+    Use this section to edit values for an attribute with a maximum occurrence greater
+    than 1.
+
+
+    | Name | Type |
+
+    |------|------|
+
+    | personID | String |
+
+    | lastName | String |
+
+    | firstName | String |
+
+    | profile | String |
+
+    | email | String |
+
+    | phone | String |
+
+    | employeeID | String |
+
+    | taxPayerID | String |
+
+    | fax | String |
+
+    | timezone | String |
+
+    | secretary | String |
+
+    | assistant | String |
+
+    | manager | String |
+
+    | company | String |
+
+    | department | String |
+
+    | middleName | String |
+
+
+    Scope definition helps identify specialized resource skill required to complete
+    the steps in a business process
+
+
+    Costs can be associated to resources and can be both per time unit and any one
+    time start up costs
+
+
+    Specifying availability characteristics assists in simulating real scenarios of
+    resource constraints
+
+
+    +   - Business items
+
+    +   - Processes
+
+    +   - Resources
+
+    +     - Account Coordinator
+
+    +     - Account Manager
+
+    +     - Credit Management Service
+
+    +     - Decision Mgp System
+
+    +     - Eligibility System
+
+    +     - Software
+
+    +       - Account Coordinator 1
+
+    +       - Account Coordinator 2
+
+    +       - Account Coordinator 3
+
+    +       - Account Coordinator 4
+
+    +       - Account Coordinator 5
+
+    +       - Account Manager 1
+
+    +       - Account Manager 2
+
+    +     - IBM Software
+
+    +     - 24Hour
+
+    +     - Day Shift
+
+    +     - Day Shift
+
+    +     - Saturday
+
+    +     - Sunday
+
+    +   - Organizations
+
+    +   - Classifier
+
+    +   - Classifiers
+
+    +   - Reports
+
+    +   - Queries
+
+    +   - Predefined resources
+
+    +   - Predefined organizations
+
+    +   - Predefined classifiers
+
+
+    Scope dimension Costs Availability Documentation
+
+
+    Costs Availability Qualifications Attributes Documentation'
+  merge: -1
+  img_proc: true
+- pgno: 205
+  md: '# Analysis Model
+
+
+    +   - Critical to understanding how a business process behaves
+
+    +   - Used to perform Return on Investment (ROI) analysis to determine the differences
+    between the current and future states of the business process
+
+    +   - Simulations against the analysis model provides the most comprehensive way
+    to identify complex behaviors of both simple and complex business processes'
+  merge: -1
+  img_proc: true
+- pgno: 206
+  md: '# Business Modeling
+
+
+    # Attributes - Initial Application Review
+
+
+    # Simulation Control Panel
+
+
+    # Errors (Filter matched 0 of 0 items)
+
+
+    # General
+
+
+    # Cost and Revenue
+
+
+    # Duration
+
+
+    # Inputs
+
+
+    # Outputs
+
+
+    # Input Logic
+
+
+    # Output Logic
+
+
+    # Resources
+
+
+    # Organizations
+
+
+    # Classifiers
+
+
+    # Processing cost
+
+
+    The expense incurred every time this task runs.
+
+
+    Literal value
+
+
+    10
+
+
+    USD
+
+
+    Clear
+
+
+    > Cost, Revenue, Duration, Resource, and Classifiers are attributes used at modeling
+    time to define analysis model
+
+
+    # Startup cost
+
+
+    The initial expense incurred when this task starts.
+
+
+    Literal value
+
+
+    5
+
+
+    USD
+
+
+    Clear
+
+
+    # Wait-time cost
+
+
+    The expense that increases over time while this task waits for a resource.
+
+
+    Unspecified
+
+
+    USD
+
+
+    Second
+
+
+    Clear
+
+
+    # Revenue
+
+
+    The money that is earned when this task is finished.
+
+
+    None
+
+
+    Unspecified
+
+
+    USD
+
+
+    Clear'
+  merge: -1
+  img_proc: true
+- pgno: 207
+  md: 'Simulation animation
+
+
+    Queued work items show potential bottlenecks
+
+
+    Simulation real-time statistics
+
+
+    Simulation control panel
+
+
+    Simulation elapsed time
+
+
+    Simulation running
+
+
+    Elapsed time: 00:00:51'
+  merge: -1
+  img_proc: true
+- pgno: 208
+  md: '# Business Measures Model
+
+
+    +   - Defines what is monitored during the execution of the business process
+
+    +   - Key Performance Indicators (KPI’s) and Metrics can be defined both at a
+    business process and activity level of granularity
+
+    +     - Example KPI - Percentage of Approved requests
+
+    +     - Example KPI – Average time to process requests from Gold customers
+
+    +   - Situation and situation outcomes can be defined in order to make KPI’s and
+    metrics actionable'
+  merge: -1
+  img_proc: true
+- pgno: 209
+  md: '# Business Modeling - Account Verification (To-Be) Complete Business measures
+    - Eclipse Platform
+
+
+    Icons are added automatically showing Triggers, Metrics, Timers, Counters and
+    KPIs, etc. as they are added to the model.
+
+
+    Observation Model
+
+
+    Business Measures, KPIs and their Attributes
+
+
+    Account Verification (To-Be)
+
+
+    Customer Application
+
+
+    Determine Applicant Eligibility
+
+
+    Initial Application Review
+
+
+    | Name | Type | Default Value | Target | Upper Bound | Lower Bound | Upper Margin
+    |
+
+    |---|---|---|---|---|---|---|
+
+    | Accounts Opened Per Day Indicator | Integer | 65 | 110 | 80 | 40 | 40 |
+
+    | Account Opening Cost Indicator | Integer | 375 | 350 | 400 | 200 | 200 |
+
+
+    +   - Project Tree
+
+    +   - Account Opening 20.3 from Mv6
+
+    +   - Processes
+
+    +   - As-Is Processes
+
+    +   - Account Verification (As-Is) Complete
+
+    +   - Account Verification (As-Is) Complete Simul
+
+    +   - Account Verification (As-Is) Complete D
+
+    +   - Account Verification (As-Is) Unfinished
+
+    +   - To-Be Processes
+
+    +   - Account Verification (To-Be)
+
+    +   - Account Verification (To-Be) Complete
+
+    +   - Account Verification (To-Be) Complete Simul
+
+    +   - Account Verification (To-Be) Complete C
+
+    +   - Account Verification (To-Be) Complete B
+
+    +   - Account Verification (To-Be) Complete Bus'
+  merge: -1
+  img_proc: true
+- pgno: 210
+  md: '# SOA的分析与建模
+
+
+    # WebSphere Integration Developer
+
+    (WID)'
+  merge: -1
+  img_proc: true
+- pgno: 211
+  md: '# WID Overview
+
+
+    Business Services
+
+    Supports enterprise business process and goals through businesses functional service
+
+    WebSphere Business Modeler
+
+    WebSphere Process Server
+
+    WebSphere Service Registry & Repository
+
+
+    Interaction Services
+
+    Enables collaboration between people, processes & information
+
+    Process Services
+
+    Orchestrate and automate business processes
+
+    Information Services
+
+    Manages diverse data and content in a unified manner
+
+
+    Enterprise Service Bus
+
+
+    Development Services
+
+    Integrated environment for design and creation of solution assets
+
+    WebSphere Integration Developer
+
+
+    Management Services
+
+    Manage and secure services, applications & resources
+
+    Apps & Info Assets
+
+
+    Partner Services
+
+    Connect with trading partners
+
+    Business App Services
+
+    Build on a robust, scaleable, and secure services environment
+
+    Access Services
+
+    Facilitate interactions with existing information and application assets
+
+
+    Infrastructure Services
+
+    Optimizes throughput, availability and utilization
+
+    WebSphere Application Server'
+  merge: -1
+  img_proc: true
+- pgno: 212
+  md: '# Business integration roles
+
+
+    Strategy and Initiation
+
+
+    Analysis and planning
+
+
+    Build and test
+
+
+    Deploy to production
+
+
+    Monitor and react
+
+
+    Green-light from business and IT decision makers
+
+
+    Solution meets design specifications
+
+
+    Modify business rules to adapt quickly to market
+
+
+    +   Roles Involved
+
+    +   - Line of Business Manager
+
+
+    +   Roles Involved
+
+    +   - Business Analyst
+
+    +   - Integration Developer
+
+    +   - Line of Business Manager
+
+
+    +   Roles Involved
+
+    +   - Integration Developer
+
+    +   - Application Developer
+
+
+    +   Roles Involved
+
+    +   - Server Administrator
+
+    +   - Integration Developer
+
+    +   - Application Developer
+
+
+    +   Roles Involved
+
+    +   - Solution Administrator
+
+    +   - Server Administrator
+
+    +   - Business Analyst
+
+    +   - Line of Business Manager
+
+
+    Modeler
+
+
+    Monitor
+
+
+    WebSphere Integration Developer
+
+
+    WebSphere Process Server
+
+
+    (transform)'
+  merge: -1
+  img_proc: true
+- pgno: 213
+  md: '# Integration Developer: Concepts
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_213_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 214
+  md: '# Module project
+
+
+    +   - Business Integration project type for developing SCA based applications
+
+    +   - Basic unit of deployment to the runtime environment
+
+    +     - A module is packaged in an EAR file
+
+    +   - Contains these artifacts
+
+    +     - SCA resources and module assembly
+
+    +     - J2EE projects
+
+    +     - Java™ projects
+
+    +     - Dependent libraries
+
+    +     - Other business integration artifacts
+
+    +       - BPEL, interfaces, XSD, and so on...
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_214_0.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_214_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 215
+  md: '# Library project
+
+
+    +   - Business Integration project type for storing artifacts shared between multiple
+    modules
+
+    +   - Not a deployable unit
+
+    +   - Contains these artifacts
+
+    +     - Interfaces
+
+    +     - Business Objects
+
+    +     - Business Object Maps
+
+    +     - Relationships
+
+    +     - Web services
+
+    +   - Can be added to the dependency list for a module from the dependency editor
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_215_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 216
+  md: '# Business integration perspective
+
+
+    Business Integration view
+
+
+    Physical Resources view
+
+
+    Servers view
+
+
+    Properties view
+
+
+    Business Integration perspective
+
+    - Primary perspective for Business Integration activities
+
+    - Default perspective when product is launched'
+  merge: -1
+  img_proc: true
+- pgno: 217
+  md: '# Business integration view
+
+
+    +   - Primary view for managing and viewing business integration resources
+
+    +   - Provides logical grouping of resources
+
+    +     - Artifacts not essential for business integration development are not visible
+
+    +   - Logical resources do not necessarily have a one-to-one relationship with
+    a physical resource
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_217_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 218
+  md: '# From WID to WPS
+
+
+    WebSphere Business Modeler
+
+
+    WebSphere Process Server
+
+
+    WebSphere Service Registry & Repository
+
+
+    Business Services
+
+    Supports enterprise business process and goals through businesses functional service
+
+
+    Development Services
+
+    Integrated environment for design and creation of solution assets
+
+
+    Interaction Services
+
+    Enables collaboration between people, processes & information
+
+
+    Process Services
+
+    Orchestrate and automate business processes
+
+
+    Information Services
+
+    Manages diverse data and content in a unified manner
+
+
+    Enterprise Service Bus
+
+
+    Management Services
+
+    Manage and secure services, applications & resources
+
+
+    Partner Services
+
+    Connect with trading partners
+
+
+    Business App Services
+
+    Build on a robust, scaleable, and secure services environment
+
+
+    Access Services
+
+    Facilitate interactions with existing information and application assets
+
+
+    Apps & Info Assets
+
+
+    Infrastructure Services
+
+    Optimizes throughput, availability and utilization
+
+
+    WebSphere Integration Developer
+
+
+    WebSphere Application Server'
+  merge: -1
+  img_proc: true
+- pgno: 219
+  md: '# WebSphere Process Server Mode
+
+
+    +   - Switch to WebSphere Process Server Mode'
+  merge: -1
+  img_proc: true
+- pgno: 220
+  md: '# Technical Attributes
+
+
+    +   - Technical Attributes are a set of **runtime attributes** related to specific
+    business process elements (process, task, decision, etc.)
+
+    +   - There are two ways to edit the runtime attributes:
+
+    +     - Technical Specification Page (for the entire process)
+
+    +     - Technical Attributes View (for selected process elements)'
+  merge: -1
+  img_proc: true
+- pgno: 221
+  md: '# Technical Attributes View
+
+
+    # Technical Attributes View
+
+
+    +   General
+
+    +   Interface
+
+    +   Request
+
+    +   Response
+
+    +   Implementation
+
+
+    # BPEL Attributes
+
+
+    Define BPEL process information below
+
+
+    Target namespace
+
+
+    http://Processes/ToBeProcesses/AccountVerificationToBeComplete
+
+
+    Process display name
+
+
+    Account Verification (To-Be) Complete
+
+
+    Process name
+
+
+    AccountVerificationToBeComplete
+
+
+    ☑ Process is long-running
+
+
+    ☐ Process runs as child process'
+  merge: -1
+  img_proc: true
+- pgno: 222
+  md: '# Interface
+
+
+    Technical Attributes View
+
+
+    General
+
+    Interface
+
+    Request
+
+    Response
+
+    Implementation
+
+
+    WSDL Interface Attributes
+
+
+    Define WSDL interface information below
+
+
+    Target namespace
+
+    http://Processes/ToBeProcesses/AccountVerificationToBeComplete/AccountVerificationToBeCompleteInterface
+
+
+    PortType name
+
+    AccountVerificationToBeComplete
+
+
+    Callback PortType name
+
+
+    Callback PortType target namespace
+
+
+    Technical Attributes View
+
+    Interface
+
+    Request
+
+    Response
+
+    Implementation
+
+    WSDL Interface Attributes
+
+    Define WSDL interface information below
+
+    Target namespace
+
+    http://Processes/ToBeProcesses/AccountVerificationToBeComplete/InitialApplicationReviewInterface
+
+    PortType name
+
+    InitialApplicationReview
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_222_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 223
+  md: '# Response
+
+
+    Technical Attributes View
+
+
+    General  Interface  Request  Response  Implementation
+
+
+    Input criterion section
+
+
+    Select an input criterion in the table to see the WSDL and BPEL information in
+    the sections below
+
+
+    | Input criterion name | Corresponding output crit... | Valid operation type |
+    Selected operation type |
+
+    | Input Criteria | Output Criteria | Request / response, one ... | Request / response
+    |
+
+
+    Operation type
+
+
+    Select the type of operation
+
+
+    Request / Response operation
+
+
+    One way operation
+
+
+    WSDL Attributes
+
+
+    Define the WSDL interface information
+
+
+    Operation name
+
+    InputCriteria
+
+
+    WSDL Message Details
+
+
+    Define the WSDL message that represer
+
+
+    Message name
+
+    InputCriteria
+
+
+    Part name
+
+    InputCriteria
+
+
+    BPEL Attributes
+
+
+    Define the BPEL invoke activity information
+
+
+    Activity display name
+
+    Account Verification (To-Be) Complete Receive
+
+
+    Activity name
+
+    AccountVerificationToBeComplete_InputCriteria'
+  merge: -1
+  img_proc: true
+- pgno: 224
+  md: '# Technical Attributes View
+
+
+    Select an output criterion in the table to see the WSDL and BPEL information in
+    the sections below
+
+
+    | Output criterion name | Corresponding input criterion name | Response type |
+
+    | --------------------- | ---------------------------------- | --------------
+    |
+
+    | OutputCriteria | Input Criteria | Response |
+
+
+
+
+    Define the WSDL interface information
+
+
+
+
+    Define the WSDL message that represent
+
+
+    Message name
+
+    OutputCriteria
+
+
+    Part name
+
+    OutputCriteria
+
+
+
+
+    Define the BPEL reply activity information
+
+
+    Activity display name
+
+    Account Verification (To-Be) Complete Reply
+
+
+    Activity name
+
+    AccountVerificationToBeComplete_OutputCriteria'
+  merge: -1
+  img_proc: true
+- pgno: 225
+  md: '# Export for WebSphere Process Server
+
+
+    # Project Tree
+
+
+    ABC Project
+
+
+    Account Opening
+
+
+    Business items
+
+
+    Processes
+
+
+    As-Is Processes
+
+
+    To-Be Processes
+
+
+    Account Verification (To-Be) Complete
+
+
+    Retrieve Cre
+
+
+    Retrieve Cre
+
+
+    Resources
+
+
+    Organizations
+
+
+    +   - New
+
+    +   - Import
+
+    +   - Export
+
+
+    # WebSphere Business Modeler Export
+
+
+    Select type.
+
+
+    Select a format and click Next.
+
+
+    # Types
+
+
+    +   - WebSphere Business Modeler project (.zip)
+
+    +   - UML Business Modeling Profile
+
+    +   - WebSphere MQ Workflow (.fdl)
+
+    +   - WebSphere Business Integration Server Foundation V5.1 (BPEL, WSDL, XSD)
+
+    +   - Delimited text (.csv, .txt)
+
+    +   - WebSphere Business Modeler XML (.xml)
+
+    +   - WebSphere Business Monitor and development tool
+
+    +   - WebSphere Process Server
+
+    +   - CEI Event Catalog'
+  merge: -1
+  img_proc: true
+- pgno: 226
+  md: '# Target Location
+
+
+    # WebSphere Business Modeler Export
+
+
+    WebSphere Process Server export details
+
+
+    Click Finish to export.
+
+
+    Target location
+
+
+    C:\LabFiles\L1140\Workspace\L1140 WID Starting Workspace
+
+
+    Module project name
+
+
+    Mod
+
+
+    Library project name
+
+
+    Lib
+
+
+    WID Workspace
+
+
+    WID Module name
+
+
+    WID Library name'
+  merge: -1
+  img_proc: true
+- pgno: 227
+  md: "# What Gets Generated\n\n![](img/431d4828d5c6073b7e23d9eca159cdeb_227_0.png)\n\
+    \n+   ### Data Types\n+   - CustomerApplication\n+   - Message\n+   \n+   ###\
+    \ Interfaces\n+   - AccountVerificationToBeComplete\n+   - PrccssRetrieveCreditReportElectronic\n\
+    +   \n+   ### Process\n+   - AccountVerificationToBeComplete\n+   \n+   ### Interfaces\n\
+    +   - DetermineApplicantEligibility\n+   - FinalApplicationReview\n+   - GenerateDecline\n\
+    +   - InitialApplicationReview\n+   - ProvidePricingApproval\n+   - RequestMoreDocumentation"
+  merge: -1
+  img_proc: true
+- pgno: 228
+  md: '# Imported Elements in WID
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_228_0.png)
+
+
+    Data Types
+
+
+    Interfaces
+
+
+    Process
+
+
+    Interfaces'
+  merge: -1
+  img_proc: true
+- pgno: 229
+  md: '# SOA的分析与建模
+
+
+    # Case Study: Arnetminer.org
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_229_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 230
+  md: '# What’s Arnetminer
+
+
+    +   - Arnetminer (arnetminer.org) is a system aiming to provide comprehensive
+    search and mining services for researcher social networks.
+
+    +     - creating a semantic-based profile for each researcher by extracting information
+    from the distributed Web
+
+    +     - integrating academic data (e.g., the bibliographic data and the researcher
+    profiles) from multiple sources
+
+    +     - accurately searching the heterogeneous network
+
+    +     - analyzing and discovering interesting patterns from the built researcher
+    social network.'
+  merge: -1
+  img_proc: true
+- pgno: 231
+  md: '# Hot-topic Finding
+
+
+    # Expertise Search
+
+
+    # Association Search
+
+
+    # Survey Paper Search
+
+
+    # Person-Profile
+
+
+    # Topic Browser
+
+
+    # Modeling Academic Network
+
+
+    # Academic Suggestion
+
+
+    # Topic Analysis
+
+
+    # Social Network Storage
+
+
+    # Social Network Extraction
+
+
+    Author-Conference Topic Model
+
+
+    Author-Conference-Citation Topic Model
+
+
+    Sentence Citation Topic Model
+
+
+    Arnetminer
+
+
+    +   - Access
+
+    +   - Indexing
+
+    +   - Storage
+
+
+    RINKE
+
+
+    +   - Name Disambiguation
+
+    +   - Integration
+
+    +   - Profiling
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_231_0.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_231_1.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_231_2.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_231_3.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_231_4.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_231_5.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_231_6.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_231_7.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_231_8.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_231_9.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_231_10.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_231_11.png)'
+  merge: -1
+  img_proc: true
+- pgno: 232
+  md: '# Person Search
+
+
+    # Basic Info.
+
+
+    # Citation statistics
+
+
+    # Research Interests
+
+
+    # Social Network
+
+
+    # Fundings
+
+
+    # Publications
+
+
+    # Arnetminer
+
+
+    Jiawei Han [?]
+
+
+    Position: Professor
+
+    Affiliation: Department of Computer Science University of Illinois at Urbana-Champaign
+    Rm 113, Siebel Center for Computer Science
+
+    Department of Computer Science University of Illinois at Urbana-Champaign Rm 113,
+    Siebel Center for Computer Science
+
+    Address: 201 N. Goodwin Avenue Urbana, IL 61801, USA
+
+    Phone: (217) 333 6993
+
+    Fax: (217) 333 2263
+
+    Email: [redacted]
+
+    Homepage: http://www.cs.uiuc.edu/~han/
+
+    Statistics: h-index 72
+
+    highest cited paper: Data Mining: Concepts and Techniques (Cited by 6759)
+
+
+    Research Interest: Data Mining, Efficient Mining, Spatial Data Mining, Mining
+    Frequent Patterns, Mining Top k
+
+
+    Show Temporal Interests (Do you want to see the change of his/her research interests?)
+
+
+    Period
+
+    2007-2008 High Dimensional Data, Massive RFID Data Set, Advanced Data Mining Technologies,
+    Association Mining, Closed Constrained and Subset Mining
+
+    2005-2003 Efficient Mining, Mining Top K, Constrained Mining, Data Mining Perspective,
+    Frequent Pattern Mining
+
+    2003-2001 Data Mining, Efficient Mining, Association Rule Mining, Association
+    Rule Mining, Data Mining
+
+
+    Education: PhD University: Univ. Wisconsin-Madison PhD Major: Computer Science
+    PhD Dates: 1985
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_232_0.png)
+
+
+    # National Science Foundation - US
+
+
+    [7] NSF: Collaborative Research: Mining and Modeling of Computer Science Literature
+    (0443769), 2005-09-01 - 2010-07-28
+
+    [5] NSF: Enterprise: Mining Database Contents in Multi-relational of Your Finger
+    Tips (0427173), 2005-09-01 - 2009-09-01
+
+    [2] Collaborative Research: Enabling Biological Databases With Analytical Power:
+    Indexing, Querying, and Mining Complex Biological Structures
+
+    [4] NSF: Heterogeneity, Querying and Mining Large Datasets of Moving Objects (0331210),
+    2003-07-01 - 2005-06-30
+
+    [1] NSF: Collaborative Research: Resilient, Observation-based Performance Prediction
+    across Platforms (0406808), 2004-08-01 - 2005-07-31
+
+
+    Show More
+
+    [2] Hector Gonzalez, Jiawei Han, Xiaolei Li, Margaret Myslinska, John Paul Sondag,
+    Adaptive Fastest Path Computation on a Road Network: A Traffic Mining Approach,
+    In Proceedings of VLDB 2007.
+
+    [2] Tianyu Wu, Yuguo Chen, Jiawei Han, Association Mining in Large Databases:
+    A Re-examination of Its Measures, In Proceedings of PKDD 2007, pp.621-628 [DBLP
+    Link] [Online Version]
+
+    [5] Jiawei Han, Jian Pei, Behzad Mortazavi-Asl, Qiming Chen, Umeshwar Dayal, and
+    Mei-Chun Hsu, FreeSpan: Frequent Pattern Projected Sequential Pattern Mining,
+    In Proceedings of KDD 2000, pp. 355-359.'
+  merge: -1
+  img_proc: true
+- pgno: 233
+  md: '# Expertise Search
+
+
+    Finding experts, expertise conferences, and expertise papers for “information
+    retrieval”
+
+
+    1 of 7407 experts for information retrieval. (0.328 seconds)
+
+
+    # J. Bruce Croft
+
+
+    Position: Distinguished Professor
+
+    Affiliation: University of Massachusetts Amherst
+
+    Address: Department of Computer Science 140 Governors Drive, Box 9264 University
+    of Massachusetts Amherst, Amherst, MA 01003 9264
+
+    Email: croft@cs.umass.edu
+
+    Homepage: http://www.cs.umass.edu/personnel/croft...
+
+
+    # Gerard Salton
+
+
+    Position: Professor
+
+    Affiliation: Harvard University Engineering College Library Committee
+
+    Address: N/A
+
+    Email: www@cs.cornell.edu
+
+    Homepage: http://www.cs.cornell.edu/info/Departmen...
+
+
+    # C. J. van Rijsbergen
+
+
+    Position: Professor
+
+    Affiliation: Information Retrieval Group Department of Computing Science University
+    of Glasgow
+
+    Address: Dept. of Computing Science University of Glasgow Glasgow Glasgow G12
+    8QQ
+
+    Email: keith@dcs.gla.ac.uk
+
+    Homepage: http://www.dcs.gla.ac.uk/~keith/
+
+
+    # ChengXiang Zhai
+
+
+    Position: Assistant Professor
+
+    Affiliation: Department of Computer Science University of Illinois at Urbana-Champaign
+
+
+    1 - 10 of 1138 conferences/journals for information retrieval (0.000 seconds)
+
+
+    +   SIGIR
+
+    +   Inf. Process. Manage.
+
+    +   TREC
+
+    +   CIKM
+
+    +   ACM Trans. Inf. Syst.
+
+    +   JASIS
+
+    +   CLEF
+
+    +   Commun. ACM
+
+    +   SIGIR Forum
+
+    +   ACL
+
+
+    1 2 3 4 5 6 7 8 9 10 Next
+
+
+    1 - 10 of 5000 publications for information retrieval (0.000 seconds)
+
+
+    Probability Kinematics in Information Retrieval
+
+    Authors: Fabio Crestani, C. J. van Rijsbergen.
+
+    In Proceedings: SIGIR
+
+    Published year: 1995
+
+
+    Approaches to Intelligent Information Retrieval
+
+    Authors: W. Bruce Croft.
+
+    Article: Inf. Process. Manage.
+
+    Published year: 1987
+
+
+    Approaches to intelligent information retrieval
+
+    Authors: W. Bruce Croft.
+
+    Article: Inf. Process. Manage.
+
+    Published year: 1987'
+  merge: -1
+  img_proc: true
+- pgno: 234
+  md: '# Association Search
+
+
+    Finding associations between persons
+
+
+    +   - high efficiency
+
+    +   - Top-K associations
+
+
+    Usage:
+
+
+    +   - to find a partner
+
+    +   - to find a person with same interests
+
+
+    # Arnetminer
+
+
+    Please input two person names:
+
+
+    Hang Li
+
+    James A. Handler
+
+
+    Association
+
+
+    103 Results (125.756 seconds)
+
+
+    Order by Closeness Length Alpha 0.5 Refine
+
+
+    * Alpha is a parameter used to control the number of returned associations. The
+    larger the more associations would be returned. We constraint alpha to be less
+    than 2 to avoid the possible large computational cost.
+
+
+    Path: 1 Score: 2 Length: 4
+
+    Hang Li → Ji-Rong Wen → Qiang Yang → James A. Handler
+
+    coauthor coauthor coauthor
+
+
+    Path: 2 Score: 2 Length: 4
+
+    Hang Li → Yong Yu → Qiang Yang → James A. Handler
+
+    coauthor coauthor coauthor
+
+
+    Path: 3 Score: 3 Length: 4
+
+    Hang Li → Wei Wu → Deborah L. McGuinness → James A. Handler
+
+    coauthor coauthor coauthor
+
+
+    Path: 4 Score: 2 Length: 4
+
+    Hang Li → Bing Liu → Qiang Yang → James A. Handler
+
+    coauthor coauthor coauthor
+
+
+    Path: 5 Score: 4 Length: 5
+
+    Hang Li → ... → James A. Handler
+
+    coauthor coauthor coauthor coauthor'
+  merge: -1
+  img_proc: true
+- pgno: 235
+  md: "# Bole Search\n\n# Arnetminer\n\n1 - 10 of 8916 Boles for Machine Learning\
+    \ (0.328 seconds)\n\n# Pedro Domingos\n\nPosition: N/A\nAffiliation: Dept. of\
+    \ Computer Science & Engineering University of Washington\nAddress: Dept. of Computer\
+    \ Science & Engineering University of Washington Box 352350 Seattle, WA 98195-2350\n\
+    Email: pedro at cs.washington.edu\nHomepage: http://www.cs.washington.edu/homes/pedro...\n\
+    \n# John Shawe-Taylor\n\nPosition: Director\nAffiliation: Department of Computer\
+    \ Science University College London\nAddress: Department of Computer Science University\
+    \ College London Gower Street London WC1E\nUnited Kingdom\nEmail: J.Shawe-Taylor@...\
+    \ \nHomepage: http://www.cs.ucl.ac.uk/staff/J.Shawe-Ta...\n\n# Tom M. Mitchell\n\
+    \nPosition: Professor\nAffiliation: Machine Learning Department School of Computer\
+    \ Science Carnegie Mellon University\nAddress: Machine Learning Department School\
+    \ of Computer Science Carnegie Mellon University\n\n# Arnetminer\n\nTop Boles\
+    \ for Machine Learning\n\nThore Graepel\nJohn Shawe-Taylor\nJaz S. Kandola\nStanley\
+    \ Kok\nKamel Nigam\nNello Cristianini\nDaniel Lowd\nPedro Domingo\nUerul Wang\n\
+    Tom M. Mitchell\nDayne Freitag\nRebecca Hutchinson\nParag Singla\nGeoff Hulten"
+  merge: -1
+  img_proc: true
+- pgno: 236
+  md: '# Topic Browser
+
+
+    # Topic 13: Computing programming
+
+
+    Commun. ACM, IFIP Congress, IFIP Congress (2), Comput. Surv., Advanced in Computers,
+    IFIP Congl
+
+
+    # Topic 14: Computer networks and communication
+
+
+    INFOCOM, IEEE/ACM Trans. Netw., IEEE Journal on Areas in Communications, SIGCOMM,
+    Computer Netw ICNP
+
+
+    # Topic 15: Automatic reasoning
+
+
+    CADE, J. Autom. Reasoning, J. Log. Comput., JELU Math. Artif. Intell., KR
+
+
+    # Topic 16: Knowledge discovery and data mining
+
+
+    KDD, PAKDD, ICDM, PKDD, IEEE Trans. Knowl. Da SDM
+
+
+    # Topic 17: Human computer interaction
+
+
+    CHI Extended Abstracts, CHI, Interactions, INTER Interacting with Computers, CHI
+    Conference Compan
+
+
+    # Topic 18: Evolvable Hardware
+
+
+    Evolvable Hardware, TCES, AHS, BioADIT, Conf. Computing Frontiers, UC
+
+
+    200 topics have been discovered automatically from the academic network
+
+
+    # Hot words in Topic 16: Knowledge discovery and data mining
+
+
+    mining: 0.041622 clustering: 0.014825 learning: 0.010930 rules: 0.008899 patterns:
+    0.007962 approach: 0.007926 frequent: 0.007478 analysis: 0.007209 efficient: 0.006129
+    text: 0.004908
+
+
+    data: 0.041024 discovery: 0.010956 classification: 0.010659 association: 0.009855
+    knowledge: 0.008720 algorithm: 0.007... based: 0.007311 databases: 0.006211 web:
+    0.005417 detection: 0.004687
+
+
+    # Word trends
+
+
+    # Hot conferences/journals in Topic 16: Knowledge discovery and data mining
+
+
+    KDD: 0.114074 ICDM: 0.101002 PKDD: 0.029992 IEEE Trans. Knowl. Data Eng.: 0.064228
+    SIGKDD Explorations: 0.037705 BDA: 0.003... Data Min. Knowl. Discov.: 0.037647
+    DaWaK: 0.034... ICDM Workshops: 0.022... Discovery Science: 0.020771 MLDM: 0.017...
+    CBM: 0.016... J. Intel. Inf. Syst.: 0.008... KDD: 0.007... DMD: 0.007... etc.
+
+
+    # Active authors in Topic 16: Knowledge discovery and data mining
+
+
+    # Publications in Topic 16: Knowledge discovery and data mining
+
+
+    Data Mining Techniques for Association, Clustering and Classification Authors:
+    Charu C. Aggarwal, Philip S. Yu. In Proceedings: PAKDD Published year: 1999
+
+
+    Data Mining for the Web Authors: Myra Spiliopoulou. In Proceedings: PAKDD Published
+    year: 1999
+
+
+    # Topic Trend in Topic 16: Knowledge discovery and data mining
+
+
+    # Topic Trend'
+  merge: -1
+  img_proc: true
+- pgno: 237
+  md: "# ArnetMiner Today\n\n+   * Arnetminer data:\n+   > 1 M researcher profiles\n\
+    +   > 3M papers\n+   > 34M citation relationships\n+   > 8K conferences\n+   >\
+    \ 80M logs\n+   \n+   * Visits come from more than 190 countries\n+   * Continuously\
+    \ +20% increase of visits per month\n+   \n+   * More than 100,000 pageviews per\
+    \ day.\n\n![](img/431d4828d5c6073b7e23d9eca159cdeb_237_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 238
+  md: "# ArnetMiner Today\n\n+   * Ari\n+   > \n+   > \n+   > \n+   > \n+   > \n+\
+    \   * Vis\n+   190\n+   * Co\n+   of vi\n+   * More than 100,000\n+   pageviews\
+    \ per day.\n\nxinying@jlu.edu.cn\n\n![](img/431d4828d5c6073b7e23d9eca159cdeb_238_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 239
+  md: "# ArnetMiner Today\n\n+   * Arnetminer data:\n+   > 1 M researcher profiles\n\
+    +   > 3M papers\n+   > 34M citation relationships\n+   > 8K conferences\n+   >\
+    \ 80M logs\n+   \n+   * Visits come from more than 190 countries\n+   * Continuously\
+    \ +20% increase of visits per month\n+   \n+   * More than 100,000 pageviews per\
+    \ day.\n\n![](img/431d4828d5c6073b7e23d9eca159cdeb_239_0.png)\n\n# Top 10 countries\n\
+    \n+   1. USA\n+   2. China\n+   3. Germany\n+   4. India\n+   5. UK\n+   6. Canada\n\
+    +   7. Japan\n+   8. Taiwan\n+   9. France\n+   10. Italy"
+  merge: -1
+  img_proc: true
+- pgno: 240
+  md: '# ArnetMiner Today
+
+
+    # Messages from Users
+
+
+    +   * Arnetminer data:
+
+    +   > 1 M researcher profiles
+
+    +   > 3M papers
+
+    +   > 34M citation relationships
+
+    +   > 8K conferences
+
+    +   > 80M logs
+
+
+    +   * Visits come from more than 190 countries
+
+    +   * Continuously +20% increase of visits per month
+
+
+    +   * More than 100,000 pageviews per day.
+
+
+    > ... I''ve happened to visit your Arnetminer, and shocked. It was really impressive,
+    its usefulness and your works!!! ... [from ... @selab.snu.ac.kr]
+
+
+    > ...I would first of all congratulate you on the excellent work you have done
+    in Arnetminer and I am much inspired... [from ...@nu.edu.pk]
+
+
+    > ... Arnetminer is one of my favorite tools to find folk and academic relatives...
+    [from ...@qlink.com]
+
+
+    > Dear Dr. Jie Tang,
+
+    > Can you include our papers (http://www.waset.org) in your Arnetminer?... [from
+    ...@waset.org]
+
+
+    > .. top top! I am very interested in your ArnetMiner. Is that possible give me
+    a bit of your social network data... [from ...@cse.ust.hk]'
+  merge: -1
+  img_proc: true
+- pgno: 241
+  md: '# ArnetMiner Today
+
+
+    # Messages from Users
+
+
+    ... I''ve happened to visit your Arnetminer, and shocked. It was really impressive,
+    its usefulness and your works!!! ... [from ...@selab.snu.ac.kr]
+
+
+    ...I would first of all congratulate you on the excellent work you have done in
+    Arnetminer and I am much inspired... [from ...@nu.edu.pk]
+
+
+    # a survey by UK Southampton
+
+
+    # Title: Semantic Technologies for Learning and Teaching in Web 2.0.
+
+    — Thanassis Tiropanis, Hugh Davis, Dave Millard, Mark Weal
+
+
+    ...Exposing the expertise of the institution to the outside world in order to
+    attract funding and students. ArnetMiner is the most representative example of
+    such tools at the moment...
+
+
+    Contextualised queries and searches, searches across repositories potentially
+    in different departments or institutions, and matching of people for collaborative
+    activities. Best example of the surveyed technologies to this end is ArnetMiner.'
+  merge: -1
+  img_proc: true
+- pgno: 242
+  md: '# How to build Arnetminer
+
+
+    +   - What do we do if we want to rebuild Arnetminer?
+
+    +     - Requirement
+
+    +     - Data crawling and processing
+
+    +     - Service Oriented Principle'
+  merge: -1
+  img_proc: true
+- pgno: 243
+  md: '# Requirement
+
+
+    +   - Academic search
+
+    +     - Person, publication, conference search
+
+    +     - Query recognition and classification
+
+    +     - Three search models
+
+
+    +   - Association search
+
+    +     - Search the association between two experts
+
+
+    +   - Bole search
+
+    +     - Find top advisors in specific topic
+
+
+    +   - Topic browser
+
+    +     - List famous experts in each topic
+
+
+    +   - User management
+
+    +     - User register, login, edit...
+
+
+    +   - Web service'
+  merge: -1
+  img_proc: true
+- pgno: 244
+  md: "# Expert’s personal homepage\n\n# Various Internet Sources\n\n# PDF files and\
+    \ Xml files\n\nJie Tang (Tang, Jie) 汤杰\nAssociate Professor, IEEE Member, ACM\
+    \ ...\nKnowledge Engineering Lab (Group)\nDepartment of Computer Science and Technology\n\
+    Tsinghua University\nWork Phone Number: +8610 6278... \nOffice: 1-508 FIT Building,\
+    \ Tsinghua University, Be...\nE-Mail: tangjie@tsinghua.edu.cn\nMy Blog: Dr. Tang's\
+    \ Blog\nMy FOAF: Jie Tang FOAF\nMy ArnetMiner Paper: Dr. Tang's Arnet\nI am an\
+    \ associate professor in Department of Computer Science and Technology of Tsinghua\
+    \ University 2006 and IEEE member in 2007.\nI have been visiting scholar at University\
+    \ of Illinois at Urbana-Champaign (Chinese University of Hong Kong) intern in\
+    \ NLC group of Microsoft Research Asia from 2009 to 2007. I have attended the\
+    \ several...\nI am interested in social network mining test mining and semantic\
+    \ web.\nNew ** ArnetMiner 6.0 is online! ** December 2006. New features include:\
+    \ Refined expertise se...\nArnetMiner 5.0 is online! April 2009\nArnetMiner 5.0\
+    \ is online! November 2008\nArnetMiner 4.0 is online! April 2008\nArnetMiner 2.0\
+    \ is online! July 2007\n\n![](img/431d4828d5c6073b7e23d9eca159cdeb_244_0.png)\n\
+    \n![](img/431d4828d5c6073b7e23d9eca159cdeb_244_1.png)\n\n![](img/431d4828d5c6073b7e23d9eca159cdeb_244_2.png)\n\
+    \n![](img/431d4828d5c6073b7e23d9eca159cdeb_244_3.png)"
+  merge: -1
+  img_proc: true
+- pgno: 245
+  md: '# ArnetMiner: Overview
+
+
+    # Modeling and Search Network
+
+
+    Topic model
+
+    Academic suggestion
+
+    Expertise search
+
+
+    # Social Network Analysis
+
+
+    Social involution analysis
+
+    Citation tracing analysis
+
+    Social influence analysis
+
+
+    # Social Network Storage
+
+
+    Access interface
+
+    Indexing
+
+    Storage
+
+    RNKB
+
+    Metadata
+
+
+    # Social Network Extraction
+
+
+    Integration
+
+    Name Disambiguation
+
+    Profiling extraction
+
+    Homepage finding
+
+    Publication extraction
+
+
+    # Data Sources
+
+
+    Homepage
+
+    ACM
+
+    DBLP
+
+    Libra
+
+    Scholar
+
+
+    # Map-reduce--Distributed processing platform'
+  merge: -1
+  img_proc: true
+- pgno: 246
+  md: '# Architecture Design
+
+
+    Requirement
+
+
+    Academic search
+
+
+    Association search
+
+
+    Bole search
+
+
+    Topic browser
+
+
+    User Manager
+
+
+    ? How to design ?
+
+
+    Arnetminer
+
+
+    Data
+
+
+    Expert''s personal homepage
+
+
+    Internet Data
+
+
+    PDF and XML files'
+  merge: -1
+  img_proc: true
+- pgno: 247
+  md: '# Available Components Integration(Bottom up)
+
+
+    Database
+
+
+    Basic Service
+
+
+    PDF Parser Component
+
+
+    Internet Spider Component
+
+
+    Database Connect pool Component
+
+
+    Index and search Component
+
+
+    Topic Model Component
+
+
+    Dijkstra Algorithm Component
+
+
+    Search and Analyse Service'
+  merge: -1
+  img_proc: true
+- pgno: 248
+  md: '# Combine Data Hibernate Layer with Upper Service(Bottom up)
+
+
+    Basic Services
+
+
+    Person:
+
+    id, name, email,
+
+    homepage,
+
+    publications,
+
+    topic
+
+
+    Publication:
+
+    id, title, authors,
+
+    conference,
+
+    citation number
+
+
+    Conference:
+
+    id, full_name,
+
+    short_name,
+
+    rank_score,
+
+    publications
+
+
+    New(), delete(),
+
+    modify(), search()
+
+
+    PersonService
+
+
+    Publication Service
+
+
+    Conference Service
+
+
+    UserManager Service
+
+
+    Database
+
+    Connect pool
+
+    Component
+
+
+    Database'
+  merge: -1
+  img_proc: true
+- pgno: 249
+  md: '# Upper Service Design(Top down)
+
+
+    Requirement
+
+
+    Academic search
+
+
+    Association search
+
+
+    Bole search
+
+
+    Topic browser
+
+
+    User Manager
+
+
+    SearchClassifyService
+
+
+    SearchBoleService
+
+
+    SearchAssociationService
+
+
+    TopicService
+
+
+    UserService
+
+
+    SearchPerson Service
+
+
+    SearchAdvisorService
+
+
+    SearchConfService
+
+
+    SearchPubsService
+
+
+    Index and search Component
+
+
+    Dijkstra Algorithm Component
+
+
+    Topic Model Component
+
+
+    BasicService'
+  merge: -1
+  img_proc: true
+- pgno: 250
+  md: '# The Architecture of Arnetminer
+
+
+    Academic search
+
+
+    Association search
+
+
+    Bole search
+
+
+    Topic browser
+
+
+    User Manager
+
+
+    Upper Service
+
+
+    SearchClassify Service
+
+
+    SearchAssociationService
+
+
+    SearchBoleService
+
+
+    SearchPerson Service
+
+
+    SearchConf Service
+
+
+    SearchPub Service
+
+
+    UserService
+
+
+    Basic Service
+
+
+    Person Service
+
+
+    Conference Service
+
+
+    Publication Service
+
+
+    UserManager Service
+
+
+    Project Components
+
+
+    PDF Parser Component
+
+
+    Internet Spider Component
+
+
+    Database Connect pool Component
+
+
+    Index and search Component
+
+
+    Topic Model Component
+
+
+    Dijkstra Algorithm Component
+
+
+    Data Sources
+
+
+    Expert''s personal homepage
+
+
+    Internet Data
+
+
+    PDF and XML files'
+  merge: -1
+  img_proc: true
+- pgno: 251
+  md: '# Web服务的实现、部署与测试
+
+
+    王新颖
+
+
+    xinying@jlu.edu.cn'
+  merge: -1
+  img_proc: true
+- pgno: 252
+  md: '# Outline
+
+
+    +   - Web service implementation and deploy
+
+    +     - XFire
+
+    +     - REST
+
+    +     - JAX-WS
+
+    +   - vice test
+
+    +     - Junit
+
+    +   - Web service invoke
+
+    +     - Ajax'
+  merge: -1
+  img_proc: true
+- pgno: 253
+  md: '# Xfire – A Java SOAP framework for development and consumption of web services'
+  merge: -1
+  img_proc: true
+- pgno: 254
+  md: '# Xfire
+
+
+    +   - Xfire开发Web服务的5个步骤:
+
+    +     - 接口定义
+
+    +     - 接口实现
+
+    +     - 配置
+
+    +     - 发布
+
+    +     - 测试'
+  merge: -1
+  img_proc: true
+- pgno: 255
+  md: "```\npackage edu.thu.keg.core.webservice;\n\npublic interface ArnetminerSearchWebService\
+    \ {\n    /**\n     * search for person list\n     * @param keyword - E.g: Jiawei\
+    \ Han pos:professor aff:Illinois edu:ph.D all:computer\n     * @param start_page\
+    \ - the start page number you want to return\n     * @param num - the number of\
+    \ persons you want to return for each page\n     * @return\n     */\n    public\
+    \ PersonSearchResult person_search(String keyword, int start_page,int num);\n\
+    \    public PersonSearchResult person_search(String keyword);\n    ...\n}\n```\n\
+    \n![](img/431d4828d5c6073b7e23d9eca159cdeb_255_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 256
+  md: "```\npublic class ArnetminerSearchWebServiceImpl implements ArnetminerSearchWebService\
+    \ {\n    public PersonSearchResult person_search(String keyword, int start_page,int\
+    \ num){\n        if(keyword == null || keyword.length() == 0) {\n            return\
+    \ null;\n        }\n        QueryContactInfoService service = new QueryContactInfoService();\n\
+    \        SearchResult<ContactInformation> results = service.queryContactInfo(keyword,\
+    \ start_page, num);\n        return SearchResultConvertor.SearchResultToPersonSearchResult(results);\n\
+    \    }\n    public PersonSearchResult person_search(String keyword){\n       \
+    \ if(keyword == null || keyword.length() == 0) {\n            return null;\n \
+    \       }\n        int start_page = 0;\n        int num = 10;\n        return\
+    \ person_search(keyword, start_page, num);\n    }\n    ...\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 257
+  md: "```\n<mappings xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"\
+    http://xfire.codehaus.org/schemas/1.0/mapping.xsd\">\n<mapping>\n    <method name=\"\
+    test\">\n        <parameter index=\"0\" mappedName=\"userId\"/>\n        <return-type\
+    \ mappedName=\"Long\" />\n    </method>\n    <method name=\"person_search\">\n\
+    \        <parameter index=\"0\" mappedName=\"keyword\"/>\n        <return-type\
+    \ mappedName=\"PersonList\" componentType=\"edu.thu.keg.core.model.indexer.PersonSearchResult\"\
+    />\n    </method>\n</mapping>\n</mappings>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 258
+  md: "```\n<beans xmlns=\"http://xfire.codehaus.org/config/1.0\">\n    <service>\n\
+    \        <name>\n            ArnetminerSearchWebService\n        </name>\n   \
+    \     <namespace>\n            http://www.arnetminer.org/ArnetminerSearchWebService\n\
+    \        </namespace>\n        <serviceClass>\n            edu.thu.keg.core.webservice.ArnetminerSearchWebService\n\
+    \        </serviceClass>\n        <implementationClass>\n            edu.thu.keg.core.webservice.ArnetminerSearchWebServiceImpl\n\
+    \        </implementationClass>\n    </service>\n</beans>\n```\n\nStep4: Release"
+  merge: -1
+  img_proc: true
+- pgno: 259
+  md: "```\npublic class ArnetminerSearchWebServiceClient {\n    public static void\
+    \ main(String args[]) throws Exception {\n        String url = \"http://localhost:8080/Arnetminer/services/ArnetminerSearchWebService\"\
+    ;\n        Service serviceModel = new ObjectServiceFactory().create(ArnetminerSearchWebService.class);\n\
+    \        ArnetminerSearchWebService service = (ArnetminerSearchWebService)new\
+    \ XFireProxyFactory().create(serviceModel, url);\n        assert(service != null);\n\
+    \        /* System.out.println(id);*/\n        System.out.println(\"1. test person\
+    \ search...\");\n        System.out.println(\"\\t querying jie tang...\");\n \
+    \       PersonSearchResult results1 = service.person_search(\"jie tang\");\n \
+    \       System.out.println(\"Got \" + results1.getResultCount() + \" results!\"\
+    );\n\n        System.out.println(\"1. test person search...\");\n        System.out.println(\"\
+    \\t querying jie tang...\");\n        PersonSearchResult results1_1 = service.person_search(\"\
+    jie tang\",1,5);\n        System.out.println(\"Got \" + results1_1.getResultCount()\
+    \ + \" results!\");\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 260
+  md: '# Unit Testing Framework for the Java Programming Language - JUnit'
+  merge: -1
+  img_proc: true
+- pgno: 261
+  md: '# JUnit
+
+
+    +   - JUnit is a framework for writing tests
+
+    +     - JUnit was written by Erich Gamma (of Design Patterns fame) and Kent Beck
+    (creator of XP methodology)
+
+    +     - JUnit uses Java’s reflection capabilities (Java programs can examine their
+    own code)
+
+    +     - JUnit helps the programmer:
+
+    +       - define and execute tests and test suites
+
+    +       - formalize requirements and clarify architecture
+
+    +       - write and debug code
+
+    +       - integrate code and always be ready to release a working version
+
+    +     - JUnit is not yet (as far as I know) included in Sun’s SDK, but an increasing
+    number of IDEs include it
+
+    +     - BlueJ, JBuilder, and Eclipse now provide JUnit tools'
+  merge: -1
+  img_proc: true
+- pgno: 262
+  md: '# Structure of a JUnit test class
+
+
+    +   - Here’s what you do to test a class named Fraction:
+
+    +   - public class FractionTest
+
+    +     extends junit.framework.TestCase {
+
+    +     - This is the unit test for the Fraction class; it declares (and possibly
+    defines) values used by one or more tests
+
+    +   - public FractionTest() {}
+
+    +     - This is the default constructor
+
+    +   - protected void setUp()
+
+    +     - Creates a test fixture by creating and initializing objects and values
+
+    +   - protected void tearDown()
+
+    +     - Releases any system resources used by the test fixture
+
+    +   - public void testAdd(), public void testToString(), etc.
+
+    +     - These methods contain tests for the Fraction methods add(), toString(),
+    etc. (note how capitalization changes)'
+  merge: -1
+  img_proc: true
+- pgno: 263
+  md: '# Assert methods I
+
+
+    An assert method is a JUnit method that performs a test, and throws an AssertionFailedError
+    if the test fails
+
+
+    – JUnit catches these Errors and shows you the result
+
+
+    ```
+
+    static void assertTrue(boolean test)
+
+    ```
+
+
+    ```
+
+    static void assertTrue(String message, boolean test)
+
+    ```
+
+
+    – Throws an AssertionFailedError if the test fails
+
+
+    – The optional message is included in the Error
+
+
+    ```
+
+    static void assertFalse(boolean test)
+
+    ```
+
+
+    ```
+
+    static void assertFalse(String message, boolean test)
+
+    ```
+
+
+    – Throws an AssertionFailedError if the test fails'
+  merge: -1
+  img_proc: true
+- pgno: 264
+  md: '# Example: Counter class
+
+
+    +   - For the sake of example, we will create and test a trivial “counter” class
+
+    +     - The constructor will create a counter and set it to zero
+
+    +     - The increment method will add one to the counter and return the new value
+
+    +     - The decrement method will subtract one from the counter and return the
+    new value
+
+    +   - We write the test methods before we write the code
+
+    +     - This has the advantages described earlier
+
+    +     - Depending on the JUnit tool we use, we may have to create the class first,
+    and we may have to populate it with stubs (methods with empty bodies)
+
+    +   - Don’t be alarmed if, in this simple example, the JUnit tests are more code
+    than the class itself'
+  merge: -1
+  img_proc: true
+- pgno: 265
+  md: "```\n```java\npublic class CounterTest extends junit.framework.TestCase {\n\
+    \    Counter counter1;\n\n    public CounterTest() { }  // default constructor\n\
+    \n    protected void setUp() {  // creates a (simple) test fixture\n        counter1\
+    \ = new Counter();\n    }\n\n    protected void tearDown() { } // no resources\
+    \ to release\n\n    public void testIncrement() {\n        assertTrue(counter1.increment()\
+    \ == 1);\n        assertTrue(counter1.increment() == 2);\n    }\n\n    public\
+    \ void testDecrement() {\n        assertTrue(counter1.decrement() == -1);\n  \
+    \  }\n}\n```\n```\n\n> Note that each test begins with a *brand new* counter\n\
+    \n> This means you don’t have to worry about the order in which the tests are\
+    \ run"
+  merge: -1
+  img_proc: true
+- pgno: 266
+  md: "# The Counter class itself\n\n```\npublic class Counter {\n    int count =\
+    \ 0;\n\n    public int increment() {\n        return ++count;\n    }\n\n    public\
+    \ int decrement() {\n        return --count;\n    }\n\n    public int getCount()\
+    \ {\n        return count;\n    }\n}\n```\n\n+   - Is JUnit testing overkill for\
+    \ this little class?\n+   - The Extreme Programming view is: If it isn’t tested,\
+    \ assume it doesn’t work\n+   - You are not likely to have many classes this trivial\
+    \ in a real program, so writing JUnit tests for those few trivial classes is no\
+    \ big deal\n+   - Often even XP programmers don’t bother writing tests for *simple*\
+    \ getter methods such as getCount()\n+   - We only used assertTrue in this example,\
+    \ but there are additional assert methods"
+  merge: -1
+  img_proc: true
+- pgno: 267
+  md: '# Assert methods II
+
+
+    +   - `assertEquals(expected, actual)`
+
+    +     `assertEquals(String message, expected, actual)`
+
+    +     - This method is heavily overloaded: *expected* and *actual* must be both
+    objects or both of the same primitive type
+
+    +     - For objects, uses your equals method, *if you have defined it properly*,
+    as `public boolean equals(Object o)`—otherwise it uses ==
+
+    +   - `assertSame(Object expected, Object actual)`
+
+    +     `assertSame(String message, Object expected, Object actual)`
+
+    +     - Asserts that two objects refer to the same object (using ==)
+
+    +   - `assertNotSame(Object expected, Object actual)`
+
+    +     `assertNotSame(String message, Object expected, Object actual)`
+
+    +     - Asserts that two objects do not refer to the same object'
+  merge: -1
+  img_proc: true
+- pgno: 268
+  md: '# Assert methods III
+
+
+    +   - assertNull(Object object)
+
+    +     assertNull(String message, Object object)
+
+    +     - Asserts that the object is null
+
+    +   - assertNotNull(Object object)
+
+    +     assertNotNull(String message, Object object)
+
+    +     - Asserts that the object is null
+
+    +   - fail()
+
+    +     fail(String message)
+
+    +     - Causes the test to fail and throw an AssertionFailedError
+
+    +     - Useful as a result of a complex test, when the other assert methods aren’t
+    quite what you want'
+  merge: -1
+  img_proc: true
+- pgno: 269
+  md: '# Junit in eclipse - Setup
+
+
+    +   - In Eclipse
+
+    +     - Create a new project
+
+    +     - Open project’s property window (File -> Properties)
+
+    +     - Select: Java build path
+
+    +     - Select: libraries
+
+    +     - Add Library
+
+    +     - Select Junit
+
+    +       - Select the type 3.x or 4.x
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_269_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 270
+  md: '# # Create a new JUnit test case
+
+
+    +   Eclipse File
+
+    +   – New
+
+    +   • Junit Test Case
+
+    +   – Set the parameters:
+
+    +   » Junit 3.x or 4.x
+
+    +   » name of the class
+
+    +   » etc.
+
+    +   – Finish
+
+
+    # New JUnit Test Case
+
+
+    Select the name of the new JUnit test case. You have the options to specify the
+    class under test and on the next page, to select methods to be tested.
+
+
+    +   New JUnit 3.8.1 test
+
+    +   New JUnit 4 test
+
+
+    Source folder: Exercise-3-MathOperators/src
+
+
+    Package: junitTest
+
+
+    Name:
+
+
+    Superclass: junit.framework.TestCase
+
+
+    +   setUpBeforeClass()
+
+    +   tearDownAfterClass()
+
+    +   setUp()
+
+    +   tearDown()
+
+    +   constructor
+
+
+    +   Do you want to add comments as configured in the properties of the current
+    project?
+
+    +   Generate comments
+
+
+    Class under test:
+
+
+    > JUnit 3.8.1 is not on the build path of project: ''Exercise-3-MathOperators''.
+    Click here to add JUnit 3.8.1 to the build path and open the build path dialog.
+
+
+    +   Back
+
+    +   Next
+
+    +   Finish
+
+    +   Cancel'
+  merge: -1
+  img_proc: true
+- pgno: 271
+  md: '# Red / Green Bar
+
+
+    # JUnit (Stack Tester)
+
+
+    Runs: 2/2 Errors: 0 Failures: 1
+
+
+    Failures Hierarchy
+
+
+    testStackAll(adt.StackTester)
+
+
+    # Failure Trace
+
+
+    junit.framework.AssertionFailedError expected:<-3> but was:<-4>
+
+
+    at adt.StackTester.testStackAll(StackTester.java:28)
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke()
+
+
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccess
+
+
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingM
+
+
+    # JUnit (Stack Tester)
+
+
+    Runs: 2/2 Errors: 0 Failures: 0
+
+
+    expected <-3> but was <-4>'
+  merge: -1
+  img_proc: true
+- pgno: 272
+  md: '# Unit Testing Web Services
+
+
+    +   - Web services as a presentation layer of sorts
+
+    +     - Tested using an approach analogous to testing GUI
+
+    +     - Separating the presentation layer from the application logic
+
+    +     - Each method and behavior of the web service interface should have corresponding
+    tests
+
+    +   - To validate how the service methods work "over the wire," it''s not sufficient
+    just to create an instance of the service interface class and invoke its methods
+    directly.
+
+    +   - The service methods must be validated by calling them via the client interface,
+    the same way they are called in the live application.'
+  merge: -1
+  img_proc: true
+- pgno: 273
+  md: "```\npublic class MyServiceTest extends TestCase {\n    public void setUp()\
+    \ {\n        String URI = \"http://localhost/services/MyService\";\n        //\
+    \ ... create service endpoint and connect to URI ...\n        MyService service\
+    \ = endpoint.getMyService();\n    }\n    public void testGetDoc() {\n        service.putDoc(\
+    \ \"test\" );\n        assertEquals( \"test\", service.getDoc() );\n    }\n  \
+    \  public void tearDown() {\n        service.destroy();\n    }\n}\n```\n\n![](img/431d4828d5c6073b7e23d9eca159cdeb_273_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 274
+  md: '# Web service invoke - Ajax'
+  merge: -1
+  img_proc: true
+- pgno: 275
+  md: '# What is Ajax?
+
+
+    • AJAX (shorthand for asynchronous JavaScript and XHTML) is a group of interrelated
+    web development techniques used on the client-side to create interactive web applications
+    or rich Internet applications.
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_275_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 276
+  md: "```\n<input type=button value=\"ajaxcall\" onClick=\"Ajax_Call ('http://xyz.com/a.jsp?id=123\
+    \ ');\" />\n```\n\n![](img/431d4828d5c6073b7e23d9eca159cdeb_276_0.png)\n\n```\n\
+    function Ajax_Call(myurl, callfunc){\n    if (window.XMLHttpRequest) {\n     \
+    \   req = new XMLHttpRequest();\n    } else if (window.ActiveXObject) {\n    \
+    \    req = new ActiveXObject(\"Microsoft.XMLHTTP\");\n    }\n    if( req ) {\n\
+    \        var localurl;\n        var isrefresh=true;\n        if(isrefresh) {\n\
+    \            localurl = addTimeStamp1(myurl);\n        } else{\n            localurl\
+    \ = myurl;\n        }\n        req.open(\"GET\", localurl, true);\n        req.onreadystatechange\
+    \ = callfunc;\n        req.send(null);\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 277
+  md: "```\n```javascript\n<script type=\"text/javascript\" src=\"scripts/prototype.js\"\
+    ></script>\n<script type=\"text/javascript\" src=\"scripts/ws.js\"></script>\n\
+    <script type=\"text/javascript\">\nfunction sayHello(name, container) {\n\tvar\
+    \ call = new WS.Call('/AjaxWS/services/HelloWorld');\n\tvar nsuri = 'http://example';\n\
+    \tvar qn_op = new WS.QName('sayHello',nsuri);\n\tvar qn_op_resp = new WS.QName('sayHelloResponse',nsuri);\n\
+    \tcall.invoke_rpc(\n\t\tqn_op,\n\t\tnew Array( {name:'name',value:name} ),\n\t\
+    \tnull,\n\t\tfunction(call,envelope) {\n\t\t\tvar ret = envelope.get_body().get_all_children()[0].get_all_children()[0].get_value();\n\
+    \t\t\tcontainer.innerHTML = ret;\n\t\t\t$('soap').innerHTML = arguments[2].escapeHTML();\n\
+    \t\t}\n\t);\n}\n</script>\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 278
+  md: '# Ajax Web Services (2)
+
+
+    +   - Then Calling the sayHello function
+
+
+    ```
+
+    <body>
+
+    <input name="name" id="name" />
+
+    <input value="Invoke the Web Service" type="button" onclick="sayHello($(''name'').value,$(''result''))"
+    />
+
+    <div id="container">Result:
+
+    <div id="result"></div>
+
+    <div id="soap"></div>
+
+    </div>
+
+    </body>
+
+    ```
+
+
+    Please refer to the source code: ws-ajax-web-service-code.zip OR
+
+
+    +   - http://www.simple-talk.com/dotnet/asp.net/calling-cross-domain-web-services-in-ajax/'
+  merge: -1
+  img_proc: true
+- pgno: 279
+  md: "# Ajax is not just Web Service\n\n```\n<script type=\"text/javascript\">\n\
+    \    document.write(unescape(\"%3Cscript src='http://arnetminer.org/js/arnet.js'\
+    \ type='text/javascript'%3E%3C/script%3E\"));\n</script>\n```\n\n```\n<script\
+    \ type=\"text/javascript\">\n    arnet_socialGraph(\"jie tang\",900,650);\n</script>\n\
+    ```\n\n![](img/431d4828d5c6073b7e23d9eca159cdeb_279_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 280
+  md: '# Representational State Transfer
+
+    (REST)'
+  merge: -1
+  img_proc: true
+- pgno: 281
+  md: '# Two Camps on Web Services
+
+
+    +   - Two Camps
+
+    +     - SOAP, WS-* / XML-RPC
+
+    +     - REST (Representational State Transfer)
+
+    +   - What is REST?
+
+    +     - Discussed in a PhD thesis by Roy Fielding
+
+    +     - When client traverses link, accesses new resource (i.e., transfers state)
+
+    +     - Uses existing standards, e.g., HTTP'
+  merge: -1
+  img_proc: true
+- pgno: 282
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 283
+  md: '# Detailed REST methods
+
+
+    +   - HTTP provides a simple set of operations. Amazingly, all Web exchanges are
+    done using this simple HTTP API:
+
+    +     - GET = "give me some info" (Retrieve)
+
+    +     - POST = "here''s some update info" (Update)
+
+    +     - PUT = "here''s some new info" (Create)
+
+    +     - DELETE = "delete some info" (Delete)
+
+    +   - The HTTP API is CRUD (Create, Retrieve, Update, and Delete)'
+  merge: -1
+  img_proc: true
+- pgno: 284
+  md: '# Difference between GET/POST
+
+
+    +   - GET:
+
+    +     - For information retrieval
+
+    +     - Data will be attached in URL
+
+    +       - Example: login.action?name=hyddd&password=idontknow
+
+    +       - Length Limit: IE (2083bytes), depends on OS/Browser
+
+    +   - POST:
+
+    +     - Anything
+
+    +     - Data will be in the body of HTTP package'
+  merge: -1
+  img_proc: true
+- pgno: 285
+  md: '# Process of RESTful involing
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_285_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 286
+  md: '# JSON Example
+
+
+    # XML
+
+
+    ```
+
+    <menu id="file" value="File">
+
+    <popup>
+
+    <menuitem value="New" onclick="CreateNewDoc()" />
+
+    <menuitem value="Open" onclick="OpenDoc()" />
+
+    <menuitem value="Close" onclick="CloseDoc()" />
+
+    </popup>
+
+    </menu>
+
+    ```
+
+
+    # JSON
+
+
+    ```
+
+    {"menu": { "id": "file", "value": "File",
+
+    "popup": {
+
+    "menuitem": [
+
+    {"value": "New", "onclick": "CreateNewDoc()"},
+
+    {"value": "Open", "onclick": "OpenDoc()"},
+
+    {"value": "Close", "onclick": "CloseDoc()"}
+
+    ]
+
+    }
+
+    }}
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 287
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 288
+  md: '# Error Handling in REST
+
+
+    +   - Use HTTP codes (use the entity-body for more info)
+
+    +     - 200 OK
+
+    +     - 201 Created
+
+    +       - HTTP Location Header should have URI to new resource
+
+    +     - 400 Bad Request
+
+    +     - 404 Not Found
+
+    +     - 500 Internal Server Error
+
+    +     - 301 Moved Permanently
+
+    +     - 403 Forbidden
+
+    +     - 401 Unauthorized
+
+    +     - 409 Conflict'
+  merge: -1
+  img_proc: true
+- pgno: 289
+  md: '# Support in .NET
+
+
+    +   - WCF .NET 3.5 – added support for building REST Style services
+
+    +   - WCF .NET 3.5sp1 - UriTemplate flexibility, support ADO.NET Entity Framework
+    entities in WCF contracts, improvements in the the dev tools
+
+    +   - ASP.NET MVC
+
+    +   - .NET 4.0: URL Routing in web forms
+
+    +   - WCF REST Starter Kit (beta) – make it easier
+
+    +     - Help page, Representation formats using Accepts HTTP Header, Declarative
+    caching, X-HTTP-Method-Override'
+  merge: -1
+  img_proc: true
+- pgno: 290
+  md: '# Support in other technologies
+
+
+    +   - Java: JAX-RS
+
+    +     - Jersey, RESTEasy, Enunciate, CXF, RESTlet
+
+    +   - Python: Django
+
+    +   - Flash/Flex: URLRequest class
+
+    +     - Browser plug-ins limited to GET and POST
+
+    +     - AIR – supports all methods
+
+    +   - Ruby – ActiveResource
+
+    +     - Mapping RESTful resources as models in a Rails application
+
+    +   - iPhone – ObjectiveResource, json-framework'
+  merge: -1
+  img_proc: true
+- pgno: 291
+  md: '# Create a REST Web Service
+
+
+    +   - Jersey
+
+    +     - A RESTful web service framework based on JAX-RS standard
+
+    +     - Supported by MyEclipse since ver. 7.0
+
+    +   - How to write a Simple HelloWorld RESTful Web Service in MyEclipse'
+  merge: -1
+  img_proc: true
+- pgno: 292
+  md: '# HelloWorld RESTful Web Service
+
+
+    +   - Create a Web Service Project
+
+
+    REST (JAX-RS)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_292_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 293
+  md: '# HelloWorld RESTful Web Service
+
+
+    +   - Configure libraries
+
+
+    +   - Core
+
+    +   - JAXB
+
+    +   - Client
+
+    +   - JSON
+
+    +   - ATOM
+
+    +   - ...
+
+
+    New Web Service Project
+
+    Project Servlet and Library Configuration
+
+    Configure the JAX-RS servlet & add JAX-RS RI (Project Jersey) libraries to your
+    project
+
+    Servlet name: JAX-RS REST Servlet
+
+    URL pattern: /services/*
+
+    Select the libraries to add to project buildpath
+
+    Show: MyEclipse Libraries User Libraries
+
+    JAX-RS 1.0.2 Core Libraries (Project Jersey 1.0.2) - {MyEclipse-Library}
+
+    JAX-RS 1.0.2 JAXB Libraries (Project Jersey 1.0.2) - {MyEclipse-Library}
+
+    JAX-RS 1.0.2 Client Libraries (Project Jersey 1.0.2) - {MyEclipse-Library}
+
+    JAX-RS 1.0.2 JSON Libraries (Project Jersey 1.0.2) - {MyEclipse-Library}
+
+    JAX-RS 1.0.2 ATOM Libraries (Project Jersey 1.0.2) - {MyEclipse-Library}
+
+    JAX-RS 1.0.2 Fastinfoset Libraries (Project Jersey 1.0.2) - {MyEclipse-Library}
+
+    JAX-RS 1.0.2 Mail & Multipart Libraries (Project Jersey 1.0.2) - {MyEclipse-Library}
+
+    < Back Next > Finish Cancel'
+  merge: -1
+  img_proc: true
+- pgno: 294
+  md: '# HelloWorld RESTful Web Service
+
+
+    +   - Create resource class
+
+
+    HelloWorldResource
+
+
+    # New Java Class
+
+
+    Java Class
+
+    The use of the default package is discouraged.
+
+
+    Source folder: HelloWorld/src
+
+    Package: (default)
+
+    Enclosing type:
+
+
+    Name: HelloWorldResource
+
+
+    Modifiers: public default private protected
+
+    abstract final static
+
+
+    Superclass: java.lang.Object
+
+    Interfaces:
+
+
+    Which method stubs would you like to create?
+
+    public static void main(String[] args)
+
+    Constructors from superclass
+
+    Inherited abstract methods
+
+
+    Do you want to add comments? (Configure templates and default value here)
+
+    Generate comments
+
+
+    Finish Cancel'
+  merge: -1
+  img_proc: true
+- pgno: 295
+  md: "# HelloWorld RESTful Web Service\n\n+   - Write your HelloWorldResouce\n\n\
+    ```\nimport javax.ws.rs.GET;\nimport javax.ws.rs.Path;\nimport javax.ws.rs.Produces;\n\
+    \n@Path(\"/helloworld\")\npublic class HelloWorldResource {\n    @GET\n    @Produces(\"\
+    text/plain\")\n    public String sayHello() {\n        return \"Hello World\"\
+    ;\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 296
+  md: '# HelloWorld RESTful Web Service
+
+
+    +   - View web.xml generated by MyEclipse
+
+
+    ```
+
+    <servlet>
+
+    <display-name>JAX-RS REST Servlet</display-name>
+
+    <servlet-name>JAX-RS REST Servlet</servlet-name>
+
+    <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+
+    <load-on-startup>1</load-on-startup>
+
+    </servlet>
+
+    <servlet-mapping>
+
+    <servlet-name>JAX-RS REST Servlet</servlet-name>
+
+    <url-pattern>/services/*</url-pattern>
+
+    </servlet-mapping>
+
+    <welcome-file-list>
+
+    <welcome-file>index.jsp</welcome-file>
+
+    </welcome-file-list>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 297
+  md: '# HelloWorld RESTful Web Service
+
+
+    +   - Deploy to Tomcat
+
+
+    # Project Deployments
+
+
+    # Manage Deployments
+
+
+    Deploy and undeploy J2EE projects.
+
+
+    Project: HelloWorld
+
+
+    # Deployments
+
+
+    HelloWorld
+
+
+    Deployment Status
+
+
+    # New Deployment
+
+
+    # New Deployment
+
+
+    Create new project deployment for HelloWorld
+
+
+    Web Project: HelloWorld
+
+
+    Server: MyEclipse Tomcat
+
+
+    Edit server connectors...
+
+
+    Deploy type: Exploded Archive (development mode) Packaged Archive (production
+    mode)
+
+
+    Deploy Location: D:\SOA\.metadata\.me_tcat\webapps\HelloWorld
+
+
+    MyEclipse Tomcat
+
+
+    Finish Cancel'
+  merge: -1
+  img_proc: true
+- pgno: 298
+  md: '# HelloWorld RESTful Web Service
+
+
+    +   - Deploy to Tomcat
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_298_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 299
+  md: '# HelloWorld RESTful Web Service
+
+
+    +   - Test
+
+    +     - type in
+
+    +     http://localhost:8080/HelloWorld/services/helloworld
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_299_0.png)
+
+
+    Hello World
+
+
+    Successful'
+  merge: -1
+  img_proc: true
+- pgno: 300
+  md: '# Tools in MyEclipse
+
+
+    # JAX-RS Resource Method
+
+
+    # New JAX-RS Resource Method
+
+
+    Create a new JAX-RS resource method
+
+
+    Method name: sayHiWithName
+
+
+    Return type: String
+
+
+    HTTP method: GET
+
+
+    URL path: /{name}
+
+
+    Consumes: <unspecified>
+
+
+    Produces: text/plain
+
+
+    # Method parameters:
+
+
+    | Java Type | Java Name | Param Type | Param Name | Default Value |
+
+    | String | name | PathParam | name |  |
+
+
+    Method signature preview:
+
+
+    ```
+
+    @GET @Path("/{name}")
+
+    @Produces("text/plain")
+
+    public String sayHiWithName(@PathParam("name") String name);
+
+    ```
+
+
+    Finish
+
+
+    Cancel
+
+
+    import javax.ws.rs.Produces;
+
+
+    +   New
+
+    +   Open
+
+    +   Open With
+
+    +   Open Type Hierarchy
+
+    +   Show In
+
+    +   Copy
+
+    +   Copy Qualified Name
+
+    +   Paste
+
+    +   Delete
+
+    +   Build Path
+
+    +   Source
+
+    +   Refactor
+
+    +   Import...
+
+    +   Export...
+
+    +   References
+
+    +   Declarations
+
+    +   Refresh
+
+    +   Assign Working Sets...
+
+    +   Run As
+
+    +   Debug As
+
+    +   Profile As
+
+    +   Team
+
+    +   Compare With
+
+    +   Replace With
+
+    +   Restore from Local History...
+
+    +   MyEclipse
+
+    +   Properties'
+  merge: -1
+  img_proc: true
+- pgno: 301
+  md: "# Path Parameter Example\n\n```\n@GET\n@Path(\"/{name}\")\n@Produces(\"text/plain\"\
+    )\npublic String sayHiWithName(@PathParam(\"name\") String name) {\n    return\
+    \ \"Hi, \" + name;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 302
+  md: '# Annotations
+
+
+    +   - @Path
+
+    +     - URL Path
+
+    +   - @GET / @POST
+
+    +     - HTTP Method
+
+    +   - @Consumes
+
+    +     - MIME type the resource can accept from client (for POST)
+
+    +   - @Produces
+
+    +     - MIME type the resource can produce (send back to client)'
+  merge: -1
+  img_proc: true
+- pgno: 303
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 304
+  md: "```\n//set URL\nURL url = new\nURL(\"http://localhost:8080/HelloWorld/services/helloworld/xml\"\
+    );\n\n//make connection\nURLConnection urlc = url.openConnection();\n\n//use GET\
+    \ mode\nurlc.setDoInput(true);\nurlc.setAllowUserInteraction(false);\n\n//get\
+    \ result\nBufferedReader br =\n    new BufferedReader(new InputStreamReader(urlc.getInputStream()));\n\
+    \nString l = null;\nwhile ((l=br.readLine())!=null) {\n    System.out.println(l);\n\
+    } br.close();\n```"
+  merge: -1
+  img_proc: true
+- pgno: 305
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 306
+  md: '# Test with REST WS Explorer
+
+
+    # REST Web Services Explorer
+
+
+    WADL URL http://localhost:8080/HelloWorld/services/application.wadl
+
+
+    HelloWorld > helloworld > hi
+
+
+    Resource: helloworld/hi
+
+    (http://localhost:8080/HelloWorld/services/helloworld/hi)
+
+
+    Choose method to test: GET(text/plain)
+
+
+    Test
+
+
+    +   - HelloWorld
+
+    +     - helloworld
+
+    +       - hi
+
+    +       - {name}'
+  merge: -1
+  img_proc: true
+- pgno: 307
+  md: '# Java API for XML Web Services
+
+    (JAX-WS)'
+  merge: -1
+  img_proc: true
+- pgno: 308
+  md: '+   - JAX-WS is a Java programming language API for creating web services.
+
+    +   - Latest version JAX-WS 2.0
+
+    +   - Part of Java EE.
+
+    +   - New in Java SE 6.
+
+    +   - API stack for web services.
+
+    +   - Replaces JAX-RPC.
+
+    +   - **JAXM**（JAVA API For XML Message）
+
+    +   - **SAAJ**（SOAP With Attachment API For Java）
+
+    +   - **JAX-RS**'
+  merge: -1
+  img_proc: true
+- pgno: 309
+  md: "# Writing A Web Service with JAX-WS\n\n```\npackage loanservice;\n\nimport\
+    \ javax.jws.WebService;\nimport javax.jws.WebMethod;\nimport javax.xml.ws.Endpoint;\n\
+    \n@WebService\npublic class LoanApprover {\n    @WebMethod\n    public boolean\
+    \ approve(String name) {\n        return name.equals(\"Mike\");\n    }\n    public\
+    \ static void main(String[] args){\n        LoanApprover la = new LoanApprover();\n\
+    \        Endpoint endpoint =\n            Endpoint.publish(\"http://localhost:8080/loanservice\"\
+    , la);\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 310
+  md: '# Compile the Web Service
+
+
+    Create a myservice directory.
+
+
+    From the directory just above loanservice, run Java’s Annotation Processing Tool
+    (APT):
+
+
+    ```
+
+    C:\>apt -d myservice loanservice/LoanApprover.java
+
+    ```
+
+
+    This populates a directory named myservice.
+
+    The directory holds the compiled package as well as a new directory (package)
+    called jaxws.
+
+    The new jaxws package holds classes associated with the parameters to and from
+    each web service method.
+
+    Use the -s switch to generate the source code.'
+  merge: -1
+  img_proc: true
+- pgno: 311
+  md: '# Publish the Service
+
+
+    From a directory just above myservice:
+
+
+    ```
+
+    C:\>java -cp myservice loanservice/LoanApprover
+
+    ```
+
+
+    To view the WSDL, visit the service with a browser at http://localhost:8080/loanapprover?wsdl'
+  merge: -1
+  img_proc: true
+- pgno: 312
+  md: '# Generate Stub Code
+
+
+    Make a client directory.
+
+
+    ```
+
+    C:\>wsimport –p client –keep http://localhost:8080/loanapprover?wsdl
+
+    ```
+
+
+    This populates the client subdirectory with .class and .java files.'
+  merge: -1
+  img_proc: true
+- pgno: 313
+  md: "# Write the Client\n\n```\npackage client;\n\nclass ApproverClient {\n    public\
+    \ static void main(String args[]){\n        LoanApproverService service = new\
+    \ LoanApproverService();\n        LoanApprover approverProxy =\n        service.getLoanApproverPort();\n\
+    \n        boolean result = approverProxy.approve(\"Mike\");\n\n        if(result)\
+    \ System.out.println(\"Approved\");\n        else System.out.println(\"Not approved\"\
+    );\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 314
+  md: '# Compile & Run the Client
+
+
+    ```
+
+    C:\>javac –cp . client/ApproverClient.java
+
+    ```
+
+
+    ```
+
+    C:\>java -cp . client/ApproverClient
+
+    ```
+
+
+    Approved'
+  merge: -1
+  img_proc: true
+- pgno: 315
+  md: '# 第6章 SOA项目实施与开发案例
+
+
+    王新颖
+
+
+    xinying@jlu.edu.cn'
+  merge: -1
+  img_proc: true
+- pgno: 316
+  md: '# Lecture 1
+
+
+    # SOA项目实施准备'
+  merge: -1
+  img_proc: true
+- pgno: 317
+  md: '# SOA效益分析
+
+
+    +   - 提高业务效率和用户满意度
+
+    +     - 依托松耦合性和重用性，减少利用现有服务和IT资产组装新业务应用的时间，提高上市速度和开发效率
+
+    +     - 创建与具体技术和最终用户设备无关的服务，以保证一致的用户体验，提高用户的满意度。
+
+    +   - 提高互操作性和可用性
+
+    +     - 遵循开放的标准化协议、应用于厂商多样性的环境
+
+    +   - 提高投资回报率
+
+    +     - 服务的松耦合及平台中立降低了集成和维护成本'
+  merge: -1
+  img_proc: true
+- pgno: 318
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 319
+  md: '# SOA标准体系
+
+
+    应用
+
+
+    应用标准
+
+
+    架构
+
+
+    集成开发标准
+
+
+    表示层标准
+
+
+    业务流程标准
+
+
+    服务描述和发现标准
+
+
+    消息传递标准
+
+
+    交互操作标准
+
+
+    安全性标准
+
+
+    事务性标准
+
+
+    可靠性标准
+
+
+    质量保证标准
+
+
+    服务管理标准
+
+
+    基础
+
+
+    XML及相关标准
+
+
+    网络传输标准'
+  merge: -1
+  img_proc: true
+- pgno: 320
+  md: '# SOA项目实施需求来源
+
+
+    +   - 系统整合驱动
+
+    +     - 应用系统之间的数据整合
+
+    +     - 功能整合
+
+    +     - 流程整合
+
+    +   - 新系统建设驱动
+
+    +     - 管理上：新业务的变换使现有系统远远不能满足需求
+
+    +     - 技术上：手工编码、缺乏总体架构的设计，注定无法全面适应系统需求变更的需要'
+  merge: -1
+  img_proc: true
+- pgno: 321
+  md: '# SOA项目的实施
+
+
+    +   - 战略规划阶段
+
+    +     - 企业或组织的决策部门需要进行**业务规划**
+
+    +     - IT管理团队对当前IT系统的功能、性能、问题、基础架构、平台、标准以及需要满足的需求等各方面进行**IT规划**，确定IT整体的建设策略、建设路线以及组织结构。
+
+    +   - 项目实施阶段
+
+    +     - 服务规划与设计
+
+    +     - 服务开发
+
+    +     - 服务测试
+
+    +     - 服务发布
+
+    +     - 服务组装运行
+
+    +     - 管理流程变化'
+  merge: -1
+  img_proc: true
+- pgno: 322
+  md: '![](img/431d4828d5c6073b7e23d9eca159cdeb_322_0.png)
+
+
+    # 战略规划过程
+
+
+    # 项目实施过程'
+  merge: -1
+  img_proc: true
+- pgno: 323
+  md: '# SOA项目实施关键要素
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_323_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 324
+  md: '# SOA的项目分析
+
+
+    +   - 组织角度
+
+    +     - 分析SOA的目标、SOA的范围、用户SOA的经验度、各业务部门的参与程度
+
+    +   - 业务角度
+
+    +     - 分析业务的规范性、业务优化的要求、业务协作性需求、业务的时限要求、业务变更需求
+
+    +   - 系统角度
+
+    +     - 分析原有系统的组件化程度、系统安全性要求、系统扩展性要求'
+  merge: -1
+  img_proc: true
+- pgno: 325
+  md: '# SOA的项目视角(cont.)
+
+
+    +   - 按建设类型来划分
+
+    +   - 按切入点划分
+
+    +   - 按实施组织类型划分
+
+    +   - 按解决问题划分
+
+    +   - 按业务关注点划分
+
+    +   - 按建设范围划分
+
+    +   - 按建设层次划分'
+  merge: -1
+  img_proc: true
+- pgno: 326
+  md: '# 按建设类型来划分
+
+
+    +   - 一步到位法
+
+    +     - 组织规范：建立战略机构，统一优化业务
+
+    +     - 服务建模：以业务优化思想为主导；
+
+    +     - 平台选择：需选择全功能且包括开发的能力的平台
+
+    +   - 核心扩展法
+
+    +     - 组织规范：以调整核心业务的组织和规范为主
+
+    +     - 服务建模：以核心业务改造为主导，逐步建立其他服务
+
+    +     - 平台选择：选择适用平台
+
+    +   - 逐级建设法
+
+    +     - 组织规范：先不涉及组织调整，后期逐步调整组织，并定规范
+
+    +     - 服务建模：以公共业务重用为主导，逐步建立其他服务
+
+    +     - 平台选择：选择简单平台'
+  merge: -1
+  img_proc: true
+- pgno: 327
+  md: '# 按切入点划分
+
+
+    +   - 从流程切入
+
+    +     - 对于基于流程来设置组织及管理机制的用户，业务流程是最核心的，以流程为中心切入SOA将更加合适
+
+    +   - 从信息切入
+
+    +     - 组织内部的营运管理需要大量而实时的商业信息，通过信息流需求来整合原有部门级的应用
+
+    +   - 从客户体验需求切入
+
+    +     - 对于关注于直接客户服务的部分企业或政府用户而言，终端服务能力是推进用户信息化的重要驱动力；提升对客户的个性化及多渠道服务能力，是用户的核心关注点。'
+  merge: -1
+  img_proc: true
+- pgno: 328
+  md: '# 按实施组织类型划分
+
+
+    +   - 用户主导
+
+    +     - 由用户方所建立的实施团队来主导IT总体规划及项目目标，用户业务决策层、IT信息部门及所涉及的业务部门主管来共同推动项目实施
+
+    +   - 厂商主导
+
+    +     - 由咨询公司帮助用户梳理业务、并提出信息化及项目招标要求，由具体的集成商，选择SOA的方法及技术进行项目实施'
+  merge: -1
+  img_proc: true
+- pgno: 329
+  md: '# 按解决问题划分
+
+
+    +   - 系统集成
+
+    +     - 在组织内部多个IT系统之间的互联互通需求，使SOA已逐渐成为许多用户整合项目的重要技术路线
+
+    +   - 新应用建设
+
+    +     - 在构建新系统时，对原系统资源进行再利用，基于新功能需求进行服务化开发，从而降低成本、缩减周期
+
+    +   - 业务创新变革
+
+    +     - 业务的调整及改变，原有多个异构系统的整合和复用，难以满足业务需求，重新规划系统，利用SOA构建新的需求，从长远角度满足业务发展及变化'
+  merge: -1
+  img_proc: true
+- pgno: 330
+  md: '# 按业务关注点划分
+
+
+    +   - 资源共享需求
+
+    +     - 实现单个组织内不同部门之间或者不同组织之间的信息资源及应用资源的共享
+
+    +     - 通过服务化的方式，对数据进行更灵活的共享
+
+    +   - 业务协同需求
+
+    +     - 业务协同的核心是流程，流程中涉及到多个复杂的异构系统
+
+    +     - 鉴于SOA的松耦合、标准化、灵活性等特性，基于服务的方式来实现IT系统之间的协同，已成为主流'
+  merge: -1
+  img_proc: true
+- pgno: 331
+  md: '# 按建设范围划分
+
+
+    +   - 组织内部
+
+    +     - 指在某个公司或单位内部各部门应用之间的IT互联互通，包括是纵向应用集成，如集团企业各级子公司及分支机构的IT系统建设。
+
+    +   - 组织之间
+
+    +     - 主要是解决不同组织之间的业务系统协同及数据交换问题，如供应链协作及跨委办局的政府服务，此类集成涉及范围更广、复杂性更高。'
+  merge: -1
+  img_proc: true
+- pgno: 332
+  md: '# 按建设层次划分
+
+
+    +   • 单层次
+
+    +   - 解决某个用户自己的IT建设需求，如单个企业内部项目、或政府同一级别的多个单位之间的项目。
+
+
+    +   • 多层次
+
+    +   - 解决大型集团用户或者政府国家部委的集中式信息化建设需求，涉及从总部到下属分支机构之间的信息资源及业务系统互联互通。'
+  merge: -1
+  img_proc: true
+- pgno: 333
+  md: '# SOA项目实施团队
+
+
+    | 项目角色 | 职责 | 合作对象 | 技能要求 | 支持工具 |
+
+    | --- | --- | --- | --- | --- |
+
+    | SOA 架构师 | 方案设计,需求分析,架构确定,服务构件建模,运维建模,业务与服务构件转换 | 任何其他项目团队成员,包括业务处室代表 | 通常的IT架构能力,J2EE技术,XML,XML
+    schema, Web services, SOA概念,平台,项目实践经验,业务知识 | UML编辑器, office套件 |
+
+    | 服务建模工程师 | 接口设计, WSDL编辑 | 业务分析师,SOA架构师,服务开发工程师 | WSDL, XML schema, J2EE命名空间技术
+    | WSDL编辑器, Java-to-WSDL generators |
+
+    | 流程设计师 | 业务建模, 服务链组装 | 服务建模工程师,业务分析师,SOA架构师,业务代表 | BPEL4WS, WSDL | 图形化流程设计工具,
+    实时通讯支持 |'
+  merge: -1
+  img_proc: true
+- pgno: 334
+  md: '# SOA项目实施团队(cont.)
+
+
+    | 项目角色 | 职责 | 合作对象 | 技能要求 | 支持工具 |
+
+    |----------|------|----------|----------|----------|
+
+    | 服务开发工程师 | 服务提供方编程, 服务需求方编程, SOAP消息包的解析, 文档编程 | 服务建模工程师,业务分析师,SOA架构师,测试工程师 |
+    J2EE, XML, SOAP, WSDL | Web services wizards in IDEs, WSDL-to-Java generators
+    |
+
+    | 互操作性测试工程师 | WSDL检查, SOAP封装跟踪, 性能测试, 问题定位 | 服务开发工程师 | SOAP, WSDL, WS-I profiles
+    | TCP/IP tunnels and monitors, WSI测试工具 |'
+  merge: -1
+  img_proc: true
+- pgno: 335
+  md: '# Lecture 2
+
+
+    # SOA用户案例'
+  merge: -1
+  img_proc: true
+- pgno: 336
+  md: '# SOA典型行业和领域
+
+
+    +   - 金融行业
+
+    +   - 电信行业
+
+    +   - 烟草行业
+
+    +   - 交通行业
+
+    +   - 电子政务行业
+
+    +   - 医疗卫生行业
+
+    +   - 物流行业
+
+    +   - 钢铁行业
+
+    +   - B2B领域'
+  merge: -1
+  img_proc: true
+- pgno: 337
+  md: '# 行业、特点及成功案例
+
+
+    | 行业/案例 | 特点 | 建设类型 | 实施切入点 | 实施类型 | 解决 问题 | 关注点 | 实施范围 | 建设层次 |
+
+    |---|---|---|---|---|---|---|---|---|
+
+    | 金融 | 交通银行管理系统统一应用平台 | 一步到位 |  | 用户主导 |  |  | 组织内 |  |
+
+    |  | 莱芜商业银行建立数据集成平台 | 一步到位 | 信息 | 厂商、用户主导 | 系统集成 | 资源共享 | 组织内 |  |
+
+    |  | ING亚太保险公司 | 一步到位 | 依据行业最佳实践业务建模 | 用户主导 | 集成、新应用、创新变革 | 资源共享、业务建模 | 组织内 |
+    多层次 |
+
+    |  | 美联银行在线银行服务 | 核心扩展 | 应用规范化、信息 | 厂商主导 | 系统集成、业务创新 | 标准化、重用 | 组织内 | 单层次 |'
+  merge: -1
+  img_proc: true
+- pgno: 338
+  md: '| 行业/案例 | 特点 | 建设类型 | 实施切入点 | 实施类型 | 解决问题 | 关注点 | 实施范围 | 建设层次 |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | 安徽电信服务保障系统 | 核心扩展 | 流程 | 厂商主导 | 新应用建设 | 业务协同 | 组织内 | 单层次 |
+
+    | 广东移动EOMS系统 | 逐级建设 | 流程 | 厂商主导 | 新应用建设 | 业务协同 | 组织内 | 单层次 |
+
+    | 移动业务投诉处理综合平台 | 核心扩展 | 流程 | 厂商主导 | 系统集成 | 资源共享 | 组织内 | 单层次 |
+
+    | 山西移动案例 | 核心扩展 | 流程 | 用户主导 | 集成、新应用、创新变革 | 业务协同 | 组织内 | 多层次 |
+
+    | 江苏联通项目管理平台 | 核心扩展 | 流程、信息 | 厂商主导 | 系统集成、信息获取 | 资源共享 | 组织内 | 多层次 |'
+  merge: -1
+  img_proc: true
+- pgno: 339
+  md: '| 行业/案例 | 特点 | 建设类型 | 实施切入点 | 实施类型 | 解决问题 | 关注点 | 实施范围 | 建设层次 |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | 山西烟草公司协同业务案例 | 核心扩展 | 流程 | 用户、厂商主导 | 集成、新应用、创新 | 资源共享、业务协同 | 跨组织 | 多层次 |
+
+    | 湖南省烟草公司营业集成项目 | 核心扩展 | 信息、流程、客户体验 | 用户、厂商主导 | 系统集成 | 资源共享、业务协同 | 跨组织 | 单层次 |
+
+    | 烟草行业卷烟生产经营决策管理系统 | 核心、逐级 | 信息、流程、客户体验 | 用户、厂商主导 | 集成、新应用、创新 | 业务协同 | 跨组织 | 多层次
+    |
+
+    | 天津河西区社区医疗卫生综合服务信息平台 | 逐级建设 | 流程 | 用户、厂商主导 | 集成、新系统开发 | 资源共享 | 跨组织 | 单层次 |
+
+    | 食品安全检测监控信息系统 | 核心扩展 | 流程 | 用户、厂商主导 | 系统集成 | 资源共享 | 跨组织 | 多层次 |'
+  merge: -1
+  img_proc: true
+- pgno: 340
+  md: '| 行业/案例 | 建设类型 | 实施切入点 | 实施类型 | 解决 问题 | 关注点 | 实施范围 | 建设层次 |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 公共服务 青岛市网上审批系统案例 | 逐级建设 | 流程 | 用户主导 | 系统集成 | 资源共享、业务协同 | 跨组织 | 多层次 |
+
+    | 公共服务 国家审计信息系统——金审工程 | 核心、逐级 | 信息、流程、客户体验 | 厂商、用户主导 | 集成、新应用、创新变革 | 资源共享、业务协同
+    | 跨组织 | 多层次 |
+
+    | 业务 国家税务总局SOA整合平台 | 一步到位 | 流程 | 用户主导 | 系统集成 | 业务协同 | 跨组织 | 多层次 |
+
+    | 业务 交通部海事局应急辅助指挥系统 | 逐级建设 | 信息 | 用户主导 | 集成、新系统开发 | 资源共享、业务协同 | 组织内 | 单层次 |'
+  merge: -1
+  img_proc: true
+- pgno: 341
+  md: '| 行业/案例 | 特点 | 建设类型 | 实施切入点 | 实施类型 | 解决问题 | 关注点 | 实施范围 | 建设层次 |
+
+    |---|---|---|---|---|---|---|---|---|
+
+    | 物流 | 中国航天科技集团“航天型号物资管理信息平台” | 逐级建设 | 流程 | 用户主导 | 业务创新变革 | 资源共享 | 跨组织 | 多层次 |
+
+    | 钢铁 | 宝钢新日铁汽车有限公司“基于SOA的统一身份认证集成” | 核心扩展 | 信息 | 厂商主导 | 系统集成 | 资源共享 | 组织内 | 多层次
+    |
+
+    | 其他 | 华电对标系统 | 逐级建设 | 流程 | 用户主导 | 新应用建设 | 业务协同 | 组织内 | 多层次 |
+
+    | 其他 | 阿里巴巴信息系统 | 逐级建设 | 流程 | 用户、厂商主导 | 系统集成 | 业务协同 | 组织内 | 多层次 |'
+  merge: -1
+  img_proc: true
+- pgno: 342
+  md: '# 交通银行管理系统统一应用平台
+
+
+    +   - 案例特点
+
+    +     - 建设类型：一步到位法
+
+    +     - 实施类型：用户主导
+
+    +     - 建设范围：组织内
+
+    +   - 业务背景
+
+    +     - 交通银行于2005年成功完成大集中工程，标志着IT建设迈入了新的阶段
+
+    +     - 各个业务部门的MIS系统建设需求源源不断推，开发部门无法完全自主开发来响应业务部门的需求'
+  merge: -1
+  img_proc: true
+- pgno: 343
+  md: '# 业务剖析
+
+
+    +   - 原有技术框架问题
+
+    +     - 如何有效的保证系统实施的速度和质量？
+
+    +     - 如何改变IT部门被动满足业务要求的局面？
+
+    +     - 如何能够通过建立更加灵活的IT架构，以更好的适应这种不断变化的要求？
+
+    +     - 如何保证各个系统之间良好的整合能力？
+
+    +     - 如何通过IT模式的转变，提升操作用户体验和工作效率？
+
+    +     - 如何形成有效的IT资产沉淀，使得新应用开发时，可以最大限度复用已有的构件、框架、模型？'
+  merge: -1
+  img_proc: true
+- pgno: 344
+  md: '# 整体解决方案——项目组织结构
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_344_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 345
+  md: '# 整体解决方案——技术方案
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_345_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 346
+  md: '# 整体解决方案——架构模型
+
+
+    MIS系统
+
+
+    # OCRM系统
+
+
+    业务流程
+
+
+    业务构件
+
+
+    客户管理 客户服务 ……
+
+
+    面向构件的SOA中间件—EOS
+
+
+    J2EE Server—Websphere
+
+
+    # 资金管理系统
+
+
+    业务流程
+
+
+    业务构件
+
+
+    EOS
+
+
+    Websphere
+
+
+    # 资产风险系统
+
+
+    业务流程
+
+
+    业务构件
+
+
+    EOS
+
+
+    Websphere
+
+
+    # ……系统
+
+
+    业务流程
+
+
+    业务构件
+
+
+    EOS
+
+
+    Websphere
+
+
+    SWIFT MQ Adapter
+
+
+    传输服务
+
+
+    中转服务
+
+
+    事件服务
+
+
+    ESB-WebSphere Message Broker
+
+
+    服务路由目录库
+
+
+    主机、交易系统
+
+
+    主机系统
+
+
+    网上银行系统
+
+
+    基金交易系统
+
+
+    外汇交易系统
+
+
+    ……
+
+
+    服务注册管理中心'
+  merge: -1
+  img_proc: true
+- pgno: 347
+  md: '# 案例剖析
+
+
+    +   - 采用标准
+
+    +     - J2EE、、 web service、 http、 xml、 WfMC等
+
+    +   - 价值
+
+    +     - 项目建设的周期大大缩短，一期只花了4人3个月的时间，工作量节省了40%左右
+
+    +     - 同一个项目在不同期中引入了不同的开发团队，实现增量开发，提升了项目实施的控制能力
+
+    +     - 采用构件化的方法使得应用能够更快响应业务的变化，项目维护方便
+
+    +     - 系统运行稳定可靠'
+  merge: -1
+  img_proc: true
+- pgno: 348
+  md: '# 交通银行IT支撑体系
+
+
+    # MISUP
+
+
+    方法与规范
+
+
+    平台与工具
+
+
+    资产与知识
+
+
+    构件标准与规范
+
+
+    软件过程体系
+
+
+    项目管理体系
+
+
+    # 集中工作平台
+
+
+    应用1
+
+
+    应用2
+
+
+    应用3
+
+
+    # 统一流程管理平台
+
+
+    # 统一技术架构平台
+
+
+    知识管理系统
+
+
+    企业服务治理平台
+
+
+    构件仓库平台
+
+
+    IT知识库
+
+
+    业务服务注册库
+
+
+    软件构件库'
+  merge: -1
+  img_proc: true
+- pgno: 349
+  md: '# 安徽电信服务保障系统
+
+
+
+
+    - 建设类型：核心扩展法
+
+
+    - 切入点：从流程切入
+
+
+    - 实施类型：厂商主导
+
+
+    - 建设范围：组织内
+
+
+
+
+    - 电信企业从传统基础网络运营商向现代综合信息服务提供商转变，要解决业务转型和业务保障的问题
+
+
+    - 安徽电信服务保障系统包含故障处理和电子运维两个子系统'
+  merge: -1
+  img_proc: true
+- pgno: 350
+  md: '# 业务剖析
+
+
+    +   - 原有技术框架的问题
+
+    +     - 如何在业务需求和关键技术上找到平衡点？
+
+    +     - 如何让IT快速地支撑业务？
+
+    +     - IT如何快速响应企业的业务和管理需要？
+
+    +   - 为何选用SOA
+
+    +     - 整体软件架构上要分层
+
+    +     - 采用可快速构建IT系统的技术
+
+    +     - 软件要可管理可控制
+
+    +     - 软件要尽可能的商业复用'
+  merge: -1
+  img_proc: true
+- pgno: 351
+  md: '# 整体解决方案——项目管理框架
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_351_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 352
+  md: '# 整体解决方案——技术方案
+
+
+    安徽电信服务保障系统
+
+
+    # 服务管理
+
+
+    服务统计
+
+
+    服务监控
+
+
+    服务分类
+
+
+    SLA 管理
+
+
+    # 应用层
+
+
+    服务保障
+
+
+    接入故障
+
+
+    网络设备
+
+
+    电子运维
+
+
+    电子运维
+
+
+    生产调度
+
+
+    # 系统管理
+
+
+    机构管理
+
+
+    角色管理
+
+
+    权限管理
+
+
+    人员管理
+
+
+    # 基础层
+
+
+    应用配置
+
+
+    日常查看
+
+
+    异常管理
+
+
+    安全控制
+
+
+    应用管理
+
+
+    监控信息
+
+
+    # 业务流程平台
+
+
+    EOS™ 工作流
+
+
+    面向构件 SOA 中间件 EOS™ 平台'
+  merge: -1
+  img_proc: true
+- pgno: 353
+  md: '# 整体解决方案——实施方案
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_353_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 354
+  md: '# 案例剖析
+
+
+    +   - 采用标准
+
+    +     - J2EE、、 web service、 http、 xml、 WfMC等
+
+    +   - 价值
+
+    +     - 系统自上线以来一直运行平稳，系统用户数近4000人，高峰时最高在线用户数为890人左右，业务处理平均时间不大于5秒
+
+    +     - 实现了有限的底层服务满足指数倍的业务场景，充分体现了SOA体系的价值
+
+    +     - 新流程现在几个小时就可完成并且稳定高效，为自底向上的创新机制创造条件'
+  merge: -1
+  img_proc: true
+- pgno: 355
+  md: '# 湖南省烟草公司应用总集成项目
+
+
+    +   - 案例特点
+
+    +     - 建设类型：核心扩展法
+
+    +     - 实施类型：用户主导
+
+    +     - 切入点：信息、流程、客户体验
+
+    +     - 建设范围：跨组织
+
+    +   - 业务背景
+
+    +     - 湖南省烟草公司下属14个商业市州公司，已建设的商业应用系统包括专卖管理系统和卷烟营销管理系统
+
+    +     - 各市州公司和省公司系统间的数据交互，采用消息中间件来实现'
+  merge: -1
+  img_proc: true
+- pgno: 356
+  md: '# 业务剖析
+
+
+    +   - 湖南省烟草公司在不同的发展阶段开发了许多信息系统，在管理信息化方面完成了MIS、OA、ERP、CRM、GIS、SRM等
+
+    +   - 分阶段独立实施不同应用系统的建设方法，各系统之间不能实现数据共享、数据变动不同步、数据冗余等，形成一个个的“信息孤岛”
+
+    +   - 新的经营方式及管理理念，要求快速、灵活的应对策略，企业必须使自身的业务精简化、自动化，以求内部与外部的业务系统实现无缝连接'
+  merge: -1
+  img_proc: true
+- pgno: 357
+  md: '# 整体解决方案
+
+
+    +   - 构建符合SOA集成理念的应用集成架构并搭建应用集成平台
+
+    +     - 实现应用系统整合的关键层次是人、流程、信息，同时要考虑整个集成架构的可调整性和与其它系统的连通性
+
+    +   - 制定应用集成规范
+
+    +     - 抽取并细化各种可操作的规范，使各家软件开发商有据可依
+
+    +   - 提供应用集成实施方案
+
+    +     - 使得应用系统集成和开发有章可循'
+  merge: -1
+  img_proc: true
+- pgno: 358
+  md: '# 系统集成总体架构
+
+
+    # 系统应用体验
+
+
+    +   卷烟营销系统
+
+    +   专卖管理系统
+
+    +   烟叶生产经营管理系统
+
+    +   财务管理
+
+    +   人力资源管理
+
+    +   办公自动化系统
+
+
+    +   单点登录
+
+    +   功能权限管理
+
+    +   业务界面门户
+
+
+    ResourceOne Framework
+
+
+    IBM Portal
+
+
+    业务流程管理（ResourceOne Starflow）
+
+
+    信息交换总线（ResourceOne DataExchange-Integration）
+
+
+    +   主题数据库
+
+    +   公共数据库
+
+    +   元数据库
+
+    +   数据交换平台
+
+
+    基础数据库体系库
+
+
+    +   * 界面风格 规范
+
+    +   * 应用组件开发规范
+
+    +   * SOA SOMA 开发方法论
+
+    +   * 基础数据使用规范
+
+    +   * 应用系统集成规范
+
+    +   * 集成测试规范'
+  merge: -1
+  img_proc: true
+- pgno: 359
+  md: '# 案例剖析
+
+
+    +   - 搭建并开发定制了基础数据服务、数据信息服务总线和业务流程管理平台等应用集成平台。
+
+
+    +   - 在全省实现了办公自动化、专卖、营销、客户关系管理、财务、烟叶系统的单点登录、用户体验层面的集成和数据服务统一集成，以及与国家局重点项目的互联互通。
+
+
+    +   - 满足国家局行业平台的技术要求：集成平台采用省、市两级部署，与国家局生产经营决策管理系统平台一致；应用基础架构符合《烟草行业信息化建设统一技术平台要求》
+
+
+    +   - 信息系统初步体现集成整合优势。信息系统按统一的标准建设，系统可定制性增强，可适应一定程度的业务变化，系统生命周期有效延长，总体降低了信息化建设的成本'
+  merge: -1
+  img_proc: true
+- pgno: 360
+  md: '# 青岛市网上审批系统案例
+
+
+    +   - 案例特点
+
+    +     - 建设类型：逐级建设，从易到难，分步实施
+
+    +     - 解决问题：集成青岛“451”架构，连接市内各纵向部门，解决在没有审批大厅情况下的部门间并联审批
+
+    +     - 关注点：同时关注资源共享与业务协同
+
+    +     - 建设层次：多层次建设
+
+    +   - 业务背景
+
+    +     - 网上审批系统包括审批系统和监察系统两部分青岛市没有建立统一行政服务大厅，申请人需要多次往返政府各相关部门'
+  merge: -1
+  img_proc: true
+- pgno: 361
+  md: '# 业务剖析
+
+
+    +   - 原有技术框架
+
+    +     - 2002年开始实施电子政务工程，已初步建成由四个平台、五个中心、一套资源目录构成的“451”技术体系
+
+    +     - 在此基础上，市网上审批系统提出了如下要求:
+
+    +       - 在内、外网物理隔离的条件下，实现“外网受理—内网办理—外网反馈”的工作模式
+
+    +       - 网上受理和现场受理相结合
+
+    +       - 实现“一站式”服务
+
+    +       - 对部门已有审批管理系统应具有较强的整合能力
+
+    +       - 充分利用已有电子政务技术设施，并与其紧密集成'
+  merge: -1
+  img_proc: true
+- pgno: 362
+  md: '# 流程划分及服务提取
+
+
+    +   服务抽象原则：
+
+    +   - 省市区都独立部署一套审批应用
+
+    +   - 业务原型涉及到多个委办局，各委办局私有有一个独立的异构系统来支撑其内部的流转
+
+    +   - 审批过程需要在公网上进行材料和信息的传递
+
+    +   - 工作流引擎支持对审批的流程架构的BPEL4People标准转换，工作流可以按照步骤、组、流程来抽象Web服务接口，业务流程按照其审批的逻辑业务过程划分为服务单元。'
+  merge: -1
+  img_proc: true
+- pgno: 363
+  md: '组织机构代码证（镇监局）
+
+
+    核发《外资企业批准证书》（外经贸）
+
+
+    工商局后置事项
+
+
+    工商局前置事项
+
+
+    外资企业设立登记（工商局）
+
+
+    工商局窗口
+
+
+    受理（外经贸委）
+
+
+    外经贸局前置事项
+
+
+    3000万元以下鼓励类、允许类外资企业设立（外经贸）'
+  merge: -1
+  img_proc: true
+- pgno: 364
+  md: '# 整体解决方案——实施模式
+
+
+    +   - 结合“自顶向下和自底向上”两种策略
+
+    +   - 同时实现长期和短期的需求
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_364_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 365
+  md: '# 整体解决方案——技术方案
+
+
+    应用
+
+
+    审批服务网站
+
+
+    网上审批系统
+
+
+    电子监察系统
+
+
+    扩展应用
+
+
+    开发工具和SOA服务建模
+
+
+    业务框架
+
+
+    GSP业务服务平台（组织机构服务、业务权限服务身份认证服务、工作日志……）
+
+
+    GPM业务流程服务管理
+
+
+    GEM业务实体服务管理
+
+
+    应用集成服务（适配器）
+
+
+    WSEngine（WEB服务引擎）
+
+
+    SOA服务架构
+
+
+    技术框架
+
+
+    服务注册与管理
+
+
+    业务组件
+
+
+    内容管理
+
+
+    消息平台
+
+
+    模型驱动
+
+
+    企业服务总线（ESB）
+
+
+    系统平台层（数据库、操作系统、应用中间件、消息中间件）'
+  merge: -1
+  img_proc: true
+- pgno: 366
+  md: '# 整体解决方案——实施方案
+
+
+    +   • 青岛市网上审批项目组是由浪潮和微软共同组成
+
+
+    +   – SOA架构师 Service Modeling, Architecture Design
+
+
+    +   – 项目经理 Project Management
+
+
+    +   – 产品专家 Design, Process Choreography, Product Support
+
+
+    +   – 业务专家 Business Analysis, Coding
+
+
+    +   – 程序员 Programmer Coding'
+  merge: -1
+  img_proc: true
+- pgno: 367
+  md: '# 整体解决方案——实施步骤
+
+
+    +   - 服务建模：通过分析业务需求定义出需要的业务服务，建立服务模型。
+
+    +   - 架构设计：确定服务的实现架构、关键技术的实现方式。
+
+    +   - 服务组装：对已确定实现的业务服务进行组装，以实现企业业务流程。
+
+    +   - 服务、服务中介等的实现：具体的业务服务的开发，包括服务接口定义、业务服务代码的编写、组件装配等。'
+  merge: -1
+  img_proc: true
+- pgno: 368
+  md: '# 采纳标准
+
+
+    +   - 行业标准
+
+    +     - 电子政务相关标准
+
+    +   - 技术标准和规范
+
+    +     - 组件规范方面使用了 WCF
+
+    +     - 流程管理方面使用了 XPDL/BPEL
+
+    +     - 安全方面使用了 WS_Security、 XACML2.0
+
+    +     - 消息传递方面使用了 SOAP
+
+    +     - 数据描述方面使用了 XML、 XML Schema
+
+    +     - 服务描述和注册方面使用了 WSDL、 UDDI'
+  merge: -1
+  img_proc: true
+- pgno: 369
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 370
+  md: '# 成果
+
+
+    +   - 2005年，青岛市网上审批平台工程启动，349项审批事项已经全部上网，其中一部分能够实现网上受理、内部流转的功能
+
+    +   - 2006年10月，开始建设市级网上审批系统，切实提高区市级政府的服务水平，提高政府的办公效率，改善投资环境
+
+    +   - 截至到2008年，全市12区市已经完成审批平台的搭建，实现了全程审批信息化的目标，取得了很好的社会效益
+
+    +   - 2006年6月开始建设行政审批电子监察系统，并在全市进行推广，截至到2008年初，全市已形成了一网流转，同步监察，全程监控的应用模式，提大的提高了整个青岛市电子政务的应用水平，改善了政府公共服务的能力。'
+  merge: -1
+  img_proc: true
+- pgno: 371
+  md: '# # 食品安全检测监控信息系统
+
+
+    # ## 案例特点
+
+
+    +   - 建设类型：中心扩展法
+
+
+    +   - 解决问题：系统集成
+
+
+    +   - 建设层次：多层次
+
+
+    # ## 业务背景
+
+
+    +   - 食品安全法制、食品安全标准、食品安全检验检测、食品安全市场准入和食品安全社会信用五大体系的建设
+
+
+    +   - 食品安全卫生与安全涉及领域广，监管体系、标准体系与检验检测体系滞后，检测资源整合度不高。
+
+
+    +   - 各部门系统间没有进行业务协作和数据共享'
+  merge: -1
+  img_proc: true
+- pgno: 372
+  md: '# 业务剖析——监管检测业务流程
+
+
+    监管部门（卫生监督所）
+
+
+    发布食品安全通告
+
+
+    现场抽样
+
+
+    样品送检
+
+
+    检测机构（CDC）
+
+
+    接收样品
+
+
+    样品检验
+
+
+    检测报告
+
+
+    电话查询
+
+
+    食品安全监管检测业务流程'
+  merge: -1
+  img_proc: true
+- pgno: 373
+  md: '# 业务剖析——应用现状
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_373_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 374
+  md: '# 整体解决方案——传统数据交换方案
+
+
+    # 监督监管系统
+
+
+    # 检验检测系统
+
+
+    数据交换方案
+
+
+    政务专网
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_374_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 375
+  md: '# 整体解决方案——SOA方案
+
+
+    # 食品监管系统
+
+
+    # 检验检测系统
+
+
+    导入数据
+
+
+    食品安全通报
+
+
+    检测报告
+
+
+    SOA适配器
+
+
+    SOA服务
+
+
+    SOA服务总线
+
+
+    ESB服务总线
+
+
+    生成数据
+
+
+    检测报告
+
+
+    SOA适配器
+
+
+    SOA服务
+
+
+    样本登记表
+
+
+    SOA服务总线
+
+
+    SOA方案'
+  merge: -1
+  img_proc: true
+- pgno: 376
+  md: '# 两种方案的比较
+
+
+    # 传统数据交换解决方案
+
+
+    # SOA解决方案
+
+
+    局限性在于：相对于两两应用系统之间，如果实现数据交换，则需要在两系统之间单独建立接口适配器。这样的话，如果有N个系统需要进行数据交换、资源整合的话，则需要建立(N-1)^2个适配器，需要花费大量的资源进行此项工作；并且，各个适配器不能兼容，通过甲适配器发出的数据完全不能被乙适配器接收
+
+
+    优势在于：通过业界公认的标准体系，建立标准的适配器，每个系统都可以通过SOA适配器发布标准的SOA服务，然后发布到服务总线上，这样，这个服务就是共有的，任何系统只要有SOA服务的需求，都可以在服务总线上寻找到相应的服务。对于SOA方案，每个系统在建设时，只要按照标准调用SOA适配器，大大节省了建立不同适配器的资源'
+  merge: -1
+  img_proc: true
+- pgno: 377
+  md: '# 航天集团 “航天型号物资管理信息平台”
+
+
+    +   - 案例特点
+
+    +     - 建设类型： 逐级建设法
+
+    +     - 切入点： 从流程切入
+
+    +     - 解决问題： 业务创新变革
+
+    +     - 实施范围： 跨组织
+
+    +   - 业务背景
+
+    +     - 型号物资管理信息化是集团信息化建设的重要组成部分，用于规范采购、存储、产品生产的全过程管理
+
+    +     - 本项目由神舟软件公司承担项目咨询、实施和交付服务工作，炎黄盈动公司提供基于BPM和SOA架构的业务基础平台'
+  merge: -1
+  img_proc: true
+- pgno: 378
+  md: '# 业务剖析
+
+
+    +   - 军工物资管理的特点
+
+    +     - 具有贯穿全系统的质量主线
+
+    +     - 严格的物资管理计划协调
+
+    +       - 军工产品研制任务具有严格的时间点要求
+
+    +       - 物资配套工作是根据整体研制节点和生产情况而制定配套计划，研制周期的紧迫性和强制性对采购供应的准确性、及时性提出了高要求
+
+    +     - 强调战略协作伙伴关系
+
+    +       - 军工企业与供应商之间是战略协作伙伴关系
+
+    +     - 对物资选用实行目录管理
+
+    +       - 超出优选目录范围的物资严格进行管控'
+  merge: -1
+  img_proc: true
+- pgno: 379
+  md: '# 业务剖析 (cont.)
+
+
+    +   - 研制背景
+
+    +     - 信息标准不统一
+
+    +     - 各单位物资管理信息化功能相对较为单一、建设水平不平衡
+
+    +     - 技术实现方式差别大，改进整合困难
+
+    +   - 总体定位
+
+    +     - 强化基础标准，形成统一业务语言，强制执行
+
+    +     - 形成自动化的软件机制，把正确的信息在正确的时刻送给正确的人
+
+    +     - 完成信息服务、业务支撑、决策支持三大功能'
+  merge: -1
+  img_proc: true
+- pgno: 380
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 381
+  md: '# 整体解决方案
+
+
+    +   - 信息化目标
+
+    +     - 提供供应商及其产品信息、价格信息和质量问题通报等相关基础信息的快速反应和查询服务
+
+    +     - 支撑所有军工物资采购供应业务全过程
+
+    +     - 分析决策是指对物资的全生命周期的信息进行分析与综合，为决策提供数据支持
+
+    +   - 功能框架
+
+    +     - 物资业务区和综合管理区
+
+    +     - 物资标准区
+
+    +     - 系统接口区'
+  merge: -1
+  img_proc: true
+- pgno: 382
+  md: '# 整体解决方案——功能框架
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_382_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 383
+  md: '# 整体解决方案——技术架构
+
+
+    吉林大学
+
+
+    csw.jlu.edu.cn
+
+
+    SZ-Portal 工具（界面集成、单点登录、用户统一管理）
+
+
+    门户系统
+
+
+    电子商务管理
+
+
+    设计选用管理
+
+
+    新型物资管理
+
+
+    采购供应管理
+
+
+    供应商管理
+
+
+    物资数据管理
+
+
+    分析决策管理
+
+
+    物资业务
+
+
+    综合管理
+
+
+    物资标准管理
+
+
+    业务系统
+
+
+    系统接口
+
+
+    SZ-BPM ENGINE 业务流程管理引擎
+
+
+    SZ-SEARCH ENGINE 搜索引擎
+
+
+    SZ-DS ENGINE 数据同步引擎
+
+
+    SZ-FI ENGINE 文件接口引擎
+
+
+    SZ-REPORT ENGINE 报表引擎
+
+
+    SZ-BI ENGINE 商业智能引擎
+
+
+    J2EE XML OR Mapping、XML Engine、Webservice、JMS、SOAP、Java Mail
+
+
+    业务集成平台
+
+
+    技术基础
+
+
+    基础软件（防病毒、备份、数据库、J2EE Web 服务器）
+
+
+    操作系统（Windows 2003 Server）
+
+
+    硬件环境（网络环境、防火墙、服务器）
+
+
+    基础环境'
+  merge: -1
+  img_proc: true
+- pgno: 384
+  md: '# 采纳或参考的标准
+
+
+    +   - 与XML相关的XML、XSL、XML Schema等标准；
+
+    +   - 与SOA架构相关的WS-*系列、SCA、SDO等标准；
+
+    +   - 与BPM相关的BPEL、BPMN、XPDL等标准
+
+    +   - 与MDA架构相关的UML、OMG相关标准及EMF建模工具标准。'
+  merge: -1
+  img_proc: true
+- pgno: 385
+  md: '# 解决方案的特点
+
+
+    +   - 强大标准基础
+
+    +     - 利用成熟的标准制定方法与工具，根据各企业的要求，制定单位物资信息化标准
+
+    +   - 快速实施
+
+    +     - 利用“标准+软件+接口+管理制度”的应用模式，满足企业垂直管理要求和供应链中不同企业间的协同要求
+
+    +   - 架构灵活
+
+    +     - 采用BPM技术支持动态建模，架构灵活易于调整，可实现在组织与业务流程发生变化后的平滑过渡'
+  merge: -1
+  img_proc: true
+- pgno: 386
+  md: '# 案例效益剖析
+
+
+    +   - 满足军工质量要求的严酷性
+
+    +   - 满足各单位之间信息沟通的需要
+
+    +   - 控制物资信息维护成本
+
+    +   - 全面提升物资体系的管控能力'
+  merge: -1
+  img_proc: true
+- pgno: 387
+  md: '# 阿里巴巴信息系统
+
+
+    +   - 案例特点
+
+    +     - 建设类型：逐级建设
+
+    +     - 实施类型：用户主导、厂商主导
+
+    +     - 建设层次：多层次
+
+    +   - 业务背景
+
+    +     - 成立于1999年的阿里巴巴，连续7次获得福布斯杂志授予的“最佳B2B网站”称号
+
+    +     - 全球企业间（B2B）电子商务的著名品牌，在200余个国家和地区拥有超过数千万名会员，成为全球商人网络推广的首选网站'
+  merge: -1
+  img_proc: true
+- pgno: 388
+  md: '# 业务剖析
+
+
+    +   - 原有技术框架的问题
+
+    +     - 建立了内部管理和客户管理，包括：人力资源系统、内部网络、CRM、财务、数据仓库等
+
+    +     - 各应用系统相互独立运行，形成“信息孤岛”
+
+    +     - 信息和数据的更新不同步甚至不一致，给企业中不同部门的人员在进行交流时带来问题
+
+    +     - 众多的系统需要分散管理，很多信息需要重复输入，造成了人力和物力的浪费'
+  merge: -1
+  img_proc: true
+- pgno: 389
+  md: '# 整体解决方案
+
+
+    +   - 实施模式
+
+    +     - 采用Sun JES（Java Enterprise Service）咨询服务
+
+    +   - 技术方案
+
+    +     - 基于JES中的Java System Composite Application Platform Suite套件(CAPS)实现人力资源、内网、CRM、财务、数据仓库等多个平台的开发和集成
+
+    +   - 实施方案
+
+    +     - 采用Sun Java Composite Application Platform Suite (Java CAPS)，作为Java企业系统的组成部分'
+  merge: -1
+  img_proc: true
+- pgno: 390
+  md: '# 采纳标准
+
+
+    +   - XML/XSLT/ XPath/XQuery
+
+    +   - SOAP
+
+    +   - WSDL
+
+    +   - UUDI
+
+    +   - WS—BPEL 2.0
+
+    +   - SCA/SDO/WS-Policy
+
+    +   - WS—I Basic Profile
+
+    +   - WSRP'
+  merge: -1
+  img_proc: true
+- pgno: 391
+  md: '# 案例剖析
+
+
+    +   - 在采用Sun JES咨询服务之后，阿里巴巴实现了多应用集成和单点用户登录，连接“信息孤岛”实现数据共享和业务流程的共享
+
+    +   - 利用现有的IT系统和数据资源，减少了资源浪费，简化了内部流程，客户服务的信息准确性全面提高，方便了系统的维护和管理
+
+    +   - 基于Sun公司强大的软件产品家族，消除了信息孤岛，提高了系统的安全性'
+  merge: -1
+  img_proc: true
+- pgno: 392
+  md: '# 奇瑞汽车'
+  merge: -1
+  img_proc: true
+- pgno: 393
+  md: '# 面临的挑战
+
+
+    +   - 企业需要采用更有效的应用开发方法，因为现有的点对点方法过于复杂，难以维护
+
+    +   - 部署一个可支持原有系统的强大稳定的平台
+
+    +   - 提高开发过程的可视性
+
+    +   - 减轻 IT 部门员工开发与维护的压力，使其能更快地应对突发情况'
+  merge: -1
+  img_proc: true
+- pgno: 394
+  md: '# 奇瑞汽车采用Oracle SOA实现应用整合
+
+
+    针对奇瑞EAI平台的项目目标和具体需求，奇瑞汽车采用了Oracle融合中间件的SOA套件作为奇瑞EAI平台的基础系统平台。
+
+
+    在采用Oracle SOA套件来搭建EAI平台的建设过程中，遵循多配置少定制开发的原则，实现应用整合项目的接口集成。同时遵循接口应用集成的监控管理图形化展现的原则，对于各种不同的集成场景，采用直观的图形化的界面进行监控和展现。'
+  merge: -1
+  img_proc: true
+- pgno: 395
+  md: '# 奇瑞EAI平台总体架构
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_395_0.png)
+
+
+    GPRS　IE　Pocket PC　Palm　公司员工　供应商　合作伙伴
+
+
+    统一信息平台门户
+
+
+    企业管理支撑平台
+
+
+    EAI/SOA平台
+
+
+    +   SAP
+
+    +   SCM
+
+    +   MES
+
+    +   DCS
+
+    +   DMS
+
+    +   SRM
+
+
+    统一信息平台基础架构
+
+
+    +   Web service　FTP　XML　数据交换　E2EE
+
+    +   HTTP　JMS　ODBC/JDBC　工作流引擎　B2B引擎
+
+
+    系统和应用管理
+
+
+    +   管理工具
+
+    +   系统监控
+
+    +   发布工具
+
+    +   开发工具
+
+
+    安全和身份管理
+
+
+    +   身份认证
+
+    +   SSO
+
+    +   访问控制
+
+    +   联合认证
+
+
+    企业外部其它系统
+
+
+    企业内部数据资源'
+  merge: -1
+  img_proc: true
+- pgno: 396
+  md: '# 奇瑞EAI平台技术架构
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_396_0.png)
+
+
+    Web Service Manager
+
+
+    服务注册
+
+
+    Oracle BPEL（流程管理器）
+
+
+    Oracle ESB（企业服务总线）
+
+
+    Oracle Adapter
+
+
+    Web Service
+
+
+    J2EE Web Services
+
+
+    SAP
+
+
+    SCM
+
+
+    MES
+
+
+    DCS
+
+
+    DMS
+
+
+    SRM
+
+
+    LDAP
+
+
+    统一管理和监控'
+  merge: -1
+  img_proc: true
+- pgno: 397
+  md: "# 奇瑞汽车SOA应用目标\n\n+   4 完善SOA管理运维平台\n+   实现SOA的敏捷性\n+   \n+   3 建立和合作伙伴应用连接平台\n\
+    +   建立外部数据交换标准\n+   \n+   2 建立企业应用互联标准\n+   主要应用互联逐步转到SOA平台\n+   \n+   1 构建SOA基础平台\n\
+    +   主要执行系统与SAP互联"
+  merge: -1
+  img_proc: true
+- pgno: 398
+  md: '# 奇瑞汽车SOA集成平台一期建设规划
+
+
+    # SOA集成平台（一期）
+
+
+    # BPEL PM—业务流程编排
+
+
+    # ESB—企业服务总线
+
+
+    # B2B
+
+
+    已有系统
+
+
+    一期新建系统
+
+
+    即将建立系统
+
+
+    PLM
+
+
+    SCM
+
+
+    SRM
+
+
+    SAP
+
+
+    DCS
+
+
+    DMS
+
+
+    TBD
+
+
+    Partner
+
+
+    MES
+
+
+    WS / THD
+
+
+    FTP
+
+
+    FTP
+
+
+    RFC / BAPI
+
+
+    FTP
+
+
+    WS / THD
+
+
+    WS / THD
+
+
+    B2B
+
+
+    Adapter
+
+
+    BizTalk
+
+
+    ORACLE'
+  merge: -1
+  img_proc: true
+- pgno: 399
+  md: '# 奇瑞汽车SOA集成平台二期建设规划
+
+
+    # SOA集成平台（二期）
+
+
+    BAM—业务活动监控（业务流程和服务的优化）
+
+
+    BPEL PM—业务流程编排（自动化、人工工作流、异常处理、交易补偿）
+
+
+    ESB—企业服务总线（连接、路由、转换）
+
+
+    安全机制
+
+
+    B2B
+
+
+    Rules Engine
+
+
+    UDDI
+
+
+    PLM
+
+
+    SCM
+
+
+    SRM
+
+
+    SAP
+
+
+    DCS
+
+
+    DMS
+
+
+    TBD
+
+
+    MES
+
+
+    Partner
+
+
+    WS / THD
+
+
+    FTP
+
+
+    FTP
+
+
+    RFC / BAPI
+
+
+    FTP
+
+
+    WS / THD
+
+
+    WS / THD
+
+
+    WS / THD
+
+
+    B2B
+
+
+    ORACLE'
+  merge: -1
+  img_proc: true
+- pgno: 400
+  md: '# 奇瑞EAI业务活动监控
+
+
+    # ORACLE BAM Active Viewer
+
+
+    奇瑞汽车EAI平台BAM监控
+
+
+    # 导入DCS的经销商库存数据条数
+
+
+    # 导入DCS的经销商库存数据明细
+
+
+    # 本条数据入库时间统计
+
+
+    # 已完成数据全额分组统计
+
+
+    # 全部已完成数据条数
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_400_0.png)
+
+
+    | 地区 | 经销商名称 | 订单号 | 车辆类型 | 车辆识别码 | 客户名称 | 数量 | 状态 |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 湖北 | 东风汽车分公司 | 0000010001 | B11 捷豹力士 | B7240ACBA300 | 武汉市名汽车 | 11 | |
+
+    | 湖北 | 东风汽车分公司 | 0000010001 | ETX 劲豹力士 | A7160AHEAAX | 武汉市名汽车 | 10 | |
+
+    | 广东 | 东风汽车分公司 | 0000010002 | B11 捷豹力士 | S7160ACBA300 | 广州市名汽车 | 12 | |
+
+    | 东北 | 东风汽车分公司 | 0000010003 | B11 捷豹力士 | S7160ACBA300 | 沈阳市名汽车 | 11 | |
+
+    | 广东 | 东风汽车分公司 | 0000010003 | ETX 劲豹力士 | S7160ACBA300 | 广州市名汽车 | 10 | |
+
+    | 广东 | 东风汽车分公司 | 0000010004 | B11 捷豹力士 | S7160ACBA300 | 广州市名汽车 | 12 | |
+
+    | 东北 | 东风汽车分公司 | 0000010004 | ETX 劲豹力士 | A7160AHEAAX | 沈阳市名汽车 | 10 | |
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_400_1.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_400_2.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_400_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 401
+  md: '# 奇瑞汽车
+
+
+    # 流程执行监控
+
+
+    # ORACLE BAM Active Viewer
+
+
+    # 系统监控平台
+
+
+    # 当日流程执行情况统计
+
+
+    # 当日各流程执行情况
+
+
+    成功 暂态
+
+
+    367
+
+
+    109
+
+
+    +   - 当日流程执行情况统计
+
+    +   - 当日流程执行情况查询
+
+    +   - 历史流程执行情况统计
+
+    +   - 历史流程执行情况查询
+
+
+    | 流程名称 | 名称 | 状态 |  |
+
+    |---|---|---|---|
+
+    | 到出库单据片 | SAP | DES | 成功 |  |
+
+    | 采购到货单据转销售 |  |  | 成功 |  |
+
+    | 维修门店维修单查询 |  |  | 成功 |  |
+
+    | 金融贷款可疑票据商 |  |  | 成功 |  |
+
+    | 采购到货单据有问题 |  |  | 成功 |  |
+
+    | 暂存客户订单回退处理 |  |  | 成功 |  |
+
+    | 采购客户分销渠道回退信息 |  |  | 成功 |  |
+
+    | 客户产品分销渠道回退信息 |  |  | 成功 |  |
+
+    | 客户产品分销渠道回退信息 |  |  | 暂态 |  |
+
+    | 到出库单据 |  |  | 成功 |  |
+
+    | 暂存客户订单回退上游信息 |  |  | 成功 |  |
+
+    | 客户的订单暂存 |  |  | 成功 |  |
+
+    | 客户订单行暂存 |  |  | 成功 |  |
+
+    | 暂存客户订单信息 |  |  | 成功 |  |
+
+    | 暂存客户订单 |  |  | 成功 |  |
+
+    | 暂存客户订单 |  |  | 成功 |  |
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_401_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 402
+  md: '# 奇瑞汽车
+
+
+    各个节点明细
+
+
+    # 当日数据库执行状态统计
+
+
+    # 当日数据库节点执行状态统计
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_402_0.png)
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_402_1.png)
+
+
+    # 流程当日执行情况明细查询
+
+
+    执行状态 ALL Go
+
+
+    | 止各节点名 | 止各节点ID名称 | 主表记录条数 | 子表记录条数 | 变动时间 | 执行状态 | 详细信息 |
+
+    |---|---|---|---|---|---|---|
+
+    | 1 | 下订单单行交付数据 | 5,2638 |  | 2011-10-14 8:31:14 | 成功 | 下单成功 |
+
+    | 2 | 上板订单交付数据 | 5,2638 |  | 2011-10-14 8:31:15 | 成功 | 上板成功 |
+
+    | 3 | 追加CSB处理单据行文本 |  |  | 2011-10-14 8:31:15 | 成功 | 写入订单执行成功 |
+
+    | 1 | 下订单单行交付数据 | 5,2983 |  | 2011-10-14 7:30:31 | 成功 | 下单成功 |
+
+    | 2 | 上板订单交付数据 | 5,2983 |  | 2011-10-14 7:30:32 | 成功 | 上板成功 |
+
+    | 3 | 追加CSB处理单据行文本 |  |  | 2011-10-14 7:30:32 | 成功 | 写入订单执行成功 |'
+  merge: -1
+  img_proc: true
+- pgno: 403
+  md: '# 奇瑞汽车
+
+    历史分析统计
+
+
+    # ORACLE BAM Active Viewer
+
+
+    活动数据 打开 个性化 帮助提示
+
+
+    # 监控平台
+
+
+    历史查询执行统计 历史查询执行情况 历史查询执行统计 历史查询执行情况
+
+
+    # 历史查询执行统计
+
+
+    年 ALL 月 ALL 日 ALL 执行状态 ALL
+
+
+    查询订单执行
+
+    查询订单执行
+
+    重新触发销售任务
+
+    重新触发销售任务
+
+    创建订单发票确认发票
+
+    创建订单发票确认发票
+
+    销售单据查询(+/-)
+
+    销售发票查询
+
+    重新触发销售计划
+
+    销售订单查询计划
+
+    销售订单查询计划
+
+    销售订单查询计划
+
+    金融模块可能影响查询
+
+    金融模块可能影响查询
+
+
+    SAP OCS 成功 失败 失败 警告 失败 成功 失败 成功 成功 成功 成功 成功 成功 成功 成功 成功'
+  merge: -1
+  img_proc: true
+- pgno: 404
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 405
+  md: '# 投资回报分析之投资篇
+
+
+    | 投资类型 | 描述 |
+
+    |---|---|
+
+    | IT基础架构 | 软件，包括相关应用软件与系统软件。
+
+    运行新软件所需要增加的硬件。 |
+
+    | 服务 | 厂商选择流程，包括评审费用，制定方案需求书（RFP）、审核方案建议书的时间等。
+
+    厂商提供的专业服务。 |
+
+    | 人员时间 | 开发新的应用适配器或修改既有的适配器。
+
+    设计、编程或修改程序。
+
+    开发业务流程与工作流。
+
+    测试与修改。
+
+    项目管理。
+
+    集成、更新行业标准。
+
+    在线安装流程过程中的性能监控。
+
+    实施中与实施后跟踪、记录问题。
+
+    解决问题。 |
+
+    | 技能 | 雇用集成、中间件、应用等方面的专家。
+
+    现有IT人员再培训。 |'
+  merge: -1
+  img_proc: true
+- pgno: 406
+  md: '# 投资回报分析之回报篇
+
+
+    | 收益类型 | 描述 |
+
+    |---|---|
+
+    | 提高IT生产力、降低费用 | 通过接口、组件重用，减少开发者的用时以及支持维护的费用。
+
+    通过标准在企业内部的使用，减少对客户化的需求。
+
+    通过使用集中监管的平台，减少中间件技术在企业内的重复。 |
+
+    | 增强灵活能力 | 应用或业务流程可以快速集成，使业务环境的变化得以快速响应。
+
+    创建基于企业范围数据的知识库，由此实现更好的决策。
+
+    由于增加了专业技能及业务处理等级，使得在以后的集成项目中缩短提交的时间。 |
+
+    | 发展专门技能、知识传递 | 建立接口文档、提高标准化。
+
+    可以快速开发新的既有流程，从而使得这些流程独立于可能丢弃的专有资源。
+
+    通过成功地保持公司的持续竞争力，增强IT在公司中的显著性。 |
+
+    | 项目专有利益 | 支持员工与客户的设备无关性接入能力，如实现对多种应用的多渠道的内容提交。 |'
+  merge: -1
+  img_proc: true
+- pgno: 407
+  md: '# 奇瑞汽车成功削减了 80% 的开发培训成本和 30% 的实施费用（EAI 平台）
+
+
+    > “有了 Oracle SOA Suite，我们IT 部门的员工现在掌握了开发、管理，以及维护各种系统的技能。我们已经削减了 30% 的实施成本，并且随着我们自己承担更多的应用开发工作，实施成本预计还将不断降低。”
+
+    > —黄孝刚
+
+    > 软件开发科科长
+
+    > 奇瑞汽车股份有限公司'
+  merge: -1
+  img_proc: true
+- pgno: 408
+  md: '# 山推工程机械股份有限公司
+
+    主数据与系统集成项目'
+  merge: -1
+  img_proc: true
+- pgno: 409
+  md: '# Solution Architecture
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_409_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 410
+  md: '# Solution Architecture
+
+
+    # SHANTUI 价值引领 共赢未来
+
+
+    开发管理
+
+
+    +   - 权限管理
+
+    +   - 标准制定
+
+    +   - 开发设计
+
+    +   - 整合分析
+
+    +   - 抽取监控
+
+    +   - 日志监控
+
+    +   - 订阅监控
+
+    +   - 排错管理
+
+
+    主题数据仓库
+
+
+    HR分析 采购分析 销售分析 质量分析 成本分析 盈利分析 费用分析
+
+
+    数据仓库
+
+
+    数据分析接口
+
+
+    全局数据中心
+
+
+    ERP 日系系统 F&I监控
+
+
+    数据中心
+
+
+    统一的集成平台+高效的数据迁移工具+面向服务的应用程序接口，如Weblogic+ODI+WS
+
+
+    其他应用系统 D2B应用系统 员工自助系统 业务支撑系统 办公自动化 历史遗留系统
+
+
+    +   - 内销单价
+
+    +   - 第三方
+
+
+    +   - 网上订单
+
+    +   - 邮件门户
+
+
+    +   - 销售上查询
+
+    +   - 卡片自助
+
+
+    +   - Oracle HR
+
+    +   - WAP HR
+
+    +   - ERP
+
+    +   - 日系统
+
+    +   - 采购
+
+    +   - F系统
+
+
+    +   - Lotus OA
+
+    +   - 景泰OA
+
+
+    +   - OFA
+
+    +   - OSA
+
+
+    SIEE 多维分析 动态分析 数据挖掘
+
+
+    MSTR 多维分析 动态分析 数据挖掘
+
+
+    名品应用 集团报表 集团查询
+
+
+    Portal 销售分析 财务分析 后勤分析 通知管理
+
+
+    OLAP报表 暨查询'
+  merge: -1
+  img_proc: true
+- pgno: 411
+  md: '# 长春一汽'
+  merge: -1
+  img_proc: true
+- pgno: 412
+  md: '# 长春一汽核心ERP整合需求
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_412_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 413
+  md: '# Oracle 为一汽构建SOA方案探索：横向业务应用系统整合总体架构
+
+
+    外部信息门户
+
+
+    信息门户系统（内网）
+
+
+    应用集成平台
+
+
+    适配器
+
+
+    合作伙伴
+
+
+    适配器
+
+
+    ERP
+
+
+    TDS
+
+
+    PDM
+
+
+    OA
+
+
+    SCM
+
+
+    小闭环
+
+
+    MES
+
+
+    DSS
+
+
+    内部业务系统
+
+
+    其它已有和规划中的信息系统
+
+
+    横向整合
+
+
+    向上级提供平台
+
+
+    小闭环
+
+
+    注：该系统随ERP系统的上线会被淘汰，因此只在老数据的导入导出上存在和新系统的数据整合需要
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_413_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 414
+  md: '# Oracle 为一汽构建SOA方案探索：纵向业务应用系统整合总体架构
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_414_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 415
+  md: '# 潍柴动力售后服务系统挑战
+
+
+    +   - 信息孤岛
+
+    +     - 现有的售后服务系统是对其它系统是封闭的
+
+    +   - 多组织，多语言挑战
+
+    +     - 只能为潍柴厂服务，不能为其它主机厂服务
+
+    +     - 不能服务于国外客户
+
+    +   - 不具备扩展性
+
+    +     - 新增的需求难以实现
+
+    +     - 集团内部各个授权主机厂的售后服务系统不统一
+
+    +   - 系统职责不清
+
+    +     - 内外部用户使用同一个遗留的售后服务系统'
+  merge: -1
+  img_proc: true
+- pgno: 416
+  md: '# Oracle 为Haier 构建基于SOA平台的业务流程
+
+
+    业务流程
+
+
+    +   - 零部件
+
+    +   - 检测系统
+
+    +   - 供应商
+
+    +   - 定价
+
+    +   - 采购
+
+    +   - 制造
+
+    +   - 销售
+
+
+    # Oracle SOA 平台
+
+
+    业务流程整合平台(Oracle BPEL)
+
+
+    Web 应用
+
+
+    SOA 集成平台(Oracle ESB/SAP Adapter)
+
+
+    +   - BCC
+
+    +     (合同/限利政策)
+
+    +   - 联网
+
+    +   - 工程管理
+
+    +   - 资金财务
+
+    +   - 物流配送
+
+    +   - 计划排产
+
+    +   - GVS
+
+    +   - 销售预测
+
+    +   - 商业渠道
+
+    +   - 报表
+
+    +   - HP
+
+    +   - 商流工资'
+  merge: -1
+  img_proc: true
+- pgno: 417
+  md: '# Oracle 为航天602直升机数字化生产线构建SOA 服务平台
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_417_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 418
+  md: '# # Oracle SOA构建柴油服务平台
+
+
+    +   - 协同CRM （Oracle EBS）
+
+    +   - 接入多家授权主机厂的售后服务系统
+
+    +   - 成为柴油机行业级别的服务平台'
+  merge: -1
+  img_proc: true
+- pgno: 419
+  md: '# 利用SOA方案进行系统整合的优势
+
+
+    +   - 标准、开放、先进
+
+    +     - SOA集成架构独立于ERP建设之外
+
+    +     - 不干扰，不加重ERP建设负担
+
+    +   - 对ERP系统的认知度高
+
+    +     - Oracle SOA 方案提供了针对SAP系统，OracleEBS系统的适配器，直接识别ERP系统数据的业务意义
+
+    +     - 大大减少了对ERP系统接口集成的开发量
+
+    +   - 在企业内建立了EAI的接口集成管理规范
+
+    +     - EAI平台服务规范：描述已定义的服务接口
+
+    +     - EAI平台接入规范：描述接入EAI平台所需要的条件
+
+    +   - 为IT运维建立标准管理规范
+
+    +   - 在企业内构建的服务总线为SOA蓝图建设奠定了基础设施'
+  merge: -1
+  img_proc: true
+- pgno: 420
+  md: '# 问题...
+
+
+    ![](img/431d4828d5c6073b7e23d9eca159cdeb_420_0.png)'
+  merge: -1
+  img_proc: true

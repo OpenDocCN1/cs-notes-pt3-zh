@@ -1,0 +1,29 @@
+第1部分
+
+KA[i] = 0;
+
+循环体=0;
+
+i=i+1;
+
+read(IMA);
+
+第3部分
+
+MAE-3 IMA;
+
+NO[IMA]=NO[IMA+1];
+
+KA[IMA]=KA[IMA]+1
+
+IMA=IMA+1
+
+循环体
+
+IMA≠MAE
+
+IMA=IMA+1
+
+read(IMA)
+
+确定计数(依A)

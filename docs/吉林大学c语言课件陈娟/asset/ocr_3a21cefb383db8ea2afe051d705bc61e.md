@@ -1,0 +1,19 @@
+# 例7-4 指针运算实例
+
+```
+#include <stdio.h>
+void main(){
+    char str[255], *p;
+    int v;
+    scanf("%s",str);
+    p=str;
+    while( *p!='\0' )
+        p++ ;
+    printf("The string length is %d \n"; p-str);
+}
+```
+
+程序运行若输入：
+abcdef
+则输出结果为
+The string length is 6

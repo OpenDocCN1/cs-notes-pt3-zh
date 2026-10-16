@@ -1,0 +1,23 @@
+# 3. 软件设计
+
++   - 主机一侧的编程。
++   - 主程序：
+
+```
+DATA SEGMENT
+AAA1: DB 256 DUP(?) ; 发数据区
+AAA2: DB 256 DUP(0) ; 收数据区
+DATA ENDS
+CODE SEGMENT
+ASSUME CS:CODE, DS:DATA
+BBB1: MOV AX, DATA
+MOV DS, AX
+MOV AL, 13H ; 写入 ICW1
+OUT 20H, AL
+MOV AL, 08H ; 写入 ICW2
+OUT 22H, AL
+MOV AL, 01H ; 写入 ICW4
+OUT 22H, AL
+MOV AL, 0FBH ; 写入 OCW1
+OUT 22H, AL
+```

@@ -1,0 +1,10 @@
+# Object-Relational Data Models
+
++   - Relational model: flat, “atomic” values
++   - Object Relational Data Models
++     - Extend the relational data model by including object orientation and constructs to deal with added data types.
++     - Allow attributes of tuples to have complex types, including non-atomic values such as nested relations.
++     - Preserve relational foundations, in particular the declarative access to data, while extending modeling power.
++     - Provide upward compatibility with existing relational languages.
+
+![](bbox=[0.0, 0.02, 0.08, 0.12])

@@ -1,0 +1,18 @@
+# Cascading Actions in Referential Integrity
+
++   - **create table** *course* (
++     - *course_id* **char(5) primary key,**
++     - *title* **varchar(20),**
++     - *dept_name* **varchar(20) references** *department*
++     - )
+
++   - **create table** *course* (
++     - …
++     - *dept_name* **varchar(20),**
++     - **foreign key** (*dept_name*) **references** *department*
++       - **on delete cascade**
++       - **on update cascade,**
++     - …
++     - )
+
++   - alternative actions to cascade: **set null**, **set default**

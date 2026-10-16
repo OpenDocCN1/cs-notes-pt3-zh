@@ -1,0 +1,293 @@
+
+![](img/e9111c49b068ca3c37fc762f47ecac61_289_0.png)
+
+## 状态矩阵
+
+|    | 数字 sort=0 | 小数点 sort=1 | 空白字符 sort=2 | 其他字符 sort=3 |
+|---|---|---|---|---|
+| S0 | 拼整数/S1 | /S2 | /S0 | Err1/S4 |
+| S1 | 拼整数/S1 | /S2 | 整数 结束/S4 | Err2/S4 |
+| S2 | 拼小数/S3 | Err3/S4 | 实数 结束/S4 | Err4/S4 |
+| S3 | 拼小数/S3 | Err3/S4 | 合并 结束/S4 | Err4/S4 |
+
+处理前导字符状态(S0);
+处理整数部分状态(S1);
+处理小数点部分状态(S2);
+处理小数部分状态(S3);
+处理错误状态和结束状态 (S4)
+
+开始
+
+结束
+
+初始化：
+s = 0;
+n = 0;
+f = 1.0 ;
+g = 1;
+
+s<4
+
+读(ch)
+
+形成 sort
+
+0
+
+s
+
+1
+
+2
+
+3
+
+sort
+
+0
+
+1
+
+2
+
+3
+
+拼整数；s = 1
+
+s = 2
+
+；
+
+错误(1); s = 4
+
+sort
+
+0
+
+1
+
+2
+
+3
+
+拼整数；s = 1
+
+s = 2
+
+s=4
+
+错误(2); s = 4
+
+sort
+
+0
+
+1
+
+2
+
+3
+
+拼小数；s = 3
+
+错误(3); s = 4
+
+s=4
+
+错误(4); s = 4
+
+sort
+
+0
+
+1
+
+2
+
+3
+
+拼小数；s = 3
+
+错误(3); s = 4
+
+合并整数、小数；s=4
+
+错误(4); s = 4
+
+```
+/* 十六进制翻译函数2 */
+#include "stdio.h"
+#define radix 16
+int n ; /* 整数部分 */
+float f ; /* 小数部分 */
+bool intflag, errflag ; /* 整数标志、错误标志 */
+char ch ; /* 当前读入字符 */
+int num ; /* ch 对应的数值 */
+float g ; /* 翻译小数部分权值 */
+int s , sort ; /* 状态、字符类 */
+void com_integer(void); /* 翻译整数部分 */
+void com_real(void); /* 翻译小数部分 */
+int sort_char(char ); /*字符分类、形成 sort */
+int calculate_char(char); /*计算合法字符的数值*/
+void com_error(int ); /*错误处理*/
+```
+
+```
+void com_integer(void){    /* 翻译整数部分 */
+n = n*radix+num;
+}
+void com_real(void){    /* 翻译小数部分 */
+g = g/radix;
+f = f+num*g;
+}
+```
+
+```
+bool convert2 ( ) {    /* 状态矩阵方法翻译函数 */
+intflag = true ;   /* 首先假设翻译的是整数 */
+errflag = true ;   /* 首先假设翻译正确 */
+s = 0;    /* 状态初值 */
+g = 1.0 ;   /* 小数部分的权值 */
+n = 0;    /* 整数单元 */
+f = 0;    /* 实数单元 */
+while ( s<4 ){
+    ch=getchar();    //读入字符
+    sort=sort_char(ch);//为字符分类
+    if(sort==0)
+    num=calculate_char(ch);//字符对应的数值
+```
+
+```
+switch ( s ){ //状态操作
+case 0: switch (sort){
+case 0: com_integer(); \\遇到数字翻译整数
+s = 1 ;
+break ;
+case 1: s = 2 ; \\遇到小数点
+break ;
+case 2: break ; \\ 前导字符
+case 3: com_error(1);
+}
+break;
+}
+```
+
+### case 1: switch (sort){
+
+case 0: com_integer(); \\ 翻译整数
+break ;
+
+case 1: s = 2; \\翻译整数时遇到小数点
+break ;
+
+case 2: s = 4; \\翻译整数时遇到空白字符
+break ;
+
+case 3: com_error(2); \\翻译整数遇其它字符
+} break;
+
+```
+case 2: switch ( sort ){
+    case 0: com_real(); \\翻译小数
+        s = 3 ;
+        break ;
+    case 2: s = 4; \\翻译整数时遇到空白字符
+        intflag = false ;
+        break ;
+    case 1: com_error(3); \\存在两个以上小数点
+        break;
+    case 3: com_error(4); \\遇到非法字
+    }
+    break;
+```
+
+```
+case 3: switch ( sort ){
+    case 0: com_real();   \\翻译小数
+        break ;
+    case 2: s = 4;   \\翻译整数时遇到空白字符
+        intflag = false ;
+        f = n+f ;
+        break ;
+    case 1: com_error(3); \\存在两个以上小数点
+        break ;
+    case 3: com_error(4); \\翻译小数遇非法字符
+    }
+break;
+```
+
+```
+}/* switch( s ) */
+}/* while( s<4 ) */
+return errflag ;
+}/* bool convert2 */
+```
+
+```
+/*字符分类、形成 sort */
+int sort_char(char ch){
+if( isdigit(ch) ){ //数字字符
+return 0;
+}else{
+if(ch=='.') //小数点
+return 1;
+else
+if(ch===' '||ch==='t'||ch==='\n')
+return 2; //空白字符
+else
+return 3; //非法字符
+}
+}
+```
+
+```
+void com_error(int errnum){
+errflag = false ;
+s=4;
+switch(errnum){
+case 1: printf("#error1:数开始符非法!\n");
+break;
+case 2: printf("#error2:整数部分输入非法字符!\n");
+break;
+case 3: printf("#error3:输入两个或以上小数点!\n");
+break;
+case 4: printf("#error4:小数部分输入非法字符!\n");
+break;
+}
+}
+```
+
+## 程序化简
+
+|    | 数字 sort=0 | 小数点 sort=1 | 空白字符 sort=2 | 其他字符 sort=3 |
+|---|---|---|---|---|
+| S0 | 拼整数/S1   | /S2    | /S0    | Err1/S4    |
+| S1 | 拼整数/S1   | /S2    | 整数 结束/S4 | Err2/S4    |
+| S2 | 拼小数/S3   | Err3/S4   | 实数 结束/S4 | Err4/S4    |
+| S3 | 拼小数/S3   | Err3/S4   | 合并 结束/S4 | Err4/S4    |
+
+|    | 数字    | 小数点    | 空白字符    | 其他字符    |
+|---|---|---|---|---|
+|    | sort=0    | sort=1    | sort=2    | sort=3    |
+| S0   | 拼整数/S1    | /S2    | /S0    | Err1/S3    |
+| S1   | 拼整数/S1    | /S2    | 整数 结束/S3    | Err2/S3    |
+| S2   | 拼小数/S3    | Err3/S3    | 实数 结束/S3    | Err4/S3    |
+
+处理前导字符状态(S0)；
+处理整数部分状态(S1)；
+处理小数部分状态(S2)；
+处理错误状态和结束状态 (S3)
+
+## 化简后的状态图
+
+![](img/e9111c49b068ca3c37fc762f47ecac61_304_0.png)
+
+## 本章小结
+
++   - 结构化的标准流程控制。包括  
++     - 顺序结构  
++     - 分支结构  
++     - 重复结构
+
++   - 重点  
++     - 使用这些控制结构编写程序解决实际问题

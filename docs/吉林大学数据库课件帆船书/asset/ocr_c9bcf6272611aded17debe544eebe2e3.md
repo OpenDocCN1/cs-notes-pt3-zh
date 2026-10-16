@@ -1,0 +1,11 @@
+# Storage Hierarchy (Cont.)
+
++   - **primary storage**: Fastest media but volatile (cache, main memory).
++   - **secondary storage**: next level in hierarchy, non-volatile, moderately fast access time
++     - also called **on-line storage**
++     - E.g. flash memory, magnetic disks
++   - **tertiary storage**: lowest level in hierarchy, non-volatile, slow access time
++     - also called **off-line storage**
++     - E.g. magnetic tape, optical storage
+
+![](bbox=[0.0, 0.0, 0.09, 0.13])

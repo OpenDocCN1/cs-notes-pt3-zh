@@ -1,0 +1,8 @@
+```
+/*已知两个直线方程的斜率和截距，求它们交点*/
+void inter( float ma,float mb,float na,float nb,
+    float *wx,float *wy){
+    *wx=(nb-mb)/(ma-na);
+    *wy=ma*wx+mb;
+}
+```

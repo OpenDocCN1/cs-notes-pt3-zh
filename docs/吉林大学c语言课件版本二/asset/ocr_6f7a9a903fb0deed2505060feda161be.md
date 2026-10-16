@@ -1,0 +1,10 @@
+# # 保留字
+
++   - <保留字> → auto | bool | break | case | char
++   - | _Complex | const | continue
++   - | default | restrict | do | double | else
++   - | enum | extern | float | for | goto
++   - | if | _Imaginary | inline | int | long
++   - | register | return | short | signed
++   - | sizeof | static | struct | switch | typedef
++   - | union | unsigned | void | volatile | while

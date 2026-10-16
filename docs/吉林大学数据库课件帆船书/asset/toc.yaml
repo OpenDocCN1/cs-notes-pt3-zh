@@ -1,0 +1,2352 @@
+- - '##'
+  - 'Chapter 5: Advanced SQL'
+- - '##'
+  - Outline
+- - '##'
+  - Accessing SQL From a Programming Language
+- - '##'
+  - Accessing SQL From a Programming Language
+- - '##'
+  - ODBC
+- - '##'
+  - JDBC
+- - '##'
+  - JDBC Code
+- - '##'
+  - JDBC Code for Older Versions of Java/JDBC
+- - '##'
+  - JDBC Code (Cont.)
+- - '##'
+  - JDBC Code Details
+- - '##'
+  - Prepared Statement
+- - '##'
+  - SQL Injection
+- - '##'
+  - Metadata Features
+- - '##'
+  - Finding Primary Keys
+- - '##'
+  - Transaction Control in JDBC
+- - '##'
+  - Other JDBC Features
+- - '##'
+  - JDBC Resources
+- - '##'
+  - SQLJ
+- - '##'
+  - Embedded SQL
+- - '##'
+  - Embedded SQL (Cont.)
+- - '##'
+  - Embedded SQL (Cont.)
+- - '##'
+  - Embedded SQL (Cont.)
+- - '##'
+  - Embedded SQL (Cont.)
+- - '##'
+  - Embedded SQL (Cont.)
+- - '##'
+  - Updates Through Embedded SQL
+- - '##'
+  - Extensions to SQL
+- - '##'
+  - Functions and Procedures
+- - '##'
+  - SQL functions (Cont.)
+- - '##'
+  - Table Functions
+- - '##'
+  - SQL Procedures
+- - '##'
+  - Language Constructs for Procedures & Functions
+- - '##'
+  - Language Constructs (Cont.)
+- - '##'
+  - Language Constructs (Cont.)
+- - '##'
+  - External Language Routines
+- - '##'
+  - External Language Routines
+- - '##'
+  - External Language Routines (Cont.)
+- - '##'
+  - Security with External Language Routines
+- - '##'
+  - Triggers
+- - '##'
+  - Triggers
+- - '##'
+  - Triggering Events and Actions in SQL
+- - '##'
+  - Trigger to Maintain credits_earned value
+- - '##'
+  - Statement Level Triggers
+- - '##'
+  - When Not To Use Triggers
+- - '##'
+  - When Not To Use Triggers (Cont.)
+- - '##'
+  - Recursive Queries
+- - '##'
+  - Recursion in SQL
+- - '##'
+  - The Power of Recursion
+- - '##'
+  - The Power of Recursion
+- - '##'
+  - Example of Fixed-Point Computation
+- - '##'
+  - Advanced Aggregation Features
+- - '##'
+  - Ranking
+- - '##'
+  - Ranking
+- - '##'
+  - Ranking (Cont.)
+- - '##'
+  - Ranking (Cont.)
+- - '##'
+  - Windowing
+- - '##'
+  - Data Analysis and OLAP
+- - '##'
+  - Example sales relation
+- - '##'
+  - Cross Tabulation of sales by item_name and color
+- - '##'
+  - Data Cube
+- - '##'
+  - Hierarchies on Dimensions
+- - '##'
+  - Cross Tabulation With Hierarchy
+- - '##'
+  - Relational Representation of Cross-tabs
+- - '##'
+  - Extended Aggregation to Support OLAP
+- - '##'
+  - Online Analytical Processing Operations
+- - '##'
+  - Online Analytical Processing Operations
+- - '##'
+  - Extended Aggregation (Cont.)
+- - '##'
+  - Extended Aggregation (Cont.)
+- - '##'
+  - Online Analytical Processing Operations
+- - '##'
+  - OLAP Implementation
+- - '##'
+  - OLAP Implementation (Cont.)
+- - '##'
+  - End of Chapter 5
+- - '##'
+  - 'Chapter 6: Formal Relational Query Languages'
+- - '##'
+  - Outline
+- - '##'
+  - Relational Algebra
+- - '##'
+  - Select Operation
+- - '##'
+  - Project Operation
+- - '##'
+  - Union Operation
+- - '##'
+  - Set Difference Operation
+- - '##'
+  - Set-Intersection Operation
+- - '##'
+  - Cartesian-Product Operation
+- - '##'
+  - Rename Operation
+- - '##'
+  - Formal Definition
+- - '##'
+  - Tuple Relational Calculus
+- - '##'
+  - Tuple Relational Calculus
+- - '##'
+  - Predicate Calculus Formula
+- - '##'
+  - Example Queries
+- - '##'
+  - Example Queries
+- - '##'
+  - Example Queries
+- - '##'
+  - Universal Quantification
+- - '##'
+  - Safety of Expressions
+- - '###'
+  - Safety of Expressions (Cont.)
+- - '##'
+  - Domain Relational Calculus
+- - '##'
+  - Example Queries
+- - '##'
+  - Safety of Expressions
+- - '##'
+  - Universal Quantification
+- - '##'
+  - End of Chapter 6
+- - '##'
+  - 'Chapter 8: Relational Database Design'
+- - '##'
+  - 'Chapter 8: Relational Database Design'
+- - '##'
+  - Combine Schemas?
+- - '##'
+  - A Combined Schema Without Repetition
+- - '##'
+  - What About Smaller Schemas?
+- - '##'
+  - A Lossy Decomposition
+- - '##'
+  - Example of Lossless-Join Decomposition
+- - '##'
+  - First Normal Form
+- - '##'
+  - First Normal Form (Cont’d)
+- - '##'
+  - Goal — Devise a Theory for the Following
+- - '##'
+  - Functional Dependencies
+- - '##'
+  - Functional Dependencies (Cont.)
+- - '##'
+  - Functional Dependencies (Cont.)
+- - '##'
+  - Use of Functional Dependencies
+- - '##'
+  - Boyce-Codd Normal Form
+- - '##'
+  - Decomposing a Schema into BCNF
+- - '##'
+  - BCNF and Dependency Preservation
+- - '##'
+  - Third Normal Form
+- - '##'
+  - Goals of Normalization
+- - '##'
+  - How good is BCNF?
+- - '##'
+  - How good is BCNF? (Cont.)
+- - '##'
+  - How good is BCNF? (Cont.)
+- - '##'
+  - Functional-Dependency Theory
+- - '##'
+  - Closure of a Set of Functional Dependencies
+- - '##'
+  - Closure of a Set of Functional Dependencies
+- - '##'
+  - Example
+- - '##'
+  - Procedure for Computing F⁺
+- - '##'
+  - Closure of Functional Dependencies (Cont.)
+- - '##'
+  - Closure of Attribute Sets
+- - '##'
+  - Example of Attribute Set Closure
+- - '##'
+  - Uses of Attribute Closure
+- - '##'
+  - Canonical Cover
+- - '##'
+  - Testing if an Attribute is Extraneous
+- - '##'
+  - Canonical Cover
+- - '##'
+  - Computing a Canonical Cover
+- - '##'
+  - Lossless-join Decomposition
+- - '##'
+  - Example
+- - '##'
+  - Dependency Preservation
+- - '##'
+  - Testing for Dependency Preservation
+- - '##'
+  - Example
+- - '##'
+  - Testing for BCNF
+- - '##'
+  - Testing Decomposition for BCNF
+- - '##'
+  - BCNF Decomposition Algorithm
+- - '##'
+  - Example of BCNF Decomposition
+- - '##'
+  - Example of BCNF Decomposition
+- - '##'
+  - BCNF Decomposition (Cont.)
+- - '##'
+  - 'Third Normal Form: Motivation'
+- - '##'
+  - 3NF Example
+- - '##'
+  - Redundancy in 3NF
+- - '##'
+  - Testing for 3NF
+- - '##'
+  - 3NF Decomposition Algorithm
+- - '##'
+  - 3NF Decomposition Algorithm (Cont.)
+- - '##'
+  - '3NF Decomposition: An Example'
+- - '##'
+  - 3NF Decomposition Example (Cont.)
+- - '##'
+  - Comparison of BCNF and 3NF
+- - '##'
+  - Design Goals
+- - '##'
+  - Multivalued Dependencies
+- - '##'
+  - Multivalued Dependencies (MVDs)
+- - '##'
+  - MVD (Cont.)
+- - '##'
+  - Example
+- - '##'
+  - Example (Cont.)
+- - '##'
+  - Use of Multivalued Dependencies
+- - '##'
+  - Theory of MVDs
+- - '##'
+  - Fourth Normal Form
+- - '##'
+  - Restriction of Multivalued Dependencies
+- - '##'
+  - 4NF Decomposition Algorithm
+- - '##'
+  - Example
+- - '##'
+  - Further Normal Forms
+- - '##'
+  - Overall Database Design Process
+- - '##'
+  - ER Model and Normalization
+- - '##'
+  - Denormalization for Performance
+- - '##'
+  - Other Design Issues
+- - '##'
+  - Modeling Temporal Data
+- - '##'
+  - Modeling Temporal Data (Cont.)
+- - '##'
+  - End of Chapter
+- - '##'
+  - Proof of Correctness of 3NF Decomposition Algorithm
+- - '##'
+  - Correctness of 3NF Decomposition Algorithm
+- - '##'
+  - Correctness of 3NF Decomposition Algorithm (Cont’d.)
+- - '##'
+  - Correctness of 3NF Decomposition (Cont’d.)
+- - '##'
+  - Correctness of 3NF Decomposition (Cont’d.)
+- - '##'
+  - Figure 8.02
+- - '##'
+  - Figure 8.03
+- - '##'
+  - Figure 8.04
+- - '##'
+  - Figure 8.05
+- - '##'
+  - Figure 8.06
+- - '##'
+  - Figure 8.14
+- - '##'
+  - Figure 8.15
+- - '##'
+  - Figure 8.17
+- - '##'
+  - 'Chapter 9: Application Design and Development'
+- - '##'
+  - 'Chapter 9: Application Design and Development'
+- - '##'
+  - APPLICATION PROGRAMS AND USER INTERFACES
+- - '##'
+  - APPLICATION ARCHITECTURE EVOLUTION
+- - '##'
+  - Web Interface
+- - '##'
+  - The World Wide Web
+- - '##'
+  - Uniform Resource Locators
+- - '##'
+  - HTML and HTTP
+- - '##'
+  - Sample HTML Source Text
+- - '##'
+  - Display of Sample HTML Source
+- - '##'
+  - Web Servers
+- - '##'
+  - Three-Layer Web Architecture
+- - '##'
+  - Two-Layer Web Architecture
+- - '##'
+  - HTTP and Sessions
+- - '##'
+  - Sessions and Cookies
+- - '##'
+  - Example Servlet Code
+- - '##'
+  - Servlet Sessions
+- - '##'
+  - SERVLET SUPPORT
+- - '##'
+  - Server-Side Scripting
+- - '##'
+  - JAVA SERVER PAGES (JSP)
+- - '##'
+  - PHP
+- - '##'
+  - Client Side Scripting
+- - '##'
+  - Client Side Scripting and Security
+- - '##'
+  - JAVASCRIPT
+- - '##'
+  - JAVASCRIPT
+- - '##'
+  - Application Architectures
+- - '##'
+  - APPLICATION ARCHITECTURES
+- - '##'
+  - APPLICATION ARCHITECTURE
+- - '##'
+  - BUSINESS LOGIC LAYER
+- - '##'
+  - OBJECT-RELATIONAL MAPPING
+- - '##'
+  - OBJECT-RELATIONAL MAPPING AND HIBERNATE (CONT.)
+- - '##'
+  - WEB SERVICES
+- - '##'
+  - RAPID APPLICATION DEVELOPMENT
+- - '##'
+  - ASP.NET AND VISUAL STUDIO
+- - '##'
+  - Application Performance
+- - '##'
+  - Improving Web Server Performance
+- - '##'
+  - Application Security
+- - '##'
+  - SQL Injection
+- - '##'
+  - CROSS SITE SCRIPTING
+- - '##'
+  - CROSS SITE SCRIPTING
+- - '##'
+  - PASSWORD LEAKAGE
+- - '##'
+  - APPLICATION AUTHENTICATION
+- - '##'
+  - APPLICATION AUTHENTICATION
+- - '##'
+  - SINGLE SIGN-ON
+- - '##'
+  - APPLICATION-LEVEL AUTHORIZATION
+- - '##'
+  - APPLICATION-LEVEL AUTHORIZATION (CONT.)
+- - '##'
+  - AUDIT TRAILS
+- - '##'
+  - Encryption
+- - '##'
+  - Encryption
+- - '##'
+  - Encryption (Cont.)
+- - '##'
+  - ENCRYPTION (CONT.)
+- - '##'
+  - ENCRYPTION IN DATABASES
+- - '##'
+  - ENCRYPTION AND AUTHENTICATION
+- - '##'
+  - End of Chapter
+- - '##'
+  - Digital Certificates
+- - '##'
+  - A formatted report
+- - '##'
+  - Acme Supply Company, Inc.
+- - '##'
+  - Figure 9.11
+- - '##'
+  - Web Interfaces to Database (Cont.)
+- - '##'
+  - 'Chapter 10: Storage and File Structure'
+- - '##'
+  - 'Chapter 10: Storage and File Structure'
+- - '##'
+  - Classification of Physical Storage Media
+- - '##'
+  - Physical Storage Media
+- - '##'
+  - Physical Storage Media (Cont.)
+- - '##'
+  - Flash memory
+- - '##'
+  - Physical Storage Media (Cont.)
+- - '###'
+  - Magnetic-disk
+- - '##'
+  - Physical Storage Media (Cont.)
+- - '###'
+  - Optical storage
+- - '##'
+  - Physical Storage Media (Cont.)
+- - '###'
+  - Tape storage
+- - '##'
+  - Storage Hierarchy
+- - '##'
+  - Storage Hierarchy (Cont.)
+- - '##'
+  - Magnetic Hard Disk Mechanism
+- - '##'
+  - Magnetic Disks
+- - '##'
+  - Magnetic Disks (Cont.)
+- - '##'
+  - Disk Subsystem
+- - '##'
+  - Disk Subsystem
+- - '##'
+  - Performance Measures of Disks
+- - '##'
+  - Performance Measures (Cont.)
+- - '##'
+  - Optimization of Disk-Block Access
+- - '##'
+  - Optimization of Disk Block Access (Cont.)
+- - '##'
+  - Optimization of Disk Block Access (Cont.)
+- - '##'
+  - Flash Storage
+- - '##'
+  - RAID
+- - '##'
+  - 'RAID: Redundant Arrays of Independent Disks'
+- - '##'
+  - Improvement of Reliability via Redundancy
+- - '##'
+  - Improvement in Performance via Parallelism
+- - '##'
+  - RAID Levels
+- - '##'
+  - RAID Levels (Cont.)
+- - '##'
+  - RAID Levels (Cont.)
+- - '##'
+  - RAID Levels (Cont.)
+- - '###'
+  - RAID Level 4 (Cont.)
+- - '##'
+  - RAID Levels (Cont.)
+- - '##'
+  - RAID Levels (Cont.)
+- - '##'
+  - Choice of RAID Level
+- - '##'
+  - Choice of RAID Level (Cont.)
+- - '##'
+  - Hardware Issues
+- - '##'
+  - Hardware Issues (Cont.)
+- - '##'
+  - Optical Disks
+- - '##'
+  - Magnetic Tapes
+- - '##'
+  - File Organization, Record Organization and Storage Access
+- - '###'
+  - File Organization
+- - '##'
+  - Fixed-Length Records
+- - '##'
+  - Deleting record 3 and compacting
+- - '##'
+  - Deleting record 3 and moving last record
+- - '##'
+  - Free Lists
+- - '##'
+  - Variable-Length Records
+- - '##'
+  - 'Variable-Length Records: Slotted Page Structure'
+- - '##'
+  - Organization of Records in Files
+- - '##'
+  - Sequential File Organization
+- - '##'
+  - Sequential File Organization (Cont.)
+- - '##'
+  - Multitable Clustering File Organization
+- - '##'
+  - Multitable Clustering File Organization (cont.)
+- - '##'
+  - Relational Representation of System Metadata
+- - '##'
+  - Storage Access
+- - '##'
+  - Buffer Manager
+- - '##'
+  - Buffer-Replacement Policies
+- - '##'
+  - Buffer-Replacement Policies (Cont.)
+- - '##'
+  - End of Chapter 10
+- - '##'
+  - Figure 10.03
+- - '##'
+  - Figure 10.18
+- - '##'
+  - Figure in-10.1
+- - '##'
+  - 'Chapter 11: Indexing and Hashing'
+- - '##'
+  - 'Chapter 12: Indexing and Hashing'
+- - '##'
+  - Basic Concepts
+- - '##'
+  - Index Evaluation Metrics
+- - '##'
+  - Ordered Indices
+- - '##'
+  - Dense Index Files
+- - '##'
+  - Dense Index Files (Cont.)
+- - '##'
+  - Sparse Index Files
+- - '##'
+  - Sparse Index Files (Cont.)
+- - '##'
+  - Secondary Indices Example
+- - '##'
+  - Primary and Secondary Indices
+- - '##'
+  - Multilevel Index
+- - '##'
+  - Multilevel Index (Cont.)
+- - '##'
+  - 'Index Update: Deletion'
+- - '##'
+  - 'Single-level index entry deletion:'
+- - '##'
+  - 'Index Update: Insertion'
+- - '##'
+  - Secondary Indices
+- - '##'
+  - B⁺-Tree Index Files
+- - '##'
+  - Example of B+-Tree
+- - '##'
+  - B⁺-Tree Index Files (Cont.)
+- - '##'
+  - B⁺-Tree Node Structure
+- - '##'
+  - Leaf Nodes in B⁺-Trees
+- - '##'
+  - Non-Leaf Nodes in B⁺-Trees
+- - '##'
+  - Example of B⁺-tree
+- - '##'
+  - Observations about B⁺-trees
+- - '##'
+  - Queries on B⁺-Trees
+- - '##'
+  - Handling Duplicates
+- - '##'
+  - Handling Duplicates
+- - '##'
+  - Queries on B⁺-Trees (Cont.)
+- - '##'
+  - 'Updates on B⁺-Trees: Insertion'
+- - '##'
+  - 'Updates on B⁺-Trees: Insertion (Cont.)'
+- - '##'
+  - B⁺-Tree Insertion
+- - '##'
+  - B⁺-Tree Insertion
+- - '##'
+  - Examples of B+-Tree Deletion
+- - '##'
+  - Example of B⁺-tree Deletion (Cont.)
+- - '##'
+  - 'Updates on B+-Trees: Deletion'
+- - '##'
+  - Non-Unique Search Keys
+- - '##'
+  - B+-Tree File Organization
+- - '##'
+  - B+-Tree File Organization (Cont.)
+- - '##'
+  - Other Issues in Indexing
+- - '###'
+  - Record relocation and secondary indices
+- - '##'
+  - Indexing Strings
+- - '##'
+  - Bulk Loading and Bottom-Up Build
+- - '##'
+  - B-Tree Index Files
+- - '##'
+  - B-Tree Index File Example
+- - '##'
+  - B-Tree Index Files (Cont.)
+- - '##'
+  - Multiple-Key Access
+- - '##'
+  - Indices on Multiple Keys
+- - '##'
+  - Other Features
+- - '##'
+  - Hashing
+- - '###'
+  - Static Hashing
+- - '###'
+  - Example of Hash File Organization
+- - '###'
+  - Hash Functions
+- - '###'
+  - Handling of Bucket Overflows
+- - '###'
+  - Handling of Bucket Overflows (Cont.)
+- - '##'
+  - Hash Indices
+- - '##'
+  - Example of Hash Index
+- - '##'
+  - Deficiencies of Static Hashing
+- - '##'
+  - General Extendable Hash Structure
+- - '##'
+  - Use of Extendable Hash Structure
+- - '##'
+  - Insertion in Extendable Hash Structure (Cont)
+- - '##'
+  - Deletion in Extendable Hash Structure
+- - '##'
+  - 'Use of Extendable Hash Structure: Example'
+- - '##'
+  - Example (Cont.)
+- - '##'
+  - Example (Cont.)
+- - '##'
+  - Example (Cont.)
+- - '##'
+  - Example (Cont.)
+- - '##'
+  - Example (Cont.)
+- - '##'
+  - Example (Cont.)
+- - '##'
+  - Example (Cont.)
+- - '##'
+  - Extendable Hashing vs. Other Schemes
+- - '##'
+  - Comparison of Ordered Indexing and Hashing
+- - '##'
+  - Bitmap Indices
+- - '##'
+  - Bitmap Indices (Cont.)
+- - '##'
+  - Efficient Implementation of Bitmap Operations
+- - '##'
+  - Index Definition in SQL
+- - '##'
+  - End of Chapter
+- - '##'
+  - Figure 11.01
+- - '##'
+  - Figure 11.15
+- - '##'
+  - Partitioned Hashing
+- - '##'
+  - Grid Files
+- - '###'
+  - Example Grid File for account
+- - '###'
+  - Queries on a Grid File
+- - '###'
+  - Grid Files (Cont.)
+- - '##'
+  - 'Chapter 12: Query Processing'
+- - '###'
+  - Basic Steps in Query Processing
+- - '###'
+  - Basic Steps in Query Processing (Cont.)
+- - '###'
+  - 'Basic Steps in Query Processing: Optimization'
+- - '##'
+  - 'Basic Steps: Optimization (Cont.)'
+- - '##'
+  - Measures of Query Cost (Cont.)
+- - '##'
+  - Selection Operation
+- - '##'
+  - Selections Using Indices
+- - '##'
+  - Selections Involving Comparisons
+- - '##'
+  - Implementation of Complex Selections
+- - '##'
+  - Algorithms for Complex Selections
+- - '##'
+  - Sorting
+- - '##'
+  - External Sort-Merge
+- - '##'
+  - External Sort-Merge (Cont.)
+- - '##'
+  - External Sort-Merge (Cont.)
+- - '##'
+  - 'Example: External Sorting Using Sort-Merge'
+- - '##'
+  - External Merge Sort (Cont.)
+- - '##'
+  - External Merge Sort (Cont.)
+- - '##'
+  - Join Operation
+- - '##'
+  - Nested-Loop Join
+- - '##'
+  - Nested-Loop Join (Cont.)
+- - '##'
+  - Block Nested-Loop Join
+- - '##'
+  - Block Nested-Loop Join (Cont.)
+- - '##'
+  - Indexed Nested-Loop Join
+- - '##'
+  - Example of Nested-Loop Join Costs
+- - '##'
+  - Merge-Join
+- - '##'
+  - Merge-Join (Cont.)
+- - '##'
+  - Hash-Join
+- - '##'
+  - Hash-Join (Cont.)
+- - '##'
+  - Hash-Join algorithm (Cont.)
+- - '##'
+  - Handling of Overflows
+- - '##'
+  - Cost of Hash-Join
+- - '##'
+  - Example of Cost of Hash-Join
+- - '##'
+  - Hybrid Hash–Join
+- - '##'
+  - Complex Joins
+- - '##'
+  - Other Operations
+- - '##'
+  - 'Other Operations : Aggregation'
+- - '##'
+  - 'Other Operations : Set Operations'
+- - '##'
+  - 'Other Operations : Outer Join'
+- - '##'
+  - Evaluation of Expressions
+- - '##'
+  - Materialization
+- - '##'
+  - Pipelining
+- - '##'
+  - Pipelining (Cont.)
+- - '##'
+  - Evaluation Algorithms for Pipelining
+- - '##'
+  - End of Chapter
+- - '##'
+  - Figure 12.02
+- - '##'
+  - Selection Operation (Cont.)
+- - '##'
+  - 'Chapter 13: Query Optimization'
+- - '##'
+  - 'Chapter 13: Query Optimization'
+- - '##'
+  - Introduction
+- - '##'
+  - Introduction (Cont.)
+- - '##'
+  - Introduction (Cont.)
+- - '##'
+  - Generating Equivalent Expressions
+- - '##'
+  - Transformation of Relational Expressions
+- - '##'
+  - Equivalence Rules
+- - '##'
+  - Equivalence Rules (Cont.)
+- - '##'
+  - Pictorial Depiction of Equivalence Rules
+- - '##'
+  - Equivalence Rules (Cont.)
+- - '##'
+  - Equivalence Rules (Cont.)
+- - '##'
+  - Equivalence Rules (Cont.)
+- - '##'
+  - Exercise
+- - '##'
+  - 'Transformation Example: Pushing Selections'
+- - '##'
+  - 'Transformation Example: Pushing Projections'
+- - '##'
+  - Join Ordering Example
+- - '##'
+  - Join Ordering Example (Cont.)
+- - '##'
+  - Enumeration of Equivalent Expressions
+- - '##'
+  - Implementing Transformation Based Optimization
+- - '##'
+  - Cost Estimation
+- - '##'
+  - Choice of Evaluation Plans
+- - '##'
+  - Cost-Based Optimization
+- - '##'
+  - Dynamic Programming in Optimization
+- - '##'
+  - Join Order Optimization Algorithm
+- - '##'
+  - Left Deep Join Trees
+- - '##'
+  - Interesting Sort Orders
+- - '##'
+  - Cost Based Optimization with Equivalence Rules
+- - '##'
+  - Heuristic Optimization
+- - '##'
+  - Structure of Query Optimizers
+- - '##'
+  - Structure of Query Optimizers (Cont.)
+- - '##'
+  - Statistics for Cost Estimation
+- - '##'
+  - Statistical Information for Cost Estimation
+- - '##'
+  - Histograms
+- - '##'
+  - Size Estimation of Complex Selections
+- - '##'
+  - 'Join Operation: Running Example'
+- - '##'
+  - Estimation of the Size of Joins
+- - '##'
+  - Size Estimation for Other Operations
+- - '##'
+  - Estimation of Number of Distinct Values
+- - '###'
+  - 'Selections: \(\sigma_\theta(r)\)'
+- - '###'
+  - 'Joins: \(r \bowtie s\)'
+- - '##'
+  - Estimation of Distinct Values (Cont.)
+- - '##'
+  - Additional Optimization Techniques
+- - '##'
+  - Optimizing Nested Subqueries
+- - '##'
+  - Optimizing Nested Subqueries (Cont.)
+- - '##'
+  - Optimizing Nested Subqueries (Cont.)
+- - '##'
+  - Materialized Views
+- - '##'
+  - Materialized View Maintenance
+- - '##'
+  - Incremental View Maintenance
+- - '##'
+  - Join Operation
+- - '##'
+  - Aggregation Operations
+- - '##'
+  - Other Operations
+- - '##'
+  - Handling Expressions
+- - '##'
+  - Query Optimization and Materialized Views
+- - '##'
+  - Materialized View Selection
+- - '##'
+  - Additional Optimization Techniques
+- - '###'
+  - Optimization of Updates
+- - '####'
+  - Halloween problem
+- - '###'
+  - Join Minimization
+- - '###'
+  - Multiquery Optimization
+- - '###'
+  - Parametric Query Optimization
+- - '##'
+  - Extra Slides
+- - '###'
+  - Plan Stability Across Optimizer Changes
+- - '###'
+  - End of Chapter
+- - '###'
+  - Figure 13.01
+- - '###'
+  - Figure 13.02
+- - '###'
+  - Figure 13.03
+- - '###'
+  - Figure 13.04
+- - '###'
+  - Figure 13.06
+- - '###'
+  - Figure 13.08
+- - '##'
+  - 'Chapter 14: Transactions'
+- - '###'
+  - Outline
+- - '###'
+  - Transaction Concept
+- - '###'
+  - Required Properties of a Transaction
+- - '###'
+  - Required Properties of a Transaction (Cont.)
+- - '##'
+  - Required Properties of a Transaction (Cont.)
+- - '##'
+  - ACID Properties
+- - '##'
+  - Transaction State
+- - '##'
+  - Transaction State (Cont.)
+- - '##'
+  - Concurrent Executions
+- - '##'
+  - Schedules
+- - '##'
+  - Schedule 1
+- - '##'
+  - Schedule 2
+- - '##'
+  - Schedule 3
+- - '##'
+  - Schedule 4
+- - '##'
+  - Serializability
+- - '##'
+  - Simplified view of transactions
+- - '##'
+  - Conflicting Instructions
+- - '##'
+  - Conflict Serializability (Cont.)
+- - '##'
+  - Conflict Serializability (Cont.)
+- - '##'
+  - Precedence Graph
+- - '##'
+  - Testing for Conflict Serializability
+- - '##'
+  - Recoverable Schedules
+- - '##'
+  - Cascading Rollbacks
+- - '##'
+  - Cascadeless Schedules
+- - '##'
+  - Concurrency Control
+- - '##'
+  - Weak Levels of Consistency
+- - '##'
+  - Levels of Consistency in SQL-92
+- - '##'
+  - Transaction Definition in SQL
+- - '##'
+  - Other Notions of Serializability
+- - '###'
+  - View Serializability
+- - '###'
+  - View Serializability (Cont.)
+- - '###'
+  - Test for View Serializability
+- - '###'
+  - More Complex Notions of Serializability
+- - '##'
+  - End of Chapter 14
+- - '##'
+  - 'Chapter 15: Concurrency Control'
+- - '###'
+  - Outline
+- - '###'
+  - Lock-Based Protocols
+- - '###'
+  - Lock-Based Protocols (Cont.)
+- - '##'
+  - Lock-Based Protocols (Cont.)
+- - '##'
+  - The Two-Phase Locking Protocol
+- - '##'
+  - The Two-Phase Locking Protocol (Cont.)
+- - '##'
+  - Lock Conversions
+- - '##'
+  - Automatic Acquisition of Locks
+- - '##'
+  - Automatic Acquisition of Locks (Cont.)
+- - '##'
+  - Deadlocks
+- - '##'
+  - Deadlocks (Cont.)
+- - '##'
+  - Deadlocks (Cont.)
+- - '##'
+  - Implementation of Locking
+- - '##'
+  - Lock Table
+- - '##'
+  - Deadlock Handling
+- - '##'
+  - More Deadlock Prevention Strategies
+- - '##'
+  - Deadlock prevention (Cont.)
+- - '##'
+  - 'Timeout-Based Schemes:'
+- - '##'
+  - Deadlock Detection
+- - '##'
+  - Deadlock Detection (Cont.)
+- - '##'
+  - Deadlock Recovery
+- - '##'
+  - Multiple Granularity
+- - '##'
+  - Example of Granularity Hierarchy
+- - '##'
+  - Intention Lock Modes
+- - '##'
+  - Compatibility Matrix with Intention Lock Modes
+- - '##'
+  - Multiple Granularity Locking Scheme
+- - '##'
+  - Timestamp-Based Protocols
+- - '##'
+  - Timestamp-Based Protocols (Cont.)
+- - '##'
+  - Example Use of the Protocol
+- - '##'
+  - Correctness of Timestamp-Ordering Protocol
+- - '##'
+  - Recoverability and Cascade Freedom
+- - '##'
+  - Thomas' Write Rule
+- - '##'
+  - Validation-Based Protocol
+- - '##'
+  - Validation-Based Protocol (Cont.)
+- - '##'
+  - Validation Test for Transaction Tj
+- - '##'
+  - Schedule Produced by Validation
+- - '##'
+  - Multiversion Schemes
+- - '##'
+  - Multiversion Timestamp Ordering
+- - '##'
+  - Multiversion Timestamp Ordering (Cont)
+- - '##'
+  - Multiversion Two-Phase Locking
+- - '##'
+  - Multiversion Two-Phase Locking (Cont.)
+- - '##'
+  - 'MVCC: Implementation Issues'
+- - '##'
+  - Snapshot Isolation
+- - '###'
+  - Snapshot Read
+- - '###'
+  - 'Snapshot Write: First Committer Wins'
+- - '###'
+  - Benefits of SI
+- - '##'
+  - Snapshot Isolation
+- - '##'
+  - Snapshot Isolation Anomalies
+- - '##'
+  - SI In Oracle and PostgreSQL
+- - '##'
+  - SI In Oracle and PostgreSQL
+- - '##'
+  - Insert and Delete Operations
+- - '##'
+  - Insert and Delete Operations (Cont.)
+- - '##'
+  - Index Locking Protocol
+- - '##'
+  - Next-Key Locking
+- - '##'
+  - Concurrency in Index Structures
+- - '##'
+  - Concurrency in Index Structures (Cont.)
+- - '##'
+  - Weak Levels of Consistency
+- - '##'
+  - Weak Levels of Consistency in SQL
+- - '##'
+  - Transactions across User Interaction
+- - '##'
+  - End of Module 16
+- - '##'
+  - Deadlocks
+- - '##'
+  - 'Chapter 16: Recovery System'
+- - '###'
+  - Failure Classification
+- - '###'
+  - Recovery Algorithms
+- - '###'
+  - Stable-Storage Implementation
+- - '##'
+  - Stable-Storage Implementation (Cont.)
+- - '##'
+  - Data Access
+- - '##'
+  - Example of Data Access
+- - '##'
+  - Data Access (Cont.)
+- - '##'
+  - Recovery and Atomicity
+- - '##'
+  - Immediate Database Modification
+- - '##'
+  - Transaction Commit
+- - '##'
+  - Immediate Database Modification Example
+- - '##'
+  - Concurrency Control and Recovery
+- - '##'
+  - Undo and Redo on Recovering from Failure
+- - '##'
+  - Immediate DB Modification Recovery Example
+- - '##'
+  - Checkpoints
+- - '##'
+  - Checkpoints (Cont.)
+- - '##'
+  - Example of Checkpoints
+- - '##'
+  - Recovery Algorithm
+- - '##'
+  - Recovery Algorithm
+- - '##'
+  - Recovery Algorithm (Cont.)
+- - '##'
+  - Recovery Algorithm (Cont.)
+- - '##'
+  - Example of Recovery
+- - '##'
+  - Beginning of log
+- - '##'
+  - Redo Pass
+- - '##'
+  - Undo Pass
+- - '##'
+  - Log Record Buffering
+- - '##'
+  - Log Record Buffering (Cont.)
+- - '##'
+  - Database Buffering
+- - '##'
+  - Database Buffering (Cont.)
+- - '##'
+  - Buffer Management (Cont.)
+- - '##'
+  - Buffer Management (Cont.)
+- - '##'
+  - Fuzzy Checkpointing
+- - '##'
+  - Fuzzy Checkpointing (Cont.)
+- - '##'
+  - Failure with Loss of Nonvolatile Storage
+- - '##'
+  - Recovering from Failure of Non-Volatile Storage
+- - '##'
+  - Recovery with Early Lock Release and Logical Undo Operations
+- - '###'
+  - Recovery with Early Lock Release
+- - '###'
+  - Logical Undo Logging
+- - '###'
+  - Physical Redo
+- - '###'
+  - Operation Logging (Cont.)
+- - '###'
+  - Transaction Rollback with Logical Undo
+- - '##'
+  - Transaction Rollback with Logical Undo (Cont.)
+- - '##'
+  - Transaction Rollback with Logical Undo
+- - '###'
+  - Transaction rollback during normal operation
+- - '##'
+  - Failure Recovery with Logical Undo
+- - '###'
+  - Redo Pass
+- - '###'
+  - Undo Pass
+- - '##'
+  - 'Transaction Rollback: Another Example'
+- - '##'
+  - Recovery Algorithm with Logical Undo
+- - '##'
+  - Recovery with Logical Undo (Cont.)
+- - '##'
+  - ARIES Recovery Algorithm
+- - '##'
+  - ARIES
+- - '##'
+  - ARIES Optimizations
+- - '##'
+  - 'ARIES Data Structures: Page LSN'
+- - '##'
+  - 'ARIES Data Structures: Log Record'
+- - '##'
+  - 'ARIES Data Structures: DirtyPage Table'
+- - '##'
+  - ARIES Data Structures
+- - '##'
+  - 'ARIES Data Structures: Checkpoint Log'
+- - '##'
+  - ARIES Recovery Algorithm
+- - '##'
+  - 'Aries Recovery: 3 Passes'
+- - '##'
+  - 'ARIES Recovery: Analysis'
+- - '###'
+  - Analysis pass
+- - '###'
+  - Analysis pass (cont.)
+- - '##'
+  - ARIES Redo Pass
+- - '##'
+  - ARIES Undo Actions
+- - '##'
+  - 'ARIES: Undo Pass'
+- - '###'
+  - 'Undo pass:'
+- - '##'
+  - Recovery Actions in ARIES
+- - '##'
+  - Other ARIES Features
+- - '##'
+  - Remote Backup Systems
+- - '##'
+  - End of Chapter 16
+- - '##'
+  - Figure 16.01
+- - '##'
+  - Figure 16.02
+- - '##'
+  - Figure 16.03
+- - '##'
+  - Figure 16.04
+- - '##'
+  - Figure 16.05
+- - '##'
+  - Figure 16.06
+- - '##'
+  - Figure 16.08
+- - '##'
+  - Figure 16.09
+- - '##'
+  - Figure 16.10
+- - '##'
+  - Extra
+- - '##'
+  - Shadow Paging
+- - '###'
+  - Sample Page Table
+- - '##'
+  - Example of Shadow Paging
+- - '##'
+  - Shadow Paging (Cont.)
+- - '##'
+  - Shadow Paging (Cont.)
+- - '##'
+  - Block Storage Operations
+- - '##'
+  - Portion of the Database Log Corresponding to T₀ and T₁
+- - '##'
+  - State of the Log and Database Corresponding to T0 and T1
+- - '###'
+  - Log
+- - '###'
+  - Database
+- - '##'
+  - Portion of the System Log Corresponding to T₀ and T₁
+- - '##'
+  - State of System Log and Database Corresponding to $T_0$ and $T_1$
+- - '###'
+  - Log
+- - '###'
+  - Database
+- - '##'
+  - 'Chapter 17: Database System Architectures'
+- - '##'
+  - 'Chapter 17: Database System Architectures'
+- - '##'
+  - Centralized Systems
+- - '##'
+  - A Centralized Computer System
+- - '##'
+  - Client-Server Systems
+- - '##'
+  - Client-Server Systems (Cont.)
+- - '##'
+  - Server System Architecture
+- - '##'
+  - Transaction Servers
+- - '##'
+  - Transaction Server Process Structure
+- - '##'
+  - Transaction Server Processes (Cont.)
+- - '##'
+  - Transaction System Processes (Cont.)
+- - '##'
+  - Transaction System Processes (Cont.)
+- - '##'
+  - Data Servers
+- - '##'
+  - Data Servers (Cont.)
+- - '##'
+  - Data Servers (Cont.)
+- - '##'
+  - Parallel Systems
+- - '##'
+  - Speed-Up and Scale-Up
+- - '##'
+  - Scaleup
+- - '###'
+  - Batch and Transaction Scaleup
+- - '##'
+  - Factors Limiting Speedup and Scaleup
+- - '###'
+  - Interconnection Network Architectures
+- - '##'
+  - Interconnection Architectures
+- - '##'
+  - Parallel Database Architectures
+- - '##'
+  - Parallel Database Architectures
+- - '##'
+  - Shared Disk
+- - '##'
+  - Shared Nothing
+- - '##'
+  - Hierarchical
+- - '##'
+  - Distributed Systems
+- - '##'
+  - Distributed Databases
+- - '##'
+  - Trade-offs in Distributed Systems
+- - '##'
+  - Implementation Issues for Distributed Databases
+- - '##'
+  - Network Types
+- - '##'
+  - Local-area Network
+- - '##'
+  - Networks Types (Cont.)
+- - '##'
+  - End of Chapter 17
+- - '##'
+  - Figure 17.01
+- - '##'
+  - Figure 17.02
+- - '##'
+  - Figure 17.04
+- - '##'
+  - Figure 17.05
+- - '##'
+  - Figure 17.06
+- - '##'
+  - Figure 17.08
+- - '##'
+  - Figure 17.09
+- - '##'
+  - Figure 17.10
+- - '##'
+  - Figure 17.11
+- - '##'
+  - 'Chapter 18: Parallel Databases'
+- - '##'
+  - 'Chapter 18: Parallel Databases'
+- - '##'
+  - Parallelism in Databases
+- - '##'
+  - I/O Parallelism
+- - '##'
+  - I/O Parallelism (Cont.)
+- - '##'
+  - Comparison of Partitioning Techniques
+- - '##'
+  - Partitioning a Relation across Disks
+- - '##'
+  - Handling of Skew
+- - '##'
+  - Handling Skew in Range-Partitioning
+- - '##'
+  - Handling Skew using Histograms
+- - '##'
+  - Handling Skew Using Virtual Processor Partitioning
+- - '##'
+  - Interquery Parallelism
+- - '###'
+  - Cache Coherency Protocol
+- - '##'
+  - Intraquery Parallelism
+- - '###'
+  - Parallel Processing of Relational Operations
+- - '##'
+  - Parallel Sort
+- - '###'
+  - Range-Partitioning Sort
+- - '##'
+  - Parallel Sort (Cont.)
+- - '###'
+  - Parallel External Sort-Merge
+- - '##'
+  - Parallel Join
+- - '##'
+  - Partitioned Join
+- - '##'
+  - Partitioned Join (Cont.)
+- - '##'
+  - Fragment-and-Replicate Join
+- - '##'
+  - Depiction of Fragment-and-Replicate Joins
+- - '##'
+  - Fragment-and-Replicate Join (Cont.)
+- - '##'
+  - Fragment-and-Replicate Join (Cont.)
+- - '##'
+  - Partitioned Parallel Hash-Join
+- - '##'
+  - Partitioned Parallel Hash-Join (Cont.)
+- - '##'
+  - Parallel Nested-Loop Join
+- - '##'
+  - Other Relational Operations
+- - '##'
+  - Other Relational Operations (Cont.)
+- - '##'
+  - Grouping/Aggregation
+- - '##'
+  - Cost of Parallel Evaluation of Operations
+- - '##'
+  - Interoperator Parallelism
+- - '###'
+  - Pipelined parallelism
+- - '##'
+  - Factors Limiting Utility of Pipeline Parallelism
+- - '##'
+  - Independent Parallelism
+- - '##'
+  - Query Optimization
+- - '##'
+  - Query Optimization (Cont.)
+- - '##'
+  - Design of Parallel Systems
+- - '##'
+  - Design of Parallel Systems (Cont.)
+- - '##'
+  - End of Chapter
+- - '##'
+  - Figure 18.01
+- - '##'
+  - Figure 18.02
+- - '##'
+  - Figure 18.03
+- - '##'
+  - 'Chapter 19: Distributed Databases'
+- - '##'
+  - 'Chapter 19: Distributed Databases'
+- - '##'
+  - Distributed Database System
+- - '##'
+  - Homogeneous Distributed Databases
+- - '##'
+  - Distributed Data Storage
+- - '##'
+  - Data Replication
+- - '##'
+  - Data Replication (Cont.)
+- - '##'
+  - Data Fragmentation
+- - '##'
+  - Horizontal Fragmentation of account Relation
+- - '##'
+  - Advantages of Fragmentation
+- - '##'
+  - Data Transparency
+- - '##'
+  - Naming of Data Items - Criteria
+- - '##'
+  - Centralized Scheme - Name Server
+- - '##'
+  - Use of Aliases
+- - '##'
+  - Distributed Transactions and 2 Phase Commit
+- - '##'
+  - Distributed Transactions
+- - '##'
+  - Transaction System Architecture
+- - '###'
+  - System Failure Modes
+- - '###'
+  - Commit Protocols
+- - '###'
+  - Two Phase Commit Protocol (2PC)
+- - '###'
+  - 'Phase 1: Obtaining a Decision'
+- - '###'
+  - 'Phase 2: Recording the Decision'
+- - '###'
+  - Handling of Failures - Site Failure
+- - '###'
+  - Handling of Failures - Coordinator Failure
+- - '##'
+  - Handling of Failures - Network Partition
+- - '##'
+  - Recovery and Concurrency Control
+- - '##'
+  - Three Phase Commit (3PC)
+- - '##'
+  - Alternative Models of Transaction Processing
+- - '##'
+  - Alternative Models (Cont.)
+- - '##'
+  - Error Conditions with Persistent Messaging
+- - '##'
+  - Persistent Messaging and Workflows
+- - '##'
+  - Implementation of Persistent Messaging
+- - '##'
+  - Implementation of Persistent Messaging (Cont.)
+- - '##'
+  - Receiving site protocol.
+- - '##'
+  - Concurrency Control
+- - '##'
+  - Single-Lock-Manager Approach
+- - '##'
+  - Single-Lock-Manager Approach (Cont.)
+- - '##'
+  - Distributed Lock Manager
+- - '##'
+  - Primary Copy
+- - '##'
+  - Majority Protocol
+- - '##'
+  - Majority Protocol (Cont.)
+- - '##'
+  - Biased Protocol
+- - '##'
+  - Quorum Consensus Protocol
+- - '##'
+  - Timestamping
+- - '##'
+  - Timestamping (Cont.)
+- - '##'
+  - Replication with Weak Consistency
+- - '##'
+  - Multimaster and Lazy Replication
+- - '##'
+  - Deadlock Handling
+- - '##'
+  - Centralized Approach
+- - '##'
+  - Local and Global Wait-For Graphs
+- - '##'
+  - Example Wait-For Graph for False Cycles
+- - '##'
+  - False Cycles (Cont.)
+- - '##'
+  - Unnecessary Rollbacks
+- - '##'
+  - Availability
+- - '##'
+  - Reconfiguration
+- - '##'
+  - Reconfiguration (Cont.)
+- - '##'
+  - Majority-Based Approach
+- - '##'
+  - Majority-Based Approach
+- - '##'
+  - Read One Write All (Available)
+- - '##'
+  - Site Reintegration
+- - '##'
+  - Coordinator Selection
+- - '##'
+  - Bully Algorithm
+- - '##'
+  - Trading Consistency for Availability
+- - '##'
+  - What is Consistency?
+- - '##'
+  - Availability
+- - '##'
+  - Brewer’s CAP Theorem
+- - '##'
+  - Replication with Weak Consistency
+- - '##'
+  - Eventual Consistency
+- - '##'
+  - Availability vs Latency
+- - '##'
+  - Distributed Query Processing
+- - '##'
+  - Distributed Query Processing
+- - '##'
+  - Query Transformation
+- - '##'
+  - Example Query (Cont.)
+- - '##'
+  - Possible Query Processing Strategies
+- - '##'
+  - Semijoin Strategy
+- - '##'
+  - Formal Definition
+- - '##'
+  - Join Strategies that Exploit Parallelism
+- - '##'
+  - Heterogeneous Distributed Databases
+- - '##'
+  - Advantages
+- - '##'
+  - Unified View of Data
+- - '##'
+  - Query Processing
+- - '##'
+  - Mediator Systems
+- - '##'
+  - Local vs. Global Serializability
+- - '##'
+  - Cloud Databases
+- - '##'
+  - Data Storage on the Cloud
+- - '##'
+  - Key Value Stores
+- - '##'
+  - Data Representation
+- - '##'
+  - Partitioning and Retrieving Data
+- - '##'
+  - Distributed Directory Systems
+- - '##'
+  - Directory Systems
+- - '##'
+  - Directory Access Protocols
+- - '##'
+  - 'LDAP: Lightweight Directory Access Protocol'
+- - '##'
+  - LDAP Data Model
+- - '##'
+  - LDAP Data Model (Cont.)
+- - '##'
+  - LDAP Data Model (cont.)
+- - '##'
+  - LDAP Data Manipulation
+- - '##'
+  - LDAP Queries
+- - '##'
+  - LDAP URLs
+- - '##'
+  - C Code using LDAP API
+- - '##'
+  - C Code using LDAP API (Cont.)
+- - '##'
+  - LDAP API (Cont.)
+- - '##'
+  - Distributed Directory Trees
+- - '##'
+  - End of Chapter
+- - '##'
+  - Extra Slides on 3PC
+- - '##'
+  - Three Phase Commit (3PC)
+- - '###'
+  - 'Phase 1: Obtaining Preliminary Decision: Identical to 2PC Phase 1.'
+- - '###'
+  - '3PC: Phase 2. Recording the Preliminary Decision'
+- - '###'
+  - '3PC: Phase 3. Recording Decision in the Database'
+- - '###'
+  - '3PC: Handling Site Failure'
+- - '###'
+  - '3PC: Handling Site Failure (Cont.)'
+- - '###'
+  - Figure 19.02
+- - '###'
+  - Figure 19.03
+- - '###'
+  - Figure 19.04
+- - '###'
+  - Figure 19.05
+- - '###'
+  - Figure 19.06
+- - '###'
+  - Figure 19.07
+- - '##'
+  - 'Chapter 20: Data Analysis'
+- - '##'
+  - 'Chapter 20: Data Analysis'
+- - '###'
+  - Decision Support Systems
+- - '##'
+  - 'Decision Support Systems: Overview'
+- - '##'
+  - Data Warehousing
+- - '##'
+  - Data Warehousing
+- - '##'
+  - Design Issues
+- - '##'
+  - More Warehouse Design Issues
+- - '##'
+  - Warehouse Schemas
+- - '##'
+  - Data Warehouse Schema
+- - '##'
+  - Data Mining
+- - '##'
+  - Data Mining (Cont.)
+- - '###'
+  - Descriptive Patterns
+- - '###'
+  - Classification Rules
+- - '###'
+  - Decision Tree
+- - '###'
+  - Construction of Decision Trees
+- - '###'
+  - Best Splits
+- - '###'
+  - Finding Best Splits
+- - '###'
+  - Decision-Tree Construction Algorithm
+- - '##'
+  - Other Types of Classifiers
+- - '##'
+  - Naïve Bayesian Classifiers
+- - '##'
+  - Regression
+- - '##'
+  - Association Rules
+- - '##'
+  - Association Rules (Cont.)
+- - '##'
+  - Finding Association Rules
+- - '##'
+  - Finding Support
+- - '##'
+  - Other Types of Associations
+- - '##'
+  - Clustering
+- - '###'
+  - Hierarchical Clustering
+- - '##'
+  - Clustering Algorithms
+- - '##'
+  - Collaborative Filtering
+- - '##'
+  - Other Types of Mining
+- - '##'
+  - End of Chapter
+- - '##'
+  - Figure 20.01
+- - '##'
+  - Figure 20.02
+- - '##'
+  - Figure 20.03
+- - '##'
+  - 'Chapter 21: Information Retrieval'
+- - '##'
+  - 'Chapter 21: Information Retrieval'
+- - '##'
+  - Information Retrieval Systems
+- - '##'
+  - Information Retrieval Systems (Cont.)
+- - '##'
+  - Keyword Search
+- - '##'
+  - Relevance Ranking Using Terms
+- - '##'
+  - Relevance Ranking Using Terms (Cont.)
+- - '##'
+  - Similarity Based Retrieval
+- - '##'
+  - Relevance Using Hyperlinks
+- - '##'
+  - Synonyms and Homonyms
+- - '##'
+  - Concept-Based Querying
+- - '##'
+  - Indexing of Documents
+- - '##'
+  - Measuring Retrieval Effectiveness
+- - '##'
+  - Web Search Engines
+- - '##'
+  - Web Crawling (Cont.)
+- - '##'
+  - Information Retrieval and Structured Data
+- - '##'
+  - Directories
+- - '##'
+  - A Classification Hierarchy For A Library System
+- - '##'
+  - Web Directories
+- - '##'
+  - End of Chapter
+- - '##'
+  - 'Chapter 22: Object-Based Databases'
+- - '##'
+  - 'Chapter 22: Object-Based Databases'
+- - '##'
+  - Object-Relational Data Models
+- - '##'
+  - Complex Data Types
+- - '##'
+  - Example of a Nested Relation
+- - '##'
+  - Complex Types and SQL
+- - '##'
+  - Structured Types and Inheritance in SQL
+- - '##'
+  - Structured Types (cont.)
+- - '###'
+  - Constructor Functions
+- - '###'
+  - Type Inheritance
+- - '###'
+  - Table Inheritance
+- - '###'
+  - Array and Multiset Types in SQL
+- - '###'
+  - Creation of Collection Values
+- - '##'
+  - Querying Collection-Valued Attributes
+- - '##'
+  - Unnesting
+- - '##'
+  - Nesting
+- - '##'
+  - Nesting (Cont.)
+- - '##'
+  - Object-Identity and Reference Types
+- - '##'
+  - User Generated Identifiers
+- - '##'
+  - User Generated Identifiers (Cont.)
+- - '##'
+  - Path Expressions
+- - '##'
+  - Implementing O-R Features
+- - '##'
+  - Persistent Programming Languages
+- - '##'
+  - Object Identity and Pointers
+- - '##'
+  - Persistent C++ Systems
+- - '##'
+  - Persistent Java Systems
+- - '##'
+  - Object-Relational Mapping
+- - '##'
+  - End of Chapter 22
+- - '##'
+  - Figure 22.05
+- - '##'
+  - Figure 22.07
+- - '##'
+  - 'Chapter 23: XML'
+- - '##'
+  - XML
+- - '##'
+  - Introduction
+- - '##'
+  - XML Introduction (Cont.)
+- - '##'
+  - XML Motivation (Cont.)
+- - '##'
+  - Comparison with Relational Data
+- - '##'
+  - Structure of XML Data
+- - '##'
+  - Motivation for Nesting
+- - '##'
+  - Structure of XML Data (Cont.)
+- - '##'
+  - Attributes
+- - '##'
+  - Attributes vs. Subelements
+- - '##'
+  - Namespaces
+- - '##'
+  - More on XML Syntax
+- - '##'
+  - XML Document Schema
+- - '##'
+  - University DTD
+- - '##'
+  - Attribute Specification in DTD
+- - '##'
+  - IDs and IDREFs
+- - '##'
+  - University DTD with Attributes
+- - '##'
+  - XML data with ID and IDREF attributes
+- - '##'
+  - Limitations of DTDs
+- - '##'
+  - XML Schema
+- - '###'
+  - XML Schema Version of Univ. DTD
+- - '##'
+  - Querying and Transforming XML Data
+- - '###'
+  - Tree Model of XML Data
+- - '##'
+  - XPath (Cont.)
+- - '##'
+  - Functions in XPath
+- - '##'
+  - More XPath Features
+- - '##'
+  - FLWOR Syntax in XQuery
+- - '##'
+  - Joins
+- - '##'
+  - Grouping and Aggregation
+- - '##'
+  - Functions and Other XQuery Features
+- - '##'
+  - Storage of XML Data
+- - '##'
+  - Storage of XML in Relational Databases
+- - '##'
+  - String Representation
+- - '##'
+  - String Representation (Cont.)
+- - '##'
+  - Tree Representation
+- - '##'
+  - Tree Representation (Cont.)
+- - '##'
+  - Mapping XML Data to Relations
+- - '##'
+  - Storing XML Data in Relational Systems
+- - '##'
+  - SQL/XML
+- - '##'
+  - XML Applications
+- - '##'
+  - Web Services
+- - '##'
+  - End of Chapter 23
+- - '##'
+  - 'Chapter 24: Advanced Application Development'
+- - '##'
+  - 'Chapter 24: Advanced Application Development'
+- - '##'
+  - Performance Tuning
+- - '##'
+  - Bottlenecks
+- - '###'
+  - Identifying Bottlenecks
+- - '###'
+  - Queues In A Database System
+- - '##'
+  - Tunable Parameters
+- - '##'
+  - Tuning of Hardware
+- - '###'
+  - 'Hardware Tuning: Five-Minute Rule'
+- - '###'
+  - 'Hardware Tuning: One-Minute Rule'
+- - '##'
+  - Tuning the Database Design
+- - '###'
+  - Schema tuning
+- - '##'
+  - Tuning the Database Design (Cont.)
+- - '##'
+  - Tuning the Database Design (Cont.)
+- - '###'
+  - Materialized Views
+- - '##'
+  - Tuning the Database Design (Cont.)
+- - '##'
+  - Tuning of Transactions
+- - '##'
+  - Tuning of Transactions (Cont.)
+- - '##'
+  - Tuning of Transactions (Cont.)
+- - '##'
+  - Performance Simulation
+- - '##'
+  - Performance Benchmarks
+- - '##'
+  - Performance Benchmarks (Cont.)
+- - '##'
+  - Database Application Classes
+- - '##'
+  - Benchmarks Suites
+- - '##'
+  - Benchmarks Suites (Cont.)
+- - '##'
+  - TPC Performance Measures
+- - '##'
+  - Other Benchmarks
+- - '##'
+  - Standardization
+- - '##'
+  - SQL Standards History
+- - '##'
+  - SQL Standards History (Cont.)
+- - '##'
+  - SQL Standards History (Cont.)
+- - '##'
+  - Database Connectivity Standards
+- - '##'
+  - Object Oriented Databases Standards
+- - '##'
+  - XML-Based Standards
+- - '##'
+  - E-Commerce
+- - '##'
+  - Marketplaces
+- - '##'
+  - Types of Marketplace
+- - '##'
+  - Order Settlement
+- - '##'
+  - Secure Payment Systems
+- - '##'
+  - Secure Payment Systems (Cont.)
+- - '##'
+  - Digital Cash
+- - '##'
+  - Legacy Systems
+- - '##'
+  - End of Chapter
+- - '##'
+  - 'Chapter 25: Advanced Data Types and New Applications'
+- - '###'
+  - Time in Databases
+- - '##'
+  - Time In Databases (Cont.)
+- - '##'
+  - Time Specification in SQL-92
+- - '##'
+  - Temporal Query Languages
+- - '##'
+  - Temporal Query Languages (Cont.)
+- - '##'
+  - Spatial and Geographic Databases
+- - '##'
+  - Spatial and Geographic Databases
+- - '##'
+  - Represented of Geometric Information
+- - '##'
+  - Representation of Geometric Constructs
+- - '##'
+  - Representation of Geometric Information (Cont.)
+- - '##'
+  - Design Databases
+- - '##'
+  - Representation of Geometric Constructs
+- - '##'
+  - Geographic Data
+- - '##'
+  - Spatial Queries
+- - '##'
+  - Indexing of Spatial Data
+- - '##'
+  - Division of Space by a k-d Tree
+- - '##'
+  - Division of Space by Quadtrees
+- - '###'
+  - Quadtrees
+- - '##'
+  - Quadtrees (Cont.)
+- - '##'
+  - R-Trees
+- - '##'
+  - R Trees (Cont.)
+- - '##'
+  - Example R-Tree
+- - '##'
+  - Search in R-Trees
+- - '##'
+  - Insertion in R-Trees
+- - '##'
+  - Deleting in R-Trees
+- - '##'
+  - Multimedia Databases
+- - '##'
+  - Multimedia Databases
+- - '##'
+  - Multimedia Data Formats
+- - '##'
+  - Continuous-Media Data
+- - '##'
+  - Video Servers
+- - '##'
+  - Similarity-Based Retrieval
+- - '##'
+  - Mobility
+- - '##'
+  - Mobile Computing Environments
+- - '##'
+  - Mobile Computing Environments (Cont.)
+- - '##'
+  - Database Issues in Mobile Computing
+- - '##'
+  - Routing and Query Processing
+- - '##'
+  - Broadcast Data
+- - '##'
+  - Disconnectivity and Consistency
+- - '##'
+  - Mobile Updates
+- - '##'
+  - Detecting Inconsistent Updates
+- - '##'
+  - Detecting Inconsistent Updates (Cont.)
+- - '##'
+  - Handling Inconsistent Updates
+- - '##'
+  - End of Chapter
+- - '##'
+  - Figure 25.02
+- - '##'
+  - Figure 25.03
+- - '##'
+  - Figure 25.04
+- - '##'
+  - Figure 25.05
+- - '##'
+  - Figure 25.06
+- - '##'
+  - 'Chapter 26: Advanced Transaction Processing'
+- - '##'
+  - 'Chapter 26: Advanced Transaction Processing'
+- - '##'
+  - Transaction Processing Monitors
+- - '##'
+  - TP Monitor Architectures
+- - '##'
+  - TP Monitor Architectures (Cont.)
+- - '##'
+  - TP Monitor Architectures (Cont.)
+- - '##'
+  - Detailed Structure of a TP Monitor
+- - '##'
+  - Detailed Structure of a TP Monitor
+- - '##'
+  - Application Coordination Using TP Monitors
+- - '##'
+  - Workflow Systems
+- - '##'
+  - Examples of Workflows
+- - '##'
+  - Loan Processing Workflow
+- - '##'
+  - Transactional Workflows
+- - '##'
+  - Workflow Specification
+- - '##'
+  - Workflow Specification (Cont.)
+- - '##'
+  - Failure-Atomicity Requirements
+- - '##'
+  - Execution of Workflows
+- - '##'
+  - Workflow Management System Architectures
+- - '##'
+  - Workflow Scheduler
+- - '##'
+  - Recovery of a Workflow
+- - '##'
+  - Recovery of a Workflow (Cont.)
+- - '##'
+  - High Performance Transaction Systems
+- - '##'
+  - High-Performance Transaction Systems
+- - '##'
+  - Main-Memory Database
+- - '##'
+  - Main-Memory Database Optimizations
+- - '##'
+  - Real-Time Transaction Systems
+- - '##'
+  - Long Duration Transactions
+- - '##'
+  - Long-Duration Transactions
+- - '##'
+  - Concurrency Control
+- - '##'
+  - Concurrency Control (Cont.)
+- - '##'
+  - Nested and Multilevel Transactions
+- - '##'
+  - Nested and Multilevel Transactions (Cont.)
+- - '##'
+  - Example of Nesting
+- - '##'
+  - Compensating Transactions
+- - '##'
+  - Implementation Issues
+- - '##'
+  - Transaction Management in Multidatabase Systems
+- - '##'
+  - Transaction Management
+- - '##'
+  - Two-Level Serializability
+- - '##'
+  - Two-Level Serializability (Cont.)
+- - '##'
+  - Global Serializability
+- - '##'
+  - Ensuring Global Serializability
+- - '##'
+  - End of Chapter 26
+- - '##'
+  - Figure 26.01
+- - '##'
+  - Figure 26.02
+- - '##'
+  - Figure 26.03
+- - '##'
+  - Figure 26.04
+- - '##'
+  - Extra slides
+- - '###'
+  - Weak Levels of Consistency
+- - '###'
+  - Example Schedule with Degree-Two Consistency

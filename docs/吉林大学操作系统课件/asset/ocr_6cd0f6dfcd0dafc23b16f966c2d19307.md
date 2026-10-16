@@ -1,0 +1,39 @@
+# exec() 加载并执行新程序
+
+proc结构
+p_pid=9
+p_ppid=5
+user结构
+
+proc结构
+p_pid=12
+p_ppid=9
+user结构
+
+```
+pid=fork();
+if(pid ==0) /*不成立*/
+{
+ exec("P",0);
+}
+}else{
+ /*父进程代码*/
+}
+...
+```
+
+```
+pid=fork();
+if(pid ==0) /*成立*/
+{
+ exec("P",0);
+}
+}else{
+ /*父进程代码*/
+}
+...
+```
+
+父进程
+
+子进程

@@ -1,0 +1,19 @@
+NO[IMA]=NO[IMA+1]
+
+IMA≠MAE
+
+F
+
+IMA<MAE
+
+F
+
+KA[IMA]=KA[IMA]+1; IMA=IMA+1
+
+IMA=IMA+1
+
+read(IMA)
+
+IMA='9'
+
+T

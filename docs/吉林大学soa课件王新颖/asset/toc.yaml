@@ -1,0 +1,714 @@
+- - '##'
+  - What is SOA?
+- - '##'
+  - SOA
+- - '##'
+  - Programming Language
+- - '##'
+  - Modeling
+- - '##'
+  - Technology & Methodology
+- - '##'
+  - Standard Specification
+- - '##'
+  - Modeling
+- - '##'
+  - Technology & Methodology
+- - '##'
+  - SOA解析
+- - '##'
+  - What is SOA?
+- - '##'
+  - SOA的技术成熟度曲线
+- - '##'
+  - SOA的技术来源
+- - '##'
+  - SOA的特点
+- - '##'
+  - 面向服务的多层架构
+- - '##'
+  - 服务=黑盒子
+- - '##'
+  - SOA的作用
+- - '##'
+  - SOA应用的开发方法
+- - '##'
+  - Service-Orientation的优势
+- - '##'
+  - SOA技术的本质
+- - '##'
+  - SOA服务的部署
+- - '##'
+  - SOA服务的部署
+- - '##'
+  - SOA的应用
+- - '##'
+  - SOA基础架构
+- - '##'
+  - SOA的基本特征
+- - '##'
+  - SOA的相关标准
+- - '##'
+  - SOA的优劣
+- - '##'
+  - SOA的切实效益
+- - '##'
+  - SOA的发展趋势
+- - '##'
+  - SOA在中国
+- - '##'
+  - 'SOA in Five Slides (1): SOA'
+- - '##'
+  - 'SOA in Five Slides (2): 政策和过程'
+- - '##'
+  - 'SOA in Five Slides (3): Web Service'
+- - '##'
+  - 服务计算带来分布式计算演进
+- - '##'
+  - 时代特征
+- - '##'
+  - 计算环境的演变
+- - '##'
+  - 远程过程调用流程图
+- - '##'
+  - 服务计算带来中间件技术演进
+- - '##'
+  - 服务计算中的服务
+- - '##'
+  - 服务计算的经典模型
+- - '##'
+  - 定义Services集
+- - '##'
+  - Services 集合示例
+- - '##'
+  - Services集路径
+- - '##'
+  - Services集路径示例
+- - '##'
+  - Services集元操作
+- - '##'
+  - Services语法
+- - '##'
+  - SOA的形式化表示
+- - '##'
+  - 面向服务视图
+- - '##'
+  - 面向服务的建模和架构（SOMA）概述
+- - '##'
+  - 第3章 SOA基本技术
+- - '##'
+  - Web1.0：以静态、单向阅读为主
+- - '##'
+  - Web2.0：以分时为特征的实时网络
+- - '##'
+  - Web2.0的特征
+- - '##'
+  - 语义网 Web3.0
+- - '##'
+  - Web3.0特征分析
+- - '##'
+  - Web3.0的发展趋势
+- - '##'
+  - Web4.0展望
+- - '##'
+  - 企业服务总线（Enterprise Service Bus）
+- - '##'
+  - ESB拓扑结构
+- - '##'
+  - SOA Mode
+- - '##'
+  - Web服务的基础——XML
+- - '##'
+  - XML Sample
+- - '##'
+  - XML文档结构
+- - '##'
+  - 元素、属性、注释、处理指令与实体
+- - '##'
+  - XML Namespaces 解决名字冲突
+- - '##'
+  - XML文档定义
+- - '##'
+  - XML Schema
+- - '##'
+  - XML Schema结构
+- - '##'
+  - '# 元素'
+- - '##'
+  - Lecture 2
+- - '##'
+  - Web服务的基础——XML
+- - '##'
+  - Lecture 3
+- - '##'
+  - Lecture 4
+- - '##'
+  - SOAP 的请求与响应
+- - '##'
+  - SOAP HTTP Binding
+- - '##'
+  - SOAP 与 HTTP
+- - '##'
+  - SERVICE REQUESTER
+- - '##'
+  - HTTP POST
+- - '##'
+  - SERVICE PROVIDER
+- - '##'
+  - HTTP Acknowledgement
+- - '##'
+  - Lecture 5
+- - '##'
+  - WSDL
+- - '##'
+  - What is WSDL
+- - '##'
+  - WSDL描述web服务的三个基本属性
+- - '##'
+  - WSDL 文档的主要结构
+- - '##'
+  - WSDL文档示例
+- - '##'
+  - WSDL操作类型
+- - '##'
+  - One-Way 操作
+- - '##'
+  - Request-Response 操作
+- - '##'
+  - WSDL Service
+- - '##'
+  - 绑定到SOAP
+- - '##'
+  - portType、binding与port的关系
+- - '##'
+  - Lecture 6
+- - '##'
+  - UDDI接口
+- - '##'
+  - SOAP WSDL UDDI的关系
+- - '##'
+  - 各标准的层次关系
+- - '##'
+  - 服务请求的过程
+- - '##'
+  - 第4章 SOA Analysis and Modeling
+- - '##'
+  - Service-Oriented Modeling & Analysis
+- - '##'
+  - Why OOAD, BPM, EA are not enough
+- - '##'
+  - Service-Oriented
+- - '##'
+  - SOA Design Principles
+- - '##'
+  - 'SOA: Method & Process'
+- - '##'
+  - Service Identification
+- - '##'
+  - Service Specification
+- - '##'
+  - Service Realization
+- - '##'
+  - SOA的分析与建模
+- - '##'
+  - BPM & BPEL
+- - '##'
+  - 基于SOA的业务流程管理
+- - '##'
+  - 业务流程
+- - '##'
+  - BPM Example
+- - '##'
+  - What is BPEL
+- - '##'
+  - WS-BPEL Process
+- - '##'
+  - BPEL Process for Business Travels
+- - '##'
+  - BPEL的基本结构
+- - '##'
+  - 伙伴链接
+- - '##'
+  - 业务伙伴
+- - '##'
+  - 变量
+- - '##'
+  - Basic Activities
+- - '##'
+  - Structured Activities
+- - '##'
+  - SOA的分析与建模
+- - '##'
+  - WebSphere Integration Developer (WID)
+- - '##'
+  - WID Overview
+- - '##'
+  - Business integration roles
+- - '##'
+  - 'Integration Developer: Concepts'
+- - '##'
+  - Module project
+- - '##'
+  - Library project
+- - '##'
+  - Business integration perspective
+- - '##'
+  - Business integration view
+- - '##'
+  - From WID to WPS
+- - '##'
+  - WebSphere Process Server Mode
+- - '##'
+  - Technical Attributes
+- - '##'
+  - Technical Attributes View
+- - '##'
+  - BPEL Attributes
+- - '##'
+  - Interface
+- - '##'
+  - Response
+- - '##'
+  - Technical Attributes View
+- - '##'
+  - Export for WebSphere Process Server
+- - '##'
+  - Project Tree
+- - '##'
+  - WebSphere Business Modeler Export
+- - '##'
+  - Types
+- - '##'
+  - Target Location
+- - '##'
+  - WebSphere Business Modeler Export
+- - '##'
+  - What Gets Generated
+- - '##'
+  - Imported Elements in WID
+- - '##'
+  - SOA的分析与建模
+- - '##'
+  - 'Case Study: Arnetminer.org'
+- - '##'
+  - What's Arnetminer
+- - '##'
+  - Person Search
+- - '##'
+  - National Science Foundation - US
+- - '##'
+  - Expertise Search
+- - '##'
+  - Association Search
+- - '##'
+  - Bole Search
+- - '##'
+  - Topic Browser
+- - '##'
+  - ArnetMiner Today
+- - '##'
+  - ArnetMiner Today
+- - '##'
+  - ArnetMiner Today
+- - '##'
+  - ArnetMiner Today
+- - '##'
+  - Messages from Users
+- - '##'
+  - ArnetMiner Today
+- - '##'
+  - How to build ArnetMiner
+- - '##'
+  - Requirement
+- - '##'
+  - Expert's personal homepage
+- - '##'
+  - 'ArnetMiner: Overview'
+- - '##'
+  - Architecture Design
+- - '##'
+  - Available Components Integration(Bottom up)
+- - '##'
+  - Combine Data Hibernate Layer with Upper Service(Bottom up)
+- - '##'
+  - Upper Service Design(Top down)
+- - '##'
+  - The Architecture of Arnetminer
+- - '##'
+  - Web服务的实现、部署与测试
+- - '##'
+  - Outline
+- - '##'
+  - Xfire – A Java SOAP framework for development and consumption of web services
+- - '##'
+  - Xfire
+- - '##'
+  - Unit Testing Framework for the Java Programming Language - JUnit
+- - '##'
+  - JUnit
+- - '##'
+  - Structure of a JUnit test class
+- - '##'
+  - Assert methods I
+- - '##'
+  - 'Example: Counter class'
+- - '##'
+  - The Counter class itself
+- - '##'
+  - Assert methods II
+- - '##'
+  - Assert methods III
+- - '##'
+  - Junit in eclipse - Setup
+- - '##'
+  - Create a new JUnit test case
+- - '##'
+  - Red / Green Bar
+- - '##'
+  - Unit Testing Web Services
+- - '##'
+  - Web service invoke - Ajax
+- - '##'
+  - What is Ajax?
+- - '##'
+  - Ajax Web Services (2)
+- - '##'
+  - Ajax is not just Web Service
+- - '##'
+  - Representational State Transfer (REST)
+- - '##'
+  - Two Camps on Web Services
+- - '##'
+  - Detailed REST methods
+- - '##'
+  - Difference between GET/POST
+- - '##'
+  - Process of RESTful involving
+- - '##'
+  - JSON Example
+- - '##'
+  - Error Handling in REST
+- - '##'
+  - Support in .NET
+- - '##'
+  - Support in other technologies
+- - '##'
+  - Create a REST Web Service
+- - '##'
+  - HelloWorld RESTful Web Service
+- - '##'
+  - HelloWorld RESTful Web Service
+- - '##'
+  - HelloWorld RESTful Web Service
+- - '##'
+  - New Java Class
+- - '##'
+  - HelloWorld RESTful Web Service
+- - '##'
+  - HelloWorld RESTful Web Service
+- - '##'
+  - HelloWorld RESTful Web Service
+- - '##'
+  - Project Deployments
+- - '##'
+  - Manage Deployments
+- - '##'
+  - Deployments
+- - '##'
+  - New Deployment
+- - '##'
+  - HelloWorld RESTful Web Service
+- - '##'
+  - Tools in MyEclipse
+- - '##'
+  - JAX-RS Resource Method
+- - '##'
+  - New JAX-RS Resource Method
+- - '##'
+  - 'Method parameters:'
+- - '##'
+  - Path Parameter Example
+- - '##'
+  - Annotations
+- - '##'
+  - Test with REST WS Explorer
+- - '##'
+  - REST Web Services Explorer
+- - '##'
+  - Java API for XML Web Services
+- - '##'
+  - Writing A Web Service with JAX-WS
+- - '##'
+  - Compile the Web Service
+- - '##'
+  - Publish the Service
+- - '##'
+  - Generate Stub Code
+- - '##'
+  - Write the Client
+- - '##'
+  - Compile & Run the Client
+- - '##'
+  - 第6章 SOA项目实施与开发案例
+- - '##'
+  - Lecture 1
+- - '##'
+  - SOA项目实施准备
+- - '##'
+  - SOA效益分析
+- - '##'
+  - SOA标准体系
+- - '##'
+  - SOA项目实施需求来源
+- - '##'
+  - SOA项目的实施
+- - '##'
+  - 战略规划过程
+- - '##'
+  - 项目实施过程
+- - '##'
+  - SOA项目实施关键要素
+- - '##'
+  - SOA的项目分析
+- - '##'
+  - SOA的项目视角(cont.)
+- - '##'
+  - 按建设类型来划分
+- - '##'
+  - 按切入点划分
+- - '##'
+  - 按实施组织类型划分
+- - '##'
+  - 按解决问题划分
+- - '##'
+  - 按业务关注点划分
+- - '##'
+  - Lecture 2
+- - '##'
+  - SOA用户案例
+- - '##'
+  - 按建设范围划分
+- - '##'
+  - 按建设层次划分
+- - '##'
+  - SOA项目实施团队
+- - '##'
+  - SOA典型行业和领域
+- - '##'
+  - 行业、特点及成功案例
+- - '##'
+  - 交通银行管理系统统一应用平台
+- - '##'
+  - 业务剖析
+- - '##'
+  - 整体解决方案——项目组织结构
+- - '##'
+  - 整体解决方案——技术方案
+- - '##'
+  - 整体解决方案——架构模型
+- - '##'
+  - OCRM系统
+- - '##'
+  - 资金管理系统
+- - '##'
+  - 资产风险系统
+- - '##'
+  - ……系统
+- - '##'
+  - 案例剖析
+- - '##'
+  - 交通银行IT支撑体系
+- - '##'
+  - MISUP
+- - '##'
+  - 集中工作平台
+- - '##'
+  - 统一流程管理平台
+- - '##'
+  - 统一技术架构平台
+- - '##'
+  - 安徽电信服务保障系统
+- - '##'
+  - 业务剖析
+- - '##'
+  - 整体解决方案——项目管理框架
+- - '##'
+  - 整体解决方案——技术方案
+- - '##'
+  - 服务管理
+- - '##'
+  - 应用层
+- - '##'
+  - 系统管理
+- - '##'
+  - 基础层
+- - '##'
+  - 业务流程平台
+- - '##'
+  - 整体解决方案——实施方案
+- - '##'
+  - 案例剖析
+- - '##'
+  - 湖南省烟草公司应用总集成项目
+- - '##'
+  - 业务剖析
+- - '##'
+  - 整体解决方案
+- - '##'
+  - 系统集成总体架构
+- - '##'
+  - 系统应用体验
+- - '##'
+  - 案例剖析
+- - '##'
+  - 青岛市网上审批系统案例
+- - '##'
+  - 业务剖析
+- - '##'
+  - 流程划分及服务提取
+- - '##'
+  - 整体解决方案——实施模式
+- - '##'
+  - 整体解决方案——技术方案
+- - '##'
+  - 整体解决方案——实施方案
+- - '##'
+  - 整体解决方案——实施步骤
+- - '##'
+  - 采纳标准
+- - '##'
+  - 成果
+- - '##'
+  - 食品安全检测监控信息系统
+- - '##'
+  - 案例特点
+- - '##'
+  - 业务背景
+- - '##'
+  - 业务剖析——监管检测业务流程
+- - '##'
+  - 业务剖析——应用现状
+- - '##'
+  - 整体解决方案——传统数据交换方案
+- - '##'
+  - 监督监管系统
+- - '##'
+  - 检验检测系统
+- - '##'
+  - 整体解决方案——SOA方案
+- - '##'
+  - 食品监管系统
+- - '##'
+  - 检验检测系统
+- - '##'
+  - 两种方案的比较
+- - '##'
+  - 传统数据交换解决方案
+- - '##'
+  - SOA解决方案
+- - '##'
+  - 航天集团 “航天型号物资管理信息平台”
+- - '##'
+  - 业务剖析
+- - '##'
+  - 业务剖析 (cont.)
+- - '##'
+  - 整体解决方案
+- - '##'
+  - 整体解决方案——功能框架
+- - '##'
+  - 整体解决方案——技术架构
+- - '##'
+  - 采纳或参考的标准
+- - '##'
+  - 解决方案的特点
+- - '##'
+  - 案例效益剖析
+- - '##'
+  - 阿里巴巴信息系统
+- - '##'
+  - 业务剖析
+- - '##'
+  - 整体解决方案
+- - '##'
+  - 采纳标准
+- - '##'
+  - 案例剖析
+- - '##'
+  - 奇瑞汽车
+- - '##'
+  - 面临的挑战
+- - '##'
+  - 奇瑞汽车采用Oracle SOA实现应用整合
+- - '##'
+  - 奇瑞EAI平台总体架构
+- - '##'
+  - 奇瑞EAI平台技术架构
+- - '##'
+  - 奇瑞汽车SOA应用目标
+- - '##'
+  - 奇瑞汽车SOA集成平台一期建设规划
+- - '##'
+  - 奇瑞汽车SOA集成平台二期建设规划
+- - '##'
+  - 奇瑞EAI业务活动监控
+- - '##'
+  - 奇瑞汽车
+- - '##'
+  - 流程执行监控
+- - '##'
+  - 系统监控平台
+- - '##'
+  - 当日流程执行情况统计
+- - '##'
+  - 当日各流程执行情况
+- - '##'
+  - 奇瑞汽车
+- - '##'
+  - 当日数据库执行状态统计
+- - '##'
+  - 当日数据库节点执行状态统计
+- - '##'
+  - 流程当日执行情况明细查询
+- - '##'
+  - 奇瑞汽车
+- - '##'
+  - 监控平台
+- - '##'
+  - 历史查询执行统计
+- - '##'
+  - 投资回报分析之投资篇
+- - '##'
+  - 投资回报分析之回报篇
+- - '##'
+  - 奇瑞汽车成功削减了 80% 的开发培训成本和 30% 的实施费用（EAI 平台）
+- - '##'
+  - 山推工程机械股份有限公司
+- - '##'
+  - Solution Architecture
+- - '##'
+  - Solution Architecture
+- - '##'
+  - SHANTUI 价值引领 共赢未来
+- - '##'
+  - 长春一汽
+- - '##'
+  - 长春一汽核心ERP整合需求
+- - '##'
+  - Oracle 为一汽构建SOA方案探索：横向业务应用系统整合总体架构
+- - '##'
+  - Oracle 为一汽构建SOA方案探索：纵向业务应用系统整合总体架构
+- - '##'
+  - 潍柴动力售后服务系统挑战
+- - '##'
+  - Oracle 为 Haier 构建基于 SOA 平台的业务流程
+- - '##'
+  - Oracle SOA 平台
+- - '##'
+  - Oracle 为航天 602 直升机数字化生产线构建 SOA 服务平台
+- - '##'
+  - Oracle SOA 构建柴油服务平台
+- - '##'
+  - 利用 SOA 方案进行系统整合的优势
+- - '##'
+  - 问题……

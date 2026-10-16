@@ -1,0 +1,3 @@
+![](bbox=[0.05, 0.05, 0.25, 0.25])
+
+# Chapter 18: Parallel Databases

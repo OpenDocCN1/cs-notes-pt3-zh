@@ -1,0 +1,3 @@
++   - 1937-1942: Atanasov and Berry designed the **ABC computer**, a binary computer, as Zuse's was, but now 100% electronic.
++   - 1944: The **colossus** (巨人) built by people from Bletchley Park (near London, UK). The Worlds First _Electronic Computer_
++   - In 1946, John Mauchly and J Presper Eckert developed the **ENIAC I** (Electrical **N**umerical **I**ntegrator **A**nd **C**alculator). --- **Invention of the Modern Computer**

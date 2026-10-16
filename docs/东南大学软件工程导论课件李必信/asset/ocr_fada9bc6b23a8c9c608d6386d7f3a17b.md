@@ -1,0 +1,2 @@
++   - **__Software engineering__** is the profession that creates and maintains software applications by applying technologies and practices from computer science, project management, engineering, application domains, and other fields.
++   - The term software engineering first was used in the late <u>1950s</u> and early <u>1960s</u>. Programmers have always known about civil, electrical, and computer engineering and debated what engineering might mean for software.

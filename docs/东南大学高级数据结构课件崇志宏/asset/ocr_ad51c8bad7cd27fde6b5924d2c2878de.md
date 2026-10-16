@@ -1,0 +1,1 @@
+Figure 3: The file structure for the previous Hilbert R-tree

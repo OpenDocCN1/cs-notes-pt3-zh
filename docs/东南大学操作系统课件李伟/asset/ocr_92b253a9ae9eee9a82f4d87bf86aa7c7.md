@@ -1,0 +1,5 @@
+# Deadlock Detection
+
++   - Allow system to enter deadlock state
++   - Detection algorithm
++   - Recovery scheme

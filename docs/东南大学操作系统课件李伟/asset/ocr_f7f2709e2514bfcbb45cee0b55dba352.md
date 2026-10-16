@@ -1,0 +1,14 @@
+# Bounded-Buffer
+
++   - Producer process
+
+```
+item nextProduced;
+while (1) {
+    while (counter == BUFFER_SIZE);
+        /* do nothing */
+    buffer[in] = nextProduced;
+    in = (in + 1) % BUFFER_SIZE;
+    counter++;
+}
+```

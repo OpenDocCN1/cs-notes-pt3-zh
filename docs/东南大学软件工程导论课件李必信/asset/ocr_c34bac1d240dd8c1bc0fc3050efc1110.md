@@ -1,0 +1,3 @@
++   - In the early 50's programmers started to let the machines do a part of the job. This was called **_automatic coding_** and made live a lot easier for the early programmers.
++   - Soon the next step was to have the program to select the proper memory address instead of using absolute addressing.
++   - The next development was to **_combine groups of instruction into so called words and abbreviations_** were thought up called: **opcodes** (Hopper 1948)

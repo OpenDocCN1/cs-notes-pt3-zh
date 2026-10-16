@@ -1,0 +1,9 @@
+# Outline
+
++   - System Model
++   - Deadlock Characterization
++   - Methods for Handling Deadlocks
++   - Deadlock Prevention
++   - Deadlock Avoidance
++   - Deadlock Detection
++   - Recovery from Deadlock

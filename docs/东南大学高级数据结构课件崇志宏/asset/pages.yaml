@@ -1,0 +1,5575 @@
+- pgno: 0
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Amortized/Competitive Analysis
+
+
+    +   - 1) Aggregate analysis 2) The accounting method 3) The potential method
+
+    +   - Competitive analysis
+
+    +   - Dynamic Structures
+
+    +   - Binominal heap Dynamic tables Splay tree'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# How large should a hash table be?
+
+
+    Goal: Make the table as small as possible, but large enough so that it won’t overflow
+    (or otherwise become inefficient).
+
+
+    Problem: What if we don’t know the proper size in advance?
+
+
+    Solution: *Dynamic tables.*
+
+
+    IDEA: Whenever the table overflows, “grow” it by allocating (via malloc or new)
+    a new, larger table. Move all items from the old table into the new one, and free
+    the storage for the old table.
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_2_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '+   1. INSERT
+
+    +   2. INSERT
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_3_0.png)
+
+
+    +   1. INSERT
+
+    +   2. INSERT
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_3_1.png)
+
+
+    +   1. INSERT
+
+    +   2. INSERT
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_3_2.png)
+
+
+    +   1. INSERT
+
+    +   2. INSERT
+
+    +   3. INSERT
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_3_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '+   1. INSERT
+
+    +   2. INSERT
+
+    +   3. INSERT
+
+
+    +   1. INSERT
+
+    +   2. INSERT
+
+    +   3. INSERT
+
+    +   4. INSERT
+
+
+    +   1. INSERT
+
+    +   2. INSERT
+
+    +   3. INSERT
+
+    +   4. INSERT
+
+    +   5. INSERT
+
+
+    overflow'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '+   1. INSERT
+
+    +   2. INSERT
+
+    +   3. INSERT
+
+    +   4. INSERT
+
+    +   5. INSERT
+
+
+    +   1. INSERT
+
+    +   2. INSERT
+
+    +   3. INSERT
+
+    +   4. INSERT
+
+    +   5. INSERT
+
+
+    overflow
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_5_0.png)
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_5_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '+   1. INSERT
+
+    +   2. INSERT
+
+    +   3. INSERT
+
+    +   4. INSERT
+
+    +   5. INSERT
+
+    +   6. INSERT
+
+    +   7. INSERT
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_6_0.png)
+
+
+    Consider a sequence of *n* insertions. The worst-case time to execute one insertion
+    is Θ(*n*). Therefore, the worst-case time for *n* insertions is *n* · Θ(*n*) =
+    Θ(*n*²).
+
+
+    WRONG! In fact, the worst-case cost for *n* insertions is only Θ(*n*) ≪ Θ(*n*²).
+
+
+    Let’s see why.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: "# Tighter analysis\n\nLet $c_i$ = the cost of the $i$th insertion\n= { $i$\
+    \ if $i-1$ is an exact power of 2,\n  $1$ otherwise. }\n\n|  | 1 | 2 | 3 | 4 |\
+    \ 5 | 6 | 7 | 8 | 9 | 10 |\n|---|---|---|---|---|---|---|---|---|---|---|\n| $i$\
+    \ | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |\n| $size_i$ | 1 | 2 | 4 | 4 | 8 |\
+    \ 8 | 8 | 8 | 16 | 16 |\n| $c_i$ | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |\n|\
+    \  |  | 1 | 2 |  | 4 |  |  |  | 8 |  |"
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# # Tighter analysis (continued)
+
+
+    Cost of *n* insertions = ∑ᵢ₌₁ⁿ cᵢ
+
+
+    ≤ *n* + ∑ⱼ₌₀^{⌊lg(*n*−1)⌋} 2ʲ
+
+
+    ≤ 3*n*
+
+
+    = Θ(*n*).
+
+
+    Thus, the average cost of each dynamic-table operation is Θ(*n*)/*n* = Θ(1).'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# 平摊分析特点
+
+
+    +   1）它是一种分析的方法，适用于分析一个彼此相关的操作序列。其分析方法不是
+
+    +   2）操作序列的总代价是序列长度的函数，而不是输入量规模的函数。
+
+    +   3）不仅是分析方法，也是设计算法和数据结构的一种思维方法。
+
+
+    因为设计算法与分析时间性能紧密相关，
+
+    所以通过平摊分析可优化算法设计，加深对算法所操作的数据结构特性的认识，从
+
+
+    提出三种平摊分析的方法：
+
+
+    +   合计法、聚集方法（aggregate）：
+
+    +   记账法、会计法（accounting）：
+
+    +   势能法（potential）。'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Amortized analysis
+
+
+    An *amortized analysis* is any strategy for analyzing a sequence of operations
+    to show that the average cost per operation is small, even though a single operation
+    within the sequence might be expensive.
+
+
+    Even though we’re taking averages, however, probability is not involved!
+
+
+    +   - An amortized analysis guarantees the average performance of each operation
+    in the *worst case*.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# # Types of amortized analyses
+
+
+    Three common amortization arguments:
+
+
+    +   - the *aggregate* method,
+
+    +   - the *accounting* method,
+
+    +   - the *potential* method.
+
+
+    We’ve just seen an aggregate analysis.
+
+
+    The aggregate method, though simple, lacks the precision of the other two methods.
+    In particular, the accounting and potential methods allow a specific *amortized
+    cost* to be allocated to each operation.
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_12_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# # Accounting method
+
+
+    +   - Charge *i*th operation a fictitious **amortized cost** $c_i$, where $\$1$
+    pays for 1 unit of work (*i.e.*, time).
+
+    +   - This fee is consumed to perform the operation.
+
+    +   - Any amount not immediately consumed is stored in the *bank* for use by subsequent
+    operations.
+
+    +   - The bank balance must not go negative! We must ensure that
+
+    +     $$\sum_{i=1}^{n} c_i \leq \sum_{i=1}^{n} \hat{c}_i$$
+
+    +     for all $n$.
+
+    +   - Thus, the total amortized costs provide an upper bound on the total true
+    costs.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Accounting analysis of dynamic tables
+
+
+    Charge an amortized cost of ĉᵢ = $3 for the i th insertion.
+
+
+    +   - $1 pays for the immediate insertion.
+
+    +   - $2 is stored for later table doubling.
+
+
+    When the table doubles, $1 pays to move a recent item, and $1 pays to move an
+    old item.
+
+
+    # Example:
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_14_0.png)
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_14_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# Accounting analysis of
+
+    dynamic tables
+
+
+    Charge an amortized cost of \(c_i = \$3\) for the \(i\)th insertion.
+
+
+    +   - \$1 pays for the immediate insertion.
+
+    +   - \$2 is stored for later table doubling.
+
+
+    When the table doubles, \$1 pays to move a recent item, and \$1 pays to move an
+    old item.
+
+
+    # Example:
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_15_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Accounting analysis of dynamic tables
+
+
+    Charge an amortized cost of ĉᵢ = $3 for the i th insertion.
+
+
+    +   - $1 pays for the immediate insertion.
+
+    +   - $2 is stored for later table doubling.
+
+
+    When the table doubles, $1 pays to move a recent item, and $1 pays to move an
+    old item.
+
+
+    # Example:
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_16_0.png)
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_16_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# # Accounting analysis
+
+    ## (continued)
+
+
+    **Key invariant:** Bank balance never drops below 0. Thus, the sum of the amortized
+    costs provides an upper bound on the sum of the true costs.
+
+
+    |  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+
+    |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+
+    | *sizeᵢ* | 1 | 2 | 4 | 4 | 8 | 8 | 8 | 8 | 16 | 16 |
+
+    | *cᵢ* | 1 | 2 | 3 | 1 | 5 | 1 | 1 | 1 | 9 | 1 |
+
+    | *ĉᵢ* | 2* | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 | 3 |
+
+    | *bankᵢ* | 1 | 2 | 2 | 4 | 2 | 4 | 6 | 8 | 2 | 4 |
+
+
+    *Okay, so I lied. The first operation costs only $2, not $3.*'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "![](img/e8cfdb0a049dc5ab9d802234ebc2190e_19_0.png)\n\n# # Understanding potentials\n\
+    \n$\\hat{c}_i = c_i + \\Phi(D_i) - \\Phi(D_{i-1})$  \n**potential difference**\
+    \ $\\Delta\\Phi_i$\n\n+   - If $\\Delta\\Phi_i > 0$, then $\\hat{c}_i > c_i$.\
+    \ Operation $i$ stores work in the data structure for later use.\n+   - If $\\\
+    Delta\\Phi_i < 0$, then $\\hat{c}_i < c_i$. The data structure delivers up stored\
+    \ work to help pay for operation $i$."
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# The amortized costs bound the true costs
+
+
+    The total amortized cost of *n* operations is
+
+
+    ∑ᵢ₌₁ⁿ ĉᵢ = ∑ᵢ₌₁ⁿ (cᵢ + Φ(Dᵢ) − Φ(Dᵢ₋₁))
+
+
+    Summing both sides.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# The amortized costs bound the true costs
+
+
+    The total amortized cost of $n$ operations is
+
+
+    $$\sum_{i=1}^{n}\hat{c}_i = \sum_{i=1}^{n}\left(c_i + \Phi(D_i)-\Phi(D_{i-1})\right)$$
+
+
+    $$= \sum_{i=1}^{n}c_i + \Phi(D_n)-\Phi(D_0)$$
+
+
+    The series telescopes.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# The amortized costs bound the true costs
+
+
+    The total amortized cost of *n* operations is
+
+
+    $$\sum_{i=1}^{n} \hat{c}_i = \sum_{i=1}^{n}\left(c_i + \Phi(D_i)-\Phi(D_{i-1})\right)$$
+
+
+    $$= \sum_{i=1}^{n} c_i + \Phi(D_n)-\Phi(D_0)$$
+
+
+    $$\geq \sum_{i=1}^{n} c_i \qquad \text{since } \Phi(D_n)\geq 0 \text{ and } \Phi(D_0)=0.$$
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_22_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# Potential analysis of table doubling
+
+
+    Define the potential of the table after the ith insertion by Φ(D_i) = 2i − 2^[lg
+    i]. (Assume that 2^[lg 0] = 0.)
+
+
+    # Note:
+
+
+    +   - Φ(D₀) = 0,
+
+    +   - Φ(D_i) ≥ 0 for all i.
+
+
+    # Example:
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_23_0.png)
+
+
+    Φ = 2·6 − 2³ = 4
+
+
+    ( accounting method )'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '![](img/e8cfdb0a049dc5ab9d802234ebc2190e_24_0.png)
+
+
+    # # Calculation of amortized costs
+
+
+    The amortized cost of the *i*th insertion is
+
+
+    $\hat{c}_i = c_i + \Phi(D_i) - \Phi(D_{i-1})$
+
+
+    $= \begin{cases} i & \text{if } i-1 \text{ is an exact power of 2,} \\ 1 & \text{otherwise;}
+    \end{cases} + (2i-2^{\lceil\lg i\rceil})-(2(i-1)-2^{\lceil\lg(i-1)\rceil})$
+
+
+    $= \begin{cases} i & \text{if } i-1 \text{ is an exact power of 2,} \\ 1 & \text{otherwise;}
+    \end{cases} + 2 = 2^{\lceil\lg i\rceil}+2^{\lceil\lg(i-1)\rceil}$.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# Calculation
+
+
+    # Case 1: i − 1 is an exact power of 2.
+
+
+    ĉᵢ = i + 2 − 2⌈lg i⌉ + 2⌈lg (i−1)⌉
+
+    = i + 2 − 2(i − 1) + (i − 1)
+
+    = i + 2 − 2i + 2 + i − 1
+
+    = 3
+
+
+    # Case 2: i − 1 is not an exact power of 2.
+
+
+    ĉᵢ = 1 + 2 − 2⌈lg i⌉ + 2⌈lg (i−1)⌉
+
+    = 3
+
+
+    Therefore, n insertions cost Θ(n) in the worst case.
+
+
+    # Exercise: Fix the bug in this analysis to show that the amortized cost of the
+    first insertion is only 2.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# Conclusions
+
+
+    +   - Amortized costs can provide a clean abstraction of data-structure performance.
+
+    +   - Any of the analysis methods can be used when an amortized analysis is called
+    for, but each method has some situations where it is arguably the simplest or
+    most precise.
+
+    +   - Different schemes may work for assigning amortized costs in the accounting
+    method, or potentials in the potential method, sometimes yielding radically different
+    bounds.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Competitive Analysis
+
+
+    +   - Self-organizing lists
+
+    +   - Move-to-front heuristic
+
+    +   - Competitive analysis of MTF'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# Self-organizing lists
+
+
+    List $L$ of $n$ elements
+
+
+    +   - The operation Access($x$) costs rank$_L(x)$ = distance of $x$ from the head
+    of $L$.
+
+    +   - $L$ can be reordered by transposing adjacent elements at a cost of 1.
+
+
+    # Example:
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_29_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# Self-organizing lists
+
+
+    List *L* of *n* elements
+
+
+    +   - The operation Access(*x*) costs rank_L(*x*) = distance of *x* from the head
+    of *L*.
+
+    +   - *L* can be reordered by transposing adjacent elements at a cost of 1.
+
+
+    # Example:
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_30_0.png)
+
+
+    Accessing the element with key 14 costs 4.'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# # On-line and off-line problems
+
+
+    **Definition.** A sequence $S$ of operations is provided one at a time. For each
+    operation, an *on-line* algorithm $A$ must execute the operation immediately without
+    any knowledge of future operations (e.g., *Tetris*). An *off-line* algorithm may
+    see the whole sequence $S$ in advance.
+
+
+    **Goal:** Minimize the total cost $C_A(S)$.
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_32_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# Worst-case analysis of self-organizing lists
+
+
+    An adversary always accesses the tail (*n*th) element of *L*. Then, for any on-line
+    algorithm *A*, we have
+
+
+    $$C_A(S) = \Omega(|S| \cdot n)$$
+
+
+    in the worst case.
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_33_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# Average-case analysis of self-organizing lists
+
+
+    Suppose that element $x$ is accessed with probability $p(x)$. Then, we have
+
+
+    E[$C_A(S)$] = $\sum_{x \in L} p(x) \cdot \text{rank}_L(x)$
+
+
+    which is minimized when $L$ is sorted in decreasing order with respect to $p$.
+
+
+    **Heuristic:** Keep a count of the number of times each element is accessed, and
+    maintain $L$ in order of decreasing count.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '![](img/e8cfdb0a049dc5ab9d802234ebc2190e_35_0.png)
+
+
+    # The move-to-front heuristic
+
+
+    **Practice:** Implementers discovered that the *move-to-front (MTF)* heuristic
+    empirically yields good results.
+
+
+    **IDEA:** After accessing *x*, move *x* to the head of *L* using transposes:
+
+
+    cost = 2 · rank_L(x).
+
+
+    The MTF heuristic responds well to locality in the access sequence *S*.'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '![](img/e8cfdb0a049dc5ab9d802234ebc2190e_37_0.png)
+
+
+    # MTF is O(1)-competitive
+
+
+    Theorem. MTF is 4-competitive for self-organizing lists.'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# # MTF is O(1)-competitive
+
+
+    **Theorem.** MTF is 4-competitive for self-organizing lists.
+
+
+    *Proof.* Let $L_i$ be MTF’s list after the $i$th access, and let $L_i^*$ be OPT’s
+    list after the $i$th access.
+
+
+    Let $c_i$ = MTF’s cost for the $i$th operation
+
+
+    $= 2 \cdot \operatorname{rank}_{L_{i-1}}(x)$ if it accesses $x$;
+
+
+    $c_i^*$ = MTF’s cost for the $i$th operation
+
+
+    $= \operatorname{rank}_{L_{i-1}^*}(x) + t_i$,
+
+
+    where $t_i$ is the number of transposes that OPT performs.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# Potential function
+
+
+    Define the potential function \(\Phi: \{L_i\} \to \mathbb{R}\) by
+
+
+    \[\Phi(L_i) = 2 \cdot |\{(x,y): x \prec_{L_i} y \text{ and } y \prec_{L_i^*} x\}|\]
+
+    \[= 2 \cdot \#\ \textit{inversions}.\]'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# Potential function
+
+
+    Define the potential function Φ:{L_i} → ℝ by
+
+
+    Φ(L_i) = 2 · |{(x, y) : x ≺_{L_i} y and y ≺_{L_i*} x}| = 2 · # inversions.
+
+
+    # Example.
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_40_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# Potential function
+
+
+    Define the potential function Φ:{L_i} → ℝ by
+
+
+    ```
+
+    Φ(L_i) = 2 · |{(x, y) : x ≺_{L_i} y and y ≺_{L_i*} x}| = 2 · # inversions.
+
+    ```
+
+
+    # Example.
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_42_0.png)
+
+
+    ```
+
+    Φ(L_i) = 2 · |{(E,C), ...}|
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# Potential function
+
+
+    Define the potential function Φ:{L_i} → ℝ by
+
+
+    Φ(L_i) = 2 · |{(x, y) : x ≺_{L_i} y and y ≺_{L_i*} x}|
+
+    = 2 · # inversions.
+
+
+    # Example.
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_43_0.png)
+
+
+    Φ(L_i) = 2 · |{(E,C), (E,A), ...}|'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# Potential function
+
+
+    Define the potential function Φ: {L_i} → ℝ by
+
+
+    Φ(L_i) = 2 · |{(x, y) : x ≺_{L_i} y and y ≺_{L_i*} x}| = 2 · # inversions.
+
+
+    # Example.
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_44_0.png)
+
+
+    Φ(L_i) = 2 · |{(E,C), (E,A), (E,D), ...}|'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# Potential function
+
+
+    Define the potential function \(\Phi: \{L\} \to \mathbb{R}\) by
+
+
+    \[\Phi(L_i)=2\cdot |\{(x,y): x\prec_{L_i} y\text{ and }y\prec_{L_i^*}x\}|\]
+
+    \[\qquad\quad=2\cdot \#\ \textit{inversions}.\]
+
+
+    # Example.
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_45_0.png)
+
+
+    \[\Phi(L_i)=2\cdot |\{(E,C),(E,A),(E,D),(E,B),\ldots\}|\]'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# Potential function
+
+
+    Define the potential function Φ: {L_i} → ℝ by
+
+
+    Φ(L_i) = 2 · |{(x, y) : x ≺_{L_i} y and y ≺_{L_i*} x}|
+
+    = 2 · # inversions.
+
+
+    # Example.
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_46_0.png)
+
+
+    Φ(L_i) = 2 · |{(E,C), (E,A), (E,D), (E,B), (D,B)}|'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# # Potential function
+
+
+    Define the potential function $\Phi: \mathcal{L}_i \to \mathbb{R}$ by
+
+
+    $$
+
+    \Phi(L_i)=2\cdot |\{(x,y):x\prec_{L_i}y\text{ and }y\prec_{L_i^*}x\}|\\
+
+    =2\cdot \#\text{ inversions}.
+
+    $$
+
+
+    # Example.
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_47_0.png)
+
+
+    $$\Phi(L_i)=2\cdot |\{(E,C),(E,A),(E,D),(E,B),(D,B)\}|$$
+
+    $$=10.$$'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# Potential function
+
+
+    Define the potential function Φ:{L_i} → ℝ by
+
+
+    Φ(L_i) = 2 · |{(x, y) : x ≺_{L_i} y and y ≺_{L_i*} x}|
+
+    = 2 · # inversions.
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_48_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# Potential function
+
+
+    Define the potential function Φ:{L_i} → ℝ by
+
+
+    Φ(L_i) = 2 · |{(x, y) : x ≺_{L_i} y and y ≺_{L_i * x} }|
+
+    = 2 · # inversions.
+
+
+    Note that
+
+
+    +   - Φ(L_i) ≥ 0 for i = 0, 1, ...,
+
+    +   - Φ(L_0) = 0 if MTF and OPT start with the same list.
+
+
+    How much does Φ change from 1 transpose?
+
+
+    +   - A transpose creates/destroys 1 inversion.
+
+    +   - ΔΦ = ±2.'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# What happens on an access?
+
+
+    Suppose that operation $i$ accesses element $x$, and define
+
+
+    $A = \{ y \in L_{i-1} : y \prec_{L_{i-1}} x \text{ and } y \prec_{L_{i-1}*} x
+    \}$,
+
+    $B = \{ y \in L_{i-1} : y \prec_{L_{i-1}} x \text{ and } y \succ_{L_{i-1}*} x
+    \}$,
+
+    $C = \{ y \in L_{i-1} : y \succ_{L_{i-1}} x \text{ and } y \prec_{L_{i-1}*} x
+    \}$,
+
+    $D = \{ y \in L_{i-1} : y \succ_{L_{i-1}} x \text{ and } y \succ_{L_{i-1}*} x
+    \}$.
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_51_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# What happens on an access?
+
+
+    L_{i-1}  A ∪ B  x  C ∪ D
+
+    r = rank_{L_{i-1}}(x)
+
+
+    L_{i-1}*  A ∪ C  x  B ∪ D
+
+    r* = rank_{L_{i-1}*}(x)
+
+
+    We have r = |A| + |B| + 1 and r* = |A| + |C| + 1.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# What happens on an access?
+
+
+    L_{i-1}  A ∪ B  x  C ∪ D
+
+    r = rank_{L_{i-1}}(x)
+
+
+    L_{i-1}*  A ∪ C  x  B ∪ D
+
+    r* = rank_{L_{i-1}*}(x)
+
+
+    We have r = |A| + |B| + 1 and r* = |A| + |C| + 1.
+
+
+    When MTF moves x to the front, it creates |A| inversions and destroys |B| inversions.
+    Each transpose by OPT creates ≤ 1 inversion. Thus, we have
+
+    Φ(L_i) − Φ(L_{i-1}) ≤ 2(|A| − |B| + t_i).'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# Amortized cost
+
+
+    The amortized cost for the *i*th operation of MTF with respect to Φ is
+
+
+    ĉᵢ = cᵢ + Φ(Lᵢ) − Φ(Lᵢ₋₁)'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '![](img/e8cfdb0a049dc5ab9d802234ebc2190e_55_0.png)
+
+
+    # Amortized cost
+
+
+    The amortized cost for the *i*th operation of MTF with respect to Φ is
+
+
+    ĉᵢ = cᵢ + Φ(Lᵢ) − Φ(Lᵢ₋₁)
+
+    ≤ 2r + 2(|A| − |B| + tᵢ)'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# Amortized cost
+
+
+    The amortized cost for the *i*th operation of MTF with respect to Φ is
+
+
+    \(\hat{c}_i = c_i + \Phi(L_i) - \Phi(L_{i-1})\)
+
+    \(\le 2r + 2(|A| - |B| + t_i)\)
+
+    \(= 2r + 2(|A| - (r - 1 - |A|) + t_i)\)
+
+    (since $r = |A| + |B| + 1$)'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# Amortized cost
+
+
+    The amortized cost for the *i*th operation of MTF with respect to Φ is
+
+
+    ĉᵢ = cᵢ + Φ(Lᵢ) − Φ(Lᵢ₋₁)
+
+    ≤ 2r + 2(|A| − |B| + tᵢ)
+
+    = 2r + 2(|A| − (r − 1 − |A|) + tᵢ)
+
+    = 2r + 4|A| − 2r + 2 + 2tᵢ
+
+    = 4|A| + 2 + 2tᵢ'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '![](img/e8cfdb0a049dc5ab9d802234ebc2190e_59_0.png)
+
+
+    # Amortized cost
+
+
+    The amortized cost for the i th operation of MTF with respect to Φ is
+
+
+    ĉᵢ = cᵢ + Φ(Lᵢ) − Φ(Lᵢ₋₁)
+
+    ≤ 2r + 2(|A| − |B| + tᵢ)
+
+    = 2r + 2(|A| − (r − 1 − |A|) + tᵢ)
+
+    = 2r + 4|A| − 2r + 2 + 2tᵢ
+
+    = 4|A| + 2 + 2tᵢ
+
+    ≤ 4(r* + tᵢ)
+
+
+    (since r* = |A| + |C| + 1 ≥ |A| + 1)'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# Amortized cost
+
+
+    The amortized cost for the *i*th operation of MTF with respect to Φ is
+
+
+    ĉᵢ = cᵢ + Φ(Lᵢ) − Φ(Lᵢ₋₁)
+
+    ≤ 2r + 2(|A| − |B| + tᵢ)
+
+    = 2r + 2(|A| − (r − 1 − |A|) + tᵢ)
+
+    = 2r + 4|A| − 2r + 2 + 2tᵢ
+
+    = 4|A| + 2 + 2tᵢ
+
+    ≤ 4(r* + tᵢ)
+
+    = 4cᵢ*.
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_60_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '![](img/e8cfdb0a049dc5ab9d802234ebc2190e_61_0.png)
+
+
+    # The grand finale
+
+
+    Thus, we have
+
+
+    $C_{\text{MTF}}(S) = \sum_{i=1}^{|S|} c_i$'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '![](img/e8cfdb0a049dc5ab9d802234ebc2190e_62_0.png)
+
+
+    # The grand finale
+
+
+    Thus, we have
+
+
+    C_{MTF}(S) = \sum_{i=1}^{|S|} c_i
+
+    = \sum_{i=1}^{|S|} (\hat{c}_i + \Phi(L_{i-1}) - \Phi(L_i))'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# # The grand finale
+
+
+    Thus, we have
+
+
+    $$C_{\mathrm{MTF}}(S)=\sum_{i=1}^{|S|} c_i$$
+
+
+    $$=\sum_{i=1}^{|S|}\left(\hat{c}_i+\Phi(L_{i-1})-\Phi(L_i)\right)$$
+
+
+    $$\leq\left(\sum_{i=1}^{|S|}4c_i^*\right)+\Phi(L_0)-\Phi(L_{|S|})$$'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# The grand finale
+
+
+    Thus, we have
+
+
+    $C_{\text{MTF}}(S) = \sum_{i=1}^{|S|} c_i$
+
+
+    $= \sum_{i=1}^{|S|} (\hat{c}_i + \Phi(L_{i-1}) - \Phi(L_i))$
+
+
+    $\le \left(\sum_{i=1}^{|S|} 4c_i^*\right) + \Phi(L_0) - \Phi(L_{|S|})$
+
+
+    $\le 4 \cdot C_{\text{OPT}}(S),$
+
+
+    since $\Phi(L_0) = 0$ and $\Phi(L_{|S|}) \ge 0$. □'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# Addendum
+
+
+    If we count transpositions that move *x* toward the front as “free” (models splicing
+    *x* in and out of *L* in constant time), then MTF is *z*-competitive.'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# Addendum
+
+
+    If we count transpositions that move x toward the front as “free” (models splicing
+    x in and out of L in constant time), then MTF is 2-competitive.
+
+
+    What if L₀ ≠ L₀*?
+
+
+    +   - Then, Φ(L₀) might be Θ(n²) in the worst case.
+
+    +   - Thus, C_MTF(S) ≤ 4 · C_OPT(S) + Θ(n²), which is still 4-competitive, since
+    n² is constant as |S| → ∞.'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# Go Further a Step!
+
+
+    +   - Not a list but a Tree
+
+    +   - **Splay Tree**'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# Problems with BSTs
+
+
+    +   - Because the shape of a BST is determined by the order that data is inserted,
+    we run the risk of trees that are essentially lists
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_68_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# BST Sequence of Operations
+
+
+    +   - Worst case for a single BST operation can be O(N)
+
+    +   - Not so bad if this happens only occasionally
+
+    +   - BUT...its not uncommon for an entire sequence of “bad” operations to occur.
+    In this case, a sequence of M operations take O(M*N) time and the time for the
+    sequence of operations becomes noticeable.'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# Splay Tree Sequence of Operations
+
+
+    +   - Splay trees guarantee that a sequence of M operations takes at most $O(\text{M
+    * lg N})$ time.
+
+    +   - We say that the splay tree has *amortized* running time of $O(\text{lg N})$
+    cost per operation. Over a long sequence of operations, some may take more than
+    lg N time, some will take less.'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# # Splay Operation
+
+
+    +   - To “splay node x”, traverse up the tree from node x to root, rotating along
+    the way until x is the root. For each rotation:
+
+    +     - If x is root, do nothing.
+
+    +     - If x has no grandparent, rotate x about its parent.
+
+    +     - If x has a grandparent,
+
+    +       - if x and its parent are both left children or both right children, rotate
+    the parent about the grandparent, then rotate x about its parent.
+
+    +       - if x and its parent are opposite type children (one left and the other
+    right), rotate x about its parent, then rotate x about its new parent (former
+    grandparent).'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# Node has no grandparent
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_73_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# Zig-Zig'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '# Zig-Zag
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_75_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# Operations on Splay Trees (cont)
+
+
+    +   - remove
+
+    +     - splay element to be removed
+
+    +       - if the element to be deleted is not in the tree, the node last visited
+    on the search path is splayed
+
+    +     - disconnect left and right subtrees from root
+
+    +     - do one or both of:
+
+    +       - splay max item in T_L (then T_L has no right child)
+
+    +       - splay min item in T_R (then T_R has no left child)
+
+    +     - connect other subtree to empty child of root'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '# Insertion in order into a Splay Tree
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_78_0.png)
+
+
+    In a BST, building a tree from N sorted elements was O(N²). What is the performance
+    of building a splay tree from N sorted elements?'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '# An extreme example of splaying
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_79_0.png)
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_79_1.png)
+
+
+    After Splaying At Node "X"
+
+
+    Original Tree'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '# Splay Tree Code
+
+
+    +   - The splaying operation is performed “up the tree” from the node to the root.
+
+    +   - How do we traverse “up” the tree?
+
+    +   - How do we know if X and P are both left/right children or are different
+    children?
+
+    +   - How do we know if X has a grandparent?
+
+    +   - What disadvantages are there to this technique?'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '+   - a constant weight \(w(v)>0\) (for the analysis, this can be arbitrary)
+
+    +   - \(weight\ sum\ s(x)=\sum_{y\in subtree(x)}w(y)\) (where subtree(x) is the
+    subtree rooted at \(x\), including \(x\))
+
+    +   - \(rank\ r(x)=\log s(x)\)
+
+
+    We use \(r(x)\) as the potential of a node. The potential function after \(i\)
+    operations is thus \(\Phi_i=\sum_{x\in tree(T)}r(x)\).'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# Lemma 1 The amortized cost of a splay step on node x is ≤ 3(r′(x) − r(x))
+    + 1, where r is rank before the splay step and r′ is rank after the splay step.
+    Furthermore, the amortized cost of the rr, ll, lr, and rl splay steps is ≤ 3(r′(x)
+    − r(x)).
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_82_0.png)
+
+
+    We will consider only the rr splay step (refer to Figure 3.1). The actual cost
+    of the splay step is 2 (for 2 rotations). The splay step only affects the potentials/ranks
+    of nodes x, y, and z; we observe that r′(x) = r(z), r(y) ≥ r(x), and r′(y) ≤ r′(x).'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '\[
+
+    \begin{aligned}
+
+    \text{amortized cost} &= 2+\phi(i+1)-\phi(i)\\
+
+    &=2+\bigl(r''(x)+r''(y)+r''(z)\bigr)-\bigl(r(x)+r(y)-r(z)\bigr)\\
+
+    &=2+\bigl(r''(x)-r(z)\bigr)+r''(y)+r''(z)-r(x)-r(y)\\
+
+    &\le 2+0+r''(x)+r''(z)-r(x)-r(x)\\
+
+    &=2+r''(x)+r''(z)-2r''(x)
+
+    \end{aligned}
+
+    \]
+
+
+    The log function is concave, i.e., \(\frac{\log a+\log b}{2}\le \log\left(\frac{a+b}{2}\right)\).
+    Thus we also have (\(s\) is weight sum before the splay step and \(s''\) is weight
+    sum after the splay step):
+
+
+    \[
+
+    \frac{\log(s(x))+\log(s''(z))}{2}\le \log\left(\frac{s(x)+s''(z)}{2}\right)
+
+    \]
+
+
+    \[
+
+    \frac{r(x)+r''(z)}{2}\le \log\left(\frac{s(x)+s''(z)}{2}\right)\qquad\text{(note
+    that }s(x)+s''(z)\le s''(x)\text{)}
+
+    \]
+
+
+    \[
+
+    \begin{aligned}
+
+    &\le \log\left(\frac{s''(x)}{2}\right)\\
+
+    &=r''(x)-1\\
+
+    r''(z)&\le 2r''(x)-r(x)-2
+
+    \end{aligned}
+
+    \]'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# **Corollary 1**  *The amortized cost of a splay operation on node x is O(log
+    n).*
+
+
+    # **Proof:**
+
+
+    The amortized cost of a splay operation on *x* is the sum of the amortized costs
+    of the splay steps on *x* involved:
+
+
+    ```
+
+    $$\begin{aligned}
+
+    \text{amortized cost} &= \sum_i \text{cost}(\text{splay step}_i) \\
+
+    &\leq \sum_i \left(3(r^{i+1}(x)-r^i(x))+1\right) \\
+
+    &= 3(r(\text{root})-r(x))+1
+
+    \end{aligned}$$
+
+    ```
+
+
+    The +1 comes from the last *r* or *r* splay step (if necessary). If we set *w(v)
+    = 1* for all nodes in the tree, then *r(root) = log n* and we have:
+
+
+    ```
+
+    $$\text{amortized cost} \leq 3\log n + 1 = O(\log n)$$
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# A long way !'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '+   - Why Advanced Data Structures?
+
+    +     - Content
+
+    +     - Week1: Data Structure and Computer Science, Algorithm, Database, WWW...
+
+    +   - Principles of Data Structures—How?
+
+    +     - Week2: Why and How O(log n) access time?
+
+    +     - Week3: Dynamic data structures and Analysis
+
+    +     - Week4: Randomized Data Structure
+
+    +     - Week5: Augmented Data Structure
+
+    +     - Week6: Data Structures in Distributed Environments
+
+    +   - New Problems—Applications
+
+    +     - Week7: Data Structures in Frontiers of Research
+
+    +     - Week8: Exam'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# # Huffman Coding
+
+
+    +   - FP-Tree
+
+    +   - Sketches'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '![](img/e8cfdb0a049dc5ab9d802234ebc2190e_90_0.png)
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_90_1.png)
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_90_2.png)
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_90_3.png)
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_90_4.png)
+
+
+    a.
+
+
+    b.
+
+
+    c.
+
+
+    d.
+
+
+    e.'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '![](img/e8cfdb0a049dc5ab9d802234ebc2190e_91_0.png)
+
+
+    | 字符 | 编码 | 字符 | 编码 |
+
+    |---|---|---|---|
+
+    | A | 00 | D | 10 |
+
+    | B | 010 | E | 11 |
+
+    | C | 011 |  |  |
+
+
+    • A character’s code is found by starting at the root and following the branches
+    that lead to that character. The code itself is the bit value of each branch on
+    the path, taken in sequence.'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '# Text
+
+
+    EAEB A ECDEA
+
+
+    # Encoder
+
+
+    A → 00    D → 10
+
+    B → 010   E → 11
+
+    C → 011
+
+
+    ```
+
+    1100110100011011101100
+
+    ```
+
+
+    # Huffman code
+
+
+    Discover the power of custom layouts'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# Huffman code
+
+
+    1100110100011011101100
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_93_0.png)
+
+
+    | Code | Character | Code | Character |
+
+    |---|---|---|---|
+
+    | 00 | A | 010 | B |
+
+    | 10 | D | 011 | C |
+
+    | 11 | E |  |  |
+
+
+    Decoder
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_93_1.png)
+
+
+    EAEBAECDEA
+
+
+    Text'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '# Outline
+
+
+    +   - Frequent Pattern Mining: Problem statement and an example
+
+    +   - Review of Apriori-like Approaches
+
+    +   - FP-Growth:
+
+    +     - Overview
+
+    +     - FP-tree:
+
+    +       - structure, construction and advantages
+
+    +     - FP-growth:
+
+    +       - FP-tree → conditional pattern bases → conditional FP-tree → frequent
+    patterns
+
+    +   - Experiments
+
+    +   - Discussion:
+
+    +     - Improvement of FP-growth
+
+    +   - Conclusion Remarks'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '# Frequent Pattern Mining: An Example
+
+
+    Given a transaction database DB and a minimum support threshold ξ, find all frequent
+    patterns (item sets) with support no less than ξ.
+
+
+    **Input:**  DB:
+
+
+    | TID | Items bought |
+
+    |---|---|
+
+    | 100 | {f, a, c, d, g, i, m, p} |
+
+    | 200 | {a, b, c, f, l, m, o} |
+
+    | 300 | {b, f, h, j, o} |
+
+    | 400 | {b, c, k, s, p} |
+
+    | 500 | {a, f, c, e, l, p, m, n} |
+
+
+    Minimum support: ξ = 3
+
+
+    **Output:** all frequent patterns, i.e., *f, a, …, fa, fac, fam, fm, am…*
+
+
+    Problem Statement: How to **efficiently** find all frequent patterns?'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '# Review of Apriori-like Approaches for finding complete frequent item-sets
+
+
+    # Apriori
+
+
+    +   - **Main Steps of Apriori Algorithm:**
+
+    +     - Use frequent $(k-1)$-itemsets ($L_{k-1}$) to generate candidates of frequent
+    $k$-itemsets $C_k$.
+
+    +     - Scan database and count each pattern in $C_k$, get frequent $k$-itemsets
+    ($L_k$).
+
+    +   - **E.g.,**
+
+
+    | TID | Items bought |
+
+    |---|---|
+
+    | 100 | {f, a, c, d, g, i, m, p} |
+
+    | 200 | {a, b, c, f, l, m, o} |
+
+    | 300 | {b, f, h, j, o} |
+
+    | 400 | {b, c, k, s, p} |
+
+    | 500 | {a, f, c, e, l, p, m, n} |
+
+
+    | Apriori iteration | |
+
+    |---|---|
+
+    | C1 | f, a, c, d, g, i, m, p, l, o, h, j, k, s, b, e, n |
+
+    | L1 | f, a, c, m, b, p |
+
+    | C2 | fa, fc, fm, fp, ac, am, ...bp |
+
+    | L2 | fa, fc, fm, ... |
+
+    | ... | |
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_96_0.png)
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_96_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# Disadvantages of Apriori-like Approach
+
+
+    # Performance Bottlenecks of Apriori
+
+
+    +   - Bottlenecks of *Apriori*: **candidate generation**
+
+    +     - Generate huge candidate sets:
+
+    +       - $10^4$ frequent 1-itemset will generate $10^7$ candidate 2-itemsets
+
+    +       - To discover a frequent pattern of size 100, e.g., {$a_1, a_2, ..., a_{100}$},
+    one needs to generate $2^{100} \approx 10^{30}$ candidates.
+
+
+    ❖ **Candidate Test** incur multiple scans of database: each candidate'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# Overview of FP-Growth: Ideas
+
+
+    +   - Compress a large database into a compact, *Frequent-Pattern tree* (**FP-tree**)
+    structure
+
+    +     - highly compacted, but complete for frequent pattern mining
+
+    +     - avoid costly repeated database scans
+
+
+    +   - Develop an efficient, FP-tree-based frequent pattern mining method (**FP-growth**)
+
+    +     - A divide-and-conquer methodology: decompose mining tasks into smaller
+    ones
+
+    +     - Avoid candidate generation: sub-database test only.'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '# FP-tree:
+
+    Construction and Design'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: "# Construct FP-tree\n\n**Two Steps:**\n\n+   1. Scan the transaction DB for\
+    \ the first time, find frequent items (single item patterns) and order them into\
+    \ a list *L* in frequency descending order.\n+   \n+      e.g., *L*={f:4, c:4,\
+    \ a:3, b:3, m:3, p:3}\n+   \n+      In the format of (item-name, support)\n\n\
+    +   2. For each transaction, order its frequent items according to the order in\
+    \ *L*; Scan DB the second time, construct FP-tree by putting each frequency ordered\
+    \ transaction onto it."
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# FP-tree Example: step 1
+
+
+    # Step 1: Scan DB for the first time to generate L
+
+
+    | TID | Items bought |
+
+    | --- | --- |
+
+    | 100 | {f, a, c, d, g, i, m, p} |
+
+    | 200 | {a, b, c, f, l, m, o} |
+
+    | 300 | {b, f, h, j, o} |
+
+    | 400 | {b, c, k, s, p} |
+
+    | 500 | {a, f, c, e, l, p, m, n} |
+
+
+    | Item | frequency |
+
+    | --- | --- |
+
+    | f | 4 |
+
+    | c | 4 |
+
+    | a | 3 |
+
+    | b | 3 |
+
+    | m | 3 |
+
+    | p | 3 |
+
+
+    By-Product of First Scan of Database'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '# FP-tree Example: step 2
+
+
+    Step 2: scan the DB for the second time, order frequent items in each transaction
+
+
+    | TID | Items bought | (ordered) frequent items |
+
+    | --- | --- | --- |
+
+    | 100 | {f, a, c, d, g, i, m, p} | {f, c, a, m, p} |
+
+    | 200 | {a, b, c, f, l, m, o} | {f, c, a, b, m} |
+
+    | 300 | {b, f, h, j, o} | {f, b} |
+
+    | 400 | {b, c, k, s, p} | {c, b, p} |
+
+    | 500 | {a, f, c, e, l, p, m, n} | {f, c, a, m, p} |'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: '# FP-tree
+
+
+    # FP-tree Example: step 2
+
+
+    # Step 2: construct FP-tree
+
+
+    NOTE: Each transaction corresponds to one path in the FP-tree
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_103_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '# FP-tree Example: step 2
+
+
+    # Step 2: construct FP-tree
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_104_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: "# FP-tree\n\n# Construction Example\n\n# Final FP-tree\n\n| Header Table |\n\
+    |---| \n| Item head |\n| f |\n| c |\n| a |\n| b |\n| m |\n| p |\n\n![](img/e8cfdb0a049dc5ab9d802234ebc2190e_105_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: '# FP-Tree Definition
+
+
+    FP-tree is a frequent pattern tree. Formally, FP-tree is a tree structure defined
+    below:
+
+
+    +   1. One root labeled as “null”, a set of item prefix sub-trees as the children
+    of the root, and a frequent-item header table.
+
+
+    +   2. Each node in the item prefix sub-trees has three fields:
+
+    +   - item-name: register which item this node represents,
+
+    +   - count, the number of transactions represented by the portion of the path
+    reaching this node,
+
+    +   - node-link that links to the next node in the FP-tree carrying the same item-name,
+    or null if there is none.
+
+
+    +   3. Each entry in the frequent-item header table has two fields,
+
+    +   - item-name, and
+
+    +   - head of node-link that points to the first node in the FP-tree carrying
+    the item-name.'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: '# Advantages of the FP-tree Structure
+
+
+    +   - The most significant advantage of the FP-tree
+
+    +     - Scan the DB only twice and twice only.
+
+
+    +   - Completeness:
+
+    +     - the FP-tree contains all the information related to mining frequent patterns
+    (given the min-support threshold). Why?
+
+
+    +   - Compactness:
+
+    +     - The size of the tree is bounded by the occurrences of frequent items
+
+    +     - The height of the tree is bounded by the maximum number of items in a
+    transaction'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '# Questions?
+
+
+    +   - Why descending order?
+
+    +   - Example 1:
+
+
+    | TID | (unordered) frequent items |
+
+    | --- | --- |
+
+    | 100 | {f, a, c, m, p} |
+
+    | 500 | {a, f, c, p, m} |
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_108_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '# Questions?
+
+
+    +   - Example 2:
+
+
+    | TID | (ascended) frequent items |
+
+    |---|---|
+
+    | 100 | {p, m, a, c, f} |
+
+    | 200 | {m, b, a, c, f} |
+
+    | 300 | {b, f} |
+
+    | 400 | {p, b, c} |
+
+    | 500 | {p, m, a, c, f} |
+
+
+    This tree is larger than FP-tree, because in FP-tree, more frequent items have
+    a higher position, which makes branches less
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_109_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: '# Mining Frequent Patterns Using FP-tree
+
+
+    +   - General idea (divide-and-conquer)
+
+
+    Recursively grow frequent patterns using the FP-tree: looking for shorter ones
+    recursively and then concatenating the suffix:
+
+
+    +   - For each frequent item, construct its conditional pattern base, and then
+    its conditional FP-tree;
+
+
+    +   - Repeat the process on each newly created conditional FP-tree until the resulting
+    FP-tree is empty, or it contains only one path (single path will generate all
+    the combinations of its sub-paths, each of which is a frequent pattern)'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: '# 3 Major Steps
+
+
+    Starting the processing from the end of list **L**:
+
+
+    +   1. **Step 1:** Construct **conditional pattern base** for each item in the
+    header table
+
+    +   2. **Step 2:** Construct **conditional FP-tree** from each conditional pattern
+    base
+
+    +   3. **Step 3:** **Recursively mine** conditional FP-trees and grow frequent
+    patterns obtained so far. If the conditional FP-tree contains a _single path_,
+    simply enumerate all the patterns'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: '# FP-Growth: An Example
+
+
+    # Step 1: Construct Conditional Pattern Base
+
+
+    +   - Starting at the bottom of frequent-item header table in the FP-tree
+
+    +   - Traverse the FP-tree by following the link of each frequent item
+
+    +   - Accumulate all of **transformed prefix paths** of that item to form a **conditional
+    pattern base**
+
+
+    | Item | head |
+
+    |---|---|
+
+    | f | |
+
+    | c | |
+
+    | a | |
+
+    | b | |
+
+    | m | |
+
+    | p | |
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_113_0.png)
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_113_1.png)
+
+
+    ### Conditional pattern bases
+
+
+    | item | cond. pattern base |
+
+    |---|---|
+
+    | p | fcam:2, cb:1 |
+
+    | m | fca:2, fcab:1 |
+
+    | b | fca:1, f:1, c:1 |
+
+    | a | fc:3 |
+
+    | c | f:3 |
+
+    | f | {} |'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: '# Properties of FP-Tree
+
+
+    +   - Node-link property
+
+    +     - For any frequent item $a_i$, all the possible frequent patterns that contain
+    $a_i$ can be obtained by following $a_i$''s node-links, starting from $a_i$''s
+    head in the FP-tree header.
+
+    +   - Prefix path property
+
+    +     - To calculate the frequent patterns for a node $a_i$ in a path $P$, only
+    the prefix sub-path of $a_i$ in $P$ need to be accumulated, and its frequency
+    count should carry the same count as node $a_i$.'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '# Step 2: Construct Conditional FP-tree
+
+
+    +   - For each pattern base
+
+    +     - Accumulate the count for each item in the base
+
+    +     - Construct the conditional FP-tree for the frequent items of the pattern
+    base
+
+
+    | Header Table |
+
+    | Item | head |
+
+    | f | 4 |
+
+    | c | 4 |
+
+    | a | 3 |
+
+    | b | 3 |
+
+    | m | 3 |
+
+    | p | 3 |
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_115_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: '# FP-Growth
+
+
+    # Step 3: Recursively mine the conditional FP-tree
+
+
+    conditional FP-tree of "m": (fca:3)
+
+
+    Frequent Pattern
+
+
+    f:3
+
+    c:3
+
+    a:3
+
+
+    add "a"
+
+
+    add "c"
+
+
+    add "f"
+
+
+    conditional FP-tree of "am": (fc:3)
+
+
+    Frequent Pattern
+
+
+    f:3
+
+    c:3
+
+
+    conditional FP-tree of "cm": (f:3)
+
+
+    Frequent Pattern
+
+
+    f:3
+
+
+    add "f"
+
+
+    conditional FP-tree of "fm": 3
+
+
+    Frequent Pattern
+
+
+    conditional FP-tree of "fam": 3
+
+
+    Frequent Pattern
+
+
+    conditional FP-tree of "fcm": 3
+
+
+    Frequent Pattern
+
+
+    Frequent Pattern
+
+
+    fcam
+
+
+    add "f"
+
+
+    add "c"
+
+
+    conditional FP-tree of "cam": (f:3)
+
+
+    f:3
+
+
+    add "f"'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: '# Principles of FP-Growth
+
+
+    +   - Pattern growth property
+
+    +     - Let α be a frequent itemset in DB, B be α''s conditional pattern base,
+    and β be an itemset in B. Then α ∪ β is a frequent itemset in DB iff β is frequent
+    in B.
+
+    +   - Is “fcabm” a frequent pattern?
+
+    +     - “fcab” is a branch of m''s conditional pattern base
+
+    +     - “b” is NOT frequent in transactions containing “fcab”
+
+    +     - “bm” is NOT a frequent itemset.'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: '# Conditional Pattern Bases and
+
+    Conditional FP-Tree
+
+
+    | Item | Conditional pattern base | Conditional FP-tree |
+
+    |---|---|---|
+
+    | p | `{(fcam:2), (cb:1)}` | `{(c:3)}\|p` |
+
+    | m | `{(fca:2), (fcab:1)}` | `{(f:3, c:3, a:3)}\|m` |
+
+    | b | `{(fca:1), (f:1), (c:1)}` | `Empty` |
+
+    | a | `{(fc:3)}` | `{(f:3, c:3)}\|a` |
+
+    | c | `{(f:3)}` | `{(f:3)}\|c` |
+
+    | f | `Empty` | `Empty` |
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_118_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: '# Single FP-tree Path Generation
+
+
+    +   - Suppose an FP-tree T has a single path P. The complete set of frequent pattern
+    of T can be generated by enumeration of all the combinations of the sub-paths
+    of P
+
+
+    {}
+
+    |
+
+    f:3
+
+    |
+
+    c:3
+
+    |
+
+    a:3
+
+    m-conditional FP-tree
+
+
+    All frequent patterns concerning m: combination of {f, c, a} and m
+
+
+    +   - m,
+
+    +   - fm, cm, am,
+
+    +   - fcm, fam, cam,
+
+    +   - fcam'
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: '# Summary of FP-Growth Algorithm
+
+
+    +   - Mining frequent patterns can be viewed as first mining 1-itemset and progressively
+    growing each 1-itemset by mining on its conditional pattern base recursively
+
+    +   - Transform a frequent k-itemset mining problem into a sequence of k frequent
+    1-itemset mining problems via a set of conditional pattern bases'
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: '# Efficiency Analysis
+
+
+    **Facts: usually**
+
+
+    +   1. FP-tree is much smaller than the size of the DB
+
+    +   2. Pattern base is smaller than original FP-tree
+
+    +   3. Conditional FP-tree is smaller than pattern base
+
+    +   ➔ mining process works on a set of usually much smaller pattern bases and
+    conditional FP-trees
+
+    +   ➔ Divide-and-conquer and dramatic scale of shrinking'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: '# Stream Model of Computation
+
+
+    Increasing time
+
+
+    Data Stream
+
+
+    Main Memory
+
+    (Synopsis Data Structures)
+
+
+    Memory: poly(1/ε, log N)
+
+
+    Query/Update Time: poly(1/ε, log N)
+
+
+    N: # items so far, or window size
+
+
+    ε: error parameter
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_122_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: '# Generalized Stream Model
+
+
+    Data stream: 2, 0, 1, 3, 1, 2, 4, ...
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_124_0.png)
+
+
+    +   - Input Element (i,a)
+
+    +     - a copies of domain-value i
+
+    +     - increment to ith dimension of m by a
+
+    +     - a need not be an integer
+
+    +   - Negative value – captures deletions'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: '# Example
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_125_0.png)
+
+
+    On seeing element $(i,a)=(2,2)$
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_125_1.png)
+
+
+    On seeing element $(i,a)=(1,-1)$
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_125_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: '# Problem 1 – Top-K List
+
+
+    [Charikar-Chen-Farach-Colton]
+
+
+    # The Google Problem
+
+
+    Return list of k most frequent items in stream
+
+
+    # Motivation
+
+
+    search engine queries, network traffic, ...
+
+
+    # Remember
+
+
+    Saw lower bound recently!
+
+
+    # Solution
+
+
+    Data structure Count-Sketch → maintaining count-estimates of high-frequency elements'
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: '# Main Idea
+
+
+    +   - Consider
+
+    +     - single counter X
+
+    +     - hash function h(i): {1, 2, ..., N} → {-1, +1}
+
+    +   - Input element i → update counter X += Z_i = h(i)
+
+    +   - For each r, use XZ_r as estimator of m_r
+
+
+    # Theorem: E[XZ_r] = m_r
+
+
+    Proof
+
+
+    +   - X = Σ_i m_i Z_i
+
+    +   - E[XZ_r] = E[Σ_i m_i Z_i Z_r] = Σ_i m_i E[Z_i Z_r] = m_r E[Z_r²] = m_r
+
+    +   - Cross-terms cancel'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: '# Problem with “Array of Counters”
+
+
+    +   - **Variance** — dominated by highest frequency
+
+    +   - **Estimates for less-frequent elements like** $k$
+
+    +     - corrupted by higher frequencies
+
+    +     - variance $\gg m_k$
+
+    +   - **Avoiding Collisions?**
+
+    +     - spread out high frequency elements
+
+    +     - replace each counter with hashtable of $b$ counters'
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: '# Count Sketch
+
+
+    +   - Hash Functions
+
+    +     - 4-wise independent hashes h₁,...,hₜ and s₁,...,sₜ
+
+    +     - hashes independent of each other
+
+    +   - Data structure: hashtables of counters X(r,c)
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_131_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: '# Overall Algorithm
+
+
+    +   - $s_r(i)$: one of $b$ counters in $r$th hashtable
+
+    +   - **Input** $i$ → for each $r$, update $X(r,s_r(i)) += h_r(i)$
+
+    +   - **Estimator** $(m_i) = \operatorname{median}_r\{X(r,s_r(i)) \bullet h_r(i)\}$
+
+    +   - Maintain heap of $k$ top elements seen so far
+
+
+    +   - **Observe**
+
+    +     - Not completely eliminated collision with high frequency items
+
+    +     - Few of estimates $X(r,s_r(i)) \bullet h_r(i)$ could have high variance
+
+    +     - Median not sensitive to these poor estimates'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: '# Avoiding Large Items
+
+
+    +   - **b > O(k)** → with probability **Ω(1)**, no collision with top-k elements
+
+
+    +   - **t** hashtables represent independent trials
+
+    +   - Need **log m/δ** trials to estimate with probability **1−δ**
+
+
+    +   - Also need – small variance for colliding small elements
+
+    +   - **Claim:**
+
+    +     P[variance due to small items in each estimate < (∑ᵢ>k mᵢ²)/b] = **Ω(1)**
+
+
+    +   - Final bound  **b = O(k + ∑ᵢ>k mᵢ² / (εmₖ)²)**'
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: '# Final Results
+
+
+    +   - Zipflan Distribution: m_i ∝ 1/i^α [Power Law]
+
+
+    +   - FindApproxTop
+
+    +     - [k + (Σ_{i>k} m_i²) / (ε m_k)²] log m/δ
+
+    +     - Roughly: sampling bound with frequencies squared
+
+    +     - Zipfian – gives improved results
+
+
+    +   - FindCandidateTop
+
+    +     - Zipf parameter 0.5
+
+    +     - O(k log N log m)
+
+    +     - Compare: sampling bound O((kN)^0.5 log k)'
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: '# Algorithm 1: Lossy Counting
+
+
+    Step 1: Divide the stream into ''windows''
+
+
+    Window 1
+
+
+    Window 2
+
+
+    Window 3
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_136_0.png)
+
+
+    Window-size w is function of support s – specify later...'
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: '# Lossy Counting in Action ...
+
+
+    Empty
+
+
+    First Window
+
+
+    Frequency Counts
+
+
+    At window boundary, decrement all counters by 1
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_137_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: '# Lossy Counting (continued)
+
+
+    Frequency Counts
+
+
+    Next Window
+
+
+    At window boundary, decrement all counters by 1
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_138_0.png)
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_138_1.png)
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_138_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: '# Error Analysis
+
+
+    How much do we undercount?
+
+
+    If current size of stream = N
+
+    and window-size w = 1/ε
+
+
+    then frequency error ≤ # windows = εN
+
+
+    Rule of thumb:
+
+    Set ε = 10% of support s
+
+    Example:
+
+    Given support frequency s = 1%,
+
+    set error frequency ε = 0.1%'
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: "# Putting it all together...\n\n# Output:\n\nElements with counter values exceeding\
+    \ $(s-\\varepsilon)N$\n\n> **Approximation guarantees**\n> \n> - Frequencies underestimated\
+    \ by at most $\\varepsilon N$\n> - No false negatives\n> - False positives have\
+    \ true frequency at least $(s-\\varepsilon)N$\n\n# How many counters do we need?\n\
+    \n+   - Worst case bound: $1/\\varepsilon \\log \\varepsilon N$ counters\n+  \
+    \ - Implementation details..."
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: '# Enhancements
+
+
+    # Frequency Errors
+
+
+    For counter (X, c), true frequency in [c, c+εN]
+
+
+    **Trick:** Track number of windows t counter has been active
+
+
+    For counter (X, c, t), true frequency in [c, c+t−1]
+
+
+    If (t = 1), no error!
+
+
+    # Batch Processing
+
+
+    Decrements after *k* windows'
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: '# Data Structures
+
+    &
+
+    Algorithms
+
+
+    Zhihong Chong
+
+
+    [http://cse.seu.edu.cn/people/zhchong/](http://cse.seu.edu.cn/people/zhchong/)'
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: '# Why Data structures?
+
+
+    +   - Why Advanced Data Structures?
+
+    +   - Essentials of data structures'
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: '# Computer science
+
+
+    +   - Study of the **theoretical foundations** of information and computation
+
+    +   - Study of **practical techniques** for their implementation and application.
+
+    +     - Study of **algorithmic processes** that create, describe and transform
+    information.
+
+
+    +   1. *theory of computation*
+
+    +   2. *algorithms and data structures*
+
+    +   3. *programming methodology and languages*
+
+    +   4. *computer elements and architecture*'
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: '# Applied Computer Science
+
+
+    +   - software engineering
+
+    +   - artificial intelligence
+
+    +   - computer networking and communication
+
+    +   - database systems
+
+    +   - parallel computation, distributed computation
+
+    +   - computer-human interaction
+
+    +   - computer graphics
+
+    +   - operating systems
+
+    +   - numerical and symbolic computation'
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: '# Summary
+
+
+    +   - The key problem of CS:
+
+    +     - What can be efficiently automated?
+
+    +     - What can be efficiently automated with a business model?
+
+    +   - The key idea
+
+    +     - Recursive递归
+
+    +     - Divide and Conquer分而治之
+
+    +   - The key techniques
+
+    +     - Stratification成层
+
+    +     - Abstraction
+
+    +     - Virtualization虚拟化'
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: '# Data structures and data-intensive applications
+
+
+    +   - Large data sets
+
+    +     - RDF data sets
+
+    +     - Large web pages stored by google and baidu
+
+    +   - Polynomial algorithms on large data sets
+
+    +     - Can not react in real-time way
+
+    +     - Even linear algorithms can not work'
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: '# 1. Data structures要领
+
+
+    +   ① R is a relation over data set
+
+    +   ② Linear structures
+
+    +      I. Stacks
+
+    +      II. Queues
+
+    +   ③ Non-linear structures
+
+    +      I. Tree structures
+
+    +      II. Graph structures'
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: '# Data Organization
+
+
+    +   - Linear file
+
+    +     - Physical Neighbor relation
+
+    +   - Linked file链接文件
+
+    +     - Pointer
+
+    +   - Indexed file索引文件
+
+    +     - Map function in table form
+
+    +   - Hash file散列文件
+
+    +     - Map function in explicit form'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: '# 1. Data structures
+
+
+    The fundamental data-structuring problem is that of maintaining sets of items
+    drawn from a universe so as to efficiently support search queries, update operations
+    and operations involving entire sets(aggregation).
+
+
+    +   ① Data sets are very large
+
+
+    +   ② Data sets are dynamic
+
+
+    +   ③ The relational structure of data are complex
+
+
+    +   I. Structured data
+
+
+    +   II. Semi-structured data
+
+
+    +   III. Non-structured data'
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: '# Efficient
+
+
+    +   1. O(log n) access time complexity
+
+    +   2. Reasonable memory cost!'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: '# Data structure-conclusion
+
+
+    +   - 数据结构就是指按一定的逻辑结构组成的一批数据，使用某种存储结构将这批数据存储与计算机中，并在这些数据上定义了一个操作集合
+
+    +     1. 数据的逻辑结构
+
+    +        - 线性和非线性结构
+
+    +     2. 数据的存储结构
+
+    +        - 线性存储空间（连续的存储单元）
+
+    +     3. 数据的操作集合
+
+    +        - 查询、更新和聚集'
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: '# Matching Residents to Hospitals
+
+
+    Goal. Given a set of preferences among hospitals and medical school students,
+    design a self-reinforcing admissions process.
+
+
+    Unstable pair: applicant x and hospital y are unstable if:
+
+
+    +   - x prefers y to its assigned hospital.
+
+    +   - y prefers x to one of its admitted students.
+
+
+    Stable assignment. Assignment with no unstable pairs.
+
+
+    +   - Natural and desirable condition.
+
+    +   - Individual self-interest will prevent any applicant/hospital deal from being
+    made.'
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: '# Stable Matching Problem
+
+
+    **Goal.** Given n men and n women, find a "suitable" matching.
+
+
+    +   - Participants rate members of opposite sex.
+
+    +   - Each man lists women in order of preference from best to worst.
+
+    +   - Each woman lists men in order of preference from best to worst.
+
+
+    **Men''s Preference Profile**
+
+
+    |       | 1st   | 2nd   | 3rd   |
+
+    |-------|-------|-------|-------|
+
+    | Xavier | Amy   | Bertha | Clare |
+
+    | Yancey | Bertha | Amy   | Clare |
+
+    | Zeus   | Amy   | Bertha | Clare |
+
+
+    **Women''s Preference Profile**
+
+
+    |       | 1st    | 2nd    | 3rd  |
+
+    |-------|--------|--------|------|
+
+    | Amy   | Yancey | Xavier | Zeus |
+
+    | Bertha| Xavier | Yancey | Zeus |
+
+    | Clare | Xavier | Yancey | Zeus |'
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: '# Data Structure and Algorithm
+
+
+    # Stable Matching Problem
+
+
+    Perfect matching: everyone is matched monogamously.
+
+
+    +   - Each man gets exactly one woman.
+
+    +   - Each woman gets exactly one man.
+
+
+    Stability: no incentive for some pair of participants to undermine assignment
+    by joint action.
+
+
+    +   - In matching M, an unmatched pair m-w is unstable if man m and woman w prefer
+    each other to current partners.
+
+    +   - Unstable pair m-w could each improve by eloping.
+
+
+    Stable matching: perfect matching with no unstable pairs.
+
+
+    Stable matching problem. Given the preference lists of n men and n women, find
+    a stable matching if one exists.'
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: '# Stable Matching Problem
+
+
+    Q. Is assignment X-C, Y-B, Z-A stable?
+
+
+    favorite ↓
+
+    least favorite ↓
+
+    1st 2nd 3rd
+
+    Xavier Amy Bertha Clare
+
+    Yancey Bertha Amy Clare
+
+    Zeus Amy Bertha Clare
+
+    Men''s Preference Profile
+
+
+    favorite ↓
+
+    least favorite ↓
+
+    1st 2nd 3rd
+
+    Amy Yancey Xavier Zeus
+
+    Bertha Xavier Yancey Zeus
+
+    Clare Xavier Yancey Zeus
+
+    Women''s Preference Profile'
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: '# Stable Matching Problem
+
+
+    Q. Is assignment X-C, Y-B, Z-A stable?
+
+    A. No. Bertha and Xavier will hook up.
+
+
+    Men''s Preference Profile
+
+    favorite ↓   least favorite ↓
+
+    1st 2nd 3rd
+
+    Xavier Amy Bertha Clare
+
+    Yancey Bertha Amy Clare
+
+    Zeus Amy Bertha Clare
+
+
+    Women''s Preference Profile
+
+    favorite ↓   least favorite ↓
+
+    1st 2nd 3rd
+
+    Amy Yancey Xavier Zeus
+
+    Bertha Xavier Yancey Zeus
+
+    Clare Xavier Yancey Zeus'
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: '# Stable Matching Problem
+
+
+    Q. Is assignment X-A, Y-B, Z-C stable?
+
+    A. Yes.
+
+
+    Men''s Preference Profile
+
+
+    favorite ↓          least favorite ↓
+
+    1st  2nd  3rd
+
+    Xavier  Amy  Bertha  Clare
+
+    Yancey  Bertha  Amy  Clare
+
+    Zeus  Amy  Bertha  Clare
+
+
+    Women''s Preference Profile
+
+
+    favorite ↓          least favorite ↓
+
+    1st  2nd  3rd
+
+    Amy  Yancey  Xavier  Zeus
+
+    Bertha  Xavier  Yancey  Zeus
+
+    Clare  Xavier  Yancey  Zeus'
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: "# Propose-And-Reject Algorithm\n\nPropose-and-reject algorithm. [Gale-Shapley\
+    \ 1962] Intuitive method that guarantees to find a stable matching.\n\n```\nInitialize\
+    \ each person to be free.\nwhile (some man is free and hasn't proposed to every\
+    \ woman) {\n    Choose such a man m\n    w = 1st woman on m's list to whom m has\
+    \ not yet proposed\n    if (w is free)\n        assign m and w to be engaged\n\
+    \    else if (w prefers m to her fiancé m')\n        assign m and w to be engaged,\
+    \ and m' to be free\n    else\n        w rejects m\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: '# Proof of Correctness: Termination
+
+
+    Observation 1. Men propose to women in decreasing order of preference.
+
+
+    Observation 2. Once a woman is matched, she never becomes unmatched; she only
+    "trades up."
+
+
+    Claim. Algorithm terminates after at most n² iterations of while loop.
+
+    Pf. Each time through the while loop a man proposes to a new woman.
+
+    There are only n² possible proposals. ■'
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: '# Proof of Correctness: Perfection
+
+
+    Claim. All men and women get matched.
+
+
+    Pf. (by contradiction)
+
+
+    +   - Suppose, for sake of contradiction, that Zeus is not matched upon termination
+    of algorithm.
+
+    +   - Then some woman, say Amy, is not matched upon termination.
+
+    +   - By Observation 2, Amy was never proposed to.
+
+    +   - But, Zeus proposes to everyone, since he ends up unmatched.'
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: '# Efficient Implementation
+
+
+    **Efficient implementation.** We describe O(n²) time implementation.
+
+
+    +   **Representing men and women.**
+
+    +   - Assume men are named 1, ..., n.
+
+    +   - Assume women are named 1′, ..., n′.
+
+
+    +   **Engagements.**
+
+    +   - Maintain a list of free men, e.g., in a queue.
+
+    +   - Maintain two arrays `wife[m]` and `husband[w]`.
+
+    +     - set entry to 0 if unmatched
+
+    +     - if m matched to w then `wife[m]=w` and `husband[w]=m`
+
+
+    +   **Men proposing.**
+
+    +   - For each man, maintain a list of women, ordered by preference.
+
+    +   - Maintain an array `count[m]` that counts the number of proposals made by
+    man m.'
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: '# Efficient Implementation
+
+
+    # Women rejecting/accepting.
+
+
+    +   - Does woman w prefer man m₁ to man m₂?
+
+    +   - For each woman, create inverse of preference list of men.
+
+    +   - Constant time access for each query after O(n) preprocessing.
+
+
+    | Amy | 1st | 2nd | 3rd | 4th | 5th | 6th | 7th | 8th |
+
+    |-----|-----|-----|-----|-----|-----|-----|-----|-----|
+
+    | Pref | 8 | 3 | 7 | 1 | 4 | 5 | 6 | 2 |
+
+
+    | Amy | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+
+    |-----|---|---|---|---|---|---|---|---|
+
+    | Inverse | 4th | 8th | 2nd | 5th | 6th | 7th | 3rd | 1st |
+
+
+    ```
+
+    for i = 1 to n
+
+    inverse[pref[i]] = i
+
+    ```
+
+
+    Amy prefers man 3 to 6
+
+    since inverse[3] < inverse[6]
+
+    2      7'
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: '# Streaming Algorithms
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_165_0.png)
+
+
+    MEM: poly(1/ε, log N)
+
+
+    Query/Update: poly(1/ε, log N)
+
+
+    +   - N: stream size or window size
+
+    +   - ε: error parameter'
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: '# Data Stream and Queries
+
+
+    +   - Data streams
+
+    +     - Digits (e.g., head of a data packet)
+
+    +     - Structured tuple (e.g., Web-log)
+
+    +     - XML documents (e.g., pub/sub system)
+
+
+    +   - Queries
+
+    +     - Continuous/ad hoc Queries
+
+    +     - May have different complexity
+
+    +       - Counting
+
+    +       - Structured queries (SQL)
+
+    +       - Data analysis and mining
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_166_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: '# Frequency Related Problems
+
+
+    Top-k most frequent elements
+
+
+    Find elements that occupy 0.1% of the tail.
+
+
+    Mean + Variance?
+
+
+    Median?
+
+
+    What is the frequency of element 3?
+
+
+    Find all elements with frequency > 0.1%
+
+
+    What is the total frequency of elements between 8 and 14?
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_167_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: '| 8 | 3 | 11 | 6 | 2 |
+
+    |---|---|---|---|---|
+
+    | 7 | 0 | 1 | 14 | 8 |
+
+    | 2 | 5 | 5 | 10 | 8 |
+
+    | 8 | 2 | 6 | 2 | 12 |
+
+
+    Estimate(6)=min(2, 8, 2, 2)=?'
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: '+   - Low space complexity: $O(\varepsilon^{-1}\log M)$
+
+    +   - Fast per-tuple processing cost
+
+    +   - High recall and precision
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_169_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: '# Readings
+
+
+    # What’s Hot and What’s Not:
+
+    Tracking Most Frequent Items Dynamically
+
+
+    Graham Cormode
+
+    Center for Discrete Mathematics and Computer Science (DIMACS)
+
+    Rutgers University, Piscataway NJ
+
+    graham@dimacs.rutgers.edu
+
+
+    S. Muthukrishnan
+
+    Department of Computer Science
+
+    Rutgers University, Piscataway NJ
+
+    muthu@cs.rutgers.edu
+
+
+    WebDB.cn Open Group,
+
+    Southeast University'
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: '# Distributed Data Structure
+
+
+    Zhihong Chong
+
+
+    http://cse.seu.edu.cn/people/zhchong/'
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: '# Content
+
+
+    +   - Why Advanced Data Structures?
+
+    +     - Week1: Data Structure and Computer Science, Algorithm, Database, WWW...
+
+
+    +   - Principles of Data Structures—How?
+
+    +     - Week2: Why and How O(log n) access time?
+
+    +     - Week3: Dynamic data structures and Analysis
+
+    +     - Week4: Randomized Data Structure
+
+    +     - Week5: Augmented Data Structure
+
+    +     - Week6: Data Structures in Distributed Environments
+
+
+    +   - New Problems—Applications
+
+    +     - Week7: Data Structures in Frontiers of Research
+
+    +     - Week8: Exam'
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: '# Outline
+
+
+    +   - Can
+
+    +   - Chord
+
+    +   - Baton'
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: '# CAN: Overview
+
+
+    +   - Support basic hash table operations on key-value pairs (K,V): insert, search,
+    delete
+
+    +   - CAN is composed of individual nodes
+
+    +   - Each node stores a chunk (zone) of the hash table
+
+    +     - A subset of the (K,V) pairs in the table
+
+    +   - Each node stores state information about neighbor zones
+
+    +   - Requests (insert, lookup, or delete) for a key are routed by intermediate
+    nodes using a greedy routing algorithm
+
+    +   - Requires no centralized control (completely distributed)
+
+    +   - Small per-node state is independent of the number of nodes in the system
+    (scalable)
+
+    +   - Nodes can route around failures (fault-tolerant)'
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: '# CAN ZONES
+
+
+    +   - Virtual d-dimensional Cartesian coordinate system
+
+    +     - Example: 2-d [0,1]x[1,0]
+
+    +   - Dynamically partitioned among all nodes
+
+    +   - Pair (K,V) is stored by mapping key K to a point P in the space using a
+    uniform hash function and storing (K,V) at the node in the zone containing P
+
+    +   - Retrieve entry (K,V) by applying the same hash function to map K to P and
+    retrieve entry from node in zone containing P
+
+    +   - If P is not contained in the zone of the requesting node or its neighboring
+    zones, route request to neighbor node in zone nearest P
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_175_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: '|  | 6 | 2 |
+
+    |---|---|---|
+
+    |  | 3 | 1 | 5 |
+
+    |  |  | 4 |  |
+
+    |  | (x,y) |  |  |
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_176_0.png)
+
+
+    1’s coordinate neighbor set = {2,3,4,5}
+
+
+    7’s coordinate neighbor set = {1}'
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: '# Routing:
+
+
+    +   - Follow straight line path through the Cartesian space from source to destination
+    coordinates
+
+    +   - Each node maintains a table of the IP address and virtual coordinate zone
+    of each local neighbor
+
+    +   - Use greedy routing to neighbor closest to destination
+
+    +   - For d-dimensional space partitioned into n equal zones, nodes maintain 2d
+    neighbors (d/4)(n^{1/d})
+
+    +     - Average routing path length:'
+  merge: -1
+  img_proc: true
+- pgno: 178
+  md: '# Join CAN
+
+
+    +   - Joining node locates a bootstrap node using the CAN DNS entry
+
+    +     - Bootstrap node provides IP addresses
+
+    +       of random member nodes
+
+    +   - Joining node sends JOIN request to random point P in the Cartesian space
+
+    +   - Node in zone containing P splits the zone and allocates “half” to joining
+    node
+
+    +   - (K,V) pairs in the allocated “half” are transferred to the joining node
+
+    +   - Joining node learns its neighbor set from previous zone occupant
+
+    +     - Previous zone occupant updates its neighbor set'
+  merge: -1
+  img_proc: true
+- pgno: 179
+  md: '1''s coordinate neighbor set = {2,3,4,7}
+
+    7''s coordinate neighbor set = {1,2,4,5}'
+  merge: -1
+  img_proc: true
+- pgno: 180
+  md: '# Departure, Recovery and Maintenance
+
+
+    +   - Graceful departure: node hands over its zone and the (K,V) pairs to a neighbor
+
+    +   - Network failure: unreachable node(s) trigger an immediate takeover algorithm
+    that allocate failed node’s zone to a neighbor
+
+    +     - Detect via lack of periodic refresh messages
+
+    +     - Neighbor nodes start a takeover timer initialized in proportion to its
+    zone volume
+
+    +   - Send a TAKEOVER message containing zone volume to all of failed node’s neighbors
+
+    +   - If received TAKEOVER volume is smaller kill timer, if not reply with a TAKEOVER
+    message
+
+    +   - Nodes agree on neighbor with smallest volume that is alive'
+  merge: -1
+  img_proc: true
+- pgno: 181
+  md: '# # CAN Improvements
+
+
+    +   - CAN provides tradeoff between per-node state, *O(d)*, and path length, *O(dn<sup>1/d</sup>)*
+
+    +     - Path length is measured in application level hops
+
+    +     - Neighbor nodes may be geographically distant
+
+    +   - Want to achieve a lookup latency that is comparable to underlying IP path
+    latency
+
+    +     - Several optimizations to reduce lookup latency also improve robustness
+    in terms of routing and data availability
+
+    +   - Approach: reduce the path length, reduce the per-hop latency, and add load
+    balancing
+
+    +   - Simulated CAN design on Transit-Stub (TS) topologies using the GT-ITM topology
+    generator (Zegura, et. al.)'
+  merge: -1
+  img_proc: true
+- pgno: 182
+  md: '# Adding Dimensions
+
+
+    +   - Increasing the dimensions of the coordinate space reduces the routing path
+    length (and latency)
+
+    +     - Small increase in the size of the routing table at each node
+
+    +   - Increase in number of neighbors improves routing fault-tolerance
+
+    +     - More potential next hop nodes
+
+    +   - Simulated path lengths follow O(d n^{1/d})
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_182_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 183
+  md: '# Adding Realities
+
+
+    +   - Nodes can maintain multiple independent coordinate spaces (realities)
+
+
+    +   - For a CAN with *r* realities:
+
+    +     - a single node is assigned *r* zones
+
+    +     - and holds *r* independent neighbor sets
+
+    +     - Contents of the hash table are replicated for each reality
+
+
+    +   - Example: for three realities, a (*K*, *V*) mapping to *P*:(*x*,*y*,*z*)
+    may be stored at three different nodes
+
+    +     - (*K*, *V*) is only unavailable when all three copies are unavailable
+
+    +     - Route using the neighbor on the reality closest to (*x*,*y*,*z*)
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_183_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 184
+  md: '# Dimensions vs. Realities
+
+
+    +   - Increasing the number of dimensions and/or realities decreases path length
+    and increases per-node state
+
+    +   - More dimensions has greater effect on path length
+
+    +   - More realities provides stronger fault-tolerance and increased data availability
+
+    +   - Authors do not quantify the different storage requirements
+
+    +     - More realities requires replicating $(K,V)$ pairs
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_184_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 185
+  md: '# RTT Ratio
+
+
+    +   - Incorporate RTT in routing metric
+
+    +     - Each node measures RTT to each neighbor
+
+    +     - Forward messages to neighbor with maximum ratio of progress to RTT
+
+
+    | Number of dimensions | Non-*RTT* weighted routing (ms) | *RTT* weighted routing
+    (ms) |
+
+    |---:|---:|---:|
+
+    | 2 | 116.8 | 88.3 |
+
+    | 3 | 116.7 | 76.1 |
+
+    | 4 | 115.8 | 71.2 |
+
+    | 5 | 115.4 | 70.9 |'
+  merge: -1
+  img_proc: true
+- pgno: 186
+  md: '# Zone Overloading
+
+
+    +   - Overload coordinate zones
+
+    +     - Allow multiple nodes to share the same zone, bounded by a threshold MAXPEERS
+
+    +     - Nodes maintain peer state, but not additional neighbor state
+
+    +     - Periodically poll neighbor for its list of peers, measure RTT to each
+    peer, retain lowest RTT node as neighbor
+
+    +     - (K,V) pairs may be divided among peer nodes or replicated'
+  merge: -1
+  img_proc: true
+- pgno: 187
+  md: '# Multiple Hash Functions
+
+
+    +   - Improve data availability by using $k$ hash functions to map a single key
+    to $k$ points in the coordinate space
+
+    +   - Replicate $(K,V)$ and store at $k$ distinct nodes
+
+    +   - $(K,V)$ is only unavailable when all $k$ replicas are simultaneously unavailable
+
+    +   - Authors suggest querying all $k$ nodes in parallel to reduce average lookup
+    latency
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_187_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 188
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 189
+  md: '# Chord'
+  merge: -1
+  img_proc: true
+- pgno: 190
+  md: '# System Model
+
+
+    +   - **Load balance:**
+
+    +     - Chord acts as a distributed hash function, spreading keys evenly over
+    the nodes.
+
+    +   - **Decentralization:**
+
+    +     - Chord is fully distributed: no node is more important than any other.
+
+    +   - **Scalability:**
+
+    +     - The cost of a Chord lookup grows as the log of the number of nodes, so
+    even very large systems are feasible.
+
+    +   - **Availability:**
+
+    +     - Chord automatically adjusts its internal tables to reflect newly joined
+    nodes as well as node failures, ensuring that, the node responsible for a key
+    can always be found.
+
+    +   - **Flexible naming:**
+
+    +     - Chord places no constraints on the structure of the keys it looks up.'
+  merge: -1
+  img_proc: true
+- pgno: 191
+  md: '# System Model
+
+
+    +   - The application interacts with Chord in two main ways:
+
+    +     - Chord provides a lookup(key) algorithm that yields the IP address of the
+    node responsible for the key.
+
+    +     - The Chord software on each node notifies the application of changes in
+    the set of keys that the node is responsible for.'
+  merge: -1
+  img_proc: true
+- pgno: 192
+  md: '+   - The Chord protocol specifies how to find the locations of keys.
+
+    +   - It uses consistent hashing, all nodes receive roughly the same number of
+    keys.
+
+    +   - When an $N^{th}$ node joins (or leaves) the network, only an $O(1/N)$ fraction
+    of the keys are moved to a different location.
+
+    +   - In an $N$-node network, each node maintains information only about $O(\log
+    N)$ other nodes, and a lookup requires $O(\log N)$ messages.'
+  merge: -1
+  img_proc: true
+- pgno: 193
+  md: '# Consistent Hashing
+
+
+    +   - The consistent hash function assigns each node and key an *m*-bit *identifier*
+    using a base hash function such as [SHA-1](SHA-1).
+
+    +   - Identifiers are ordered in an *identifier circle* modulo 2^m.
+
+    +   - Key *k* is assigned to the first node whose identifier is equal to or follows
+    *k* in the identifier space. This node is called the *successor node* of key *k*.
+
+    +   - If identifiers are represented as a cycle of numbers from 0 to 2^m − 1,
+    then *successor(k )* is the first node clockwise from *k*.'
+  merge: -1
+  img_proc: true
+- pgno: 194
+  md: 'An identifier circle consisting of the three nodes 0, 1, and 3.
+
+    In this example, key 1 is located at node 1, key 2 at node 3,
+
+    and key 6 at node 0.'
+  merge: -1
+  img_proc: true
+- pgno: 195
+  md: '# Scalable key Location
+
+
+    +   - Let *m* be the number of bits in the key/node identifiers.
+
+    +   - Each node, *n*, maintains a routing table with (at most) *m* entries, called
+    the *finger table*.
+
+    +   - The *i*th entry in the table at node *n* contains the identity of the *first*
+    node, *s*, that succeeds *n* by at least 2^i -1 on the identity circle.'
+  merge: -1
+  img_proc: true
+- pgno: 196
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 197
+  md: 'finger[3].interval = [finger[3].start, 1)
+
+
+    finger[1].start = 2
+
+
+    finger[1].interval = [finger[1].start, finger[2].start)
+
+
+    finger[3].start = 5
+
+
+    finger[2].start = 3
+
+
+    finger[2].interval = [finger[2].start, finger[3].start)
+
+
+    (a)
+
+
+    (b)
+
+
+    finger table keys
+
+    start int. succ. 6
+
+    1 [1,2) 1
+
+    2 [2,4) 3
+
+    4 [4,0) 0
+
+
+    finger table keys
+
+    start int. succ. 1
+
+    2 [2,3) 3
+
+    3 [3,6) 3
+
+    5 [5,1) 0
+
+
+    finger table keys
+
+    start int. succ. 2
+
+    4 [4,5) 0
+
+    5 [5,7) 0
+
+    7 [7,3) 0
+
+
+    (a) The finger intervals associated with node 1. (b) Finger tables and key locations
+    for a net with nodes 0, 1, and 3, and keys 1, 2, and 6.'
+  merge: -1
+  img_proc: true
+- pgno: 198
+  md: '# Scalable key Location
+
+
+    +   - With high probability (or under standard hardness assumption), the number
+    of nodes that must be contacted find a successor in an $N$-node network is $O(\log
+    N)$.'
+  merge: -1
+  img_proc: true
+- pgno: 199
+  md: '# Node Joins
+
+
+    +   - Each node in Chord maintains a *predecessor pointer*, and can be used work
+    counterclockwise around the identifier circle.
+
+    +   - When a node *n* joins the network:
+
+    +     - Initialize the predecessor and fingers of node *n*.
+
+    +     - Update the fingers and predecessors of existing nodes to reflect the addition
+    of *n*.
+
+    +     - Notify the higher layer software so that it can transfer state (e.g. values)
+    associated with keys that node *n* is now responsible for.'
+  merge: -1
+  img_proc: true
+- pgno: 200
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 201
+  md: '# Failures and Replication
+
+
+    +   - When a node *n* fails, nodes whose finger tables include *n* must find *n*’s
+    successor.
+
+    +   - Each Chord node maintains a “successor-list” of its r nearest successor
+    on the Chord ring.
+
+    +   - A typical application using Chord might store replicas of the data associated
+    with key at the *k* nodes succeeding the key.'
+  merge: -1
+  img_proc: true
+- pgno: 202
+  md: '![](img/e8cfdb0a049dc5ab9d802234ebc2190e_202_0.png)
+
+
+    The mean and 1st and 99th percentiles of the number of keys stored per node in
+    a 10⁴ node network.'
+  merge: -1
+  img_proc: true
+- pgno: 203
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 204
+  md: '![](img/e8cfdb0a049dc5ab9d802234ebc2190e_204_0.png)
+
+
+    (a)
+
+
+    The path length as a function of network size.'
+  merge: -1
+  img_proc: true
+- pgno: 205
+  md: '![](img/e8cfdb0a049dc5ab9d802234ebc2190e_205_0.png)
+
+
+    (b)
+
+
+    The PDF of the path length in the case of a 2¹² node network.'
+  merge: -1
+  img_proc: true
+- pgno: 206
+  md: '# BATON
+
+    A Balanced Tree Structure
+
+    for Peer-to-Peer Networks
+
+
+    H. V. Jagadish, Beng Chin Ooi, Quang Hieu Vu'
+  merge: -1
+  img_proc: true
+- pgno: 207
+  md: '# Related Work
+
+
+    +   - **P-Grid (CoopIS’01)**
+
+    +     - Based on a binary prefix tree structure.
+
+    +     - Can not guarantee *log N search* step boundary
+
+    +   - **P-Tree (WebDB’04)**
+
+    +     - Based on B+-tree structure and uses CHORD as overlay framework
+
+    +     - Each node maintains a branch of the B+-tree
+
+    +     - *Expensive* cost to keep consistency knowledge among nodes
+
+    +   - **Multi-way tree (DBISP2P’04)**
+
+    +     - Each node maintains links to its parent, its siblings, its neighbors,
+    and its children
+
+    +     - Can not guarantee *log N search* step boundary'
+  merge: -1
+  img_proc: true
+- pgno: 208
+  md: '# BATON Architecture
+
+
+    +   - BATON: BAlanced Tree Overlay Network
+
+    +   - Definition: A tree is balanced if and only if at any node in the
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_208_0.png)
+
+
+    Node m: level=3, number=6 parent=f, leftchild=null, rightchild=r leftadjacent=f,
+    rightadjacent=r
+
+
+    Left routing table:
+
+
+    |  | Node | Left child | Right child | Lower bound | Upper bound |
+
+    |---|---|---|---|---|---|
+
+    | 0 | l | null | null | l_lower | l_upper |
+
+    | 1 | k | p | q | k_lower | k_upper |
+
+    | 2 | i | null | null | i_lower | i_upper |
+
+
+    Right routing table:
+
+
+    |  | Node | Left child | Right child | Lower bound | Upper bound |
+
+    |---|---|---|---|---|---|
+
+    | 0 | n | null | null | n_lower | n_upper |
+
+    | 1 | o | s | t | o_lower | o_upper |
+
+
+    Binary Balanced Tree Index Architecture'
+  merge: -1
+  img_proc: true
+- pgno: 209
+  md: '# Theorems
+
+
+    +   - *Theorem 1*: The tree is a balanced tree if every node in the tree that
+    has a child also has both its left and right routing tables full (*).
+
+
+    +   - *Theorem 2*: If a node, say *x*, contains a link to another node, say *y*,
+    in its left or right routing tables, parent node of *x* must also contain a link
+    to parent node of *y* unless the same node is parent of both *x* and *y*.
+
+
+    (*) A routing table is full if none of the valid links is NULL.'
+  merge: -1
+  img_proc: true
+- pgno: 210
+  md: '# Node join
+
+
+    +   - Example: new node $u$ joins the network
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_210_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 211
+  md: '# Node join
+
+
+    +   - Cost of finding a node to join: O(log N)
+
+    +   - When a node accepts a new node as its child
+
+    +     - Split half of its content (its range of values) to its new child
+
+    +     - Update adjacent links of itself and its new child
+
+    +     - Notify both its neighbor nodes and its new child’s neighbor nodes to update
+    their knowledge
+
+    +   - Cost: 6 log N'
+  merge: -1
+  img_proc: true
+- pgno: 212
+  md: '# Node departure
+
+
+    +   - When a node wishes to leave the network
+
+    +     - If it is a leaf node and there is no neighbor node having children, it
+    can leave the network
+
+    +       - Transfer its content to the parent node, and update correspondence adjacent
+    link
+
+    +       - Notify its neighbor nodes and its parent’s neighbor nodes to update
+    their knowledge
+
+    +       - Cost: 4 log N
+
+    +     - If it is a leaf node and there is a neighbor node having children, it
+    needs to find a leaf node to replace it by sending a FINDREPLACEMENTNODE request
+    to a child of that neighbor node
+
+    +     - If it is an intermediate node, it needs to find a leaf node to replace
+    it by sending a FINDREPLACEMENTNODE to one of its *adjacent* nodes'
+  merge: -1
+  img_proc: true
+- pgno: 213
+  md: '# Node departure
+
+
+    +   - Example: existing node *b* leaves the network
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_213_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 214
+  md: '# Node departure
+
+
+    +   - Cost of finding a leaf node to replace: O(log N)
+
+    +   - When a node comes to replace a leave node
+
+    +     - Notify its parent and its neighbor nodes as in case of leaf node leaving:
+    4 log N
+
+    +     - Notify its new parent node, its new neighbor nodes, and the parent’s neighbor
+    nodes: 4 log N
+
+    +     - Total cost: 8 log N'
+  merge: -1
+  img_proc: true
+- pgno: 215
+  md: '# Fault tolerance
+
+
+    +   - Node failure
+
+    +     - Nodes discovering failure of a node report to that node’s parent.
+
+    +     - The failure’s parent node will take responsibility for finding a leaf
+    node to replace if necessary.
+
+    +     - Routing information of the failure node can be recovered by contacting
+    its neighbor nodes via routing information of its parent.
+
+
+    +   - Fault tolerance: failure node can be passed by two ways
+
+    +     - Through routing tables (similar to CHORD) - *horizontal axis*
+
+    +     - Through parent-child and adjacent links - *vertical axis*
+
+    +     - Specifically, even if all nodes at the same level fail, the tree is not
+    partitioned'
+  merge: -1
+  img_proc: true
+- pgno: 216
+  md: '# Network restructuring
+
+
+    +   - Necessary in case of forced join or forced leave that is used in load balancing
+    scheme
+
+    +   - Network restructuring is triggered when the condition in theorem 1 is violated
+
+    +   - Network restructuring is done by shifting nodes via adjacent links
+
+    +     - No data movement is required
+
+    +     - Each shifted node requires O(log N) effort to update routing tables'
+  merge: -1
+  img_proc: true
+- pgno: 217
+  md: '# Forced join
+
+
+    +   - Example 1: network restructure is triggered as a forced join
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_217_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 218
+  md: '# Forced leave
+
+
+    +   - Example 2: network restructuring is triggered as a forced leave
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_218_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 219
+  md: '# Index construction
+
+
+    +   - Each node is assigned a range of values
+
+    +   - The range of values directly managed by a node is
+
+    +     - Greater than the range managed by its left adjacent node
+
+    +     - Smaller than the range managed by its right adjacent node
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_219_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 220
+  md: '# Exact match query
+
+
+    Example: node b want to search data belonged to node c, say 74
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_220_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 221
+  md: '# Range query
+
+
+    +   - Process similar to exact match query
+
+    +     - First, find an intersection with searched range
+
+    +     - Second, follow adjacent links to retrieve all results
+
+    +   - Cost
+
+    +     - Exact match query: O(log N)
+
+    +     - Range query: O(log N + X) where X is the total number of nodes containing
+    searched results'
+  merge: -1
+  img_proc: true
+- pgno: 222
+  md: '# Data insertion and deletion
+
+
+    +   - Insertion
+
+    +     - Follow the exact match query process to find the node where data should
+    be inserted except that
+
+    +       - If it is the left most node and the inserted value is still less than
+    its lower bound, or if it is the right most node and the inserted value is still
+    greater than its upper bound, it expands its range of values to accept the new
+    inserted value.
+
+    +       - In this case, additional log N cost is needed for updating routing tables
+
+    +   - Deletion
+
+    +     - Follow the exact match query process to find the node containing data
+    which should be deleted
+
+    +   - Cost: similar to exact match query process
+
+    +     - O(log N) for both insertion and deletion'
+  merge: -1
+  img_proc: true
+- pgno: 223
+  md: '# Load balancing
+
+
+    +   - Load balancing process is initialized when a node is overloaded or under
+    loaded due to insertion or deletion
+
+    +   - 2 load balancing schemes
+
+    +     - Do load balancing with adjacent nodes
+
+    +     - An overloaded node finds a lightly loaded node to share work load (only
+    if the overloaded / under loaded node is a leaf node)
+
+    +       - A lightly loaded node is found by traveling through neighbor nodes within
+    O(logN) steps.
+
+    +       - Once found, the lightly loaded node transfers its content to one of
+    its adjacent nodes, forced leaves its current position, and forced joins as a
+    child of the overloaded node.
+
+    +       - Network restructuring is triggered if necessary
+
+    +     - Similar process is applied to under loaded nodes
+
+    +   - Cost: O(log N) for each node attending load balancing process'
+  merge: -1
+  img_proc: true
+- pgno: 224
+  md: '# Load balancing
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_224_0.png)
+
+
+    a. Before load balancing
+
+
+    b. After load balancing'
+  merge: -1
+  img_proc: true
+- pgno: 225
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 226
+  md: '# Join and leave operations
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_226_0.png)
+
+
+    Cost of finding join node and replacement node
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_226_1.png)
+
+
+    Cost of updating routing tables'
+  merge: -1
+  img_proc: true
+- pgno: 227
+  md: '# Insert and delete operations
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_227_0.png)
+
+
+    Cost of insert and delete operations'
+  merge: -1
+  img_proc: true
+- pgno: 228
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 229
+  md: '# Access load
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_229_0.png)
+
+
+    Access load for nodes at different levels'
+  merge: -1
+  img_proc: true
+- pgno: 230
+  md: '# Effect of load balancing
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_230_0.png)
+
+
+    Average messages of load balancing operation
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_230_1.png)
+
+
+    Size of load balancing process'
+  merge: -1
+  img_proc: true
+- pgno: 231
+  md: '# Effect of network dynamics
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_231_0.png)
+
+
+    Network Dynamics'
+  merge: -1
+  img_proc: true
+- pgno: 232
+  md: '# # Conclusion
+
+
+    +   - **BATON**
+
+    +     - The first P2P overlay network based on a balanced tree structure
+
+    +     - Strengths
+
+    +       - Incur less cost of updating routing tables compared to other systems
+
+    +       - Support both exact match query and range query efficiently
+
+    +       - Flexible and efficient load balancing scheme
+
+    +       - Scalability (NOT bounded by network size or ID space before hand)'
+  merge: -1
+  img_proc: true
+- pgno: 233
+  md: '# Thank you
+
+    Q & A'
+  merge: -1
+  img_proc: true
+- pgno: 234
+  md: '# Management
+
+    of
+
+    Semantic Web Data 语义万维网
+
+
+    Zhihong Chong
+
+
+    http://cse.seu.edu.cn/people/zhchong/
+
+
+    WebDB.cn Open Group, Southeast University'
+  merge: -1
+  img_proc: true
+- pgno: 235
+  md: 'Outline
+
+
+    # Problem
+
+
+    # Technique
+
+
+    # Improvement'
+  merge: -1
+  img_proc: true
+- pgno: 236
+  md: '# Outline—Problem
+
+
+    +   - Model
+
+    +     - triple/quadruple(三倍、四倍)
+
+    +   - Query
+
+    +     - query/continuous query
+
+    +     - pattern-matching
+
+    +     - key-word tree query
+
+    +   - Architecture
+
+    +     - central/distributed'
+  merge: -1
+  img_proc: true
+- pgno: 237
+  md: '# Schema-oblivious/aware techniques
+
+
+    +   - Vertical/horizontal segment
+
+    +   - B-tree Index 平衡树索引
+
+    +   - Hash index 散列索引'
+  merge: -1
+  img_proc: true
+- pgno: 238
+  md: '# Triples
+
+
+    | Subject
+
+    (resource URI) | Predicate
+
+    (property name) | Object
+
+    (property value) |
+
+    |---|---|---|
+
+
+    # Fig. 1. Schema-oblivious representation
+
+
+    # Property₁
+
+
+    | Subject
+
+    (resource URI) | Object
+
+    (property value) |
+
+    |---|---|
+
+
+
+    # Class₁
+
+
+    | Subject
+
+    (resource URI) |
+
+    |---|
+
+
+
+    # Propertyₙ
+
+
+    | Subject
+
+    (resource URI) | Object
+
+    (property value) |
+
+    |---|---|
+
+
+
+    # Classₘ
+
+
+    | Subject
+
+    (resource URI) |
+
+    |---|
+
+
+
+    # Fig. 2. Schema-aware representation
+
+
+    | Subject | FamilyName | GivenName | Phone | eMail |
+
+    |---|---|---|---|---|
+
+    | ex:person1 | Ding | Luping |  | lisading@WPI.EDU |
+
+    | ex:person2 | Kuno | Harumi | 123-456-7890 | harumi.kuno@hp.com |
+
+    | ex:person3 | Sayers | Craig |  | csayers@hpl.hp.com |
+
+    | ex:person4 | Wilkinson | Kevin | 123-555-7890 |  |'
+  merge: -1
+  img_proc: true
+- pgno: 239
+  md: '# Improvement: Sparse Data Store
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_239_0.png)
+
+
+    **Figure 1:** Positions represented using a list (a), a bit-string (b), and as
+    ranges (c) for sparse columns
+
+
+    +   - Column-Stores For Wide and Sparse（稀疏）Data列存储
+
+    +   - CIDR2007'
+  merge: -1
+  img_proc: true
+- pgno: 240
+  md: "# Oracle’s Embedded Triple SQL-Query[1]\n\n```\nRDF_MATCH (\n    Pattern  \
+    \      VARCHAR,\n    Models         RDFModels,\n    RuleBases      RDFRules,\n\
+    \    Aliases        RDFAliases,\n)\nRETURNS AnyDataSet;\n```\n\n+   - Graft RDF-Query\
+    \ into DBMS\n+   - Exploring DBMS capabilities\n+   - Materialized views as schema\
+    \ automation\n\n```\nSELECT t.r reviewer, t.c conf, t.a age\nFROM TABLE(RDF_MATCH(\n\
+    \  '(?r rdf:type Student)\n  (?r ReviewerOf ?c)\n  (?r Age ?a)',\n  RDFModels\
+    \ ('reviewers'),\n  NULL, NULL)) t\nWHERE t.a < 25;\n```\n\nThe RDF_MATCH invocation\
+    \ returns the following table:\n\n| r | c | c$type | a | a$type |\n|---|---|---|---|---|\n\
+    | John | IDBC2005 | URI | 24 | xsd:int |\n\n![](img/e8cfdb0a049dc5ab9d802234ebc2190e_240_0.png)\n\
+    \nFigure 2: RDF_MATCH Implementation Overview"
+  merge: -1
+  img_proc: true
+- pgno: 241
+  md: '# Beng Chin''s Philosophy
+
+
+    Beng Chin approaches research problems and system design with the philosophy that
+    all algorithms and structures should be simple, elegant and yet efficient so that
+    they can be easily grafted into existing systems and they are implementable, maintainable
+    and scalable in actual applications. A good example would be his approach towards
+    the design of new indexes; they are mainly B+-tree based -- simple and elegant
+    in design, and efficient, robust and scalable in performance (eg. iDistance, Bx-tree,
+    ST2B-tree).
+
+    http://www.comp.nus.edu.sg/~ooibc/
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_241_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 242
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 243
+  md: 'query:
+
+
+    ```
+
+    select ?a, ?t where {
+
+    ?b hasAuthor ?a . ?b hasTitle ?t .
+
+    ?b inLanguage French . ?b inCategory Crime . ?b wonPrize ?p .
+
+    ?b features ?m . ?m inList WorldHeritage . ?m locatedIn Africa }
+
+    ```
+
+
+    join graph:
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_243_0.png)
+
+
+    operator tree
+
+    (excerpt):
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_243_1.png)
+
+
+    Figure 1: Query, Join Graph and Operator Tree'
+  merge: -1
+  img_proc: true
+- pgno: 244
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 245
+  md: '# Sideway Information Passing
+
+
+    +   1. Light-weight run-time method 轻量级运行时方法
+
+    +      - Run-time optimizing operator tree based light-weight statistics information
+    collection
+
+    +   2. Pipelined executions 流水线
+
+    +   3. Scale very well with increasing complex trees'
+  merge: -1
+  img_proc: true
+- pgno: 246
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 247
+  md: '# Column-Store Support for RDF Data Management: not all swans are white[4]
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_247_0.png)
+
+
+    Figure 7: Scalability experiment'
+  merge: -1
+  img_proc: true
+- pgno: 248
+  md: '![](img/e8cfdb0a049dc5ab9d802234ebc2190e_248_0.png)
+
+
+    | S | P | O | C |
+
+    |---|---|---|---|
+
+    | &N.YT | endorses | S.B. Obama | c₂ |
+
+    | &N.YT | rdf:type | Newspaper | c₄ |
+
+    | Newspaper | rdf:type | rdfs:Class | c₃ |
+
+    | Newspaper | rdfs:subClassOf | Mass Media | c₃ |
+
+    | Mass Media | rdfs:subClassOf | Media | c₅ |
+
+    | Candidate | rdf:type | rdfs:Class | c₆ |
+
+    | S.B. Obama | rdf:type | Candidate | c₆ |
+
+    | endorses | rdf:type | rdf:Property | c₁ |
+
+    | endorses | rdfs:domain | Newspaper | c₁ |
+
+    | endorses | rdfs:range | Candidate | c₁ |
+
+    | Candidate | rdfs:subClassOf | Person | c₁ |
+
+    | supports | rdf:type | rdf:Property | c₁ |
+
+    | supports | rdfs:domain | Mass Media | c₁ |
+
+    | supports | rdfs:range | Person | c₁ |
+
+    | endorses | rdfs:subPropertyOf | supports | c₂ |
+
+    | &N.YT | endorses | S.B. Obama | c₂ |
+
+    | Media | rdf:type | rdfs:Class | c₃ |
+
+
+    # Fig. 1. Granularity Levels of Power
+
+
+    # Fig. 2. Relation S(s, p, o, c)'
+  merge: -1
+  img_proc: true
+- pgno: 249
+  md: Fig. 3. Graph representation of Q(s, p, o, c)
+  merge: -1
+  img_proc: true
+- pgno: 250
+  md: '# Beyond Triples: Quadruple Storage
+
+
+    To my knowledge, no reported research on the storage of quadruples by now!
+
+
+    +   1. Sextuple Indexing may not be efficient
+
+    +   2. Complex queries on quadruples
+
+    +   3. It is related with uncertain data management, a hot research point.
+
+    +      - (s, p, o, p’), where p’ means the possibility of (s, p, o).'
+  merge: -1
+  img_proc: true
+- pgno: 251
+  md: Fig. 4. Nodes a₁ and a₆ are connected by a path that follows the sequence of
+    navigational axes next/next/edge/next/next⁻¹/node
+  merge: -1
+  img_proc: true
+- pgno: 252
+  md: '# G:
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_252_0.png)
+
+
+    β = next::a/(next::[next::b/self::c])*/(edge::[next::d] | next::a)+'
+  merge: -1
+  img_proc: true
+- pgno: 253
+  md: "# SPARQ2L:Towards support for subgraph extraction queries in RDF Database[9]\n\
+    \n```\nSELECT ??p\nWHERE {  ?x  ??p  ?x .\n         ?z  compound:name  \"Methionine\"\
+    .\n         PathFilter(containsAny(??p, ?z) ) }\n```\n\n```\nSELECT ??p\nWHERE\
+    \  {  ?x  ??p  ?y .\n         ?x  foaf:name  \"salesPersonA\".\n         ?y  company:is_CIO\
+    \ ?z.\n         ?z  company:name \"CompanyY\".\n         PathFilter( cost(??p)\
+    \ < 4 ) }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 254
+  md: '# Complex Query
+
+
+    To my knowledge, no reported research on complex query in database literature!
+
+
+    +   1. Long join chain
+
+    +   2. Complex star join
+
+    +   3. Support inference
+
+    +      - Materialization method may not be available?
+
+    +      - Sideway information passing?
+
+    +      - Others??'
+  merge: -1
+  img_proc: true
+- pgno: 255
+  md: '![](img/e8cfdb0a049dc5ab9d802234ebc2190e_255_0.png)
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_255_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 256
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 257
+  md: '| URI / Literal | Hash Value in [0, 15] |
+
+    |---|---:|
+
+    | `<infosrdfpeers>` | 13 |
+
+    | `<info:mincar>` | 1 |
+
+    | `<dcecreator>` | 5 |
+
+    | `<foaf:name>` | 4 |
+
+    | `<foaf:age>` | 10 |
+
+    | `"Min Car"` | 7 |
+
+    | `"28"` | 2 |
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_257_0.png)
+
+
+    Fig. 3. Storing three triples into an RDFPeers network of eight nodes in an example
+    4-bit identifier space that could hold up to 16 nodes. (In reality, a much larger
+    identifier space is used, such as 128 bits.)'
+  merge: -1
+  img_proc: true
+- pgno: 258
+  md: '| No. | Query Pattern | Cost | Query Semantics |
+
+    |---|---|---|---|
+
+    | Q1 | (?s, ?p, ?o) | O(N) | find all possible triples |
+
+    | Q2 | (?s, ?p, o_i) | log N | given object o_i of any predicate, find the subjects
+    and predicates of matching triples |
+
+    | Q3 | (?s, p_i, ?o) | log N | given predicate p_i, find the subjects and objects
+    of the triples having this predicate |
+
+    | Q4 | (?s, p_i, o_i) | log N | given object o_i of predicate p_i, find the subjects
+    of matching triples |
+
+    | Q5 | (s_i, ?p, ?o) | log N | given subject s_i, find all predicates and objects
+    of the resource identified by s_i |
+
+    | Q6 | (s_i, ?p, o_i) | log N | given subject s_i, find its predicate that has
+    object o_i |
+
+    | Q7 | (s_i, p_i, ?o) | log N | given subject s_i, find its object of predicate
+    p_i |
+
+    | Q8 | (s_i, p_i, o_i) | log N | return this triple if it exists otherwise return
+    nothing |
+
+
+    Table 1
+
+    The eight possible atomic triple queries for exact matches. The cost is measured
+    in the number of routing hops needed to resolve each query.'
+  merge: -1
+  img_proc: true
+- pgno: 259
+  md: '# Reference
+
+
+    +   1. An efficient SQL-based RDF Querying Schema, VLDB’05
+
+    +   2. Hexastore: Sextuple Indexing for Semantic Web Data Management VLDB’08
+
+    +   3. Scalable Join Processing on Very Large RDF Graphs, SIGMOD’09
+
+    +   4. Column-Store Support for RDF Data Management: not all swans are white,
+    VLDB’08
+
+    +   5. Coloring RDF Triples to Capture Provenance, ISWC’09
+
+    +   6. Foundations of RDF database, Reasoning Web 2009
+
+    +   7. Continuous RDF Query Processing over DHTs, ISWC’07
+
+    +   8. A Subscribable Peer-to-Peer RDF Repository for Distributed Metadata Management,
+    Web Semantics: Science, Services and Agents on the World Wide Web 2004
+
+    +   9. SPARQ2L:Towards support for subgraph extraction queries in RDF Database,
+    WWW’07'
+  merge: -1
+  img_proc: true
+- pgno: 260
+  md: '# Thanks☺
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_260_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 261
+  md: '+   - 1. Why Advanced Data Structure?
+
+    +     - 1.1. Data Structure and Algorithm
+
+    +     - 1.2. Data Structure and Data-intensive Application
+
+    +   - 2. Principles of Data Structure
+
+    +     - 2.1. Why and How O(log n)-access Time?
+
+    +     - 2.2. Amortized/Competitive Analysis and Dynamic Data Structure
+
+    +     - 2.3. Randomized Data Structure
+
+    +     - 2.4. Augmented Data Structure
+
+    +     - 2.5. Compact Data Structure
+
+    +     - 2.6. Distributed Data Structure
+
+    +   - 3. Application
+
+    +     - 3.1. Data Streams/XML/RDF Storage Structure
+
+    +     - 3.2. P2P Overlay Structure
+
+    +     - 3.3. Indexing Moving Objects
+
+    +     - 3.4. What''s More?'
+  merge: -1
+  img_proc: true
+- pgno: 262
+  md: '# Why and How O(log n) Access Time?
+
+
+    Zhihong Chong
+
+
+    http://cse.seu.edu.cn/people/zhchong/'
+  merge: -1
+  img_proc: true
+- pgno: 263
+  md: '# Outline
+
+
+    +   1. First try: O(n^(3/2)) sorting algorithm
+
+    +   2. From binary search to binary search tree; from list to skip list
+
+    +   3. From binary heap to binomial heap
+
+    +   4. From AVL Trees to B-trees, red-black tree......'
+  merge: -1
+  img_proc: true
+- pgno: 264
+  md: '+   - 逆排序方法的一个下界
+
+    +     - 一对逆序 <i,j>, a[i]>a[j]
+
+    +       - 34，8，64，5
+
+    +       - (34，8)，(34，5)，(8，5)
+
+    +     - 一个事实：如果一个序列的逆序个数为零，那么这个序列是从小到大的序列
+
+    +     - 另外一个事实：交换两个相邻的逆序对仅仅使一个序列的逆序个数减少1
+
+
+    +   - **定理1：** 随机序列的平均逆序对数为 n(n-1)/4
+
+    +   - **定理2：** 交换相邻逆序的算法平均需要 Ω(n²)'
+  merge: -1
+  img_proc: true
+- pgno: 265
+  md: '# First try: from O(n²) to O(n¹·⁵)
+
+
+    | [0] | [1] | [2] | [3] | [4] | [5] | [6] | [7] | [8] | [9] | [10] | [11] | [12]
+    | [13] | [14] | [15] |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
+    | 40 | 35 | 80 | 75 | 34 | 45 | 62 | 57 | 55 | 90 | 85 | 60 | 90 | 70 | 75 | 65
+    |
+
+
+    | [0] | [1] | [2] | [3] | [4] | [5] | [6] | [7] | [8] | [9] | [10] | [11] | [12]
+    | [13] | [14] | [15] |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
+    | 40 | 34 | 45 | 60 | 75 | 55 | 62 | 57 | 60 | 65 | 70 | 75 | 75 | 85 | 90 | 90
+    |
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_265_0.png)
+
+
+    +   - Insertion sort of 16/3 ~= 5 items, items are = 1, 10, 4, 6, 15
+
+    +   - Insertion sort of 16/3 ~= 5 items, items are = 9, 3, 12, 14, 8
+
+    +   - Insertion sort of 16/3 ~= 5 items'
+  merge: -1
+  img_proc: true
+- pgno: 266
+  md: '# First try: from O(n²) to O(n¹·⁵)
+
+
+    |  |  |  |
+
+    |---|---|---|
+
+    | Original | 32 95 16 82 24 66 35 19 75 54 40 43 93 68 |  |
+
+    | After 5-sort | 32 35 16 68 24 40 43 19 75 54 66 95 93 82 | 6 swaps |
+
+    | After 3-sort | 32 19 16 43 24 40 54 35 75 68 66 95 93 82 | 5 swaps |
+
+    | After 1-sort | 16 19 24 32 35 40 43 54 66 68 75 82 93 95 | 15 swaps |'
+  merge: -1
+  img_proc: true
+- pgno: 267
+  md: "```\nVoi\nint j, i;\nint gap;\nfor (gap = a.size() /2; gap > 0; gap /=2)\n\
+    {\n    for (i=gap; i < a.size(); i++)\n    {\n        int tmp = a[i];\n      \
+    \  for (j=i; j>=gap && tmp < a[j-gap]; j -= gap)\n            a[j] = a[j-gap];\n\
+    \        a[j] = tmp;\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 268
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 269
+  md: 'h_k=1, h_{k-1}=3, h_{k-2}=7, ..., let gap=h_k, because Hibbard suggested the
+    sequence.
+
+
+    # An O(n^2) sequence
+
+
+    +   1. **For h_k>N^{1/2}**, we follow the previous analysis
+
+    +   2. **For h_k<=N^{1/2}**
+
+    +      - h_k-sorted,
+
+    +      - For gap=h_k, preserve h_{k+1}-sorted, h_{k+2}-sorted
+
+    +      - a[p-i]<a[p] if i is a multiple of h_{k+1} or h_{k+2},
+
+    +      - For any number i>=(h_{k+1}-1)(h_{k+2}-1)=8h_k^2+4h_k can be expressed
+    as a linear combination of h_{k+1} and h_{k+2}'
+  merge: -1
+  img_proc: true
+- pgno: 270
+  md: '# An Example
+
+
+    +   - h₁=1, h₂=3, h₃=7, h₄=15....
+
+    +   - k=3, h₃=3, (h₄-sorted and h₅-sorted)
+
+    +   - (h₄-1)*(h₅-1)=52=1*7+3*15
+
+    +   - A[100]<=A[107]<=A[122]<=A[137]<=A[152]'
+  merge: -1
+  img_proc: true
+- pgno: 271
+  md: '# O(n^(3/2))的由来
+
+
+    ∑_{i=1}^t N² / h_i = O(N² ∑_{i=1}^t 1/h_i) = O(N²)
+
+
+    h_k * (N/h_k)²
+
+
+    since ∑_{i=1}^t 1/h_i < 2
+
+
+    h_k * ((h_{k+1}-1)(h_{k+2}-1)/h_k)²'
+  merge: -1
+  img_proc: true
+- pgno: 272
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 273
+  md: '# Insertion
+
+
+    +   To insert an item (x, o) into a skip list, we use a randomized algorithm:
+
+    +   - We repeatedly toss a coin until we get tails, and we denote with i the number
+    of times the coin came up heads
+
+    +   - If i ≥ h, we add to the skip list new lists S_{h+1}, ..., S_{i+1}, each
+    containing only the two special keys
+
+    +   - We search for x in the skip list and find the positions p0, p1, ..., pi
+    of the items with largest key less than x in each list S0, S1, ..., Si
+
+    +   - For j ← 0, ..., i, we insert item (x, o) into list Sj after position pj
+
+    +   Example: insert key 15, with i = 2
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_273_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 274
+  md: '# Deletion
+
+
+    To remove an item with key x from a skip list, we proceed as follows:
+
+
+    +   - We search for x in the skip list and find the positions p₀, p₁, ..., pᵢ
+    of the items with key x, where position pⱼ is in list Sⱼ
+
+    +   - We remove positions p₀, p₁, ..., pᵢ from the lists S₀, S₁, ..., Sᵢ
+
+    +   - We remove all but one list containing only the two special keys
+
+
+    Example: remove key 34
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_274_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 275
+  md: '# Space Usage
+
+
+    +   - The space used by a skip list depends on the random bits used by each invocation
+    of the insertion algorithm
+
+    +   - We use the following two basic probabilistic facts:
+
+    +     Fact 1: The probability of getting i consecutive heads when flipping a coin
+    is 1/2^i
+
+    +     Fact 2: If each of n items is present in a set with probability p, the expected
+    size of the set is np
+
+
+    +   - Consider a skip list with n items
+
+    +     - By Fact 1, we insert an item in list S_i with probability 1/2^i
+
+    +     - By Fact 2, the expected size of list S_i is n/2^i
+
+    +   - The expected number of nodes used by the skip list is
+
+    +     ∑_{i=0}^{h} n/2^i = n ∑_{i=0}^{h} 1/2^i < 2n
+
+    +   - Thus, the expected space usage of a skip list with n items is O(n)'
+  merge: -1
+  img_proc: true
+- pgno: 276
+  md: '# Height
+
+
+    +   - The running time of the search an insertion algorithms is affected by the
+    height $h$ of the skip list
+
+    +   - We show that with high probability, a skip list with $n$ items has height
+    $O(\log n)$
+
+    +   - We use the following additional probabilistic fact:
+
+    +     Fact 3: If each of $n$ events has probability $p$, the probability that
+    at least one event occurs is at most $np$
+
+
+    +   - Consider a skip list with $n$ items
+
+    +     - By Fact 1, we insert an item in list $S_i$ with probability $1/2^i$
+
+    +     - By Fact 3, the probability that list $S_i$ has at least one item is at
+    most $n/2^i$
+
+    +   - By picking $i = 3\log n$, we have that the probability that $S_{3\log n}$
+    has at least one item is at most
+
+    +     $n/2^{3\log n} = n/n^3 = 1/n^2$
+
+    +   - Thus a skip list with $n$ items has height at most $3\log n$ with probability
+    at least $1 - 1/n^2$'
+  merge: -1
+  img_proc: true
+- pgno: 277
+  md: '# Search and Update Times
+
+
+    +   - The search time in a skip list is proportional to
+
+    +     - the number of drop-down steps, plus
+
+    +     - the number of scan-forward steps
+
+    +   - The drop-down steps are bounded by the height of the skip list and thus
+    are $O(\log n)$ with high probability
+
+    +   - To analyze the scan-forward steps, we use yet another probabilistic fact:
+
+    +     Fact 4: The expected number of coin tosses required in order to get tails
+    is 2
+
+
+    +   - When we scan forward in a list, the destination key does not belong to a
+    higher list
+
+    +     - A scan-forward step is associated with a former coin toss that gave tails
+
+    +   - By Fact 4, in each list the expected number of scan-forward steps is 2
+
+    +   - Thus, the expected number of scan-forward steps is $O(\log n)$
+
+    +   - We conclude that a search in a skip list takes $O(\log n)$ expected time
+
+    +   - The analysis of insertion and deletion gives similar results'
+  merge: -1
+  img_proc: true
+- pgno: 278
+  md: 'There are 4 cases in all, choosing which one is made by seeing the direction
+    of the first 2 nodes from the unbalanced node to the newly inserted node and matching
+    them to the top most row.
+
+
+    Root is the initial parent before a rotation and Pivot is the child to take the
+    root''s place.
+
+
+    # Left Left Case
+
+
+    # Right Right Case
+
+
+    # Left Right Case
+
+
+    # Right Left Case
+
+
+    # Right Rotation
+
+
+    # Left Rotation
+
+
+    # Left Rotation
+
+
+    # Right Rotation
+
+
+    # Right Rotation
+
+
+    # Left Rotation'
+  merge: -1
+  img_proc: true
+- pgno: 279
+  md: '# B-Tree: Minimization Factor t=3, Minimum Degree =2, Maximum Degree =5
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_279_0.png)
+
+
+    Search(21)'
+  merge: -1
+  img_proc: true
+- pgno: 280
+  md: '+   1. The data items are sorted at leaves from A/1 trees to B-trees
+
+    +   2. The nonleaf nodes stores up to M-1 key to guide the searching
+
+    +   3. The root is either a leaf or has between two and M children
+
+    +   4. All nonleaf nodes except the root have between ⌈M/2⌉ and M children
+
+    +   5. All leaves are at the same depth and have between ⌈L/2⌉ and L data items'
+  merge: -1
+  img_proc: true
+- pgno: 281
+  md: '# And Red Black-tree
+
+
+    +   1. A node is either red or black.
+
+    +   2. The root is black
+
+    +   3. All leaves are black.
+
+    +   4. Both children of every red node are black.
+
+    +   5. Every simple path from a given node to any of its descendant leaves contains
+    the same number of black nodes.
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_281_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 282
+  md: '# Insertion
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_282_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 283
+  md: '# Insertion'
+  merge: -1
+  img_proc: true
+- pgno: 284
+  md: '# Deletion
+
+
+    +   1. this reduces to the problem of deleting a node with at most one non-leaf
+    child.
+
+
+    +   - deleting a red node
+
+
+    +   - the deleted node is black and its child is red
+
+
+    +   - both the node to be deleted and its child are black'
+  merge: -1
+  img_proc: true
+- pgno: 285
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 286
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 287
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 288
+  md: '# And R-tree
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_288_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 289
+  md: '# R-TREES: A DYNAMIC INDEX STRUCTURE FOR SPATIAL SEARCHING
+
+
+    Antoninn Guttman
+
+
+    University of California
+
+
+    Berkeley
+
+
+    To Data Tuples
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_289_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 290
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 291
+  md: 'H₁
+
+
+    H₂
+
+
+    H₃
+
+
+    # Figure 1: Hilbert Curves of order 1, 2 and 3'
+  merge: -1
+  img_proc: true
+- pgno: 292
+  md: 'Hilbert curve, first order
+
+
+    Hilbert curves, first and second orders
+
+
+    Hilbert curves, first to third orders
+
+
+    Hilbert curve in three dimensions
+
+
+    3-D Hilbert curve with color showing progression'
+  merge: -1
+  img_proc: true
+- pgno: 293
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 294
+  md: '![](img/e8cfdb0a049dc5ab9d802234ebc2190e_294_0.png)
+
+
+    Figure 2: Data rectangles organized in a Hilbert R-tree'
+  merge: -1
+  img_proc: true
+- pgno: 295
+  md: 'Figure 3: The file structure for the previous Hilbert R-tree'
+  merge: -1
+  img_proc: true
+- pgno: 296
+  md: '# From binary heap to binomial heap
+
+
+    Re-heap up
+
+
+    Re-heap down
+
+
+    (a) Original tree: not a heap
+
+
+    (b) Last element (25) moved up
+
+
+    (c) Moved up again: tree is a heap
+
+
+    (a) Original tree: not a heap
+
+
+    (b) Root moved down (right)
+
+
+    (c) Moved down again: tree is a heap'
+  merge: -1
+  img_proc: true
+- pgno: 297
+  md: '![](img/e8cfdb0a049dc5ab9d802234ebc2190e_297_0.png)
+
+
+    # (a) Heap in its logical form
+
+
+    ![](img/e8cfdb0a049dc5ab9d802234ebc2190e_297_1.png)
+
+
+    # (b) Heap in an array'
+  merge: -1
+  img_proc: true
+- pgno: 298
+  md: 'A binomial tree $B_k$ is an ordered tree defined recursively.
+
+
+    +   - $B_0$ consists of a single node.
+
+    +   - For $k \ge 1$, $B_k$ is a pair of $B_{k-1}$ trees, where the root of one
+    $B_{k-1}$ becomes the leftmost child of the other.'
+  merge: -1
+  img_proc: true
+- pgno: 299
+  md: 'B₀
+
+
+    Bₖ
+
+
+    Bₖ₋₁
+
+
+    Bₖ₋₁
+
+
+    B₁
+
+
+    B₂
+
+
+    B₃
+
+
+    B₄'
+  merge: -1
+  img_proc: true
+- pgno: 300
+  md: '# Lemma A
+
+
+    For all integers $k \ge 0$, the following properties hold:
+
+
+    +   1. $B_k$ has $2^k$ nodes.
+
+    +   2. $B_k$ has height $k$.
+
+    +   3. For $i = 0, \dots, k$, $B_k$ has exactly $\binom{k}{i}$ nodes at depth
+    $i$.
+
+    +   4. The root of $B_k$ has degree $k$ and all other nodes in $B_k$ have degree
+    smaller than $k$.
+
+    +   5. If $k \ge 1$, then the children of the root of $B_k$ are $B_{k-1}, B_{k-2},
+    \cdots, B_0$ from left to right.
+
+
+    # Corollary B
+
+
+    The maximum degree of an $n$-node binomial tree is $\lg n$.'
+  merge: -1
+  img_proc: true
+- pgno: 301
+  md: '![](img/e8cfdb0a049dc5ab9d802234ebc2190e_301_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 302
+  md: '# Implementation of a Binomial Heap
+
+
+    Keep at each node the following pieces of information:
+
+
+    +   - a field *key* for its key,
+
+    +   - a field *degree* for the number of children,
+
+    +   - a pointer *child*, which points to the leftmost-child,
+
+    +   - a pointer *sibling*, which points to the right-sibling, and
+
+    +   - a pointer *p*, which points to the parent.
+
+
+    The roots of the trees are connected so that the sizes of the connected trees
+    are in decreasing order. Also, for a heap H, *head*[H] points to the head of the
+    list.'
+  merge: -1
+  img_proc: true
+- pgno: 303
+  md: '+   - How count the cost of n insertions?
+
+    +   - Amortized analysis(分摊代价)'
+  merge: -1
+  img_proc: true
+- pgno: 304
+  md: '# An O()'
+  merge: -1
+  img_proc: true

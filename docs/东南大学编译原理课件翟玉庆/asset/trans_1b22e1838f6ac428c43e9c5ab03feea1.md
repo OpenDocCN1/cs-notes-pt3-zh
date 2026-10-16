@@ -1,0 +1,218 @@
+
+
+# 3) DFA ⇒ DFA°
+
+Z₀, Z₁, Z₂, Z₃, Z₄, Z₅, Z₆, Z₇, Z₈
+
+①
+
+Z₀, Z₁, Z₂, Z₃, Z₄
+
+Z₅, Z₆, Z₇, Z₈
+
+②
+
+④
+
+Z₀, Z₁, Z₂
+
+Z₃, Z₄
+
+③
+
+⑦
+
+Z₀, Z₂
+
+Z₁
+
+Z₃
+
+Z₄
+
+Z₅, Z₆
+
+Z₇, Z₈
+
+⑤
+
+⑥
+
+Z₅
+
+Z₆
+
+Z₇
+
+Z₈
+
+# Review
+
+## 6.Important knowledge points
+
+- Chapter 4
+  - Top-down Parsing
+    - Recursive descent parsing
+    - Predictive parsing
+      - LL(1)
+    - LL(1) Parsing table construction
+      - Elimination of left recursion
+        - First direct, Next indirect recursion
+      - Factoring
+      - First & Follow
+      - Show a CFG grammar is whether a LL(1) grammar by constructing the related parsing table
+
+Please **eliminate the left recursions (if there are)** and **extract maximum common left factors (if there are)** from the following context free grammar, and then decide **the resulted grammar** is whether a LL(1) grammar by constructing the related LL(1) parsing table.
+
+S→if E then S|if E then S else S|while E do S|a
+E→E and F|F
+F→F or G|G
+G→(E)|b
+
+# Construct the related parsing table
+
+| V_N \ V_T | while | do | a | if | then | else | and | or | ( | ) | b | $ |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| S | S -> while E do S |  | S -> a | S -> if E then S A |  |  |  |  |  |  |  |  |
+| A |  |  |  |  | A -> else S<br>A -> ε |  |  |  |  |  |  | A -> ε |
+| E |  |  |  |  |  |  |  |  | E -> F E' | E -> F E' |  |  |
+| E' |  | E' -> ε |  |  | E' -> ε |  | E' -> and F E' |  |  | E' -> ε |  |  |
+| F |  |  |  |  |  |  |  |  | F -> G F' | F -> G F' |  |  |
+| F' |  | F' -> ε |  |  | F' -> ε |  | F' -> ε | F' -> or G F' |  | F' -> ε |  |  |
+| G |  |  |  |  |  |  |  |  | G -> (E) |  | G -> b |  |
+
+There is a conflict in the table.
+So, G' is not a LL(1) grammar.
+
+# Review
+
+## 6.Important knowledge points
+
+- Chapter 4
+  - Bottom-up Parsing
+  - LR parsing
+    - SLR(1) -- Follow
+    - LR(1) – Predictive symbol
+    - LALR – Merging states with the same core
+    - Show a CFG grammar is whether a LR grammar by constructing the related parsing table
+
+# Review
+
+## 6.Important knowledge points
+
+- Chapter 4
+  - Ambiguous Grammar parsing
+- Additional conditions
+  - Associated law and precedence
+  - Dangle rules
+  - Parsing an ambiguous grammar in LR parsing method with additional conditions
+
+Please construct a LR(1) parsing table for the following ambiguous grammar with your own defined additional conditions (You determine the required additional conditions by yourself).
+
+E→E and E|E or E|not E|(E)|b
+
+# ① Construct <RC1> DFA
+
+I₀
+S → . E , $ R
+E → . E and E , $ R | and | or
+E → . E or E , $ R | and | or
+E → . not E , $ R | and | or
+E → . (E) , $ R | and | or
+E → . b , $ R | and | or
+
+I₁
+S → E . , $ R
+E → E . and E , $ R | and | or
+E → E . or E , $ R | and | or
+
+I₂
+E → not . E , $ R | and | or
+E → . E and E , $ R | and | or
+E → . E or E , $ R | and | or
+E → . not E , $ R | and | or
+E → . (E) , $ R | and | or
+E → . b , $ R | and | or
+
+I₃
+E → ( . E ) , $ R | and | or
+E → . E and E , ) | and | or
+E → . E or E , ) | and | or
+E → . not E , ) | and | or
+E → . (E) , ) | and | or
+E → . b , ) | and | or
+
+I₄
+E → b . , $ R | and | or
+
+E
+
+not
+
+(
+
+b
+
+I₁ and
+E→E and. E, $k|and/or
+E→. E and E, $k|and/or
+E→. E or E, $k|and/or
+E→. not E, $k|and/or
+E→. (E), $k|and/or
+E→. b, $k|and/or
+25
+
+I₄ or
+E→E or. E, $k|and/or
+E→. E and E, $k|and/or
+E→. E or E, $k|and/or
+E→. not E, $k|and/or
+E→. (E), $k|and/or
+E→. b, $k|and/or
+26
+
+I₂ E→
+E→not E., $k|and/or
+E→E. and E, $k|and/or
+E→E. or E, $k|and/or
+17
+
+I₂ not I₂
+I₁ () I₃
+I₂ b I₄
+
+I₃ E →
+E→(E.), $k|and|or 28
+E→E. and E, $k|and|or
+E→E. or E, ?|and|or
+
+I₃ not →
+E→not. E, ?|and|or 29
+E→. E and E, ?|and|or
+E→. E or E, ?|and|or
+E→. not E, ?|and|or
+E→. (E), ?|and|or
+E→. b, ?|and|or
+
+I₃ ( →
+E→(.E), ?|and|or 210
+E→. E and E, ?|and|or
+E→. E or E, ?|and|or
+E→. not E, ?|and|or
+E→. (E), ?|and|or
+E→. b, ?|and|or
+
+I₃ b →
+E→b., ?|and|or 24
+
+I₅ E →
+E→E and E., $k|and|or 12
+E→E. and E, $k|and|or
+E→E. or E, $k|and|or
+
+I₅ not → I₂
+
+I₅ ( → I₃
+
+I₅ b → I₄
+

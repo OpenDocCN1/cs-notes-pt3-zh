@@ -1,0 +1,19 @@
+# # Implementation
+
+Semaphore operations now defined as
+
+```
+wait(S):
+    S.value--;
+    if (S.value < 0) {
+        add this process to S.L;
+        block();
+    }
+
+signal(S):
+    S.value++;
+    if (S.value <= 0) {
+        remove a process P from S.L;
+        wakeup(P);
+    }
+```

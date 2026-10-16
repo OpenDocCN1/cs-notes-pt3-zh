@@ -1,0 +1,5 @@
+# Conclusions
+
++   - Amortized costs can provide a clean abstraction of data-structure performance.
++   - Any of the analysis methods can be used when an amortized analysis is called for, but each method has some situations where it is arguably the simplest or most precise.
++   - Different schemes may work for assigning amortized costs in the accounting method, or potentials in the potential method, sometimes yielding radically different bounds.

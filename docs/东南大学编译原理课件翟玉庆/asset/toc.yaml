@@ -1,0 +1,304 @@
+- - '###'
+  - 2、 Why avoid compilers & program in machine language?
+- - '###'
+  - 3、 Structure of a compiler
+- - '###'
+  - 4、 More Structure of a compiler
+- - '###'
+  - 2. The Analysis-Synthesis Model of Compilation
+- - '###'
+  - 2、 The Analysis-Synthesis Model of Compilation
+- - '###'
+  - 6、Symbol-Table Management
+- - '###'
+  - 7、Error Detection and Reporting
+- - '###'
+  - 3、How to construct a compiler?
+- - '###'
+  - 3、 How to construct a compiler?
+- - '###'
+  - 4、 Compiler-Construction Tools
+- - '###'
+  - 4、Compiler-Construction Tools
+- - '####'
+  - 1、 Alphabet
+- - '####'
+  - 2、 Symbol(Character)
+- - '####'
+  - 3、 String
+- - '####'
+  - 4、 Sentence
+- - '####'
+  - 5、 Language
+- - '####'
+  - 1、从语言构造语法
+- - '####'
+  - 2、语法简化
+- - '####'
+  - 3、构造不含 ε-产生式的上下文无关文法
+- - '####'
+  - 1、语法树
+- - '#####'
+  - a、定义
+- - '#####'
+  - b、功能
+- - '#####'
+  - c、语法树中的基本术语
+- - '####'
+  - 4、 Non-deterministic FA (NFA)
+- - '####'
+  - 5、 Conversion of an NFA into a DFA
+- - '####'
+  - 6、 Minimizing the number of States of a DFA
+- - '####'
+  - 4、 Elimination of Left Recursion
+- - '#####'
+  - 3) Algorithm
+- - '######'
+  - (1) Elimination of immediate left recursion
+- - '######'
+  - (2) Elimination of indirect left recursion
+- - '####'
+  - 5、 Eliminating Ambiguity of a grammar
+- - '####'
+  - 6、 Left factoring
+- - '####'
+  - 7、Predictive Parsers Methods
+- - '####'
+  - 8、 Transition diagram based Predictive Parsers
+- - '#####'
+  - 1) Transition diagram
+- - '#####'
+  - 2) Transition diagram based predictive parsing
+- - '###'
+  - 3、递归下降
+- - '###'
+  - 4、消除左递归
+- - '####'
+  - 1)左递归的基本形式
+- - '###'
+  - 第2节 自顶向下解析
+- - '####'
+  - 4、消除左递归
+- - '#####'
+  - 2)消除左递归的策略
+- - '####'
+  - 11、 Canonical LR(0)
+- - '####'
+  - 11、Canonical LR(0)
+- - '#####'
+  - (3) Goto 运算
+- - '#####'
+  - 3)项目集构造
+- - '####'
+  - 12、 SLR(1) Parsing Table Algorithm
+- - '###'
+  - 第5节 LR解析器
+- - '####'
+  - 13、 LR(1)项目
+- - '####'
+  - 14、有效的LR(1)项目
+- - '####'
+  - 15、 LR(1)项目集的构造
+- - '####'
+  - 16、规范LR分析表的构造
+- - '####'
+  - 16、规范 LR 分析表的构造
+- - '####'
+  - 17、 LALR(lookahead-LR)
+- - '####'
+  - 17、LALR(look-ahead-LR)
+- - '####'
+  - 18、 An easy, but space-consuming LALR table construction
+- - '####'
+  - 18、An easy, but space-consuming LALR table construction
+- - '###'
+  - Section 5 LR parsers
+- - '###'
+  - Section 6 Using ambiguous grammars
+- - '####'
+  - 1、Using Precedence and Associativity to Resolve Parsing Action Conflicts
+- - '###'
+  - Section 6  使用二义性文法
+- - '####'
+  - 2、悬空 else 二义性
+- - '###'
+  - Section 7  解析器生成器 Yacc
+- - '####'
+  - 1、利用 Yacc 创建输入/输出转换器
+- - '##'
+  - 第 5 章 语法制导翻译
+- - '###'
+  - 1、基本思想
+- - '###'
+  - 第 0 节 实现语法制导翻译的方法
+- - '####'
+  - 2、将语义规则与产生式相关联的两种表示法
+- - '####'
+  - 3、语法制导翻译的概念视图
+- - '###'
+  - 第 1 节 语法制导定义
+- - '####'
+  - 1、定义
+- - '#####'
+  - 1)语法制导定义
+- - '#####'
+  - 2)属性
+- - '#####'
+  - 3)属性的类型
+- - '####'
+  - 1、 基本思想
+- - '####'
+  - 2、 综合属性的求值
+- - '####'
+  - 1.Static Checking
+- - '####'
+  - 2. Position of type checker
+- - '####'
+  - 2. 类型系统
+- - '####'
+  - 3. 类型的静态与动态检查
+- - '####'
+  - 4. 错误恢复
+- - '####'
+  - 1. 一个简单的语言
+- - '####'
+  - 2. 表达式的类型检查
+- - '####'
+  - 3. 语句的类型检查
+- - '####'
+  - 4. 函数的类型检查
+- - '####'
+  - 1. 类型表达式的结构等价性
+- - '####'
+  - 2. 类型表达式的名称
+- - '####'
+  - 3. 类型表示中的循环
+- - '####'
+  - 1. 程序与程序执行
+- - '####'
+  - 3. 激活树
+- - '####'
+  - 4. 控制栈
+- - '####'
+  - 5. 名称的绑定
+- - '######'
+  - (2) 嵌套深度
+- - '######'
+  - (3) 访问链
+- - '######'
+  - (4) 显示表
+- - '######'
+  - (5) 非显示表
+- - '####'
+  - 1.参数传递方法
+- - '####'
+  - 2.传值调用
+- - '####'
+  - 3.传引用调用
+- - '####'
+  - 5.传名调用
+- - '####'
+  - 1.符号表的功能
+- - '####'
+  - 2. 符号表条目
+- - '####'
+  - 1.中间代码生成器的位置
+- - '####'
+  - 2.使用机器无关中间形式的益处
+- - '####'
+  - 3.中间代码生成器的实现
+- - '####'
+  - 1.中间表示
+- - '####'
+  - 2. 三地址码(TAC)
+- - '####'
+  - 3. TAC 的类型
+- - '##'
+  - 第8章 中间代码生成
+- - '###'
+  - 第1节 中间语言
+- - '####'
+  - 7. 短路代码中控制流语句的翻译方法
+- - '###'
+  - 1. 什么是回填？为什么需要回填？
+- - '###'
+  - 第2节 回填
+- - '####'
+  - 3. 布尔表达式
+- - '#####'
+  - 2) 语义规则
+- - '###'
+  - 第3节 四元式
+- - '####'
+  - 5.布尔表达式
+- - '#####'
+  - 1)布尔表达式的主要目的
+- - '#####'
+  - 2)文法
+- - '#####'
+  - 3).数值表示
+- - '####'
+  - 6. 回填
+- - '#####'
+  - 2).布尔表达式
+- - '######'
+  - (1)修改文法
+- - '######'
+  - (2)语义规则
+- - '#####'
+  - 3) 控制流语句
+- - '######'
+  - (2) 语义规则
+- - '####'
+  - 5. 活跃变量分析
+- - '####'
+  - 6. 活跃变量算法
+- - '####'
+  - 7. 定义-使用链
+- - '###'
+  - 实验文档要求
+- - '##'
+  - 复习
+- - '###'
+  - 1.课程结构
+- - '###'
+  - 2.复习范围
+- - '###'
+  - 3.复习方法
+- - '###'
+  - 4.试卷中问题的形式
+- - '###'
+  - 5.考试形式
+- - '###'
+  - 6.重要知识点
+- - '####'
+  - ① RE ⇒ NFA
+- - '####'
+  - ② NFA ⇒ DFA
+- - '####'
+  - ③ OFA ⇒ DFA°
+- - '####'
+  - 2). NFA ⇒ DFA
+- - '####'
+  - 3) DFA ⇒ DFA°
+- - '##'
+  - Review
+- - '###'
+  - 6.Important knowledge points
+- - '####'
+  - Construct the related parsing table
+- - '####'
+  - ① Construct <RC1> DFA
+- - '####'
+  - 构造 LR(0) 分析表
+- - '####'
+  - ③ 附加条件：not ← and
+- - '####'
+  - ① 构造活动树
+- - '####'
+  - ② 构造最大尺寸的布局
+- - '####'
+  - ③ 在活动记录（AR）中进行细节设计
+- - '###'
+  - 2. 语法分析器（Parser）

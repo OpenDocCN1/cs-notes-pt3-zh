@@ -1,0 +1,5 @@
+# Architecture...
+
++   - **Structural properties.** This aspect of the architectural design representation defines the **components of a system (e.g., modules, objects, filters)** and **the manner** in which those components are packaged and interact with one another. For example, objects are packaged to encapsulate both data and the processing that manipulates the data and interact via the invocation of methods.
++   - **Extra-functional properties.** The architectural design description should address **how the design architecture achieves requirements for performance, capacity, reliability, security, adaptability, and other system characteristics.**
++   - **Families of related systems.** The architectural design should draw upon repeatable patterns that are commonly encountered in **the design of families of similar systems.** In essence, the design should have the ability to reuse architectural building blocks.

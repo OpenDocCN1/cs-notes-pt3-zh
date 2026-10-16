@@ -1,0 +1,125 @@
+
+
+## CHAPTER 3 LEXICAL ANALYSIS
+
+### Section 4 Finite automata
+
+#### 6. Minimizing the number of States of a DFA
+
+**b) Algorithm**
+
+(3) If Π_{i+1} = Π_i, let Π_final = Π_{i+1} and continue with step (4). Otherwise, repeat step (2) with Π_{i+1}.
+
+(4) Choose one state in each group of the partition Π_final as the representative for that group. The representatives will be the states of the reduced DFA M'. Let s and t be representative states for s's and t's group respectively, and suppose on input a there is a transition of M from s to t. Then M' has a transition from s to t on a.
+
+(5) If M' has a dead state (a state that is not accepting and that has transitions to itself on all input symbols), then remove it. Also remove any states not reachable from the start state.
+
+**Notes:** The meaning that a string w distinguishes state s from state t is that by starting with the DFA M in state s and feeding it input w, we end up in an accepting state, but starting in state t and feeding it input w, we end up in a non-accepting state, or vice versa.
+
+- Example: Minimize the following DFA.
+
+![](img/353f619caa6c5715591f2105bdfa2865_124_0.png)
+
+1. Initialization: Π₀ = {{0,1,2},{3,4,5,6}}
+
+2.1 For non-accepting states in Π₀:
+- a. move({0,2}, a) = {1}; move({1}, a) = {3}. 1 and 3 are not in the same subgroup of Π₀.
+  So, Π₁' = {{1},{0,2},{3,4,5,6}}.
+- b. move({0}, b) = {2}; move({2}, b) = {5}. 2 and 5 are not in the same subgroup of Π₁'.
+  So, Π₁'' = {{1},{0},{2},{3,4,5,6}}.
+
+2.2 For accepting states in Π₀:
+- a: move({3,4,5,6}, a) = {3,6}, which is a subset of {3,4,5,6} in Π₁''.
+- b: move({3,4,5,6}, b) = {4,5}, which is a subset of {3,4,5,6} in Π₁''.
+- So, Π₁ = {{1},{0},{2},{3,4,5,6}}.
+
+3. Apply step (2) again to Π₁, and get Π₂.
+- Π₂ = {{1},{0},{2},{3,4,5,6}} = Π₁,
+- So, Π_final = Π₁.
+
+4. Let state 3 represent the state group {3,4,5,6}.
+
+So, the minimized DFA is:
+
+![](img/353f619caa6c5715591f2105bdfa2865_127_0.png)
+
+`(a|b)* a (a|b)(a|b)`
+
+**1. NFA.**
+
+![](img/353f619caa6c5715591f2105bdfa2865_128_0.png)
+
+**2. NFA ⇒ DFA**
+
+| $I_i$ | $a$ | $b$ |
+|---|---|---|
+| $I_0 = \epsilon(\{1\}) = \{1,2,3\}$ | $\epsilon(\{1,a\}) = \{2,3,4\} = I_1$ | $\epsilon(\{1,b\}) = \{2,3\} = I_2$ |
+| $I_1 = \{2,3,4\}$ | $\epsilon(\{2,a\}) = \{2,3,4,5\} = I_3$ | $\epsilon(\{2,b\}) = \{2,3,5\} = I_4$ |
+| $I_2 = \{2,3\}$ | $\epsilon(\{2,4\}) = I_1$ | $\epsilon(\{2\}) = I_2$ |
+| $I_3 = \{2,3,4,5\}$ | $\epsilon(\{2,4,5,6\}) = \{2,3,4,5,6\} = I_5$ | $\epsilon(\{2,5,6\}) = \{2,5,6\} = I_6$ |
+| $I_4 = \{2,3,5\}$ | $\epsilon(\{2,4,6\}) = \{2,3,4,6\} = I_7$ | $\epsilon(\{2,6\}) = \{2,3,6\} = I_8$ |
+| $I_5 = \{2,3,4,5,6\}$ | $\epsilon(\{2,4,5,6\}) = I_5$ | $\epsilon(\{2,5,6\}) = I_6$ |
+| $I_6 = \{2,3,5,6\}$ | $\epsilon(\{2,4,6\}) = I_7$ | $\epsilon(\{2,6\}) = I_8$ |
+| $I_7 = \{2,3,4,6\}$ | $\epsilon(\{2,4,5\}) = I_3$ | $\epsilon(\{2,5\}) = I_4$ |
+| $I_8 = \{2,3,6\}$ | $\epsilon(\{2,4\}) = I_1$ | $\epsilon(\{2\}) = I_2$ |
+
+**3. DFA ⇒ DFA'**
+
+```
+Z₀, Z₁, Z₂, Z₃, Z₄, Z₅, Z₆, Z₇, Z₈
+
+①
+
+Z₀, Z₁, Z₂, Z₃, Z₄
+
+Z₅, Z₆, Z₇, Z₈
+
+②
+
+④
+
+Z₀, Z₁, Z₂
+
+Z₃, Z₄
+
+③
+
+⑦
+
+Z₀, Z₂
+
+Z₁
+
+Z₃
+
+Z₄
+
+Z₅, Z₆
+
+Z₇, Z₈
+
+⑤
+
+⑥
+
+Z₅
+
+Z₆
+
+Z₇
+
+Z₈
+```
+
+### Section 5 Regular expression to an NFA
+
+#### 1. The reasons about regular expression to an NFA
+
+Strategy for building a recognizer from a regular expression is to construct an NFA from a regular expression and then to simulate the behavior of the NFA on an input string.
+
+#### 2. Construction of an NFA from a regular expression
+
+**a) Basic idea**
+
+Syntax-directed in that it uses the syntactic structure of the regular expression to guide the construction process.
+

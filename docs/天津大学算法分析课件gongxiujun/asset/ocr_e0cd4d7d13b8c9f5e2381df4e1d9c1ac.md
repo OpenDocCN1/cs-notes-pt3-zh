@@ -1,0 +1,9 @@
+# # An example
+
+Suppose that q = 5 and r =(10 , 5 , 1 , 10 , 2 , 10), find the optimal orders of multiplications
+
+c(1,5)=min {c(1,1)+c(2,5)+500, c(1,2)+c(3,5)+100, c(1,3)+c(4,5)+1000, c(1,4)+c(5,5)+200}
+
+c(2,5)=min {c(2,2)+c(3,5)+50, c(2,3)+c(4,5)+500, c(2,4)+c(5,5)+100}
+
+c(3,5)=min {c(3,3)+c(4,5)+100, c(3,4)+c(5,5)+20} min{500,40} =40

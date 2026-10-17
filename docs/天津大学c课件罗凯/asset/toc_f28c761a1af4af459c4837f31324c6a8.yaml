@@ -1,0 +1,1289 @@
+- - '##'
+  - First Class
+- - '##'
+  - Instructor Information
+- - '##'
+  - Teaching Style
+- - '##'
+  - Class Time (Time Requirement)
+- - '##'
+  - Text Books
+- - '##'
+  - Grading Percentages
+- - '##'
+  - Grading Notes
+- - '##'
+  - ☠️ Cheating ☠️
+- - '##'
+  - Goal
+- - '##'
+  - How to be successful in this class and with programming
+- - '##'
+  - Lunch
+- - '##'
+  - Office Hours (Da Yi答疑)
+- - '##'
+  - What is Programming?
+- - '##'
+  - Are computers smart?
+- - '##'
+  - What does a program look like?
+- - '##'
+  - Here is the code
+- - '##'
+  - Tells the compiler that we need to use someone else's code (stored in a library
+    file)
+- - '##'
+  - Programs always start at `main()`
+- - '##'
+  - Programs always start at main()
+- - '##'
+  - Commands used to display text to the screen
+- - '##'
+  - Command to make the program wait before finishing (so we can see it)
+- - '##'
+  - Command to tell the program that it is done
+- - '##'
+  - So how do I convert my code into a program?
+- - '##'
+  - How does my program becomes an executable code
+- - '##'
+  - Source Code is the code that we type in (our program)
+- - '##'
+  - Compiler will translate the source code (almost English) to something closer to
+    what the computer understands
+- - '##'
+  - Linker then will combine our code with code from libraries and change it into
+    an executable
+- - '##'
+  - Tells the compiler that we need to use other libraries of code
+- - '##'
+  - These commands are used from the libraries
+- - '##'
+  - Another Example
+- - '##'
+  - Learning Programming
+- - '##'
+  - Programming Process
+- - '###'
+  - Problem Solving Phase
+- - '##'
+  - Programming Process
+- - '###'
+  - Problem Solving Phase
+- - '##'
+  - Programming Process
+- - '###'
+  - Problem Solving Phase
+- - '##'
+  - Programming Process
+- - '###'
+  - Problem Solving Phase
+- - '##'
+  - Programming Process
+- - '###'
+  - Problem Solving Phase
+- - '##'
+  - Programming Process
+- - '###'
+  - Problem Solving Phase
+- - '##'
+  - Programming Process
+- - '###'
+  - Problem Solving Phase
+- - '###'
+  - Implementation Phase (coding)
+- - '##'
+  - Programming Process
+- - '###'
+  - Problem Solving Phase
+- - '###'
+  - Implementation Phase (coding)
+- - '##'
+  - Programming Process
+- - '###'
+  - Problem Solving Phase
+- - '###'
+  - Implementation Phase (coding)
+- - '##'
+  - Problem Solving Practice
+- - '###'
+  - 'Number List:'
+- - '##'
+  - Possible Solution
+- - '##'
+  - Possible Solution
+- - '##'
+  - 'Possible Solution  '
+- - '##'
+  - Reading
+- - '##'
+  - Who am I ?
+- - '##'
+  - Chapter 2
+- - '###'
+  - 'Foundations: numbers, cin, cout'
+- - '##'
+  - C++ Topics
+- - '##'
+  - C++ Topics
+- - '##'
+  - C++ Topics
+- - '##'
+  - Back to learning about code...
+- - '##'
+  - '....and here is the program running'
+- - '##'
+  - cout information
+- - '##'
+  - cout information
+- - '##'
+  - Data Stream
+- - '##'
+  - Data Stream
+- - '##'
+  - Data Stream
+- - '##'
+  - More examples of cout
+- - '##'
+  - More examples of cout
+- - '##'
+  - More examples of cout
+- - '##'
+  - More examples of cout
+- - '##'
+  - More examples of cout
+- - '##'
+  - Different ways to do the same thing
+- - '##'
+  - Different types of data
+- - '##'
+  - cout and different kinds of data (more examples)
+- - '##'
+  - String Literals
+- - '##'
+  - String Literals
+- - '##'
+  - String Literals
+- - '##'
+  - String Literals
+- - '##'
+  - Number Data types in C++
+- - '##'
+  - Numbers and Math Operators
+- - '##'
+  - Numbers and Math Operators
+- - '##'
+  - Integers and Modulus Operator
+- - '##'
+  - Integers and Modulus Operator
+- - '##'
+  - Something to think about
+- - '##'
+  - Something to think about
+- - '##'
+  - Something to think about
+- - '##'
+  - More to think about
+- - '##'
+  - More Modulus Operations
+- - '##'
+  - Something to think about
+- - '##'
+  - So what is std ?
+- - '##'
+  - using std::cout
+- - '##'
+  - When do you use what?
+- - '###'
+  - using namespace std;
+- - '###'
+  - using std::cout;
+- - '##'
+  - Back to numbers and math
+- - '##'
+  - Back to numbers and math
+- - '##'
+  - Back to numbers and math
+- - '##'
+  - Back to numbers and math
+- - '##'
+  - Back to numbers and math
+- - '##'
+  - Back to numbers and math
+- - '##'
+  - Back to numbers and math
+- - '##'
+  - Using ( ) to change order
+- - '##'
+  - Something to think about
+- - '##'
+  - Something to think about
+- - '##'
+  - How does a program remember?
+- - '##'
+  - How does a program remember?
+- - '##'
+  - What happens when a variable is created?
+- - '##'
+  - Using a variable
+- - '##'
+  - Using a variable
+- - '##'
+  - Using a variable
+- - '##'
+  - Using a variable
+- - '##'
+  - Using a variable
+- - '##'
+  - Other ways to declare variables
+- - '##'
+  - Other ways to declare variables
+- - '##'
+  - Good Variable Names
+- - '##'
+  - Good Variable Names
+- - '##'
+  - Variable Name Examples
+- - '##'
+  - Variable Name Examples
+- - '##'
+  - Variable Name Examples
+- - '##'
+  - Variable Names
+- - '##'
+  - 'Summary: Integers (整数 zhěng shù)'
+- - '##'
+  - Some experiments
+- - '##'
+  - Some experiments
+- - '##'
+  - Assignment Operator (赋值操作符)
+- - '##'
+  - Assignment Operator (赋值操作符)
+- - '##'
+  - Assignment Operator (赋值操作符)
+- - '##'
+  - '...more examples'
+- - '##'
+  - '...more examples'
+- - '##'
+  - '...more examples'
+- - '##'
+  - '...more examples'
+- - '##'
+  - Operators and order of operation (precedence)
+- - '##'
+  - Floating-Point Numbers （浮点数 fú diǎn shù）
+- - '##'
+  - Floating-Point Numbers (浮点数 fú diǎn shù)
+- - '##'
+  - Floating-Point Numbers
+- - '##'
+  - Floating-Point Numbers
+- - '##'
+  - Problem with Floating-Point numbers
+- - '##'
+  - Floating-Point Constants
+- - '##'
+  - Automatic Promotion
+- - '##'
+  - Automatic Promotion
+- - '##'
+  - Types of Conversion
+- - '##'
+  - Quick English Lesson
+- - '##'
+  - Types of Conversion
+- - '##'
+  - Explicit Conversion
+- - '##'
+  - Casting (the old way)
+- - '##'
+  - Most Common Command
+- - '##'
+  - Most Common Command
+- - '##'
+  - Compound Assignment
+- - '##'
+  - Compound Assignment
+- - '##'
+  - unary operator -
+- - '##'
+  - unary operator -
+- - '##'
+  - unary operator -
+- - '##'
+  - Would these do the same thing?
+- - '##'
+  - Would these do the same thing?
+- - '##'
+  - Most Common Command
+- - '###'
+  - Most Common Command
+- - '###'
+  - What's the difference
+- - '###'
+  - Pre (before) or Post (after)
+- - '###'
+  - Positive and Negative
+- - '###'
+  - What would the output be?
+- - '##'
+  - Operators and order of operation (precedence)
+- - '##'
+  - Class Exercise
+- - '##'
+  - Data Type
+- - '##'
+  - Data Type
+- - '##'
+  - Character Data Types
+- - '##'
+  - Character Data Types
+- - '##'
+  - Character Data Types
+- - '##'
+  - Character Operations
+- - '##'
+  - Discovering the ASCII encoding
+- - '##'
+  - Or we could use casting
+- - '##'
+  - Constants
+- - '##'
+  - Character Constants
+- - '##'
+  - Constant Variables
+- - '##'
+  - Creating and using a Constant Variable
+- - '##'
+  - Why use Constant Variables
+- - '##'
+  - So in your programs…..
+- - '##'
+  - cin
+- - '##'
+  - How the input stream works
+- - '##'
+  - cin Notes
+- - '##'
+  - How the input stream works
+- - '##'
+  - Multiple reads on the same line
+- - '##'
+  - Class Exercise
+- - '##'
+  - That's it for Chapter 2 !!
+- - '##'
+  - Questions
+- - '##'
+  - Make sure you understand how to
+- - '##'
+  - Chapter 3
+- - '##'
+  - Making decisions in your program
+- - '##'
+  - C++ Keywords
+- - '##'
+  - How does the program make decisions?
+- - '##'
+  - ⌘ True & False Decisions
+- - '##'
+  - Relational Operators
+- - '##'
+  - Operators and order of operation (precedence)
+- - '##'
+  - Lets give it a try
+- - '##'
+  - Lets give it a try
+- - '##'
+  - Making a decision
+- - '##'
+  - Making a decision
+- - '##'
+  - Making a decision
+- - '##'
+  - Making a decision
+- - '##'
+  - Making a decision
+- - '##'
+  - if, else
+- - '##'
+  - Boolean Expression
+- - '##'
+  - True Block
+- - '##'
+  - False Block
+- - '##'
+  - Class Exercise
+- - '##'
+  - A Boolean data type
+- - '##'
+  - Boolean Algebra
+- - '##'
+  - Boolean Algebra
+- - '##'
+  - Boolean Algebra
+- - '##'
+  - Boolean Algebra
+- - '##'
+  - A Boolean Type
+- - '##'
+  - A Boolean Type
+- - '##'
+  - Type conversion with a bool
+- - '##'
+  - Boolean expressions that don't look like a Boolean Expression
+- - '##'
+  - Short Circuit Evaluation
+- - '##'
+  - Review of if's
+- - '##'
+  - 'BAD STYLE: Do not do this!!!'
+- - '##'
+  - Multiple lines in a block
+- - '##'
+  - A little about Code Style
+- - '##'
+  - Dangling Else
+- - '##'
+  - Dangling Else
+- - '##'
+  - The fix for a Dangling Else
+- - '##'
+  - else if chain
+- - '##'
+  - else if chain
+- - '##'
+  - An alternative for simple if’s
+- - '##'
+  - Conditional Operator
+- - '##'
+  - Conditional Operator
+- - '##'
+  - Operators and order of operation
+- - '##'
+  - '...and what does this do?'
+- - '##'
+  - The Switch Statement
+- - '##'
+  - Switch Statement
+- - '##'
+  - Switch Statement
+- - '##'
+  - Switch Example
+- - '##'
+  - Another Switch Example
+- - '##'
+  - Another Switch Example
+- - '##'
+  - Class Exercise
+- - '##'
+  - An Example Solution
+- - '##'
+  - Controlling the Output of Floats
+- - '##'
+  - Controlling the Output of Floats
+- - '##'
+  - Controlling the Output of Floats
+- - '##'
+  - Controlling the Output of Floats
+- - '##'
+  - Controlling the Output of Floats
+- - '##'
+  - Setting the Width of an Output
+- - '##'
+  - Setting the Width of an Output
+- - '##'
+  - Enumeration
+- - '##'
+  - Behind the scenes....
+- - '###'
+  - 'Example:'
+- - '##'
+  - Chapter 4
+- - '###'
+  - '*Looping*'
+- - '##'
+  - Advantages of Computers
+- - '##'
+  - Loops
+- - '##'
+  - While loops
+- - '##'
+  - While loops
+- - '##'
+  - While loops
+- - '##'
+  - What is a difference between if and while
+- - '##'
+  - Answer
+- - '##'
+  - Another Class Exercise
+- - '##'
+  - Answer
+- - '##'
+  - Another Answer
+- - '##'
+  - Another Answer
+- - '##'
+  - While loops
+- - '##'
+  - Embedded loops
+- - '##'
+  - Creating Some Time Output
+- - '##'
+  - Now What is the Output?
+- - '##'
+  - Random Numbers
+- - '##'
+  - Random numbers in real life
+- - '###'
+  - Examples
+- - '##'
+  - Random Numbers
+- - '##'
+  - Stdlib Library
+- - '##'
+  - Program Output
+- - '##'
+  - Program Output for two runs
+- - '###'
+  - 'Output #1'
+- - '###'
+  - 'Output #2'
+- - '##'
+  - Different Sequences
+- - '##'
+  - Different Sequences
+- - '###'
+  - Consider seed.cpp
+- - '##'
+  - Different Sequences
+- - '##'
+  - Randseed.cpp
+- - '##'
+  - Program Output for two runs
+- - '##'
+  - 'Output #1'
+- - '##'
+  - 'Output #2'
+- - '##'
+  - Sentinel Controlled Loops
+- - '##'
+  - 'Example:'
+- - '##'
+  - Sentinel Controlled Loops
+- - '##'
+  - 'Example:'
+- - '##'
+  - Will this work?
+- - '##'
+  - Will this work?
+- - '##'
+  - Infinite loops
+- - '##'
+  - Common Infinite Loops
+- - '##'
+  - Looping Control Structures
+- - '##'
+  - The Do-While Statement
+- - '###'
+  - Syntax
+- - '##'
+  - Using a do while loop
+- - '##'
+  - Why use a ........?
+- - '##'
+  - Looping Control Structures
+- - '##'
+  - 1. 多模态大语言模型(MLLM)
+- - '##'
+  - The for loop
+- - '##'
+  - Initialization
+- - '##'
+  - Bool Exp
+- - '##'
+  - Body
+- - '##'
+  - Update Action
+- - '##'
+  - Execution Example
+- - '##'
+  - Execution Example
+- - '##'
+  - Execution Example
+- - '##'
+  - Execution Example
+- - '##'
+  - Execution Example
+- - '##'
+  - Execution Example
+- - '##'
+  - Execution Example
+- - '##'
+  - Execution Example
+- - '##'
+  - Execution Example
+- - '##'
+  - Execution Example
+- - '##'
+  - Execution Example
+- - '##'
+  - Execution Example
+- - '##'
+  - Execution Example
+- - '##'
+  - Execution Example
+- - '##'
+  - Embedding for loops
+- - '##'
+  - What is the output?
+- - '##'
+  - Class Exercise
+- - '###'
+  - One solution to grid exercise
+- - '##'
+  - Another use of break
+- - '###'
+  - A better solution
+- - '###'
+  - The best solution
+- - '##'
+  - Another use of break
+- - '##'
+  - Continue, the brother of break
+- - '##'
+  - Using break and continue in loops
+- - '##'
+  - 'Chapter 5: Functions'
+- - '###'
+  - Intro to Functions
+- - '###'
+  - Functions { Math vs Programming }
+- - '##'
+  - Functions in Programming
+- - '##'
+  - Functions in Programming
+- - '##'
+  - Functions in Programming
+- - '##'
+  - So what are functions…..
+- - '##'
+  - So what are functions......
+- - '##'
+  - So what are functions…..
+- - '##'
+  - Using a Function
+- - '##'
+  - Using a Function
+- - '##'
+  - Using a Function
+- - '##'
+  - For Example
+- - '##'
+  - Using a Function
+- - '##'
+  - Other cctype functions
+- - '##'
+  - C++ Standard Library
+- - '##'
+  - Order for Simple Programs
+- - '##'
+  - Function Definition
+- - '##'
+  - Function Body
+- - '##'
+  - Function Definition
+- - '##'
+  - Parameters and Arguments
+- - '##'
+  - Parameter Variable Rules
+- - '##'
+  - 环境管理
+- - '##'
+  - promptAndReadInt()
+- - '##'
+  - sum()
+- - '##'
+  - range.cpp (part 1)
+- - '##'
+  - range.cpp (part 1)
+- - '##'
+  - range.cpp (below main)
+- - '##'
+  - promptAndReadInt()
+- - '##'
+  - 'promptAndReadInt( ): better version'
+- - '##'
+  - putback()
+- - '##'
+  - Another look at promptAndReadInt()
+- - '##'
+  - Class Exercise
+- - '##'
+  - Class Exercise Answer
+- - '##'
+  - Void functions
+- - '##'
+  - Void functions
+- - '##'
+  - Scope:（作用域 zuò yòng yù）
+- - '##'
+  - Blocks and Local Scope
+- - '##'
+  - Name Reuse
+- - '##'
+  - However, Don’t Do This At Home
+- - '##'
+  - However, Don’t Do This At Home
+- - '##'
+  - Global Scope
+- - '##'
+  - Global Scope
+- - '##'
+  - Don’t Do This At Home Either
+- - '##'
+  - Why do we only use global constants?
+- - '##'
+  - Why do we only use global constants?
+- - '##'
+  - Global variables are like global bank accounts
+- - '##'
+  - Let’s review some names associated with functions…..
+- - '##'
+  - Parameters
+- - '##'
+  - Global variable
+- - '##'
+  - Local variables
+- - '##'
+  - Arguments
+- - '##'
+  - Parameters
+- - '##'
+  - Local variables
+- - '##'
+  - '......enough of a review, back to new material'
+- - '##'
+  - Consider
+- - '##'
+  - Using
+- - '##'
+  - Consider
+- - '##'
+  - Reference Variables
+- - '##'
+  - Reference Parameters
+- - '##'
+  - Reconsider
+- - '##'
+  - Using reference parameters
+- - '##'
+  - Constant Parameters
+- - '##'
+  - Constant Reference Parameters
+- - '##'
+  - Review
+- - '##'
+  - Consider
+- - '##'
+  - Default Parameters
+- - '##'
+  - Consider
+- - '##'
+  - Function Overloading 函数重载 hán shù chóng zài
+- - '###'
+  - Consider
+- - '##'
+  - '....and that ends Chapter 5'
+- - '##'
+  - Recursion (递归 dí guī) *(actually chap 8)*
+- - '##'
+  - Using
+- - '##'
+  - Recursion Visualization
+- - '##'
+  - Recursion Visualization
+- - '##'
+  - Function memory
+- - '##'
+  - Recursion Visualization
+- - '##'
+  - Abstract
+- - '##'
+  - 1 Introduction
+- - '##'
+  - 2 Related Work
+- - '###'
+  - 2.1 Large Language Models for Code Generation
+- - '##'
+  - Thoughts on Recursion
+- - '##'
+  - '....and that ends Chapter 5'
+- - '##'
+  - Chapter 6 Arrays
+- - '###'
+  - Holding multiple pieces of data
+- - '##'
+  - List
+- - '###'
+  - Array Overview
+- - '###'
+  - Array Vocabulary
+- - '###'
+  - Array Vocabulary
+- - '###'
+  - 'Basic Array Definition: Creating'
+- - '###'
+  - Example Definitions (creating an array)
+- - '###'
+  - Initializing an array
+- - '###'
+  - Initializing an array
+- - '###'
+  - Initializing an array
+- - '##'
+  - Initializing an array
+- - '##'
+  - Array Elements
+- - '##'
+  - Array Element Manipulation
+- - '##'
+  - Reading from a file into an Array
+- - '##'
+  - Reading from a file into an Array
+- - '##'
+  - Displaying an array
+- - '##'
+  - Passing an array to a function
+- - '##'
+  - Using an array in a function
+- - '##'
+  - Class Exercise
+- - '##'
+  - An Answer
+- - '##'
+  - Using findSmallest()
+- - '##'
+  - Some Useful Functions
+- - '##'
+  - Using the functions
+- - '##'
+  - Some Useful Functions
+- - '##'
+  - Searching
+- - '###'
+  - Problem
+- - '###'
+  - 'Solution:'
+- - '##'
+  - Example using search
+- - '##'
+  - Array Review
+- - '##'
+  - Array Review
+- - '##'
+  - Array Review
+- - '##'
+  - Array Review
+- - '##'
+  - Common Sorting Techniques
+- - '##'
+  - Common Sorting Techniques
+- - '###'
+  - Selection sort
+- - '##'
+  - Common Sorting Techniques
+- - '##'
+  - Common Sorting Techniques
+- - '###'
+  - Selection sort
+- - '##'
+  - Speed of Sorting Algorithm
+- - '##'
+  - Understanding is more important than memorizing
+- - '##'
+  - Arrays
+- - '##'
+  - Arrays
+- - '##'
+  - Arrays of arrays
+- - '##'
+  - Arrays of arrays
+- - '##'
+  - Arrays of arrays
+- - '###'
+  - Access an array of int arrays
+- - '##'
+  - Arrays of arrays
+- - '##'
+  - Using Multi-Dimension Arrays
+- - '##'
+  - Using Multi-Dimension Arrays
+- - '##'
+  - Calling a Function with Multi-Dim Arrays
+- - '##'
+  - Calling a Function with Multi-Dim Arrays
+- - '##'
+  - Calling a Function with Multi-Dim Arrays
+- - '##'
+  - Calling a Function with Multi-Dim Arrays
+- - '##'
+  - Fixing our Problem
+- - '##'
+  - Multi-dimensional Arrays
+- - '##'
+  - Arrays of arrays
+- - '##'
+  - Arrays of arrays
+- - '##'
+  - Arrays of arrays
+- - '##'
+  - Arrays of arrays
+- - '##'
+  - Arrays and Data Types
+- - '##'
+  - Arrays and Data Types
+- - '##'
+  - Arrays and Data Types
+- - '##'
+  - Arrays and Data Types
+- - '##'
+  - Arrays and Data Types
+- - '##'
+  - Class Exercise
+- - '##'
+  - Solution to Exercise
+- - '##'
+  - Something to think about
+- - '##'
+  - 'Pointers: a special kind of variable'
+- - '##'
+  - 'Pointers: a special kind of variable'
+- - '##'
+  - Different uses of *
+- - '##'
+  - Different uses of &
+- - '##'
+  - “Address of” Operator
+- - '##'
+  - Revisiting the Swap Function
+- - '###'
+  - swap function using reference parameters
+- - '###'
+  - Swap Func. using Pointers (the C way)
+- - '##'
+  - Reference vs Pointers
+- - '##'
+  - Null Address
+- - '##'
+  - Constants and Pointers
+- - '##'
+  - So why use Pointers
+- - '##'
+  - Big benefit of Pointers
+- - '##'
+  - New Operator Behavior
+- - '##'
+  - 'Differences: Local Variable vs Dynamic Memory'
+- - '##'
+  - The Basic New Form
+- - '###'
+  - Syntax
+- - '###'
+  - Beware
+- - '##'
+  - Examples
+- - '##'
+  - Pointers and “arrays”
+- - '###'
+  - Syntax
+- - '##'
+  - Examples
+- - '##'
+  - Giving back the memory
+- - '##'
+  - Pointers and arrays
+- - '##'
+  - 'Chap 6: Passing an array to a function'
+- - '##'
+  - 'Chap 6: Passing an array to a function'
+- - '##'
+  - Pointers and arrays
+- - '##'
+  - Pointer Arithmetic and arrays
+- - '##'
+  - Pointer Arithmetic and arrays
+- - '##'
+  - Pointer Arithmetic and arrays
+- - '##'
+  - Pointer Arithmetic and arrays
+- - '##'
+  - Dangling Pointer Problem
+- - '##'
+  - Memory Leak Problem
+- - '##'
+  - 'C''s way of doing strings: cstring'
+- - '###'
+  - cstring's strlen (string length)
+- - '###'
+  - 'strlen: String Length for cstrings'
+- - '###'
+  - Using strlen
+- - '###'
+  - Passing Arrays to Functions
+- - '##'
+  - 'strcpy: String copy for cstrings'
+- - '##'
+  - Calling the strcpy
+- - '##'
+  - Leaving Chapter 7
+- - '##'
+  - Kinds of Variables
+- - '##'
+  - Structures and Structure Variables
+- - '###'
+  - Structures
+- - '###'
+  - 'Example:'
+- - '##'
+  - Defining a Structure
+- - '##'
+  - Creating a Structure Variable
+- - '##'
+  - Operators for Structures
+- - '##'
+  - Operators for Structures
+- - '##'
+  - Structures and functions
+- - '##'
+  - Structures and functions
+- - '###'
+  - A better way to pass structure variables
+- - '##'
+  - Returning a Structure
+- - '###'
+  - Returning a structure
+- - '##'
+  - Better to use Reference with large Structures
+- - '##'
+  - Structures can be used in other Structures
+- - '##'
+  - What data type is this?
+- - '##'
+  - What data type is this?
+- - '##'
+  - Initializing a Structure
+- - '##'
+  - Member Arrays
+- - '##'
+  - Arrays of Structures
+- - '##'
+  - One last bit......
+- - '##'
+  - Class Exercise
+- - '##'
+  - Answer
+- - '##'
+  - Review of Structures
+- - '##'
+  - Review of Structures
+- - '##'
+  - Review of Structures
+- - '##'
+  - OOP ???
+- - '##'
+  - OOP ???
+- - '##'
+  - Some Definitions that I want you to **memorize**
+- - '##'
+  - Some Definitions that I want you to **memorize**
+- - '##'
+  - Some Definitions that I want you to **memorize**
+- - '##'
+  - Comparison
+- - '##'
+  - Comparison
+- - '##'
+  - Comparison
+- - '##'
+  - Comparison
+- - '##'
+  - Something to think about
+- - '##'
+  - Something to think about
+- - '##'
+  - Goals of an Object
+- - '##'
+  - 'Example: Time Class'
+- - '##'
+  - 'UML: Unified Modeling Language'
+- - '##'
+  - Here is a class definition
+- - '##'
+  - 'UML: Unified Modeling Language'
+- - '##'
+  - Members
+- - '##'
+  - Two Problems
+- - '##'
+  - New version of the class definition
+- - '##'
+  - Using an instance
+- - '##'
+  - Using an instance
+- - '##'
+  - Using an instance
+- - '##'
+  - New version of the class definition
+- - '##'
+  - New version of the class definition
+- - '##'
+  - Where do you think the Time function is being called (used)
+- - '##'
+  - Where do you think the Time function is being called (used)
+- - '##'
+  - Using the constructor
+- - '##'
+  - Constructor Functions
+- - '##'
+  - Constructor Functions
+- - '##'
+  - Using the constructor function
+- - '##'
+  - Old Example of Creating and Using an instance
+- - '##'
+  - Old Example of Creating and Using an instance
+- - '##'
+  - Default Constructor
+- - '##'
+  - New version of the class definition
+- - '##'
+  - Using the constructor functions
+- - '##'
+  - Adding comparison functions
+- - '##'
+  - Using the *equals* function
+- - '##'
+  - Example of the output
+- - '##'
+  - Using the equals function
+- - '##'
+  - Hmmm, the output could be better
+- - '##'
+  - A simple change to print( )
+- - '##'
+  - Ahhh, that is much better
+- - '##'
+  - Lets take a rest and review
+- - '##'
+  - One Problem!!!
+- - '##'
+  - One Problem!!!
+- - '##'
+  - Program using Time
+- - '##'
+  - Time Class Programmer
+- - '##'
+  - Time Class Programmer
+- - '##'
+  - Time Class Programmer
+- - '##'
+  - Client Code Programmer
+- - '##'
+  - Lets take a
+- - '##'
+  - So what does this look like?
+- - '##'
+  - Time Class Programmer
+- - '##'
+  - Client Code Programmer
+- - '##'
+  - Program user
+- - '##'
+  - Program using Time
+- - '##'
+  - Difference between “time” and <time>
+- - '##'
+  - So what about the new stuff?
+- - '##'
+  - First a little review
+- - '##'
+  - First a little review
+- - '##'
+  - Name Conflict
+- - '##'
+  - The Details
+- - '##'
+  - So how does it work?
+- - '##'
+  - Time Class Programmer
+- - '##'
+  - Time Class Programmer
+- - '##'
+  - Client Code Programmer
+- - '##'
+  - Program user
+- - '##'
+  - Things you need to know from
+- - '##'
+  - File Streams and File I/O
+- - '##'
+  - Chapter 12
+- - '##'
+  - Now a deeper look at Streams
+- - '##'
+  - Now a deeper look at Streams
+- - '##'
+  - 'File Streams: fstream'
+- - '##'
+  - Opening a File
+- - '##'
+  - Opening a File
+- - '##'
+  - Checking to see if a file opened
+- - '##'
+  - What can you do if you fail?
+- - '##'
+  - File Locations
+- - '##'
+  - Giving file name at run time
+- - '##'
+  - Closing a file
+- - '##'
+  - Reusing a file variable
+- - '##'
+  - Resetting a file variable
+- - '##'
+  - 'EOF: End of File'
+- - '###'
+  - Knowing when you are done reading
+- - '##'
+  - 'EOF: End of File'
+- - '###'
+  - Knowing when you are done reading
+- - '##'
+  - Class Exercise
+- - '##'
+  - Sample Answer
+- - '##'
+  - Sample Answer
+- - '##'
+  - Something to think about.....
+- - '##'
+  - Get Function for istream
+- - '##'
+  - Read Functions for istream
+- - '##'
+  - '# Input Using >>'
+- - '##'
+  - '# Input Using get( )'
+- - '##'
+  - '# A better copy solution'
+- - '##'
+  - Sample Answer
+- - '##'
+  - Extraction

@@ -1,0 +1,13 @@
+# # Derive the recursive equation
+
++   - Our goal is to maximize size(n,n)
++   - We have known that
+
+\(size(1,j)=\left\{\begin{array}{ c c }
+0 & \text{if } j < c_1 \\
+1 & \text{if } j \geq c_1
+\end{array}\right.\)
+
++   - We want to know the relationship between size(i,j) and size(i-1,j)
++     - if \(j < c_i\), then \((i, c_i) \notin MNS(i-1, j)\), thus size(i,j)=size(i-1,j)
++     - if \(j \geq c_i\), there are two cases

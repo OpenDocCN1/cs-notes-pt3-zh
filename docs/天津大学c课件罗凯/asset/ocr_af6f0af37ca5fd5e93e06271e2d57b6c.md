@@ -1,0 +1,18 @@
+# More examples of cout
+
+```
+```cpp
+std::cout << “data1” << “data2”;
+```
+```
+
+// puts two piece into the stream
+
+How do you think will they display on the screen?
+
++   a) data1  data2
++   
++   b) data1
++      data2
++   
++   c) data1data2

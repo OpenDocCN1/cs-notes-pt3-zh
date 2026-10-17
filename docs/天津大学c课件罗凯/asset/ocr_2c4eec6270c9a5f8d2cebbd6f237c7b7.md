@@ -1,0 +1,22 @@
+# # One Problem!!!
+
+```
+#include <iostream>
+using namespace std;
+class Time {
+Time(int hr, int mn ) {......}
+private:
+int hour, min;
+}; // end of Time class
+int main() {
+Time t(12, 30) , t2(-1, 67);
+t.print();
+cout << " == ";
+t2.print();
+cout << " : " << t.equals( t2 ) << endl;
+return 0;
+} // end of main
+```
+
+**Time** can only be used with this one program.
+What if we want to use the Time class in other programs (make it **reusable**)

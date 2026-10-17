@@ -1,0 +1,8 @@
+# # Today
+
++   - Cache memory organization and operation
++   - Performance impact of caches
+
++   - The memory mountain
++   - Rearranging loops to improve spatial locality
++   - Using blocking to improve temporal locality

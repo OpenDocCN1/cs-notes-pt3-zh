@@ -1,0 +1,5 @@
+# # Today
+
++   - Storage technologies and trends
++   - Locality of reference
++   - Caching in the memory hierarchy

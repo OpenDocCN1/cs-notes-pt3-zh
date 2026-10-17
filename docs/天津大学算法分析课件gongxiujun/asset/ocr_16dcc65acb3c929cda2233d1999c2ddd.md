@@ -1,0 +1,14 @@
+# # B&B solutions
+
++   - Branch: let \( i \) be the E-node, it splits the sub solution space \( S_i \) into
++     - Sub solution space \( S_i^0 \) with \( x_{i+1} = 0 \)
++     - Sub solution space \( S_i^1 \) with \( x_{i+1} = 1 \)
++     - \( S_i = S_i^0 \cup S_i^1 \)
+
++   - Estimate the lower/upper bound of \( S_i^0 \) and \( S_i^1 \)
++     - lower bound(current penalties): \( L(i+1) = \sum_{j=i+1}^{i+1} (1 - x_j) * p_j \)
++     - upper bound(at worst case): \( U(i+1) = L(i+1) + \sum_{j=i+2}^{n} p_j \)
+
++   - Bound: for each \( S_i^0 \) and \( S_i^1 \)
++     - Check for feasible conditions: if not hold, discard it
++     - Check for lower bound: if it is greater than any of upper bounds of live nodes, discard it

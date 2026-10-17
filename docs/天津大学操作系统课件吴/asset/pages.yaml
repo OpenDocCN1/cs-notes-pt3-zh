@@ -1,0 +1,3318 @@
+- pgno: 0
+  md: '# # Introduction'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# # What Is An Operating System (2)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_2_0.png)
+
+
+    Figure 1-1. Where the operating system fits in.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# The Operating System as an Extended Machine
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_3_0.png)
+
+
+    Figure 1-2. Operating systems turn ugly hardware into beautiful abstractions.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# The Operating System as a Resource Manager
+
+
+    +   - Allow multiple programs to run at the same time
+
+    +   - Manage and protect memory, I/O devices, and other resources
+
+    +   - Includes multiplexing (sharing) resources in two different ways:
+
+    +     - In time
+
+    +     - In space
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_4_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# 1945-1955 Vacuum Tubes
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_6_0.png)
+
+
+    ENIAC
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_6_1.png)
+
+
+    Ada Lovelace
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_6_2.png)
+
+
+    John Von Neumann
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_6_3.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_6_4.png)
+
+
+    Alan Turing'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# # Transistors and Batch Systems (1)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_7_0.png)
+
+
+    Figure 1-3. An early batch system.
+
+    (a) Programmers bring cards to 1401.
+
+    (b)1401 reads batch of jobs onto tape.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Transistors and Batch Systems (2)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_8_0.png)
+
+
+    Figure 1-3. (c) Operator carries input tape to 7094. (d) 7094 does computing.
+    (e) Operator carries output tape to 1401. (f) 1401 prints output.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Transistors and Batch Systems (4)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_9_0.png)
+
+
+    Figure 1-4. Structure of a typical FMS job.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# IBM System/360
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_11_0.png)
+
+
+    +   - One Family
+
+    +   - OS/360
+
+    +   - Multiprogramming
+
+    +   - SPOOLING (Simultaneous Peripheral Operation On Line)'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# # OS/360
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_12_0.png)
+
+
+    Written by Fred Brooks, One of the designers of OS/360'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "+   > CTSS\n+   > > Compatible Time Sharing system\n+   > > MIT, 7094\n+  \
+    \ \n+   > MULTICS\n+   > > MULTiplexed Information and Computing Service\n+  \
+    \ > > MIT, Bell Labs, General Electric\n+   > > Sold by Honeywell\n\n![](img/856cffd4f5aea27d2abb1fffe70c2f49_13_0.png)\n\
+    \nGE-645"
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# # History of UNIX
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_14_0.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_14_1.png)
+
+
+    Dennis Ritchie
+
+
+    Ken Thompson'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# # History of UNIX
+
+
+    +   - 1969'' UNIX
+
+    +     - Ken Thompson
+
+    +     - Bell Lab (AT&T)
+
+    +     - DEC PDP-7
+
+    +     - space travel
+
+    +     - UNICS -> UNIX
+
+    +     - Written in assembly language
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_15_0.png)
+
+
+    PDP - Programmed Data Processor'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# History of UNIX
+
+
+    +   - 1970: PDP-11/20
+
+    +   - 1971: Unix Programmer''s Manual
+
+    +   - 1972: Richie BCPL(Basic Combined Programming Language)->B->C, *The C Programming
+    Language*
+
+    +   - 1973: *The UNIX Time – Sharing System*
+
+    +   - 1983 Turing Award
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_16_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# # First Microcomputer
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_18_0.png)
+
+
+    1975: MIPS Altair 8800 (Intel 8080)'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# # 1984: Motorola 68000
+
+
+    # # 1998: PowerPC
+
+
+    # # 2006: Intel
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_20_0.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_20_1.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_20_2.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_20_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# # IBM PC
+
+
+    +   - 1981: IBM Personal Computer
+
+    +     - Intel 8088(4.77MHz) 16KB
+
+    +     - MS-DOS/PC-DOS
+
+    +   - 1985: Intel 80386
+
+    +   - 1986: Compaq 386
+
+    +   - 1987: IBM PS/2 (386, MCA)
+
+    +     IBM OS/2
+
+    +   - RISC: PowerPC vs Intel
+
+    +   - 1993: Intel Pentium
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_21_0.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_21_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# # Microsoft Windows
+
+
+    +   - 1985: Windows 1.0; 1987: 2.0
+
+    +   - 1990: Windows 3.0; 1992: 3.1
+
+    +   - 1993: Windows NT 3.1
+
+    +   - 1995: Windows 95; 1996: NT4.0
+
+    +   - 1998: Windows 98
+
+    +   - 2000: Windows ME; Win2000 (NT 5.0)
+
+    +   - 2001: XP(NT 5.1); 2003:Server 2003
+
+    +   - 2006: Vista; 2008: Server 2008
+
+    +   - 2009: Windows 7 (NT 6.1)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_22_0.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_22_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# # Minix – AST
+
+
+    +   > Andrew S. Tanenbaum (AST)
+
+
+    +   > http://www.cs.vu.nl/~ast/
+
+
+    +   > http://www.minix3.org/
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_24_0.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_24_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# # General Public License
+
+
+    +   - Most software (including the Linux kernel) is GPL''ed (GNU General Public
+    License)
+
+    +     - http://www.gnu.org/copyleft/gpl.html
+
+
+    +   - Linux is called "copyleft" (instead of "copyright").
+
+    +     - You can copy the software.
+
+    +     - You get the source code.
+
+    +     - You can alter the source code and recompile it.
+
+    +     - You can distribute the altered source and binaries.
+
+    +     - You can charge money for all this.
+
+
+    +   - You cannot change the license.
+
+    +     - So all your customers have the same rights as you.
+
+    +     - So you really cannot make money from selling the software alone.
+
+
+    +   - Other Open Source licenses (for example, BSD) are also used
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_26_0.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_26_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# # Linux Kernel vs Distributions
+
+
+    +   - Kernel version like: 2.6.32-24
+
+    +   - Distributions:
+
+    +     - RedHat: Fedora, RHEL, CentOS
+
+    +     - Ubuntu: from Debian
+
+    +     - Slackware
+
+    +     - SuSE: OpenSuSE
+
+    +     - RedFlag
+
+    +     - ...
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_27_0.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_27_1.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_27_2.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_27_3.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_27_4.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_27_5.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_27_6.png)'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Linux Today
+
+
+    +   - Linux covers the whole spectrum of computing
+
+    +     - Embedded devices
+
+    +     - Laptops
+
+    +     - Desktop systems
+
+    +     - Development systems
+
+    +     - Small and large servers
+
+    +     - Megaclusters/supercomputers
+
+
+    +   - Linux is used throughout the world
+
+    +     - ... and in space
+
+
+    +   - Linux is used by home users
+
+    +     - ... and by some of the largest companies in the world
+
+    +     - IBM
+
+    +     - Boeing
+
+    +     - NASA
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_28_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# Computer Hardware Review
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_29_0.png)
+
+
+    Figure 1-6. Some of the components
+
+    of a simple personal computer.'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# # CPU Pipelining
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_30_0.png)
+
+
+    Figure 1-7. (a) A three-stage pipeline. (b) A superscalar CPU.'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# # Multithreaded and Multicore Chips
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_31_0.png)
+
+
+    Figure 1-8. (a) A quad-core chip with a shared L2 cache.
+
+    (b) A quad-core chip with separate L2 caches.'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# Memory (1)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_32_0.png)
+
+
+    Figure 1-9. A typical memory hierarchy.
+
+    The numbers are very rough approximations.'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# Memory (2)
+
+
+    Questions when dealing with cache:
+
+
+    +   - When to put a new item into the cache.
+
+    +   - Which cache line to put the new item in.
+
+    +   - Which item to remove from the cache when a slot is needed.
+
+    +   - Where to put a newly evicted item in the larger memory.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# # Disks
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_34_0.png)
+
+
+    Figure 1-10. Structure of a disk drive.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# Buses
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_36_0.png)
+
+
+    Figure 1-12. The structure of a large Pentium system'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# # Operating System Concepts
+
+
+    +   - Processes
+
+    +   - Address spaces
+
+    +   - Files
+
+    +   - Input/Output
+
+    +   - Protection
+
+    +   - The shell
+
+    +   - Ontogeny recapitulates phylogeny
+
+    +     - Large memories
+
+    +     - Protection hardware
+
+    +     - Disks
+
+    +     - Virtual memory'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# Processes
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_39_0.png)
+
+
+    Figure 1-13. A process tree. Process A created two child processes, B and C. Process
+    B created three child processes, D, E, and F.'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# # Files (1)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_40_0.png)
+
+
+    Figure 1-14. A file system for a university department.'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# Files (3)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_42_0.png)
+
+
+    Figure 1-16. Two processes connected by a pipe.'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# # System Calls
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_43_0.png)
+
+
+    Figure 1-17. The 11 steps in making the system call read(fd, buffer, nbytes).'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# System Calls for Process Management
+
+
+    | **Process management** |  |
+
+    |---|---|
+
+    | **Call** | **Description** |
+
+    | `pid = fork()` | Create a child process identical to the parent |
+
+    | `pid = waitpid(pid, &statloc, options)` | Wait for a child to terminate |
+
+    | `s = execve(name, argv, environ)` | Replace a process’ core image |
+
+    | `exit(status)` | Terminate process execution and return status |
+
+
+    Figure 1-18. Some of the major POSIX system calls.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# System Calls for File Management (1)
+
+
+    | **File management** |  |
+
+    |---|---|
+
+    | **Call** | **Description** |
+
+    | `fd = open(file, how, ...)` | Open a file for reading, writing, or both |
+
+    | `s = close(fd)` | Close an open file |
+
+    | `n = read(fd, buffer, nbytes)` | Read data from a file into a buffer |
+
+    | `n = write(fd, buffer, nbytes)` | Write data from a buffer into a file |
+
+    | `position = lseek(fd, offset, whence)` | Move the file pointer |
+
+    | `s = stat(name, &buf)` | Get a file’s status information |
+
+
+    Figure 1-18. Some of the major POSIX system calls.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# System Calls for File Management (2)
+
+
+    | Call | Description |
+
+    |---|---|
+
+    | `s = mkdir(name, mode)` | Create a new directory |
+
+    | `s = rmdir(name)` | Remove an empty directory |
+
+    | `s = link(name1, name2)` | Create a new entry, name2, pointing to name1 |
+
+    | `s = unlink(name)` | Remove a directory entry |
+
+    | `s = mount(special, name, flag)` | Mount a file system |
+
+    | `s = umount(special)` | Unmount a file system |
+
+
+    Figure 1-18. Some of the major POSIX system calls.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# Miscellaneous System Calls
+
+
+    | Call | Description |
+
+    |---|---|
+
+    | `s = chdir(dirname)` | Change the working directory |
+
+    | `s = chmod(name, mode)` | Change a file’s protection bits |
+
+    | `s = kill(pid, signal)` | Send a signal to a process |
+
+    | `seconds = time(&seconds)` | Get the elapsed time since Jan. 1, 1970 |
+
+
+    Figure 1-18. Some of the major POSIX system calls.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "# # A Simple Shell\n\n```\n#define TRUE 1\n\nwhile (TRUE) {\n    type_prompt();\n\
+    \    read_command(command, parameters);\n\n    if (fork() != 0) {\n        /*\
+    \ Parent code. */\n        waitpid(-1, &status, 0);\n    } else {\n        /*\
+    \ Child code. */\n        execve(command, parameters, 0);\n    }\n}\n```\n\nFigure\
+    \ 1-19. A stripped-down shell."
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "# Memory Layout\n\n![](img/856cffd4f5aea27d2abb1fffe70c2f49_49_0.png)\n\nFigure\
+    \ 1-20. Processes have three segments:  \ntext, data, and stack."
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# Linking
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_50_0.png)
+
+
+    Figure 1-21. (a) Two directories before linking /usr/jim/memo to ast’s directory.
+    (b) The same directories after linking.'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "# Mounting\n\n![](img/856cffd4f5aea27d2abb1fffe70c2f49_51_0.png)\n\nFigure\
+    \ 1-22. (a) File system before the mount.  \n(b) File system after the mount."
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# Windows Win32 API
+
+
+    | UNIX | Win32 | Description |
+
+    |---|---|---|
+
+    | fork | CreateProcess | Create a new process |
+
+    | waitpid | WaitForSingleObject | Can wait for a process to exit |
+
+    | execve | (none) | CreateProcess = fork + execve |
+
+    | exit | ExitProcess | Terminate execution |
+
+    | open | CreateFile | Create a file or open an existing file |
+
+    | close | CloseHandle | Close a file |
+
+    | read | ReadFile | Read data from a file |
+
+    | write | WriteFile | Write data to a file |
+
+    | seek | SetFilePointer | Move the file pointer |
+
+    | stat | GetFileAttributesEx | Get various file attributes |
+
+    | mkdir | CreateDirectory | Create a new directory |
+
+    | rmdir | RemoveDirectory | Remove an empty directory |
+
+    | link | (none) | Win32 does not support links |
+
+    | unlink | DeleteFile | Destroy an existing file |
+
+    | mount | (none) | Win32 does not support mount |
+
+    | umount | (none) | Win32 does not support mount |
+
+    | chdir | SetCurrentDirectory | Change the current working directory |
+
+    | chmod | (none) | Win32 does not support security (although NT does) |
+
+    | kill | (none) | Win32 does not support signals |
+
+    | time | GetLocalTime | Get the current time |
+
+
+    Figure 1-23. The Win32 API calls that roughly correspond to the UNIX calls of
+    Fig. 1-18.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# # Operating Systems Structure
+
+
+    Monolithic systems – basic structure:
+
+
+    +   - A main program that invokes the requested service procedure.
+
+
+    +   - A set of service procedures that carry out the system calls.
+
+
+    +   - A set of utility procedures that help the service procedures.'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "# # Monolithic Systems\n\n```\n#define FALSE 0\n#define TRUE 1\n#define N 2\
+    \ /* number of processes */\nint turn; /* whose turn is it? */\nint interested[N];\
+    \ /* all values initially 0 (FALSE) */\nvoid enter_region(int process) /* process\
+    \ is 0 or 1 */\n{\n    int other; /* number of the other process */\n    other\
+    \ = 1 - process; /* the opposite of process */\n    interested[process] = TRUE;\
+    \ /* show that you are interested */\n    turn = process; /* set flag */\n   \
+    \ while (turn == process && interested[other] == TRUE) /* null statement */ ;\n\
+    }\nvoid leave_region(int process) /* process: who is leaving */\n{\n    interested[process]\
+    \ = FALSE; /* indicate departure from critical region */\n}\n```\n\nFigure 1-24.\
+    \ A simple structuring model for a monolithic system."
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# Client-Server Model
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_57_0.png)
+
+
+    Figure 1-27. The client-server model over a network.'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# # Virtual Machines (2)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_59_0.png)
+
+
+    Figure 1-29. (a) A type 1 hypervisor. (b) A type 2 hypervisor.'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# The World According to C
+
+
+    +   - The C language
+
+    +   - Header files
+
+    +   - Large programming projects
+
+    +   - The model of run time'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# The Model of Run Time
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_61_0.png)
+
+
+    Figure 1-30. The process of compiling C and header files to make an executable.'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# # Operating Systems
+
+
+    # ## Processes'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# Objectives
+
+
+    +   1. What’s process?
+
+    +   2. What’s the difference between program and process?
+
+    +   3. What about process’s lifecycle?'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# The Process Model
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_64_0.png)
+
+
+    (a) Multiprogramming of four programs.
+
+
+    (b) Conceptual model of four independent, sequential processes.
+
+
+    (c) Only one program is active at once.'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# Process
+
+
+    +   - What''s process?
+
+    +     - A process is an instance of a computer program that is being executed.
+    It contains the program code and its current activity.
+
+
+    +   - What is the difference between program and process?
+
+    +     - Program is just the static text .
+
+    +     - Process is an dynamic entity being executed and has lifecycle.
+
+
+    +   - A process consists of three parts:
+
+    +     - Process Control Block ( Process Table Entry)
+
+    +     - Program (Text)
+
+    +     - Data'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# # Processes Control Block
+
+
+    | Process management | Memory management | File management |
+
+    |---|---|---|
+
+    | Registers
+
+    Program counter
+
+    Program status word
+
+    Stack pointer
+
+    Process state
+
+    Priority
+
+    Scheduling parameters
+
+    Process ID
+
+    Parent process
+
+    Process group
+
+    Signals
+
+    Time when process started
+
+    CPU time used
+
+    Children''s CPU time
+
+    Time of next alarm | Pointer to text segment info
+
+    Pointer to data segment info
+
+    Pointer to stack segment info | Root directory
+
+    Working directory
+
+    File descriptors
+
+    User ID
+
+    Group ID |
+
+
+    Some of the fields of a typical process table entry.'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# # Process Creation
+
+
+    # ## Events which cause process creation:
+
+
+    +   - System initialization.
+
+    +   - Execution of a process creation system call by a running process.
+
+    +   - A user request to create a new process.
+
+    +   - Initiation of a batch job.'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: "# fork\n\n```\nmain()\n{\n    pid_t val;\n    printf(\"PID before fork(): %d\
+    \ \\n\",(int)getpid());\n    val=fork();\n    if ( val > 0) {\n        printf(\"\
+    Parent PID: %d\\n\",(int)getpid());\n    } else if (val == 0) {\n        printf(\"\
+    Child PID: %d\\n\",(int)getpid());\n    } else {\n        printf(\"Fork failed!\"\
+    );\n        exit(1);\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '# Shell and its children
+
+
+    +   - All processes are started by other processes
+
+    +     - Parent/Child relationship
+
+
+    ```
+
+    $ ls -l
+
+    ```
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_70_0.png)
+
+
+    +   - A process can be terminated for two reasons:
+
+    +     - The process terminates itself when done.
+
+    +     - The process is terminated by a signal from another process.'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "# # Code\n\n```\n```c\npid_t val;\nint exit_code = 0;\n\nval=fork();\nif (val\
+    \ > 0) {\n    int stat_val;\n    pid_t child_pid;\n    child_pid = waitpid(val,&stat_val,0);\n\
+    \    printf(\"Child has finished: PID = %d\\n\", child_pid);\n    if(WIFEXITED(stat_val))\n\
+    \        printf(\"Child exited with code %d\\n\", WEXITSTATUS(stat_val));\n  \
+    \  else\n        printf(\"Child terminated abnormally\\n\");\n    exit(exit_code);\n\
+    } else if (val == 0) {\n    execlp(\"ls\",\"ls\",\"-l\",NULL);\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# # Process States
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_73_0.png)
+
+
+    +   1. Process blocks for input
+
+    +   2. Scheduler picks another process
+
+    +   3. Scheduler picks this process
+
+    +   4. Input becomes available
+
+
+    A process can be in running, blocked, or ready state. Transitions between these
+    states are as shown.'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# Scheduling
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_74_0.png)
+
+
+    The lowest layer of a process-structured operating system handles interrupts and
+    scheduling. Above that layer are sequential processes.'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '# # Process Termination
+
+
+    # ## Events which cause process termination:
+
+
+    +   - Normal exit (voluntary).
+
+    +   - Error exit (voluntary).
+
+    +   - Fatal error (involuntary).
+
+    +   - Killed by another process (involuntary).'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# # Modeling Multiprogramming
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_77_0.png)
+
+
+    CPU utilization as a function of the number of processes in memory.'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '# # Summary
+
+
+    +   1. Pseudo-parallelism vs. multiprocessor
+
+    +   2. Program vs. process
+
+    +   3. Process Hierarchies
+
+    +   4. Process lifecycle
+
+    +   5. Process states
+
+    +   6. System Calls:
+
+    +      * fork() vfork()
+
+    +      * exec() execv() execle() execve() execlp() execvp()
+
+    +      * wait() waitpid()
+
+    +      * exit()
+
+    +      * system()'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '# # Operating Systems
+
+
+    # ## Threads'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '# # Thread Usage (1)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_80_0.png)
+
+
+    Figure 2-7. A word processor with three threads.'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# Thread Usage (2)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_81_0.png)
+
+
+    Figure 2-8. A multithreaded Web server.'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# # Thread Usage (3)
+
+
+    ```
+
+    while (TRUE) {
+
+    get_next_request(&buf);
+
+    handoff_work(&buf);
+
+    }
+
+    ```
+
+
+    ```
+
+    while (TRUE) {
+
+    wait_for_work(&buf)
+
+    look_for_page_in_cache(&buf, &page);
+
+    if (page_not_in_cache(&page))
+
+    read_page_from_disk(&buf, &page);
+
+    return_page(&page);
+
+    }
+
+    ```
+
+
+    (a)
+
+
+    (b)
+
+
+    Figure 2-9. A rough outline of the code for Fig. 2-8. (a) Dispatcher thread. (b)
+    Worker thread.'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '# Thread Usage (4)
+
+
+    | Model | Characteristics |
+
+    |---|---|
+
+    | Threads | Parallelism, blocking system calls |
+
+    | Single-threaded process | No parallelism, blocking system calls |
+
+    | Finite-state machine | Parallelism, nonblocking system calls, interrupts |
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_83_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# The Classical Thread Model (1)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_84_0.png)
+
+
+    Figure 2-11. (a) Three processes each with one thread. (b) One process with three
+    threads.'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# The Classical Thread Model (2)
+
+
+    | Per process items | Per thread items |
+
+    |---|---|
+
+    | Address space | Program counter |
+
+    | Global variables | Registers |
+
+    | Open files | Stack |
+
+    | Child processes | State |
+
+    | Pending alarms |  |
+
+    | Signals and signal handlers |  |
+
+    | Accounting information |  |
+
+
+    Figure 2-12. The first column lists some items shared by all threads in a process.
+    The second one lists some items private to each thread.'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# # The Classical Thread Model (3)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_86_0.png)
+
+
+    Figure 2-13. Each thread has its own stack.'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '# # POSIX Threads (1)
+
+
+    | Thread call | Description |
+
+    |---|---|
+
+    | Pthread_create | Create a new thread |
+
+    | Pthread_exit | Terminate the calling thread |
+
+    | Pthread_join | Wait for a specific thread to exit |
+
+    | Pthread_yield | Release the CPU to let another thread run |
+
+    | Pthread_attr_init | Create and initialize a thread''s attribute structure |
+
+    | Pthread_attr_destroy | Remove a thread''s attribute structure |
+
+
+    Figure 2-14. Some of the Pthreads function calls.'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: "# POSIX Threads (2)\n\n```\n```c\n#include <pthread.h>\n#include <stdio.h>\n\
+    #include <stdlib.h>\n\n#define NUMBER_OF_THREADS    10\n\nvoid *print_hello_world(void\
+    \ *tid)\n{\n        /* This function prints the thread’s identifier and then exits.\
+    \ */\n        printf(\"Hello World. Greetings from thread #%d.\\n\", tid);\n \
+    \       pthread_exit(NULL);\n}\n\nint main(int argc, char *argv[])\n{\n      \
+    \  /* The main program creates 10 threads and then exits. */\n        pthread_t\
+    \ threads[NUMBER_OF_THREADS];\n        int status, i;\n\n        for(i=0; i <\
+    \ NUMBER_OF_THREADS; i++) {\n                printf(\"Main here. Creating thread\
+    \ #%d.\\n\", i);\n                status = pthread_create(&threads[i], NULL, print_hello_world,\
+    \ (void *)i);\n\n                if (status != 0) {\n                        printf(\"\
+    Oops. pthread_create returned error code %d\\n\", status);\n                 \
+    \       exit(-1);\n                }\n        }\n        pthread_exit(NULL);\n\
+    }\n```\n```\n\nFigure 2-15. An example program using threads."
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '# # Implementing Threads in User Space
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_89_0.png)
+
+
+    Figure 2-16. (a) A user-level threads package. (b) A threads package managed by
+    the kernel.'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# # Hybrid Implementations
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_90_0.png)
+
+
+    Multiple user threads on a kernel thread
+
+
+    User space
+
+
+    Kernel
+
+
+    Kernel thread
+
+
+    Kernel space
+
+
+    Figure 2-17. Multiplexing user-level threads onto kernel-level threads.'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '# # Pop-Up Threads
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_91_0.png)
+
+
+    Figure 2-18. Creation of a new thread when a message arrives.
+
+    (a) Before the message arrives.
+
+    (b) After the message arrives.'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '# # Making Single-Threaded Code Multithreaded (1)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_92_0.png)
+
+
+    Figure 2-19. Conflicts between threads over the use of a global variable.'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# # Making Single-Threaded Code Multithreaded (2)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_93_0.png)
+
+
+    Figure 2-20. Threads can have private global variables.'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '# Operating Systems
+
+
+    # Scheduling'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '# # Scheduling – Process Behavior
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_95_0.png)
+
+
+    Bursts of CPU usage alternate with periods of waiting for I/O. (a) A CPU-bound
+    process. (b) An I/O-bound process.'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '# # Categories of Scheduling Algorithms
+
+
+    +   - Batch
+
+    +   - Interactive
+
+    +   - Real time'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# # Scheduling in Batch Systems
+
+
+    +   - First Come First Served
+
+    +   - Shortest Job First
+
+    +   - Shortest Remaining-time Next
+
+    +   - High Response-radio First
+
+
+    Batch Systems are usually non-preemptible.'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# Shortest Job First
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_100_0.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_100_1.png)
+
+
+    An example of shortest job first scheduling. (a) Running four jobs in the original
+    order. (b) Running them in shortest job first order.'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# # Scheduling in Interactive Systems
+
+
+    +   - Round-robin scheduling
+
+    +   - Priority scheduling
+
+    +   - Multiple queues
+
+    +   - Shortest process next
+
+    +   - Guaranteed scheduling
+
+    +   - Lottery scheduling
+
+    +   - Fair-share scheduling'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '# # Round-Robin Scheduling
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_102_0.png)
+
+
+    Round-robin scheduling.
+
+    (a) The list of runnable processes. (b) The list of runnable processes after B
+    uses up its quantum.'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: '# Priority Scheduling
+
+
+    Queue headers
+
+
+    Runnable processes
+
+
+    | Queue headers |
+
+    |---|
+
+    | Priority 4 |
+
+    | Priority 3 |
+
+    | Priority 2 |
+
+    | Priority 1 |
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_103_0.png)
+
+
+    (Highest priority)
+
+
+    (Lowest priority)
+
+
+    A scheduling algorithm with four priority classes.'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '# Thread Scheduling (1)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_104_0.png)
+
+
+    (a) Possible scheduling of user-level threads with a 50-msec process quantum and
+    threads that run 5 msec per CPU burst.'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: '# Thread Scheduling (2)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_105_0.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_105_1.png)
+
+
+    (b) Possible scheduling of kernel-level threads with the same characteristics
+    as (a).'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: '# # Relationship of Processes
+
+
+    +   - Two types of relationship
+
+    +     - Mutex
+
+    +     - Synchronization
+
+    +   - Solutions
+
+    +     - Busy Waiting
+
+    +     - Sleep and Wakeup'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '# Critical Regions (2)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_110_0.png)
+
+
+    Mutual exclusion using critical regions.'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: '# Mutual Exclusion with Busy Waiting
+
+
+    Proposals for achieving mutual exclusion:
+
+
+    +   - Disabling interrupts
+
+    +   - Lock variables
+
+    +   - Strict alternation
+
+    +   - Peterson''s solution
+
+    +   - The TSL instruction'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "# # Strict Alternation\n\n```\n```c\nwhile (TRUE) {\n    while (turn != 0)\n\
+    \        /* loop */;\n    critical_region();\n    turn = 1;\n    noncritical_region();\n\
+    }\n```\n```\n\n```\n```c\nwhile (TRUE) {\n    while (turn != 1)\n        /* loop\
+    \ */;\n    critical_region();\n    turn = 0;\n    noncritical_region();\n}\n```\n\
+    ```\n\nA proposed solution to the critical region problem. (a) Process 0. (b)\
+    \ Process 1. In both cases, be sure to note the semicolons terminating the while\
+    \ statements."
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: "# # Peterson's Solution\n\n```\n```c\n#define FALSE 0\n#define TRUE 1\n#define\
+    \ N 2            /* number of processes */\n\nint turn;              /* whose\
+    \ turn is it? */\nint interested[N];     /* all values initially 0 (FALSE) */\n\
+    \nvoid enter_region(int process) /* process is 0 or 1 */\n{\n    int other;  \
+    \       /* number of the other process */\n\n    other = 1 - process; /* the opposite\
+    \ of process */\n    interested[process] = TRUE; /* show that you are interested\
+    \ */\n    turn = process;    /* set flag */\n    while (turn == process && interested[other]\
+    \ == TRUE) /* null statement */ ;\n}\n\nvoid leave_region(int process) /* process:\
+    \ who is leaving */\n{\n    interested[process] = FALSE; /* indicate departure\
+    \ from critical region */\n}\n```\n```\n\nPeterson's solution for achieving mutual\
+    \ exclusion."
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: "# The TSL Instruction (1)\n\n```\nenter_region:\n    TSL REGISTER,LOCK    \
+    \    | copy lock to register and set lock to 1\n    CMP REGISTER,#0          |\
+    \ was lock zero?\n    JNE enter_region         | if it was nonzero, lock was set,\
+    \ so loop\n    RET                      | return to caller; critical region entered\n\
+    \nleave_region:\n    MOVE LOCK,#0             | store a 0 in lock\n    RET   \
+    \                   | return to caller\n```\n\nEntering and leaving a critical\
+    \ region\nusing the TSL instruction."
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '# # The TSL Instruction (2)
+
+
+    enter_region:
+
+    MOVE REGISTER,#1
+
+    XCHG REGISTER,LOCK
+
+    CMP REGISTER,#0
+
+    JNE enter_region
+
+    RET
+
+    | put a 1 in the register
+
+    | swap the contents of the register and lock variable
+
+    was lock zero?
+
+    | if it was non zero, lock was set, so loop
+
+    | return to caller; critical region entered
+
+
+    leave_region:
+
+    MOVE LOCK,#0
+
+    RET
+
+    | store a 0 in lock
+
+    | return to caller
+
+
+    Entering and leaving a critical region
+
+    using the XCHG instruction.'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: '# Semaphore
+
+
+    +   - Semaphore
+
+    +     - 1965 E. W. Dijkstra
+
+    +   - PV operations
+
+    +     - Atomic operations: very quick and uninterruptable
+
+    +     - Also known as down/up or wait/signal operations
+
+    +   - Semaphore can be operated by PV operation only.
+
+    +     - The only exception is the initialization.
+
+    +     - Even read the value is prohibited'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: '# Semaphore
+
+
+    +   - What’s is semaphore?
+
+    +     - An integer variable
+
+    +     - In sleep and wakeup, with a process waiting queue (usu. first in first
+    out)
+
+
+    +   - Variable range has different definitions:
+
+    +     - Whole integer (sleep and wakeup)
+
+    +       - Positive: the number of resources available
+
+    +       - Zero: no resource available, no waiting process
+
+    +       - Negative: the number of processes waiting to use the resources
+
+    +     - Zero and positive integer (busy waiting)
+
+    +       - Positive: the number of resources available
+
+    +       - Zero: no resource available
+
+    +     - Zero and One only (mutex)
+
+    +       - Binary semaphores'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: "# # PV in Sleep and Wakeup\n\n```\nP (Semaphore s)\n{\n    s=s-1;\n    if (s<0)\n\
+    \    {\n        added to the semaphore's\n        queue and sleep;\n    }\n}\n\
+    ```\n\n```\nV (Semaphore s)\n{\n    s=s+1;\n    if (s<=0)\n    {\n        wakeup\
+    \ the waiting process\n        in the semaphore's queue;\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: "![](img/856cffd4f5aea27d2abb1fffe70c2f49_119_0.png)\n\nS = 1\n\nProcess A:\n\
+    \n... ...\nP(S);\nPrint(a.doc);\nV(S);\n... ...\n\nRunnable\n\n```\n```text\n\
+    P (Semaphore s){\n    s=s-1;\n    if (s<0){\n        sleep…;\n    }\n}\n```\n\
+    ```\n\n```\n```text\nV (Semaphore s){\n    s=s+1;\n    if (s<=0){\n        wakeup…;\n\
+    \    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: "![](img/856cffd4f5aea27d2abb1fffe70c2f49_120_0.png)\n\nS = 1 -> 0\n\n```\n\
+    Process A:\n... ...\nP(S);\nPrint(a.doc);\nV(S);\n... ...\n```\n\nRunnable\n\n\
+    ```\nP (Semaphore s){\n    s=s-1;\n    if (s<0){\n        sleep...;\n    }\n}\n\
+    ```\n\n```\nV (Semaphore s){\n    s=s+1;\n    if (s<=0){\n        wakeup...;\n\
+    \    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: '![](img/856cffd4f5aea27d2abb1fffe70c2f49_121_0.png)
+
+
+    S = 1 -> 0
+
+
+    Process A:
+
+    ...
+
+    P(S);
+
+    Print(a.doc);
+
+    V(S);
+
+    ... ...
+
+
+    Process B:
+
+    ...
+
+    P(S);
+
+    Print(b.doc);
+
+    V(S);
+
+    ... ...
+
+
+    P (Semaphore s){
+
+    s=s-1;
+
+    if (s<0){
+
+    sleep...;
+
+    }
+
+    }
+
+
+    V (Semaphore s){
+
+    s=s+1;
+
+    if (s<=0){
+
+    wakeup...;
+
+    }
+
+    }'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '![](img/856cffd4f5aea27d2abb1fffe70c2f49_123_0.png)
+
+
+    S = 1 -> 0 -> -1
+
+
+    # # B
+
+
+    Process A:
+
+    ...
+
+    P(S);
+
+    Print(a.doc);
+
+    V(S);
+
+    ... ...
+
+
+    Process B:
+
+    ...
+
+    P(S);
+
+    Print(b.doc);
+
+    V(S);
+
+    ... ...
+
+
+    Process C:
+
+    ...
+
+    P(S);
+
+    Print(c.doc);
+
+    V(S);
+
+    ... ...
+
+
+    P (Semaphore s){
+
+    s=s-1;
+
+    if (s<0){
+
+    sleep...;
+
+    }
+
+    }
+
+
+    V (Semaphore s){
+
+    s=s+1;
+
+    if (s<=0){
+
+    wakeup...;
+
+    }
+
+    }
+
+
+    Runnnable
+
+
+    Blocked
+
+
+    Runnnable'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: '![](img/856cffd4f5aea27d2abb1fffe70c2f49_124_0.png)
+
+
+    S = 1 -> 0 -> -1 -> -2
+
+
+    Process A:
+
+    ...
+
+    P(S);
+
+    Print(a.doc);
+
+    V(S);
+
+    ... ...
+
+
+    Process B:
+
+    ...
+
+    P(S);
+
+    Print(b.doc);
+
+    V(S);
+
+    ... ...
+
+
+    Process C:
+
+    ...
+
+    P(S);
+
+    Print(c.doc);
+
+    V(S);
+
+    ... ...
+
+
+    P (Semaphore s){
+
+    s=s-1;
+
+    if (s<0){
+
+    sleep...;
+
+    }
+
+    }
+
+
+    V (Semaphore s){
+
+    s=s+1;
+
+    if (s<=0){
+
+    wakeup...;
+
+    }
+
+    }
+
+
+    Runnnable
+
+
+    Blocked
+
+
+    Blocked
+
+
+    # B
+
+
+    # C'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: 'S = 1 -> 0 -> -1 -> -2
+
+
+    Process A:
+
+    ...
+
+    P(S);
+
+    Print(a.doc);
+
+    V(S);
+
+    ... ...
+
+
+    Process B:
+
+    ...
+
+    P(S);
+
+    Print(b.doc);
+
+    V(S);
+
+    ... ...
+
+
+    Process C:
+
+    ...
+
+    P(S);
+
+    Print(c.doc);
+
+    V(S);
+
+    ... ...
+
+
+    P (Semaphore s){
+
+    s=s-1;
+
+    if (s<0){
+
+    sleep...;
+
+    }
+
+    }
+
+
+    V (Semaphore s){
+
+    s=s+1;
+
+    if (s<=0){
+
+    wakeup...;
+
+    }
+
+    }'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: "![](img/856cffd4f5aea27d2abb1fffe70c2f49_126_0.png)\n\nS = 1 -> 0 -> -1 ->\
+    \ -2 -> -1\n\n+   - Process A:\n+     ...\n+     P(S);\n+     Print(a.doc);\n\
+    +     V(S);\n+     ...\n\n+   - Process B:\n+     ...\n+     P(S);\n+     Print(b.doc);\n\
+    +     V(S);\n+     ...\n\n+   - Process C:\n+     ...\n+     P(S);\n+     Print(c.doc);\n\
+    +     V(S);\n+     ...\n\n```\nP (Semaphore s){\n    s=s-1;\n    if (s<0){\n \
+    \       sleep...;\n    }\n}\n```\n\n```\nV (Semaphore s){\n    s=s+1;\n    if\
+    \ (s<=0){\n        wakeup...;\n    }\n}\n```\n\nRunnnable\n\nRunnnable\n\nBlocked"
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: "![](img/856cffd4f5aea27d2abb1fffe70c2f49_127_0.png)\n\nS = 1 -> 0 -> -1 ->\
+    \ -2 -> -1\n\n# C\n\n```\nP (Semaphore s){\n    s=s-1;\n    if (s<0){\n      \
+    \  sleep…;\n    }\n}\n```\n\n```\nV (Semaphore s){\n    s=s+1;\n    if (s<=0){\n\
+    \        wakeup…;\n    }\n}\n```\n\n```\nProcess A:\n... ...\nP(S);\nPrint(a.doc);\n\
+    V(S);\n... ...\n```\n\nRunnable\n\n```\nProcess B:\n... ...\nP(S);\nPrint(b.doc);\n\
+    V(S);\n... ...\n```\n\nRunnable\n\n```\nProcess C:\n... ...\nP(S);\nPrint(c.doc);\n\
+    V(S);\n... ...\n```\n\nBlocked"
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: "S = 1 -> 0 -> -1 -> -2 -> -1 -> 0\n\n```\nP (Semaphore s){\n    s=s-1;\n  \
+    \  if (s<0){\n        sleep...;\n    }\n}\n```\n\n```\nV (Semaphore s){\n    s=s+1;\n\
+    \    if (s<=0){\n        wakeup...;\n    }\n}\n```\n\nProcess A:\n\n... ...\n\
+    P(S);\nPrint(a.doc);\nV(S);\n... ...\n\nRunnable\n\nProcess B:\n\n... ...\nP(S);\n\
+    Print(b.doc);\nV(S);\n... ...\n\nRunnable\n\nProcess C:\n\n... ...\nP(S);\nPrint(c.doc);\n\
+    V(S);\n... ...\n\nRunnable"
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: '![](img/856cffd4f5aea27d2abb1fffe70c2f49_129_0.png)
+
+
+    S = 1 -> 0 -> -1 -> -2 -> -1 -> 0
+
+
+    Process A:
+
+    ...
+
+    P(S);
+
+    Print(a.doc);
+
+    V(S);
+
+    ...
+
+
+    Process B:
+
+    ...
+
+    P(S);
+
+    Print(b.doc);
+
+    V(S);
+
+    ...
+
+
+    Process C:
+
+    ...
+
+    P(S);
+
+    Print(c.doc);
+
+    V(S);
+
+    ...
+
+
+    P (Semaphore s){
+
+    s=s-1;
+
+    if (s<0){
+
+    sleep...;
+
+    }
+
+    }
+
+
+    V (Semaphore s){
+
+    s=s+1;
+
+    if (s<=0){
+
+    wakeup...;
+
+    }
+
+    }
+
+
+    Runnable
+
+
+    Runnable
+
+
+    Runnable'
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: "![](img/856cffd4f5aea27d2abb1fffe70c2f49_130_0.png)\n\nS = 1 -> 0 -> -1 ->\
+    \ -2 -> -1 -> 0 -> 1\n\n+   Process A:\n+   ...\n+   P(S);\n+   **Print(a.doc);**\n\
+    +   V(S);\n+   ...\n\nRunnable\n\n+   Process B:\n+   ...\n+   P(S);\n+   **Print(b.doc);**\n\
+    +   V(S);\n+   ...\n\nRunnable\n\n+   Process C:\n+   ...\n+   P(S);\n+   **Print(c.doc);**\n\
+    +   V(S);\n+   ...\n\nRunnable\n\n```\nP (Semaphore s){\n    s=s-1;\n    if (s<0){\n\
+    \        sleep...;\n    }\n}\n```\n\n```\nV (Semaphore s){\n    s=s+1;\n    if\
+    \ (s<=0){\n        wakeup...;\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: "# PV in Busy Waiting\n\n```\nP (Semaphore s)\n{\n    while (!s>0)\n       \
+    \ yield the CPU;\n    s--;\n}\n```\n\n```\nV (Semaphore s)\n{\n    s++;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: "![](img/856cffd4f5aea27d2abb1fffe70c2f49_133_0.png)\n\nS = 1 -> 0\n\nProcess\
+    \ A:\n...\nP(S);\nPrint(a.doc);\nV(S);\n... ...\n\nRunnnable\n\n```\n```\nP (Semaphore\
+    \ s){\n    while (!s>0)\n        yield;\n    s--;\n}\n```\n```\n\n```\n```\nV\
+    \ (Semaphore s){\n    s++;\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: '![](img/856cffd4f5aea27d2abb1fffe70c2f49_134_0.png)
+
+
+    S = 1 -> 0
+
+
+    Process A:
+
+    ...
+
+    P(S);
+
+    Print(a.doc);
+
+    V(S);
+
+    ... ...
+
+
+    Process B:
+
+    ...
+
+    P(S);
+
+    Print(b.doc);
+
+    V(S);
+
+    ... ...
+
+
+    P (Semaphore s){
+
+    while (!s>0)
+
+    yield;
+
+    s--;
+
+    }
+
+
+    V (Semaphore s){
+
+    s++;
+
+    }'
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: '![](img/856cffd4f5aea27d2abb1fffe70c2f49_135_0.png)
+
+
+    S = 1 -> 0
+
+
+    Process A:
+
+    ...
+
+    P(S);
+
+    Print(a.doc);
+
+    V(S);
+
+    ... ...
+
+
+    Process B:
+
+    ...
+
+    P(S);
+
+    Print(b.doc);
+
+    V(S);
+
+    ... ...
+
+
+    Process C:
+
+    ...
+
+    P(S);
+
+    Print(c.doc);
+
+    V(S);
+
+    ... ...
+
+
+    P (Semaphore s){
+
+    while (!s>0)
+
+    yield;
+
+    s--;
+
+    }
+
+
+    V (Semaphore s){
+
+    s++;
+
+    }
+
+
+    Runnable
+
+
+    Runnable
+
+
+    Runnable'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: "![](img/856cffd4f5aea27d2abb1fffe70c2f49_136_0.png)\n\nS = 1 -> 0\n\n```\n\
+    Process A:\n... ...\nP(S);\nPrint(a.doc);\nV(S);\n... ...\n```\n\nRunnable\n\n\
+    ```\nProcess B:\n... ...\nP(S);\nPrint(b.doc);\nV(S);\n... ...\n```\n\nRunnable\n\
+    \n```\nProcess C:\n... ...\nP(S);\nPrint(c.doc);\nV(S);\n... ...\n```\n\nRunnable\n\
+    \n```\nP (Semaphore s){\n    while (!s>0)\n        yield;\n    s--;\n}\n```\n\n\
+    ```\nV (Semaphore s){\n    s++;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: 'S = 1 -> 0 -> 1
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_137_0.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_137_1.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_137_2.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_137_3.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_137_4.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_137_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: "# # The Producer-Consumer Problem\n\n```\n#define N 100\nint count = 0;\nvoid\
+    \ producer(void)\n{\n    int item;\n    while (TRUE) {\n        item = produce_item();\n\
+    \        if (count == N) sleep();\n        insert_item(item);\n        count =\
+    \ count + 1;\n        if (count == 1) wakeup(consumer);\n    }\n}\nvoid consumer(void)\n\
+    {\n    int item;\n    while (TRUE) {\n        if (count == 0) sleep();\n     \
+    \   item = remove_item();\n        count = count - 1;\n        if (count == N\
+    \ - 1) wakeup(producer);\n        consume_item(item);\n    }\n}\n```\n\nThe producer-consumer\
+    \ problem\nwith a fatal race condition."
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: "# Semaphores\n\n```\n```c\n#define N 100                         /* number\
+    \ of slots in the buffer */\ntypedef int semaphore;                 /* semaphores\
+    \ are a special kind of int */\nsemaphore mutex = 1;                  /* controls\
+    \ access to critical region */\nsemaphore empty = N;                  /* counts\
+    \ empty buffer slots */\nsemaphore full = 0;                   /* counts full\
+    \ buffer slots */\n\nvoid producer(void)\n{\n    int item;\n\n    while (TRUE)\
+    \ {                     /* TRUE is the constant 1 */\n        item = produce_item();\
+    \         /* generate something to put in buffer */\n        down(&empty);   \
+    \               /* decrement empty count */\n        down(&mutex);           \
+    \       /* enter critical region */\n        insert_item(item);             /*\
+    \ put new item in buffer */\n        up(&mutex);                    /* leave critical\
+    \ region */\n        up(&full);                     /* increment count of full\
+    \ slots */\n    }\n}\n\nvoid consumer(void)\n{\n    int item;\n\n    while (TRUE)\
+    \ {                     /* infinite loop */\n        down(&full);            \
+    \       /* decrement full count */\n        down(&mutex);                  /*\
+    \ enter critical region */\n        item = remove_item();          /* take item\
+    \ from buffer */\n        up(&mutex);                    /* leave critical region\
+    \ */\n        up(&empty);                    /* increment count of empty slots\
+    \ */\n        consume_item(item);            /* do something with the item */\n\
+    \    }\n}\n```\n```\n\nThe producer-consumer problem using semaphores."
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: '# Operating Systems
+
+
+    # Inter-Process Communications'
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: "# # Dining Philosophers Problem (2)\n\n```\n```c\n#define N 5\nvoid philosopher(int\
+    \ i)\n{\n    while (TRUE) {\n        think();\n        take_fork(i);\n       \
+    \ take_fork((i+1) % N);\n        eat();\n        put_fork(i);\n        put_fork((i+1)\
+    \ % N);\n    }\n}\n```\n```\n\n```\n```c\n/* number of philosophers */\n/* i:\
+    \ philosopher number, from 0 to 4 */\n/* philosopher is thinking */\n/* take left\
+    \ fork */\n/* take right fork; % is modulo operator */\n/* yum-yum, spaghetti\
+    \ */\n/* put left fork back on the table */\n/* put right fork back on the table\
+    \ */\n```\n```\n\nA nonsolution to the dining philosophers problem."
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: "# # Dining Philosophers Problem (3)\n\n```\n```c\n#define N               \
+    \     5             /* number of philosophers */\n#define LEFT               \
+    \  (i+N-1)%N     /* number of i's left neighbor  */\n#define RIGHT           \
+    \     (i+1)%N       /* number of i's right neighbor */\n#define THINKING     \
+    \        0             /* philosopher is thinking */\n#define HUNGRY         \
+    \      1             /* philosopher is trying to get forks */\n#define EATING\
+    \               2             /* philosopher is eating */\ntypedef int semaphore;\
+    \                     /* semaphores are a special kind of int */\nint state[N];\
+    \                              /* array to keep track of everyone's state */\n\
+    semaphore mutex = 1;                       /* mutual exclusion for critical regions\
+    \ */\nsemaphore s[N];                            /* one semaphore per philosopher\
+    \ */\nvoid philosopher(int i)                    /* i: philosopher number, from\
+    \ 0 to N-1 */\n{\n    while (TRUE) {\n        think();                       \
+    \    /* philosopher is thinking */\n        take_forks(i);                   \
+    \  /* acquire two forks or block */\n        eat();                          \
+    \   /* yum-yum, spaghetti */\n        put_forks(i);                      /* put\
+    \ both forks back on table */\n    }\n}\n... \n```\n```\n\nA solution to the dining\
+    \ philosophers problem."
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: "# # Dining Philosophers Problem (4)\n\n```\n```c\nvoid take_forks(int i)\n\
+    {\n    down(&mutex);\n    state[i] = HUNGRY;\n    test(i);\n    up(&mutex);\n\
+    \    down(&s[i]);\n}\n```\n```\n\nA solution to the dining philosophers problem."
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: "# # Dining Philosophers Problem (5)\n\n```\nvoid put_forks(i)\n{\n    down(&mutex);\n\
+    \    state[i] = THINKING;\n    test(LEFT);\n    test(RIGHT);\n    up(&mutex);\n\
+    }\n\nvoid test(i) /* i: philosopher number, from 0 to N−1 */\n{\n    if (state[i]\
+    \ == HUNGRY && state[LEFT] != EATING && state[RIGHT] != EATING) {\n        state[i]\
+    \ = EATING;\n        up(&s[i]);\n    }\n}\n```\n\nA solution to the dining philosophers\
+    \ problem."
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: "# The Readers and Writers Problem (1)\n\n```\ntypedef int semaphore;      \
+    \                   /* use your imagination */\nsemaphore mutex = 1;         \
+    \                   /* controls access to ’rc’ */\nsemaphore db = 1;         \
+    \                      /* controls access to the database */\nint rc = 0;    \
+    \                                 /* # of processes reading or wanting to */\n\
+    \nvoid reader(void)\n{\n        while (TRUE) {                          /* repeat\
+    \ forever */\n                down(&mutex);                   /* get exclusive\
+    \ access to ’rc’ */\n                rc = rc + 1;                    /* one reader\
+    \ more now */\n                if (rc == 1) down(&db);         /* if this is the\
+    \ first reader ... */\n                up(&mutex);                     /* release\
+    \ exclusive access to ’rc’ */\n                read_data_base();             \
+    \  /* access the data */\n                down(&mutex);                   /* get\
+    \ exclusive access to ’rc’ */\n                rc = rc − 1;                  \
+    \  /* one reader fewer now */\n                if (rc == 0) up(&db);         \
+    \   /* if this is the last reader ... */\n                up(&mutex);        \
+    \             /* release exclusive access to ’rc’ */\n                use_data_read();\
+    \                /* noncritical region */\n        }\n}\n```\n\n•••\n\nA solution\
+    \ to the readers and writers problem."
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: "# # The Readers and Writers Problem (2)\n\n```\nvoid writer(void)\n{\n    while\
+    \ (TRUE) {\n        think_up_data();\n        down(&db);\n        write__data_base();\n\
+    \        up(&db);\n    }\n}\n```\n\nA solution to the readers and writers problem."
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: "# Mutexes\n\n```\nmutex_lock:\n        TSL REGISTER,MUTEX       | copy mutex\
+    \ to register and set mutex to 1\n        CMP REGISTER,#0          | was mutex\
+    \ zero?\n        JZE ok                   | if it was zero, mutex was unlocked,\
+    \ so return\n        CALL thread_yield        | mutex is busy; schedule another\
+    \ thread\n        JMP mutex_lock           | try again\nok:     RET          \
+    \            | return to caller; critical region entered\n\nmutex_unlock:\n  \
+    \      MOVE MUTEX,#0            | store a 0 in mutex\n        RET            \
+    \          | return to caller\n```\n\nImplementation of mutex lock and mutex unlock."
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: '# # Mutexes in Pthreads (2)
+
+
+    | Thread call | Description |
+
+    |---|---|
+
+    | Pthread_cond_init | Create a condition variable |
+
+    | Pthread_cond_destroy | Destroy a condition variable |
+
+    | Pthread_cond_wait | Block waiting for a signal |
+
+    | Pthread_cond_signal | Signal another thread and wake it up |
+
+    | Pthread_cond_broadcast | Signal multiple threads and wake all of them |
+
+
+    Some of the Pthreads calls relating
+
+    to condition variables.'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: '# # Monitors (1)
+
+
+    ```
+
+    ```
+
+    monitor example
+
+    integer i;
+
+    condition c;
+
+    procedure producer();
+
+    .
+
+    .
+
+    .
+
+    end;
+
+    procedure consumer();
+
+    .
+
+    .
+
+    .
+
+    end;
+
+    end monitor;
+
+    ```
+
+    ```
+
+
+    A monitor.'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: '# # Message Passing (1)
+
+
+    ```
+
+    ```java
+
+    public class ProducerConsumer {
+
+    static final int N = 100;   // constant giving the buffer size
+
+    static producer p = new producer();   // instantiate a new producer thread
+
+    static consumer c = new consumer();   // instantiate a new consumer thread
+
+    static our_monitor mon = new our_monitor();   // instantiate a new monitor
+
+
+    public static void main(String args[]) {
+
+    p.start();   // start the producer thread
+
+    c.start();   // start the consumer thread
+
+    }
+
+
+    static class producer extends Thread {
+
+    public void run() {   // run method contains the thread code
+
+    int item;
+
+    while (true) {   // producer loop
+
+    item = produce_item();
+
+    mon.insert(item);
+
+    }
+
+    }
+
+
+    private int produce_item() { ... }   // actually produce
+
+    }
+
+    ```
+
+    ```
+
+
+    # # A solution to the producer-consumer problem in Java.'
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: "# Message Passing (3)\n\n...\n\n```\npublic synchronized int remove() {\n \
+    \   int val;\n    if (count == 0) go_to_sleep();    // if the buffer is empty,\
+    \ go to sleep\n    val = buffer [lo]; // fetch an item from the buffer\n    lo\
+    \ = (lo + 1) % N;    // slot to fetch next item from\n    count = count − 1; \
+    \   // one few items in the buffer\n    if (count == N − 1) notify(); // if producer\
+    \ was sleeping, wake it up\n    return val;\n}\nprivate void go_to_sleep() { try{wait();}\
+    \ catch(InterruptedException exc) {};}\n}\n}\n```\n\nA solution to the producer-consumer\n\
+    problem in Java."
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: "# Producer-Consumer Problem\nwith Message Passing (1)\n\n```\n```c\n#define\
+    \ N 100                         /* number of slots in the buffer */\n\nvoid producer(void)\n\
+    {\n        int item;\n        message m;                     /* message buffer\
+    \ */\n\n        while (TRUE) {\n                item = produce_item(); /* generate\
+    \ something to put in buffer */\n                receive(consumer, &m);  /* wait\
+    \ for an empty to arrive */\n                build_message(&m, item);/* construct\
+    \ a message to send */\n                send(consumer, &m);     /* send item to\
+    \ consumer */\n        }\n}\n```\n```\n\n...\n\nThe producer-consumer problem\
+    \ with N messages."
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: "# # Producer-Consumer Problem with Message Passing (2)\n\n```\nvoid consumer(void)\n\
+    {\n    int item, i;\n    message m;\n    for (i = 0; i < N; i++) send(producer,\
+    \ &m); /* send N empties */\n    while (TRUE) {\n        receive(producer, &m);\
+    \       /* get message containing item */\n        item = extract_item(&m);  \
+    \   /* extract item from message */\n        send(producer, &m);          /* send\
+    \ back empty reply */\n        consume_item(item);          /* do something with\
+    \ the item */\n    }\n}\n```\n\nThe producer-consumer problem with N messages."
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: '# # Barriers
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_159_0.png)
+
+
+    Use of a barrier. (a) Processes approaching a barrier. (b) All processes but one
+    blocked at the barrier. (c) When the last process arrives at the barrier, all
+    of them are let through.'
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: '# # Deadlocks'
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: '# Preemptable and Nonpreemptable
+
+    Resources
+
+
+    Sequence of events required to use a resource:
+
+
+    +   1. Request the resource.
+
+    +   2. Use the resource.
+
+    +   3. Release the resource.'
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: "# # Resource Acquisition (1)\n\n```\ntypedef int semaphore;\nsemaphore resource__1;\n\
+    \nvoid process__A(void) {\n    down(&resource__1);\n    use__resource__1();\n\
+    \    up(&resource__1);\n}\n```\n\n```\ntypedef int semaphore;\nsemaphore resource__1;\n\
+    semaphore resource__2;\n\nvoid process__A(void) {\n    down(&resource__1);\n \
+    \   down(&resource__2);\n    use__both__resources();\n    up(&resource__2);\n\
+    \    up(&resource__1);\n}\n```\n\nFigure 6-1. Using a semaphore to protect resources.\n\
+    (a) One resource. (b) Two resources."
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: "# # Resource Acquisition (2)\n\n```\ntypedef int semaphore;\nsemaphore resource_1;\n\
+    semaphore resource_2;\nvoid process_A(void) {\n    down(&resource_1);\n    down(&resource_2);\n\
+    \    use_both_resources();\n    up(&resource_2);\n    up(&resource_1);\n}\nvoid\
+    \ process_B(void) {\n    down(&resource_1);\n    down(&resource_2);\n    use_both_resources();\n\
+    \    up(&resource_2);\n    up(&resource_1);\n}\n```\n\nFigure 6-2. (a) Deadlock-free\
+    \ code."
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: "# Resource Acquisition (3)\n\n```\nsemaphore resource_1;\nsemaphore resource_2;\n\
+    \nvoid process_A(void) {\n    down(&resource_1);\n    down(&resource_2);\n   \
+    \ use_both_resources();\n    up(&resource_2);\n    up(&resource_1);\n}\n\nvoid\
+    \ process_B(void) {\n    down(&resource_2);\n    down(&resource_1);\n    use_both_resources();\n\
+    \    up(&resource_1);\n    up(&resource_2);\n}\n```\n\n![](img/856cffd4f5aea27d2abb1fffe70c2f49_164_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: '# Introduction To Deadlocks
+
+
+    Deadlock can be defined formally as follows:
+
+
+    *A set of processes is deadlocked if each process in the set is waiting for an
+    event that only another process in the set can cause.*'
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: '# Conditions for Resource Deadlocks
+
+
+    +   1. Mutual exclusion condition
+
+    +   2. Hold and wait condition.
+
+    +   3. No preemption condition.
+
+    +   4. Circular wait condition.'
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: '# # Deadlock Modeling (2)
+
+
+    A
+
+    Request R
+
+    Request S
+
+    Release R
+
+    Release S
+
+    (a)
+
+
+    B
+
+    Request S
+
+    Request T
+
+    Release S
+
+    Release T
+
+    (b)
+
+
+    C
+
+    Request T
+
+    Request R
+
+    Release T
+
+    Release R
+
+    (c)
+
+
+    1. A requests R
+
+    2. B requests S
+
+    3. C requests T
+
+    4. A requests S
+
+    5. B requests T
+
+    6. C requests R
+
+    deadlock
+
+    (d)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_168_0.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_168_1.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_168_2.png)
+
+
+    Figure 6-4. An example of how deadlock occurs and how it can be avoided.'
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: "# # Deadlock Modeling (3)\n\n+   1. A requests R  \n+   2. B requests S  \n\
+    +   3. C requests T  \n+   4. A requests S  \n+   5. B requests T  \n+   6. C\
+    \ requests R deadlock\n\n![](img/856cffd4f5aea27d2abb1fffe70c2f49_169_0.png)\n\
+    \n![](img/856cffd4f5aea27d2abb1fffe70c2f49_169_1.png)\n\n![](img/856cffd4f5aea27d2abb1fffe70c2f49_169_2.png)\n\
+    \n![](img/856cffd4f5aea27d2abb1fffe70c2f49_169_3.png)\n\n![](img/856cffd4f5aea27d2abb1fffe70c2f49_169_4.png)\n\
+    \n![](img/856cffd4f5aea27d2abb1fffe70c2f49_169_5.png)\n\nFigure 6-4. An example\
+    \ of how deadlock occurs and how it can be avoided."
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: '# Deadlock Modeling (5)
+
+
+    Strategies for dealing with deadlocks:
+
+
+    +   1. Just ignore the problem.
+
+    +   2. Detection and recovery. Let deadlocks occur, detect them, take action.
+
+    +   3. Dynamic avoidance by careful resource allocation.
+
+    +   4. Prevention, by structurally negating one of the four required conditions.'
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: '# Deadlock Detection with
+
+    One Resource of Each Type (1)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_172_0.png)
+
+
+    Figure 6-5. (a) A resource graph. (b) A cycle extracted from (a).'
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: '# # Deadlock Detection with One Resource of Each Type (2)
+
+
+    Algorithm for detecting deadlock:
+
+
+    +   1. For each node, N in the graph, perform the following five steps with N
+    as the starting node.
+
+
+    +   2. Initialize L to the empty list, designate all arcs as unmarked.
+
+
+    +   3. Add current node to end of L, check to see if node now appears in L two
+    times. If it does, graph contains a cycle (listed in L), algorithm terminates.
+
+
+    ...'
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: "# Deadlock Detection with\nOne Resource of Each Type (3)\n\n+   1. From given\
+    \ node, see if any unmarked outgoing arcs. If so, go to step 5; if not, go to\
+    \ step 6.\n+   \n+   2. Pick an unmarked outgoing arc at random and mark it. Then\
+    \ follow it to the new current node and go to step 3.\n+   \n+   3. If this is\
+    \ initial node, graph does not contain any cycles, algorithm terminates. Otherwise,\
+    \ dead end. Remove it, go back to previous node, make that one current node, go\
+    \ to step 3."
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: '# # Deadlock Detection with Multiple Resources of Each Type (1)
+
+
+    Resources in existence
+
+    (E1, E2, E3, ..., Em)
+
+
+    Resources available
+
+    (A1, A2, A3, ..., Am)
+
+
+    Current allocation matrix
+
+
+    Request matrix
+
+
+    | C11 | C12 | C13 | ... | C1m |
+
+    |-----|-----|-----|-----|-----|
+
+    | C21 | C22 | C23 | ... | C2m |
+
+    | ... | ... | ... | ... | ... |
+
+    | Cn1 | Cn2 | Cn3 | ... | Cnm |
+
+
+    | R11 | R12 | R13 | ... | R1m |
+
+    |-----|-----|-----|-----|-----|
+
+    | R21 | R22 | R23 | ... | R2m |
+
+    | ... | ... | ... | ... | ... |
+
+    | Rn1 | Rn2 | Rn3 | ... | Rnm |
+
+
+    Row n is current allocation
+
+    to process n
+
+
+    Row 2 is what process 2 needs
+
+
+    Figure 6-6. The four data structures needed
+
+    by the deadlock detection algorithm.'
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: '# # Deadlock Detection with Multiple Resources of Each Type (2)
+
+
+    Deadlock detection algorithm:
+
+
+    +   1. Look for an unmarked process, _P<sub>i</sub>_, for which the i-th row of
+    _R_ is less than or equal to _A_.
+
+
+    +   2. If such a process is found, add the _i-th_ row of _C_ to _A_, mark the
+    process, and go back to step 1.
+
+
+    +   3. If no such process exists, the algorithm terminates.'
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: '# # Deadlock Detection with Multiple Resources of Each Type (3)
+
+
+    E = (4 2 3 1) A = (2 1 0 0)
+
+
+    Current allocation matrix
+
+
+    C = [
+
+    0 0 1 0
+
+    2 0 0 1
+
+    0 1 2 0
+
+    ]
+
+
+    Request matrix
+
+
+    R = [
+
+    2 0 0 1
+
+    1 0 1 0
+
+    2 1 0 0
+
+    ]
+
+
+    Figure 6-7. An example for the deadlock detection algorithm.'
+  merge: -1
+  img_proc: true
+- pgno: 178
+  md: '# Recovery from Deadlock
+
+
+    +   - Recovery through preemption
+
+    +   - Recovery through rollback
+
+    +   - Recovery through killing processes'
+  merge: -1
+  img_proc: true
+- pgno: 179
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 180
+  md: '# Safe and Unsafe States (1)
+
+
+    ### (a)
+
+
+    |   | Has | Max |
+
+    |---|---:|---:|
+
+    | A | 3 | 9 |
+
+    | B | 2 | 4 |
+
+    | C | 2 | 7 |
+
+
+    Free: 3
+
+
+    ### (b)
+
+
+    |   | Has | Max |
+
+    |---|---:|---:|
+
+    | A | 3 | 9 |
+
+    | B | 4 | 4 |
+
+    | C | 2 | 7 |
+
+
+    Free: 1
+
+
+    ### (c)
+
+
+    |   | Has | Max |
+
+    |---|---:|---:|
+
+    | A | 3 | 9 |
+
+    | B | 0 | — |
+
+    | C | 2 | 7 |
+
+
+    Free: 5
+
+
+    ### (d)
+
+
+    |   | Has | Max |
+
+    |---|---:|---:|
+
+    | A | 3 | 9 |
+
+    | B | 0 | — |
+
+    | C | 7 | 7 |
+
+
+    Free: 0
+
+
+    ### (e)
+
+
+    |   | Has | Max |
+
+    |---|---:|---:|
+
+    | A | 3 | 9 |
+
+    | B | 0 | — |
+
+    | C | 0 | — |
+
+
+    Free: 7
+
+
+    Figure 6-9. Demonstration that the state in (a) is safe.'
+  merge: -1
+  img_proc: true
+- pgno: 181
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 182
+  md: '# # The Banker''s Algorithm for a Single Resource
+
+
+    Has Max
+
+
+    | A | 0 | 6 |
+
+    |---|---|---|
+
+    | B | 0 | 5 |
+
+    | C | 0 | 4 |
+
+    | D | 0 | 7 |
+
+
+    Free: 10
+
+
+    (a)
+
+
+    Has Max
+
+
+    | A | 1 | 6 |
+
+    |---|---|---|
+
+    | B | 1 | 5 |
+
+    | C | 2 | 4 |
+
+    | D | 4 | 7 |
+
+
+    Free: 2
+
+
+    (b)
+
+
+    Has Max
+
+
+    | A | 1 | 6 |
+
+    |---|---|---|
+
+    | B | 2 | 5 |
+
+    | C | 2 | 4 |
+
+    | D | 4 | 7 |
+
+
+    Free: 1
+
+
+    (c)
+
+
+    Figure 6-11. Three resource allocation states: (a) Safe. (b) Safe. (c) Unsafe.'
+  merge: -1
+  img_proc: true
+- pgno: 183
+  md: '# # The Banker''s Algorithm for Multiple Resources (1)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_183_0.png)
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_183_1.png)
+
+
+    E = (6342)
+
+    P = (5322)
+
+    A = (1020)
+
+
+    Figure 6-12. The banker''s algorithm with multiple resources.'
+  merge: -1
+  img_proc: true
+- pgno: 184
+  md: '# # The Banker''s Algorithm for Multiple Resources (2)
+
+
+    Algorithm for checking to see if a state is safe:
+
+
+    +   1. Look for row, R, whose unmet resource needs all ≤ A. If no such row exists,
+    system will eventually deadlock since no process can run to completion
+
+
+    +   2. Assume process of row chosen requests all resources it needs and finishes.
+    Mark process as terminated, add all its resources to the A vector.
+
+
+    +   3. Repeat steps 1 and 2 until either all processes marked terminated (initial
+    state was safe) or no process left whose resource needs can be met (there is a
+    deadlock).'
+  merge: -1
+  img_proc: true
+- pgno: 185
+  md: '# Deadlock Prevention
+
+
+    +   - Attacking the mutual exclusion condition
+
+    +   - Attacking the hold and wait condition
+
+    +   - Attacking the no preemption condition
+
+    +   - Attacking the circular wait condition'
+  merge: -1
+  img_proc: true
+- pgno: 186
+  md: '# # Attacking the Circular Wait Condition
+
+
+    +   1. Imagesetter
+
+    +   2. Scanner
+
+    +   3. Plotter
+
+    +   4. Tape drive
+
+    +   5. CD-ROM drive
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_186_0.png)
+
+
+    (a)
+
+
+    (b)
+
+
+    Figure 6-13. (a) Numerically ordered resources.
+
+    (b) A resource graph.'
+  merge: -1
+  img_proc: true
+- pgno: 187
+  md: '# Approaches to Deadlock Prevention
+
+
+    | Condition | Approach |
+
+    |---|---|
+
+    | Mutual exclusion | Spool everything |
+
+    | Hold and wait | Request all resources initially |
+
+    | No preemption | Take resources away |
+
+    | Circular wait | Order resources numerically |
+
+
+    Figure 6-14. Summary of approaches to deadlock prevention.'
+  merge: -1
+  img_proc: true
+- pgno: 188
+  md: '# Other Issues
+
+
+    +   - Two-phase locking
+
+    +   - Communication deadlocks
+
+    +   - Livelock
+
+    +   - Starvation'
+  merge: -1
+  img_proc: true
+- pgno: 189
+  md: '# # Communication Deadlocks
+
+
+    ![](img/856cffd4f5aea27d2abb1fffe70c2f49_189_0.png)
+
+
+    Figure 6-15. A resource deadlock in a network.'
+  merge: -1
+  img_proc: true
+- pgno: 190
+  md: "# # Livelock\n\n```\nvoid process_A(void) {\n    enter_region(&resource_1);\n\
+    \    enter_region(&resource_2);\n    use_both_resources();\n    leave_region(&resource_2);\n\
+    \    leave_region(&resource_1);\n}\n```\n\n```\nvoid process_B(void) {\n    enter_region(&resource_2);\n\
+    \    enter_region(&resource_1);\n    use_both_resources();\n    leave_region(&resource_1);\n\
+    \    leave_region(&resource_2);\n}\n```\n\nFigure 6-16. Busy waiting that can\
+    \ lead to livelock."
+  merge: -1
+  img_proc: true

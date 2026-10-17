@@ -1,0 +1,267 @@
+- - '##'
+  - 'Chapter 04: Dynamic Programming Algorithm'
+- - '##'
+  - An example of task scheduling
+- - '##'
+  - Definition
+- - '##'
+  - Where DP applicable?
+- - '##'
+  - Procedures
+- - '##'
+  - Problem statements
+- - '##'
+  - Solutions
+- - '##'
+  - Step 1. Identifying subproblems
+- - '##'
+  - Step 2. Validating Principle of Optimization
+- - '##'
+  - '[Optimal substructure]'
+- - '##'
+  - Step 3. Defining an optimal value function
+- - '##'
+  - Step 4. Deriving the recursive equation
+- - '##'
+  - Step 5. Solve recursive equation
+- - '##'
+  - Recursive version
+- - '##'
+  - 'Algorithm complexity:'
+- - '##'
+  - 'Recursive version: an example'
+- - '##'
+  - 'First attempt: using array'
+- - '##'
+  - 'Second attempt: using a tuple'
+- - '##'
+  - 'Tuple method: principle'
+- - '##'
+  - 'Tuple method: an example'
+- - '##'
+  - Problem Description
+- - '##'
+  - Identifying subproblems
+- - '##'
+  - Define the optimal function
+- - '##'
+  - An example
+- - '##'
+  - Recursive Algorithm for MPC
+- - '##'
+  - Revision recursive algorithm
+- - '##'
+  - Iterative algorithm for MPC
+- - '##'
+  - Outline
+- - '##'
+  - Problem statement
+- - '##'
+  - Subproblem identification by edges
+- - '##'
+  - Proof
+- - '##'
+  - Subproblems identification by intermediate vertices
+- - '##'
+  - Theorem 16
+- - '##'
+  - Proof
+- - '##'
+  - Iterative algorithm for ASAP
+- - '##'
+  - An example
+- - '##'
+  - Outline
+- - '##'
+  - Problem statement
+- - '##'
+  - Problem statement
+- - '##'
+  - Problem statement
+- - '##'
+  - Problem statement
+- - '##'
+  - Derive the recursive equation
+- - '##'
+  - Outline
+- - '##'
+  - Problem statements
+- - '##'
+  - Definitions
+- - '#'
+  - DP approach for LCS
+- - '##'
+  - DP approach for LCS
+- - '##'
+  - Recursive equation
+- - '##'
+  - 'Coming up: Backtracking Algorithm'
+- - '#'
+  - 'Chapter 05: Backtracking Algorithm Design and Analysis of Computer Algorithms'
+- - '##'
+  - Outline
+- - '##'
+  - Motivations
+- - '##'
+  - Solution space
+- - '##'
+  - Solution space, cont.
+- - '##'
+  - Define solution representations
+- - '##'
+  - Formulate solution space
+- - '##'
+  - Definition
+- - '##'
+  - State space tree
+- - '##'
+  - Subset sum using FLT representation
+- - '##'
+  - Searching solution space
+- - '##'
+  - Searching solution space
+- - '##'
+  - Bounding function for Subset sum problem
+- - '##'
+  - Subset sum algorithm with bounding
+- - '##'
+  - State space tree with bounding
+- - '##'
+  - Outline
+- - '##'
+  - Problem statement
+- - '##'
+  - Solution
+- - '##'
+  - Bound function
+- - '##'
+  - State space tree with bounding
+- - '##'
+  - Outline
+- - '##'
+  - Bound function for 0/1 Knapsack
+- - '##'
+  - Backtrack algorithm for Knapsack
+- - '##'
+  - NEW
+- - '##'
+  - Outline
+- - '##'
+  - 'Max Clique: problem statements'
+- - '##'
+  - An example
+- - '##'
+  - 'Max clique: bounding'
+- - '##'
+  - Backtrack algorithm for maxclique
+- - '##'
+  - Outline
+- - '##'
+  - TSP
+- - '##'
+  - Bounding
+- - '##'
+  - Backtrack algorithm for maxclique
+- - '##'
+  - 'Coming up: Branch & Bound Algorithm'
+- - '#'
+  - 'Chapter 06: Branch & Bound Algorithm'
+- - '##'
+  - Outline
+- - '##'
+  - Motivations
+- - '##'
+  - Managing live nodes
+- - '##'
+  - Bounding solution states
+- - '##'
+  - State space tree with lower/upper bounds
+- - '##'
+  - Problem statements
+- - '##'
+  - Procedures
+- - '##'
+  - B&B vs Backtrack
+- - '##'
+  - Outline
+- - '##'
+  - Problem statements
+- - '##'
+  - B&B solutions
+- - '##'
+  - An example
+- - '##'
+  - The basic idea
+- - '##'
+  - Matrix reduction
+- - '##'
+  - Lower bound estimation
+- - '##'
+  - An example of state space tree
+- - '##'
+  - Outline
+- - '##'
+  - Definitions
+- - '##'
+  - Properties of A-star
+- - '##'
+  - 'An example: 8 puzzle problem'
+- - '##'
+  - Design a heuristic cost function
+- - '##'
+  - State space tree
+- - '##'
+  - Pseudo code of A-star algorithm
+- - '#'
+  - 'Coming up: NP Complete Problems'
+- - '#'
+  - 'Chapter 07: Non-deterministic Polynomial Complete Problems'
+- - '##'
+  - Outline
+- - '##'
+  - Are problems easy or hard?
+- - '##'
+  - What makes a problem hard ?
+- - '##'
+  - Hardness equivalence of problems
+- - '##'
+  - Are problems easy or hard?
+- - '##'
+  - intractable problem
+- - '##'
+  - intractable problem
+- - '##'
+  - Are problems easy or hard?
+- - '##'
+  - unsolvable problems
+- - '##'
+  - Examples
+- - '##'
+  - Example 1. 0/1 Knapsack problem
+- - '#'
+  - 'Example 2. Composites numbers: Are there integers $k > 1$ and $p > 1$ such that
+    $n = kp$?'
+- - '#'
+  - Definition
+- - '#'
+  - Outline
+- - '#'
+  - Definition
+- - '##'
+  - Definition
+- - '##'
+  - Polynomial Reduction
+- - '##'
+  - Theorem 1
+- - '##'
+  - Definition
+- - '##'
+  - Definition
+- - '##'
+  - Kth largest subset problem
+- - '##'
+  - Euler Diagram
+- - '##'
+  - Lists of NP-Complete Problems
+- - '##'
+  - Summary

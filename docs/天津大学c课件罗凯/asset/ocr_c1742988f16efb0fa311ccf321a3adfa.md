@@ -1,0 +1,24 @@
+```
+```cpp
+#include <iostream>
+using namespace std;
+
+float circleArea(float r);          // func prototype
+
+// main(): calculate area of circle
+int main() {
+    cout << "Enter radius: ";
+    float myRadius;
+    cin >> myRadius;
+    float area = circleArea(myRadius);  // func call
+    cout << "Circle has area " << area;
+    return 0;
+}
+
+// circleArea(): compute area of a circle
+float circleArea(float radius) {     // func definition
+    const float PI = 3.1415;
+    return PI * radius * radius;
+}
+```
+```

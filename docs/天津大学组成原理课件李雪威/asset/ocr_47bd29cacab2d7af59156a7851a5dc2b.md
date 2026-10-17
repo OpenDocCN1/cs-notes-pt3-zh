@@ -1,0 +1,17 @@
+# # Condition Codes (Explicit Setting: Compare)
+
+# ## Explicit Setting by Compare Instruction
+
++   - `cmpq Src2, Src1`
+
++   - `cmpq b,a` like computing `a-b` without setting destination
+
++   - **CF set** if carry out from most significant bit (used for unsigned comparisons)
+
++   - **ZF set** if `a == b`
+
++   - **SF set** if `(a-b) < 0` (as signed)
+
++   - **OF set** if two’s-complement (signed) overflow
+
++   - `(a>0 && b<0 && (a-b)<0) || (a<0 && b>0 && (a-b)>0)`

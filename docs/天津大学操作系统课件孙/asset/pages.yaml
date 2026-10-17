@@ -1,0 +1,4813 @@
+- pgno: 0
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Agenda
+
+
+    # Memory Management
+
+
+    +   - Why?
+
+    +   - What?
+
+    +   - How?'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# General Memory Problem
+
+
+    +   - We have a limited (expensive) physical resource: **main memory**
+
+    +   - We want to use it as efficiently as possible
+
+    +   - We have an abundant, but slower, resource: **disk**'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Lots of Variants
+
+
+    +   - Many processes, total size less than memory
+
+    +     - Technically possible to pack them together
+
+    +     - Will programs know about each other’s existence?
+
+    +   - One process, size exceeds memory
+
+    +     - Can you only keep part of the program in memory?
+
+    +   - Lots of processes, total size exceeds memory
+
+    +     - What programs are in memory, and how to decide?'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Memory Manager
+
+
+    +   - It’s task: Manage memory hierarchy
+
+    +     - Track used and free memory
+
+    +     - Allocate memory to processes
+
+    +     - Reclaim (De-allocate) memory
+
+    +     - **Swapping** between main memory and disk'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/173140081d013d40ccca0b8e597b7a43_5_0.png)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_5_1.png)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_5_2.png)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_5_3.png)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_5_4.png)'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# # Memory Hierarchy
+
+
+    Typical access time
+
+
+    1 nsec
+
+
+    2 nsec
+
+
+    10 nsec
+
+
+    10 msec
+
+
+    100 sec
+
+
+    Typical capacity
+
+
+    <1 KB
+
+
+    4 MB
+
+
+    512-2048 MB
+
+
+    200-1000 GB
+
+
+    400-800  GB
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_6_0.png)
+
+
+    A typical memory hierarchy.
+
+    The numbers are very rough approximations.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Memory Cache
+
+
+    Questions when dealing with cache:
+
+
+    +   - When to put a new item into the cache.
+
+    +   - Which cache line to put the new item in.
+
+    +   - Which item to remove from the cache when a slot is needed.
+
+    +   - Where to put a newly evicted item in the larger memory.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# # Types of Memory
+
+
+    +   - **Primary Memory** (a.k.a. RAM)
+
+    +     – Holds data and programs used by a process that is executing
+
+    +     – Only type of memory that a CPU deals with
+
+    +   - **Secondary Memory** (i.e. hard disk)
+
+    +     – Non-volatile memory used to store data when a process is not executing'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# The Memory Manager (MM)
+
+
+    +   - **Purpose:** to manage the use of primary and secondary memory.
+
+    +   - **Responsible for:**
+
+    +     - Allocating primary memory to processes
+
+    +     - Moving processes between primary and secondary memory
+
+    +     - Optimizing memory usage'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Process Memory
+
+
+    +   - There are two types of memory that can
+
+    +     be used within a process:
+
+    +   - **Stack:** used for local/automatic
+
+    +     variables and for passing parameters to
+
+    +     function calls
+
+    +   - **Heap:** used for dynamic memory
+
+    +     allocation'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# # Process Memory Layout
+
+
+    | Environment Variables, etc. |
+
+    |-----------------------------|
+
+    | Stack Segment               |
+
+    |                             |
+
+    |                             |
+
+    |                             |
+
+    | Heap Storage                |
+
+    | Data Segment (global and    |
+
+    | static variables)           |
+
+    | Text Segment                |
+
+
+    +   - Allocates more memory than needed at first
+
+    +   - Heap grows towards stack for dynamic memory allocation
+
+    +   - Stack grows towards heap when automatic variables are created'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# # Single-Partition Strategies
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_12_0.png)
+
+
+    Three simple ways of organizing memory with an operating system and one user process.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# # Fixed-Partition Strategies
+
+
+    +   - Memory divided into _fixed-size_ regions
+
+    +   - Size of each region usually not equal
+
+    +   - MM will allocate a region to a process that
+
+    +     _best fits_ it
+
+    +   - Unused memory within an allocated
+
+    +     partition called _internal fragmentation_'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# # Fixed-Partition Example
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_14_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# Multiprogramming with Fixed Partitions
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_15_0.png)
+
+
+    +   - **Fixed memory partitions**
+
+    +     - separate input queues for each partition
+
+    +     - single input queue'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# # Variable-Partition Strategies
+
+
+    +   - MM allocates regions equal to the memory requirements of
+
+    +   a process at any given time
+
+    +   - As processes die, _holes_ develop in the memory
+
+    +   - MM inserts new processes into holes'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# # Variable-Partition Example
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_17_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# # More...
+
+
+    +   - Results in *External Fragmentation*
+
+    +   - After a while, only small processes will be able to run due
+
+    +   to too much external fragmentation
+
+    +   - MM must *compact* the memory to make more space
+
+    +   available for larger processes'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# # Base and Limit Registers
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_20_0.png)
+
+
+    Base and limit registers can be used to give each process a separate address space.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# Memory Management with Bitmaps
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_21_0.png)
+
+
+    (a) A part of memory with five processes and three holes. The tick marks show
+    the memory allocation units. The shaded regions (0 in the bitmap) are free. (b)
+    The corresponding bitmap. (c) The same information as a list.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# # Memory Management with Linked Lists
+
+
+    Four neighbor combinations
+
+    for the terminating process, X.
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_22_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# Storage Placement Strategies
+
+
+    +   - **First Fit**
+
+    +     - Scan; use the first available hole whose size is sufficient to meet the
+    need.
+
+    +     - Problem: Creates average size holes; more fragmentation closer to scan
+    start.
+
+    +   - **Next Fit**
+
+    +     - Minor variation of first fit: keep track of where last search ended, restart
+    from there.
+
+    +     - Problem: slightly worse performance than first fit.
+
+    +   - **Best Fit**
+
+    +     - Use the hole whose size is equal to the need, or if none is equal, the
+    smallest hole that is large enough.
+
+    +     - Problem: Creates small holes that can''t be used.
+
+    +   - **Worst Fit**
+
+    +     - Use the largest available hole.
+
+    +     - Problem: Gets rid of large holes, making it difficult to run large processes.
+
+    +   - **Quick Fit**
+
+    +     - maintains separate lists for some of the more common sizes requested.
+
+    +     - When a request comes for placement, it finds the closest fit.
+
+    +     - This is a very fast scheme, but a merge is expensive. If merge is not
+    done, memory will quickly fragment into a large number of holes.'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# # Modeling Multiprogramming
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_24_0.png)
+
+
+    CPU utilization as a function of number of processes in memory'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# # Chapter 3
+
+
+    # # Memory Management
+
+
+    # # Virtual Memory'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Swapping（1）
+
+
+    +   - Comes from the basis that when a process is blocked, it does not need to
+    be in memory
+
+    +   - Thus, it is possible to save a process’ entire address space to disk
+
+    +   - Saving to a “swap file” or a “swap partition”'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# # Swapping (3)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_29_0.png)
+
+
+    +   - Allocating space for growing data segment
+
+    +   - Allocating space for growing stack & data segment'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# Compaction (Similar to Garbage Collection)
+
+
+    +   - Assumes programs are all relocatable (how supported?)
+
+    +   - Processes must be suspended during compaction
+
+    +   - Needed only when fragmentation gets very bad
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_30_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# Memory Management Problems
+
+
+    +   - Fixed partitions suffer from internal fragmentation
+
+    +   - Variable partitions suffer from external fragmentation
+
+    +   - Compaction suffers from overhead
+
+    +   - Overlays are painful to program efficiently
+
+    +   - Swapping requires writing to disk sectors'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# # Alternative Approach:
+
+    # Virtual Memory
+
+
+    +   - Provide user with virtual memory that is as big as user needs
+
+    +   - Store virtual memory on disk
+
+    +   - Store in real memory those parts of virtual memory currently under use
+
+    +   - Load and store cached virtual memory without user program intervention (“transparently”)'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# Virtual Memory
+
+
+    +   - Comes from the basis that all of a process’ address space is not needed
+    at once
+
+    +   - Thus, chop up the address space into smaller parts and only load the parts
+    that are needed
+
+    +   - These parts need not be contiguous in memory!'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# # Benefits of Virtual Memory
+
+
+    +   - Use secondary storage($)
+
+    +     - Extend DRAM($$$) with reasonable performance
+
+    +   - Protection
+
+    +     - Processes do not step on each other
+
+    +   - Convenience
+
+    +     - Flat address space
+
+    +     - Processes have the same view of the world
+
+    +     - Load and store cached virtual memory without user program intervention
+
+    +   - Reduce fragmentation:
+
+    +     - make cacheable units all the same size (page=allocation unit)
+
+    +   - Remove memory deadlock possibilities:
+
+    +     - permit pre-emption of real memory'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# # Process Memory Layout
+
+
+    | Environment Variables, etc. |
+
+    |-----------------------------|
+
+    | Stack Segment               |
+
+    |                             |
+
+    | Heap Storage                |
+
+    | Data Segment (global and
+
+    static variables)           |
+
+    | Text Segment                |
+
+
+    +   - Allocates more
+
+    +   memory than needed
+
+    +   at first
+
+
+    +   - Heap grows towards
+
+    +   stack for dynamic
+
+    +   memory allocation
+
+
+    +   - Stack grows towards
+
+    +   heap when automatic
+
+    +   variables are created'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# Paging
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_36_0.png)
+
+
+    # Page
+
+
+    # Page
+
+    Frame
+
+
+    | Page | Page Frame |
+
+    |---|---|
+
+    | N-1 | 3 |
+
+    | … … | … … |
+
+    | 4 | 6 |
+
+    | 3 | 10 |
+
+    | 2 | 4 |
+
+    | 1 | 2 |
+
+    | 0 | 7 |
+
+
+    |  |
+
+    |---|
+
+    | 10 |
+
+    | 9 |
+
+    | 8 |
+
+    | 7 |
+
+    | 6 |
+
+    | 5 |
+
+    | 4 |
+
+    | 3 |
+
+    | 2 |
+
+    | 1 |
+
+    | 0 |
+
+
+    # Logical
+
+    Memory
+
+
+    # Page Table
+
+
+    # Physical Memory'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# Structure of Page Table Entry
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_40_0.png)
+
+
+    A typical page table entry.'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# # Speeding Up Paging
+
+
+    # ## Paging implementation issues:
+
+
+    +   - The mapping from virtual address to physical address must be fast.
+
+    +   - If the virtual address space is large, the page table will be large.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# Translation Lookaside Buffers
+
+
+    | Valid | Virtual page | Modified | Protection | Page frame |
+
+    |---|---:|---:|---|---:|
+
+    | 1 | 140 | 1 | RW | 31 |
+
+    | 1 | 20 | 0 | R X | 38 |
+
+    | 1 | 130 | 1 | RW | 29 |
+
+    | 1 | 129 | 1 | RW | 62 |
+
+    | 1 | 19 | 0 | R X | 50 |
+
+    | 1 | 21 | 0 | R X | 45 |
+
+    | 1 | 860 | 1 | RW | 14 |
+
+    | 1 | 861 | 1 | RW | 75 |
+
+
+    A TLB to speed up paging.'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# # Inverted Page Tables
+
+
+    Traditional page table with an entry for each of the 2^52 pages
+
+
+    2^52 - 1
+
+
+    0
+
+
+    Indexed by virtual page
+
+
+    1-GB physical memory has 2^18 4-KB page frames
+
+
+    2^18 - 1
+
+
+    0
+
+
+    Hash table
+
+
+    2^18 - 1
+
+
+    0
+
+
+    Indexed by hash on virtual page
+
+
+    Virtual page
+
+
+    Page frame
+
+
+    Comparison of a traditional page table with an inverted page table.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# # Virtual Memory Usage
+
+
+    +   - Virtual memory is used in most modern operating systems:
+
+    +       - Windows NT/2000/XP uses one or more “page files” to swap pages
+
+    +       - Linux uses a hard disk partition (“swap partition”) to swap to'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# # Pros/Cons
+
+
+    +   - Since only the necessary parts of the process are loaded, processes load
+    faster and it allows much better memory utilization
+
+
+    +   - Needs lots of extra hardware to accomplish the job (efficiently)
+
+
+    +   - In some cases too much paging (i.e. “thrashing”) can occur, which is _very_
+    slow'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# # Page Fault Handling (1)
+
+
+    +   - The hardware traps to the kernel, saving the program counter on the stack.
+
+    +   - An assembly code routine is started to save the general registers and other
+    volatile information.
+
+    +   - The operating system discovers that a page fault has occurred, and tries
+    to discover which virtual page is needed.
+
+    +   - Once the virtual address that caused the fault is known, the system checks
+    to see if this address is valid and the protection consistent with the access'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# Page Fault Handling (2)
+
+
+    +   - If the page frame selected is dirty, the page is scheduled for transfer
+    to the disk, and a context switch takes place.
+
+    +   - When page frame is clean, operating system looks up the disk address where
+    the needed page is, schedules a disk operation to bring it in.
+
+    +   - When disk interrupt indicates page has arrived, page tables updated to reflect
+    position, frame marked as being in normal state.'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# 作业：
+
+
+    +   - P139  2, 3, 4, 5'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# Chapter 3
+
+
+    # Memory Management
+
+
+    # Page Replacement'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: "# # Thrashing\n\n+   - If a process does not have “enough” pages, the page-fault\
+    \ rate is very high. This leads to:\n+   \n+     – low CPU utilization\n+   \n\
+    +     – OS scheduler thinks that it needs to increase the degree of multiprogramming\
+    \ → new processes are added → even less pages for each process ...\n\n+   - Thrashing\
+    \ ≡ a process is busy swapping pages in and out\n+   \n+     – → Spending more\
+    \ time paging than executing.\n\n![](img/173140081d013d40ccca0b8e597b7a43_52_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# # Demand Paging
+
+
+    +   - **Demand paging**: pages are only loaded into memory when they are demanded
+    during execution
+
+    +     – Less I/O needed
+
+    +     – Less memory needed
+
+    +     – Higher degree of multiprogramming
+
+    +     – Faster response
+
+
+    +   - **Pager (lazy swapper)** never swaps a page into memory unless that page
+    will be needed.
+
+
+    +   - An extreme case: **Pure demand paging** starts a process with no pages in
+    memory ...
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_53_0.png)
+
+
+    Transfer of a Paged Memory to Contiguous Disk Space'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# # Page Replacement Algorithms
+
+
+    +   - Page fault forces choice
+
+    +     - which page must be removed
+
+    +     - make room for incoming page
+
+
+    +   - Modified page must first be saved
+
+    +     - unmodified just over written
+
+
+    +   - Better not to choose an often used page
+
+    +     - will probably need to be brought back in soon'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# Page Replacement Algorithms
+
+
+    +   - Random page replacement
+
+    +   - Optimal page replacement algorithm
+
+    +   - Not recently used page replacement
+
+    +   - First-In, First-Out page replacement
+
+    +   - Second chance page replacement
+
+    +   - Clock page replacement
+
+    +   - Least recently used page replacement
+
+    +   - Working set page replacement
+
+    +   - WSClock page replacement'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "# Optimal Page Replacement Algorithm\n\n+   - Replace page needed at the farthest\
+    \ point in future\n+     - Optimal but unrealizable\n+   \n+   - Estimate by …\n\
+    +     - logging page use on previous runs of process\n+     - although this is\
+    \ impractical"
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# # Optimal Example
+
+
+    12 references, 7 faults
+
+
+    | Page Refs | Fault? | Page Contents |
+
+    |-----------|--------|---------------|
+
+    | A         | yes    | A             |
+
+    | B         | yes    | B A           |
+
+    | C         | yes    | C B A         |
+
+    | D         | yes    | D B A         |
+
+    | A         | no     | D B A         |
+
+    | B         | no     | D B A         |
+
+    | E         | yes    | E B A         |
+
+    | A         | no     | E B A         |
+
+    | B         | no     | E B A         |
+
+    | C         | yes    | C E B         |
+
+    | D         | yes    | D C E         |
+
+    | E         | no     | D C E         |'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# Not Recently Used Page Replacement
+
+    Algorithm（NRU）
+
+
+    +   - Each page has Reference bit, Modified bit
+
+    +     - bits are set when page is referenced, modified
+
+    +   - Pages are classified
+
+    +     0: not referenced, not modified
+
+    +     1: not referenced, modified
+
+    +     2: referenced, not modified
+
+    +     3: referenced, modified
+
+    +   - NRU removes page at random
+
+    +     - from lowest numbered non empty class'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# FIFO Page Replacement Algorithm
+
+
+    +   - Maintain a linked list of all pages
+
+    +     - in order they came into memory
+
+
+    +   - Page at beginning of list replaced
+
+
+    +   - Disadvantage
+
+    +     - page in memory the longest may be often used'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# FIFO
+
+
+    12 references, 9 faults
+
+
+    | Page Refs | Fault? | 3 Page Frames |  |  |
+
+    |---|---|---|---|---|
+
+    | A | yes | A |  |  |
+
+    | B | yes | B | A |  |
+
+    | C | yes | C | B | A |
+
+    | D | yes | D | C | B |
+
+    | A | yes | A | D | C |
+
+    | B | yes | B | A | D |
+
+    | E | yes | E | B | A |
+
+    | A | no | E | B | A |
+
+    | B | no | E | B | A |
+
+    | C | yes | C | E | B |
+
+    | D | yes | D | C | E |
+
+    | E | no | D | C | E |'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# Belady''s Anomaly (for FIFO)
+
+
+    Same reference string as with 3 frames (9 page faults).
+
+
+    12 references, 10 faults
+
+
+    | Page Refs | Fault? | 4 Page Frames |  |  |  |
+
+    |---|---|---|---|---|---|
+
+    | A | yes | A |  |  |  |
+
+    | B | yes | B | A |  |  |
+
+    | C | yes | C | B | A |  |
+
+    | D | yes | D | C | B | A |
+
+    | A | no | D | C | B | A |
+
+    | B | no | D | C | B | A |
+
+    | E | yes | E | D | C | B |
+
+    | A | yes | A | E | D | C |
+
+    | B | yes | B | A | E | D |
+
+    | C | yes | C | B | A | E |
+
+    | D | yes | D | C | B | A |
+
+    | E | yes | E | D | C | B |
+
+
+    Belady’s Anomaly for FIFO: (Sometimes) as the number of page frames increase,
+    so does the fault rate.'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# # Second Chance Example
+
+
+    12 references,
+
+    9 faults
+
+
+    | Page Refs | Fault? | Page Contents |
+
+    |---|---|---|
+
+    | A | yes | A* |
+
+    | B | yes | B* | A* |
+
+    | C | yes | C* | B* | A* |
+
+    | D | yes | D* | C | B |
+
+    | A | yes | A* | D* | C |
+
+    | B | yes | B* | A* | D* |
+
+    | E | yes | E* | B | A |
+
+    | A | no | E* | B | A* |
+
+    | B | no | E* | B* | A* |
+
+    | C | yes | C* | E | B |
+
+    | D | yes | D* | C* | E |
+
+    | E | no | D* | C* | E* |'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# # The Clock Page Replacement Algorithm
+
+
+    When a page fault occurs, the page the hand is pointing to is inspected. The action
+    taken depends on the R bit: R = 0: Evict the page R = 1: Clear R and advance hand
+
+
+    The clock page replacement algorithm.
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_64_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# Least Recently Used (LRU)
+
+
+    +   - Assume pages used recently will used again soon
+
+    +     - throw out page that has been unused for longest time
+
+    +   - Must keep a linked list of pages
+
+    +     - most recently used at front, least at rear
+
+    +     - update this list every memory reference !!
+
+    +   - Alternatively keep counter in each page table entry
+
+    +     - choose page with lowest value counter
+
+    +     - periodically zero the counter'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# # LRU Page Replacement Algorithm
+
+
+    LRU using a matrix when pages are referenced in the order 0, 1, 2, 3, 2, 1, 0,
+    3, 2, 3.
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_66_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# Simulating LRU in Software
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_67_0.png)
+
+
+    The aging algorithm simulates LRU in software. Shown are six pages for five clock
+    ticks. The five clock ticks are represented by (a) to (e).'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# # LRU and Anomalies
+
+
+    Anomalies cannot occur.
+
+
+    12 references, 8 faults
+
+
+    | Page Refs | Fault? | Page Contents |
+
+    |-----------|--------|---------------|
+
+    | A         | yes    | A             |
+
+    | B         | yes    | B A           |
+
+    | C         | yes    | C B A         |
+
+    | D         | yes    | D C B A       |
+
+    | A         | no     | A D C B       |
+
+    | B         | no     | B A D C       |
+
+    | E         | yes    | E B A D       |
+
+    | A         | no     | A E B D       |
+
+    | B         | no     | B A E D       |
+
+    | C         | yes    | C B A E       |
+
+    | D         | yes    | D C B A       |
+
+    | E         | yes    | E D C B       |'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# # Working Set Page Replacement (1)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_69_0.png)
+
+
+    The working set is the set of pages used by the k most recent memory references.
+    The function w(k, t) is the size of the working set at time t.'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '# Working Set Page Replacement (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_70_0.png)
+
+
+    The working set algorithm.'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# # The WSClock Page Replacement Algorithm (1)
+
+
+    When the hand comes all the way around to its starting point  there are two cases
+    to consider:
+
+
+    +   - At least one write has been scheduled.
+
+    +   - No writes have been scheduled.'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '# Local versus Global Allocation Policies (1)
+
+
+    | Page | Age |
+
+    |---|---:|
+
+    | A0 | 10 |
+
+    | A1 | 7 |
+
+    | A2 | 5 |
+
+    | A3 | 4 |
+
+    | A4 | 6 |
+
+    | A5 | 3 |
+
+    | B0 | 9 |
+
+    | B1 | 4 |
+
+    | B2 | 6 |
+
+    | B3 | 2 |
+
+    | B4 | 5 |
+
+    | B5 | 6 |
+
+    | B6 | 12 |
+
+    | C1 | 3 |
+
+    | C2 | 5 |
+
+    | C3 | 6 |
+
+
+    | Page |
+
+    |---|
+
+    | A0 |
+
+    | A1 |
+
+    | A2 |
+
+    | A3 |
+
+    | A4 |
+
+    | A6 |
+
+    | B0 |
+
+    | B1 |
+
+    | B2 |
+
+    | B3 |
+
+    | B4 |
+
+    | B5 |
+
+    | B6 |
+
+    | C1 |
+
+    | C2 |
+
+    | C3 |
+
+
+    | Page |
+
+    |---|
+
+    | A0 |
+
+    | A1 |
+
+    | A2 |
+
+    | A3 |
+
+    | A4 |
+
+    | A5 |
+
+    | B0 |
+
+    | B1 |
+
+    | B2 |
+
+    | A6 |
+
+    | B4 |
+
+    | B5 |
+
+    | B6 |
+
+    | C1 |
+
+    | C2 |
+
+    | C3 |
+
+
+    (a) Original configuration. (b) Local page replacement. (c) Global page replacement.'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# # Local versus Global Allocation Policies (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_76_0.png)
+
+
+    Page fault rate as a function
+
+    of the number of page frames assigned.'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '# Page Size (1)
+
+
+    # Small page size
+
+
+    # Advantages
+
+
+    +   - less internal fragmentation
+
+    +   - better fit for various data structures, code sections
+
+    +   - less unused program in memory
+
+
+    # Disadvantages
+
+
+    +   - programs need many pages, larger page tables'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# # Page Size (2)
+
+
+    # ## Overhead due to page table and internal fragmentation
+
+
+    s = average process size in bytes
+
+    p = page size in bytes
+
+    e = page entry
+
+
+    overhead = \(\frac{s \cdot e}{p} + \frac{p}{2}\)
+
+
+    page table space
+
+
+    internal fragmentation
+
+
+    Optimized when
+
+    \(p = \sqrt{2se}\)'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# Separate Instruction and Data Spaces
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_82_0.png)
+
+
+    One address space
+
+
+    Separate I and D spaces'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '# Shared Pages
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_83_0.png)
+
+
+    Process table
+
+
+    Program
+
+
+    Data 1
+
+
+    Data 2
+
+
+    Page tables
+
+
+    Two processes sharing same program sharing its page table'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# # Implementation Issues
+
+
+    # ## Operating System Involvement with Paging
+
+
+    Four times when OS involved with paging
+
+
+    +   - **Process creation**
+
+    +     - determine program size
+
+    +     - create page table
+
+    +   - **Process execution**
+
+    +     - MMU reset for new process
+
+    +     - TLB flushed
+
+    +   - **Page fault time**
+
+    +     - determine virtual address causing fault
+
+    +     - swap target page out, needed page in
+
+    +   - **Process termination time**
+
+    +     - release page table, pages'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# Page Fault Handling (1)
+
+
+    +   - Hardware traps to kernel
+
+    +   - General registers saved
+
+    +   - OS determines which virtual page needed
+
+    +   - OS checks validity of address, seeks page frame
+
+    +   - If selected frame is dirty, write it to disk'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# Page Fault Handling (2)
+
+
+    +   - OS brings schedules new page in from disk
+
+    +   - Page tables updated
+
+    +   - Faulting instruction backed up to when it began
+
+    +   - Faulting process scheduled
+
+    +   - Registers restored
+
+    +   - Program continues'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '# # Instruction Backup
+
+
+    MOVE.L #6(A1), 2(A0)
+
+
+    16 Bits
+
+
+    | 1000 | MOVE |
+
+    | --- | --- |
+
+    | 1002 | 6 |
+
+    | 1004 | 2 |
+
+
+    Opcode
+
+    First operand
+
+    Second operand
+
+
+    An instruction causing a page fault'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# Separation of Policy and Mechanism
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_90_0.png)
+
+
+    Page fault handling with an external pager'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '# 作业
+
+
+    P 139 页
+
+
+    12，22，24，26，27，28'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '# Chapter 3
+
+
+    # Memory Management
+
+
+    # Segmentation'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# # Separate Instruction and Data Spaces
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_93_0.png)
+
+
+    (a) One address space.
+
+    (b) Separate I and D spaces.'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '# Shared Pages
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_94_0.png)
+
+
+    Two processes sharing the same program
+
+    sharing its page table.'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# Segmentation (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_97_0.png)
+
+
+    In a one-dimensional address space with growing tables, one table may bump into
+    another.'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# # Segmentation (3)
+
+
+    A segmented memory allows each table to grow or shrink independently of the other
+    tables.
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_98_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '# # Implementation of Pure Segmentation
+
+
+    | Consideration | Paging | Segmentation |
+
+    |---|---|---|
+
+    | Need the programmer be aware that this technique is being used? | No | Yes |
+
+    | How many linear address spaces are there? | 1 | Many |
+
+    | Can the total address space exceed the size of physical memory? | Yes | Yes
+    |
+
+    | Can procedures and data be distinguished and separately protected? | No | Yes
+    |
+
+    | Can tables whose size fluctuates be accommodated easily? | No | Yes |
+
+    | Is sharing of procedures between users facilitated? | No | Yes |
+
+    | Why was this technique invented? | To get a large linear address space without
+    having to buy more physical memory | To allow programs and data to be broken up
+    into logically independent address spaces and to aid sharing and protection |
+
+
+    Comparison of paging and segmentation.'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# Segmentation
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_100_0.png)
+
+
+    Figure 3-34. (a)–(d) Development of checkerboarding. (e) Removal of the checkerboarding
+    by compaction.'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# Segmentation with Paging: MULTICS (1)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_101_0.png)
+
+
+    Figure 3-35. The MULTICS virtual memory. (a) The descriptor segment points to
+    the page tables.'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: '# # Segmentation with Paging: MULTICS (3)
+
+
+    When a memory reference occurs, the following algorithm is carried out:
+
+
+    +   - The segment number used to find segment descriptor.
+
+    +   - Check is made to see if the segment''s page table is in memory.
+
+    +     - If not, segment fault occurs.
+
+    +     - If there is a protection violation, a fault (trap) occurs.'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '# Segmentation with Paging: MULTICS (4)
+
+
+    +   - Page table entry for the requested virtual page examined.
+
+    +     - If the page itself is not in memory, a page fault is triggered.
+
+    +     - If it is in memory, the main memory address of the start of the page is
+    extracted from the page table entry
+
+    +   - The offset is added to the page origin to give the main memory address where
+    the word is located.
+
+    +   - The read or store finally takes place.'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: '# # Segmentation with Paging: MULTICS (5)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_105_0.png)
+
+
+    Figure 3-36. A 34-bit MULTICS virtual address.'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: '# Segmentation with Paging: MULTICS (6)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_106_0.png)
+
+
+    Figure 3-37. Conversion of a two-part MULTICS address into a main memory address.'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: '# Segmentation with Paging: MULTICS (7)
+
+
+    Comparison field: Segment number and Virtual page. Is this entry used?
+
+
+    | Segment number | Virtual page | Page frame | Protection | Age | Used? |
+
+    |---:|---:|---:|---|---:|---:|
+
+    | 4 | 1 | 7 | Read/write | 13 | 1 |
+
+    | 6 | 0 | 2 | Read only | 10 | 1 |
+
+    | 12 | 3 | 1 | Read/write | 2 | 1 |
+
+    |  |  |  |  |  | 0 |
+
+    | 2 | 1 | 0 | Execute only | 7 | 1 |
+
+    | 2 | 2 | 12 | Execute only | 9 | 1 |
+
+
+    Figure 3-38. A simplified version of the MULTICS TLB. The existence of two page
+    sizes makes the actual TLB more complicated.'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '# # Summary
+
+
+    | | Fixed Partition | Variable Partition | Paging | Segmentation | Segmentation
+    with Paging |
+
+    |---|---|---|---|---|---|
+
+    | Fragmentation | Internal | External | Internal | External | Internal |
+
+    | Continuity | Whole process | Whole process | Page | Segment | Page |
+
+    | Swapping | Whole process | Whole process | Page | Segment | Segment |
+
+    | Relocation | Base register | Base register | Page table | Segment table | Segment
+    table with page tables |'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '# # Segmentation with Paging: Pentium (1)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_109_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '# Segmentation with Paging: Pentium (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_110_0.png)
+
+
+    Pentium code segment descriptor
+
+
+    Data segments differ slightly'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: '# # Segmentation with Paging: Pentium (4)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_112_0.png)
+
+
+    Mapping of a linear address onto a physical address'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: '# # Chapter 5 File Management
+
+
+    # # File Overview'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '# # File Systems (1)
+
+
+    # ## Essential requirements for long-term information storage:
+
+
+    +   - It must be possible to store a very large amount of information.
+
+
+    +   - The information must survive the termination of the process using it.
+
+
+    +   - Multiple processes must be able to access the information concurrently.'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: '# # File & File Structure
+
+
+    +   - File: a named collection of related information that is recorded on secondary
+    storage
+
+    +     - contiguous logical address space
+
+    +     - Types:
+
+    +       - Data: numeric, character, binary
+
+    +       - Program
+
+    +   - File Structure: depends on its type
+
+    +     - None - sequence of words, bytes
+
+    +     - Complex Structures
+
+    +     - Simple record structure
+
+    +       - Lines
+
+    +       - Fixed length
+
+    +       - Variable length
+
+    +       - Formatted document
+
+    +       - etc.'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: '# File Systems (2)
+
+
+    Think of a disk as a linear sequence of fixed-size blocks and supporting reading
+    and writing of blocks. Questions that quickly arise:
+
+
+    +   - How do you find information?
+
+    +   - How do you keep one user from reading another’s data?
+
+    +   - How do you know which blocks are free?'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: '# # File Structure
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_118_0.png)
+
+
+    Figure 4-2. Three kinds of files. (a) Byte sequence. (b) Record sequence. (c)
+    Tree.'
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: '# File Naming
+
+
+    | Extension | Meaning |
+
+    |---|---|
+
+    | file.bak | Backup file |
+
+    | file.c | C source program |
+
+    | file.gif | Compuserve Graphical Interchange Format image |
+
+    | file.hlp | Help file |
+
+    | file.html | World Wide Web HyperText Markup Language document |
+
+    | file.jpg | Still picture encoded with the JPEG standard |
+
+    | file.mp3 | Music encoded in MPEG layer 3 audio format |
+
+    | file.mpg | Movie encoded with the MPEG standard |
+
+    | file.o | Object file (compiler output, not yet linked) |
+
+    | file.pdf | Portable Document Format file |
+
+    | file.ps | PostScript file |
+
+    | file.tex | Input for the TEX formatting program |
+
+    | file.txt | General text file |
+
+    | file.zip | Compressed archive |
+
+
+    Figure 4-1. Some typical file extensions.'
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: '# File Attributes
+
+
+    | Attribute | Meaning |
+
+    |---|---|
+
+    | Protection | Who can access the file and in what way |
+
+    | Password | Password needed to access the file |
+
+    | Creator | ID of the person who created the file |
+
+    | Owner | Current owner |
+
+    | Read-only flag | 0 for read/write; 1 for read only |
+
+    | Hidden flag | 0 for normal; 1 for do not display in listings |
+
+    | System flag | 0 for normal files; 1 for system file |
+
+    | Archive flag | 0 for has been backed up; 1 for needs to be backed up |
+
+    | ASCII/binary flag | 0 for ASCII file; 1 for binary file |
+
+    | Random access flag | 0 for sequential access only; 1 for random access |
+
+    | Temporary flag | 0 for normal; 1 for delete file on process exit |
+
+    | Lock flags | 0 for unlocked; nonzero for locked |
+
+    | Record length | Number of bytes in a record |
+
+    | Key position | Offset of the key within each record |
+
+    | Key length | Number of bytes in the key field |
+
+    | Creation time | Date and time the file was created |
+
+    | Time of last access | Date and time the file was last accessed |
+
+    | Time of last change | Date and time the file was last changed |
+
+    | Current size | Number of bytes in the file |
+
+    | Maximum size | Number of bytes the file may grow to |
+
+
+    Figure 4-4a. Some possible file attributes.'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '# # File Operations
+
+
+    The most common system calls relating to files:
+
+
+    +   - Create
+
+    +   - Delete
+
+    +   - Open
+
+    +   - Close
+
+    +   - Read
+
+    +   - Write
+
+
+    +   - Append
+
+    +   - Seek
+
+    +   - Get Attributes
+
+    +   - Set Attributes
+
+    +   - Rename'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: "# Example Program Using File System Calls (1)\n\n```\n/* File copy program.\
+    \ Error checking and reporting is minimal. */\n\n#include <sys/types.h>      \
+    \            /* include necessary header files */\n#include <fcntl.h>\n#include\
+    \ <stdlib.h>\n#include <unistd.h>\n\nint main(int argc, char *argv[]);       /*\
+    \ ANSI prototype */\n\n#define BUF_SIZE 4096                    /* use a buffer\
+    \ size of 4096 bytes */\n#define OUTPUT_MODE 0700                  /* protection\
+    \ bits for output file */\n\nint main(int argc, char *argv[])\n{\n    int in_fd,\
+    \ out_fd, rd_count, wt_count;\n    char buffer[BUF_SIZE];\n\n    if (argc != 3)\
+    \ exit(1);              /* syntax error if argc is not 3 */\n\n    /* Open the\
+    \ input file and create the output file */\n    in_fd = open(argv[1], O_RDONLY);\
+    \     /* open the source file */\n    if (in_fd < 0) exit(2);              /*\
+    \ if it cannot be opened, exit */\n    out_fd = creat(argv[2], OUTPUT_MODE); /*\
+    \ create the destination file */\n    if (out_fd < 0) exit(3);             /*\
+    \ if it cannot be created, exit */\n\n    ...\n```\n\nFigure 4-5. A simple program\
+    \ to copy a file."
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: "# # Example Program Using File System Calls (2)\n\n```\n/* Copy loop */\nwhile\
+    \ (TRUE) {\n    rd_count = read(in_fd, buffer, BUF_SIZE); /* read a block of data\
+    \ */\n    if (rd_count <= 0) break; /* if end of file or error, exit loop */\n\
+    \    wt_count = write(out_fd, buffer, rd_count); /* write data */\n    if (wt_count\
+    \ <= 0) exit(4); /* wt_count <= 0 is an error */\n}\n\n/* Close the files */\n\
+    close(in_fd);\nclose(out_fd);\nif (rd_count == 0) /* no error on last read */\n\
+    \    exit(0);\nelse\n    exit(5); /* error on last read */\n}\n```\n\nFigure 4-5.\
+    \ A simple program to copy a file."
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: '# Hierarchical Directory Systems (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_127_0.png)
+
+
+    Figure 4-7. A hierarchical directory system.'
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: '# Path Names
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_128_0.png)
+
+
+    Figure 4-8. A UNIX directory tree.'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: '# Shared Files
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_129_0.png)
+
+
+    File system containing a shared file.'
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: '# # Directory Operations
+
+
+    # ## System calls for managing directories:
+
+
+    +   - Create
+
+    +   - Delete
+
+    +   - Opendir
+
+    +   - Closedir
+
+    +   - Readdir
+
+    +   - Rename
+
+    +   - Link
+
+    +   - Uplink'
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: '# Directory Contents
+
+
+    # Directory
+
+
+    # i-node Table
+
+
+    | name | i-node |
+
+    |---|---:|
+
+    | subdir1 | 4 |
+
+    | myfile | 10 |
+
+
+    | # | type | mode | links | user | group | date | size | loc |
+
+    |---:|---|---:|---:|---|---|---|---:|---|
+
+    | 4 | dir | 755 | 2 | team01 | staff | July 10 10:15 | 512 | |
+
+    | 10 | file | 644 | 1 | team01 | staff | July 11 11:00 | 96 | |
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_131_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: '# Shared Files
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_132_0.png)
+
+
+    File system containing a shared file.'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: '# # Shared Files (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_133_0.png)
+
+
+    Figure 4-17. (a) Situation prior to linking. (b) After the link is created. (c)
+    After the original owner removes the file.'
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: '# Linking Files
+
+
+    ```
+
+    `ln source_file target_file`
+
+    ```
+
+
+    +   - Allows files to have more than one name in the directory structure
+
+    +   - Both files reference the same i-node
+
+    +   - Cannot be used with directories, cannot span file systems
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_134_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: '# Linking Files (cont.)
+
+
+    ```
+
+    `ln -s source_file target_file`
+
+    ```
+
+
+    +   - Creates an indirect reference to a file (symbolic link)
+
+    +   - Name references the original file’s name and path
+
+    +   - Can be used with directories and span file systems
+
+
+    ```
+
+    ```text
+
+    $ ls -li
+
+    63 -rw-r--r--    1 team01  staff   1910 Nov 21 14:19 man_files
+
+
+    $ ln -s man_files manuals
+
+
+    $ ls -li
+
+    63 -rw-r--r--    1 team01  staff   1910 Nov 21 14:19 man_files
+
+    66 lrwxrwxrwx    1 team01  staff   1910 Nov 21 14:19 manuals -> man_files
+
+
+    $
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: '# # Viewing Permissions
+
+
+    To show the permissions of a file, use the `ls` command with
+
+    the `-l` option.
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_137_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: '# # Permissions Notation
+
+
+    rwxrwxrwx
+
+
+    owner   group   other
+
+
+    | r   | read    |
+
+    | --- | ------- |
+
+    | w   | write   |
+
+    | x   | execute |
+
+
+    Regular files:
+
+    r   file is readable
+
+    w   file is writeable
+
+    x   file is executable ( if in an executable format )
+
+
+    Directories:
+
+    r   contents of directory can be listed (ls)
+
+    w   contents can be modified (add/delete files)
+
+    x   change into directory is possible (cd)'
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: '# Chapter 5 File Management
+
+
+    # File System Implementation'
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: '# What is a filesystem?
+
+
+    +   - Place to store files and refer to them
+
+    +   - Hierarchical structure through use of directories
+
+    +   - A filesystem can be stored on any block device
+
+    +     - Floppy disk
+
+    +     - Hard disk
+
+    +     - Partition
+
+    +     - RAID, LVM volume
+
+    +     - File (for use with a loop device)
+
+    +     - RAM disk'
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: '# Implementation of File System
+
+    — File System Layout
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_142_0.png)
+
+
+    Figure 4-9. A possible file system layout.'
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: '# # Implementation of File System —— Implementing Files Contiguous Allocation
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_143_0.png)
+
+
+    Figure 4-10. (a) Contiguous allocation of disk space for 7 files. (b) The state
+    of the disk after files D and F have been removed.
+
+
+    Tanenbaum, Modern Operating Systems 3 e, (c) 2008 Prentice-Hall, Inc. All rights
+    reserved. 0-13-6006639'
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: '# I-nodes
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_146_0.png)
+
+
+    Figure 4-13. An example i-node.'
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: '# # i-node
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_147_0.png)
+
+
+    A UNIX i-node.'
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: '# Implementation of File System—Implementing Directories (1)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_148_0.png)
+
+
+    Figure 4-14. (a) A simple directory containing fixed-size entries with the disk
+    addresses and attributes in the directory entry. (b) A directory in which each
+    entry just refers to an i-node.'
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: '# # Implementing Directories (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_149_0.png)
+
+
+    Figure 4-15. Two ways of handling long file names in a directory. (a) In-line.
+    (b) In a heap.'
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: '# # Shared Files (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_151_0.png)
+
+
+    Figure 4-17. (a) Situation prior to linking. (b) After the link is created. (c)
+    After the original owner removes the file.'
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: '# The virtual file systems (1)
+
+
+    User Processes
+
+
+    `vi, ls, mv, zm, file, strings, cat, touch ...`
+
+
+    System Call Interface
+
+
+    `open() read() write() close()...`
+
+
+    # VFS Abstraction Layer
+
+
+    ext2
+
+
+    reiserfs
+
+
+    minix
+
+
+    ext3
+
+
+    ...
+
+
+    Buffer Cache
+
+
+    Device Drivers
+
+
+    I/O Request
+
+
+    Hardware'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: '# Virtual File Systems (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_153_0.png)
+
+
+    Figure 4-19. A simplified view of the data structures and code used by the VFS
+    and concrete file system to do a read.'
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: '# Filesystem example: ext2
+
+
+    +   - Partition divided into blocks of 1024, 2048 or 4096 bytes
+
+    +     - Blocksize depends on size of filesystem and expected usage
+
+    +   - Blocks can have different usage:
+
+    +     - Superblock
+
+    +     - Index node (inode) block
+
+    +     - Indirect block (double, triple)
+
+    +     - Data block
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_155_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: '# 人民日报（2024年12月17日）
+
+
+    中国周边国家的友好合作，是推动构建人类命运共同体的重要力量。
+
+
+    近年来，中国坚持亲诚惠容周边外交理念，与周边国家在政治互信、经贸合作、人文交流等领域取得丰硕成果。
+
+
+    +   - 深化政治互信，加强高层交往和战略沟通；
+
+    +   - 推进互联互通，共建“一带一路”高质量发展；
+
+    +   - 拓展经贸合作，深化区域经济一体化；
+
+    +   - 促进人文交流，夯实民意基础；
+
+    +   - 共同维护地区和平稳定，应对风险挑战；
+
+    +   - 推动绿色发展，加强气候变化和生态环境合作。
+
+
+    周边地区是中国发展的重要战略依托，一个和平、稳定、繁荣的周边环境符合中国和周边国家的共同利益。
+
+
+    中国将继续秉持“亲、诚、惠、容”的周边外交理念，与周边国家携手同行，共同谱写合作共赢的新篇章。
+
+
+    中国的发展离不开周边国家，周边国家的繁荣也需要中国。我们坚信，通过共同努力，中国与周边国家的命运共同体必将更加紧密。
+
+
+    让我们携手合作，共创美好未来！'
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: '# Inodes
+
+
+    +   - 128 bytes (8 inodes per 1024-Byte block)
+
+    +   - Contains information about a file: owner, group, type, size, permissions,
+    ctime, atime, mtime, ...
+
+    +   - Contains pointers to data blocks
+
+    +   - Contains pointers to an indirect block, a double indirect block, and a triple
+    indirect block
+
+
+    | Inode information |
+
+    |---|
+
+    | Owner / Group |
+
+    | File Type |
+
+    | File Size |
+
+    | File Permissions |
+
+    | Time Stamps: create time; access time; modification time |
+
+    | Link Counter |
+
+    | Additional Flags: (ACL, EXT2,_FLAGS) |
+
+    | Pointers to Block Data |
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_157_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: "# Data blocks\n\n+   - Contain file data\n+   - File may be a directory, in\
+    \ which case the data is the list of file names and inodes in that directory\n\
+    +   - Multiple file names may point to the same inode!  \n+     (Or files may\
+    \ have multiple names)\n\n![](img/173140081d013d40ccca0b8e597b7a43_158_0.png)\n\
+    \n![](img/173140081d013d40ccca0b8e597b7a43_158_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: '# Ext2fs summary
+
+
+    +   - The most important components of a filesystem are the inodes and the data
+    blocks
+
+    +   - The filesystem is full if:
+
+    +     - No more inodes are available
+
+    +     - No more data blocks are available
+
+    +   - So tune your filesystem according to the number of bytes per file:
+
+    +     - Blocksize (1024, 2048, or 4096 possible)
+
+    +     - Bytes-per-inode (4096 default)'
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: '# # 作业
+
+
+    +   - P182 9, 11, 19, 20'
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: '# # Management and Optimization of File System'
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: '# # Disk Space Management Block Size (1)
+
+
+    | Length | VU 1984 | VU 2005 | Web |
+
+    |---|---|---|---|
+
+    | 1 | 1.79 | 1.38 | 6.67 |
+
+    | 2 | 1.88 | 1.53 | 7.67 |
+
+    | 4 | 2.01 | 1.65 | 8.33 |
+
+    | 8 | 2.31 | 1.80 | 11.30 |
+
+    | 16 | 3.32 | 2.15 | 11.46 |
+
+    | 32 | 5.13 | 3.15 | 12.33 |
+
+    | 64 | 8.71 | 4.98 | 26.10 |
+
+    | 128 | 14.73 | 8.03 | 28.49 |
+
+    | 256 | 23.09 | 13.29 | 32.10 |
+
+    | 512 | 34.44 | 20.62 | 39.94 |
+
+    | 1 KB | 48.05 | 30.91 | 47.82 |
+
+    | 2 KB | 60.87 | 46.09 | 59.44 |
+
+    | 4 KB | 75.31 | 59.13 | 70.64 |
+
+    | 8 KB | 84.97 | 69.96 | 79.69 |
+
+
+    | Length | VU 1984 | VU 2005 | Web |
+
+    |---|---|---|---|
+
+    | 16 KB | 92.53 | 78.92 | 86.79 |
+
+    | 32 KB | 97.21 | 85.87 | 91.65 |
+
+    | 64 KB | 99.18 | 90.84 | 94.80 |
+
+    | 128 KB | 99.84 | 93.73 | 96.93 |
+
+    | 256 KB | 99.96 | 96.12 | 98.48 |
+
+    | 512 KB | 100.00 | 97.73 | 98.99 |
+
+    | 1 MB | 100.00 | 98.87 | 99.62 |
+
+    | 2 MB | 100.00 | 99.44 | 99.80 |
+
+    | 4 MB | 100.00 | 99.71 | 99.87 |
+
+    | 8 MB | 100.00 | 99.86 | 99.94 |
+
+    | 16 MB | 100.00 | 99.94 | 99.97 |
+
+    | 32 MB | 100.00 | 99.97 | 99.99 |
+
+    | 64 MB | 100.00 | 99.99 | 99.99 |
+
+    | 128 MB | 100.00 | 99.99 | 100.00 |
+
+
+    Figure 4-20. Percentage of files smaller than a given size (in bytes).'
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: '# Disk Space Management Block Size (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_164_0.png)
+
+
+    Figure 4-21. The dashed curve (left-hand scale) gives the data rate of a disk.
+    The solid curve (right-hand scale) gives the disk space efficiency. All files
+    are 4 KB.'
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: '# Creating a filesystem
+
+
+    +   - Creating a filesystem is done with an **mkfs** variant
+
+    +     - `mke2fs`, `mke2fs -j`
+
+    +     - `mkreiserfs`
+
+    +     - `mkjfs`
+
+
+    +   - Typical options:
+
+    +     - `b` blocksize sets blocksize
+
+    +     - `i` bytes-per-inode sets number of inodes
+
+    +     - `c` checks disk for bad blocks
+
+
+    • Example:
+
+
+    ```
+
+    ```shell
+
+    # mke2fs -b 1024 -i 4096 -c /dev/sda6
+
+    ...
+
+    Writing inode tables: done
+
+    Writing superblocks and filesystem accounting
+
+    info: done
+
+    ...
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: '# # Mount
+
+
+    +   - mount is the glue that logically connects file systems to the directory
+    hierarchy
+
+
+    +   - File systems are associated with devices represented by special files in
+    /dev (the logical volume)
+
+
+    +   - When a file system is mounted, the logical volume and its contents are connected
+    to a directory in the hierarchical tree structure
+
+
+    ```
+
+    ```
+
+    # mount  /dev/lv00  /home/patsie
+
+    ```
+
+    ```
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_167_0.png)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_167_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: '# Comparing filesystems
+
+
+    Journaled Filesystems used by Linux:
+
+
+    |  | ext2 | ext3 | jfs | reiser | xfs |
+
+    |---|---|---|---|---|---|
+
+    | **Journal** | no | yes (10 MB default) | yes (auto resized) | yes (32 MB default)
+    | yes |
+
+    | **resizeable** | yes, but only when unmounted | yes, but only when unmounted
+    | yes | yes | yes, but only when mounted |
+
+    | **maximum size** | File: 2 TB<br>FS: 16 TB | File: 2 TB<br>FS: 16 TB | File:
+    4 PB<br>FS: 32 PB | File: 16 TB<br>FS: 1 EB | File: 2 TB<br>FS: 8 EB |
+
+    | **type** | inodes (completely block oriented) | inodes (completely block oriented)
+    | inodes (allocated in a b-tree) | b-Tree | inodes (allocated in a b-tree) |'
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: '# SHMFS-specific information
+
+
+    +   - SHMFS: POSIX compliant Shared Memory Filesystem
+
+    +   - Filesystem stored in memory, expands when used to required size
+
+    +   - Not persistent across reboot
+
+    +   - Typically mounted on `/dev/shm`
+
+    +   - Required by certain applications'
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: '# Quota concepts
+
+
+    +   - Quotas limit the amount of data a user/group is allowed to store
+
+    +   - Defined on a per-filesystem basis
+
+    +   - Based on block and/or inode usage per user or group
+
+    +   - Two limits per quota: Soft and hard
+
+    +     - User exceeds soft limit — warning only
+
+    +     - User exceeds hard limit — error
+
+    +   - Grace period identifies how long the soft limit may be exceeded
+
+    +     - After that period, a user gets errors instead of warnings
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_170_0.png)
+
+
+    Each user may consume only 20 MB permanently and 25 MB temporarily'
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: '# # Disk Quotas
+
+
+    Figure 4-24. Quotas are kept track of on a per-user basis in a quota table.
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_171_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: '# Quota implementation on Linux
+
+
+    +   - Quota support compiled into the kernel
+
+    +     - No daemon necessary
+
+    +   - Implemented on a per-filesystem basis
+
+    +     - A user can have different quota on different filesystems
+
+    +     - Stored in aquota.user and aquota.groups in the root of the filesystem
+
+    +   - Quota checking should be enabled when mounting the filesystem
+
+    +     - Mount options: **usrquota**, **grpquota**
+
+    +     - Can be specified in /etc/fstab
+
+    +   - Quota checking should be turned on after mounting with the **quotaon** command
+
+    +     - Automatically executed from bootscript after **mount -a**'
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: '# Enabling quota
+
+
+    +   - Modify `/etc/fstab`
+
+
+    ```
+
+    ```text
+
+    /dev/sda2  /          ext3    defaults                         1 1
+
+    /dev/sda4  /home      ext3    defaults,usrquota,grpquota      1 2
+
+    /dev/sdb   /mnt/cdrom iso9660 noauto,owner,ro                 0 0
+
+    /dev/sda3  swap       swap    defaults                         0 0
+
+    /dev/fd0   /mnt/floppy msdos  noauto,owner                    0 0
+
+    none       /proc      proc    defaults                         0 0
+
+    none       /dev/pts   devpts  gid=5,mode=620                   0 0
+
+    ```
+
+    ```
+
+
+    +   - Create `aquota.user` and `aquota.group` in the filesystem''s root directory
+
+    +   - Remount the partition
+
+    +   - Calculate current usage and turn on quota checking
+
+
+    ```
+
+    ```shell
+
+    # touch /home/aquota.user /home/aquota.group
+
+    # mount -o remount /home
+
+    # quotacheck /home
+
+    # quotaon /home
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: "# # Configuring quota\n\n+   - Done with the **edquota** command  \n+     -\
+    \ Starts $EDITOR (default: vi) in a subshell  \n+     - Only edit the block/inode\
+    \ soft/hard quota numbers\n\n+   - User quota: `edquota -u username`  \n+    \
+    \ ```text  \n+     Disk quotas for user tux1 (uid 501):  \n+     Filesystems \
+    \  blocks   soft   hard   inodes   soft   hard  \n+     /dev/sda4     10700  \
+    \  20000  25000  407    0    0  \n+     /dev/sda9     320      300    350    23\
+    \     30   50  \n+     ~  \n+     ~  \n+     ~  \n+     ~  \n+     \"/tmp/Edp.a9fSEQK\"\
+    \ 3L, 213C  \n+     ```\n\n+   - Group quota: `edquota -g groupname`  \n+   -\
+    \ Grace period: `edquota -t`  \n+   - Copy quota: `edquota -p tux1 -u tux2 tux3\
+    \ tux4`"
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: "# Quota information\n\n+   - **quota** command\n+     - Reports on the quota\
+    \ of one user\n+     - Can be executed by anyone\n+     - A regular user can only\
+    \ view his own quota\n\n```\ntux1$ quota\nDisk quotas for user tux1 (uid 501):\n\
+    Filesystem  blocks  quota  limit  grace  files  quota  limit  grace\n/dev/sda4\
+    \   10700  20000  25000         407    0      0\n```\n\n+   - **repquota** command\n\
+    +     - Reports on the quota of all users and groups\n+     - Can only be executed\
+    \ by root\n\n```\nroot# repquota /dev/hda4\n                 Block limits    \
+    \              File limits\nUser      used   soft   hard  grace     used  soft\
+    \  hard  grace\nroot       --   848804      0      0            56892     0  \
+    \   0\n.\ntux1       ++     1500   1000   1500  7days      112   112   115  none\n\
+    tux2       --      176   1000   1500               44     0     0\n```"
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: '# File System Backups (1)
+
+
+    Backups to tape are generally made to handle one of two potential problems:
+
+
+    +   - Recover from disaster.
+
+    +   - Recover from stupidity.
+
+
+    # Physical Backup VS Logical Backup'
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: '# # Backup schemes
+
+
+    +   - Full backup
+
+    +     - Preserves the whole system
+
+    +   - System backup
+
+    +     - Preserves system directories and files
+
+    +     - Must include backup/restore tools
+
+    +     - Usually on bootable media (floppy, optical)
+
+    +   - Data backup
+
+    +     - Preserves user data
+
+    +   - Incremental or differential backup
+
+    +     - Only backup files that changed
+
+    +     - Very fast, but takes more time to restore
+
+    +     - Must be used carefully
+
+    +     - Needs more media'
+  merge: -1
+  img_proc: true
+- pgno: 178
+  md: '# File System Backups (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_178_0.png)
+
+
+    Figure 4-25. A file system to be dumped. Squares are directories, circles are
+    files. Shaded items have been modified since last dump. Each directory and file
+    is labeled by its i-node number.'
+  merge: -1
+  img_proc: true
+- pgno: 179
+  md: '# File System Backups (3)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_179_0.png)
+
+
+    Figure 4-26. Bitmaps used by the logical dumping algorithm.'
+  merge: -1
+  img_proc: true
+- pgno: 180
+  md: '# Incremental versus differential backup
+
+
+    **Day 1**
+
+
+    **Day 2**
+
+
+    **Day 3**
+
+
+    **Day 4**
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_180_0.png)
+
+
+    # Incremental backup
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_180_1.png)
+
+
+    # Differential backup'
+  merge: -1
+  img_proc: true
+- pgno: 181
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 182
+  md: '# Backup devices
+
+
+    +   - Tape drive
+
+    +     - Large capacity, fast
+
+    +     - Requires new tapes regularly
+
+    +   - CD-R, CD-RW, DVD
+
+    +     - Cheap but relatively slow
+
+    +   - (Removable) Hard disk
+
+    +     - Fast but expensive
+
+    +   - Diskette drive
+
+    +     - Often available but cumbersome for large backups
+
+    +   - Network
+
+    +     - Useful in large installations; usually requires commercial software (for
+    instance, Tivoli Storage Manager)'
+  merge: -1
+  img_proc: true
+- pgno: 183
+  md: '# # Default backup tools
+
+
+    +   - **tar**
+
+    +     - Backs up individual files
+
+    +     - Widely available
+
+    +     - Excellent for transferring data between platforms
+
+    +   - **cpio**
+
+    +     - Backs up individual files
+
+    +     - Widely available
+
+    +     - Difficulties with many symbolic links
+
+    +   - **dump**
+
+    +     - Backs up whole filesystems
+
+    +     - Can handle incremental backups (nine levels)
+
+    +   - **dd**
+
+    +     - Useful for making bit-for-bit dumps of disks and filesystems'
+  merge: -1
+  img_proc: true
+- pgno: 184
+  md: '# File System Consistency
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_184_0.png)
+
+
+    Figure 4-27. File system states. (a) Consistent. (b) Missing block. (c) Duplicate
+    block in free list. (d) Duplicate data block.'
+  merge: -1
+  img_proc: true
+- pgno: 185
+  md: '# Caching (1)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_185_0.png)
+
+
+    Hash table
+
+
+    Front (LRU)
+
+
+    Rear (MRU)
+
+
+    Figure 4-28. The buffer cache data structures.'
+  merge: -1
+  img_proc: true
+- pgno: 186
+  md: '# Caching (2)
+
+
+    +   - Some blocks, such as i-node blocks, are rarely referenced two times within
+    a short interval.
+
+    +   - Consider a modified LRU scheme, taking two factors into account:
+
+    +     - Is the block likely to be needed again soon?
+
+    +     - Is the block essential to the consistency of the file system?'
+  merge: -1
+  img_proc: true
+- pgno: 187
+  md: '# # Reducing Disk Arm Motion
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_187_0.png)
+
+
+    Figure 4-29. (a) I-nodes placed at the start of the disk. (b) Disk divided into
+    cylinder groups, each with its own blocks and i-nodes.'
+  merge: -1
+  img_proc: true
+- pgno: 188
+  md: '# # The ISO 9660 File System
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_188_0.png)
+
+
+    Figure 4-30. The ISO 9660 directory entry.'
+  merge: -1
+  img_proc: true
+- pgno: 189
+  md: '# # Rock Ridge Extensions
+
+
+    # ## Rock Ridge extension fields:
+
+
+    +   - PX - POSIX attributes.
+
+    +   - PN - Major and minor device numbers.
+
+    +   - SL - Symbolic link.
+
+    +   - NM - Alternative name.
+
+    +   - CL - Child location.
+
+    +   - PL - Parent location.
+
+    +   - RE - Relocation.
+
+    +   - TF - Time stamps.'
+  merge: -1
+  img_proc: true
+- pgno: 190
+  md: '# Joliet Extensions
+
+
+    Joliet extension fields:
+
+
+    +   - Long file names.
+
+    +   - Unicode character set.
+
+    +   - Directory nesting deeper than eight levels.
+
+    +   - Directory names with extensions'
+  merge: -1
+  img_proc: true
+- pgno: 191
+  md: '# The MS-DOS File System (1)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_191_0.png)
+
+
+    Figure 4-31. The MS-DOS directory entry.'
+  merge: -1
+  img_proc: true
+- pgno: 192
+  md: '# The MS-DOS File System (2)
+
+
+    | Block size | FAT-12 | FAT-16 | FAT-32 |
+
+    |---|---|---|---|
+
+    | 0.5 KB | 2 MB |  |  |
+
+    | 1 KB | 4 MB |  |  |
+
+    | 2 KB | 8 MB | 128 MB |  |
+
+    | 4 KB | 16 MB | 256 MB | 1 TB |
+
+    | 8 KB |  | 512 MB | 2 TB |
+
+    | 16 KB |  | 1024 MB | 2 TB |
+
+    | 32 KB |  | 2048 MB | 2 TB |
+
+
+    Figure 4-32. Maximum partition size for different block sizes. The empty boxes
+    represent forbidden combinations.'
+  merge: -1
+  img_proc: true
+- pgno: 193
+  md: '# The UNIX V7 File System (1)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_193_0.png)
+
+
+    Figure 4-33. A UNIX V7 directory entry.'
+  merge: -1
+  img_proc: true
+- pgno: 194
+  md: '# # The UNIX V7 File System (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_194_0.png)
+
+
+    Figure 4-34. A UNIX i-node.'
+  merge: -1
+  img_proc: true
+- pgno: 195
+  md: '# The UNIX V7 File System (3)
+
+
+    | Root directory |
+
+    |---|
+
+    | 1  . |
+
+    | 1  .. |
+
+    | 4  bin |
+
+    | 7  dev |
+
+    | 14  lib |
+
+    | 9  etc |
+
+    | 6  usr |
+
+    | 8  tmp |
+
+
+    Looking up /usr yields i-node 6
+
+
+    | I-node 6 is for /usr |
+
+    |---|
+
+    | Mode size times |
+
+    | 132 |
+
+
+    I-node 6 says that /usr is in block 132
+
+
+    | Block 132 is /usr directory |
+
+    |---|
+
+    | 6  . |
+
+    | 1  .. |
+
+    | 19  dick |
+
+    | 30  erik |
+
+    | 51  jim |
+
+    | 26  ast |
+
+    | 45  bal |
+
+
+    /usr/ast is i-node 26
+
+
+    | I-node 26 is for /usr/ast |
+
+    |---|
+
+    | Mode size times |
+
+    | 406 |
+
+
+    I-node 26 says that /usr/ast is in block 406
+
+
+    | Block 406 is /usr/ast directory |
+
+    |---|
+
+    | 26  . |
+
+    | 6  .. |
+
+    | 64  grants |
+
+    | 92  books |
+
+    | 60  mbox |
+
+    | 81  minix |
+
+    | 17  src |
+
+
+    /usr/ast/mbox is i-node 60
+
+
+    Figure 4-35. The steps in looking up /usr/ast/mbox.'
+  merge: -1
+  img_proc: true
+- pgno: 196
+  md: '# 作业
+
+
+    +   - P 183　27，28，29，32'
+  merge: -1
+  img_proc: true
+- pgno: 197
+  md: '# Chapter 5 File Management
+
+
+    # Storage: Hard disks, LVM and RAID'
+  merge: -1
+  img_proc: true
+- pgno: 198
+  md: '# Hard Disks
+
+
+    +   - IDE (Integrated Drive Electronics)
+
+    +   - ATA (Advanced Technology Attachment )
+
+    +     - PATA (Parallel ATA or IDE)
+
+    +     - SATA (Serial ATA )
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_198_0.png)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_198_1.png)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_198_2.png)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_198_3.png)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_198_4.png)'
+  merge: -1
+  img_proc: true
+- pgno: 199
+  md: '# # Hard Disks
+
+
+    +   - SCSI (Small Computer System Interface)
+
+    +     – SAS (Serial Attached SCSI)
+
+    +   - SSD (Solid State Disk)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_199_0.png)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_199_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 200
+  md: '# # Hard disk partitions
+
+
+    +   - IDE and SCSI hard disks can be partitioned
+
+    +   - Maximum of four _primary partitions_
+
+    +   - One primary partition may be an _extended partition_
+
+    +   - An extended partition can hold an unlimited amount of _logical partitions_
+    (Linux: max 59 for IDE, 11 for SCSI)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_200_0.png)
+
+
+    +   - sda: The first sector of the disk contains the MBR and Partition Table
+
+    +   - sda1: First primary partition holds a Windows filesystem
+
+    +   - sda2: Second primary partition is an extended partition and holds three
+    logical partitions
+
+    +   - sda5: First logical partition holds a Linux filesystem that will be mounted
+    as /
+
+    +   - sda6: Second logical partition holds a Linux filesystem that will be mounted
+    as /home
+
+    +   - sda7: Third logical partition holds a Linux swap space'
+  merge: -1
+  img_proc: true
+- pgno: 201
+  md: '# # Partitioning tools
+
+
+    +   - **fdisk**
+
+    +     - Virtually every PC OS comes with a tool **fdisk** to create partitions
+    for that OS
+
+    +       - Linux, Windows, and so forth
+
+    +   - **parted**
+
+    +     - GPLed Linux program, available at www.gnu.org
+
+    +     - Can create/resize/move/delete partitions
+
+    +   - GParted, QTParted
+
+    +     - GUI utilities that use GNU Parted
+
+    +     - Can create/resize/move/delete partitions
+
+    +   - Disk Druid and others
+
+    +     - Partitioning program integrated in Linux install program'
+  merge: -1
+  img_proc: true
+- pgno: 202
+  md: '# # Components of storage
+
+
+    +   - Files
+
+    +   - Directories
+
+    +   - File systems
+
+    +   - Logical storage
+
+    +   - Physical storage
+
+    +   - Logical Volume Manager (LVM)'
+  merge: -1
+  img_proc: true
+- pgno: 203
+  md: '# # Traditional disk storage
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_203_0.png)
+
+
+    # ## PROBLEMS:
+
+
+    +   - Fixed partitions
+
+    +   - Expanding size of the partition
+
+    +   - Limitation on size of a file system and a file
+
+    +   - Contiguous data requirement
+
+    +   - Time and effort required in planning ahead'
+  merge: -1
+  img_proc: true
+- pgno: 204
+  md: '# Benefits of the LVM
+
+
+    +   - Logical volumes solve noncontiguous space problems
+
+    +   - Logical volumes can span disks
+
+    +   - Logical volume sizes can be dynamically increased
+
+    +   - Logical volumes can be mirrored
+
+    +   - Physical volumes are easily added to the system
+
+    +   - Logical volumes can be relocated
+
+    +   - Volume group and logical volume statistics can be collected
+
+
+    These tasks can be performed dynamically!'
+  merge: -1
+  img_proc: true
+- pgno: 205
+  md: '# # Logical volume management
+
+
+    +   - Logical volume management solves the disadvantages of traditional disk storage:
+
+    +     - One or more physical volumes (hard disks, partitions) are assigned to
+    a volume group (VG)
+
+    +     - All physical volumes (PV) are split into physical extents (PE) of identical
+    size (default 4 MB)
+
+    +     - PEs in a VG can be combined into logical volumes (LV), which can be used
+    like any block device
+
+    +   - An LV can span multiple disks
+
+    +   - To increase the size of an LV, add PEs
+
+    +   - To increase the size of a VG, add PVs'
+  merge: -1
+  img_proc: true
+- pgno: 206
+  md: '# Logical volume management on Linux
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_206_0.png)
+
+
+    physical volume
+
+    (hard disk or partition)
+
+
+    physical volume
+
+    (hard disk or partition)
+
+
+    logical volume
+
+
+    volume group'
+  merge: -1
+  img_proc: true
+- pgno: 207
+  md: '# Logical storage on AIX
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_207_0.png)
+
+
+    Physical volumes
+
+
+    Logical Volume Manager
+
+
+    Logical Partitions
+
+
+    Logical volume
+
+
+    Logical volume'
+  merge: -1
+  img_proc: true
+- pgno: 208
+  md: '# LVM implementation overview
+
+
+    +   - Add hard disks and/or create partitions (type 0x8e) on existing hard disks
+
+    +   - Initialize physical volumes (disks or partitions)
+
+
+    ```
+
+    ```bash
+
+    # pvcreate /dev/sda3
+
+    # pvcreate /dev/sdb
+
+    ```
+
+    ```
+
+
+    +   - Create volume group **vg00** with physical volumes
+
+
+    ```
+
+    ```bash
+
+    # vgcreate vg00 /dev/sda3 /dev/sdb
+
+    ```
+
+    ```
+
+
+    +   - Create logical volume **lv00** in volume group
+
+
+    ```
+
+    ```bash
+
+    # lvcreate -L 50M -n lv00 vg00
+
+    ```
+
+    ```
+
+
+    +   - Can now use /dev/vg00/lv00 as block device'
+  merge: -1
+  img_proc: true
+- pgno: 209
+  md: "# # Physical volume commands\n\n+   - `pvcreate <pv>`\n+     – Initializes\
+    \ a physical volume by putting an (empty) volume group descriptor area at the\
+    \ start of the PV\n+   \n+     VGDA ( **V**olume **G**roup **D**escriptor **A**rea)\n\
+    +   \n+     ![](img/173140081d013d40ccca0b8e597b7a43_209_0.png)\n+   \n+   - `pvmove\
+    \ [-n <lv>] <source pv> [<destination pv>]`\n+     – Move PEs from one PV to another\
+    \ PV in the volume group\n+   \n+   - `pvdisplay <pv>`\n+     – List information\
+    \ about a PV"
+  merge: -1
+  img_proc: true
+- pgno: 210
+  md: '# Volume group commands
+
+
+    +   - `vgcreate [-s <pe size>] <vg name> <pv> [<pv>...]`
+
+    +     - Create a volume group
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_210_0.png)
+
+
+    +   - `vgdisplay [<vg>]`
+
+    +     - Display information about a volume group
+
+    +   - `vgremove <vg>`
+
+    +     - Delete a volume group'
+  merge: -1
+  img_proc: true
+- pgno: 211
+  md: '# # Logical volume commands
+
+
+    +   - `lvcreate -L <size> [-n <lv name>] <vg> [<pv>...]`
+
+    +     - Create a logical volume in a volume group
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_211_0.png)
+
+
+    +   - `lvdisplay <lv> [<lv>...]`
+
+    +     - Display information about a logical volume
+
+
+    +   - `lvremove <lv> [<lv>...]`
+
+    +     - Remove a logical volume'
+  merge: -1
+  img_proc: true
+- pgno: 212
+  md: '# # Striping logical volumes
+
+
+    +   - A logical volume may be striped across two or more physical volumes during
+    creation
+
+    +   - For large data transfers, this increases performance
+
+
+    ```
+
+    ```
+
+    # lvcreate -L 300M -i 2 -I 8 -n mystripedlv vg00
+
+    ```
+
+    ```
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_212_0.png)
+
+
+    /dev/vg00/mystripedlv'
+  merge: -1
+  img_proc: true
+- pgno: 213
+  md: '# # Extending/reducing a volume group
+
+
+    +   • To add or remove a physical volume to or from a volume group, use the `vgextend`
+    and `vgreduce` commands
+
+    +   • To move physical extents from one physical volume to another, use `pvmove`
+
+
+    ```
+
+    ```
+
+    # vgextend vg00 /dev/sdb6
+
+    # vgreduce vg00 /dev/sda5
+
+    ERROR: can''t reduce volume group "vg00" by used
+
+    physical volume "/dev/sda5"
+
+    # pvmove /dev/sda5 /dev/sdb6
+
+    # vgreduce vg00 /dev/sda5
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 214
+  md: "# Extending/reducing a logical volume\n\n+   - To extend/shrink a logical volume\
+    \ use the `lvextend`/`lvreduce` commands\n+     - Use `-L` option to specify size\
+    \ in bytes\n+     - Use `-l` option to specify size in PEs\n+   - `lvextend`/`lvreduce`\
+    \ do **NOT** extend/shrink a filesystem in the LV automatically!\n+   \n+    \
+    \ (Extending/shrinking a filesystem will be covered later)\n\n```\n```text\n#\
+    \ lvextend -L +300M /dev/vg00/mylv\nlvextend -- rounding relative size up to physical\
+    \ extent boundary\nlvextend -- extending logical volume \"/dev/vg00/mylv\" to\
+    \ 380 MB\nlvextend -- doing automatic backup of volume group \"system\"\nlvextend\
+    \ -- logical volume \"/dev/vg00/mylv\" successfully extended\n# lvreduce -l -12\
+    \ /dev/system/mystripedlv\n...\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 215
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 216
+  md: "# # Additional LVM considerations\n\n+   - Linux LVM implementation has \"\
+    snapshot\" capability  \n+     – Can be useful for fast backups\n+   - If LVM-based\
+    \ filesystems are listed in /etc/fstab, then LVM support needs to be included\
+    \ in the initial root disk (initrd)\n+   - Mirroring is handled outside of the\
+    \ LVM structure\n+   - LVM uses the device mapper kernel device driver\n+   -\
+    \ LVM snapshots are read/write by default"
+  merge: -1
+  img_proc: true
+- pgno: 217
+  md: '# # RAID
+
+
+    +   - Redundant Array of Independent Disks
+
+    +   - Typical PC hard disks, compared to expensive mainframe-quality hard disks,
+    are:
+
+    +     - Slower
+
+    +     - Less reliable
+
+    +     - Smaller
+
+    +     - But less expensive
+
+    +   - RAID uses multiple hard disks in an array to create a logical device that
+    is:
+
+    +     - Faster
+
+    +     - More reliable
+
+    +     - Or larger
+
+    +     - And still relatively inexpensive'
+  merge: -1
+  img_proc: true
+- pgno: 218
+  md: '# # RAID (Redundant Array of Independent Disk)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_218_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 219
+  md: '# # RAID 1+0
+
+
+    # # RAID 0+1
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_219_0.png)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_219_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 220
+  md: '# # RAID 5
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_220_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 221
+  md: '# # RAID (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_221_0.png)
+
+
+    Figure 5-20. RAID levels 0 through 5. Backup and parity drives are shown shaded.'
+  merge: -1
+  img_proc: true
+- pgno: 222
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 223
+  md: '# # RAID levels
+
+
+    +   - RAID levels have different characteristics
+
+    +     – RAID-5 is not "better" than RAID-1
+
+
+    +   - Use RAID level according to needs
+
+
+    | RAID level | Min # disks | Read performance | Write performance | Redundancy
+    | Data capacity with 3x1GB disk | Other remarks |
+
+    |------------|-------------|------------------|-------------------|------------|-------------------------------|---------------|
+
+    | Linear     | 2           | Equal            | Equal             | No         |
+    3 GB                          | Can be used if disks are not equal |
+
+    | 0          | 2           | Fast             | Fast              | No         |
+    3 GB                          |               |
+
+    | 1          | 2           | Fast             | Somewhat slower   | Yes        |
+    1 GB                          | Can sustain N-1 disk crash(s) |
+
+    | 4          | 3           | Somewhat faster  | Slow              | Yes        |
+    2 GB                          | Can sustain one disk crash Parity disk is bottleneck
+    |
+
+    | 5          | 3           | Somewhat faster  | Somewhat faster   | Yes        |
+    2 GB                          | Can sustain one disk crash CPU intensive |
+
+
+    (*) Performance compared to a single disk, for data transfers greater than block
+    size'
+  merge: -1
+  img_proc: true
+- pgno: 224
+  md: '# # Linux RAID support
+
+
+    +   - Software RAID
+
+    +     - Implemented in Linux kernel
+
+    +     - Needs **mdadm** package
+
+    +     - Uses disk partitions to create RAID devices
+
+    +     - Logical device name: /dev/mdn
+
+    +   - Hardware RAID
+
+    +     - Implemented in special adapter cards
+
+    +     - Adapter needs to be supported by Linux kernel
+
+    +     - Generally specific software needed to configure adapter correctly (might
+    not be available under Linux)
+
+    +     - RAID devices show up as regular SCSI disk'
+  merge: -1
+  img_proc: true
+- pgno: 225
+  md: '# Spare disks
+
+
+    +   - To make RAID1/RAID5 more failsafe in case of a disk failure, use spare disks!
+
+
+    ```
+
+    ```text
+
+    # cat /etc/raidtab
+
+    ...
+
+    nr-spare-disks 1
+
+    device  /dev/sdd1
+
+    spare-disk 0
+
+    ...
+
+    ```
+
+    ```
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_225_0.png)
+
+
+    +   - Remove a failed disk with `raidhotremove`
+
+    +   - Add a new disk to the array with `raidhotadd`'
+  merge: -1
+  img_proc: true
+- pgno: 226
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 227
+  md: '# # References
+
+
+    +   - Chapter 5: Input/Output, _Modern Operating Systems .3rd ed_, _Andrew S.
+    Tanenbaum_
+
+    +   - Unit 8: Block devices, RAID, and LVM, _Linux System Administration I: Implementation
+    , ERC 6.0, IBM_'
+  merge: -1
+  img_proc: true
+- pgno: 228
+  md: '# Input/Output
+
+    Devices'
+  merge: -1
+  img_proc: true
+- pgno: 229
+  md: '# # I/O Devices
+
+
+    | Device | Data rate |
+
+    |---|---|
+
+    | Keyboard | 10 bytes/sec |
+
+    | Mouse | 100 bytes/sec |
+
+    | 56K modem | 7 KB/sec |
+
+    | Scanner | 400 KB/sec |
+
+    | Digital camcorder | 3.5 MB/sec |
+
+    | 802.11g Wireless | 6.75 MB/sec |
+
+    | 52x CD-ROM | 7.8 MB/sec |
+
+    | Fast Ethernet | 12.5 MB/sec |
+
+    | Compact flash card | 40 MB/sec |
+
+    | FireWire (IEEE 1394) | 50 MB/sec |
+
+    | USB 2.0 | 60 MB/sec |
+
+    | SONET OC-12 network | 78 MB/sec |
+
+    | SCSI Ultra 2 disk | 80 MB/sec |
+
+    | Gigabit Ethernet | 125 MB/sec |
+
+    | SATA disk drive | 300 MB/sec |
+
+    | Ultrium tape | 320 MB/sec |
+
+    | PCI bus | 528 MB/sec |
+
+
+    Figure 5-1. Some typical device, network, and bus data rates.'
+  merge: -1
+  img_proc: true
+- pgno: 230
+  md: '# # Memory-Mapped I/O (1)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_230_0.png)
+
+
+    Figure 5-2. (a) Separate I/O and memory space. (b) Memory-mapped I/O. (c) Hybrid.'
+  merge: -1
+  img_proc: true
+- pgno: 231
+  md: '# # Memory-Mapped I/O (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_231_0.png)
+
+
+    Figure 5-3. (a) A single-bus architecture.
+
+    (b) A dual-bus memory architecture.'
+  merge: -1
+  img_proc: true
+- pgno: 232
+  md: '# # Direct Memory Access (DMA)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_232_0.png)
+
+
+    Figure 5-4. Operation of a DMA transfer.
+
+
+    Tanenbaum, Modern Operating Systems 3 e, (c) 2008 Prentice-Hall, Inc. All rights
+    reserved. 0-13-6006639'
+  merge: -1
+  img_proc: true
+- pgno: 233
+  md: '# # Interrupts Revisited
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_233_0.png)
+
+
+    Figure 5-5. How an interrupt happens. The connections between the devices and
+    the interrupt controller actually use interrupt lines on the bus rather than dedicated
+    wires.'
+  merge: -1
+  img_proc: true
+- pgno: 234
+  md: '# # Precise and Imprecise Interrupts (1)
+
+
+    # ## Properties of a _precise interrupt_
+
+
+    +   1. PC (Program Counter) is saved in a known place.
+
+
+    +   2. All instructions before the one pointed to by the PC have fully executed.
+
+
+    +   3. No instruction beyond the one pointed to by the PC has been executed.
+
+
+    +   4. Execution state of the instruction pointed to by the PC is known.'
+  merge: -1
+  img_proc: true
+- pgno: 235
+  md: '# # Precise and Imprecise Interrupts (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_235_0.png)
+
+
+    Figure 5-6. (a) A precise interrupt. (b) An imprecise interrupt.
+
+
+    Tanenbaum, Modern Operating Systems 3 e, (c) 2008 Prentice-Hall, Inc. All rights
+    reserved. 0-13-6006639'
+  merge: -1
+  img_proc: true
+- pgno: 236
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 237
+  md: '# # Interrupt-Driven I/O
+
+
+    ```
+
+    copy_from_user(buffer, p, count);
+
+    enable_interrupts();
+
+    while (*printer_status_reg != READY) ;
+
+    *printer_data_register = p[0];
+
+    scheduler();
+
+    ```
+
+
+    ```
+
+    if (count == 0) {
+
+    unblock_user();
+
+    } else {
+
+    *printer_data_register = p[i];
+
+    count = count - 1;
+
+    i = i + 1;
+
+    }
+
+    acknowledge_interrupt();
+
+    return_from_interrupt();
+
+    ```
+
+
+    (a)
+
+
+    (b)
+
+
+    Figure 5-9. Writing a string to the printer using interrupt-driven I/O.
+
+    (a) Code executed at the time the print system call is made.
+
+    (b) Interrupt service procedure for the printer.'
+  merge: -1
+  img_proc: true
+- pgno: 238
+  md: '# # I/O Using DMA
+
+
+    ```
+
+    copy_from_user(buffer, p, count);
+
+    set_up_DMA_controller();
+
+    scheduler();
+
+    ```
+
+
+    ```
+
+    acknowledge_interrupt();
+
+    unblock_user();
+
+    return_from_interrupt();
+
+    ```
+
+
+    Figure 5-10. Printing a string using DMA. (a) Code executed when the print system
+    call is made. (b) Interrupt service procedure.'
+  merge: -1
+  img_proc: true
+- pgno: 239
+  md: '# I/O Software Layers
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_239_0.png)
+
+
+    Figure 5-11. Layers of the I/O software system.'
+  merge: -1
+  img_proc: true
+- pgno: 240
+  md: '# Interrupt Handlers (1)
+
+
+    +   1. Save registers not already been saved by interrupt hardware.
+
+    +   2. Set up a context for the interrupt service procedure.
+
+    +   3. Set up a stack for the interrupt service procedure.
+
+    +   4. Acknowledge the interrupt controller. If there is no centralized interrupt
+    controller, reenable interrupts.
+
+    +   5. Copy the registers from where they were saved to the process table.'
+  merge: -1
+  img_proc: true
+- pgno: 241
+  md: '# Interrupt Handlers (2)
+
+
+    +   6. Run the interrupt service procedure.
+
+    +   7. Choose which process to run next.
+
+    +   8. Set up the MMU context for the process to run next.
+
+    +   9. Load the new process’ registers, including its PSW.
+
+    +   10. Start running the new process.'
+  merge: -1
+  img_proc: true
+- pgno: 242
+  md: '# # Device Drivers
+
+
+    Figure 5-12. Logical positioning of device drivers. In reality all communication
+    between drivers and device controllers goes over the bus.
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_242_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 243
+  md: '# Device-Independent I/O Software
+
+
+    | Functions of the device-independent I/O software |
+
+    |---|
+
+    | Uniform interfacing for device drivers |
+
+    | Buffering |
+
+    | Error reporting |
+
+    | Allocating and releasing dedicated devices |
+
+    | Providing a device-independent block size |
+
+
+    Figure 5-13. Functions of the device-independent I/O software.'
+  merge: -1
+  img_proc: true
+- pgno: 244
+  md: '# Uniform Interfacing for Device Drivers
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_244_0.png)
+
+
+    Figure 5-14. (a) Without a standard driver interface. (b) With a standard driver
+    interface.'
+  merge: -1
+  img_proc: true
+- pgno: 245
+  md: '# Buffering (1)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_245_0.png)
+
+
+    Figure 5-15. (a) Unbuffered input. (b) Buffering in user space. (c) Buffering
+    in the kernel followed by copying to user space. (d) Double buffering in the kernel.'
+  merge: -1
+  img_proc: true
+- pgno: 246
+  md: '# Buffering (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_246_0.png)
+
+
+    **Figure 5-16.** Networking may involve many copies of a packet.'
+  merge: -1
+  img_proc: true
+- pgno: 247
+  md: '# # User-Space I/O Software
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_247_0.png)
+
+
+    Figure 5-17. Layers of the I/O system and the main functions of each layer.'
+  merge: -1
+  img_proc: true
+- pgno: 248
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 249
+  md: '# # Block devices
+
+
+    +   - A block device is any device which allows random access ("seeks") and which
+    is divided into "blocks" of a given size.
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_249_0.png)
+
+
+    +   - Typical block devices:
+
+    +     - Hard disks (and partitions)
+
+    +     - Floppy disks
+
+    +     - Virtual block devices (RAID and LVM)'
+  merge: -1
+  img_proc: true
+- pgno: 250
+  md: '# # Magnetic Disks (1)
+
+
+    | Parameter | IBM 360-KB floppy disk | WD 18300 hard disk |
+
+    |---|---|---|
+
+    | Number of cylinders | 40 | 10601 |
+
+    | Tracks per cylinder | 2 | 12 |
+
+    | Sectors per track | 9 | 281 (avg) |
+
+    | Sectors per disk | 720 | 35742000 |
+
+    | Bytes per sector | 512 | 512 |
+
+    | Disk capacity | 360 KB | 18.3 GB |
+
+    | Seek time (adjacent cylinders) | 6 msec | 0.8 msec |
+
+    | Seek time (average case) | 77 msec | 6.9 msec |
+
+    | Rotation time | 200 msec | 8.33 msec |
+
+    | Motor stop/start time | 250 msec | 20 sec |
+
+    | Time to transfer 1 sector | 22 msec | 17 μsec |
+
+
+    Figure 5-18. Disk parameters for the original IBM PC 360-KB floppy disk and a
+    Western Digital WD 18300 hard disk.'
+  merge: -1
+  img_proc: true
+- pgno: 251
+  md: '# # Magnetic Disks (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_251_0.png)
+
+
+    Figure 5-19. (a) Physical geometry of a disk with two zones.
+
+    (b) A possible virtual geometry for this disk.'
+  merge: -1
+  img_proc: true
+- pgno: 252
+  md: '# # CD-ROMs (1)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_252_0.png)
+
+
+    Figure 5-21. Recording structure of a compact disc or CD-ROM.'
+  merge: -1
+  img_proc: true
+- pgno: 253
+  md: "# DVD (1)\n\n# DVD Improvements on CDs\n\n+   1. **Smaller pits**  \n+    \
+    \  (0.4 microns versus 0.8 microns for CDs).  \n+   2. **A tighter spiral**  \n\
+    +      (0.74 microns between tracks versus 1.6 microns for CDs).  \n+   3. **A\
+    \ red laser**  \n+      (at 0.65 microns versus 0.78 microns for CDs)."
+  merge: -1
+  img_proc: true
+- pgno: 254
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 255
+  md: '# Disk Formatting (1)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_255_0.png)
+
+
+    Figure 5-25. A disk sector.'
+  merge: -1
+  img_proc: true
+- pgno: 256
+  md: '# # Disk Formatting (2)
+
+
+    Figure 5-26. An illustration of cylinder skew.
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_256_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 257
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 258
+  md: "# Disk Arm Scheduling Algorithms (1)\n\n# Read/write time factors\n\n+   1.\
+    \ Seek time (the time to move the arm to the proper cylinder).  \n+   2. Rotational\
+    \ delay (the time for the proper sector to rotate under the head).  \n+   3. Actual\
+    \ data transfer time."
+  merge: -1
+  img_proc: true
+- pgno: 259
+  md: '# # Disk Arm Scheduling Algorithms (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_259_0.png)
+
+
+    Figure 5-28. Shortest Seek First (SSF) disk scheduling algorithm.'
+  merge: -1
+  img_proc: true
+- pgno: 260
+  md: '# Disk Arm Scheduling Algorithms (3)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_260_0.png)
+
+
+    Figure 5-29. The elevator algorithm for scheduling disk requests.'
+  merge: -1
+  img_proc: true
+- pgno: 261
+  md: "# # Error Handling\n\n![](img/173140081d013d40ccca0b8e597b7a43_261_0.png)\n\
+    \nFigure 5-30. (a) A disk track with a bad sector.  \n(b) Substituting a spare\
+    \ for the bad sector.  \n(c) Shifting all the sectors to bypass the bad one."
+  merge: -1
+  img_proc: true
+- pgno: 262
+  md: '# Clock Hardware
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_262_0.png)
+
+
+    Crystal oscillator
+
+
+    Counter is decremented at each pulse
+
+
+    Holding register is used to load the counter
+
+
+    Figure 5-32. A programmable clock.'
+  merge: -1
+  img_proc: true
+- pgno: 263
+  md: '# # Clock Software (1)
+
+
+    # ## Typical duties of a clock driver
+
+
+    +   1. Maintaining the time of day.
+
+
+    +   2. Preventing processes from running longer than they are allowed to.
+
+
+    +   3. Accounting for CPU usage.
+
+
+    +   4. Handling alarm system call made by user processes.
+
+
+    +   5. Providing watchdog timers for parts of the system itself.
+
+
+    +   6. Doing profiling, monitoring, statistics gathering.'
+  merge: -1
+  img_proc: true
+- pgno: 264
+  md: '# # Clock Software (2)
+
+
+    Figure 5-33. Three ways to maintain the time of day.
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_264_0.png)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_264_1.png)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_264_2.png)
+
+
+    (a)
+
+
+    (b)
+
+
+    (c)'
+  merge: -1
+  img_proc: true
+- pgno: 265
+  md: '# # Keyboard Software
+
+
+    | Character | POSIX name | Comment |
+
+    |---|---|---|
+
+    | CTRL-H | ERASE | Backspace one character |
+
+    | CTRL-U | KILL | Erase entire line being typed |
+
+    | CTRL-V | LNEXT | Interpret next character literally |
+
+    | CTRL-S | STOP | Stop output |
+
+    | CTRL-Q | START | Start output |
+
+    | DEL | INTR | Interrupt process (SIGINT) |
+
+    | CTRL-\\ | QUIT | Force core dump (SIGQUIT) |
+
+    | CTRL-D | EOF | End of file |
+
+    | CTRL-M | CR | Carriage return (unchangeable) |
+
+    | CTRL-J | NL | Linefeed (unchangeable) |
+
+
+    Figure 5-35. Characters that are handled specially in canonical mode.'
+  merge: -1
+  img_proc: true
+- pgno: 266
+  md: '# # The X Window System (1)
+
+
+    | Escape sequence | Meaning |
+
+    |---|---|
+
+    | ESC [ n A | Move up n lines |
+
+    | ESC [ n B | Move down n lines |
+
+    | ESC [ n C | Move right n spaces |
+
+    | ESC [ n D | Move left n spaces |
+
+    | ESC [ m ; n H | Move cursor to (m,n) |
+
+    | ESC [ s J | Clear screen from cursor (0 to end, 1 from start, 2 all) |
+
+    | ESC [ s K | Clear line from cursor (0 to end, 1 from start, 2 all) |
+
+    | ESC [ n L | Insert n lines at cursor |
+
+    | ESC [ n M | Delete n lines at cursor |
+
+    | ESC [ n P | Delete n chars at cursor |
+
+    | ESC [ n @ | Insert n chars at cursor |
+
+    | ESC [ n m | Enable rendition n (0=normal, 4=bold, 5=blinking, 7=reverse) |
+
+    | ESC M | Scroll the screen backward if the cursor is on the top line |
+
+
+    Figure 5-36. The ANSI escape sequences accepted by the terminal driver on output.
+    ESC denotes the ASCII escape character (0x1B), and n, m, and s are optional numeric
+    parameters.'
+  merge: -1
+  img_proc: true
+- pgno: 267
+  md: '# # The X Window System (2)
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_267_0.png)
+
+
+    Figure 5-37. Clients and servers in the M.I.T. X Window System.
+
+
+    Tanenbaum, Modern Operating Systems 3 e, (c) 2008 Prentice-Hall, Inc. All rights
+    reserved. 0-13-6006639'
+  merge: -1
+  img_proc: true
+- pgno: 268
+  md: '# The X Window System (3)
+
+
+    Types of messages between client and server:
+
+
+    +   1. Drawing commands from the program to the workstation.
+
+    +   2. Replies by the workstation to program queries.
+
+    +   3. Keyboard, mouse, and other event announcements.
+
+    +   4. Error messages.'
+  merge: -1
+  img_proc: true
+- pgno: 269
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 270
+  md: "# # Graphical User Interfaces (2)\n\n```\nwhile (running) {\n    XNextEvent(disp,\
+    \ &event);      /* get next event */\n    switch (event.type) {\n    case Expose:\
+    \   ...; break;     /* repaint window */\n    case ButtonPress: ...; break;  /*\
+    \ process mouse click */\n    case Keypress:  ...; break;    /* process keyboard\
+    \ input */\n    }\n}\nXFreeGC(disp, gc);                 /* release graphic context\
+    \ */\nXDestroyWindow(disp, win);         /* deallocate window's memory space */\n\
+    XCloseDisplay(disp);               /* tear down network connection */\n}\n```\n\
+    \nFigure 5-38. A skeleton of an X Window application program."
+  merge: -1
+  img_proc: true
+- pgno: 271
+  md: '# # Graphical User Interfaces (3)
+
+
+    Figure 5-39. A sample window located at (200, 100) on an XGA display.
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_271_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 272
+  md: "# Graphical User Interfaces (4)\n\n```\n```c\n#include <windows.h>\n\nint WINAPI\
+    \ WinMain(HINSTANCE h, HINSTANCE, hprev, char *szCmd, int iCmdShow)\n{\n     \
+    \   WNDCLASS wndclass;                 /* class object for this window */\n  \
+    \      MSG msg;                            /* incoming messages are stored here\
+    \ */\n        HWND hwnd;                          /* handle (pointer) to the window\
+    \ object */\n\n        /* Initialize wndclass */\n        wndclass.lpfnWndProc\
+    \ = WndProc;    /* tells which procedure to call */\n        wndclass.lpszClassName\
+    \ = \"Program name\"; /* Text for title bar */\n        wndclass.hIcon = LoadIcon(NULL,\
+    \ IDI_APPLICATION); /* load program icon */\n        wndclass.hCursor = LoadCursor(NULL,\
+    \ IDC_ARROW);   /* load mouse cursor */\n\n        RegisterClass(&wndclass); \
+    \         /* tell Windows about wndclass */\n        hwnd = CreateWindow(...)\
+    \           /* allocate storage for the window */\n        ShowWindow(hwnd, iCmdShow);\
+    \        /* display the window on the screen */\n        UpdateWindow(hwnd); \
+    \               /* tell the window to paint itself */\n        ...\n}\n```\n```\n\
+    \nFigure 5-40. A skeleton of a Windows main program."
+  merge: -1
+  img_proc: true
+- pgno: 273
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 274
+  md: '# # Power Management Hardware Issues
+
+
+    | Device | Li et al. (1994) | Lorch and Smith (1998) |
+
+    |---|---|---|
+
+    | Display | 68% | 39% |
+
+    | CPU | 12% | 18% |
+
+    | Hard disk | 20% | 12% |
+
+    | Modem | | 6% |
+
+    | Sound | | 2% |
+
+    | Memory | 0.5% | 1% |
+
+    | Other | | 22% |
+
+
+    Figure 5-45. Power consumption of various parts of a notebook computer.'
+  merge: -1
+  img_proc: true
+- pgno: 275
+  md: '# # Power Management The Display
+
+
+    ![](img/173140081d013d40ccca0b8e597b7a43_275_0.png)
+
+
+    Figure 5-46. The use of zones for backlighting the display. (a) When window 2
+    is selected it is not moved. (b) When window 1 is selected, it moves to reduce
+    the number of zones illuminated.'
+  merge: -1
+  img_proc: true
+- pgno: 276
+  md: "# Power Management  \nThe CPU\n\n![](img/173140081d013d40ccca0b8e597b7a43_276_0.png)\n\
+    \nFigure 5-47. (a) Running at full clock speed. (b) Cutting voltage by two cuts\
+    \ clock speed by two and power consumption by four."
+  merge: -1
+  img_proc: true
+- pgno: 277
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true

@@ -1,0 +1,7 @@
+# # Definitions
+
+# ## Definition 3: Longest common subsequence:LCS
+
+A **longest common subsequence** of X and Y is a common subsequence of X and Y with the longest length.
+
++   - Longest common subsequence may not be unique, for example, strings both acd and abd are LCS of abcd and acbd

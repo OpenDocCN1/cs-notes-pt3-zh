@@ -1,0 +1,384 @@
+- - '##'
+  - 1. Introduction
+- - '##'
+  - CAD For Products
+- - '##'
+  - CAD In Architecture
+- - '##'
+  - Simulation/Training
+- - '##'
+  - Visualization
+- - '##'
+  - Computational photography & video
+- - '##'
+  - Lighting Sensitive Display
+- - '##'
+  - Researches in Computer Graphics
+- - '##'
+  - What we will talk about in this course
+- - '##'
+  - 高效执行业务的七项习惯简报
+- - '##'
+  - 田野调研报告专题
+- - '##'
+  - Wireframe Vs. Solid Models - Illustration
+- - '##'
+  - Flat Shading
+- - '##'
+  - Gouraud Shading
+- - '##'
+  - Phong Shading
+- - '##'
+  - Modeling with Curved Surfaces
+- - '##'
+  - Rendering with Texture Mapping
+- - '##'
+  - Advanced illumination - Illustration
+- - '##'
+  - Global Illumination - radiosity
+- - '##'
+  - Global Illumination - photon mapping
+- - '##'
+  - Researches in our CS, TJU
+- - '##'
+  - Researches in our group
+- - '##'
+  - MCGI renderer
+- - '##'
+  - Pmap
+- - '##'
+  - Chinese Ink-wash Drawing
+- - '##'
+  - Image based Modeling and Rendering
+- - '##'
+  - Splatting algorithm for visualization
+- - '##'
+  - Reference Books
+- - '##'
+  - Prerequisite
+- - '##'
+  - 2. Graphics System and Architecture
+- - '##'
+  - Graphics System
+- - '##'
+  - Pixels and the Frame Buffer
+- - '##'
+  - Frame Buffer
+- - '##'
+  - Color
+- - '##'
+  - RGB Color Space
+- - '##'
+  - Color Cube
+- - '##'
+  - Problems with RGB
+- - '##'
+  - CIE XYZ Color Space
+- - '##'
+  - Going from RGB to XYZ
+- - '##'
+  - Standard RGB↔XYZ
+- - '##'
+  - Uniform Color Spaces
+- - '##'
+  - Tone mapping & gamma correction
+- - '##'
+  - A Technical Overview of the OpenGL Graphics API
+- - '##'
+  - Programming With OpenGL
+- - '##'
+  - Graphics API
+- - '##'
+  - An Introduction
+- - '##'
+  - OpenGL Advantages
+- - '##'
+  - Objectives
+- - '##'
+  - What is OpenGL?
+- - '##'
+  - Where is in the Graphics System
+- - '##'
+  - What OpenGL Can Do For You
+- - '##'
+  - Graphics Functions
+- - '##'
+  - Overview of OpenGL Components
+- - '##'
+  - OpenGL Library GL
+- - '##'
+  - OpenGL Utility Library GLU
+- - '##'
+  - OpenGL Auxiliary Library
+- - '##'
+  - OpenGL Command Syntax
+- - '##'
+  - Drawing Geometry
+- - '##'
+  - Primitive Types
+- - '##'
+  - Attributes
+- - '##'
+  - Drawing Geometry
+- - '##'
+  - OpenGL The Statemachine
+- - '##'
+  - States
+- - '##'
+  - Structure of a Typical Program
+- - '##'
+  - Initialization
+- - '##'
+  - Control Functions
+- - '##'
+  - Redraw
+- - '##'
+  - Computer Graphics
+- - '##'
+  - Solid Object Representation and Advanced Modeling Techniques
+- - '##'
+  - Application of Solid Modeling
+- - '##'
+  - Solid Object Representations
+- - '##'
+  - Polygon Modeling
+- - '##'
+  - Polygons Dominate
+- - '##'
+  - Polygon Meshes
+- - '##'
+  - Polygon Meshes - example
+- - '##'
+  - Meshes from Scanning
+- - '##'
+  - Scanning in Action
+- - '##'
+  - Level of Detail
+- - '##'
+  - Problems with Polygons
+- - '##'
+  - Spatial-Partitioning Representations
+- - '##'
+  - Spatial-Occupancy Enumeration
+- - '##'
+  - Octree
+- - '##'
+  - 'Advantages:'
+- - '##'
+  - 'Drawback:'
+- - '##'
+  - Application Example
+- - '##'
+  - Thesaurus(Tianjin University)
+- - '##'
+  - 空间曲线
+- - '##'
+  - 定义
+- - '##'
+  - Some definitions
+- - '##'
+  - 插值和逼近样条
+- - '##'
+  - Parametric Continuity Conditions
+- - '##'
+  - 几何连续性
+- - '##'
+  - Geometric Continuity Conditions
+- - '##'
+  - 贝塞尔(Bezier)曲线
+- - '##'
+  - 贝塞尔曲线
+- - '##'
+  - Bezier Curve
+- - '##'
+  - 贝塞尔曲线（几何解释）
+- - '##'
+  - 贝塞尔曲线（OpenGL）
+- - '##'
+  - 贝塞尔曲面（OpenGL）
+- - '##'
+  - OpenGl Bezier-Spline Surface
+- - '##'
+  - B 样条曲线
+- - '##'
+  - B-Spline Curves
+- - '##'
+  - 均匀B样条曲线
+- - '##'
+  - Uniform B-Spline Curves
+- - '##'
+  - 非均匀B样条曲线
+- - '##'
+  - 非均匀有理B样条曲线（NURBS）
+- - '##'
+  - Transformation
+- - '##'
+  - Why to do transformation?
+- - '##'
+  - Question
+- - '##'
+  - Frame Buffer
+- - '##'
+  - Rendering/Drawing Pipeline
+- - '##'
+  - Transformation Pipeline
+- - '##'
+  - Model Coordinate System
+- - '##'
+  - Model Coordinate System - example
+- - '##'
+  - World Coordinate System
+- - '##'
+  - World Coordinate System - example
+- - '##'
+  - Begin Transformation...
+- - '##'
+  - Translation
+- - '##'
+  - Scaling
+- - '##'
+  - Rotation
+- - '##'
+  - 2D Transformation
+- - '##'
+  - 1. Translation
+- - '##'
+  - 2D Transformation
+- - '##'
+  - 2. Rotation
+- - '##'
+  - Then
+- - '##'
+  - 2D Transformation
+- - '##'
+  - 3.Scale
+- - '##'
+  - 3D Translation
+- - '##'
+  - 3D Rotation
+- - '##'
+  - Rotation (cont.)
+- - '##'
+  - The order of transformations
+- - '##'
+  - 3D Scaling
+- - '##'
+  - Homogeneous coordinates
+- - '##'
+  - 'Homogeneous coordinates:'
+- - '##'
+  - Viewing Position
+- - '##'
+  - Viewing Coordinate System
+- - '##'
+  - Local coordinate
+- - '##'
+  - World coordinate
+- - '##'
+  - Camera
+- - '##'
+  - Viewing coordinate
+- - '##'
+  - Projections
+- - '##'
+  - Projections (cont.)
+- - '##'
+  - Perspective projection
+- - '##'
+  - Parallel projection
+- - '##'
+  - Normalizing
+- - '##'
+  - Screen Coordinates
+- - '##'
+  - From Window to Viewport
+- - '##'
+  - Illuminating a Shadow
+- - '##'
+  - Illumination
+- - '##'
+  - 'Elements of object appearance:'
+- - '##'
+  - Basic illumination components
+- - '##'
+  - Local Illumination
+- - '##'
+  - Diffuse Reflection Model
+- - '##'
+  - Diffuse lighting
+- - '##'
+  - How to Calculate \((\vec{R} \cdot \vec{V})\)
+- - '##'
+  - Specular lighting
+- - '##'
+  - Local Illumination
+- - '##'
+  - Ambient Light
+- - '##'
+  - Ambient lighting
+- - '##'
+  - Local Illumination
+- - '##'
+  - Shading
+- - '##'
+  - Shading Techniques
+- - '##'
+  - Flat Shading
+- - '##'
+  - Gouraud Shading Illustration
+- - '##'
+  - Gouraud Shading
+- - '##'
+  - Phong Shading Illustration
+- - '##'
+  - Phong Shading
+- - '##'
+  - Ray Tracing
+- - '##'
+  - Whitted Ray Tracing Model
+- - '##'
+  - Raytracing
+- - '##'
+  - Raytracing for each eye ray
+- - '##'
+  - Ray Tracing
+- - '##'
+  - Lighting calculation
+- - '##'
+  - Ray Tracing - Explanation
+- - '##'
+  - The Ray Tree
+- - '##'
+  - Ray Tracing
+- - '##'
+  - Algorithm Description
+- - '##'
+  - Problems
+- - '##'
+  - Line Algorithms
+- - '##'
+  - Digital Differential Analyzer (DDA)
+- - '##'
+  - DDA Algorithm
+- - '##'
+  - Bresenham Line Algorithm
+- - '##'
+  - Polygon Filling
+- - '##'
+  - Flood Fill
+- - '##'
+  - Scan-Line Algorithms
+- - '##'
+  - Odd-even fill
+- - '##'
+  - Line-Segment Clipping
+- - '##'
+  - Cohen-Sutherland Clipping
+- - '##'
+  - Hidden-Surface Removal
+- - '##'
+  - Z-Buffer Algorithm
+- - '##'
+  - The Z-buffer
+- - '##'
+  - The Z-buffer (Image Precision)

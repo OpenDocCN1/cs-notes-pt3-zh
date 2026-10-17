@@ -1,0 +1,8 @@
+# Outline
+
++   1. What is DP
++   2. 0/1 Knapsack Problem
++   3. Matrix Multiplication Chains
++   4. All Pairs Shortest Path
++   5. Maximum Non-crossing Subset of Nets
++   6. Longest Common Subsequences

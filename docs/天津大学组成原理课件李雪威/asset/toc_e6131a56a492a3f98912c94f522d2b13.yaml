@@ -1,0 +1,1915 @@
+- - '##'
+  - SLIDES FOR CHAPTER 1
+- - '##'
+  - Overview
+- - '##'
+  - How does a computer program work？
+- - '##'
+  - 计算机系统的软硬件概念
+- - '##'
+  - Application (Netscape)
+- - '##'
+  - 计算机的工作过程
+- - '##'
+  - 内存
+- - '##'
+  - CPU
+- - '##'
+  - 内存Memory
+- - '##'
+  - 总线Bus
+- - '##'
+  - 基本字长
+- - '##'
+  - 主存容量
+- - '##'
+  - 主频
+- - '##'
+  - 2. 主频、CPU时钟周期、CPI、CPU执行时间
+- - '##'
+  - 3. MIPS、MFLOPS
+- - '##'
+  - 作业：
+- - '##'
+  - 'Today: Bits, Bytes, and Integers'
+- - '##'
+  - Everything is bits
+- - '##'
+  - For example, can count in binary
+- - '##'
+  - Encoding Byte Values
+- - '##'
+  - Example Data Representations
+- - '##'
+  - 'Today: Bits, Bytes, and Integers'
+- - '##'
+  - Boolean Algebra
+- - '##'
+  - General Boolean Algebras
+- - '##'
+  - 'Example: Representing & Manipulating Sets'
+- - '##'
+  - Bit-Level Operations in C
+- - '##'
+  - 'Contrast: Logic Operations in C'
+- - '##'
+  - 'Contrast: Logic Operations in C'
+- - '##'
+  - Shift Operations
+- - '##'
+  - 'Today: Bits, Bytes, and Integers'
+- - '##'
+  - Encoding Integers
+- - '##'
+  - Two-complement Encoding Example (Cont.)
+- - '##'
+  - Numeric Ranges
+- - '##'
+  - Values for Different Word Sizes
+- - '##'
+  - Unsigned & Signed Numeric Values
+- - '##'
+  - 'Today: Bits, Bytes, and Integers'
+- - '##'
+  - Mapping Between Signed & Unsigned
+- - '##'
+  - Mapping Signed ↔ Unsigned
+- - '##'
+  - Mapping Signed ↔ Unsigned
+- - '##'
+  - Relation between Signed & Unsigned
+- - '##'
+  - Conversion Visualized
+- - '##'
+  - Signed vs. Unsigned in C
+- - '##'
+  - Casting Surprises
+- - '##'
+  - Summary
+- - '##'
+  - 'Casting Signed <-> Unsigned: Basic Rules'
+- - '##'
+  - 'Today: Bits, Bytes, and Integers'
+- - '##'
+  - Sign Extension
+- - '##'
+  - Sign Extension Example
+- - '##'
+  - 'Summary: Expanding, Truncating: Basic Rules'
+- - '##'
+  - 'Today: Bits, Bytes, and Integers'
+- - '##'
+  - Unsigned Addition
+- - '##'
+  - Visualizing (Mathematical) Integer Addition
+- - '###'
+  - True Sum
+- - '##'
+  - Two's Complement Addition
+- - '##'
+  - TAdd Overflow
+- - '##'
+  - Visualizing 2's Complement Addition
+- - '##'
+  - Multiplication
+- - '##'
+  - Unsigned Multiplication in C
+- - '##'
+  - Signed Multiplication in C
+- - '##'
+  - Power-of-2 Multiply with Shift
+- - '##'
+  - Unsigned Power-of-2 Divide with Shift
+- - '##'
+  - 'Today: Bits, Bytes, and Integers'
+- - '##'
+  - 'Arithmetic: Basic Rules'
+- - '##'
+  - Why Should I Use Unsigned?
+- - '##'
+  - Counting Down with Unsigned
+- - '##'
+  - Why Should I Use Unsigned? (cont.)
+- - '##'
+  - 'Today: Bits, Bytes, and Integers'
+- - '##'
+  - Byte-Oriented Memory Organization
+- - '##'
+  - Machine Words
+- - '##'
+  - Word-Oriented Memory Organization
+- - '##'
+  - Example Data Representations
+- - '##'
+  - Byte Ordering
+- - '##'
+  - Byte Ordering Example
+- - '##'
+  - Representing Integers
+- - '##'
+  - Examining Data Representations
+- - '##'
+  - show_bytes Execution Example
+- - '##'
+  - Representing Pointers
+- - '##'
+  - Representing Strings
+- - '##'
+  - Integer C Puzzles
+- - '##'
+  - Bonus extras
+- - '##'
+  - Application of Boolean Algebra
+- - '##'
+  - Binary Number Property
+- - '##'
+  - Code Security Example
+- - '##'
+  - Typical Usage
+- - '##'
+  - Malicious Usage
+- - '##'
+  - Mathematical Properties
+- - '##'
+  - Mathematical Properties of TAdd
+- - '##'
+  - Characterizing TAdd
+- - '##'
+  - 'Negation: Complement & Increment'
+- - '##'
+  - Complement & Increment Examples
+- - '##'
+  - 'Code Security Example #2'
+- - '##'
+  - XDR Code
+- - '##'
+  - XDR Vulnerability
+- - '##'
+  - Compiled Multiplication Code
+- - '##'
+  - Compiled Unsigned Division Code
+- - '###'
+  - C Function
+- - '###'
+  - Compiled Arithmetic Operations
+- - '###'
+  - Explanation
+- - '#'
+  - Logical shift
+- - '##'
+  - Signed Power-of-2 Divide with Shift
+- - '##'
+  - Correct Power-of-2 Divide
+- - '###'
+  - 'Case 1: No rounding'
+- - '##'
+  - Correct Power-of-2 Divide (Cont.)
+- - '###'
+  - 'Case 2: Rounding'
+- - '##'
+  - Compiled Signed Division Code
+- - '###'
+  - C Function
+- - '###'
+  - Compiled Arithmetic Operations
+- - '###'
+  - Explanation
+- - '##'
+  - 'Arithmetic: Basic Rules'
+- - '##'
+  - Properties of Unsigned Arithmetic
+- - '##'
+  - Properties of Two’s Comp. Arithmetic
+- - '##'
+  - Reading Byte-Reversed Listings
+- - '##'
+  - Bits, Bytes, and Integers – Part 2
+- - '##'
+  - Autolab/TPZ/GitLab accounts
+- - '##'
+  - 'First Assignment: Data Lab'
+- - '##'
+  - Summary From Last Lecture
+- - '##'
+  - Bit-Level Operations in C
+- - '##'
+  - Logic Operations in C
+- - '##'
+  - Encoding Integers
+- - '###'
+  - Unsigned
+- - '###'
+  - Two's Complement
+- - '###'
+  - Two's Complement Examples (w = 5)
+- - '##'
+  - Unsigned & Signed Numeric Values
+- - '###'
+  - Equivalence
+- - '###'
+  - Uniqueness
+- - '###'
+  - 'Expression containing signed and unsigned int: int is cast to unsigned!!'
+- - '##'
+  - Sign Extension and Truncation
+- - '###'
+  - Sign Extension
+- - '###'
+  - Truncation
+- - '##'
+  - 'Today: Bits, Bytes, and Integers'
+- - '##'
+  - Unsigned Addition
+- - '##'
+  - Visualizing (Mathematical) Integer Addition
+- - '###'
+  - Integer Addition
+- - '###'
+  - Add$_4(u, v)$
+- - '##'
+  - Visualizing Unsigned Addition
+- - '###'
+  - Wraps Around
+- - '##'
+  - Two’s Complement Addition
+- - '###'
+  - TAdd and UAdd have Identical Bit-Level Behavior
+- - '##'
+  - TAdd Overflow
+- - '###'
+  - Functionality
+- - '##'
+  - Visualizing 2’s Complement Addition
+- - '###'
+  - Values
+- - '###'
+  - Wraps Around
+- - '##'
+  - Characterizing TAdd
+- - '##'
+  - 'Negation: Complement & Increment'
+- - '##'
+  - Complement & Increment Examples
+- - '##'
+  - Canonical counter example
+- - '##'
+  - Multiplication
+- - '##'
+  - Unsigned Multiplication in C
+- - '##'
+  - Signed Multiplication in C
+- - '###'
+  - Standard Multiplication Function
+- - '##'
+  - Power-of-2 Multiply with Shift
+- - '###'
+  - Operation
+- - '###'
+  - Examples
+- - '##'
+  - Unsigned Power-of-2 Divide with Shift
+- - '###'
+  - Quotient of Unsigned by Power of 2
+- - '##'
+  - Signed Power-of-2 Divide with Shift
+- - '##'
+  - Correct Power-of-2 Divide
+- - '###'
+  - 'Case 1: No rounding'
+- - '##'
+  - Correct Power-of-2 Divide (Cont.)
+- - '###'
+  - 'Case 2: Rounding'
+- - '##'
+  - 'Today: Bits, Bytes, and Integers'
+- - '##'
+  - 'Arithmetic: Basic Rules'
+- - '###'
+  - 'Addition:'
+- - '###'
+  - 'Multiplication:'
+- - '##'
+  - Why Should I Use Unsigned?
+- - '##'
+  - Counting Down with Unsigned
+- - '##'
+  - Why Should I Use Unsigned? (cont.)
+- - '##'
+  - Integer Arithmetic Example
+- - '##'
+  - Byte-Oriented Memory Organization
+- - '###'
+  - Programs refer to data by address
+- - '###'
+  - 'Note: system provides private address spaces to each “process”'
+- - '##'
+  - Machine Words
+- - '##'
+  - Word-Oriented Memory Organization
+- - '##'
+  - Example Data Representations
+- - '##'
+  - Byte Ordering
+- - '##'
+  - Byte Ordering Example
+- - '###'
+  - Example
+- - '###'
+  - Big Endian
+- - '###'
+  - Little Endian
+- - '##'
+  - Representing Integers
+- - '##'
+  - Examining Data Representations
+- - '###'
+  - Code to Print Byte Representation of Data
+- - '##'
+  - Representing Pointers
+- - '##'
+  - Representing Strings
+- - '###'
+  - Strings in C
+- - '###'
+  - Compatibility
+- - '##'
+  - Integer C Puzzles
+- - '###'
+  - Initialization
+- - '##'
+  - Summary
+- - '##'
+  - Floating Point
+- - '##'
+  - 'Today: Floating Point'
+- - '##'
+  - Fractional binary numbers
+- - '##'
+  - Fractional Binary Numbers
+- - '###'
+  - Representation
+- - '##'
+  - 'Fractional Binary Numbers: Examples'
+- - '###'
+  - Observations
+- - '##'
+  - Representable Numbers
+- - '##'
+  - IEEE Floating Point
+- - '###'
+  - IEEE Standard 754
+- - '###'
+  - Driven by numerical concerns
+- - '##'
+  - Floating Point Representation
+- - '###'
+  - 'Numerical Form:'
+- - '###'
+  - Encoding
+- - '##'
+  - Precision options
+- - '##'
+  - Three "kinds" of floating point numbers
+- - '##'
+  - '"Normalized" Values'
+- - '##'
+  - Denormalized Values
+- - '##'
+  - Special Values
+- - '##'
+  - C float Decoding Example
+- - '##'
+  - C float Decoding Example
+- - '##'
+  - C float Decoding Example
+- - '##'
+  - 'Visualization: Floating Point Encodings'
+- - '##'
+  - 'Today: Floating Point'
+- - '##'
+  - Tiny Floating Point Example
+- - '##'
+  - Dynamic Range (Positive Only)
+- - '##'
+  - Distribution of Values
+- - '###'
+  - 6-bit IEEE-like format
+- - '###'
+  - Notice how the distribution gets denser toward zero.
+- - '##'
+  - Distribution of Values (close-up view)
+- - '##'
+  - Special Properties of the IEEE Encoding
+- - '###'
+  - FP Zero Same as Integer Zero
+- - '###'
+  - Can (Almost) Use Unsigned Integer Comparison
+- - '##'
+  - 'Today: Floating Point'
+- - '##'
+  - 'Floating Point Operations: Basic Idea'
+- - '##'
+  - Rounding
+- - '##'
+  - FP Multiplication
+- - '##'
+  - Mathematical Properties of FP Add
+- - '##'
+  - Mathematical Properties of FP Mult
+- - '###'
+  - Compare to Commutative Ring
+- - '###'
+  - Monotonicity
+- - '##'
+  - 'Today: Floating Point'
+- - '##'
+  - Floating Point in C
+- - '###'
+  - C Guarantees Two Levels
+- - '###'
+  - Conversions/Casting
+- - '##'
+  - Summary
+- - '##'
+  - Additional Slides
+- - '##'
+  - Postnormalize
+- - '###'
+  - Issue
+- - '##'
+  - Interesting Numbers
+- - '##'
+  - '`{single, double}`'
+- - '#'
+  - 'Machine-Level Programming I: Basics'
+- - '#'
+  - Office Hours
+- - '##'
+  - 'Today: Machine Programming I: Basics'
+- - '##'
+  - Intel x86 Processors
+- - '##'
+  - Intel x86 Processors, cont.
+- - '###'
+  - Machine Evolution
+- - '###'
+  - Added Features
+- - '###'
+  - Past Generations
+- - '###'
+  - Recent Generations
+- - '###'
+  - Upcoming Generations
+- - '####'
+  - Process technology
+- - '##'
+  - 'x86 Clones: Advanced Micro Devices (AMD)'
+- - '###'
+  - Historically
+- - '###'
+  - Then
+- - '###'
+  - Recent Years
+- - '##'
+  - Intel’s 64-Bit History
+- - '###'
+  - '2001: Intel Attempts Radical Shift from IA32 to IA64'
+- - '###'
+  - '2003: AMD Steps in with Evolutionary Solution'
+- - '###'
+  - Intel Felt Obligated to Focus on IA64
+- - '###'
+  - '2004: Intel Announces EM64T extension to IA32'
+- - '###'
+  - All but low-end x86 processors support x86-64
+- - '##'
+  - Our Coverage
+- - '##'
+  - 'Today: Machine Programming I: Basics'
+- - '##'
+  - Levels of Abstraction
+- - '##'
+  - Definitions
+- - '##'
+  - Assembly/Machine Code View
+- - '###'
+  - Programmer-Visible State
+- - '##'
+  - 'Assembly Characteristics: Data Types'
+- - '##'
+  - x86-64 Integer Registers
+- - '##'
+  - 'Some History: IA32 Registers'
+- - '##'
+  - Moving Data
+- - '##'
+  - movq Operand Combinations
+- - '##'
+  - Simple Memory Addressing Modes
+- - '##'
+  - Example of Simple Addressing Modes
+- - '##'
+  - Example of Simple Addressing Modes
+- - '##'
+  - Understanding Swap()
+- - '###'
+  - Registers
+- - '###'
+  - Memory
+- - '##'
+  - Understanding Swap()
+- - '###'
+  - Registers
+- - '###'
+  - Memory
+- - '##'
+  - Understanding Swap()
+- - '###'
+  - Registers
+- - '###'
+  - Memory
+- - '##'
+  - Understanding Swap()
+- - '##'
+  - Understanding Swap()
+- - '##'
+  - Understanding Swap()
+- - '###'
+  - Registers
+- - '###'
+  - Memory
+- - '##'
+  - Simple Memory Addressing Modes
+- - '##'
+  - Complete Memory Addressing Modes
+- - '###'
+  - Most General Form
+- - '###'
+  - Special Cases
+- - '##'
+  - Address Computation Examples
+- - '##'
+  - 'Today: Machine Programming I: Basics'
+- - '##'
+  - Address Computation Instruction
+- - '#'
+  - Example
+- - '#'
+  - 'Converted to ASM by compiler:'
+- - '##'
+  - Some Arithmetic Operations
+- - '###'
+  - 'Two Operand Instructions:'
+- - '###'
+  - Watch out for argument order! `Src,Dest`
+- - '###'
+  - No distinction between signed and unsigned int (why?)
+- - '##'
+  - Some Arithmetic Operations
+- - '###'
+  - One Operand Instructions
+- - '###'
+  - See book for more instructions
+- - '##'
+  - Arithmetic Expression Example
+- - '###'
+  - Interesting Instructions
+- - '##'
+  - Understanding Arithmetic Expression Example
+- - '##'
+  - 'Today: Machine Programming I: Basics'
+- - '##'
+  - Turning C into Object Code
+- - '##'
+  - Compiling Into Assembly
+- - '###'
+  - C Code (sum.c)
+- - '###'
+  - Generated x86-64 Assembly
+- - '###'
+  - What it really looks like
+- - '##'
+  - 'Assembly Characteristics: Operations'
+- - '##'
+  - Object Code
+- - '###'
+  - Code for sumstore
+- - '###'
+  - Assembler
+- - '###'
+  - Linker
+- - '##'
+  - Machine Instruction Example
+- - '###'
+  - C Code
+- - '###'
+  - Assembly
+- - '###'
+  - Object Code
+- - '##'
+  - Disassembling Object Code
+- - '###'
+  - Disassembled
+- - '##'
+  - Alternate Disassembly
+- - '###'
+  - Disassembled
+- - '##'
+  - What Can be Disassembled?
+- - '##'
+  - 'Machine Programming I: Summary'
+- - '##'
+  - Office Hours—Thanks for Coming!
+- - '##'
+  - 'Reminder: Turning C into Object Code'
+- - '##'
+  - 'Reminder: Address Modes'
+- - '###'
+  - ■ Most General Form
+- - '###'
+  - ■ Special Cases
+- - '##'
+  - Today
+- - '##'
+  - Processor State (x86-64, Partial)
+- - '##'
+  - CF set when
+- - '##'
+  - SF set when
+- - '##'
+  - OF set when
+- - '##'
+  - ZF set when
+- - '##'
+  - 'Condition Codes (Explicit Setting: Compare)'
+- - '###'
+  - Explicit Setting by Compare Instruction
+- - '##'
+  - 'Condition Codes (Explicit Setting: Test)'
+- - '##'
+  - Reading Condition Codes
+- - '###'
+  - SetX Instructions
+- - '##'
+  - x86-64 Integer Registers
+- - '##'
+  - Reading Condition Codes (Cont.)
+- - '##'
+  - Reading Condition Codes (Cont.)
+- - '###'
+  - Beware weirdness movzbl (and others)
+- - '##'
+  - Today
+- - '##'
+  - Jumping
+- - '###'
+  - jX Instructions
+- - '##'
+  - Conditional Branch Example (Old Style)
+- - '##'
+  - Conditional Branch Example (Old Style)
+- - '###'
+  - Generation
+- - '#'
+  - x <= y
+- - '##'
+  - Expressing with Goto Code
+- - '##'
+  - General Conditional Expression Translation (Using Branches)
+- - '###'
+  - C Code
+- - '###'
+  - Goto Version
+- - '##'
+  - Using Conditional Moves
+- - '###'
+  - Conditional Move Instructions
+- - '###'
+  - Why?
+- - '###'
+  - C Code
+- - '###'
+  - Goto Version
+- - '##'
+  - Conditional Move Example
+- - '##'
+  - Bad Cases for Conditional Move
+- - '###'
+  - Expensive Computations
+- - '###'
+  - Risky Computations
+- - '###'
+  - Computations with side effects
+- - '##'
+  - Bad Performance
+- - '##'
+  - Unsafe
+- - '##'
+  - Illegal
+- - '##'
+  - Exercise
+- - '##'
+  - Exercise
+- - '##'
+  - Today
+- - '##'
+  - “Do-While” Loop Example
+- - '###'
+  - C Code
+- - '###'
+  - Goto Version
+- - '##'
+  - “Do-While” Loop Compilation
+- - '###'
+  - Goto Version
+- - '##'
+  - General “Do-While” Translation
+- - '###'
+  - C Code
+- - '###'
+  - Goto Version
+- - '###'
+  - 'Body:'
+- - '##'
+  - 'General "While" Translation #1'
+- - '###'
+  - While version
+- - '###'
+  - Goto Version
+- - '##'
+  - 'While Loop Example #1'
+- - '###'
+  - C Code
+- - '###'
+  - Jump to Middle
+- - '##'
+  - 'While Loop Example #2'
+- - '###'
+  - C Code
+- - '###'
+  - Do-While Version
+- - '##'
+  - “For” Loop Form
+- - '###'
+  - General Form
+- - '###'
+  - Init
+- - '###'
+  - Test
+- - '###'
+  - Update
+- - '###'
+  - Body
+- - '##'
+  - '"For" Loop → While Loop'
+- - '###'
+  - For Version
+- - '###'
+  - While Version
+- - '##'
+  - For-While Conversion
+- - '###'
+  - Init
+- - '###'
+  - Test
+- - '###'
+  - Update
+- - '###'
+  - Body
+- - '##'
+  - '"For" Loop Do-While Conversion'
+- - '###'
+  - C Code
+- - '###'
+  - Goto Version
+- - '##'
+  - Today
+- - '##'
+  - Switch Statement Example
+- - '##'
+  - Jump Table Structure
+- - '###'
+  - Switch Form
+- - '###'
+  - Jump Table
+- - '###'
+  - Jump Targets
+- - '###'
+  - Translation (Extended C)
+- - '##'
+  - Switch Statement Example
+- - '###'
+  - 'Setup:'
+- - '##'
+  - Switch Statement Example
+- - '###'
+  - 'Setup:'
+- - '###'
+  - Jump table
+- - '##'
+  - Assembly Setup Explanation
+- - '###'
+  - Table Structure
+- - '###'
+  - Jumping
+- - '###'
+  - Jump table
+- - '##'
+  - Jump Table
+- - '###'
+  - Jump table
+- - '##'
+  - Code Blocks (x == 1)
+- - '#'
+  - Handling Fall-Through
+- - '##'
+  - Code Blocks (x == 2, x == 3)
+- - '##'
+  - Code Blocks (x == 5, x == 6, default)
+- - '##'
+  - Summary
+- - '##'
+  - Finding Jump Table in Binary
+- - '##'
+  - Finding Jump Table in Binary (cont.)
+- - '##'
+  - Finding Jump Table in Binary (cont.)
+- - '##'
+  - 'Machine-Level Programming III: Procedures'
+- - '##'
+  - 'Reminder: Condition Codes'
+- - '###'
+  - Single bit registers
+- - '###'
+  - jX and SetX instrcutions
+- - '##'
+  - Machine Level Programming – Control
+- - '##'
+  - Mechanisms in Procedures
+- - '###'
+  - Passing control
+- - '###'
+  - Passing data
+- - '###'
+  - Memory management
+- - '###'
+  - Mechanisms all implemented with machine instructions
+- - '###'
+  - x86-64 implementation of a procedure uses only those mechanisms required
+- - '##'
+  - Mechanisms in Procedures
+- - '##'
+  - Today
+- - '##'
+  - x86-64 Stack
+- - '##'
+  - x86-64 Stack
+- - '##'
+  - x86-64 Stack
+- - '##'
+  - 'x86-64 Stack: Push'
+- - '##'
+  - 'x86-64 Stack: Push'
+- - '##'
+  - 'x86-64 Stack: Pop'
+- - '#'
+  - Stack “Bottom”
+- - '##'
+  - 'x86-64 Stack: Pop'
+- - '##'
+  - 'x86-64 Stack: Pop'
+- - '##'
+  - Today
+- - '###'
+  - Procedures
+- - '##'
+  - Code Examples
+- - '##'
+  - Procedure Control Flow
+- - '#'
+  - 'Control Flow Example #1'
+- - '##'
+  - 'Control Flow Example #2'
+- - '#'
+  - 'Control Flow Example #3'
+- - '##'
+  - 'Control Flow Example #4'
+- - '##'
+  - Procedure Data Flow
+- - '###'
+  - Registers
+- - '###'
+  - Return value
+- - '###'
+  - Stack
+- - '##'
+  - Data Flow Examples
+- - '#'
+  - x in %rdi, y in %rsi, dest in %rdx
+- - '#'
+  - t in %rax
+- - '#'
+  - a in %rdi, b in %rsi
+- - '#'
+  - s in %rax
+- - '##'
+  - Stack-Based Languages
+- - '###'
+  - Languages that support recursion
+- - '###'
+  - Stack discipline
+- - '###'
+  - Stack allocated in Frames
+- - '##'
+  - Call Chain Example
+- - '##'
+  - Example
+- - '##'
+  - Example
+- - '##'
+  - Example
+- - '##'
+  - Example
+- - '##'
+  - Example
+- - '##'
+  - Example
+- - '##'
+  - Example
+- - '##'
+  - Example
+- - '#'
+  - Stack
+- - '##'
+  - Example
+- - '##'
+  - Example
+- - '##'
+  - x86-64/Linux Stack Frame
+- - '###'
+  - Current Stack Frame ("Top" to Bottom)
+- - '###'
+  - Caller Stack Frame
+- - '##'
+  - 'Example: Calling `incr` #1'
+- - '###'
+  - Initial Stack Structure
+- - '###'
+  - Resulting Stack Structure
+- - '##'
+  - 'Example: Calling incr #2'
+- - '###'
+  - Stack Structure
+- - '##'
+  - 'Example: Calling `incr` #2'
+- - '###'
+  - Stack Structure
+- - '##'
+  - 'Example: Calling `incr` #2'
+- - '###'
+  - Stack Structure
+- - '##'
+  - 'Example: Calling `incr` #2'
+- - '###'
+  - Stack Structure
+- - '##'
+  - 'Example: Calling `incr` #3'
+- - '###'
+  - Stack Structure
+- - '##'
+  - 'Example: Calling `incr` #5b'
+- - '###'
+  - Updated Stack Structure
+- - '###'
+  - Final Stack Structure
+- - '##'
+  - Register Saving Conventions
+- - '##'
+  - 'x86-64 Linux Register Usage #1'
+- - '##'
+  - 'x86-64 Linux Register Usage #2'
+- - '##'
+  - Small Exercise
+- - '##'
+  - Small Exercise
+- - '##'
+  - 'Callee-Saved Example #1'
+- - '##'
+  - 'Callee-Saved Example #2'
+- - '###'
+  - Initial Stack Structure
+- - '###'
+  - Resulting Stack Structure
+- - '##'
+  - 'Callee-Saved Example #3'
+- - '###'
+  - Initial Stack Structure
+- - '###'
+  - Resulting Stack Structure
+- - '##'
+  - 'Callee-Saved Example #4'
+- - '###'
+  - Stack Structure
+- - '##'
+  - 'Callee-Saved Example #5'
+- - '##'
+  - Stack Structure
+- - '##'
+  - 'Callee-Saved Example #6'
+- - '##'
+  - Stack Structure
+- - '##'
+  - 'Callee-Saved Example #7'
+- - '##'
+  - Stack Structure
+- - '##'
+  - 'Callee-Saved Example #8'
+- - '##'
+  - Initial Stack Structure
+- - '##'
+  - final Stack Structure
+- - '##'
+  - Today
+- - '###'
+  - Procedures
+- - '##'
+  - Recursive Function
+- - '##'
+  - Recursive Function Terminal Case
+- - '##'
+  - Recursive Function Register Save
+- - '##'
+  - Recursive Function Call Setup
+- - '##'
+  - Recursive Function Completion
+- - '##'
+  - Observations About Recursion
+- - '###'
+  - Handled Without Special Consideration
+- - '###'
+  - Also works for mutual recursion
+- - '##'
+  - x86-64 Procedure Summary
+- - '##'
+  - 'Machine-Level Programming IV: Data'
+- - '##'
+  - Today
+- - '###'
+  - Arrays
+- - '###'
+  - Structures
+- - '###'
+  - Floating Point
+- - '##'
+  - Array Access
+- - '###'
+  - Basic Principle
+- - '##'
+  - Array Example
+- - '##'
+  - Array Accessing Example
+- - '###'
+  - x86-64
+- - '#'
+  - '%rdi = z'
+- - '#'
+  - '%rsi = digit'
+- - '##'
+  - Array Loop Example
+- - '#'
+  - '%rdi = z'
+- - '##'
+  - 'Understanding Pointers & Arrays #1'
+- - '##'
+  - 'Understanding Pointers & Arrays #1'
+- - '##'
+  - 'Understanding Pointers & Arrays #2'
+- - '##'
+  - Multidimensional (Nested) Arrays
+- - '###'
+  - Declaration
+- - '###'
+  - Array Size
+- - '###'
+  - Arrangement
+- - '##'
+  - Nested Array Example
+- - '##'
+  - Nested Array Row Access
+- - '###'
+  - Row Vectors
+- - '##'
+  - Nested Array Row Access Code
+- - '###'
+  - Row Vector
+- - '###'
+  - Machine Code
+- - '##'
+  - Nested Array Element Access
+- - '###'
+  - Array Elements
+- - '##'
+  - Nested Array Element Access Code
+- - '##'
+  - Multi-Level Array Example
+- - '##'
+  - Element Access in Multi-Level Array
+- - '###'
+  - Computation
+- - '##'
+  - Array Element Accesses
+- - '###'
+  - Nested array
+- - '###'
+  - Multi-level array
+- - '##'
+  - N X N Matrix
+- - '###'
+  - Code
+- - '##'
+  - 16 X 16 Matrix Access
+- - '###'
+  - Array Elements
+- - '#'
+  - A in %rdi, i in %rsi, j in %rdx
+- - '##'
+  - n X n Matrix Access
+- - '###'
+  - Array Elements
+- - '#'
+  - n in %rdi, A in %rsi, i in %rdx, j in %rcx
+- - '##'
+  - 'Example: Array Access'
+- - '##'
+  - 'Example: Array Access'
+- - '##'
+  - 'Understanding Pointers & Arrays #3'
+- - '##'
+  - Declaration
+- - '##'
+  - 'Understanding Pointers & Arrays #3'
+- - '##'
+  - Today
+- - '##'
+  - Generating Pointer to Structure Member
+- - '##'
+  - Generating Pointer to Array Element
+- - '#'
+  - r in %rdi, idx in %rsi
+- - '##'
+  - Following Linked List
+- - '##'
+  - Element i
+- - '##'
+  - Structures & Alignment
+- - '###'
+  - Unaligned Data
+- - '###'
+  - Aligned Data
+- - '##'
+  - Specific Cases of Alignment (x86-64)
+- - '##'
+  - Satisfying Alignment with Structures
+- - '##'
+  - Meeting Overall Alignment Requirement
+- - '##'
+  - Arrays of Structures
+- - '##'
+  - Accessing Array Elements
+- - '#'
+  - '%rdi = idx'
+- - '##'
+  - Saving Space
+- - '##'
+  - Example Struct Exam Question
+- - '##'
+  - Example Struct Exam Question
+- - '###'
+  - 'Problem 5. (8 points):'
+- - '##'
+  - Example Struct Exam Question (Cont’d)
+- - '###'
+  - 'Problem 5. (8 points):'
+- - '##'
+  - Example Struct Exam Question (Cont’d)
+- - '##'
+  - Today
+- - '##'
+  - Background
+- - '##'
+  - Programming with SSE3
+- - '###'
+  - XMM Registers
+- - '##'
+  - Scalar & SIMD Operations
+- - '###'
+  - 'Scalar Operations: Single Precision'
+- - '###'
+  - 'SIMD Operations: Single Precision'
+- - '###'
+  - 'Scalar Operations: Double Precision'
+- - '##'
+  - FP Basics
+- - '#'
+  - x in %xmm0, y in %xmm1
+- - '#'
+  - x in %xmm0, y in %xmm1
+- - '##'
+  - FP Memory Referencing
+- - '#'
+  - p in %rdi, v in %xmm0
+- - '##'
+  - Other Aspects of FP Code
+- - '##'
+  - 'Machine-Level Programming V: Advanced Topics'
+- - '##'
+  - Today
+- - '##'
+  - x86-64 Linux Memory Layout
+- - '##'
+  - Memory Allocation Example
+- - '##'
+  - x86-64 Example Addresses
+- - '##'
+  - Today
+- - '##'
+  - 'Recall: Memory Referencing Bug Example'
+- - '##'
+  - Memory Referencing Bug Example
+- - '###'
+  - 'Explanation:'
+- - '##'
+  - Such problems are a BIG deal
+- - '##'
+  - String Library Code
+- - '###'
+  - Implementation of Unix function gets ()
+- - '###'
+  - Similar problems with other library functions
+- - '##'
+  - Vulnerable Buffer Code
+- - '##'
+  - Buffer Overflow Disassembly
+- - '###'
+  - 'echo:'
+- - '###'
+  - 'call_echo:'
+- - '##'
+  - Buffer Overflow Stack Example
+- - '###'
+  - Before call to gets
+- - '###'
+  - 'call_echo:'
+- - '##'
+  - 'Buffer Overflow Stack Example #1'
+- - '###'
+  - After call to gets
+- - '###'
+  - 'call_echo:'
+- - '###'
+  - Overflowed buffer, but did not corrupt state
+- - '##'
+  - 'Buffer Overflow Stack Example #3'
+- - '###'
+  - After call to gets
+- - '###'
+  - 'call_echo:'
+- - '###'
+  - Overflowed buffer, corrupted return pointer, but program seems to work!
+- - '##'
+  - 'Buffer Overflow Stack Example #3 Explained'
+- - '###'
+  - After call to gets
+- - '###'
+  - 'register_tm_clones:'
+- - '##'
+  - Stack Smashing Attacks
+- - '##'
+  - Crafting Smashing String
+- - '###'
+  - Target Code
+- - '###'
+  - Attack String (Hex)
+- - '##'
+  - Code Injection Attacks
+- - '##'
+  - How Does The Attack Code Execute?
+- - '#'
+  - What To Do About Buffer Overflow Attacks
+- - '##'
+  - 1. Avoid Overflow Vulnerabilities in Code (!)
+- - '##'
+  - 2. System-Level Protections can help
+- - '###'
+  - Randomized stack offsets
+- - '##'
+  - 3. Stack Canaries can help
+- - '##'
+  - Protected Buffer Disassembly
+- - '###'
+  - 'echo:'
+- - '##'
+  - Setting Up Canary
+- - '###'
+  - Before call to gets
+- - '##'
+  - Checking Canary
+- - '###'
+  - After call to gets
+- - '##'
+  - Return-Oriented Programming Attacks
+- - '##'
+  - 'Gadget Example #1'
+- - '###'
+  - Use tail end of existing functions
+- - '##'
+  - 'Gadget Example #2'
+- - '###'
+  - Repurpose byte codes
+- - '##'
+  - Crafting an ROB Attack String
+- - '##'
+  - Gadget
+- - '##'
+  - Attack String (Hex)
+- - '##'
+  - Today
+- - '##'
+  - Union Allocation
+- - '##'
+  - Using Union to Access Bit Patterns
+- - '##'
+  - Byte Ordering Revisited
+- - '###'
+  - Idea
+- - '###'
+  - Big Endian
+- - '###'
+  - Little Endian
+- - '###'
+  - Bi Endian
+- - '##'
+  - Byte Ordering Example
+- - '###'
+  - How are the bytes inside short/int/long stored?
+- - '##'
+  - Byte Ordering Example (Cont).
+- - '##'
+  - Byte Ordering on IA32
+- - '###'
+  - Little Endian
+- - '#'
+  - 'Output:'
+- - '##'
+  - Byte Ordering on Sun
+- - '###'
+  - Big Endian
+- - '#'
+  - 'Output on Sun:'
+- - '#'
+  - Byte Ordering on x86-64
+- - '##'
+  - Little Endian
+- - '###'
+  - 'Output on x86-64:'
+- - '##'
+  - Summary of Compound Types in C
+- - '##'
+  - Summary
+- - '##'
+  - Exploits Based on Buffer Overflows
+- - '##'
+  - 'Example: the original Internet worm (1988)'
+- - '##'
+  - 'Example 2: IM War'
+- - '##'
+  - IM War (cont.)
+- - '##'
+  - 'Aside: Worms and Viruses'
+- - '##'
+  - Code Optimization
+- - '##'
+  - Today
+- - '##'
+  - Limitations of Optimizing Compilers
+- - '##'
+  - Generally Useful Optimizations
+- - '###'
+  - Code Motion
+- - '###'
+  - Reduction in Strength
+- - '##'
+  - 'Optimization Blocker #1: Procedure Calls'
+- - '###'
+  - Procedure to Convert String to Lower Case
+- - '###'
+  - Lower Case Conversion Performance
+- - '###'
+  - Convert Loop To Goto Form
+- - '###'
+  - Calling Strlen
+- - '##'
+  - Lower Case Conversion Performance
+- - '##'
+  - 'Optimization Blocker: Procedure Calls'
+- - '##'
+  - Memory Matters
+- - '#'
+  - sum_rows1 inner loop
+- - '##'
+  - Memory Aliasing
+- - '#'
+  - 'Value of B:'
+- - '##'
+  - Removing Aliasing
+- - '#'
+  - sum_rows2 inner loop
+- - '##'
+  - 'Optimization Blocker: Memory Aliasing'
+- - '###'
+  - Aliasing
+- - '##'
+  - Exploiting Instruction-Level Parallelism
+- - '##'
+  - 'Benchmark Example: Data Type for Vectors'
+- - '###'
+  - Data Types
+- - '##'
+  - Benchmark Computation
+- - '##'
+  - Data Types
+- - '##'
+  - Operations
+- - '##'
+  - Cycles Per Element (CPE)
+- - '##'
+  - Benchmark Performance
+- - '##'
+  - Basic Optimizations
+- - '##'
+  - Effect of Basic Optimizations
+- - '##'
+  - Modern CPU Design
+- - '##'
+  - Superscalar Processor
+- - '##'
+  - Pipelined Functional Units
+- - '##'
+  - Haswell CPU
+- - '##'
+  - x86-64 Compilation of Combine4
+- - '###'
+  - 'Inner Loop (Case: Integer Multiply)'
+- - '##'
+  - Combine4 = Serial Computation (OP = *)
+- - '##'
+  - Loop Unrolling (2x1)
+- - '##'
+  - Effect of Loop Unrolling
+- - '##'
+  - Loop Unrolling with Reassociation (2x1a)
+- - '##'
+  - Effect of Reassociation
+- - '##'
+  - Reassociated Computation
+- - '###'
+  - 'What changed:'
+- - '###'
+  - Overall Performance
+- - '##'
+  - Loop Unrolling with Separate Accumulators (2x2)
+- - '###'
+  - Different form of reassociation
+- - '##'
+  - Effect of Separate Accumulators
+- - '##'
+  - Separate Accumulators
+- - '##'
+  - Unrolling & Accumulating
+- - '###'
+  - Idea
+- - '###'
+  - Limitations
+- - '##'
+  - 'Unrolling & Accumulating: Double *'
+- - '##'
+  - 'Unrolling & Accumulating: Int +'
+- - '###'
+  - Case
+- - '##'
+  - Achievable Performance
+- - '##'
+  - Programming with AVX2
+- - '###'
+  - YMM Registers
+- - '##'
+  - SIMD Operations
+- - '##'
+  - Using Vector Instructions
+- - '##'
+  - What About Branches?
+- - '###'
+  - Challenge
+- - '##'
+  - Modern CPU Design
+- - '##'
+  - Branch Outcomes
+- - '##'
+  - Branch Prediction
+- - '###'
+  - Idea
+- - '##'
+  - Branch Prediction Through Loop
+- - '##'
+  - Branch Misprediction Invalidation
+- - '##'
+  - Branch Misprediction Recovery
+- - '###'
+  - Performance Cost
+- - '##'
+  - Branch Prediction Numbers
+- - '##'
+  - The Memory Hierarchy
+- - '##'
+  - Today
+- - '##'
+  - Random-Access Memory (RAM)
+- - '##'
+  - SRAM vs DRAM Summary
+- - '##'
+  - Enhanced DRAMs
+- - '##'
+  - Nonvolatile Memories
+- - '##'
+  - Traditional Bus Structure Connecting CPU and Memory
+- - '##'
+  - Memory Read Transaction (1)
+- - '##'
+  - Memory Read Transaction (2)
+- - '##'
+  - Memory Read Transaction (3)
+- - '##'
+  - Memory Write Transaction (1)
+- - '##'
+  - Memory Write Transaction (2)
+- - '##'
+  - Memory Write Transaction (3)
+- - '##'
+  - What’s Inside A Disk Drive?
+- - '##'
+  - Disk Geometry
+- - '##'
+  - Disk Geometry (Multiple-Platter View)
+- - '##'
+  - Disk Capacity
+- - '##'
+  - Recording zones
+- - '##'
+  - Computing Disk Capacity
+- - '###'
+  - 'Example:'
+- - '##'
+  - Disk Operation (Single-Platter View)
+- - '##'
+  - Disk Operation (Multi-Platter View)
+- - '##'
+  - Disk Structure - top view of single platter
+- - '##'
+  - Disk Access
+- - '##'
+  - Disk Access
+- - '##'
+  - Disk Access – Read
+- - '##'
+  - Disk Access – Read
+- - '##'
+  - Disk Access – Read
+- - '##'
+  - Red request scheduled next
+- - '##'
+  - Disk Access – Seek
+- - '##'
+  - Seek to red’s track
+- - '##'
+  - Disk Access – Rotational Latency
+- - '##'
+  - Disk Access – Read
+- - '##'
+  - Disk Access Time
+- - '##'
+  - Disk Access Time Example
+- - '###'
+  - 'Given:'
+- - '###'
+  - 'Derived:'
+- - '##'
+  - Disk Access Time Example
+- - '###'
+  - 'Given:'
+- - '###'
+  - 'Derived:'
+- - '###'
+  - 'Important points:'
+- - '##'
+  - Logical Disk Blocks
+- - '##'
+  - I/O Bus
+- - '##'
+  - Reading a Disk Sector (1)
+- - '##'
+  - Reading a Disk Sector (2)
+- - '##'
+  - Reading a Disk Sector (3)
+- - '##'
+  - Solid State Disks (SSDs)
+- - '##'
+  - SSD Tradeoffs vs Rotating Disks
+- - '###'
+  - Advantages
+- - '###'
+  - Disadvantages
+- - '###'
+  - Applications
+- - '##'
+  - The CPU-Memory Gap
+- - '##'
+  - Locality to the Rescue!
+- - '##'
+  - Today
+- - '##'
+  - Locality
+- - '##'
+  - Locality Example
+- - '###'
+  - Qualitative Estimates of Locality
+- - '###'
+  - Locality Example
+- - '###'
+  - Locality Example
+- - '##'
+  - Memory Hierarchies
+- - '###'
+  - Today
+- - '##'
+  - Example Memory Hierarchy
+- - '###'
+  - Caches
+- - '###'
+  - General Cache Concepts
+- - '#'
+  - 'General Cache Concepts: Hit'
+- - '#'
+  - 'General Cache Concepts: Miss'
+- - '##'
+  - 'General Caching Concepts: Types of Cache Misses'
+- - '##'
+  - Examples of Caching in the Mem. Hierarchy
+- - '##'
+  - Summary
+- - '##'
+  - Supplemental slides
+- - '##'
+  - Conventional DRAM Organization
+- - '##'
+  - Reading DRAM Supercell (2,1)
+- - '##'
+  - Memory Modules
+- - '##'
+  - Storage Trends
+- - '###'
+  - SRAM
+- - '###'
+  - DRAM
+- - '###'
+  - Disk
+- - '#'
+  - CPU Clock Rates
+- - '##'
+  - Today
+- - '##'
+  - General Cache Concepts
+- - '##'
+  - 'General Cache Concepts: Hit'
+- - '##'
+  - 'General Cache Concepts: Miss'
+- - '##'
+  - 'General Caching Concepts: Types of Cache Misses'
+- - '###'
+  - Cold (compulsory) miss
+- - '###'
+  - Conflict miss
+- - '###'
+  - Capacity miss
+- - '##'
+  - Cache Memories
+- - '##'
+  - 'Recap from Lecture 10: Modern CPU Design'
+- - '##'
+  - How it Really Looks Like
+- - '##'
+  - What it Really Looks Like (Cont.)
+- - '##'
+  - General Cache Organization (S, E, B)
+- - '##'
+  - Cache Read
+- - '##'
+  - 'Example: Direct Mapped Cache (E = 1)'
+- - '##'
+  - Direct-Mapped Cache Simulation
+- - '##'
+  - 'E-way Set Associative Cache (Here: E = 2)'
+- - '##'
+  - 2-Way Set Associative Cache Simulation
+- - '##'
+  - What about writes?
+- - '##'
+  - Intel Core i7 Cache Hierarchy
+- - '##'
+  - 'Example: Core i7 L1 Data Cache'
+- - '##'
+  - 'Example: Core i7 L1 Data Cache'
+- - '##'
+  - Cache Performance Metrics
+- - '###'
+  - Miss Rate
+- - '###'
+  - Hit Time
+- - '###'
+  - Miss Penalty
+- - '##'
+  - Let’s think about those numbers
+- - '##'
+  - Writing Cache Friendly Code
+- - '##'
+  - 'Key idea: Our qualitative notion of locality is quantified through our understanding
+    of cache memories'
+- - '##'
+  - Today
+- - '##'
+  - The Memory Mountain
+- - '##'
+  - Memory Mountain Test Function
+- - '##'
+  - The Memory Mountain
+- - '##'
+  - Today
+- - '##'
+  - Matrix Multiplication Example
+- - '##'
+  - Miss Rate Analysis for Matrix Multiply
+- - '###'
+  - 'Assume:'
+- - '###'
+  - 'Analysis Method:'
+- - '##'
+  - Layout of C Arrays in Memory (review)
+- - '##'
+  - Matrix Multiplication (i j k)
+- - '###'
+  - 'Misses per inner loop iteration:'
+- - '##'
+  - Matrix Multiplication (jik)
+- - '##'
+  - Matrix Multiplication (kij)
+- - '###'
+  - 'Misses per inner loop iteration:'
+- - '##'
+  - Matrix Multiplication (ikj)
+- - '##'
+  - Matrix Multiplication (jki)
+- - '###'
+  - 'Misses per inner loop iteration:'
+- - '##'
+  - Matrix Multiplication (kji)
+- - '##'
+  - Summary of Matrix Multiplication
+- - '###'
+  - 'ijk (& jik):'
+- - '###'
+  - 'kij (& ikj):'
+- - '###'
+  - 'jki (& kji):'
+- - '##'
+  - Core i7 Matrix Multiply Performance
+- - '##'
+  - Today
+- - '##'
+  - 'Example: Matrix Multiplication'
+- - '##'
+  - Cache Miss Analysis
+- - '###'
+  - 'Assume:'
+- - '###'
+  - 'First iteration:'
+- - '##'
+  - Blocked Matrix Multiplication
+- - '##'
+  - Cache Miss Analysis
+- - '###'
+  - 'Assume:'
+- - '###'
+  - 'First (block) iteration:'
+- - '##'
+  - Cache Miss Analysis
+- - '###'
+  - 'Assume:'
+- - '###'
+  - 'Second (block) iteration:'
+- - '###'
+  - 'Total misses:'
+- - '##'
+  - Blocking Summary
+- - '##'
+  - Cache Summary
+- - '##'
+  - '15-213 Recitation: C Review'
+- - '##'
+  - Agenda
+- - '##'
+  - Logistics
+- - '##'
+  - Attack Lab Conclusion
+- - '##'
+  - C Assessment
+- - '##'
+  - 'C Assessment: Question 1'
+- - '##'
+  - 'C Assessment: Question 1'
+- - '##'
+  - 'C Assessment: Question 1'
+- - '##'
+  - 'C Assessment: Question 1'
+- - '##'
+  - 'C Assessment: Question 1'
+- - '##'
+  - 'C Assessment: Question 2'
+- - '##'
+  - 'C Assessment: Question 2'
+- - '##'
+  - 'C Assessment: Question 2'
+- - '##'
+  - 'C Assessment: Question 2 Part B'
+- - '##'
+  - 'C Assessment: Question 3'
+- - '##'
+  - C Assessment Conclusion
+- - '##'
+  - C Programming Style
+- - '##'
+  - C Exercise
+- - '##'
+  - 'C Exercise: C Hints and Math Reminders'
+- - '##'
+  - Cache Lab Overview
+- - '##'
+  - If you get stuck...
+- - '##'
+  - Cache Lab Tips!
+- - '##'
+  - Appendix
+- - '##'
+  - 'Appendix: Valgrind'
+- - '##'
+  - 'Appendix: Clang / LLVM'
+- - '##'
+  - 'Appendix: Cache Structure'

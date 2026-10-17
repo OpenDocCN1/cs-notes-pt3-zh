@@ -1,0 +1,13 @@
+# # Second attempt: using a tuple
+
+n=5, c=10
+
+p   6   3   5   4   6
+w   2   2   6   5   4
+X   x₁  x₂  x₃  x₄  x₅
+
++   - Calculate f values using array
++     - f(5,0) = 0, ..., f(5,4) = 6, ..., f(5,10) = 6
++     - f(4,0) = 0, ..., f(4,4) = 6, ..., f(4,9) = 10), f(4,10) = 10
++     - ...
++   - Save step points only for each i

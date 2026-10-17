@@ -1,0 +1,9 @@
+# Are problems easy or hard?
+
+An **unsolvable** (or "impossible") problem is one for which there is NO algorithm at all, not even an inefficient, exponential time one.
+
+# Examples
+
++   - HALTING PROBLEM - Given an arbitrary algorithm and its input, determine whether the algorithm will halt (terminate), or run forever in an "infinite loop". This is the most infamous unsolvable problem.
+
++   - EQUIVALENCE PROBLEM - Given two programs, test to see if they are equivalent.

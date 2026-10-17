@@ -1,0 +1,9 @@
+# Goal
+
++   - My personal goal for the class is that you will:
++     - be able to learn the C++ language
++     - be comfortable and confident in using it.
+
++   - I will make every effort as a teacher to help you learn
+
+....but you are still the one who has to do the learning.

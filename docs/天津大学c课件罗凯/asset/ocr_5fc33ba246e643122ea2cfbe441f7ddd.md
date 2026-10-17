@@ -1,0 +1,13 @@
+# unary operator -
+
++   - only has one operand
++     ( num = -num    like    num = num * -1 )
+
+```
+int num = 5;
+num = - num;
+cout << num;    // -5
+
+num = - num;
+cout << num;    // 5
+```

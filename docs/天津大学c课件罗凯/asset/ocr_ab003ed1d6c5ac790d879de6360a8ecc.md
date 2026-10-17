@@ -1,0 +1,13 @@
+# # Using a variable
+
+```
+int num;    // create an int variable
+
+num = 5;    // store 5 in the variable
+
+cout << " num = " << num << endl;
+
+What will be displayed on the screen?
+
+num = 5
+```

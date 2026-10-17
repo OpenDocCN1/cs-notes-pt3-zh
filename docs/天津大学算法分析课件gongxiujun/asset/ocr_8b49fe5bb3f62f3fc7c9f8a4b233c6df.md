@@ -1,0 +1,6 @@
+# Tuple method: principle
+
++   - Let $Q = \{(s,t) \mid w_i \leq s < c,\ (s-w_i, t-p_i) \in P_{i+1}\}$
++     - $Q$ corresponds $P_i$ in which item $i$ has been selected
++     - $P_{i+1}$ contains $P_i$ in which item $i$ has not been selected
++     - thus, $P_i = Q \cup P_{i+1}$

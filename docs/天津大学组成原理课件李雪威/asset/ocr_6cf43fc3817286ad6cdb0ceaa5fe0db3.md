@@ -1,0 +1,11 @@
+# Today
+
++   - Arrays
++     - One-dimensional
++     - Multi-dimensional (nested)
++     - Multi-level
++   - Structures
++     - Allocation
++     - Access
++     - Alignment
++   - Floating Point

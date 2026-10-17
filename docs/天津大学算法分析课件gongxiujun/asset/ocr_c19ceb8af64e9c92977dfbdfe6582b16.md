@@ -1,0 +1,9 @@
+# # Where DP appliable?
+
++   - **Optimal substructure**(Principle of Optimization)
++     - A problem is said to have optimal substructure if an optimal solution can be constructed efficiently from optimal solutions to its subproblems.
++     - In other words, a problem exhibits optimal substructure if an optimal solution to the problem contains within it optimal solutions to subproblems.
++     - Subproblems must be only 'slightly' smaller than the larger problem
++       - A constant additive factor
++       - A multiplicative factor: D&C
++   - **Overlapping subproblems**

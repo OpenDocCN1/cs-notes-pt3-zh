@@ -1,0 +1,6 @@
+# # Problem Description
+
++   - Two matrices A×B with dimension (m,n) and (n,q) takes _mnq_ multiplications.
++   - Let's consider three matrices: A×B×C with dimension (100,1) , (1,100) and (100,1) . The product can be done:
++     - (A×B)×C takes 20000 multiplications.
++     - A×(B×C) takes 200 multiplications.

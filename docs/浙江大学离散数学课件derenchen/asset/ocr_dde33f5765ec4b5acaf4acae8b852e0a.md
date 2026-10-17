@@ -1,0 +1,14 @@
+# # EXAMPLE 13
+
+# # Sets 集合
+
+Let A, B, and C be sets. Show that
+
+\(\overline{A \cup (B \cap C)} = (\overline{C} \cup \overline{B}) \cap \overline{A}\)
+
+```
+\(\overline{A \cup (B \cap C)} = \overline{A} \cap \overline{(B \cap C)}\)
+\(= \overline{A} \cap (\overline{B} \cup \overline{C})\)
+\(= (\overline{B} \cup \overline{C}) \cap \overline{A}\)
+\(= (\overline{C} \cup \overline{B}) \cap \overline{A}\)
+```

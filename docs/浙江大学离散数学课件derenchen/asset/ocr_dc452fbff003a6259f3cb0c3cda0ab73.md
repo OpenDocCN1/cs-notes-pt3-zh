@@ -1,0 +1,11 @@
+# # 参考教材：
+
++   1、离散数学（左孝琳、李为槛、刘永才，上海科技文献版）
+
++   2、离散数学-计算机数学基础学习（陈德人，浙大版）
+
++   3、Discrete Mathematics（Forth Edition: Richard Johnsonbaugh）
+
++   4、Discrete Mathematics（Revised Edition:Biggs）
+
++   5、Discrete Math. Elements（Liu Chuang Laung）

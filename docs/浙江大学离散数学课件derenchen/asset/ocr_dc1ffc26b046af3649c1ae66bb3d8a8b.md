@@ -1,0 +1,10 @@
+# # DEFINITION 3.
+
+Let p and q be propositions.The proposition "p or q,"  
+denoted by p∨q,is the proposition that is false when p and q  
+are both false and true otherwise. The proposition p∨q is  
+called the disjunction of p and q.
+
+The truth table for p∨q is shown in Table 3.
+
+# ## p和q的析取

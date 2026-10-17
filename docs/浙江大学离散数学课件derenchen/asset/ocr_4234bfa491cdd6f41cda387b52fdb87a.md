@@ -1,0 +1,3 @@
+Consequently, a third color is required for this vertex. Note that we would have also needed three colors if we had colored vertices in the counterclockwise direction. Thus, the chromatic number of C₅ is 3. A coloring of C₅ using three colors is displayed in Figure 7.
+
+In general, two colors are needed to color Cₙ when n is even. To construct such a coloring, simply pick a vertex and color it red. Then proceed around the graph in a clockwise direction (using a planar representation of the graph) coloring the second vertex blue, the third vertex red, and so on. The nth vertex can be colored blue, since the two vertices adjacent to it, namely, the first and (n−1)st. Hence, a third color must be used.

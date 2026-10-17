@@ -1,0 +1,3 @@
+This construction is possible since G is connected. G is obtained after e edges are added. Let rₙ, eₙ, and vₙ represent the number of regions, edges, and vertices of the planar representation of Gₙ induced by the planar representation of G, respectively.
+
+The proof will now proceed by induction. The relationship r₁ = e₁ − v₁ + 2 is true for G₁, since e₁ = 1, v₁ = 2, and r₁ = 1. This is shown in Figure 9.

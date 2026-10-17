@@ -1,0 +1,5 @@
+# Theorem 2
+
+Let m be a positive integer and let a,b,and c be integers.If ac≡bc(mod m)and gcd(c,m)=1,then a≡b(mod m).
+
+**Proof:**since ac≡bc(mod m),m ∣ ac-bc=c(a-b).By Lemma 1,since gcd(c,m)=1,it follows that m ∣ a-b.We conclude that a≡b(mod m).

@@ -259,6 +259,7 @@
 +   [浙江大学操作系统课件（Abraham Silberschatz）](docs/浙江大学操作系统课件abrrahamsilberschatz/README.md)
 +   [浙江大学数据库课件（陈岭）](docs/浙江大学数据库课件陈岭/README.md)
 +   [浙江大学数据结构课件（陈越）](docs/浙江大学数据结构课件陈越/README.md)
++   [浙江大学离散数学课件（DeRenChen）](docs/浙江大学离散数学课件derenchen/README.md)
 +   [浙江大学组成原理课件（施青松）](docs/浙江大学组成原理课件施青松/README.md)
 +   [浙江大学编译原理课件](docs/浙江大学编译原理课件/README.md)
 +   [浙江大学软件工程课件（陈越）](docs/浙江大学软件工程课件陈越/README.md)

@@ -1,0 +1,7 @@
+# Closure of V（V的闭包）
+
+$V^* = \{a \mid a=a_1a_2a_3\ldots a_n\text{ 是 }V\text{ 上的串且 }n\geq0\}$
+
+# Positive Closure of V（V的正闭包）
+
+$V^+ = \{a \mid a=a_1a_2a_3\ldots a_n\text{ 是 }V\text{ 上的串且 }n>0\}$

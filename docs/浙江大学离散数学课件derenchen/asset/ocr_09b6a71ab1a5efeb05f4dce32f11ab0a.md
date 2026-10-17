@@ -1,0 +1,9 @@
+# 函数/映射/Functions/Mapping
+
+If f is a function from A to B, we say that A is the domain of f and B is the codomain of f. If f(a) = b, we say that b is the image of a and a is a pre-image of b. The range of f is the set of all images of elements of A. Also, if f is a function from A to B, we say that f maps A to B.
+
++   - A: 定义域/domain of f
++   - B: 陪域/codomain of f
++   - f(A)：值域/range of f
++   - a: b 的原象/pre-image
++   - b: a 的象/image

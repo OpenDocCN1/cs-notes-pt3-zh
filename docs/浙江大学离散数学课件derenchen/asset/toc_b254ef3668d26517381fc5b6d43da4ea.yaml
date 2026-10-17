@@ -1,0 +1,4478 @@
+- - '##'
+  - 什么叫数学？
+- - '##'
+  - 数学：心智的产物
+- - '##'
+  - Introduction
+- - '##'
+  - 数学==逻辑
+- - '##'
+  - 数学的研究对象是客观世界的和逻辑可能的数量关系和结构关系
+- - '##'
+  - Discrete Math.
+- - '##'
+  - 离散数学
+- - '##'
+  - 离散数学的内容：
+- - '##'
+  - 与高等数学的区别：
+- - '##'
+  - 离散数学的由来与发展：
+- - '##'
+  - DEFINITION 2.
+- - '##'
+  - Introduction
+- - '##'
+  - 离散数学课程的学习方法：
+- - '##'
+  - 教材：
+- - '##'
+  - 参考教材：
+- - '##'
+  - 教学内容：
+- - '##'
+  - 教学内容：
+- - '##'
+  - 教学网站：
+- - '##'
+  - 相关网站：
+- - '##'
+  - Introduction
+- - '##'
+  - Discrete Math.
+- - '##'
+  - 离散数学
+- - '##'
+  - 离散数学的内容：
+- - '##'
+  - 离散数学的由来与发展：
+- - '##'
+  - 离散数学课程设置：
+- - '##'
+  - 离散数学的后继课程：
+- - '##'
+  - 离散数学课程的学习方法：
+- - '##'
+  - 教材：
+- - '##'
+  - 参考教材：
+- - '##'
+  - 教学内容：
+- - '##'
+  - 基础部分：
+- - '##'
+  - 1.1 逻辑
+- - '#'
+  - Logic
+- - '##'
+  - 数理逻辑的内容：
+- - '###'
+  - 古典数理逻辑：
+- - '###'
+  - 现代数理逻辑：
+- - '##'
+  - 命题逻辑
+- - '#'
+  - Proposition Logic
+- - '###'
+  - '命题 Proposition:'
+- - '##'
+  - EXAMPLE 2
+- - '##'
+  - 命题的语句形式
+- - '###'
+  - 陈述句
+- - '###'
+  - 非命题语句：
+- - '###'
+  - 非命题陈述句：悖论语句
+- - '##'
+  - 命题的符号表示：
+- - '##'
+  - 命题真值（Truth Values）的表示：
+- - '###'
+  - 真值表（Truth Table）
+- - '##'
+  - DEFINITION 1.
+- - '##'
+  - p的否定
+- - '##'
+  - DEFINITION 2.
+- - '##'
+  - p和q的合取
+- - '###'
+  - TABLE 2
+- - '##'
+  - EXAMPLE 4
+- - '##'
+  - DEFINITION 3.
+- - '##'
+  - p和q的析取
+- - '###'
+  - TABLE 3
+- - '##'
+  - EXAMPLE 5
+- - '#'
+  - Logic 命题逻辑
+- - '##'
+  - DEFINITION 4.
+- - '##'
+  - p和q的对称差
+- - '###'
+  - TABLE 4
+- - '###'
+  - Table 5
+- - '##'
+  - EXAMPLE 6
+- - '##'
+  - implication p→q
+- - '##'
+  - EXAMPLE 7
+- - '##'
+  - Logic 命题逻辑
+- - '##'
+  - DEFINITION 6.
+- - '##'
+  - TABLE 6
+- - '##'
+  - The Truth Table for the Biconditional p ←→ q.
+- - '##'
+  - EXAMPLE 8
+- - '##'
+  - EXAMPLE 9
+- - '##'
+  - EXAMPLE 10
+- - '##'
+  - Logic 命题逻辑
+- - '##'
+  - APPLICATION 2
+- - '##'
+  - Logic
+- - '##'
+  - 命题公式的运算规则：
+- - '##'
+  - 逻辑联接词的优先级：
+- - '##'
+  - 命题公式的表达式的运算规律：
+- - '##'
+  - 命题公式的运算方法：
+- - '##'
+  - 性质1：
+- - '##'
+  - 永真命题公式（Tautology）
+- - '##'
+  - 永假命题公式（Contradiction）
+- - '##'
+  - 可满足命题公式（Satisfaction）
+- - '##'
+  - 一般命题公式（Contingency）
+- - '##'
+  - 性质2：
+- - '##'
+  - 小结
+- - '##'
+  - 进一步的思考：
+- - '##'
+  - 练习题：
+- - '##'
+  - 基础部分：
+- - '##'
+  - 1.1.1 命题逻辑
+- - '##'
+  - 数理逻辑的内容：
+- - '##'
+  - 古典数理逻辑：
+- - '##'
+  - 现代数理逻辑：
+- - '##'
+  - 命题逻辑
+- - '##'
+  - Proposition Logic
+- - '##'
+  - 'Proposition:'
+- - '##'
+  - All the following statements are propositions.
+- - '##'
+  - EXAMPLE 2
+- - '##'
+  - Consider the following sentences.
+- - '##'
+  - 命题的语句形式
+- - '###'
+  - 陈述句
+- - '###'
+  - 非命题语句：
+- - '###'
+  - 非命题陈述句：悖论语句
+- - '##'
+  - 命题的符号表示：
+- - '##'
+  - 命题真值（Truth Values）的表示：
+- - '##'
+  - 真值表（Truth Table）
+- - '###'
+  - DEFINITION 1（p的否定）
+- - '###'
+  - DEFINITION 2（p和q的合取）
+- - '###'
+  - TABLE 2
+- - '###'
+  - EXAMPLE 4
+- - '###'
+  - DEFINITION 3（p和q的析取）
+- - '###'
+  - TABLE 3
+- - '###'
+  - EXAMPLE 5
+- - '###'
+  - DEFINITION 4（p和q的对称差）
+- - '###'
+  - TABLE 4
+- - '###'
+  - TABLE 5
+- - '###'
+  - EXAMPLE 6
+- - '###'
+  - EXAMPLE 7
+- - '###'
+  - DEFINITION 6（p当且仅当q，双条件、等价）
+- - '##'
+  - EXAMPLE 8
+- - '##'
+  - Logic 命题逻辑
+- - '##'
+  - EXAMPLE 9
+- - '##'
+  - Logic 命题逻辑
+- - '##'
+  - How can the following English sentence be translated into a logical expression?
+- - '##'
+  - EXAMPLE 11
+- - '##'
+  - DEFINITION 7.
+- - '##'
+  - Logic 命题逻辑
+- - '##'
+  - TABLE 7
+- - '##'
+  - Tables for the Bit Operators OR, AND, and XOR.
+- - '##'
+  - EXAMPLE 12
+- - '##'
+  - Logic 命题逻辑
+- - '##'
+  - Proposition Formulas, Well-Formed Formulas(wff)
+- - '##'
+  - 命题公式的运算规则：
+- - '##'
+  - 逻辑联接词的优先级：
+- - '##'
+  - 命题公式的表达式的运算规律：
+- - '##'
+  - 命题公式的运算方法：
+- - '##'
+  - 性质1：
+- - '##'
+  - 永真命题公式（Tautology）
+- - '##'
+  - 永假命题公式（Contradiction）
+- - '##'
+  - 可满足命题公式（Satisfaction）
+- - '##'
+  - 一般命题公式（Contingency）
+- - '##'
+  - 性质2：
+- - '##'
+  - 小结
+- - '##'
+  - 进一步的思考：
+- - '##'
+  - 练习题：
+- - '##'
+  - 1.1.2 命题演算
+- - '##'
+  - Propositional Equivalences
+- - '##'
+  - 1、命题(Proposition)
+- - '##'
+  - 2、从简单命题(atomic proposition)到复合命题(compositional proposition)
+- - '##'
+  - 3、从命题常量(propositional constant)到命题变量(propositional variable)
+- - '##'
+  - 4、从复合命题(compositional proposition)到命题公式(propositional formulas)
+- - '##'
+  - 永真命题公式（Tautology）
+- - '##'
+  - 永假命题公式（Contradiction）
+- - '##'
+  - 可满足命题公式（Satisfaction）
+- - '##'
+  - 一般命题公式（Contingency）
+- - '##'
+  - EXAMPLE 1
+- - '##'
+  - TABLE 1
+- - '###'
+  - Examples of a Tautology and a Contradiction.
+- - '##'
+  - DEFINITION 2
+- - '##'
+  - EXAMPLE 2
+- - '##'
+  - TABLE 2
+- - '###'
+  - Truth Tables for ¬(p ∨ q) and ¬p ∧ ¬q
+- - '##'
+  - Table 3
+- - '##'
+  - EXAMPLE 4
+- - '##'
+  - Table 4
+- - '##'
+  - 基本逻辑等价定理：
+- - '##'
+  - Table 5 Logical Equivalences.
+- - '##'
+  - Table 6
+- - '##'
+  - EXAMPLE 5
+- - '##'
+  - EXAMPLE 6
+- - '##'
+  - 判断命题公式逻辑等价的方法：
+- - '##'
+  - 命题公式逻辑等价关系的应用：
+- - '##'
+  - Example 7
+- - '###'
+  - Propositional Equivalences
+- - '##'
+  - 进一步的思考：
+- - '###'
+  - 一、命题公式的对偶性及其对偶处理。
+- - '##'
+  - 限定性命题公式： 最多仅含有否定、析取、合取逻辑联结词的命题公式。
+- - '##'
+  - 对偶原理（Duality Principle）
+- - '##'
+  - 进一步的思考：
+- - '###'
+  - 二、命题公式中的逻辑联接词的极小完备性。
+- - '###'
+  - 例1：否定、析取、合取组成的逻辑联结词组是功能完备的，但不是极小功能完备的。
+- - '###'
+  - 例2：否定和合取组成的逻辑联结词组是极小功能完备的。
+- - '###'
+  - 例3：否定和析取组成的逻辑联结词组是极小功能完备的。
+- - '##'
+  - 进一步的思考：
+- - '###'
+  - 三、命题公式的进一步分类。
+- - '###'
+  - 命题公式的标准化----范式
+- - '###'
+  - 文字（literal）/符号（symbol）：原子命题或其否定
+- - '###'
+  - 小项（small item）/合取式（conjunctive form）：若干个文字的合取。
+- - '###'
+  - 大项（large item）/析取式（disjunctive form）：若干个文字的析取。
+- - '###'
+  - 合取范式（conjunctive normal form）：若干个大项的合取。
+- - '###'
+  - 析取范式（disjunctive normal form）：若干个小项的析取。
+- - '###'
+  - 定理1：任意一个命题公式都存在与之等价的合取范式和析取范式。
+- - '####'
+  - 定理的证明思路：
+- - '###'
+  - Propositional Equivalence 命题等价
+- - '###'
+  - 命题演算
+- - '###'
+  - 小结
+- - '##'
+  - 1.1.3 谓词与量词
+- - '##'
+  - Predicates and Quantifiers
+- - '##'
+  - DEFINITION 1.
+- - '##'
+  - EXAMPLE 1
+- - '##'
+  - EXAMPLE 2
+- - '##'
+  - Predicates and Quantifiers 谓词与量词
+- - '##'
+  - DEFINITION 2.
+- - '##'
+  - EXAMPLE 5
+- - '##'
+  - EXAMPLE 8
+- - '##'
+  - Predicates and Quantifiers
+- - '##'
+  - DEFINITION 3
+- - '##'
+  - EXAMPLE 9
+- - '##'
+  - EXAMPLE 10
+- - '##'
+  - EXAMPLE 11
+- - '##'
+  - DEFINITION 4
+- - '##'
+  - Predicates and Quantifiers 谓词与量词
+- - '##'
+  - EXAMPLE 12
+- - '##'
+  - EXAMPLE 13
+- - '##'
+  - EXAMPLE 16
+- - '##'
+  - EXAMPLE 17
+- - '##'
+  - EXAMPLE 18
+- - '##'
+  - EXAMPLE 19
+- - '##'
+  - EXAMPLE 20
+- - '##'
+  - EXAMPLE 21
+- - '##'
+  - EXAMPLE 22
+- - '##'
+  - Predicates and Quantifiers
+- - '##'
+  - EXAMPLE 23
+- - '##'
+  - TABLE 2 Quantifications of Two Variables.
+- - '##'
+  - NEGATIONS
+- - '##'
+  - Predicates and Quantifiers
+- - '##'
+  - TABLE 3 Negating Quantifiers.
+- - '##'
+  - 进一步的思考
+- - '##'
+  - 进一步的思考
+- - '###'
+  - 一、谓词公式的分类
+- - '##'
+  - 进一步的思考
+- - '###'
+  - 二、谓词公式的等价演算
+- - '##'
+  - 进一步的思考
+- - '###'
+  - 定理2 （基本量词等值定律）
+- - '####'
+  - '\( E_{14} \): 量词分配律'
+- - '##'
+  - 进一步的思考
+- - '###'
+  - 例 证明
+- - '##'
+  - 进一步的思考
+- - '###'
+  - 三、谓词公式的标准化形式
+- - '##'
+  - 小结
+- - '###'
+  - 一、从命题到命题函数
+- - '###'
+  - N元谓词
+- - '###'
+  - 个体、个体变量、个体域
+- - '###'
+  - 二、从命题公式到谓词公式
+- - '###'
+  - 存在量词、全称量词
+- - '##'
+  - 1、命题(Proposition)
+- - '##'
+  - 2、从简单命题(atomic proposition)到复合命题(compositional proposition)
+- - '##'
+  - 3、从命题常量(propositional constant)到命题变量(propositional variable)
+- - '##'
+  - 4、从复合命题(compositional proposition)到命题公式(propositional formulas)
+- - '##'
+  - 永真命题公式（Tautology）
+- - '##'
+  - 永假命题公式（Contradiction）
+- - '##'
+  - 可满足命题公式（Satisfaction）
+- - '##'
+  - 一般命题公式（Contingency）
+- - '##'
+  - EXAMPLE 1
+- - '##'
+  - TABLE 1
+- - '###'
+  - Examples of a Tautology and a Contradiction.
+- - '##'
+  - DEFINITION 2
+- - '###'
+  - Propositional Equivalences
+- - '##'
+  - EXAMPLE 2
+- - '##'
+  - TABLE 2
+- - '###'
+  - Truth Tables for ¬(p ∨ q) and ¬p ∧ ¬q
+- - '##'
+  - Table 3
+- - '##'
+  - EXAMPLE 4
+- - '##'
+  - Table 4
+- - '##'
+  - 基本逻辑等价定理：
+- - '##'
+  - Table 5 Logical Equivalences.
+- - '##'
+  - Table 6
+- - '##'
+  - EXAMPLE 5
+- - '##'
+  - Show that (p ∧ q) → (p ∨ q) is a tautology.
+- - '##'
+  - 判断命题公式逻辑等价的方法：
+- - '##'
+  - 命题公式逻辑等价关系的应用：
+- - '##'
+  - Example 7
+- - '##'
+  - Propositional Equivalences
+- - '##'
+  - 进一步的思考：
+- - '###'
+  - 一、命题公式的对偶性及其对偶处理。
+- - '###'
+  - 限定性命题公式：最多仅含有否定、析取、合取逻辑联结词的命题公式。
+- - '###'
+  - 对偶原理（Duality Principle）
+- - '##'
+  - 进一步的思考：
+- - '###'
+  - 二、命题公式中的逻辑联接词的极小完备性。
+- - '###'
+  - 例1：否定、析取、合取组成的逻辑联结词组是功能完备的，但不是极小功能完备的。
+- - '###'
+  - 例2：否定和合取组成的逻辑联结词组是极小功能完备的。
+- - '###'
+  - 例3：否定和析取组成的逻辑联结词组是极小功能完备的。
+- - '##'
+  - 进一步的思考：
+- - '###'
+  - 三、命题公式的进一步分类。
+- - '###'
+  - 命题公式的标准化----范式
+- - '###'
+  - 文字（literal）/符号（symbol）：
+- - '###'
+  - 小项（small item）/合取式（conjunctive form）：
+- - '###'
+  - 大项（large item）/析取式（disjunctive form）：
+- - '###'
+  - 合取范式（conjunctive normal form）：
+- - '###'
+  - 析取范式（disjunctive normal form）：
+- - '###'
+  - 定理1：任意一个命题公式都存在与之等价的合取范式和析取范式。
+- - '###'
+  - 定理的证明思路：
+- - '##'
+  - Propositional Equivalence 命题等价
+- - '###'
+  - 定理3：命A（a1、a2、......、an）包含有n个变量的公式，则有：
+- - '##'
+  - 小结
+- - '##'
+  - 练习
+- - '##'
+  - 附加题
+- - '##'
+  - 1.2 集合
+- - '##'
+  - Sets
+- - '##'
+  - 1.2.1 集合的基本概念
+- - '##'
+  - Concepts of Sets
+- - '##'
+  - DEFINITION 1.
+- - '##'
+  - EXAMPLE 1
+- - '##'
+  - Sets 集合
+- - '##'
+  - EXAMPLE 2
+- - '##'
+  - DEFINITION 2.
+- - '##'
+  - EXAMPLE 5
+- - '##'
+  - Sets 集合
+- - '##'
+  - EXAMPLE 5
+- - '###'
+  - 1、集合中的元素互异
+- - '###'
+  - 2、集合中的元素无次序和大小之分
+- - '###'
+  - 3、集合中的元素不一定同类
+- - '###'
+  - 4、集合中的元素也可以是集合
+- - '##'
+  - DEFINITION 3.
+- - '##'
+  - Sets 集合
+- - '###'
+  - 定理1：$A=B$ 当且仅当 $A\subseteq B\land B\subseteq A$
+- - '###'
+  - 定理2：对任意的集合 $A$，$A\subseteq A$
+- - '###'
+  - 定理3：对任意的集合 $A$、$B$、$C$，如果 $A\subseteq B$，$B\subseteq C$，则 $A\subseteq C$
+- - '###'
+  - 定理4：对任意的集合 $A$，$\varnothing\subseteq A$
+- - '###'
+  - 定理5：空集 $\varnothing$ 是唯一的
+- - '##'
+  - DEFINITION 3.
+- - '###'
+  - Sets 集合
+- - '##'
+  - DEFINITION 4.
+- - '###'
+  - 集合的基、势
+- - '##'
+  - EXAMPLE 7
+- - '###'
+  - Sets 集合
+- - '##'
+  - EXAMPLE 8
+- - '###'
+  - Sets 集合
+- - '##'
+  - EXAMPLE 9
+- - '###'
+  - Sets 集合
+- - '##'
+  - DEFINITION 5.
+- - '###'
+  - Sets 集合
+- - '##'
+  - EXAMPLE 10
+- - '###'
+  - Sets 集合
+- - '##'
+  - DEFINITION 6.
+- - '###'
+  - Sets 集合
+- - '###'
+  - 幂集
+- - '##'
+  - EXAMPLE 11
+- - '###'
+  - Sets 集合
+- - '##'
+  - EXAMPLE 12
+- - '##'
+  - DEFINITION 7.
+- - '##'
+  - DEFINITION 8.
+- - '###'
+  - Sets 集合
+- - '##'
+  - EXAMPLE 14
+- - '##'
+  - DEFINITION 9.
+- - '##'
+  - EXAMPLE 16
+- - '###'
+  - Sets 集合
+- - '##'
+  - Set Operations
+- - '###'
+  - 集合的运算
+- - '##'
+  - DEFINITION 1.
+- - '###'
+  - Sets 集合
+- - '##'
+  - DEFINITION 2.
+- - '###'
+  - Sets 集合
+- - '##'
+  - DEFINITION 3.
+- - '###'
+  - Sets 集合
+- - '##'
+  - DEFINITION 4.
+- - '###'
+  - Sets 集合
+- - '##'
+  - DEFINITION 5.
+- - '##'
+  - Table 1
+- - '###'
+  - TABLE 5 Logical Equivalences.
+- - '###'
+  - EXAMPLE 11
+- - '###'
+  - Table 2
+- - '###'
+  - EXAMPLE 13
+- - '###'
+  - EXAMPLE 14
+- - '##'
+  - DEFINITION 6.
+- - '##'
+  - DEFINITION 7.
+- - '##'
+  - 小结
+- - '##'
+  - 进一步的思考
+- - '##'
+  - 练习
+- - '##'
+  - 1.2.2 函数 Functions / Mapping 映射
+- - '###'
+  - DEFINITION 1.
+- - '###'
+  - DEFINITION 2.
+- - '##'
+  - DEFINITION 3.
+- - '###'
+  - Function 函数
+- - '####'
+  - 当B=Real Set
+- - '##'
+  - DEFINITION 4.
+- - '###'
+  - Function 函数
+- - '##'
+  - DEFINITION 11.
+- - '##'
+  - EXAMPLE 20
+- - '###'
+  - Function 函数
+- - '##'
+  - DEFINITION 1.
+- - '###'
+  - Function 函数
+- - '###'
+  - 函数的分类
+- - '##'
+  - DEFINITION 5.
+- - '###'
+  - Function 函数
+- - '##'
+  - EXAMPLE 6
+- - '###'
+  - Function 函数
+- - '##'
+  - DEFINITION 6.
+- - '###'
+  - Function 函数
+- - '##'
+  - DEFINITION 7.
+- - '###'
+  - Function 函数
+- - '##'
+  - DEFINITION 8.
+- - '###'
+  - Function 函数
+- - '##'
+  - DEFINITION 9.
+- - '##'
+  - DEFINITION 10.
+- - '##'
+  - EXAMPLE 18
+- - '###'
+  - Function 函数
+- - '##'
+  - Function 函数
+- - '###'
+  - 定理2 设f:A→B, g:B→C。
+- - '##'
+  - Function 函数
+- - '###'
+  - '定理3 设\( f: A \to B \)，\( g: B \to C \)，\( h: C \to D \)'
+- - '##'
+  - 几个常用的函数：
+- - '##'
+  - Eigenfunction:特征函数
+- - '##'
+  - DEFINITION 12.
+- - '##'
+  - Sequences （序列、顺序）：
+- - '##'
+  - Function 函数
+- - '###'
+  - Closure of V （V的闭包）
+- - '###'
+  - Positive Closure of V （V的正闭包）
+- - '###'
+  - Language （语言）
+- - '###'
+  - 从集合的基（Cardinality）进行集合的分类
+- - '##'
+  - 小结
+- - '##'
+  - 进一步的思考
+- - '##'
+  - 1.3 谓词与量词（Predicates and Quantifiers）
+- - '###'
+  - DEFINITION 1
+- - '###'
+  - EXAMPLE 1
+- - '###'
+  - EXAMPLE 2
+- - '###'
+  - DEFINITION 2
+- - '###'
+  - EXAMPLE 5
+- - '###'
+  - EXAMPLE 8
+- - '###'
+  - DEFINITION 3
+- - '###'
+  - EXAMPLE 9
+- - '###'
+  - EXAMPLE 10
+- - '###'
+  - EXAMPLE 11
+- - '##'
+  - DEFINITION 4.
+- - '##'
+  - Predicates and Quantifiers 谓词与量词
+- - '##'
+  - EXAMPLE 12
+- - '##'
+  - EXAMPLE 13
+- - '##'
+  - Predicates and Quantifiers
+- - '##'
+  - EXAMPLE 16
+- - '##'
+  - EXAMPLE 17
+- - '##'
+  - EXAMPLE 18
+- - '##'
+  - EXAMPLE 19
+- - '##'
+  - EXAMPLE 20
+- - '##'
+  - EXAMPLE 21
+- - '##'
+  - EXAMPLE 22
+- - '##'
+  - Predicates and Quantifiers
+- - '##'
+  - EXAMPLE 23
+- - '##'
+  - TABLE 2 Quantifications of Two Variables.
+- - '##'
+  - NEGATIONS
+- - '##'
+  - Predicates and Quantifiers
+- - '##'
+  - TABLE 3 Negating Quantifiers.
+- - '##'
+  - 变量的约束（BINDING VARIABLES）
+- - '##'
+  - 进一步的思考
+- - '###'
+  - 一、谓词公式的分类
+- - '###'
+  - 二、谓词公式的等价演算
+- - '###'
+  - 三、谓词公式的标准化形式
+- - '##'
+  - 进一步的思考
+- - '###'
+  - 一、谓词公式的分类
+- - '##'
+  - 进一步的思考
+- - '###'
+  - 二、谓词公式的等价演算
+- - '##'
+  - 进一步的思考
+- - '###'
+  - 定理2 （基本量词等值定律）
+- - '####'
+  - 'E<sub>14</sub>: 量词分配律'
+- - '##'
+  - 'E<sub>15</sub>: 量词扩张/收缩律'
+- - '##'
+  - 例 证明
+- - '##'
+  - 小结
+- - '###'
+  - 一、从命题到命题函数
+- - '###'
+  - N元谓词
+- - '###'
+  - 个体、个体变量、个体域
+- - '###'
+  - 二、从命题公式到谓词公式
+- - '###'
+  - 存在量词、全称量词
+- - '##'
+  - 练习题
+- - '##'
+  - 1.4 集合
+- - '##'
+  - '集合/ Sets:'
+- - '##'
+  - EXAMPLE 1
+- - '##'
+  - DEFINITION 2.
+- - '##'
+  - Sets 集合
+- - '##'
+  - EXAMPLE 5
+- - '##'
+  - Sets 集合
+- - '##'
+  - DEFINITION 3.
+- - '##'
+  - Sets
+- - '##'
+  - Sets 集合
+- - '##'
+  - Sets 集合
+- - '###'
+  - 定理1： A = B 当且仅当 \( A \subseteq B \wedge B \subseteq A \)
+- - '###'
+  - 定理2： 对任意的集合A， \( A \subseteq A \)
+- - '###'
+  - 定理3： 对任意的集合A、B、C， 如果 \( A \subseteq B \), \( B \subseteq C \), 则 \( A \subseteq
+    C \)
+- - '###'
+  - 定理4： 对任意的集合A， \( \varnothing \subseteq A \)
+- - '###'
+  - 定理5： 空集\(\varnothing\) 是唯一的
+- - '##'
+  - DEFINITION 3.
+- - '###'
+  - Sets 集合
+- - '##'
+  - DEFINITION 4.
+- - '###'
+  - 集合的基、势
+- - '##'
+  - EXAMPLE 7
+- - '##'
+  - EXAMPLE 8
+- - '###'
+  - Sets 集合
+- - '##'
+  - EXAMPLE 9
+- - '###'
+  - Sets 集合
+- - '##'
+  - DEFINITION 5.
+- - '##'
+  - EXAMPLE 10
+- - '###'
+  - Sets 集合
+- - '##'
+  - DEFINITION 6.
+- - '###'
+  - Sets 集合
+- - '###'
+  - 幂集
+- - '##'
+  - EXAMPLE 11
+- - '###'
+  - Sets 集合
+- - '##'
+  - EXAMPLE 12
+- - '###'
+  - Sets 集合
+- - '##'
+  - DEFINITION 7.
+- - '###'
+  - Sets 集合
+- - '##'
+  - DEFINITION 8.
+- - '##'
+  - EXAMPLE 14
+- - '###'
+  - Sets 集合
+- - '##'
+  - DEFINITION 9.
+- - '##'
+  - EXAMPLE 16
+- - '###'
+  - Sets 集合
+- - '##'
+  - 1.5 Set Operations
+- - '##'
+  - DEFINITION 1.
+- - '###'
+  - Sets 集合
+- - '##'
+  - DEFINITION 2.
+- - '###'
+  - 集合的交
+- - '##'
+  - DEFINITION 5.
+- - '##'
+  - Venn diagram 文氏图
+- - '##'
+  - Table 1
+- - '##'
+  - EXAMPLE 11
+- - '###'
+  - Sets
+- - '##'
+  - EXAMPLE 13
+- - '###'
+  - Sets 集合
+- - '##'
+  - EXAMPLE 14
+- - '###'
+  - Sets 集合
+- - '##'
+  - Sets 集合
+- - '###'
+  - 证明两个集合相等的方法：
+- - '##'
+  - DEFINITION 6.
+- - '###'
+  - Sets 集合
+- - '##'
+  - DEFINITION 7.
+- - '###'
+  - Sets 集合
+- - '##'
+  - EXAMPLE 18
+- - '###'
+  - Sets 集合
+- - '##'
+  - 进一步的思考
+- - '##'
+  - 练习
+- - '##'
+  - 1.2.2 函数
+- - '###'
+  - Functions
+- - '###'
+  - /Mapping 映射
+- - '##'
+  - DEFINITION 3.
+- - '###'
+  - Sets 集合
+- - '###'
+  - 当B=Real Set
+- - '##'
+  - DEFINITION 4.
+- - '##'
+  - DEFINITION 11.
+- - '###'
+  - Sets 集合
+- - '##'
+  - EXAMPLE 20
+- - '###'
+  - Sets 集合
+- - '##'
+  - 函数的分类
+- - '##'
+  - DEFINITION 5.
+- - '##'
+  - EXAMPLE 6
+- - '###'
+  - Sets 集合
+- - '##'
+  - DEFINITION 6.
+- - '###'
+  - Sets 集合
+- - '##'
+  - EXAMPLE 9
+- - '##'
+  - Sets 集合
+- - '###'
+  - DEFINITION 8.
+- - '###'
+  - DEFINITION 9.
+- - '###'
+  - 逆函数
+- - '###'
+  - 定理1
+- - '###'
+  - DEFINITION 10.
+- - '###'
+  - EXAMPLE 18
+- - '###'
+  - 定理2
+- - '###'
+  - 定理3
+- - '###'
+  - 几个常用的函数：
+- - '###'
+  - 'Characteristic function: 特征函数'
+- - '###'
+  - DEFINITION 12.
+- - '###'
+  - 关于集合的进一步讨论（基于函数）
+- - '###'
+  - String（串）
+- - '###'
+  - Closure of \(V\)（\(V\) 的闭包）
+- - '###'
+  - Positive Closure of \(V\)（\(V\) 的正闭包）
+- - '###'
+  - Language（语言）
+- - '###'
+  - 小结：
+- - '###'
+  - 进一步的思考：
+- - '###'
+  - 练习题：
+- - '###'
+  - 基础部分一：
+- - '###'
+  - 基础部分二：
+- - '##'
+  - 2.1 算法
+- - '###'
+  - Algorithms 算法
+- - '###'
+  - DEFINITION 1
+- - '###'
+  - example
+- - '###'
+  - 递归与递推
+- - '###'
+  - DEFINITION 2.
+- - '##'
+  - Algorithms 算法
+- - '##'
+  - 算法的计算量问题
+- - '##'
+  - Theorem 1
+- - '##'
+  - Theorem 2
+- - '##'
+  - Corollary 1
+- - '##'
+  - Theorem 3
+- - '##'
+  - Definition 5
+- - '##'
+  - Theorem 4
+- - '##'
+  - 算法的计算复杂性
+- - '##'
+  - 常用的算法复杂性分类：
+- - '##'
+  - 小结
+- - '###'
+  - 一、算法的概念
+- - '###'
+  - 二、算法复杂性
+- - '##'
+  - 练习题
+- - '##'
+  - 2.2 数论
+- - '#'
+  - Number Theory
+- - '##'
+  - 1、算术基本定理
+- - '##'
+  - Definition 1
+- - '##'
+  - Theorem 1
+- - '##'
+  - 定理2
+- - '##'
+  - EXAMPLE 2
+- - '##'
+  - theorem 3
+- - '##'
+  - Theorem 4
+- - '##'
+  - 定理4 任意两个整数都存在最大公因子。
+- - '##'
+  - Example 1
+- - '##'
+  - 例1：求133 和301 的最大公因子
+- - '##'
+  - Theorem 5
+- - '##'
+  - Theorem 5
+- - '##'
+  - Definition 3
+- - '##'
+  - 质数的存在性
+- - '##'
+  - 质数的判定
+- - '##'
+  - Definition 5
+- - '##'
+  - Theorem 7
+- - '##'
+  - Theorem 8
+- - '##'
+  - 推论2（质数分解定理）
+- - '##'
+  - Theorem 8
+- - '##'
+  - 定理9（欧几里德定理）
+- - '##'
+  - EXAMPLE 4
+- - '##'
+  - 2、同余关系
+- - '##'
+  - Theorem 1
+- - '##'
+  - Theorem 2
+- - '##'
+  - Hashing Function / 哈希函数
+- - '##'
+  - Theorem 3
+- - '##'
+  - 数论
+- - '##'
+  - Definition 2
+- - '##'
+  - Theorem 4
+- - '##'
+  - Theorem 4
+- - '##'
+  - 定理5（中国同余定理/孙子定理）
+- - '##'
+  - Example 4
+- - '##'
+  - Theorem 6
+- - '##'
+  - Theorem 6
+- - '##'
+  - Theorem 7
+- - '##'
+  - RSA Decryption
+- - '##'
+  - (Rivest, Schamir, Adleman)
+- - '##'
+  - Theorem 7
+- - '##'
+  - Example 5
+- - '##'
+  - 小结
+- - '##'
+  - 进一步的思考
+- - '###'
+  - 1、从GCD到LCM
+- - '###'
+  - 2、Cryptology
+- - '###'
+  - 3、安全性应用
+- - '##'
+  - 练习
+- - '#'
+  - DEFINITION 1.
+- - '#'
+  - DEFINITION 2.
+- - '#'
+  - DEFINITION 3.
+- - '#'
+  - DEFINITION 4.
+- - '#'
+  - Matrices 矩阵
+- - '#'
+  - DEFINITION 5.
+- - '#'
+  - DEFINITION 6.
+- - '#'
+  - DEFINITION 7.
+- - '#'
+  - DEFINITION 8.
+- - '#'
+  - DEFINITION 9.
+- - '#'
+  - Matrices
+- - '#'
+  - DEFINITION 10.
+- - '#'
+  - The Integers and Division
+- - '##'
+  - Division
+- - '##'
+  - Example 1
+- - '##'
+  - Example 2
+- - '##'
+  - Theorem 1
+- - '##'
+  - 例 2、求 gcd(252, 198) 的线性组合表达。
+- - '##'
+  - Example 3
+- - '##'
+  - Theorem 3
+- - '##'
+  - THE FUNDAMENTAL THEOREM OF ARITHMETIC
+- - '##'
+  - 定理 3（算术基本定理）任意一个正整数 n (n ≠ 1) 可以唯一地表示为若干个质数的乘积。这里唯一的意义表示为不考虑质因子的次序。
+- - '##'
+  - 推论 1 任意一个正整数 n (n ≠ 0, n ≠ 1) 可以唯一地表示为
+- - '##'
+  - 推论 2（质数分解定理）任意一个正整数 n (n ≠ 0, n ≠ ±1) 可以唯一地表示为
+- - '##'
+  - 质数的性质
+- - '##'
+  - 算法
+- - '##'
+  - Example 4
+- - '##'
+  - The integers and Division
+- - '##'
+  - Algorithms
+- - '##'
+  - Example 6 Find the prime factorization of 7007.
+- - '##'
+  - 定理4（欧几里德定理）
+- - '##'
+  - Definition 4
+- - '##'
+  - Definition 5
+- - '##'
+  - Definition 6
+- - '##'
+  - Definition 7
+- - '##'
+  - Lcm(a,b)= \( p_1^{max(a_1, b_1)} p_2^{max(a_2, b_2)} \cdots p_n^{max(a_n, b_n)}
+    \) (2.3.2)
+- - '##'
+  - Algorithms 算法
+- - '##'
+  - Modular arithmetic (同余)
+- - '##'
+  - Theorem 6
+- - '###'
+  - Theorem 7
+- - '##'
+  - 1 Hashing Function / 哈希函数
+- - '##'
+  - 2. 密码学
+- - '###'
+  - 解密函数
+- - '##'
+  - Exercises
+- - '##'
+  - 2.4 Integers and Algorithms
+- - '###'
+  - INTRODUCTION
+- - '###'
+  - REPRESENTATIONS OF INTEGERS
+- - '###'
+  - Theorem 1
+- - '###'
+  - Example 2
+- - '###'
+  - Example 3
+- - '###'
+  - Example 4
+- - '##'
+  - Algorithms 算法
+- - '###'
+  - Algorithm 2 Constructing Base b Expansions
+- - '###'
+  - Example 5
+- - '###'
+  - Algorithm 3 Addition of Integers
+- - '##'
+  - Example 6
+- - '##'
+  - Example 7
+- - '##'
+  - Algorithm 4 Multiplying Integers
+- - '##'
+  - 2.5 Applications of Number Theory
+- - '###'
+  - Theorem 1
+- - '###'
+  - Lemma 1
+- - '###'
+  - Lemma 2
+- - '##'
+  - Theorem 2
+- - '##'
+  - Theorem 3
+- - '##'
+  - Theorem 4
+- - '##'
+  - Theorem 5
+- - '##'
+  - 2.4 Integers and Algorithms
+- - '##'
+  - INTRODUCTION
+- - '##'
+  - REPRESENTATIONS OF INTEGERS
+- - '##'
+  - Example 2
+- - '##'
+  - Example 3
+- - '##'
+  - Algorithms 算法
+- - '##'
+  - Example 4
+- - '##'
+  - Algorithm 2 Constructing Base b Expansions.
+- - '##'
+  - Example 5
+- - '###'
+  - Algorithm 3 Addition of Integers
+- - '###'
+  - Example 6
+- - '###'
+  - Algorithms 算法
+- - '###'
+  - Example 7
+- - '###'
+  - Algorithm 4 Multiplying Integers
+- - '##'
+  - 2.5 Applications of Number Theory
+- - '###'
+  - Theorem 1
+- - '###'
+  - Example 1
+- - '##'
+  - Lemma 1
+- - '##'
+  - Lemma 2
+- - '##'
+  - Algorithms 算法
+- - '##'
+  - Theorem 2
+- - '##'
+  - Theorem 3 11,06 同余逆
+- - '##'
+  - Example 3
+- - '###'
+  - Find the inverse of 3 modulo 7.
+- - '##'
+  - Example 4
+- - '##'
+  - Example 5
+- - '##'
+  - Theorem 4
+- - '##'
+  - The solution to Sun-Tsu’s puzzle
+- - '##'
+  - Algorithms 算法
+- - '##'
+  - Theorem 5 (Fermat’s little theorem)
+- - '##'
+  - 收报方 公开通讯 发报方
+- - '#'
+  - 例5：p=47 和 q = 59
+- - '##'
+  - 3 数学推理
+- - '##'
+  - Mathematical Reasoning
+- - '###'
+  - 3.1 推理与证明方法
+- - '###'
+  - Reasoning and Methods of Proof
+- - '###'
+  - 3.2 数学归纳方法
+- - '###'
+  - 3.3 递推方法
+- - '#'
+  - 一些基本概念
+- - '#'
+  - 推理与证明方法
+- - '#'
+  - Definition 1
+- - '#'
+  - 蕴涵演算/logical implying operation
+- - '#'
+  - Table 1
+- - '#'
+  - EXAMPLE 1
+- - '#'
+  - 推理与证明方法
+- - '#'
+  - EXAMPLE 2
+- - '#'
+  - 推理与证明方法
+- - '#'
+  - 苏格拉底论证：
+- - '#'
+  - EXAMPLE 4
+- - '#'
+  - 推理与证明方法
+- - '#'
+  - 定理证明方法：
+- - '#'
+  - 推理与证明方法
+- - '#'
+  - 定理证明方法：
+- - '##'
+  - 5、反证明/proof of contradiction：
+- - '##'
+  - 6、分例证明/proof of cases：
+- - '#'
+  - 推理与证明方法
+- - '#'
+  - 定理证明方法：
+- - '#'
+  - 小结
+- - '#'
+  - 进一步的思考
+- - '#'
+  - 推理与证明方法
+- - '#'
+  - 练 习
+- - '#'
+  - 3 数学推理
+- - '#'
+  - Mathematical Reasoning
+- - '##'
+  - 3.1 推理与证明方法
+- - '##'
+  - 3.2 数学归纳方法
+- - '#'
+  - Mathematical Induction
+- - '##'
+  - 3.3 递推方法
+- - '#'
+  - Definition 1
+- - '#'
+  - 数学归纳方法
+- - '#'
+  - Definition 2
+- - '#'
+  - EXAMPLE 1
+- - '#'
+  - pp.191 example 5
+- - '##'
+  - 第二数学归纳法：
+- - '##'
+  - EXAMPLE 2
+- - '##'
+  - 数学归纳方法
+- - '##'
+  - Definition 4
+- - '##'
+  - pp. 195 Example 11
+- - '##'
+  - 3 数学推理
+- - '##'
+  - Mathematical Reasoning
+- - '###'
+  - 3.1 推理与证明方法
+- - '###'
+  - 3.2 数学归纳方法
+- - '###'
+  - 3.3 递归方法
+- - '##'
+  - Recursive Definition
+- - '##'
+  - DEFINITION 1
+- - '###'
+  - '递归定义的函数f:'
+- - '##'
+  - Example 1
+- - '##'
+  - PP. 205 Example 6
+- - '##'
+  - 递归定义的集合：
+- - '##'
+  - Well-formed formulae
+- - '##'
+  - 小结
+- - '###'
+  - 1、数学归纳方法
+- - '###'
+  - 2、递归方法
+- - '##'
+  - 练习
+- - '##'
+  - 第三章 二元关系
+- - '###'
+  - § 1 二元关系
+- - '###'
+  - 定义2： 二元关系----按照某种规定，定义了一个有序对（a，b）的集合R，其中a ∈ A，b ∈ B，称R为A到B的一个二元关系。
+- - '###'
+  - 注意： 二元关系是指满足某规律的有序对的全体。
+- - '###'
+  - 定义3： 当A = B时，R是A到A的二元关系，称为A上的二元关系。
+- - '###'
+  - 定义：
+- - '###'
+  - 图示法：关系图，直观
+- - '###'
+  - 注：
+- - '###'
+  - § 2 二元关系的运算
+- - '#'
+  - 注：
+- - '##'
+  - 2. 二元关系的复合
+- - '#'
+  - 例 3：
+- - '#'
+  - 普通的矩阵乘法：
+- - '#'
+  - 而二元关系的复合的矩阵布尔型乘法：
+- - '#'
+  - 例 4：
+- - '#'
+  - R的关系图：
+- - '#'
+  - 二元关系的逆关系：运算
+- - '##'
+  - § 3 A 上各类二元关系的性质
+- - '###'
+  - 注：
+- - '##'
+  - 反对称性：
+- - '###'
+  - 注：
+- - '##'
+  - 3）传递性：
+- - '##'
+  - 例 4：
+- - '##'
+  - 例 5：
+- - '##'
+  - 推论2
+- - '##'
+  - 定义3：传递扩张
+- - '##'
+  - 定义3
+- - '##'
+  - 定理3 传递闭包 \(R^* = R \cup R^2 \cup \dots \cup R^k \cup \dots\)
+- - '##'
+  - 定理4：传递闭包 R* 一定是传递的。
+- - '###'
+  - 传递扩张的实际意义：
+- - '##'
+  - 定理5
+- - '###'
+  - 证明：
+- - '###'
+  - 例 6：
+- - '##'
+  - Warshall算法：（1962）
+- - '###'
+  - 例6：重新计算 R*
+- - '###'
+  - 例 7：\(A = \{ a , b , c , d \}\) \(R = \{ ( a , b ) , ( b , c ) , ( c , d ) \}\)
+    计算 R*。
+- - '##'
+  - § 4 等价关系
+- - '##'
+  - 4.1 等价关系
+- - '###'
+  - 定义1 等价关系：
+- - '###'
+  - 定义4.2 等价类：
+- - '###'
+  - 定义4.3 集合的分划：
+- - '###'
+  - 注：
+- - '###'
+  - 定理1：
+- - '###'
+  - 证明：
+- - '#'
+  - 例 1：
+- - '#'
+  - 例 2：
+- - '#'
+  - 例3：
+- - '#'
+  - 例 4：
+- - '#'
+  - '[定义]相容关系：'
+- - '#'
+  - 注：
+- - '#'
+  - 4．2 等价关系的运算
+- - '#'
+  - 例 5：
+- - '#'
+  - '[定理4]: 若R<sub>1</sub>, R<sub>2</sub>是A上等价关系,'
+- - '#'
+  - 则（R<sub>1</sub> U R<sub>2</sub>）<sup>*</sup>也是A上等价关系。
+- - '#'
+  - 证明：
+- - '#'
+  - 4.3 等价关系的运算与分划的关系
+- - '#'
+  - 例7：
+- - '#'
+  - 注：
+- - '#'
+  - § 5 半序关系
+- - '#'
+  - 例：
+- - '#'
+  - 记号：
+- - '#'
+  - 简化的关系图：
+- - '#'
+  - '[定义] Hasse图'
+- - '#'
+  - '[定义] 全序：'
+- - '#'
+  - 【定义】半序集：
+- - '#'
+  - 注：
+- - '#'
+  - 【定义】全序集：
+- - '#'
+  - 注：
+- - '#'
+  - '[定义]链：'
+- - '##'
+  - '[定义]反链：'
+- - '##'
+  - 【定义】极大元与极小元：
+- - '##'
+  - 注：
+- - '##'
+  - '[定义]最大元与最小元：'
+- - '#'
+  - 结论：
+- - '#'
+  - 注：
+- - '##'
+  - '[定义]上界与下界：'
+- - '#'
+  - 注：
+- - '##'
+  - 【定义】上确界与下确界：
+- - '#'
+  - 例：
+- - '#'
+  - 注：
+- - '#'
+  - 例：
+- - '##'
+  - '[引理2]：'
+- - '#'
+  - 反证：
+- - '##'
+  - '[定理1]：设（P，≤）是有限的半序集，P中最长链长度为n，则P可以划分为n个互不相交的反链。'
+- - '#'
+  - 说明：
+- - '##'
+  - 【定理2】：每个 A 的分划
+- - '#'
+  - 例：
+- - '###'
+  - 例 1
+- - '###'
+  - 定义：良序集
+- - '##'
+  - 3 数学推理（Mathematical Reasoning）
+- - '###'
+  - 3.1 推理与证明方法（Reasoning and Methods of Proof）
+- - '###'
+  - 3.2 数学归纳方法（Mathematical Induction）
+- - '###'
+  - 3.3 递推方法
+- - '##'
+  - Definition 2
+- - '###'
+  - 数学归纳法的一般公式表示：
+- - '###'
+  - pp.191 example 5
+- - '##'
+  - Definition 3
+- - '###'
+  - 推理与证明方法
+- - '###'
+  - 第二数学归纳法：
+- - '##'
+  - Definition 4
+- - '##'
+  - 3.3 递归方法
+- - '###'
+  - Recursive Definition
+- - '###'
+  - DEFINITION 1
+- - '###'
+  - '递归定义的函数f:'
+- - '###'
+  - Example 1
+- - '###'
+  - 推理与证明方法
+- - '###'
+  - Example 6 （ PP.205 ）
+- - '###'
+  - 利用 Fibonacci数列研究Euclid算法的计算复杂性。
+- - '###'
+  - 递归定义的集合：
+- - '##'
+  - 递归算法和迭代算法
+- - '###'
+  - 推理与证明方法
+- - '##'
+  - 小结
+- - '###'
+  - 1、数学归纳方法
+- - '###'
+  - 2、递归方法
+- - '##'
+  - 推理与证明方法
+- - '###'
+  - 进一步的思考
+- - '##'
+  - 4 计数原理/Counting
+- - '###'
+  - 4.1 基本计数原理
+- - '###'
+  - The Basic of Counting
+- - '###'
+  - 4.2 包含与排斥原理
+- - '###'
+  - The Inclusion-Exclusion Principle
+- - '###'
+  - 4.3 鸽洞原理
+- - '###'
+  - The Pigeonhole Principle
+- - '##'
+  - 求和规则/The Sum Rule
+- - '##'
+  - 求和规则的推广
+- - '##'
+  - 求积规则/The Product Rule
+- - '##'
+  - How many functions are there from a set with **m** elements to one with **n**
+    elements?
+- - '##'
+  - How many one-to-one functions are there
+- - '##'
+  - 例11 多重循环程序
+- - '##'
+  - 求积规则的推广
+- - '##'
+  - 4 计数原理/Counting
+- - '###'
+  - 4.1 基本计数原理
+- - '###'
+  - The Basic of Counting
+- - '###'
+  - 4.2 包含与排斥原理/容斥原理
+- - '###'
+  - The Inclusion-Exclusion Principle
+- - '###'
+  - 4.3 鸽洞原理
+- - '###'
+  - The Pigeonhole Principle
+- - '##'
+  - 讨论范围：有限集 A 及其 A 的基 |A|
+- - '##'
+  - 例 1
+- - '##'
+  - EXAMPLE 2
+- - '##'
+  - 例 2
+- - '##'
+  - EXAMPLE 3
+- - '##'
+  - 例 3
+- - '##'
+  - 4 计数原理/Counting
+- - '###'
+  - 4.1 基本计数原理
+- - '###'
+  - The Basic of Counting
+- - '###'
+  - 4.2 包含与排斥原理
+- - '###'
+  - The Inclusion-Exclusion Principle
+- - '###'
+  - 4.3 鸽洞原理
+- - '###'
+  - The Pigeonhole Principle
+- - '##'
+  - The Pigeonhole Principle
+- - '##'
+  - EXAMPLE 8
+- - '##'
+  - 例 8
+- - '##'
+  - 例 2
+- - '##'
+  - EXAMPLE 3
+- - '##'
+  - 计数原理
+- - '##'
+  - 小结
+- - '##'
+  - 进一步的思考
+- - '##'
+  - Example
+- - '##'
+  - 计数原理
+- - '##'
+  - 排列/Permutations
+- - '##'
+  - 组合/Combinations
+- - '##'
+  - 计数原理
+- - '##'
+  - 组合/Combinations
+- - '##'
+  - 组合的函数表示：
+- - '##'
+  - 组合的球盒模型表示：
+- - '##'
+  - 定理 2 推论（组合推论/ combination corollary）：
+- - '##'
+  - Binomial coefficients
+- - '##'
+  - 计数原理
+- - '##'
+  - 定理 3（PASCAL 公式）：
+- - '##'
+  - PASCAL 三角形/杨辉三角形
+- - '##'
+  - 二项式系数与二项式定理
+- - '##'
+  - 计数原理
+- - '##'
+  - 定理 4：
+- - '##'
+  - 定理 4 证明思路：
+- - '##'
+  - 二项式系数与二项式定理
+- - '##'
+  - 计数原理
+- - '##'
+  - 定理 5（Vandermonde 公式）：
+- - '##'
+  - 二项式系数与二项式定理
+- - '##'
+  - 计数原理
+- - '##'
+  - 定理 6（Binomial Theorem/二项式定理）：
+- - '##'
+  - 对任意正整数 n 和变量 x、y
+- - '##'
+  - \((x+y)^n = \sum_{j=0}^n C(n, j) x^{n-j} y^j\)
+- - '##'
+  - 二项式系数与二项式定理
+- - '##'
+  - 计数原理
+- - '##'
+  - 二项式定理推论：
+- - '##'
+  - 排列与组合的推广
+- - '##'
+  - 计数原理
+- - '##'
+  - 排列与组合的推广
+- - '##'
+  - 计数原理
+- - '##'
+  - 排列与组合的推广
+- - '###'
+  - 计数原理
+- - '###'
+  - 小结
+- - '###'
+  - 进一步的思考
+- - '###'
+  - 练习
+- - '##'
+  - 4、计数原理/Counting
+- - '###'
+  - 4.6 排列与组合的生成 Generating Permutations and Combinations
+- - '###'
+  - 一、字典序排列/lexicographic ordering for permutation
+- - '###'
+  - 二、字典序组合/lexicographic ordering for combination
+- - '##'
+  - 练习
+- - '##'
+  - 4 计数原理/Counting
+- - '###'
+  - 4.1 基本计数原理
+- - '###'
+  - The Basic of Counting
+- - '###'
+  - 4.2 包含与排斥原理
+- - '###'
+  - The Inclusion-Exclusion Principle
+- - '###'
+  - 4.3 鸽洞原理
+- - '###'
+  - The Pigeonhole Principle
+- - '###'
+  - 求和规则/The Sum Rule
+- - '###'
+  - 求和规则的推广
+- - '###'
+  - 求积规则/The Product Rule
+- - '###'
+  - How many functions are there from a set with m elements to one with n elements
+    ?
+- - '###'
+  - example3
+- - '###'
+  - 例11 多重循环程序
+- - '###'
+  - 求积规则的推广
+- - '##'
+  - 4 计数原理/Counting
+- - '###'
+  - 4.1 基本计数原理
+- - '###'
+  - The Basic of Counting
+- - '###'
+  - 4.2 包含与排斥原理/容斥原理
+- - '###'
+  - The Inclusion-Exclusion Principle
+- - '###'
+  - 4.3 鸽洞原理
+- - '###'
+  - The Pigeonhole Principle
+- - '###'
+  - 例1.
+- - '###'
+  - EXAMPLE 2
+- - '###'
+  - EXAMPLE 3
+- - '##'
+  - 4 计数原理/Counting
+- - '###'
+  - 4.1 基本计数原理
+- - '###'
+  - The Basic of Counting
+- - '###'
+  - 4.2 包含与排斥原理
+- - '###'
+  - The Inclusion-Exclusion Principle
+- - '###'
+  - 4.3 鸽洞原理
+- - '###'
+  - The Pigeonhole Principle
+- - '###'
+  - EXAMPLE 1
+- - '###'
+  - 计数原理
+- - '###'
+  - 例2.
+- - '###'
+  - EXAMPLE 3
+- - '###'
+  - 计数原理
+- - '###'
+  - 小结
+- - '###'
+  - 进一步的思考
+- - '###'
+  - 练习
+- - '##'
+  - 4、计数原理/Counting
+- - '##'
+  - 4.4 排列与组合
+- - '##'
+  - Permutations and Combinations
+- - '##'
+  - 排列/Permutations
+- - '##'
+  - 计数原理
+- - '###'
+  - 例1 教室里有两排座位，每排8个。14个同学上课，5人喜欢前排，4人喜欢后排，求满足要求的座法。
+- - '##'
+  - 排列/Permutations
+- - '##'
+  - 排列/Permutations
+- - '##'
+  - 组合/Combinations
+- - '##'
+  - 计数原理
+- - '##'
+  - 二项式系数与二项式定理
+- - '##'
+  - 计数原理
+- - '###'
+  - 定理3（PASCAL’公式）：
+- - '###'
+  - PASCAL三角形/杨辉三角形
+- - '##'
+  - 二项式系数与二项式定理
+- - '###'
+  - 计数原理
+- - '###'
+  - 定理4：
+- - '###'
+  - 定理4证明思路：
+- - '##'
+  - 二项式系数与二项式定理
+- - '###'
+  - 定理5（Vandermonde公式）：
+- - '##'
+  - 二项式系数与二项式定理
+- - '###'
+  - 计数原理
+- - '###'
+  - 定理6（Binomial Theorem/二项式定理）：
+- - '###'
+  - 对任意正整数n和变量x、y
+- - '###'
+  - \((x+y)^n = \sum_{j=0}^n C(n, j) x^{n-j} y^j\)
+- - '##'
+  - 二项式系数与二项式定理
+- - '##'
+  - 二项式系数与二项式定理
+- - '###'
+  - 计数原理
+- - '###'
+  - 二项式定理推论：
+- - '##'
+  - 排列与组合的推广
+- - '###'
+  - 计数原理
+- - '##'
+  - 排列与组合的推广
+- - '###'
+  - 计数原理
+- - '##'
+  - 排列与组合的推广
+- - '###'
+  - 计数原理
+- - '##'
+  - 小结
+- - '##'
+  - 进一步的思考
+- - '##'
+  - 练习
+- - '##'
+  - 4、计数原理/Counting
+- - '##'
+  - 4.5 排列与组合的生成
+- - '##'
+  - Generating Permutations
+- - '##'
+  - and Combinations
+- - '##'
+  - 一、字典序排列/lexicographic ordering for permutation
+- - '###'
+  - 定义：
+- - '##'
+  - 计数原理
+- - '##'
+  - 字典序排列算法
+- - '##'
+  - 计数原理
+- - '##'
+  - 计数原理
+- - '##'
+  - 例 2：求 n = 4 时 {1，2，3，4} 的所有排列。
+- - '##'
+  - 计数原理
+- - '###'
+  - 定理一：
+- - '##'
+  - 二、字典序组合/lexicographic ordering for combination
+- - '##'
+  - 计数原理
+- - '##'
+  - (2) 构造 \( S_{i+1} \)
+- - '###'
+  - 注：
+- - '##'
+  - 计数原理
+- - '##'
+  - 计数原理
+- - '##'
+  - 定理二：
+- - '##'
+  - 练习
+- - '##'
+  - 5. Relations
+- - '##'
+  - 关系
+- - '##'
+  - 5.1 Relations and their Properties
+- - '##'
+  - 关系及其性质
+- - '##'
+  - Relations关系
+- - '###'
+  - 注意:相关性与指定的规则有关。
+- - '##'
+  - 注：
+- - '##'
+  - 定义2： 二元关系/binary relation
+- - '##'
+  - Relations关系
+- - '##'
+  - 函数作为二元关系
+- - '###'
+  - 二元关系看成函数关系
+- - '###'
+  - 当定义域与值域交换得
+- - '##'
+  - 二元关系中的计数问题
+- - '##'
+  - Relations关系
+- - '##'
+  - 表格表示法：用表格表示一目了然
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - 二元关系的性质对应于关系图，有：
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - 例 4：
+- - '##'
+  - 例 5：
+- - '##'
+  - 二元关系的集合运算
+- - '##'
+  - Combining Relations
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - 注：
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - 进一步的思考
+- - '##'
+  - Relations关系
+- - '##'
+  - 练习
+- - '##'
+  - 5.2 二元关系的运算
+- - '###'
+  - Relation Operation and Closures
+- - '##'
+  - 二元关系的复合运算
+- - '###'
+  - 定义
+- - '##'
+  - 例 3
+- - '##'
+  - 普通的矩阵乘法
+- - '##'
+  - 关系的幂
+- - '##'
+  - THEOREM
+- - '##'
+  - 例 4
+- - '###'
+  - R 的关系图
+- - '##'
+  - Rⁿ 的关系图的构造
+- - '##'
+  - 二元关系的逆关系：运算
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '#'
+  - 证明：
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '###'
+  - Warshall算法（1962）
+- - '##'
+  - 小结
+- - '##'
+  - 进一步的思考
+- - '##'
+  - 练习
+- - '##'
+  - 5.3 等价关系
+- - '###'
+  - Equivalence Relations
+- - '##'
+  - 练习
+- - '##'
+  - 5.4 半序关系
+- - '###'
+  - Partial Ordering
+- - '##'
+  - Relations关系
+- - '##'
+  - 例2：整数集I上的二元关系
+- - '##'
+  - Relations关系
+- - '##'
+  - 记号：
+- - '##'
+  - 几点说明：
+- - '##'
+  - Relations关系
+- - '##'
+  - '[定义]：哈森图/Hasse图'
+- - '##'
+  - '[定义] 全序：'
+- - '##'
+  - Relations关系
+- - '##'
+  - '[定义]全序集：'
+- - '##'
+  - 例：
+- - '##'
+  - Relations关系
+- - '##'
+  - '【定义】极大元与极小元/maximal element and minimal element:'
+- - '##'
+  - Relations关系
+- - '#'
+  - 说明：
+- - '##'
+  - Relations关系
+- - '#'
+  - 上例：其Hasse图如下图所示
+- - '##'
+  - Relations关系
+- - '#'
+  - 结论：
+- - '#'
+  - 说明：
+- - '##'
+  - Relations关系
+- - '#'
+  - '【定义】上界与下界/upper bound and lower bound:'
+- - '##'
+  - '【定义】上确界与下确界 / least upper bound and greatest lower bound:'
+- - '##'
+  - 例：
+- - '#'
+  - 说明：
+- - '##'
+  - Relations 关系
+- - '###'
+  - 例：
+- - '###'
+  - 定理
+- - '###'
+  - 定理
+- - '###'
+  - 定义 格/lattice
+- - '###'
+  - 例 20
+- - '###'
+  - 例 22
+- - '###'
+  - 例 23
+- - '###'
+  - 定理
+- - '###'
+  - 定义 拓扑排序/topological sorting
+- - '###'
+  - 定义 良序集/well ordered set
+- - '##'
+  - 小结
+- - '##'
+  - 进一步的思考
+- - '##'
+  - 练习
+- - '##'
+  - 5. Relations 关系
+- - '###'
+  - 5.1 Relations and their Properties 关系及其性质
+- - '###'
+  - 函数作为二元关系
+- - '####'
+  - 二元关系看成函数关系
+- - '###'
+  - 二元关系中的计数问题
+- - '###'
+  - 二元关系的表示
+- - '####'
+  - 表格表示法：用表格表示一目了然
+- - '#'
+  - Relations关系
+- - '#'
+  - Relations关系
+- - '#'
+  - Relations关系
+- - '#'
+  - Relations关系
+- - '#'
+  - Relations关系
+- - '#'
+  - 二元关系的性质对应于关系图，有：
+- - '#'
+  - Relations关系
+- - '#'
+  - Relations关系
+- - '#'
+  - 例 4：
+- - '#'
+  - 例 5：
+- - '#'
+  - 二元关系的运算
+- - '#'
+  - Combining Relations
+- - '#'
+  - Relations关系
+- - '#'
+  - Relations关系
+- - '#'
+  - Relations关系
+- - '#'
+  - 注：
+- - '#'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - 进一步的思考
+- - '##'
+  - Relations关系
+- - '##'
+  - 练习
+- - '##'
+  - 5.2 二元关系的运算
+- - '##'
+  - Relation Operation and Closures
+- - '##'
+  - 二元关系的复合运算
+- - '##'
+  - Relations关系
+- - '##'
+  - 例 3：
+- - '##'
+  - Relations关系
+- - '##'
+  - 普通的矩阵乘法：
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - THEOREM
+- - '##'
+  - 例 4.
+- - '#'
+  - R的关系图：
+- - '##'
+  - Relations关系
+- - '#'
+  - Rⁿ的关系图的构造：
+- - '##'
+  - Relations关系
+- - '##'
+  - 二元关系的逆关系：运算
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '#'
+  - 证明：
+- - '##'
+  - Relations关系
+- - '#'
+  - Warshall算法：（1962）
+- - '##'
+  - Relations关系
+- - '##'
+  - 小结
+- - '##'
+  - 进一步的思考
+- - '##'
+  - 练习
+- - '##'
+  - 5.3 等价关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '#'
+  - '## 注：'
+- - '#'
+  - '## [定理1]：'
+- - '#'
+  - 证明：
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '###'
+  - 练习
+- - '###'
+  - 4.2 等价关系的运算
+- - '###'
+  - 4.3 等价关系的运算与分划的关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - § 5 半序关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - '[定义] 全序：'
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - '[定义]极大元与极小元：'
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - '[定义]上界与下界：'
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '#'
+  - 例：
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - 5. Relations
+- - '##'
+  - 关系
+- - '###'
+  - 5.1 Relations and their Properties
+- - '###'
+  - 关系及其性质
+- - '#'
+  - Relations关系
+- - '#'
+  - Relations关系
+- - '##'
+  - 注：
+- - '#'
+  - 定义2： 二元关系/binary relation
+- - '##'
+  - 注意： 二元关系是指满足某规律的有序对的全体。
+- - '#'
+  - Relations关系
+- - '#'
+  - 二元关系中的计数问题
+- - '#'
+  - Relations关系
+- - '##'
+  - 表格表示法：用表格表示一目了然
+- - '#'
+  - Relations关系
+- - '#'
+  - 相关矩阵法表示：
+- - '#'
+  - 把A， B集合内元素排好序
+- - '#'
+  - Relations关系
+- - '#'
+  - 二元关系的性质（A上的R）
+- - '#'
+  - Relations关系
+- - '#'
+  - Relations关系
+- - '##'
+  - 反对称性：
+- - '##'
+  - 注：
+- - '#'
+  - Relations关系
+- - '#'
+  - 例：
+- - '#'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - 二元关系的性质对应于关系图，有：
+- - '##'
+  - Relations关系
+- - '##'
+  - 例 4：
+- - '##'
+  - 例 5：
+- - '##'
+  - 二元关系的集合运算
+- - '##'
+  - Combining Relations
+- - '##'
+  - 设 $R_1$ 和 $R_2$ 是 $A$ 到 $B$ 的二元关系，则
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - 进一步的思考
+- - '###'
+  - 1、其他的二元关系
+- - '##'
+  - 进一步的思考
+- - '##'
+  - 5.2 二元关系的运算
+- - '##'
+  - Relation Operation and Closures
+- - '##'
+  - 二元关系的复合运算
+- - '##'
+  - Relations关系
+- - '##'
+  - 例 3：
+- - '##'
+  - Relations关系
+- - '##'
+  - 普通的矩阵乘法：
+- - '##'
+  - 而二元关系的复合的矩阵布尔型乘法：
+- - '##'
+  - 对例 3，有：
+- - '##'
+  - Relations关系
+- - '##'
+  - THEOREM
+- - '##'
+  - 例 4：
+- - '#'
+  - R的关系图：
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '#'
+  - Rⁿ的关系图的构造：
+- - '##'
+  - Relations关系
+- - '##'
+  - 二元关系的逆关系：运算
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - 关系的闭包/Closure of Relations
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - 注：
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '##'
+  - '[定义3]：'
+- - '##'
+  - '[定理3] 传递闭包 \( R^* = R \cup R^2 \cup \dots \cup R^k \cup \dots \)'
+- - '##'
+  - Relations关系
+- - '##'
+  - Relations关系
+- - '#'
+  - 【定理4】：传递闭包 $R^*$ 一定是传递的。
+- - '#'
+  - 传递扩张的实际意义：
+- - '#'
+  - Relations关系
+- - '#'
+  - 证明：
+- - '#'
+  - Relations关系
+- - '#'
+  - Relations关系
+- - '#'
+  - Relations关系
+- - '#'
+  - Relations关系
+- - '#'
+  - 小结
+- - '#'
+  - 进一步的思考
+- - '#'
+  - 练习
+- - '#'
+  - 5.3 等价关系 Equivalence Relations
+- - '##'
+  - '[定义1] 等价关系：'
+- - '#'
+  - Relations关系
+- - '#'
+  - 'example 4: Congruence Modulo m'
+- - '#'
+  - Relations关系
+- - '#'
+  - 'example 4: Congruence Modulo m'
+- - '#'
+  - Relations关系
+- - '#'
+  - Relations关系
+- - '##'
+  - 注：
+- - '##'
+  - '[定义3]集合的划分：把集合 A 分为若干子集 A₁，A₂，...，满足：'
+- - '#'
+  - 定理2：
+- - '#'
+  - Relations关系
+- - '##'
+  - 证明：
+- - '##'
+  - Relations关系
+- - '##'
+  - 'EXAMPLE:'
+- - '##'
+  - R是等价关系，用关系图表示。
+- - '##'
+  - Relations关系
+- - '##'
+  - 小结
+- - '##'
+  - 进一步的思考
+- - '##'
+  - Relations关系
+- - '##'
+  - 练习
+- - '##'
+  - 5.4 半序关系
+- - '##'
+  - Partial Ordering
+- - '##'
+  - 几点说明：
+- - '##'
+  - Relations关系
+- - '##'
+  - 【定义】：哈森图/Hasse图
+- - '##'
+  - 【定义】可比较与不可比较：
+- - '##'
+  - '[定义] 全序：'
+- - '##'
+  - Relations关系
+- - '##'
+  - 【定义】链：
+- - '##'
+  - '[定义]反链：'
+- - '##'
+  - Relations关系
+- - '###'
+  - '[定义]极大元与极小元/maximal element and minimal element:'
+- - '###'
+  - '[定义]最大元与最小元/greatest element and least element:'
+- - '###'
+  - '【定义】上界与下界/upper bound and lower bound:'
+- - '###'
+  - '## [定理]:'
+- - '###'
+  - '## 证：'
+- - '###'
+  - '[定理]：'
+- - '###'
+  - '[定义]格/lattice:'
+- - '#'
+  - 小结
+- - '#'
+  - 进一步的思考
+- - '#'
+  - 从半序集到格
+- - '#'
+  - 从格到布尔代数
+- - '#'
+  - 练习
+- - '#'
+  - Chapter 7 Graphs
+- - '#'
+  - 图 论
+- - '#'
+  - '## 7.1 图的概念/Introduction of Graph'
+- - '#'
+  - '## 7.2 图的术语/Graph Terminology'
+- - '#'
+  - '## 7.3 图的表示与同构/Representing Graph and Graph Isomorphism'
+- - '#'
+  - '## 7.4 连通性/Connectivity'
+- - '#'
+  - '## 7.5 欧拉道路与哈密尔顿道路/Euler and Hamilton Paths'
+- - '#'
+  - '## 7.6 最短道路问题/Shortest Path Problem'
+- - '#'
+  - '## 7.7 平面图/Planar Graphs'
+- - '#'
+  - '## 7.8 图的着色/Graph Coloring'
+- - '#'
+  - '# 7.1 图的概念/Introduction of Graph'
+- - '#'
+  - '# [定义]顶点：'
+- - '#'
+  - '# [定义]边：'
+- - '#'
+  - '[定义]图的分类'
+- - '#'
+  - '# [定义]孤立顶点：'
+- - '#'
+  - '# [定义]自回路：'
+- - '##'
+  - Graphs/图论
+- - '###'
+  - '[定理3] 设有向图 $G=(V,E)$ 有 $e$ 条边，则 $G$ 中所有顶点的入次之和等于所有顶点的出次之和，也等于 $e$。'
+- - '###'
+  - 有向图与无向图的对应：
+- - '###'
+  - 一些特殊的简单无向图：
+- - '###'
+  - '[定理4] 设无向完全图 $G$ 有 $n$ 个顶点，则 $G$ 有 $n(n-1)/2$ 条边。'
+- - '###'
+  - 计算机处理和网络应用特殊图表示：
+- - '###'
+  - '[定义] 子图'
+- - '###'
+  - '[定义] 补图/complementary graph'
+- - '###'
+  - 定义补图：
+- - '###'
+  - '[定义] 并图'
+- - '##'
+  - 7.3 图的表示与同构 / Representing Graph and Graph Isomorphism
+- - '###'
+  - '[定义] 邻接矩阵'
+- - '###'
+  - 【定义】图的同构
+- - '###'
+  - 同构判定算法（用邻接矩阵）
+- - '##'
+  - 小结
+- - '###'
+  - 进一步的思考
+- - '##'
+  - 练习
+- - '##'
+  - 7.4 连通性/Connectivity
+- - '###'
+  - '[定义] 道路/path'
+- - '###'
+  - '[定义] 简单道路/Simple Path'
+- - '###'
+  - '[定义] 基本道路/Element Path'
+- - '##'
+  - '[定义]连通性/connectivity'
+- - '##'
+  - '[定义] 无向图的连通性'
+- - '##'
+  - '[定理1]'
+- - '##'
+  - '[定义]无向图的连通性'
+- - '##'
+  - '[定义]连通分图/connected components'
+- - '##'
+  - '[定义]有向图的连通性'
+- - '##'
+  - 连通无向图
+- - '##'
+  - 弱连通
+- - '##'
+  - 强连通
+- - '##'
+  - Graphs/图论
+- - '##'
+  - Graphs/图论
+- - '##'
+  - 用邻接矩阵讨论图 G 的连通性质
+- - '##'
+  - '[定理2]'
+- - '##'
+  - 【定理3】
+- - '##'
+  - 【定理4】
+- - '##'
+  - 定义：n 个顶点的图 G 中，A 是 G 的邻接矩阵。\( B=A+A^2+\ldots+A^{n-1}+A^n \) 称为 G 的可达性矩阵。
+- - '##'
+  - 有向图的连通性（n>1）
+- - '##'
+  - 无向图的连通性（n>1）
+- - '##'
+  - 7.5 Euler and Hamilton Path
+- - '##'
+  - Konigsberg(哥尼斯堡)七桥问题
+- - '##'
+  - '[定义] 欧拉道路（回路）'
+- - '##'
+  - '[定理1]（欧拉定理）'
+- - '##'
+  - Graphs/图论
+- - '##'
+  - 证明
+- - '###'
+  - 必要性
+- - '###'
+  - 充分性
+- - '##'
+  - Graphs/图论
+- - '##'
+  - 例1
+- - '##'
+  - 例
+- - '##'
+  - 定理2（有向图的欧拉定理）
+- - '##'
+  - 中国邮递员问题
+- - '##'
+  - Hamilton（哈密顿）道路问题
+- - '##'
+  - '[定义] 哈密顿道路/回路'
+- - '##'
+  - 定理3
+- - '##'
+  - 定理4
+- - '##'
+  - 定理5
+- - '##'
+  - 小结
+- - '##'
+  - 进一步的思考
+- - '##'
+  - 应用问题之一：Knight’s tour
+- - '##'
+  - 应用问题之二：Gray Code
+- - '##'
+  - 应用问题之三：Tower of Hanoi
+- - '##'
+  - 练习
+- - '##'
+  - 7.6 最短道路问题（Shortest Path Problem）
+- - '###'
+  - 加权图/Weighted graph
+- - '###'
+  - 'Example: Weighted Graphs Modeling an Airline System For SF, LS, DL, DV, CG, BT,
+    NY Cities'
+- - '###'
+  - 'Example: Weighted Graphs Modeling a Computer Network For SF, LS, DL, DV, CG,
+    BT, NY Cities'
+- - '###'
+  - 定义：a到b的道路及其长度
+- - '###'
+  - 定义：a到b的最短道路/shortest path
+- - '###'
+  - 应用问题：旅行商问题（TSP） / Traveling Salesman Problem
+- - '###'
+  - 无向加权完全图的最近邻域算法/Approximation
+- - '###'
+  - 说明
+- - '###'
+  - 例
+- - '##'
+  - Graphs/图论
+- - '##'
+  - 练习
+- - '##'
+  - 7.1 图的概念/Introduction of Graph
+- - '##'
+  - 7.2 图的术语/Graph Terminology
+- - '##'
+  - 7.3 图的表示与同构/ Representing Graph and Graph Isomorphism
+- - '##'
+  - 7.4 连通性/Connectivity
+- - '##'
+  - 7.5 欧拉道路与哈密尔顿道路/ Euler and Hamilton Paths
+- - '##'
+  - 7.6 最短道路问题/Shortest Path Problem
+- - '##'
+  - 7.7 平面图/Planar Graphs
+- - '##'
+  - 7.8 图的着色/Graph Coloring
+- - '##'
+  - § 6 平面图/Planar Graphs
+- - '##'
+  - '[定义]区域/region'
+- - '##'
+  - '[定理1]（欧拉公式/Euler’s formula）'
+- - '###'
+  - 【推论一】：
+- - '##'
+  - 定理2 库氏定理/Kuratowski’s theorem
+- - '##'
+  - 图的着色应用与对偶图
+- - '###'
+  - 'DUAL GRAPH:'
+- - '##'
+  - 定义1：简单图的着色/coloring
+- - '##'
+  - 定义2：简单图的色数/chromatic number
+- - '##'
+  - 定理1
+- - '###'
+  - 四着定理/four color theorem
+- - '##'
+  - 应用问题
+- - '##'
+  - 小结
+- - '##'
+  - 进一步的思考
+- - '##'
+  - Chapter 7 Graphs
+- - '##'
+  - 图论
+- - '##'
+  - 7.1 图的概念/Introduction of Graph
+- - '##'
+  - 7.2 图的术语/Graph Terminology
+- - '##'
+  - 7.3 图的表示与同构/ Representing Graph and Graph Isomorphism
+- - '##'
+  - 7.4 连通性/Connectivity
+- - '##'
+  - 7.5 欧拉道路与哈密尔顿道路/ Euler and Hamilton Paths
+- - '##'
+  - 7.6 最短道路问题/Shortest Path Problem
+- - '##'
+  - 7.7 平面图/Planar Graphs
+- - '##'
+  - 7.8 图的着色/Graph Coloring
+- - '##'
+  - 7.1 图的概念/Introduction of Graph
+- - '##'
+  - '[定义]顶点：'
+- - '##'
+  - '[定义]边：'
+- - '##'
+  - '[定义]图的分类'
+- - '##'
+  - 图的模型
+- - '##'
+  - 7.2 图的术语/Graph Terminology
+- - '###'
+  - '[定义]相邻和关联：'
+- - '###'
+  - '[定义] 孤立顶点：'
+- - '###'
+  - '[定义] 自回路：'
+- - '###'
+  - 【定义】顶点的次：
+- - '##'
+  - '[定理1 (Handshaking)] 设无向图G= (V, E) 有e条边，则G中所有顶点的次之和等于e的两倍。'
+- - '##'
+  - '[定理2] 无向图中次为奇数的顶点个数恰有偶数个。'
+- - '##'
+  - '[定理3] 设有向图G=（V， E）有e条边，则G中所有顶点的入次之和等于所有顶点的出次之和，也等于e。'
+- - '##'
+  - 有向图与无向图的对应：
+- - '##'
+  - 一些特殊的简单无向图：
+- - '##'
+  - '[定理4] 设无向完全图G有n个顶点，则G有n(n-1)/2条边。'
+- - '##'
+  - 一些特殊的其他图：
+- - '##'
+  - 【定义】子图：
+- - '##'
+  - '[定义]补图/complementary graph :'
+- - '##'
+  - '[定义]补图:'
+- - '##'
+  - Graphs/图论
+- - '##'
+  - 练习
+- - '##'
+  - 7.3 图的表示与同构 / Representing Graph and Graph Isomorphism
+- - '##'
+  - Graphs/图论
+- - '##'
+  - Graphs/图论
+- - '##'
+  - 从图中不容易直接得出。
+- - '##'
+  - 同构判定算法（用邻接矩阵）
+- - '##'
+  - 小结（1-3）
+- - '##'
+  - 进一步的思考
+- - '##'
+  - 7.4 连通性/Connectivity
+- - '###'
+  - '[定义] 道路/path'
+- - '###'
+  - '[定义] 简单道路/Simple Path'
+- - '###'
+  - '[定义] 基本道路/Element Path'
+- - '###'
+  - '[定义] 无向图的连通性'
+- - '###'
+  - '[定理1]'
+- - '###'
+  - '[定义] 连通分图/connected components'
+- - '###'
+  - '[定义] 有向图的连通性'
+- - '###'
+  - 连通无向图
+- - '###'
+  - 弱连通
+- - '###'
+  - 强连通
+- - '###'
+  - 例：用图描述一台自动售货机
+- - '###'
+  - 用邻接矩阵讨论图 G 的连通性质
+- - '###'
+  - 【定理2】
+- - '##'
+  - 进一步的思考
+- - '###'
+  - 结论1
+- - '###'
+  - 结论2
+- - '##'
+  - 进一步的思考
+- - '##'
+  - 7.5 Euler and Hamilton Paths
+- - '###'
+  - Konigsberg（哥尼斯堡）七桥问题
+- - '###'
+  - '[定义] 欧拉道路（回路）'
+- - '###'
+  - '[定理1]（欧拉定理）'
+- - '##'
+  - 证明：
+- - '###'
+  - 必要性：
+- - '###'
+  - 充分性：
+- - '##'
+  - 例1：
+- - '##'
+  - 说明：
+- - '##'
+  - 应用与推广：
+- - '##'
+  - 例
+- - '##'
+  - 定理2（有向图的欧拉定理）：
+- - '##'
+  - 推论
+- - '##'
+  - Hamilton（哈密顿）道路问题：
+- - '##'
+  - '[定义]哈密顿道路/回路：'
+- - '##'
+  - 【定理3】：设 G = (V, E) 是 n 个顶点的简单图，如果任何一对顶点的次之和 ≥ n-1，则 G 中一定有 H 道路（n ≥ 2）。
+- - '##'
+  - 证明：
+- - '##'
+  - Graphs/图论
+- - '##'
+  - Graphs/图论
+- - '##'
+  - 9.3 双曲线
+- - '##'
+  - 小结
+- - '##'
+  - 进一步的思考
+- - '##'
+  - Graphs/图论
+- - '##'
+  - Graphs/图论
+- - '##'
+  - G－S 存在3个分图
+- - '##'
+  - 练习
+- - '##'
+  - Algorithms 算法
+- - '##'
+  - 7.6 Shortest Path Problems
+- - '##'
+  - Algorithm 1 Dijkstra’s Algorithm.
+- - '##'
+  - Algorithms 算法
+- - '##'
+  - Example 2
+- - '##'
+  - Theorem 2
+- - '##'
+  - 7.7 Planar Graphs
+- - '##'
+  - Example 1
+- - '##'
+  - Theorem 1
+- - '##'
+  - Algorithms / 算法
+- - '###'
+  - Example 4
+- - '###'
+  - Corollary 1
+- - '###'
+  - Proof of Corollary 1
+- - '###'
+  - Example 5
+- - '##'
+  - Example 6
+- - '##'
+  - Corollary 3
+- - '##'
+  - The construction of Dodecahedron(正12面体)
+- - '##'
+  - Theorem 2
+- - '##'
+  - Example 8
+- - '##'
+  - Algorithms
+- - '##'
+  - 7.8 Graph Coloring
+- - '##'
+  - 'Definition 1:'
+- - '##'
+  - Vertex coloring and region coloring
+- - '##'
+  - Definition 2
+- - '##'
+  - Theorem 1
+- - '##'
+  - Example 1
+- - '##'
+  - Algorithms 算法
+- - '##'
+  - Example 2
+- - '##'
+  - Example 3
+- - '##'
+  - Example 4
+- - '##'
+  - 1. Scheduling Final Exam
+- - '##'
+  - 2. Frequency Assignments
+- - '##'
+  - 3. Index Register
+- - '##'
+  - Exercise p498-500 2, 17, 26
+- - '##'
+  - pp.508 7、10、20
+- - '##'
+  - pp.517 11、15
+- - '##'
+  - 树/Trees
+- - '###'
+  - 8.1 树的概念/Introduction of Trees
+- - '###'
+  - 8.2 树的应用/Applications of Trees
+- - '###'
+  - 8.3 树的遍历/Tree Traversal
+- - '###'
+  - 8.4 树和排序/Trees and Sorting
+- - '###'
+  - 8.5 生成树和最小生成树/Spanning Trees and minimum Spanning Trees
+- - '##'
+  - § 1 树的概念
+- - '##'
+  - '[定理1]树的基本性质：'
+- - '##'
+  - Graphs/图论
+- - '##'
+  - Graphs/图论
+- - '##'
+  - Graphs/图论
+- - '##'
+  - Graphs/图论
+- - '##'
+  - 小结
+- - '##'
+  - 练习
+- - '##'
+  - 树/Trees
+- - '###'
+  - 8.1 树的概念/Introduction of Trees
+- - '###'
+  - 8.2 树的应用/Applications of Trees
+- - '###'
+  - 8.3 树的遍历/Tree Traversal
+- - '###'
+  - 8.4 树和排序/Trees and Sorting
+- - '###'
+  - 8.5 生成树和最小生成树/Spanning Trees and minimum Spanning Trees
+- - '##'
+  - 前缀码/Prefix Codes
+- - '##'
+  - Graphs/图论
+- - '##'
+  - '[定理]:'
+- - '##'
+  - '注:'
+- - '##'
+  - 树/Trees
+- - '###'
+  - 8.1 树的概念/Introduction of Trees
+- - '###'
+  - 8.2 树的应用/Applications of Trees
+- - '###'
+  - 8.3 树的遍历/Tree Traversal
+- - '###'
+  - 8.4 树和分类/Trees and Sorting
+- - '###'
+  - 8.5 生成树和最小生成树/Spanning Trees and minimum Spanning Trees
+- - '##'
+  - 二元树的遍历问题：
+- - '##'
+  - 二元树的遍历问题的应用公式的三种表示方法：
+- - '##'
+  - 小结
+- - '##'
+  - 练习
+- - '##'
+  - 树/Trees
+- - '###'
+  - 8.1 树的概念/Introduction of Trees
+- - '###'
+  - 8.2 树的应用/Applications of Trees
+- - '###'
+  - 8.3 树的遍历/Tree Traversal
+- - '###'
+  - 8.4 树和分类/Trees and Sorting XXX
+- - '###'
+  - 8.5 生成树和最小生成树/Spanning Trees and minimum Spanning Trees
+- - '##'
+  - Graphs/图论
+- - '##'
+  - 最小生成树/minimum spanning tree
+- - '##'
+  - Kruskal 算法：
+- - '##'
+  - 解题过程：
+- - '##'
+  - 小结
+- - '##'
+  - 进一步的思考
+- - '##'
+  - 练习
+- - '##'
+  - 9 布尔代数
+- - '##'
+  - 布尔代数的抽象定义：
+- - '##'
+  - 布尔代数的抽象定义：
+- - '##'
+  - TABLE 1
+- - '###'
+  - Examples of a Tautology and a Contradiction.
+- - '##'
+  - Table 4
+- - '##'
+  - TABLE 4
+- - '##'
+  - A Demonstration That p∨(q∨r) and (p∨q)∧(p∨r) Are Logically Equivalent.
+- - '##'
+  - Boolean Algebra
+- - '###'
+  - 基本逻辑等价定理：
+- - '##'
+  - Table 5 Logical Equivalences.
+- - '##'
+  - Table 6
+- - '##'
+  - 进一步的思考：
+- - '###'
+  - 一、命题公式的对偶性及其对偶处理。
+- - '##'
+  - 布尔代数
+- - '##'
+  - 对偶原理（Duality Principle）
+- - '##'
+  - 进一步的思考：
+- - '###'
+  - 二、命题公式的进一步分类。
+- - '##'
+  - 命题公式的标准化----范式
+- - '##'
+  - 文字（literal）/符号（symbol）：
+- - '##'
+  - 小项（small item）/合取式（conjunctive form）：
+- - '##'
+  - 大项（large item）/析取式（disjunctive form）：
+- - '##'
+  - Boolean Algebra布尔代数
+- - '##'
+  - 定理3：令A（a1、a2、......、an）包含有n个变量的公式，则有：
+- - '##'
+  - 进一步思考
+- - '###'
+  - 1、卡诺图/Karnaugh Maps
+- - '###'
+  - 2、布尔表达式的标准化描述
+- - '##'
+  - 练习
+- - '##'
+  - 第三章
+- - '##'
+  - 命题逻辑的推理理论
+- - '##'
+  - § 3.1 推理的形式结构
+- - '##'
+  - 注：
+- - '##'
+  - 定理3.1
+- - '##'
+  - 例3.1 判断下列推理是否正确
+- - '##'
+  - 例3.2 判断下列推理是否正确。
+- - '###'
+  - 常用的推理定律
+- - '##'
+  - § 3.2 自然推理系统
+- - '##'
+  - 例3.3 在自然推理系统P中构造下面推理的证明：
+- - '##'
+  - 例3.4 在自然推理系统P中构造下面推理的证明：
+- - '##'
+  - 证明：
+- - '##'
+  - 注：构造证明时的两个技巧：
+- - '#'
+  - 例3.5 在自然推理系统P中构造下面推理的证明：
+- - '#'
+  - 例3.6 在自然推理系统P中构造下面推理的证明：
+- - '#'
+  - 第四章
+- - '#'
+  - （一阶）谓词逻辑基本概念
+- - '##'
+  - § 4.1 谓词逻辑命题符号化
+- - '##'
+  - 例4.1 用0元谓词将下列命题符号化，并讨论它们的真值。
+- - '##'
+  - 3. 量词：表示个体常项或变项之间数量关系的词。
+- - '##'
+  - 例4.2 将下面两个命题符号化：
+- - '##'
+  - 例4.3 上例中，将个体域改为全总个体域后，两命题的符号化形式如何？
+- - '##'
+  - 例4.4 将下列命题符号化，并讨论其真值。
+- - '##'
+  - § 4.2（一阶）谓词逻辑公式及解释
+- - '##'
+  - 谁说我睡了？
+- - '##'
+  - 例 4.7 给定解释 I 如下：
+- - '##'
+  - 例4.8 判断下列公式中，哪些是永真式，哪些是永假式？
+- - '##'
+  - 例4.10 判断下列公式的类型：
+- - '##'
+  - 第五章
+- - '##'
+  - 谓词逻辑等值演算与推理
+- - '##'
+  - § 5.1 谓词逻辑等值式与等值变换规则
+- - '##'
+  - 一、等值式
+- - '##'
+  - 二、一些重要的等值式
+- - '##'
+  - 3. 量词辖域收缩与扩张等值式：设A(x)含个体变项x，B中不含x，则：
+- - '##'
+  - 4. 量词分配等值式：
+- - '##'
+  - 5. 命题逻辑中16组等值式给出的代换实例都是谓词逻辑的等值式。例如：
+- - '##'
+  - 我要起床了
+- - '##'
+  - 三、谓词逻辑的等值演算规则
+- - '##'
+  - 例5.1 将下列公式化成与之等值的公式，使其没有既是约束出现的又是自由出现的个体变项。
+- - '##'
+  - 例 5.2 证明：
+- - '##'
+  - 例5.3 设个体域为D={a，b，c}，将下列公式中的量词消去：
+- - '##'
+  - 解：
+- - '##'
+  - 例5.4 给定解释I 如下：
+- - '##'
+  - 例5.5 证明下列等值式
+- - '##'
+  - (2) ¬ ∀x(F(x)→G(x))
+- - '##'
+  - (3) ¬ ∀x∀y (F(x)∧G(y)→H(x,y))
+- - '##'
+  - 洗澡好爽呦
+- - '##'
+  - §5.2 谓词逻辑的前束范式
+- - '##'
+  - 定理5.1 请调逻辑中的任何公式都存在与之等值的前束范式。
+- - '##'
+  - 注：
+- - '##'
+  - 例5.6 求下列公式的前束范式：
+- - '##'
+  - 例5.7 求下列各式的前束范式
+- - '##'
+  - 例5.8 求下列各公式的前束范式
+- - '##'
+  - § 5.3 谓词逻辑的推理理论
+- - '###'
+  - 一、谓词逻辑推理的形式结构
+- - '###'
+  - 二、谓词逻辑推理定律
+- - '###'
+  - 第三组：其它重要推理定律。
+- - '##'
+  - 四、自然推理系统
+- - '##'
+  - '例5.9 设个体域为实数域，F(x,y): x>y。指出下列推理的错误之处。'
+- - '##'
+  - 例5.10 在自然推理系统F中，构造下面推理的证明：
+- - '##'
+  - 例5.11 在自然推理系统中，构造下面推理的证明：
+- - '##'
+  - 例5.12 在自然推理系统F中，构造下面推理的证明（个体域为实数集）：不存在能表示出分数的无理数，有理数都能表示成分数，因此，有理数都不是无理数。
+- - '##'
+  - 注：
+- - '##'
+  - 第六章 集合代数
+- - '##'
+  - §6.1 集合的基本概念
+- - '##'
+  - §6.2 集合的运算
+- - '###'
+  - 一、集合的基本运算
+- - '###'
+  - 二、文氏图
+- - '##'
+  - §6.3 集合恒等式
+- - '###'
+  - 其它重要运算性质：
+- - '###'
+  - 证明集合恒等式的方法：欲证 $P=Q$
+- - '##'
+  - 例 6.1 证明 $A-(B\cup C)=(A-B)\cap(A-C)$
+- - '##'
+  - 例6.4 证明 \( A \cup (A \cap B) = A \)
+- - '##'
+  - 例6.5 证明 \( (A - B) \cup B = A \cup B \)
+- - '##'
+  - 例6.6 证明 $A\cup B=B\Leftrightarrow A\subseteq B\Leftrightarrow A\cap B=A\Leftrightarrow
+    A-B=\varnothing$
+- - '##'
+  - 例 6.7 化简 \(((A \cup B \cup C) \cap (A \cup B)) - ((A \cup (B - C)) \cap A)\)
+- - '##'
+  - 例 6.8 已知 \(A \oplus B = A \oplus C\)，证明 \(B = C\)
+- - '##'
+  - 第七章 二元关系
+- - '##'
+  - §7.1 有序对与笛卡尔积
+- - '##'
+  - §7.2 二元关系
+- - '###'
+  - 一、基本概念
+- - '###'
+  - 二、关系的表达方式
+- - '##'
+  - 2. 关系矩阵法：
+- - '##'
+  - 例7.5
+- - '##'
+  - 3. 关系图法
+- - '##'
+  - 例7.6
+- - '##'
+  - 定义7.7
+- - '##'
+  - 定义7.8
+- - '##'
+  - 定义7.9
+- - '##'
+  - 例7.7
+- - '##'
+  - 例7.8
+- - '##'
+  - 二. 关系的运算性质
+- - '##'
+  - 定理7.1
+- - '##'
+  - 定理7.2
+- - '##'
+  - 定理7.3
+- - '##'
+  - 定理7.4
+- - '##'
+  - 定理7.5
+- - '##'
+  - 定理7.6
+- - '##'
+  - 定理7.7
+- - '##'
+  - 定理7.8
+- - '##'
+  - 例7.9
+- - '##'
+  - 例7.10
+- - '##'
+  - 定义7.12
+- - '##'
+  - 例7.11
+- - '##'
+  - 定义7.13
+- - '##'
+  - 例7.12
+- - '##'
+  - 二、各种性质的充分必要条件
+- - '##'
+  - 定理7.9
+- - '###'
+  - 例7.13 设 \(A\) 是集合，\(R_1\) 和 \(R_2\) 是 \(A\) 上的关系，证明
+- - '##'
+  - 三、各种性质在关系矩阵和关系图中的体现
+- - '###'
+  - 例7.14 判断图7.3中关系的性质
+- - '##'
+  - §7.5 关系的闭包
+- - '###'
+  - 一、闭包的定义
+- - '###'
+  - 二、闭包的求法
+- - '###'
+  - 推论
+- - '###'
+  - 三、闭包的性质
+- - '##'
+  - § 7.6 等价关系与划分
+- - '###'
+  - 一、等价关系
+- - '###'
+  - 三、等价类的性质
+- - '###'
+  - 四、商集
+- - '###'
+  - 五、集合的划分
+- - '##'
+  - §7.7 偏序关系
+- - '###'
+  - 1 偏序关系与偏序集
+- - '##'
+  - 三、偏序集中的特殊元素
+- - '##'
+  - 注：
+- - '##'
+  - 例7.21 求上例(2)中A的极大元、极小元、最大元、最小元，
+- - '##'
+  - 例7.22 设x为集合， A=p(x)-{Φ}-{x,} 且A≠Φ，若 |x|= n, 问：
+- - '##'
+  - 定义7.25 设<A, ≤ >为偏序集， B⊆A, y∈A.
+- - '##'
+  - 注：
+- - '##'
+  - 第八章 函数
+- - '##'
+  - § 8.1 函数的定义与性质
+- - '##'
+  - 定义 8.5
+- - '##'
+  - 例 8.3
+- - '##'
+  - 定义8.6 设 $f:A\to B$。
+- - '##'
+  - 注：
+- - '##'
+  - 解：
+- - '##'
+  - 例8.5 对如下给定的 $A$、$B$ 和 $f$，判断 $f$ 是否构成 $A$ 到 $B$ 的函数，如果是，说明它是否为单射、满射和双射，并按要求进行计算。
+- - '##'
+  - 例8.6 对给定的集合 $A$ 和 $B$ 构造双射函数 $f:A\to B$。
+- - '##'
+  - 定义8.7
+- - '##'
+  - § 8.2 函数的复合与反函数
+- - '##'
+  - § 8.3 一个电话系统的描述实例
+- - '##'
+  - '# 第九章 集合的基数'
+- - '##'
+  - §9.1 集合大小的比较——等势与优势
+- - '##'
+  - 例9.1 证明下列命题：
+- - '##'
+  - 例9.3 设 $A$ 为任意集合，证明：$P(A)\approx\{0,1\}^A$
+- - '##'
+  - 定理9.1 设 $A$、$B$、$C$ 是任意集合
+- - '##'
+  - 定理9.2 (1) \(N\not\sim R\)；(2) 对任意集合 \(A\)，都有 \(A^*\notin P(A)\)。
+- - '##'
+  - 定义9.2
+- - '##'
+  - 定理9.3
+- - '##'
+  - § 9.2 集合的基数
+- - '##'
+  - 定理9.4 无限集合A为可数集的充分必要条件是A的全部元素可以排成无重复项的序列：\(a_1, a_2, \cdots, a_n, \cdots\)。
+- - '##'
+  - 定理9.5 任何无限集合A必含有无限可数子集。
+- - '##'
+  - 定理9.6
+- - '##'
+  - 9 布尔代数（Boolean Algebra）
+- - '###'
+  - 9.1 代数系统和群
+- - '####'
+  - 9.1.1 二元运算及性质
+- - '##'
+  - 9.1.2 二元运算的性质
+- - '##'
+  - 例9.11
+- - '##'
+  - 例9.12
+- - '##'
+  - 9.1.3 代数系统的零元、单位元和逆元
+- - '##'
+  - 布尔代数
+- - '##'
+  - Boolean Algebra 布尔代数
+- - '##'
+  - Boolean Algebra
+- - '##'
+  - 9.2.2 群
+- - '##'
+  - 布尔代数
+- - '##'
+  - Boolean Algebra 布尔代数
+- - '##'
+  - 9.2.3 子群
+- - '##'
+  - 9.3 Boolean functions
+- - '##'
+  - Boolean Algebra 布尔代数
+- - '##'
+  - Boolean expressions and Boolean functions
+- - '##'
+  - 布尔代数
+- - '##'
+  - Boolean Algebra
+- - '##'
+  - Table 2
+- - '##'
+  - The Number of Boolean functions
+- - '##'
+  - Boolean Algebra
+- - '##'
+  - 布尔代数
+- - '##'
+  - Table 5 Boolean Identites
+- - '##'
+  - 练习
+- - '##'
+  - 二元关系(Binary relation)
+- - '##'
+  - Δ相关：
+- - '##'
+  - 二元关系(Binary relation)
+- - '##'
+  - 二元关系(Binary relation)
+- - '##'
+  - 二元关系（Binary relation）
+- - '##'
+  - 二元关系
+- - '##'
+  - 二元关系(Binary relation)
+- - '##'
+  - 二元关系(Binary relation)
+- - '##'
+  - '## △二元关系的表示：'
+- - '##'
+  - 用穷举法：
+- - '##'
+  - 二元关系(Binary relation)
+- - '##'
+  - 二元关系(Binary relation)
+- - '##'
+  - 二元关系(Binary relation)
+- - '##'
+  - 二元关系(Binary relation)
+- - '##'
+  - 二元关系的运算
+- - '##'
+  - 二元关系的运算
+- - '##'
+  - 二元关系的运算
+- - '##'
+  - 二元关系的运算
+- - '##'
+  - 二元关系的运算
+- - '##'
+  - A 上各类二元关系的性质
+- - '###'
+  - 1）自反性与反自反性
+- - '##'
+  - A 上各类二元关系的性质
+- - '###'
+  - 3）传递性
+- - '##'
+  - A 上各类二元关系的性质
+- - '##'
+  - A 上各类二元关系的性质
+- - '##'
+  - A上各类二元关系的性质
+- - '###'
+  - Δ传递扩张（Transitive extension）
+- - '##'
+  - 图形图像技术实验室情况介绍
+- - '###'
+  - 实验室主任 叶修梓
+- - '##'
+  - 内容提要
+- - '##'
+  - 图形图像技术实验室
+- - '##'
+  - 人员构成
+- - '##'
+  - 实验室主任
+- - '##'
+  - 实验室副主任
+- - '##'
+  - 主要教师
+- - '##'
+  - 硬件设施
+- - '##'
+  - 研究方向
+- - '##'
+  - 研究方向分类
+- - '##'
+  - CAD 与图形学：研发内容
+- - '##'
+  - CAD 与图形学：主要课题
+- - '##'
+  - 图像工程：研发内容
+- - '##'
+  - 图像工程：主要课题
+- - '##'
+  - 生物信息学：研发内容
+- - '##'
+  - 生物信息学：主要课题
+- - '##'
+  - 地理信息系统（GIS）：研发内容
+- - '###'
+  - 技术研究
+- - '###'
+  - 应用开发
+- - '##'
+  - 地理信息系统（GIS）：主要课题
+- - '##'
+  - 数据库与管理系统：研发内容
+- - '##'
+  - 数据库与管理系统：主要课题
+- - '##'
+  - 网络信息安全：研发内容
+- - '##'
+  - Q & A
+- - '##'
+  - 研究生培养
+- - '##'
+  - 研究生管理
+- - '##'
+  - 离散数学
+- - '##'
+  - 第一章
+- - '##'
+  - 命题逻辑基本概念
+- - '##'
+  - § 1.1 命题与联结词
+- - '###'
+  - 一、命题
+- - '###'
+  - 例 1.1 判断下列句子是否为命题
+- - '###'
+  - 二．联结词与复合命题
+- - '###'
+  - 例 1.2 将下列命题符号化：
+- - '###'
+  - 定义1.2
+- - '###'
+  - 例1.3 将下列命题符号化
+- - '###'
+  - 定义1.3 设 p，q 为两个命题，复合命题 “ p 或 q ”
+- - '###'
+  - 例1.4 将下列命题符号化
+- - '###'
+  - 定义1.4 设 p,q为两个命题。复合命题 “如果 p，则 q ” 称为p与q的蕴含式，记作p→q。称 p 是蕴含式的前件，q 是蕴含式的后件。符号→称为为蕴含联结词。当且仅当
+    p 为真且q为假时， p→q为假。
+- - '###'
+  - 定义1.5 设 $p,q$ 是两个命题，复合命题“$p$ 当且仅当 $q$”称为 $p$ 与 $q$ 的等价式，记为 $p\leftrightarrow q$。符号
+    $\leftrightarrow$ 称为等价联结词。当且仅当 $p$ 与 $q$ 同时为真或同时为假时，$p\leftrightarrow q$ 为真。
+- - '##'
+  - 例 1.6 将下列命题符号化，并讨论它们的真值。
+- - '##'
+  - 本节小结
+- - '##'
+  - § 1.2 命题公式及其赋值
+- - '##'
+  - 例 1.8 求下列公式的真值表。
+- - '###'
+  - (¬p∧q)→¬r 的真值表
+- - '###'
+  - (p∧¬p)↔(q∧¬q) 的真值表
+- - '###'
+  - ¬（p→q）∧q∧r 的真值表
+- - '##'
+  - 本节结束语
+- - '##'
+  - 例1.9 下列公式中哪些具有相同的真值表？
+- - '##'
+  - 例1.10 下列公式中，哪些具有相同的真值表？
+- - '##'
+  - 4 个公式的真值表
+- - '##'
+  - 第二章
+- - '##'
+  - 命题逻辑等值演算
+- - '###'
+  - § 2.1 等值式
+- - '###'
+  - 例2.2 判断下列两组公式是否等值：
+- - '##'
+  - 例2.3 用等值演算证明：\((p \lor q) \to r \Leftrightarrow (p \to r) \land (q \to r)\)
+- - '##'
+  - 例2.4 证明： \( (p \to q) \to r \Leftrightarrow p \to (q \to r) \)
+- - '##'
+  - § 2.2 析取范式与合取范式
+- - '##'
+  - 求给定公式的范式的步骤：
+- - '##'
+  - 例2.7 求公式 \((p\to q)\leftrightarrow r\) 的析取范式与合取范式。
+- - '###'
+  - 定义2.4
+- - '###'
+  - 定理2.4
+- - '###'
+  - 定义2.5
+- - '###'
+  - 定理2.5
+- - '###'
+  - 例2.8
+- - '###'
+  - 1. 求公式的成真与成假赋值
+- - '###'
+  - 2. 判断公式的类型
+- - '###'
+  - 例2.10
+- - '###'
+  - 3. 判断两公式是否等值
+- - '###'
+  - 例2.11
+- - '###'
+  - 4. 利用主析取范式和主合取范式解决应用问题
+- - '###'
+  - 例2.12
+- - '###'
+  - 关于主合取范式的两点说明
+- - '##'
+  - 例2.13 由公式的主析取范式，求主合取范式：
+- - '##'
+  - 2 . 重言式与矛盾式的主合取范式
+- - '##'
+  - 本节结束语
+- - '##'
+  - § 2.3 联结词的完备集
+- - '##'
+  - 推论：以下联结词集都是完备集：
+- - '##'
+  - 注：
+- - '##'
+  - 再谈离散数学
+- - '##'
+  - Reviewing in Discrete Mathematics
+- - '##'
+  - Discrete Math.
+- - '##'
+  - 离散数学
+- - '##'
+  - 离散数学的内容：基础——概念
+- - '##'
+  - Review
+- - '##'
+  - 逻辑（LOGIC）：
+- - '##'
+  - 命题逻辑
+- - '##'
+  - Proposition Logic
+- - '##'
+  - 命题演算
+- - '##'
+  - Propositional Equivalences
+- - '##'
+  - 谓词和量词
+- - '##'
+  - Predicates and Quantifiers
+- - '##'
+  - Table 5 Logical Equivalences.
+- - '##'
+  - 判断命题公式逻辑等价的方法：
+- - '##'
+  - 命题公式逻辑等价关系的应用：
+- - '##'
+  - 定理2（基本量词等值定律）
+- - '###'
+  - 量词分配律
+- - '###'
+  - 量词否定律
+- - '##'
+  - 量词扩张/收缩律
+- - '##'
+  - 集合
+- - '##'
+  - 命题演算的基本等价定理
+- - '##'
+  - 证明两个集合相等的方法：
+- - '##'
+  - 逆函数
+- - '##'
+  - 几个常用的函数：
+- - '##'
+  - 关于集合的进一步讨论（基于函数）：
+- - '##'
+  - DEFINITION 2.
+- - '##'
+  - 一个算法通常应具有下列特征：
+- - '##'
+  - Theorem 1
+- - '##'
+  - Theorem 2
+- - '##'
+  - Corollary 1
+- - '##'
+  - Theorem 3
+- - '##'
+  - 常用的算法复杂性分类：
+- - '##'
+  - 数论（Number Theory）
+- - '#'
+  - 1、整数的因子、公因子、GCD
+- - '#'
+  - 2、质数、质因子、两两互质　　---整数分解
+- - '#'
+  - 3、同余关系、线性同余、中国同余定理
+- - '#'
+  - 4、费尔玛小定理、RSA算法
+- - '##'
+  - 原理部分：
+- - '##'
+  - 数学推理(Reasoning)
+- - '###'
+  - 3.1 推理与证明方法
+- - '###'
+  - 3.2 数学归纳方法
+- - '###'
+  - 3.3 递推方法
+- - '##'
+  - 计数原理(Counting)
+- - '##'
+  - 关系(Relations)
+- - '##'
+  - 蕴涵演算/logical implying operation
+- - '##'
+  - 蕴涵演算的推广表示：
+- - '##'
+  - Table 1
+- - '##'
+  - 定理证明方法：
+- - '##'
+  - 定理证明方法：
+- - '###'
+  - 5、反证明/proof of contradiction：
+- - '###'
+  - 6、分例证明/proof of cases：
+- - '###'
+  - 7、存在证明/existence proof：
+- - '###'
+  - 8、归纳证明/induction proof：
+- - '##'
+  - 皮亚诺公理
+- - '##'
+  - Definition 2
+- - '##'
+  - 第二数学归纳法：
+- - '##'
+  - 有限数学归纳法：对于 $n_0 \le n \le n_k$ 的 $P(n)$
+- - '##'
+  - 有限数学归纳法：对于 $n_0 \le n \le n_k$ 的 $P(n)$
+- - '##'
+  - 递归定义的函数f：
+- - '##'
+  - 菲波那契数/Fibonacci
+- - '##'
+  - 4、计数原理/Counting
+- - '###'
+  - 4.1 基本计数原理:加法原理和乘法原理
+- - '###'
+  - 4.2 包含与排斥原理:有限集的基的运算
+- - '###'
+  - 4.3 鸽洞原理:有限集的基的比较
+- - '###'
+  - 4.4 排列与组合:排列、组合、二项式
+- - '###'
+  - 4.5 排列与组合的生成：排列生成、组合生成
+- - '##'
+  - 求和规则/The Sum Rule
+- - '###'
+  - 求和规则的推广
+- - '##'
+  - 求积规则/The Product Rule
+- - '##'
+  - 求积规则的推广
+- - '##'
+  - Theorem of Inclusion-Exclusion
+- - '##'
+  - The Pigeonhole Principle
+- - '##'
+  - The Generalized Pigeonhole Principle
+- - '##'
+  - 排列/Permutations
+- - '##'
+  - 排列/Permutations
+- - '###'
+  - 排列的函数表示：
+- - '###'
+  - 排列的球盒模型表示：
+- - '##'
+  - 组合/Combinations
+- - '##'
+  - 二项式系数与二项式定理
+- - '###'
+  - 定理6（Binomial Theorem/二项式定理）：
+- - '##'
+  - 排列与组合的推广
+- - '##'
+  - Relations 关系
+- - '###'
+  - 多元关系
+- - '##'
+  - （5）等价关系的概念、等价关系与划分
+- - '##'
+  - （6）半序关系与半序集、全序关系与全序集
+- - '##'
+  - 7、图/Graph
+- - '###'
+  - 7.1 图的概念/Introduction of Graph
+- - '###'
+  - 7.2 图的术语/Graph Terminology
+- - '###'
+  - 7.3 图的表示与同构/Representing Graph and Graph Isomorphism
+- - '###'
+  - 7.4 连通性/Connectivity
+- - '##'
+  - 一些特殊的简单无向图：
+- - '##'
+  - 7.5 欧拉道路与哈密尔顿道路/Euler and Hamilton Paths
+- - '##'
+  - 7.6 最短道路问题/Shortest Path Problem
+- - '##'
+  - 7.7 平面图/Planar Graphs
+- - '##'
+  - 7.8 图的着色/Graph Coloring
+- - '##'
+  - 树/Trees
+- - '###'
+  - 8.1 树的概念/Introduction of Trees
+- - '###'
+  - 8.2 树的应用/Applications of Trees
+- - '###'
+  - 8.3 树的遍历/Tree Traversal
+- - '###'
+  - 8.4 树和分类/Trees and Sorting
+- - '###'
+  - 8.5 生成树和最小生成树/Spanning Trees and minimum Spanning Trees
+- - '##'
+  - 1、树的概念：无向/有向
+- - '##'
+  - 树的层、树中顶点的道路长度
+- - '##'
+  - 2、树的分类：M元树、正规M元树、完全M元树
+- - '##'
+  - 3、树的应用：前缀码、二元树的遍历问题
+- - '##'
+  - 4、生成树：存在的充分必要条件
+- - '##'
+  - 最小生成树的求法Kruskal算法
+- - '##'
+  - 布尔代数的抽象定义：
+- - '##'
+  - 布尔表达式与布尔函数
+- - '##'
+  - Boolean Expressions and Boolean Functions
+- - '##'
+  - That’s all !
+- - '##'
+  - Discrete Math.
+- - '##'
+  - 离散数学
+- - '##'
+  - 离散数学的内容：基础、原理、应用
+- - '##'
+  - 基础部分：
+- - '##'
+  - 原理部分：
+- - '##'
+  - 应用部分：
+- - '##'
+  - 逻辑（LOGIC）：
+- - '#'
+  - Proposition Formulas, Well-Formed Formulas(wff)
+- - '##'
+  - 永真命题公式（Tautology）
+- - '##'
+  - 永假命题公式（Contradiction）
+- - '##'
+  - 可满足命题公式（Satisfaction）
+- - '##'
+  - 一般命题公式（Contingency）
+- - '#'
+  - Table 6
+- - '##'
+  - 判断命题公式逻辑等价的方法：
+- - '##'
+  - 命题公式逻辑等价关系的应用：
+- - '##'
+  - 命题公式的标准化描述：
+- - '###'
+  - 文字（literal）/符号（symbol）：
+- - '###'
+  - 小项（small item）/合取式（conjunctive form）：
+- - '###'
+  - 大项（large item）/析取式（disjunctive form）：
+- - '##'
+  - Review
+- - '##'
+  - DEFINITION 2.
+- - '##'
+  - DEFINITION 4.
+- - '##'
+  - 定理2 （基本量词等值定律）
+- - '###'
+  - 'E14: 量词分配律'
+- - '###'
+  - 'E15: 量词扩张/收缩律'
+- - '##'
+  - 1.2 集合（Sets）
+- - '###'
+  - 1.2.1 集合的概念（Concepts of Sets）
+- - '###'
+  - 1.2.2 集合的运算（Operating of Sets）
+- - '###'
+  - 1.2.3 函数（Functions）
+- - '###'
+  - 1.2.4 语言（Language）
+- - '##'
+  - 函数/映射/Functions/Mapping
+- - '##'
+  - Sequences（序列、顺序）：
+- - '##'
+  - String（串）
+- - '##'
+  - Closure of V（V的闭包）
+- - '##'
+  - Positive Closure of V（V的正闭包）
+- - '##'
+  - Language（语言）
+- - '###'
+  - 从集合的基（Cardinality）进行集合的分类
+- - '###'
+  - 基础部分二：
+- - '##'
+  - DEFINITION 2.
+- - '###'
+  - 算法的计算量问题
+- - '##'
+  - Theorem 1
+- - '##'
+  - Theorem 2
+- - '##'
+  - Corollary 1
+- - '##'
+  - Theorem 3
+- - '###'
+  - 常用的算法复杂性分类：
+- - '###'
+  - 数论 (Number Theory)
+- - '###'
+  - 原理部分：
+- - '###'
+  - 数学推理(Reasoning)
+- - '###'
+  - 计数原理(Counting)
+- - '###'
+  - 关系(Relations)
+- - '###'
+  - 蕴涵演算/logical implying operation
+- - '##'
+  - Table 1
+- - '##'
+  - 定理证明方法：
+- - '##'
+  - 皮亚诺公理
+- - '##'
+  - Definition 2
+- - '##'
+  - 第二数学归纳法
+- - '##'
+  - 有限数学归纳法：对于 n₀ ≤ n ≤ nₖ 的 P(n)
+- - '##'
+  - 有限数学归纳法：对于 n₀ ≤ n ≤ nₖ 的 P(n)
+- - '##'
+  - 递归定义的函数
+- - '##'
+  - 菲波那契数/Fibonacci
+- - '#'
+  - 4 计数原理/Counting
+- - '##'
+  - 4.1 基本计数原理：加法原理和乘法原理
+- - '##'
+  - 4.2 包含与排斥原理：有限集的基的运算
+- - '##'
+  - 4.3 鸽洞原理：有限集的基的比较
+- - '##'
+  - 4.4 排列与组合：排列、组合、二项式
+- - '##'
+  - 4.5 排列与组合的生成：排列生成、组合生成
+- - '##'
+  - 求和规则/The Sum Rule
+- - '##'
+  - 求和规则的推广
+- - '##'
+  - 求积规则/The Product Rule
+- - '##'
+  - 求积规则的推广
+- - '##'
+  - Theorem of Inclusion-Exclusion
+- - '##'
+  - 4.4 排列与组合/Permutations and Combinations
+- - '##'
+  - 4.5 排列与组合的生成 Generating Permutations and Combinations
+- - '##'
+  - 排列/Permutations
+- - '##'
+  - 排列/Permutations
+- - '###'
+  - 排列的函数表示：
+- - '###'
+  - 排列的球盒模型表示：
+- - '##'
+  - 组合/Combinations
+- - '##'
+  - 二项式系数与二项式定理
+- - '###'
+  - 定理6（Binomial Theorem/二项式定理）：
+- - '#'
+  - 5. Relations 关系
+- - '#'
+  - 7、图/Graph
+- - '##'
+  - 7.1 图的概念/Introduction of Graph
+- - '##'
+  - 7.2 图的术语/Graph Terminology
+- - '##'
+  - 7.3 图的表示与同构/
+- - '##'
+  - 7.4 连通性/Connectivity
+- - '##'
+  - 一些特殊的简单无向图：
+- - '##'
+  - 些特殊的其他图：
+- - '##'
+  - 树/Trees
+- - '###'
+  - 8.1 树的概念/Introduction of Trees
+- - '###'
+  - 8.2 树的应用/Applications of Trees
+- - '###'
+  - 8.3 树的遍历/Tree Traversal
+- - '###'
+  - 8.4 树和分类/Trees and Sorting
+- - '###'
+  - 8.5 生成树和最小生成树/Spanning Trees and minimum Spanning Trees
+- - '##'
+  - 1、树的概念：无向/有向
+- - '##'
+  - 树的层、树中顶点的道路长度
+- - '##'
+  - 2、树的分类：M元树、正规M元树、完全M元树
+- - '##'
+  - 3、树的应用：前缀码、二元树的遍历问题
+- - '##'
+  - 4、生成树：存在的充分必要条件
+- - '##'
+  - 最小生成树的求法Kruskal算法
+- - '##'
+  - 布尔代数的抽象定义：
+- - '###'
+  - 半序集（A，≤）
+- - '##'
+  - 布尔表达式与布尔函数
+- - '##'
+  - Boolean Expressions and Boolean Functions
+- - '##'
+  - 布尔表达式的表示

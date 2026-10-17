@@ -1,0 +1,10028 @@
+# 国防科大离散数学课件（MaoXiaoguang）
+
+
+
+
+
+
+# Introduction
+
+
+
+## Logic Puzzles
+
+- Raymond Smullyan posed many puzzles about an island that had two kinds of inhabitants, knights, who always tell the truth, and their opposites, knaves, who always lie.
+
+![](img/47b87ec6fe4fa238d13429358848c545_1_0.png)
+
+- You encounter two people A and B. What are A and B if A says "B is a knight" and B says "The two of us are opposite types"?
+
+## Solution
+
+Let p denote "A is a knight" and q for "B is a knight." We would like to find the truth values for p and q.
+
+- Suppose p is true. Then A tells the truth. So q is true. But then B must also tell the truth. Since p and q are both true, B cannot tell the truth. A contradiction.
+
+- On the other hand, Suppose p is false. Then A lies and q is false. Since q is false, B lies. Thus both p and q must have the same truth value. This is exactly the case. We now conclude A and B are knaves.
+
+A says “B is a knight”
+B says “The two of us are opposite types”
+
+## Logic Puzzles
+
+- A father tells his two children, a boy and a girl, to play in their backyard without getting dirty.
+- However, while playing, both children get mud on their foreheads.
+- When the children stop playing, the father says “At least one of you has a muddy forehead,”
+- and then asks the children to answer “Yes” or “No” to the question: “Do you know whether you have a muddy forehead?” The father asks this question twice.
+- What will the children answer each time this question is asked, assuming that a child can see whether his or her sibling has a muddy forehead, but cannot see his or her own forehead?
+- Assume that both children are honest and that the children answer each question simultaneously.
+
+## Historical view
+
+- Philosophical Logic
+  - 500 BC to 19th Century
+- Symbolic Logic
+  - Mid to late 19th Century
+- Mathematical Logic
+  - Late 19th to mid 20th Century
+- Logic in Computer Science
+
+## Philosophical Logic
+
+- 500 B.C – 19th Century
+- Logic dealt with arguments in the natural language used by humans.
+- Example
+  - All men are mortal.
+  - Socrates is a man
+  - Therefore, Socrates is mortal.
+
+## Philosophical Logic
+
+Natural language is very ambiguous.
+
+Tom hates Jim and he likes Mary.
+
+It led to many paradoxes.
+
+> “This sentence is a lie.” (The Liar’s Paradox)
+
+## The Sophist’s Paradox
+
+- A sophist is sued for his tuition by the school that educated him.
+- He argued that he must win, since, if he loses, the school didn’t educate him well enough, and doesn’t deserve the money.
+- The school argue that he must lose, since, if he win, he was educated well enough therefore should pay for it.
+
+## Symbolic Logic
+
+- Mid to late 19th Century.
+- Attempted to **formulate logic in terms of a mathematical language**
+- Rules of inference were modeled after various laws for manipulating algebraic expressions.
+
+## Mathematical Logic
+
+- Late 19th to mid 20th Century
+- Frege proposed logic as a language for mathematics in 1879.
+- With the rigor of this new foundation, Cantor was able to analyze the notion of infinity in ways that were previously impossible. (2^N is strictly larger than N)
+- Russell’s Paradox
+  T = { S | S ∉ S }
+
+## Logic in Computer Science
+
+In computer science, we design and study systems through the use of formal languages that can themselves be interpreted by a formal system.
+
+- Boolean circuits
+- Programming languages
+- Design validation and verification
+- AI, Security. Etc.
+
+## Logics in Computer Science
+
+- Propositional Logic
+- First Order Logic
+- Higher Order Logic
+- Theory of Construction
+- Real-time Logic, Temporal Logic
+- Process Algebras
+- Linear Logic
+
+## Overview
+
+Mathematical Logic is a tool for working with elaborate compound statements. It includes:
+
+- A formal language for expressing them.
+- A concise notation for writing them.
+- A methodology for objectively reasoning about their truth or falsity.
+
+It is the foundation for expressing formal proofs in all branches of mathematics.
+
+
+
+## Overview
+
+- Propositional logic:
+  - Basic definitions: propositions, connectives
+  - Equivalence rules & derivations
+- Predicate logic
+  - Predicates
+  - Quantified predicate expressions
+  - Equivalences & derivations
+- First-order logic
+  - syntax: propositions, connectives, functions, predicates, atoms, formulas
+  - semantics: interpretation, soundness, completeness
+  - proof rules: natural deduction
+
+
+
+
+
+
+## Propositional (Sentential) Logic
+
+Propositional Logic is the logic of compound statements built from simpler statements using so-called Boolean connectives.
+
+Some applications in computer science:
+
+- Design of digital electronic circuits.
+- Expressing conditions in programs.
+- Queries to databases & search engines.
+
+## Proposition
+
+A proposition (denoted p, q, r, ...) is simply:
+
+- a statement (i.e., a declarative sentence)
+- with some definite meaning, (not vague or ambiguous)
+- having a truth value that’s either true (T) or false (F)
+- it is never both, neither, or somewhere "in between!"
+  - However, you might not know the actual truth value,
+  - and, the truth value might depend on the situation or context.
+
+Later, we will study probability theory, in which we assign degrees of certainty ("between" T and F) to propositions.
+
+- But for now: think True/False only!
+
+## Examples of Propositions
+
+- "It is raining." (In a given situation.)
+- "Beijing is the capital of China."
+- "1 + 2 = 3"
+
+But, the following are NOT propositions:
+
+- "Who’s there?" (interrogative, question)
+- "La la la la la." (meaningless interjection)
+- "Just do it!" (imperative, command)
+- "Yeah, I sorta dunno, whatever..." (vague)
+- "1 + 2" (expression with no truth value)
+
+## Further Proposition Examples
+
+- It will rain in Changsha tomorrow.
+  - We cannot know the truth of this statement today, but it is certainly either true or false.
+- 2+2=19
+  - false
+- There are only finitely many prime numbers.
+  - false
+- Every positive even integer greater than 2 can be written as the sum of two prime numbers.
+  - This is certainly true or false, but no one knows which.
+  - The proposition is known as Goldbach’s Conjecture.
+  - It holds for every integer yet tested – e.g, 4=2+2, 6=3+3, 8=3+5 – but no one has found a proof that it holds for all even integers greater than two.
+
+## Counterexamples
+
+- Where is Ayres Hall?
+  - This is neither true nor false. It is a question.
+- Find Ayres Hall!
+  - This is neither true nor false. It is a command.
+- Blue is the best color to paint a house.
+  - This is a matter of opinion, not truth. It may be your favorite color, but it is not objective truth.
+- Coffee tastes better than tea.
+  - Again, this is a matter of taste, not truth.
+
+## Counterexamples
+
+- The integer *n* is even.
+  - Since *n* has no value, this statement is neither true nor false.
+  - If *n* is given a value, this statement becomes a proposition.
+  - Later we will call such statements predicates or propositional functions. They are not propositions, but they become propositions when their variables are assigned values.
+
+## Propositional variables
+
+- We use propositional variables to refer to propositions
+  - Usually are lower case letters starting with p (i.e. *p, q, r, s, etc.*)
+  - A propositional variable can have one of two values: true (T) or false (F)
+- A proposition can be...
+  - A single variable: *p*
+  - An operation of multiple variables: *p∧(q∨¬r)*
+
+## Introduction to logical connectives
+
+- An operator or connective combines one or more operand expressions into a larger expression. (e.g., "+" in numeric exprs.)
+  - Unary operators take 1 operand (e.g., −3); binary operators take 2 operands (e.g., 3 × 4).
+- Logical connectives are used to form new propositions from two or more existing propositions.
+  - Propositional or Boolean operators operate on propositions (or their truth values) instead of on numbers.
+
+
+
+## Logical connectives
+
+| Formal Name | Nick Name | Parity | Symbol |
+|---|---|---|---|
+| Negation | NOT | Unary | ¬ |
+| Conjunction | AND | Binary | ∧ |
+| Disjunction | OR | Binary | ∨ |
+| Exclusive Or | XOR | Binary | ⊕ |
+| Implication | IMPLIES | Binary | → |
+| Bi-conditional | IFF | Binary | ↔ |
+
+In the following examples,
+
+- p = "Today is Friday"
+- q = "Today is my birthday"
+
+### Logical connectives: Not
+
+- A "not" connective switches (negates) the truth value
+- Symbol: ¬ or ~
+- ¬p = "Today is not Friday"
+
+| p | ¬p |
+|---|---|
+| T | F |
+| F | T |
+
+**Definition**
+
+Let p be a proposition. The statement "It is not the case that p" is another proposition, called the negation of p. The negation of p is denoted by ¬p, read "not p".
+
+### Logical connectives: And
+
+- An "and" connective is true if both operands are true
+- Symbol: ∧
+- It’s like the `A` in And
+- p∧q = "Today is Friday and today is my birthday"
+
+| p | q | p∧q |
+|---|---|---|
+| T | T | T |
+| T | F | F |
+| F | T | F |
+| F | F | F |
+
+**Definition**
+
+Let p and q be propositions. The proposition "p and q" (write p∧q) is the proposition that is true only when both p and q are true and false otherwise. The proposition p∧q is also called the **conjunction** of p and q.
+
+### Logical connectives: Or
+
+- An "or" operation is true if either operands are true
+- Symbol: ∨
+- p∨q = "Today is Friday or today is my birthday (or possibly both)"
+
+| p | q | p∨q |
+|---|---|---|
+| T | T | T |
+| T | F | T |
+| F | T | T |
+| F | F | F |
+
+**Definition**
+
+Let p and q be propositions. The proposition "p or q" (write p∨q) is the proposition that is false only when both p and q are false and true otherwise. The proposition p∨q is also called the disjunction of p and q.
+
+### Logical connectives: Exclusive Or
+
+- An exclusive or operation is true if one of the operands are true, but false if both are true
+- Symbol: ⊕
+- Often called XOR
+- p⊕q ≡ (p ∨ q) ∧ ¬(p ∧ q)
+- p⊕q = "Today is Friday or today is my birthday, but not both"
+
+| p | q | p⊕q |
+|---|---|---|
+| T | T | F |
+| T | F | T |
+| F | T | T |
+| F | F | F |
+
+**Definition**
+
+Let p and q be propositions. The **exclusive or** of p and q (write p ⊕ q) is the proposition that is true only when one of p and q is true and false otherwise.
+
+### Inclusive Or versus Exclusive Or
+
+Do these sentences mean inclusive or exclusive or?
+
+- Experience with C++ or Java is required
+- Lunch includes soup or salad
+- To enter the country, you need a passport or a driver’s license
+
+### Logical connectives: Conditional
+
+- A conditional means “if *p* then *q*”
+- Symbol: →
+- *p*→*q* ≡ “If today is Friday, then today is my birthday”
+- *p*→*q* = ¬*p*∨*q*
+
+![](img/47b87ec6fe4fa238d13429358848c545_31_0.png)
+
+| *p* | *q* | *p*→*q* |
+|---|---|---|
+| T | T | T |
+| T | F | F |
+| F | T | T |
+| F | F | T |
+
+**Definition**
+
+Let *p* and *q* be propositions. The **implication** *p* → *q* is the proposition that is false only when *p* is true and *q* is false, and true otherwise.
+
+- Let p = "I am elected" and q = "I will lower taxes"
+- I state: p → q = "If I am elected, then I will lower taxes"
+- Consider all possibilities
+- Note that if p is false, then the conditional is true regardless of whether q is true or false
+
+| p | q | p→q |
+|---|---|---|
+| T | T | T |
+| T | F | F |
+| F | T | T |
+| F | F | T |
+
+Alternate ways of stating a conditional:
+
+- p implies q
+- If p, q
+- p only if q
+- p is sufficient for q
+- q if p
+- q whenever p
+- q is necessary for p
+
+| p | q | ¬p | ¬q | Conditional (p→q) | Inverse (¬p→¬q) | Converse (q→p) | Contrapositive (¬q→¬p) |
+|---|---|---|---|---|---|---|---|
+| T | T | F | F | T | T | T | T |
+| T | F | F | T | F | T | T | F |
+| F | T | T | F | T | F | F | T |
+| F | F | T | T | T | T | T | T |
+
+
+
+## Logical connectives: Bi-conditional 1
+
+- A bi-conditional means "p if and only if q"
+- Symbol: ↔
+- Alternatively, it means "(if p then q) and (if q then p)"
+- Note that a bi-conditional has the opposite truth values of the exclusive or
+
+| p | q | p↔q |
+|---|---|---|
+| T | T | T |
+| T | F | F |
+| F | T | F |
+| F | F | T |
+
+## Definition
+
+Let p and q be propositions. The **biconditional** p ↔ q is the proposition that is true when p and q have the same truth values, and false otherwise.
+
+## Logical connectives: Bi-conditional 2
+
+- Let p = "You take this class" and q = "You get a grade"
+- Then p↔q means "You take this class if and only if you get a grade"
+- Alternatively, it means "If you take this class, then you get a grade and if you get a grade then you take (took) this class"
+
+| p | q | p↔q |
+|---|---|---|
+| T | T | T |
+| T | F | F |
+| F | T | F |
+| F | F | T |
+
+## Boolean connectives summary
+
+| | | not | not | and | or | xor | conditional | Bi-conditional |
+|---|---|---|---|---|---|---|---|---|
+| p | q | ¬p | ¬q | p∧q | p∨q | p⊕q | p→q | p↔q |
+| T | T | F | F | T | T | F | T | T |
+| T | F | F | T | F | T | T | F | F |
+| F | T | T | F | F | T | T | T | F |
+| F | F | T | T | F | F | F | T | T |
+
+Learn what they mean, don’t just memorize the table!
+
+## Truth Tables of Compound Propositions
+
+We can use logical operators (connectives) to build up complicated compound propositions involving any number of propositional variables, then use truth tables to determine the truth value of these compound propositions.
+
+The Truth Table of (p v ¬q) → (p ∧ q).
+
+| p | q | ¬q | p v ¬q | p ∧ q | (p v ¬q) → (p ∧ q) |
+| --- | --- | --- | --- | --- | --- |
+| T | T | F | T | T | T |
+| T | F | T | T | F | F |
+| F | T | F | F | F | T |
+| F | F | T | T | F | F |
+
+## Precedence of operators
+
+We can use parentheses to specify the order in which logical operators in a compound proposition are to be applied.
+
+To reduce the number of parentheses, the precedence order is defined for logical operators.
+
+```
+(((p ∨ (q ∧ (¬r))) → s) ↔ t)
+```
+
+## Precedence of operators
+
+- Just as in algebra, operators have precedence
+  - ▸ 4+3*2 = 4+(3*2), not (4+3)*2
+
+- Precedence order (from highest to lowest):
+  - ¬ ∧ ∨ → ↔
+  - ▸ The first three are the most important
+
+- This means that p ∨ q ∧ ¬r → s ↔ t yields: (((p ∨ (q ∧ (¬r))) → s) ↔ t)
+
+- ¬ is always performed before any other operation
+
+## Translating English Sentences
+
+Question 7 from Rosen, p. 17
+
+- $p$ = “It is below freezing”
+- $q$ = “It is snowing”
+
+- It is below freezing and it is snowing — $p \land q$
+- It is below freezing but not snowing — $p \land \neg q$
+- It is not below freezing and it is not snowing — $\neg p \land \neg q$
+- It is either snowing or below freezing (or both) — $p \lor q$
+- If it is below freezing, it is also snowing — $p \to q$
+- It is either below freezing or it is snowing, but it is not snowing if it is below freezing — $(p \lor q) \land (p \to \neg q)$
+- That it is below freezing is necessary and sufficient for it to be snowing — $p \leftrightarrow q$
+
+## Translation Example 2
+
+- Heard on the radio:
+  - A study showed that there was a correlation between the more children ate dinners with their families and lower rate of substance abuse by those children
+  - Announcer conclusions:
+    - If children eat more meals with their families, they will have lower substance abuse
+    - If they have a higher substance abuse rate, then they did not eat more meals with their families
+
+## Translation Example 3
+
+□ "I have neither given nor received help on this exam"
+
+□ Let p = "I have given help on this exam"
+
+□ Let q = "I have received help on this exam"
+
+□ ¬p ∧ ¬q
+
+## Translation Example 4
+
+- You can access the Internet from campus only if you are a computer science major or you are not a freshman.
+- a → (c ∨ ¬ f)
+- You cannot ride the roller coaster if you are under 4 feet tall unless you are older than 16 years old.
+- (f ∧ ¬ s) → ¬ r
+- r → (¬ f ∨ s)
+
+
+
+
+
+
+
+
+## Boolean Searches
+
+![](img/47b87ec6fe4fa238d13429358848c545_45_0.png)
+
+iPad AND (16G OR 32G)
+
+- Note that Google requires you to capitalize Boolean operators
+- Google defaults to AND; many others do not
+
+iPad (16G OR 32G)
+
+## Bit Operations
+
+### Definition
+
+A **bit** has two possible values, 0 and 1. A variable is called a **Boolean variable** if its value is either true or false. Hence, a Boolean variable can be represented by a bit. A **bit string** is a sequence of zero or more bits. The **length** of this string is the number of bits in the string.
+
+Let x = 01 1011 0110 and y = 11 0001 1101. Compute their bitwise OR, AND and XOR.
+Solution:
+
+```
+01 1011 0110
+11 0001 1101
+-------------
+11 1011 1111 bitwise OR
+01 0001 0100 bitwise AND
+10 1010 1011 bitwise XOR
+```
+
+Each column is its own Boolean operation
+
+## The Language of Propositional Logic
+
+### What is a Logic
+
+- A formal language
+  - KB = set of sentences
+- Syntax
+  - what sentences are legal (well-formed)
+  - E.g., arithmetic
+    - x+2 >= y is a wf sentence, +x2y is not a wf sentence
+- Semantics
+  - loose meaning: the interpretation of each sentence
+  - More precisely:
+    - Defines the truth of each sentence wrt to each possible world
+  - e.g.,
+    - x+2 = y is true in a world where x=7 and y =9
+    - x+2 = y is false in a world where x=7 and y =1
+  - Note: standard logic – each sentence is T or F wrt each world
+    - Fuzzy logic – allows for degrees of truth.
+
+### Formal Language
+
+- A formal language is defined by:
+  - an alphabet (a set of symbols), and
+  - a grammar (a set of rules that define the way of forming "Well Formed Formulas" - WFF)
+
+### The Language of Propositional Logic (PL)
+
+- alphabet:
+  - Constants: T, F
+  - Symbols for propositions: p, q, r, ... (also with indexes p1, p2, ...)
+  - Symbols for logical connectives: ¬, ∨, ∧, →, ↔
+  - Auxiliary symbols: (, )
+- grammar (defines inductively well-formed-formulas)
+  - Inductive definition of an infinite set of WFF:
+    - ① Constants T, F and symbols p, q, r, ... are WFFs (the definition base).
+    - ② If A, B are WFFs, then expressions (¬A), (A ∧ B), (A ∨ B), (A → B), (A ↔ B) are WFFs (inductive definition step).
+    - ③ Only expressions due to ① and ② are WFFs. (the definition closure).
+
+The language of PL is the set of well-formed formulas.
+
+- Formulas according to ① are atomic formulas
+- Formulas according to ② are composed formulas
+
+### Formulas of PL
+
+### Backus-Naur Form
+
+Form := Prop | (¬Form) | (Form o Form).
+
+### Context-Free Grammar
+
+Form → Prop
+
+Form → (¬ Form)
+
+Form → (Form o Form)
+
+o := ∧ | ∨ | → | ↔
+
+### Interpretation
+
+An interpretation of a PL formula is
+
+- an assignment to each propositional symbol one or the other (but not both) of the truth values truth (T) and falsity (F), and
+- an assignment to the connective symbols of their usual truth-functional meanings.
+
+| A | B | ¬A | A∧B | A∨B | A⊕B | A→B | A↔B |
+|---|---|---|---|---|---|---|---|
+| T | T | F | T | T | F | T | T |
+| T | F | F | F | T | T | F | F |
+| F | T | T | F | T | T | T | F |
+| F | F | T | F | F | F | T | T |
+
+### Assignments
+
+- Definition: A truth-values assignment, α, is an element of 2^Prop (i.e., α ∈ 2^Prop).
+- In other words, α is a subset of the variables that are assigned true, i.e. α ⊆ Prop.
+- Equivalently, we can see α as a mapping from variables to truth values:
+  α : Prop ↦ {F, T}      α : Prop ↦ {0, 1}
+- Example: α: {p ↦ F, q ↦ T,...}
+
+ELECTRICAL ENGINEER'S VIEW
+
+### Satisfaction relation (⊨): intuition
+
+- An assignment can either satisfy or not satisfy a given formula.
+- α ⊨ φ means
+  - α satisfies φ or
+  - φ holds at α or
+  - α is a model of φ
+
+PHILOSOPHER'S VIEW
+
+- We will first see an example.
+- Then we will define these notions formally.
+
+
+
+## Example
+
+- Let φ = (p ∨ (q → r))
+- Let α = {p ↦ 0, q ↦ 0, r ↦ 1}
+- Q: Does α satisfy φ?
+  (in symbols: does it hold that α ⊨ φ?)
+- A: (0 ∨ (0 → 1)) = (0 ∨ 1) = 1
+- Hence, α ⊨ φ.
+- Let us now formalize an evaluation process.
+
+## The satisfaction relation (⊨): formalities
+
+⊨ is a relation: ⊨ ⊆ (2^{Prop} × Form)
+
+- Examples:
+  - ({a}, a ∨ b) // the assignment α = {a} satisfies a ∨ b
+  - ({a,b}, a ∧ b)
+
+⊨ is defined recursively:
+
+- α ⊨ p if α(p) = true (or, p ∈ α)
+- α ⊨ ¬φ if α ⊭ φ.
+- α ⊨ φ₁ ∧ φ₂ if α ⊨ φ₁ and α ⊨ φ₂
+- α ⊨ φ₁ ∨ φ₂ if α ⊨ φ₁ or α ⊨ φ₂
+- α ⊨ φ₁ → φ₂ if α ⊨ φ₁ implies α ⊨ φ₂
+- α ⊨ φ₁ ↔ φ₂ if α ⊨ φ₁ iff α ⊨ φ₂
+
+## From definition to an evaluation algorithm
+
+### Truth Evaluation Problem
+
+- Given φ ∈ Form and α ∈ 2^{AP(φ)}, does α ⊨ φ ?
+
+```
+Eval(φ, α) {
+    If φ ≡ p, return α(p).
+    If φ ≡ (¬φ₁) return ¬Eval(φ₁, α)
+    If φ ≡ (φ₁ ∘ φ₂)
+        return Eval(φ₁, α) ∘ Eval(φ₂, α)
+}
+```
+
+**ALGORITHMIC PERSPECTIVE**
+
+### ‘Eval’ uses polynomial time and space.
+
+## It doesn’t give us more than what we already know...
+
+- Recall our example
+  - Let φ = (p ∨ (q → r))
+  - Let α = {p ↦ 0, q ↦ 0, r ↦ 1}
+
+Eval(φ, α) = Eval(p, α) ∨ Eval(q → r, α) = 0 ∨ (Eval(q, α) → Eval(r, α)) = 0 ∨ (0 → 1) = 0 ∨ 1 = 1
+
+Hence, α ⊨ φ.
+
+## Satisfiability (SAT) Problem
+
+Given a p, is p satisfiable?
+
+```
+SAT(p)
+B:=0
+for all τ ∈ 2^{AP(p)}
+    B = B ∨ Eval(p,τ)
+end
+return B
+```
+
+NP-Complete
+
+## Tautology, Contradiction, Contingency
+
+- Tautology: a statement that’s always true
+  - p ∨ ¬p will always be true
+- Contradiction: a statement that’s always false
+  - p ∧ ¬p will always be false
+- Let p be a proposition. Then p ∨ ¬p is a tautology. p ∧ ¬p is a contradiction. p and ¬p are contingencies.
+
+### Definition
+
+A compound proposition that is always true is called a tautology (valid). A compound proposition that is always false is called a contradiction (unsatisfiable). A proposition that is neither a tautology nor a contradiction is called a contingency (satisfiable).
+
+## Possible Worlds and Models
+
+- Logicians typically think in terms of models, which are formally structured worlds with respect to which truth value can be evaluated.
+- *m* is a model of a sentence *α* if *α* is true in *m*
+- *M(α)* is the set of all models of *α*
+- **Possible worlds ~ models**
+  - Possible worlds: potentially real environments
+  - Models: mathematical abstractions that establish the truth or falsity of every sentence
+- **Example:**
+  - x + y = 4, where x = #men, y = #women
+  - Possible models = all possible assignments of integers to x and y
+
+## Definitions wrt Model
+
+- A **model** of a PL formula A: an interpretation 𝒢 such that A is true in 𝒢: 𝒢(A) = T.
+  - A formula is a **tautology** iff **any interpretation is its model**.
+  - A formula is a **contradiction** iff **it has no model**.
+  - A formula is a **contingency** iff **it has at least one model**.
+- A set of formulas {A₁,...,Aₙ} is satisfiable iff there is an interpretation 𝒢 such that 𝒢 is a model of every formula Aᵢ, i = 1,...,n.
+  - The interpretation 𝒢 is then **a model of the set {A₁,...,Aₙ}**.
+
+## Set of assignments
+
+- Intuition: a formula specifies a set of truth assignments.
+- Function models: Form ↦ 2^{2^{Prop}}
+  (a formula ↦ set of satisfying assignments)
+- Recursive definition:
+  - models(p) = {α | α(p) = 1}, p ∈ Prop
+  - models(¬φ₁) = 2^{Prop} − models(φ₁)
+  - models(φ₁∧φ₂) = models(φ₁) ∩ models(φ₂)
+  - models(φ₁∨φ₂) = models(φ₁) ∪ models(φ₂)
+  - models(φ₁→φ₂) = (2^{Prop} − models(φ₁)) ∪ models(φ₂)
+
+## Theorem
+
+Let φ ∈ Form and α ∈ 2^{Prop}, then the following statements are equivalent:
+
+- α ⊨ φ
+- α ∈ models(φ)
+
+## Only the projected assignment matters...
+
+- AP(φ) – the Atomic Propositions in φ.
+- Clearly AP(φ) ⊆ Prop.
+- Let α₁, α₂ ∈ 2^{Prop}, φ ∈ Formula.
+- **Lemma:** if α₁|_{AP(φ)} = α₂|_{AP(φ)}, then α₁ ⊨ φ iff α₂ ⊨ φ
+
+![](img/47b87ec6fe4fa238d13429358848c545_66_0.png)
+
+**Corollary:** α ⊨ φ iff α|_{AP(φ)} ⊨ φ
+
+- We will assume, for simplicity, that Prop = AP(φ).
+
+
+
+## Extension of ⊨ to sets of assignments
+
++   Let φ ∈ Form
++   Let T be a set of assignments, i.e., T ⊆ 2^Prop
+
+T ⊨ φ if T ⊆ models(φ)
+
+i.e., ⊨ ⊆ 2^Prop × Form
+
+## Extension of ⊨ to formulas
+
++   ⊨ ⊆ 2^Form × Form
++   Definition. Let Γ, φ be prop. formulas.
+
+Γ ⊨ φ
+iff models(Γ) ⊆ models(φ)
+iff for all α ∈ 2^Prop
+    if α ⊨ Γ then α ⊨ φ
+
+Example:
+
+p , q ⊨ p ∨ r
+
+## Extension of ⊢ to formulas
+
++   ⊢ ⊆ ²Form × ²Form
++   **Definition.** Let Γ₁, Γ₂ be prop. formulas.
+
+Γ₁ = Γ₂
+iff models(Γ₁) ⊆ models(Γ₂)
+iff for all α ∈ ²Prop
+if α ⊢ Γ₁ then α ⊢ Γ₂
+
+
+
+
+
+
+## Equivalences
+
++   A logical equivalence means that the two sides always have the same truth values
++   Symbol is ⇔ or ≡ (we’ll use ⇔)
++   REMARK: The symbol ⇔ is not a logical connective since p ≡ q is not a compound proposition.
+
+## Definition
+
+The propositions p and q are called logically equivalent if p ↔ p is a tautology. We write p ⇔ q when p and q are logically equivalent.
+
+## Examples
+
+▣ Identity law    p ∧ T ⇔ p
+
+| *p* | T | *p*∧T |
+|---|---|---|
+| T | T | T |
+| F | T | F |
+
+▣ Commutative law    p ∧ q ⇔ q ∧ p
+
+| p | q | p∧q | q∧p |
+|---|---|---|---|
+| T | T | T | T |
+| T | F | F | F |
+| F | T | F | F |
+| F | F | F | F |
+
+## Truth Table Solution
+
+□ (p → r) ∨ (q → r) ⇔ (p ∧ q) → r ?
+
+| p | q | r | p→r | q→r | (p→r)∨(q→r) | p∧q | (p∧q)→r |
+|---|---|---|-----|-----|-------------|-----|----------|
+| T | T | T | T   | T   | T           | T   | T        |
+| T | T | F | F   | F   | F           | T   | F        |
+| T | F | T | T   | T   | T           | F   | T        |
+| T | F | F | F   | T   | T           | F   | T        |
+| F | T | T | T   | T   | T           | F   | T        |
+| F | T | F | T   | F   | T           | F   | T        |
+| F | F | T | T   | T   | T           | F   | T        |
+| F | F | F | T   | T   | T           | F   | T        |
+
+## Logical Equivalences
+
+| p ∧ T ⇔ p | Identity Laws | (p ∨ q) ∨ r ⇔ p ∨ (q ∨ r) | Associative laws |
+| p ∨ T ⇔ T | Domination Law | p ∨ (q ∧ r) ⇔ (p ∨ q) ∧ (p ∨ r) | Distributive laws |
+| p ∧ F ⇔ F | Domination Law | p ∧ (q ∨ r) ⇔ (p ∧ q) ∨ (p ∧ r) | Distributive laws |
+| p ∨ p ⇔ p | Idempotent Laws | ¬(p ∧ q) ⇔ ¬p ∨ ¬q | De Morgan's laws |
+| p ∧ p ⇔ p | Idempotent Laws | ¬(p ∨ q) ⇔ ¬p ∧ ¬q | De Morgan's laws |
+| ¬(¬p) ⇔ p | Double Negation law | p ∨ (p ∧ q) ⇔ p | Absorption laws |
+| p ∨ q ⇔ q ∨ p | Commutative Laws | p ∨ ¬p ⇔ T | Negation laws |
+| p ∧ q ⇔ q ∧ p | Commutative Laws | p ∧ ¬p ⇔ F | Negation laws |
+| p → q ⇔ ¬p ∨ q | Definition of Implication | p ↔ q ⇔ (p → q) ∧ (q → p) | Definition of Biconditional |
+
+## Proof using Logical Equivalence
+
+(p → r) ∨ (q → r)
+
+⇔ (¬ p ∨ r) ∨ (¬ q ∨ r)    Definition of implication
+
+⇔ ¬ p ∨ r ∨ ¬ q ∨ r    Associative
+
+⇔ ¬ p ∨ ¬ q ∨ r ∨ r    Commutative
+
+⇔ (¬ p ∨ ¬ q) ∨ (r ∨ r)    Associative
+
+⇔ ¬ (p ∧ q) ∨ r    De Morgan, Idempotent
+
+⇔ (p ∧ q) → r    Definition of implication
+
+## Example
+
+Show that (p ∧ q) → (p ∨ q) is a Tautology.
+
+(Proof)
+
+```
+(p ∧ q) → (p ∨ q)
+⇔ ¬(p ∧ q) ∨ (p ∨ q) Implication
+⇔ (¬p ∨ ¬q) ∨ (p ∨ q) De Morgan
+⇔ (¬p ∨ p) ∨ (¬q ∨ q) Commutative, Associative
+⇔ T ∨ T Negation
+⇔ T Identity
+```
+
+
+
+
+
+
+## A Famous Problem in Computer Science
+
++   We have shown how to use propositional logic to write system specifications.
++   In real world, there may be hundreds, even thousands of propositions in the requirements. How to find proper truth values to propositions such that all requirements are satisfied. This problem is called the satisfiability problem.
++   Since there are so many propositions, one would write a program to find a solution for us.
++   However, if there are 300 propositions in the specification, a brute-force method may try 2^300 possible combinations. It is worth noting that 2^300 ≈ 10^90 but the number of particles in our universe is roughly 10^87. It doesn't sound "efficient".
++   Whether there is an "efficient" way to solve the problem is the famous P=NP? problem.
+
+
+
+## Decision Problem
+
++   The decision problem:
++   Given a propositional formula A, is A satisfiable ?
+
++   An algorithm that always terminates with a correct answer to this problem is called a decision procedure for propositional logic.
+
+![](img/47b87ec6fe4fa238d13429358848c545_83_0.png)
+
+## Answer to Decision Problem in PL
+
++   1. Any wff of PL is finite.
++   2. There are finite elementary propositions in a wff. (assume n)
++   3. There are 2^n rows in the truth-value table of this wff.
++   4. It is decidable whether a wff is valid, satisfiable or unsatisfiable.
+
++   Answer: There do exist decision procedures for PL.
++      Complexity: O(2^n)
+
+Any efficient ?
+
+![](img/47b87ec6fe4fa238d13429358848c545_84_0.png)
+
+## Overview of Resolution Proof
+
+$$(\neg p \lor q \lor r) \land (s \lor \neg q) \land \neg r \land p \land \neg s$$
+
+![](img/47b87ec6fe4fa238d13429358848c545_85_0.png)
+
+## Normal forms of PL formulas
+
++   - Literal is a proposition symbol or its negation: Ex.: p, ¬q, r, ...
++   - Elementary conjunction (EC) is a conjunction of literals. Ex.: p ∧ ¬q, r ∧ ¬r, ...
++   - Elementary disjunction (ED) is a disjunction of literals. Ex.: p ∨ ¬q, r ∨ ¬r, ...
++   - Complete elementary conjunction (CEC) of a given set S of elementary propositional symbols is an elementary conjunction in which each symbol (element of S) occurs just once: Ex.: p ∧ ¬q
++   - Complete elementary disjunction (CED) of a given set S of elementary propositional symbols is an elementary disjunction in which each symbol (element of S) occurs just once: Ex.: p ∨ ¬q
++   - Disjunctive normal form (DNF) of a formula F is a formula F′ such that F′ is equivalent to F and F′ has the form of a disjunction of elementary conjunctions. Ex.: DNF(p ≡ p): (p ∧ p) ∨ (¬p ∧ ¬p), p ∨ ¬p
++   - Conjunctive normal form (CNF) of a formula F is a formula F′ such that F′ is equivalent to F and F′ has the form of a conjunction of elementary disjunctions. Ex.: CNF(p ≡ p): (¬p ∨ p) ∧ (¬p ∨ p)
++   - Complete disjunctive normal form (CDNF) of a formula F is a formula F′ equivalent to F such that F′ has the form of a disjunction of complete elementary conjunctions. Ex.: UDNF(p ≡ q): (p ∧ q) ∨ (¬p ∧ ¬q)
++   - Complete conjunctive normal form (CCNF) of a formula F is a formula F′ equivalent to F such that F′ has the form of a conjunction of complete elementary disjunctions. Ex.: UKNF(p ≡ q): (¬p ∨ q) ∧ (¬q ∨ p)
++   - CDNF and CCNF are called canonic (or standard) forms of a formula.
+
+## Questions ?
+
++   ① Does a normal form exist for any wff of PL ?
++   ② How to find the normal form for a wff in PL?
++   ③ How to decide with normal forms ?
+
+## Theoretical foundation: Functionally complete sets of truth-functional connectives?
+
+Is {¬, ∧, ∨, →, ↔, ⊕} enough ?
+
+| p | q | ¬p | p∧q | p∨q | p⊕q | p→q | p↔q |
+|---|---|----|-----|-----|------|------|------|
+| T | T | F | T | T | F | T | T |
+| T | F | F | F | T | T | F | F |
+| F | T | T | F | T | T | T | F |
+| F | F | T | F | F | F | T | T |
+
+| p | 0 | 1 | 2 | 3 |
+|---|---|---|---|---|
+| T | F | T | F | T |
+| F | F | F | T | T |
+|   |   |   | ¬ |   |
+
+Do we need all connectives to represent a complex sentence?
+
+| p | q | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
+|---|---|---|---|---|---|---|---|---|---|---|---|----|----|----|----|----|----|
+| T | T | F | T | F | T | F | T | F | T | F | T | F | T | F | T | F | T |
+| T | F | F | F | T | T | F | F | T | T | F | F | T | T | F | F | T | T |
+| F | T | F | F | F | F | T | T | T | T | F | F | F | F | T | T | T | T |
+| F | F | F | F | F | F | F | F | F | F | T | T | T | T | T | T | T | T |
+|   |   |   | ∧ |   |   |   |   | ∨ | ↓ | ≡ |    |    |    | ⊃ | ↑ |   |
+
+## Theoretical foundation: Functionally complete sets of truth-functional connectives?
+
++   - A set of logical connectives is called **functionally complete** if every compound proposition is logically equivalent to a compound proposition involving only this set of logical connectives.
++   - The following systems of truth-functional connectives are functionally complete:
++     - `{¬, ∧, ∨}`
++     - `{¬, ∧}` or `{¬, ∨}`
++     - `{¬, →}`
++     - `{↑}` or `{↓}`
++   - Hence in order to express any truth-value function (and thus any PL formula) just one connective suffices!
++     - Either Scheffer’s NAND ↑ or Pierce’s NOR ↓
+
+
+
+## Proofs of functional completeness
+
+- Transition to the system {¬, ∧} or {¬, ∨}:
+  - A ∧ B ⇔ ¬(¬A ∨ ¬B),
+  - A ∨ B ⇔ ¬(¬A ∧ ¬B)
+- The system {¬, ∧, ∨} is sufficient according to the above statement.
+- Transition to the system {¬, →}:
+  - A ∨ B ⇔ ¬A → B,
+  - A ∧ B ⇔ ¬(A → ¬B)
+- Transition to the system {↑} or {↓}:
+  - ¬A ⇔ A ↑ A, A ∧ B ⇔ (A ↑ B) ↑ (A ↑ B) (↑ is NAND),
+  - ¬A ⇔ A ↓ A, A ∨ B ⇔ (A ↓ B) ↓ (A ↓ B) (↓ is NOR).
+
+## Existence of normal forms
+
+Findings:
+
+### CNF
+
+- (p ∨ ¬q) ∧ (q ∨ ¬r) is F **iff**
+- at least one elementary disjunction is F **iff**
+- all literals in that elementary disjunction are F
+
+### DNF
+
+- (p ∧ ¬q) ∨ (q ∧ ¬r) is T **iff**
+- at least one elementary conjunction is T **iff**
+- all literals in that elementary conjunction are T
+
+## A simple example
+
+**Wff:** ¬(p → q)
+
+**CNF:** (¬p ∨ ¬q) ∧ (p ∨ ¬q) ∧ (p ∨ q)
+
+**DNF:** (p ∧ ¬q)
+
+If we construct a CCNF (CDNF) from a truth table, we take into account only those rows where the function has the value F (T), and construct CED (CEC) in such a way that the CED (CEC) is false (true).
+
+| p | q | ¬(p → q) | CNF | DNF |
+| --- | --- | --- | --- | --- |
+| T | T | F | ¬p ∨ ¬q |  |
+| T | F | T |  | p ∧ ¬q |
+| F | T | F | p ∨ ¬q |  |
+| F | F | F | p ∨ q |  |
+
+## Further example
+
+Find CCNF and CDNF for the formula A?
+
+| p | q | r | A |
+| --- | --- | --- | --- |
+| F | F | F | T |
+| F | F | T | F |
+| F | T | F | T |
+| F | T | T | T |
+| T | F | F | F |
+| T | F | T | T |
+| T | T | F | F |
+| T | T | T | F |
+
+## Existence of normal forms
+
+- Each formula which is not a contradiction has a CDNF (complete disjunctive normal form).
+  - A contradiction does not have a CDNF.
+- Each formula which is not a tautology has a CCNF (complete conjunctive normal form).
+  - A tautology does not have a CCNF.
+
+## Example
+
+Assume: ¬(P → Q) ∨ (R → P)
+
+- **Eliminate ↔, →**: ¬(¬P ∨ Q) ∨ (¬R ∨ P)
+- **Reduce the scope of ¬ through de Morgan's laws and double negation**: (P ∧ ¬Q) ∨ (¬R ∨ P)
+- **Convert to CNF using the distributive laws and laws for flatten**: (P ∨ ¬R) ∧ (¬Q ∨ ¬R ∨ P)
+
+## Conversion to DNF with ⇔
+
+1. Eliminate ⇔, replacing α ⇔ β with (α → β) ∧ (β → α).
+2. Eliminate →, replacing α → β with ¬α ∨ β.
+3. Move ¬ inwards using de Morgan's rules and double-negation.
+   - ¬(α ∨ β) ⇔ ¬α ∧ ¬β
+   - ¬(α ∧ β) ⇔ ¬α ∨ ¬β
+   - ¬¬α ⇔ α
+4. Apply distributive law (∧ over ∨) and flatten.
+   - α ∧ (β ∨ γ) ⇔ (α ∧ β) ∨ (α ∧ γ)
+
+## Decision approaches
+
+- Satisfiability (SAT) problem: Determine whether a sentence in normal forms (CNF or DNF) is satisfiable (i.e. can evaluate to true).
+
+Not limited to:
+
+- Complete normal forms: CCNF, CDNF
+
+  (P ∨ ¬R ∨ Q) ∧ (P ∨ ¬R ∨ ¬Q) ∧ (¬Q ∨ ¬R ∨ P)?
+
+- With the resolution rule
+
+## Conversion to CNF with ⇔
+
+1. Eliminate ⇔, replacing α ⇔ β with (α → β) ∧ (β → α).
+2. Eliminate →, replacing α → β with ¬α ∨ β.
+3. Move ¬ inwards using de Morgan's rules and double-negation.
+   - ¬(α ∨ β) ⇔ ¬α ∧ ¬β
+   - ¬(α ∧ β) ⇔ ¬α ∨ ¬β
+   - ¬¬α ⇔ α
+4. Apply distributive law (∨ over ∧) and flatten.
+   - α ∨ (β ∧ γ) ⇔ (α ∨ β) ∧ (α ∨ γ)
+5. Supplementing missing literals.
+   - α ⇔ (α ∨ ¬γ) ∧ (α ∨ γ)
+
+## Example
+
+Assume: ¬(P → Q) ∨ (R → P)
+
+- **Eliminate ↔, →**: ¬(¬P ∨ Q) ∨ (¬R ∨ P)
+- **Reduce the scope of ¬ through de Morgan's laws and double negation**: (P ∧ ¬Q) ∨ (¬R ∨ P)
+- **Convert to CNF using the distributive laws and laws for flatten**: (P ∨ ¬R) ∧ (¬Q ∨ ¬R ∨ P)
+- **Convert to CCNF by supplementing missing literals**: (P ∨ ¬R ∨ Q) ∧ (P ∨ ¬R ∨ ¬Q) ∧ (¬Q ∨ ¬R ∨ P)
+
+
+
+## Conversion to CNF with ↔
+
+- ① Eliminate ↔, replacing α ↔ β with (α → β) ∧ (β → α).
+- ② Eliminate →, replacing α → β with ¬α ∨ β.
+- ③ Move ¬ inwards using De Morgan’s rules and double-negation.
+  - ¬(α ∨ β) ⇔ ¬α ∧ ¬β
+  - ¬(α ∧ β) ⇔ ¬α ∨ ¬β
+  - ¬¬α ⇔ α
+- ④ Apply distributive law (∨ over ∧) and flatten.
+  - α ∧ (β ∨ γ) ⇔ (α ∧ β) ∨ (α ∧ γ)
+- □ Supplement of missing literals.
+  - α ⇔ (α ∧ ¬γ) ∨ (α ∧ γ)
+
+## Resolution rule in propositional logic
+
+Let l be a literal. From (A ∨ l) ∧ (B ∨ ¬l) infer (A ∨ B). Notation:
+
+\[
+\frac{(A \lor l) \land (B \lor \neg l)}{(A \lor B)} \text{ resolvent}
+\]
+
+This rule does not lead to an equivalent formula. But it preserves satisfiability.
+
+Proof:
+
+Let formula (A ∨ l) ∧ (B ∨ ¬l) be non-contradictory. Hence there is an interpretation I in which it is true. In this I both the conjuncts (so-called clauses) are true: (A ∨ l) and (B ∨ ¬l).
+
+Let I(l) = F. Then I(A) = T and I(A ∨ B) = T.
+
+Let I(l) = T. Then I(¬l) = F and I(B) = T, thus I(A ∨ B) = T.
+
+In both cases the formula A ∨ B is true in the model I of the original formula, hence it is not a contradiction.
+
+## Further findings
+
+If you realize that the above proof is valid for any valuation \(v\), then you see that the rule is truth-preserving:
+
+\[
+(A \lor l) \land (B \lor \neg l) \Rightarrow (A \lor B)
+\]
+
+Thus you also obtain a method of finding **logical consequences of a formula.**
+
+Moreover:
+
+\[
+(A \lor l) \land (B \lor \neg l) \Leftrightarrow (A \lor l) \land (B \lor \neg l) \land (A \lor B)
+\]
+
+## Clausal form
+
+The conjunctive normal form is called clausal form. Particular conjuncts (i.e., elementary disjunctions) are called clauses.
+
+Example:
+
+Transition of a formula into the clausal form:
+
+\[
+\neg[((p \rightarrow q) \land (r \lor \neg q) \land \neg r) \rightarrow \neg p]
+\]
+\[
+\Leftrightarrow ((p \rightarrow q) \land (r \lor \neg q) \land \neg r) \land p
+\]
+\[
+\Leftrightarrow (\neg p \lor q) \land (r \lor \neg q) \land \neg r \land p
+\]
+
+The formula consists of four clauses.
+
+The proof of contradiction:
+
+\[
+(\neg p \lor q) \land (r \lor \neg q) \land (\neg p \lor r) \land \neg r \land \neg p \land p
+\]
+
+## Proof by resolution
+
+- R(F) – conjunctive extension of a formula F by all its resolvents.
+- R₀(F) = F, Rᵢ(F) = R(Rᵢ₋₁(F)) – resolution closure of F. It holds that Rᵢ(F) ⇔ F.
+- Proof: A is a contradiction (not satisfiable): there is an n such that Rₙ(A) contains the empty clause.
+- Proof: A is a tautology: ¬A is a contradiction.
+- Proof: a set of formulas {A₀, ..., Aₙ} is not satisfiable. We prove that the formula A₁ ∧ ... ∧ Aₙ is a contradiction.
+- Infer logical consequences of {A₁, ..., Aₙ}: infer all the resolvents.
+- Proof of validity: A₁, ..., Aₙ |= Z
+  - Direct: by step-by-step inferring resolvents from A₁, ..., Aₙ you obtain Z.
+  - Indirect: prove that A₁ ∧ ... ∧ Aₙ → Z is a tautology, i.e., A₁ ∧ ... ∧ Aₙ ∧ ¬Z is a contradiction, i.e., the set {A₁, ..., Aₙ, ¬Z} is not satisfiable.
+
+## Example — direct proof / forward reasoning
+
+Prove that (¬q → p) ∧ (p ∨ r) ∧ (q → ¬r) logically entails p.
+
+CNF: (q ∨ p) ∧ (p ∨ r) ∧ (¬q ∨ ¬r)
+
+Direct proof: from facts to conclusion.
+
+Proof:
+
+1. q ∨ p — fact
+2. p ∨ r — fact
+3. ¬q ∨ ¬r — fact
+4. p ∨ ¬r — resolution: 1, 3
+5. p — resolution: 2, 4
+
+## Example – indirect proof / backward reasoning
+
+Prove that (¬q → p) ∧ (p ∨ r) ∧ (q → ¬r) logically entails p.
+
+Convert to: Prove that the following wff is a contradiction:
+
+\[
+(\neg q \rightarrow p) \land (p \lor r) \land (q \rightarrow \neg r) \land \neg p
+\]
+
+CNF: (q ∨ p) ∧ (p ∨ r) ∧ (¬q ∨ ¬r) ∧ ¬p
+
+Proof by resolution:
+
+1. q ∨ p
+2. p ∨ r
+3. ¬q ∨ ¬r
+4. ¬p
+5. p ∨ ¬r — resolution: 1, 3
+6. p — resolution: 2, 5
+7. {} — resolution: 4, 6
+
+## Example
+
+\[
+(q \lor p)
+\]
+
+\[
+(p \lor r)
+\]
+
+\[
+(\neg q \lor \neg r)
+\]
+
+\[
+\neg p
+\]
+
+\[
+(p \lor \neg r)
+\]
+
+\[
+p
+\]
+
+Contradiction → {}
+
+## Logic programming
+
+Strategies of generating resolvents:
+
+- **Breadth-first** (pursue all closest paths first)
+  - Resolution closure – generates **all** resolvents.
+  - It can be rather inefficient due to combinatorial explosion of resolvents.
+- **Depth-first** (top down: pursue first path to exhaustion before looking at the next path)
+  - It is very simple and efficient to implement, but it is **not complete**; it can lead to some very odd infinite loops though there is a solution in a neighbouring branch.
+
+
+
+## Example: incompleteness of the depth-first strategy
+
+- d ∧ e ∧ (b → a) ∧ (e → b) ∧ (d → a) ⊨ a (?)
+- Logic program
+  (depth-first, top down strategy; goal driven):
+
+  1. D.                 fact
+  2. E.                 fact
+  3. A :- B.            rule (A, if B)
+  4. B :- E.            rule (B, if E)
+  5. A :- D.            rule (A, if D)
+  6. ?A                  query, goal
+
+- the program tries to meet the goal A by searching top down; the clause 3 meets the goal ⇒ generates a new goal B. Succeeds with the clause 4 ⇒ a new goal E – met by the clause 2. – **Yes**
+
+- or generates backtracking: again ?A – clause 5 – goal D – clause 1. – **Yes**
+
+## Summary of typical problems in PL
+
+- ① A proof of a tautology / contradiction
+- ② Prove that a set of formulas is not satisfiable
+- ③ (Direct / indirect) proof of validity of an argument
+- ④ Inferring consequences of assumptions
+
+We can solve by:
+
+- A semantic method, i.e., by a truth-table or indirectly
+- By means of equivalent transformations – using basic rules of inference (modus ponens, transposition, disjunction elimination)
+- By means of normal forms: CCNF, CDNF
+- Resolution method: clausal form (conjunctive normal form)
+
+## Deduction requires axioms and Inference rules
+
+Inference rules:
+
+Antecedents
+Consequent
+(rule-name)
+
+Examples:
+
+A → B   B → C
+-----------
+    A → C
+(trans)
+
+A → B   A
+-----------
+    B
+(M.P.)
+
+## Axioms
+
+- Axioms are inference rules with no antecedents, e.g.,
+
+A → (B → A) (H1)
+
+- We can turn an inference rule into an axiom if we have `→` in the logic.
+
+- So the difference between them is not sharp.
+
+## Proofs
+
+- A proof uses a given set of inference rules and axioms.
+- This is called the proof system.
+- Let ℋ be a proof system.
+- Γ ⊢_ℋ φ means: there is a proof of φ in system ℋ whose premises are included in Γ
+- ⊢_ℋ is called the provability relation.
+
+## Example
+
+Let H be the proof system comprised of the rules Trans and M.P. that we saw earlier.
+
+Does the following relation holds?
+
+a → b, b → c, c → d, d → e, a ⊢_H e
+
+## Questions on a proof system
+
+- The problem: ⊢ is a relation defined by syntactic transformations of the underlying proof system.
+
+- For a given proof system \(\mathcal{H}\),
+  - does ⊢ conclude “correct” conclusions from premises?
+  - Can we conclude all true statements with \(\mathcal{H}\)?
+
+- ‘Correct’ with respect to what?
+  - With respect to the semantic definition of the logic. In the case of propositional logic truth tables gives us this.
+
+## Soundness and completeness
+
+- Let H be a proof system
+
+- Soundness of H: if ⊢_H φ then ⊨ φ
+
+- Completeness of H : if ⊨ φ then ⊢_H φ
+
+- How to prove soundness and completeness ?
+
+## Soundness and completeness
+
+- To prove soundness of ℋ, prove the soundness of its axioms and inference rules (easy with truth-tables). For example:
+
+| A | B | A → (B → A) |
+|---|---|---|
+| F | F | T |
+| F | T | T |
+| T | F | T |
+| T | T | T |
+
+- Completeness – harder, but possible.
+
+## The resolution inference system
+
+▪ The **resolution** inference rule for CNF:
+
+$$\frac{(l \lor l_1 \lor ... \lor l_n) \qquad (\neg l \lor l'_1 \lor ... \lor l'_n)}{(l_1 \lor ... \lor l_n \lor l'_1 \lor ... \lor l'_n)} \quad (\mathrm{Resolution})$$
+
+▪ Example:
+
+$$\frac{(a \lor b) \qquad (\neg a \lor c)}{(b \lor c)}$$
+
+## Proof by resolution
+
+- Let φ = (p∨r)∧(¬p∨q∨t)∧(p∨¬q)∧(¬p∨s)∧(¬p∨¬s)
+- We’ll try to prove φ → (r∨t)
+
+![](img/47b87ec6fe4fa238d13429358848c545_125_0.png)
+
+## Resolution
+
+- Resolution is a sound and complete inference system for CNF
+  - ordering of literals in any clause is neglected
+- If the input formula is unsatisfiable, there exists a proof of the empty clause.
+
+
+
+## Example
+
+Let φ = (p∨r)∧(¬p∨q)∧(p∨¬q)∧(¬p∨s)∧(¬p∨¬s)∧(¬r)
+
+(p∨r)
+
+(¬p∨q)
+
+(q∨r)
+
+(p∨¬q)
+
+(¬p∨s)
+
+(¬p∨¬s)
+
+(p∨r)
+
+(¬p)
+
+(r)
+
+(¬r)
+
+()
+
+## Natural deduction system (ℳ)
+
+- Natural deduction was invented by G. Gentzen in 1934.
+  - The idea was to have a system of derivation rules that as closely as possible reflect the logical steps in an informal rigorous proof.
+
+- In logic and proof theory, natural deduction is a kind of proof calculus in which logical reasoning is expressed by inference rules closely related to the "natural" way of reasoning.
+
+- This contrasts with the axiomatic systems which instead use axioms as much as possible to express the logical laws of deductive reasoning.
+
+## Rules
+
+- **Identity Principle:** The simplest proof is: (ε)
+  A
+  -----
+  A
+- having 1 assumption, *A*, and conclusion the same *A*.
+- We may express it by: Γ|- *A*, for all *A*∈Γ
+- We call this proof "The Identity Principle" (from *A* we derive *A*).
+
+## Rules for ⊥
+
+Introduction rule: none (⊥ is always false).
+
+Elimination rule: from the truth of ⊥ (a contradiction) we derive everything:
+
+```
+⊥
+-----
+A
+```
+
+If Γ|- ⊥, then Γ|-A, for all A
+
+## Rules for
+
+### Introduction rule:
+
+![](img/47b87ec6fe4fa238d13429358848c545_134_0.png)
+
+If Γ, A ⊢ ⊥, then Γ ⊢ ¬A
+
+### Elimination rule:
+
+![](img/47b87ec6fe4fa238d13429358848c545_134_1.png)
+
+If Γ ⊢ ¬A and Γ ⊢ A, then Γ ⊢ ⊥
+
+## Rules for ∧
+
+- Introduction rule: ∧i
+
+      A   B
+      --------
+      A ∧ B
+
+If Γ|- A and Γ|- B then Γ|- A ∧ B
+
+- Elimination rule: ∧e
+
+      A ∧ B
+      --------
+      A
+
+      A ∧ B
+      --------
+      B
+
+If Γ|- A ∧ B, then Γ|- A and Γ|- B
+
+## Rules for ∨
+
+Introduction rule: ∨i
+
+A
+------
+A ∨ B
+
+B
+------
+A ∨ B
+
+If Γ|- A then Γ|- A ∨ B ;    If Γ|- B then Γ|- A ∨ B
+
+Elimination rule: ∨e
+
+[A]   [B]
+...
+C   C
+A ∨ B
+----------------
+C
+
+If Γ|- A ∨ B, Γ, A|- C and Γ, B|- C then Γ|- C
+
+## Rules for →
+
+### ▪ **Introduction rule:** →I
+
+```
+[A]
+⋮
+B
+-----------
+A → B
+```
+
+▪ **If Γ, A ⊢ B, then Γ ⊢ A → B**
+  ▸ We may drop any number of assumptions equal to A from the proof of A.
+
+### ▪ **Elimination rule:** →e
+
+```
+A → B        A
+----------------
+       B
+```
+
+▪ **If Γ ⊢ A → B and Γ ⊢ A, then Γ ⊢ B**
+
+## Rules for ↔
+
+- Introduction rule: ↔i
+  A → B    B → A
+  -------------
+          A ↔ B
+
+If Γ|- A → B and Γ|- B → A then Γ|- A ↔ B
+
+- Elimination rule: ↔e
+  A ↔ B
+  -----
+  A → B        A ↔ B
+              -----
+              A → B
+
+If Γ|- A ↔ B, then Γ|- A → B and Γ|- B → A
+
+## Proofs
+
+The only axiom not associated to a connective, nor justified by some Introduction rule, is Double Negation:
+
+[¬A]
+...
+⊥
+--------
+A
+
+- If Γ, ¬A |- ⊥, then Γ |- A
+
+- We may drop any number of assumptions equal to ¬A from the proof of ⊥.
+
+## 0812235
+
+## Logic and Algebra
+
+Ch1.6 Introduction to Proofs
+
+Ch 1.7 Proof Methods and Strategy
+
+Fall 2010
+
+Mao Xiaoguang
+
+## Proof methods
+
+- 1. Direct proofs
+- 2. Indirect proofs
+- 3. Vacuous proofs
+- 4. Trivial proofs
+- 5. Proof by contradiction
+- 6. Proof by cases
+- 7. Proofs of equivalence
+- 8. Existence proofs
+- 9. Uniqueness proofs
+- 10. Counterexamples
+
+## Terminology
+
+- Theorem: a statement that can be shown true. Sometimes called facts.
+  - Proposition: less important theorem
+- Proof: Demonstration that a theorem is true.
+- Axiom: A statement that is assumed to be true.
+- Lemma: a less important theorem that is useful to prove a theorem.
+- Corollary: a theorem that can be proven directly from a theorem that has been proved.
+- Conjecture: a statement that is being proposed to be a true statement.
+
+## Direct proofs
+
+- Consider an implication: p→q
+  - If p is false, then the implication is always true
+  - Thus, show that if p is true, then q is true
+
+- To perform a direct proof, assume that p is true, and show that q must therefore be true
+
+- Show that the square of an even number is an even number
+  - Rephrased: if n is even, then n² is even
+
+(Proof) Assume n is even
+Thus, n = 2k, for some k (definition of even numbers)
+n² = (2k)² = 4k² = 2(2k²)
+As n² is 2 times an integer, n² is thus even
+
+## Indirect proofs
+
+- Consider an implication: \(p \to q\).
+- Its contrapositive is \(\neg q \to \neg p\).
+  - It is logically equivalent to the original implication!
+- If the antecedent (\(\neg q\)) is false, then the contrapositive is always true.
+- Thus, show that if \(\neg q\) is true, then \(\neg p\) is true.
+
+To perform an indirect proof, do a direct proof on the contrapositive.
+
+### Indirect proof example
+
+- If \(n^2\) is an odd integer, then \(n\) is an odd integer.
+- Prove the contrapositive: if \(n\) is an even integer, then \(n^2\) is an even integer.
+
+**Proof.** Assume \(n\) is an even integer.
+
+\(n = 2k\) for some integer \(k\) (def. of even numbers).
+
+\(n^2 = (2k)^2 = 4k^2 = 2(2k^2)\).
+
+Since \(n^2\) is 2 times an integer, it is even.
+
+- When do you use a direct proof versus an indirect proof?
+
+### Example of which to use
+
+- Prove that if \(n\) is an integer and \(n^3 + 5\) is odd, then \(n\) is even.
+
+- Via direct proof:
+  - \(n^3 + 5 = 2k + 1\) for some integer \(k\) (definition of odd numbers).
+  - \(n^3 = 2k - 4\).
+  - Umm... \(n = \sqrt[3]{2k - 4}\) ???
+
+- So direct proof doesn’t work out. So: indirect proof.
+  - Contrapositive: If \(n\) is odd, then \(n^3 + 5\) is even.
+  - Assume \(n\) is odd, and show that \(n^3 + 5\) is even.
+  - \(n = 2k + 1\) for some integer \(k\) (definition of odd numbers).
+  - \(n^3 + 5 = (2k + 1)^3 + 5 = 8k^3 + 12k^2 + 6k + 6 = 2(4k^3 + 6k^2 + 3k + 3)\).
+  - As \(2(4k^3 + 6k^2 + 3k + 3)\) is 2 times an integer, it is even.
+
+## Proof by contradiction
+
+- Given a statement \(p\), assume it is false:
+  - Assume \(\neg p\).
+- Prove that \(\neg p\) cannot occur:
+  - A contradiction exists.
+- Given a statement of the form \(p \to q\):
+  - To assume it’s false, you only have to consider the case where \(p\) is true and \(q\) is false.
+
+### Proof by contradiction example 1
+
+**Theorem (by Euclid):** There are infinitely many prime numbers.
+
+**Proof.** Assume there are a finite number of primes.
+
+List them as follows: \(p_1, p_2, \ldots, p_n\).
+
+Consider the number \(q = p_1 p_2 \cdots p_n + 1\).
+
+- This number is not divisible by any of the listed primes.
+  - If we divided \(p_i\) into \(q\), there would result a remainder of 1.
+- We must conclude that \(q\) is a prime number, not among the primes listed above.
+  - This contradicts our assumption that all primes are in the list \(p_1, p_2, \ldots, p_n\).
+
+### Proof by contradiction example 2
+
+- Prove that if \(n\) is an integer and \(n^3 + 5\) is odd, then \(n\) is even.
+- Rephrased: If \(n^3 + 5\) is odd, then \(n\) is even.
+
+- Assume \(p\) is true and \(q\) is false:
+  - Assume that \(n^3 + 5\) is odd, and \(n\) is odd.
+- \(n = 2k + 1\) for some integer \(k\) (definition of odd numbers).
+- \(n^3 + 5 = (2k + 1)^3 + 5 = 8k^3 + 12k^2 + 6k + 6 = 2(4k^3 + 6k^2 + 3k + 3)\).
+- As \(2(4k^3 + 6k^2 + 3k + 3)\) is 2 times an integer, it must be even.
+
+- Contradiction!
+
+## Vacuous and Trivial proofs
+
+### Vacuous proof
+
+- Consider an implication: \(p \to q\).
+- If it can be shown that \(p\) is false, then the implication is always true.
+  - By definition of an implication.
+
+### Trivial proof
+
+- Consider an implication: \(p \to q\).
+- If it can be shown that \(q\) is true, then the implication is always true.
+  - By definition of an implication.
+
+## Proof by cases
+
+Show a statement is true by showing all possible cases are true.
+
+Thus, you are showing a statement of the form:
+\[
+(p_1 \lor p_2 \lor \cdots \lor p_n) \to q
+\]
+
+is true by showing that:
+\[
+[(p_1 \lor p_2 \lor \cdots \lor p_n) \to q] \equiv [(p_1 \to q) \land (p_2 \to q) \land \cdots \land (p_n \to q)]
+\]
+
+Make sure you get ALL the cases.
+
+- The biggest mistake is to leave out some of the cases.
+
+### Proof by cases example
+
+Prove that \(|a/b| = |a|/|b|\). Note that \(b \neq 0\).
+
+Cases:
+
+**Case 1: \(a \ge 0\) and \(b > 0\)**
+
+Then \(|a| = a\), \(|b| = b\), and
+
+\[
+|a/b| = a/b = |a|/|b|.
+\]
+
+**Case 2: \(a \ge 0\) and \(b < 0\)**
+
+Then \(|a| = a\), \(|b| = -b\), and
+
+\[
+|a/b| = -(a/b) = a/(-b) = a/|b| = |a|/|b|.
+\]
+
+**Case 3: \(a < 0\) and \(b > 0\)**
+
+Then \(|a| = -a\), \(|b| = b\), and
+
+\[
+|a/b| = -(a/b) = (-a)/b = |a|/|b|.
+\]
+
+**Case 4: \(a < 0\) and \(b < 0\)**
+
+Then \(|a| = -a\), \(|b| = -b\), and
+
+\[
+|a/b| = a/b = (-a)/(-b) = |a|/|b|.
+\]
+
+## Proofs of equivalences
+
+- This is showing the definition of a biconditional.
+- Given a statement of the form "p if and only if q".
+- Show it is true by showing \((p \to q) \land (q \to p)\) is true.
+
+
+
+## Proofs of equivalence example
+
++   □ Show that m²=n² if and only if m=n or m=-n
++   □ Rephrased: (m²=n²) ↔ [(m=n)∨(m=-n)]
+
++   ▸ [(m=n)∨(m=-n)] → (m²=n²)
++     ✎ Proof by cases!
++     ✎ Case 1: (m=n) → (m²=n²)
++       - (m)² = m², and (n)² = n², so this case is proven
++     ✎ Case 2: (m=-n) → (m²=n²)
++       - (m)² = m², and (-n)² = n², so this case is proven
+
++   ▸ (m²=n²) → [(m=n)∨(m=-n)]
++     ✎ Subtract n² from both sides to get m²-n²=0
++     ✎ Factor to get (m+n)(m-n) = 0
++     ✎ Since that equals zero, one of the factors must be zero
++     ✎ Thus, either m+n=0 (which means m=-n)
++     ✎ or m-n=0 (which means m=n)
+
+## Existence proofs
+
++   - Given a statement: ∃x P(x)
++   - We only have to show that a P(c) exists for some value c
++   - Two types:
++     - Constructive: Find a specific value c for which P(c) is true.
++     - Nonconstructive: Show that such a c exists, but don’t actually find it
++       - Assume it does not exist, and show a contradiction
+
+## Constructive existence proof example
+
++   Show that a square exists that is the sum of two other squares
++     Proof: 3² + 4² = 5²
+
++   Show that a cube exists that is the sum of three other cubes
++     Proof: 3³ + 4³ + 5³ = 6³
+
+## Non-constructive existence proof example
+
+Prove that either 2*10^500+15 or 2*10^500+16 is not a perfect square
+
++   A perfect square is a square of an integer
+
++   Rephrased: Show that a non-perfect square exists in the set {2*10^500+15, 2*10^500+16}
+
+Proof: The only two perfect squares that differ by 1 are 0 and 1
+
++   Thus, any other numbers that differ by 1 cannot both be perfect squares
+
++   Thus, a non-perfect square must exist in any other set that contains two numbers that differ by 1
+
++   Note that we didn't specify which one it was!
+
+## Uniqueness proofs
+
++   - A theorem may state that only one such value exists
++   - To prove this, you need to show:
++     - Existence: that such a value does indeed exist
++       - Either via a constructive or non-constructive existence proof
++     - Uniqueness: that there is only one such value
+
+## Uniqueness proof example
+
++   If the real number equation 5x+3=a has a solution then it is unique
+
++   Existence
++     - We can manipulate 5x+3=a to yield x=(a-3)/5
++     - Is this constructive or non-constructive?
+
++   Uniqueness
++     - If there are two such numbers, then they would fulfill the following: a = 5x+3 = 5y+3
++     - We can manipulate this to yield that x = y
++       - Thus, the solution is unique!
+
+## Counterexamples
+
++   - Given a universally quantified statement, find a single example which it is not true
++   - Note that this is DISPROVING a UNIVERSAL statement by a counterexample
++   - ∀x ¬R(x), where R(x) means "x has red hair"
++     - Find one person (in the domain) who has red hair
++   - Every positive integer is the square of another integer
++     - The square root of 5 is 2.236, which is not an integer
+
+## Counterexample
+
++   Prove or disprove: Every positive integer is the sum of two squares of integers.
+
+## What’s wrong with this proof?
+
+If n² is an even integer, then n is an even integer.
+
+(Proof) Suppose n² is even. Then n² = 2k for some integer k. Let n = 2m for some integer m. Then n is an even integer.
+
+## Proof methods
+
++   1. Direct proofs
++   2. Indirect proofs
++   3. Vacuous proofs
++   4. Trivial proofs
++   5. Proof by contradiction
++   6. Proof by cases
++   7. Proofs of equivalence
++   8. Existence proofs
++   9. Uniqueness proofs
++   10. Counterexamples
+
+## Exercises
+
++   Prove that there are 100 positive integers that are not perfect squares.
+
++   Show that if a, b are odd integers and a≠b, then there is a unique integer c such that |a-c| = |b-c|.
+
+## 0812235
+
+## Logic and Algebra
+
+Ch1.3 Predicates and Quantifiers
+Ch 1.4 Nested Quantifiers
+
+Fall 2010
+Mao Xiaoguang
+
+## Introduction
+
++   - Remember that the statement “x+1 = 3” is NOT a proposition. Why?
++     - Can we produce a proposition from it?
+
++   - The statement “x plus 1 equals 3” has two parts, namely, the *variable* x which is the subject of the statement, and the *property* “plus one equals 3” which is the *predicate*.
+
++   - Grammatically, a predicate is the part of the sentence that says something about the subject.
+
+
+
+## Propositional function
+
+- If P denotes the predicate "plus 1 equals 3", then the proposition "x plus 1 equals 3" can be denoted by P(x).
+- P(x) is called a propositional function with variable x.
+- Once a value is assigned to x, then P(x) becomes a proposition - it has a truth value.
+  - What is the truth value of P(1), P(2), etc?
+
+## Universe of Discourse
+
+- Let Q(x, y) denote "x = y - 4"
+- What is truth value of Q(1, 2), Q(1, 5), etc?
+- Find all values of x, y which make Q(x, y) true.
+- We need to specify the Universe of Discourse which is the domain of consideration.
+- In general, P(x₁, x₂, ..., xₙ) is the value of the propositional function P at n-tuple (x₁, x₂, ..., xₙ)
+
+## Quantifiers
+
+- Recall that a proposition is a statement that is either true or false
+  - P(x) is not a proposition
+  - P(x) is a propositional function
+
+Let P(x) be "x == 0"
+
+- There are two ways to make a propositional function into a proposition:
+  - Assigning values to its variables
+    - For example, P(5) is false, P(0) is true
+  - Using quantifiers.
+    - Universal quantifier (∀)
+    - Existential quantifier (∃)
+    - For example, ∀x P(x) is false and ∃x P(x) is true
+      - Let the universe of discourse be the real numbers
+
+## Quantifiers: the Universal ∀
+
+Definition: The universal quantification of P(x), denoted by ∀x P(x), is the proposition:
+
+> "every x in the universe of discourse has property P."
+
+∀ is called the universal quantifier, and ∀x P(x) is read as:
+
+- “For all x P(x),” or
+- “For every x P(x).”
+
+Every integer can be factored into a set of prime factors.
+
+All cats have tails.
+
+All humans have rights.
+
+## Example
+
+Let’s consider the proposition “Every student in this class has studied calculus.”
+
+- Let P(x) denote “x has studied calculus”.
+- ∀x P(x), where the universe of discourse consists of the students in this class.
+
+Here is another way of stating the same thing but using a different universe of discourse:
+
+- Let P(x) denote “x has studied calculus”.
+- Let S(x) is the proposition “x is in this class” and the universe of discourse is the set of all students.
+- ∀x (S(x) → P(x))
+
+## The universe quantifier
+
+- Note that when the universe of discourse is finite, then ∀x P(x) ≡ P(x₁) ∧ P(x₂) ∧ ... ∧ P(xₙ) where x₁, ..., xₙ are values in the universe of discourse.
+- Note again that ∀x P(x) is a proposition and is thus either true or false.
+
+## Quantifiers: the Existential ∃
+
+Definition: The existential quantification of P(x), denoted by ∃x P(x), is the proposition:
+"One or more x in the universe of discourse has property P."
+
+∃ is called the existential quantifier, and it is read as:
+
+- "There exists an x such that P(x)," or
+- "There is at least one x such that P(x)," or
+- "For some x P(x)."
+
+There exists an integer larger than 1000.
+There exists a prime larger than 1000.
+
+## Example
+
+Let *P(x)* denote "*x* > 3".
+
+- What is the truth value of ∃*x* *P(x)*, where the universe of discourse is the set of real numbers?
+- *Solution:* ∃*x* *P(x)* is true; since "*x* > 3" is true, for instance, when *x* = 4.
+- What if we change the universe of discourse to the set of negative numbers?
+
+## Semantics of ∀
+
+- Let the universe be the real numbers.
+- Let P(x) = "x/2 < x"
+  - Not true for the negative numbers!
+  - Thus, ∀x P(x) is false
+    - When the domain is all the real numbers
+- In order to prove that a universal quantification is true, it must be shown for ALL cases
+- In order to prove that a universal quantification is false, it must be shown to be false for only ONE case
+- ∀xP(x) is True when P(x) is true for every x.
+- ∀xP(x) is False if there is an x for which P(x) is false.
+
+## Semantics of ∃
+
+- Let P(x) = "x+1 > x"
+  - There is a numerical value for which x+1>x
+  - In fact, it’s true for all of the values of x!
+  - Thus, ∃x P(x) is true
+
+In order to show an existential quantification is true, you only have to find ONE value
+
+In order to show an existential quantification is false, you have to show it’s false for ALL values
+
+∃xP(x) is True if there exists an x for which P(x) is true.
+
+∃xP(x) is False if P(x) is false for every x.
+
+
+
+## Semantics of quantifiers - summary
+
+| Proposition | When True ? | When False ? |
+|---|---|---|
+| ∀ x P(x) | When P(x) is true for every x. | When there is an x for which P(x) is false. |
+| ∃ x P(x) | When there is an x for which P(x) is true. | When P(x) is false for every x. |
+
+## Negating quantifications 1
+
+- Consider the statement:
+  - All students in this class have red hair
+
+- What is required to show the statement is false?
+  - There exists a student in this class that does NOT have red hair
+
+- To negate a universal quantification:
+  - You negate the propositional function
+  - AND you change to an existential quantification
+
+- ¬∀xP(x) is equivalent to ∃x¬P(x)
+  - True if there exists an x for which P(x) is false.
+  - False if P(x) is true for every x.
+
+## Negating quantifications 2
+
+Consider the statement:
+
+- There is a student in this class with red hair
+
+What is required to show the statement is false?
+
+- All students in this class do not have red hair
+
+Thus, to negate an existential quantification:
+
+- To negate the propositional function
+- AND you change to a universal quantification
+
+¬∃xP(x) is equivalent to ∀x¬P(x)
+
+- True when P(x) is false for every x
+- False if there is an x for which P(x) is true.
+
+## Translating from English 3
+
+- Consider:
+  - "Some students have visited Beijing"
+  - "Every student in this class has visited Beijing or Guangzhou"
+
+- Let:
+  - S(x) be "x is a student in this class"
+  - B(x) be "x has visited Beijing"
+  - G(x) be "x has visited Guangzhou"
+
+## Translating from English 4
+
+- Consider: "Some students have visited Beijing"
+  Rephrasing: "There exists a student who has visited Beijing"
+
+- ∃x B(x)
+  True if the universe of discourse is all students
+
+- What about if the universe of discourse is all people?
+  ∃x (S(x) → B(x))
+    This is wrong! Why?
+  ∃x (S(x) ∧ B(x))
+
+## Translating from English 5
+
+- Consider: "Every student in this class has visited Beijing or Guangzhou"
+
+- ∀x (B(x) ∨ G(x))
+  When the universe of discourse is all students
+
+- ∀x (S(x)→(B(x) ∨ G(x))
+  When the universe of discourse is all people
+
+## Interesting Proposition
+
+- The universe of discourse is the set of all positive integers N.
+
+- Every even integer (greater than 2) is the sum of two primes.
+  - 10 = 3+7;
+  - 44 = 3 +41.
+
+- ∀n ∃m ∃k ( (n>2) → (n = m+k ) )
+  - This has never been proved or disproved!
+  - Written in terms of functions we have
+    ∀n ∃m ∃k ( (GT(n,2)) → (EQ( n, SUM(m, k ) ))
+
+## Binding variables
+
+Consider a propositional function P(x).
+
+A variable x is said to be bound when:
+
+- a value is assigned to x, or
+- a quantifier is used on x.
+
+Otherwise, x is said to be free.
+
+## Free and bound variables
+
+When all the variables of a propositional function are bound then it becomes a proposition.
+
+Let P(x, y) denote "x < y".
+
+- In ∃x P(x, y), variable x is bound but y is free, and ∃x P(x, y) is not yet a proposition.
+
+- ∃x P(x, 2) is now a proposition; all the variables are bound now.
+
+- ∀x ∃y P(x, y) is also a proposition, all the variables are bound now.
+
+Note that once a variable is bound using a quantifier, it cannot be given a value.
+
+- For example, ∃x P(3, y) does not make sense.
+
+## Examples
+
+- □ (∃x P(x)) ∨ Q(x)
+  ▸ The x in Q(x) is not bound; thus not a proposition
+
+- □ (∃x P(x)) ∨ (∀x Q(x))
+  ▸ Both x values are bound; thus it is a proposition
+
+- □ (∃x (P(x) ∧ Q(x))) ∨ (∀y R(y))
+  ▸ All variables are bound; thus it is a proposition
+
+- □ (∃x (P(x) ∧ Q(y))) ∨ (∀y R(y))
+  ▸ The y in Q(y) is not bound; this not a proposition
+
+## Scope of quantifiers
+
+The *scope* of a quantifier (∃ or ∀) is the part of the expression that it applies to.
+
+- In ∀x(S(x)→P(x)), the scope of ∀ is S(x)→P(x).
+
+- In (∃x P(x))∧Q(x), the scope of ∃ is P(x).
+
+- This is the same as (∃y P(y))∧Q(x).
+
+
+
+## Nested quantifiers
+
++   A statement may have multiple quantifiers.
+
++   ∀x∃y P(x, y)
++     ▸ "For all x, there exists a y such that P(x,y)"
++     ▸ Example: ∀x∃y (x+y == 0)
+
++   ∃x∀y P(x,y)
++     ▸ There exists an x such that for all y P(x,y) is true"
++     ▸ ∃x∀y (x*y == 0)
+
+## Order of quantifiers
+
+When we have more than one variable in a propositional function, the order of the quantifiers is important (unless the quantifiers are of the same type).
+
+∃x∀y and ∀x∃y are not equivalent!
+
+∃x∀y P(x,y)
+
+If P(x,y) = "(x+y == 0)", it is false.
+
+∀x∃y P(x,y)
+
+If P(x,y) = "(x+y == 0)", it is true.
+
+## Thinking of Quantification as Loops
+
++   - Nested quantifiers can be thought of as nested loops.
++   - For example, ∀x∀yP(x,y) can be thought of as a loop over x, inside of which we loop over y (i.e., for each value of x).
++   - Likewise, ∃x∃yP(x,y) can be thought of as a loop over x with a loop over y nested inside.
++   - This can be extended to any number of variables.
+
+## Negating multiple quantifiers 1
+
++   Recall negation rules for single quantifiers:
++   - ¬∀x P(x) = ∃x ¬P(x)
++   - ¬∃x P(x) = ∀x ¬P(x)
++   - Essentially, you change the quantifier(s), and negate what it’s quantifying
+
++   Examples:
++   - ¬(∀x∃y P(x,y)) = ∃x (¬∃y P(x,y))
+     = ∃x∀y(¬P(x,y))
++   - ¬(∀x∃y∀z P(x,y,z)) = ∃x (¬∃y∀z P(x,y,z))
+     = ∃x∀y(¬∀z P(x,y,z)) = ∃x∀y∃z (¬P(x,y,z))
+
+## Negating multiple quantifiers 2
+
+Consider ¬(∀x∃y P(x,y)) = ∃x∀y (¬P(x,y))
+
++   - ∀x∃y P(x,y) is saying "for all x, there exists a y such that P is true"
++   - To disprove it (negate it), you need to show that "there exists an x such that for all y, P is false"
+
+Consider ¬(∃x∀y P(x,y)) = ∀x∃y ¬P(x,y)
+
++   - ∃x∀y P(x,y) is saying "there exists an x such that for all y, P is true"
++   - To disprove it (negate it), you need to show that "for all x, there exists a y such that P is false"
+
+## Translating between English and quantifiers
+
++   ∃x∀y (x+y = y)
++     ▸ There exists an additive identity for all real numbers
+
++   ∀x∀y (((x≥0) ∧ (y<0)) → (x-y > 0))
++     ▸ A non-negative number minus a negative number is greater than zero
+
++   ∃x∃y (((x≤0) ∧ (y≤0)) ∧ (x-y > 0))
++     ▸ The difference between two non-positive numbers is not necessarily non-positive (i.e. can be positive)
+
++   ∀x∀y (((x≠0) ∧ (y≠0)) ↔ (xy ≠ 0))
++     ▸ The product of two non-zero numbers is non-zero if and only if both factors are non-zero
+
+## Axioms for Set Theory
+
++   1. The only sets are the empty set and those made by adjoining something to a set:
+      ∀s set(s) <=> (s=EmptySet) ∨ (∃x,r Set(r) ∧ s=Adjoin(s,r))
++   2. The empty set has no elements adjoined to it:
+      ~ ∃x,s Adjoin(x,s)=EmptySet
++   3. Adjoining an element already in the set has no effect:
+      ∀x,s Member(x,s) <=> s=Adjoin(x,s)
++   4. The only members of a set are the elements that were adjoined into it:
+      ∀x,s Member(x,s) <=> ∃y,r (s=Adjoin(y,r) ∧ (x=y ∨ Member(x,r)))
++   5. A set is a subset of another iff all of the 1st set’s members are members of the 2nd:
+      ∀s,r Subset(s,r) <=> (∀x Member(x,s) => Member(x,r))
++   6. Two sets are equal iff each is a subset of the other:
+      ∀s,r (s=r) <=> (subset(s,r) ∧ subset(r,s))
++   7. Intersection
+      ∀x,s1,s2 member(X,intersection(S1,S2)) <=> member(X,s1) ∧ member(X,s2)
++   8. Union
+      ∃x,s1,s2 member(X,union(s1,s2)) <=> member(X,s1) ∨ member(X,s2)
+
+## Monty Python example (Russell & Norvig)
+
+FIRST VILLAGER: We have found a witch. May we burn her?
+ALL: A witch! Burn her!
+BEDEVERE: Why do you think she is a witch?
+SECOND VILLAGER: She turned me into a newt.
+B: A newt?
+V2 (after looking at himself for some time): I got better.
+ALL: Burn her anyway.
+B: Quiet! Quiet! There are ways of telling whether she is a witch.
+
+![](img/47b87ec6fe4fa238d13429358848c545_199_0.png)
+
+B: Tell me... what do you do with witches?
+ALL: Burn them!
+B: And what do you burn, apart from witches?
+V4: ...wood?
+B: So why do witches burn?
+V2 (pianissimo): because they’re made of wood?
+B: Good.
+ALL: I see. Yes, of course.
+
+
+
+B: So how can we tell if she is made of wood?
+
+V1: Make a bridge out of her.
+
+B: Ah... but can you not also make bridges out of stone?
+
+ALL: Yes, of course... um... er...
+
+B: Does wood sink in water?
+
+ALL: No, no, it floats. Throw her in the pond.
+
+B: Wait. Wait... tell me, what also floats on water?
+
+ALL: Bread? No, no no. Apples... gravy... very small rocks...
+
+B: No, no, no,
+
+![](img/47b87ec6fe4fa238d13429358848c545_200_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_201_0.png)
+
+KING ARTHUR: A duck!
+
+(They all turn and look at Arthur. Bedevere looks up, very impressed.)
+
+B: Exactly. So... logically...
+
+V1 (beginning to pick up the thread): If she... weighs the same as a duck... she's made of wood.
+
+B: And therefore?
+
+ALL: A witch!
+
+## Fallacy: Affirming the conclusion
+
+∀x witch(x) → burns(x)
+∀x wood(x) → burns(x)
+-----------------------------
+∴ ∀z witch(x) → wood(x)
+
+p → q
+r → q
+---------
+p → r
+
+![](img/47b87ec6fe4fa238d13429358848c545_202_0.png)
+
+## Monty Python Near-Fallacy #2
+
+wood(x) → can-build-bridge(x)
+
+∴ can-build-bridge(x) → wood(x)
+
+B: Ah... but can you not also make bridges out of stone?
+
+## Monty Python Fallacy #3
+
+∀x wood(x) → floats(x)
+
+∀x duck-weight (x) → floats(x)
+
+∴ ∀x duck-weight(x) → wood(x)
+
+p → q
+
+r → q
+
+∴ r → p
+
+## Monty Python Fallacy #4
+
+∀z light(z) → wood(z)
+light(W)
+-----------------------------
+∴ wood(W)          % ok.............
+
+witch(W) → wood(W)   % applying universal instan.
+                     % to fallacious conclusion
+  #1
+wood(W)
+-----------------------------
+∴ witch(z)
+
+## 0812235
+
+## Logic and Algebra
+
+## The Language of First-Order Logic
+
+Fall 2010
+Mao Xiaoguang
+
+## Pros and cons of propositional logic
+
++   - Propositional logic is declarative
++   - Propositional logic allows partial/disjunctive/negated information
++     - (unlike most data structures and databases)
++   - Propositional logic is compositional:
++     - meaning of B₁,₁ ∧ P₁,₂ is derived from meaning of B₁,₁ and of P₁,₂
++   - Meaning in propositional logic is context-independent
++     - (unlike natural language, where meaning depends on context)
++   - Propositional logic has very limited expressive power (unlike natural language)
++     - E.g., cannot say "pits cause breezes in adjacent squares"
++       - except by writing one sentence for each square
+
+## First-order logic
+
++   Whereas propositional logic assumes the world contains facts,
++   first-order logic (like natural language) assumes the world contains
++   - Objects: people, houses, numbers, colors, baseball games, wars, ...
++   - Relations: red, round, prime, brother of, bigger than, part of, comes between, ...
++   - Functions: father of, best friend, one more than, plus, ...
+
+## Symbols
+
++   Logical symbols:
++   - Truth constants: T, F
++   - Logical connectives: ¬, ∧, ∨, →, ↔
++   - Quantifiers: ∀, ∃
++   - Variables: x, y, z, ...
++   - Auxiliary symbols: '(', ')', ','
+
++   Non-logical symbols:
++   - Functions: f, g, h, ...
++     - Constants: a, b, c, ...
++   - Predicates: P, Q, R, ...
+
+## Terms
+
+The set of terms is inductively defined by the following rules:
+
++   - Variables.
++     - Any variable $x_i$ is a term.
++   - Functions.
++     - Any expression $f(t_1, ..., t_n)$ of n arguments (where each argument $t_i$ is a term and $f$ is a function symbol of valence $n$) is a term.
+
+Only expressions which can be obtained by finitely many applications of rules 1 and 2 are terms.
+
++   - e.g. No expression involving a predicate symbol is a term.
+
+## Well-formed formulas
+
+The set of formulas (also called well-formed formulas or wffs) is inductively defined by the following rules:
+
++   - Predicate symbols. If P is an n-ary predicate symbol and t₁, ..., tₙ are terms then P(t₁,...,tₙ) is a formula.
++   - Negation. If φ is a formula, then ¬φ is a formula.
++   - Binary connectives. If φ and ψ are formulas, then ( φ o ψ ) is a formula, where o is a binary logical connective.
++   - Quantifiers. If φ is a formula and x is a variable, then ∀x φ and ∃x φ are formulas.
+
+Only expressions which can be obtained by finitely many applications of rules 1–5 are formulas.
+
+The formulas obtained from the first two rules are said to be atomic formulas.
+
+
+
+## Syntax of FOL Language
+
+- Let V be a fixed infinite set of symbols called variables.
+- A language of FOL is a triple L = (C, F, P), where
+  - C is a set of symbols called individual constants;
+  - F is a set of symbols called function symbols, each with an assigned arity ≥ 1;
+  - P is a set of symbols called predicate symbols, each with an assigned arity ≥ 1;
+  - V, C, F, and P are pairwise disjoint.
+- A term of L is a string of symbols inductively defined by the following formation rules:
+  - Each x ∈ V and a ∈ C is a term of L.
+  - If f ∈ F is n-ary and t₁,...,tₙ are terms of L, then f(t₁,...,tₙ) is a term of L.
+- A formula of L is a string of symbols inductively defined by the following formation rules:
+  - If p ∈ P is n-ary and t₁,...,tₙ are terms of L, then p(t₁,...,tₙ) is a formula of L.
+  - If A and B are formulas of L and x ∈ V, then (¬A), (A∧B), (A∨B), (A→B), (A↔B), (∀x.A) and (∃x.A) are formulas of FOL.
+
+## Notational conventions
+
+- The precedence of the logical operators in PL: ¬, ∧, ∨, →, ↔.
+- A common convention is:
+  - ¬ is evaluated first;
+  - ∧ and ∨ are evaluated next;
+  - Quantifiers ∀ and ∃ are evaluated next;
+  - → and ↔ are evaluated last.
+
+## Semantics of FOL
+
+- Domain D: the set of all objects in the world (of interest).
+- Interpretation I: includes
+  - Assign each constant to an object in D;
+  - Define each function of n arguments as a mapping Dⁿ → D;
+  - Define each predicate of n arguments as a mapping Dⁿ → {T, F}.
+    - Therefore, every ground predicate with any instantiation will have a truth value.
+    - In general there is an infinite number of interpretations because |D| is infinite.
+- A pair M = <D, I> is called a structure.
+- Define logical connectives: ¬, ∧, ∨, →, ↔ as in PL.
+- Define semantics of (∀x) and (∃x):
+  - (∀x) P(x) is true iff P(x) is true under all interpretations.
+  - (∃x) P(x) is true iff P(x) is true under some interpretation.
+
+## Valuation of FOL sentences
+
+### Valuation of truth values of FOL sentences
+
+(FOL formulas without any free variable)
+
+Recursive definition for interpreting terms and evaluating truth values of formulas (M = <D, I>):
+
+- For c ∈ {c₁,...,cₙ}: [[cᵢ]] = I(cᵢ).
+- [[fᵢ(t₁,...,tᵣ)]] = I(fᵢ)([[t₁]],...,[[tᵣ]]).
+- [[R(t₁,...,tᵣ)]] = T iff <[[t₁]],...,[[tᵣ]]> ∈ I(R).
+- [[φ ∧ ψ]] = T iff [[φ]] = T and [[ψ]] = T.
+- [[φ ∨ ψ]] = T iff [[φ]] = T or [[ψ]] = T.
+- [[¬φ]] = T iff [[φ]] = F.
+- [[∀x φ(x)]] = T iff for all d ∈ D: [[φ(x)]]_{x=d} = T.
+- [[∃x φ(x)]] = T iff there exists d ∈ D: [[φ(x)]]_{x=d} = T.
+
+## Models and satisfiability
+
+### Models
+
+- Model
+  - If the interpretation of a formula φ with respect to a structure M = <D, I> results in the truth value T, M is called a model for φ (formal: M |= φ).
+- Validity
+  - If every structure M = <D, I> is a model for φ, we call φ valid (|= φ).
+- Satisfiability
+  - If there exists a model M = <D, I> for φ, we call φ satisfiable.
+- Logical consequence
+  - A formula φ is a logical consequence (or a logical entailment) of A = {A₁,...,Aₙ}, if each model for A is also a model for φ.
+  - We write A |= φ.
+  - Notice: A |= φ can mean that A is a model for φ or that φ is a logical consequence of A.
+    - Therefore people usually use different alphabets or fonts to make this difference visible.
+
+## Examples
+
+∀x∀y (R(x) ∧ R(y) → R(x) ∨ R(y)) [valid]
+
+- "If x and y are rich, either x is rich or y is rich."
+- "If x and y are even, either x is even or y is even."
+
+∃x (N(x) ∧ P(x,c)) [satisfiable]
+
+- There is a natural number that is smaller than 17.
+- There exists someone who is a student and likes logic.
+- Notice that there are models which make the statement false.
+
+## The electronic circuits domain
+
+### One-bit full adder
+
+![](img/47b87ec6fe4fa238d13429358848c545_218_0.png)
+
+- 1. Identify the task
+  - Does the circuit actually add properly? (circuit verification)
+- 2. Assemble the relevant knowledge
+  - Composed of wires and gates; types of gates (AND, OR, XOR, NOT)
+  - Irrelevant: size, shape, color, cost of gates
+- 3. Decide on a vocabulary
+  - Alternatives:
+    - Type(X₁) = XOR
+    - Type(X₁, XOR)
+    - XOR(X₁)
+
+
+
+# The electronic circuits domain
+
+## 4. Encode general knowledge of the domain
+
+- ∀t₁,t₂ Connected(t₁, t₂) ⇒ Signal(t₁) = Signal(t₂)
+- ∀t Signal(t) = 1 ∨ Signal(t) = 0
+- 1 ≠ 0
+- ∀t₁,t₂ Connected(t₁, t₂) ⇒ Connected(t₂, t₁)
+- ∀g Type(g) = OR ⇒ Signal(Out(1,g)) = 1 ⇔ ∃n Signal(In(n,g)) = 1
+- ∀g Type(g) = AND ⇒ Signal(Out(1,g)) = 0 ⇔ ∃n Signal(In(n,g)) = 0
+- ∀g Type(g) = XOR ⇒ Signal(Out(1,g)) = 1 ⇔ Signal(In(1,g)) ≠ Signal(In(2,g))
+- ∀g Type(g) = NOT ⇒ Signal(Out(1,g)) ≠ Signal(In(1,g))
+
+# The electronic circuits domain
+
+- Type(X₁) = XOR
+- Type(X₂) = XOR
+- Type(A₁) = AND
+- Type(A₂) = AND
+- Type(O₁) = OR
+
+- Connected(Out(1,X₁),In(1,X₂)) Connected(Out(1,X₁),In(2,A₂))
+- Connected(Out(1,A₁),In(1,O₁)) Connected(Out(1,A₁),In(2,O₁))
+- Connected(Out(1,X₂),Out(1,C₁))
+- Connected(In(3,C₁),In(2,X₂))
+- Connected(Out(1,O₁),Out(2,C₁))
+- Connected(In(3,C₁),In(1,A₂))
+
+# The electronic circuits domain
+
+## 6. Pose queries to the inference procedure
+
+What are the possible sets of values of all the terminals for the adder circuit?
+
+```
+∃i₁,i₂,i₃,o₁,o₂ Signal(In(1,C_1)) = i₁ ∧ Signal(In(2,C₁)) = i₂ ∧ Signal(In(3,C₁)) = i₃ ∧ Signal(Out(1,C₁)) = o₁ ∧ Signal(Out(2,C₁)) = o₂
+```
+
+## 7. Debug the knowledge base
+
+May have omitted assertions like 1 ≠ 0
+
+# 0812235
+Logic and Algebra
+Inference in First-Order Logic
+
+Fall 2010
+Mao Xiaoguang
+
+# Resolution for propositional logic
+
+- Ground (propositional) resolution is a single sound inference rule that is applied to clauses.
+- A clause is a disjunction of literals.
+- Example, (p ∨ ¬q ∨ r) is a clause.
+- Resolution: (A ∨ p), (B ∨ ¬p)
+  (A ∨ B)
+- Example, (¬p ∨ q), (¬q ∨ r)
+  (¬p ∨ r)
+
+# Clausal form
+
+- In order to use resolution for first order logic the formulas must be converted into clausal form.
+- A clause is a disjunction of literals with no literal appearing twice, no existential quantifiers and all universal quantifiers are at the left.
+- Ex, ∀x∀y∀z( P(x,y) ∨ ¬Q(y) ∨ R(z,y) )
+- The empty clause, denoted by ⊥ , is unsatisfiable.
+- A unit clause contains just one literal.
+- The universal quantifiers may be omitted.
+
+# Skolemization
+
+- Process for removing existential quantifiers.
+- Delete each existential quantifier, then replace the resulting free variables by terms referred to as Skolem functions.
+- ∃x∀y P(x,y) becomes ∀y P(c, y)
+- ∀x∃y P(x,y) becomes ∀x P(x, f(x))
+- Skolemization preserves satisfiability.
+
+# Conversion to clausal form
+
+- Eliminate ⇒ and ⇔
+- Move ¬ inwards
+- Rename variables if two quantifiers have the same bound variable name.
+- Eliminate existential quantifiers using Skolem functions.
+- Move all universal quantifiers to the left (prenex normal form).
+- Transform the matrix into conjunctive normal form.
+
+# Unification
+
+A substitution, denoted by θ, is an assignment from variables to terms.
+
+Example:
+if θ is {x → g(y)} and E is P(x,w,f(x))
+then Eθ is P(g(y),w,f(g(y)))
+
+Unification is the process of replacing the variables in expressions by terms to make the modified expressions identical to each other.
+
+Example:
+Let E₁=P(x,a) , E₂=P(y,a) , θ = {y→x}
+Then E₁θ = E₂θ = P(x,a)
+
+In the example θ is the most general unifier (mgu)
+
+# Resolution for FOL
+
+(A ∨ L)θ, (B ∨ ¬L)θ
+-------------------
+(A ∨ B) θ
+
+- θ is the most general unifier for L.
+- The result of resolution is called the resolvent.
+- There may be more than one possible resolvent.
+- The resolvent of two complementary unit clauses is the empty clause.
+
+# Resolution for first order logic
+
+- Resolution is refutationally complete (with factoring).
+- Factoring is an additional rule that allows you to remove duplicate literals within a clause.
+- Proving Σ |= A is equivalent to proving that Σ ∪ {¬A} is unsatisfiable.
+- A is called the goal.
+- In a resolution proof you negate the goal and add it to the set of hypotheses, then apply resolution until the empty clause is produced.
+
+
+
+## Example
+
+- ∀x (dog(x) ⇒ animal(x))
+- dog(fido)
+- ∀y (animal(y) ⇒ die(y))
+
+- ¬dog(x) ∨ animal(x)
+- dog(fido)
+- ¬animal(y) ∨ die(y)
+
+die(fido)
+
+¬die(fido)
+
+## Example
+
+![](img/47b87ec6fe4fa238d13429358848c545_233_0.png)
+
+## Automated theorem proving
+
+- Resolution is used in automated theorem provers like Otter.
+- Don't have to choose which rule of inference to use because there is only one.
+- No axiom schemata to instantiate.
+- Many refinements, such as Hyper-resolution and Lock resolution.
+- Search strategies remove redundancy of preforming all possible deduction sequences.
+
+## Example: A simple genealogy KB by FOL
+
+- **Build a small genealogy knowledge base using FOL that**
+  - contains facts of immediate family relations (spouses, parents, etc.)
+  - contains definitions of more complex relations (ancestors, relatives)
+  - is able to answer queries about relationships between people
+
+- **Predicates:**
+  - parent(x, y), child(x, y), father(x, y), daughter(x, y), etc.
+  - spouse(x, y), husband(x, y), wife(x,y)
+  - ancestor(x, y), descendant(x, y)
+  - male(x), female(y)
+  - relative(x, y)
+
+- **Facts:**
+  - husband(Joe, Mary), son(Fred, Joe)
+  - spouse(John, Nancy), male(John), son(Mark, Nancy)
+  - father(Jack, Nancy), daughter(Linda, Jack)
+  - daughter(Liz, Linda)
+  - etc.
+
+## Example: A simple genealogy KB by FOL
+
+### Rules for genealogical relations
+
+- (∀x,y) parent(x, y) ↔ child(y, x)
+- (∀x,y) father(x, y) ↔ parent(x, y) ∧ male(x); *similarly for mother(x, y)*
+- (∀x,y) daughter(x, y) ↔ child(x, y) ∧ female(x); *similarly for son(x, y)*
+- (∀x,y) husband(x, y) ↔ spouse(x, y) ∧ male(x); *similarly for wife(x, y)*
+- (∀x,y) spouse(x, y) ↔ spouse(y, x); **spouse relation is symmetric**
+- (∀x,y) parent(x, y) → ancestor(x, y)
+- (∀x,y)(∃z) parent(x, z) ∧ ancestor(z, y) → ancestor(x, y)
+- (∀x,y) descendant(x, y) ↔ ancestor(y, x)
+- (∀x,y)(∃z) ancestor(z, x) ∧ ancestor(z, y) → relative(x, y); related by common ancestry
+- (∀x,y) spouse(x, y) → relative(x, y); related by marriage
+- (∀x,y)(∃z) relative(z, x) ∧ relative(z, y) → relative(x, y); **transitive**
+- (∀x,y) relative(x, y) ↔ relative(y, x); **symmetric**
+
+### Queries
+
+- ancestor(Jack, Fred)   ; the answer is yes
+- relative(Liz, Joe)   ; the answer is yes
+- relative(Nancy, Matthew)
+  ; no answer in general, no if under closed world assumption
+- (∃z) ancestor(z, Fred) ∧ ancestor(z, Liz)
+
+## Assignments
+
+### 习题4.1
+
+- 2.
+- 3. a) c)
+
+### 习题4.2
+
+- 2. e)
+- 3. c) d)
+- 4. a) d) e) i)
+- 6.
+
+### 习题4.3
+
+- 2. b)
+- 3. c)
+- 4. a) e)
+
+### 习题4.4
+
+- 1. e) g)
+- 2. a)
+
+## Assignments
+
+- □ 习题5.1
+  - ▸ 1. d) e)
+  - ▸ 2. a) b)
+  - ▸ 3. b) c) d)
+  - ▸ 4. a) d) e)
+
+- □ 习题5.2
+  - ▸ 1. b)
+  - ▸ 2. a) c) e)
+  - ▸ 3.
+  - ▸ 4. b)
+
+- □ 习题5.3
+  - ▸ 1. a) d)
+  - ▸ 2. a) d)
+  - ▸ 3.
+
+- □ 习题5.4
+  - ▸ 1.
+
+## Assignments
+
+□ 习题6.1
+
+- 1. b) c)
+- 2. a) c) e) h)
+- 3.
+
+□ 习题6.2
+
+- 1. a) f) g)
+- 2. a) e) f)
+
+## 命题逻辑
+
+![](img/47b87ec6fe4fa238d13429358848c545_240_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_240_1.png)
+
+## 主要内容
+
+- 1. 命题和联结词
+- 2. 合式公式
+- 3. 等价和蕴含
+- 4. 范式和判定问题
+
+推理：一切科学都需要。
+
+正确的推理形式：
+“从正确的前提出发，必然的出正确的结论。”
+— Aristotle 亚里士多德
+
+## 逻辑
+
+逻辑：是研究推理的科学。公元前四世纪由希腊的亚里士多德首创。作为一门独立科学，十七世纪，德国莱布尼兹给逻辑学引入了符号，又称为数理逻辑。
+
+## 形式逻辑
+
+形式逻辑：用自然语言研究推理形式。缺点：不准确。
+
+- 1) 限于主宾式语句，再按质按量分成四种：
+- 全称肯定A：凡S均为P；
+- 全称否定E：凡S均非P；
+- 特称肯定I：有的S为P；
+- 特称否定O：有的S非P。
+
+但人们日常使用的语句却不限于主宾式语句：
+
+- “我与他争论”
+- “我给你们上《离散数学》课”
+
+## 形式逻辑
+
+2）限于三段论推理形式：两个前提，一个结论
+
+（凡）人总是要死的    张三是人
+
+张三是要死的
+
+但三段论不能包括一切推理形式。
+
+## 形式逻辑
+
+- 3）没有量词的研究。
+
+因为形式逻辑限于主宾式语句，且无“变元”的概念，以至于量词的作用受到极大的限制，可有可无。
+
+- 4）自然语言本身具有模糊性和二义性（歧义性）。
+
+> “这个商店关门了”
+
+## 数理逻辑
+
+数理逻辑（又称符号逻辑）：使用特别的表意符号。
+是一门用数学方法研究推理形式的科学。是现代数学的重要基础，也是计算机科学的重要基础之一。
+（对比自然语言和计算机语言）
+
+数理逻辑中引入了形式语言，组成形式系统，把对形式逻辑的研究归结为对形式系统的研究。有如下优点：
+
+- 1) 表达准确而简练；
+- 2) 推理严格而方便；
+- 3) 概括程度高，易于分析研究。
+
+![](img/47b87ec6fe4fa238d13429358848c545_247_0.png)
+
+
+
+## 数理逻辑
+
+数理逻辑的四大分支：
+
+- 公理集合论
+- 递归论
+- 证明论（构造性数学）
+- 模型论
+
+逻辑演算（命题逻辑和一阶谓词逻辑）构成其共同基础。
+
+电子计算机 = 电子学 + 数理逻辑
+
+## 命题逻辑的应用
+
+- 数字电路设计
+- 程序中条件的表达
+- 数据库查询、搜索引擎
+- 人工智能
+- ……
+
+![](img/47b87ec6fe4fa238d13429358848c545_249_0.png)
+
+## 命题和联结词
+
+推理离不开判断，判断的语言表述就是命题。
+
+## 命 题
+
+- 或真或假而不能二者都是
+- 可能要根据上下文确定真值
+
+命题：称具有确定真假意义的陈述句为命题。
+
+命题词：表示命题的形式符号。大写拉丁字母，如P。既可表示真命题，又可表示假命题，故称命题变元
+
+T，F：命题常元（相对于命题变元）
+
+命题的真值： T（1）或F（0）
+
+T、F两种含义
+{
+命题的真值
+命题常量
+}
+
+## 命题
+
+真命题： 意义为真的命题
+
+假命题： 意义为假的命题
+
+简单命题： 由简单陈述句表示的判断
+
+## 例
+
+- (1) 10是一个整数
+- 命题为真,即真值为真
+- (2) 北京是中国的首都
+- (3) 3+3=8
+- 真值为假
+- (4) x+y=4
+- 是断言,不是命题
+- (5) 吃过饭了吗？
+- 疑问句，不是命题
+- (6) 我正在说谎
+- 是悖论
+- (7) 快跑！
+- 是祈使句，不是命题
+- (8) 啦啦啦啦！
+- 感叹句，不是命题
+
+## 复合命题
+
+- 由复合陈述句表示的判断
+- 布尔： ‘The Laws of Thought’, 1854
+
+## 命题联结词
+
+- 联结词（操作符）将一个或多个操作数组合成一个更大的表达式（如数值表达式中的“+”）
+  - 一元联结词作用于一个操作数（如： -3）
+  - 二元联结词作用于两个操作数（如： 3×4）
+- 命题联结词作用于命题词或真值（T或F）上
+
+## 命题联结词总汇
+
+| 名称 | 元数 | 符号 |
+|---|---|---|
+| 否定联结词 | 一元 | ¬ |
+| 合取联结词 | 二元 | ∧ |
+| 析取联结词 | 二元 | ∨ |
+| 异或联结词 | 二元 | ⊕ |
+| 条件（蕴涵）联结词 | 二元 | → |
+| 双条件（等值）联结词 | 二元 | ↔ |
+
+## 命题联结词
+
+- 函数： 命题联结词可视为函数
+  - 设集合 B={T, F}
+  - 一元联结词： U: B→B
+  - 二元联结词： T: B×B→B
+
+## 否定联结词（¬）
+
+- 定义：给定命题P， ¬P表示命题P的否定。
+  读作 “非P”
+
+## 真值表
+
+| p | ¬p |
+|---|---|
+| T | F |
+| F | T |
+
+操作数列
+
+结果列
+
+## 例
+
+- P: 长沙处处清洁
+  - ¬P: 长沙不处处清洁 (注意,不是处处不清洁)
+- Q: 这些都是男同学
+  - ¬Q: 这些不都是男同学
+- R: 我的头发是棕色的
+  - ¬R: 我的头发不是棕色的
+
+![](img/47b87ec6fe4fa238d13429358848c545_260_0.png)
+
+## 合取联结词 (∧)
+
+• 定义：设定P, Q, “P并且Q” 生成新命题 P∧Q。读作 “P和Q”。
+
+| p | q | p∧q |
+|---|---|---|
+| F | F | F |
+| F | T | F |
+| T | F | F |
+| T | T | T |
+
+¬和∧就能够表达各种命题操作
+
+![](img/47b87ec6fe4fa238d13429358848c545_261_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_261_1.png)
+
+## 例
+
+P：我们去植树
+
+Q：我们去浇水
+
+P∧Q：我们去植树并且我们去浇水
+
+P：今天下大雨
+
+Q：3+3=6
+
+P∧Q：今天下大雨并且3+3=6 逻辑上允许
+
+- ∧满足结合率和交换率
+- N个操作数时的真值表
+- ∧是与汉语中“与”、“和”、“并”的翻译，但不能一概而论。
+  例: 小王与小张是堂兄弟
+
+## 析取联结词 (∨)
+
+• 定义：设定P, Q, 则 “P或Q”也是一种命题，记作P∨Q，称为P, Q的析取。读作 “P或Q”
+
+| p | q | p∨q |
+| F | F | F |
+| F | T | T |
+| T | F | T |
+| T | T | T |
+
+注意与合取的区别
+
+![](img/47b87ec6fe4fa238d13429358848c545_264_0.png)
+
+## 析取联结词（∨）
+
+- p∨q为T表示p可为T，或q可为T，或p和q可同时为T。
+- “p和q可同时为T”表示析取联结词∨是“相容的”
+- ¬和∨就能够表达各种命题操作
+
+## 例
+
+P：灯泡有故障
+
+Q：开关有故障
+
+P∨Q：灯泡有故障或开关有故障
+
+![](img/47b87ec6fe4fa238d13429358848c545_266_0.png)
+
+## 练习
+
+P：昨晚上下雨了。
+Q：昨晚上洒水了。
+R：今天早上草坪是湿的。
+
+请问下列表达式代表什么意思？
+
+- ¬P：昨晚没有下雨
+- R ∧ ¬P：今天早上草坪是湿的，并且昨晚没有下雨
+- ¬R ∨ P ∨ Q：今天早上草坪不是湿的，或者昨晚上下雨了，或者昨晚上洒水了
+
+## 异或联结词（⊕）
+
+• 定义：设定P，Q，则“P异或Q”也是一种命题，记作P⊕Q，称为P，Q的异或。读作“P异或Q”
+
+• P⊕Q表示P为T，或Q为T，但P和Q不能同时为真。⊕是“不相容”或，“排斥”或。
+
+$$(P\lor Q)\land(\neg(P\land Q))$$
+
+## 异或联结词（⊕）
+
+## 真值表
+
+| p | q | p⊕q |
+|---|---|---|
+| F | F | F |
+| F | T | T |
+| T | F | T |
+| T | T | F |
+
+注意与析取的区别
+
+## 例
+
+P：我的《离散数学》成绩是90分。
+Q：我没有修《离散数学》。
+P ⊕ Q：我的《离散数学》成绩是90分，或我没有修《离散数学》。（二者不会同时为真）
+
+P：李四是男的
+Q：李四是女的
+P ⊕ Q：李四是男的，或李四是女的。（不能同时成立）
+
+## 条件（蕴涵）联结词（→）
+
+- 定义：给定P，Q，“若P则Q”也是一个命题，记为P→Q。读作“若P则Q”，P称为前提、条件、前件，Q称为结论或后件。
+
+真值表
+
+| p | q | p→q |
+|---|---|---|
+| F | F | T |
+| F | T | T |
+| T | F | F |
+| T | T | T |
+
+唯一取F的情况
+
+## 条件（蕴涵）联结词（→）
+
+- p→q并不等于p是q产生的原因
+- p→q为真不要求p和q都为真
+  - 例如：(1=0) → 人会飞 命题为真
+
+## 例
+
+- 天不下雨，则草木枯黄
+  P： 天不下雨
+  Q： 草木枯黄
+  P→Q： 天不下雨，则草木枯黄
+
+- 若小明学日语，小华学英语，则小芳学德语。
+  P： 小明学日语
+  Q： 小华学英语
+  X： 小芳学德语.
+  (P∧Q)→X
+
+## 例
+
+P： 月亮下山
+
+Q： 3+3=6
+
+P→Q： 若月亮下山,则3+3=6
+
+（并没有实质蕴含关系，仍承认）
+
+## 例
+
+- 如果这节课结束了，明天太阳会从东方升起。
+  T还是F
+- 如果1+1=6，那么克里当选美国总统。
+  T还是F
+
+## 条件（蕴涵）联结词（→）
+
+- Q→P： 是P→Q的逆命题
+- ¬P→¬Q： 是P→Q的否命题
+- ¬Q→¬P： 是P→Q的逆否命题
+- P→Q： 若P则Q，也可说P是Q的充分条件，Q是P的必要条件。
+
+哪个命题与P→Q等价
+
+## P→Q
+
+- 如果P，那么Q
+- P蕴含Q
+- 如果P，Q
+- P仅当Q
+- P是Q的充分条件
+- Q如果P
+- Q每当P
+- Q是P的必要条件
+
+## 双条件（等值）联结词（↔）
+
+定义： “P当且仅当Q”也是一个命题，记为 P↔Q，读作 “P当且仅当Q”。
+
+## 真值表
+
+| p | q | p ↔ q |
+|---|---|---|
+| F | F | T |
+| F | T | F |
+| T | F | F |
+| T | T | T |
+
+P↔Q即¬(P⊕Q)
+
+![](img/47b87ec6fe4fa238d13429358848c545_278_0.png)
+
+
+
+## 双条件（等值）联结词（↔）
+
+- P↔Q表示P为T，当且仅当Q为T。即表示P和Q有同样的真值（同为T或同为F）
+- P↔Q等价于(P→Q)∧(Q→P)
+- P仅当Q 可译为P→Q
+  P当Q 可译为Q→P
+
+## 例
+
+P：布什赢得2004年美国大选
+
+Q：布什是2005年的美国总统
+
+P↔Q：当且仅当，布什赢得2004年美国大选，布什是2005年的美国总统
+
+![](img/47b87ec6fe4fa238d13429358848c545_280_0.png)
+
+## 例
+
+P： 2+2=4
+Q： 雪是白的
+P↔Q： 2+2=4当且仅当雪是白的
+
+![](img/47b87ec6fe4fa238d13429358848c545_281_0.png)
+
+## 例
+
+当且仅当明天不下雪且不下雨，我才去学校。
+
+P: 明天不下雪
+
+Q: 明天不下雨
+
+R: 我去学校
+
+P∧Q↔R
+
+![](img/47b87ec6fe4fa238d13429358848c545_282_0.png)
+
+## 命题联结词—总结
+
+| p | q | ¬p | p∧q | p∨q | p⊕q | p→q | p↔q |
+|---|---|---|---|---|---|---|---|
+| F | F | T | F | F | F | T | T |
+| F | T | T | F | T | T | T | F |
+| T | F | F | F | T | T | F | F |
+| T | T | F | T | T | F | T | T |
+
+| 名称 | not | and | or | xor | implies | iff |
+|------|-----|-----|-----|-----|---------|------|
+| 命题逻辑 | ¬ | ∧ | ∨ | ⊕ | → | ↔ |
+| 布尔代数 | p̄ | pq | + | ⊕ |  |  |
+| C/C++/Java (字符): | ! | && | || | != | == |
+| C/C++/Java (位): | ~ | & | \| | ^ |  |  |
+| 逻辑门 | NOT | AND | OR | XOR |  |  |
+
+## 布尔检索
+
+- **AND：** 用于匹配包含两个检索项的记录
+- **OR：** 用于匹配包含两个检索项之一或两项均匹配的记录
+- **NOT（AND NOT）：** 用于排除某个特定的检索项
+
+## 命题符号化
+
+命题的符号化：首先用命题词表示它能包含的简单命题，然后用这些命题词和上面定义的逻辑联结词把给定的命题表示出来。
+
+原则：
+
+- 1. 语义理解；
+- 2. 正反验证。
+
+![](img/47b87ec6fe4fa238d13429358848c545_286_0.png)
+
+## 联系
+
+- 1. 他在家或上街去了
+- 2. 他吃饭或听音乐
+- 3. 水清，则无鱼
+- 4. 落后就要挨打
+- 5. 他虽聪明，但不用功
+- 6. 除非你努力，否则你将失败
+- 7. 张三或李四都可以做这件事
+- 8. 仅当你走我才留下
+
+## 例
+
+- 1. 他在家或上街去了  (P ∨ Q) ∧ ¬(P ∧ Q)
+- 2. 他吃饭或听音乐  P ∨ Q
+  （1和2表达“相容析取和不相容析取”的概念）
+- 3. 水清，则无鱼  P → ¬Q
+- 4. 落后就要挨打  P → Q
+- 5. 他虽聪明，但不用功  P ∧ ¬Q
+- 6. 除非你努力，否则你将失败  ¬P → Q
+- 7. 张三或李四都可以做这件事  P ∧ Q
+  （“或”并非一定是∨）
+- 8. 仅当你走我才留下  ¬P → ¬Q
+  （“如果你不走，我就不留下”）
+
+## 作业
+
+习题 4.1
+
+- 2.
+- 
+- 3.　a)　c)
+
+## 合式公式
+
+![](img/47b87ec6fe4fa238d13429358848c545_290_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_290_1.png)
+
+## 注意：区分语法和语义。
+
+Σ = { F, T, P, Q, R, ..., ¬, ∧, ∨, →, ↔, (, ) }
+什么样的符号序列是合法的、有意义的？
+
+## 原子
+
+单个命题变元和命题常元叫做原子公式，记为atf。
+
+T、F { 语法  命题常元
+语义  真值 }
+
+## 合式公式
+
+合式公式用wff表示，是按以下规则构成的有穷符号串：
+
+- i) 若P为原子，则P为wff;
+- ii) 若A为wff，则(¬A)为wff;
+- iii) 若A和B都是wff，则(A∧B)、(A∨B)、(A→B)、(A↔B)都是wff。
+
+（类比于算术表达式的定义）
+
+分子合式公式：是wff 且 是某wff的一部分。
+
+## 例
+
+判断下列符号串是否为合式公式。如是，找出其分子合式公式
+
+- 1) (¬(P ∨ Q))
+
+- 2) (P → (¬(P ∧ Q)))
+
+- 3) (P)
+
+- 4) P ∨ Q
+
+- 5) (((P → Q) ∧ (Q → R)) → (P → R))
+
+## 括号省略规则
+
+括号使用优缺点：
+
+- 优点：使公式结构清晰，无二义性；
+- 缺点：括号太多会增加书写和阅读的困难。
+
+## 括号省略规则
+
+约定：
+
+- i) 合式公式最外层的括号可以省略；
+
+- ii) 规定各逻辑联结词的运算优先级次序（从高到底）为： ¬, ∧, ∨, →, ↔，依此可省略括号；
+
+- iii) 对 wff 中同一联结词的多次连续出现，按从左到右的次序运算，以此可省略中间括号。
+
+## 例
+
+- 1) (¬(P ∨ Q))
+- 2) (P → (¬(P ∧ Q)))
+- 3) (P ∨ Q)
+- 4) (((P → Q) ∧ (Q → R)) → (P → R))
+
+![](img/47b87ec6fe4fa238d13429358848c545_297_0.png)
+
+如果合式公式中仅含命题变元P₁, P₂, ..., Pₙ, 则常用符号：
+G ( P₁, P₂, ..., Pₙ ) 来表示
+
+## 解释
+
+设G是一个合式公式，P₁，P₂，…，Pₙ为出现在G中的所有命题变元，对诸命题变元的一组真值赋值称为对G的一个解释，记为 I = (P̃₁, P̃₂, …, P̃ₙ)，其中：
+
+P̃ᵢ = { T   对Pᵢ赋予真值T
+        F   对Pᵢ赋予真值F }   ( i = 1 , 2 , … , n )
+
+并称G(P̃₁, P̃₂, …, P̃ₙ)的真值为G(P₁, P₂, …, Pₙ)在I下的真值。
+
+## 例
+
+- 1) $P \lor F \rightarrow Q \land T$
+- 2) $P \rightarrow (Q \rightarrow P)$
+- 3) $Q \lor R \rightarrow (\lnot R \rightarrow Q)$
+
+有几种解释？ 真值分别是什么？
+
+## 真值表的运用
+
+- ➢ 合式公式在给定解释下的真值？
+- 
+- ➢ 使某合式公式为真/假的解释？
+
+真值表法　$n$ 个命题变元　$2^n$ 种真值组合
+
+- ① 按分子公式列表
+- 
+- ② 按命题联结词列表
+
+## 例
+
+- 1) ¬(P ∧ Q) ↔ ¬P ∨ ¬Q
+- 2) Q ∨ R → (¬R → Q)
+
+用两种方法分别构造真值表
+
+## 例
+
+- - 永真式： $(\neg P \rightarrow Q) \rightarrow ((\neg P \rightarrow \neg Q) \rightarrow P)$
+- - 永假式： $P \land \neg P$
+- - 可满足： $P \lor Q \rightarrow R$
+  （F， T， T）
+
+- - 永真式的否定是永假式
+- - 永假式的否定是永真式
+- - 任何两个永真式的合取仍是永真式
+- - 任何两个永假式的析取仍是永假式
+
+![](img/47b87ec6fe4fa238d13429358848c545_305_0.png)
+
+## 永真式的判定方法
+
+- ① 真值表法
+- ② 代换法
+
+## 代换实例
+
+用合式公式取代命题变元
+
+设 G 是包含 n 个命题变元 P₁, P₂, ..., Pₙ 的合式公式，Pᵢ₁, Pᵢ₂, ..., Pᵢᵣ (1 ≤ r ≤ n) 为其中 r 个不同的命题变元，用合式公式 A₁, A₂, ..., Aᵣ 分别同时取代 G 中的 Pᵢ₁, Pᵢ₂, ..., Pᵢᵣ 所得到的新合式公式称为 G 的一个代换实例。
+
+外层括号
+
+保证代换实例的唯一性
+
+全部出现
+
+## 例
+
+*P* ∧ ¬*P* → *Q*
+
++   • 用R→S取代P的代换实例
+
++   • 用R→S和S→P分别取代P和Q的代换实例
+
+## 例
+
++   - 永真式： $P \lor \lnot P$
++   - 永假式： $P \land \lnot P$
++   - 可满足： $P \lor Q \rightarrow R$
+
+## 定理4.2.1（代入定理）
+
++   i) 永真式的任何代换实例必为永真式；
++   ii) 永假式的任何代换实例必为永假式；
++   iii) 既非永真又非永假的合式公式之代换实例，可永真，可永假，也可既非永真又非永假。
+
+## 作业
+
+习题4.2
+
++   2. e)
++   3. c) d)
++   4. a) d) e) i)
++   6.
+
+## 等价和蕴含
+
+![](img/47b87ec6fe4fa238d13429358848c545_312_0.png)
+
+## 语义等价证明方法
+
+常用等价式
++
+置换定理、代入定理
+
+## 语义蕴含证明方法
+
+常用等价式、常用蕴含式
+
++
+置换定理、代入定理
+
+## 等价
+
+如果合式公式A、B满足：A↔B是永真式，
+则称A等价于B，记为A ↔ B。
+
+语义符号
+
+![](img/47b87ec6fe4fa238d13429358848c545_315_0.png)
+
+## 例
+
+试证明 P∨Q ⇔ ¬(¬P ∧ ¬Q)
+
+| P | Q | P∨Q | ¬P | ¬Q | ¬P ∧ ¬Q | ¬(¬P ∧ ¬Q) |
+|---|---|---|---|---|---|---|
+| F | F | F | T | T | T | F |
+| F | T | T | T | F | F | T |
+| T | F | T | F | T | F | T |
+| T | T | T | F | F | F | T |
+
+## 定理4.3.1
+
+A ⇔ B
+当且仅当
+合式公式A↔B在任何解释下，A和B有相同的真值。
+
+## 定理4.3.2
+
+若A, B, C是合式公式，则有
+
++   i) A⇔A;
++   ii) 若A⇔B，则B⇔A;
++   iii) 若A⇔B且B⇔C，则A⇔C.
+
+⇔是等价关系
+
+( ⇔ ⊆ wff² )
+
+## 常用等价式
+
+| | | |
+|---|---|---|
+| E1 ¬¬P ⇔ P | 双重否定律 |
+| E2 P∧Q ⇔ Q∧P | 交换律 |
+| E3 P∨Q ⇔ Q∨P | |
+| E4 (P∧Q)∧R ⇔ P∧(Q∧R) | 结合律 |
+| E5 (P∨Q)∨R ⇔ P∨(Q∨R) | |
+| E6 P∧(Q∨R) ⇔ (P∧Q)∨(P∧R) | 分配律 |
+| E7 P∨(Q∧R) ⇔ (P∨Q)∧(P∨R) | |
+| E8 ¬(P∧Q) ⇔ ¬P∨¬Q | 德·摩尔根律 |
+| E9 ¬(P∨Q) ⇔ ¬P∧¬Q | |
+| E10 P∨P ⇔ P | 幂等律 |
+
+## 常用等价式
+
++   E11  P∧P ⇔ P
++   E12  R∨F ⇔ R          同一律
++   E13  R∧T ⇔ R
++   E14  R∨T ⇔ T          零律
++   E15  R∧F ⇔ F
++   E16  P→Q ⇔ ¬P∨Q
++   E17  ¬(P→Q) ⇔ P∧¬Q
++   E18  P→Q ⇔ ¬Q→¬P
++   E19  P→(Q→R) ⇔ P∧Q→R
++   E20  ¬(P↔Q) ⇔ P↔¬Q
+
+## 常用等价式
+
++   **E21** P ↔ Q ⇔ (P→Q)∧(Q→P)
++   **E22** P ↔ Q ⇔ (P ∧ Q) V (¬P ∧ ¬Q)
++   **E23** P V ¬P ⇔ T
++   **E24** P ∧ ¬P ⇔ F
+
++   1. 上述等价式可用真值表法证明。
++   2. ∴ 代入定理的成立
++   ∴上述等价式均为模板，
++   即，
++   用任意wff取代上述公式中的命题变元
++   所得到的等价式仍成立。
+
+## 定理4.3.3（置换定理）
+
+设A为合式公式G的分子公式，B为与A等价的wff，R为用B取代G中A之若干出现所得之wff，则G⇔R。
+
+## 定理4.3.3
+
+证明思路：
+
+因为对变元的任一指派,A与B真值相同，所以以B取代A后，公式G与公式R对变元的任一指派真值也相同,所以G⇔R。
+
+## 代入和置换的区别
+
+1°（被动对象） 代入是对命题变元进行取代
+置换是对分子公式进行取代
+
+2°（主动对象） 可用任意合式公式代入命题变元
+仅可用与分子公式等价的wff置换该分子公式
+
+3°（位置） 代入必须取代该命题变元的所有出现
+置换可以取代该分子公式的部分出现
+
+4°（结果） 代入后得到的新公式与原公式不一定等价
+取代后得到的新公式必与原公式等价
+
+## 置换定理使用
+
+置换定理使我们可以对wff进行等价演算，以推出新的等价式（化简）或判断一个公式的类型（永真、永假、可满足）。
+
+## 例
+
+试证明：
+
++   1、(P→Q)→R ⇔ (¬Q∧P)∨R
++   2、(P→Q)→(Q∨R)⇔ P∨Q∨R
+
+## 对偶式
+
+设 wff A只包含逻辑联结词¬，∨，∧，在A中，用∧代替∨，用∨代替∧，用T代替F，用F代替T，所得到的wff称为A的对偶式，记为A*。
+
+(A*)*=A
+
+A*为什么一定是wff？
+(wff定义)
+
+A ∨→∧,∧→∨,T→F,F→T A*
+
+## 例子
+
+(P∨Q)∧R 与 (P∧Q)∨R 互为对偶式。
+
+## 定理4.3.4
+
+设A是仅包含命题变元P₁，P₂，…，Pₙ 的wff，并且在A中只有联结词¬，∧，∨，则
+
+¬A(P₁， P₂， …， Pₙ) ⇔ A*(¬P₁， ¬P₂， …， ¬Pₙ)
+A(¬P₁， ¬P₂， …， ¬Pₙ) ⇔ ¬A*(P₁， P₂， …， Pₙ)
+
+证明：反复使用德·摩尔根律 ∵ 置换 ∴等价
+
+¬(P∧Q)⇔(¬P∨¬Q)
+¬(P∨Q)⇔¬P∧¬Q
+
+## 例
+
++   - 设合式公式A=¬P1 ∨（P2 ∧ P3），求 A* (¬ P1, ¬ P2, ¬ P3)和¬A
+
+设A和B仅包含逻辑联结词 ¬，∧，∨。若 A ⇔ B，则 A* ⇔ B*。
+证明：设 P₁，P₂，…，Pₙ为出现在 A 和 B 中的所有命题变元，故
+A(P₁，P₂，…，Pₙ) ⇔ B(P₁，P₂，…，Pₙ) 是永真式。
+由代入定理知
+A(¬P₁，¬P₂，…，¬Pₙ) ⇔ B(¬P₁，¬P₂，…，¬Pₙ) 是永真式。
+即： A(¬P₁，¬P₂，…，¬Pₙ) ⇔ B(¬P₁，¬P₂，…，¬Pₙ)
+¬A*(P₁，P₂，…，Pₙ) ⇔ ¬B*(P₁，P₂，…，Pₙ)
+故 A* ⇔ B*。
+
+## 利用对偶原理求等价式
+
+$P \lor \neg P \Leftrightarrow T$
+
+$\Downarrow$
+
+$P \land \neg P \Leftrightarrow F$
+
+## 例
+
+证明：
+
++   a) ¬(P ∧ Q) → (¬P ∨ (¬P ∨ Q)) ⇔ ¬P ∨ Q
++   b) (P ∨ Q) ∧ (¬P ∧ (¬P ∧ Q)) ⇔ ¬P ∧ Q
+
+## 蕴含
+
+设A和B是wff。
+若A→B是永真式，
+则称A蕴含B，记作A⇒B。
+
+![](img/47b87ec6fe4fa238d13429358848c545_337_0.png)
+
++   - 蕴含 ⇒ 和等价 ⇔ 都不是逻辑联结词，A⇒B 和 A⇔B 也都不是 wff。
++   - A⇒B 表明 A→B 是永真式；
++   - A⇔B 表明 A ↔ B 是永真式。
+
+## 定理4.3.6（等价和蕴含）
+
+若A, B是wff, 则：
+
+A⇔B 当且仅当 A⇒B且B⇒A。
+
+## 定理4.3.7 （⇒传递）
+
+设A，B，C是合式公式，
+
+如果A⇒B且B⇒C，则A⇒C。
+
+## A⇒B的证明方法
+
++   ① 真值表法
+
++   ② 解释法：对于A→B的任意解释I，若A在I下取真值T，则可证明B在I下也必然取真值T；或者，只要B在I下取真值F，则可证明A在I下也必然取真值F。
+
++   ③ 推演法证A→B为永真式
+
+## 例
+
+试证明： ¬Q ∧ ( P → Q ) ⇒ ¬P
+
+证明：
+
+¬Q ∧ ( P → Q )
+⇔ ¬Q ∧ ( ¬P ∨ Q )
+⇔ ( ¬Q ∧ ¬P ) ∨ ( ¬Q ∧ Q )
+⇔ ( ¬Q ∧ ¬P ) ∨ F
+⇔ ¬Q ∧ ¬P
+⇒ ¬P
+
+## 常用蕴含式
+
++   I1  P∧Q ⇒ P  化简式
++   I2  P∧Q ⇒ Q
++   I3  P ⇒ P∨Q  附加式
++   I4  Q ⇒ P∨Q
++   I5  ¬P ⇒ P→Q
++   I6  Q ⇒ P→Q
++   I7  ¬(P→Q) ⇒ P
++   I8  ¬(P→Q) ⇒ ¬Q
++   I9  P→Q ⇒ P∧R→Q∧R
++   I10 ¬P∧(P∨Q) ⇒ Q  析取三段论
++   I11 P∧(P→Q) ⇒ Q  假言推论
++   I12 ¬Q∧(P→Q) ⇒ ¬P  拒取式
++   I13 (P→Q)∧(Q→R) ⇒ P→R  假言三段论
++   I14 (P∨Q)∧(P→R)∧(Q→R) ⇒ R  二难推论
+
+由代入定理，用任意wff取代上述蕴含式中的命题变元，所得到的蕴含式仍成立。
+
+> 如果永真式蕴含一个合式公式，则该合式公式必为永真式；
+> 如果一个合式公式蕴含永假式，则该合式公式必为永假式。
+
+## 定理4.3.8
+
+设H₁， H₂， ...， Hₘ， P， Q是wff。如果 H₁∧H₂∧...∧Hₘ∧P ⇒ Q，则 H₁∧H₂∧...∧Hₘ ⇒ P→Q。
+
+E19：
+H₁ ∧ H₂ ∧ ... ∧ Hₘ ∧ P → Q
+↔
+H₁ ∧ H₂ ∧ ... ∧ Hₘ → (P → Q)
+
+回顾
+
+## 作业
+
+习题4.3
+
+- 2. b)
+- 3. c)
+- 4. a) e)
+
+## 范式和判定问题
+
+## 判定问题
+
+判定问题：确定一个对象的性质。
+
+逻辑演算的判定问题：通过有限步骤确定给定逻辑演算合式公式是永真的、永假的或可满足的的判断。
+
+- 1) 判定问题
+  对应（逻辑）
+  有解    部分有解    无解
+  可判定    半可判定    不可判定
+  命题逻辑    一阶谓词逻辑
+
+2) 可判定或半可判定时哪种算法优势大
+
+指效率，尤其是机械化程度
+机械定理证明
+
+## 命题逻辑的判定问题
+
+命题逻辑的判定问题：
+
+- 1) ∴ 公式长度有穷，一个合式公式的真值表有限步可构造
+  ∴ 可判定
+
+- 2) 真值表法复杂度O（2ⁿ），复杂度高
+
+∴ 范式、标准型
+
+## 极大项/极小项
+
+设 $P_1，P_2，\ldots，P_n$ 为互不相同的命题变元，分别称 $\widetilde{P}_1\lor\widetilde{P}_2\lor\cdots\lor\widetilde{P}_n$ 及 $\widetilde{P}_1\land\widetilde{P}_2\land\cdots\land\widetilde{P}_n$ 为关于 $P_1，P_2，\ldots，P_n$ 的极大项和极小项，其中 $P_i$ 为 $P_i$ 或 $\neg P_i$（$i=1，2，\ldots，n$）。
+
+- 极大项与使该极大项为假的解释之间存在一种双射关系
+- 故任何两个不同的极大项都不等价，因此所有2ⁿ个极大项的合取必为永假式。
+
+## 极小项与解释
+
+关于P₁，P₂，…，Pₙ的不同极小项共有2ⁿ个。
+对于极小项 \tilde{P}_1 ∧ \tilde{P}_2 ∧ \dots ∧ \tilde{P}_n，只有一种解释 I = ( \tilde{P}_1, \tilde{P}_2, ... \tilde{P}_n ) 使其为真，其中
+
+\tilde{P}_i = { T   若 \tilde{P}_i = P_i
+F   若 \tilde{P}_i = ¬P_i }   ( i = 1, 2, …, n )
+
+- 极小项与使该极小项为真的解释之间存在一种双射关系
+- 故任何两个不同的极小项都不等价，因此所有2ⁿ个极小项的析取必为永真式。
+
+## 主范式
+
+设A为包含命题变元P₁，P₂，…，Pₙ的合式公式，如果合式公式B与A等价，并且B是若干个不同的关于P₁，P₂，…，Pₙ的极大(小)项的合(析)取，则称B为A的主合(析)取范式，主合取范式和主析取范式称为主范式。
+
+## 定理4.4.1
+
+设A为任意wff。
+i) 如果A不是永真式，则A必有主合取范式；
+ii) 如果A不是永假式，则A必有主析取范式。
+
+- 如果不考虑极大项（极小项）的排列顺序，给定wff的主范式若存在必唯一。
+- 不妨规定永真式的主合取范式为T，永假式的主析取范式为F，则每个合式公式都有唯一的主合取范式和主析取范式。
+
+## 极小项的顺序
+
+a_i = \left\{ \begin{array}{ll} 0, & \tilde{P}_i = \neg P_i \\ 1, & \tilde{P}_i = P_i \end{array} \right.
+
+例： P₁ ∧ P₂ ∧ ¬P₃
+¬P₁ ∧ P₂ ∧ ¬P₃
+
+## 真值表法
+
+原理：真值表相同的两公式等价。
+
+操作：
+
+- i) 对于所有使wff真值为F的解释，合取
+  它们所对应的极大项；
+
+- ii) 对于所有使wff真值为T的解释，析取
+  它们所对应的极小项。
+
+## 真值表法
+
+例：
+
+| P | Q | R | A |
+|---|---|---|---|
+| F | F | F | T |
+| F | F | T | F |
+| F | T | F | T |
+| F | T | T | T |
+| T | F | F | F |
+| T | F | T | T |
+| T | T | F | F |
+| T | T | T | F |
+
+求：主合取范式和主析取范式
+
+![](img/47b87ec6fe4fa238d13429358848c545_362_0.png)
+
+## 等价变换法
+
+求 wff A 的主析取范式的算法：
+
+- i) 利用 E16 和 E22 删去 → 和 ← 在 A 中的所有出现，得到 A₁；
+- ii) 利用德·摩尔根律将 A₁ 中的 ¬ 内移到原子之前，并用 E₁ 使每个原子之前至多仅有一个 ¬；
+- iii) 再用分配律将 ii) 的结果化为若干个合取式的析取，其中每个合取式的因子皆为原子或原子的否定；
+- iv) 对于 iii) 的结果中的每个合取式 B，若命题变元 P 在 B 中不出现，利用 (B∧P)∨(B∧¬P) ⇔ B∧(P∨¬P) ⇔ B∧T ⇔ B 取代 B，直到每个合取式都变为极小项，最后删除相同项。
+
+## 例
+
+求P→(P→Q)∧¬(¬Q∨¬P)的主范式。
+
+![](img/47b87ec6fe4fa238d13429358848c545_365_0.png)
+
+## 主合取和主析取范式相互变换
+
+- 对合式公式B，在B的主合取范式中没有出现的极大项，必出现在¬B的主合取范式中；
+- 对合式公式B，在B的主析取范式中没有出现的极小项，必出现在¬B的主析取范式中；
+
+## 主合取和主析取范式相互变换
+
+- 1. 用不出现在合式公式B的主合取范式中的极大项构造¬B的主合取范式；
+- 2. 求¬B的对偶式(¬B)*；
+- 3. 在(¬B)*中，用命题变元的否定代替命题变元，命题变元代替命题变元的否定，即可得到B的主析取范式。
+
+回顾
+
+¬A(P₁, P₂, …, Pₙ) ⇔ A*(¬P₁, ¬P₂, …, ¬Pₙ)
+A(¬P₁, ¬P₂, …, ¬Pₙ) ⇔ ¬A*(P₁, P₂, …, Pₙ)
+
+## 主合取和主析取范式相互变换
+
+- 1. 用不出现在合式公式B的主析取范式中的极小项构造¬B的主析取范式；
+- 2. 求¬B的对偶式(¬B)*；
+- 3. 在(¬B)*中，用命题变元的否定代替命题变元，命题变元代替命题变元的否定，即可得到B的主合取范式。
+
+## 例
+
+- 求(¬P→R) ∧ (Q ↔P)的主范式。
+- 求P→(P→Q)∧¬(¬Q∨¬P)的主范式。
+
+## 作业
+
+## 习题4.4
+
+- 1. e) g)
+- 2. a)
+
+![](img/47b87ec6fe4fa238d13429358848c545_371_0.png)
+
+## 谬词逻辑
+
+![](img/47b87ec6fe4fa238d13429358848c545_372_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_372_1.png)
+
+## 命题逻辑的能力
+
+命题逻辑：能揭示一部分有效的推理过程。
+
+苏格拉底三段论：    所有的人都是要死的    苏格拉底是人
+
+苏格拉底是要死的
+
+命题逻辑：
+
+P ∧ Q ⇒ R  ?
+
+但苏格拉底三段论是正确的，推理是有效的。
+
+简单命题需再加以分析，分离出主词和谓词、考虑一般和个别、全称和存在，分析逻辑性质和规律。
+
+谓词逻辑
+
+## 谓词逻辑
+
+- 谓词逻辑是命题逻辑的扩展，能对实体集合进行精确地推理。
+- 命题逻辑将简单命题当作原子命题
+- 谓词逻辑会区分命题中的谓词和主语
+
+## 谓词逻辑的应用
+
+- 形式化描述数学中的定义、公理和定理
+- 形式化描述复杂系统
+- 自动定理证明器
+- 人工智能
+- …… 
+
+
+
+## 主要内容
+
++   1. 符号集（变元、谓词和量词）
++   2. 语法构成、语义解释
++   3. 语义证明方法
++   4. 永真式的判定
+
+## 符号集
+
+![](img/47b87ec6fe4fa238d13429358848c545_377_0.png)
+
+## 谓词逻辑中的符号集
+
+Σ = { a, b, c, ..., x, y, z, ..., f, g, h, ..., F, T, P, Q, R, ..., ¬, ∧, ∨, →, ↔, ∀, ∃, (, ) }
+
+个体常元
+个体变元
+函词
+谓词
+逻辑联结词
+量词
+括号
+
+Σ = { F, T, P, Q, R, ..., ¬, ∧, ∨, →, ↔, (, ) }
+
+## 谓词逻辑中的新概念
+
++   论域、个体
++   (n元) 函词
++   (n元) 谓词
++   (全称、存在) 量词
+
+## 论域、个体
+
+“张三是学生”
+
+命题逻辑：
+
+谓词逻辑： a： 张三   H(x)： x是学生
+
+思维对象
+
+思维对象的性质
+
+论域 D： 思维对象的非空集合。
+
+其元素称为个体
+
+表示个体的形式符号称为个体词
+
+个体变元 x, y, z
+
+个体常元 a, b, c
+
+所有人的集合
+
+## 谓词
+
++   - 命题的主语是主语是命题的思维对象
++   - 命题的谓语表示思维对象的属性及其关系
++   - 表示个体思维对象的属性及其关系的正式符号称为谓词
++     - 一元谓词
++     - n元谓词
+
+## 函词、谓词
+
+“张三的父亲卖电脑”
+
+S ( f (a) , b )
+
+a：张三
+
+b：电脑
+
+f(x)：x的父亲
+
+f：D → D 一元函数
+
+S(x, y)：x卖y
+
+项
+
+思维对象间的关系
+
+## 论域
+
+个体常元 a
+
+个体变元 x
+
+n元谓词 P
+
+n元函数 f
+
+论域 D
+
+Dⁿ → D
+
+Dⁿ → {F, T}
+
+## 问题： 所有自然数都不小于0
+D = R      N(x) → ¬L(x, 0)
+
+![](img/47b87ec6fe4fa238d13429358848c545_384_0.png)
+
+## 量词
+
+量词：表示命题中个体数量的词。
+
+∀ 全称量词 表示论域中全部元素
+
+∃ 存在量词 ... 部分 ...
+
+(∀x) ：关于x的全称量词
+
+(∃x) ： ... 存在 ...
+
+(∀x₁)…(∀xₙ)：简写为(∀x₁…xₙ)
+
+* 量词后面的子wff除原子外需加括号。
+
+## 全称量词
+
++   - ∀x读作 ‘对任意x’
++   - (∀x)(P(x))表示 ‘对一切x, P(x)为真’
++   - (∀x)(¬P(x))表示 ‘对一切x, ¬P(x)为真’
++   - ¬(∀x)(P(x)) 表示 ‘并非对任意x, P(x)是真’
+
+## 存在量词
+
++   - ∃x读作 ‘至少有一个x’， ‘存在一个x’
++   - (∃x)(P(x)) 表示 ‘存在一个x，使P(x) 为真’
++   - (∃x)(¬P(x)) 表示 ‘存在一个x，使¬P(x) 为真’
++   - ¬(∃x)(P(x))表示 ‘并非存在一个x，使P(x)为真’
+
+## 例
+
+问题： 所有自然数都不小于0
+D = R
+(∀x)( N(x) → ¬L(x, 0) )
+
+引言例：
+a：苏格拉底
+M(x)： x是人
+D(x)： x是要死的
+(∀x)(M(x) → D(x)) ∧ M(a) ⇒ D(a)
+
+## 量词的语义
+
+量词： 设P为论域D上的一个一元谓词，则
+
+命题(∀x)P(x)的真值为T
+iff
+对每个a∈D，命题P(a)的真值皆为T；
+
+命题(∃x)P(x)的真值为T
+iff
+有a∈D，使命题P(a)的真值为T。
+
+若D = {a₁, a₂, ..., aₙ}，则
+(∀x)P(x) ⇔ P(a₁) ∧ ... ∧ P(aₙ)
+(∃x)P(x) ⇔ P(a₁) ∨ ... ∨ P(aₙ)
+
+## 例
+
+如果 R(x,y) 表示 “x 依赖 y”，列出下列公式的含义：
+
++   - ∀x(∃y R(x,y)) = 每个人都有某些人可依靠。
++   - ∃y(∀x R(x,y)) = 有些人被所有的人依赖。（包括自己）
++   - ∃x(∀y R(x,y)) = 有些人依赖所有的人。（包括自己）
++   - ∀y(∃x R(x,y)) = 每个人都被某些人依赖。
++   - ∀x(∀y R(x,y)) = 每个人都依赖所有的人。
+
+## 命题符号化
+
+对一个给定的命题，用上面介绍的形式符号（个体常元、个体变元、函词、谓词和量词）及逻辑联结词（¬、∧、∨、→和↔）正确地表示出来，称为对它的符号化。
+
+## 符号化原则
+
++   1) 逐词翻译的原则；
++   2) 词性翻译；
++   3) 语义上理解后进行符号化；
++   4) 特性谓词；
++   5) 数学公式的符号化。
+
+论域为全域 或 论域的子域内取值
+
+在全称量词约束下用 “→”
+
+在存在量词约束下用 “∧”
+
+## 词性翻译
+
++   名词: → 个体常量
++   专有名词、普通名词、被名词所有格或物主代词修饰
++   代词: → 个体常量
++   人称代词、指示代词
++   形容词: → 谓词
++   动词: → 谓词
++   数量词: → 量词
++   全体概念、部分概念
++   副词和前置词: 与其它词类合并，不单独分析
++   连词: → 逻辑连接词
+
+## 例
+
++   • 并非 所有的 书 大家都 喜欢
++   连词 数量词 名词 数量词 动词
++   ¬(∀x)(Book(x)→(∀y)(Person(y) →Love(y, x)))
+
++   • 这家 店 供应 一切 简易 用具
++   指示代词 名词 动词 数量词 形容词 名词
++   Shop(a) ∧ (∀x)(Simple(x) ∧ Tool(x)→Supply(a, x))
+
+## 例
+
++   • 对任意正数ε > 0，皆有正数δ > 0，当0 < |x − a| < δ时，都有|f(x) − b| < ε。
+
+(∀ε)(Real(ε)∧Bigger(ε,0) →(∃δ)(Real(δ)∧Bigger(δ,0) ∧ (∀x)(Real(x)∧Bigger(abs(minus(x,a)),0) ∧Bigger(δ,abs(minus(x,a)))) → Bigger(ε,abs(minus(f(x),b)))) ) )
+
+## 例
+
++   1) 有实数小于 0；
+
+$(\exists x)\ P(x,0)\quad D=\mathbb{R}$
+
+$(\exists x)\ (R(x)\land P(x,0))$
+
++   2) 任何实数的平方都不小于 0；
+
+$(\forall x)(\neg P(f(x),0))\quad D=\mathbb{R}$
+
+$(\forall x)(R(x)\to\neg P(f(x),0))$
+
++   3) 存在唯一的实数 x 使 x+1=0
+
+$(\exists x)\ ((R(x)\land E(f(x),1,0))\land$  
+$(\forall y)(R(y)\land E(f(y),1,0)\to E(x,y)))$
+
+## 例
+
++   - 他和她讨论问题
++     (∃x) (Problem(x) ∧ Discuss(a, b, x))
++   - 我去电影院，仅当电影院上映大片
++     (∀x)(Cinema(x)∧Goto(a, x)→(∃y)(Good(y) ∧Play(x, y)))
++   - 他在办公室或家里
++     (At(a, office(a))∨At(a, home(a)))∧
++     ¬(At(a, office(a))∧At(a, home(a)))
+
+## 例
+
++   - 没有不犯错误的人
++   - 某些人对某些食物过敏
++   - 尽管有人聪明，但未必一切人聪明
++   - X、Y和Z为实数，如果X>Y，并且Z>0，那么XY>YZ
++   - 每个建筑物都有一些装饰品
+
+(∀x)(∀y)(∀z)(B(x)∧B(y)∧B(z)→R(x,y)∧R(y,z)∧R(x,z))
+
+## 例
+
+P: 今天天气好
+Q: 入学考试准时进行
+
+A(x): x是考生
+B(x): x提前进入考场
+C(x): x取得良好成绩
+E(x, y): x等于y （即x=y）
+
++   1. 如果今天天气不好，就一定有些考生不能提前进入考场
++   2. 如果所有考生提前进入考场，那么入学考试可以准时进行
++   3. 并非所有提前进入考场的考生都能取得良好成绩
++   4. 有且仅有一个提前进入考场的考生未取得良好成绩
+
+## 符号化原则
+
++   1) 逐词翻译的原则；
++   2) 词性翻译；
++   3) 语义上理解后进行符号化；
++   4) 特性谓词；
++   5) 数学公式的符号化。
+
+论域为全域 或 论域的子域内取值
+
+在全称量词约束下用 “→”
+
+在存在量词约束下用 “∧”
+
+
+
+## 作业
+
+### 习题5.1
+
+- 1. d) e)
+- 2. a) b)
+- 3. b) c) d)
+- 4. a) d) e)
+
+![](img/47b87ec6fe4fa238d13429358848c545_402_0.png)
+
+## 语法构成
+
+![](img/47b87ec6fe4fa238d13429358848c545_403_0.png)
+
+### 语法构成：项、原子、合式公式
+
+### 项
+
+项为按以下规则构成的有穷符号串：
+
+- i) 每个个体常元是一个项；
+- ii) 每个个体变元是一个项；
+- iii) 如果 f 是一个 n 元（n≥1）函词且 t₁, …, tₙ 都是项，则 f(t₁, …, tₙ) 也是一个项。
+
+### 原子
+
+原子（atf）为按以下规则构成的有穷符号串：
+
+- i) 每个命题词是一个原子；
+- ii) 若 P 为 n 元（n≥1）谓词且 t₁, …, tₙ 都是项，则 P(t₁, …, tₙ) 是一个原子。
+
+### 合式公式
+
+合式公式（wff），是按以下规则构成的有穷符号串：
+
+- i) 每个原子是一个 wff；
+- ii) 如果 A 是 wff，则 (¬A) 是 wff；
+- iii) 如果 A 和 B 都是 wff，则 (A∨B)、(A∧B)、(A→B) 和 (A↔B) 都是 wff；
+- iv) 如果 A 是 wff，x 为个体变元，则 (∀x)A 和 (∃x)A 都是 wff；
+- v) 只有有限次应用步骤 i)、ii)、iii) 和 iv) 构成的公式才是合式公式。
+
+子合式公式：构造过程中的 wff。
+
+### 例
+
+- P(f(x), y)
+- f(x, y, z)
+- (P(x)→Q(y, a))
+- ¬(∀x)P(x, y)
+- ((∀x)P(y)→(¬Q(y)))
+- (∀x)P(a, b, f(c))
+
+### 括号省略规则
+
+与命题逻辑类似
+
+例：
+
+```
+(P(a) ∧ (∀x)((¬E(x,a))∧P(f(a)))→(∃x)P(x))
+```
+
+### 几个基本概念
+
+- 辖域
+- 约束出现和自由出现
+- 约束变元和自由变元
+- 约束变元换名
+
+![](img/47b87ec6fe4fa238d13429358848c545_410_0.png)
+
+### 辖域
+
+量词的辖域：紧接其后的公式。
+
+(∀x)A : 称 A 为 (∀x) 的辖域；
+
+(∃x)A : 称 A 为 (∃x) 的辖域。
+
+### 例
+
+- (∀x)P(x)→Q(x)
+  - (∀x) 的辖域是 P(x)
+- (∃x)(P(x, y)→Q(x, y)) ∨ P(y, z)
+  - (∃x) 的辖域是 P(x, y)→Q(x, y)
+
+### 约束出现、自由出现
+
+变元 x 在公式 A 中的某次出现为：
+
+- 约束出现：在 A 的子公式 (∀x)B 或 (∃x)B 中的出现；
+- 自由出现：否则。
+
+### 例子
+
+(∀x)(P(x)→(∃y)R(x, y))
+
+约束出现
+
+(∃x)P(x) ∧ Q(x)
+
+约束出现
+
+自由出现
+
+### 例
+
+指出下列谓词公式中的自由变元和约束变元。并指明量词的辖域：
+
+- 1、(∀x)(P(x) ∧ R(x))→(∀x)P(x) ∧ Q(x)
+- 2、(∀x)P(y)
+- 3、(∀x)(∃y)(P(x, y) → Q(y))
+
+- 在一个公式中，**一个变元既可以约束出现，又可以自由出现**。为避免混淆可用改名规则对**约束变元**改名。（上例1）
+
+### 约束变元换名
+
+设 (∀x)B 为合式公式 A 的子公式，（B 为 (∀x) 的辖域）。如果 y 在 B 中不出现，则可以将 (∀x) 换成 (∀y)，同时将 B 中所有自由出现的 x 换成 y。
+
+（不改变公式的语义）
+
+### 例
+
+(∀x)(P(x) ∧(∃x)Q(x))∨((∀x)P(x) →Q(x))
+
+(∀y)(P(y) ∧(∃x)Q(x))∨((∀x)P(x) →Q(x))
+
+(∀y)(P(y) ∧(∃z)Q(z))∨((∀x)P(x) →Q(x))
+
+![](img/47b87ec6fe4fa238d13429358848c545_419_0.png)
+
+### 换名原则
+
+- 若要改名，则该变元在量词及该量词的辖域中的所有自由出现须**一起**更改。
+- 改名时所选用变元必须是**量词辖域内未出现**的，最好是公式中未出现的。
+
+### 例
+
+- (∀x)(P(x, y)→(∃y)R(x, y))
+- (∃x)P(x) ∧ Q(x)
+- (∀x)(A(x)∨B(x, y))∨C(x)∨D(w)
+  - (∀z)(A(z)∨B(z, y)) ∨ C(x) ∨ D(w)
+  - (∀y)(A(y)∨B(y, y)) ∨C(x) ∨ D(w)
+
+## 语义解释
+
+![](img/47b87ec6fe4fa238d13429358848c545_422_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_422_1.png)
+
+### 解释
+
+对合式公式 $G$ 的解释包括以下几点：
+
+- i) 指定一个非空集合 $D$，称为 $I$ 的论域，并称 $I$ 为 $D$ 上的解释；
+- ii) 对 $G$ 中出现的每个个体常元和自由变元，指定 $D$ 中的一个元素；
+- iii) 对 $G$ 中出现的每个 $n$ 元函词，指定一个 $D$ 上的 $n$ 元函数；
+- iv) 对 $G$ 中出现的每个命题词，指定一个真值 $T$ 或 $F$；
+- v) 对 $G$ 中出现的每个 $n$ 元谓词，指定一个从 $D^n$ 到 $\{T,F\}$ 的函数；
+
+$G_I$ 的真值为合式公式 $G$ 在 $I$ 下的真值。
+
+### 语法、语义对应关系
+
+| 语法 | 语义 |
+| --- | --- |
+| 个体常元 | D中的元素 |
+| 自由个体变元 | D中的元素 |
+| n元函词 | D上的n元函数 |
+| 命题词 | T 或 F |
+| n元谓词 | Dⁿ到{T, F}的函数 |
+
+- 逻辑联结词的对应关系未明确列出
+
+### 例
+
+对合式公式 P(h(a, x))，取解释 I 如下：
+
+- D = {1, 2}
+- 令 x=2，a=1：
+
+| x | a | h(1, 1) | h(1, 2) | h(2, 1) | h(2, 2) |
+|---|---|---|---|---|---|
+| 2 | 1 | 1 | 2 | 2 | 1 |
+
+- 定义 D 上的谓词 P 如下：
+
+| P(1) | P(2) |
+|---|---|
+| F | T |
+
+### 项的语义
+
+- 项：论域上的个体
+  - 个体常元 c： I(c) ∈ D
+  - 个体变元 x： I(x) ∈ D
+  - 项 f(t₁, ..., tₙ)： f_I(I(t₁),...,I(tₙ)) ∈ D
+
+### 原子的语义
+
+- **原子**：\(\{T, F\}\)
+  - **命题词** \(p\)：\(I(p) \in \{T, F\}\)
+  - **原子** \(P(t_1, \ldots, t_n)\)：\(P_I(I(t_1), \ldots, I(t_n)) \in \{T, F\}\)
+
+### G_I 的真值
+
+关于 G_I 的真值定义见 P101 定义5.2.5，其中
+
+((∀x)A)_I 的真值为 T iff 对每个 d∈D，A_d^x 的真值皆为 T；
+
+((∃x)A)_I 的真值为 T iff 有 d∈D，使 A_d^x 的真值为 T。
+
+（A_d^x 表示用 d 替换 A 中 x 的每个自由出现后所得之结果）
+
+### 要求
+
+- ① 计算一个合式公式的给定解释下的真值；
+- ② 给出使一个合式公式为真（假）的解释。
+
+### 计算合式公式在给定解释下的真值
+
+例：对合式公式 (∀x)(∃y)P(x, y)，取解释 I 如下：
+
+- D = {1, 2}
+- 定义 D 上的二元谓词 P 为
+
+| P(1, 1) | P(1, 2) | P(2, 1) | P(2, 2) |
+|---|---|---|---|
+| T | F | F | T |
+
+(∀x)(∃y)P(x, y)
+
+- P(1, 1)、P(2, 2) 的真值为 T
+- (∃y)P(1, y)、(∃y)P(2, y) 的真值为 T
+- (∀x)(∃y)P(x, y) 的真值为 T
+- (∀x)(∃y)P(x, y) 在解释 I 下的真值为 T
+
+![](img/47b87ec6fe4fa238d13429358848c545_431_0.png)
+
+
+
+## 例
+
+对合式分式(∀x)(P(x)→Q(f(x), a))，取解释I如下：
+
+- D= {1, 2}
+- 令 a f(1) f(2)
+  1 2 1
+- 定义D上的谓词P和Q如下：
+  P(1) P(2) Q(1, 1) Q(1, 2) Q(2, 1) Q(2, 2)
+  F T T T F F
+
+![](img/47b87ec6fe4fa238d13429358848c545_432_0.png)
+
+(∀x)(P(x)→Q(f(x), a))
+
+P(1)→Q(f(1),1)、 P(2)→Q(f(2),1)的真值为T
+
+↓
+
+(∀x)(P(x)→Q(f(x),1))的真值为T
+
+↓
+
+(∀x)(P(x)→Q(f(x), a))在解释I下的真值为T
+
+![](img/47b87ec6fe4fa238d13429358848c545_433_0.png)
+
+## 例
+
+确定(∀x)(∀y)(P(f(x, y), a) → P(x, y))在如下解释下的真值：
+
+解释如下：
+
++ 1、 D=I
++ 2、 a: 0
++ 3、 f(x, y): x-y的差
++ 4、 P(x, y): x<y
+
+## 给出使合式公式真值为真/假的解释
+
+给出使(∀x)(P(x) → P(f(x)))真值为假的解释
+
+D=I
+
+P(x): x>0
+
+f(x): -x
+
+## 作业
+
+## 习题 5.2
+
++ 1. b)
++ 2. a)　c)　e)
++ 3.
++ 4. b)
+
+## 语义证明方法
+
+![](img/47b87ec6fe4fa238d13429358848c545_437_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_437_1.png)
+
+谓词逻辑中，合式公式的永真、永假、可满足、等价和蕴含的定义，在形式上与命题逻辑的完全一样。
+
++ 1) 把命题逻辑中的一些永真式推广到谓词逻辑中来;
++ 2) 讨论另外一些带有量词的永真式。
+
+## 定理5.3.1（代入定理）
+
+设G是命题逻辑中的永真式，则用谓词逻辑中的合式公式代替G中的某些命题变元得到的代换实例也是永真式；如果G是永假式，则上述代换实例也是永假式。
+
+对于 § 4.3中列举的命题逻辑的等价式和蕴含式，用谓词逻辑中的合式公式代替其中的命题变元就得到谓词逻辑中的等价式和蕴含式。
+
+例如， P ∧ (P→Q) ⇒ Q 得到 (∃x)P(x) ∧ ((∃x)P(x)→(∀x)Q(x)) ⇒ (∀x)Q(x)
+
+真值表方法对于谓词逻辑中wff的永真式判定失效；但解释法仍适用。
+
+## 例
+
+证明蕴含式：
+(∃x)(A(x)∧B(x)) ⇒ (∃x)A(x)∧(∃x)B(x)
+
+分析： (∃x)(A(x)∧B(x)) ⇒ (∃x)A(x)∧(∃x)B(x)
+
+(∃x)(A(x)∧B(x)) → (∃x)A(x)∧(∃x)B(x)是永真式
+
+∀I，若((∃x)(A(x)∧B(x)))I的真值为T，则((∃x)A(x)∧(∃x)B(x))I的真值也为T
+
+## 例
+
+证明蕴含式：
+(∀x)A(x) ∨ (∀x)B(x) ⇒ (∀x)(A(x) ∨ B(x))
+
+分析： (∀x)A(x) ∨ (∀x)B(x) ⇒ (∀x)(A(x) ∨ B(x))
+
+(∀x)A(x) ∨ (∀x)B(x) → (∀x)(A(x) ∨ B(x))是永真式
+
+∀I，若((∀x)A(x) ∨ (∀x)B(x))I的真值为T，则((∀x)(A(x) ∨ B(x)))I的真值也为T
+
+∀I，若((∀x)(A(x) ∨ B(x)))I的真值为F，则((∀x)A(x) ∨ (∀x)B(x))I的真值也为F
+
+## 例
+
+判定 (∃x)P(x) ∧ (∃x)Q(x) → (∃x)(P(x) ∧ Q(x)) 是否为永真式
+
+分析： (∃x)P(x) ∧ (∃x)Q(x) → (∃x)(P(x) ∧ Q(x)) 为假
+
+(∃x)P(x) ∧ (∃x)Q(x) (∃x)(P(x) ∧ Q(x))
+---------------------------
+T F
+
+(∃x)P(x) (∃x)Q(x) (∃x)(P(x) ∧ Q(x))
+-------- -------- -------------------
+T T F
+
+证明：构造解释如下：
+
++ i) D = {1, 2}
++ ii) P(1) P(2) Q(1) Q(2)
+ ----- ----
+ T F F T
+
+则(∃x)P(x)，(∃x)Q(x)在I下均为真，而(∃x)(P(x) ∧ Q(x))在I下为假。故非永真式。
+
+## 例
+
+判定(∀x)P(x)→(∃x)P(x)是否为永真式？
+
+# 分析：假设存在使上式为假的解释I（论域为D），
+
+(∀x)P(x)→(∃x)P(x) 在I下为假
+
+(∀x)P(x)在I下为真 且 (∃x)P(x)在I下为假
+
+对于任何d∈D
+P(d)在I均为真
+
+对于任何c∈D
+均有P(c)在I为假
+
+矛盾
+
+所以假设不成立，即(∀x)P(x)→(∃x)P(x)为永真式。
+
+## 定理5.3.2（置换定理）
+
+设A为合式公式G的分子公式，B为与A等价的合式公式，R为用B取代G中A之若干出现后所得之合式公式，则G⇔R。
+
+## 例
+
+试证明等价式：
+
++ 1). ¬(∀x)P(x) ⇔ (∃x)(¬P(x))
++ 2). ¬(∃x)P(x) ⇔ (∀x)(¬P(x))
+
+证明：1). ¬(∀x)P(x) ⇔ (∃x)(¬P(x))
+
+¬(∀x)P(x) ↔ (∃x)(¬P(x))是永真式
+
+¬(∀x)P(x)→(∃x)(¬P(x))是永真式 且 (∃x)(¬P(x))→¬(∀x)P(x)是永真式
+
+对于¬(∀x)P(x)→(∃x)(¬P(x))在任意论域D上的任意解释I，若¬(∀x)P(x)在I下为真，则(∀x)P(x)在I下为假，即有a∈D使P(a)为假，所以¬P(a)为真，故(∃x)(¬P(x))在I下为真。
+
+对于(∃x)(¬P(x))→¬(∀x)P(x)在任意论域D上的任意解释I，若(∃x)(¬P(x))在I下为真，则有a∈D使¬P(a)为真，即P(a)为假，所以(∀x)P(x)为假，故¬(∀x)P(x)在I下为真。
+
+## 例
+
+试证明等价式：
+
++ 1). $(\exists x)(A(x)\lor B(x))\Leftrightarrow (\exists x)A(x)\lor(\exists x)B(x)$
++ 
++ 2). $(\forall x)(A(x)\land B(x))\Leftrightarrow (\forall x)A(x)\land(\forall x)B(x)$
+
+**证明：** 1). 对于任意论域D上的任意解释，
+
+$(\exists x)(A(x)\lor B(x))$在I下为真　　iff
+
+有$a\in D$使$A(a)\lor B(a)$为真　　iff
+
+有$a\in D$使$A(a)$为真或$B(a)$为真　　iff
+
+$(\exists x)A(x)$为真或$(\exists x)B(x)$为真　　iff
+
+$(\exists x)A(x)\lor(\exists x)B(x)$在I下为真
+
+## 一些重要的等价式和蕴含式
+
+E25 (∃x)(A(x) ∨ B(x)) ⇔ (∃x)A(x) ∨ (∃x)B(x)
+
+E26 (∀x)(A(x) ∧ B(x)) ⇔ (∀x)A(x) ∧ (∀x)B(x)
+
+E27 ¬(∃x)A(x) ⇔ (∀x)(¬A(x))
+
+E28 ¬(∀x)A(x) ⇔ (∃x)(¬A(x))
+
+E29 (∀x)(A(x) ∨ P) ⇔ (∀x)A(x) ∨ P
+
+E30 (∀x)(A(x) ∧ P) ⇔ (∀x)A(x) ∧ P
+
+E31 (∃x)(A(x) ∨ P) ⇔ (∃x)A(x) ∨ P
+
+E32 (∃x)(A(x) ∧ P) ⇔ (∃x)A(x) ∧ P
+
+## 一些重要的等价式和蕴含式
+
+E33 (∃x)(A(x)→P) ⇔ (∀x)A(x)→P
+
+E34 (∀x)(A(x)→P) ⇔ (∃x)A(x)→P
+
+E35 (∀x)(P→B(x)) ⇔ P→(∀x)B(x)
+
+E36 (∃x)(P→B(x)) ⇔ P→(∃x)B(x)
+
+E37 (∃x)(A(x)→B(x)) ⇔ (∀x)A(x)→(∃x)B(x)
+
+I15 (∀x)A(x) ∨ (∀x)B(x) ⇒ (∀x)(A(x) ∨ B(x))
+
+I16 (∃x)(A(x) ∧ B(x)) ⇒ (∃x)A(x) ∧ (∃x)B(x)
+
+I17 (∃x)A(x)→(∀x)B(x) ⇒ (∀x)(A(x)→B(x))
+
+I18 (∀x)A(x) ⇒ (∃x)A(x)
+
+
+
+## 等价式
+
+- 1. 命题演算的永真公式也是谓词演算的永真公式
+- 2. 含有量词的谓词演算的永真公式
+- 3. 量词的否定
+- 4. 量词辖域的扩展和收缩
+- 5. 量词的分配公式
+- 6. 量词对→及↔的处理
+- 7. 关于多个量词的永真式
+
+## 命题演算的永真公式也是谓词演算的永真公式
+
+例： (∀x)P(X)→(∃x)R(X)
+↔ ¬(∀x)P(x) ∨ (∃x)R(x)
+
+例： ¬Q(x) ∨ ¬(∀x)P(x)
+↔ ¬(Q(x) ∧ (∀x)P(x))
+
+## 含有量词的谓词演算的永真公式
+
+(∀x)A ⇔ A
+
+(∃x)A ⇔ A
+
+这里A不含自由变元x
+
+证：因A的真值与x无关
+
+例 (∀x)P(y, z) ⇔ P(y, z)
+
+但是：(∀y)P(y, z) ⇔ P(y, z) 不成立
+
+## 含有量词的谓词演算的永真公式
+
+- A). (∀x)P(x) ⇒ P(y) 或 (∀x)P(x) ⇒ P(x)
+- B). P(y) ⇒ (∃x) P(x) 或 P(x) ⇒ (∃x) P(x)
+- C). (∀x)P(x) ⇒ (∃x)P(x)
+
+证：
+
+- A). 对(∀x)P(x)为真，则对某一具体y，P(y)为真
+- B). 对某一确定的y，P(y)为真，即则存在x使P(x)为真
+- C). (∀x)P(x) ⇒ P(x) ⇒ (∃x) P(x)
+
+## 证明2：
+
+对有穷论域D={a₁, a₂, ............., aₙ}得：
+
+¬((∀x)P(x))
+
+⇔ ¬(P(a₁)∧P(a₂)∧...............∧P(aₙ))
+
+⇔ ¬P(a₁)∨¬P(a₂)∨...............∨¬P(aₙ)
+
+⇔ (∃x)¬P(x)
+
+## 量词辖域的扩展和收缩
+
+(∀x)A(x)∨P ⇔ (∀x)(A(x)∨P)
+(∀x)A(x)∧P ⇔ (∀x)(A(x)∧P)
+(∃x)A(x)∨P ⇔ (∃x)(A(x)∨P)
+(∃x)A(x)∧P ⇔ (∃x)(A(x)∧P)
+(∀x)A(x,y)∧P(y) ⇔ (∀x)(A(x,y)∧P(y))
+(∃x)P(x,y)∧(∀x)P(x,z) ⇔ (∃x)(P(x,y)∧(∀x)P(x,z))
+
+P是不含自由变元x的谓词公式。
+
+证明：
+a). 因P的值与x无关。若P为真，等价式两边都真。
+若P为假，两边也都为∀xA(x)。
+
+## 量词辖域的扩展和收缩
+
+例： (∀x)(∀y)(P(x)→Q(y)) ⇔ ((∃x)P(x)→(∀y)Q(y))
+
+## 量词的分配公式
+
+- a). (∀x)(A(x)∧B(x)) ⇔ (∀x)A(x) ∧ (∀x)B(x)
+
+- b). (∃x)(A(x)∨B(x)) ⇔ (∃x)A(x) ∨ (∃x)B(x)
+
+a). 因为对一切x，A(x)∧B(x)为真,所以对一切x, A(x)为真且对一切x, B(x)为真。
+
+## 证明：
+
+- b) \(\neg(\exists x)\,(A(x) \lor B(x))\)
+- 
+- \(\Leftrightarrow\quad (\forall x)\,(\neg(A(x) \lor B(x)))\)
+- 
+- \(\Leftrightarrow\quad (\forall x)\,(\neg A(x) \land \neg B(x))\)
+- 
+- \(\Leftrightarrow\quad (\forall x)\,(\neg A(x)) \land (\forall x)\,\neg B(x)\)
+- 
+- \(\Leftrightarrow\quad \neg(\exists x)\,(A(x)) \land \neg(\exists x)\,(B(x))\)
+
+## 两边取非：
+
+- \(\neg\neg(\exists x)\,(A(x) \lor B(x))\)
+- 
+- \(\Leftrightarrow\ \neg(\neg(\exists x)\,(A(x)) \land \neg(\exists x)\,(B(x)))\)
+
+## 得到：
+
+- \((\exists x)\,(A(x) \lor B(x))\)
+- 
+- \(\Leftrightarrow\ (\exists x)A(x) \lor (\exists x)B(x)\)
+
+## 量词的分配公式
+
+c). (∃x)(A(x)∧B(x))⇒(∃x)A(x)∧(∃x)B(x)
+
+d). (∀x)A(x)∨(∀x)B(x) ⇒ (∀x)(A(x)∨B(x))
+
+## 证明：
+
+c). 因存在x使A(x)∧B(x)为真，故该x使A(x)为真，该x使B(x)为真,即∃xA(x)∧∃xB(x)为真。
+
+注意逆方向不成立
+
+举反例：设论述域是整数。
+
+A(x): “x为奇数”， B(x): “x为偶数”
+
+## 量词对→及↔的处理
+
+只须应用量词对∨，∧，¬的恒等式即可推出
+
+例：证明(∃x)A(x)→(∀x)B(x)⇔(∀x)(A(x)→B(x))
+
+## 一些两个量词的等价式和蕴含式
+
+B1    (∀x)(∀y)P(x,y) ⇔ (∀y)(∀x)P(x,y)
+
+B2    (∀x)(∀y)P(x,y) ⇒ (∃y)(∀x)P(x,y)
+
+B3    (∀y)(∀x)P(x,y) ⇒ (∃x)(∀y)P(x,y)
+
+B4    (∃y)(∀x)P(x,y) ⇒ (∀x)(∃y)P(x,y)
+
+B5    (∃x)(∀y)P(x,y) ⇒ (∀y)(∃x)P(x,y)
+
+B6    (∀x)(∃y)P(x,y) ⇒ (∃y)(∃x)P(x,y)
+
+B7    (∀y)(∃x)P(x,y) ⇒ (∃x)(∃y)P(x,y)
+
+B8    (∃x)(∃y)P(x,y) ⇔ (∃y)(∃x)P(x,y)
+
+## 作业
+
+习题5.3
+
+- 1. d)
+- 2. d)
+- 3.
+
+![](img/47b87ec6fe4fa238d13429358848c545_465_0.png)
+
+## 永真式的判定
+
+![](img/47b87ec6fe4fa238d13429358848c545_466_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_466_1.png)
+
+## 判定思路
+
+谓词逻辑，其wff的永真性是半可判定的。
+本节讨论构造其半可判定程序（算法）的基础问题。
+
+- 给定A → 全称闭包∀A
+- → 否定¬∀A
+- → 前束化
+- → Skolem化
+- → 范式化
+
+## 第一步、第二步
+
+1° 若公式A（x₁，…，xₙ）中仅含自由变元x₁，…，xₙ，
+则A（x₁，…，xₙ）是永真式
+
+iff
+
+(∀x₁)…(∀xₙ)A（x₁，…，xₙ）是永真式。
+
+仅讨论不含自由变元的公式，简称公式（句子）。
+
+2° 公式A是永真式　iff　¬A是永假式。
+
+由1°和2°，有：**判A永真 → 判∀A永真 → 判¬∀A永假**
+
+## 前束范式
+
+设A为公式，若
+
+A ⇔ (Q₁ x₁)(Q₂ x₂) ... (Qₙ xₙ)B，
+
+则称(Q₁ x₁)(Q₂ x₂) ... (Qₙ xₙ)B 为 A 的前束范式，并且称(Q₁ x₁)(Q₂ x₂) ... (Qₙ xₙ) 为前束词， B 为母式。
+
+其中： n≥0，
+
+- Q₁, Q₂, …, Qₙ 是 ∀ 或 ∃，
+- x₁, x₂, …, xₙ 是不同的变元，
+- B 是不含量词的公式。
+
+- 例1：∀x∀y∃z(Q(x, y) → R(z))
+- 例2：∀x∀y(¬P(x, y) → Q(y))
+
+任意公式都可以化为它的前束范式。
+
+## 第三步
+
+3° 公式前束化：
+
+- ① 化掉 → 和 ↔ ；
+- ② 将 ¬ 内移至原子的紧前面；
+- ③ 利用等价式将 ∧、∃ 前（外）移
+
+操作过程中可能要对约束变元进行换名
+
+## 公式前束化
+
+(1)把否定词深入到命题变元和谓词前面
+
+(2)利用
+A∨∀xB(x) ⇔ ∀x(A∨B(x))
+A∧∃xB(x) ⇔ ∃x(A∧B(x))
+把量词推到前面
+
+(3)利用改名规则：
+∀x A(x)∨∀xB(x)
+⇔ ∀uA(u) ∨∀xB(x))
+⇔ ∀u∀x (A(u)∨B(x))
+把量词推到前面
+
+## 例
+
+求下列公式的前束范式
+
+- 1、 ¬((∀x)(∃y)F(a, x, y) → (∃x)(¬(∀y)G(y, b)→H(x)))
+- 2、 (∀x)(∀y)(¬((∃z)(P(x,y,z) ∧R(y,z)))→(∃u)Q(x,y,u))
+- 3、 (∀x)P(x, y) ∨ (∀x)Q(x, z)
+
+## 第四步
+
+4° Skolem化：（消去前束范式中存在量词的方法）
+
+在含有存在量词的前束范式A中，
+
+- 1、划去最左方的存在量词∃y；
+- 2、并且当∃y的左方没有全称量词时，任取一个不在A中出现也没有在这个过程中出现过的个体常量a，并在A的母式中以a代入y的所有自由出现；
+- 3、当∃y的左方依次有全称量词∀x₁，∀x₂，…，∀xₙ出现时，任取一个不在A中出现并且在这个过程中没有出现过的n元函数f，并在A的母式中以f(x₁，x₂，…，xₙ)代入y的所有自由出现。
+
+
+
+## 例
+
+上例中，公式前束化后得：
+
+(∀x)(∃y)(∃z)(F(a, x, y) ∧ ¬G(z, b) ∧ ¬H(x))。
+
+⇓（消去∃y）
+
+(∀x)(∃z)(F(a, x, f(x)) ∧ ¬G(z, b) ∧ ¬H(x))
+
+⇓（消去∃z）
+
+(∀x)(F(a, x, f(x)) ∧ ¬G(g(x), b) ∧ ¬H(x))
+
+## 例
+
+求(∃x)(∀y)(∀z)(∃u)(∀v)(∃w)(A(a, x, f(y), v) ∧ ¬B(u, b, w) ∧ ¬H(z)) 的无∃前束范式。
+
+解：(∃x)(∀y)(∀z)(∃u)(∀v)(∃w)(A(a, x, f(y), v) ∧ ¬B(u, b, w) ∧ ¬H(z))
+
+↓（消去∃x）
+
+(∀y)(∀z)(∃u)(∀v)(∃w)(A(a, c, f(y), v) ∧ ¬B(u, b, w) ∧ ¬H(z))
+
+↓（消去∃u）
+
+(∀y)(∀z)(∀v)(∃w)(A(a, c, f(y), v) ∧ ¬B(g(y, z), b, w) ∧ ¬H(z))
+
+↓（消去∃w）
+
+(∀y)(∀z)(∀v)(A(a, c, f(y), v) ∧ ¬B(g(y, z), b, h(y, z, v)) ∧ ¬H(z))
+
+## 定理5.4.1
+
+公式A是永假式 iff A的无∃前束范式是永假式。
+
+## 思考：
+
+- 1. 上述命题的逆否命题？
+- 2. 公式A是永真式 iff A的无∃前束范式是永真式？
+
+如何判定A的无∃前束范式是否永假？
+
+需考虑A的所有论域上的所有解释？
+
+Herbrand域  Herbrand解释
+
+## Herbrand域
+
+给定无∃前束范式A，称由A中个体常元(如果A中没有个体常元，就任意取一个个体常元)和函词生成的项的集合为A的Herbrand域，记作H。
+
+- * H由A的语法材料构成（抽象）
+
+## Herbrand域分解
+
+H分层： H₀， H₁， H₂， ...
+
+H₀ = { a | a∈H且a是个体常元 }
+
+Hᵢ₊₁ = Hᵢ ∪ { f(t₁, t₂, ..., tₙ) | f是A中的n元函词， t₁, t₂, ..., tₙ ∈ Hᵢ }
+
+因此， H = ⋃ᵢ₌₀^∞ Hᵢ = H_∞ 。
+
+## 例（续）
+
+例：前面例子中，无∃前缀范式为
+
+(∀y)(∀z)(∀v)(A(a, c, f(y), v) ∧ ¬B(g(y, z), b, h(y, z, v)) ∧ ¬H(z))
+
+H₀ = {a, b, c}
+
+H₁ = H₀ ∪ {f(a), f(b), f(c), g(a, a), g(a, b), g(b, a), g(b, b), g(c, a), g(c, b), g(a, c), g(b, c), g(c, c), h(a, a, a), h(a, a, b), h(a, a, c), h(a, b, a), h(a, b, b), h(a, b, c), h(a, c, a), h(a, c, b), h(a, c, c), h(b, a, a), h(b, a, b), h(b, a, c), h(b, b, a), h(b, b, b), h(b, b, c), h(b, c, a), h(b, c, b), h(b, c, c), h(c, a, a), h(c, a, b), h(c, a, c), h(c, b, a), h(c, b, b), h(c, b, c), h(c, c, a), h(c, c, b), h(c, c, c)}
+
+H₂ = H₁ ∪ {f(x)|x∈ H₁} ∪ {g(x, y)|x, y∈ H₁} ∪ {h(x, y, z)|x, y,z ∈ H₁}
+
+……
+
+## 例
+
+求无∃前束范式A=(∀x)(F(a)∧F(b)∧F(f(x)))的Herbrand域。
+
+解：
+
+- H₀ = {a, b}
+- H₁ = {a, b, f(a), f(b)}
+- H₂ = {a, b, f(a), f(b), f(f(a)), f(f(b))} 等等。
+
+## Herbrand解释
+
+任给无∃前束范式A，若A的解释I满足以下条件：
+
+- i) I的论域是A的Herbrand域H；
+- ii) 对于A中的每个个体常元a，指定H中的元素a；
+- iii) 对于A中的每个n元函词f，指定H上的n元函数f_I，使得对于任意t₁, t₂, …, tₙ ∈ H皆有
+
+f_I(t₁, t₂, …, tₙ) = f(t₁, t₂, …, tₙ);
+
+则称I为A的Herbrand解释。
+
+- * 对于谓词Herbrand解释不作限制；因此，一般说来，无∃前束范式A的Herbrand解释不唯一。
+
+## 定理5.4.2
+
+无∃前束范式A是永假式
+
+当且仅当
+
+A在任何Herbrand解释下均为假
+
+## Herbrand定理
+
+无前缀范式(∀x₁)(∀x₂)...(∀xₙ)B(x₁, x₂, ..., xₙ)是永假式，
+
+当且仅当
+
+存在它的Herbrand域中的元素
+
+t₁₁, t₁₂, ..., t₁ₙ, t₂₁, t₂₂, ..., t₂ₙ, ..., tₘ₁, tₘ₂, ..., tₘₙ 使
+
+B(t₁₁, t₁₂, ..., t₁ₙ)∧B(t₂₁, t₂₂, ..., t₂ₙ)∧...∧B(tₘ₁, tₘ₂, ..., tₘₙ)
+
+为永假式。
+
+* B(t₁₁, t₁₂, ..., t₁ₙ) 称为 B(x₁, x₂, ..., xₙ) 的例式。
+
+## 判定问题
+
+设A = (∀x₁)(∀x₂)...(∀xₙ)B(x₁, x₂, ..., xₙ)
+
+A是永假式当且仅当存在B(x₁, x₂, ..., xₙ)的有限个例式B₁, ..., Bₘ使得B₁ ∧ ... ∧ Bₘ为永假式。
+
+半可判定：
+
+若A是永假式，则从H₀开始总能找到Hᵢ使得Hᵢ中元素生成的B(x₁, x₂, ..., xₙ)的例式的合取是永假式；
+
+若A不是永假式，这个过程永远不会终止。
+
+## 例
+
+证明：
+(∀ x)(∀ y)(P(x, y) → P(y, x)) ∧
+(∀ x)(∀ y)(∀ z)(P(x, y) ∧ P(y, z) → P(x, z)) ∧
+(∀ x)(∃ y)P(x, y)
+→
+(∀ x)P(x, x)
+是永真式
+
+¬
+(∀ x)(∀ y)(¬ P(x, y) ∨ P(y, x)) ∧
+(∀ x)(∀ y)(∀ z)(¬ P(x, y) ∨ ¬ P(y, z) ∨ P(x, z)) ∧
+(∀ x)(∃ y) P(x, y) ∧
+(∃ x)(¬ P(x, x))
+
+（¬内移）
+
+(∀ x)(∀ y)(∀ z)((¬ P(x, y) ∨ P(y, x)) ∧
+(¬ P(x, y) ∨ ¬ P(y, z) ∨ P(x, z))) ∧
+(∀ x)(∃ y) P(x, y) ∧ (∃ x)(¬ P(x, x))
+
+（∀前移）
+
+(∀ x)(∀ y)(∀ z)((¬ P(x, y) ∨ P(y, x)) ∧
+(¬ P(x, y) ∨ ¬ P(y, z) ∨ P(x, z))) ∧
+(∀ x)(∃ u) P(x, u) ∧ (∃ v)(¬ P(v, v))
+
+（换名）
+
+(∃ v)((∀ x)(∀ y)(∀ z)((¬ P(x, y) ∨ P(y, x)) ∧
+(¬ P(x, y) ∨ ¬ P(y, z) ∨ P(x, z)))
+∧
+(∀ x)(∃ u) P(x, u) ∧ ¬ P(v, v))
+
+（∃前移）
+
+(∃ v)(∀ x)((∀ y)(∀ z)((¬ P(x, y) ∨ P(y, x)) ∧ (¬ P(x, y) ∨ ¬ P(y, z) ∨ P(x, z))) ∧ (∃ u) P(x, u) ∧ ¬ P(v, v))
+
+(∀前移)
+(∃ v)(∀ x)(∃ u)((∀ y)(∀ z)((¬ P(x, y) ∨ P(y, x)) ∧ (¬ P(x, y) ∨ ¬ P(y, z) ∨ P(x, z))) ∧ P(x, u) ∧ ¬ P(v, v))
+
+(∃前移)
+(∃ v)(∀ x)(∃ u)(∀ y)(∀ z)
+((¬ P(x, y) ∨ P(y, x)) ∧ (¬ P(x, y) ∨ ¬ P(y, z) ∨ P(x, z)) ∧ P(x, u) ∧ ¬ P(v, v))
+
+(∀前移)
+
+令f为一元函数，则原公式的无∃前束范式为：
+(∀ x)(∀ y)(∀ z)((¬ P(x, y) ∨ P(y, x)) ∧
+(¬ P(x, y) ∨ ¬ P(y, z) ∨ P(x, z))
+P(x, f(x)) ∧
+¬ P(a, a)
+)
+
+所以，H = {a, f(a), f(f(a)), ...}
+若将¬ X的无∃前束范式看成(∀ x)(∀ y)(∀ z) B(x, y, z)，
+B(a, f(a), a) 为
+(¬ P(a, f(a)) ∨ P(f(a), a)) ∧
+(¬ P(a, f(a)) ∨ ¬ P(f(a), a) ∨ P(a, a)) ∧
+P(a, f(a)) ∧ ¬ P(a, a)
+
+F
+
+则B(a, f(a), a)为永假式。
+根据Herbrand定理可知上述原公式的无∃前束范式为永假式，
+即¬ X为永假式。所以，X为永真式。
+
+
+
+# 作业
+
+习题5.4
+
++   1.
+
+![](img/47b87ec6fe4fa238d13429358848c545_493_0.png)
+
+# 自然推理系统
+
+![](img/47b87ec6fe4fa238d13429358848c545_494_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_494_1.png)
+
+# 主要内容
+
++   1. 自然推理系统
++   2. 形式证明方法
+
+# 语法和语义证明方法
+
+第四、五章关于命题逻辑、谓词逻辑中永真式、等价和蕴含，都是利用合式公式的解释进行分析，即采用语义的方法。
+
+本章介绍另一种方法，即形式推理的方法，来证明从某些前提可以推出某结论。这种方法更接近于数学中的证明。它是纯语法的方法。
+
+程序验证、定理的机械证明、人工智能
+
+# 形式推理、形式推理关系
+
+形式推理：不考虑公式的解释，依推理规则办事，如果由A₁，A₂，…，Aₙ能够形式地推出A，则A必是A₁，A₂，…，Aₙ的逻辑结果。
+
+形式推理关系：合式公式的有限序列与合式公式之间的一种关系。如果合式公式的有限序列A₁，A₂，…，Aₙ与合式公式A之间存在形式推理关系，则记为
+
+A₁，A₂，…，Aₙ ⊢ A
+
+* 前提中各公式的排列次序无关紧要
+
+合式公式的有限集
+
+n=0      ⊢ A      无需前提      A永真式
+
+![](img/47b87ec6fe4fa238d13429358848c545_497_0.png)
+
+Γ：合式公式的有限序列(可以是空序列);
+
+Γ ⊢ A₁, Γ ⊢ A₂, ..., Γ ⊢ Aₙ,
+
+简记为：Γ ⊢ A₁, A₂, ..., Aₙ
+
+# 自然推理系统的规则
+
++   1. 肯定前提规则(∈)
++      Γ, A ⊢ A
++   2. 前提引入规则(∈₊)
++      若Γ ⊢ B, 则Γ, A ⊢ B
++   3. 前提消去规则(∈₋)
++      若Γ, A ⊢ B且Γ, ¬A ⊢ B, 则Γ ⊢ B
++   4. T规则
++      Γ ⊢ T
++   5. F规则
++      Γ ⊢ ¬F
++   6. ∨引入规则(∨₊)
++      若Γ ⊢ A, 则Γ ⊢ A∨B, B∨A
++   7. ∨消去规则(∨₋)
++      若Γ, A ⊢ C且Γ, B ⊢ C, 则Γ, A∨B ⊢ C
++   8. ∧引入规则(∧₊)
++      若Γ ⊢ A, B, 则Γ ⊢ A∧B
++   9. ∧消去规则(∧₋)
++      若Γ ⊢ A∧B, 则Γ ⊢ A, B
+
+# 自然推理系统的规则
+
+10. →引入规则(→₊)
+若Γ, A ⊢ B, 则Γ ⊢ A→B
+
+11. →消除规则(→₋)
+若Γ ⊢ A, A→B, 则Γ ⊢ B
+
+12. ¬引入规则(¬₊)
+若Γ, A ⊢ B, ¬B, 则Γ ⊢ ¬A
+
+13. ¬消除规则(¬₋)
+若Γ ⊢ A, ¬A, 则Γ ⊢ B
+
+14. ¬¬引入规则(¬¬₊)
+若Γ ⊢ A, 则Γ ⊢ ¬¬A
+
+15. ¬¬消除规则(¬¬₋)
+若Γ ⊢ ¬¬A, 则Γ ⊢ A
+
+16. 引入规则(⇔₊)
+若Γ, A ⊢ B且Γ, B ⊢ A, 则Γ ⊢ A ⇔ B
+
+17. 消除规则(⇔₋)
+若Γ ⊢ A ⇔ B, 则Γ ⊢ A→B, B→A
+
+# 自然推理系统的规则
+
+18. ∀引入规则(∀₊)
+若Γ ⊢ A(x)，则Γ ⊢ (∀x)A(x)，
+其中x不是Γ中任何公式的自由变元。
+
+19. ∀消去规则(∀₋)
+若Γ ⊢ (∀x)A(x)，则Γ ⊢ A(t)，
+其中项t对于A(x)中的x是可代入的。
+
+20. ∃引入规则(∃₊)
+若Γ ⊢ A(t)，则Γ ⊢ (∃x)A(x)，
+其中项t对于A(x)中的x是可代入的。
+
+21. ∃消去规则(∃₋)
+若Γ ⊢ (∃x)A(x)且Γ，A(b) ⊢ C，则Γ ⊢ C，
+其中b是在(∃x)A(x)，C和Γ的每个公式中都不出现的个体常元。
+
+# 证明、定理
+
+设 Γ₁ ⊢ A₁，Γ₂ ⊢ A₂，…，Γₙ ⊢ Aₙ 是形式推理关系的有限非空序列。如果其中每个 Γₖ ⊢ Aₖ（1≤k≤n），或者它本身是一条规则，或者可由 Γᵢ₁ ⊢ Aᵢ₁，Γᵢ₂ ⊢ Aᵢ₂，…，Γᵢₘ ⊢ Aᵢₘ（1≤i₁，i₂，…，iₘ<k）按照某规则推出，则称 Γ₁ ⊢ A₁，Γ₂ ⊢ A₂，…，Γₙ ⊢ Aₙ 为 Γₙ ⊢ Aₙ 的一个证明。有证明的形式推理关系称为自然推理系统的定理。
+
+约定：要求证明 Γ ⊢ A，就是要给出它的一个证明。
+
+# 逻辑结果
+
+设A₁，A₂，…，Aₙ是合式公式的有限非空序列，A是合式公式。若A₁∧A₂∧…∧Aₙ⇒A，则称A为A₁，A₂，…，Aₙ的逻辑结果或有效结论。
+
+称空公式序列的逻辑结果为永真式。
+
+若A为永真式，则记为⇒A。
+
+# 定理6.1.1（有效性定理）
+
+设A是合式公式，Γ是合式公式的有限序列。如果Γ ⊢ A是自然推理系统的定理，则A是Γ的逻辑结果。
+
+其中，设Γ = { A₁, A₂, …, Aₙ }，若A₁ ∧ A₂ ∧ … ∧ Aₙ ⇒ A，则称A为Γ的逻辑结果或有效结论。空公式序列的逻辑结果为永真式，记为⇒ A。
+
+（第二归纳法证明，参见P115证明）
+
+*语法可推导的都是语义正确的
+
+![](img/47b87ec6fe4fa238d13429358848c545_504_0.png)
+
+# 定理6.1.2（完全性定理）
+
+设A是合式公式，Γ是合式公式的有限序列。如果A是Γ的逻辑结果，则Γ ⊢ A是自然推理系统的定理。
+
+* 语义正确的都是语法可推导的
+
+# 自然推理系统的规则
+
++   1. 肯定前提规则(∈)
++      Γ, A ⊢ A
++   2. 前提引入规则(∈₊)
++      若Γ ⊢ B, 则Γ, A ⊢ B
++   3. 前提消去规则(∈₋)
++      若Γ, A ⊢ B且Γ, ¬A ⊢ B, 则Γ ⊢ B
++   4. T规则
++      Γ ⊢ T
++   5. F规则
++      Γ ⊢ ¬F
++   6. ∨引入规则(∨₊)
++      若Γ ⊢ A, 则Γ ⊢ A∨B, B∨A
++   7. ∨消去规则(∨₋)
++      若Γ, A ⊢ C且Γ, B ⊢ C, 则Γ, A∨B ⊢ C
++   8. ∧引入规则(∧₊)
++      若Γ ⊢ A, B, 则Γ ⊢ A∧B
++   9. ∧消去规则(∧₋)
++      若Γ ⊢ A∧B, 则Γ ⊢ A, B
+
+# 自然推理系统的规则
+
++   10. →引入规则(→₊)
++       若Γ, A ⊢ B, 则Γ ⊢ A→B
++   11. →消除规则(→₋)
++       若Γ ⊢ A, A→B, 则Γ ⊢ B
++   12. ¬引入规则(¬₊)
++       若Γ, A ⊢ B, ¬B, 则Γ ⊢ ¬A
++   13. ¬消除规则(¬₋)
++       若Γ ⊢ A, ¬A, 则Γ ⊢ ⊥
++   14. ¬¬引入规则(¬¬₊)
++       若Γ ⊢ A, 则Γ ⊢ ¬¬A
++   15. ¬¬消除规则(¬¬₋)
++       若Γ ⊢ ¬¬A, 则Γ ⊢ A
++   16. 引入规则(⇔₊)
++       若Γ, A ⊢ B且Γ, B ⊢ A, 则Γ ⊢ A ⇔ B
++   17. 消除规则(⇔₋)
++       若Γ ⊢ A ⇔ B, 则Γ ⊢ A→B, B→A
+
+# 导出规则
+
+A ⊢ B 表示 A ⊢ B 且 B ⊢ A
+
++   1) 结合律    (A∨B)∨C ⊢ A∨(B∨C)
+
++   3) 分配律    A∨(B∧C) ⊢ (A∨B)∧(A∨C)
+
++   5) 析取三段论    ¬A, A∨B ⊢ B
+
++   6) 拒取式    ¬B, A→B ⊢ ¬A
+
++   7) 假言三段论    A→B, B→C ⊢ A→C
+
++   8) 二难推理    A∨B, A→C, B→C ⊢ C
+
+# 作业
+
+习题6.1
+
++   1. b) c)
+
++   2. a) c) e) h)
+
++   3.
+
+# 形式证明方法
+
++   1. 常用证明策略
++   2. 逆向分析方法
+
+# 证明思路：策略指导 + 语义引路
+
+# 常用证明策略（无量词部分）
+
++   1. （右→策略）若要证Γ ⊢ A→B，一般可把A作为附加前提引入，以推出B（再用→₊可得A→B）。如果仍达不到目的，可再把¬B作为附加前提引入，以推出矛盾结果（再利用¬₊等规则即可得B）。
++   2. （右∧策略）若要证Γ ⊢ A∧B，一般可先证结论相对简单的Γ ⊢ A和Γ ⊢ B，然后再由∧₊规则得到Γ ⊢ A∧B。
++   3. （右∨策略）若要证Γ ⊢ A∨B，一般可先证Γ，¬A ⊢ B（或Γ，¬B ⊢ A）得到Γ，¬A ⊢ A∨B（或Γ，¬B ⊢ A∨B），然后利用Γ，A ⊢ A∨B（或Γ，B ⊢ A∨B）和∨₋规则即可得到Γ ⊢ A∨B。
+
+
+
+## 常用证明策略（无量词部分）
+
+- 4. （右A策略）若要证 Γ ⊢ A，可把 ¬A 作为附加前提引入，以推出矛盾（再利用 ¬- 规则得到 A）。如果把 ¬A 作为附加前提引入之后，仍没有明确的证明思路，此时可以观察前提，考虑一下选什么作为 C，才能既得到 Γ, ¬A ⊢ C，又能得到 Γ, ¬A ⊢ ¬C，从而产生矛盾（再利用 ¬- 规则得到 A）。例如：¬(A→B) ⊢ A（可选取 A→B 作为 C）。
+
+- 5. （右¬策略）若要证 Γ ⊢ ¬A，可把 A 作为附加前提引入，以推出矛盾（再利用 ¬+ 规则得到 ¬A）。如果把 A 作为附加前提引入之后，仍没有明确的证明思路，此时可以观察前提，考虑一下选什么作为 C，才能既得到 Γ, A ⊢ C，又能得到 Γ, A ⊢ ¬C，从而产生矛盾（再利用 ¬+ 规则得到 ¬A）。
+
+- 6. （右↔策略）若要证 Γ ⊢ A↔B，一般可先证 Γ, A ⊢ B 和 Γ, B ⊢ A，然后利用 ↔+ 规则即可得到 Γ ⊢ A↔B。
+
+- 7. （左¬策略）若要证 Γ, ¬A ⊢ C，如果直接使用 ¬A 进行证明有困难，可以先证 Γ, ¬A, ¬C ⊢ C，然后利用 ¬+ 和 ¬- 规则得到 Γ, ¬A ⊢ C。
+
+- 8. （左→策略）若要证 Γ, A→B ⊢ ?，可先证 Γ ⊢ A，然后利用 →- 规则得到 Γ, A→B ⊢ B，从而变复杂前提 A→B 为易于使用的简单前提。或者，可直接证 Γ, A→B, A ⊢ B 以分解复杂前提 A→B，然后想办法消除附加前提。
+
+- 9. （左∧策略）若要证 Γ, A∧B ⊢ C，可直接分解前提 A∧B，得到 Γ, A∧B ⊢ A 和 Γ, A∧B ⊢ B。
+
+- 10. （左∨策略）若要证 Γ, A∨B ⊢ C，则可分别把 A 与 B 作为前提引入，即先证 Γ, A ⊢ C 和 Γ, B ⊢ C，再由 ∨ 规则得到 Γ, A∨B ⊢ C。
+
+- 11. （左↔策略）若要证 Γ, A↔B ⊢ C，可利用 ↔ 规则得到 Γ, A↔B ⊢ A→B 和 Γ, A↔B ⊢ B→A，然后利用策略 8 对 A→B 和 B→A 加以利用。
+
+## 逆向分析方法
+
+利用自然推演系统进行证明之前，通常需要根据待证目标进行逆向分析。
+
+- 首先观察待证目标的前提、结论的公式形态
+- 然后选择合适的证明策略，将待证目标转换为一个或多个相对简单的目标
+- 对新目标重复上述处理
+
+## 例
+
+试证明 ¬(A∧B) ⊢ ¬A∨¬B
+
+¬(A∧B) ⊢ ¬A∨¬B
+
+（右∨策略）
+
+¬(A∧B), A ⊢ ¬B
+
+（右¬策略）
+
+¬(A∧B), A, B ⊢ 矛盾
+
+矛盾选取 ¬(A∧B) 和 (A∧B)
+
+¬(A∧B), A, B ⊢ ¬(A∧B) 且 ¬(A∧B), A, B ⊢ (A∧B)
+
+（右∧策略）
+
+¬(A∧B), A, B ⊢ A 且 ¬(A∧B), A, B ⊢ B
+
+## 例子
+
+- 例1：证明 ⊢ (A∧B→C)→((A→B)→(A→C))
+- 例2：证明 ⊢ A∨¬A
+- 例3：证明 A ⊢ B→A
+- 例4：证明 ¬A ⊢ A→B
+- 例5：证明 A→B ⊢ ¬B→¬A
+- 例6：证明 ¬A→A ⊢ A
+- 例7：证明 ¬(A→B) ⊢ A
+- 例8：证明 ¬(A→B) ⊢ ¬B
+- 例9：证明 A∨B ⊢ ¬A→B
+- 例10：证明 ¬(A∨B) ⊢ ¬A∧¬B
+- 例11：证明 ¬(A∧B) ⊢ ¬A∨¬B
+
+## 自然推理系统的规则
+
+- 18. ∀引入规则（∀+）：若 Γ ⊢ A(x)，则 Γ ⊢ (∀x)A(x)，其中 x 不是 Γ 中任何公式的自由变元。
+- 19. ∀消除规则（∀-）：若 Γ ⊢ (∀x)A(x)，则 Γ ⊢ A(t)，其中项 t 对于 A(x) 中的 x 是可代入的。
+- 20. ∃引入规则（∃+）：若 Γ ⊢ A(t)，则 Γ ⊢ (∃x)A(x)，其中项 t 对于 A(x) 中的 x 是可代入的。
+- 21. ∃消除规则（∃-）：若 Γ ⊢ (∃x)A(x) 且 Γ, A(b) ⊢ C，则 Γ ⊢ C，其中 b 是在 (∃x)A(x)、C 和 Γ 的每个公式中都不出现的个体常元。
+
+## 规则解释 — 可代入
+
+“项 t 对于 A(x) 中的 x 是可代入的”：项 t 中的变元在代入后都不会变成约束的。
+
+例（不可代入）：
+
+- A(x) 为 (∃y)(x=2·y)（x 是偶数）
+- t 取 y+1
+- A(t) 为 (∃y)(y+1=2·y)（有一个自然数是1）
+
+原因：t 中的变元 y 在 A(t) 中变成约束。
+
+## 规则解释 — ∃-规则中的条件
+
+“b 是在 (∃x)A(x)、C 和 Γ 的每个公式中都不出现的个体常元”这一条件不可少。
+
+否则：
+
+- (∃x)A(x) ⊢ (∃x)A(x)
+- (∃x)A(x), A(b) ⊢ A(b)（b 在 C 中出现）
+- 由此推出 (∃x)A(x) ⊢ A(b)（不合理！）
+
+即存在量词不能采取形如 (∃x)A(x) ⊢ A(b) 的直接消去。
+
+## 导出规则
+
+- 9. 左∀引入规则：若 Γ, A(x) ⊢ B(x)，则 Γ, (∀x)A(x) ⊢ B(x)。
+- 10. ∀∀引入规则（其中 x 不是 Γ 中任何公式的自由变元）：若 Γ, A(x) ⊢ B(x)，则 Γ, (∀x)A(x) ⊢ (∀x)B(x)。
+- 11. 左∃引入规则（也记为 ∃-，这两个规则可以互换）：若 Γ, A(x) ⊢ B，则 Γ, (∃x)A(x) ⊢ B，其中 x 不是 Γ、B 中任何公式的自由变元。
+- 12. ∃∃引入规则：若 Γ, A(x) ⊢ B(x)，则 Γ, (∃x)A(x) ⊢ (∃x)B(x)，其中 x 不是 Γ 中任何公式的自由变元。
+
+## 常用证明策略（量词部分）
+
+- 1. （右∀策略）若要证 Γ ⊢ (∀x)A(x)，可证结论相对简单的 Γ ⊢ A(x)（其中 x 不是 Γ 中任何公式的自由变量），然后利用 ∀₊ 规则得到 Γ ⊢ (∀x)A(x)。
+- 2. （右∃策略）若要证 Γ ⊢ (∃x)A(x)，可先证 Γ ⊢ A(t)（其中项 t 对于 A(x) 中的 x 是可代入的），然后利用 ∃₊ 规则得到 Γ ⊢ (∃x)A(x)。
+- 3. （左∀策略）若要证 Γ, (∀x)A(x) ⊢ C，可根据证明的需要利用 ∀- 规则将前提 (∀x)A(x) 特殊化为 A(t)（其中项 t 对于 A(x) 中的 x 是可代入的）。
+- 4. （左∃策略）若要证 Γ, (∃x)A(x) ⊢ C，可以引入附加前提 A(b)（其中个体常元 b 不在 Γ、(∃x)A(x) 和 C 中出现），以便证出 C（再由 ∃- 规则即可得出 Γ, (∃x)A(x) ⊢ C）。另一种策略是先证 Γ, A(x) ⊢ C（其中 x 不是 Γ 和 C 中任何公式的自由变元），再由左∃₊规则即可得到 Γ, (∃x)A(x) ⊢ C。后一种方法较前一种方法更易于掌握。
+
+## 左∃引入规则证明
+
+1. Γ, A(x) ⊢ B（已知）
+2. Γ ⊢ A(x)→B（→₊，1）
+3. Γ ⊢ (∀x)(A(x)→B)（∀₊，2）
+4. Γ, (∃x)A(x) ⊢ (∃x)A(x)（∈）
+5. Γ, (∃x)A(x), A(a) ⊢ A(a)（∈）
+6. Γ, (∃x)A(x), A(a) ⊢ (∀x)(A(x)→B)（∈₊，3）
+7. Γ, (∃x)A(x), A(a) ⊢ A(a)→B（∀-，6）
+8. Γ, (∃x)A(x), A(a) ⊢ B（→-，5, 7）
+9. Γ, (∃x)A(x) ⊢ B（∃-，4, 8）
+
+## 用自然推理系统间接证明等价式和蕴含式
+
+- E25 (∃x)(A(x)∨B(x)) ⊣⊢ (∃x)A(x)∨(∃x)B(x)
+- E26 (∀x)(A(x) ∧ B(x)) ⊣⊢ (∀x)A(x)∧(∀x)B(x)
+- E27 ¬(∃x)A(x) ⊣⊢ (∀x)(¬A(x))
+- E28 ¬(∀x)A(x) ⊣⊢ (∃x)(¬A(x))
+
+## ¬(∀x)A(x) ⊢ (∃x)(¬A(x))
+
+¬(∀x)A(x) ⊢ (∃x)(¬A(x))
+
+（右A策略）
+
+¬(∀x)A(x), ¬(∃x)(¬A(x)) ⊢ 矛盾
+
+矛盾选取 ¬(∀x)A(x) 和 (∀x)A(x)
+
+¬(∀x)A(x), ¬(∃x)(¬A(x)) ⊢ ¬(∀x)A(x) 且 ¬(∀x)A(x), ¬(∃x)(¬A(x)) ⊢ (∀x)A(x)
+
+（右∀策略）
+
+¬(∀x)A(x), ¬(∃x)(¬A(x)) ⊢ A(x)
+
+（右A策略）
+
+¬(∀x)A(x), ¬(∃x)(¬A(x)), ¬A(x) ⊢ 矛盾
+
+矛盾选取 ¬(∃x)(¬A(x)) 和 (∃x)(¬A(x))
+
+¬(∀x)A(x), ¬(∃x)(¬A(x)), ¬A(x) ⊢ (∃x)(¬A(x)) 且 ¬(∀x)A(x), ¬(∃x)(¬A(x)), ¬A(x) ⊢ ¬(∃x)(¬A(x))
+
+（右∃策略）
+
+¬(∀x)A(x), ¬(∃x)(¬A(x)), ¬A(x) ⊢ ¬A(x)
+
+
+
+## (∃x)(¬A(x)) ⊢ ¬(∀x)A(x)
+
+(∃x)(¬A(x)) ⊢ ¬(∀x)A(x)
+
+（左∃策略）
+
+¬A(x) ⊢ ¬(∀x)A(x)
+
+（右A策略）
+
+¬A(x), (∀x)A(x) ⊢ 矛盾
+
+矛盾选取¬A(x)和A(x)
+
+¬A(x), (∀x)A(x) ⊢ ¬A(x) 且 ¬A(x), (∀x)A(x) ⊢ A(x)
+
+## ¬(∃x)A(x) ⊢ (∀x)(¬A(x))
+
+¬(∃x)A(x) ⊢ (∀x)(¬A(x))
+
+（右A策略）
+
+¬(∃x)A(x), ¬(∀x)(¬A(x)) ⊢ 矛盾
+
+矛盾选取¬(∀x)(¬A(x))和(∀x)(¬A(x))
+
+¬(∃x)A(x), ¬(∀x)(¬A(x)) ⊢ ¬(∀x)(¬A(x)).且¬(∃x)A(x), ¬(∀x)(¬A(x)) ⊢ (∀x)(¬A(x))
+
+（右∀策略）
+
+¬(∃x)A(x), ¬(∀x)(¬A(x)) ⊢ ¬A(x)
+
+（右A策略）
+
+¬(∃x)A(x), ¬(∀x)(¬A(x)), A(x) ⊢ 矛盾
+
+矛盾选取¬(∃x)A(x)和(∃x)A(x)
+
+¬(∃x)A(x), ¬(∀x)(¬A(x)), A(x) ⊢ ¬(∃x)A(x)
+且¬(∃x)A(x), ¬(∀x)(¬A(x)), A(x) ⊢ (∃x)A(x)
+
+（右∃策略）
+
+¬(∃x)A(x), ¬(∀x)(¬A(x)), A(x) ⊢ A(x)
+
+## (∀x)(¬A(x)) ⊢ ¬(∃x)A(x)
+
+(∀x)(¬A(x)) ⊢ ¬(∃x)A(x)
+
+（右A策略）
+
+(∀x)(¬A(x)), (∃x)A(x) ⊢ 矛盾
+
+（左∃策略）
+
+(∀x)(¬A(x)), A(x) ⊢ 矛盾
+
+矛盾选取¬A(x)和A(x)
+
+(∀x)(¬A(x)), A(x) ⊢ ¬A(x)且(∀x)(¬A(x)), A(x) ⊢ A(x)
+
+(∀x)(¬A(x)), A(x) ⊢ ¬A(x)且(∀x)(¬A(x)), A(x) ⊢ A(x)
+
+## 例子
+
+例12：证明 (∀x)A(x) ⊢ ¬(∃x)(¬A(x))
+
+例13：证明 (∃x)(∃y)A(x, y) ⊢ (∃y)(∃x)A(x, y)
+
+例14：证明 (∃x)(∀y)A(x, y) ⊢ (∀y)(∃x)A(x, y)
+
+例15：证明 ⊢ (∀x)(∃y)(P(x)→P(y))
+
+证明：令A(y)=P(x)→P(y)，则A(x)=P(x)→P(x)。
+
+易证 ⊢ A(x)          ( P(x) ⊢ P(x) )
+
+⊢ (∃y)A(y)
+
+⊢ (∀x)(∃y)A(y) 即 ⊢ (∀x)(∃y)(P(x)→P(y))
+
+## 例16
+
+### 符号化下面命题，并构造推理证明：
+
+每一个自然数不是奇数就是偶数，自然数是偶数当且仅当它能被2整除，并不是所有的自然数都能被2整除，因此，有的自然数是奇数。
+
+## 解一：
+
+令： (论域为自然数域)
+
+- Q(x): x是奇数；
+- P(x): x是偶数；
+- R(x): x能被2整除；
+
+则上述命题被符号化为：
+
+- 每一个自然数不是奇数就是偶数 ： (∀x)(Q(x)∨P(x)) ；
+- 自然数偶数当且仅当它能被2整除 ： (∀x)(P(x)⇔R(x)) ；
+- 并不是所有的自然数都能被2整除 ： ¬(∀x)R(x) ；
+- 有的自然数是奇数 ： (∃x)Q(x) 。
+
+于是，上述一段话等价于形式推理关系：
+
+```
+(∀x)(Q(x)∨P(x)), (∀x)(P(x)⇔R(x)), ¬(∀x)R(x) ⊢ (∃x)Q(x)
+```
+
+![](img/47b87ec6fe4fa238d13429358848c545_534_0.png)
+
+## 解二：
+
+令：（论域为全域）
+
+N(x)：x是自然数；
+Q(x)：x是奇数；
+P(x)：x是偶数；
+R(x)：x能被2整除；
+
+则上述命题被符号化为：
+
+每一个自然数不是奇数就是偶数：(∀x)(N(x)→Q(x)∨P(x))；
+
+自然数是偶数当且仅当它能被2整除：(∀x)(N(x)→(P(x)⇔R(x)))；
+
+并不是所有的自然数都能被2整除：¬(∀x)(N(x)→R(x))；
+
+有的自然数是奇数：(∃x)(N(x)∧Q(x))。
+
+于是，上述一段话等价于形式推理关系：
+
+(∀x)(N(x)→Q(x)∨P(x)), (∀x)(N(x)→(P(x)⇔R(x))), ¬(∀x)(N(x)→R(x)) ⊢ (∃x)(N(x)∧Q(x))
+
+## 例18
+
+用谓词逻辑推理方法证明下面推理的有效性。
+
+（要求按照教材规定的格式书写推理过程）
+
+$(\exists x)P(x)\to(\forall x)((P(x)\lor Q(x))\to R(x))，\quad(\exists x)P(x)，$
+
+$(\exists x)Q(x)\vdash(\exists x)(\exists y)(R(x)\land R(y))$
+
+## 作业
+
+## 习题6.2
+
+- 1. a)　f)　g)
+- 2. a)　e)　f)
+
+## 0812210
+
+## Sets and Graphs
+
+Ch 9.1 Graphs and Graph Models
+
+Spring 2010
+
+Mao Xiaoguang
+
+## Graphs
+
+- A graph G = (V, E) consists of V, a nonempty set of vertices, and E, a set of edges. Each edge is associated with one or two vertices (an unordered pair of vertices), called its endpoints.
+
+- A simple graph is a graph in which each edge connects two different vertices and where no multiple edges connect the same pair of vertices.
+
+- A multigraph is a graph that may have multiple edges connecting the same pair of vertices (u,v∈V, u≠v)
+  - The edges e1 and e2 are called multiple or parallel edges if f(e1) = f(e2).
+  - No loops are allowed in multigraphs (u ≠ v).
+
+## Example
+
+A multigraph G with vertices V = {a, b, c, d}, edges E = {1, 2, 3, 4, 5} and function f with f(1) = {a, b}, f(2) = {a, b}, f(3) = {b, c}, f(4) = {c, d} and f(5) = {c, d}:
+
+![](img/47b87ec6fe4fa238d13429358848c545_541_0.png)
+
+## Pseudograph
+
+- If we want to define loops, we need the following type of graph:
+
+- A pseudograph is a graph that may have loops and possibly multiple edges connecting the same pair of vertices.
+
+- An edge e is a loop if f(e) = {u, u} for some u ∈ V.
+
+## Types of Graphs and Their Properties
+
+| Type | Edges | Multiple Edges | Loops |
+|---|---|---|---|
+| simple graph | undirected | No | No |
+| multigraph | undirected | Yes | No |
+| Pseudograph | undirected | Yes | Yes |
+| simple directed graph | directed | No | No |
+| directed multigraph | directed | Yes | Yes |
+| mixed graph | undirected and directed | Yes | Yes |
+
+## Graph Models
+
+- Example I: How can we represent a network of (bi-directional) railways connecting a set of cities?
+
+- We should use a simple graph with an edge {a, b} indicating a direct train connection between cities a and b.
+
+![](img/47b87ec6fe4fa238d13429358848c545_546_0.png)
+
+
+
+# Graph Models
+
+Example II: In a round-robin tournament, each team plays against each other team exactly once. How can we represent the results of the tournament (which team beats which other team)?
+
+We should use a directed graph with an edge (a, b) indicating that team a beats team b.
+
+![](img/47b87ec6fe4fa238d13429358848c545_547_0.png)
+
+# Homework for Section 9.1
+
+# Section 9.1
+
+- 2
+- 12
+- 19
+
+# 0812210
+
+# Sets and Graphs
+
+# Ch 9.2 Graph Terminology and Special Types of Graphs
+
+Spring 2010
+
+Mao Xiaoguang
+
+# Adjacent and Endpoints
+
+- Two vertices u and v in an undirected graph G are called **adjacent** (or **neighbors**) in G if {u, v} is an edge in G.
+- If e = {u, v}, the edge e is called **incident with** the vertices u and v. The edge e is also said to connect u and v.
+- The vertices u and v are called **endpoints** of the edge {u, v}.
+
+# Degree - deg(v)
+
+- The degree of a vertex in an undirected graph is the number of edges incident with it, except that a loop at a vertex contributes twice to the degree of that vertex.
+- In other words, you can determine the degree of a vertex in a displayed graph by counting the lines that touch it.
+- The degree of the vertex v is denoted by deg(v).
+
+# Isolated and Pendent Vertices
+
+- A vertex of degree 0 is called isolated, since it is not adjacent to any vertex.
+- Note: A vertex with a loop at it has at least degree 2 and, by definition, is not isolated, even if it is not adjacent to any other vertex.
+- A vertex of degree 1 is called pendant. It is adjacent to exactly one other vertex.
+
+# Example
+
+Which vertices in the following graph are isolated, which are pendant, and what is the maximum degree? What type of graph is it?
+
+![](img/47b87ec6fe4fa238d13429358848c545_553_0.png)
+
+Vertex f is isolated, and vertices a, d and j are pendant. The maximum degree is deg(g) = 5. This graph is a pseudograph.
+
+# Handshaking Theorem
+
+- The Handshaking Theorem: Let G = (V, E) be an undirected graph with n edges. Then
+- 2n = Σv∈V deg(v)
+- Note: This theorem holds even if multiple edges and/or loops are present.
+- Example: How many edges are there in a graph with 10 vertices, each of degree 6?
+- Solution: The sum of the degrees of the vertices is 6·10 = 60. According to the Handshaking Theorem, it follows that 2e = 60, so there are 30 edges.
+
+# Theorem Proof
+
+- Theorem: An undirected graph has an even number of vertices of odd degree.
+- Idea: There are three possibilities for adding an edge to connect two vertices in the graph:
+- Before:
+  Both vertices have even degree
+  Both vertices have odd degree
+  One vertex has odd degree, the other even
+- After:
+  Both vertices have odd degree
+  Both vertices have even degree
+  One vertex has even degree, the other odd
+
+- There are two possibilities for adding a loop to a vertex in the graph:
+- Before:
+  The vertex has even degree
+  The vertex has odd degree
+- After:
+  The vertex has even degree
+  The vertex has odd degree
+
+- So if there is an even number of vertices of odd degree in the graph, it will still be even after adding an edge.
+- Therefore, since an undirected graph with no edges has an even number of vertices with odd degree (zero), the same must be true for any undirected graph.
+
+# Adjacent, Initial and Terminal Vertices
+
+- When (u, v) is an edge of the graph G with directed edges, u is said to be adjacent to v, and v is said to be adjacent from u.
+- The vertex u is called the initial vertex of (u, v), and v is called the terminal vertex of (u, v).
+- The initial vertex and terminal vertex of a loop are the same.
+
+# Example
+
+What are the in-degrees and out-degrees of the vertices a, b, c, d in this graph:
+
+deg⁻(a) = 1
+deg⁺(a) = 2
+
+deg⁻(d) = 2
+deg⁺(d) = 1
+
+deg⁻(b) = 4
+deg⁺(b) = 2
+
+deg⁻(c) = 0
+deg⁺(c) = 2
+
+![](img/47b87ec6fe4fa238d13429358848c545_559_0.png)
+
+
+
+## Theorem
+
+Theorem: Let G = (V, E) be a graph with directed edges. Then:
+∑v∈V deg-(v) = ∑v∈V deg+(v) = |E|
+
+This is easy to see, because every new edge increases both the sum of in-degrees and the sum of out-degrees by one.
+
+## Special Graphs - Complete Graphs
+
+The complete graph on n vertices, denoted by Kₙ, is the simple graph that contains exactly one edge between each pair of distinct vertices.
+
+![](img/47b87ec6fe4fa238d13429358848c545_561_0.png)
+
+## Special Graphs - Cycles
+
+The cycle Cₙ, n ≥ 3, consists of n vertices v1, v2, ..., vₙ and edges {v1, v2}, {v2, v3}, ..., {vₙ₋₁, vₙ}, {vₙ, v1}.
+
+![](img/47b87ec6fe4fa238d13429358848c545_562_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_562_1.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_562_2.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_562_3.png)
+
+## Special Graphs - Wheels
+
+We obtain the wheel Wₙ when we add an additional vertex to the cycle Cₙ, for n ≥ 3, and connect this new vertex to each of the n vertices in Cₙ by adding new edges.
+
+![](img/47b87ec6fe4fa238d13429358848c545_563_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_563_1.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_563_2.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_563_3.png)
+
+## Special Graphs – Bipartite Graphs
+
+A simple graph G is called bipartite if its vertex set V can be partitioned into two disjoint sets V₁ and V₂ such that every edge in the graph connects a vertex in V₁ and a vertex in V₂ (so that no edge in G connects either two vertices in V₁ or two vertices in V₂).
+
+![](img/47b87ec6fe4fa238d13429358848c545_565_0.png)
+
+## Examples
+
+### Example I: Is C₃ bipartite?
+
+![](img/47b87ec6fe4fa238d13429358848c545_566_0.png)
+
+No, because there is no way to partition the vertices into two sets so that there are no edges with both endpoints in the same set.
+
+### Example II : Is C₆ bipartite?
+
+![](img/47b87ec6fe4fa238d13429358848c545_566_1.png)
+
+Yes, because we can display C₆ like this:
+
+![](img/47b87ec6fe4fa238d13429358848c545_566_2.png)
+
+## Complete Bipartite Graph
+
+The complete bipartite graph Kₘ,ₙ is the graph that has its vertex set partitioned into two subsets of m and n vertices, respectively. Two vertices are connected if and only if they are in different subsets.
+
+![](img/47b87ec6fe4fa238d13429358848c545_567_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_567_1.png)
+
+## Operations on Graphs - Subgraph
+
+- A subgraph of a graph G = (V, E) is a graph H = (W, F) where ∅ ≠ W ⊆ V and F ⊆ E.
+- Note: Of course, H is a valid graph, so we cannot remove any endpoints of remaining edges when creating H.
+- Example:
+
+![](img/47b87ec6fe4fa238d13429358848c545_568_0.png)
+
+## Operations on Graphs - Union
+
+- The union of two simple graphs G₁ = (V₁, E₁) and G₂ = (V₂, E₂) is the simple graph with vertex set V₁ ∪ V₂ and edge set E₁ ∪ E₂.
+
+- The union of G₁ and G₂ is denoted by G₁ ∪ G₂.
+
+![](img/47b87ec6fe4fa238d13429358848c545_569_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_569_1.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_569_2.png)
+
+## Homework for Section 9.2
+
+### Section 9.2
+
+- 12
+- 20 c)
+- 22
+- 45
+- 51
+
+## 0812210
+
+## Sets and Graphs
+
+Ch 9.3 Representing Graphs and Graph Isomorphism
+
+Spring 2010
+Mao Xiaoguang
+
+## Adjacent List
+
+![](img/47b87ec6fe4fa238d13429358848c545_572_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_572_1.png)
+
+| Vertex | Adjacent Vertices |
+| --- | --- |
+| a | b, c, d |
+| b | a, d |
+| c | a, d |
+| d | a, b, c |
+
+| Initial Vertex | Terminal Vertices |
+| --- | --- |
+| a | c |
+| b | a |
+| c |  |
+| d | a, b, c |
+
+## Adjacency Matrix
+
+- Let G = (V, E) be a simple graph with |V| = n. Suppose that the vertices of G are listed in arbitrary order as v1, v2, ..., vn.
+- The adjacency matrix A (or AG) of G, with respect to this listing of the vertices, is the n×n zero-one matrix with 1 as its (i, j)th entry when vi and vj are adjacent, and 0 otherwise.
+- In other words, for an adjacency matrix A = [aij],
+  {
+    aij = 1    if {vi, vj} is an edge of G,
+    aij = 0    otherwise.
+  }
+
+
+
+## Example
+
+What is the adjacency matrix A_G for the following graph G based on the order of vertices a, b, c, d ?
+
+![](img/47b87ec6fe4fa238d13429358848c545_574_0.png)
+
+Solution: $A_G = \begin{bmatrix} 0 & 1 & 1 & 1 \\ 1 & 0 & 0 & 1 \\ 1 & 0 & 0 & 1 \\ 1 & 1 & 1 & 0 \end{bmatrix}$
+
+Note: Adjacency matrices of undirected graphs are always symmetric.
+
+## Adjacency Matrix for Multiple Edges
+
+- For the representation of graphs with multiple edges, we can no longer use zero-one matrices.
+- Instead, we use matrices of natural numbers.
+- The (i, j)th entry of such a matrix equals the number of edges that are associated with {v_i, v_j}.
+
+## Example
+
+What is the adjacency matrix A_G for the following graph G based on the order of vertices a, b, c, d ?
+
+![](img/47b87ec6fe4fa238d13429358848c545_576_0.png)
+
+Solution: $A_G = \begin{bmatrix}0 & 1 & 1 & 2 \\ 1 & 1 & 0 & 1 \\ 1 & 0 & 0 & 3 \\ 2 & 1 & 3 & 0\end{bmatrix}$
+
+Note: Adjacency matrices of undirected graphs are always symmetric.
+
+## Adjacency Matrix for Directed Graphs
+
+- Let G = (V, E) be a directed graph with |V| = n. Suppose that the vertices of G are listed in arbitrary order as v1, v2, ..., vn.
+- The adjacency matrix A (or AG) of G, with respect to this listing of the vertices, is the n×n zero-one matrix with 1 as its (i, j)th entry when there is an edge from vi to vj, and 0 otherwise.
+- In other words, for an adjacency matrix A = [aij],
+  - { aij = 1    if (vi, vj) is an edge of G,
+    aij = 0    otherwise. }
+
+## Example
+
+What is the adjacency matrix A_G for the following graph G based on the order of vertices a, b, c, d ?
+
+![](img/47b87ec6fe4fa238d13429358848c545_578_0.png)
+
+Solution: $A_G = \begin{bmatrix} 0 & 0 & 1 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 1 & 1 & 1 & 0 \end{bmatrix}$
+
+## Incident Matrix
+
+- Let G = (V, E) be an undirected graph with |V| = n and |E| = m. Suppose that the vertices and edges of G are listed in arbitrary order as v₁, v₂, ..., vₙ and e₁, e₂, ..., eₘ, respectively.
+- The incidence matrix of G with respect to this listing of the vertices and edges is the n×m zero-one matrix with 1 as its (i, j)th entry when edge eⱼ is incident with vᵢ, and 0 otherwise.
+- In other words, for an incidence matrix M = [mᵢⱼ],
+  - { mᵢⱼ = 1    if edge eⱼ is incident with vᵢ
+    mᵢⱼ = 0    otherwise. }
+
+## Representing Graphs
+
+What is the incidence matrix M for the following graph G based on the order of vertices a, b, c, d and edges 1, 2, 3, 4, 5, 6?
+
+![](img/47b87ec6fe4fa238d13429358848c545_580_0.png)
+
+Solution: M =
+
+| | 1 | 1 | 0 | 0 | 1 | 0 |
+| | 1 | 0 | 1 | 0 | 0 | 0 |
+| | 0 | 0 | 0 | 1 | 1 | 1 |
+| | 0 | 1 | 1 | 1 | 0 | 0 |
+
+Note: Incidence matrices of directed graphs contain two 1s per column for edges connecting two vertices and one 1 per column for loops.
+
+## Isomorphism
+
+- The simple graphs G₁ = (V₁, E₁) and G₂ = (V₂, E₂) are isomorphic if there is a bijection (an one-to-one and onto function) f from V₁ to V₂ with the property that a and b are adjacent in G₁ if and only if f(a) and f(b) are adjacent in G₂, for all a and b in V₁.
+- Such a function f is called an isomorphism.
+- In other words, G₁ and G₂ are isomorphic if their vertices can be ordered in such a way that the adjacency matrices M_G₁ and M_G₂ are identical.
+
+## Isomorphism of Graphs
+
+- From a visual standpoint, G₁ and G₂ are isomorphic if they can be arranged in such a way that their displays are identical (of course without changing adjacency).
+- Unfortunately, for two simple graphs, each with n vertices, there are n! possible isomorphisms that we have to check in order to show that these graphs are isomorphic.
+- However, showing that two graphs are not isomorphic can be easy.
+
+## Invariants
+
+For this purpose we can check invariants, that is, properties that two isomorphic simple graphs must both have.
+
+For example, they must have
+
+- the same number of vertices,
+- the same number of edges, and
+- the same degrees of vertices.
+
+Note that two graphs that differ in any of these invariants are not isomorphic, but two graphs that match in all of them are not necessarily isomorphic.
+
+
+
+## Example
+
+Example I: Are the following two graphs isomorphic?
+
+![](img/47b87ec6fe4fa238d13429358848c545_584_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_584_1.png)
+
+Solution: Yes, they are isomorphic, because they can be arranged to look identical. You can see this if in the right graph you move vertex b to the left of the edge {a, c}.
+
+Then the isomorphism f from the left to the right graph is:
+
+f(a) = e, f(b) = a, f(c) = b, f(d) = c, f(e) = d.
+
+## Example
+
+Example II: How about these two graphs?
+
+![](img/47b87ec6fe4fa238d13429358848c545_585_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_585_1.png)
+
+Solution: No, they are not isomorphic, because they differ in the degrees of their vertices.
+Vertex d in right graph is of degree one, but there is no such vertex in the left graph.
+
+## Homework for Section 9.3
+
+## Section 9.3
+
+- 6
+- 28
+- 31
+- 36
+- 40
+- 55
+
+## 0812210
+
+## Sets and Graphs
+
+Ch 9.4 Connectivity
+
+Spring 2010
+Mao Xiaoguang
+
+## Paths of Undirected Graphs
+
+A path of length n from u to v, where n is a positive integer, in an undirected graph is a sequence of edges e₁, e₂, ..., eₙ of the graph such that f(e₁) = {x₀, x₁}, f(e₂) = {x₁, x₂}, ..., f(eₙ) = {xₙ₋₁, xₙ}, where x₀ = u and xₙ = v.
+
+When the graph is simple, we denote this path by its vertex sequence x₀, x₁, ..., xₙ, since it uniquely determines the path.
+
+- The path is a circuit if it begins and ends at the same vertex, that is, if u = v.
+- The path or circuit is said to pass through the vertices v₁, v₂, ..., vₙ₋₁ or traverse the edges x₁, x₂, ..., xₙ.
+- A path or circuit is simple if it does not contain the same edge more than once.
+
+## Paths of Directed Graphs
+
+- A path of length n from u to v, where n is a positive integer, in a directed multigraph is a sequence of edges e₁, e₂, ..., eₙ of the graph such that f(e₁) = (x₀, x₁), f(e₂) = (x₁, x₂), ..., f(eₙ) = (xₙ₋₁, xₙ), where x₀ = u and xₙ = v.
+- When there are no multiple edges in the path, we denote this path by its vertex sequence x₀, x₁, ..., xₙ, since it uniquely determines the path.
+- The path is a circuit if it begins and ends at the same vertex, that is, if u = v.
+- A path or circuit is called simple if it does not contain the same edge more than once.
+
+## Connected
+
+- An undirected graph is called connected if there is a path between every pair of distinct vertices in the graph.
+- For example, any two computers in a network can communicate if and only if the graph of this network is connected.
+- Note: A graph consisting of only one vertex is always connected, because it does not contain any pair of distinct vertices.
+
+## Examples
+
+Are the following graphs connected?
+
+![](img/47b87ec6fe4fa238d13429358848c545_591_0.png)
+
+Yes.
+
+![](img/47b87ec6fe4fa238d13429358848c545_591_1.png)
+
+No.
+
+![](img/47b87ec6fe4fa238d13429358848c545_591_2.png)
+
+Yes.
+
+![](img/47b87ec6fe4fa238d13429358848c545_591_3.png)
+
+No.
+
+## Theorem
+
+- Theorem: There is a simple path between every pair of distinct vertices of a connected undirected graph.
+- Proof: page 625.
+- A graph that is not connected is the union of two or more connected subgraphs, each pair of which has no vertex in common. These disjoint connected subgraphs are called the connected components of the graph.
+
+## Example
+
+What are the connected components in the following graph?
+
+![](img/47b87ec6fe4fa238d13429358848c545_593_0.png)
+
+Solution: The connected components are the graphs with vertices {a, b, c, d}, {e}, {f}, {i, g, h, j}.
+
+## Connectivity of Directed Graphs
+
+- A directed graph is strongly connected if there is a path from a to b and from b to a whenever a and b are vertices in the graph.
+- A directed graph is weakly connected if there is a path between any two vertices in the underlying undirected graph.
+
+## Example
+
+Are the following directed graphs strongly or weakly connected?
+
+![](img/47b87ec6fe4fa238d13429358848c545_595_0.png)
+
+Weakly connected, because, for example, there is no path from b to d.
+
+![](img/47b87ec6fe4fa238d13429358848c545_595_1.png)
+
+Strongly connected, because there are paths between all possible pairs of vertices.
+
+
+
+## Connectivity vs Isomorphism
+
++   Idea: The number and size of connected components and circuits are further invariants with respect to isomorphism of simple graphs.
+
++   Example: Are these two graphs isomorphic?
+
+![](img/47b87ec6fe4fa238d13429358848c545_596_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_596_1.png)
+
++   Solution: No, because the right graph contains circuits of length 3, while the left graph does not.
+
+## Homework for Section 9.4
+
+## Section 9.4
+
++   - 2
++   - 5
++   - 12
++   - 21
+
+## 0812210
+
+## Sets and Graphs
+
+Ch 9.5 Euler and Hamilton Paths
+
+Spring 2010
+Mao Xiaoguang
+
+## The bridges of Königsberg
+
+The town of Königsberg (East Prussia; now Kaliningrad, Russia) is divided in four sections with seven bridges
+
+![](img/47b87ec6fe4fa238d13429358848c545_599_0.png)
+
+Is it possible to start somewhere and return to that point crossing all bridges exactly once?
+
+## Euler Paths and Circuits
+
+The Seven bridges of Königsberg
+
+![](img/47b87ec6fe4fa238d13429358848c545_600_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_600_1.png)
+
+## Euler Paths and Circuits
+
++   An *Euler path* is a path using every edge of the graph $G$ exactly once.
+
++   An *Euler circuit* is an Euler path that returns to its start.
+
+## Does this graph have an Euler circuit?
+
+No.
+
+![](img/47b87ec6fe4fa238d13429358848c545_601_0.png)
+
+## Necessary and Sufficient Conditions
+
++   - How about multigraphs?
++   - A connected multigraph has a Euler circuit iff *each of its vertices has an even degree*.
++   - A connected multigraph has a Euler path but not an Euler circuit iff *it has exactly two vertices of odd degree*.
+
+## Proof: “Only if” direction
+
+Suppose that a graph has an Euler circuit. Then the graph must be connected. The Euler circuit starts at a vertex v. Every time any vertex other the last vertex in the circuit is entered (including v if it is visited multiple times), the circuit must leave this vertex. Thus, the edges entering and leaving each vertex are paired, adding 2 to that vertex’s degree each time it is visited. 2 is also added to v’s degree for the first and last edge, so all vertex degrees are even.
+
+## Proof: “If” direction
+
++   Suppose that all vertices have even degrees. We construct an Euler circuit as follows: Start at an arbitrary vertex, and construct a path randomly, until we can’t do so anymore (this will happen at some point because the graph is finite).
+
++   This process must terminate at v, because each time the path passes from a vertex u it subtracts 2 from the remaining edges incident to u, and those are an even number. Therefore, we can always leave any vertex other than v.
+
+## Proof: “If” direction
+
+We have therefore constructed a simple circuit. Does this use all edges? If not, consider the subgraphs obtained by deleting the circuit we just constructed. Because the original graph is connected, these subgraphs will have at least a vertex in common with our path. Follow the above process in each such subgraph, and splice the circuits together to obtain an Euler circuit for the original graph.
+
+## Example
+
+Which of the following graphs has an Euler circuit?
+
+![](img/47b87ec6fe4fa238d13429358848c545_606_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_606_1.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_606_2.png)
+
+yes
+(a, e, c, d, e, b, a)
+
+no
+
+no
+
+## Example
+
+Which of the following graphs has an Euler path?
+
+![](img/47b87ec6fe4fa238d13429358848c545_607_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_607_1.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_607_2.png)
+
+yes
+(a, e, c, d, e, b, a)
+
+no
+
+yes
+(a, c, d, e, b, d, a, b)
+
+## Euler Path in Directed Graphs
+
+![](img/47b87ec6fe4fa238d13429358848c545_609_0.png)
+
+H₁
+
+NO
+
+![](img/47b87ec6fe4fa238d13429358848c545_609_1.png)
+
+H₂
+
+(a, g, c, b, g, e, d, f, a)
+
+![](img/47b87ec6fe4fa238d13429358848c545_609_2.png)
+
+H₃
+
+(c, a, b, c, d, b)
+
+
+
+## Hamilton Paths and Circuits
+
+- A *Hamilton path* in a graph $G$ is a path which visits every vertex in $G$ exactly once.
+
+- A *Hamilton circuit* is a Hamilton path that returns to its start.
+
+## Hamilton Circuits
+
+![](img/47b87ec6fe4fa238d13429358848c545_611_0.png)
+
+Dodecahedron puzzle and it equivalent graph
+
+Is there a circuit in this graph that passes through each vertex exactly once?
+
+## Hamilton Circuits
+
+![](img/47b87ec6fe4fa238d13429358848c545_612_0.png)
+
+Yes; this is a circuit that passes through each vertex exactly once.
+
+## Finding Hamilton Circuits
+
+![](img/47b87ec6fe4fa238d13429358848c545_613_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_613_1.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_613_2.png)
+
+Which of these three figures has a Hamilton circuit? Of, if no Hamilton circuit, a Hamilton path?
+
+## Finding Hamilton Circuits
+
+![](img/47b87ec6fe4fa238d13429358848c545_614_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_614_1.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_614_2.png)
+
+- G₁ has a Hamilton circuit: a, b, c, d, e, a
+- G₂ does not have a Hamilton circuit, but does have a Hamilton path: a, b, c, d
+- G₃ has neither.
+
+## Finding Hamilton Circuits
+
+- Unlike the Euler circuit problem, finding Hamilton circuits is hard.
+
+- There is no simple set of necessary and sufficient conditions, and no simple algorithm.
+
+## A Sufficient Condition
+
+Let $G$ be a connected simple graph with $n$ vertices with $n \ge 3$.
+
+If the degree of each vertex is $\ge n/2$, then $G$ has a Hamilton circuit.
+
+## Travelling Salesman Problem
+
+A Hamilton circuit or path may be used to solve practical problems that require visiting “vertices”, such as:
+
+- road intersections
+- pipeline crossings
+- communication network nodes
+
+A classic example is the Travelling Salesman Problem – finding a Hamilton circuit in a complete graph such that the total weight of its edges is minimal.
+
+## Example tour on circuit board
+
+![](img/47b87ec6fe4fa238d13429358848c545_619_0.png)
+
+3,038 points
+to visit
+
+## Summary
+
+| Property | Euler | Hamilton |
+|---|---|---|
+| Repeated visits to a given node allowed? | Yes | No |
+| Repeated traversals of a given edge allowed? | No | No |
+| Omitted nodes allowed? | No | No |
+| Omitted edges allowed? | No | Yes |
+
+## Homework for Section 9.5
+
+## Section 9.5
+
+- 4
+- 15
+- 19
+- 32
+
+## 0812210
+
+## Sets and Graphs
+
+Ch 9.6 Shortest-Path Problems
+
+Spring 2010
+
+Mao Xiaoguang
+
+## Weighted Graphs
+
+Graphs that have a number assigned to each edge are called weighted graphs.
+
+![](img/47b87ec6fe4fa238d13429358848c545_623_0.png)
+
+## Weighted Graphs
+
+MILES
+
+![](img/47b87ec6fe4fa238d13429358848c545_624_0.png)
+
+## Weighted Graphs
+
+FARES
+
+![](img/47b87ec6fe4fa238d13429358848c545_625_0.png)
+
+## Weighted Graphs
+
+# FLIGHT TIMES
+
+![](img/47b87ec6fe4fa238d13429358848c545_626_0.png)
+
+## Weighted Graphs
+
+- A weighted graph is a graph in which each edge (u, v) has a weight w(u, v). Each weight is a real number.
+- Weights can represent distance, cost, time, capacity, etc.
+- The length of a path in a weighted graph is the sum of the weights on the edges.
+- Dijkstra’s Algorithm finds the shortest path between two vertices.
+
+## Shortest-Path Problem
+
+Given a weighted graph and two vertices u and v, we want to find a path of minimum total weight between u and v.
+
+- Length of a path is the sum of the weights of its edges.
+
+Application:
+
+- Internet packet routing
+- Flight reservations
+- Driving directions
+
+## Shortest Path Properties
+
+- Property 1:
+  - A subpath of a shortest path is itself a shortest path
+- Property 2:
+  - There is a tree of shortest paths from a start vertex to all the other vertices
+
+## Dijkstra's Algorithm
+
+- Dijkstra’s algorithm is an iterative procedure that finds the shortest path between to vertices a and z in a weighted graph.
+- It proceeds by finding the length of the shortest path from a to successive vertices and adding these vertices to a distinguished set of vertices S.
+- The algorithm terminates once it reaches the vertex z.
+
+
+
+## Dijkstra's Algorithm
+
+```
+procedure Dijkstra(G: weighted connected simple graph with vertices a = v₀, v₁, ..., vₙ = z and positive weights w(vᵢ, vⱼ), where w(vᵢ, vⱼ) = ∞ if {vᵢ, vⱼ} is not an edge in G)
+for i := 1 to n
+    L(vᵢ) := ∞
+L(a) := 0
+S := ∅
+{the labels are now initialized so that the label of a is zero and all other labels are ∞, and the distinguished set of vertices S is empty}
+```
+
+## Dijkstra's Algorithm
+
+```
+while z ∉ S
+begin
+    u := the vertex not in S with minimal L(u)
+    S := S ∪ {u}
+    for all vertices v not in S
+    if L(u)+w(u,v)<L(v) then L(v) := L(u) + w(u, v)
+    {this adds a vertex to S with minimal label and updates the labels of vertices not in S}
+end {L(z) = length of shortest path from a to z}
+```
+
+## Example
+
+Step 0:
+
+![](img/47b87ec6fe4fa238d13429358848c545_633_0.png)
+
+## Example
+
+Step 1:
+
+![](img/47b87ec6fe4fa238d13429358848c545_634_0.png)
+
+## Example
+
+Step 2:
+
+![](img/47b87ec6fe4fa238d13429358848c545_635_0.png)
+
+## Example
+
+▣ Step 3:
+
+![](img/47b87ec6fe4fa238d13429358848c545_636_0.png)
+
+## Example
+
+Step 4:
+
+![](img/47b87ec6fe4fa238d13429358848c545_637_0.png)
+
+## Example
+
+Step 5:
+
+![](img/47b87ec6fe4fa238d13429358848c545_638_0.png)
+
+## Example
+
+▣ Step 6:
+
+![](img/47b87ec6fe4fa238d13429358848c545_639_0.png)
+
+## Dijkstra’s algorithm
+
+- Theorem: Dijkstra’s algorithm finds the length of a shortest path between two vertices in a connected simple undirected weighted graph.
+- Theorem: Dijkstra’s algorithm uses O(n²) operations (additions and comparisons) to find the length of the shortest path between two vertices in a connected simple undirected weighted graph.
+- Please take a look at pages 649 to 653 for a comprehensive description and analysis of Dijkstra’s algorithm.
+
+## The Traveling Salesman Problem
+
+- The traveling salesman problem is one of the classical problems in computer science.
+- A traveling salesman wants to visit a number of cities and then return to his starting point. Of course he wants to save time and energy, so he wants to determine the shortest path for his trip.
+- We can represent the cities and the distances between them by a weighted, complete, undirected graph.
+- The problem then is to find the circuit of minimum total weight that visits each vertex exactly once.
+
+## Example
+
+What path would the traveling salesman take to visit the following cities?
+
+![](img/47b87ec6fe4fa238d13429358848c545_642_0.png)
+
+Solution: The shortest path is Boston, New York, Chicago, Toronto, Boston (2,000 miles).
+
+## The Traveling Salesman Problem
+
+Question: Given n vertices, how many different cycles Cₙ can we form by connecting these vertices with edges?
+
+Solution: We first choose a starting point. Then we have (n − 1) choices for the second vertex in the cycle, (n − 2) for the third one, and so on, so there are (n − 1)! choices for the whole cycle.
+
+However, this number includes identical cycles that were constructed in opposite directions. Therefore, the actual number of different cycles Cₙ is (n − 1)!/2.
+
+## The Traveling Salesman Problem
+
+- Unfortunately, no algorithm solving the traveling salesman problem with polynomial worst-case time complexity has been devised yet.
+- This means that for large numbers of vertices, solving the traveling salesman problem is impractical.
+- In these cases, we can use approximation algorithms that determine a path whose length may be slightly larger than the traveling salesman’s path, but can be computed with polynomial time complexity.
+- For example, artificial neural networks can do such an efficient approximation task.
+
+## Homework for Section 9.6
+
+## Section 9.6
+
+- 3
+- 17
+- 26
+
+## 0812210
+
+## Sets and Graphs
+
+Ch 9.7 Planar Graphs
+
+Spring 2010
+
+Mao Xiaoguang
+
+## The House-and-Utilities Problem
+
+![](img/47b87ec6fe4fa238d13429358848c545_647_0.png)
+
+Sets and graphs
+
+
+
+Is it possible to join the three houses to the three utilities in such a way that none of the connections cross?
+
+![](img/47b87ec6fe4fa238d13429358848c545_648_0.png)
+
+## Planar Graphs
+
+- A graph is called **planar** if it can be drawn in the plane without any edges crossing.
+- A crossing of edges is the intersection of the lines or arcs representing them at a point other than their common endpoint.
+- Such a drawing is called a **planar** representation of the graph.
+
+### Example
+
+A graph may be planar even if it is usually drawn with crossings, since it may be possible to draw it in another way without crossings.
+
+![](img/47b87ec6fe4fa238d13429358848c545_651_0.png)
+
+### Example
+
+A graph may be planar even if it represents a 3-dimensional object.
+
+![](img/47b87ec6fe4fa238d13429358848c545_652_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_652_1.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_652_2.png)
+
+## Planar Graphs
+
+- We can prove that a particular graph is planar by showing how it can be drawn without any crossings.
+- However, not all graphs are planar.
+- It may be difficult to show that a graph is nonplanar. We would have to show that there is no way to draw the graph without any edges crossing.
+
+## Regions
+
+Euler showed that all planar representations of a graph split the plane into the same number of regions, including an unbounded region.
+
+![](img/47b87ec6fe4fa238d13429358848c545_654_0.png)
+
+### Regions for K₃,₃
+
+In any planar representation of K₃,₃, vertex v₁ must be connected to both v₄ and v₅, and v₂ also must be connected to both v₄ and v₅.
+
+![](img/47b87ec6fe4fa238d13429358848c545_655_0.png)
+
+### Step 1
+
+The four edges {v₁, v₄}, {v₄, v₂}, {v₂, v₅}, {v₅, v₁} form a closed curve that splits the plane into two regions, R₁ and R₂.
+
+![](img/47b87ec6fe4fa238d13429358848c545_656_0.png)
+
+### Step 2
+
+- Next, we note that v₃ must be in either R₁ or R₂.
+- Assume v₃ is in R₂. Then the edges {v₃, v₄} and {v₃, v₅} separate R₂ into two subregions, R₂₁ and R₂₂.
+
+![](img/47b87ec6fe4fa238d13429358848c545_657_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_657_1.png)
+
+### Step 3 - 1
+
+Now there is no way to place vertex v₆ without forcing a crossing:
+
+- If v₆ is in R₁ then {v₆, v₃} must cross an edge
+- If v₆ is in R₂₁ then {v₆, v₂} must cross an edge
+- If v₆ is in R₂₂ then {v₆, v₁} must cross an edge
+
+![](img/47b87ec6fe4fa238d13429358848c545_658_0.png)
+
+### Step 3 - 2
+
+Alternatively, assume v₃ is in R₁. Then the edges {v₃, v₄} and {v₃, v₅} separate R₁ into two subregions, R₁₁ and R₁₂.
+
+![](img/47b87ec6fe4fa238d13429358848c545_659_0.png)
+
+### Step 4
+
+Now there is no way to place vertex v₆ without forcing a crossing:
+
+- If v₆ is in R₂ then {v₆, v₃} must cross an edge
+- If v₆ is in R₁₁ then {v₆, v₂} must cross an edge
+- If v₆ is in R₁₂ then {v₆, v₁} must cross an edge
+
+![](img/47b87ec6fe4fa238d13429358848c545_660_0.png)
+
+### Step 5
+
+Consequently, the graph K₃,₃ must be nonplanar.
+
+![](img/47b87ec6fe4fa238d13429358848c545_661_0.png)
+
+## Euler's Formula
+
+Let G be a connected planar simple graph with e edges and v vertices. Let r be the number of regions in a planar representation of G. Then r = e - v + 2.
+
+![](img/47b87ec6fe4fa238d13429358848c545_663_0.png)
+
+- Number of edges, e = 6
+- Number of vertices, v = 4
+- Number of regions, r = e - v + 2 = 4
+
+- Corollary 1: If G is a connected planar simple graph with e edges and v vertices where v ≥ 3, then e ≤ 3v − 6.
+- Is K₅ planar?
+
+![](img/47b87ec6fe4fa238d13429358848c545_664_0.png)
+
+K₅
+
+### Euler's Formula on K₅
+
+- K₅ has 5 vertices and 10 edges.
+- We see that v ≥ 3.
+- So, if K₅ is planar, it must be true that e ≤ 3v − 6.
+- 3v − 6 = 3 × 5 − 6 = 15 − 6 = 9.
+- So e must be ≤ 9.
+- But e = 10.
+- So, K₅ is nonplanar.
+
+![](img/47b87ec6fe4fa238d13429358848c545_665_0.png)
+
+
+
+## Corollary 2: If G is a connected planar simple graph, then G must have a vertex of degree not exceeding 5.
+
+- If G has one or two vertices, it is true;
+- thus, we assume that G has at least three vertices.
+
+- If the degree of each vertex were at least 6, then by Handshaking Theorem,
+- 2e ≥ 6v, i.e., e ≥ 3v,
+
+- but this contradicts the inequality from $2e = \sum_{v \in V} \deg(v)$
+- Corollary 1: e ≤ 3v − 6.
+
+## Corollary 3: If a connected planar simple graph has e edges and v vertices with v ≥ 3 and no circuits of length 3, then e ≤ 2v - 4.
+
+Is K₃,₃ planar?
+
+![](img/47b87ec6fe4fa238d13429358848c545_667_0.png)
+
+## Proof
+
+- K₃,₃ has 6 vertices and 9 edges.
+- Obviously, v ≥ 3 and there are no circuits of length 3.
+- If K₃,₃ were planar, then e ≤ 2v − 4 would have to be true.
+- 2v − 4 = 2*6 − 4 = 8
+- So e must be ≤ 8.
+- But e = 9.
+- So K₃,₃ is nonplanar.
+
+![](img/47b87ec6fe4fa238d13429358848c545_668_0.png)
+
+## Homework for Section 9.7
+
+□ Section 9.7
+
+- ▸ 6
+- ▸ 8
+- ▸ 14
+- ▸ 16
+
+Sets and graphs
+
+## 0812210
+
+## Sets and Graphs
+
+## Introduction
+
+Spring 2010
+
+Mao Xiaoguang
+
+## Instructor, TA, Office Hours
+
+### Instructor
+
+- Mao Xiaoguang (毛晓光)
+- Email: xgmao@gfkd.mtn, xgmao@sina.com
+  Please include `ds` in the subject of your mail
+- Office: 1st Campus, SC Building, room 222
+
+### Teaching Assistants
+
+- Chen Huilong (陈慧龙), 13974974225
+- Zhang Lumin (张鲁民), 15274909946
+
+### Hours
+
+- 26(lec) + 2(lab) + 2(exam)
+- Lecture: Tue/Thu 10:10am - 12:00am, 305-405
+- Exam: June 30, 8:00am – 10:00am
+
+## Class web page, e-mail
+
+[http://elearning.gfkd.mtn](http://elearning.gfkd.mtn), ‘Sets and Graphs’
+
+- Reading **carefully** and **regularly**!
+
+## E-mail policy
+
+- Include ‘**ds**’ in the subject of your e-mail
+- Use TA as much as possible ☺
+
+## Textbook
+
+## Discrete Mathematics and Its Applications
+
+- Kenneth H. Rosen
+- 6th Edition
+- McGraw Hill
+- China Machine Press
+  (机械工业出版社)
+- 2007
+
+![](img/47b87ec6fe4fa238d13429358848c545_673_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_673_1.png)
+
+## Why Discrete Mathematics?
+
+Design efficient computer systems.
+
+- How did Google manage to build a fast search engine?
+- What is the foundation of internet security?
+
+algorithms, data structures, database, parallel computing, distributed systems, cryptography, computer networks...
+
+Logic, number theory, counting, graph theory...
+
+## What is Discrete Mathematics?
+
+Logic: artificial intelligence (AI), database, circuit design
+
+Counting: probability, analysis of algorithm
+
+Graph theory: computer network, data structures
+
+Number theory: cryptography, coding theory
+
+logic, sets, functions, relations, etc
+
+## Topic 1: Logic and Proofs
+
+How do computers think?
+
+Logic: propositional logic, first order logic
+Proof: induction, contradiction
+
+![](img/47b87ec6fe4fa238d13429358848c545_676_0.png)
+
+Artificial intelligence, database, circuit, algorithms
+
+## Topic 3: Graph Theory
+
+- Relations, graphs
+- Degree sequence, isomorphism, Eulerian graphs
+- Trees
+
+![](img/47b87ec6fe4fa238d13429358848c545_678_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_678_1.png)
+
+Computer networks, circuit design, data structures
+
+## Topic 4: Number Theory
+
+- Number sequence
+- Euclidean algorithm
+- Prime number
+- Modular arithmetic
+
+![](img/47b87ec6fe4fa238d13429358848c545_679_0.png)
+
+Cryptography, coding theory, data structures
+
+## Pythagorean Theorem
+
+![](img/47b87ec6fe4fa238d13429358848c545_680_0.png)
+
+a² + b² = c²
+
+Familiar?
+
+Obvious?
+
+## Good Proof
+
+![](img/47b87ec6fe4fa238d13429358848c545_681_0.png)
+
+Rearrange into: (i) a c×c square, and then
+(ii) an a×a & a b×b square
+
+## Good Proof
+
+![](img/47b87ec6fe4fa238d13429358848c545_682_0.png)
+
+Proof by rearrangement
+
+http://en.wikipedia.org/wiki/Pythagorean_theorem
+
+
+
+## Good Proof
+
+![](img/47b87ec6fe4fa238d13429358848c545_683_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_683_1.png)
+
+Proof using area subtraction
+
+http://en.wikipedia.org/wiki/Pythagorean_theorem
+
+## Guide for Successful Study
+
+- Ψ No minimalist approach
+- ⊗ Homework would be sufficient! NOPE!!!
+- ▸ Read relevant sections before coming to class
+- ▸ Do the homework (of course!!!)
+- ▸ Solve much more problems (odd numbered)
+- Ψ Work regularly
+- ▸ Most chapters are building blocks for other chapters
+- ▸ On average 10 hours EVERY week!
+- Ψ Creativity
+- ▸ No questions will require you to put just numbers to formula.
+- ▸ Need to know how to apply! This can be improved by practice!
+- Ψ Learning ≠ Book, class, note, homework
+- ▸ It is combination of everything!
+- Ψ Think yourself, discuss with your classmates, write your own answer!
+
+## Grading
+
+- Absolute (i.e. not on a curve).
+- The overall grade will be based upon
+  - 30% for assignments
+  - 70% for the final exam
+- Grading is performed by TAs.
+- If you have any question about grading, talk to TAs.
+  - Only if something unreasonable has occurred will the instructor intervene.
+
+## Due dates and Submission
+
+- Due dates for all assignments are strict
+  - No late assignment will be graded.
+
+Keep a copy of each of your submissions as evidence that you have indeed submitted each assignment.
+
+http://elearning.gfkd.mtn, 'Sets and Graphs'
+
+## What we’ll learn
+
+- Chapter 2 Basic Structures
+- Chapter 4 (4.1 4.2) Induction
+- Chapter 5 (5.2) The pigeonhole principle
+- Chapter 8 Relations
+- Chapter 9 Graphs
+- Chapter 10 Trees
+
+## 0812210
+
+## Sets and Graphs
+
+Ch 4.1 Mathematical Induction
+
+Ch4.2 Strong Induction
+
+Spring 2010
+
+Mao Xiaoguang
+
+## What is induction?
+
+- ▽ A method of proof
+- ▽ It does not generate answers: it only can prove them
+- ▽ Three parts:
+  - ▸ Base case(s): show it is true for one element
+  - ▸ Inductive hypothesis: assume it is true for any given element
+    🟢 Must be clearly labeled!!!
+  - ▸ Inductive step: Show that if it is true for the next element
+
+## Induction example
+
+Show that the sum of the first n odd integers is n²
+
+- Example: If n = 5, 1+3+5+7+9 = 25 = 5²
+- Formally, Show ∀ n P(n) where P(n) = Σₙᵢ₌₁ 2i-1 = n²
+
+Base case: Show that P(1) is true
+
+- P(1) = 1
+
+Inductive hypothesis: assume true for k
+
+- Thus, we assume that P(k) is true, or that P(k) = Σᵏᵢ₌₁ 2i-1 = k²
+- Note: we don’t yet know if this is true or not!
+
+Inductive step: show true for k+1
+
+- We want to show that: P(k+1) = Σᵏ⁺¹ᵢ₌₁ 2i-1 = (k+1)²
+
+## What did we show
+
+- Base case: P(1)
+- If P(k) was true, then P(k+1) is true
+  i.e., P(k) → P(k+1)
+- We know it’s true for P(1)
+- Because of P(k) → P(k+1), if it’s true for P(1), then it’s true for P(2)
+- Because of P(k) → P(k+1), if it’s true for P(2), then it’s true for P(3)
+- Because of P(k) → P(k+1), if it’s true for P(3), then it’s true for P(4)
+- ...
+- And onwards to infinity
+- Thus, it is true for all possible values of n
+- In other words, we showed that:
+  [P(1) ∧ ∀ k (P(k) → P(k+1))] → ∀ n P(n)
+
+## Second induction example
+
+Show the sum of the first n positive even integers is n² + n
+
+- Rephrased:
+  ∀ n P(n), where P(n) = Σᵢ=1ⁿ 2 i = n² + n
+
+The three parts:
+
+- Base case
+- Inductive hypothesis
+- Inductive step
+
+## Induction example
+
+Show that n! < n^n for all n > 1
+
+Base case: n = 2
+2! < 2²
+2 < 4
+
+Inductive hypothesis: assume k! < k^k
+
+Inductive step: show that (k+1)! < (k+1)^(k+1)
+
+- (k+1)! = (k+1) · k! < (k+1) k^k < (k+1) (k+1)^k = (k+1)^(k+1)
+
+## Interesting Induction
+
+- ♈ Someone with zero hairs is bald.
+- ♈ Someone with one more hair than a bald person is bald.
+- ♈ .
+- ♈ . turn the inductive crank......
+- ♈ .
+- ♈ Therefore, someone with 1,000, 000 hairs is bald.
+- ♈ What’s wrong with this induction?
+
+![](img/47b87ec6fe4fa238d13429358848c545_695_0.png)
+
+
+
+## More Examples
+
+Prove that if an integer h> -1, then 1+nh ≤ (1+h)^n for all non-negative integer n.
+
+Prove that n² mod 8 ≡ 1 for all odd integer n.
+
+## Strong induction
+
+- Weak mathematical induction assumes P(k) is true, and uses that (and only that!) to show P(k+1) is true
+- Strong mathematical induction assumes P(1), P(2), ..., P(k) are all true, and uses that to show that P(k+1) is true.
+- [P(1) ∧ P(2) ∧ P(3) ∧ ... ∧ P(k) ] → P(k+1)
+
+## Strong induction example 1
+
+- Show that any number > 1 can be written as the product of primes
+- Base case: P(2)
+- 2 is the product of 2 (remember that 1 is not prime!)
+- Inductive hypothesis: P(2), P(3), ..., P(k) are all true
+- Inductive step: Show that P(k+1) is true
+
+Inductive step: Show that P(k+1) is true
+
+There are two cases:
+
+- k+1 is prime
+  - It can then be written as the product of k+1
+- k+1 is composite
+  - It can be written as the product of two composites, a and b, where 2 ≤ a ≤ b < k+1
+  - By the inductive hypothesis, both P(a) and P(b) are true
+  - Then P(k+1) is true
+
+## Strong Induction Examples 2
+
+Prove that every amount of 8 yuans or more can be formed using just 3-yuan and 5-yuan bills.
+
+Basis Step
+
+- 8 = 1 * 3-yuan bill + 1 * 5-yuan bill
+- 9 = 3 * 3-yuan bill
+- 10 = 2 * 5-yuan bill
+
+Inductive step: Suppose P(j) is true for 8 ≤ j ≤ k (k≥10). It is sufficient to show that P(k+1) is true.
+
+- If k is formed by at least 1 5-yuan bill, then k+1 can be formed by replacing this 5-yuan bill with 2 3-yuan bills.
+- Else, k is formed only by more than 3 3-yuan bills, then k+1 can be formed by replacing 3 3-yuan bills with 2 5-yuan bills.
+
+## Recursion
+
+Recursion means defining something, such as a function, in terms of itself
+
+- For example, let f(n) = n!
+- We can define f(n) as
+  - f(1) = 1
+  - f(n) = n * f(n-1) for n > 1
+
+Find f(1), f(2), f(3), and f(4), where f(0) = 1
+
+- Let f(n+1) = f(n) + 2
+  - f(1) = f(0) + 2 = 1 + 2 = 3
+  - f(2) = f(1) + 2 = 3 + 2 = 5
+  - f(3) = f(2) + 2 = 5 + 2 = 7
+  - f(4) = f(3) + 2 = 7 + 2 = 9
+- Let f(n+1) = 3f(n)
+  - f(1) = 3 * f(0) = 3*1 = 3
+  - f(2) = 3 * f(1) = 3*3 = 9
+  - f(3) = 3 * f(2) = 3*9 = 27
+  - f(4) = 3 * f(3) = 3*27 = 81
+
+## Recursion example
+
+### Fibonacci Sequence
+
+- f₀ = 0, f₁ = 1
+- fₙ = fₙ₋₁ + fₙ₋₂ for n ≥ 2
+- f₂ = 1, f₃ = 2, f₄ = 3, f₅ = 5, f₆ = 8, ...
+
+## Homework for Chapter 4
+
+- ♈ Section 4.1
+  - 6
+  - 38
+- ♈ Section 4.2
+  - 12
+
+## 0812210
+
+## Sets and Graphs
+
+## Ch 5.2 The Pigeonhole Principle
+
+Spring 2010
+
+Mao Xiaoguang
+
+## The pigeonhole principle
+
+- Suppose a flock of pigeons fly into a set of pigeonholes to roost
+- If there are more pigeons than pigeonholes, then there must be at least 1 pigeonhole that has more than one pigeon in it
+- If k+1 or more objects are placed into k boxes, then there is at least one box containing two or more of the objects
+
+![](img/47b87ec6fe4fa238d13429358848c545_705_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_705_1.png)
+
+## Pigeonhole principle examples
+
+- In a group of 367 people, there must be two people with the same birthday
+  As there are 366 possible birthdays
+- In a group of 27 English words, at least two words must start with the same letter
+  As there are only 26 letters
+
+## Generalized pigeonhole principle
+
+♈ If N objects are placed into k boxes, then there is at least one box containing ⌈N/k⌉ objects
+
+## Generalized pigeonhole principle
+
+Among 100 people, there are at least ⌈100/12⌉ = 9 born on the same month
+
+How many students in a class must there be to ensure that 6 students get the same grade (one of A, B, C, D, or E)?
+
+- The "boxes" are the grades. Thus, k = 5
+- Thus, we set ⌈N/5⌉ = 6
+- Lowest possible value for N is 26
+
+## Example
+
+A bowl contains 10 red and 10 yellow balls
+
+How many balls must be selected to ensure 3 balls of the same color?
+
+- One solution: consider the "worst" case
+- Consider 2 balls of each color
+- You can’t take another ball without hitting 3, Thus, the answer is 5
+- Via generalized pigeonhole principle
+- How many balls are required if there are 2 colors, and one color must have 3 balls?
+- How many pigeons are required if there are 2 pigeon holes, and one must have 3 pigeons?
+- number of boxes: k = 2, We want ⌈N/k⌉ = 3
+- What is the minimum N?
+- N = 5
+
+
+
+## More elegant applications
+
+Show that among any n+1 positive integers not exceeding 2n, there must be an integer that divides one of the other integers.
+
+- Let a₁, a₂, ..., aₙ₊₁ be such integers (increasing).
+- For any j, aⱼ could be written as 2ᵏʲ qⱼ where qⱼ is odd.
+- The integers q₁, q₂, ..., qₙ₊₁ are all odd positive integers less than 2n.
+- Since there are only n odd numbers less than 2n, there exist qᵢ = qⱼ by the Pigeonhole principle.
+- Let q be qᵢ = qⱼ. Then aᵢ = 2ᵏⁱ q and aⱼ = 2ᵏʲ q
+- If i<j, aᵢ | aⱼ. Otherwise, aⱼ | aᵢ.
+
+## Homework for Chapter 5
+
+## Section 5.2
+
+- 6
+- 18
+- 24
+
+## 0812210
+
+## Sets and Graphs
+
+## Ch 8.1 Relations
+
+Spring 2010
+Mao Xiaoguang
+
+## What are relations?
+
+- Relations are a formal means to specify which elements from two or more sets are related to each other.
+  - {students} who take {courses}
+  - {businesses} and their {telephone numbers}
+  - {integers} and their {divisors}
+  - {program variables} and the {subroutines} they are used in
+
+- Let A and B be sets.
+  A binary relation R from A to B is a subset of A × B
+  - Recall: A x B = {(a, b) | a ∈ A, b ∈ B}
+  - aRb: (a, b) ∈ R.
+
+- Application
+  - Relational database model is based on the concept of relation.
+
+## Relation examples
+
+## Example
+
+- Let A be the students in a the CS major
+  - A = {Alice, Bob, Claire, Dan}
+- Let B be the courses the department offers
+  - B = {CS1901, CS2011, CS2021}
+- We specify relation R ⊂ A × B as the set that lists all students a ∈ A enrolled in class b ∈ B
+- R = {(Alice, CS1011), (Bob, CS2011), (Bob, CS2021), (Dan, CS2011), (Dan, CS2021)}
+
+## More relation examples
+
+- Another relation example:
+- Let A be the cities in the China
+- Let B be the provinces in the China
+- We define R to mean a is a city in province b
+- Thus, the following are in our relation:
+  - (Changsha, Hunan)
+  - (Wuhan, Hubei)
+  - (Houzhou, Zhejiang)
+  - (Nanjing, Jiangsu)
+  - etc...
+
+Most relations we will see deal with ordered pairs of integers
+
+## Representing relations
+
+We can represent relations graphically:
+
+We can represent relations in a table:
+
+![](img/47b87ec6fe4fa238d13429358848c545_716_0.png)
+
+Not valid functions!
+
+|  | CS1901 | CS2011 | CS2021 |
+|---|---|---|---|
+| Chen | X |  |  |
+| Li |  | X | X |
+| Hu |  |  |  |
+| Wang |  | X | X |
+
+## How many relations are there?
+
+A relation R ⊆ A × B, |A| = m, |B| = n
+
+- A × B has m×n elements,
+- the number of subsets of a set with q elements is 2^q,
+- so the desired number is 2^{m×n} (= P(A×B)).
+
+## Relations vs. Functions
+
+A function f : A → B is a special case of a relation from A to B
+
+- It satisfies the property: A function takes EACH element from a set and maps it to a UNIQUE element in another set
+- f: X → Y
+  ∀ x ∈ X, ∃ y such that f(x) = y
+
+Relations are a generalization of functions
+
+- A binary relation R from A to B is a subset of A × B, R ⊆ A × B
+- They allow unmapped elements from A
+- They allow one-to-many mappings where an element from A maps to multiple elements from B
+- They also allow many-to-one and many-to-many mappings
+
+## Relations vs. functions
+
+- If \(R \subseteq X \times Y\) is a relation, then is \(R\) a function?
+- If \(f: X \to Y\) is a function, then is \(f\) a relation?
+
+## Relations on a set
+
+A binary relation R on the set A is a relation from A to A, i.e. R ⊆ A × A = A²
+
+- In other words, the domain and co-domain are the same set
+- We will generally be studying relations of this type
+
+## Relations on a set
+
+- Let A be the set { 1, 2, 3, 4 }
+- Which ordered pairs are in the relation
+  R = { (a,b) | a divides b }
+- R = {(1,1), (1,2), (1,3), (1,4), (2,2), (2,4), (3,3), (4,4)}
+
+![](img/47b87ec6fe4fa238d13429358848c545_721_0.png)
+
+| R | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| 1 | X | X | X | X |
+| 2 |   | X |   | X |
+| 3 |   |   | X |   |
+| 4 |   |   |   | X |
+
+
+
+## More examples
+
+- Consider some relations on the set Z
+- Are the following ordered pairs in the relation?
+
+| | (2,2) | (1,1) | (1,2) | (2,1) | (1,-1) |
+|---|---|---|---|---|---|
+| $R_1 = \{ (a,b) \mid a \le b \}$ | X | X | X |  |  |
+| $R_2 = \{ (a,b) \mid a > b \}$ |  |  |  | X | X |
+| $R_3 = \{ (a,b) \mid a = |b| \}$ | X | X |  |  | X |
+| $R_4 = \{ (a,b) \mid a = b \}$ | X | X |  |  |  |
+| $R_5 = \{ (a,b) \mid a = b + 1 \}$ |  |  |  | X |  |
+| $R_6 = \{ (a,b) \mid a + b \le 3 \}$ |  | X | X | X | X |
+
+## Relation properties
+
+Six properties of relations we will study:
+
+- Reflexive
+- Irreflexive
+- Symmetric
+- Asymmetric
+- Antisymmetric
+- Transitive
+
+## Reflexivity vs. Irreflexivity
+
+- A relation can be neither reflexive nor irreflexive
+- Example?
+  - A = {1, 2}, R = {(1, 1)}
+  - It is not reflexive, since (2, 2) ∉ R,
+  - It is not irreflexive, since (1, 1) ∈ R.
+
+## Symmetry, Asymmetry, Antisymmetry
+
+A relation is **symmetric** if
+- for all a, b ∈ A, (a,b) ∈ R ⇒ (b,a) ∈ R
+
+A relation is **asymmetric** if
+- for all a, b ∈ A, (a,b) ∈ R ⇒ (b,a) ∉ R
+
+A relation is **antisymmetric** if
+- for all a, b ∈ A, ((a,b) ∈ R ∧ (b,a) ∈ R) ⇒ a=b
+- (Second definition) for all a, b ∈ A, ((a,b) ∈ R ∧ a ≠ b) ⇒ (b,a) ∉ R
+
+| | < | > | = | ≤ | ≥ | isTwinOf |
+| --- | --- | --- | --- | --- | --- | --- |
+| symmetric | x | x | o | x | x | o |
+| asymmetric | o | o | x | x | x | x |
+| antisymmetric | o | o | o | o | o | x |
+
+## Notes on *symmetric relations
+
+- A relation can be neither symmetric or asymmetric
+  - R = { (a,b) | a = |b| }
+  - This is not symmetric
+    - -4 is not related to itself
+  - This is not asymmetric
+    - 4 is related to itself
+  - Note that it is antisymmetric
+
+## Transitivity
+
+- A relation is **transitive** if
+  - for all \(a, b, c \in A\), \(((a,b)\in R \land (b,c)\in R) \Rightarrow (a,c)\in R\)
+- If \(a < b\) and \(b < c\), then \(a < c\)
+  - Thus, \(<\) is transitive
+- If \(a = b\) and \(b = c\), then \(a = c\)
+  - Thus, \(=\) is transitive
+
+## Transitivity examples
+
+- **Consider isAncestorOf()**
+  - Let Alice be Bob’s parent, and Bob be Claire’s parent
+  - Thus, Alice is an ancestor of Bob, and Bob is an ancestor of Claire
+  - Thus, Alice is an ancestor of Claire
+  - Thus, isAncestorOf() is a transitive relation
+- **Consider isParentOf()**
+  - Let Alice be Bob’s parent, and Bob be Claire’s parent
+  - Thus, Alice is a parent of Bob, and Bob is a parent of Claire
+  - However, Alice is *not* a parent of Claire
+  - Thus, isParentOf() is *not* a transitive relation
+
+## Summary of properties of relations
+
+| Property | Definition |
+| --- | --- |
+| reflexive | ∀a (a, a) ∈ R |
+| irreflexive | ∀a (a, a) ∉ R |
+| symmetric | ∀ a, b ∈ A, (a,b) ∈ R ⇒ (b,a) ∈ R |
+| asymmetric | ∀ a, b ∈ A, (a,b) ∈ R ⇒ (b,a) ∉ R |
+| antisymmetric | ∀ a, b ∈ A, ((a,b) ∈ R ∧ (b,a) ∈ R) ⇒ a=b<br>(*) for all a, b ∈ A, ((a,b) ∈ R ∧ a ≠ b) ⇒ (b,a) ∉ R |
+| transitive | ∀ a, b, c ∈ A, ((a,b) ∈ R ∧ (b,c) ∈ R) ⇒ (a,c) ∈ R |
+
+(*) Alternative definition...
+
+## Combining relations
+
+There are two ways to combine relations $R_1$ and $R_2$
+
+- Via Set operators
+- Via relation "composition"
+
+## Combining relations via Set operators
+
+- Consider two relations \(R_{\ge}\) and \(R_{\le}\)
+  - \(R_{\ge} \cup R_{\le}\) = all numbers ≥ OR ≤
+    - That’s all the number pairs
+  - \(R_{\ge} \cap R_{\le}\) = all numbers ≥ AND ≤
+    - That’s all numbers equal to
+  - \(R_{\ge} \oplus R_{\le}\) = all numbers ≥ or ≤, but not both
+    - That’s all numbers not equal to
+  - \(R_{\ge} - R_{\le}\) = all numbers ≥ that are not also ≤
+    - That’s all numbers strictly greater than
+  - \(R_{\le} - R_{\ge}\) = all numbers ≤ that are not also ≥
+    - That’s all numbers strictly less than
+
+Note that it’s possible the result is the empty set
+
+## Combining via relational composition
+
+Similar to function composition
+
+Let R be a relation from A to B, and S be a relation from B to C
+
+- Let a ∈ A, b ∈ B, and c ∈ C
+- Let (a,b) ∈ R, and (b,c) ∈ S
+- Then the composite of R and S consists of the ordered pairs (a,c)
+
+We denote the relation by S ∘ R
+
+Note that S comes first when writing the composition!
+
+(a, c) ∈ S ∘ R if ∃ b such that (a, b) ∈ R, and (b,c) ∈ S
+
+
+
+# Combining via relational composition
+
++   Let M be the relation "is mother of"
++   Let F be the relation "is father of"
++   What is M ∘ F ?
++     - If (a,b) ∈ F, then a is the father of b
++     - If (b,c) ∈ M, then b is the mother of c
++     - Thus, M ∘ F denotes the relation "maternal grandfather"
++   What is F ∘ M ?
++     - If (a,b) ∈ M, then a is the mother of b
++     - If (b,c) ∈ F, then b is the father of c
++     - Thus, F ∘ M denotes the relation "paternal grandmother"
++   What is M ∘ M ?
++     - If (a,b) ∈ M, then a is the mother of b
++     - If (b,c) ∈ M, then b is the mother of c
++     - Thus, M ∘ M denotes the relation "maternal grandmother"
+
+# Combining via relational composition
+
+Given relation R
+
++   - R ◦ R can be denoted by R²
++   - R² ◦ R = (R ◦ R) ◦ R = R³
++   - Example: M³ is your mother’s mother’s mother
+
+0812210
+
+# Sets and Graphs
+
+# Ch 8.2 n-ary Relations
+and Their Applications
+
+Spring 2010
+
+Mao Xiaoguang
+
+# n-ary Relations
+
++   - An *n*-ary relation *R* on sets *A*₁,...,*A*ₙ is simply a subset *R* ⊆ *A*₁ × ... × *A*ₙ, written (with signature) *R*:*A*₁ × ... × *A*ₙ or *R*:*A*₁,...,*A*ₙ.
++   - The sets *A*ᵢ are called the *domains* of *R*.
++   - The *degree* of *R* is *n*.
++   - *R* is *functional* in the *domain* *A*ᵢ if it contains at most one *n*-tuple (..., *a*ᵢ, ...) for any value *a*ᵢ within domain *A*ᵢ.
+
+# Example
+
++   - Let R be a relation on NxNxN consisting of triples (a,b,c) where a, b, c are integers with a < b < c.
++     - Then (1, 2, 3) is an element of R
++     - (2, 4, 3) is not
++   - Let R be the relation with 5-tuples (A, N, S, D, T). A: Airline, N: flight number, S: starting point, D: destination, T: departure time
++     - Degree of this Relation is 5
++     - Domain: set of all airlines, all flight numbers, all cities, all cities, all times
+
+# Relational Databases
+
++   A *relational database* is essentially just an *n*-ary relation *R*.
++   A domain *A_i* is a *primary key* for the database if the relation *R* is functional in *A_i*.
++   Combinations of domains can also uniquely identify n-tuples : composite key
++   A *composite key* for the database is a set of domains {...,*A_i*,...,*A_j*,...} such that *R* contains at most 1 *n*-tuple (... ,*a_i*,...,*a_j*,...) for each composite value (... ,*a_i*...,*a_j*...) ∈ ... × *A_i* × ... × *A_j* × ...
+
+# Selection Operators
+
++   We may define operations on n-ary relations
++   Let A be any n-ary domain A=A₁ × ... × Aₙ, and let C:A→{T,F} be any condition (predicate) on elements (n-tuples) of A.
++   Then, the selection operator s_C is the operator that maps any (n-ary) relation R on A to the n-ary relation of all n-tuples from R that satisfy C.
+
+> I.e., ∀R⊆A, s_C(R) = {a∈R | s_C(a) = T}
+
+# Projection Operators
+
++   Let $A = A_1 \times \dots \times A_n$ be any $n$-ary domain, and let $\{i_k\} = (i_1, \dots, i_m)$ be a sequence of indices all falling in the range 1 to $n$,
++   That is, where $1 \le i_k \le n$ for all $1 \le k \le m$.
++   Then the *projection* operator on n-tuples is defined by:
+
+$P_{\{i_k\}} : A_1 \times \dots \times A_n \to A_{i_1} \times \dots \times A_{i_m}$
+
+$P_{\{i_k\}}(a_1, \dots, a_n) = (a_{i_1}, \dots, a_{i_m})$
+
+# Projection Example
+
+■ Let Rooms be the relation with attributes
+{Place, Seats, BoardType, Computer}
+
+A = {(P, S, B, C)}
+
+R = {(Fan171, 80, Chalk, Yes),
+    (Lws210, 25, No, Yes),
+    (Nek138, 50, Chalk, No),
+    (Agr212, 200, No, Yes), ...}
+
+R₁ = project (R, {P, S}) will produce a relation
+     limited to the place and number of seats.
+
+R₁ = {(Fan171, 80), (Lws210, 25),
+     (Nek138, 50), (Agr212, 200), ...}
+
+# Join Operator
+
++   Puts two relations together to form a sort of combined relation.
++   If the tuple (A,B) appears in R₁, and the tuple (B,C) appears in R₂, then the tuple (A,B,C) appears in the join J(R₁,R₂).
++   A, B, and C here can also be sequences of elements (across multiple fields), not just single elements.
+
+
+
+## Join Example
+
+- Suppose $R_1$ is a teaching assignment table, relating *Professors* to *Courses*.
+- Suppose $R_2$ is a room assignment table relating *Courses* to *Rooms*,*Times*.
+- Then $J(R_1,R_2)$ is like your class schedule, listing (*professor*,*course*,*room*,*time*).
+
+## Join Example
+
+| Prof. | Course |
+| --- | --- |
+| John | CS202 |
+| Brian | CS340 |
+| Kenny | CS220 |
+| Kemal | CS215 |
+
+R1
+
+| Course | Class | Time |
+| --- | --- | --- |
+| CS215 | FNR1326 | 11:00 |
+| CS220 | FNR2332 | 9:00 |
+| CS340 | Quig101 | 2:30 |
+| CS202 | LWS202 | 3:30 |
+
+R2
+
+| Prof. | Course | Class | Time |
+| --- | --- | --- | --- |
+| Kemal | CS215 | FNR1326 | 11:00 |
+| Kenny | CS220 | FNR2332 | 9:00 |
+| Brian | CS340 | Quig101 | 2:30 |
+| John | CS202 | LWS202 | 3:30 |
+
+J(R1, R2)
+
+## Database operators
+
+- Selection: σ(R, c) = the subset of R that satisfies condition c
+- Projection: π(R, {set of fields}) = a new relation identical to R except that it has only the specified fields
+- Join: J(R, S, {set of fields}) = a new relation that has records with all fields from both R and S constructed from matching R and S records. Matching here means identical values on {set of fields}.
+
+## SQL
+
+- SQL (structured query language) is a widely used language for specifying database queries, i.e., new databases
+- Basic structure
+  - SELECT field1, field2, ... Projection
+  - FROM database1, database2, ... Join
+  - WHERE condition1, condition2, ... Selection
+
+## Example
+
+- Finding courses Professor Kenny teaches
+- SQL query
+  - SELECT Course
+  - FROM Teach_database
+  - WHERE Professor = "Kenny"
+
+| Professor | Course |
+|-----------|--------|
+| John      | CS202  |
+| Brian     | CS340  |
+| Kenny     | CS220  |
+| Kemal     | CS215  |
+
+Teach_database
+
+## Example with join
+
+Suppose
+
+| Professor | Course |
+|-----------|--------|
+| John      | CS202  |
+| Brian     | CS340  |
+| Kenny     | CS220  |
+| Kemal     | CS215  |
+
+Teach_database
+
+| Course | Class   | Time |
+|--------|---------|------|
+| CS215  | FNR1326 | 11:00 |
+| CS220  | FNR2332 | 9:00  |
+| CS340  | Quig101 | 2:30  |
+| CS202  | LWS202  | 3:30  |
+
+Room_database
+
+Where does Professor Kenny teach?
+
+## Solving the example
+
+- SQL query
+  - SELECT Class
+  - FROM Teach_database, Room_database
+  - WHERE Professor="Kenny"
+
+- Answer: "FNR2332"
+
+This is the *inner join* (most commonly used) and it directly corresponds to the composition of two relations that we defined earlier
+
+## Homework for Section 8.2
+
+## Section 8.2
+
+- 9
+- 13
+- 17
+- 29
+
+## 0812210
+
+## Sets and Graphs
+
+## Ch 8.3 Representing Relations
+
+Spring 2010
+
+Mao Xiaoguang
+
+## Matrix review
+
+- We will only be dealing with zero-one matrices
+  - Each element in the matrix is either a 0 or a 1
+
+```
+[ 1 0 0 0 ]
+[ 0 1 0 0 ]
+[ 1 0 1 0 ]
+[ 1 0 1 0 ]
+```
+
+- These matrices will be used for Boolean operations
+  - 1 is true, 0 is false
+
+## Matrix transposition
+
+Given a matrix **M**, the transposition of **M**, denoted **M**ᵗ, is the matrix obtained by switching the columns and rows of **M**
+
+```
+**M** = [[1 2 3]
+[4 5 6]]
+```
+
+```
+**M**ᵗ = [[1 4]
+[2 5]
+[3 6]]
+```
+
+```
+**M** = [[1 2 3 4]
+[5 6 7 8]
+[9 10 11 12]
+[13 14 15 16]]
+```
+
+```
+**M**ᵗ = [[1 5 9 13]
+[2 6 10 14]
+[3 7 11 15]
+[4 8 12 16]]
+```
+
+In a “square” matrix, the main diagonal stays unchanged
+
+## Matrix join
+
+A *join* of two matrices performs a Boolean OR on each relative entry of the matrices
+
+- Matrices must be the same size
+- Denoted by the or symbol: ∨
+
+```
+[1 0 0 0; 0 1 0 0; 1 0 1 0; 1 0 1 0] ∨ [0 1 1 0; 0 1 1 0; 0 0 1 1; 1 1 0 0] = [1 1 1 0; 0 1 1 0; 1 0 1 1; 1 1 1 0]
+```
+
+## Matrix meet
+
+A *meet* of two matrices performs a Boolean AND on each relative entry of the matrices
+
+- Matrices must be the same size
+- Denoted by the and symbol: ∧
+
+[1 0 0 0; 0 1 0 0; 1 0 1 0; 1 0 1 0] ∧ [0 1 1 0; 0 1 1 0; 0 0 1 1; 1 1 0 0] = [0 0 0 0; 0 1 0 0; 0 0 1 0; 1 0 0 0]
+
+
+
+# Matrix Boolean product
+
+- A *Boolean product* of two matrices is similar to matrix multiplication
+
+$c_{1,1}=a_{1,1}*b_{1,1}+a_{1,2}*b_{2,1}+a_{1,3}*b_{3,1}+a_{1,4}*b_{4,1}$
+
+- Instead of the sum of the products, it’s the conjunction (and) of the disjunctions (ors)
+
+$c_{1,1}=a_{1,1}\land b_{1,1}\lor a_{1,2}\land b_{2,1}\lor a_{1,3}\land b_{3,1}\lor a_{1,4}\land b_{4,1}$
+
+- Denoted by the or symbol: $\odot$
+
+$\begin{bmatrix}1&0&0&0\\0&1&0&0\\1&0&1&0\\1&0&1&0\end{bmatrix}\odot\begin{bmatrix}0&1&1&0\\0&1&1&0\\0&0&1&1\\1&1&0&0\end{bmatrix}=\begin{bmatrix}0&1&1&0\\0&1&1&0\\0&1&1&1\\0&1&1&1\end{bmatrix}$
+
+# Relations using matrices
+
+- List the elements of sets A and B in a particular order
+  - Order doesn’t matter, but we’ll generally use ascending order
+
+- Create a matrix
+
+$$\mathbf{M}_R = [m_{ij}]$$
+
+$$m_{ij} = \begin{cases} 1 & \text{if } (a_i, b_j) \in R \\ 0 & \text{if } (a_i, b_j) \notin R \end{cases}$$
+
+# Relations using matrices
+
+Consider the relation of who is enrolled in which class
+
+- Let A = { Alice, Bob, Claire, Dan }
+- Let B = { CS101, CS201, CS202 }
+- R = { (a,b) | person a is enrolled in course b }
+
+|  | CS101 | CS201 | CS202 |
+|---|---|---|---|
+| Alice | X |  |  |
+| Bob |  | X | X |
+| Claire |  |  |  |
+| Dan |  | X | X |
+
+M_R = [[1 0 0], [0 1 1], [0 0 0], [0 1 1]]
+
+# Reflexivity
+
+Consider a reflexive relation: ≤
+
+- One which every element is related to itself
+- Let A = { 1, 2, 3, 4, 5 }
+
+```
+M_≤ = [ 1 1 1 1 1
+0 1 1 1 1
+0 0 1 1 1
+0 0 0 1 1
+0 0 0 0 1 ]
+```
+
+If the center (main) diagonal is all 1's, a relation is reflexive
+
+# Irreflexivity
+
+Consider a reflexive relation: <
+
+- One which every element is not related to itself
+
+- Let A = { 1, 2, 3, 4, 5 }
+
+```
+M_≤ = [ 0 1 1 1 1
+0 0 1 1 1
+0 0 0 1 1
+0 0 0 0 1
+0 0 0 0 0 ]
+```
+
+If the center (main) diagonal is all 0's, a relation is irreflexive
+
+# Symmetry
+
+Consider an symmetric relation R
+
+- One which if a is related to b then b is related to a for all (a,b)
+- Let A = { 1, 2, 3, 4, 5 }
+
+M_≤ = [[1 0 1 1 0], [0 0 0 0 1], [1 0 0 0 0], [1 0 0 1 0], [0 1 0 0 1]]
+
+If, for every value, it is the equal to the value in its transposed position, then the relation is symmetric
+
+# Asymmetry
+
+Consider an asymmetric relation: <
+
+- One which if a is related to b then b is not related to a for all (a,b)
+
+- Let A = { 1, 2, 3, 4, 5 }
+
+![](img/47b87ec6fe4fa238d13429358848c545_766_0.png)
+
+If, for every value and the value in its transposed position, if they are not both 1, then the relation is asymmetric
+
+An asymmetric relation must also be irreflexive
+
+Thus, the main diagonal must be all 0's
+
+# Antisymmetry
+
+Consider an antisymmetric relation: ≤
+
+- One which if a is related to b then b is not related to a unless a=b for all (a,b)
+
+- Let A = { 1, 2, 3, 4, 5 }
+
+M_≤ = \begin{bmatrix}1 & 1 & 1 & 1 & 1\\0 & 1 & 1 & 1 & 1\\0 & 0 & 1 & 1 & 1\\0 & 0 & 0 & 1 & 1\\0 & 0 & 0 & 0 & 1\end{bmatrix}
+
+If, for every value and the value in its transposed position, if they are not both 1, then the relation is antisymmetric
+
+The center diagonal can have both 1's and 0's
+
+# Transitivity
+
+Consider an transitive relation: ≤
+
+- One which if a is related to b and b is related to c then a is related to c for all (a,b), (b,c) and (a,c)
+
+- Let A = { 1, 2, 3, 4, 5 }
+
+M_≤ = [[1, 1, 1, 1, 1], [0, 1, 1, 1, 1], [0, 0, 1, 1, 1], [0, 0, 0, 1, 1], [0, 0, 0, 0, 1]]
+
+If, for every spot (a,b) and (b,c) that each have a 1, there is a 1 at (a,c), then the relation is transitive
+
+Matrices don’t show this property easily
+
+# Combining relations: via Boolean operators
+
+Let:
+$\mathbf{M}_R = \begin{bmatrix}1 & 0 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0\end{bmatrix}$
+$\mathbf{M}_S = \begin{bmatrix}1 & 0 & 1 \\ 0 & 1 & 1 \\ 1 & 0 & 0\end{bmatrix}$
+
+Join:
+$\mathbf{M}_{R\cup S} = \mathbf{M}_R \lor \mathbf{M}_S = \begin{bmatrix}1 & 0 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 0\end{bmatrix}$
+
+Meet:
+$\mathbf{M}_{R\cap S} = \mathbf{M}_R \land \mathbf{M}_S = \begin{bmatrix}1 & 0 & 1 \\ 0 & 0 & 0 \\ 0 & 0 & 0\end{bmatrix}$
+
+
+
+## Combining relations: via relation composition
+
++   Let:
+
+M_R = [a b c; d e f] matrix with rows a,b,c and columns d,e,f
+ a 1 0 1
+ b 1 0 0
+ c 0 1 0
+
+M_S = [d e f; g h i] matrix with rows d,e,f and columns g,h,i
+ d 1 0 1
+ e 0 1 1
+ f 1 0 0
+
++   But why is this the case?
+
+M_{S∘R} = M_R ⊙ M_S =
+
+matrix with rows a,b,c and columns g,h,i
+ a 1 0 1
+ b 1 0 1
+ c 0 1 1
+
+## Find the matrix representing the relations S o R:
+
+$M_{S\circ R}=M_{R}\circ M_{S}$
+
+![](img/47b87ec6fe4fa238d13429358848c545_771_0.png)
+
+## Representing relations using directed graphs
+
++   A directed graph consists of:
++   - A set V of vertices (or nodes)
++   - A set E of edges (or arcs)
++   - If (a, b) is in the relation, then there is an arrow from a to b
+
+Will generally use relations on a single set
+
+Consider our relation R = { (a,b) | a divides b }
+
+Old way:
+
+![](img/47b87ec6fe4fa238d13429358848c545_772_0.png)
+
+## Reflexivity
+
+Consider a reflexive relation: ≤
+
++   - One which every element is related to itself
++   - Let A = { 1, 2, 3, 4, 5 }
+
+![](img/47b87ec6fe4fa238d13429358848c545_773_0.png)
+
+If every node has a loop, a relation is reflexive
+
+## Irreflexivity
+
+Consider a reflexive relation: <
+
++   - One which every element is *not* related to itself
++   - Let A = { 1, 2, 3, 4, 5 }
+
+![](img/47b87ec6fe4fa238d13429358848c545_774_0.png)
+
+If every node does *not* have a loop, a relation is irreflexive
+
+## Symmetry
+
+## Consider an symmetric relation R
+
++   - One which if a is related to b then b is related to a for all (a,b)
++   - Let A = { 1, 2, 3, 4, 5 }
+
+![](img/47b87ec6fe4fa238d13429358848c545_775_0.png)
+
+Called anti-parallel pairs
+
++   - If, for every edge, there is an edge in the other direction, then the relation is symmetric
++   - Loops are allowed, and do not need edges in the “other” direction
+
+Note that this relation is neither reflexive nor irreflexive!
+
+## Antisymmetry
+
+Consider an antisymmetric relation: ≤
+
++   - One which if a is related to b then b is not related to a unless a=b for all (a,b)
++   - Let A = { 1, 2, 3, 4, 5 }
+
+![](img/47b87ec6fe4fa238d13429358848c545_777_0.png)
+
+If, for every edge, there is not an edge in the other direction, then the relation is antisymmetric
+
+Loops are allowed in the digraph
+
+## Transitivity
+
+## Consider an transitive relation: ≤
+
++   One which if a is related to b and b is related to c then a is related to c for all (a,b), (b,c) and (a,c)
+
++   Let A = { 1, 2, 3, 4, 5 }
+
+![](img/47b87ec6fe4fa238d13429358848c545_778_0.png)
+
+A digraph is transitive if, for there is a edge from a to c when there is a edge from a to b and from b to c
+
+## Applications of digraphs: MapQuest
+
++   - Not reflexive
++   - Is irreflexive
++   - **Not symmetric**
++   - Not asymmetric
++   - Not antisymmetric
++   - Not transitive
+
++   - Not reflexive
++   - Is irreflexive
++   - **Is symmetric**
++   - Not asymmetric
++   - Not antisymmetric
++   - Not transitive
+
+End
+
+Start
+
+Sets and graphs
+
+![](img/47b87ec6fe4fa238d13429358848c545_779_0.png)
+
+## Rosen, section 8.1, question 45(a)
+
+How many symmetric relations are there on a set with n elements?
+
+Let’s apply matrix
+
+## Rosen, section 8.1, question 45 (a)
+
++   - Consider the matrix representing symmetric relation R on a set with $n$ elements:
++   - The center diagonal can have any values
++   - Once the “upper” triangle is determined, the “lower” triangle must be the transposed version of the “upper” one
++   - How many ways are there to fill in the center diagonal and the upper triangle?
++   - There are $n^2$ elements in the matrix
++   - There are $n$ elements in the center diagonal
++     - Thus, there are $2^n$ ways to fill in 0’s and 1’s in the diagonal
++   - Thus, there are $(n^2-n)/2$ elements in each triangle
++     - Thus, there are $2^{(n^2-n)/2}$ ways to fill in 0’s and 1’s in the triangle
++   - Answer: there are $2^n * 2^{(n^2-n)/2} = 2^{(n^2+n)/2}$ possible symmetric relations on a set with $n$ elements
+
+![](img/47b87ec6fe4fa238d13429358848c545_782_0.png)
+
+
+
+# Homework for Section 8.3
+
+# Section 8.3
+
++   - 14  b)  c)
++   - 31
+
+# 0812210
+
+# Sets and Graphs
+
+# Ch 8.4 Closures of
+Relations
+
+Spring 2010
+
+Mao Xiaoguang
+
+## Relational closures
+
+Three types we will study
+
++   - Reflexive
++     - Easy
++   - Symmetric
++     - Easy
++   - Transitive
++     - Hard
+
+## Reflexive closure
+
++   - Consider a relation \(R\):
++     - From our MapQuest example in the last slide set
++     - Note that it is not reflexive
++   - We want to add edges to make the relation reflexive
++   - By adding those edges, we have made a non-reflexive relation \(R\) into a reflexive relation
++   - This new relation is called the **reflexive closure** of \(R\)
+
+![](img/47b87ec6fe4fa238d13429358848c545_786_0.png)
+
+## Reflexive closure
+
++   In order to find the reflexive closure of a relation R, we add a loop at each node that does not have one
+
++   The reflexive closure of R, r(R), is R U Π_A
++   Where Π_A = { (a,a) | a ∈ R }
++   Called the "diagonal relation"
++   With matrices, we set the diagonal to all 1's
+
+## Rosen, section 7.4, question 1(a)
+
++   Let R be a relation on the set { 0, 1, 2, 3 } containing the ordered pairs (0,1), (1,1), (1,2), (2,0), (2,2), and (3,0)
+
++   What is the reflexive closure of R?
+
++   We add all pairs of edges (a,a) that do not already exist
+
+![](img/47b87ec6fe4fa238d13429358848c545_788_0.png)
+
+We add edges:
+(0,0), (3,3)
+
+## Symmetric closure
+
++   - Consider a relation R:
++     - From our MapQuest example in the last slide set
++     - Note that it is not symmetric
++   - We want to add edges to make the relation symmetric
++   - By adding those edges, we have made a non-symmetric relation R into a symmetric relation
++   - This new relation is called the **symmetric closure** of R
+
+![](img/47b87ec6fe4fa238d13429358848c545_789_0.png)
+
+## Symmetric closure
+
++   - In order to find the symmetric closure of a relation $R$, we add an edge from $a$ to $b$, where there is already an edge from $b$ to $a$
++   - The symmetric closure of $R$, $s(R)$, is $R \cup R^{-1}$
++     - If $R = \{ (a,b) \mid \dots \}$
++     - Then $R^{-1} = \{ (b,a) \mid (a,b) \text{ in } R \}$
+
+## Rosen, section 8.4, question 1(b)
+
++   Let R be a relation on the set { 0, 1, 2, 3 } containing the ordered pairs (0,1), (1,1), (1,2), (2,0), (2,2), and (3,0)
+
++   What is the symmetric closure of R?
+
++   We add all pairs of edges (a,b) where (b,a) exists
+
++   We make all “single” edges into anti-parallel pairs
+
+![](img/47b87ec6fe4fa238d13429358848c545_791_0.png)
+
+We add edges:
+(0,2), (0,3)
+(1,0), (2,1)
+
+## Paths in directed graphs
+
++   - A path is a sequences of connected edges from vertex a to vertex b
++   
++   - No path exists from the noted start location
++   
++   - A path that starts and ends at the same vertex is called a circuit or cycle
++   
++     - Must have length ≥1
+
+![](img/47b87ec6fe4fa238d13429358848c545_792_0.png)
+
+## More on paths...
+
++   - The length of a path is the number of **edges** in the path, not the number of nodes
+
+## Transitive closure
+
++   Informal definition: If there is a path from a to b, then there should be an edge from a to b in the transitive closure
+
++   First definition:
++     In order to find the transitive closure of a relation R, we add an edge from a to c, when there are edges from a to b and b to c
+
++   But there is a path from 1 to 4 with no edge!
+
+R = { (1,2), (2,3), (3,4) }
+
+(1,2) & (2,3) ⇒ (1,3)
+(2,3) & (3,4) ⇒ (2,4)
+
+![](img/47b87ec6fe4fa238d13429358848c545_794_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_794_1.png)
+
+## Transitive closure
+
++   Informal definition: If there is a path from a to b, then there should be an edge from a to b in the transitive closure
+
++   Second definition:
+
++   In order to find the transitive closure of a relation R, we add an edge from a to c, when there are edges from a to b and b to c
+
++   Repeat this step until no new edges are added to the relation
+
++   We will study different algorithms for determining the transitive closure
+
++   red means added on the first repeat
+
++   teal means added on the second repeat
+
+![](img/47b87ec6fe4fa238d13429358848c545_795_0.png)
+
+
+
+## 6 degrees of separation
+
+- The idea that everybody in the world is connected by six degrees of separation
+- Where 1 degree of separation means you know (or have met) somebody else
+
+- Let R be a relation on the set of all people in the world
+- (a,b) ∈ R if person a has met person b
+
+- So six degrees of separation for any two people a and g means:
+- (a,b), (b,c), (c,d), (d,e), (e,f), (f,g) are all in R
+
+- Or, (a,g) ∈ R⁶
+
+R* is the star closure of relation R, and it is defined as
+
+$$R^* = \bigcup_{k=1}^{\infty} R^k$$
+
+Def.: The transitive closure of a relation R, t(R), Is the smallest transitive relation containing R.
+
+## Theorem: t(R) = R*.
+
+## How long are the paths in a transitive closure?
+
+- Let R be a relation on set A, and let A be a set with n elements
+- Rephrased: consider a graph G with n nodes and some number of edges
+
+- Lemma 1: If there is a path (of length at least 1) from a to b in R, then there is a path between a and b of length not exceeding n
+
+- Proof preparation:
+- Suppose there is a path from a to b in R
+- Let the length of that path be m
+- Let the path be edges (x₀, x₁), (x₁, x₂), …, (xₘ₋₁, xₘ)
+- That’s nodes x₀, x₁, x₂, …, xₘ₋₁, xₘ
+- If a node exists twice in our path, then it’s not a shortest path
+- As we made no progress in our path between the two occurrences of the repeated node
+- Thus, each node may exist at most once in the path
+
+## How long are the paths in a transitive closure?
+
+Proof by contradiction:
+
+- Assume there are more than *n* nodes in the path
+- Thus, *m* > *n*
+- Let *m* = *n*+1
+- By the pigeonhole principle, there are *n*+1 nodes in the path (pigeons) and they have to fit into the *n* nodes in the graph (pigeonholes)
+- Thus, there must be at least one pigeonhole that has at least two pigeons
+- Rephrased: there must be at least one node in the graph that has two occurrences in the nodes of the path
+- Not possible, as the path would not be the shortest path
+- Thus, it cannot be the case that *m* > *n*
+
+If there exists a path from *a* to *b*, then there is a path from *a* to *b* of at most length *n*
+
+## Finding the transitive closure
+
+Let M_R be the zero-one matrix of the relation R on a set with n elements. Then the zero-one matrix of the transitive closure R* is:
+
+M_R* = M_R ∨ M_R^[2] ∨ M_R^[3] ∨ … ∨ M_R^[n]
+
+Nodes reachable with one application of the relation
+
+Nodes reachable with two applications of the relation
+
+Nodes reachable with n applications of the relation
+
+## Rosen, section 8.4, example 7
+
+Find the zero-one matrix of the transitive closure of the relation R given by:
+
+M_R = [[1 0 1],[0 1 0],[1 1 0]]
+
+![](img/47b87ec6fe4fa238d13429358848c545_802_0.png)
+
+M_R^[2] =
+
+![](img/47b87ec6fe4fa238d13429358848c545_802_1.png)
+
+M_R* = M_R ∨ M_R^[2] ∨ M_R^[3]
+
+M_R^[2] = M_R ⊙ M_R = [[1 0 1],[0 1 0],[1 1 0]] ⊙ [[1 0 1],[0 1 0],[1 1 0]] = [[1 1 1],[0 1 0],[1 1 1]]
+
+## Rosen, section 8.4, example 7
+
+M_R^{[3]} = M_R^{[2]} ⊙ M_R = [1 1 1; 0 1 0; 1 1 1] ⊙ [1 0 1; 0 1 0; 1 1 0] = [1 1 1; 0 1 0; 1 1 1]
+
+![](img/47b87ec6fe4fa238d13429358848c545_803_0.png)
+
+M_R* = [1 0 1; 0 1 0; 1 1 0] ∨ [1 1 1; 0 1 0; 1 1 1] ∨ [1 1 1; 0 1 0; 1 1 1] = [1 1 1; 0 1 0; 1 1 1]
+
+## Transitive closure algorithm
+
+What we did (or rather, could have done):
+
+- Compute the next matrix M_R^{[i]}, where 1 ≤ i ≤ n
+- Do a Boolean join with the previously computed matrix
+
+For our example:
+
+- Compute M_R^{[2]} = M_R ∘ M_R
+- Join that with M_R to yield M_R ∨ M_R^{[2]}
+- Compute M_R^{[3]} = M_R^{[2]} ∘ M_R
+- Join that with M_R ∨ M_R^{[2]} from above
+
+## Transitive closure algorithm
+
+```
+procedure transitive_closure (M_R: zero-one n×n matrix)
+    A := M_R
+    B := A
+    for i := 2 to n
+    begin
+        A := A ⊙ M_R
+        B := B ∨ A
+    end { B is the zero-one matrix for R* }
+```
+
+What is the time complexity?      O(n⁴)
+
+
+
+## Roy-Warshall Algorithm
+
+Uses only O(n³) operations!
+
+## Procedure Warshall (M_R : rank-n 0-1 matrix)
+
+```
+W := M_R
+for k := 1 to n
+  for i := 1 to n
+    for j := 1 to n
+      w_ij := w_ij ∨ (w_ik ∧ w_kj)
+return W  {this represents R*}
+```
+
+w_ij = 1 means there is a path from i to j going only through nodes ≤k. Indices i and j may have index higher than k.
+
+## Homework for Section 8.4
+
+## Section 8.4
+
+- 25 b)
+- 29 b)
+
+## 0812210
+
+## Sets and Graphs
+
+## Ch 8.5 Equivalence Relations
+
+Spring 2010
+
+Mao Xiaoguang
+
+## Introduction
+
+- Certain combinations of relation properties are very useful
+- We won’t have a chance to see many applications in this course
+- In this set we will study equivalence relations
+- A relation that is reflexive, symmetric and transitive
+
+## Equivalence relations
+
+- A relation on a set *A* is called an *equivalence relation* if it is reflexive, symmetric, and transitive
+- This is definition 1 in the textbook
+
+- Consider relation *R* = { (*a*,*b*) | *len(a)* = *len(b)* }
+- Where *len(a)* means the length of string *a*
+- It is reflexive: *len(a)* = *len(a)*
+- It is symmetric: if *len(a)* = *len(b)*, then *len(b)* = *len(a)*
+- It is transitive: if *len(a)* = *len(b)* and *len(b)* = *len(c)*, then *len(a)* = *len(c)*
+- Thus, *R* is a equivalence relation
+
+## Equivalence relation example
+
+- Consider the relation $R = \{ (a,b) \mid a \equiv b \pmod m \}$
+- Remember that this means that $m \mid a-b$
+- Called "congruence modulo $m$"
+
+- Is it reflexive: $(a,a) \in R$ means that $m \mid a-a$
+- $a-a = 0$, which is divisible by $m$
+
+- Is it symmetric: if $(a,b) \in R$ then $(b,a) \in R$
+- $(a,b)$ means that $m \mid a-b$
+- Or that $km = a-b$. Negating that, we get $b-a = -km$
+- Thus, $m \mid b-a$, so $(b,a) \in R$
+
+- Is it transitive: if $(a,b) \in R$ and $(b,c) \in R$ then $(a,c) \in R$
+- $(a,b)$ means that $m \mid a-b$, or that $km = a-b$
+- $(b,c)$ means that $m \mid b-c$, or that $lm = b-c$
+- $(a,c)$ means that $m \mid a-c$, or that $nm = a-c$
+- Adding these two, we get $km+lm = (a-b) + (b-c)$
+- Or $(k+l)m = a-c$
+- Thus, $m$ divides $a-c$, where $n = k+l$
+
+- Thus, congruence modulo $m$ is an equivalence relation
+
+## Rosen, section 8.5, question 1
+
+Which of these relations on {0, 1, 2, 3} are equivalence relations? Determine the properties of an equivalence relation that the others lack
+
+- { (0,0), (1,1), (2,2), (3,3) }
+- Has all the properties, thus, is an equivalence relation
+
+- { (0,0), (0,2), (2,0), (2,2), (2,3), (3,2), (3,3) }
+- Not reflexive: (1,1) is missing
+- Not transitive: (0,2) and (2,3) are in the relation, but not (0,3)
+
+- { (0,0), (1,1), (1,2), (2,1), (2,2), (3,3) }
+- Has all the properties, thus, is an equivalence relation
+
+- { (0,0), (1,1), (1,3), (2,2), (2,3), (3,1), (3,2) (3,3) }
+- Not transitive: (1,3) and (3,2) are in the relation, but not (1,2)
+
+- { (0,0), (0,1) (0,2), (1,0), (1,1), (1,2), (2,0), (2,2), (3,3) }
+- Not symmetric: (1,2) is present, but not (2,1)
+- Not transitive: (2,0) and (0,1) are in the relation, but not (2,1)
+
+## Rosen, section 8.5, question 5
+
+- Suppose that A is a non-empty set, and f is a function that has A as its domain. Let R be the relation on A consisting of all ordered pairs (x,y) where f(x) = f(y)
+- Meaning that x and y are related if and only if f(x) = f(y)
+
+- Show that R is an equivalence relation on A
+
+- Reflexivity: f(x) = f(x)
+- True, as given the same input, a function always produces the same output
+
+- Symmetry: if f(x) = f(y) then f(y) = f(x)
+- True, by the definition of equality
+
+- Transitivity: if f(x) = f(y) and f(y) = f(z) then f(x) = f(z)
+- True, by the definition of equality
+
+## Rosen, section 8.5, question 8
+
+- Show that the relation R, consisting of all pairs (x,y) where x and y are bit strings of length three or more that agree except perhaps in their first three bits, is an equivalence relation on the set of all bit strings
+
+- Let f(x) = the bit string formed by the last n-3 bits of the bit string x (where n is the length of the string)
+
+- Thus, we want to show: let R be the relation on A consisting of all ordered pairs (x,y) where f(x) = f(y)
+
+- This has been shown in question 5 on the previous slide
+
+
+
+## Equivalence classes
+
+- Let R be an equivalence relation on a set A. The set of all elements that are related to an element a of A is called the equivalence class of a.
+- The equivalence class of a with respect to R is denoted by [a]_R = { b | b∈A ∧ (a, b)∈R }
+- When only one relation is under consideration, the subscript is often deleted, and [a] is used to denote the equivalence class
+- Note that these classes are disjoint!
+- As the equivalence relation is symmetric
+
+## More on equivalence classes
+
+- Consider the relation R = {(a,b) | a ≡ b (mod 2)}
+  - Thus, all the even numbers are related to each other
+  - As are the odd numbers
+- The even numbers form an equivalence class
+  - As do the odd numbers
+- The equivalence class for the even numbers is denoted by [2] (or [4], or [784], etc.)
+  - [2] = { ..., -4, -2, 0, 2, 4, ... }
+  - 2 is a *representative* of its equivalence class
+- There are only 2 equivalence classes formed by this equivalence relation
+
+## More on equivalence classes
+
+- Consider the relation R = {(a,b) | a=b or a=-b}
+  - Thus, every number is related to additive inverse
+- The equivalence class for an integer a:
+  - [7] = { 7, -7 }
+  - [0] = { 0 }
+  - [a] = { a, -a }
+- There are an infinite number of equivalence classes formed by this equivalence relation
+
+## Partitions
+
+- Consider the relation R = { (a,b) | a ≡ b (mod 2)}
+- This splits the integers into two equivalence classes: even numbers and odd numbers
+- Those two sets together form a partition of the integers
+- Formally, *a partition of a set S* is a collection of non-empty disjoint subsets of S whose union is S
+- In this example, the partition is { [0], [1] }
+- Or { {..., -3, -1, 1, 3, ...}, {..., -4, -2, 0, 2, 4, ...} }
+
+## Rosen, section 8.5, question 44
+
+Which are partitions of the set of integers?
+
+- • The set of even integers and the set of odd integers
+  ✓ Yes, it’s a valid partition
+- • The set of positive integers and the set of negative integers
+  ✗ No: 0 is in neither set
+- • The set of integers divisible by 3, the set of integers leaving a remainder of 1 when divided by 3, and the set of integers leaving a remainder of 2 when divided by 3
+  ✓ Yes, it’s a valid partition
+- • The set of integers less than -100, the set of integers with absolute value not exceeding 100, and the set of integers greater than 100
+  ✓ Yes, it’s a valid partition
+- • The set of integers not divisible by 3, the set of even integers, and the set of integers that leave a remainder of 3 when divided by 6
+  ✗ The first two sets are not disjoint (2 is in both), so it’s not a valid partition
+
+## Homework for Section 8.5
+
+## Section 8.5
+
+- 3
+- 28
+- 45 a) b) c)
+
+## 0812210
+
+## Sets and Graphs
+
+## Ch 8.6 Partial Orderings
+
+Spring 2010
+Mao Xiaoguang
+
+## Introduction
+
+- An equivalence relation is a relation that is reflexive, symmetric, and transitive
+- A partial ordering (or partial order) is a relation that is reflexive, *anti*symmetric, and transitive
+- Recall that antisymmetric means that if $(a,b) \in R$, then $(b,a) \notin R$ unless $b = a$
+- Thus, $(a,a)$ is allowed to be in $R$
+- But since it's reflexive, all possible $(a,a)$ must be in $R$
+
+## Partially Ordered Set (POSET)
+
+- A relation R on a set S is called a partial ordering or partial order if it is reflexive, antisymmetric, and transitive.
+- A set S together with a partial ordering R is called a partially ordered set, or poset, and is denoted by (S, R)
+
+## Example
+
+- Let S = {1, 2, 3} and
+- let R = {(1,1), (2,2), (3,3), (1, 2), (3,1), (3,2)}
+
+![](img/47b87ec6fe4fa238d13429358848c545_824_0.png)
+
+## Notation≼
+
+- In a poset, the notation $a \preccurlyeq b$ denotes that $(a,b) \in R$
+- This notation is used because the “less than or equal to” relation is a paradigm for a partial ordering. (Note that the symbol $\preccurlyeq$ is used to denote the relation in any poset, not just the “less than or equals” relation.)
+- The notation $a \prec b$ denotes that $a \preccurlyeq b$, but $a \neq b$
+
+
+
+## Example
+
++   Let S = {1, 2, 3} and
++   let R = {(1,1), (2,2), (3,3), (1, 2), (3,1), (3,2)}
+
+![](img/47b87ec6fe4fa238d13429358848c545_826_0.png)
+
+2 ≲ 2      3 ≺ 2
+
+## Example
+
++   - Show that ≥ is a partial order on the set of integers
++     - It is reflexive: $a \ge a$ for all $a \in \mathbf{Z}$
++     - It is antisymmetric: if $a \ge b$ then the only way that $b \ge a$ is when $b = a$
++     - It is transitive: if $a \ge b$ and $b \ge c$, then $a \ge c$
+
++   - Note that ≥ is the partial ordering on the set of integers
+
++   - $(\mathbf{Z}, \ge)$ is the partially ordered set, or poset
+
+## More example
+
++   Consider the power set of {a, b, c} and the subset relation. (P({a,b,c}), ⊆)
+
++   Draw a graph of this relation.
+
+## Comparable / Incomparable
+
++   - The elements *a* and *b* of a poset $(S, \preceq)$ are called **comparable** if either $a \preceq b$ or $b \preceq a$.
++   - When *a* and *b* are elements of *S* such that neither $a \preceq b$ nor $b \preceq a$, *a* and *b* are called **incomparable**.
+
++   - **Example:** Consider the power set of $\{a,b,c\}$ and the subset relation. $(P(\{a,b,c\}), \subseteq)$
++   
++     $\{a,c\} \nsubseteq \{a,b\}$ and $\{a,b\} \nsubseteq \{a,c\}$
++   
++   - So, $\{a,c\}$ and $\{a,b\}$ are **incomparable**.
+
+## Total order, Chain
+
++   - If (S, ≤ ) is a poset and every two elements of S are comparable, S is called *totally ordered* or *linearly ordered* set, and ≤ is called a *total order* or a *linear order*.
++   - A totally ordered set is also called a *chain*.
+
+## Examples
+
++   □ Is ≤ on the set of reals a total order?
++     ▸ Yes. For any reals x and y, either x ≤ y or y ≤ x.
++   □ | on the set of positive integers?
++     ▸ No. Neither 2 divides 3, nor 3 divides 2.
++   □ ⊆ on the power set of a set?
++     ▸ No. For x ≠ y, neither {x} ⊆ {y}, nor {y} ⊆ {x}.
++   □ Lexicographic order on English words?
++     ▸ Yes. For any two words, either x precedes y or y precedes x (or both if they are the same).
+
+## Generalized lexicographic order
+
+If $(A_1, \preceq_1)$, $(A_2, \preceq_2)$, ..., $(A_n, \preceq_n)$ are posets, the lexicographic order on the Cartesian product $A_1 \times A_2 \times \cdots \times A_n$ is defined recursively: $(a_1, a_2, \ldots, a_n) \preceq (b_1, b_2, \ldots, b_n)$ if
+
++   - $a_1 \preceq_1 b_1$, or
++   - $a_1 = b_1$ and $(a_2, \ldots, a_n) \preceq (b_2, \ldots, b_n)$
+
+## Lexicographic order on strings
+
+If $x = (x_1, x_2, ..., x_n)$ and $y = (y_1, y_2, ..., y_m)$ are two strings, we define lexicographic order on them as an extension of the previous that takes care of different lengths. Let $k = \min(n, m)$; then $x \leqslant y$ if
+
++   - $(x_1, x_2, ..., x_k) \leqslant (y_1, y_2, ..., y_k)$ or
++   - $(x_1, x_2, ..., x_k) = (y_1, y_2, ..., y_k)$ and $k = n < m$
+
+## Hasse diagrams
+
+What is the directed graph representation of a partial order?
+
++   - There will be loops at every node
++   - Transitivity will produce many "extra" edges
++   - There will be a particular direction for edges
+
+Hasse diagrams simplify the graph by removing loops, removing extra edges implied by transitivity, and putting nodes in order (bottom to top) so that arrows can be omitted
+
++   - Start with a directed graph of the relation in which all arrows point upward. Then eliminate:
++     - the loops at all the vertices,
++     - all arrows whose existence is implied by the transitive property,
++     - the direction indicators on the arrows.
+
+## More Hasse diagram examples
+
++   • “divides” on {1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60} (all divisors of 60)
+
+![](img/47b87ec6fe4fa238d13429358848c545_836_0.png)
+
+## More Hasse diagram examples
+
+□ “⊆” on the power set of {a, b, c, d}
+
+![](img/47b87ec6fe4fa238d13429358848c545_837_0.png)
+
+## Maximal and minimal elements
+
++   - An element x of a poset (A, ≤ ) is called
++     - minimal, if there is no other element that precedes it, i.e., there is no y ∈ A such that y < x
++     - maximal, if there is no other element that follows it, i.e., there is no y ∈ A such that x < y
+
++   - Existence
++     - Guaranteed for finite sets
+
++   - Uniqueness
++     - Generally not unique
+
+
+
+## Examples
+
+- Consider the following Hasse diagram
+- Element $a$ is minimal and least.
+- Elements $b$ and $c$ are maximal.
+- There is no greatest element.
+
+![](img/47b87ec6fe4fa238d13429358848c545_840_0.png)
+
+## More examples
+
+- The power set of a set A with set inclusion
+  - ∅ is least and minimal, because it is a subset of every other set
+  - A is greatest and maximal, because it is a superset of every other set
+- The set of positive integers with "divides"
+  - 1 is least and minimal
+  - There is no maximal or greatest element (the set is infinite)
+
+## Upper bound, Lower bound
+
+- Sometimes it is possible to find an element that is greater than all the elements in a subset A of a poset (S, ≪ ).
+
+- If u is an element of S such that a ≪ u for all elements a ∈ A, then u is called an upper bound of A.
+
+- Likewise, there may be an element less than all the elements in A.
+
+- If v is an element of S such that v ≪ a for all elements a ∈ A, then v is called a lower bound of A.
+
+## Least Upper Bound, Greatest Lower Bound
+
+- The element x is called the *least upper bound* (lub) of the subset A if x is an upper bound that is less than every other upper bound of A.
+- The element y is called the *greatest lower bound* (glb) of A if y is a lower bound of A and z ≤ y whenever z is a lower bound of A.
+
+## Example
+
+- Consider the elements 1 and 3
+  - Upper bounds of 1 are 1, 2, 4 and 5
+  - Upper bounds of 3 are 3, 2, 4 and 5
+  - 2, 4 and 5 are upper bounds for the pair 1 and 3
+  - There is no lub since
+    - 2 is not related to 4
+    - 4 is not related to 2
+    - 2 and 4 are both related to 5
+  - There is no glb either
+
+![](img/47b87ec6fe4fa238d13429358848c545_844_0.png)
+
+## Lattices
+
+- A special case of partially ordered sets (A, ≤) with the property that for any pair {x, y} with x, y ∈ A, there is a least upper bound and a greatest lower bound.
+
+- Lattices have important properties that make them suitable for modeling
+
+  - information flow
+  - statistical dependency models
+
+(P({a, b, c}), ⊆)
+
+![](img/47b87ec6fe4fa238d13429358848c545_845_0.png)
+
+## Example lattices
+
+- Power set of a set with set inclusion
+  - least upper bound of {A, B}: A ∪ B
+  - greatest lower bound of {A, B}: A ∩ B
+- The set of positive integers with "divides"
+  - least upper bound of {n, m}: the least common multiple of n and m
+  - greatest lower bound of {n, m}: the greatest common divisor of n and m
+
+## Homework for Section 8.6
+
+## Section 8.6
+
+- 8
+- 22
+- 32
+- 44 b) d)
+
+## 0812210
+
+## Sets and Graphs
+
+## Ch 2.1 Sets
+
+Spring 2010
+
+Mao Xiaoguang
+
+## What is a set?
+
+A set is an unordered collection of "objects"
+
+- People in a class: { Li, Chen, Hou }
+- Cities in China: {Changsha, Beijing, Shanghai, ...}
+- Sets can contain non-related elements:
+  { 3, Li, red, 离散 }
+
+## Properties
+
+- Order does not matter
+  - { 1, 2, 3, 4 } is equivalent to { 3, 2, 4, 1 }
+
+- Sets do not have duplicate elements
+  - Consider the list of students in this class
+    - It does not make sense to list somebody twice
+  - e.g. {a, b, c} = {a, b, a, c, c}
+
+## What is a set?
+
+## Usually
+
+- A set is a collection of (mathematical) objects,
+- with the collection treated as a single mathematical object.
+
+## We will most often use sets of numbers
+
+- All positive numbers less than or equal to 4:
+  { 1, 2, 3, 4 }
+- A few selected real numbers:
+  { 1.01, π, 0, -6.18 }
+
+## A set can be an element of another set
+
+- { 1, {2}, {3,{2}} }
+
+## Specifying a set
+
+- Capital letters (A, B, S, ...) for sets
+
+- Italic lower-case letter for elements (a, x, y, ...)
+
+- Easiest way: list all the elements (enumeration)
+
+- A = { 1, 2, 3, 4 }, Not always feasible!
+
+- May use ellipsis (...): B = { 0, 1, 2, 3, ... }
+
+- May cause confusion. C = { 3, 5, 7, ... }. What’s next?
+
+- If the set is all odd integers greater than 2, it is 9
+
+- If the set is all prime numbers greater than 2, it is 11
+
+- Can use set-builder notation
+
+- D = {x | x is prime and x > 2}
+
+- E = {x | x is odd and x > 2}
+
+- The vertical bar means "such that"
+
+
+
+## Defining sets by predicates
+
+The set of elements, $x$, in $A$ such that $P(x)$ is true.
+
+$\{x \in A \mid P(x)\}$
+
+$\{-1,0,1,2,3,4\}=\{x\in Z\mid -2<x<5\}$
+
+$\{x\in R\mid -2<x<5\}$
+
+The set of prime numbers:
+
+$\{p\in Z\mid (p>1)\land (\forall a>1\ \forall b>1\ a\cdot b\ne p)\}$
+
+## Elements
+
+A set "contains" various "members" or "elements" that make up the set
+
+- If an element a is a member of (or an element of) a set S, we use then notation a ∈ S
+
+4 ∈ {1, 2, 3, 4}
+
+- If not, we use the notation a ∉ S
+
+7 ∉ {1, 2, 3, 4}
+
+## Example
+
+{7, "Albert", π/2, T}      π/2 ∈ {7, "Albert",π/2, T}
+
+π/3 ∉ {7, "Albert",π/2, T}
+
+14/2 ∈ {7, "Albert",π/2, T}
+
+## Often used sets
+
+ℕ = {0, 1, 2, 3, ...} is the set of natural numbers
+
+ℤ = {..., -2, -1, 0, 1, 2, ...} is the set of integers
+
+ℤ⁺ = {1, 2, 3, ...} is the set of positive integers (a.k.a whole numbers)
+
+- Note that people disagree on the exact definitions of whole numbers and natural numbers
+
+ℚ = {p/q | p ∈ ℤ, q ∈ ℤ, q ≠ 0} is the set of rational numbers
+
+- Any number that can be expressed as a fraction of two integers (where the bottom one is not zero)
+
+ℝ is the set of real numbers
+
+## The universal set U
+
+U is the universal set – the set of all of elements (or the "universe") from which given any set is drawn
+
+- For the set {-2, 0.4, 2}, U would be the real numbers R
+- For the set {0, 1, 2}, U could be the N, Z, Q, R depending on the context
+- For the set of the vowels of the alphabet, U would be all letters of the alphabet
+
+## Venn diagrams
+
+- Represents sets graphically
+  - The box represents the universal set
+  - Circles represent the set(s)
+- Consider set S, which is the set of all vowels in the alphabet
+- Individual elements are usually not written in a Venn diagram
+
+![](img/47b87ec6fe4fa238d13429358848c545_857_0.png)
+
+## Sets of sets
+
+Sets can contain other sets
+
+- S = { {1}, {2}, {3} }
+- T = { {1}, {{2}}, {{{3}}} }
+- V = { {{1}, {{2}}}, {{{3}}}, { {1}, {{2}}, {{{3}}} } }
+
+V has only 3 elements!
+
+Note that 1 ≠ {1} ≠ {{1}} ≠ {{{1}}}
+
+- They are all different
+
+## The Empty Set
+
+If a set has zero elements, it is called the empty (or null) set
+
+- Written using the symbol ∅
+- Thus, ∅ = { } ← VERY IMPORTANT
+
+It can be an element of other sets
+
+- { ∅, 1, 2, 3, x } is a valid set
+
+∅ ≠ { ∅ }
+
+- ∅ : a set of zero elements. Think of this as an empty folder
+- {∅}: a set with one element. The element is an empty set. Think of this as an folder with an empty folder in it.
+
+Replace ∅ by { }, and you get: { } ≠ { { } }
+
+- It’s easier to see that they are not equal that way
+
+## Recap
+
+A set is an unordered collection of “objects”
+
+Specifying a set:
+
+- enumeration
+- incomplete enumeration (...)
+- set-builder (predicate)
+- Venn diagram
+
+a ∈ S, a ∉ S
+
+N, Z, Z+, Q, R
+
+U: Universal set, ∅ = { }
+
+! Sets of sets, ∅ ≠ { ∅ }
+
+## Set Equality, Subsets
+
+Two sets are equal if they have same elements
+
+- {1, 2, 3, 4, 5} = {5, 4, 3, 2, 1}
+- {1, 2, 3, 2, 4, 3, 2, 1} = {4, 3, 2, 1}
+- Two sets are not equal if they do not have same elements
+  - {1, 2, 3, 4, 5} ≠ {1, 2, 3, 4}
+
+```
+S = T ↔ ∀x (x ∈ S ↔ x ∈ T)
+```
+
+If all elements of a set S are also elements of a set T, then S is a subset of T
+
+- If S = {2, 4, 6}, T = {1, 2, 3, 4, 5, 6, 7}, S is a subset of T
+- This is specified by S ⊆ T meaning that ∀ x (x ∈ S → x ∈ T)
+
+```
+S ⊆ T ↔ ∀x (x ∈ S → x ∈ T)
+```
+
+## Subsets ⊆
+
+S ⊆ T ⇔ ∀x(x ∈ S → x ∈ T)
+
+S ⊈ T ⇔ ∃x(x ∈ S ∧ x ∉ T)
+
+For any set S, S ⊆ S (∀S S ⊆ S)
+
+For any set S, ∅ ⊆ S (∀S ∅ ⊆ S)
+
+Examples:
+
+⊆ R
+
+{3} ⊆ {5,7,3}
+
+⊈ N
+
+## Proper Subsets \(\subset\)
+
+If S is a subset of T, and S is not equal to T, then S is a proper subset of T
+
+- Let T = {0, 1, 2, 3, 4, 5}
+- If S = {1, 2, 3}, S is not equal to T, and S is a subset of T
+- A proper subset is written as S ⊂ T
+- Let Q = {4, 5, 6}. Q is neither a subset of T nor a proper subset of T
+
+The difference between “subset” and “proper subset” is like the difference between “less than or equal to” and “less than” for numbers
+
+
+
+## Set cardinality
+
+The cardinality of a set is the number of elements in a set, written as |A|
+
+- Let R = {1, 2, 3, 4, 5}. Then |R| = 5
+- |∅| = 0
+- Let S = {∅, {a}, {b}, {a, b}}. Then |S| = 4
+
+## Power sets
+
+Given S = {0, 1}. All the possible subsets of S?
+
+- ∅ (as it is a subset of all sets), {0}, {1}, and {0, 1}
+- The power set of S (written as P(S)) is the set of all subsets of S
+- P(S) = { ∅, {0}, {1}, {0,1} }
+  - Note that |S| = 2 and |P(S)| = 4
+
+Let T = {0, 1, 2}. P(T) = { ∅, {0}, {1}, {2}, {0,1}, {0,2}, {1,2}, {0,1,2} }
+
+- Note that |T| = 3 and |P(T)| = 8
+
+P(∅) = { ∅ }
+
+- Note that |∅| = 0 and |P(∅)| = 1
+
+If a set has n elements, then the power set will have 2ⁿ elements
+
+## Tuples
+
+In 2-dimensional space, it is a (x, y) pair of numbers to specify a location
+
+In 3-dimensional space, (1,2,3) is not the same as (3,2,1), it is a (x, y, z) triple of numbers
+
+In n-dimensional space, it is a n-tuple of numbers
+
+- Two-dimensional space uses pairs, or 2-tuples
+- Three-dimensional space uses triples, or 3-tuples
+
+Note that these tuples are **ordered**, unlike sets
+
+- the x value has to come first
+
+![](img/47b87ec6fe4fa238d13429358848c545_866_0.png)
+
+## Cartesian products
+
+A Cartesian product is a set of all ordered 2-tuples where each "part" is from a given set
+
+- Denoted by A × B, and uses parentheses (not curly brackets)
+- For example, 2-D Cartesian coordinates are the set of all ordered pairs Z × Z
+  - Recall Z is the set of all integers
+  - This is all possible coordinates in 2-D space
+- Example: Given A = { a, b } and B = { 0, 1 }, what is their Cartesian product?
+  - C = A × B = { (a,0), (a,1), (b,0), (b,1) }
+
+Formal definition of a Cartesian product:
+
+- A × B = { (a,b) | a ∈ A and b ∈ B }
+
+## Cartesian products
+
+All possible grades in this class will be a Cartesian product of the set S of all students in this class and the set G of all possible grades
+
+- Let S = { Chen, Li, Hou } and G = { A, B, C }
+- D = { (Alice, A), (Alice, B), (Alice, C), (Bob, A), (Bob, B), (Bob, C), (Chris, A), (Chris, B), (Chris, C) }
+- Final grades will be a subset of D: { (Alice, C), (Bob, B), (Chris, A) }
+
+> Such a subset of a Cartesian product is called a relation (more on this later in the course)
+
+## Homework for Section 2.1
+
+### Section 2.1
+
+- 16
+- 22
+- 36
+
+0812210
+
+## Sets and Graphs
+
+### Ch 2.2 Set Operations
+
+Spring 2010
+
+Mao Xiaoguang
+
+## Recap
+
+- A set is an unordered collection of "objects"
+- $a \in S$
+- **N**, **Z**, **Z+**, **Q**, **R**
+- **U**: Universal set, $\varnothing = \{ \}$
+- $S \subseteq T$ if $\forall x\ (x \in S \rightarrow x \in T)$
+- $S = T$ if $S \subseteq T$ and $T \subseteq S.$
+- $|A|$: number of elements in A
+- Power Set: $P(S) = \{T | T \subseteq S\}$
+- $A \times B = \{ (a,b) \ | \ a \in A \text{ and } b \in B \}$
+
+## Set operations: Union
+
+Formal definition for the union of two sets:
+
+A ∪ B = { x | x ∈ A or x ∈ B }
+
+### Further examples
+
+- {1, 2, 3} ∪ {3, 4, 5} = {1, 2, 3, 4, 5}
+- {a, b} ∪ {3, 4} = {a, b, 3, 4}
+- {1, 2} ∪ ∅ = {1, 2}
+
+### Properties of the union operation
+
+- A ∪ ∅ = A  Identity law
+- A ∪ U = U  Domination law
+- A ∪ A = A  Idempotent law
+- A ∪ B = B ∪ A  Commutative law
+- A ∪ (B ∪ C) = (A ∪ B) ∪ C  Associative law
+
+## Set operations: Intersection
+
+Formal definition for the intersection of two sets:
+
+A ∩ B = { x | x ∈ A and x ∈ B }
+
+### Examples
+
+- {1, 2, 3} ∩ {3, 4, 5} = {3}
+- {a, b} ∩ {3, 4} = ∅
+- {1, 2} ∩ ∅ = ∅
+
+### Properties of the intersection operation
+
+- A ∩ U = A    Identity law
+- A ∩ ∅ = ∅    Domination law
+- A ∩ A = A    Idempotent law
+- A ∩ B = B ∩ A    Commutative law
+- A ∩ (B ∩ C) = (A ∩ B) ∩ C    Associative law
+
+## Disjoint sets
+
+Formal definition for disjoint sets: two sets are disjoint if their intersection is the empty set
+
+### Further examples
+
+- {1, 2, 3} and {3, 4, 5} are not disjoint
+- {a, b} and {3, 4} are disjoint
+- {1, 2} and ∅ are disjoint
+  - Their intersection is the empty set
+- ∅ and ∅ are disjoint!
+  - Their intersection is the empty set
+
+
+
+# Set operations: Difference
+
+Formal definition for the difference of two sets:
+A - B = { x | x ∈ A and x ∉ B }
+
+## Further examples
+
+- {1, 2, 3} - {3, 4, 5} = {1, 2}
+- {a, b} - {3, 4} = {a, b}
+- {1, 2} - ∅ = {1, 2}
+
+The difference of any set S with the empty set will be the set S
+
+# Complement sets
+
+## Formal definition for the complement of a set:
+
+Aᶜ = { x | x ∉ A } = Aᶜ
+
+Or U − A, where U is the universal set
+
+## Further examples (assuming U = Z)
+
+- {1, 2, 3}ᶜ = { ..., -2, -1, 0, 4, 5, 6, ... }
+- {a, b}ᶜ = Z ?
+
+## Properties of complement sets
+
+- (Aᶜ)ᶜ = A
+- Complement law
+
+- A ∪ Aᶜ = U
+- Complement law
+
+- A ∩ Aᶜ = ∅
+- Complement law
+
+# Set identities
+
+| A ∪ ∅ = A | Identity Law | A ∪ U = U |
+| A ∩ U = A |  |  |
+| A ∩ ∅ = ∅ | Domination law |  |
+| A ∪ A = A | Idempotent Law | (Aᶜ)ᶜ = A | Complemention Law |
+| A ∩ A = A |  |  |
+| A ∪ B = B ∪ A | Commutative Law | (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ |
+| A ∩ B = B ∩ A |  | (A ∩ B)ᶜ = Aᶜ ∪ Bᶜ | De Morgan’s Law |
+| A ∪ (B ∪ C) = (A ∪ B) ∪ C | Associative Law | A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) |
+| A ∩ (B ∩ C) = (A ∩ B) ∩ C |  | A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C) | Distributive Law |
+| A ∪ (A ∩ B) = A | Absorption Law | A ∪ Aᶜ = U |
+| A ∩ (A ∪ B) = A |  | A ∩ Aᶜ = ∅ | Complement Law |
+
+# How to prove a set identity
+
+For example: A∩B=B-(B-A)
+
+Four methods:
+- Use the basic set identities
+- Use membership tables
+- Prove each set is a subset of each other
+- Use set builder notation and logical equivalences
+
+# What we are going to prove...
+
+A∩B = B - (B - A)
+
+![](img/47b87ec6fe4fa238d13429358848c545_879_0.png)
+
+# Proof by Set Identities
+
+♈ A ∩ B = A - (A - B)
+Proof) A - (A - B) = A - (A ∩ Bᶜ)
+= A ∩ (A ∩ Bᶜ)ᶜ
+= A ∩ (Aᶜ ∪ B)
+= (A ∩ Aᶜ) ∪ (A ∩ B)
+= ∅ ∪ (A ∩ B)
+= A ∩ B
+
+# Showing each is a subset of the others
+
+℘(A ∩ B)^c = A^c ∪ B^c
+
+Proof) Want to prove that (A ∩ B)^c ⊆ A^c ∪ B^c and (A ∩ B)^c ⊇ A^c ∪ B^c
+
+x ∈ (A ∩ B)^c
+⇒ x ∉ (A ∩ B)
+⇒ ¬ (x ∈ A ∩ B)
+⇒ ¬ (x ∈ A ∧ x ∈ B)
+⇒ ¬ (x ∈ A) ∨ ¬ (x ∈ B)
+⇒ x ∉ A ∨ x ∉ B
+⇒ x ∈ A^c ∨ x ∈ B^c
+⇒ x ∈ A^c ∪ B^c
+
+# Examples
+
+Let A, B, and C be sets. Show that:
+
+- a) (A ∪ B) ⊆ (A ∪ B ∪ C)
+- b) (A ∩ B ∩ C) ⊆ (A ∩ B)
+- c) (A - B) - C ⊆ A - C
+- d) (A - C) ∩ (C - B) = ∅
+
+# Computer representations of sets
+
+Represent a subset A of U with the bit string of length n, where the i-th bit in the string is 1 if a_i belongs to A and is 0 if a_i does not belong to A.
+
+Example:
+
+Let U = {1,2,3,4,5,6,7,8,9,10}, and the ordering of elements of U has the elements in increasing order; that is a_i = i.
+
+What bit string represents the subset of all odd integers in U?
+Solution: 10 1010 1010
+
+What bit string represents the subset of all even integers in U?
+Solution: 01 010 10101
+
+What bit string represents the subset of all integers not exceeding 5 in U?
+Solution: 11 1110 0000
+
+What bit string represents the complement of the set {1,3,5,7,9}?
+Solution: 01 0101 0101
+
+# Logic and bit operations
+
+- Computers represent information using bits.
+- A **bit** is a symbol with two possible values, 0 and 1.
+- By convention, 1 represents T (true) and 0 represents F (false).
+- A variable is called a Boolean variable if its value is either true or false.
+- Bit operation – replace true by 1 and false by 0 in logical operations.
+
+Table for the Bit Operators OR, AND, and XOR.
+
+| x | y | x ∨ y | x ∧ y | x ⊕ y |
+|---|---|---|---|---|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 | 1 |
+| 1 | 0 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 | 0 |
+
+# Logic and bit operations
+
+## DEFINITION 7
+
+A *bit string* is a sequence of zero or more bits. The *length* of this string is the number of bits in the string.
+
+Example: Find the bitwise *OR*, bitwise *AND*, and bitwise *XOR* of the bit string 01 1011 0110 and 11 0001 1101.
+
+Solution:
+
+01 1011 0110
+11 0001 1101
+----------------
+11 1011 1111  bitwise OR
+01 0001 0100  bitwise AND
+10 1010 1011  bitwise XOR
+
+# Set operations
+
+The bit string for the union is the bitwise OR of the bit string for the two sets. The bit string for the intersection is the bitwise AND of the bit strings for the two sets.
+
+Example:
+
+The bit strings for the sets {1,2,3,4,5} and {1,3,5,7,9} are 11 1110 0000 and 10 1010 1010, respectively. Use bit strings to find the union and intersection of these sets.
+
+Solution:
+
+Union:
+11 1110 0000 V 10 1010 1010 = 11 1110 1010,
+{1,2,3,4,5,7,9}
+
+Intersection:
+11 1110 0000 ∧ 10 1010 1010 = 10 1010 0000, {1,3,5}
+
+
+
+## Homework for Section 2.2
+
+- 16
+- 20
+- 30
+
+Sets and Graphs
+
+## 0812210
+
+## Sets and Graphs
+
+## Ch 2.3 Functions
+
+Spring 2010
+
+Mao Xiaoguang
+
+## Recap
+
+- A set is an unordered collection of "objects"
+- $a \in S$
+- **N, Z, Z+, Q, R**
+- **U**: Universal set, $\varnothing = \{ \}$
+- $S \subseteq T$ if $\forall x\ (x \in S \rightarrow x \in T)$
+- $S = T$ if $S \subseteq T$ and $T \subseteq S$.
+- $|A|$: number of elements in A
+- Power Set: $P(S) = \{T | T \subseteq S\}$
+- $A \times B = \{ (a,b) \mid a \in A \text{ and } b \in B \}$
+- $A \cup B = \{ x \mid x \in A \text{ or } x \in B \}$
+- $A \cap B = \{ x \mid x \in A \text{ and } x \in B \}$
+- A, B are disjoint if $A \cap B = \varnothing$
+- $A - B = \{ x \mid x \in A \text{ and } x \notin B \}$
+- $A^c = \{ x \mid x \notin A \}$
+
+## Definition of a function
+
+A function takes each element from a set and maps it to a UNIQUE element in another set.
+
+![](img/47b87ec6fe4fa238d13429358848c545_891_0.png)
+
+## Definition of a function
+
+Let X and Y be two sets. A function f : X → Y means that: ∀x₁, x₂ ∈ X,
+
+if x₁ = x₂, then f(x₁) = f(x₂)
+
+## More functions
+
+Domain
+
+Co-domain
+
+Alice
+Bob
+Chris
+Dave
+Emma
+
+A
+B
+C
+D
+F
+
+A class grade function
+
+A pre-image of 1
+
+The image of “a”
+
+“a”
+“bb”
+“cccc”
+“dd”
+“e”
+
+1
+2
+3
+4
+5
+
+A string length function
+
+## Even more functions
+
+Range
+
+a
+e
+i
+o
+u
+
+1
+2
+3
+4
+5
+
+Some function...
+
+"a"
+"bb"
+"cccc"
+"dd"
+"e"
+
+1
+2
+3
+4
+5
+
+Not a valid function!
+Also not a valid function!
+
+## Function arithmetic
+
+- Let f₁(x) = 2x
+- Let f₂(x) = x²
+- f₁+f₂ = (f₁+f₂)(x) = f₁(x)+f₂(x) = 2x+x²
+- f₁*f₂ = (f₁*f₂)(x) = f₁(x)*f₂(x) = 2x*x² = 2x³
+
+## One-to-one functions
+
+A function is one-to-one if each element in the co-domain has a unique pre-image
+
+Formal definition: A function f is one-to-one if f(x) = f(y) implies x = y.
+
+![](img/47b87ec6fe4fa238d13429358848c545_896_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_896_1.png)
+
+## More on one-to-one
+
+- Injective is synonymous with one-to-one
+- "A function is injective"
+- A function is an injection if it is one-to-one
+
+Note that there can be un-used elements in the co-domain
+
+![](img/47b87ec6fe4fa238d13429358848c545_897_0.png)
+
+A one-to-one function
+
+## Injections
+
+![](img/47b87ec6fe4fa238d13429358848c545_898_0.png)
+
+$f(\bullet)=\bullet$
+
+$\leq 1$ arrow in
+
+$\forall a,a'\in A.$
+
+$(f(a)=f(a'))\to(a=a')$
+
+$|A|\leq|B|$
+
+## Onto functions
+
+A function is onto if each element in the co-domain is an image of some pre-image
+
+Formal definition: A function f is onto if for all y ∈ C, there exists x ∈ D such that f(x)=y.
+
+![](img/47b87ec6fe4fa238d13429358848c545_899_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_899_1.png)
+
+## More on onto
+
+- Surjective is synonymous with onto
+- "A function is surjective"
+- A function is an surjection if it is onto
+
+Note that there can be multiply used elements in the co-domain
+
+![](img/47b87ec6fe4fa238d13429358848c545_900_0.png)
+
+## Surjections
+
+≥1 arrow in
+
+f(●) = ●
+
+A
+
+B
+
+∀b ∈ B ∃a ∈ A. f(a) = b
+
+|A| ≥ |B|
+
+![](img/47b87ec6fe4fa238d13429358848c545_901_0.png)
+
+## Onto vs. one-to-one
+
+Are the following functions onto, one-to-one, both, or neither?
+
+![](img/47b87ec6fe4fa238d13429358848c545_902_0.png)
+
+1-to-1, not onto
+
+![](img/47b87ec6fe4fa238d13429358848c545_902_1.png)
+
+Both 1-to-1 and onto
+
+![](img/47b87ec6fe4fa238d13429358848c545_902_2.png)
+
+Not a valid function
+
+![](img/47b87ec6fe4fa238d13429358848c545_902_3.png)
+
+Onto, not 1-to-1
+
+![](img/47b87ec6fe4fa238d13429358848c545_902_4.png)
+
+Neither 1-to-1 nor onto
+
+## Bijections
+
+- Consider a function that is both one-to-one and onto:
+- Such a function is a one-to-one correspondence, or a bijection
+
+![](img/47b87ec6fe4fa238d13429358848c545_903_0.png)
+
+## Bijections
+
+exactly one arrow in
+
+f(●) = ●
+
+A
+
+B
+
+|A| = |B|
+
+![](img/47b87ec6fe4fa238d13429358848c545_904_0.png)
+
+
+
+## Identity functions
+
+A function such that the image and the pre-image are ALWAYS equal
+
+∀x, f(x) = x
+
+- f(x) = 1*x
+- f(x) = x + 0
+
+The domain and the co-domain must be the same set
+
+## Inverse functions
+
+Let f(x) = 2*x
+
+Then f⁻¹(x) = x/2
+
+## More on inverse functions
+
+Can we define the inverse of the following functions?
+
+![](img/47b87ec6fe4fa238d13429358848c545_907_0.png)
+
+![](img/47b87ec6fe4fa238d13429358848c545_907_1.png)
+
+What is f^{-1}(2)?
+Not onto!
+
+What is f(2)?
+Not 1-to-1!
+
+An inverse function can ONLY be defined on a bijection
+
+## Inverse Function
+
+Informally, an inverse function $f^{-1}$ is to “undo” the operation of function $f$.
+
+![](img/47b87ec6fe4fa238d13429358848c545_908_0.png)
+
+There is an inverse function $f^{-1}$ for $f$ if and only if $f$ is a bijection.
+
+## Compositions of functions
+
+(f ○ g)(x) = f(g(x))
+
+![](img/47b87ec6fe4fa238d13429358848c545_909_0.png)
+
+## Compositions of functions
+
+Let f(x) = 2x+3
+
+Let g(x) = 3x+2
+
+![](img/47b87ec6fe4fa238d13429358848c545_910_0.png)
+
+(f∘g)(x) = f(g(x)) = 2(3x+2)+3 = 6x+7
+
+## Bypass subset
+
+A
+
+B
+
+B'
+
+C
+
+## Commutative ?
+
+Does f(g(x)) = g(f(x))?
+
+Let f(x) = 2x+3
+
+Let g(x) = 3x+2
+
+f(g(x)) = 2(3x+2)+3 = 6x+7
+
+g(f(x)) = 3(2x+3)+2 = 6x+11
+
+Not equal!
+
+Function composition is not commutative!
+
+## Useful functions
+
+- Floor: ⌊x⌋ means the greatest integer less than or equal to x
+- Ceiling: ⌈x⌉ means the lowest integer greater than or equal to x
+- round(x) = ⌊ x+0.5 ⌋
+
+## Ceiling and floor properties
+
+Let n be an integer
+
+(1a) ⌊x⌋ = n if and only if n ≤ x < n+1
+
+(1b) ⌈x⌉ = n if and only if n-1 < x ≤ n
+
+(1c) ⌊x⌋ = n if and only if x-1 < n ≤ x
+
+(1d) ⌈x⌉ = n if and only if x ≤ n < x+1
+
+(2) x-1 < ⌊x⌋ ≤ x ≤ ⌈x⌉ < x+1
+
+(3a) ⌊-x⌋ = -⌈x⌉
+
+(3b) ⌈-x⌉ = -⌊x⌋
+
+(4a) ⌊x+n⌋ = ⌊x⌋+n
+
+(4b) ⌈x+n⌉ = ⌈x⌉+n
+
+## Floor property proof
+
+### Prove rule 4a: ⌊x+n⌋ = ⌊x⌋+n
+
+- Where n is an integer
+- Will use rule 1a: ⌊x⌋ = n if and only if n ≤ x < n+1
+
+### Direct proof!
+
+- Let m = ⌊x⌋
+- Thus, m ≤ x < m+1 (by rule 1a)
+- Add n to both sides: m+n ≤ x+n < m+n+1
+- By rule 4a, m+n = ⌊x+n⌋
+- Since m = ⌊x⌋, m+n also equals ⌊x⌋+n
+- Thus, ⌊x⌋+n = m+n = ⌊x+n⌋
+
+## Factorial
+
+- ♈ Factorial is denoted by n!
+- ♈ n! = n * (n-1) * (n-2) * ... * 2 * 1
+- ♈ Thus, 6! = 6 * 5 * 4 * 3 * 2 * 1 = 720
+- ♈ Note that 0! is defined to equal 1
+
+## Proving Function problems
+
+- Let f be an invertible function from Y to Z
+- Let g be an invertible function from X to Y
+- Show that the inverse of f∘g is:
+
+(f∘g)⁻¹ = g⁻¹ ∘ f⁻¹
+
+(Pf) Thus, we want to show, for all z∈Z and x∈X
+((f ∘ g) ∘ (g⁻¹ ∘ f⁻¹)) (x) = x and ((f⁻¹ ∘ g⁻¹) ∘ (g ∘ f)) (z) = z
+
+((f ∘ g) ∘ (g⁻¹ ∘ f⁻¹)) (x) = (f ∘ g) ((g⁻¹ ∘ f⁻¹) (x))
+= (f ∘ g) (g⁻¹ (f⁻¹(x)))
+= f (g(g⁻¹ (f⁻¹(x))))
+= f (f⁻¹(x))
+= x
+
+The second equality is similar
+
+## Homework for Section 2.3
+
+Section 2.3
+
+- 12 (c) (d)
+- 14 (b) (d)
+- 30 *
+- 36
+
+## 0812210
+
+## Sets and Graphs
+
+## Ch 2.4 Sequences and Summations
+
+Spring 2010
+
+Mao Xiaoguang
+
+## Recap
+
+A set is an unordered collection of "objects", a ∈ S
+
+N, Z, Z+, Q, R, U, ∅ = { }
+
+S ⊆ T if ∀x (x ∈ S → x ∈ T), S = T if S ⊆ T and T ⊆ S.
+
+|A|: number of elements in A. Power Set: P(S) = {T|T⊆S}
+
+A × B = { (a,b) | a ∈ A and b ∈ B }
+
+A ∪ B = { x | x ∈ A or x ∈ B }
+
+A ∩ B = { x | x ∈ A and x ∈ B }, A, B are disjoint if A∩B = ∅.
+
+A - B = { x | x ∈ A and x ∉ B }
+
+Aᶜ = { x | x ∉ A }
+
+A function maps every element from D to a UNIQUE element in C
+
+f is 1-1 if f(x) = f(y) → x = y.
+
+f is onto if ∀y ∈ C ∃x ∈ D such that f(x) = y.
+
+f is a bijection, if f is 1-1 and onto.
+
+f(S) = {y | y = f(x) for x ∈ S}
+
+## Definitions
+
+Sequence: an ordered list of elements
+
+- Like a set, but:
+- Elements can be duplicated
+- Elements are ordered
+
+A sequence is a function from a subset of Z to a set S
+
+a_n is a term in the sequence
+
+{a_n} means the entire sequence
+
+- The same notation as sets!
+
+
+
+## Sequence examples
+
+aₙ = 3n
+
+- The terms in the sequence are a₁, a₂, a₃, ...
+- The sequence {aₙ} is { 3, 6, 9, 12, ... }
+
+## Arithmetic Progression
+
+- a, a+d, a+2d, ..., a+nd, ...
+- aₙ = a + (n-1) d
+
+bₙ = 2ⁿ
+
+- The terms in the sequence are b₁, b₂, b₃, ...
+- The sequence {bₙ} is { 2, 4, 8, 16, 32, ... }
+
+## Geometric Progression
+
+- a, ar, ar², ar³, ..., arⁿ⁻¹, ...
+- aₙ = arⁿ⁻¹
+
+## Determining the sequence formula
+
+Given values in a sequence, how do you determine the formula?
+
+Steps to consider:
+
+- Is it an arithmetic progression (each term a constant amount from the last)?
+- Is it a geometric progression (each term a factor of the previous term)?
+- Does the sequence repeat (or cycle)?
+- Does the sequence combine previous terms?
+- Are there runs of the same value?
+
+## Determining the sequence formula
+
+- 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, ...
+  The sequence alternates 1’s and 0’s, increasing the number of 1’s and 0’s each time
+
+- 1, 2, 2, 3, 4, 4, 5, 6, 6, 7, 8, 8, ...
+  This sequence increases by one, but repeats all even numbers once
+
+- 1, 0, 2, 0, 4, 0, 8, 0, 16, 0, ...
+  The non-0 numbers are a geometric sequence (2ⁿ) interspersed with zeros
+
+- 3, 6, 12, 24, 48, 96, 192, ...
+  Each term is twice the previous: geometric progression
+  $a_n = 3*2^{n-1}$
+
+## Summations
+
+A summation:
+
+∑_{j=m}^{n} a_j   or   ∑_{j=m}^{n} a_j
+
+upper limit
+
+lower limit
+
+is like a for loop:
+
+index of summation
+
+```
+int sum = 0;
+for ( int j = m; j <= n; j++ )
+    sum += a(j);
+```
+
+## Evaluating sequences
+
+∑⁵ₖ₌₁ (k+1) = 2 + 3 + 4 + 5 + 6 = 20
+
+∑⁴ₖ₌₀ (−2)ᵏ
+= (−2)⁰ + (−2)¹ + (−2)² + (−2)³ + (−2)⁴
+= 11
+
+∑¹⁰ₖ₌₁ 3
+= 3 + 3 + 3 + 3 + 3 + 3 + 3 + 3 + 3 + 3
+= 30
+
+∑¹⁰ₖ₌₁ (2ᵏ − 2ᵏ⁻¹)
+= (2¹−2⁰) + (2²−2¹) + (2³−2²) + … (2¹⁰−2⁹)
+= 511
+
+> Note that each term (except the first and last) is cancelled by another term
+
+## Summation
+
+♈ 1 + 2 + 3 + ... + n = n(n+1)/2
+
+♈ 1 + 2 + 3 + ... + (n-1) = ?
+
+♈ 1 + 3 + 5 + ... + 21 = ?
+
+♈ a_i = a_1 + (i-1) d
+
+♈ Σ_{i=1}^n a_i = ?
+
+## Proof
+
+If $r = 1$, then the sum is:
+
+$$S = \sum_{j=0}^{n} a = (n+1)a$$
+
+$$S = \sum_{j=0}^{n} ar^{j}$$  
+$$rS = r\sum_{j=0}^{n} ar^{j}$$  
+$$= \sum_{j=0}^{n} ar^{j+1}$$  
+$$= \sum_{k=1}^{n+1} ar^{k}$$  
+$$= \sum_{k=0}^{n} ar^{k} + \left(ar^{n+1} - a\right)$$  
+$$rS = S + \left(ar^{n+1} - a\right)$$  
+$$rS - S = \left(ar^{n+1} - a\right)$$  
+$$S(r - 1) = \left(ar^{n+1} - a\right)$$  
+$$S = \frac{\left(ar^{n+1} - a\right)}{r - 1}$$
+
+## Double summations
+
+Like a nested for loop
+
+![](img/47b87ec6fe4fa238d13429358848c545_931_0.png)
+
+Is equivalent to:
+
+```
+int sum = 0;
+for (int i = 1; i <= 4; i++)
+for (int j = 1; j <= 3; j++)
+sum += i*j;
+```
+
+## Cardinality
+
+- ♈ For finite (only) sets, cardinality is the number of elements in the set
+
+- ♈ For finite and infinite sets, two sets *A* and *B* have the same cardinality if there is a one-to-one correspondence from *A* to *B*
+
+## Cardinality
+
+### Example on finite sets:
+
+- Let S = { 1, 2, 3, 4, 5 }
+- Let T = { a, b, c, d, e }
+- There is a one-to-one correspondence between the sets
+
+### Example on infinite sets:
+
+- Let S = Z+
+- Let T = { x | x = 2k and k ∈ Z+ }
+- One-to-one correspondence:
+  1 ↔ 2      2 ↔ 4      3 ↔ 6      4 ↔ 2
+  5 ↔ 10     6 ↔ 12     7 ↔ 14     8 ↔ 16
+  Etc.
+
+Note that here the `↔` symbol means that there is a correspondence between them, not the biconditional
+
+## More definitions
+
+Countably infinite: elements can be listed
+
+- Anything that has the same cardinality as the integers
+- Example: rational numbers, ordered pairs of integers
+
+Uncountably infinite: elements cannot be listed
+
+- Example: real numbers
+
+## Showing a set is countably infinite
+
+Done by showing there is a one-to-one correspondence between the set and the integers
+
+Examples
+- Even numbers
+  - Shown two slides ago
+- Rational numbers
+  - Shown in Rosen, page 159
+- Ordered pairs of integers
+  - Shown next slide
+
+
+
+## Ordered pairs of integers: countably infinite
+
+A one-to-one correspondence
+
+![](img/47b87ec6fe4fa238d13429358848c545_936_0.png)
+
+## Homework for Section 2.4
+
+## Section 2.4
+
+- 10
+- 20
+- 32*

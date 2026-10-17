@@ -1,0 +1,3 @@
+![](bbox=[0.156, 0.156, 0.844, 0.781])
+
+Figure 6.2: The action of MAX-HEAPIFY(A, 2), where A.heap-size[A] = 10. (a) The initial configuration, with A[2] = 6 at node i = 2 violating the max-heap property since it is not larger than both children. The max-heap property is restored for node 2 in (b) by exchanging A[2] with A[4], which destroys the max-heap property for node 4. The recursive call MAX-HEAPIFY(A, 4) now has i = 4. After swapping A[4] with A[9], as shown in (c), node 4 is fixed up, and the recursive call MAX-HEAPIFY(A, 9) yields no further changes to the data structure.

@@ -1,0 +1,3 @@
+![](bbox=[0.04, 0.19, 0.96, 0.5])
+
+**Figure 7.5** (a) Two levels of a recursion tree for quicksort. The partitioning at the root costs \( n \) and produces a "bad" split: two subarrays of sizes 0 and \( n-1 \). The partitioning of the subarray of size \( n-1 \) costs \( n-1 \) and produces a "good" split: subarrays of size \( (n-1)/2 - 1 \) and \( (n-1)/2 \). (b) A single level of a recursion tree that is very well balanced. In both parts, the partitioning cost for the subproblems shown with elliptical shading is \( \Theta(n) \). Yet the subproblems remaining to be solved in (a), shown with square shading, are no larger than the corresponding subproblems remaining to be solved in (b).

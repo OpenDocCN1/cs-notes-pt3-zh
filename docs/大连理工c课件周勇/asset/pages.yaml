@@ -1,0 +1,4648 @@
+- pgno: 0
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# # 1. 面向过程程序设计OPP
+
+
+    +   - Oriented Procedural Programming
+
+
+    将复杂过程简单的按功能分层，从而解决问题。
+
+
+    +   - 结构化：
+
+
+    描述任何实体的操作的序列只需三种基本控制结构
+
+
+    +   - 模块化设计：
+
+
+    程序设计中各个过程体和组成部分用模块表示
+
+
+    +   - 过程化设计方法：
+
+
+    自顶向下，逐步细化
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_1_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# 2. 面向对象程序设计OOP
+
+
+    面向对象的编程思想力图使在计算机语言中对事物的的描述与现实世界中该事物的本来面目尽可能的一致。
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_2_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# # 面向对象程序设计
+
+
+    # ## 对象 object
+
+
+    +   - 对象是实际存在的该类事物的每个个体，也称实例(instance)。
+
+
+    +   - 构成世界的一个独立单位，它具有自己的静态特征（状态）和动态特征（操作）。
+
+
+    +   - 静态特征即可以用某种数据来描述的特征
+
+
+    +   - 动态特征即对象所表现的行为或对象所具有的功能。'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "# # 面向对象程序设计\n\n# ## 类 class\n\n+   - 一类事物描述， 是抽象的、概念上的定义；  \n+     把具有相同属性的事物划分为一类，\
+    \  \n+     它将具有相同状态、操作和访问机制的多个对象  \n+     抽象(abstract)成为一个类。\n\n+   - 面向对象语言必需提供的用户定义的数据类型\
+    \  \n+     类封装了一组数据结构和作用于此的一组方法。"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# # 3.面向过程与面向对象
+
+
+    程序 = 算法 + 数据结构
+
+    + 程序设计方法
+
+    + 语言工具和开发环境
+
+
+    对象 = 算法 + 数据结构
+
+
+    程序 = (对象+对象+对象+...) + 消息
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_5_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# # 面向对象 vs 面向过程设计
+
+
+    | 程序执行步骤 | 通常按顺序执行 | 在对象内执行独立其他对象 |
+
+    |---|---|---|
+
+    | 数据项 | 变量;独立;位于程序中 | 属性;属于一个对象;随对象而变,具有某种行为 |
+
+    | 激活方式 | 调用函数 | 发消息给对象 |
+
+    | 数据与函数 | 保持分离 | 结合成对象 |
+
+    | 事件发生 | 函数执行时 | 方法执行时 |
+
+    | 活动涉及 | 函数和参数 | 对象,消息和参数 |'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# # 面向对象程序设计
+
+
+    # ## 2. 封装(encapsulate)
+
+
+    +   ✓ 把全部属性和全部行为封装在一起，形成一个不可分割的独立单位（即对象）。
+
+
+    +   ✓ 信息隐蔽(information hiding)
+
+
+    对象的外部不能直接地存取对象属性，只能通过几个允许外部使用的服务与对象发生联系。
+
+
+    +   ✓ 对象间通过发送消息进行交互。
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_8_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# # 面向对象程序设计
+
+
+    # ## 3. 继承 (inheritance)
+
+
+    +   - 总结归纳
+
+    +   - 一般一特殊
+
+    +   - 范化一特化
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_9_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# # 面向对象程序设计
+
+
+    # ## 3. 继承 (inheritance)
+
+
+    +   - 软件重用” (software reusability)
+
+
+    采用继承的方法可以很方便地利用一个已有的类建立一个新的类。
+
+
+    +   - 类与类之间可以组成继承层次
+
+
+    一个类的定义（派生类）可以定义在另一个已定义类（基类）的基础上。
+
+
+    派生类可以继承基类中的属性和操作，也可以定义自己的属性和操作。'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '![](img/bf99340ecbaf09a3098cf7d9c4b141d1_11_0.png)
+
+
+    Person
+
+
+    Manager
+
+    manage();
+
+
+    Worker
+
+
+    Farmer
+
+    plant();
+
+
+    Feeder
+
+    feed();'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "# # 面向对象程序设计\n\n# # 4. 多态性(polymorphism)\n\nCPerson bush;\nCDuck donald;\n\
+    Roar (&bush);    < == >   bush.roar();\nRoar (&donald);   < == >   donald.roar();\n\
+    \nvoid Roar (CAnimal* pAnimal)\n{\n    pAnimal->roar();\n}\n\n利用多态性，用户可发送一个通用的信息，而将所有的实现细节都留给接受消息的对象自行决定。\n\
+    \n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_13_0.png)\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_13_1.png)\n\
+    \n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_13_2.png)"
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# 第二讲 类与对象
+
+
+    +   - 类的概念
+
+    +   - 类与结构体
+
+    +   - 类的定义
+
+    +   - 访问权限
+
+    +   - 成员函数'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: "# # 何为类class？\n\n+   类是面向对象编程的程序基本单位  \n+   程序模块是各种由类构成的\n\n+   类是逻辑上相关数据和函数的封装\
+    \  \n+   类可以隐藏数据和操作细节\n\n+   类是对问题的抽象描述  \n+   类的对象使用自己的方法完成对数据的操作"
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "# # 1. 结构一类\n\n几点  \n如何调整\n\n```\nint hour, minute, second;\n```\n\n```\nstruct\
+    \ Clock  \n{  \n    int hour; // 0-23  \n    int minute;// 0-59  \n    int second;//\
+    \ 0-59  \n};\n```\n\n数据类型  \n是对同种数据的抽象"
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "# # 1. 结构一类\n\n```\nstruct Clock\n{\n    int hour;\n    int minute;\n    int\
+    \ sec;\n};\n```\n\n```\n#include <iostream.h>\nint main()\n{\n    Clock t1;\n\
+    \    setTime(t1);\n    showTime( t1 );\n    Clock t2;\n    setTime(t2);\n    showTime(\
+    \ t2 );\n    return 0;\n}\n```\n\n```\nvoid setTime( Clock& t );\nvoid showTime\
+    \ (Clock &t);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: "# 1. 结构一类\n\n```\n```cpp\n#include <iostream.h>\nstruct Clock\n{\n\tint hour;\n\
+    \tint minute;\n\tint sec;\n};\nvoid setTime(Clock& t)\n{\n\tcin>>t.hour>>t.minute>>t.sec;\n\
+    }\nvoid showTime( Clock& t)\n{\n\tcout<<t.hour<<\":\"<<t.minute<<\":\"<<t.sec<<endl;\n\
+    }\n```\n```\n\n```\n```cpp\nint main( )\n{\n\tClock t1;\n\tsetTime(t1);\n\tshowTime(t1);\n\
+    \tClock t2;\n\tsetTime(t2);\n\tshowTime(t2);\n\treturn 0;\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "# # 1. 结构一类\n\n```\n```cpp\nclass Clock\n{\nprivate :\n    关于时间的数据;\npublic\
+    \ :\n    读取时间值 ;\n    调整时间值 ;\n};\n```\n```\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_21_0.png)\n\
+    \n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_21_1.png)\n\n类是数据和操作数据的函数的封装"
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "# # 1. 结构一类\n\n```\n```cpp\nclass Clock\n{\nprivate :\n    int hour;\n    int\
+    \ minute;\n    int second;\npublic :\n    void set();\n    void get();\n};\n```\n\
+    ```\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_22_0.png)\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_22_1.png)\n\
+    \n对象使用自己的方法对数据操作\n\n构造"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# # 1. 结构一类
+
+
+    //改用含成员函数的类来处理
+
+    class Clock
+
+    {
+
+    public:
+
+    void setTime();
+
+    void showTime();
+
+    private:
+
+    int hour;
+
+    int minute;
+
+    int sec;
+
+    };
+
+
+    int main()
+
+    {
+
+    Clockt1;
+
+    t1.setTime();
+
+    t1.showTime();
+
+    Time t2;
+
+    t2.setTime();
+
+    t2.showTime();
+
+    return 0;
+
+    }'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# # 2. 类的声明与定义
+
+
+    +   - 类是用户定义的数据类型，用关键字class声明。类包含两种成员： 数据成员和成员函数。
+
+
+    +   - 类的定义指包含成员实现的类声明
+
+
+    +   - 类使程序员可以构造对象的属性和行为或操作'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# ## 2. 类的声明与定义
+
+
+    类一般定义格式如下：
+
+
+    class ClassName {
+
+
+    private:
+
+
+    data member & member function;
+
+
+    public:
+
+
+    data member & member function;
+
+
+    };
+
+
+    Member function definition;
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_25_0.png)
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_25_1.png)
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_25_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "# # 定义成员函数\n\n# ## 1. 类外定义成员函数\n\n```\nvoid Clock :: setTime()\n{\n    cin>>hour;\n\
+    \    cin>>minute;\n    cin>>sec;\n}\nvoid Clock:: showTime()\n{\n    cout<<hour<<\"\
+    \ :\"\n    <<minute<<\" :\"\n    <<sec<<endl;\n}\n```\n\n# ## 2.类内定义成员函数\n\n```\n\
+    class Clock\n{\npublic:\n    void setTime()\n    { cin>>hour>>minute>>sec;}\n\
+    \    void showTime()\n    {   cout<<hour<<\":\"\n    <<minute<<\":\"\n    <<sec<<endl;\
+    \ }\nprivate:\n    int hour, minute, sec;\n};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "# # 定义成员函数\n\n+   - 成员函数为描述对象的方法\n+   - 在类的外部定义成员函数\n\n返回类型 类名::成员函数名(参数列表)\n\
+    {\n    函数定义体\n}\n\n+   - 在类内直接定义成员函数， 默认创建为内联函数\n\n如果成员函数在类体外定义,要用inline声明为内联函数"
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# 成员函数 vs. 一般函数
+
+
+    +   - 都有函数体，返回值和函数类型。
+
+    +   - 成员函数属于一个类的成员，可出现在类体中
+
+    +     定义在类体为要加类名和作用域解析符::
+
+    +   - 成员函数和数据成员封装成一体
+
+    +     可直接引用数据成员
+
+    +   - 成员函数只能由本类对象或者成员访问
+
+    +     访问说明符限制private、public'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# 2. 类的声明与定义
+
+
+    类是一种用户自定义的数据类型，它的一般定义格式如下：
+
+
+    class 类名 {
+
+
+    private:
+
+
+    私有数据成员和成员函数；
+
+
+    protected:
+
+
+    保护数据成员和成员函数；
+
+
+    public:
+
+
+    公有数据成员和成员函数；
+
+
+    };
+
+
+    各个成员函数的实现；'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# 3. 访问控制
+
+
+    +   成员访问说明符 决定调用成员的权限以及它的作用域
+
+
+    +   公有 public:
+
+
+    说明为公有的成员可以被程序中的任何代码访问；
+
+
+    +   私有 private:
+
+
+    说明为私有的成员只能被类本身的成员函数及友元类成员函数或友元函数访问，默认类的对象的成员是私有；
+
+
+    +   保护 protected:
+
+
+    除了类本身的成员函数和说明为友元函数或友元类的成员函数可以访问保护成员外，该类的派生类的成员也可以访问。'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "# ## 3. 访问控制\n\n```\nclass A\n{\n    private:             // 首次出现时可以省略\n  \
+    \  int m_a;\n    void set(int a) { m_a = a; }\n    public:              // 公有成员\n\
+    \    int m_b;\n    void show() ;\n}\nvoid A::show(){ cout << m_a << m_b <<endl;}\n\
+    ```\n\n```\nA a;    //定义A类的对象a\na.m_a;\na.m_b;\na.show();\na.set(5);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "# ## 3. 访问控制\n\n+   - private声明的数据和函数不能在类以外访问\n\n+   - public声明的数据和函数可以在类以外访问\n\
+    \n+   - 默认为private访问类型的\n\n```\n```cpp\nclass A\n{\n    public:\n    int m_b;\n\
+    \    void show( ) ;\n    private:\n    int m_a;\n    void set( int a )\n    {\
+    \ m_a = a; }\n}\n```\n```\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_32_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# 课堂练习：完成Clock类的定义并对其进行测试增加 void setTime(int h, int m, int s);注意时间有效性的判断
+
+
+    应注意区分什么场合用域运算符“::”，什么场合用成员运算符“.”, 不要搞混。
+
+
+    +   - 在主函数中调用两个成员函数时，应指明对象名。表示调用的是哪一个对象的成员函数。Time t1, t2;  t1. setTime() ; t2.showTme();
+
+
+    +   - 在类外定义函数时，应指明成员函数的作用域void Clock::setTime() { cin>>hour>>minute>>sec;}在成员函数引用本对象的数据成员时，只需直接写数据成员名，这时C++系统会把它默认为本对象的数据成员。'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# # 总结
+
+
+    +   - 类的概念
+
+    +   - 类与结构体的区别
+
+    +   - 类的声明
+
+    +   - 类的定义
+
+    +   - 访问权限'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "# # 课堂练习：声明日期类\n\n# # 声明并定义描述日期的类，对该类进行测试\n\n```\nclass Date\n{\nprivate:\n\
+    \    int month, day, year;\n    int isLeapYear();\npublic:\n    void set( int\
+    \ m, int d, int y ) ;\n    void show();\n    int getYear(); int getMonth(); int\
+    \ getDay();\n    int whichDay();\n};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# # 作业与上机
+
+
+    # # 1. 盒子类 BOX
+
+
+    +   - 数据成员包括： length, width, height
+
+
+    +   - 成员函数实现以下功能：
+
+
+    +   （1）由键盘分别输入三个盒子的长宽高；
+
+
+    +   （2）输出盒子的属性
+
+
+    +   （3）计算长方体盒子的表面积和
+
+
+    +   （4）计算长方体盒子的体积
+
+
+    +   - 编写基于对象的程序，对该类进行测试。'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# # 作业与上机
+
+
+    # ## 2.日期类 Date
+
+
+    +   - 私有数据成员 year, month, day;
+
+
+    +   - 公有成员函数实现以下功能:
+
+
+    +   1）设置时间，并对该时间的有效性进行检测
+
+
+    +   2）输出时间，按mm/ dd / yyyy方式打印
+
+
+    +   3）判断该日期是一年的第几天
+
+
+    +   4）判断该日期是星期几（选作）
+
+
+    +   编写一个驱动程序进行测试'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "# # 作业与上机\n\n# ## 3.时间类 Time\n\n+   - 私有数据成员int hour, minute, second\n\n+ \
+    \  - 共有成员函数： 自定义\n\n用一个tick成员函数将Time对象中存放的时间递增1秒。  \nTime 对象应该总是保持一致状态。编写一个驱动程序，\
+    \  \n在循环中测试tick成员函数，按标准格式打印时间，从而  \n演示tick成员函数的工作情况。要保证测试下列情况：  \na)递增到下一分钟。 \
+    \ \nb)递增到下一小时。  \nc)递增到下一天(即11： 59： 59PM到12： 00： 00AM)。"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# # 作业与上机
+
+
+    # ## 4. student类
+
+
+    每个学生包含姓名、年龄、学号、性别等属性,并且实现显示和设置这些属性的成员函数.
+
+
+    要求：第一次上机检查！
+
+
+    | Student   |
+
+    |-----------|
+
+    | char name[10] |
+
+    | int no    |
+
+    | char sex  |
+
+    | void set(); |
+
+    | void set(char*, int, char); |
+
+    | void get(); |
+
+    | char* getName(); |'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# # 练习
+
+
+    1.关于类定义格式的描述中，错误的是( )。
+
+    A.一般类中包含有数据成员和成员函数。
+
+    B.一般类的定义格式分为说明部分和实现部分。
+
+    C.类中成员有三种访问方式:公有,私有和保护。
+
+    D.成员函数都应是公有的,数据成员都应是私有的。
+
+
+    2.关于类的成员函数描述错误的是( )
+
+    A.类中可以有一个或多个函数，
+
+    B.成员函数只能定义在类体外
+
+    C.定义在类体外的成员函数前加inline可以成为内联函数.
+
+    D.在类外定义成员函数时,在函数名前除了加类型说明符外,还需用作用域符号来限定改成员函数所属的类.'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# # 练习
+
+
+    3.类中包含哪两种成员？它们的访问权限有哪些？
+
+
+    4. 下面是Time类的定义部分,找出其中错误：
+
+    class Time{
+
+    public:
+
+    // 函数原型省略
+
+    private:
+
+    int hour=0;
+
+    int minute=0;
+
+    int second=0;
+
+    }'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "# # 初识类class\n\n+   - 类是面向对象编程的程序基本单位  \n+   程序模块是各种由类构成的\n\n+   - 类是逻辑上相关数据和函数的封装\
+    \  \n+   类可以隐藏数据和操作细节\n\n+   - 类是对问题的抽象描述  \n+   类的对象使用自己的方法完成对数据的操作"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "# # 1. 结构一类\n\n几点  \n如何调整\n\n```\nint hour, minute, second;\n```\n\n```\nstruct\
+    \ Clock  \n{  \n    int hour; // 0-23  \n    int minute;// 0-59  \n    int second;//\
+    \ 0-59  \n};\n```\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_44_0.png)\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_44_1.png)\n\
+    \n数据类型  \n是对同种数据的抽象"
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "# # 1. 结构一类\n\n```\nstruct Clock\n{\n    int hour;\n    int minute;\n    int\
+    \ sec;\n};\n```\n\n```\n#include <iostream.h>\nint main()\n{\n    Clock t1;\n\
+    \    setTime(t1);\n    showTime( t1 );\n    Clock t2;\n    setTime(t2);\n    showTime(\
+    \ t2 );\n    return 0;\n}\n```\n\n```\nvoid setTime( Clock& t );\nvoid showTime\
+    \ (Clock &t);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "# # 1. 结构一类\n\n```\nclass Clock\n{\n    private :\n    关于时间的数据;\n    public\
+    \ :\n    读取时间值 ;\n    调整时间值 ;\n};\n```\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_47_0.png)\n\
+    \n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_47_1.png)\n\n类是数据和操作数据的函数的封装"
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# # 1. 结构一类
+
+
+    ```
+
+    ```
+
+    class Clock
+
+    {
+
+    private :
+
+    int hour;
+
+    int minute;
+
+    int second;
+
+    public :
+
+    void set();
+
+    void get();
+
+    };
+
+    ```
+
+    ```
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_48_0.png)
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_48_1.png)
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_48_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# # 1. 结构一类
+
+
+    //改用含成员函数的类来处理
+
+    class Clock
+
+    {
+
+    public:
+
+    void setTime();
+
+    void showTime();
+
+    private:
+
+    int hour;
+
+    int minute;
+
+    int sec;
+
+    };
+
+
+    int main()
+
+    {
+
+    Clockt1;
+
+    t1.setTime();
+
+    t1.showTime();
+
+    Time t2;
+
+    t2.setTime();
+
+    t2.showTime();
+
+    return 0;
+
+    }'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# ## 2. 类的声明与定义
+
+
+    +   - 类是用户定义的数据类型，用关键字class声明。
+
+    +   类包含两种成员： 数据成员和成员函数。
+
+
+    +   - 类的定义指包含成员实现的类声明
+
+
+    +   - 类使程序员可以构造对象的属性和行为或操作'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# ## 2. 类的声明与定义
+
+
+    类一般定义格式如下：
+
+
+    class ClassName
+
+    {
+
+    private:
+
+    data member & member function;
+
+    public:
+
+    data member & member function
+
+    };
+
+    Member function definition;
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_51_0.png)
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_51_1.png)
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_51_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: "# # 定义成员函数\n\n# ## 1. 类外定义成员函数\n\n```\nvoid Clock :: setTime()\n{\n    cin>>hour;\n\
+    \    cin>>minute;\n    cin>>sec;\n}\nvoid Clock:: showTime()\n{ cout<<hour<<\"\
+    \ :\"\n    <<minute<<\" :\"\n    <<sec<<endl;\n}\n```\n\n# ## 2.类内定义成员函数\n\n```\n\
+    class Clock\n{\n    public:\n    void setTime()\n    { cin>>hour>>minute>>sec;}\n\
+    \    void showTime()\n    {   cout<<hour<<\":\"\n    <<minute<<\":\"\n    <<sec<<endl;\
+    \ }\n    private:\n    int hour, minute, sec;\n};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: "# 定义成员函数\n\n+   - 成员函数为描述对象的方法\n+   - 在类的外部定义成员函数\n\n```\n返回类型    类名::成员函数名(参数列表)\n\
+    {\n    函数定义体\n}\n```\n\n+   - 在类内直接定义成员函数，默认创建为内联函数\n\n如果成员函数在类体外定义,要用inline声明为内联函数"
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# # 成员函数 vs. 一般函数
+
+
+    +   - 都有函数体，返回值和函数类型。
+
+    +   - 成员函数属于一个类的成员，可出现在类体中定义在类体为要加类名和作用域解析符::
+
+    +   - 成员函数和数据成员封装成一体可直接引用数据成员
+
+    +   - 成员函数只能由本类对象或者成员访问访问说明符限制private、public'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# 3. 访问控制
+
+
+    决定调用成员的权限以及它的作用域
+
+
+    # 成员访问说明符
+
+
+    +   公有 public:
+
+
+    说明为公有的成员可以被程序中的任何代码访问；
+
+
+    +   私有 private:
+
+
+    说明为私有的成员只能被类本身的成员函数及友元类成员函数或友元函数访问，默认类的对象的成员是私有；
+
+
+    +   保护 protected:
+
+
+    除了类本身的成员函数和说明为友元函数或友元类的成员函数可以访问保护成员外，该类的派生类的成员也可以访问。
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_56_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "# 3. 访问控制\n\n```\nclass A\n{\n    private:    // 首次出现时可以省略\n    int m_a;\n\
+    \    void set( int a ) { m_a = a; }\n    public:    // 公有成员\n    int m_b;\n  \
+    \  void show( ) ;\n}\nvoid A::show( ){ cout << m_a << m_b <<endl;}\n```\n\n```\n\
+    A a;    //定义A类的对象a\na.m_a;\na.m_b;\na.show();\na.set(5);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "# 3. 访问控制\n\n+   - private声明的数据和函数不能在类以外访问\n\n+   - public声明的数据和函数可以在类以外访问\n\
+    \n+   - 默认为private访问类型的\n\n```\n```cpp\nclass A\n{\npublic:\n    int m_b;\n  \
+    \  void show();\nprivate:\n    int m_a;\n    void set(int a)\n    {\n        m_a\
+    \ = a;\n    }\n}\n```\n```\n\n无法从类的外部访问\n\n可以从类的外部访问\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_58_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "# 课堂练习：\n完成Clock类的定义并对其进行测试\n增加 `void setTime(int h, int m, int s);`\n注意时间有效性的判断\n\
+    \n应注意区分什么场合用域运算符“::”，什么场合用成员运算符“.”，不要搞混。\n\n+   - 在主函数中调用两个成员函数时，应指明对象名。表示调用的是哪一个对象的成员函数。\n\
+    +   \n+     `Time t1, t2;    t1.setTime(); t2.showTime();`\n\n+   - 在类外定义函数时，应指明成员函数的作用域\n\
+    +   \n+     `void Clock::setTime()   { cin>>hour>>minute>>sec;}`\n+   \n+    \
+    \ 在成员函数引用本对象的数据成员时，只需直接写数据成员名，这时C++系统会把它默认为本对象的数据成员。"
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "# # 课堂练习：声明日期类\n\n# ## 声明并定义描述日期的类，对该类进行测试\n\n```\nclass Date\n{\nprivate:\n\
+    \    int month, day, year;\n    int isLeapYear();\npublic:\n    void set( int\
+    \ m, int d, int y ) ;\n    void show();\n    int getYear(); int getMonth(); int\
+    \ getDay();\n    int whichDay();\n};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: "# # 小结\n\n+   - 类的概念  \n+     类 vs.结构体  \n+   - 类的声明  \n+   - 类的定义  \n+   \
+    \  成员函数 vs.普通函数  \n+   - 访问权限\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_61_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# # 成员函数
+
+
+    # ## 成员函数 vs. 一般函数
+
+
+    +   - 都有函数体，返回值和函数类型。
+
+
+    +   - 成员函数属于一个类的成员，出现在类体中
+
+
+    +   - 成员访问说明符限制private、public
+
+
+    +   注意调用它的权限以及它的作用域
+
+
+    +   - 成员函数必须由对象句柄调用
+
+
+    +   - 成员函数和数据成员封装成一体'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# # 类对象的存储方式
+
+
+    用类去定义对象时，系统会为每一个对象分配存储空间。如果一个类包括了数据和函数，要分别为数据和函数的代码分配存储空间。
+
+
+    ```
+
+    Time t;
+
+    sizeof(Time) == sizeof(t)
+
+    ```
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_63_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# 4. 类的实例化
+
+
+    类的实例化即定义类的对象 (Object)
+
+
+    对客观世界中事物的抽象描述
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_64_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# # 4. 类的实例化-对象
+
+
+    # ## 定义对象有三种形式
+
+
+    # ### （1）先声明类类型，后定义对象
+
+
+    ```
+
+    ```cpp
+
+    class Date d1,d2;
+
+    // 把class和Tdate合起来作为一个类名
+
+    Date d1,d2;
+
+    // 直接用类名定义对象。
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "# # 定义对象有三种形式\n\n# ## (2) 在声明类类型的同时定义对象\n\n```\n```cpp\nclass Date\n{\n   \
+    \ public:\n        void Set(int m, int d, int y ){…}\n        int IsLeapYear()\
+    \ {…}\n        void Print( ) {…}\n    private:\n        int month;\n        int\
+    \ day;\n        int year;\n} d1, d2;\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: "# # 定义对象有三种形式\n\n# ## （3）不出现类名，直接定义对象\n\n```\n```cpp\nclass\n{\n    private:\n\
+    \    :\n    public:\n    :\n}d1, d2;\n//无类名\n//声明以下部分为私有的\n//声明以下部分为公用的\n//定义了两个无类名的类\n\
+    对象\n```\n```\n\n编译系统会为这个对象分配存储空间，以存放对象中的成员。"
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: "# # 对象的使用\n\n+   - 由于类和结构是等价的，对类的五种操作对结构也同样适用：\n\n+   （1）对象之间可以相互赋值。\n+   \n\
+    +   Location locationA, locationB;\n+   locationA.set (5,6);\n+   locationB =\
+    \ locationA;\n\n+   （2）对象可以作为数组的元素。\n+   \n+   Location arrayloc[100];"
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: "# # 对象的使用\n\n（3）可以说明指向对象的指针，  \n但不能取私有数据成员的指针或成员函数的地址。  \n\nLocation location[10];\
+    \  \nLocation *pointLoc = &location[0];  \n当pointLoc被加1后，它将指向下一个Location对象\n\n\
+    （4）对象可以作为函数的参数，  \n既可作值参也可以作引用参数。  \nvoid display(Location &location) { ... };"
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: "# 对象的使用\n\n（5）一个对象可以是另一个类的成员－类的组合\n\n# 注意：\n\n```\n例：\nclass X\n{\n    ……\n\
+    };\nclass Y\n{\n    X dataMember; // 声明一个类类型数据成员\n    ……\n};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "# # 对象的使用\n\n# ## 注意：\n\n# ## 允许已定义类名出现在类的说明中\n\n例：\n\nclass X\n{\n    X dataMember\
+    \ ; // 错误\n    ......\n};\n\n> > 错误\n> > 无穷递归结构"
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# # 预习UML与类的组合
+
+
+    # ## Student
+
+
+    -name:char [10]
+
+    -no: int
+
+    -sex: char
+
+    -birthday: Date
+
+
+    +set(): void
+
+    +set( char*, int,
+
+    char =’m’):void
+
+    +setBrith (Date&)
+
+    +getName(): char*
+
+    +print(): void
+
+
+    # ## Date
+
+
+    -day:int
+
+    -month:int
+
+    -year: int
+
+
+    +set(): void
+
+    +set( int d= 1, int m= 1 ,
+
+    int y = 1990): void
+
+    +getYear(): int
+
+    +getMonth(): int
+
+    + getDay(): int'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# 对象的使用
+
+
+    一个对象可以是另一个类的成员。
+
+
+    ```
+
+    class Date {
+
+    public:
+
+    void set( int, int, int);
+
+    void print();
+
+    int get_y0;
+
+    private:
+
+    int month;
+
+    int day;
+
+    int year;
+
+    };
+
+    ```
+
+
+    ```
+
+    class Time_date{
+
+    public:
+
+    void set();
+
+    void print();
+
+    private:
+
+    int hour;
+
+    int minute;
+
+    int second;
+
+    };
+
+    ```
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_73_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# 5. 成员的访问
+
+
+    一般用对象访问成员引用形式
+
+
+    **成员访问**运算符“.”和“->”
+
+
+    +   - 数据成员
+
+    +     - 对象名.成员名
+
+    +     - 或 对象指针名->成员名
+
+
+    +   - 成员函数
+
+    +     - 对象名.成员名（参数表）
+
+    +     - 或 对象指针名->成员名（参数表）
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_74_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '# ## 2. 成员的访问
+
+
+    +   - 通过指向对象的指针访问对象中的成员；
+
+
+    ```
+
+    ```cpp
+
+    Time t, *pTime;   //定义对象t和指针变量p
+
+    pTime =&t;        //使p指向对象t
+
+    cout << pTime ->hour << (*pTime).hour << t.hour ;
+
+    ```
+
+    ```
+
+
+    +   - 通过对象的引用变量访问对象中的成员。
+
+
+    ```
+
+    ```cpp
+
+    Time t1;   Time &t2=t1;
+
+    cout<<t2.hour;
+
+    void Fuction( Time& t);
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "# ## 2. 成员的访问\n\n访问对象中的成员可以有3种方法：\n\n+   - 通过对象名和成员运算符访问对象中的成员；\n\n```\n```cpp\n\
+    class A\n{\nprivate :\n    int m_a;\npublic:\n    int m_b;\n    void print(){\
+    \ cout<<m_a<<m_b };\n    int getA(){ return m_a ; }\n};\n```\n```\n\n```\n```cpp\n\
+    A a ;\n× a.m_a = 5;\n✓ a.m_b = 6;\n✓ a.print() ;\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# # 类的封装性和信息隐蔽（自习）
+
+
+    # ## 公用接口与私有实现的分离
+
+
+    +   - 类中被操作的数据是私有的，实现细节对用户是隐蔽的，这种实现称为私有实现。
+
+
+    +   - 在声明了一个类以后，用户主要是通过调用公用的成员函数来实现类提供的功能。因此，公用成员函数是用户使用类的公用接口，或者说是类的对外接口。
+
+
+    +   - 软件工程的一个最基本的原则就是将接口与实现分离，信息隐蔽是软件工程中一个非常重要的概念。'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '# # 类声明和成员函数定义的分离
+
+
+    # ## 1. 自定义类库头文件.h
+
+
+    文件中有用户自行设计的类的定义，包括类的外部接口（公有成员函数的原型）。任何需要使用这些类的源程序，只要在文件中包含这些头文件即可。
+
+
+    ```
+
+    ```cpp
+
+    // date.h
+
+    class Date{
+
+    public:
+
+    void set(int m,int d,int y);
+
+    int isLeapYear();
+
+    void print();
+
+    private:
+
+    int month, day, year;
+
+    };
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "# ## 2. 用户自定义类库的内部实现源文件\n\n包括相关头文件包含和类中成员函数的定义。\n\n这就形成类的实现方法。\n\n```\n```cpp\n\
+    //date.cpp\n#include<iostream.h>\n#include \"date.h\"\nvoid Date ::set(int m,int\
+    \ d,int y)\n{\n    month=m; day=d; year=y;\n}\nint Date :: isLeapYear( )\n{\n\
+    \    return\n    (year%4==0&&year%100!=0)||(year%400==0);\n}\nvoid Date :: print(\
+    \ )\n{\n    cout <<month <<\"'/'\" <<day <<\"'/'\" <<year <<endl;\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "# 类声明和成员函数定义的分离\n\n# 3. 唯一包含主函数的源文件\n\n包括所有相关头文件及 main\n\n```\n```cpp\n#include<iostream.h>\n\
+    # include“date.h”\n\nvoid main( )\n{\n    {\n        Date a;\n        a.set(2,4,1998);\n\
+    \        a.print( );\n    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: "# # 课堂练习（分离，实例）\n\n实现表示学生的类  \nStudent，  \n属性包括名字，学号，  \n性别和生日，\n\n行为包括：属性的设置\
+    \  \n和显示等，返回属性值。\n\n建立完整的工程，包括  \n多个源文件和头文件。\n\n| Student  |\n|---|\n| char name[10]\
+    \  |\n| int no  |\n| char sex  |\n| Date birthday  |\n| void set();  |\n| void\
+    \ set(char*, int, char);  |\n| void set( Date&);  |\n| char* getName();  |\n|\
+    \ int getNo();  |\n| void print();  |"
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: "```\n//student.h\nclass Student\n{ public:\n    void display();\nprivate:\n\
+    \    int num;\n    char name[20];\n    char sex;\n};\n```\n\n```\n//student.cpp\n\
+    #include <iostream>\n#include \"student.h\"\nvoid Student::display( )\n{cout<<\"\
+    \ num: \" <<num<<endl;\n cout<<\" name: \" <<name<<endl;\n cout<<\" sex: \" <<sex<<endl;\n\
+    }\n```\n\n```\n//main.cpp\n#include <iostream>\n#include \"student.h\"\nint main()\n\
+    {   Student stud;\n    stud.display();\n    return 0;\n}\n```\n\n主函数模块\n//将类声明头文件包含进来\n\
+    //定义对象\n//执行stud对象的display函数"
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# # 作业与上机
+
+
+    # # 1. 盒子类 BOX
+
+
+    +   - 数据成员包括： length, width, height
+
+
+    +   - 成员函数实现以下功能：
+
+
+    +   （1）由键盘分别输入三个盒子的长宽高；
+
+
+    +   （2）输出盒子的属性
+
+
+    +   （3）计算长方体盒子的表面积和
+
+
+    +   （4）计算长方体盒子的体积
+
+
+    +   - 编写基于对象的程序，对该类进行测试。'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# # 作业与上机
+
+
+    # ## 2.日期类 Date
+
+
+    +   - 私有数据成员 year, month, day;
+
+
+    +   - 公有成员函数实现以下功能:
+
+
+    +   1）设置时间，并对该时间的有效性进行检测
+
+
+    +   2）输出时间，按mm/ dd / yyyy方式打印
+
+
+    +   3）判断该日期是一年的第几天
+
+
+    +   4）判断该日期是星期几（选作）
+
+
+    +   编写一个驱动程序进行测试'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: "# # 作业与上机\n\n# ## 3.时间类 Time\n\n+   - 私有数据成员int hour, minute, second\n\n+ \
+    \  - 共有成员函数： 自定义\n\n用一个tick成员函数将Time对象中存放的时间递增1秒。  \nTime 对象应该总是保持一致状态。编写一个驱动程序，\
+    \  \n在循环中测试tick成员函数，按标准格式打印时间，从而  \n演示tick成员函数的工作情况。要保证测试下列情况：  \na)递增到下一分钟。 \
+    \ \nb)递增到下一小时。  \nc)递增到下一天(即11： 59： 59PM到12： 00： 00AM)。"
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# # 作业与上机
+
+
+    # ## 4. student类
+
+
+    每个学生包含姓名、年龄、学号、性别等属性,并且实现显示和设置这些属性的成员函数.
+
+
+    | Student   |
+
+    |-----------|
+
+    | char name[10] |
+
+    | int no    |
+
+    | char sex  |
+
+    | void set(); |
+
+    | void set(char*, int, char); |
+
+    | void get(); |
+
+    | char* getName(); |'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '# # 练习
+
+
+    1.关于类定义格式的描述中，错误的是( )。
+
+    A.一般类中包含有数据成员和成员函数。
+
+    B.一般类的定义格式分为说明部分和实现部分。
+
+    C.类中成员有三种访问方式:公有,私有和保护。
+
+    D.成员函数都应是公有的,数据成员都应是私有的。
+
+
+    2.关于类的成员函数描述错误的是( )
+
+    A.类中可以有一个或多个函数，
+
+    B.成员函数只能定义在类体外
+
+    C.定义在类体外的成员函数前加inline可以成为内联函数.
+
+    D.在类外定义成员函数时,在函数名前除了加类型说明符外,还需用作用域符号来限定改成员函数所属的类.'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# # 练习
+
+
+    3.类中包含哪两种成员？它们的访问权限有哪些？
+
+
+    4. 下面是Time类的定义部分,找出其中错误：
+
+    class Time{
+
+    public:
+
+    // 函数原型省略
+
+    private:
+
+    int hour=0;
+
+    int minute=0;
+
+    int second=0;
+
+    }'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '# # 练习
+
+
+    # ## 5. 判断对错:
+
+
+    +   A. 同类创建的若干个对象的数据结构和其内容都是不同的。
+
+    +   B. 对象的成员表示与C语言中结构变量的成员表示相同。
+
+    +   C. 一个类可以定义多个对象、指向对象的指针和对象数组。
+
+    +   D. 一个对象在定义时就被初始化。
+
+    +   E. 定义一个对象时系统只存储其数据成员, 而不存储对象的成员函数, 成员函数是同一类的对象所共享的。
+
+    +   F. 一个类中可以只有公共成员, 也可以只有私有成员, 也可以都有。
+
+
+    # ## 2. 思考如何访问类成员, 方法有那些?
+
+
+    # ## 3. 什么是类, 什么是对象, 他们的区别和联系.'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '# # 第四讲 构造函数
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_92_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: "# # 构造函数\n\n构造函数是一种用于创建对象特殊的成员函数；\n\n+   - 特点：\n+     构造函数是与类同名的成员函数  \n+ \
+    \    可有任意类型的参数，但没有返回类型  \n+     不能由程序员调用，创建对象时自动执行\n\n+   - 作用：\n+     - 为对象分配空间；\n\
+    +     - 对数据成员赋初值；\n+     - 请求其他资源。"
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '# 构造函数种类
+
+
+    +   - 默认构造函数
+
+    +   - 有参构造函数
+
+    +   - 复制构造函数
+
+
+    # 构造函数的重载'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: "# # 1.默认构造函数\n\n```\nclass Time\n{\npublic:\nTime() { }\nvoid set_time(int,int=0,int=0);\n\
+    void show_time();\nprivate:\nint hour, min, sec;\n};\n```\n\n```\n#include <iostream.h>\n\
+    int main()\n{\nTime start;\nstart.set_time(13, 30 );\ntl.show_time();\nTime end;\n\
+    end.show_time();\n}\n```\n\n在生成类的对象时自动调用  \n可以初始化类对象的数据成员"
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# 自定义默认构造函数
+
+
+    一般在构造函数内部设置成员变量的值
+
+
+    ```
+
+    class Time
+
+    {
+
+    public:
+
+    Time();
+
+    void set_time(int, int, int );
+
+    void show_time( );
+
+    private:
+
+    int hour, min, sec;
+
+    };
+
+    Time::Time()
+
+    {
+
+    hour=min=sec = 0;
+
+    }
+
+    ```
+
+
+    ```
+
+    #include <iostream.h>
+
+    int main()
+
+    {
+
+    Time t;
+
+    t.show_time();
+
+    return 0;
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: "# 1. 默认构造函数\n\n# ▪ 在构造函数处初始化成员\n\n```\nclass Time\n{\npublic:\n  Time();\n\
+    \  void set_time(int, int, int);\n  void show_time();\nprivate:\n  int hour, min,\
+    \ sec;\n};\nTime::Time():hour(0)\n{\n  //hour=0;\n  min=0; sec = 0;\n}\n```\n\n\
+    +   1. 将变量hour置为0；\n+   2. 这种初始化方法在构造函数执行以前进行。\n+   3. 如何用这种方式初始化多个成员变量？\n+  \
+    \ 4. 有些成员必须这样初始化！"
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '# 2.有参构造函数
+
+
+    +   带参数的构造函数可以在创建对象时，用具体数值初始化数据成员和各种数据元素。可方便实现对不同对象进行初始化。
+
+
+    +   构造函数的首部：
+
+
+    构造函数名（形参列表）；
+
+
+    定义对象的一般格式：
+
+
+    类名 对象名（实参列表）'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# 带参数的构造函數
+
+
+    > 用参数初始化列表对数据成员初始化
+
+
+    ```
+
+    class Time
+
+    {
+
+    public:
+
+    Time(int h, int m, int s)
+
+    Time(int h, int m, int s):
+
+    hour(h), min(m), sec(s)
+
+    {
+
+    }
+
+    private:
+
+    int hour; int min; int sec;
+
+    };
+
+    ```
+
+
+    ```
+
+    #include <iostream.h>
+
+    int main()
+
+    {
+
+    Time t2(8, 15, 16);
+
+    t2.show_time();
+
+    return 0;
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# 3.重载构造函数
+
+
+    类的定义中可以有多个构造函数，但必须各个构造函数的形参个数或类型不一样，即重载构造函数。
+
+
+    在创建对象时会根据实参的类型及个数自动选择相应的构造函数。每个对象创建时只调用1个构造函数
+
+
+    默认构造函数必须唯一
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_101_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: '# 4·带默认参数的构造函数
+
+
+    +   - 默认构造函数
+
+    +   - 有参构造函数
+
+    +   - 带默认参数的构造函数
+
+
+    +   - 在调用构造函数时没有提供实参，可按默认参数值对对象进行初始化。
+
+    +   - 在构造函数中使用默认参数，可提供建立对象时的多种选择，相当于多个重载构造函数。'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '# # 带默认认参数的构造函数
+
+
+    ```
+
+    class Time
+
+    {
+
+    public:
+
+    Time() : hour(0),min(0),sec(0) {}
+
+    Time(int h, int m, int s )
+
+    Time(int h =0, int m=0, int s=0 )
+
+    { hour=h;min=m;sec=s ; }
+
+    private:
+
+    int hour; int min; int sec;
+
+    };
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: '# # 带默认认参数的构造函数
+
+
+    ```
+
+    ```cpp
+
+    class Time
+
+    {
+
+    public:
+
+    Time(int h=0,int m=0,int s=0):
+
+    hour(h),min(m),sec(s) {}
+
+    void set_time();
+
+    void show_time();
+
+    private:
+
+    int hour;
+
+    int min;
+
+    int sec;
+
+    };
+
+    ......
+
+    ```
+
+    ```
+
+
+    ```
+
+    ```cpp
+
+    #include <iostream.h>
+
+    int main()
+
+    {
+
+    Time t1,
+
+    t2(2),
+
+    t3(21, 34),
+
+    t4(12, 25, 42),
+
+    t5(27, 74, 99);
+
+    ......
+
+    return 0;
+
+    }
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: '# # 构造函数使用说明
+
+
+    +   默认构造函数/缺省构造函数（default constructor）系统自动生成的构造函数和无参构造函数属于默认构造函数一个类中只能有一个默认构造函数。
+
+
+    +   如果在建立对象时用无参构造函数，注意定义对象的语句。Time t1, t2(1,2,3); //OKTime t(); // error
+
+
+    +   定义每个对象时只执行多个构造函数中的一个。
+
+
+    +   当构造函数中有默认参数时，注意函数重载的二义性。'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: "# # 代码练习\n\n定义student类  \n每个学生包含姓名、年龄、学号、性别等属性，  \n实现成员函数：  \n默认构造函数  \n有参构造函数\
+    \  \n显示和设置属性的成员函数。\n\n| Student    |\n|------------|\n| char name[10] |\n| int\
+    \ no    |\n| char sex    |\n| Student();    |\n| Student(char*, int, char); |\n\
+    | void set(char*, int, char); |\n| void get();    |\n| char* getName(); |\n| \
+    \           |"
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: "# # 设计有理数类/分数类\n\n```\nclass Rational\n{\npublic:\nprivate:\n    int m; //\
+    \ 分母\n    int n; // 分子\n};\n```\n\n```\nclass Rational{\npublic:\n    construcotors\n\
+    \    set\n    get\n    print\n    四则运算\nprivate:\n    int m, n; // 分子\n};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: "# # 设计有理数类/分数类\n\n```\nclass Rational{\npublic:\n    Rational(int nn=1,int\
+    \ mm=1); //构造函数\n    void print() ;    // 输出化简的 分子/分母\n    void simple();    //\
+    \ 约分\n    double getValue();    // 返回分数值\n    Rational add(Rational & A);    //\
+    \ r = r1.add(r2);\n    void sub(Rational & A , Rational &B); // r.sub(r1,r2);\n\
+    \    Rational mul(Rational & A);\n    void _div(Rational & A, Rational &B);\n\
+    private:\n    int m; // 分母\n    int n; // 分子\n};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '# # 练习
+
+
+    +   1. 判断对错： 构造函数用来初始化所定义的对象，如果一个类中没有定义任何构造函数，则该类的对象便无法初始化。
+
+
+    +   2. 下列构造函数的特点，描述错误的是（ ）。
+
+    +   A. 构造函数是一种成员函数，它具有一般成员函数的特点。
+
+    +   B. 构造函数的名称与其类名相同。
+
+    +   C. 构造函数必须指明其类型。
+
+    +   D. 一个类中可以定义一个或多个构造函数。'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: "# # 练习\n\n3. 假定一个类的构造函数为  \nLocation(int aa, int bb=20) {a=aa, b=bb}，  \n则执行Location\
+    \ x(4, 5)后，x.a和x.b的值分别为  \n（ ）  \nA 4和5. B. 5, 4; C. 4和20; d20和5;\n\n4. 假定ab为一个类，则执行ab\
+    \ x;语句时，将自动调用该类的（ ）  \nA有参构造函数，B无参构造函数  \nC. 拷贝构造函数 D复制构造函数"
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "# # 作业 设计复数类\n\n```\nclass Complex\n{\npublic:\n    //默认构造函数\n    //有参构造函数\n\
+    \    //输出复数 -5+3i， 4 - i 形式的show\n    //实现四则运算的成员函数\nprivate:\n    double real;\
+    \   //实部\n    double imag;   //虚部\n};\n```\n\n# # 上机实验2"
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: '# 思考题
+
+
+    (1)你是如何理解类和对象的？举例说明什么是类？什么是对象？它们有何关系？
+
+
+    (2)面向对象的程序设计与结构化程序设计有何不同？
+
+
+    (3)普通函数和成员函数有什么区别？
+
+
+    (4)拷贝构造函数那些情况下会被调用，请举例说明
+
+
+    (5) 定义类Point.，指出程序中错误并改正， 给出程序运行的结果。'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: '# # 第三讲 类的实例化
+
+
+    +   - 定义对象
+
+
+    +   - 成员引用
+
+
+    +   - 对象的操作
+
+
+    +   - 代码分离'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '# # 1. 类的实例化-对象
+
+
+    类的实例化即定义类的对象，类似于定义任何类型的变量（类名称为一个新的类型说明符）
+
+
+    # ## 定义对象有三种形式
+
+
+    # ### （1）先声明类类型，后定义对象
+
+
+    ```
+
+    ```cpp
+
+    class Date d1,d2;
+
+    // 把class和Tdate合起来作为一个类名
+
+    Date d1,d2;
+
+    // 直接用类名定义对象。
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: "# # 定义对象有三种形式\n\n# ## (2) 在声明类类型的同时定义对象\n\n```\n```cpp\nclass Date\n{\n   \
+    \ public:\n        void Set(int m, int d, int y ){…}\n        int IsLeapYear()\
+    \ {…}\n        void Print( ) {…}\n    private:\n        int month;\n        int\
+    \ day;\n        int year;\n} d1, d2;\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: "# 定义对象有三种形式\n\n\n\n```\n``` \nclass { //无类名\nprivate: //声明以下部分为私有的\n...\npublic:\
+    \ //声明以下部分为公有的\n...\n} d1, d2; //定义了两个无类名的类对象\n```\n```\n\n编译系统会为这个对象分配存储空间，以存放对象中的成员。"
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: '# # 对象的使用
+
+
+    +   - 由于类和结构是等价的， 对类的五种操作对结构也同样适用：
+
+
+    （1）对象之间可以相互赋值。
+
+
+    Location locationA, locationB;
+
+    locationA.set (5,6);
+
+    locationB = locationA;
+
+
+    （2）对象可以作为数组的元素。
+
+
+    Location arrayloc[100];'
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: "# # 对象的使用\n\n(3) 可以说明指向对象的指针，  \n但不能取私有数据成员的指针或成员函数的地址。  \n\nLocation location[10];\
+    \  \nLocation *pointLoc = &location[0];  \n当pointLoc被加1后，它将指向下一个Location对象\n\n\
+    (4) 对象可以作为函数的参数，  \n既可作值参也可以作引用参数。  \n\nvoid display(Location &location) { ...\
+    \ };"
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: "# # 对象的使用\n\n(5）一个对象可以是另一个类的成员。\n\n# ## 注意：\n\n```\n```cpp\n例： class X\n{\n\
+    ......\n};\nclass Y\n{\n    X dataMember ; // 声明一个类类型数据成员\n......\n};\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: "# # 对象的使用\n\n注意：允许已定义类名出现在类的说明中\n\n```\n``` \nclass X\n{\nX dataMember ; //\
+    \ 错误\n......\n};\n```\n```\n\n> 错误 无穷递归结构"
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '# 2. 成员的访问
+
+
+    一般对象的成员引用形式
+
+
+    # 成员访问运算符“.”和“->”
+
+
+    +   - 数据成员
+
+    +     - 对象名.成员名
+
+    +     - 或 对象指针名->成员名
+
+    +   - 成员函数
+
+    +     - 对象名.成员名（参数表）
+
+    +     - 或
+
+    +     - 对象指针名->成员名（参数表）'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: "# ## 2. 成员的访问\n\n# ### 2访问对象中的成员可以有3种方法：\n\n+   - 通过对象名和成员运算符访问对象中的成员；\n\n\
+    ```\n```cpp\nclass A\n{\nprivate :      // private说明符在首\n    int m_a;\npublic:\
+    \        // 切换到public说明符\n    int m_b;\n    void print(){ cout<<m_a<<m_b;}\n \
+    \   int getA(){ return m_a ; }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: '# ## 2. 成员的访问
+
+
+    +   - 通过指向对象的指针访问对象中的成员；
+
+
+    ```
+
+    ```cpp
+
+    Time t, *pTime;       //定义对象t和指针变量p
+
+    pTime = &t;           //使p指向对象t
+
+    cout << pTime->hour << (*pTime).hour << t.hour ;
+
+    ```
+
+    ```
+
+
+    +   - 通过对象的引用变量访问对象中的成员。
+
+
+    ```
+
+    ```cpp
+
+    Time t1;      Time &t2=t1;
+
+    cout<<t2.hour;
+
+
+    void Fuction( Time& t);
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: "# # 成员的存储方式\n\n用类去定义对象时，系统会为每一个对象分配存储空间。  \n如果一个类包括了数据和函数，要分别为数据和函数的代码分配存储空间。\n\
+    \n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_126_0.png)\n\n```\ncout<<sizeof(Time)<<endl;\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: '# # 成员函数
+
+
+    # ## 成员函数 vs. 一般函数
+
+
+    +   - 都有函数体，返回值和函数类型。
+
+
+    +   - 成员函数属于一个类的成员，出现在类体中
+
+
+    +   - 成员访问说明符限制private、public
+
+
+    +   注意调用它的权限以及它的作用域
+
+
+    +   - 成员函数必须由对象句柄调用
+
+
+    +   - 成员函数和数据成员封装成一体'
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: '# # 类的封装性和信息隐蔽
+
+
+    # # 1. 公用接口与私有实现的分离
+
+
+    +   - 类中被操作的数据是私有的，实现细节对用户是隐蔽的，这种实现称为私有实现。
+
+
+    +   - 在声明了一个类以后，用户主要是通过调用公用的成员函数来实现类提供的功能。因此，公用成员函数是用户使用类的公用接口，或者说是类的对外接口。
+
+
+    +   - 软件工程的一个最基本的原则就是将接口与实现分离，信息隐蔽是软件工程中一个非常重要的概念。'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: '# # 类声明和成员函数定义的分离
+
+
+    # ## 1. 自定义类库头文件.h
+
+
+    文件中有用户自行设计的类的定义，包括类的外部接口（公有成员函数的原型）。任何需要使用这些类的源程序，只要在文件中包含这些头文件即可。
+
+
+    ```
+
+    ```cpp
+
+    // date.h
+
+    class Date{
+
+    public:
+
+    void set(int m,int d,int y);
+
+    int isLeapYear();
+
+    void print();
+
+    private:
+
+    int month, day, year;
+
+    };
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: "# ## 2. 用户自定义类库的内部实现源文件\n\n包括相关头文件包含和类中成员函数的定义。\n\n这就形成类的实现方法。\n\n```\n```cpp\n\
+    //date.cpp\n#include<iostream.h>\n#include \"date.h\"\nvoid Date ::set(int m,int\
+    \ d,int y)\n{\n    month=m; day=d; year=y;\n}\nint Date :: isLeapYear( )\n{\n\
+    \    return\n    (year%4==0&&year%100!=0) || (year%400==0) ;\n}\nvoid Date ::\
+    \ print( )\n{\n    cout <<month <<\"/\" <<day <<\"/\" <<year <<endl;\n}\n```\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: "# # 类声明和成员函数定义的分离\n\n# ## 3. 唯一包含主函数的源文件\n\n包括所有相关头文件及main\n\n```\n```cpp\n\
+    #include<iostream.h>\n#include\"date.h\"\nvoid main()\n{\n    Date a;\n    a.set(2,4,1998);\n\
+    \    a.print();\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: '# # 类声明和成员函数定义的分离
+
+
+    +   在面向对象的程序开发中，一般做法是将类的声明放在指定的头文件中，用户如果想用该类，只要把有关的头文件包含进来即可，不必在程序中重复书写类的声明，以减少工作量，节省篇幅，提高编程的效率。
+
+
+    +   由于在头文件中包含了类的声明，因此在程序中就可以用该类来定义对象。由于在类体中包含了对成员函数的声明，在程序中就可以调用这些对象的公用成员函数。为了实现信息隐蔽，对类成员函数的定义一般不放在头文件中，而另外放在一个文件中。'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: "# # 课堂练习（分离，实例）\n\n实现表示学生的类  \nStudent，  \n属性包括名字，学号，  \n性别和生日，\n\n行为包括：属性的设置\
+    \  \n和显示等，返回属性值。\n\n建立完整的工程，包括  \n多个源文件和头文件。\n\n| Student    |\n|------------|\n\
+    | char name[10] |\n| int no    |\n| char sex    |\n| Date birthday |\n| void set();\
+    \    |\n| void set(char*, int, char); |\n| void set(Date&); |\n| char* getName();\
+    \ |\n| int getNo();    |\n| void print();   |"
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: "```\n//student.h\nclass Student\n{ public:\n    void display();\nprivate:\n\
+    \    int num;\n    char name[20];\n    char sex;\n};\n```\n\n```\n//student.cpp\n\
+    #include <iostream>\n#include \"student.h\"\nvoid Student::display( )\n{cout<<\"\
+    \ num: \" <<num<<endl;\n cout<<\" name: \" <<name<<endl;\n cout<<\" sex: \" <<sex<<endl;\n\
+    }\n```\n\n```\n//main.cpp\n#include <iostream>\n#include \"student.h\"\nint main()\n\
+    {   Student stud;\n    stud.display();\n    return 0;\n}\n```\n\n主函数模块\n//将类声明头文件包含进来\n\
+    //定义对象\n//执行stud对象的display函数"
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: '# 预习UML与类的组合
+
+
+    **Student**
+
+    -name:char [10]
+
+    -no: int
+
+    -sex: char
+
+    -birthday: Date
+
+    +set(): void
+
+    +set( char*, int, char =''m''):void
+
+    +setBrith (Date&)
+
+    +getName(): char*
+
+    +print(): void
+
+
+    **Date**
+
+    -day: int
+
+    -month: int
+
+    -year: int
+
+    +set(): void
+
+    +set (int d=1, int m=1, int y=1990): void
+
+    +getYear(): int
+
+    +getMonth(): int
+
+    + getDay(): int'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: "# # 作业与上机 第一次上机检查！\n\n# # 1. 复数类complex\n\n+   - 设计complex类，进行复数的四则运算。复数的形式如下：\
+    \ real + imaginary * i\n\n+   - 私有数据成员： real, imag\n\n+   - 公有成员函数：\n\nShow方法：\
+    \ 打印形如(real, imag)的complex值  \nSet方法：设置负数的实部和虚部值  \nget方法： 分别获取实部和虚部值\n\n+   -\
+    \ 编写一个驱动程序，测试这个类。"
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: '# # 作业与上机
+
+
+    # ## 2. 有理数类 Rational
+
+
+    设计一个Rational类，进行分数的运算。
+
+    用整数变量表示类的private数据(分子和分母)，数存放成简化形式， 例如分数： 2/4 ， 应在对象中存放成分子1和分母2的形式。
+
+    类中包含公有成员函数
+
+
+    +   a) 两个Rational值相加，结果保存成简化形式。
+
+    +   b) 两个Rational值相减，结果保存成简化形式。
+
+    +   c) 两个Rational值相乘，结果保存成简化形式。
+
+    +   d) 两个Rational值相除，结果保存成简化形式。
+
+    +   e) 按a/b形式打印Rational值。
+
+    +   f) 按浮点数形式打印Rational值
+
+
+    编写一个驱动程序，测试这个类。'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: '# # 练习
+
+
+    # ## 1. 判断对错：
+
+
+    A. 同一类创建的若干个对象的数据结构和其内容都是不同的.
+
+    B. 对象的成员表示与C语言中结构变量的成员表示相同.
+
+    C. 一个类可以定义多个对象、指向对象的指针和对象数组.
+
+    D. 一个对象在定义时就被初始化.
+
+    E. 定义一个对象时系统只存储其数据成员，而不存储对象的成员函数，成员函数是同一类的对象所公享的.
+
+    F. 一个类中可以只有公共成员，也可以只有私有成员，也可以都有.
+
+
+    2. 思考如何访问类成员，方法有那些？
+
+
+    3. 什么是类，什么是对象，他们的区别和联系.'
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: '# # 第四讲 构造函数
+
+
+    # # 构造函数(constructor)
+
+
+    +   - 用于初始化对象的特殊成员函数：
+
+    +   - 为对象分配空间；
+
+    +   - 对数据成员赋初值；
+
+    +   - 生成类对象时， 调用构造函数；'
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: "# # 构造函数\n\n构造函数是一种用于创建对象特殊的成员函数；\n\n+   - 特点：\n+     构造函数是与类同名的成员函数  \n+ \
+    \    可有任意类型的参数，但没有返回类型  \n+     不能由程序员调用，创建对象时自动执行\n\n+   - 作用：\n+     - 为对象分配空间；\n\
+    +     - 对数据成员赋初值；\n+     - 请求其他资源。"
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: '# # 构造函数种类
+
+
+    +   - 默认构造函数
+
+
+    +   - 自定义构造函数
+
+
+    +   - 带默认参数的构造函数
+
+
+    +   - 重载构造函数'
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: "# # 1.默认构造函数\n\n```\n```cpp\nclass Time\n{\npublic:\n    Time() { }\n    void\
+    \ set_time(int, int, int );\n    void show_time( );\nprivate:\n    int hour;\n\
+    \    int min;\n    int sec;\n};\n```\n```\n\n```\n```cpp\n#include\n<iostream.h>\n\
+    int main( )\n{\n    Time t1;\n    t1.set_time( );\n    t1.show_time( );\n\n  \
+    \  Time t2;\n    t2.show_time( );\n\n    return 0;\n}\n```\n```\n\n初始化类对象的数据成员，在生成这个类的对象时自动调用。"
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: "# ## 2.自定义默认构造函数\n\n# ### 一般在构造函数内部设置成员变量的值\n\n```\n```cpp\nclass Time\n{\n\
+    public:\n    Time();\n    void set_time(int, int, int);\n    void show_time();\n\
+    private:\n    int hour, min, sec;\n};\nTime::Time()\n{\n    hour=0; min=0; sec\
+    \ = 0;\n}\n```\n```\n\n```\n```cpp\n#include <iostream.h>\nint main()\n{\n   \
+    \ Time t;\n    t.show_time();\n    return 0;\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: "# ## 2.自定义构造函数\n\n# ### 一个类中只能有一个默认构造函数！\n\n```\n```cpp\nclass Time\n{\npublic:\n\
+    \    Time();\n    void set_time(int, int, int);\n    void show_time();\nprivate:\n\
+    \    int hour, min, sec;\n};\nTime::Time():hour(0)\n{\n    //hour=0;\n    min=0;\
+    \ sec = 0;\n}\n```\n```\n\n+   1. 将变量hour置为0；\n+   2. 这种初始化方法在构造函数执行以前进行。\n+ \
+    \  3. 如何用这种方式初始化多个成员变量？"
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: '# 3.带参数的构造函数
+
+
+    +   带参数的构造函数可以在创建对象时，用具体数值初始化数据成员和各种数据元素。可方便实现对不同对象进行初始化。
+
+
+    +   构造函数的首部：
+
+
+    构造函数名（形参列表）；
+
+
+    定义对象的一般格式：
+
+
+    类名 对象名（实参列表）'
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: "# # 带参数的构造函数\n\n```\n```cpp\nclass Time\n{\npublic:\n    Time(int h, int m,\
+    \ int s )\nprivate:\n    int hour;   int min;   int sec;\n};\n```\n```\n\n```\n\
+    ```cpp\n#include <iostream.h>\nint main( )\n{\n    Time t2(8, 15, 16);\n    t2.show_time(\
+    \ );\n    return 0;\n}\n```\n```\n\n> > 用参数初始化列表对数据成员初始化"
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: '# 3.重载构造函数
+
+
+    +   类的定义中可以有多个构造函数，但必须各个构造函数的形参个数或类型不一样，即重载构造函数。
+
+
+    +   在创建对象时会根据实参的类型及个数自动选择相应的构造函数。
+
+
+    +   每个对象创建时只调用1个构造函数'
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: "# # 重载构造函数（代码模拟）\n\n```\nclass Time\n{\npublic:\n    Time(): hour(0), min(0),\
+    \ sec(0)\n    {\n    }\n    Time(int h, int m, int s)\n    {\n        hour=h,min=m,sec=s;\n\
+    \    }\n    ......\nprivate:\n    int hour;   int min;  int sec;\n};\n```\n\n\
+    ```\n#include <iostream.h>\nint main()\n{\n    Time t1;\n    t1.set_time();\n\
+    \    t1.show_time();\n\n    Time t2(8,15,16);\n    t2.show_time();\n\n    return\
+    \ 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: '# # 4.带默认参数的构造函数
+
+
+    +   - 默认构造函数
+
+    +   - 自定义构造函数
+
+    +   - 重载构造函数
+
+    +   - 带默认参数的构造函数
+
+
+    +   - 在调用构造函数时没有提供实参，可按默认参数值对对象进行初始化。
+
+    +   - 在构造函数中使用默认参数，可提供建立对象时的多种选择，相当于多个重载构造函数。'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: '# # 带默认认参数的构造函数
+
+
+    ```
+
+    class Time
+
+    {
+
+    public:
+
+    Time() : hour(0),min(0),sec(0) {}
+
+    Time(int h, int m, int s )
+
+    Time(int h =0, int m=0, int s=0 )
+
+    { hour=h;min=m;sec=s ; }
+
+    private:
+
+    int hour; int min; int sec;
+
+    };
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: '# # 带默认认参数的构造函数
+
+
+    ```
+
+    ```cpp
+
+    class Time
+
+    {
+
+    public:
+
+    Time(int h=0,int m=0,int s=0):
+
+    hour(h),min(m),sec(s) {}
+
+    void set_time();
+
+    void show_time();
+
+    private:
+
+    int hour;
+
+    int min;
+
+    int sec;
+
+    };
+
+    ......
+
+    ```
+
+    ```
+
+
+    ```
+
+    ```cpp
+
+    #include <iostream.h>
+
+    int main()
+
+    {
+
+    Time t1,
+
+    t2(2),
+
+    t3(21, 34),
+
+    t4(12, 25, 42),
+
+    t5(27, 74, 99);
+
+    ......
+
+    return 0;
+
+    }
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: '# # 构造函数使用说明
+
+
+    +   默认构造函数/缺省构造函数（default constructor）系统自动生成的构造函数和无参构造函数属于默认构造函数一个类中只能有一个默认构造函数。
+
+
+    +   如果在建立对象时用无参构造函数，注意定义对象的语句。Time t1, t2(1,2,3); //OKTime t(); // error
+
+
+    +   定义每个对象时只执行多个构造函数中的一个。
+
+
+    +   当构造函数中有默认参数时，注意函数重载的二义性。'
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: '# # 代码练习
+
+
+    定义计数器类Counter，包含：
+
+    数据成员m_c，默认值为0
+
+    默认构造函数
+
+    有参构造函数
+
+    成员函数set(int)
+
+    成员函数get()
+
+
+    测试该类'
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: '# 代码练习
+
+
+    定义student类
+
+    每个学生包含姓名、年龄、学号、性别等属性。
+
+    实现成员函数：
+
+    默认构造函数
+
+    有参构造函数
+
+    显示和设置属性的成员函数。
+
+
+    | Student |
+
+    |---|
+
+    | char name[10] |
+
+    | int no |
+
+    | char sex |
+
+    | Student(); |
+
+    | Student(char*, int, char); |
+
+    | void set(char*, int, char); |
+
+    | void get(); |
+
+    | char* getName(); |'
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: '# # 练习
+
+
+    +   1. 判断对错： 构造函数用来初始化所定义的对象，如果一个类中没有定义任何构造函数，则该类的对象便无法初始化。
+
+
+    +   2. 下列构造函数的特点，描述错误的是（ ）。
+
+    +   A. 构造函数是一种成员函数，它具有一般成员函数的特点。
+
+    +   B. 构造函数的名称与其类名相同。
+
+    +   C. 构造函数必须指明其类型。
+
+    +   D. 一个类中可以定义一个或多个构造函数。'
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: "# # 练习\n\n3. 假定一个类的构造函数为  \nLocation(int aa, int bb=20) {a=aa, b=bb}，  \n则执行Location\
+    \ x(4, 5)后，x.a和x.b的值分别为  \n（ ）  \nA 4和5. B. 5, 4; C. 4和20; d20和5;\n\n4. 假定ab为一个类，则执行ab\
+    \ x;语句时，将自动调用该类的（ ）  \nA有参构造函数，B无参构造函数  \nC. 拷贝构造函数 D复制构造函数"
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: '# # 第五讲 析构函数
+
+
+    # ## 析构函数(destructor)
+
+
+    +   - 作用
+
+    +   - 特点
+
+    +   - 调用'
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: '# # 第五讲 析构函数
+
+
+    # ## 析构函数(destructor)
+
+
+    +   - 当一个对象生命期结束时，系统自动调用析构函数进行清除对象，释放内存等。
+
+    +   - 没有定义析构函数时，系统提供缺省版本的析构函数
+
+    +   - 特点：
+
+    +     - 析构函数名为：~ 类名
+
+    +     - 没有参数，也没有返回类型'
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: '# # 析构函数（destructor）
+
+
+    +   ✓ 构造函数的反函数，析构函数是用于取消对象成员函数，当一个对象生命期结束时，系统自动调用析构函数。
+
+    +   ✓ 析构函数名字为符号“~”加类名；
+
+    +   ✓ 析构函数没有参数和返回值。
+
+    +   ✓ 一个类中只可能定义一个析构函数，析构函数不能重载。
+
+    +   ✓ 析构函数的作用进行清除对象，释放内存等；'
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: "# # 析构函数的定义\n\n+   - 如果一个类没有定义析构函数，编译器会自动生成一个默认析构函数\n\n其格式如下：\n\n类名:: ~默认析构函数名（）{\
+    \ } 默认析构函数是一个空函数。\n\n```\n```cpp\nclass Time\n{\npublic:\n    Time();\n    Time(int\
+    \ ,int ,int )\n    ~ Time() { };\n    ......\nprivate:\n    int hour, min, sec;\n\
+    };\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: "# # 析构函数的调用\n\n+   - 构造函数与析构函数自动调用  \n+     (1) 一个对象当其结束生命周期时；  \n+     (2)\
+    \ 使用new运算符创建的对象，在使用delete运算符释放该对象时；两种情况下，析构函数将被自动调用。\n\n+   - 调用顺序取决于执行过程进入和离开实例化对象范围的顺序。一般析构函数的调用顺序与构造函数相反。\n\
+    \n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_164_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: '# # 构造函数与析构函数的调用
+
+
+    +   创建对象时都要调用构造函数（包括默认构造函数）。构造函数的工作是建立对象的基本结构，进行数据初始化。即：初始化虚函数表；建立基类对象；建立非静态数据成员对象；安置虚基类对象信息；执行构造函数体中的代码。
+
+
+    +   当一个对象结束生命期时，都要调用析构函数。析构函数的工作是：执行析构函数中的代码，将对象占据的存储空间归还系统，做公共及用户要求的善后工作。'
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: "# # 析构函数\n\n```\n```cpp\nclass Student\n{\npublic:\n    Student();\n    Student(int,\
+    \ char*);\n    ~Student();\n    void display();\nprivate:\n    int num;\n    char\
+    \ name[10];\n};\n```\n```\n\n```\n```cpp\nclass Student\n{\npublic:\n    Student();\n\
+    \    Student(int, char*);\n    ~Student();\n    void display();\nprivate:\n  \
+    \  int num;\n    char* name;\n};\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: "# # 构造函数与析构函数\n\n```\nclass Student\n{\nprivate:\n    int num;\n    char* name\
+    \ ;\npublic:\n    Student(int no, char* n ):num(no),\n    {   name = new char[strlen(n)+1];\n\
+    \        strcpy(name,n);\n    }\n    ~Student() { delete []name; }\n    void display(){\
+    \ cout<< num<<name<<endl};\n};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: '问题：设计描述圆的类的。
+
+
+    | Circle |
+
+    |--------|
+
+    |- radius:double |
+
+    |- x:int |
+
+    |- y:int |
+
+    |- col: enum COLOR |
+
+
+    | +pi: double |
+
+    | +Circle(double, int, int) |
+
+    | +print() :void |
+
+    | +area() :double |
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_168_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: '# 作业1:p123 4-10
+
+
+    +   设计一个用于人事管理的Person(人员)类。人员属性：number（编号）、name(姓名 char*或string)、sex（性别）、birthday（出生日期）、id（身份证）等。其中“出生日期”定义为一个日期内嵌对象。用成员函数实现对人员信息的录入和显示。要求：用到构造函数和析构函数、内联成员函数、带默认参数的成员函数。
+
+
+    +   建立完整的工程，分别定义Date.h， Date.cpp, Person.h， Person.cpp， Main.cpp文件
+
+
+    +   下周提交代码'
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: '# 作业2: p123~4-9
+
+
+    +   - 设计并测试一个Rectangle类，属性为两个点的坐标，其中左下角坐标默认认为原点，成员函数包括计算长方形的长宽 length和width，计算其
+    perimeter(周长) 和area(面积)，并提供构造函数和相关的 get方法和set方法。
+
+
+    +   - 给出代码及UML类图'
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: "# # 练习\n\n+   1. 下面关于析构函数特点描述错误的是( )  \n+      A. 析构函数名字与类名相同.  \n+      B.\
+    \ 析构函数中不可以有参数.  \n+      C. 析构函数定义时不必指出类型.  \n+      D. 析构函数也是一种成员函数.  \n+   \
+    \   E. 构造函数和析构函数都可以重载  \n+      F. 析构函数是一个函数体为空的成员函数.\n\n+   2. 类的构造函数以及析构函数的作用是什么？\
+    \  \n+      如何定义？执行的时机是什么？"
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: '# # 改错练习
+
+
+    ```
+
+    #include <iostream.h>
+
+    #include <string.h>
+
+    class Person
+
+    {
+
+    int age;
+
+    char *name;
+
+    person(int i, char *str)
+
+    {
+
+    int j=strlen(str);
+
+    name=new char[j];
+
+    strcpy(name,str);
+
+    age=i;
+
+    }
+
+    }
+
+    ```
+
+
+    ```
+
+    ~person()
+
+    {
+
+    delete name;
+
+    }
+
+    void display()
+
+    {
+
+    cout << name << " is " << age << " years old.\n";
+
+    }
+
+    void main()
+
+    {
+
+    person demo(30,"Li-ming");
+
+    display();
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: "# # 改错练习\n\n```\n```cpp\n#include<iostream.h>\n#include<string.h>\nclass Person\n\
+    { int age;\n char *name;\n person(int i, char *str)\n { int j=strlen(str);\n name=new\
+    \ char[j];\n strcpy(name,str);\n age=i;\n }\n```\n```\n\n```\n```cpp\n~person()\n\
+    {delete name; }\n} ;\nvoid display()\n{ cout<<<name<<\" is \"\n \"<<age<<\" years\
+    \ old.\\n\";\n }\nvoid main()\n{\n person demo(30,\"Li-ming\");\n display();\n\
+    }\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: "# # 对象的赋值 assignment\n\n+   - 同一类的两个对象可以相互赋值，  \n+     即不同对象的成员分别复制。  \n+ \
+    \  \n+   - 通过赋值运算符的重载实现。\n\n对象1 = 对象2;\n\n```\nDate d1(3, 30, 2010), d2;\nd2 =\
+    \ d1;\n//d2. set(3, 30, 2010)\n```\n\n> > 注意：  \n> > 对象的赋值只对其中的数据成员赋值，  \n> >\
+    \ 而不复制成员函数。  \n> > 类的数据成员中不能包括动态分配的数据！"
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: "# # 对象的复制 copy\n\n```\nDate d1(3, 30, 2010);\nDate d2 = d1;   //copy constructor\n\
+    Date d3(d2);   // d3(3, 30, 2010)；\n```\n\n+   - 复制构造函数用一个已有同类对象的数据  \n+     对正在建立的对象进行数据初始化.\n\
+    \n+   - C++为类提供默认版本的复制构造函数\n\n+   - 程序员可以定义用户版本的复制构造函数\n\n语法形式  \n类名 :: 类名（const\
+    \ 类名 & 引用名 ）;"
+  merge: -1
+  img_proc: true
+- pgno: 178
+  md: "# # 默认复制构造函数\n\nDate d1(3, 30, 2010);\nDate d2 = d1;   Date d3(d2);\n\nclass\
+    \ Date\n{\n    int year, month, day;\n    public:\n    Date(int m, int d, int\
+    \ m);\n    Date(const Date& d);\n    set(int m, int d, int m);\n    get() ;\n\
+    };\n\nDate :: Date(const Date& d)\n{\n    year = d.year;\n    month = d.month;\n\
+    \    day = d.day;\n}\n\n将d对象中的数据成员的值赋给新定义的对象中的对应的数据成员"
+  merge: -1
+  img_proc: true
+- pgno: 179
+  md: '# # 复制构造函数
+
+
+    +   - 对于类来说，拷贝构造函数是必须的；
+
+    +   - 没有定义，则生成默认的拷贝构造函数内置在类中；
+
+    +   - 默认拷贝构造函数是单参数的，而且参数是同属一类的对象；
+
+    +   - 拷贝构造函数可以被重载。'
+  merge: -1
+  img_proc: true
+- pgno: 180
+  md: '# # 复制构造函数的执行
+
+
+    +   用已有对象初始化创建对象时；
+
+
+    +   当对象作函数参数时，要用实参初始化形参对象对象引用调用 —不会调用构造函数和析构函数
+
+
+    +   函数返回对象时
+
+
+    返回一个临时对象，这样调用一次临时对象的析构函数'
+  merge: -1
+  img_proc: true
+- pgno: 181
+  md: '# 代码模拟
+
+
+    # 调用复制构造函数的时机
+
+
+    ```
+
+    ```cpp
+
+    class Box
+
+    {
+
+    public :
+
+    Box( );
+
+    Box(const Box&);
+
+    void set(int, int, int);
+
+    double volume( );
+
+    private:
+
+    float length; float width; float highth;
+
+    };
+
+    ```
+
+    ```
+
+
+    ```
+
+    ```cpp
+
+    void main()
+
+    {
+
+    Box shoesBox;
+
+    Box b1 = shoesBox;
+
+    Box b2(b1);
+
+    }
+
+    ```
+
+    ```
+
+
+    ```
+
+    ```cpp
+
+    Box::Box(const Box & b )
+
+    {
+
+    cout<<"Copy constructor."<<endl;
+
+    length=b.length ; width=b.width ;
+
+    highth=b.highth;
+
+    }
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 182
+  md: "# # 调用复制构造函数的时机\n\n```\n```cpp\nclass Box\n{\npublic :\n    Box( );\n    Box(const\
+    \ Box&);\n    void set(int, int,int);\n    double volum( );\nprivate:\n    float\
+    \ length;   float width;   float hight;\n};\n```\n```\n\n```\n```cpp\nvoid test\
+    \ (Box b)\n{   cout<<“ test fuction: ”<<endl;  }\nvoid main()\n{   Box b ( 1,\
+    \ 2 ) ;\n    test ( b ) ;      // 调用复制构造函数\n}\n```\n```\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_182_0.png)\n\
+    \n> > 一个带类参数的函数"
+  merge: -1
+  img_proc: true
+- pgno: 183
+  md: '# # 复制构造函数
+
+
+    +   默认复制构造函数可以完成对象的数据成员值简单的复制—浅拷贝；
+
+
+    +   对象的数据资源是由指针指示的堆时，默认复制构造函数仅作指针值复制，需显式定义复制构造函数-深拷贝。'
+  merge: -1
+  img_proc: true
+- pgno: 184
+  md: "# # 代码练习，程序探讨\n\n# # 浅复制和深复制\n\n```\n```cpp\n//一个有问题的程序\nclass myString\n{\n\
+    \    public :\n        myString(char *pn) ;\n        ~myString( ) ;\n    private:\n\
+    \        char *pStr ; //指向字符串的指针\n        int size ; //包含字符的数目\n} ;\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 185
+  md: "# # 浅复制和深复制\n\n```\nmyString :: myString(char *pn)\n{\n    pStr = new char[strlen(pn)+1]\
+    \ ;\n    if (pStr!=0) strcpy(pStr,pn) ;\n    size = strlen(pn) ;\n}\nmyString\
+    \ :: ~ myString()\n{\n    pStr[0] = ’\\0’ ;\n    delete []pname ;\n    size =\
+    \ 0 ;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 186
+  md: "# //一个有问题的程序\n\n```\n#include<iostream>\nusing namespace std;\n#include \"\
+    myString.h\"\n```\n\n```\nvoid main()\n{\n    myString Obj1(\"No Name\") ;\n \
+    \   myString Obj2 = Obj1 ;\n}\n```\n\n# 浅复制和深复制\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_186_0.png)\n\
+    \n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_186_1.png)\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_186_2.png)"
+  merge: -1
+  img_proc: true
+- pgno: 187
+  md: '# # 浅复制和深复制'
+  merge: -1
+  img_proc: true
+- pgno: 188
+  md: '# //修改程序
+
+
+    ```
+
+    #include<iostream.h>
+
+    #include<string.h>
+
+    class String
+
+    { public :
+
+    myString(char *pn) ;
+
+    myString(name Obj &);
+
+    ~ myString() ;
+
+    private :
+
+    char *pStr ;
+
+    int size ;
+
+    myString::myString( String Obj &)
+
+    {
+
+    pStr = new char[strlen(Obj.pStr)+1] ;
+
+    if (pStr!=0) strcpy(pStr, Obj.pStr) ;
+
+    size = Obj.size ;
+
+    }
+
+    ```
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_188_0.png)
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_188_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 189
+  md: '# # 总结：复制构造函数
+
+
+    +   - 默认复制构造函数可以完成对象的数据成员值简单的复制；
+
+    +   - 对象的数据涉及资源时，显式定义复制构造函数
+
+
+    # ## 调用
+
+
+    复制构造函数只适用于初始化：
+
+
+    +   - 用一个对象显式初始化另一个对象。
+
+    +   - 函数值传递
+
+    +   - 生成临时对象'
+  merge: -1
+  img_proc: true
+- pgno: 190
+  md: "# # 练习\n\n1.设A为test类的对象且赋有初值,则语句test B=A;表示( )  \nA. 语法错误    B. 为对象A定义一个别名\
+    \  \nC. 将对象A复制给对象B  D. 仅说明B和A属于同一个类\n\n2. 假定AB为一个类，则该类的拷贝构造函数的声明语句为______。\n\n\
+    +   A. AB &(AB x)    B. AB(AB x)  \n+   C. AB(AB &)    D. AB(AB * x)\n\n3.假定AB为一个类，则执行“AB\
+    \ a(4), b[3], * p[2];”语句时，自动调用该类构造函数的次数为______。\n\n+   A. 3    B. 4    C. 6  \
+    \  D. 9\n\n4.假定AB为一个类，则执行“AB a[10];”语句时，系统自动调用该类的构造函数的次数为______。"
+  merge: -1
+  img_proc: true
+- pgno: 191
+  md: '# # 第六讲 复制构造函数
+
+
+    # # copy constructor'
+  merge: -1
+  img_proc: true
+- pgno: 192
+  md: '# # 构造函数 constructor
+
+
+    +   - 默认构造函数 default
+
+
+    +   - 有参构造函数
+
+
+    +   - 复制构造函数 copy
+
+
+    +   - 语法形式
+
+
+    +   - 调用时机
+
+
+    +   - 深复制与浅复制
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_192_0.png)
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_192_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 193
+  md: '# 赋值运算符 vs 拷贝构造函数
+
+
+    ```
+
+    Date d1(3 , 30,2010), d2;
+
+    d2 = d1;        //assignment
+
+    Date d3 = d1;   //copy constructor
+
+    Date &d4 = d1;  //reference
+
+    ```
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_193_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 194
+  md: '# # 对象的赋值 assignment
+
+
+    +   同一类的两个对象可以相互赋值，不同对象的成员分别复制。
+
+
+    +   通过赋值运算符实现。
+
+
+    # ## 对象1 = 对象2；
+
+
+    ```
+
+    Date d1(3, 30, 2011), d2;
+
+    d2 = d1; //d2.set(3, 30, 2010)
+
+    ```
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_194_0.png)
+
+
+    > > 注意：
+
+    > > 对象的赋值只对其中的数据成员赋值，
+
+    > > 而不复制成员函数。
+
+    > > 含有特殊数据成员的类需要重载='
+  merge: -1
+  img_proc: true
+- pgno: 195
+  md: "# # 对象的复制 copy\n\nDate d1 (3, 30, 2010) ;\nDate d2 = d1; //copy constructor\n\
+    Date d3(d2); // d3(3, 30, 2010) ;\n\n+   - 复制构造函数用一个已有同类对象的数据  \n+     对正在建立的对象进行数据初始化.\n\
+    \n+   - C++为类提供默认版本的复制构造函数\n\n+   - 程序员可以定义用户版本的复制构造函数\n\n语法形式\n\n类名 :: 类名（const\
+    \ 类名 & 引用名 ）；\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_195_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 196
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 197
+  md: "# # 1.复制构造函数\n\n+   - 对于类来说，拷贝构造函数是必须的；\n+   - 类中没有定义则生成默认的拷贝构造函数；\n+   - 默认拷贝构造函数是单参数的，而且参数是同属一类的对象；\n\
+    \n+   - 语法形式  \n+     类名 :: 类名（const 类名 & 引用名 ）；"
+  merge: -1
+  img_proc: true
+- pgno: 198
+  md: '# ## 2.复制构造函数的执行
+
+
+    +   > 用已有对象初始化创建对象时；
+
+
+    +   > 当对象作函数参数时，要用实参初始化形参对象对象引用调用 —不会调用构造函数和析构函数
+
+
+    +   > 函数返回对象时
+
+
+    返回一个临时对象，这样调用一次临时对象的析构函数'
+  merge: -1
+  img_proc: true
+- pgno: 199
+  md: '# 代码模拟
+
+
+    ```
+
+    ```cpp
+
+    class Box
+
+    {
+
+    public :
+
+    Box( );
+
+    Box(const Box&);
+
+    void set(int, int, int);
+
+    double volume( );
+
+    private:
+
+    float length; float width; float highth;
+
+    };
+
+    ```
+
+    ```
+
+
+    # 调用复制构造函数的时机
+
+
+    ```
+
+    ```cpp
+
+    void main()
+
+    {
+
+    Box shoesBox;
+
+    Box b1 = shoesBox;
+
+    Box b2(b1);
+
+    }
+
+    ```
+
+    ```
+
+
+    ```
+
+    ```cpp
+
+    Box::Box(const Box & b )
+
+    {
+
+    cout<<"Copy constructor."<<endl;
+
+    length=b.length ; width=b.width ;
+
+    highth=b.highth;
+
+    }
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 200
+  md: "# # 调用复制构造函数的时机\n\n```\n```cpp\nclass Box\n{\npublic :\n    Box( );\n    Box(const\
+    \ Box&);\n    void set(int, int,int);\n    double volum( );\nprivate:\n    float\
+    \ length;   float width;   float hight;\n};\n```\n```\n\n```\n```cpp\nvoid test\
+    \ (Box b)\n{   cout<<“ test fuction: ”<<endl;  }\nvoid main()\n{   Box b ( 1,\
+    \ 2 ) ;\n    test ( b ) ;      // 调用复制构造函数\n}\n```\n```\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_200_0.png)\n\
+    \n> > 一个带类参数的函数"
+  merge: -1
+  img_proc: true
+- pgno: 201
+  md: '# # 复制构造函数
+
+
+    +   默认复制构造函数可以完成对象的数据成员值简单的复制—浅拷贝；
+
+
+    +   对象的数据资源是由指针指示的堆时，默认复制构造函数仅作指针值复制，需显式定义复制构造函数-深拷贝。'
+  merge: -1
+  img_proc: true
+- pgno: 202
+  md: '# # 代码练习，程序探讨
+
+
+    # # 浅复制和深复制
+
+
+    ```
+
+    //一个有问题的程序
+
+    class myString
+
+    {
+
+    public:
+
+    myString(char *pn);
+
+    ~myString();
+
+    void set(char* pn);
+
+    private:
+
+    char *pStr ;
+
+    int size ;
+
+    };
+
+    ```
+
+
+    ```
+
+    myString :: myString(char *pn)
+
+    {
+
+    pStr = new char[strlen(pn)+1] ;
+
+    if (pStr!=0) strcpy(pStr,pn);
+
+    size = strlen(pn) ;
+
+    }
+
+    ```
+
+
+    ```
+
+    myString :: ~ myString()
+
+    {
+
+    pStr[0] = ''\0'' ;
+
+    delete []pname ;
+
+    size = 0 ;
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 203
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 204
+  md: '# # 浅复制和深复制
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_204_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 205
+  md: '# //修改程序
+
+
+    ```
+
+    #include<iostream.h>
+
+    #include<string.h>
+
+    class String
+
+    { public :
+
+    myString(char *pn) ;
+
+    myString(name Obj &);
+
+    ~ myString() ;
+
+    private :
+
+    char *pStr ;
+
+    int size ;
+
+    myString::myString( String Obj &)
+
+    {
+
+    pStr = new char[strlen(Obj.pStr)+1] ;
+
+    if (pStr!=0) strcpy(pStr, Obj.pStr) ;
+
+    size = Obj.size ;
+
+    }
+
+    ```
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_205_0.png)
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_205_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 206
+  md: '# # 总结：复制构造函数
+
+
+    +   - 默认复制构造函数可以完成对象的数据成员值简单的复制；
+
+    +   - 对象的数据涉及资源时，显式定义复制构造函数
+
+
+    # ## 调用
+
+
+    复制构造函数只适用于初始化：
+
+
+    +   - 用一个对象显式初始化另一个对象。
+
+    +   - 函数值传递
+
+    +   - 生成临时对象'
+  merge: -1
+  img_proc: true
+- pgno: 207
+  md: "# # 练习\n\n1.设A为test类的对象且赋有初值,则语句test B=A;表示( )  \nA. 语法错误    B. 为对象A定义一个别名\
+    \  \nC. 将对象A复制给对象B  D. 仅说明B和A属于同一个类\n\n2. 假定AB为一个类，则该类的拷贝构造函数的声明语句为______。\n\n\
+    +   A. AB &(AB x)    B. AB(AB x)  \n+   C. AB(AB &)    D. AB(AB * x)\n\n3.假定AB为一个类，则执行“AB\
+    \ a(4), b[3], * p[2];”语句时，自动调用该类构造函数的次数为______。\n\n+   A. 3    B. 4    C. 6  \
+    \  D. 9\n\n4.假定AB为一个类，则执行“AB a[10];”语句时，系统自动调用该类的构造函数的次数为______。"
+  merge: -1
+  img_proc: true
+- pgno: 208
+  md: '# # 第七讲 静态成员 & const成员'
+  merge: -1
+  img_proc: true
+- pgno: 209
+  md: '# # 类的共享机制
+
+
+    ### 对象1
+
+
+    数据1
+
+
+    数据2
+
+
+    ### 对象2
+
+
+    数据1
+
+
+    数据2
+
+
+    ### 对象3
+
+
+    数据1
+
+
+    数据2
+
+
+    成员函数
+
+
+    函数1
+
+
+    函数2
+
+
+    数据3
+
+
+    函数3
+
+
+    静态成员'
+  merge: -1
+  img_proc: true
+- pgno: 210
+  md: '# # 静态成员
+
+
+    class X { char ch ; static int s;
+
+    ...... };
+
+    int X :: s = 0 ;
+
+    object A , B , C , D ;
+
+
+    X B ;
+
+    char ch ;
+
+
+    X A ;
+
+    char ch ;
+
+
+    static int s ;
+
+
+    X C ;
+
+    char ch ;
+
+
+    X D ;
+
+    char ch ;'
+  merge: -1
+  img_proc: true
+- pgno: 211
+  md: "# # 静态类成员数据\n\n+   - 静态数据成员的使用方法如下：\n+   \n+   1）静态数据成员的定义与一般数据成员相似，  \n+ \
+    \     但前面要加上static关键词。\n+   \n+   2）静态数据成员的初始化与一般数据成员不同，  \n+      静态数据成员初始化的格式如下：\n\
+    +      `<类型> <类名>::<静态数据成员> = <值>;`\n+   \n+   3）在引用静态数据成员时采用格式：\n+      `<类名>::<静态数据成员>`\n\
+    +      `<对象名>.<静态数据成员>`"
+  merge: -1
+  img_proc: true
+- pgno: 212
+  md: "# 静态类成员数据\n\n```\nclass A\n{\n    static int var;    //在类的内部声明\n    ...\n};\n\
+    int A::var = 1;        //在类的外部定义\n\nA :: var              //通过类名访问\na.var    \
+    \             //通过对象名访问\npA->var               //通过指向对象的指针访问\n```"
+  merge: -1
+  img_proc: true
+- pgno: 213
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 214
+  md: "# //例 静态数据成员的说明和初始化\n\n```\n```cpp\n#include<iostream.h>\nclass Counter\n{\n\
+    \    static int num;\npublic:\n    void setnum(int i);\n    void shownum();\n\
+    };\nint Counter::num = 0;\nvoid main()\n{\n    Counter a, b;\n    a.shownum();\
+    \       b.shownum();\n    a.setnum(10);\n    a.shownum();       b.shownum();\n\
+    }\n```\n```\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_214_0.png)\n\n> 声明私有静态数据成员\n\
+    \n> 访问同一个静态数据成员\n\n> 调用成员函数访问私有静态数据成员"
+  merge: -1
+  img_proc: true
+- pgno: 215
+  md: "# 例 使用公有静态数据成员\n\n```\n```cpp\n#include<iostream.h>\nclass counter\n{\npublic:\n\
+    \        void setnum ( int i ) { num = i ; }\n        void shownum ( ) { cout\
+    \ << num << '\\t' ; }\n        static int num ;\n} ;\nint counter :: num = 1 ;\
+    \        // 初始值为1\nvoid main()\n{\n  int i ;\n  for ( i = 0 ; i < 5 ; i ++ )\n\
+    \  {\n    counter :: num += i ;\n    cout << counter :: num << '\\t' ;\n  }\n\
+    \  cout << endl ;\n}\n```\n```\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_215_0.png)\n\
+    \n> 访问\n> 公有静态数据成员"
+  merge: -1
+  img_proc: true
+- pgno: 216
+  md: '# 静态类成员数据
+
+
+    # ➢ 静态数据成员 vs 全局变量
+
+
+    静态数据成员是各对象之间的数据沟通的渠道，\n实现数据共享。
+
+
+    全局变量破坏了封装的原则，不符合面向对象程序的要求。
+
+
+    公用静态数据成员与全局变量的作用域不同\n静态数据成员的作用域只限于定义该类的作用域内'
+  merge: -1
+  img_proc: true
+- pgno: 217
+  md: '# # 静态成员函数
+
+
+    +   静态成员函数的定义是在一般函数定义前加上static 关键字。
+
+
+    +   静态成员函数不与某个具体的对象相联系，它是属于类的。
+
+
+    +   调用静态成员函数的格式如下：
+
+
+    +   <类名>::<静态成员函数名>（<参数表>）；或<对象名>.<静态成员函数名>（<参数表>）；'
+  merge: -1
+  img_proc: true
+- pgno: 218
+  md: "# 代码模拟一统计对象的数目\n\n```\n```cpp\n#include<iostream.h>\nclass Counter\n{\n\tstatic\
+    \ int num ;\n\tpublic :\n\t\tCounter() { num++; }\n\t\t~Counter() { num--; }\n\
+    \t\tvoid setnum ( int i ) { num = i ; }\n\t\tvoid shownum() { cout << num << '\\\
+    t' ; }\n\t\tstatic int get() { return num ; }\n} ;\nint Counter :: num = 0 ;\n\
+    void main ()\n{\n\tCounter a ; a.shownum()\n\tCounter b ; b.shownum()\n\tcout<<Counter::get()\
+    \ <<endl;\n}```\n```\n\n> 调用 公有静态成员函数"
+  merge: -1
+  img_proc: true
+- pgno: 219
+  md: '# 静态成员函数
+
+
+    +   静态成员函数只能访问静态数据成员、静态成员函数和类以外的函数和数据。
+
+
+    +   静态成员函数不能访问类中的非静态数据成员。
+
+    +   因为没有this指针。
+
+
+    +   静态数据成员和静态成员函数可由任意访问权限许可的函数访问。
+
+    +   私有静态成员函数不能由外界访问。'
+  merge: -1
+  img_proc: true
+- pgno: 220
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 221
+  md: "# # 代码分析\n\n//学生平均分\n#include <iostream.h>\nclass Student\n{ public:\n    Student(int\
+    \ n,int a,float s):num(n),score(s)\n    { count++; }\n    void total() { sum+=score;\
+    \ }\n    static float average() { return sum/count; }\nprivate:\n    int num;\n\
+    \    float score;\n    static float sum;\n    static int count;\n};\n\n> 最好只用静态成员函数\n\
+    > 引用静态数据成员，\n> 而不引用非静态数据成员。"
+  merge: -1
+  img_proc: true
+- pgno: 222
+  md: "```\nfloat Student::sum=0;    //对静态数据成员初始化\nint Student::count=0;    //对静态数据成员初始化\n\
+    \nint main( )\n{\n    Student stud[3]={    Student(1001, 18, 70),\n          \
+    \          Student(1002, 19, 78),\n                    Student(1003, 20, 98) \
+    \ };\n    for(int i=0;i<3;i++)\n        stud[i].total( );\n\n    cout<<\"the average\
+    \ score of is \"\n        << Student::average( )<<endl;\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 223
+  md: '# # const与类
+
+
+    +   - const 对象与常引用
+
+
+    +   - const 成员变量
+
+
+    +   - const 成员函数'
+  merge: -1
+  img_proc: true
+- pgno: 224
+  md: '# # const与类
+
+
+    # ## 1. const 对象
+
+
+    +   - 用 **const** 声明的对象称为常量对象。
+
+
+    ```
+
+    const  Date  d1;
+
+    Date:: Date(const Date & d);
+
+    Date dQ(d1),
+
+    ```
+
+
+    +   - **const** 对象只能调用它的 **const** 成员函数，
+
+    +     而不能调用其他成员函数。'
+  merge: -1
+  img_proc: true
+- pgno: 225
+  md: "# # const 成员函数\n\n# ## 2. const 成员函数\n\n+   - 使用**const**关键词说明的函数称为常量成员函数，说明格式如下：\n\
+    +   \n+     `<类型> <函数名>(<参数表>) const;`\n\n+   - **const** 成员函数的定义格式如下：\n+   \n\
+    +     `<类型> <函数名>(<参数表>) const`\n+   \n+     `{ ...... }`\n\n+   - 若成员函数**不修改对象**,则声明为**const.**"
+  merge: -1
+  img_proc: true
+- pgno: 226
+  md: '# # const 成员函数
+
+
+    对于const 成员函数需要注意以下几点：
+
+
+    +   1）const是函数类型的一个组成部分，因此在实现部分也要带const关键词。
+
+
+    +   2）常成员函数不更新对象的数据成员，也不能调用该类中非常成员函数。
+
+
+    +   3）const关键词可以参与区分重载函数。
+
+    +   void print();
+
+    +   void print() const;
+
+    +   则这是对print的有效重载。'
+  merge: -1
+  img_proc: true
+- pgno: 227
+  md: "```\nclass Time\n{\npublic:\n    Time(int h = 0, int m = 0, int s = 0)\n  \
+    \  :hour(h),minute(m),second(s) { }\n    void setTime( int h, int m, int s)\n\
+    \    { hour=h; minute= m; second =s; }\n    void show() const;\nprivate:\n   \
+    \ int hour, minute, second;\n};\nmain()\n{\n    const Time t(20, 20, 20) ;\n \
+    \   t.show() ;\n    t.setTime(30, 39, 39) ; //error\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 228
+  md: '# const与类
+
+
+    # 3. const 成员变量
+
+
+    +   - 用 const 声明的成员变量为常量成员变量
+
+
+    +   - const 成员变量只能由构造函数通过初始化列表对该数据成员进行初始化。'
+  merge: -1
+  img_proc: true
+- pgno: 229
+  md: "```\nclass Time {\npublic:\n    Time(int h = 0,int m = 0,int s = 0) ;\n   \
+    \ void setTime( int, int, int );\n    int setHour(int );\n    int getHour();\n\
+    \    int getMinute();\n    void print ();\nprivate:\n    const int hour;\n   \
+    \ int minute; // 0\n    int second; // 0\n};\nTime wakeUp( 6, 45, 0 );\nwakeUp.setHour(\
+    \ 8 );\nwakeUp.getHour();\nwakeUp.print ();\n```"
+  merge: -1
+  img_proc: true
+- pgno: 230
+  md: '# # 课后作业1
+
+
+    商店经销一种货物，货物成箱购进，成箱卖出，购进和卖出时以重量为单位，各箱的重量不一样，单价不一样，因此商店需要记录下目前库存的货物的总重量和总价值。编写一个程序，通过定义类Carlo来模拟商店货物购进和卖出的情况。（本题目主要练习静态数据成员的使用，定义私有变量存每件货物的价格和重量，用静态数据成员存货物的总重量和总价钱，定义构造函数和析构函数，当定义新的对象完成初始化的功能和删除对象时，从总重量和总价钱中减去对象的重量和价格）'
+  merge: -1
+  img_proc: true
+- pgno: 231
+  md: '# # 课后作业2
+
+
+    定义一个double型的动态集合，集合中元素数目没有限制，可由用户任意输入，添加适当的成员函数，实现集合的相关操作。包括实现将集合置空、添加元素、删除元素、判断元素是否在集合中、输出集合中数据的成员；并实现集合的并与交操作。注意集合中元素不能重复！'
+  merge: -1
+  img_proc: true
+- pgno: 232
+  md: '# # 课后作业3
+
+
+    +   - 设计一个整数链表类，满足栈操作。
+
+    +   即总在链表首插入结点，总在链表首取出（删除）结点。类中需有记录结点个数的数据成员。如果链表为空，而要做取出结点操作，则类必须给出错误信息。
+
+
+    +   - 具体要求见上机实验3 类的应用，上机检查！'
+  merge: -1
+  img_proc: true
+- pgno: 233
+  md: '# 练习
+
+
+    +   1. 以下关于静态成员函数的叙述不正确的是（ ）
+
+    +      A. 静态成员函数属于整个类
+
+    +      B. 对静态成员函数的引用允许使用对象名
+
+    +      C. 在静态成员函数中不能直接引用类的非静态成员
+
+    +      D. 使用类名可以直接调用其静态成员函数
+
+
+    2. 如果一个成员函数只存取一个类的静态数据成员，可将该成员函数说明为静态成员函数。
+
+
+    3. 在类的构造函数中，可以对类的静态数据进行初始化。
+
+
+    4. 假定类AB中有一个公用属性的静态数据成员bb，在类外不通过对象名访问该成员bb的写法为____________________。'
+  merge: -1
+  img_proc: true
+- pgno: 234
+  md: '# # 练习
+
+
+    5. 对const与类，理解不正确的为： （ ）
+
+
+    +   A. 可以用const限制对象、数据成员或成员函数；
+
+
+    +   B. 常成员函数不能修改对象的数据成员，但能调用该类中非常成员函数；
+
+
+    +   C. const数据成员只能由构造函数通过初始化列表对其进行初始化；
+
+
+    +   D. const 对象只能调用它的const 成员函数，而不能调用非常成员函数；'
+  merge: -1
+  img_proc: true
+- pgno: 235
+  md: '# # 代码练习
+
+
+    根据要求，写出类gamma.
+
+    int main()
+
+    {
+
+    gamma g1;
+
+    gamma::showtotal();
+
+
+    gamma g2, g3;
+
+    gamma::showtotal();
+
+
+    g1.showid();
+
+    g2.showid();
+
+    g3.showid();
+
+    cout << "----------end of program----------\n";
+
+    return 0;
+
+    }'
+  merge: -1
+  img_proc: true
+- pgno: 236
+  md: '# # 第八讲 复杂对象 & this指针'
+  merge: -1
+  img_proc: true
+- pgno: 237
+  md: '# 一、复杂的对象表示与应用
+
+
+    +   - 类的关系
+
+    +   - 对象的数组
+
+    +   - 对象指针'
+  merge: -1
+  img_proc: true
+- pgno: 238
+  md: '# # 1. 类的关系
+
+
+    问题：设计描述圆的类。
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_238_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 239
+  md: '# # 1. 类的包含关系
+
+
+    问题：设计描述圆的类。
+
+
+    | Circle |
+
+    | --- |
+
+    | -radius:double |
+
+    | - x:int |
+
+    | _ y:int |
+
+    | - col: enum COLOR |
+
+    | +pi: double |
+
+    | +Circle(double, int, int) |
+
+    | +print():void |
+
+    | +area():double |'
+  merge: -1
+  img_proc: true
+- pgno: 240
+  md: '# # 1. 类对象作为成员
+
+
+    # ## 问题：设计描述圆的类。
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_240_0.png)
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_240_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 241
+  md: '# 2.对象数组
+
+
+    对象数组的元素为同类对象，即相同属性的不同实体构成对象数组。
+
+
+    对象数组的定义与初始化
+
+
+    ```
+
+    类名 数组名[元素个数];
+
+    ```
+
+
+    ```
+
+    类名 数组名[元素个数] = {初始化列表} ;
+
+    ```
+
+
+    > 为使对象数组合理初始化，应提供合适的构造函数：
+
+    > (1) 使用默认构造函数；
+
+    > (2) 若有用户自定义构造函数，则必须含有有一个不带参数或具有一个带默认参数的构造函数。'
+  merge: -1
+  img_proc: true
+- pgno: 242
+  md: "```\nclass Box\n{\npublic:\n    Box(int = 0 ,int =0, int =0 );\n    int volume();\n\
+    private:\n    int height; int width;int length;\n};\n```\n\n```\nint main()\n\
+    { Box a[3]={ Box(10,12),\n    Box(15,18,20)\n};\nfor( int i = 0; i<3;i++)\n  \
+    \  cout<<a[i].volume()<<endl;\nBox *p =new Box[10];\ndelete [ ] p;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 243
+  md: "# # 思考题\n\n+   - 关于扑克牌的游戏\n\n+   - 洗牌与发牌\n\n```\n```cpp\nclass card\n{\nprivate:\n\
+    \tint number; //2 to 10, jack, queen, king, ace\n\tSuit suit; //clubs, diamonds,\
+    \ hearts, spades\npublic:\n\tcard(); //constructor\n\tvoid set(int, Suit); //set\
+    \ card\n\tvoid display(); //display card\n};\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 244
+  md: '# # 程序设计思考题
+
+
+    +   关于扑克牌的游戏
+
+
+    +   实现洗牌与发牌
+
+
+    +   包括card类、player类、game类等
+
+
+    +   main函数用于测试
+
+
+    +   以小组为单位开发，要求提交书面报告！
+
+
+    +   报告包括：需求分析、系统设计（UML图）
+
+
+    +   代码实现、运行结果和总结及分工。'
+  merge: -1
+  img_proc: true
+- pgno: 245
+  md: '# 3.对象指针
+
+
+    +   对象指针的声明格式：
+
+    +   类名 * 指针名；
+
+
+    +   使用对象指针访问成员的方法：
+
+    +   指针名 ->成员名
+
+    +   或 (*指针名).成员名'
+  merge: -1
+  img_proc: true
+- pgno: 246
+  md: "# # 复杂的对象表示\n\n+   - 对象参数传递到函数  \n+     传值方式和传地址方式。\n\n+   - 对象指针  \n+    \
+    \ 对象可以直接引用，也可以通过对象指针来引用。  \n+     注意：  \n+     当指针加1或减1时，它的增加或减少方式会使指针指向其基类型的下一元素或上一元素。"
+  merge: -1
+  img_proc: true
+- pgno: 247
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 248
+  md: "# ## 二. this指针\n\n+   当一个成员函数被调用时，自动向它传递一个 隐含的参数，该参数是一个指向该对象的指针。  \n+   成员函数中可以用**this**关键字来引用该指针。\n\
+    \n+   当调用成员函数时，它被初始化为被调用函数所在的类实例的地址。\n\n+   使用this指针访问成员数据  \n+   this->num  \
+    \ (*this).num"
+  merge: -1
+  img_proc: true
+- pgno: 249
+  md: '```
+
+    #include<iostream.h>
+
+    class Simple
+
+    { int x, y ;
+
+    public :
+
+    void setXY ( int a, int b) { x = a ; y = b ; }
+
+    void printXY() { cout << x << "," << y << endl ; } ;
+
+    } ;
+
+    void main()
+
+    { Simple obj1 (10, 15 ), obj2, obj3 .
+
+    obj1 . printXY ( ) ;
+
+    obj2 . setXY ( 20, 25 ) ;
+
+    obj2 . printXY ( ) ;
+
+    obj3 . setXY ( 30, 35 ) ;
+
+    obj3 . printXY ( ) ;
+
+    }
+
+    ```
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_249_0.png)
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_249_1.png)
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_249_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 250
+  md: "```\n```cpp\nclass Simple\n{\n    int x, y;\npublic:\n    void setXY ( int\
+    \ a, int b ) { x = a; y = b; }\n    void setXY ( int a, int b ) { this->x = a;\
+    \ this->y = b; }\n};\n\nvoid main()\n{\n    Simple obj1 (10, 15), obj2, obj3;\n\
+    \    obj1.printXY ( );\n    obj2.setXY (20, 25 );\n    obj2.printXY ( );\n   \
+    \ obj3.setXY (30, 35 );\n    obj3.printXY ( );\n}\n```\n```\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_250_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 251
+  md: '# # this指针（Box类）
+
+
+    int Box::volume( Box *this )
+
+    {return(this->height * this->width*this->length);}
+
+
+    class Box
+
+    {
+
+    public:
+
+    Box(int =10,int =12,int =15):
+
+    int volume( )
+
+    { return(height*width*length);}
+
+    static int get() { return counter;}
+
+    private:
+
+    int height; int width; int length;
+
+    };
+
+
+    Box a(10, 20, 30);
+
+    a.volume( ); // a.volume(&a);
+
+
+    Box * const this
+
+    this 指针不能显式声明
+
+
+    成员函数拥有this 指针'
+  merge: -1
+  img_proc: true
+- pgno: 252
+  md: '# # this指针
+
+
+    +   Note
+
+
+    this指针只能在类的成员函数中使用，它指向调用该成员函数被的对象。
+
+
+    Point.cpp
+
+
+    this指针常用于返回当前对象自身。大量用于运算符重载成员函数设计中。'
+  merge: -1
+  img_proc: true
+- pgno: 253
+  md: "# # 作业\n\n完成点类的定义，类声明如下，重载类成员函数copy用于实现两个对象的相互拷贝，要求显式使用this 指针实现copy的定义。测试该类的所有成员函数。\n\
+    \n```\n```cpp\nclass Point\n{\npublic:\n    Point(int = 0,int b = 0);\n    Point(const\
+    \ Point& rP) ; // 拷贝构造\n    void copy(Point& rP);\n    void copy(Point* pP);\n\
+    \    void print();\nprivate:\n    int x,y;\n};\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 254
+  md: '# # 作业
+
+
+    +   - 设计老师类，每个老师有姓名和研究方向，还可以指导若干个研究生；
+
+    +   每名研究生有姓名，专业和学号；
+
+    +   编写一个程序，创建包含三个教师的数组，用初始化列表初始化教师的信息。
+
+    +   输入每个老师的指导所有研究生的信息，
+
+    +   输出所有教师的相关信息，包括指导学生情况。
+
+
+    +   - 上机检查'
+  merge: -1
+  img_proc: true
+- pgno: 255
+  md: '# # 练习
+
+
+    1.假定AB为一个类，则执行“AB a(4), b[3], * p[2];”语句时，自动调用该类构造函数的次数为（ ）。
+
+
+    A. 3    B. 4    C. 6    D. 9
+
+
+    2. 以下程序的运行结果是。
+
+
+    ```
+
+    ```cpp
+
+    #include<iostream.h>
+
+    #include<string.h>
+
+    class person
+
+    { int age; char *name;
+
+    public:
+
+    person(int i, char *str)
+
+    { int j; j=strlen(str)+1;
+
+    name=new char[j];
+
+    strcpy(name, str);
+
+    age=i;
+
+    }
+
+    ~person()
+
+    {delete name;
+
+    cout<< “destructor is called.\n” ;
+
+    }
+
+    void display()
+
+    { cout<<name<<” is ”<<age<<”
+
+    years old.\n” ; }
+
+    };
+
+    void main()
+
+    {person demo(30, ” Li-ming” );
+
+    demo.display();
+
+    }
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 256
+  md: '# # 练习
+
+
+    3.设有以下类和对象的定义：
+
+    class A
+
+    {public:
+
+    int m;
+
+    ...
+
+    };
+
+    A k1,k2,*p1,*p2;
+
+    则下面针对成员变量m的引用，正确的是( )
+
+    A. k1.m=1; B. k2->m=2; C. p1.m=3; D. (*p2)->m=4;'
+  merge: -1
+  img_proc: true
+- pgno: 257
+  md: '# # 第九讲 友元
+
+
+    +   - 友元函数
+
+
+    +   - 友元类'
+  merge: -1
+  img_proc: true
+- pgno: 258
+  md: "# 友元 (friend)\n\n+   - 友元可以访问与其有好友关系的类中的私有成员和保护成员。\n+   \n+     友元包括友元函数和友元类。\n\
+    +   - 使用友员目的是基于程序的运行效率\n+   \n+     运算符重载的某些场合需要使用友员\n+   - 为了确保数据的完整性，及数据封装与隐藏的原则，建议尽量不使用或少使用友元。"
+  merge: -1
+  img_proc: true
+- pgno: 259
+  md: "# # 友元函数\n\n+   - 友元函数是在类声明中由关键字friend修饰说明的非成员函数，虽然类中有友元函数的原型，但是友元不是成员函数。\n\
+    +   在它的函数体中能够通过对象名访问 private 和 protected成员\n+   \n+   - 作用：增加灵活性，使程序员可以在封装和快速性方面做合理选择。\n\
+    +   \n+   - 格式如下：\n+   friend <类型> <友元函数名> （<参数表>）；"
+  merge: -1
+  img_proc: true
+- pgno: 260
+  md: "# # 友元函数\n\n```\nclass A\n{\nprivate:\n    int num ;\npublic:\n    void MemberFun(int)\
+    \ ;\n    friend void FriendFun(A * , int) ;\n} ;\n```\n\n```\nvoid A:: MemberFun(\
+    \ int x )\n{ this-> num = x ; }\n```\n\n```\nvoid FriendFun( A * ptr, int x )\n\
+    { ptr -> num = x ; }\n```\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_260_0.png)\n\
+    \n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_260_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 261
+  md: "# # 友元函数\n\n```\nclass A\n{\n private:\n int num ;\n public:\n void MemberFun(int)\
+    \ ;\n friend void FriendFun(A & , int) ;\n } ;\nvoid FriendFun( A & a , int x\
+    \ )\n{ a. num = x ; }\n```\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_261_0.png)\n\
+    \n```\nvoid A:: MemberFun( int x )\n{ (*this). num = x ;}\n```\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_261_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 262
+  md: "# # 例 友元函数的简单例子\n\n```\nclass Time\n{public:\n    Time(int, int, int);\n  \
+    \  friend void display(Time &);\nprivate:\n    int hour, minute, sec;\n};\n\n\
+    Time::Time(int h, int m, int s)\n{   hour=h;   minute=m;   sec=s; }\n\nvoid display(\
+    \ Time& t )\n{\n    cout<<t.hour<<\" : \"<<t.minute<<\" : \"<<t.sec<<endl; }\n\
+    \n```\n\n```\n#include <iostream.h>\nint main( )\n{\n    Time t1(10,13,56);\n\
+    \    display(t1);\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 263
+  md: "# // 友元成员函数\n\n```\n#include <iostream.h>\nclass Date;\nclass DTime\n{\npublic:\n\
+    \    Time(int,int,int);\n    void display() const;\nprivate:\n    int hour,minute,\
+    \ sec;\n    Date d;\n};\nclass Date\n{\npublic:\n    Date(int,int,int);\n    friend\
+    \ void DTime:: display(Date &) const;\nprivate:\n    int month, day, year; };\n\
+    \n```\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_263_0.png)\n\n![](img/bf99340ecbaf09a3098cf7d9c4b141d1_263_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 264
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 265
+  md: '# # 友元类
+
+
+    +   当两个类关系极为密切时，可以将类声明为另一个类的友元。友元类通常设计为一种对数据操作或类之间传递消息的辅助类。
+
+
+    +   将一个类声明为另一个类的友元类定义的一般格式如下：
+
+
+    ```
+
+    friend class 友元类名；
+
+    ```
+
+
+    +   当一个类作为另一类的友元类时，类的所有成员函数都是另一类的友元函数。'
+  merge: -1
+  img_proc: true
+- pgno: 266
+  md: "# 友元类\n\n说明：\n\n+   - 友元关系不具有传递性。\n+   \n+     例如\n+   \n+     类A是类B的友元，类B是类C的友元，\n\
+    +   \n+     但并不表示A是C的友元。\n\n+   - 友元关系不具有交换性。\n+   \n+     例如\n+   \n+     类A是类B的友元，但并不表示类B是类A的友元。"
+  merge: -1
+  img_proc: true
+- pgno: 267
+  md: "```\nclass Time\n{\npublic:\n    Time(int, int, int);\n    void display (Date\
+    \ &);\nprivate:\n    int hour, minute, sec;\n};\n```\n\n```\nclass Date\n{\n \
+    \   public:\n        Date(int, int, int);\n        void show();\n        friend\
+    \ class Time;\n    private:\n        int month; int day;\n        int year;\n\
+    };\n```\n\n# 说明：\n\n+   ✓友元关系是单向的；\n\n+   ✓友元关系不能传递。"
+  merge: -1
+  img_proc: true
+- pgno: 268
+  md: '# # 友元 (friend)
+
+
+    +   友元可以访问与其有好友关系的类中的私有成员。
+
+
+    友元包括友元函数和友元类。
+
+
+    +   使用友员目的是基于程序的运行效率
+
+
+    运算符重载的某些场合需要使用友员
+
+
+    +   友员关系是单向和非传递的。'
+  merge: -1
+  img_proc: true
+- pgno: 269
+  md: "# # 代码练习\n\n+   - 设计描述位置的一个点类Point\n+   - 其属性为其x,y坐标，\n+   - 包括设置坐标，显示位置等方法\n\
+    +   - 要求：\n+     定义构造函数，复制构造函数；\n+     定义静态成员变量total,存放当前点的数目。\n+     定义求两点距离的友元函数distance。\n\
+    \n```\nvoid main()\n{\n    Point p1 , p2( 4.0, 6.0 ) ;\n    Point p3 = p2;\n \
+    \   double d = distance ( p1, p2 ) ;\n    cout << \"This distance is \" << d <<\
+    \ endl ;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 270
+  md: "# # 例 计算两点之间的距离\n\n// 普通函数作友元函数\nclass Point\n{\npublic:\n    Point(double\
+    \ xi = 0, double yi = 0) ;\n    setXY(double xx, double yy) ;\n    double getX()\
+    \ ;\n    double getY() ;\n    void show();\n    friend double distance ( Point&\
+    \ a, Point& b ) ;\nprivate:\n    double X, Y ;\n    static int   total;\n} ;"
+  merge: -1
+  img_proc: true
+- pgno: 271
+  md: "# 练习\n\n1. 若需要把一个函数“void F();”定义为一个类AB的友元函数，则应在类AB的定义中加入一条语句：____________________。\n\
+    \n+   2. 以下关于友元函数的叙述不正确的是（ ）\n+   \n+   A. 友元函数提供了类之间数据共享的一个途径\n+   B. 一个友元函数可以访问任何类的任何成员\n\
+    +   C. 友元函数破坏了数据的封装\n+   D. 友元函数增加了程序设计的灵活性\n\n+   3. 友元函数的作用是（ ）\n+   \n+   A.\
+    \ 提高程序的效率  B. 加强类的封装性\n+   C. 实现数据的隐蔽性  D. 增加成员函数的种类\n\n4. 友元类中的所有成员函数可以对该类的私有成员进行存取操作。"
+  merge: -1
+  img_proc: true
+- pgno: 272
+  md: '# 作业: 上机实验3~ (4) (5)
+
+
+    (4) 改写复数类，提供各种构造函数(默认/ 有参/ 拷贝构造函数), 实现两个复数的四则运算。用友元函数实现加减乘除功能。
+
+
+    (5) 定义整型数集合类和实型数集合类，每个集合中最多放10个元素。完成集合的设置，输出和复制功能。'
+  merge: -1
+  img_proc: true
+- pgno: 273
+  md: '# # 第十讲 类与对象小结'
+  merge: -1
+  img_proc: true
+- pgno: 274
+  md: '# 问题: 设计描述圆的类
+
+    实现圆的各种操作
+
+
+    ![](img/bf99340ecbaf09a3098cf7d9c4b141d1_274_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 275
+  md: "# # 一、面向对象\n\n+   - 面向对象的编程思想力图使在计算机语言中对事物的描述与现实世界中该事物的本来面目尽可能的一致。\n\n+   -\
+    \ 类(class)和对象(object)\n+   \n+   类是对一类事物描述，是抽象、概念上的定义；\n+   对象是实际存在的该类事物的每个个体，也称实例。"
+  merge: -1
+  img_proc: true
+- pgno: 276
+  md: '# # 一、面向对象类的包含关系
+
+
+    | Point |
+
+    | --- |
+
+    | -x: int \-y: int |
+
+    | +Point (int=0, int=0) +Point(const Point&) +print():void +getX():int +getY():int
+    |
+
+
+    | Circle |
+
+    | --- |
+
+    | -radius:double \-cener:Point |
+
+    | +Circle(double, int, int) +Circle(double, Point& ) +print():void +area():double
+    + 《static》 pi: double |'
+  merge: -1
+  img_proc: true
+- pgno: 277
+  md: '# ## 二、类的定义
+
+
+    +   - 类的概念
+
+
+    +   - 类与结构体
+
+
+    +   - 类的声明
+
+
+    +   - 类的定义
+
+
+    +   - 类成员的访问权限'
+  merge: -1
+  img_proc: true
+- pgno: 278
+  md: '# 三、类的实例化
+
+
+    +   - 定义对象-构造函数
+
+    +     - 默认构造函数 / 自定义构造函数
+
+    +     - 带默认参数的构造函数
+
+    +     - 复制构造函数
+
+    +   - 成员引用
+
+    +   - 复杂对象的操作
+
+
+    # 对象指针与数组'
+  merge: -1
+  img_proc: true
+- pgno: 279
+  md: '# 四、构造函数
+
+
+    # ➢作用
+
+
+    +   • 用于初始化对象的特殊成员函数：
+
+    +   • 为对象分配空间；对数据成员赋初值；请求其他资源。
+
+
+    # ➢特点
+
+
+    构造函数是与类同名的成员函数
+
+    可有任意类型的参数，但没有返回类型
+
+    不能由程序员调用，创建对象时自动执行
+
+
+    # ➢分类
+
+
+    重载构造函数'
+  merge: -1
+  img_proc: true
+- pgno: 280
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 281
+  md: '# # 六、复制构造函数
+
+
+    # ## 调用
+
+
+    复制构造函数只适用于初始化：
+
+
+    +   - 用一个对象显式初始化另一个对象。
+
+
+    +   - 函数值传递
+
+
+    +   - 生成临时对象
+
+
+    # ## 深复制与浅复制
+
+
+    +   - 默认复制构造函数可以完成对象的数据成员值简单的复制；
+
+
+    +   - 对象的数据涉及资源时，显式定义复制构造函数'
+  merge: -1
+  img_proc: true
+- pgno: 282
+  md: '# # 七、数据的共享和保护
+
+
+    # ## const
+
+
+    定义常对象、常引用、常成员函数和常数据成员，实现数据保护
+
+
+    # ## static
+
+
+    静态成员属于整个类，提供一种同类对象的共享机制。
+
+
+    # ## friend
+
+
+    一个类的友元可以直接访问该类各种成员。'
+  merge: -1
+  img_proc: true
+- pgno: 283
+  md: '# 程序设计思考题
+
+
+    +   - 关于扑克牌的游戏
+
+
+    +   - 洗牌与发牌
+
+
+    ```
+
+    class card
+
+    {
+
+    private:
+
+    int number; //2 to 10, jack, queen, king, ace
+
+    Suit suit; //clubs, diamonds, hearts, spades
+
+    public:
+
+    card( ); //constructor
+
+    void set(int, Suit); //set card
+
+    void display(); //display card
+
+    };
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 284
+  md: '# # 程序设计思考题
+
+
+    # ## 关于扑克牌的游戏
+
+
+    +   - 实现洗牌与发牌
+
+
+    +   - 包括card类、player类、game类等
+
+
+    +   - main函数用于测试
+
+
+    +   - 以小组为单位开发，要求提交书面报告！
+
+
+    +   - 报告包括：需求分析、系统设计（UML图）代码实现、运行结果和总结及分工。'
+  merge: -1
+  img_proc: true

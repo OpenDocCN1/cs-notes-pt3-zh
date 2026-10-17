@@ -1,0 +1,9 @@
+# # Calculating expectation
+
+E[T(n)] = E[\sum_{k=0}^{n-1} X_k(T(k) + T(n-k-1) + \Theta(n))]
+= \sum_{k=0}^{n-1} E[X_k(T(k) + T(n-k-1) + \Theta(n))]
+= \sum_{k=0}^{n-1} E[X_k] \cdot E[T(k) + T(n-k-1) + \Theta(n)]
+= \frac{1}{n} \sum_{k=0}^{n-1} E[T(k)] + \frac{1}{n} \sum_{k=0}^{n-1} E[T(n-k-1)] + \frac{1}{n} \sum_{k=0}^{n-1} \Theta(n)
+= \frac{2}{n} \sum_{k=1}^{n-1} E[T(k)] + \Theta(n)
+
+Summations have identical terms.

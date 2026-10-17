@@ -1,0 +1,9 @@
+# # 四、关系的闭包运算
+
+证明（_b_）：因为\(tr(R)=t(R \bigcup I_X)\)，\(rt(R)=t(R) \bigcup I_X\)，而对于所有的 \(n \in N\) 有 \(I_X^n = I_X\)，以及 \(I_X \circ R = R \circ I_X = R\)。根据这些关系式，可有 \((R \bigcup I_X)^n = I_X \bigcup \bigcup_{i=1}^n R^i\)
+
+于是 \(tr(R)=t(R \bigcup I_X)=\bigcup_{i=1}^\infty(R \bigcup I_X)^i\)
+\(=(R \bigcup I_X) \bigcup (R \bigcup I_X)^2 \bigcup (R \bigcup I_X)^3 \bigcup \cdots\)
+\(=I_X \bigcup R \bigcup R^2 \bigcup R^3 \bigcup \cdots\)
+\(=I_X \bigcup t(R)\)
+\(=rt(R)\)

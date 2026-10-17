@@ -1,0 +1,3 @@
+![](bbox=[0.108, 0.039, 0.892, 0.789])
+
+Figure 12.4 Deleting a node z from a binary search tree. Which node is actually removed depends on how many children z has; this node is shown lightly shaded. (a) If z has no children, we just remove it. (b) If z has only one child, we splice out z. (c) If z has two children, we splice out its successor y, which has at most one child, and then replace z's key and satellite data with y's key and satellite data.

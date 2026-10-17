@@ -1,0 +1,3 @@
+# Worst-case recursion tree
+
+$T(n) = T(0) + T(n-1) + cn$

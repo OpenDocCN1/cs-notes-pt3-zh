@@ -1,0 +1,3 @@
+![](bbox=[0.039, 0.128, 0.881, 0.565])
+
+**Figure 12.1** Binary search trees. For any node *x*, the keys in the left subtree of *x* are at most *key[x]*, and the keys in the right subtree of *x* are at least *key[x]*. Different binary search trees can represent the same set of values. The worst-case running time for most search-tree operations is proportional to the height of the tree. (a) A binary search tree on 6 nodes with height 2. (b) A less efficient binary search tree with height 4 that contains the same keys.

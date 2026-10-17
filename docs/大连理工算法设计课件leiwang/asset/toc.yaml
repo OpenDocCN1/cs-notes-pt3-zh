@@ -1,0 +1,998 @@
+- - '##'
+  - 大连理工算法设计课件（LeiWang）
+- - '###'
+  - Figure 6.1
+- - '###'
+  - Figure 2.1 Sorting a hand of cards using insertion sort.
+- - '###'
+  - Figure 2.2 The operation of INSERTION-SORT on the array A = ⟨5, 2, 4, 6, 1, 3⟩.
+    Array indices appear above the rectangles, and values stored in the array positions
+    appear within the rectangles. (a)–(e) The iterations of the for loop of lines
+    1–8. In each iteration, the black rectangle holds the key taken from A[j], which
+    is compared with the values in shaded rectangles to its left in the test of line
+    5. Shaded arrows show array values moved one position to the right in line 6,
+    and black arrows indicate where the key is moved to in line 8. (f) The final sorted
+    array.
+- - '###'
+  - INSERTION-SORT(A)
+- - '###'
+  - Loop invariants and the correctness of insertion sort
+- - '###'
+  - Figure 2.3 The operation of lines 10–17 in the call MERGE(A, 9, 12, 16), when
+    the subarray A[9 . . 16] contains the sequence ⟨2, 4, 5, 7, 1, 2, 3, 6⟩. After
+    copying and inserting sentinels, the array L contains ⟨2, 4, 5, 7, ∞⟩, and the
+    array R contains ⟨1, 2, 3, 6, ∞⟩. Lightly shaded positions in A contain their
+    final values, and lightly shaded positions in L and R contain values that have
+    yet to be copied back into A. Taken together, the lightly shaded positions always
+    comprise the values originally in A[9 . . 16], along with the two sentinels. Heavily
+    shaded positions in A contain values that will be copied over, and heavily shaded
+    positions in L and R contain values that have already been copied back into A.
+    (a)–(h) The arrays A, L, and R, and their respective indices k, i, and j prior
+    to each iteration of the loop of lines 12–17. (i) The arrays and indices at termination.
+    At this point, the subarray in A[9 . . 16] is sorted, and the two sentinels in
+    L and R are the only two elements in these arrays that have not been copied into
+    A.
+- - '####'
+  - MERGE-SORT(A, p, r)
+- - '####'
+  - BUBBLESORT(A)
+- - '####'
+  - HIRE-ASSISTANT(n)
+- - '####'
+  - PERMUTE-BY-SORTING(A)
+- - '####'
+  - RANDOMIZE-IN-PLACE(A)
+- - '##'
+  - Course information
+- - '##'
+  - Analysis of algorithms
+- - '##'
+  - Why study algorithms and performance?
+- - '##'
+  - Insertion sort
+- - '##'
+  - Insertion sort
+- - '###'
+  - MERGE-SORT \( A[1 \dots n] \)
+- - '###'
+  - 'Key subroutine: MERGE'
+- - '###'
+  - MERGE-SORT $A[1..n]$
+- - '##'
+  - Asymptotic notation
+- - '##'
+  - Asymptotic notation
+- - '##'
+  - '_O_-notation (upper bounds):'
+- - '##'
+  - Asymptotic notation
+- - '##'
+  - Set definition of O-notation
+- - '##'
+  - Macro substitution
+- - '##'
+  - Ω-notation (lower bounds)
+- - '##'
+  - Θ-notation (tight bounds)
+- - '##'
+  - o-notation and ω-notation
+- - '##'
+  - Solving recurrences
+- - '##'
+  - Substitution method
+- - '##'
+  - Example of substitution
+- - '##'
+  - Example (continued)
+- - '##'
+  - Example (continued)
+- - '##'
+  - This bound is not tight!
+- - '##'
+  - A tighter upper bound?
+- - '##'
+  - A tighter upper bound?
+- - '##'
+  - A tighter upper bound?
+- - '##'
+  - A tighter upper bound?
+- - '##'
+  - A tighter upper bound?
+- - '##'
+  - A tighter upper bound!
+- - '##'
+  - A tighter upper bound!
+- - '##'
+  - Recursion-tree method
+- - '##'
+  - Example of recursion tree
+- - '##'
+  - Example of recursion tree
+- - '##'
+  - Example of recursion tree
+- - '##'
+  - Example of recursion tree
+- - '##'
+  - Example of recursion tree
+- - '##'
+  - Example of recursion tree
+- - '##'
+  - Example of recursion tree
+- - '##'
+  - The master method
+- - '##'
+  - Three common cases
+- - '##'
+  - Three common cases (cont.)
+- - '##'
+  - Examples
+- - '##'
+  - Idea of master theorem
+- - '###'
+  - 'Recursion tree:'
+- - '##'
+  - Idea of master theorem
+- - '###'
+  - 'Recursion tree:'
+- - '##'
+  - Idea of master theorem
+- - '###'
+  - 'Recursion tree:'
+- - '##'
+  - Idea of master theorem
+- - '###'
+  - 'Recursion tree:'
+- - '##'
+  - Idea of master theorem
+- - '###'
+  - 'Recursion tree:'
+- - '##'
+  - Idea of master theorem
+- - '###'
+  - 'Recursion tree:'
+- - '##'
+  - 'Appendix: geometric series'
+- - '##'
+  - Merge sort
+- - '##'
+  - Master theorem (reprise)
+- - '##'
+  - Binary search
+- - '##'
+  - Binary search
+- - '##'
+  - Binary search
+- - '##'
+  - Binary search
+- - '##'
+  - Binary search
+- - '##'
+  - Recurrence for binary search
+- - '##'
+  - Recurrence for binary search
+- - '##'
+  - Powering a number
+- - '##'
+  - Powering a number
+- - '##'
+  - Fibonacci numbers
+- - '###'
+  - 'Recursive definition:'
+- - '###'
+  - 'Naive recursive algorithm: \(\Omega(\phi^n)\)'
+- - '##'
+  - Computing Fibonacci numbers
+- - '###'
+  - 'Bottom-up:'
+- - '###'
+  - 'Naive recursive squaring:'
+- - '##'
+  - Recursive squaring
+- - '###'
+  - 'Inductive step \( (n \geq 2) \):'
+- - '##'
+  - Matrix multiplication
+- - '##'
+  - Standard algorithm
+- - '##'
+  - Divide-and-conquer algorithm
+- - '###'
+  - 'IDEA:'
+- - '##'
+  - Analysis of D&C algorithm
+- - '##'
+  - Strassen's idea
+- - '##'
+  - Strassen’s algorithm
+- - '##'
+  - Analysis of Strassen
+- - '##'
+  - VLSI layout
+- - '##'
+  - VLSI layout
+- - '##'
+  - H-tree embedding
+- - '##'
+  - Conclusion
+- - '#'
+  - Quicksort
+- - '##'
+  - Divide and conquer
+- - '##'
+  - Partitioning subroutine
+- - '##'
+  - 'Invariant:'
+- - '##'
+  - Example of partitioning
+- - '##'
+  - Example of partitioning
+- - '##'
+  - Example of partitioning
+- - '##'
+  - Example of partitioning
+- - '##'
+  - Example of partitioning
+- - '##'
+  - Example of partitioning
+- - '##'
+  - Example of partitioning
+- - '##'
+  - Example of partitioning
+- - '##'
+  - Example of partitioning
+- - '##'
+  - Pseudocode for quicksort
+- - '##'
+  - Worst-case of quicksort
+- - '##'
+  - Worst-case recursion tree
+- - '##'
+  - Best-case analysis
+- - '###'
+  - _(For intuition only!)_
+- - '##'
+  - Analysis of “almost-best” case
+- - '##'
+  - More intuition
+- - '###'
+  - 'Solving:'
+- - '##'
+  - Randomized quicksort
+- - '##'
+  - Randomized quicksort analysis
+- - '##'
+  - Analysis (continued)
+- - '##'
+  - Calculating expectation
+- - '##'
+  - Calculating expectation
+- - '##'
+  - Hairy recurrence
+- - '##'
+  - Substitution method
+- - '##'
+  - Quicksort in practice
+- - '##'
+  - How fast can we sort?
+- - '##'
+  - Is _O_(_nlg n_) the best we can do?
+- - '##'
+  - Decision-tree example
+- - '##'
+  - Decision-tree example
+- - '##'
+  - Decision-tree example
+- - '##'
+  - Decision-tree model
+- - '##'
+  - Lower bound for decision-tree sorting
+- - '##'
+  - Lower bound for comparison sorting
+- - '##'
+  - Sorting in linear time
+- - '##'
+  - Counting sort
+- - '##'
+  - Counting-sort example
+- - '##'
+  - Loop 1
+- - '##'
+  - Loop 2
+- - '##'
+  - Loop 2
+- - '##'
+  - Loop 2
+- - '##'
+  - Loop 2
+- - '##'
+  - Loop 2
+- - '##'
+  - Loop 3
+- - '##'
+  - Loop 3
+- - '##'
+  - Loop 3
+- - '##'
+  - Loop 4
+- - '##'
+  - Loop 4
+- - '##'
+  - Loop 4
+- - '##'
+  - Analysis
+- - '##'
+  - Running time
+- - '###'
+  - 'Answer:'
+- - '##'
+  - Stable sorting
+- - '###'
+  - 'Exercise: What other sorts have this property?'
+- - '##'
+  - Radix sort
+- - '##'
+  - Correctness of radix sort
+- - '###'
+  - Induction on digit position
+- - '##'
+  - Correctness of radix sort
+- - '###'
+  - Induction on digit position
+- - '##'
+  - Correctness of radix sort
+- - '###'
+  - Induction on digit position
+- - '##'
+  - Analysis of radix sort
+- - '##'
+  - Analysis (continued)
+- - '##'
+  - Choosing r
+- - '##'
+  - Conclusions
+- - '###'
+  - 'Example (32-bit numbers):'
+- - '##'
+  - 'Appendix: Punched-card technology'
+- - '##'
+  - Herman Hollerith (1860-1929)
+- - '##'
+  - Punched cards
+- - '###'
+  - Hollerith's tabulating system, punch card in Genealogy Article on the Internet
+- - '##'
+  - Hollerith’s tabulating system
+- - '##'
+  - Operation of the sorter
+- - '##'
+  - Origin of radix sort
+- - '##'
+  - '"Modern" IBM card'
+- - '##'
+  - So, that’s why text windows have 80 columns!
+- - '##'
+  - Web resources on punched-card technology
+- - '##'
+  - Order statistics
+- - '##'
+  - Randomized divide-and-conquer algorithm
+- - '##'
+  - Example
+- - '##'
+  - Intuition for analysis
+- - '###'
+  - 'Lucky:'
+- - '###'
+  - 'Unlucky:'
+- - '##'
+  - Analysis of expected time
+- - '##'
+  - Analysis (continued)
+- - '##'
+  - Calculating expectation
+- - '##'
+  - Calculating expectation
+- - '##'
+  - Calculating expectation
+- - '##'
+  - Calculating expectation
+- - '##'
+  - Calculating expectation
+- - '##'
+  - Hairy recurrence
+- - '##'
+  - Substitution method
+- - '##'
+  - Worst-case linear-time order statistics
+- - '###'
+  - SELECT(i, n)
+- - '###'
+  - Choosing the pivot
+- - '###'
+  - Analysis (Assume all elements are distinct.)
+- - '###'
+  - Minor simplification
+- - '###'
+  - Developing the recurrence
+- - '##'
+  - Solving the recurrence
+- - '###'
+  - Substitution
+- - '##'
+  - Conclusions
+- - '###'
+  - 'Exercise: Why not divide into groups of 3?'
+- - '##'
+  - Hashing I
+- - '###'
+  - Symbol-table problem
+- - '###'
+  - Direct-access table
+- - '###'
+  - Hash functions
+- - '###'
+  - Resolving collisions by chaining
+- - '###'
+  - Worst case
+- - '###'
+  - Average-case analysis of chaining
+- - '###'
+  - Search cost
+- - '###'
+  - Choosing a hash function
+- - '###'
+  - Desiderata
+- - '##'
+  - Division method
+- - '###'
+  - 'Annoyance:'
+- - '##'
+  - Multiplication method
+- - '##'
+  - Multiplication method example
+- - '###'
+  - Modular wheel
+- - '##'
+  - Resolving collisions by open addressing
+- - '##'
+  - Example of open addressing
+- - '##'
+  - Probing strategies
+- - '###'
+  - Double hashing
+- - '##'
+  - Analysis of open addressing
+- - '##'
+  - Proof of the theorem
+- - '###'
+  - Proof.
+- - '##'
+  - Implications of the theorem
+- - '#'
+  - Balanced Search Trees
+- - '#'
+  - Prof. Erik Demaine
+- - '##'
+  - Balanced search trees
+- - '###'
+  - 'Examples:'
+- - '##'
+  - Red-black trees
+- - '###'
+  - 'Red-black properties:'
+- - '##'
+  - Example of a red-black tree
+- - '##'
+  - Example of a red-black tree
+- - '##'
+  - Example of a red-black tree
+- - '##'
+  - Example of a red-black tree
+- - '##'
+  - Example of a red-black tree
+- - '##'
+  - Height of a red-black tree
+- - '###'
+  - Theorem.
+- - '###'
+  - Proof.
+- - '###'
+  - 'INTUITION:'
+- - '##'
+  - Height of a red-black tree
+- - '###'
+  - 'INTUITION:'
+- - '##'
+  - Height of a red-black tree
+- - '###'
+  - 'INTUITION:'
+- - '##'
+  - Height of a red-black tree
+- - '###'
+  - 'INTUITION:'
+- - '##'
+  - Height of a red-black tree
+- - '###'
+  - 'INTUITION:'
+- - '###'
+  - Proof (continued)
+- - '##'
+  - Modifying operations
+- - '##'
+  - Insertion into a red-black tree
+- - '###'
+  - 'Example:'
+- - '##'
+  - Insertion into a red-black tree
+- - '###'
+  - 'Example:'
+- - '##'
+  - Insertion into a red-black tree
+- - '###'
+  - 'Example:'
+- - '##'
+  - Insertion into a red-black tree
+- - '###'
+  - 'Example:'
+- - '##'
+  - Graphical notation
+- - '##'
+  - Case 1
+- - '##'
+  - Case 2
+- - '###'
+  - LEFT-ROTATE(A)
+- - '##'
+  - Analysis
+- - '#'
+  - Augmenting Data Structures
+- - '##'
+  - Dynamic order statistics
+- - '##'
+  - Example of an OS-tree
+- - '##'
+  - Selection
+- - '##'
+  - Example
+- - '###'
+  - OS-SELECT(root, 5)
+- - '##'
+  - Data structure maintenance
+- - '##'
+  - Example of insertion
+- - '###'
+  - INSERT("K")
+- - '##'
+  - Handling rebalancing
+- - '###'
+  - 'Example:'
+- - '##'
+  - Data-structure augmentation
+- - '##'
+  - Interval trees
+- - '##'
+  - Following the methodology
+- - '##'
+  - Example interval tree
+- - '##'
+  - Modifying operations
+- - '##'
+  - New operations
+- - '###'
+  - 4. Develop new dynamic-set operations that use the information.
+- - '##'
+  - 'Example 1: **INTERVAL-SEARCH**([14,16])'
+- - '##'
+  - 'Example 2: INTERVAL-SEARCH([12,14])'
+- - '##'
+  - 'Example 2: INTERVAL-SEARCH([12,14])'
+- - '##'
+  - 'Example 2: INTERVAL-SEARCH([12,14])'
+- - '##'
+  - 'Example 2: INTERVAL-SEARCH([12, 14])'
+- - '##'
+  - Analysis
+- - '##'
+  - Correctness
+- - '##'
+  - Correctness proof
+- - '##'
+  - Proof (continued)
+- - '#'
+  - LECTURE 13
+- - '#'
+  - Amortized Analysis
+- - '##'
+  - How large should a hash table be?
+- - '##'
+  - Example of a dynamic table
+- - '##'
+  - Example of a dynamic table
+- - '##'
+  - Example of a dynamic table
+- - '##'
+  - Example of a dynamic table
+- - '##'
+  - Example of a dynamic table
+- - '##'
+  - Example of a dynamic table
+- - '##'
+  - Example of a dynamic table
+- - '##'
+  - Example of a dynamic table
+- - '##'
+  - Example of a dynamic table
+- - '##'
+  - Example of a dynamic table
+- - '##'
+  - Example of a dynamic table
+- - '##'
+  - Worst-case analysis
+- - '##'
+  - Tighter analysis
+- - '##'
+  - Tighter analysis
+- - '##'
+  - Tighter analysis (continued)
+- - '##'
+  - Amortized analysis
+- - '##'
+  - Types of amortized analyses
+- - '##'
+  - Accounting method
+- - '##'
+  - Accounting analysis of dynamic tables
+- - '###'
+  - 'Example:'
+- - '##'
+  - Accounting analysis of dynamic tables
+- - '###'
+  - 'Example:'
+- - '##'
+  - Accounting analysis of dynamic tables
+- - '###'
+  - 'Example:'
+- - '##'
+  - Accounting analysis (continued)
+- - '##'
+  - Potential method
+- - '##'
+  - Understanding potentials
+- - '##'
+  - The amortized costs bound the true costs
+- - '##'
+  - The amortized costs bound the true costs
+- - '##'
+  - The amortized costs bound the true costs
+- - '##'
+  - Potential analysis of table doubling
+- - '###'
+  - 'Note:'
+- - '###'
+  - 'Example:'
+- - '##'
+  - Calculation of amortized costs
+- - '##'
+  - Calculation of amortized costs
+- - '##'
+  - Calculation
+- - '##'
+  - Calculation
+- - '###'
+  - 'Case 1: \(i-1\) is an exact power of 2.'
+- - '###'
+  - 'Case 1: \(i-1\) is an exact power of 2.'
+- - '###'
+  - 'Case 1: \( i - 1 \) is an exact power of 2.'
+- - '###'
+  - 'Case 2: \( i - 1 \) is *not* an exact power of 2.'
+- - '##'
+  - Conclusions
+- - '#'
+  - Dynamic Programming
+- - '#'
+  - Prof. Charles E. Leiserson
+- - '##'
+  - Dynamic programming
+- - '###'
+  - 'Example: Longest Common Subsequence (LCS)'
+- - '##'
+  - Brute-force LCS algorithm
+- - '##'
+  - Towards a better algorithm
+- - '###'
+  - 'Simplification:'
+- - '##'
+  - Recursive formulation
+- - '###'
+  - Theorem.
+- - '###'
+  - 'Proof. Case \(x[i]=y[j]\):'
+- - '##'
+  - Proof (continued)
+- - '##'
+  - 'Dynamic-programming hallmark #1'
+- - '##'
+  - 'Dynamic-programming hallmark #1'
+- - '###'
+  - Optimal substructure
+- - '##'
+  - Recursive algorithm for LCS
+- - '##'
+  - Recursive algorithm for LCS
+- - '##'
+  - Recursion tree
+- - '##'
+  - 'Dynamic-programming hallmark #2'
+- - '###'
+  - Overlapping subproblems
+- - '###'
+  - 'Dynamic-programming hallmark #2'
+- - '###'
+  - Memoization algorithm
+- - '###'
+  - Memoization algorithm
+- - '##'
+  - Dynamic-programming algorithm
+- - '###'
+  - 'IDEA:'
+- - '##'
+  - Dynamic-programming algorithm
+- - '###'
+  - 'IDEA:'
+- - '##'
+  - Dynamic-programming algorithm
+- - '###'
+  - 'IDEA:'
+- - '##'
+  - Dynamic-programming algorithm
+- - '###'
+  - 'IDEA:'
+- - '###'
+  - 'Exercise:'
+- - '#'
+  - Greedy Algorithms (and Graphs)
+- - '##'
+  - Graphs (review)
+- - '##'
+  - Adjacency-matrix representation
+- - '##'
+  - Adjacency-list representation
+- - '##'
+  - Adjacency-list representation
+- - '##'
+  - Adjacency-list representation
+- - '##'
+  - Minimum spanning trees
+- - '##'
+  - Example of MST
+- - '##'
+  - Optimal substructure
+- - '##'
+  - Proof of optimal substructure
+- - '##'
+  - Hallmark for “greedy” algorithms
+- - '##'
+  - Proof of theorem
+- - '##'
+  - Prim's algorithm
+- - '##'
+  - Example of Prim's algorithm
+- - '##'
+  - Analysis of Prim
+- - '###'
+  - Analysis of Prim (continued)
+- - '##'
+  - MST algorithms
+- - '#'
+  - LECTURE 17 Shortest Paths I
+- - '##'
+  - Paths in graphs
+- - '###'
+  - 'Example:'
+- - '##'
+  - Shortest paths
+- - '##'
+  - Optimal substructure
+- - '##'
+  - Triangle inequality
+- - '##'
+  - Well-definedness of shortest paths
+- - '###'
+  - 'Example:'
+- - '##'
+  - Single-source shortest paths
+- - '##'
+  - Dijkstra's algorithm
+- - '###'
+  - Dijkstra's algorithm
+- - '###'
+  - Example of Dijkstra's algorithm
+- - '##'
+  - 'Initialize:'
+- - '##'
+  - 'Relax all edges leaving A:'
+- - '##'
+  - 'Relax all edges leaving C:'
+- - '##'
+  - 'Relax all edges leaving E:'
+- - '##'
+  - 'Relax all edges leaving B:'
+- - '###'
+  - Correctness — Part I
+- - '###'
+  - Correctness — Part I
+- - '###'
+  - Correctness — Part II
+- - '##'
+  - Correctness — Part III
+- - '##'
+  - Analysis of Dijkstra
+- - '##'
+  - Unweighted graphs
+- - '###'
+  - Breadth-first search
+- - '##'
+  - Unweighted graphs
+- - '##'
+  - Breadth-first search
+- - '###'
+  - 'Analysis: Time = $O(V + E)$.'
+- - '###'
+  - Example of breadth-first search
+- - '##'
+  - Correctness of BFS
+- - '###'
+  - Key idea
+- - '#'
+  - Shortest Paths II
+- - '##'
+  - Negative-weight cycles
+- - '##'
+  - Bellman-Ford algorithm
+- - '##'
+  - Example of Bellman-Ford
+- - '##'
+  - Example of Bellman-Ford
+- - '##'
+  - Example of Bellman-Ford
+- - '##'
+  - Example of Bellman-Ford
+- - '##'
+  - Example of Bellman-Ford
+- - '##'
+  - Correctness
+- - '##'
+  - Correctness
+- - '##'
+  - Correctness (continued)
+- - '##'
+  - Detection of negative-weight cycles
+- - '##'
+  - Linear programming
+- - '##'
+  - Linear-programming algorithms
+- - '###'
+  - Algorithms for the general problem
+- - '##'
+  - Linear-programming algorithms
+- - '###'
+  - Algorithms for the general problem
+- - '##'
+  - Solving a system of difference constraints
+- - '###'
+  - 'Example:'
+- - '##'
+  - Solving a system of difference constraints
+- - '###'
+  - 'Example:'
+- - '###'
+  - 'Solution:'
+- - '###'
+  - Solving a system of difference constraints
+- - '###'
+  - 'Example:'
+- - '###'
+  - 'Solution:'
+- - '###'
+  - 'Constraint graph:'
+- - '###'
+  - Unsatisfiable constraints
+- - '###'
+  - Unsatisfiable constraints
+- - '###'
+  - Satisfying the constraints
+- - '###'
+  - Satisfying the constraints
+- - '###'
+  - Bellman-Ford and linear programming
+- - '###'
+  - Application to VLSI layout compaction
+- - '###'
+  - 'Integrated -circuit features:'
+- - '###'
+  - 'Problem:'
+- - '#'
+  - Shortest Paths III
+- - '##'
+  - Single-source shortest paths
+- - '##'
+  - All-pairs shortest paths
+- - '##'
+  - All-pairs shortest paths
+- - '##'
+  - All-pairs shortest paths
+- - '###'
+  - 'IDEA:'
+- - '##'
+  - Proof of claim
+- - '##'
+  - Matrix multiplication
+- - '##'
+  - Matrix multiplication (continued)
+- - '##'
+  - Improved matrix multiplication algorithm
+- - '##'
+  - Floyd-Warshall algorithm
+- - '##'
+  - Floyd-Warshall recurrence
+- - '##'
+  - Pseudocode for Floyd-Warshall
+- - '##'
+  - 'Notes:'
+- - '###'
+  - Transitive closure of a directed graph
+- - '###'
+  - Graph reweighting
+- - '###'
+  - Shortest paths in reweighted graphs
+- - '###'
+  - Shortest paths in reweighted graphs
+- - '###'
+  - Johnson's algorithm
+- - '###'
+  - Take-home quiz
+- - '###'
+  - End of quiz
+- - '###'
+  - Planning
+- - '###'
+  - Format
+- - '###'
+  - Executive summary
+- - '##'
+  - Solutions
+- - '##'
+  - Solutions
+- - '##'
+  - Assumptions
+- - '##'
+  - Bugs, etc.
+- - '##'
+  - Academic honesty
+- - '##'
+  - Academic honesty
+- - '##'
+  - Academic honesty
+- - '##'
+  - Poll of 78 quiz takers
+- - '###'
+  - 'Question 1: “Did you cheat?”'
+- - '##'
+  - Poll of 78 quiz takers
+- - '###'
+  - 'Question 2: “How many people do you know who cheated?”'
+- - '##'
+  - Reread instructions
+- - '##'
+  - Test-taking strategies
+- - '##'
+  - Manage your time
+- - '##'
+  - Manage your psyche
+- - '##'
+  - Brainstorm
+- - '##'
+  - Write up early and often
+- - '##'
+  - Positive attitude

@@ -1,0 +1,15 @@
+# # 第5章 继承
+
+# ## 5.5 继承中的访问控制
+
+# ## 公有继承
+
+# ## 基类
+
+# ## 派生类
+
+| private 成员 | protected 成员 | public 成员 |
+|---|---|---|
+| protected 成员 | protected 成员 | public 成员 |
+| public 成员 | public 成员 | public 成员 |
+| private 成员 | protected 成员 | public 成员 |

@@ -1,0 +1,20 @@
+# # FIRST集合及FOLLOW集合的计算方法
+
+# ## FIRST集合计算方法
+
++   - 若X→a..，则将终结符 a 加入FIRST(X)中
+
++   - 若X→ε，则将ε加入FIRST(X)中
+
++   - 若X→Y....，且Y属于非终结符，则将FIRST(Y){ε}加入到FIRST(X)中
+
++   - 若X→Y1Y2..YK,且Y1,Y2,..Yi-1都是非终结符，且Y1,Y2,..Yi-1的FIRST集合中均包含ε，则将FIRST(Yj)的所有非ε元素加入到FIRST(X)中，（j=1,2,..i）。特别地，若Y1~YK均有ε产生式，则将ε加到FIRST(X)中。
+
+S→BA  
+FIRST(B)={a,b,c}  
+
+A→BS|d  
+FIRST(A)={a,b,c,d}  
+
+B→aA|bS|c  
+FIRST(S)={a,b,c}

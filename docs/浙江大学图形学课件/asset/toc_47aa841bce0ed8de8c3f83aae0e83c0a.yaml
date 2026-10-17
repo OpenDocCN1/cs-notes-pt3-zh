@@ -1,0 +1,1548 @@
+- - '##'
+  - '# Welcome to the World of Computer Graphics'
+- - '##'
+  - '## Course Faculty Details'
+- - '##'
+  - '## Evaluation'
+- - '##'
+  - '# Course Website'
+- - '##'
+  - '## Homework today'
+- - '##'
+  - '# Thank You'
+- - '##'
+  - '## Computer Graphics'
+- - '##'
+  - '# Pixel Representation Problem'
+- - '##'
+  - '## Computer Graphics'
+- - '##'
+  - '# Three Fundamental Tasks'
+- - '##'
+  - '# Three Fundamental Tasks'
+- - '##'
+  - '## Different Digital Representations of the World'
+- - '##'
+  - '## Different Digital Representations of the World'
+- - '##'
+  - '## World Representation Problem'
+- - '##'
+  - '## Three Fundamental Tasks'
+- - '##'
+  - '## Three Fundamental Tasks'
+- - '##'
+  - '## Displaying the World'
+- - '##'
+  - '## Different Digital Representations of the World'
+- - '##'
+  - '## Visual Computing Fields'
+- - '##'
+  - '## Computer Graphics Applications'
+- - '##'
+  - '## Gis'
+- - '##'
+  - '## Visualization'
+- - '##'
+  - '## Virtual reality'
+- - '##'
+  - '## Technology Developments'
+- - '##'
+  - '## Parallel Projection'
+- - '##'
+  - '## Topics Addressed (contd)'
+- - '##'
+  - '## Geometrc Modelling and 3D Rendering in CAD'
+- - '##'
+  - '## Topics Addressed (contd)'
+- - '##'
+  - '### Texture Mapping'
+- - '##'
+  - '#### (Only Brief Overview)'
+- - '##'
+  - '## Topics Not Addressed'
+- - '##'
+  - '# Advanced Modelling and Rendering'
+- - '##'
+  - '## Topics Not Addressed'
+- - '##'
+  - '### Non-Photorealistic Rendering'
+- - '##'
+  - '## Non-Photorealistic Rendering'
+- - '##'
+  - '## Non-Photorealistic Rendering'
+- - '##'
+  - '# Key Features:'
+- - '##'
+  - '# Thank You'
+- - '##'
+  - '# Computer Graphics Basics - I'
+- - '##'
+  - '## Vector'
+- - '##'
+  - '## Vector Operations'
+- - '##'
+  - '## Vector Operations (contd.)'
+- - '##'
+  - '## Vector Operations (cont.)'
+- - '##'
+  - '## Vector Operations (contd.)'
+- - '##'
+  - '## Point'
+- - '##'
+  - '## 3D Coordinates'
+- - '##'
+  - '## 3D Coordinate Systems'
+- - '##'
+  - '## Line'
+- - '##'
+  - '## Other Simple Objects'
+- - '##'
+  - '## Affine Combinations'
+- - '##'
+  - '## Barycentric Co-ordinates'
+- - '##'
+  - '## Polygons'
+- - '##'
+  - '## Convex Combination'
+- - '##'
+  - '## Convex and Concave Polygons'
+- - '##'
+  - '## Intersections'
+- - '##'
+  - '## Area Computations'
+- - '##'
+  - '## Matrix Operations'
+- - '##'
+  - '## Vector - Matrix Multiplication'
+- - '##'
+  - '## Matrix - Matrix Multiplication'
+- - '##'
+  - '## Matrix Inverse'
+- - '##'
+  - '## Thank You'
+- - '##'
+  - '## Introduction to OpenGL'
+- - '##'
+  - '## What is OpenGL?'
+- - '##'
+  - '## Given 3D data, generate 2D view'
+- - '##'
+  - '## OpenGL'
+- - '##'
+  - '## Programming the Graphics Pipeline'
+- - '##'
+  - '## OpenGL'
+- - '##'
+  - '## OpenGL'
+- - '##'
+  - '## What OpenGL Does'
+- - '##'
+  - '## 3 Stages in OpenGL'
+- - '##'
+  - '## How OpenGL Works'
+- - '##'
+  - '## Defining OpenGL Objects'
+- - '##'
+  - '## 2D Coordinates'
+- - '##'
+  - '## 3D Coordinates'
+- - '##'
+  - '## OpenGL Primitives'
+- - '##'
+  - '## Examples'
+- - '##'
+  - '## Examples'
+- - '##'
+  - '## Examples'
+- - '##'
+  - '## Examples'
+- - '##'
+  - '## glVertex'
+- - '##'
+  - '## Building Objects From Vertices'
+- - '##'
+  - '## OpenGL Example'
+- - '##'
+  - '## Colors'
+- - '##'
+  - '## Other Commands in glBegin / glEnd blocks'
+- - '##'
+  - '## Example'
+- - '##'
+  - '## Polygon Display Modes'
+- - '##'
+  - '## Drawing Other Objects'
+- - '##'
+  - '## Compiling OpenGL Programs'
+- - '##'
+  - '## Structure of GLUT-Assisted Programs'
+- - '##'
+  - '## Event Driven Programming'
+- - '##'
+  - '## Simple GLUT Example'
+- - '##'
+  - '### Displaying a square'
+- - '##'
+  - '## Display Callback'
+- - '##'
+  - '## More GLUT'
+- - '##'
+  - '### Additional GLUT functions'
+- - '##'
+  - '### Additional callback functions'
+- - '##'
+  - '## Reshape Callback'
+- - '##'
+  - '## Mouse Callbacks'
+- - '##'
+  - '## Keyboard Callbacks'
+- - '##'
+  - '### Called when a button is pressed'
+- - '##'
+  - '### Called when a special button is pressed'
+- - '##'
+  - '## Animation Callbacks'
+- - '##'
+  - '## Menu Callbacks'
+- - '##'
+  - '### Creating a menu'
+- - '##'
+  - '### Called when a menu button is pressed'
+- - '##'
+  - '## OpenGL – GLUT Example'
+- - '##'
+  - '## OpenGL – GLUT Example'
+- - '##'
+  - '## OpenGL – GLUT Example'
+- - '##'
+  - '## OpenGL – GLUT Example'
+- - '##'
+  - '## Web Resources'
+- - '##'
+  - '# Thank You'
+- - '##'
+  - '## Computer Graphics Basics - 2'
+- - '##'
+  - '## Contents'
+- - '##'
+  - '# Curve and Surface Forms'
+- - '##'
+  - '# How would you describe this?'
+- - '##'
+  - '# Explicit Representation: Some Examples'
+- - '##'
+  - '# Implicit Form'
+- - '##'
+  - '## Implicit Representation: Some Examples'
+- - '##'
+  - '## Point Classification Using Implicit Form'
+- - '##'
+  - '# Problems in Using Implicit Form'
+- - '##'
+  - '# Parametric Representation of Curves'
+- - '##'
+  - '# Parametric Form: Some Examples'
+- - '##'
+  - '# Parametric Representation'
+- - '##'
+  - '# Parametric Form: More Examples'
+- - '##'
+  - '# Curve Tangents'
+- - '##'
+  - '## Surface Normals'
+- - '##'
+  - '## Piecewise Linear Representations'
+- - '##'
+  - '## Meshes from Scanning'
+- - '##'
+  - '## Picture'
+- - '##'
+  - '## Normal Vectors'
+- - '##'
+  - '## Computing Normal Vectors'
+- - '##'
+  - '## End.'
+- - '##'
+  - '# 2D Graphics Algorithms'
+- - '##'
+  - '## Rasterization'
+- - '##'
+  - '## Rasterization'
+- - '##'
+  - '## Why Study these Algorithms?'
+- - '##'
+  - '## Scan Converting a Line Segment'
+- - '##'
+  - '## Scan converting lines'
+- - '##'
+  - '## Question1: How ?'
+- - '##'
+  - '## Question2: How to speed up?'
+- - '##'
+  - '## Equation of a Line'
+- - '##'
+  - '## Digital Differential Analyzer (DDA)'
+- - '##'
+  - '# If △x<△y'
+- - '##'
+  - '# Digital Differential Analyzer'
+- - '##'
+  - '# Bresenham Line Drawing'
+- - '##'
+  - '# The initial $P_0$'
+- - '##'
+  - '# Bresenham Algorithm in first octant:'
+- - '##'
+  - '# 3D DDA; 3D Bresenham'
+- - '##'
+  - '# Scan converting circles'
+- - '##'
+  - '# polar coordinates'
+- - '##'
+  - '# Discussion 3 : How to speed up?'
+- - '##'
+  - '# Different representations'
+- - '##'
+  - '# Polygon filling'
+- - '##'
+  - '## Polygon filling'
+- - '##'
+  - '## Inside check'
+- - '##'
+  - '## Scan Line Methods'
+- - '##'
+  - '## Scan Line Method'
+- - '##'
+  - '### From top to down'
+- - '##'
+  - '## Efficiency Issues in Scan Line Method'
+- - '##'
+  - '## Special cases for Scan Line Method'
+- - '##'
+  - '## Advantages of Scan Line method'
+- - '##'
+  - '## Seed Fill Algorithms'
+- - '##'
+  - '## Aliasing'
+- - '##'
+  - '## Aliasing(examples)'
+- - '##'
+  - '## Aliasing(examples)'
+- - '##'
+  - '## Disintegrating textures'
+- - '##'
+  - '## Aliasing(examples)'
+- - '##'
+  - '## Antialiasing'
+- - '##'
+  - '## Area Sampling'
+- - '##'
+  - '## Area Sampling'
+- - '##'
+  - '## Clipping'
+- - '##'
+  - '## Definition'
+- - '##'
+  - '## How would we clip?'
+- - '##'
+  - '## We''ll start in 2D'
+- - '##'
+  - '## Line Segments'
+- - '##'
+  - '## Cohen-Sutherland Line Clipping'
+- - '##'
+  - '## Last case...'
+- - '##'
+  - '## Cohen-Sutherland Line-Clipping Algorithm'
+- - '##'
+  - '## Sutherland-Hodgeman Polygon-Clipping Algorithm'
+- - '##'
+  - '## Pipelined Polygon Clipping'
+- - '##'
+  - '## Sutherland-Hodgeman Polygon Clipping Algorithm'
+- - '##'
+  - '## Sutherland-Hodgeman algorithm'
+- - '##'
+  - '## Example'
+- - '##'
+  - '## v₂, v₃'
+- - '##'
+  - '## V₃, V₄'
+- - '##'
+  - '## v4, v5 – last edge...'
+- - '##'
+  - '## Thank You'
+- - '##'
+  - '## Contents'
+- - '##'
+  - '# Transformations'
+- - '##'
+  - '## Translation'
+- - '##'
+  - '## Translating an Object'
+- - '##'
+  - '## Scaling'
+- - '##'
+  - '## Scaling (contd.)'
+- - '##'
+  - '## Scaling an Object'
+- - '##'
+  - '## Scaling an Object'
+- - '##'
+  - '## Rotation'
+- - '##'
+  - '## Rotate around \((x_r, y_r)\)'
+- - '##'
+  - '## Shearing'
+- - '##'
+  - '## General Linear Transformation'
+- - '##'
+  - '## Homogeneous Co-ordinates'
+- - '##'
+  - '## Matrix Notations for Transformations'
+- - '##'
+  - '## Matrix Representations and Homogeneous Co-ordinates'
+- - '##'
+  - '## Matrix Representations of Various Transformations'
+- - '##'
+  - '## Matrix Representations of Various Transformations (contd.)'
+- - '##'
+  - '## Matrix Representations of Various Transformations (contd.)'
+- - '##'
+  - '## Matrix Representations of Various Transformations (contd.)'
+- - '##'
+  - '## Simple Rotation'
+- - '##'
+  - '## To rotate the cat''s head about its nose'
+- - '##'
+  - '## Composition...'
+- - '##'
+  - '## Composite Transformation'
+- - '##'
+  - '## Rotation About Point P (Math)'
+- - '##'
+  - '### Translate to Origin'
+- - '##'
+  - '### Rotate'
+- - '##'
+  - '### Translate Back'
+- - '##'
+  - '## Scaling About Point P'
+- - '##'
+  - '## Matrix Multiplication is Not Commutative'
+- - '##'
+  - '## Composite of basic transformations'
+- - '##'
+  - '## Rotation about arbitrary axis'
+- - '##'
+  - '## Rotation example (contd.)'
+- - '##'
+  - '## Rotation About Arbitrary Axis'
+- - '##'
+  - '## Transformations in OpenGL'
+- - '##'
+  - '## Programming Transformations'
+- - '##'
+  - '## Current Transformation Matrix'
+- - '##'
+  - '## Changing CTM'
+- - '##'
+  - '## Rotation About an Arbitrary Point'
+- - '##'
+  - '## Order of Transformations'
+- - '##'
+  - '## Matrix Stacks'
+- - '##'
+  - '## Example of Modelling Transform hierarchy'
+- - '##'
+  - '## Ex2 – Desk with 4 legs'
+- - '##'
+  - '## Thank You'
+- - '##'
+  - '## Properties of Transformations'
+- - '##'
+  - '## Viewing in 2D/3D'
+- - '##'
+  - '## 2D Viewing'
+- - '##'
+  - '## 2D Viewing Transformation'
+- - '##'
+  - '## Deriving 2D Viewing Transformation'
+- - '##'
+  - '## The Aspect Ratio'
+- - '##'
+  - '## Maintaining Aspect Ratio'
+- - '##'
+  - '## OpenGl Commands'
+- - '##'
+  - '### gluOrtho2D( left, right, bottom, top )'
+- - '##'
+  - '### glViewport( x, y, width, height )'
+- - '##'
+  - '## 2D Rendering-1'
+- - '##'
+  - '## 2D Rendering-2'
+- - '##'
+  - '## 2D Rendering-3'
+- - '##'
+  - '## User Interactions'
+- - '##'
+  - '### *Panning*'
+- - '##'
+  - '## Modelling vs Viewing'
+- - '##'
+  - '## Modelling Coordinates'
+- - '##'
+  - '## Screen Coordinates'
+- - '##'
+  - '## 3D Viewing'
+- - '##'
+  - '## The Pinhole Camera'
+- - '##'
+  - '### Camera Obscura Leonardo da Vinci'
+- - '##'
+  - '## Transformations and Camera Analogy'
+- - '#'
+  - 'Classical Viewing: Perspective Projection'
+- - '#'
+  - History of Perspective
+- - '#'
+  - Vanishing Points
+- - '#'
+  - Single Vanishing Point
+- - '#'
+  - Perspective Projection
+- - '#'
+  - Taxonomy of Projections
+- - '#'
+  - Orthographic Projection
+- - '#'
+  - Multiview Parallel Projection
+- - '#'
+  - Axonometric Projections
+- - '#'
+  - Foreshortening
+- - '#'
+  - Projection Plane
+- - '#'
+  - Object
+- - '#'
+  - Mechanical Drawing
+- - '#'
+  - Oblique Projections
+- - '#'
+  - Oblique Projections
+- - '##'
+  - Cavalier
+- - '##'
+  - Cabinet
+- - '#'
+  - Perspective Viewing
+- - '#'
+  - View Specification
+- - '#'
+  - Specify
+- - '#'
+  - View Reference Coordinate System
+- - '##'
+  - View Up Vector
+- - '##'
+  - Simplest Camera position
+- - '##'
+  - Deriving View Orientation Matrix
+- - '##'
+  - Perspective Projection
+- - '##'
+  - Transformation Matrix for Perspective Projection
+- - '##'
+  - View Window
+- - '##'
+  - Perspective Viewing
+- - '##'
+  - View Volume & Clipping
+- - '##'
+  - OpenGL
+- - '###'
+  - Orthographic Default View Volume
+- - '###'
+  - OpenGL Parallel View
+- - '##'
+  - OpenGL Perspective
+- - '##'
+  - OpenGL Perspective
+- - '##'
+  - gluPerspective(fovy, aspect, near, far)
+- - '##'
+  - 'A More Intuitive Approach Offered by glu:'
+- - '##'
+  - gluLookAt
+- - '##'
+  - Ex3
+- - '##'
+  - THANK YOU
+- - '##'
+  - Viewing in 2D/3D
+- - '##'
+  - Viewing
+- - '##'
+  - 2D Viewing
+- - '##'
+  - 2D World
+- - '##'
+  - Screen
+- - '##'
+  - 2D Viewing Transformation
+- - '##'
+  - Deriving 2D Viewing Transformation
+- - '##'
+  - OpenGL Commands
+- - '##'
+  - Modelling vs Viewing
+- - '##'
+  - Modelling Coordinates
+- - '##'
+  - Screen Coordinates
+- - '##'
+  - Transformations and Camera Analogy
+- - '##'
+  - 'Classical Viewing: Perspective Projection'
+- - '##'
+  - Perspective Projection
+- - '##'
+  - 'Engineering Viewing: Parallel Projection'
+- - '##'
+  - Orthographic Projection
+- - '##'
+  - View Specification
+- - '###'
+  - Specify
+- - '##'
+  - View Reference Coordinate System
+- - '##'
+  - View Up Vector
+- - '##'
+  - Simplest Camera position
+- - '##'
+  - World to Viewing coordinate Transformation
+- - '##'
+  - Deriving View Orientation Matrix
+- - '##'
+  - Perspective Projection
+- - '##'
+  - Transformation Matrix for Perspective Projection
+- - '###'
+  - transformation matrix for perspective projection
+- - '##'
+  - View Window
+- - '##'
+  - Perspective Viewing
+- - '##'
+  - Parallel Viewing
+- - '##'
+  - View Volume & Clipping
+- - '##'
+  - The Complete View Specification
+- - '##'
+  - OpenGL
+- - '###'
+  - Orthographic Default View Volume
+- - '##'
+  - OpenGL Parallel View
+- - '##'
+  - OpenGL Perspective
+- - '##'
+  - OpenGL Perspective
+- - '##'
+  - A More Intuitive Approach
+- - '##'
+  - gluLookAt
+- - '##'
+  - Ex3
+- - '##'
+  - THANK YOU
+- - '##'
+  - Computer Graphics Hardware
+- - '##'
+  - Conceptual Framework for Interactive Graphics
+- - '##'
+  - Vector and Raster Displays
+- - '##'
+  - Examples of raster and vector device pictures
+- - '##'
+  - Basic Definitions
+- - '##'
+  - Basic Definitions
+- - '##'
+  - Hard Copy Devices
+- - '##'
+  - Display Technologies
+- - '##'
+  - Cross-section of a CRT
+- - '##'
+  - A Shadow Mask Colour CRT
+- - '##'
+  - Raster Scan
+- - '##'
+  - Scanning Process
+- - '##'
+  - Non-Interlace vs. Interlace
+- - '##'
+  - Raster Scan Control
+- - '##'
+  - Frame Buffer
+- - '##'
+  - Color is expensive …
+- - '##'
+  - Color Lookup Table
+- - '##'
+  - Colour Look-up Table
+- - '##'
+  - Display types
+- - '##'
+  - A simple raster display system
+- - '##'
+  - Dedicated memory
+- - '##'
+  - Graphics Accelerator
+- - '##'
+  - Graphics Bus Interface
+- - '###'
+  - PCI based technology
+- - '##'
+  - Graphics Bus Interface (2)
+- - '##'
+  - Accelerated Graphics Port (AGP)
+- - '##'
+  - AGP
+- - '##'
+  - ISA、PCI、AGP及PCI Express
+- - '##'
+  - PCI Express Bandwidth Improvements (NVIDIA)
+- - '##'
+  - Other Input Devices
+- - '###'
+  - 'Physical Devices:'
+- - '##'
+  - Input Device Access Modes
+- - '###'
+  - 'Request Mode:'
+- - '###'
+  - 'Event Mode:'
+- - '###'
+  - 'Sample Mode:'
+- - '##'
+  - Virtual Reality Devices
+- - '##'
+  - Head Mounted Display
+- - '##'
+  - CybergIove
+- - '##'
+  - CAVE
+- - '##'
+  - Immersive Wall
+- - '##'
+  - Color
+- - '##'
+  - Why study Color ?
+- - '##'
+  - What is color ?
+- - '##'
+  - Physics of Light
+- - '##'
+  - Properties of Light
+- - '##'
+  - Spectrum(光谱) of Electromagnetic Radiation
+- - '##'
+  - Spectral Energy Distribution Curve
+- - '##'
+  - Spectral Energy Distribution Curve
+- - '##'
+  - Spectral Energy Distribution Curve
+- - '##'
+  - Describing Color
+- - '##'
+  - Describing Color
+- - '##'
+  - Color Models
+- - '##'
+  - CMY Color Model
+- - '##'
+  - YIQ Color Model
+- - '##'
+  - HSV Color Model
+- - '##'
+  - Thank You
+- - '##'
+  - Visual Realism
+- - '##'
+  - Viewing Pipeline Review
+- - '##'
+  - Projection
+- - '###'
+  - Orthographic
+- - '###'
+  - Perspective
+- - '##'
+  - Visible Line Drawing
+- - '##'
+  - Rendering Shaded Images
+- - '##'
+  - Visible Surface Determination
+- - '##'
+  - HLHSR Algorithms
+- - '##'
+  - Object Precision Algorithm
+- - '##'
+  - Object Precision Algorithm...
+- - '##'
+  - Image Precision Algorithms
+- - '##'
+  - Image Precision Algorithm...
+- - '##'
+  - Other Algorithms
+- - '##'
+  - Computing View Depth
+- - '##'
+  - Computing View Depth
+- - '##'
+  - Computing View Depth
+- - '##'
+  - Perspective Transformation
+- - '##'
+  - Perspective Transformation
+- - '##'
+  - Perspective Transformation
+- - '##'
+  - Complexity of Visibility Computations
+- - '##'
+  - Back-face Culling
+- - '##'
+  - Back-Face Culling
+- - '##'
+  - Back-Face Culling
+- - '##'
+  - Back-Face Culling
+- - '##'
+  - Back-face Culling...
+- - '##'
+  - Back-face Culling...
+- - '##'
+  - Extents and Bounding Volumes
+- - '##'
+  - Occlusion Removal
+- - '##'
+  - Occlusion Removal
+- - '##'
+  - Warnock’s Area Subdivision
+- - '##'
+  - Z-Buffer Algorithm
+- - '##'
+  - Polygon Scan Conversion
+- - '##'
+  - Z-Buffer Pseudo-code
+- - '##'
+  - OpenGL Support
+- - '##'
+  - Painter's Algorithm
+- - '##'
+  - Painter's Algorithm...
+- - '##'
+  - Painter's Algorithm...
+- - '##'
+  - Binary Space Partitioning Trees
+- - '##'
+  - BSP Tree
+- - '##'
+  - BSP Tree
+- - '##'
+  - BSP Tree
+- - '#'
+  - Draw BSP Tree
+- - '##'
+  - BSP Tree
+- - '##'
+  - BSP Tree
+- - '##'
+  - BSP Tree
+- - '##'
+  - BSP Tree Construction
+- - '##'
+  - BSP Tree
+- - '##'
+  - BSP Demo
+- - '##'
+  - 'Summary: BSP Trees'
+- - '##'
+  - Ray Casting
+- - '##'
+  - Ray Casting
+- - '###'
+  - Cast ray(ray)
+- - '##'
+  - Ray-Triangle Intersection
+- - '##'
+  - Ray-Triangle Intersection
+- - '##'
+  - Illumination and Shading
+- - '##'
+  - Lighting & Shading
+- - '##'
+  - Demo – Multi-light
+- - '##'
+  - Illumination
+- - '##'
+  - Interaction of light with a Solid
+- - '##'
+  - Interaction of Light
+- - '##'
+  - Light interaction in a Scene
+- - '##'
+  - Illumination models
+- - '##'
+  - Reflection Models
+- - '##'
+  - Diffuse Reflection
+- - '##'
+  - Ambient Light
+- - '##'
+  - Illumination equation
+- - '##'
+  - Specular Reflection
+- - '##'
+  - Phong Illumination Model
+- - '##'
+  - Phong Illumination Model
+- - '##'
+  - Phong Illumination model
+- - '##'
+  - Phong Illumination model
+- - '##'
+  - Difference between illumination models
+- - '##'
+  - Multiple Light Sources
+- - '##'
+  - Colored objects
+- - '##'
+  - Lights in OpenGL
+- - '##'
+  - Lights in OpenGL
+- - '##'
+  - Shading
+- - '##'
+  - Shading Models
+- - '##'
+  - Constant Shading
+- - '##'
+  - Constant Shading
+- - '##'
+  - Gouraud Shading
+- - '##'
+  - Gouraud Shading
+- - '##'
+  - Gouraud Shading
+- - '##'
+  - Phong Shading
+- - '##'
+  - Constant Shading
+- - '##'
+  - Gouraud Shading
+- - '##'
+  - Phong Shading
+- - '##'
+  - Demo – OpenGL Shade Model
+- - '##'
+  - Problems with Interpolated Shading
+- - '##'
+  - Problems with Interpolated Shading
+- - '##'
+  - Problems with Interpolated Shading
+- - '##'
+  - Lighting in OpenGL
+- - '##'
+  - Steps of specifying lighting in OpenGL
+- - '##'
+  - Specifying Materials in OpenGL
+- - '##'
+  - Demo - Materials
+- - '#'
+  - THANK YOU
+- - '##'
+  - Texture Mapping
+- - '##'
+  - Texture Mapping
+- - '##'
+  - Texture Mapping
+- - '##'
+  - What is texture mapping
+- - '##'
+  - Image Mapping
+- - '##'
+  - Environment Mapping
+- - '##'
+  - Bump Mapping
+- - '##'
+  - For what kind of objects?
+- - '##'
+  - What is a typical 2D texture?
+- - '##'
+  - Example
+- - '##'
+  - Assigning Texture Coordinates
+- - '##'
+  - Assigning Texture Coordinates
+- - '##'
+  - Texture Interpolation
+- - '##'
+  - Polygonal texture mapping
+- - '##'
+  - Establish Correspondences
+- - '##'
+  - Find compound 2D-2D mapping
+- - '##'
+  - Crude texture mapping code
+- - '##'
+  - Attributes modulated for texture
+- - '##'
+  - Problems
+- - '##'
+  - Computing Color in Texture mapping
+- - '##'
+  - Taking care of aliasing
+- - '##'
+  - Optimization
+- - '##'
+  - Mipmapping
+- - '##'
+  - Mipmapping (continued)
+- - '##'
+  - Mipmapping Example
+- - '###'
+  - Original Texture
+- - '###'
+  - Pre-Filtered Images
+- - '##'
+  - Texture Filtering
+- - '##'
+  - Filtering Example
+- - '##'
+  - Texture Matrix
+- - '##'
+  - Multitexturing
+- - '##'
+  - Light Maps
+- - '##'
+  - 'OpenGL Texture mapping (Ref: Red book)'
+- - '##'
+  - Specify Texture
+- - '##'
+  - Specifying mipmaps
+- - '##'
+  - Automatic mipmap generation
+- - '##'
+  - OpenGL filtering
+- - '##'
+  - Other calls
+- - '##'
+  - Tricks with Textures
+- - '##'
+  - Boundaries
+- - '##'
+  - Repeat Border
+- - '##'
+  - Clamp Border
+- - '##'
+  - Border Color
+- - '##'
+  - Yet More Texture Stuff
+- - '##'
+  - Environment Mapping
+- - '##'
+  - Nuxt 3
+- - '##'
+  - Cube Mapping
+- - '##'
+  - Bump Mapping
+- - '##'
+  - Displacement Mapping
+- - '##'
+  - Procedural Texture Mapping
+- - '##'
+  - THANK YOU
+- - '##'
+  - Global Illumination
+- - '##'
+  - Shadows
+- - '##'
+  - Shadows
+- - '##'
+  - Shadows
+- - '##'
+  - Shadow Z-buffer
+- - '##'
+  - Z-buffer enhanced for shadows
+- - '##'
+  - Facts about adding shadows
+- - '##'
+  - Global Illumination
+- - '##'
+  - Radiosity
+- - '##'
+  - Radiosity Methods
+- - '##'
+  - Radiosity Theory
+- - '##'
+  - Form Factor Calculation
+- - '##'
+  - The Radiosity Matrix
+- - '##'
+  - 'This set simultaneous of equations can be written in matrix form:'
+- - '##'
+  - Ray Tracing
+- - '##'
+  - Introduction
+- - '##'
+  - Features
+- - '##'
+  - Background
+- - '##'
+  - Ray Tracing
+- - '##'
+  - Visible Surface Determination
+- - '##'
+  - Global Illumination
+- - '##'
+  - Global Illumination
+- - '##'
+  - Classes of Rays
+- - '##'
+  - Recursion
+- - '##'
+  - Recursive Ray Tracing
+- - '##'
+  - Shadows
+- - '##'
+  - Representing a Ray
+- - '###'
+  - Representing a ray becomes essential
+- - '##'
+  - Ray-Sphere Intersection
+- - '##'
+  - Ray-Plane Intersection
+- - '##'
+  - Ray-Polygon Intersection
+- - '##'
+  - Efficiency in Ray Tracing
+- - '##'
+  - Distributed Ray tracing
+- - '##'
+  - Some Observations
+- - '##'
+  - Radiosity & Ray Tracing
+- - '##'
+  - Particle/Path Tracing
+- - '##'
+  - Particle Tracing
+- - '##'
+  - Particle Tracing with Reflections
+- - '##'
+  - Hybrid Techniques - Particle Tracing and Ray Tracing
+- - '##'
+  - THANK YOU
+- - '##'
+  - OpenGL Vertex Array
+- - '##'
+  - What is Vertex Array? -2
+- - '##'
+  - What is Vertex Array? -4
+- - '##'
+  - HOW-TO
+- - '##'
+  - 'Step 1: Enabling Arrays'
+- - '##'
+  - 'Step 1: Enabling Arrays -2'
+- - '##'
+  - 'Step 2: Specifying Data -1'
+- - '##'
+  - 'Step 2: Specifying Data'
+- - '##'
+  - 'Step 2: Specifying Data -3'
+- - '##'
+  - 'Step 2: Specifying Data'
+- - '##'
+  - 'Step 2: Specifying Data'
+- - '##'
+  - 'Step 3: Dereferencing & Rendering'
+- - '##'
+  - 'Step 3: Dereferencing & Rendering'
+- - '##'
+  - 'Step 3: Dereferencing & Rendering -3'
+- - '##'
+  - 'Step 3: Dereferencing & Rendering'
+- - '##'
+  - 'Step 3: Dereferencing & Rendering'
+- - '##'
+  - 'Step 3: Dereferencing & Rendering'
+- - '##'
+  - 'Step 3: Dereferencing & Rendering -7'
+- - '##'
+  - 'Step 3: Dereferencing & Rendering'
+- - '##'
+  - Display Lists
+- - '##'
+  - Display Lists
+- - '##'
+  - What does Cache Mean?
+- - '###'
+  - 'glRotate(35.0, 1.0, 0.0, 0.0):'
+- - '##'
+  - Creating a List
+- - '##'
+  - Rendering Context
+- - '##'
+  - Not Allowed
+- - '###'
+  - Vertex Array Stuff
+- - '###'
+  - Display List Stuff
+- - '###'
+  - Selection Stuff
+- - '##'
+  - Using a Display List
+- - '##'
+  - Vertex Arrays
+- - '##'
+  - Method Two
+- - '##'
+  - The Basic Idea
+- - '##'
+  - Enable / Disable
+- - '##'
+  - Specifying Data
+- - '##'
+  - Using the Vertex Arrays
+- - '##'
+  - Which One is Better?
+- - '##'
+  - Any Question?
+- - '##'
+  - Display Lists
+- - '###'
+  - Introduction
+- - '###'
+  - 'Use a Display List: list.c'
+- - '##'
+  - Editable Display Lists
+- - '##'
+  - Managing Display List Indices
+- - '##'
+  - Fonts and Display Lists
+- - '##'
+  - Any Question?
+- - '##'
+  - Picking
+- - '###'
+  - Three Approaches
+- - '###'
+  - A hint...
+- - '###'
+  - Area Maps
+- - '###'
+  - Back Buffer
+- - '###'
+  - Purpose
+- - '###'
+  - Steps in Picking
+- - '###'
+  - Naming objects
+- - '###'
+  - Hit Testing
+- - '##'
+  - Selection Buffer
+- - '##'
+  - Pick program
+- - '##'
+  - Display
+- - '##'
+  - Mouse (cont)
+- - '##'
+  - Selection Mode Functions
+- - '##'
+  - Using Selection Mode
+- - '##'
+  - Select an object
+- - '##'
+  - Process Hits
+- - '##'
+  - Modelling
+- - '##'
+  - Mesh
+- - '##'
+  - Surface modeling
+- - '##'
+  - Solid Modeling
+- - '##'
+  - Other methods
+- - '##'
+  - Representation of Solids
+- - '##'
+  - Wireframe models
+- - '##'
+  - Nonsense Objects
+- - '##'
+  - What do we mean by a solid object?
+- - '##'
+  - Questionable Objects
+- - '##'
+  - Primary schemes for representing solid objects
+- - '##'
+  - Constructive Solid Geometry
+- - '##'
+  - CSG Representation
+- - '##'
+  - Primitive Instancing
+- - '##'
+  - Primary schemes for representing solid objects
+- - '##'
+  - 'Decomposition: Spatial Partitioning Representations'
+- - '##'
+  - Torus represented using a Spatial Occupancy Enumeration Scheme
+- - '##'
+  - Octrees
+- - '##'
+  - OBJECT
+- - '##'
+  - UNIFORM GRID
+- - '##'
+  - QUADTREE
+- - '##'
+  - Spatial Enumeration Schemes
+- - '##'
+  - Quadtree Data Structures
+- - '##'
+  - Primary schemes for representing solid objects
+- - '##'
+  - 'Brep: Boundary Representation'
+- - '##'
+  - 'Brep: Boundary Representation'
+- - '##'
+  - Faceted Model
+- - '###'
+  - 10.2.1 半边数据结构描述
+- - '##'
+  - Euler's Operators
+- - '##'
+  - Primitive Euler Operators
+- - '##'
+  - Comparison of the representation schemes
+- - '##'
+  - Fractal
+- - '##'
+  - Particle Systems
+- - '##'
+  - Representing Objects with Particles
+- - '##'
+  - Basic Model of Particle Systems
+- - '##'
+  - Attributes of a Particle
+- - '##'
+  - Basic Particle System
+- - '##'
+  - Particle system
+- - '##'
+  - Thank You
+- - '##'
+  - Curve and Surface
+- - '##'
+  - classification of curves
+- - '##'
+  - classification of curves
+- - '###'
+  - implicit curve
+- - '##'
+  - Implicit Curves
+- - '###'
+  - Display of Implicit Curves — Chain Coding
+- - '###'
+  - Display of Implicit Curves — Subdivision
+- - '##'
+  - Parametric Curves
+- - '##'
+  - Bézier Curve
+- - '###'
+  - Properties of the Bernstein Basis \(B_{i,n}(t)=C_n^i t^i(1-t)^{n-i},\ t\in[0,1]\)
+- - '#'
+  - Bézier curve
+- - '##'
+  - properties of Bézier curves
+- - '##'
+  - properties of Bézier curves
+- - '##'
+  - properties of Bézier curves
+- - '#'
+  - Bézier curve
+- - '#'
+  - Bézier curve
+- - '##'
+  - Bézier--- De Casteljau algorithm
+- - '#'
+  - Bézier curve
+- - '#'
+  - Bézier curve
+- - '##'
+  - 'properties of rational Bézier curve:'
+- - '#'
+  - Bézier surface
+- - '#'
+  - Bézier surface
+- - '#'
+  - NURBS curve
+- - '#'
+  - B-spline curve
+- - '##'
+  - NURBS curve
+- - '###'
+  - 'B-spline curve:'
+- - '###'
+  - 'B-spline basis:'
+- - '###'
+  - properties of B-spline basis
+- - '##'
+  - B-spline---de Boor algorithm
+- - '##'
+  - NURBS surface
+- - '###'
+  - B-spline surface
+- - '###'
+  - NURBS surface
+- - '##'
+  - subdivision surface
+- - '###'
+  - 'subdivision curves:'
+- - '##'
+  - subdivision surface
+- - '##'
+  - Catmull-Clerk and Doo-Sabin subdivision
+- - '###'
+  - Catmull-Clerk rules
+- - '###'
+  - 'Doo-Sabin rules:'
+- - '##'
+  - subdivision surface
+- - '###'
+  - 'Catmull-Clerk subdivision surface:'
+- - '###'
+  - Catmull-Clark subdivision surfaces
+- - '##'
+  - thank you
+- - '##'
+  - Mesh and Level of Detail(LOD)
+- - '##'
+  - 1. Generation of Meshes
+- - '##'
+  - 1. Generation of Meshes
+- - '##'
+  - 1. Generation of Meshes
+- - '###'
+  - 3D scanner.
+- - '##'
+  - 1. Generation of Meshes
+- - '##'
+  - 1. Generation of Meshes
+- - '##'
+  - 2. Mesh simplification and LOD
+- - '##'
+  - 2. Mesh simplification and LOD
+- - '##'
+  - 2. Mesh simplification and LOD
+- - '##'
+  - 2. Mesh simplification and LOD
+- - '##'
+  - 3. mesh optimization
+- - '##'
+  - 3. mesh optimization
+- - '##'
+  - 3. mesh optimization
+- - '##'
+  - 3. mesh optimization
+- - '##'
+  - 3. mesh optimization
+- - '##'
+  - 4. Parameterization
+- - '##'
+  - 4. parameterization
+- - '##'
+  - 4. parameterization
+- - '##'
+  - 4. parameterization
+- - '###'
+  - split the model to pieces
+- - '###'
+  - application
+- - '##'
+  - 5. mesh edition
+- - '##'
+  - thanks
+- - '##'
+  - Introduction to OpenGL
+- - '###'
+  - What is OpenGL?
+- - '###'
+  - Given 3D data, generate 2D view
+- - '###'
+  - OpenGL
+- - '###'
+  - What OpenGL Does
+- - '###'
+  - OpenGL/GLU/GLUT/GLUI
+- - '###'
+  - 3 Stages in OpenGL
+- - '###'
+  - How OpenGL Works
+- - '###'
+  - Example Code
+- - '##'
+  - OpenGL Primitives
+- - '##'
+  - Examples
+- - '##'
+  - Examples
+- - '##'
+  - Examples
+- - '##'
+  - OpenGL Command Syntax
+- - '##'
+  - Building Objects From Vertices
+- - '##'
+  - OpenGL Example
+- - '##'
+  - Colors
+- - '##'
+  - Other Commands in glBegin / glEnd blocks
+- - '##'
+  - Example
+- - '##'
+  - Compiling OpenGL Programs
+- - '##'
+  - Structure of GLUT-Assisted Programs
+- - '##'
+  - Event Driven Programming
+- - '##'
+  - Simple GLUT Example
+- - '###'
+  - Displaying a square
+- - '###'
+  - Display Callback
+- - '##'
+  - More GLUT
+- - '###'
+  - Additional GLUT functions
+- - '###'
+  - Additional callback functions
+- - '##'
+  - Mouse Callbacks
+- - '##'
+  - Keyboard Callbacks
+- - '##'
+  - OpenGL – GLUT Example
+- - '##'
+  - Web Resources

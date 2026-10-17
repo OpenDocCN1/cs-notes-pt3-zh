@@ -1,0 +1,11 @@
+# Chapter Five
+
+# The processor : Datapath and control
+
++   5.1 Introduction
++   5.2 Logic Design Conventions (skip)
++   5.3 Building a datapath
++   5.4 A Simple Implementation Scheme
++   5.5 A Multicycle Implementation
++   5.5 Microprogramming
++   5.6 Exception

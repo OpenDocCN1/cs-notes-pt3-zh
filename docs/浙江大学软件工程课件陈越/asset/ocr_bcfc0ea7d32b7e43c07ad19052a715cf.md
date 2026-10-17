@@ -1,0 +1,5 @@
+# # BUILDS AT MICROSOFT
+
+Microsoft’s integration strategy is **market-driven**, based on the need to have a working product as quickly as possible (Cusumano and Selby 1995, 1997). It uses many small, parallel teams (three to eight developers each) implementing a “synch-and-stabilize” approach. The process iterates among designing, building, and testing components while involving customers in the testing process. All parts of a product are integrated frequently to determine what does and does not work.
+
+The Microsoft approach allows the team to change the specification of features as the developers learn more about what the product can and should do. Sometimes the feature set changes as much as 30% or more. The product and project are divided into parts, based on features, and different teams are responsible for different features.

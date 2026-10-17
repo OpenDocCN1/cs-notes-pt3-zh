@@ -1,0 +1,1362 @@
+- - '##'
+  - OS参考书、网址
+- - '##'
+  - 'Chapter 1: Introduction 引论'
+- - '###'
+  - 1.1 What is an Operating System?
+- - '###'
+  - Computer System Components 计算机系统部件
+- - '###'
+  - Operating System Definitions 操作系统定义
+- - '###'
+  - 1.1.3 Operating System Goals 操作系统目标
+- - '###'
+  - 1.2.2 Multiprogrammed Systems 多道程序系统
+- - '###'
+  - OS Features Needed for Multiprogramming
+- - '###'
+  - 1.2.3 Time-Sharing Systems–Interactive Computing 分时系统-交互式计算
+- - '###'
+  - Time-Sharing Systems–Interactive Computing (Cont.)
+- - '###'
+  - 1.3 Desktop Systems
+- - '###'
+  - 1.4 Multiprocessor Systems 多处理机系统
+- - '###'
+  - Multiprocessor Systems(Cont.)
+- - '###'
+  - Multiprocessor Systems(Cont.)
+- - '###'
+  - Fig 1.4 Symmetric Multiprocessing Architecture
+- - '###'
+  - 1.5 Distributed Systems分布式系统
+- - '###'
+  - Distributed Systems (cont.)
+- - '###'
+  - 1.6 Clustered Systems 集群系统
+- - '###'
+  - 1.7 Real-Time Systems 实时系统
+- - '###'
+  - Real-Time Systems (Cont.)
+- - '###'
+  - 1.8 Handheld Systems 手持系统
+- - '###'
+  - Fig 1.6 Migration of Operating-System Concepts and Features
+- - '###'
+  - 1.10 Computing Environments 计算环境
+- - '##'
+  - 'Chapter 2: Computer-System Structures 计算机系统结构'
+- - '###'
+  - 2.1 Computer-System Operation 计算机系统运行
+- - '###'
+  - Common Functions of Interrupts
+- - '###'
+  - 中断的常见功能
+- - '###'
+  - Common Functions of Interrupts (Cont.)
+- - '###'
+  - Interrupt Handling
+- - '###'
+  - Fig 2.2 Interrupt Time Line For a Single Process Doing Output
+- - '###'
+  - 2.2 I/O Structure
+- - '###'
+  - I/O结构
+- - '###'
+  - 2.2.1 I/O Interrupts
+- - '###'
+  - I/O Structure (Cont.)
+- - '###'
+  - Fig 2.3 Two I/O Methods
+- - '###'
+  - Synchronous 同步
+- - '###'
+  - Asynchronous 异步
+- - '###'
+  - Fig 2.4 Device-Status Table 设备状态表
+- - '###'
+  - 2.3 Storage Structure 存储构造
+- - '###'
+  - 2.3.1 Main Memory
+- - '###'
+  - 2.3.2 Magnetic disks
+- - '###'
+  - Storage Structure (Cont.)
+- - '###'
+  - Fig 2.5 Moving-Head Disk Mechanism 磁头移动机制
+- - '###'
+  - 2.4.1 Caching缓存
+- - '###'
+  - 2.4.2 Coherency and Consistency
+- - '###'
+  - Fig 2.7 Migration of A From Disk to Register
+- - '###'
+  - 2.5 Hardware Protection 硬件保护
+- - '###'
+  - 2.5.1 Dual-Mode Operation
+- - '###'
+  - Dual-Mode Operation (Cont.-1)
+- - '###'
+  - Dual-Mode Operation (Cont.-2)
+- - '###'
+  - 2.5.2 I/O Protection I/O保护
+- - '###'
+  - I/O Protection (Cont.)
+- - '###'
+  - Fig 2.8 Use of A System Call to Perform I/O 使用系统调用完成I/O
+- - '###'
+  - 2.5.3 Memory Protection 存储保护
+- - '###'
+  - Fig 2.9 Use of A Base and Limit Register 基址与限长寄存器使用
+- - '###'
+  - Fig2.10 Hardware Address Protection 硬件地址保护
+- - '###'
+  - Hardware Protection
+- - '###'
+  - 2.5.4 CPU Protection CPU保护
+- - '###'
+  - 2.6 Network Structure 网络结构
+- - '###'
+  - Fig2.11 Local Area Network Structure 局域网结构
+- - '###'
+  - Fig 2.12 Wide Area Network Structure 广域网结构
+- - '##'
+  - 'Chapter 3: Operating-System Structures'
+- - '##'
+  - 操作系统结构
+- - '##'
+  - 3.1 System Components 系统部件
+- - '##'
+  - 3.1.1 Process Management进程管理
+- - '##'
+  - 3.1.2 Main-Memory Management 主存管理
+- - '##'
+  - Main-Memory Management
+- - '##'
+  - 3.1.3 File Management 文件管理
+- - '##'
+  - 3.1.4 I/O System Management I/O系统管理
+- - '##'
+  - 3.1.5 Secondary-Storage Management 二级存储管理
+- - '##'
+  - 3.1.6 Networking (Distributed Systems) 网络处理（分布式系统）
+- - '##'
+  - 3.1.7 Protection System 保护系统
+- - '##'
+  - 3.1.8 Command-Interpreter System 命令解释系统
+- - '##'
+  - Operating System Services (Cont.)
+- - '##'
+  - Additional Operating System Functions 其他操作系统功能
+- - '##'
+  - 3.3 System Calls 系统调用
+- - '##'
+  - System Calls (Cont.)
+- - '##'
+  - Fig 3.1 Passing of Parameters As A Table 表格方式的参数传递
+- - '##'
+  - Types of System Calls 系统调用类型
+- - '##'
+  - Fig 3.4 UNIX Running Multiple Programs UNIX运行多个程序
+- - '##'
+  - Fig 3.5 Communication Models 通信模式
+- - '##'
+  - 3.4 System Programs 系统程序
+- - '##'
+  - System Programs (Cont.)
+- - '##'
+  - 3.5 System Structure 系统结构
+- - '##'
+  - 3.5.1 Simple Structure
+- - '##'
+  - Fig 3.6 MS-DOS Layer Structure MS-DOS层次结构
+- - '##'
+  - UNIX System Structure UNIX 系统结构
+- - '##'
+  - UNIX System Structure (Cont.)
+- - '##'
+  - 3.5.2 Layered Approach 层次化结构
+- - '##'
+  - Layered Structure of the THE OS
+- - '##'
+  - Layered Structure of the THE OS (Cont.)
+- - '##'
+  - E.W.Dijkstra的THE系统：
+- - '##'
+  - Fig 3.9 OS/2 Layer Structure OS/2层次化结构
+- - '##'
+  - Fig 3.10 Windows NT Client-Server Structure Windows NT 客户机-服务器结构
+- - '##'
+  - 系统支持进程
+- - '##'
+  - 服务进程
+- - '##'
+  - 用户程序
+- - '##'
+  - 环境子系统
+- - '##'
+  - 子系统动态链接库
+- - '##'
+  - 用户态
+- - '##'
+  - 核心态
+- - '##'
+  - 图形引擎
+- - '##'
+  - Windows 2000/XP的构成
+- - '##'
+  - Windows 2000/XP的构成(Cont.)
+- - '##'
+  - 核心态组件
+- - '##'
+  - Windows 2000/XP的关键系统组件
+- - '##'
+  - 3.6 Virtual Machines
+- - '##'
+  - Virtual Machines (Cont.)
+- - '##'
+  - Fig 3.11 System Models系统模式
+- - '##'
+  - Advantages/Disadvantages of Virtual Machines
+- - '##'
+  - Advantages/Disadvantages of Virtual Machines (Cont.)
+- - '##'
+  - 3.6.3 Java Virtual Machine Java虚拟机
+- - '##'
+  - Fig 3.12 Java Virtual Machine Java虚拟机
+- - '##'
+  - 3 System Design and Implementation 系统设计和实现
+- - '##'
+  - 3.7.1 Design Goals设计目标
+- - '##'
+  - 3.7.2 Mechanisms and Policies 机制和策略
+- - '##'
+  - 3.7.3 System Implementation
+- - '##'
+  - 3.8 System Generation (SYSGEN) 系统生成
+- - '##'
+  - 'Chapter 4: Processes 进程'
+- - '##'
+  - 4.1 Process Concept 进程概念
+- - '##'
+  - 4.1.1 The Process 进程
+- - '##'
+  - Fig 4.1 Diagram of Process State 进程状态图
+- - '##'
+  - 4.1.3 Process Control Block (PCB) 进程控制块
+- - '##'
+  - Fig 4.2 Process Control Block (PCB) 进程控制块
+- - '##'
+  - Fig 4.3 CPU Switch From Process to Process 进程间CPU的切换
+- - '##'
+  - 4.2 Process Scheduling 进程调度
+- - '##'
+  - 4.2.1 Scheduling Queues 调度队列
+- - '##'
+  - Fig 4.4 Ready Queue And Various I/O Device Queues 就绪队列和各种 I/O 设备队列
+- - '##'
+  - Fig 4.5 Representation of Process Scheduling 进程调度的描述
+- - '##'
+  - 4.2.2 Schedulers 调度
+- - '##'
+  - Schedulers (Cont.)
+- - '##'
+  - 4.2.3 Context Switch 上下文切换
+- - '##'
+  - Process Creation
+- - '##'
+  - Process Creation (Cont.)
+- - '##'
+  - UNIX examples UNIX例子
+- - '##'
+  - 4.3.2 Process Termination
+- - '##'
+  - Process Termination (Cont.)
+- - '##'
+  - Cooperating Processes (Cont.)
+- - '##'
+  - Bounded-Buffer – Shared-Memory Solution
+- - '##'
+  - Bounded-Buffer – Producer Process
+- - '##'
+  - 4.5 Interprocess Communication (IPC)
+- - '##'
+  - 4.5.1 Message-Passing System
+- - '##'
+  - Message-Passing System
+- - '##'
+  - Message-Passing System (Cont.)
+- - '##'
+  - Implementation Questions实现中的问题
+- - '##'
+  - 4.5.2 Naming 命名
+- - '##'
+  - 4.5.2.1 Direct Communication 直接通信
+- - '##'
+  - Direct Communication直接通信
+- - '##'
+  - 4.5.2.2 Indirect Communication 间接通信
+- - '##'
+  - Indirect Communication (Cont.)
+- - '##'
+  - Operations 操作
+- - '##'
+  - Indirect Communication (Cont.-1)
+- - '##'
+  - Indirect Communication (Cont.-2)
+- - '##'
+  - 4.5.3 Synchronization 同步
+- - '##'
+  - 4.5.4 Buffering 缓冲
+- - '##'
+  - 4.5.6 An Example：Windows 2000
+- - '##'
+  - 'An Example: Windows 2000 (Cont.)'
+- - '##'
+  - 'An Example: Windows 2000 (Cont.)'
+- - '##'
+  - Windows 2000/XP 邮件槽-1
+- - '##'
+  - 4.6 Client-Server Communication 客户机-服务器通信
+- - '##'
+  - 4.6.1 Sockets 套接字
+- - '##'
+  - 4.6.2 Remote Procedure Calls 远程过程调用
+- - '##'
+  - Fig 4.12 Execution of RPC (RPC 执行)
+- - '##'
+  - 'Chapter 5: Threads'
+- - '##'
+  - 线程
+- - '##'
+  - 5.1 Overview 综述
+- - '##'
+  - 5.1.1 Motivation
+- - '##'
+  - Motivation (Cont.)
+- - '##'
+  - Fig 5.1 Single and Multithreaded Processes
+- - '##'
+  - 单个和多线程进程
+- - '##'
+  - 5.1.2 Benefits
+- - '##'
+  - Benefits(Cont.)
+- - '##'
+  - 5.1.3 User and Kernel Threads 用户和内核线程
+- - '##'
+  - 'User Threads用户线程:'
+- - '##'
+  - Kernel Threads
+- - '##'
+  - 5.2 Multithreading Models
+- - '##'
+  - 5.2.1 Many-to-One多对一
+- - '##'
+  - Fig 5.2 Many-to-One Model多对一模型
+- - '##'
+  - Fig 5.3 One-to-one Model—对一模型
+- - '##'
+  - 5.2.3 Many-to-Many Model多对多模型
+- - '##'
+  - 5.3 Threading Issues 线程问题
+- - '##'
+  - 5.3.1 fork() and exec() system calls
+- - '##'
+  - 5.3.2 Cancellation
+- - '##'
+  - 5.3.3 Signal Handling（信号处理）
+- - '##'
+  - 5.4 Pthreads（POSIX线程）
+- - '##'
+  - 5.5 Solaris 2 Threads（Solaris 2 线程）
+- - '##'
+  - 5.6 Windows 2000 Threads（Windows 2000线程）
+- - '##'
+  - 5.8 Java Threads（Java线程）
+- - '##'
+  - Java Thread States（Java线程状态）
+- - '##'
+  - 'Chapter 6: CPU Scheduling（CPU调度）'
+- - '##'
+  - 6.1 Basic Concepts（基本概念）
+- - '##'
+  - 6.1.2 CPU Scheduler（CPU调度）
+- - '##'
+  - 6.1.4 Dispatcher
+- - '##'
+  - Scheduling Criteria (Cont.)
+- - '##'
+  - 6.3 Scheduling Algorithms（调度算法）
+- - '##'
+  - 6.3.1 First-Come, First-Served (FCFS) Scheduling（先来先服务调度）
+- - '##'
+  - 6.3.2 Shortest-Job-First (SJF) Scheduling（短作业优先调度）
+- - '##'
+  - 6.3.3 Priority Scheduling（优先权调度）
+- - '##'
+  - 6.3.4 Round Robin (RR)（时间片轮转调度）
+- - '##'
+  - 6.3.5 Multilevel Queue Scheduling（多级队列调度）
+- - '##'
+  - 6.3.6 Multilevel Feedback Queue Scheduling（多级反馈队列调度）
+- - '##'
+  - 6.3.1 First-Come, First-Served (FCFS) Scheduling 先来先服务调度
+- - '##'
+  - FCFS Scheduling (Cont.)
+- - '##'
+  - 6.3.2 Shortest-Job-First (SJF) Scheduling 短作业优先调度
+- - '##'
+  - Shortest-Job-First (SJF) Scheduling (Cont.)
+- - '##'
+  - Example of Non-Preemptive SJF
+- - '##'
+  - Example of Preemptive SJF
+- - '##'
+  - Determining Length of Next CPU Burst
+- - '##'
+  - Fig. 3 Prediction of the Length of the Next CPU Burst
+- - '##'
+  - Examples of Exponential Averaging
+- - '##'
+  - 6.3.3 Priority Scheduling 优先权调度
+- - '##'
+  - Priority Scheduling (Cont.)
+- - '##'
+  - 6.3.4 Round Robin (RR) 时间片轮转调度
+- - '##'
+  - Fig 6.4 Time Quantum and Context Switch Time
+- - '##'
+  - Fig 6.5 Turnaround Time Varies With The Time Quantum
+- - '##'
+  - 6.3.5 Multilevel Queue Scheduling 多级队列调度
+- - '##'
+  - Example of Multilevel Feedback Queue
+- - '##'
+  - Scheduling调度
+- - '##'
+  - Fig 6.7 Multilevel Feedback Queues
+- - '##'
+  - 6.4 Multiple-Processor Scheduling 多处理器调度
+- - '##'
+  - 6.5 Real-Time Scheduling 实时调度
+- - '##'
+  - Fig 6.8 Dispatch Latency调度等待
+- - '##'
+  - 6.6.2 Queueing models等待队列模型
+- - '##'
+  - Fig 6.9 Evaluation of CPU Schedulers by Simulation
+- - '##'
+  - 6.7 Process Scheduling Models 进程调度模型
+- - '##'
+  - Fig 6.10 Solaris 2 Scheduling
+- - '##'
+  - 'Chapter 7: Process Synchronization 进程同步'
+- - '##'
+  - 7.1 Background 背景
+- - '##'
+  - Background (Cont.)
+- - '##'
+  - Bounded-Buffer
+- - '##'
+  - Bounded-Buffer (Cont.-1)
+- - '##'
+  - Producer process
+- - '##'
+  - Bounded-Buffer (Cont.-2)
+- - '##'
+  - Consumer process
+- - '##'
+  - Bounded Buffer (Cont.-3)
+- - '##'
+  - Bounded Buffer (Cont.-4)
+- - '##'
+  - Bounded Buffer (Cont.-5)
+- - '##'
+  - Bounded Buffer (Cont.-6)
+- - '##'
+  - Race Condition
+- - '##'
+  - 7.2 The Critical-Section Problem
+- - '##'
+  - Solution to Critical-Section Problem (Cont.)
+- - '##'
+  - 3. Bounded Waiting.
+- - '##'
+  - Fig. 7.1 General structure of a typical process Pi
+- - '##'
+  - 7.2.1 Two-Process Solutions Algorithm 1
+- - '##'
+  - Algorithm 2
+- - '##'
+  - Algorithm 3
+- - '##'
+  - 7.2.2 Multiple-Process Solutions Bakery Algorithm
+- - '##'
+  - Critical section for n processes
+- - '##'
+  - Bakery Algorithm
+- - '##'
+  - Bakery Algorithm (Cont.)
+- - '##'
+  - Fig 7.7 Mutual Exclusion with Test-and-Set
+- - '##'
+  - Fig 7.8 The definition of Swap instruction
+- - '##'
+  - Fig 7.9 Mutual Exclusion with Swap
+- - '##'
+  - 7.4 Semaphores 信号量
+- - '##'
+  - Fig 7.11 Mutual-exclusion with semaphores
+- - '##'
+  - 7.4.2 Semaphore Implementation
+- - '##'
+  - Implementation
+- - '##'
+  - Semaphore as a General Synchronization Tool
+- - '##'
+  - 7.4.3 Deadlock and Starvation
+- - '##'
+  - Deadlock and Starvation
+- - '##'
+  - Two Types of Semaphores
+- - '##'
+  - Implementing S as a Binary Semaphore
+- - '##'
+  - 7.5 Classical Problems of Synchronization 经典同步问题
+- - '##'
+  - 7.5.1 Bounded-Buffer Problem
+- - '##'
+  - 7.5.2 Readers and Writers Problem
+- - '##'
+  - 7.5.3 Dining-Philosophers Problem
+- - '##'
+  - 7.5.1 Bounded-Buffer Problem 有限缓冲区问题
+- - '##'
+  - Fig 7.12 The structure of Producer Process
+- - '##'
+  - Fig 7.13 structure of the Consumer Process
+- - '##'
+  - 7.5.2 The Readers-Writers Problem
+- - '##'
+  - Fig 7.14 The structure of a Writer Process
+- - '##'
+  - Fig 7.15 The structure of a Reader Process
+- - '##'
+  - 7.5.3 Dining Philosophers Problem
+- - '##'
+  - 哲学家就餐问题
+- - '##'
+  - Fig 7.17 The structure of Philosophers i
+- - '##'
+  - 7.6 Critical Regions 临界区
+- - '##'
+  - Example – Bounded Buffer
+- - '##'
+  - Bounded Buffer Producer Process
+- - '##'
+  - Bounded Buffer Consumer Process
+- - '##'
+  - Implementation
+- - '##'
+  - 7.7 Monitors 管程
+- - '##'
+  - Monitors (Cont.)
+- - '##'
+  - Monitors
+- - '##'
+  - Fig 7.20 Schematic View of a Monitor
+- - '##'
+  - Fig 7.21 Monitor With Condition Variables
+- - '##'
+  - Fig 7.22 A monitor solution to the Dining-Philosophers
+- - '##'
+  - Monitor Implementation Using Semaphores
+- - '##'
+  - 7.8 OS Synchronization
+- - '##'
+  - 7.8.1 Synchronization in Solaris 2
+- - '##'
+  - 7.8.2 Windows 2000 Synchronization
+- - '##'
+  - 7.9 Atomic Transactions 自动事务处理
+- - '##'
+  - 7.9.1 System Model 系统模型
+- - '##'
+  - 7.9.2 Log-Based Recovery
+- - '##'
+  - 7.9.3 Checkpoint
+- - '##'
+  - 7.9.4 Concurrent Atomic Transactions 并行的自动事务处理
+- - '##'
+  - 'Chapter 8: Deadlocks 死锁'
+- - '##'
+  - 8.1 System Model 系统模型
+- - '##'
+  - 8.2 Deadlock Characterization 死锁特征
+- - '##'
+  - 8.3 Methods for Handling Deadlocks 处理死锁的方法
+- - '##'
+  - 8.4 Deadlock Prevention 预防死锁
+- - '##'
+  - 8.5 Deadlock Avoidance 死锁避免
+- - '##'
+  - 8.6 Deadlock Detection 死锁检测
+- - '##'
+  - 8.7 Recovery from Deadlock 死锁恢复
+- - '##'
+  - 8.8 Combined Approach to Deadlock Handling 综合处理方法
+- - '##'
+  - 8.1 The Deadlock Problem 死锁问题
+- - '##'
+  - Bridge Crossing Example 过桥的例子
+- - '##'
+  - System Model (Cont.)
+- - '##'
+  - 8.2 Deadlock Characterization
+- - '##'
+  - 8.2.1 Necessary Conditions 产生死锁的必要条件
+- - '##'
+  - Deadlock Characterization (Cont.)
+- - '##'
+  - 8.2.2 Resource-Allocation Graph 资源分配图
+- - '##'
+  - Resource-Allocation Graph (Cont.)
+- - '##'
+  - Fig 8.1 Example of a Resource Allocation Graph 资源分配图的例子
+- - '##'
+  - Fig 8.2 Resource Allocation Graph With A Deadlock
+- - '##'
+  - Fig 8.3 Resource Allocation Graph With A Cycle But No Deadlock 有环但没有死锁的资源分配图
+- - '##'
+  - Basic Facts 基本事实
+- - '##'
+  - 8.3 Methods for Handling Deadlocks
+- - '##'
+  - 8.4 Deadlock Prevention
+- - '##'
+  - 死锁的预防
+- - '##'
+  - Deadlock Prevention (Cont.-1)
+- - '##'
+  - 8.5 Deadlock Avoidance 死锁避免
+- - '##'
+  - Deadlock Avoidance (Cont.)
+- - '##'
+  - Safe State (Cont.)
+- - '##'
+  - Basic Facts基本事实
+- - '##'
+  - Fig 8.4 Safe, Unsafe , Deadlock State spaces 安全、不安全、死锁状态空间
+- - '##'
+  - 8.5.2 Resource-Allocation Graph Algorithm
+- - '##'
+  - Fig 8.5 Resource-Allocation Graph For Deadlock Avoidance 死锁避免的资源分配图
+- - '##'
+  - Fig 8.6 Unsafe State In Resource-Allocation Graph 不安全的状态图
+- - '##'
+  - 8.5.3 Banker's Algorithm
+- - '##'
+  - Data Structures for the Banker's Algorithm
+- - '##'
+  - 银行家算法的数据结构
+- - '##'
+  - Data Structures for the Banker's Algorithm (Cont.)
+- - '##'
+  - 8.5.3.1 Safety Algorithm安全算法
+- - '##'
+  - Example of Banker's Algorithm
+- - '##'
+  - Example (Cont.)
+- - '##'
+  - 银行家算法例
+- - '##'
+  - T₀时刻是否安全？
+- - '##'
+  - Example P₁ Request (1,0,2) (Cont.)
+- - '##'
+  - 8.6 Deadlock Detection
+- - '##'
+  - 死锁检测
+- - '##'
+  - 8.6.1 Single Instance of Each Resource Type
+- - '##'
+  - 每一种资源类型只有一个实例
+- - '##'
+  - Fig 8.7 Resource-Allocation Graph and Wait-for Graph
+- - '##'
+  - 8.6.2 Several Instances of a Resource Type
+- - '##'
+  - Detection Algorithm检测算法
+- - '##'
+  - Detection Algorithm (Cont.)
+- - '##'
+  - Example of Detection Algorithm
+- - '##'
+  - 检测算法的例子
+- - '##'
+  - Example (Cont.)
+- - '##'
+  - Request
+- - '##'
+  - 8.6.3 Detection-Algorithm Usage 检测算法的应用
+- - '##'
+  - 8.7 Recovery from Deadlock
+- - '##'
+  - 8.7.1 Process Termination 进程终止
+- - '##'
+  - 8.7.2 Resource Preemption资源抢占
+- - '##'
+  - 8.7.2 Resource Preemption资源抢占
+- - '##'
+  - 8.8 Combined Approach to Deadlock Handling
+- - '##'
+  - Fig 8.8 Traffic Deadlock for Exercise 8.4
+- - '##'
+  - 'Chapter 9: Memory Management'
+- - '##'
+  - 存储器管理
+- - '##'
+  - 9.1 Background 背景
+- - '##'
+  - Fig 9.1 Multistep Processing of a User Program
+- - '##'
+  - 9.1.2 Logical vs. Physical Address Space
+- - '##'
+  - Memory-Management Unit (MMU)
+- - '##'
+  - Fig 9.2 Dynamic relocation using a relocation register
+- - '##'
+  - 9.1.4 Dynamic Linking 动态链接
+- - '##'
+  - 9.1.5 Overlays覆盖
+- - '##'
+  - Fig 9.3 Overlays for a Two-Pass Assembler
+- - '##'
+  - 9.2 Swapping 交换
+- - '##'
+  - Swapping (Cont.)
+- - '##'
+  - Swapping (Cont.-1)
+- - '##'
+  - 9.3 Contiguous Memory Allocation
+- - '##'
+  - 9.3.1 Memory protection
+- - '##'
+  - 9.3.2 Memory Allocation
+- - '##'
+  - Dynamic Storage-Allocation Problem（动态存储分派问题）
+- - '##'
+  - Dynamic Partitioning Placement Algorithm
+- - '##'
+  - Dynamic Partitioning Placement Algorithm (Cont.2)
+- - '##'
+  - 9.3.3 Fragmentation（碎片）
+- - '##'
+  - Fragmentation (Cont.)
+- - '##'
+  - 9.4 Paging （分页）
+- - '##'
+  - Address Translation Scheme （地址变换方案）
+- - '##'
+  - Fig 9.6 Address Translation Architecture （地址变换机构）
+- - '##'
+  - Fig 9.7 Paging Example
+- - '##'
+  - Fig 9.8 Paging Example for a 32-byte memory with 4-byte pages
+- - '##'
+  - Fig 9.9 Free Frames
+- - '##'
+  - Implementation of Page Table （页表实现）
+- - '##'
+  - 分页地址变换机构
+- - '##'
+  - Associative Memory 联想寄存器
+- - '##'
+  - Associative memory – parallel search （联想寄存器—并行查找）
+- - '##'
+  - Address translation (A′, A′′) （地址转换）
+- - '##'
+  - Fig 9.10 Paging Hardware With TLB
+- - '##'
+  - Effective Access Time 有效存取时间
+- - '##'
+  - 9.4.3 Memory Protection（存储保护）
+- - '##'
+  - Fig 9.11 Valid (v) or Invalid (i) Bit In A Page Table
+- - '##'
+  - 9.4.4 Page Table Structure
+- - '##'
+  - 9.4.4.1 Hierarchical Paging
+- - '##'
+  - Two-Level Paging Example
+- - '##'
+  - Fig 9.12 Two-Level Page-Table Scheme
+- - '##'
+  - Fig 9.13 Address-Translation Scheme
+- - '##'
+  - Address-translation scheme for a two-level 32-bit paging architecture
+- - '##'
+  - （一个两级32位分页结构的地址转换机制）
+- - '##'
+  - 9.4.4.2 Hashed Page Tables
+- - '##'
+  - Fig 9.14 Hashed Page Table
+- - '##'
+  - 9.4.4.3 Inverted Page Table (IPT) 倒置页表
+- - '##'
+  - Fig 9.15 Inverted Page Table Architecture
+- - '##'
+  - 9.4.5 Shared Pages共享页
+- - '##'
+  - Fig 9.16 Shared Pages Example
+- - '##'
+  - 9.5 Segmentation
+- - '##'
+  - Logical View of Segmentation
+- - '##'
+  - Segmentation Architecture
+- - '##'
+  - Segmentation Architecture (Cont.)
+- - '##'
+  - Segmentation Architecture (Cont.)
+- - '##'
+  - Fig 9.18 Segmentation Hardware
+- - '##'
+  - 分段地址变换机构
+- - '##'
+  - 段表寄存器
+- - '##'
+  - 越界中断
+- - '##'
+  - 逻辑地址
+- - '##'
+  - Fig 9.20 Sharing of Segments
+- - '##'
+  - 9.6 Segmentation with Paging – MULTICS
+- - '##'
+  - MULTICS Address Translation Scheme
+- - '##'
+  - Segmentation with Paging – Intel 386
+- - '##'
+  - Fig 9.21 Intel 30386 Address Translation
+- - '##'
+  - Intel 30386 Address Translation
+- - '##'
+  - 9.7 Summary
+- - '##'
+  - 'Chapter 10: Virtual Memory'
+- - '##'
+  - Background 背景
+- - '##'
+  - Background
+- - '##'
+  - Virtual Memory That is Larger Than Physical Memory
+- - '##'
+  - Demand Paging
+- - '##'
+  - Transfer of a Paged Memory to Contiguous Disk Space
+- - '##'
+  - Valid-Invalid Bit
+- - '##'
+  - Valid-Invalid Bit Cont.
+- - '##'
+  - Page Fault
+- - '##'
+  - Page Fault Cont.
+- - '##'
+  - Steps in Handling a Page Fault
+- - '##'
+  - What happens if there is no free frame?
+- - '##'
+  - Performance of Demand Paging
+- - '##'
+  - Demand Paging Example
+- - '##'
+  - Process Creation
+- - '##'
+  - Copy-on-Write
+- - '##'
+  - Memory-Mapped Files
+- - '##'
+  - Memory Mapped Files
+- - '##'
+  - Page Replacement
+- - '##'
+  - Basic Page Replacement
+- - '##'
+  - Page Replacement
+- - '##'
+  - Graph of Page Faults Versus The Number of Frames
+- - '##'
+  - FIFO Page Replacement
+- - '##'
+  - FIFO Illustrating Belady's Anomaly
+- - '##'
+  - Optimal Algorithm
+- - '##'
+  - Optimal Page Replacement
+- - '##'
+  - Least Recently Used (LRU) Algorithm
+- - '##'
+  - LRU Page Replacement
+- - '##'
+  - LRU Algorithm (Cont.)
+- - '##'
+  - Use Of A Stack to Record The Most Recent Page References
+- - '##'
+  - LRU Approximation Algorithms
+- - '##'
+  - LRU Approximation Algorithms Cont.
+- - '##'
+  - Second-Chance (clock) Page-Replacement Algorithm
+- - '##'
+  - Counting Algorithms
+- - '##'
+  - Allocation of Frames
+- - '##'
+  - Fixed Allocation
+- - '##'
+  - Priority Allocation
+- - '##'
+  - Global vs. Local Allocation
+- - '##'
+  - Thrashing
+- - '##'
+  - Locality In A Memory-Reference Pattern
+- - '##'
+  - Working-Set Model
+- - '##'
+  - Keeping Track of the Working Set
+- - '##'
+  - Page-Fault Frequency Scheme
+- - '##'
+  - Other Considerations
+- - '##'
+  - Increasing the Size of the TLB
+- - '##'
+  - Other Considerations (Cont.)
+- - '##'
+  - Other Considerations (Cont.)
+- - '##'
+  - Reason Why Frames Used For I/O Must Be In Memory
+- - '##'
+  - Operating System Examples
+- - '##'
+  - Windows NT
+- - '##'
+  - WINDOWS NT
+- - '##'
+  - Solaris 2
+- - '##'
+  - 'Chapter 12: File System Implementation 文件系统实现'
+- - '##'
+  - 12.1 File-System Structure
+- - '##'
+  - Fig 12.1 Layered File System
+- - '##'
+  - 12.2 File System Implementation 文件系统实现
+- - '##'
+  - 12.2.1 Overview
+- - '##'
+  - UNIX磁盘文件卷结构
+- - '##'
+  - Volume Structure in UNIX
+- - '##'
+  - Fig 12.2 A Typical File Control Block
+- - '##'
+  - In-Memory File System Structures
+- - '##'
+  - Fig 12.3 In-Memory File System Structures
+- - '##'
+  - UNIX内存的目录管理表
+- - '##'
+  - Linux内存的目录管理表-1
+- - '##'
+  - Linux内存的目录管理表-2
+- - '##'
+  - Linux内存的目录管理表-3
+- - '##'
+  - Linux内存的目录管理表-4
+- - '##'
+  - Linux内存的目录管理表-1
+- - '##'
+  - 12.2.2 Partitions and Mounting分区和安装
+- - '##'
+  - 12.2.3 Virtual File Systems虚拟文件系统
+- - '##'
+  - Virtual File Systems (Cont.)
+- - '##'
+  - Schematic View of Virtual File System VFS示意图
+- - '##'
+  - 12.3 Directory Implementation
+- - '##'
+  - 12.4 Allocation Methods
+- - '##'
+  - 12.4.1 Contiguous Allocation(连续分配)
+- - '##'
+  - Fig 12.5 Contiguous Allocation of Disk Space
+- - '##'
+  - Extent-Based Systems （基于外延系统）
+- - '##'
+  - 12.4.2 Linked Allocation （链接分配）
+- - '##'
+  - Linked Allocation (Cont.)
+- - '##'
+  - 2.4.3 Indexed Allocation （索引分配）
+- - '##'
+  - Indexed Allocation – Mapping (Cont.) 索引分配—映射 （续）
+- - '##'
+  - Indexed Allocation – Mapping (Cont.) 索引分配—映射（续）
+- - '##'
+  - 链接索引
+- - '##'
+  - 12.5 Free-Space Management （自由空间管理）
+- - '##'
+  - 12.5.1 Bit vector /Bit map （n blocks）（位图）
+- - '##'
+  - Free-Space Management (Cont.-1)
+- - '##'
+  - Free-Space Management (Cont.-2)
+- - '##'
+  - 12.6 Efficiency and Performance （效率和性能）
+- - '##'
+  - '12.6.1 Efficiency dependent on: （效率取决于）'
+- - '##'
+  - 12.6.2 Performance （性能）
+- - '##'
+  - Page Cache 页缓冲
+- - '##'
+  - Fig 12.11 I/O Without a Unified Buffer Cache
+- - '##'
+  - Unified Buffer Cache
+- - '##'
+  - Fig 12.12 I/O Using a Unified Buffer Cache
+- - '##'
+  - Fig 12.13 Various Disk-Caching Locations
+- - '##'
+  - 12.7 Recovery恢复
+- - '##'
+  - 12.8 Log Structured File Systems 日志结构文件系统
+- - '##'
+  - NFS (Cont.)
+- - '##'
+  - NFS (Cont.)
+- - '##'
+  - Three Independent File Systems
+- - '##'
+  - Mounting in NFS
+- - '##'
+  - NFS Mount Protocol（NFS安装协议）
+- - '##'
+  - NFS Protocol （NFS协议）
+- - '##'
+  - Three Major Layers of NFS Architecture
+- - '##'
+  - Schematic View of NFS Architecture NFS结构的示意图
+- - '##'
+  - NFS Path-Name Translation
+- - '##'
+  - NFS Remote OperationsNFS远程操作
+- - '##'
+  - NFS Remote Operations Cont. NFS远程操作 （续）
+- - '##'
+  - 12.10 Linux
+- - '##'
+  - vfsmntlist
+- - '##'
+  - vfsmount
+- - '##'
+  - vfsmnttail
+- - '##'
+  - first_inode
+- - '##'
+  - VFS
+- - '##'
+  - Super-block[j]
+- - '##'
+  - VFS
+- - '##'
+  - file_systems
+- - '##'
+  - File_system_type
+- - '##'
+  - struct msdos_sb_info
+- - '##'
+  - struct msdos_inode_info
+- - '##'
+  - 文件系统类型的注册和注销
+- - '##'
+  - 文件系统的注册和注销
+- - '##'
+  - VFS 超级块
+- - '##'
+  - VFS inode
+- - '##'
+  - III. Consider the organization of a UNIX file as represented by the Inode.
+- - '##'
+  - 'Chapter 13: I/O Systems'
+- - '##'
+  - I/O 系统
+- - '##'
+  - 13.2 I/O Hardware
+- - '##'
+  - 13.2.1 Polling 轮询
+- - '##'
+  - 13.2.2 Interrupts 中断
+- - '##'
+  - Fig 13.3 Interrupt-Driven I/O Cycle
+- - '##'
+  - Fig. 13.4 Intel Pentium Processor Event-Vector Table
+- - '##'
+  - 13.2.3 Direct Memory Access 直接内存存取
+- - '##'
+  - Fig 13.6 Six Step Process to Perform DMA Transfer
+- - '##'
+  - 通过六步来完成 DMA 传输
+- - '##'
+  - 13.3 Application I/O Interface 应用程序 I/O 接口
+- - '##'
+  - Fig 13.6 A Kernel I/O Structure
+- - '##'
+  - Fig 13.7 Characteristics of I/O Devices
+- - '##'
+  - 13.3.1 Block and Character Devices 块或字符设备
+- - '##'
+  - 13.3.3 Clocks and Timers 时钟和记时器
+- - '##'
+  - 13.3.4 Blocking and Nonblocking I/O 阻塞和非阻塞I/O
+- - '##'
+  - 13.4 Kernel I/O Subsystem
+- - '##'
+  - 13.4.1 I/O Scheduling I/O调度
+- - '##'
+  - 13.4 Buffering – store data in memory while transferring between devices
+- - '##'
+  - Fig 13.8 Sun Enterprise 6000 Device-Transfer Rates
+- - '##'
+  - Kernel I/O Subsystem
+- - '##'
+  - 13.4.3 Caching - fast memory holding copy of data
+- - '##'
+  - 13.4.4 Spooling - hold output for a device
+- - '##'
+  - Device reservation - provides exclusive access to a device设备预定—提供对设备的独占访问
+- - '##'
+  - 13.4.5 Error Handling 错误处理
+- - '##'
+  - 13.4.6 Kernel Data Structures 核心数据结构
+- - '##'
+  - Fig 13.9 UNIX I/O Kernel Structure
+- - '##'
+  - 13.5 Transforming I/O to Hardware Operations
+- - '##'
+  - 转换 I/O 请求为硬件操作
+- - '##'
+  - Fig 13.10 Life Cycle of An I/O Request I/O请求的周期
+- - '##'
+  - 13.6 STREAMS 流
+- - '##'
+  - 流机制(streams)
+- - '##'
+  - 流的结构：上行流(upstream)和下行流(downstream)
+- - '##'
+  - 流的多路复用机制：
+- - '##'
+  - 13.7 Performance 性能
+- - '##'
+  - Performance-1
+- - '##'
+  - Fig 13.12 Intercomputer Communications of a remote login from one machine to another
+- - '##'
+  - Several principles to improve performance 改进性能几个原则
+- - '##'
+  - Fig 13.13 Device-Functionality Progression
+- - '##'
+  - 'Chapter 14: Mass-Storage Systems 海量存储器系统'
+- - '##'
+  - 14.1 Disk Structure 磁盘结构
+- - '##'
+  - 14.2 Disk Scheduling 磁盘调度
+- - '##'
+  - Disk Scheduling (Cont.)
+- - '##'
+  - 14.2.1 FCFS Scheduling先来先服务调度
+- - '##'
+  - SSTF (Cont.)
+- - '##'
+  - 14.2.3 SCAN Scheduling
+- - '##'
+  - SCAN (Cont.)
+- - '##'
+  - 14.2.4 C-SCAN Scheduling
+- - '##'
+  - C-SCAN (Cont.)
+- - '##'
+  - 14.2.5 C-LOOK Scheduling
+- - '##'
+  - C-LOOK (Cont.)
+- - '##'
+  - 14.2.6 Selecting a Disk-Scheduling Algorithm
+- - '##'
+  - Disk Management (Cont.)
+- - '##'
+  - 14.3.2 Boot Block 启动块
+- - '##'
+  - 14.3.3 Bed Block 坏块
+- - '##'
+  - Fig 14.6 MS-DOS Disk Layout
+- - '##'
+  - Swap-Space Management (Cont.)
+- - '##'
+  - Swap-space management 交换空间管理
+- - '##'
+  - 14.5 RAID Structure
+- - '##'
+  - RAID (cont)
+- - '##'
+  - 14.5.3 RAID levels
+- - '##'
+  - 14.6 Disk Attachment 磁盘连接
+- - '##'
+  - 14.8 Tertiary Storage Structure 三级存储结构
+- - '##'
+  - 14.8.1 Tertiary Storage Devices 三级存储设备
+- - '##'
+  - 14.8.1.1 Removable Disks 可移动磁盘
+- - '##'
+  - Removable Disks (Cont.)
+- - '##'
+  - Removable Disks (Cont.-1)
+- - '##'
+  - WORM Disks
+- - '##'
+  - 14.8.1.2 Tapes 磁带
+- - '##'
+  - Tapes (Cont.)
+- - '##'
+  - 14.8.2 Operating System Jobs 操作系统的工作
+- - '##'
+  - 14.8.2.1 Application interface 应用程序接口
+- - '##'
+  - Application Interface (Cont.)
+- - '##'
+  - Tape Drives 磁带驱动器
+- - '##'
+  - 14.8.2.2 File Naming 文件命名
+- - '##'
+  - 14.8.2.3 Hierarchical Storage Management (HSM) 层次存储管理
+- - '##'
+  - 14.8.3 Performance Issues 有关性能的问题
+- - '##'
+  - 14.8.3.1 Speed 速度
+- - '##'
+  - Speed
+- - '##'
+  - 14.8.3.3 Cost 成本
+- - '##'
+  - Fig 14.13 Price per Megabyte of DRAM, From 1981 to 2000
+- - '##'
+  - Fig 14.14 Price per Megabyte of Magnetic Hard Disk, From 1981 to 2000
+- - '##'
+  - Fig 14.15 Price per Megabyte of a Tape Drive, From 1984-2000
+- - '##'
+  - 浙大98本科试卷II
+- - '##'
+  - 'Module 20: The Linux System'
+- - '##'
+  - History
+- - '##'
+  - The Linux Kernel
+- - '##'
+  - Linux 2.0
+- - '##'
+  - The Linux System
+- - '##'
+  - Linux Licensing
+- - '##'
+  - Design Principles
+- - '##'
+  - Components of a Linux System
+- - '##'
+  - Components of a Linux System (Cont.)
+- - '##'
+  - Components of a Linux System (Cont.)
+- - '##'
+  - Kernel Modules
+- - '##'
+  - Module Management
+- - '##'
+  - Driver Registration
+- - '##'
+  - Conflict Resolution
+- - '##'
+  - Process Management
+- - '##'
+  - Process Identity
+- - '##'
+  - Process Environment
+- - '##'
+  - Process Context
+- - '##'
+  - Process Context (Cont.)
+- - '##'
+  - Scheduling
+- - '##'
+  - Kernel Synchronization
+- - '##'
+  - Kernel Synchronization (Cont.)
+- - '##'
+  - Interrupt Protection Levels
+- - '##'
+  - Process Scheduling
+- - '##'
+  - Process Scheduling (Cont.)
+- - '##'
+  - Memory Management
+- - '##'
+  - Splitting of Memory in a Buddy Heap
+- - '##'
+  - Managing Physical Memory
+- - '##'
+  - Virtual Memory
+- - '##'
+  - Virtual Memory (Cont.)
+- - '##'
+  - Virtual Memory (Cont.)
+- - '##'
+  - Virtual Memory (Cont.)
+- - '##'
+  - Virtual Memory (Cont.)
+- - '##'
+  - Executing and Loading User Programs
+- - '##'
+  - Memory Layout for ELF Programs
+- - '##'
+  - Static and Dynamic Linking
+- - '##'
+  - File Systems
+- - '##'
+  - The Linux Ext2fs File System
+- - '##'
+  - Ext2fs Block-Allocation Policies
+- - '##'
+  - The Linux Proc File System
+- - '##'
+  - Input and Output
+- - '##'
+  - Device-driver Block Structure
+- - '##'
+  - Block Devices
+- - '##'
+  - Character Devices
+- - '##'
+  - Interprocess Communication
+- - '##'
+  - Passing Data Between Processes
+- - '##'
+  - Network Structure (Cont.)
+- - '##'
+  - Security (Cont.)
+- - '##'
+  - Device-driver Block Structure

@@ -1,0 +1,8451 @@
+- pgno: 0
+  md: '# Java语言程序设计
+
+
+    浙江大学计算机学院　陆汉权
+
+
+    88206257　87951441
+
+
+    luhq@zju.edu.cn
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_0_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# 关于本课
+
+
+    +   - **语言 (Language)：** 表达与交流
+
+    +   - 人类的语言
+
+    +   - 机器的语言
+
+    +     - 人与机器的交流
+
+    +     - 基本的规则
+
+    +     - 合适的表达与组织
+
+    +     - 理解'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# 计算机语言
+
+
+    +   计算机能够“听懂”的语言
+
+
+    +   借助于计算机语言，人要告知机器，你想让他
+
+
+    +   做什么
+
+
+    +   如何做/怎么做
+
+
+    +   方法
+
+
+    +   面向过程
+
+
+    +   面向对象'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 课程目标
+
+
+    理解计算机语言，掌握：
+
+
+    +   - 如何表达（数、符）
+
+    +   - 如何计算（公式，求解）
+
+    +   - 如何写代码
+
+    +   - 简单程序
+
+    +   - 常用算法
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_3_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "# # Java: 是Coffee, 不是Coffee\n\n+   - Java是一种计算机语言  \n+     - 可以编写计算机程序  \n\
+    +   - 特点  \n+     - 具有大多数计算机语言的共同特性  \n+     - 面向对象，更适合网络编程  \n+   - 学习Java语言基本要素\
+    \  \n+     - 常量，变量  \n+     - 表达式，语句  \n+     - 程序结构  \n+   - And more...... \
+    \ \n+     - 运用Java语言编写简单应用程序  \n+     - 理解过程和对象的编程  \n+     - 认识Java的高级特性"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "# 课程评价\n\n+   考试课，100分制，组成：\n+   \n+   - 理论40\n+   - 其他60\n\n+   理论：期末卷面考试，及格线为卷面成绩\
+    \ >=55\n\n+   其他：上机/作业/课堂测验： 及格线>=35分\n+   \n+   - 期末实验考试：30分，最低分15分\n+   - 平时上机实验：10分，最低分\
+    \ 8分\n+   - Exercise /Quiz：20分，最低分12分"
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# # Chapter1
+
+
+    # # Java Introduction'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: "# # 学习任务\n\n+   ### Java编程环境\n+   - 安装JDK， Java语言开发工具， Sun公司\n+   - 安装Jcreator或者Eclipse\n\
+    +   - 推荐： Eclipse\n+   \n+   ### Java程序的基本结构\n+   - Demo开始\n+   - 改写\n+   - 编写"
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# # Chapter 1
+
+
+    +   - 1.1 程序语言 —— Program Language
+
+    +   - 1.2 面向对象的程序设计语言—OOP
+
+    +     - Object Oriented Programming
+
+    +   - 1.3 Java的开发和运行环境
+
+    +   - 1.4 开发和运行Java程序的步骤
+
+    +   - 1.5 工具
+
+    +     - JCreator
+
+    +     - JEdit
+
+    +     - Eclipse'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 1.1 程序设计语言
+
+
+    +   - 程序设计语言经历
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_9_0.png)
+
+
+    +   - 高级语言
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_9_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# # 什么是“面向过程”
+
+
+    # ## How to do something?
+
+
+    +   - 分解问题——步骤
+
+    +   - 设计每一步骤的实现
+
+    +   - 依次执行这些步骤
+
+    +   - 得到结果/得到错误
+
+
+    # ## 特点
+
+
+    +   - 从用户的角度，这些步骤是“按部就班”
+
+    +   - 从设计的角度，考虑每一步骤的细节'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# # 什么是“面向对象”
+
+
+    +   ### How to do something?
+
+    +   - 分解问题为“对象”
+
+    +   - 设计每个对象的“属性”和“行为”
+
+    +   - 建立对象之间的联系
+
+    +   - 执行，得到结果/错误
+
+
+    +   ### 特点
+
+    +   - 以功能划分——没有按部就班问题
+
+    +   - 以设计角度——接近人的思维方式'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: "# # Example\n\n+   ## 电梯\n+   - 面向过程：设计上下电梯的每一步操作\n+   - 面向对象：只要告诉电梯上行或下行\n\
+    +   \n+   ## 下棋\n+   - 面向过程：按规则设计下棋的每一步骤\n+     - 博弈的步骤\n+     - 重复这些步骤直到结果\n\
+    +   - 面向对象：设计下棋的功能\n+     - 博弈对象\n+     - 博弈行为\n+     - 设定规则\n+   - 如果规则改变？"
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# # Java 简介
+
+
+    历史
+
+    特点：
+
+    - 简单性
+
+    - 面向对象
+
+    - 安全性
+
+    - 多线程
+
+    - 网络功能
+
+    - 执行效率
+
+    - 平台无关
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_13_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Java与C/C++
+
+
+    +   - 跨平台
+
+    +     - C/C++语言编译为机器码；机器直接执行
+
+    +     - Java语言编译为字节码，通过JVM编译为机器码
+
+    +   - 指针
+
+    +     - C/C++语言有指针类型；Java语言没有指针类型
+
+    +   - 继承
+
+    +     - C++允许多继承；Java语言仅允许单继承
+
+    +   - 速度
+
+    +     - C/C++运行速度快；Java运行速度较慢'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# # 编写Java程序——Key Point!
+
+
+    +   下载J2SDK，安装和设置。
+
+    +   Java2 Software Development Kit
+
+    +   命令行方式
+
+    +   javac（编译器）；java（解释器）
+
+    +   http://java.sun.com/j2se/1.4/download.html
+
+
+    +   Java IDE（集成开发环境）：
+
+    +   JBuilder
+
+    +   Visual Age for Java、Visual J++、Visual Café
+
+    +   Eclipse（推荐）
+
+    +   JCreator'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "# Demo\n\n```\n```java\npublic class Example\n{\n    public static void main(String\
+    \ args[])\n    {\n        System.out.println(\"Hello Java!\");\n    }\n}\n```\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# # Eclipse
+
+
+    +   1. Eclipse——目前最好的Java开发工具
+
+
+    +   2. Http://www.eclipse.org下载Eclipse最新版本
+
+
+    +   3. 下载语言包(Language Park),含中文版
+
+
+    +   4. 安装步骤
+
+
+    +   直接解压下载的Eclipse软件包到磁盘的目录下，如 Eclipse 3.5， 解压到E:\Eclipse
+
+
+    +   解压语言包，将语言包下面的两个文件夹直接拷贝到E:\Eclipse目录下，覆盖原文件夹：
+
+
+    +   features, plugins
+
+
+    +   进入E:\Eclipse目录，执行Eclipse
+
+
+    +   将自动搜索JDK，并建立工作区
+
+
+    +   请在课程网站 上下载有关Eclipse的操作指南'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# Do it!
+
+
+    在你的机器上安装JDK，Eclipse
+
+
+    +   - JDK的安装文件夹为D:\Java6
+
+    +   - Eclipse的安装文件夹为 D:\Eclipse
+
+    +   - 你的工作区为D:\MyJavaFile'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# # Eclipse Demo
+
+
+    +   在屏幕上输出： Hello, Java！
+
+    +   步骤：
+
+    +   - 打开Eclipse
+
+    +   - 文件——新建——项目(Project)
+
+    +   - 新建项目对话框——Java项目
+
+    +   - 输入“项目名”：Hello，点击“完成”
+
+    +   - 在左侧的“导航器”上，在“Hello”点击右键——“新建”——类，
+
+    +   - 在弹出的Java类对话框中，“名称”输入：Hello
+
+    +   - 想要创建哪些方法存根：选择public static void main(String[] args)，进入编程窗口'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: "# # 一个Java程序必须以public class开头\n\n# # 关于命令行参数的注释\n\n# # 一个程序中必须有一个main方法\n\n\
+    # # 程序代码写在这里\n\n# # 大括号必须成对出现\n\n# # 这个窗口显示程序执行结果\n\npublic class Hello {\n  \
+    \  /**\n     * @param args\n     */\n    public static void main(String[] args)\
+    \ {\n        // TODO 自动生成方法存根\n    }\n}"
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# # 运行程序
+
+
+    +   1. 菜单或者工具按钮： 运行方式
+
+    +   2. 选择： Java应用程序'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "```\n```java\npublic class Hello {\n\n    /**\n     * @param args\n     */\n\
+    \    public static void main(String[] args) {\n        // TODO 自动生成方法存根\n    \
+    \    System.out.println(\"Hello, Java\");\n    }\n}\n```\n```\n\nHello,Java"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "# # Hello, Java!\n\n```\n```java\npublic class Hello {\n\t/**\n\t * @param\
+    \ args\n\t */\n\tpublic static void main(String[] args) {\n\t\tSystem.out.println(\"\
+    Hello,Java\");\n\t}\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# # 输出语句
+
+
+    +   - 一个程序必须有至少一个输出！
+
+    +   - Java中使用print方法——输出信息
+
+    +     - print方法 ——是输出方法： out
+
+    +     - out 是由Java系统完成的： System， so：
+
+    +   - System.out.print();
+
+    +     - 其中的“.”表示 “属于”
+
+    +   - print() 没有换行
+
+    +   - println() 执行之后自动换行'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# System.out.print();
+
+
+    在输入上述语句的时候，Eclipse有“Tips”：
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_25_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "# # Java的命令行和输入\n\n### 一个例子： 通过命令行输入Hello, Java!\n```java\npublic class Hello\
+    \ {\n/**\n * @param args\n */\npublic static void main(String[] args) {\n    System.out.println(args[0]+\"\
+    \ \"+args[1]);\n}\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# # Java编程：J2SE
+
+
+    +   利用编辑器编写 Java源程序 主类名.java
+
+    +   如：Hello.java
+
+
+    +   通过javac编辑器 → 字节码：类文件名.class
+
+    +   编译Java文件：Javac. Hello.java
+
+    +   得到Class文件：Hello.class
+
+
+    +   在虚拟机下(java)运行：java 类文件名
+
+    +   java Hello Hello Java！
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_27_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '```
+
+    public class Hello {
+
+    public static void main(String[] args) {
+
+    System.out.println(args[0]+" "+args[1]);
+
+    }
+
+    }
+
+    ```
+
+
+    +   其中：args为命令行参数
+
+    +   arguments
+
+    +   Demo:
+
+    +   1. 设置Java的路径
+
+    +   2. 将Hello.java拷贝到Java目录下
+
+    +   3. 开始——运行：cmd，进入命令行出口
+
+    +   4. 编译：javac Hello.java
+
+    +   5. 执行：java Hello hello， Java!
+
+    +   这里的 “hello,” 就是 args[0], “Java!”就是 args[1].中间用空格隔开'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '```
+
+    public class Hello {
+
+    public static void main(String[] args) {
+
+    System.out.println(args[0]+" "+args[1]);
+
+    }
+
+    }
+
+    }
+
+    ```
+
+
+    # 在Eclipse中执行：
+
+
+    +   单击“运行”按钮或者“运行”菜单的运行命令
+
+
+    +   在“(x)=自变量”选项卡中输入 Hello, Java！
+
+
+    +   即这个栏目就是代表——命令行参数
+
+
+    +   运行！
+
+
+    +   ——相当于“输入”数据
+
+
+    # System.out.println(args[0]+" "+args[1]);
+
+
+    +   其中的“+”，表示连接符'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# # 练习：
+
+
+    +   - 编写一个Java程序，命令行输入：
+
+    +     - Hello, Java!
+
+    +     - 程序中输出信息如下：
+
+    +       Hello, Java!
+
+    +       我们正在学习Java编程'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# # 本周作业
+
+
+    +   - 安装Java， Eclipse
+
+    +   - 练习教材上的例题P8: 【例1-1】
+
+    +     - 在Java命令行下编译执行(部分同学选做)
+
+    +     - 在Eclipse中建立该文件并执行
+
+    +   - 编写程序：
+
+    +     命令行输入并在程序中输出：
+
+    +     Hello, the World！
+
+    +     程序输出： 这是我编写的第一个Java程序！'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# # Chapter 2
+
+
+    # # Java 基础'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# Overview
+
+
+    +   - 2.1 标识符和关键字
+
+    +   - 2.2 数据类型与常量、变量
+
+    +   - 2.3 运算符和表达式'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# 2.1 标识符和关键字
+
+
+    +   - 标识符 (Label Signal)：
+
+    +     Java中用来标记变量和其他运算的符号
+
+
+    +   - 关键字 (Key Words)
+
+    +     Java已经使用的一些字符，用户不能使用
+
+
+    +   - Java语言
+
+    +     - Unicode字符集，16位编码
+
+    +     - 前256个字符与ASCII相同
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_34_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "# # Java 标识符\n\n+   标识符是用来标识变量、常量、方法、类、对象等元素的有效字符序列。\n\n+   Java 的标识符由字母、数字、_和$组成，长度不限，但实际命名不宜过长。\n\
+    \n+   标识符的第一个字符必须为字母、 `“_”` 或 `“$”` 。标识符区分大小写。\n\n合法的标识符：name, s_no, $2, boy_number\
+    \  \n非法的标识符：2y, a*b, w/"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "# # 标识符规则\n\n+   “见名知义”，规范大小写的使用方式\n+   \n+   1. 大多数为小写字母开头\n+      - 变量名、对象名、方法名、包名\n\
+    +      - 标识符由多个单词构成，则首字母小写，其后单词的首字母大写，其余字母小写。如getAge。\n+   \n+   2. 类名首字母大写\n\
+    +   \n+   3. 常量名全部字母大写\n+   \n+   规则：非强制性"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# # Java 关键字
+
+
+    +   表 2-1
+
+
+    +   关键字是由Java语言定义的、具有特殊含义的字符序列
+
+
+    +   用户只能按照系统规定的方式使用，不能自行定义
+
+
+    +   关键字一律用小写字母表示。'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "# ## 2.2 数据类型\n\n+   - 基本数据类型\n+     - 简单数据组成的数据类型，其数据是不可分解的。\n+       例如，\n\
+    +     - 整数类型int的数据有34， 17等，可以进行整除运算  \n+       34/17。\n\n+   - 基本数据类型有：\n+   \
+    \  - 整数、小数、字符等\n\n+   - Java数据还包括\n+     - 数组（array）、类（class）和接口(interface)\n\
+    +     - 被称为“引用数据类型”"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# # Java
+
+
+    # # 数据类型
+
+
+    # ## 基本类型
+
+
+    # ## 引用类型
+
+
+    +   - 整型
+
+    +   - 浮点型
+
+    +   - 字符型
+
+    +   - 布尔型
+
+
+    +   - 数组 Array
+
+    +   - 接口 Interface
+
+    +   - 类 Class'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# Java 整型
+
+
+    +   - 整型有4种，差别在于
+
+    +     - 内存空间和
+
+    +     - 数据取值范围
+
+
+    | 数据类型 | 所占字节 | 取值范围 |
+
+    |---|---:|---|
+
+    | long（长整型） | 8 | −9223372036854775808～9223372036854775807 |
+
+    | int（整型） | 4 | −2147483648～2147483647 |
+
+    | short（短整型） | 2 | −32768～32767 |
+
+    | byte（位） | 1 | −128～127 |'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# # Java 整型
+
+
+    +   - 一个整数的缺省类型为int
+
+    +     - 表示整数为long型，在其后加L或l，
+
+    +     - 如345L
+
+    +   - Java提供了3种进制的整数表示：
+
+    +     - 十进制数。0~9表示的数，首位不能为0
+
+    +     - 八进制数。0~7表示的数，以0为前缀
+
+    +     - 十六进制数。0~9，a~f或A~F之间的字母表示的数，以0x或0X为前缀'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# 浮点数
+
+
+    +   - 浮点数类型有2种表示形式：
+
+    +     - 标准记数法
+
+    +       - 由整数部分、小数点和小数部分组成
+
+    +       - 如12.37
+
+    +     - 科学记数法：由尾数、E或e及阶码组成
+
+    +       - 也称为指数形式
+
+    +       - 如2.5E4表示2.5×10⁴
+
+    +     - 2种浮点数类型
+
+    +       - float　单精度浮点数
+
+    +       - double 双精度浮点数'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# # 浮点数
+
+
+    # ## 取值范围及所占用的内存大小
+
+
+    | 浮点数类型 | 所占字节 | 取值范围 |
+
+    |---|---|---|
+
+    | float（单精度浮点数） | 4 | -3.4E38～3.4E38 |
+
+    | double（双精度浮点数） | 8 | -1.7E308～1.7E308 |
+
+
+    +   - 浮点数默认类型为double
+
+    +   - 表示浮点数为float型，加后缀F或f
+
+    +     - 如34.5f'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# # 字符类型
+
+
+    +   - 字符类型： char
+
+    +     - Unicode字符，1个字符占16位
+
+    +   - 字符类型数据表示方法
+
+    +     - 单引号括起来的单个字符
+
+    +     - 用Unicode码表示，前缀是“\u”
+
+    +   - Unicide字符集内的控制字符需要通过转义字符表示
+
+    +     - 转义符 → 符号的意义被转换了
+
+    +     - 转义后代表的是控制符
+
+
+    | 转义字符 | 功能   | Unicode码   |
+
+    |----------|--------|-------------|
+
+    | \b       | 退格   | \u0008      |
+
+    | \t       | 制表符 | \u0009      |
+
+    | \n       | 换行   | \u000a      |
+
+    | \f       | 换页   | \u000c      |
+
+    | \r       | 回车   | \u000d      |'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# # 字符串
+
+
+    +   - 字符串 (String)
+
+    +     - 由多个字符组成的字符序列
+
+    +     - 字符串用双引号括起来
+
+    +     - 如"green "'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# # 布尔类型
+
+
+    +   - 逻辑运算
+
+    +     - 运算结果：真(true)或假(false)
+
+    +   - 布尔类型（boolean）
+
+    +     - 表示逻辑运算，运算结果叫做“**布尔值**”
+
+    +     - 运算结果，只有2个值：
+
+    +       - true（真）
+
+    +       - false（假）
+
+    +       - 布尔值占1个字节'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# # Java数据基本类型表——小结
+
+
+    | 关键字 | 数据类型 | 所占字节 | 表示范围 |
+
+    |---|---|---|---|
+
+    | long | 长整型 | 8 | 2^31-1 ~ -2^31 |
+
+    | int | 整型 | 4 | -2147483648~ 2147483647 |
+
+    | short | 短整型 | 2 | -32768~32767 |
+
+    | byte | 位 | 1 | -128~127 |
+
+    | char | 字符 | 1 | 0~256 |
+
+    | boolean | 布尔 | 1 | true 或 false |
+
+    | float | 单精度 | 4 | -3.4E38~ 3.4E38 |
+
+    | double | 双精度 | 8 | -1.7E308~ 1.7E308 |'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# # 2 常量
+
+
+    # ## 常量
+
+
+    +   - 程序运行过程中其值始终保持不变的量
+
+    +   - 类似于数学中的“常数”
+
+
+    # ## Java中的常量类型
+
+
+    +   - 整型，如：26
+
+    +   - 浮点数型，如：47.3
+
+    +   - 字符型，如：''A''
+
+    +   - 布尔型，如：true
+
+    +   - 字符串型，如："student"
+
+
+    # ## 常量的这种表示方式称为直接常量'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# # 符号常量
+
+
+    +   - 标识符表示常量，称为符号常量
+
+    +   - 符号常量必须先声明，后使用
+
+    +     - 声明关键字final，声明方式：
+
+    +       `final [修饰符] 类型标识符 常量名 = （直接）常量;`
+
+    +   - 修饰符是表示该常量使用范围的“权限修饰”：
+
+    +     public，private，protected 或 缺省(不使用修饰符)
+
+    +     - 如
+
+    +       `final float PI=3.14159;    //PI是一个浮点常量`
+
+    +       `final char SEX=''M'';    //SEX是一个字符常量`
+
+    +       `final int MAX=100;    //MAX是一个整型常量`'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# # 符号常量的优点
+
+
+    +   1. 增加了程序的可读性
+
+    +      - 从常量名可知常量的含义。
+
+
+    +   2. 增强了程序的可维护性
+
+    +      - 只要在声明处修改常量的值，就自动修改了程序中所有地方所使用的常量值'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# 3 变量
+
+
+    +   变量：程序运行中其值可以改变的量
+
+    +   变量必须先定义后使用
+
+    +   定义变量的格式：
+
+    +   [修饰符] 类型标识符 变量名[=常量];
+
+    +   例如：public int x=1;  // x为整型变量，初值为1
+
+    +   类型标识符：基本数据类型或引用数据类型
+
+    +   变量名必须符合标识符的规定→习惯小写
+
+    +   声明同类型的多个变量，用逗号分隔
+
+    +   若声明中包含“=常量”部分，系统将此常量作为变量的初始值'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# # Demo
+
+
+    以下是合法的变量声明
+
+    float x=25.4, y; // x、y为浮点型变量，x初值为25.4
+
+    char c; // c 为字符型变量
+
+    boolean flag1=true, flag2; // 布尔型变量
+
+    int n, m; // 整型变量
+
+    上例中
+
+    变量 x 和flag1 被赋予初始值
+
+    其它变量没有初始化'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# # 【例2-1】：使用整数型变量
+
+
+    ```
+
+    public class Integers {
+
+    public static void main(String args[]) {
+
+    int a=015; // 定义变量a，赋值八进制数
+
+    int b=20; //十进制数
+
+    int c=0x25; //十六进制数
+
+    short x=30; //定义short型，十进制
+
+    long y=123456L;
+
+    System.out.println(“a=”+a); // 输出 a 的值
+
+    System.out.println(“b=”+b); // 输出 b 的值
+
+    System.out.println(“c=”+c); // 输出 c 的值
+
+    System.out.println(“x=”+x); // 输出 x 的值
+
+    System.out.println(“y=”+y); // 输出 y 的值
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# # 【例2-1】结果
+
+
+    程序运行结果如下
+
+
+    a=13
+
+    b=20
+
+    c=37
+
+    x=30
+
+    y=123456'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "# 【例2-2】：使用浮点型变量\n\n```\n```java\npublic class Floats {\n    public static\
+    \ void main(String args[]) {\n        float a=35.45f;                 // 定义单精度变量a\n\
+    \        double b=3.56e18;               // 定义双精度变量b\n        System.out.println(\"\
+    a=\"+a);    // 输出a\n        System.out.println(\"b=\"+b);    // 输出b\n    }\n}\n\
+    ```\n```\n\n程序运行结果如下：\n\na=35.45\n\nb=3.56E18"
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "# 【例2-3】：使用字符类型变量\n\n```\npublic class Characters {\n    public static void\
+    \ main(String args[]) {\n        char ch1='a';        // 定义字符变量 ch1\n        char\
+    \ ch2='B';         // 定义字符变量 ch2\n        System.out.println(\"ch1=\"+ch1);  //\
+    \ 输出字符变量ch1\n        System.out.println(\"ch2=\"+ch2);  // 输出字符变量ch2\n    }\n\
+    }\n```\n\n程序运行结果如下：\nch1=a\nch4=B"
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# # 【例2-4】：使用字符串类型数据
+
+
+    ```
+
+    public class Samp2_5 {
+
+    public static void main(String args[]) {
+
+    String str1="abc"; // 定义字符串变量str1
+
+    String str2="\\n"; // 定义字符串变量str2
+
+    String str3= "123"; // 定义字符串变量str3
+
+    // 输出字符串变量时str1、 str2、 str3
+
+    System.out.println("str1="+str1+str2+"str3="+str3);
+
+    }
+
+    }
+
+    程序运行结果如下：
+
+    str1=abc
+
+    str3=123
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# 【例2-5】：使用逻辑类型变量
+
+
+    ```
+
+    public class Logic {
+
+    public static void main(String args[]) {
+
+    boolean instance1=true;
+
+    boolean instance2=false;
+
+    System.out.println("逻辑状态1="+instance1+" "+
+
+    "逻辑状态2="+instance2);
+
+    }
+
+    }
+
+    ```
+
+
+    程序运行结果如下：
+
+    逻辑状态1=true 逻辑状态2=false'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# 2.3 运算符和表达式
+
+
+    +   - **运算符 operator**
+
+    +     - 表示各种运算的符号
+
+    +     - 参与运算的数据称为操作数
+
+
+    +   - **运算符分类：根据操作数的个数**
+
+    +     - 单目运算：只有一个操作数
+
+    +     - 双目运算：有两个操作数
+
+    +     - 多目运算符：多个操作数
+
+
+    +   - **根据运算性质，运算符分为**
+
+    +     - 算术运算符：+(加)、-(减)、*(乘)、/(除)、%(求余数)、++、--
+
+    +     - 关系运算符：>、<、>=、<=、==、!=
+
+    +     - 逻辑运算符：&(与)、|(或)、!(非)、^(异或)、&&(条件与)、||(条件或)
+
+    +     - 位运算符：~(反)、&(与)、|(或)、^(异或)、<<(左移)、>>(右移)、>>>(无符号右移)'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# # 算术运算符
+
+
+    +   +、-、*、/、%
+
+
+    +   例如：if( a=(a/10)*10+a%10)
+
+
+    +   23+5 // 加的结果是 28
+
+
+    +   6*5 // 乘的结果是 30
+
+
+    +   27/3 // 除的结果是 9
+
+
+    +   45/4 // 除的结果是 11, Why?
+
+
+    +   45.0/4 // ??
+
+
+    +   9%3 // 余数是 0
+
+
+    +   9%4 // 余数是 1'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# # 单目算术运算符
+
+
+    # ## 单目算术运算符
+
+
+    +   - ++：自增
+
+    +   - --：自减）
+
+    +   - -：负号）
+
+
+    # ## ++、--
+
+
+    +   - 仅用于整型变量
+
+    +   - ++、--可在变量左边，也可在变量右边
+
+
+    # ### 例如：
+
+
+    ```
+
+    ```c
+
+    int j=5;
+
+    K=j++;
+
+    X=++j;
+
+    --j;
+
+    j--;
+
+    ```
+
+    ```
+
+
+    ```
+
+    ```c
+
+    //结果，j等于6
+
+    //结果，j等于7
+
+    //结果，j等于6
+
+    //结果，j等于5
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# 【例2-6】：++、-- Demo：
+
+
+    ```
+
+    public class OOperator {
+
+    public static void main(String args[]) {
+
+    int i=15, j1, j2, j2, j4;
+
+    j1=i++;
+
+    //在操作数的右面
+
+    System.out.println("i++="+j1);
+
+    j2=++i;
+
+    //在操作数的左面
+
+    System.out.println("++i="+j2);
+
+    j3=--i;
+
+    System.out.println("--i="+j3);
+
+    j4=i--;
+
+    System.out.println("i--="+j4);
+
+    System.out.println("i="+i);
+
+    }
+
+    }
+
+    ```
+
+
+    ```
+
+    i++=15
+
+    ++i=17
+
+    --i=16
+
+    i--=16
+
+    i=15
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# 上机实验 2-1
+
+
+    阅读并上机运行下列程序(Next Page)，并写出程序的运行结果
+
+
+    # 思考：
+
+
+    +   - 字符 ‘A’ 和 ‘a’ 之间有什么关系？
+
+    +   - 假设 字符型变量 ch 中有大写字母，那么
+
+    +     ```c
+
+    +     ch += (''a'' - ''A'');
+
+    +     ```
+
+    +     则：ch 中是什么？'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '```
+
+    public class Lab21 {
+
+    public static void main(String[] args) {
+
+    int n,m,k;
+
+    m=n=1;
+
+    k=m++;
+
+    System.out.println("m="+m+" k="+k);
+
+    float x,y,z;
+
+    x=y=1;
+
+    y+=x;
+
+    z=x+y;
+
+    z/=(x-y);
+
+    System.out.println("x="+x+" y="+y+" z="+z);
+
+    char ch1=''A'',ch2=''\u0041'';
+
+    System.out.println("ch1="+ch1+" ch2="+ch2);
+
+    ch2+=32;
+
+    System.out.println("ch1="+ch1+" ch2="+ch2);
+
+    String str1="Hello,",str2="Welcome to Core Java!";
+
+    System.out.println(str1+str2);
+
+    }
+
+    }
+
+    ```
+
+
+    # Lab 21'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# # 关系运算符
+
+
+    +   - 关系运算：
+
+    +     - 是2个操作数间的比较运算
+
+
+    +   - 关系运算符有：
+
+    +     - `>`、`<`、`>=`、`<=`、`=`、`==`、`!=`
+
+
+    +   - `=`、`==`、`!=`
+
+    +     - 还可用于布尔类型及字符串类型操作数
+
+    +     - 字符型比较依据是其Unicode值，从左向右比较每个字符
+
+
+    +   - 关系运算的运算结果为布尔值：
+
+    +     - 关系成立，结果为 `true`
+
+    +     - 否则其运算结果为 `false`'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# # 关系运算符
+
+
+    | 运算符 | 用例 | 功能 |
+
+    |---|---|---|
+
+    | > | a > b | 如果a > b成立，结果为true；否则，结果为false |
+
+    | >= | a >= b | 如果a ≥ b成立，结果为true；否则，结果为false |
+
+    | < | a < b | 如果a < b成立，结果为true；否则，结果为false |
+
+    | <= | a <= b | 如果a ≤ b成立，结果为true；否则，结果为false |
+
+    | == | a == b | 如果a = b成立，结果为true；否则，结果为false |
+
+    | != | a != b | 如果a ≠ b成立，结果为true；否则，结果为false |'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# 关系运算符，Demo:
+
+
+    ```
+
+    23.5>10.4    // 结果是true
+
+    45!=45       // 结果是false
+
+    ''7''<''6''      // 结果是false
+
+    true!=false  // 结果是true
+
+    ''T''<''a''      // 结果是true
+
+    ''u''<''9''      // 结果是false
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# 二机实验 2-2
+
+
+    阅读并上机运行下列程序(Next Page)，并写出程序的运行结果
+
+
+    # 思考：
+
+
+    +   - s1 和 s2 为什么不相等？
+
+    +   - s1 和 s2 哪一个大？'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# # Lab22
+
+
+    ```
+
+    ```java
+
+    public class Lab22 {
+
+    public static void main(String[] args) {
+
+    int m=3,n=2;
+
+    System.out.println("m="+m+" n="+n+". m大于n吗?"+(m>n));
+
+    m--;
+
+    System.out.println("m="+m+" n="+n+". m大于n吗?"+(m>n));
+
+    String s1="Hello",s2="Hello!";
+
+    System.out.print("\n str1="+s1+";str2="+s2);
+
+    System.out.print("\n s1和s2相等吗?"+(s1==s2));
+
+    }
+
+    }
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '# # 逻辑运算符
+
+
+    # ## 逻辑运算
+
+
+    +   - 运算对象为布尔型操作数
+
+    +   - 运算结果仍然是布尔值
+
+
+    # ## 逻辑运算符有：
+
+
+    +   - `&`（与）：`a & b` //a、b均为true，结果为true
+
+    +   - `|`（或）：`a | b` //a、b有一个true，结果为true
+
+    +   - `!`（非）：`!a` //a为true，结果为false，a为false，结果为true
+
+    +   - `^`（异或）：`a^B` // a b不同结果为true
+
+    +   - `&&`（条件与）：`a && b`
+
+    +   - `||`（条件或）：`a || b`'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# 逻辑运算真值表
+
+
+    | a | b | !a | a&b，a&&b | a|b，a||b | a^b |
+
+    |---|---|---|---|---|---|
+
+    | false | false | true | False | false | false |
+
+    | false | true | true | false | true | true |
+
+    | true | false | false | false | true | true |
+
+    | true | true | false | true | true | false |'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# 逻辑运算 Demo:
+
+
+    ```
+
+    ```text
+
+    !true              //结果是false
+
+    true & false       //结果是false
+
+    true | false       //结果是true
+
+    ```
+
+    ```
+
+
+    用途：判断条件是否满足，例如：
+
+
+    +   - `(age>20) && (age<30)`　//判age的值是否在20~30之间
+
+    +   - `(ch==''b'') || (ch==''B'')`　//判ch的值是否为字母''b''或''B''
+
+    +   - `(ch>=''0'' && ch<=''9'')`　//判ch是否为数字0~9'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# # 位运算符
+
+
+    # ## 位运算
+
+
+    +   - 操作数：整型
+
+    +   - 运算规则：按二进制的位
+
+    +   - 运算结果：整型值
+
+
+    # ## 位运算符有
+
+
+    +   - ~ （位反）
+
+    +   - & （位与）、| （位或）
+
+    +   - ^ （位异或）
+
+    +   - << （左移）、>> （右移）、
+
+    +   >>> （无符号右移）
+
+
+    # ## 位运算真值表
+
+
+    | a | b | ~a | a&b | a|b | a^b |
+
+    |---|---|---|---|---|---|
+
+    | 0 | 0 | 1 | 0 | 0 | 0 |
+
+    | 0 | 1 | 1 | 0 | 1 | 1 |
+
+    | 1 | 0 | 0 | 0 | 1 | 1 |
+
+    | 1 | 1 | 0 | 1 | 1 | 0 |'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# 位运算符（理解）
+
+
+    | 运算符 | 用例 | 功能 |
+
+    |---|---|---|
+
+    | `~` | `~a` | 将 a 逐位取反 |
+
+    | `&` | `a & b` | a、b 逐位进行“与”操作 |
+
+    | `|` | `a | b` | a、b 逐位进行“或”操作 |
+
+    | `^` | `a ^ b` | a、b 逐位进行“异或”操作 |
+
+    | `<<` | `a<<b` | a 向左移动 b 位 |
+
+    | `>>` | `a>>b` | a 向右移动 b 位 |
+
+    | `>>>` | `a>>>b` | a 向右移动 b 位，移动后的空位用 0 填充 |'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: "# 位运算 Demo:\n\n设 x=132，y=204；计算~x和x^y的值\n\n+   （1）将整数转换为二进制数。\n+   \n+   x=10000100，y=11001100\n\
+    \n+   （2）对x按位进行取反操作。\n+   \n+   ~10000100→01111011\n\n+   （3）对x，y按位进行异或操作\n+ \
+    \  \n+   ```text\n+       10000100\n+   ^   11001100\n+   ──────────\n+      \
+    \ 01001000\n+   ```\n\n+   （4）所得结果：~x=123，x^y=72。"
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# 上机实验2-3
+
+
+    +   - 阅读并上机运行下列程序(Next Page)，并写出程序的运行结果
+
+    +   - 思考：
+
+    +     - 如果给 b1 赋值2，程序会怎样？
+
+    +     - 解释 n、m的运算结果。如果“m、n的位与后左移3位的结果”是什么？左移有什么特点？'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "# Lab23\n\n```\n```java\npublic class Lab23 {\n    public static void main(String[]\
+    \ args) {\n        boolean b1=true, b2=false;\n\n        System.out.println(\"\
+    逻辑变量b1=\"+b1+\", b2=\"+b2);\n        System.out.println(\"b1^b2(异或运算)的结果是：\"+(b1&b2));\n\
+    \        System.out.println(\"b1^!b2(b2取反后)\"+\n                \"b1异或运算)的结果是：\"\
+    +(b1&&!b2));\n\n        int n=0x1F,m=017;\n        System.out.println(\"n=\"+n+\"\
+    ,m=\"+m+\", \" +\n                \"m和n的位与运算结果是：\"+(m&n));\n        System.out.println(\"\
+    m、n的位移与左移2位的结果：\"+(m&n)<<2);\n    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '# # 赋值运算符
+
+
+    赋值运算用于给变量赋值，形式如下：
+
+    变量名=表达式；
+
+
+    赋值运算的次序是从右向左的，即先计算表达式的值，再将表达式的值赋予变量。例如：
+
+
+    int i=3, j;
+
+    j=(i+2)/4 ;
+
+    i=2*j;
+
+    j=j+4;
+
+
+    //i的初始值是3
+
+    //结果得j值
+
+    //结果i是10
+
+    //结果，j的值是9
+
+
+    是5'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '# 复合赋值运算符
+
+
+    由赋值运算符与算术运算符、逻辑运算符和位运算符组合成，使用方法：
+
+
+    | 运算符 | 用例 | 等价于 | 运算符 | 用例 | 等价于 |
+
+    |---|---|---|---|---|---|
+
+    | += | x += y | x=x+y | &= | x &= y | x=x&y |
+
+    | -= | x -= y | x=x-y | \|= | x \|= y | x=x\|y |
+
+    | *= | x *= y | x=x*y | ^= | x ^= y | x=x^y |
+
+    | /= | x /= y | x=x/y | <<= | x <<= y | x=x<<y |
+
+    | %= | x %= y | x=x%y | >>= | x >>= y | x=x>>y |
+
+    | >>>= | x >>>= y | x=x>>>y |  |  |  |'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '# # Demo:
+
+
+    ```
+
+    i*=10;
+
+    i=i*10;
+
+    ```
+
+
+    等价于
+
+
+    ```
+
+    x/=3;
+
+    x=x/3;
+
+    ```
+
+
+    等价于'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# 括号运算符
+
+
+    ▣ 圆括号运算符：（）
+
+
+    +   - 改变表达式中运算符的运算次序
+
+    +   - 先进行括号内的运算，再进行括号外的运算
+
+    +   - 多层括号的情况下，先内后外逐层运算'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '# 表达式 Express
+
+
+    表达式 → 运算符将操作数连接起来的符合语法规则的式子
+
+
+    例如：
+
+
+    ```
+
+    int i=5, j=10, k;
+
+    k=(24+3*i)*j;  //这是表达式
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# # 运算符的优先级
+
+
+    | 运算符 | 描述 | 优先级 | 结合性 |
+
+    |---|---|---:|---|
+
+    | `.  []  （）` | 域，数组，括号 | 1 | 从左至右 |
+
+    | `++  --  -  !  ~` | 一元运算符 | 2 | 从右至左 |
+
+    | `*  /  %` | 乘，除，取余 | 3 | 从左至右 |
+
+    | `+  -` | 加，减 | 4 | 从左至右 |
+
+    | `<<  >>  >>>` | 位运算 | 5 | 从左至右 |
+
+    | `<  <=  >  >=` | 逻辑运算 | 6 | 从左至右 |
+
+    | `==  !=` | 逻辑运算 | 7 | 从左至右 |
+
+    | `&` | 按位与 | 8 | 从左至右 |
+
+    | `^` | 按位异或 | 9 | 从左至右 |'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# # 续前表
+
+
+    | 运算符 | 描述 | 优先级 | 结合性 |
+
+    |---|---|---|---|
+
+    | \| | 按位或 | 10 | 从左至右 |
+
+    | && | 逻辑与 | 11 | 从左至右 |
+
+    | \|\| | 逻辑或 | 12 | 从左至右 |
+
+    | ? : | 条件运算 | 13 | 从右至左 |
+
+    | = *= /= %= += -= <<= >>= >>>= &= ^= |= | 赋值和复合运算 | 14 | 从右至左 |'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# # 表达式的数据类型
+
+
+    +   - 表达式将得到一个结果，这个结果的数据类型就是表达式数据类型
+
+    +   - 例如：
+
+
+    ```
+
+    int i=3, j=21, k;
+
+    boolean f;
+
+    k=(i+3)*4;    //(i+3)*4是算术表达式
+
+    f=(i*2)>j;     //(i*2)>j是布尔表达式
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: "# # 数据类型转换规则\n\n+   - 低级别的值赋给高级别的变量时，系统自动转换  \n+     float x=200; // 将int型200转换成float值200.0\
+    \  \n+     // 结果x的值是200.0\n\n+   - 高级别的值赋给低级别变量，须强制类型转换  \n+     int i;  \n+ \
+    \    i= (int) 26.35; // double值26.35转换成int值26  \n+     // 结果i获得int类型值26  \n+ \
+    \    // 如果26.95？\n\n+   - 进行强制类型转换时，可能会造成数据精度丢失"
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '运行结果如下：
+
+
+    ```
+
+    k=3
+
+    f1=3.0
+
+    f2=3.75
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '# # Lab 2-4
+
+
+    +   阅读并上机运行下列程序(Next Page，Lab24)，并写出程序的运行结果
+
+    +   思考并回答问题：
+
+    +   temp的结果为什么是2？ 计算出temp后， m、n、k的值各为多少？
+
+    +   语句float x=3.14f;改为float x=3.14;会出错， 为什么？
+
+    +   表达式(m+2*n)/k的值为什么是2？
+
+    +   如果将x=(m+2*n)/k改为x=(m+2*n)/(float)k， x的结果是多少？'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: "# Lab24\n\n```\n```java\npublic class Lab24 {\n    public static void main(String[]\
+    \ args){\n        int m=1,n=2,k=3,temp;\n        temp=(m+n>k)?(m++):(--m+n++);\n\
+    \        System.out.println(\"(m+n>k)?(m++):(--m+n++)的运算结果：\"+temp);\n\n     \
+    \   float x=3.14f;\n        System.out.println(\"float型变量强制转换为int型的结果：\"+(int)x);\n\
+    \n        m=1;\n        x=(m+2*n)/k;\n        System.out.println(\"int型变量运算：(m+2*n)/k的结果是：\"\
+    +((m+2*n)/k));\n        System.out.println(\"(m+2*n)/k的结果是赋值给float型变量x=\"+x);\n\
+    \    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# # Homework
+
+
+    +   P28 习题1-7
+
+
+    +   习题8：假设摄氏温度为38度，计算相应的华氏温度值。
+
+
+    +   系统9：假设半径为6.5，计算球的体积。'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '# Overview
+
+
+    本章为课程的重点之一
+
+
+    +   - 3.1 语句及程序结构
+
+    +   - 3.2 顺序结构
+
+    +   - 3.3 选择结构
+
+    +   - 3.4 循环结构
+
+    +   - 3.5 跳转语句'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '# # 语句
+
+
+    # ## 语句，Statement
+
+
+    +   - 向计算机系统发出操作的代码
+
+
+    +   - 程序由一系列语句组成，语句以 “; ” 结束
+
+
+    # ## Java语句类型
+
+
+    +   - 表达式语句，如： total=math+phys+chem
+
+
+    +   - 空语句，只有一个 “;”
+
+
+    +   - 复合语句，用 “{}”将多条语句括起来作为一条语句使用，如：
+
+
+    +   - If (x>10)
+
+
+    +   - z=x+y;
+
+
+    +   - t=z/10;
+
+
+    +   - 方法调用语句： 方法名(参数); 如：
+
+
+    +   - System.out.println("Java Language");
+
+
+    +   - 控制语句，完成一定的控制功能，包括
+
+
+    +   - 选择语句
+
+
+    +   - 循环语句'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# # 程序结构
+
+
+    +   - 任何程序有3种基本的结构：
+
+    +     - 顺序结构
+
+    +     - 分支结构
+
+    +     - 循环结构
+
+
+    +   - 顺序结构
+
+    +     - 最简单的一种程序结构
+
+    +     - 程序按照语句的书写次序顺序执行'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: "# # 顺序结构 Demo1，【例3-1】\n\n```\npublic class Force {    // 计算太阳和地球之间的万有引力\npublic\
+    \ static void main(String args[]) {\n    double g, mSun, mEarth, f;\n\ng=6.66667E-8;\n\
+    mSun = 1.987E33;\nmEarth = 5.975E27;\nf = g* mSun* mEarth /(1.495E13*1.495E13);\n\
+    System.out.println(\"The force is \"+f);\n}\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: "# 顺序结构 Demo2，【例3-2】\n\n```\n// 华氏温度转换为摄氏温度： c=5(F-32)/9\npublic class Conversion{\n\
+    \    public static void main(String args[]) {\n        float f, c;\n        f=70.0f;\n\
+    \        c=5*(f-32)/9;\n        System.out.println(\"Fahrenheit=\"+f);\n     \
+    \   System.out.println(\"Centigrade=\"+c);\n    }\n}\n```\n\n![](img/80da1d99a94a92757465da523b64f0ce_99_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: "# # 顺序结构Demo3，【例3-3】\n\n```\npublic class Root {\n    public static void main(String\
+    \ args[]) {\n        intt a, b, x;\n        a=Integer.parseInt (args[0]); //命令行输入第一个数\n\
+    \        b=Float.parseFloat (args[1]); //命令行输入第二个数\n        x=-b/a; // 求根 x\n\
+    \        System.out.println(\"a=\"+a); // Out Result\n        System.out.println(\"\
+    b=\"+b);\n        System.out.println(\"x=\"+x);\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# # Demo3 解析：
+
+
+    其中语句：a=Float.parseFloat (args[0]);
+
+
+    转换为浮点数
+
+
+    这是命令行输入的第一个数
+
+
+    Eclipse“运行”——Java应用程序对话框的(x)=自变量栏中键入：
+
+    2.0 6.0
+
+    运行程序，屏幕输出结果如下：
+
+    a=2.0
+
+    b=6.0
+
+    x=-3.0
+
+    这里： 2.0和6.0分别作为第1和第2个参数传递给args[0]和args[1]。'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: '# # Lab 3-1
+
+
+    +   题1：编写一个程序，计算方程 ax=b 的x，其中a、b通过命令行输入，且为长整型，但 x 为Double型。
+
+
+    +   题2：程序计算：华氏温度转换为摄氏温度： c=5(F-32)/9，其中F值通过命令行输入。
+
+
+    +   选作：求解二元一次方程。系数通过命令行输入，假设输入能够有解。'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '# 选择结构
+
+
+    +   - 选择结构，也叫分支结构
+
+    +   - Java分支选择语句：
+
+    +     - **if**　 二选一
+
+    +     - **switch**　 多选一
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_104_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: '# # if 语句
+
+
+    +   - if (布尔表达式) 语句
+
+
+    +   - if (布尔表达式) 语句1 else 语句2
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_105_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: '# 选择结构 Demo1：
+
+
+    ```
+
+    public class MinNum {//【例3-4】命令行输入2个整数，输出较小者
+
+    public static void main(String args[]) {
+
+    int x, y, min;
+
+    x=Integer.parseInt(args[0]); //命令行第一个数
+
+    y=Integer.parseInt(args[1]); //命令行第一个数
+
+
+    if(x<y) min=x; // 比较 x、y的大小
+
+    else min=y;
+
+
+    System.out.println("x="+x+“ y="+y);
+
+    System.out.println("min="+min);
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: "# # 选择结构 Demo2:\n\n```\npublic class Root { // [例3-5]:求解ax+b=0(a≠0)的根\npublic\
+    \ static void main(String args[]) {\n    float a, b, x;\n\na=Float.parseFloat\
+    \ (args[0]); // 输入a\nb=Float.parseFloat (args[1]); // 输入b\n\nif (Math.abs(a)>0.000001f)\
+    \ { // a!=0\n    x=-b/a;\n    System.out.println(\"x=\"+x); // 输出x\n    }\n}\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: "# if 语句嵌套\n\n+   if 语句中可以包含if语句，形成嵌套\n\n```\nif（布尔表达式1）\n    语句1\nelse if（布尔表达式2）\n\
+    \    语句2\n\n    ……\n        else if（布尔表达式n）\n            语句n\n```"
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: "```\n```java\npublic class Function{\n    public static void main(String args[])\
+    \ {\n        float x, y;\n        x=Float.parseFloat (args[0]);\n        if (\
+    \ x<0 )\n            y = 0;\n        else if ( x >=0 && x <= 10 )\n          \
+    \  y = x;\n        else if ( x > 10 && x <= 20 )\n            y = 10;\n      \
+    \  else\n            y = -0.5f * x + 20;\n        System.out.println(\"x=\"+x);\n\
+    \        System.out.println(\"y=\"+y);\n    }\n}\n```\n```\n\n| 例3-6 分段函数 |  |\n\
+    |---|---|\n| x | y |\n| x<0 | 0 |\n| 0<=x<=10 | x |\n| 10<x<=20 | 10 |\n| 20<x\
+    \ | 0.5x+20 |"
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '# # Lab 3-1
+
+
+    # ## 题3：计算分段函数的值
+
+
+    |    x    |    y    |
+
+    |---------|---------|
+
+    | x<0     | -1      |
+
+    | x=0     | 0       |
+
+    | 0<x≤10  | 1       |
+
+    | 10<x≤20 | 2       |
+
+    | 20<x    | x/2 + 20|'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: "# # Switch语句\n\n```\nswitch (表达式) {\n    case 值1: 语句块1; // 如果表达式值为值1，执行语句块1\n\
+    \        break; // 终止，结束switch语句\n    case 值2: 语句块2;\n        break; // 终止，结束switch语句\n\
+    \    ......\n    case 值n: 语句块n; // 如果表达式值为值n，执行语句块n\n        break; // 终止，结束switch语句\n\
+    \    default: // 如果表达式值与值1～值n都不同，执行语句块n+1\n        语句块n+1;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: '# # Switch语句
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_112_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: '// 【例3-7】命令行输入1～12之间的数字，输出对应的月份的英文名
+
+    public class Chapter37 {
+
+    public static void main(String[] args) {
+
+    String str="";
+
+    switch(Integer.parseInt(args[0])){//根据输入的值进行多选
+
+    case 1: str="January"; break;
+
+    case 2: str="February"; break;
+
+    case 3: str="March"; break;
+
+    case 4: str="April"; break;
+
+    case 5: str="May"; break;
+
+    case 6: str="June"; break;
+
+    case 7: str="July"; break;
+
+    case 8: str="August"; break;
+
+    case 9: str="September"; break;
+
+    case 10: str="October"; break;
+
+    case 11: str="November"; break;
+
+    case 12: str="December"; break;
+
+    default: str="The Input Error!";
+
+    }
+
+    System.out.println(str);//输出
+
+    }}'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: '# # 多分支Demo：【例3-8】
+
+
+    将百分制成绩转化为优秀、良好、中等、及格和不及格的5级制成绩。
+
+
+    标准为：
+
+
+    优秀： 90~100分；
+
+    良好： 80~89分；
+
+    中等： 70~79分；
+
+    及格： 60~69分；
+
+    不及格：60分以下
+
+
+    思路
+
+
+    +   - 第一步： 将百分制划分等级
+
+    +   - 第二步： 将等级对应的中文字符输出'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: "```\n// 教材 Chapter 3，【例3-8】命令行输入百分制成绩转换为等级制\npublic class Chapter38 {\n   \
+    \ public static void main(String[] args) {\n        String newGrade=\"\"; // 存放新的等级成绩\n\
+    \        int grade,temp; // grade为原来的百分制成绩\n        grade=Integer.parseInt(args[0]);\n\
+    \n        System.out.println(\"百分制的成绩为: \"+grade);\n        switch(grade/10){\n\
+    \        case 10:\n        case 9: newGrade =\"优秀\"; break;\n        case 8: newGrade\
+    \ =\"良好\"; break;\n        case 7: newGrade =\"中等\"; break;\n        case 6: newGrade\
+    \ =\"及格\"; break;\n        case 5:\n        case 4:\n        case 3:\n       \
+    \ case 2:\n        case 1:\n        case 0: newGrade =\"不及格\"; break;\n      \
+    \  default: newGrade=\"输入的数据错误\";\n        }\n        System.out.println(\"对应的等级为:\
+    \ \"+newGrade);\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: '```
+
+    // 新的处理思路
+
+    public class Chapter38_New { //@param args: 百分制成绩
+
+    public static void main(String[] args) {
+
+    String newGrade=""; // 存放新的等级成绩
+
+    int grade; // grade为原来的百分制成绩
+
+    grade=Integer.parseInt(args[0]);
+
+    if (grade>100 | grade<0) {
+
+    System.out.println("输入数据出错，程序退出");
+
+    System.exit(0);
+
+    }
+
+    System.out.println("百分制的成绩为： "+grade);
+
+    switch(grade/10){
+
+    case 10:
+
+    case 9: newGrade ="优秀"; break;
+
+    case 8: newGrade ="良好"; break;
+
+    case 7: newGrade ="中等"; break;
+
+    case 6: newGrade ="及格"; break;
+
+    default: newGrade ="不及格";
+
+    }
+
+    System.out.println("对应的等级为： "+newGrade);
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: '# # Lab3-2
+
+
+    +   题1：
+
+    +   使用switch计算运动员名次与分值：
+
+    +   名次    分值
+
+    +   1    7
+
+    +   2    5
+
+    +   3    4
+
+    +   4    3
+
+    +   5    2
+
+    +   6    1
+
+
+    +   命令行输入名次，程序输出转换后的分值
+
+
+    +   选做：累计输入，并给出每次累计的结果，直到输入一个负数表示介绍。'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: "# # 循环结构\n\n+   ## 循环语句\n+   \n+   - 在一定条件下，反复执行一段程序代码  \n+   - 被反复执行的程序代码称为循环体。\n\
+    \n+   ## Java提供的循环语句有\n+   \n+   - while语句  \n+   - do...while语句  \n+   - for语句。\n\
+    \n![](img/80da1d99a94a92757465da523b64f0ce_118_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: "# # while 语句\n\n### 语句格式：\nwhile （布尔表达式） {\n    循环体\n}\n\n含义：当逻辑表达式计算结果为true时，重复执行循环体。\n\
+    \n![](img/80da1d99a94a92757465da523b64f0ce_119_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: "# # 循环控制Demo1，【例3-9】\n\n```\npublic class Factorial { // 计算10!\npublic static\
+    \ void main(String args[])\n{\n    int i=1;    // 循环变量\n    double s=1; // 存放结果的变量\n\
+    \n    while (i<=10) {\n    s=s*i;    // 循环体\n    i=i+1;\n    }\n    System.out.println(\"\
+    10!=\"+s);\n}\n}\n```\n\n计算结果：\n10!=3628800.0"
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: "# # 一个小问题：\n\n+   上题答案： 10!=3628800.0  \n+   正确结果应该为： 10!=3628800  \n+   How\
+    \ to do ......？  \n+   使用语句  \n+   System.out.printf(\"10!= %.0f\",s);  \n+  \
+    \ 强制转换  \n+   System.out.printf(\"10!=\"+(long)s);  \n+   其中， printf语句和C中printf功能相同"
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: "# 循环结构 Demo2：【例3-10】\n\n```\n```java\npublic class Sum1 {  //例：计算1+3+5+...+99\n\
+    \    public static void main(String args[]) {\n        int i=1, s=0;   // i循环变量，s存放结果\n\
+    \n        do {\n            s=s+i;       // 循环体\n            i=i+2;\n        }\
+    \ while (i<100);\n\n        System.out.println(\"sum=\"+s);\n    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: "# 另一种算法\n\n// 教材 第3章，例3-10，计算1+2+...99\n\n```\npublic class Chapter310 {\n\
+    \    public static void main(String[] args) {\n        int i=1,s=0; //i循环变量，s\
+    \ 存放求和结果\n\n        do {\n            s+=i++;       // 循环体\n        }while (i<100);\n\
+    \n        System.out.printf(\"1+2+...+99=%d\",s);\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: "# 例3-10：计算1～50之间的奇数和与偶数和\n\n```\n```java\npublic class Sum2 {\n    public static\
+    \ void main(String args[]){\n        int i=1,oddSum=0,evenSum=0;\n        do {\n\
+    \            if(i%2==0)  evenSum+=i;    //求偶数和\n            else         oddSum+=i;\
+    \     //求奇数和\n            i++;\n        }while(i<=50);                  //判断i的值是否在1～50之间\n\
+    \n        System.out.println(\"Odd  sum=\"+oddSum);\n        System.out.println(\"\
+    Even sum=\"+evenSum);\n    }\n}\n```\n```\n\n其中，循环变量的修改可以程序的在其他什么地方？"
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: "# for语句\n\n```\n```text\nfor(Exp1;Exp2;Exp3) {\n    循环体\n}\n```\n```\n\nExpress,\
+    \ 表达式\nExp1, Exp2, Exp3\n\n+   Exp1：循环初值；\n+   Exp2：布尔表达式，判断循环是否继续；\n+   Exp3：修改循环变量值。\n\
+    \n![](img/80da1d99a94a92757465da523b64f0ce_127_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: "# 例3-12：计算1～100之间的整数之和\n\n```\npublic class Sum3 {\n    public static void\
+    \ main(String args[]) {\n\n        int i, s=0;    // 循环变量i，s为和数\n\n        for\
+    \ (i=1; i<=100; i++)\n            s+=i;       // 循环体，这里只有一条语句\n\n        System.out.println(\"\
+    1+2…+100=\"+s);\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: '# 例3-13：求Fibonacci数列中的前20项。
+
+
+    ```
+
+    public class Fibonacci {
+
+    public static void main(String args[]) {
+
+    long f1=1, f2=1;
+
+
+    for (int i=1; i<=10; i++) {
+
+    System.out.print(f1+" "+f2+" "); // 循环体
+
+    f1=f1+f2;
+
+    f2=f1+f2;
+
+    }
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: '# Lab 3-2
+
+
+    # 第3题：
+
+
+    +   - 在程序中
+
+    +     - 使用While计算1～100之和
+
+    +     - Do……While求1～100中的奇数之和
+
+    +     - For语句实现1～100中的偶数之和'
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: '# 例3-14：判断素数
+
+
+    +   - **素数** prime
+
+    +     - 除了1及自身外，不能被其它数整除的自然数。
+
+    +   - **判断素数的思路**
+
+    +     - 对于一个自然数k，与2~k-1之间的每个整数进行相除
+
+    +     - 如果没有一个能被整除，则k是素数；否则k不是素数
+
+    +   - **转为算法**
+
+    +     - 变量 i 从 2 开始，每次加 1，到 k-1 为止
+
+    +     - 每次用 k 去除 i，是否能够整除？——求余
+
+    +     - 判余数：为0，不是素数，终止循环
+
+    +     - m≠0，不能整除，进行下一次判断
+
+    +     - 判结束？正常结束（所有的数都判了，即i==k），是素数！
+
+    +     - 非正常结束，不是素数'
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: '```
+
+    public class Prime {
+
+    public static void main(String args[])
+
+    {
+
+    short k=Short.parseShort(args[0]); // 输入k
+
+    for (short i=2; i<=k-1; i++)
+
+    if (k % i ==0) break; // 循环体
+
+    // 如果i和k相等，说明完成了整个循环
+
+    if(i==k) System.out.println(k+"is a prime.");
+
+    else System.out.println(k+"isn''t a prime.");
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: "# # 多重循环 Multi-Loop\n\n例如：\nfor(... ; ... ; ) {    //外循环开始\n...\n    for(...;\
+    \ ... ; ) {  //内循环开始\n    ...\n    }   //内循环结束\n...\n}   //外循环结束"
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: "```\n// 例3-15: 计算输出1!、2!、...、5!以及它们的和\npublic class Factorials {\n    public\
+    \ static void main(String args[]) {\n        long s=0, k; // s存放阶乘之和，k为每一个数的阶乘\n\
+    \        for (int i=1; i<=5; i++) { //外循环开始\n            k=1;\n            for\
+    \ (int j=1; j<=i; j++) // 内循环开始\n                k=k*j; // 内循环体\n            //\
+    \ 内循环结束\n            System.out.println(i+\"!=\"+k);\n            s=s+k;\n   \
+    \     } //外循环结束\n        System.out.println(\"Total sum=\"+s);\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: "# # 程序运行结果\n\n1!=1  \n2!=2  \n3!=6  \n4!=24  \n5!=120  \nTotal sum=153"
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: '# 例：求2-50之间的所有素数
+
+
+    ```
+
+    public class Primes {
+
+    public static void main(String args[]) {
+
+    final int MAX=50;
+
+    int i, k;
+
+    boolean yes;
+
+
+    for(k=2; k<MAX; k++){ //外循环，k:2~50
+
+    yes=true;
+
+    i=2;
+
+    while (i<=k-1 && yes){ // 内循环，i:2~k
+
+    if (k%i++ ==0) yes=false; // 不是素数
+
+    }
+
+    if (yes) System.out.print(k+" ");
+
+    }
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: '```
+
+    public class Chapter316 {
+
+    public static void main(String args[]) {
+
+    for(int k=2; k<50; k++){ //外循环, k:2~50
+
+    boolean yes=true;
+
+    int i=2;
+
+    while( i<k && yes){ // 内循环, i:2~k
+
+    if (k%i++ ==0) yes=false; // 不是素数
+
+    }
+
+    if (yes) System.out.print(k+" ");
+
+    }
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: '程序运行结果如下：
+
+
+    2 3 5 7 11 13 17 19 23 29 31 37 41 43 47'
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: '# Lab 3-2
+
+
+    题4：使用循环程序，输出如下图形：
+
+
+    ```
+
+    ```text
+
+    *
+
+
+    * *
+
+
+    * * *
+
+
+    * * * *
+
+
+    * * * * *
+
+
+    * * * * * *
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: '# # 跳转语句
+
+
+    +   break语句：使程序的流程从一个语句块内部跳转出来。通常在switch和循环语句中使用。
+
+
+    +   continue语句：只在循环语句中使用。其作用是终止当前这一轮的循环，跳过本轮循环剩余的语句，直接进入下一轮循环。'
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: "# 例：找素数\n\n```\n```java\npublic class PrimeNumber {\n    public static void\
+    \ main(String args[]) {\n\n        for(int i=2; i<=50; i++) {  // 外循环\n      \
+    \      boolean flag=true;\n\n            for(int j=2; j<=i/2; j++){  // 内循环\n\
+    \                if(i%j==0) {        // 条件成立：余数为0\n                    flag=false;\
+    \     // 不是质数\n                    break;          // 结束本次内循环\n              \
+    \  }\n            }\n            if(flag) System.out.print(i+\" \");\n       \
+    \ }\n    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: '# Lab 3-3
+
+
+    +   1、第3章 习题 1
+
+
+    +   2、从命令行输入一串字符，统计其中的字母和数字的个数（建议课后练习）。
+
+
+    +   - 从命令行输入字符串的语句：s=args(0);\n  其中，变量s为字符串类型
+
+
+    +   - 求字符串长度的函数 s.length();
+
+
+    +   - 从字符串中读取一个字符的函数：c=s.CharAt(i); 其中，变量c为char型，i表示为第i个字符
+
+
+    +   - 判断c是否为数字的表达式
+
+
+    ```
+
+    c>=‘0’ && c<=‘9’  // c>=‘0’ & c<=‘9’
+
+    ```
+
+
+    判断是否为英文字符的表达式？'
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: '# Lab 3-3
+
+
+    +   3、计算 1!+3!+5!+……+99!
+
+
+    +   4、计算水仙花数——如果一个3位数，每一位数的立方和等于这个数本身，则该数为水仙花数'
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: '# Chapter 4
+
+
+    # 方法 - Method'
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: '# 概念
+
+
+    +   - **方法(Method)**
+
+    +     - 这是Java的一种命名
+
+    +     - 和通常意义上的“方法”不同
+
+    +   - **Java“方法”的定义**
+
+    +     - 完成特定功能的、相对独立的程序段
+
+    +   - **特点**
+
+    +     - 方法可以在不同的程序段中被多次调用
+
+    +     - 可增强程序结构的清晰度，提高编程效率
+
+    +   - **学习重点**
+
+    +     - 方法的声明和调用'
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: "# # Overview\n\n+   4.1 方法声明  \n+   4.2 方法调用  \n+   4.3 参数传递  \n+   4.4 递归\n\
+    \n课程教学重点之一"
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: '# Lab 4-1
+
+
+    +   1、例题 4-1
+
+    +   2、编写“方法”求4个数中的最大数，这4个数由命令行参数提供。
+
+    +   3、第4章 习题2：编写“方法”，计算由命令行输入的两个整数的最大公约数和最小公倍数。
+
+    +   4、第4章 习题6'
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: '# # Lab 4-1 Review
+
+
+    +   编写“方法”求4个数中的最大数，这4个数由命令行参数提供。
+
+
+    +   题意：
+
+    +   编写比较大小的程序（方法）
+
+    +   直接求解4个数的大小
+
+    +   编写的“方法”是比较两个数大小的，然后多次调用这个方法
+
+    +   Which One?'
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: "# 题6 实验代码\n\n```\n```java\npublic class no6 {\n    static int max(int x,int\
+    \ y){\n        if (x<y)\n            return y;\n        else\n            return\
+    \ x;\n    }\n\n    public static void main(String[] args) {\n        int a=Integer.parseInt(args[0]);\n\
+    \        int b=Integer.parseInt(args[1]);\n\n        int x=max(a,b);\n       \
+    \ System.out.println(x);\n    }\n}\n```\n```\n\n实验结果，比如输入7和34，结果输出为34"
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: '```
+
+    题6
+
+    public class zuida {
+
+    /**
+
+    static void area(int a,int b,int c,int d){
+
+    if(a<=b)
+
+    a=b;
+
+    else if(a<=c)
+
+    a=c;
+
+    else if(a<=d)
+
+    a=d;
+
+    System.out.println(a);
+
+    }
+
+    */
+
+    public static void main(String[] args) {
+
+    // TODO Autogenerated method stub
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: "```\n```java\npublic class xin {\n    static int da(int x,int y){\n       \
+    \ if (x>=y) {\n            return x;\n        }\n        return y;\n    }\n  \
+    \  public static void main(String[]args){\n        int x,y,a,b;\n        x=Integer.parseInt(args[0]);\n\
+    \        y=Integer.parseInt(args[1]);\n        a=Integer.parseInt(args[2]);\n\
+    \        b=Integer.parseInt(args[3]);\n        System.out.println(\"+a+\"+\"+b+\"\
+    +\"+x+\"+\"+y);\n        System.out.println(\"zuida=\"+da(da(x,y),da(a,b)));\n\
+    \    }\n}\n```\n```\n\n} 程序运行结果 3 4 1 2 zuida=4"
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: '# 第4章习题2：
+
+
+    编写“方法”，计算由命令行输入的两个整数的最大公约数和最小公倍数。'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: "```\n//求m 和 n 的最大公约数\npublic static int gongyue(int m, int n) {\n    while(m\
+    \ % n != 0) {\n        int temp = m % n;\n        m = n;\n        n = temp;\n\
+    \    }\n    return n;\n}\n//求m 和 n 的最小公倍数\npublic static int gongbei(int m, int\
+    \ n) {\n    return m * n / gongyue(m, n);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: "```\npublic class no7 {\n    static int gcd(int x, int y){\n        int r;\n\
+    \        r=y % x;\n        while (r!=0) {\n        y=x;\n        x=r;\n      \
+    \  r=y % x; }\n        return x;\n    }\n    public static void main(String[]\
+    \ args) {\n        int a=Integer.parseInt(args[0]);\n        int b=Integer.parseInt(args[1]);\n\
+    \        int n=gcd(a,b);\n        System.out.println(n);\n    }\n} // 实验结果 若输入4\
+    \ 与6， 所得结果为2\n```"
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: '# Lab 4-2
+
+
+    第4章
+
+
+    +   - 习题1～6
+
+
+    注意：使用“方法”完成习题'
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: "# # 一个参照\n\n+   ## 数学计算\n+   \n+   Y=Σ(1, 2, ... 100)  \n+   +Σ(200,201, ...\
+    \ 298)  \n+   +Σ(-1,-2 ... -99)  \n+   +Σ(51,52, ... 199)\n\n+   ## How to do?\n\
+    +   \n+   1. 在程序中使用4个循环"
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: "```\n```java\npublic class Chap4DemoMathod1 {\n    public static void main(String[]\
+    \ args) {\n        for(int i=2; i<=100; i=i+2)\n            //∑(2,4,6...100)\n\
+    \            f=f+i;\n\n        for(int i=200; i<=298; i=i+2)\n            //+∑(200,201,\
+    \ ...298)\n            f=f+i;\n\n        for(int i=-99; i<=-1; i=i+2) //+∑(-1,\
+    \ -3...\n        99)\n            f=f+i;\n\n        for(int i=51; i<=199; i=i+2)\n\
+    \            //+∑(51,52, ...199)\n            f=f+i;\n    }\n}\n```\n```\n\n#\
+    \ 编写一个累加的“子程序”，然后调用4次？\n\n![](img/80da1d99a94a92757465da523b64f0ce_158_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: "```\npublic class Chap4DemoMathod2 {\n    static int func(int n, int m) { //\
+    \ 定义Java方法\n        int sum=0;\n        for( ; n<=m; n++ ) //Σ (n, n+1, ... m)\n\
+    \        sum=sum+n;\n        return sum;\n    }\n    public static void main(String[]\
+    \ args) {\n        int f;\n        f = func(2, 100)+func(200, 298)+ // 调用方法\n\
+    \        func(-99, -1)+func(51, 199);\n        System.out.printf(\"The Result:\
+    \ %d\", f);\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: "# # 什么时候使用“方法”\n\n+   - 用户程序经常重复的任务  \n+     - 用户自己编写“方法”代码  \n+     - 例如前面举例的第二种做法\n\
+    \n+   - 常用的任务——由Java提供  \n+     - 数学函数；  \n+     - 输出操作(print);  \n+     - 字符串操作\
+    \  \n+     - 界面操作  \n+     - ......"
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: '# 关于 “方法”
+
+
+    +   Java的方法
+
+    +   在其他语言中，多半被叫做 “子程序”、“函数”
+
+
+    +   Java “方法” 的规则
+
+    +   先声明，后使用
+
+    +   只能在类(Class)中声明
+
+
+    +   Java “方法” 声明的格式：
+
+    +   [修饰符] 返回值类型 方法名 [（参数表）]
+
+    +   {
+
+    +   变量声明
+
+    +   语句
+
+    +   }
+
+
+    +   如果有返回值，使用 return 语句'
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: "# # “方法声明”\n\n[修饰符] 返回值类型 方法名 [（参数表）]\n{\n    变量声明\n    语句\n}\n\n+   - 修饰符可以是：public、private、protected、默认等\n\
+    +   - “类型” → 返回结果的数据类型\n+   - 方法名 → 用户定义的标识符，不与 Java关键字重名\n+   - 参数表 → 调用方法时，传递的参数及其数据类型\n\
+    +   - 方法声明不能嵌套：不能在方法中再声明其它的方法"
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: '# 【例4-1】：计算平方的方法
+
+
+    类型修饰符 方法名 参数
+
+
+    static int square(int x)
+
+
+    方法体 { int s; s=x*x; return s; }
+
+
+    变量声明 语句 返回语句'
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: '# # 方法调用
+
+
+    +   - 定义了方法后，要使用“方法” → 方法调用（Call）
+
+    +   - 调用格式：
+
+    +     - 方法名（[实际参数表]）
+
+    +     - 有返回值的“方法”可作为表达式或表达式的一部分来调用，其在表达式中出现，例如 y=square(20)；'
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: "# 【例4-2】\n\n```\npublic class SquareC{\n    static int square(int x) {    //\
+    \ 计算平方的方法\n        int s;\n        s=x*x;\n        return s;\n    }\n\n    public\
+    \ static void main(String[] args){\n        int n = 5;\n        int result = square(n);\
+    \    // 调用“方法”\n        System.out.println(result);\n    }\n}\n```\n\n![](img/80da1d99a94a92757465da523b64f0ce_165_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: '# # 方法语句
+
+
+    +   - 方法语句——使用“方法”的语句——调用
+
+    +   - 以独立语句的形式调用“方法”
+
+    +     方法名([实际参数表])
+
+    +   - “方法语句”
+
+    +     - “方法”没有返回值时的调用
+
+    +     - 方法前面的类型修饰符为 void
+
+    +   - Demo：求面积的“方法”'
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: "# 例【4-3】 以方法语句方式调用方法\n\n```\nclass AreaC {\n    static void area(int a , int\
+    \ b) {\n        int s;\n        s = a * b;\n        System.out.println(s); //\
+    \ 直接输出， 没有返回值\n    }\n    public static void main(String[] args){\n        int\
+    \ x = 5, y=3;\n        area(x, y); // 调用方法AreaC\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: '# # 无参方法
+
+
+    有些“方法”没有输入参数，例【4-4】：
+
+    class SumC {
+
+    static void sum() { // 无参、无返回值“方法”
+
+    int i=3, j=6;
+
+    int s = i + j;
+
+    System.out.println(s);
+
+    }
+
+    public static void main(String[] args) {
+
+    sum(); // 调用无参数“方法”
+
+    }
+
+    }'
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: '# ### 4.3 参数传递——值传递
+
+
+    参数传递规则
+
+
+    +   - 调用带形参的“方法”时，必须提供实参
+
+    +   - 实参 → 形参，称为参数传递
+
+    +   - 被调用的“方法”用实参执行方法体
+
+
+    在Java中，只有值传递
+
+
+    +   - 参数以值的方式进行传递，即调用时将实参的值传递给“方法”的形参
+
+
+    问题：如果形参变了，实参变吗？'
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: "# 例【4-5】：交换两个变量的值“方法”\n\n```\npublic class Chap45Swap {\n    static void swap(int\
+    \ x, int y) { // 交换x、y的值的“方法”\n        System.out.println(\"交换前：x=\"+x+\" y=\"\
+    +y);\n        int temp = x; x = y; y = temp; // 交换\n        System.out.println(\"\
+    交换后：x=\"+x+\" y=\"+ y);\n    }\n    public static void main(String[] args) {\n\
+    \        int a = 23, b = 10;\n        System.out.println(\"调用前：a=\"+a+\" b=\"\
+    +b);\n        swap(a, b); // 调用“方法”\n        System.out.println(\"调用后：a=\"+a+\"\
+    \ b=\"+b);\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: "# # 值传递的例子\n\n+   ### 【例4-5】运行的结果\n+   调用前：a=23 b=10  \n+   交换前：x=23 y=10 \
+    \ \n+   交换后：x=10 y=23  \n+   调用后：a=23 b=10\n\n+   ### 说明：\n+   - 参数传递：a → x; b\
+    \ → y  \n+   - 调用前后：a、b的值没有变  \n+   - 交换前后：x、y的值改变了\n\n```\n```java\nstatic void\
+    \ swap(int x, int y) {\n    int temp = x; x = y; y = temp; // 交换\n}\npublic static\
+    \ void main(String[] args) {\n    int a = 23, b = 10;\n    swap(a, b); // 调用 “方法”\n\
+    }\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: "# # 4.4 递归(recursion)\n\n+   递归  \n+   用自身的结构来描述自身  \n+   典型的例子是阶乘运算\n\n+ \
+    \  简而言之  \n+   递归就是自己调用自己"
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: "# # 【例4-6】递归算法求n!\n\n## n!的算法\nn! = n×(n-1)!  \n(n-1)! = (n-1)×(n-2)!  \n(n-2)!\
+    \ = (n-2)×(n-3)!  \n……  \n2! = 2×1!  \n1! = 1;\n\n## 递归定义 F=n! ，设计算阶乘的“方法”为fac(n)\n\
+    fac(n) = n * fac(n-1)  \n当n=1, n=0时，fac(n)=1"
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: "# And More\n\n计算阶乘，也可以使用循环结构的“方法”\n\n```\n```java\nStatic long fac(int n) {\n\
+    \    long m=1;\n    for (int i=1; i<=n; i++)\n        m = m*i;\n    return m;\n\
+    }\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: "# # Compare:\n\n```\n```c\nstatic long fac( int n){\nif (n == 1)\nreturn 1;\n\
+    else\nreturn n*fac(n-1);\n}\n```\n```\n\n```\n```c\nStatic long fac(int n) {\n\
+    \    long m=1,i;\n    for (i=0; i<=n; i++)\n        m = m*i;\n    return m;\n\
+    }\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: '# 递归程序设计的规范
+
+
+    +   计算递归公式
+
+
+    +   确定递归出口
+
+
+    +   例如：求1、1、2、3、5、8、13、21，34......第 n 项的输出
+
+
+    +   递归公式： f(n) = f(n-1)+f(n-2)
+
+
+    +   递归出口： f(1)=1， f(2)=1'
+  merge: -1
+  img_proc: true
+- pgno: 178
+  md: '# # 例：梵塔（Hanoi）问题
+
+
+    据古印度神话，在贝拿勒斯的圣庙里安放着一块铜板，板上有3根宝石针。梵天（印度教的主神）在创造世界的时候，在其中的一根针上摆放了由小到大共64片中间有空的金片。无论白天和黑夜，都有一位僧侣负责移动这些金片。移动金片的规则是：一次只能将一个金片移动到另一根针上，并且在任何时候以及任意一根针上，小片只能在大片的上面。当64个金片全部由最初的那根针上移动到另一根针上时，这世界就在一声霹雳中消失。
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_178_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 179
+  md: '# # 第5章
+
+
+    # # 数组 Array'
+  merge: -1
+  img_proc: true
+- pgno: 180
+  md: '# Review: about Method
+
+
+    +   - 编写“方法”
+
+    +   - 在 **Main** 方法中调用，也可以在“方法”中调用“方法”。
+
+    +   - 所有“方法”，都是“类”的一部分，且“地位”相当，因此方法不能“嵌套”
+
+    +   - 方法
+
+    +     - 方法类型（返回值），方法名，形式参数
+
+    +   - 调用
+
+    +     - “方法”调用：方法有返回值时
+
+    +     - “方法”语句：方法没有返回值（**void**）'
+  merge: -1
+  img_proc: true
+- pgno: 181
+  md: '# # Review: about Method
+
+
+    +   - 要求
+
+    +     - 能够解读“方法”的程序代码
+
+    +     - 编写简单的“方法”
+
+    +   - 常用的方法（自定义）
+
+    +     - 水仙花数
+
+    +     - 计算阶乘；
+
+    +     - 求阶乘之和
+
+    +     - 计算多项式——例如第4章习题3
+
+    +     - 计算公约数、公倍数
+
+    +     - 判断素数
+
+    +     - **Fibonacci**数列'
+  merge: -1
+  img_proc: true
+- pgno: 182
+  md: '# # Introduction
+
+
+    +   - 数组，Array(阵列)
+
+    +   - 变量：定义单个数据
+
+    +   - 数组：定义多个数据
+
+    +     - 具有相同性质的一批数据
+
+    +     - Java 数组：用一个变量表示一组相同类型的数据'
+  merge: -1
+  img_proc: true
+- pgno: 183
+  md: '# # For Example
+
+
+    +   - 一组n个学生的成绩数据处理
+
+    +     - 输入
+
+    +     - 输出
+
+    +     - 排序
+
+    +     - 求最大
+
+    +     - 求平均值
+
+    +     - 判断不及格
+
+    +     - 统计分数段
+
+    +     - ......
+
+    +   - 给每一个学生的成绩数据设定一个变量？
+
+    +     - **NO!**'
+  merge: -1
+  img_proc: true
+- pgno: 184
+  md: "# # Overview\n\n+   5.1 一维数组\n+   \n+   5.2 多维数组\n+   \n+   5.3 数组的基本操作\n+\
+    \   \n+   5.4 数组应用举例\n+   \n+   5.5 数组参数\n+   \n+   5.6 字符串"
+  merge: -1
+  img_proc: true
+- pgno: 185
+  md: '# # Lab
+
+
+    +   - 习题1 （Page 75）
+
+    +     - 10个整数可以是直接赋值，也可以通过命令行输入
+
+    +   - 习题8
+
+    +   - 习题5
+
+    +   - 习题2（选做）
+
+    +   - 习题3（选做）'
+  merge: -1
+  img_proc: true
+- pgno: 186
+  md: '# 5.1 一维数组
+
+
+    +   - 数学
+
+    +     - X₁, X₂, ……，Xₙ
+
+    +   - 计算机语言
+
+    +     - X[1], X[2], ……，X[N]
+
+    +     - 一个变量：X
+
+    +     - 方括号是下标
+
+    +   - 数组
+
+    +     - 一个变量名表示一组数据，每个数据称为数组元素
+
+    +     - 每个元素通过下标来区分
+
+    +   - 一维数组
+
+    +     - 以一个下标确定数组中的不同元素
+
+    +   - 多维数组
+
+    +     - 多个下标表示一个数组元素'
+  merge: -1
+  img_proc: true
+- pgno: 187
+  md: '# # 1 一维数组的声明
+
+
+    +   - 一维数组声明的格式
+
+
+    类型标识符 数组名[ ]
+
+
+    或
+
+
+    类型标识符[ ] 数组名
+
+
+    +   - 类型标识符指定每个元素的数据类型'
+  merge: -1
+  img_proc: true
+- pgno: 188
+  md: "# # For Example\n\n+   - 表示学生的成绩(整数)，可以声明数组**score**:\n+   \n+     int score[];\n\
+    +   \n+     - 其中，数组的名字为**score**，每个元素都是整型\n\n+   - **Another**:\n+   \n+     -\
+    \ 表示体重(浮点数)的数组类型为**float**的**weight**\n+   \n+     - 声明:\n+   \n+       float\
+    \ [ ] weight;\n\nNote: 方括号可以在变量名的后面，也可以在类型名单后面"
+  merge: -1
+  img_proc: true
+- pgno: 189
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 190
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 191
+  md: '# 使用数组的好处
+
+
+    +   - 减少程序中的变量数量
+
+    +   - 统一的数组名，易于理解
+
+    +   - 对数据元素的操作可以使用循环语句'
+  merge: -1
+  img_proc: true
+- pgno: 192
+  md: "# # 一个例子\n\n例：计算100个学生的平均成绩的程序段：\n\n```\nfloat sum;\nint  i;\nint score[ ];\n\
+    score = new int[100];\n/* 输入数组各元素的值，代码省略   */\nsum=0;\nfor ( i=0; i<100;   i++)\n\
+    \    sum=sum+score[i];   // 累计\nsum=sum/100;   // 平均值=累计值/数组元素数目\n```"
+  merge: -1
+  img_proc: true
+- pgno: 193
+  md: '# # 数组初始化
+
+
+    # ## 在声明的同时进行初始化
+
+
+    +   - 用1条语句声明并初始化数组，即将前述的声明语句、new语句合并为一条语句：
+
+    +     类型标识符 数组名[]=new 类型标识符[元素个数]
+
+
+    # ## 或
+
+
+    +   - 类型标识符[] 数组名=new 类型标识符[元素个数]
+
+
+    +   - 例如，要表示10个学生的学号的数组no：
+
+    +     int no[] = new int[10];'
+  merge: -1
+  img_proc: true
+- pgno: 194
+  md: '# # 赋初值初始化数组
+
+
+    +   - 可以在声明数组的同时，给数组元素赋初值
+
+    +   - 所赋初值的个数决定数组元素的数目
+
+    +   - 其格式如下：
+
+    +     类型标识符 数组名 [ ] = { 初值表 }
+
+    +     初值表是用逗号隔开的初始值， 例如：
+
+    +     int score[]={65,34,78,81,56,92,56,87,90,77};
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_194_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 195
+  md: '# # 5.2 多维数组
+
+
+    # ## 二维数组的声明
+
+
+    ◆ 二维数组的声明方式与一维数组类似，只是要给出两对方括号。二维数组声明形式如下：
+
+    类型标识符 数组名[][]
+
+    或
+
+    类型标识符[][] 数组名
+
+    例如：
+
+    int a[][]; // 一般把第一个[]叫做 行 // 第二个[]叫做 列'
+  merge: -1
+  img_proc: true
+- pgno: 196
+  md: '# # 2 二维数组的初始化
+
+
+    +   - 用new初始化二维数组
+
+    +     - 先声明数组再初始化
+
+    +       数组名 = new 类型标识符[行数][列数]
+
+    +       例如：
+
+    +       ```java
+
+    +       int a[][];
+
+    +       a=new int[3][4];
+
+    +       ```'
+  merge: -1
+  img_proc: true
+- pgno: 197
+  md: '# 二维数组：声明同时初始化
+
+
+    类型标识符 数组名[][]=new 类型标识符[行数][列数]
+
+    或
+
+    类型标识符[][] 数组名=new 类型标识符[行数][列数]
+
+
+    ```
+
+    int a[][]=new int[3][4];
+
+    ```
+
+
+    数组中各元素通过两个下标来区分
+
+    每个下标的最小值为0，最大值分别比行数或列数少1。
+
+
+    ```
+
+    a[0][0], a[0][1], a[0][2], a[0][3]
+
+    a[1][0], a[1][1], a[1][2], a[2][3]
+
+    a[2][0], a[2][1], a[2][2], a[2][3]
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 198
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 199
+  md: '# # 赋初值初始化二维数组
+
+
+    +   - 类型标识符 数组名[][]={{初值表}，{初值表}，...，{初值表}}；
+
+
+    ```
+
+    ```c
+
+    int gd[][]={{65,34,78},{81,56,92},{56,87,90},{92, 69, 75}};
+
+    ```
+
+    ```
+
+
+    Question: 数组gd[][]是几乘几？'
+  merge: -1
+  img_proc: true
+- pgno: 200
+  md: '数组gd共有12个元素，元素gd[0][0]，gd[0][1]，gd[0][2]，gd[1][0]，...，gd[3][2]的初始值分别为65， 34，
+    78， ...， 75， 如表所示
+
+
+    | gd [0][0] 65 | gd [0][1] 34 | gd [0][2] 78 |
+
+    |---|---|---|
+
+    | gd [1][0] 81 | gd [1][1] 56 | gd [1][2] 92 |
+
+    | gd [2][0] 56 | gd [2][1] 87 | gd [2][2] 90 |
+
+    | gd [3][0] 92 | gd [3][1] 69 | gd [3][2] 75 |'
+  merge: -1
+  img_proc: true
+- pgno: 201
+  md: '# # 5.3 数组的基本操作
+
+
+    # ## 1、数组的引用
+
+
+    对数组的应用通常是对其元素的引用
+
+
+    ```
+
+    int age[]=new int[3];
+
+    age[0]=25;
+
+    age[2]=2+age[0] ;
+
+    ```
+
+
+    # ## 2、数组的复制
+
+
+    ```
+
+    int a[]=new int[6];
+
+    int b[]={1,2,3,4,5,6};
+
+    for(int i=0;i<6;i++) a[i]=b[i];
+
+    或  a=b;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 202
+  md: "# # 举例\n\n```\nint c[][],d[][], e[][],i, j;\nc=new int[3][3];\nd=new int[3][3];\n\
+    e=new int[3][3];\nfor(i=0;i<3; i++)\n    for (j=0; j<3; j++)\n    {\n        d[i][j]=i+j;\n\
+    \        c[i][j]=d[i][j];\n    }\ne=d;\n```\n\n阅读并归纳程序代码实现的功能"
+  merge: -1
+  img_proc: true
+- pgno: 203
+  md: "# 3、数组的输出\n\n数组输出通常是逐个元素结合循环语句实现\n\n```\nint a[]=new int[6];\n\nfor(int i=0;i<6;i++)\
+    \  {\n    a[i]=i;\n    System.out.println(a[i]);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 204
+  md: "# 程序举例\n\n```\n```java\nclass ArrayC {\n    public static void main(String[]\
+    \ args) {\n        int a[],b[], i, j;\n        a=new int[3];\n        b=new int[5];\n\
+    \n        System.out.println(\"a.length=\"+a.length);\n        for ( i=0; i<a.length;\
+    \ i++)   {\n            a[i]=i;\n            System.out.print(a[i]+\"    \");\n\
+    \        }\n        System.out.println();\n        （接下页）\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 205
+  md: "```\nSystem.out.println(\"Before array assignment\");\n    System.out.println(\"\
+    b.length=\"+b.length);\n    for (j=0; j<b.length; j++) {\n        b[j]=j*10;\n\
+    \        System.out.print(b[j]+\"\\\\t\");\n    }\n    System.out.println();\n\
+    \    b=a; // 注意，数组a、b长度不一样\n    System.out.println(\"After array assignment\"\
+    );\n    System.out.println(\"b.length=\"+b.length);\n    for (j=0; j<b.length;\
+    \ j++)\n        System.out.print(b[j]+\"\\\\t\");\n    System.out.println();\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 206
+  md: '程序运行结果如下：
+
+    a.length=3
+
+    0 1 2
+
+    Before array assignment
+
+    b.length=5
+
+    0 10 20 30 40
+
+    After array assignment
+
+    b.length=3
+
+    0 1 2'
+  merge: -1
+  img_proc: true
+- pgno: 207
+  md: '# # Example AttayC2'
+  merge: -1
+  img_proc: true
+- pgno: 208
+  md: "```\n```java\nint c[][],d[][],i,j;\nc=new int[2][2];\nd=new int[3][3];\nSystem.out.println(\"\
+    Array d:\");\nfor(i=0;i<d.length; i++) {\n    for (j=0; j<d[i].length; j++) {\n\
+    \        d[i][j]=i+j;\n        System.out.print(d[i][j]+\"\\t\");\n    }\n   \
+    \ System.out.println();\n}\nc=d;\nSystem.out.println(\"Array c:\");\nfor(i=0;i<c.length;\
+    \ i++){\n    for (j=0; j<c[i].length; j++)\n        System.out.print(c[i][j]+\"\
+    \\t\");\n    System.out.println();\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 209
+  md: '# 程序运行结果如下：
+
+
+    Array d
+
+    0   1   2
+
+    1   2   3
+
+    2   3   4
+
+
+    Array c
+
+    0   1   2
+
+    1   2   3
+
+    2   3   4'
+  merge: -1
+  img_proc: true
+- pgno: 210
+  md: '# 5.4 数组应用举例'
+  merge: -1
+  img_proc: true
+- pgno: 211
+  md: '# # 排序
+
+
+    +   - 排序是将一组数按照递增或递减的顺序排列
+
+    +   - 排序的方法很多，其中最基本的是选择法
+
+    +   - 选择法排序基本思想
+
+
+    +   ① 对于给定的 n 个数，从中选出最小（大）的数，与第1个数交换位置 → 最小（大）的数置于第1个位置
+
+    +   ② 对第1个数外的剩下的 n−1 个数，重复步骤1，将次小（大）的数置于第2个位置
+
+    +   ③ 对于剩下的 n−2，n−3，…，n−n+2 个数用同样的方法，分别将第3个最小（大）数置于第3个位置，第4个最小（大）数置于第4个位置，
+
+    +   ④ ……，第 n−1 个最小（大）数置于第 n−1 个位置'
+  merge: -1
+  img_proc: true
+- pgno: 212
+  md: '# # For Example
+
+
+    假定有7， 4， 0， 6， 2， 5， 1的排序：
+
+
+    +   1. 7个数中， 最小数是0， 与第1个数7交换位置， 结果为：
+
+    +   0 4 7 6 2 5 1
+
+
+    +   2. 余下的6个数最小数是1， 与第2个数4交换， 结果为：
+
+    +   0 1 7 6 2 5 4
+
+
+    +   3. 剩下的5个数最小数是2， 与第3个数7交换， 结果为：
+
+    +   0 1 2 6 7 5 4
+
+
+    +   4. 剩下的4个数最小数是4， 与第4个数6交换， 结果为：
+
+    +   0 1 2 4 7 5 6'
+  merge: -1
+  img_proc: true
+- pgno: 213
+  md: "# # Cont\n\n5、剩下的3个数最小数是5，与第5个数7交换，结果为：\n0 1 2 4 5 7 6\n\n6、剩下的**2个数是6**，与数**7**交换，结果为\
+    \  \n0 1 2 4 5 6 7\n\n# ## 排序过程结束\n\n可见：\n\n+   - 对n个待排序的数，要进行n-1轮的选择和交换过程\n\n\
+    +   - 其中第 i 轮的选择和交换过程中，要进行n-i次的比较\n\n+   - n个数的排序需要多少次排序操作？"
+  merge: -1
+  img_proc: true
+- pgno: 214
+  md: "# # 例一-排序\n\n```\n```java\nimport java.io.*;\nclass ArraySort  {\n    public\
+    \ static void main(String[] args) throws\n    IOException {\n        BufferedReader\
+    \ keyin =new BufferedReader(new\n        InputStreamReader(System.in));\n    \
+    \    int a[],i, j, k, temp; String c;\n        System.out.println(\"Input the\
+    \ number of\n        array elements!\");\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 215
+  md: '```
+
+    c=keyin.readLine();
+
+    temp=Integer.parseInt(c);
+
+    a = new int[temp];
+
+    System.out.println("Input " + temp
+
+    + " numbers. One
+
+    per line!");
+
+    for ( i=0; i<a.length; i++)
+
+    {
+
+    c=keyin.readLine();
+
+    a[i]=Integer.parseInt(c);
+
+    }
+
+    System.out.println("After sorting!");
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 216
+  md: "```\nfor ( i=0; i<a.length-1; i++) {\n    k = i;\n    for( j = i + 1 ;  j<\
+    \ a.length; j++)\n        if(a[j]<a[k]) // 找最小的元素的下标\n            k = j;\n   \
+    \ temp = a[i]; // 较小数换至第k个元素位置\n    a[i]= a[k];\n    a[k] = temp;\n}\nfor ( i=0;\
+    \ i<a.length; i++)// 排序后的输出\n    System.out.println(a[i]) ;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 217
+  md: '# 从键盘输入
+
+
+    +   - System.out.print ——标准输出流
+
+    +   - 输入：
+
+    +     - 命令行——Eclipse“运行设置”中的参数
+
+    +     - 直接从键盘输入——Like C Language
+
+    +   - ——专业术语：控制台窗口输入，即程序直接读取键盘输入的数据
+
+    +   - Java 控制台输入
+
+    +     - Scanner 对象'
+  merge: -1
+  img_proc: true
+- pgno: 218
+  md: '# Java 控制台输入
+
+
+    +   - **Scanner**
+
+    +     - 属于 Java 标准输入流 `System.in`
+
+    +     - 在程序顶部加上语句：
+
+    +       ```java
+
+    +       import java.util.*; // Java 的工具包
+
+    +       ```
+
+
+    使用标准输入流
+
+
+    +   1. 定义一个 **Scanner** 对象
+
+    +      ```java
+
+    +      Scanner in = new Scanner(System.in);
+
+    +      ```
+
+    +   2. **Scanner** 类用法
+
+    +      用法很多，包括输入各种类型的数据'
+  merge: -1
+  img_proc: true
+- pgno: 219
+  md: '# Scanner
+
+
+    +   - Example
+
+
+    ```
+
+    Scanner in = new Scanner(System.in);
+
+    System.out.println("请问你的姓名?");
+
+    String name = in.nextLine();
+
+    System.out.printf("哦, 你是"+ name);
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 220
+  md: '# # Scanner 对象（1）
+
+
+    # ## next 和 nextLine
+
+
+    +   - **next** 输入的字符是一个单词，即空格结束
+
+
+    +   - **nextLine**: 输入是一个语句，以回车结束'
+  merge: -1
+  img_proc: true
+- pgno: 221
+  md: "# # Scanner 对象(2)\n\n+   - Scanner 对象从控制台读取的是字符\n+   - 如果已定义了Scanner in对象，需要读取数据，可使用“方法”：\n\
+    \n+   1. 读取整型数  \n+      int n=in.nextInt();  // 回车结束输入\n\n+   2. 读取浮点数  \n+ \
+    \     float x=in.nextFloat();  // 回车结束输入\n\n+   3. 读取双精度数  \n+      double y=in.nextDouble();\
+    \ // 回车结束输入"
+  merge: -1
+  img_proc: true
+- pgno: 222
+  md: "# # Example\n\n+   - 从控制台读取**10个数据**，写入整型数组**a**中，程序代码为：\n+   \n+   ```java\n\
+    +   int [] a = new int[10];\n+   Scanner in = new Scanner(System.in);\n+   for(int\
+    \ i=0; i<10;i++)\n+       a[i]=in.nextInt();\n+   \n+   System.out.println(\"\
+    数组元素为\");\n+   for (int i=0; i<a.length;i++)\n+       System.out.print(a[i]+\"\
+    \  \");\n+   ```"
+  merge: -1
+  img_proc: true
+- pgno: 223
+  md: "# 使用对话框输入\n\n+   - 在 **Java** 中，提供对话框输入\n+   - 程序顶部加入语句\n+   \n+     ```java\n\
+    +     import javax.swing.*;\n+     ```\n+   - 在程序中使用：\n+   \n+     ```java\n+\
+    \     JOptionPane.showInputDialog\n+     ```\n+   - 例如：\n+   \n+     ```java\n\
+    +     String in_x =\n+     JOptionPane.showInputDialog(\"请输入：\");\n+     ```"
+  merge: -1
+  img_proc: true
+- pgno: 224
+  md: '# 使用对话框输入
+
+
+    +   - 使用对话框输入的也是字符，如果需要转换为其他类型的数据，使用Java方法
+
+    +     - `Integer.parseInt`
+
+    +     - `Double.PasreDouble`
+
+    +     - ……
+
+
+    +   - 注意：使用对话框，必须程序最后一条语句应该为 `System.exit(0);`
+
+    +     - 因为每打开一个对话框，相当于启动一个线程
+
+    +     - `System.exit()` 是结束线程的语句'
+  merge: -1
+  img_proc: true
+- pgno: 225
+  md: '# # 数组数据例--矩阵运算
+
+
+    数学中的矩阵在**Java**中用二维数组实现，本例中要进行矩阵的加、乘运算。
+
+
+    ```
+
+    ```java
+
+    class ArrayC3 {
+
+    public static void main(String[] args){
+
+    int c[][]={{1,2,3},{4,5,6},{7,8,9}};
+
+    int d[][]={{2,2,2},{1,1,1},{3,3,3}};
+
+    int i, j, k;
+
+    int e[][]=new int[3][3];
+
+    System.out.println(" Array c");
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 226
+  md: "```\n```java\nfor(i=0;i<c.length; i++){\n    for (j=0; j<c[i].length; j++)\n\
+    \        System.out.print(c[i][j]+\"\\t\");\n    System.out.println();\n}\nSystem.out.println(\"\
+    \ Array d\");\nfor(i=0;i<d.length; i++) {\n    for (j=0; j<d[i].length; j++)\n\
+    \        System.out.print(d[i][j]+\"\\t\");\n    System.out.println();\n}\n```\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 227
+  md: "```\nSystem.out.println(\" Array c+d\");\nfor(i=0;i<e.length; i++) {\n    for\
+    \ (j=0; j<e[i].length; j++) {\n    e[i][j]=c[i][j]+d[i][j];\n    System.out.print(e[i][j]+\"\
+    \\\\t\");\n    }\n    System.out.println();\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 228
+  md: "```\nSystem.out.println(\" Array c*d\");\nfor(i=0;i<3; i++) {\n    for(j=0;j<3;j++)\
+    \ {\n        e[i][j]=0;\n        for ( k = 0 ; k < 3 ; k ++ )\n        e[i][j]=e[i][j]+c[i][k]*d[k][j]\
+    \ ;\n        System.out.print(e[i][j]+\"\\t\"); }\n    System.out.println(); }\n\
+    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 229
+  md: '# # 程序运行结果如下：
+
+
+    Array c
+
+
+    1   2   3
+
+
+    4   5   6
+
+
+    7   8   9
+
+
+    Array d
+
+
+    2   2   2
+
+
+    1   1   1
+
+
+    3   3   3
+
+
+    Array c+d
+
+
+    3   4   5
+
+
+    5   6   7
+
+
+    10   11   12
+
+
+    Array c*d
+
+
+    12   12   12
+
+
+    21   21   21
+
+
+    30   30   30'
+  merge: -1
+  img_proc: true
+- pgno: 230
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 231
+  md: "# # 5.5 数组参数\n\n+   在java的过程中，允许参数是数组。在使用数组参数时，应该注意以下事项：\n+   \n+   - 在形式参数表中，数组名后的括号不能省略，括号个数和数组的维数相等。不需给出数组元素的个数。\n\
+    +   - 在实际参数表中，数组名后不需括号。\n+   - 数组名做实际参数时，传递的是地址，而不是值 → 即形式参数和实际参数具有相同的存储单元。"
+  merge: -1
+  img_proc: true
+- pgno: 232
+  md: "# 例--计算数组元素平均值\n\n```\n```java\nclass ArrayC4 {\n    public static void main(String[]\
+    \ args)\n    {\n        int c[]={1,2,3,4,5,6,7,8,9};\n        int j;\n       \
+    \ System.out.println(\" Array c\");\n\n        for (j=0; j<c.length; j++)\n  \
+    \          System.out.print(c[j]+\"    \");\n        System.out.println();\n \
+    \       System.out.println(\" Array average\");\n        // 调用数组\n        System.out.println(\
+    \ arrayAverage(c));\n    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 233
+  md: "# // 通过“方法”计算数组元素的平均值，数组名作为形式参数\n\n```\nstatic float arrayAverage(int d[])\n\
+    {\n    float average=0 ;\n    for(int i=0;i<d.length; i++)\n        average=average+d[i];\n\
+    \    average=average/d.length;\n    return average;\n}\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 234
+  md: '程序运行结果如下：
+
+
+    Array c
+
+
+    1　2　3　4　5　6　7　8　9
+
+
+    Array average
+
+
+    5.0'
+  merge: -1
+  img_proc: true
+- pgno: 235
+  md: "# 例--展示数组参数传递地址的特性\n\n```\nclass ArrayC6 {\n    public static void main(String[]\
+    \ args){\n        int c[][]={{1,2,3,4,5},{6,7,8,9,10}};\n        int i, j;\n \
+    \       System.out.println(\"调用arrayMultiply之前的数组\");\n        for (i=0; i<c.length;\
+    \ i++){\n            for(j=0; j<c[i].length; j++)\n                System.out.print(c[i][j]+\"\
+    \ \");\n            System.out.println();\n        }\n        arrayMultiply(c);\
+    \  // 调用数组\n```"
+  merge: -1
+  img_proc: true
+- pgno: 236
+  md: "```\nSystem.out.println(\"调用arrayMultiply之后的数组\");\nfor (i=0; i<c.length; i++)\
+    \ { // What Do?\n    for(j=0; j<c[i].length; j++)\n    System.out.print(c[i][j]+\"\
+    \ \");\n    System.out.println();\n}\n\nstatic void arrayMultiply(int d[][]) {\n\
+    \    int k,l;\n    for (k=0; k<d.length; k++)\n    for(l=0; l<d[k].length; l++)\n\
+    \    d[k][l]=2*d[k][l];\n    System.out.println(\" In arrayMultiply\");\n    for\
+    \ (k=0; k<d.length; k++) {\n    for(l=0; l<d[k].length; l++)\n    System.out.print(d[k][l]+\"\
+    \ \");\n    System.out.println();\n    }\n} // 方法arrayMultiply结束\n} // 程序结束\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 237
+  md: '# 程序的运行结果如下，发生了什么？
+
+
+    调用 **arrayMultiply** 之前的数组
+
+
+    1　2　3　4　5
+
+    6　7　8　9　10
+
+
+    In **arrayMultiply**
+
+
+    2　4　6　8　10
+
+    12　14　16　18　20
+
+
+    调用 **arrayMultiply** 之后的数组
+
+
+    2　4　6　8　10
+
+    12　14　16　18　20'
+  merge: -1
+  img_proc: true
+- pgno: 238
+  md: '# 例--展示数组元素参数传递值的特性
+
+
+    ```
+
+    class ArrayC7 {
+
+    public static void main(String[] args) {
+
+    int c[]={1,10,100,1000};
+
+    int j;
+
+    System.out.println("数组在调用elementMultiply前");
+
+    for (j=0; j<c.length; j++)
+
+    System.out.print(c[j]+" ");
+
+    System.out.println();
+
+    elementMultiply(c[2]);
+
+    System.out.println("数组在调用elementMultiply后");
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 239
+  md: '```
+
+    for (j=0; j<c.length; j++)
+
+    System.out.print(c[j]+" ");
+
+    System.out.println();
+
+    } // main 方法结束
+
+
+    static void elementMultiply(int d) {
+
+    d=2*d;
+
+    System.out.println("d="+d);
+
+    } // elementMultiply 方法结束
+
+    } // 程序结束
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 240
+  md: '该程序的运行结果如下：
+
+
+    数组在调用elementMultiply前
+
+
+    1    10    100    1000
+
+
+    d=200  //在elementMultiply中的输出
+
+
+    数组在调用elementMultiply后
+
+
+    1    10    100    1000
+
+
+    What’s happen?'
+  merge: -1
+  img_proc: true
+- pgno: 241
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 242
+  md: '# # 字符串
+
+
+    为了使用方便Java提供了String类型。
+
+
+    # ## 字符串变量的声明和初始化：
+
+
+    String 变量名；变量名=new String();
+
+
+    或
+
+
+    String 字符串变量 = new String （）；
+
+
+    例如：
+
+
+    String s=new String();'
+  merge: -1
+  img_proc: true
+- pgno: 243
+  md: '# # 字符串赋值
+
+
+    可以为字符串变量赋一个字符串常量，也可以将一个字符串变量或表达式的值赋给字符串变量。
+
+
+    ```
+
+    s="Chinese people";
+
+    s2=s1;
+
+    s3="a lot of"+s2;
+
+    ```
+
+
+    结果s2的值为 “Chinese people” ， s3的值为 “a lot of Chinese people” 。其中运算符 “+” 的作用是将前后的两个字符串连接起来'
+  merge: -1
+  img_proc: true
+- pgno: 244
+  md: '# # 字符串的输出
+
+
+    字符串可以通过println()或print()语句输出。
+
+
+    例如，以下的语句序列为字符串变量s赋值并输出其值：
+
+
+    ```
+
+    s="All the world";
+
+    System.out.println(s);
+
+    ```
+
+
+    输出结果为：
+
+
+    ```
+
+    All the world
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 245
+  md: "# 例一字符串应用\n\n```\n```java\npublic class StringUse\n{\n    public static void\
+    \ main(String[] args)\n    {String s1, s2;\n        s1=new String(\"Students should\
+    \ \");\n        s2=new String();\n        s2=\"study hard.\";\n        System.out.print(s1);\n\
+    \        System.out.println(s2);\n        s2=\"learn english, too\";\n       \
+    \ System.out.print(s1);\n        System.out.println(s2);\n        s2=s1+s2;\n\
+    \        System.out.println(s2);}}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 246
+  md: '# 该程序的运行结果如下：
+
+
+    Students should study hard.
+
+
+    Students should learn english, too
+
+
+    Students should learn english, too'
+  merge: -1
+  img_proc: true
+- pgno: 247
+  md: '# # 字符串操作
+
+
+    Java中通过String类来使用字符串
+
+    String类用很多成员方法来对字符串进行操作。如： 字符串访问、比较和转换等。
+
+
+    +   - length(): 返回字符串的长度。
+
+    +   - charAt(int index): 返回字符串中第index个字符 。
+
+    +   - indexOf(int ch): 返回字符串中字符ch第1次出现的位置。
+
+    +   - indexOf(String str, int index):
+
+    +     返回值是在该字符串中，从第index个位置开始，子字符串str第1次出现的位置。
+
+    +   - subString (int index1, int index2):
+
+    +     返回值是在该字符串中，从第index1个位置开始，到第index2-1个位置结束的子字符串。'
+  merge: -1
+  img_proc: true
+- pgno: 248
+  md: '将int，long，float，double，boolean等基本类型数据转换为String类型的方法是：
+
+
+    ```
+
+    String.valueOf(基本类型数据)
+
+    ```
+
+
+    将字符串型数据转换为其他基本类型的方法及实例
+
+
+    | 方法 | 返回值类型 | 返回值 |
+
+    |---|---|---|
+
+    | Boolean.getBoolean("false") | boolean | false |
+
+    | Integer.parseInt("123") | int | 123 |
+
+    | Long.parseLong("375") | long | 375 |
+
+    | Float.parseFloat("345.23") | float | 345.23 |
+
+    | Double.parseDouble("67892.34") | double | 67892.34 |'
+  merge: -1
+  img_proc: true
+- pgno: 249
+  md: '+   • 字符串数组——多个字符串组成
+
+    +     要表示一组字符串可以用字符串数组来实现。
+
+
+    ```
+
+    String str=new String[4];
+
+
+    str[0]="Chinese";
+
+    str[1]="English";
+
+    str[2]="Tianjin";
+
+    str[3]="Chongqing";
+
+    ```
+
+
+    # 有什么特点？'
+  merge: -1
+  img_proc: true
+- pgno: 250
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 251
+  md: '# 第六章
+
+
+    # 类和对象
+
+
+    Class and Object'
+  merge: -1
+  img_proc: true
+- pgno: 252
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 253
+  md: '# # 6.1 类和对象概述
+
+
+    +   - 面向对象的基本概念：
+
+    +     - 面向对象技术中，将客观世界中的一个事物作为一个对象看待。每个事物都有自己的属性和行为
+
+    +     - 从程序设计的角度，事物的属性可以用变量描述，行为用方法描述。
+
+    +       - 类：定义属性和行为的模板
+
+    +       - 对象是类的实例，对象与类的关系就像变量和数据类型的关系一样'
+  merge: -1
+  img_proc: true
+- pgno: 254
+  md: '# # 对象与类
+
+
+    简单地说：
+
+    对象是表示现实世界中某个具体的事物；
+
+    类是对对象的抽象描述。
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_254_0.png)
+
+
+    张二
+
+
+    将对象抽象为类
+
+
+    对类进行实例化
+
+
+    类(CLASS)，如：
+
+    “Man class”'
+  merge: -1
+  img_proc: true
+- pgno: 255
+  md: '# # Java的类
+
+
+    +   - 面向对象的程序设计认为：程序由对象组成。
+
+    +   - 程序中的每个对象有自己的属性和能够执行的操作
+
+    +   - 只关心对象能够完成的操作，不必关注实现功能的过程
+
+    +     - For Example： 用户买车'
+  merge: -1
+  img_proc: true
+- pgno: 256
+  md: '# # Java的类
+
+
+    +   - Java的所有程序代码都属于某个类的内部
+
+    +   - Java的类分为两个部分
+
+    +     - Java类库——由Java提供的大量的、可供用户调用的各种类的各种方法（我们可以使用的）
+
+    +     - 用户编写的类（**我们需要学习的**）'
+  merge: -1
+  img_proc: true
+- pgno: 257
+  md: '# Java的类
+
+
+    Java类库——我们已经使用过的……
+
+
+    +   - String
+
+    +   - Math
+
+    +   - JOptionPane
+
+    +   - Scanner'
+  merge: -1
+  img_proc: true
+- pgno: 258
+  md: '# # Java类库
+
+
+    # ## Math——数学类库
+
+
+    +   - 为用户处理数学问题提供方法（函数）
+
+    +   - 例如：
+
+    +     - `Math.PI`
+
+    +     - `Math.sin(double a)`
+
+    +     - `Math.sqrt(double a)`
+
+    +     - `Math.abs(int/long/float/double a)`
+
+    +     - ……
+
+
+    +   - 在Math库中，有程序处理需要的各种数学（方法）函数'
+  merge: -1
+  img_proc: true
+- pgno: 259
+  md: '# # 自定义类——用户编写程序
+
+
+    +   - 用户程序从类开始
+
+    +   - 一个用户程序可以有多个类
+
+    +   - 其中有且只有一个类中，有类的main()方法
+
+    +   - 每一个类可以有多个方法
+
+    +   - 不同的类之间的方法可以互相调用，除了main()方法'
+  merge: -1
+  img_proc: true
+- pgno: 260
+  md: "# # 类的声明\n\n```\n[修饰符] class 类名 [extends 父类名] [implements 接口名列表]\n{\n    类的成员变量声明;\n\
+    \    类的方法声明;\n}\n```\n\n这里，[]中的可以省略  \n因此，一般的类声明格式为：\n\n```\n[修饰符] class 类名\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 261
+  md: '# 例6-1 定义一个二维平面上点的类
+
+
+    ```
+
+    class Point {
+
+    private int x,y;
+
+    public void setPoint(int a,int b) {
+
+    x=a;
+
+    y=b;
+
+    }
+
+    public int getX() {
+
+    return x;
+
+    }
+
+    public int getY() {
+
+    return y;
+
+    }
+
+    public String toString() {
+
+    return "["+x+","+y+"]";
+
+    }
+
+    }
+
+    ```
+
+
+    类名：Point
+
+
+    类变量成员：x，y
+
+
+    类的方法（1）：setPoint
+
+
+    类的方法（2）：getX取X坐标
+
+
+    类的方法（3）：getY 取Y坐标
+
+
+    类的方法（4）：toString 获取变量的字符串'
+  merge: -1
+  img_proc: true
+- pgno: 262
+  md: '# # 对象的创建
+
+
+    # # 建立了类，就可以使用类创建其对象
+
+
+    [修饰符] 类名 对象名=new 类名(实参列表);
+
+
+    或
+
+
+    [修饰符] 类名 对象名;
+
+
+    对象名 = new 类名(实参列表);'
+  merge: -1
+  img_proc: true
+- pgno: 263
+  md: '[修饰符] 类名 对象名 = new 类名(实参列表);
+
+    或
+
+    [修饰符] 类名 对象名;
+
+    对象名 = new 类名(实参列表);
+
+
+    比较 Java变量的命名方法：
+
+    int x = 10;
+
+    比较String变量命名：
+
+    String str2 = new String();
+
+    或者：
+
+    String str3;
+
+    str3 = new String();'
+  merge: -1
+  img_proc: true
+- pgno: 264
+  md: '# 创建对象（Java实例6-1）
+
+
+    ```
+
+    Point  P1;    // 对象p1
+
+    ```
+
+
+    注意：类属于复合数据类型，因此，在声明对象时，系统并没有为对象分配空间，用户需要应用 new 完成分配空间的任务。
+
+
+    new 运算符的作用是 创建对象
+
+
+    ```
+
+    P1= new Point( );    // 给P1 对象分配存储空间
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 265
+  md: "# ## 对象的引用\n\n```\n```java\nclass Point {\nprivate int x,y;\npublic void setPoint(int\
+    \ a,int b) {\nx=a;\ny=b;\n}\npublic int getX() {\nreturn x;\n}\npublic int getY()\
+    \ {\nreturn y;\n}\npublic String toString() {\nreturn \"[\"+x+\",\"+y+\"]\";\n\
+    }\n}\n```\n```\n\n+   - 引用成员变量  \n+     对象名.成员变量名  \n+     例如：P1.x=3;  \n+   \
+    \    P1.y=5;\n+   \n+   - 引用方法  \n+     对象名.方法名(参数列表)  \n+     例如：int n=P1.getX();\
+    \  \n+       int m=P1.getY();\n\n```\n```java\nPoint p1;\np1= new Point();\np1.setPoint(3,\
+    \ 5);\nSystem.out.print(p1.getX());\nSystem.out.print(\" \"+ p1.getY());\nSystem.out.print(\"\
+    \ \"+ p1.toString());\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 266
+  md: "例6-2：定义一个表示圆形的类，能够计算圆面积和周长。\n\n```\nclass Circle1{\n    float r;\n    final\
+    \ double PI=3.14159;\n    public double area() {  //计算面积\n        return PI*r*r;\n\
+    \    }\n    public void setR(float x) {  //设置半径\n        r=x;\n    }\n    public\
+    \ double perimeter() {  //计算周长\n        return 2*PI*r;\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 267
+  md: "# # 创建对象和使用对象调用\n\n```\npublic static void main(String args[])\n{\n    double\
+    \ x,y;\n    Circle1 cir=new Circle1(); //创建Circle1类的对象cir\n    cir.setR(12.35f);\
+    \ //引用cir对象的setR()方法\n    x=cir.area(); //引用cir对象的area()方法\n    y=cir.perimeter();\
+    \ //引用cir对象的perimeter()方法\n    System.out.println(\"圆面积=\"+x+\"\\n圆周长=\"+y);\n\
+    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 268
+  md: '程序运行结果如下：
+
+
+    圆面积=479.163190376011
+
+
+    圆周长=77.59727539684296'
+  merge: -1
+  img_proc: true
+- pgno: 269
+  md: '# 构造方法和对象的初始化
+
+
+    +   - 在类（Class）中，可以定义多种成员方法
+
+    +   - 类中还有一种特殊的成员方法，其方法名与类名相同，称为构造方法。
+
+    +   - 当使用 new 运算符实例化（定义）一个对象时，Java 做两件事：
+
+    +     1. 系统为对象创建内存区域
+
+    +     2. 自动调用构造方法初始化成员变量。'
+  merge: -1
+  img_proc: true
+- pgno: 270
+  md: '# 构造方法的特点
+
+
+    +   - 构造方法名与类名相同；
+
+    +   - 构造方法没有返回值；
+
+    +   - 构造方法的主要作用是对对象初始化。
+
+    +   - 构造方法不能显式地直接调用；
+
+    +   - 一个类中可以定义多个构造方法
+
+    +     - 用不同的参数区别不同的构造方法
+
+    +     - 或不同参数类型区别不同的构造方法'
+  merge: -1
+  img_proc: true
+- pgno: 271
+  md: "# Java实例6-3——用构造方法初始化成员变量\n\n```\n```java\nclass Triangle {\n    int x,y,z;\n\
+    \    public Triangle(int i,int j,int k) { //声明构造方法，方法名和类名相同\n        x=i; y=j;\
+    \ z=k;                 //简单地将变量关联，i→x, j→y, k→z\n    }\n    public static boolean\
+    \ judge(Triangle m) { //判断是否为直角三角形\n        //引用Math类库的sqrt()方法\n        if (\
+    \ Math.sqrt(m.x*m.x+ m.y*m.y)== Math.sqrt(m.z*m.z))\n            return true;\n\
+    \        else\n            return false;\n    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 272
+  md: "# // 类中的主方法main，对本“类”定义并使用对象\n\n```\npublic static void main(String args[]){\n\
+    \    Triangle t1; //声明Triangle类对象t1\n    t1=new Triangle(3,4,5); //实例化对象t1，调用构造方法对其进行初始化\n\
+    \n    /* 调用judge()方法，判断t1的成员变量是\n       否能构成直角三角型的3个边长 */\n    if(judge(t1))\n\
+    \        System.out.println(\"这是一个直角三角形\");\n    else\n        System.out.println(\"\
+    这不是一个直角三角形\");\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 273
+  md: "# # Java实例6-4— 定义构造方法\n\n```\nclass Student\n{\n    String name;       // 定义类的成员变量\n\
+    \    String address;\n    int grade;\n    Student(String x1,String x2,int x3)\
+    \ { //定义构造方法\n        name=x1;\n        address=x2;\n        grade=x3;\n    }\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 274
+  md: "```\n```java\npublic static void main(String args[]) {\n    Student zhang;\
+    \  //声明并创建zhang对象\n    zhang=new Student(\"张三\",\"西安市兴庆路1号\",3);\n    Student\
+    \ wang;  //声明并创建wang对象\n    wang=new Student(\"王五\",\"西安市翠华路12号\",4);\n    System.out.println(zhang.name+zhang.address+zhang.grade);\n\
+    \    System.out.println(wang.name+wang.address+wang.grade);\n}\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 275
+  md: "# 缺省构造方法的使用\n\n所谓“缺省(Default)”构造方法，是在类中没有定义构造方法，Java默认的类成员方法初始化处理。\n注意：Java中变量必须初始化，即赋初值才能使用变量\n\
+    \n```\nclass Student {\n    String name;    //成员变量\n    String address; //成员变量\n\
+    \    int score;      //成员变量\n    public void setMessage(String x1,String x2, int\
+    \ x3) {//成员方法\n        name=x1;\n        address=x2;\n        score=x3;\n    }\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 276
+  md: "```\npublic static void main(String args[])\n{\n    Student s1=new Student();\
+    \    //创建Student类对象\n    s1\n    System.out.println(s1.name+\" \"+s1.address+\"\
+    \n\"+s1.score);\n    //输出缺省构造方法的初始化结果\n    s1.setMessage(\"张三\",\"西安市兴庆路1号\",75);\n\
+    \    // 调用成员方法给成员变量赋值\n    System.out.println(s1.name+\" \"+s1.address+\"\n\"\
+    +s1.score);\n}\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 277
+  md: '程序运行结果如下：
+
+
+    null　 null　 0
+
+
+    张三　 西安市兴庆路1号　 75'
+  merge: -1
+  img_proc: true
+- pgno: 278
+  md: "# 使用无参数的构造方法\n\n```\n```java\nclass Time {                    // 教材例6-5，类Time\n\
+    \    private int hour;           // 0-23\n    private int minute;         // 0-59\n\
+    \    private int second;         // 0-59\n\n    public Time() {\n        setTime(0,0,0);\n\
+    \    }\n\n    public void setTime(int hh, int mm, int ss) {\n        hour = ((hh\
+    \ >= 0 && hh <24) ? hh : 0);     // 使hour在0-23之间\n        minute = ((mm >= 0 &&\
+    \ mm < 60) ? mm : 0);\n        second = ((ss >= 0 && ss < 60) ? ss : 0);\n   \
+    \ }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 279
+  md: "```\npublic String toString() {\n    return (hour + \":\" + (minute < 10 ?\
+    \ \"0\" : \"\") + minute +\n        \":\" + \n        (second < 10 ? \"0\" : \"\
+    \") + second );\n}\n}\n// 类 Time结束\n```\n\n```\npublic class MyTime { // 程序中的第二个类\
+    \ MyTime\npublic static void main(String args[]) {\n    Time time=new Time();\n\
+    \    time.setTime(11,22,33);\n    System.out.println(\" set time =\" + time.toString());\n\
+    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 280
+  md: '# 编程与运行
+
+
+    +   - 在Java中，每个类是一个独立的程序段，是一个Java文件
+
+    +   - 本例中，有两个类，因此有两个Java文件，分别建立
+
+    +   - 这两个程序被打“包”（Packet），成为一个整体程序
+
+    +   - 能够被运行的程序是内有main()方法的类
+
+
+    运行结果如下：
+
+    set time =11:22:33'
+  merge: -1
+  img_proc: true
+- pgno: 281
+  md: "# 使用多个构造方法\n\n```\nclass Time1\n{\n    private int hour;          //0-23\n\
+    \    private int minute;        //0-59\n    private int second;        //0-59\n\
+    \    public Time1()\n    { setTime (0,0,0); }\n    public Time1(int hh)\n    {\
+    \ setTime (hh,0,0); }\n    public Time1 (int hh, int mm)\n    { setTime (hh,mm,0);\
+    \ }\n    public Time1(int hh, int mm, int ss)\n    { setTime (hh,mm,ss); }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 282
+  md: "```\npublic void setTime(int hh, int mm, int ss)\n{\n    hour = ((hh >= 0 &&\
+    \ hh < 24) ? hh : 0);\n    minute = ((mm >= 0 && mm < 60) ? mm : 0);\n    second\
+    \ = ((ss >= 0 && ss < 60) ? ss : 0);\n}\n\npublic String toString()\n{\n    return\
+    \ (hour + \":\" + (minute < 10 ? \"0\" : \"\") + minute + \":\" +\n          \
+    \  (second < 10 ? \"0\" : \"\") + second);\n}\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 283
+  md: '```
+
+    public class MyTime1
+
+    {
+
+    private static Time1 t0, t1, t2, t3;
+
+    public static void main(String args[])
+
+    {
+
+    t0=new Time1();
+
+    t1=new Time1(11);
+
+    t2=new Time1(22, 22);
+
+    t3=new Time1(33, 33, 33);
+
+    System.out.println(" t0= " + t0.toString());
+
+    System.out.println("t1= " + t1.toString());
+
+    System.out.println("t2= " + t2.toString());
+
+    System.out.println("t3= " + t3.toString());
+
+    } }
+
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 284
+  md: '程序运行结果如下：
+
+    t0= 0:00:00
+
+    t1= 11:00:00
+
+    t2= 22:22:00
+
+    t3= 0:33:33'
+  merge: -1
+  img_proc: true
+- pgno: 285
+  md: "# # 对象的销毁\n\n+   - new运算符实例化对象\n+   \n+     - 过程：系统为对象分配所需的存储空间\n+   \n+  \
+    \   - 但内存空间有限，不能存放无限多的对象\n+   \n+     - 为此，Java提供了资源回收机制，自动销毁无用对象，回收其所占用的存储空间\n\
+    +   \n+   - 如需主动释放对象，或在释放时执行特定操作，则在类中可以定义 finalize() 方法：\n+   \n+     ```java\n\
+    +     public void finalize()\n+     {\n+         方法体;\n+     }\n+     ```"
+  merge: -1
+  img_proc: true
+- pgno: 286
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 287
+  md: '# About Class
+
+
+    +   - 类是Java程序的构成，每一个类是一个整体
+
+    +   - 类中包括：
+
+    +     - 成员变量 → 数据，如何被访问，被谁访问？
+
+    +     - 成员方法 → 对数据(成员变量)进行操作
+
+    +   - 特点：
+
+    +     - 可以定义不同的访问方法 → 成员变量
+
+    +   - 这个特点就是封装！'
+  merge: -1
+  img_proc: true
+- pgno: 288
+  md: '# 6.2.1 访问权限
+
+
+    +   Java的成员访问权限通过关键字 private，public，protected，缺省(不用关键字)实现
+
+
+    +   public （公有）
+
+
+    +   成员变量和成员方法可以Java在所有类中访问
+
+
+    +   protected （保护）
+
+
+    +   成员变量和成员方法可在声明他们的类中访问
+
+
+    +   可以在在该类的子类中访问
+
+
+    +   也可以在与该类位于同一包的类中访问——不能被其它包的非子类中访问'
+  merge: -1
+  img_proc: true
+- pgno: 289
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 290
+  md: '# 访问控制权限小结
+
+
+    | 访问控制 | 本类 | 同一包中的类 | 其他包中子类 | 其他包中的类 |
+
+    |---|---|---|---|---|
+
+    | public | √ | √ | √ | √ |
+
+    | private | √ | × | × | × |
+
+    | protected | √ | √ | √ | × |
+
+    | 缺省 | √ | √ | × | × |'
+  merge: -1
+  img_proc: true
+- pgno: 291
+  md: "# Java实例-权限修饰符的作用\n\n```\n```java\n// 包里的第一个类\nclass Time {\n    private int\
+    \ hour;    // 私有成员变量0-23\n    private int minute;  // 0-59\n    private int second;\
+    \  // 0-59\n\n    public Time () {     // 构造方法，初始化成员变量\n        setTime(0,0,0);\n\
+    \    }\n    public void setTime(int hh, int mm, int ss) { // 对成员变量操作\n       \
+    \ hour = ((hh >= 0 && hh <24) ? hh : 0);\n        minute = ((mm >= 0 && mm < 60)\
+    \ ? mm : 0);\n        second = ((ss >=0 && ss < 60) ? ss : 0);\n    }\n}\n```\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 292
+  md: "```\npublic String toString() {\n   return (hour + \":\" + (minute < 10 ? \"\
+    0\" : \"\") + minute + \":\" +\n          (second < 10 ? \"0\" : \"\") + second\
+    \ );\n}\n}\n\n// 包里的第二个类\npublic class MyTime2 {\n   public static void main(String\
+    \ args[]) {\n      Time time = new Time();\n      time.hour = 11;   // 给成员变量hour赋值：\
+    \ 非法访问， 因为\ntime类中的成员变量hour的属性是private\n      System.out.println(\"time\" + time.toString());\n\
+    \   }\n}\n\n```"
+  merge: -1
+  img_proc: true
+- pgno: 293
+  md: "# # 类访问权限 P86\n\n+   - 声明一个类  \n+     - 可使用的权限修饰符：public、缺省  \n+     - 不能使用：private、protected\n\
+    \n+   - 一个Java源程序文件中可包含多个类  \n+     - 但，只能有一个类使用public修饰符，该类的名字与源程序文件的名字相同  \n\
+    +     - 有多个类，必须运行包含main()方法的类，否则出错"
+  merge: -1
+  img_proc: true
+- pgno: 294
+  md: "# # 6.2.2 类成员——变量和方法\n\n# ## 类成员变量\n\n+   - 使用static修饰的变量为类成员变量\n\n+   - 没有使用static修饰的变量为实例成员变量，\n\
+    \n```\n```java\nclass Student {\n    String name;        //实例成员变量\n    String\
+    \ sex;         //实例成员变量\n    static int count=0; //类成员变量\n    public Student(String\
+    \ m, String s ) {\n        name=m;         // 在本类， 对实例和类成员操作\n        sex=s;\n\
+    \        count=count+1;\n    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 295
+  md: '# # 类成员
+
+
+    # ## 类成员
+
+
+    +   - 在类中的成员变量和成员方法
+
+
+    +   - 根据不同的修饰符，有不同的使用规则
+
+
+    +   - static 是规则......
+
+
+    +   1. 类成员变量
+
+
+    +   2. 类成员方法'
+  merge: -1
+  img_proc: true
+- pgno: 296
+  md: '# # 类成员变量 P86
+
+
+    +   使用类创建对象：
+
+    +   每个对象拥有各自的实例成员变量，不同对象的实例成员变量具有不同的值；
+
+    +   类成员变量被分配一个存储单元，类的所有对象共享这个类成员变量
+
+
+    +   实例成员变量属于对象，只能通过对象引用：
+
+    +   对象名.实例成员变量名
+
+
+    +   类成员变量属于类——既可以通过类名访问，也可以通过对象名访问：
+
+    +   对象名.实例成员变量名
+
+    +   or
+
+    +   类名.实例成员变量名'
+  merge: -1
+  img_proc: true
+- pgno: 297
+  md: "# # 例：类成员变量和实例成员变量的对比\n\n```\nclass Student1 {\n    String name;    //实例成员变量\n\
+    \    String address; //实例成员变量\n    static int count=0; //类成员变量\n    public Student1(String\
+    \ m, String a ) {\n        name=m;\n        address=a;\n        count=count+1;\
+    \ // count 为 2\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 298
+  md: "```\npublic static void main(String args[]) {\n    // 使用实例成员变量\n    Student1\
+    \ p1=new Student1(\"李明\", \"杭州市西湖区\");\n    Student1 p2=new Student1(\"张敏\", \"\
+    上海市闵行区\");\n    // 使用类成员变量 Student1.count, p1.count\n    System.out.println(p1.name+\"\
+    \ \"+p1.address+\" \"+p1.count);\n    Student1.count=Student1.count+1; // count\
+    \ 为3\n    System.out.println(p2.name+\" \"+p2.address+\" \"+p2.count);\n    p1.count=p1.count-1;\
+    \ // count为2\n    System.out.println(p2.name+\" \"+p2.address+\" \"+p2.count);\n\
+    }\n} // 类结束\n```"
+  merge: -1
+  img_proc: true
+- pgno: 299
+  md: '程序运行结果如下：
+
+
+    +   - 李明 杭州市西湖区 2
+
+    +   - 张敏 上海市闵行区 3
+
+    +   - 张敏 上海市闵行区 2'
+  merge: -1
+  img_proc: true
+- pgno: 300
+  md: "# 类成员方法　P88\n\n+   - 没有使用static修饰的方法为实例成员方法\n+   - 使用static修饰的方法为类成员方法\n\n\
+    ```\n```java\n// area 是类成员方法\npublic static double area(double r) {\n    return\
+    \ 3.14*r*r;\n}\n```\n```\n\n+   - 类成员方法中使用——受限制\n+     - 本方法中声明的局部变量\n+     -\
+    \ 可以访问类成员变量，不能访问实例成员变量\n+   - 实例成员方法中使用——不受限制\n+     - 本方法中声明的局部变量\n+     - 可访问类成员变量\n\
+    +     - 也可以访问实例成员变量"
+  merge: -1
+  img_proc: true
+- pgno: 301
+  md: "+   ◆ 类成员方法中只能调用类成员方法，不能调用实例成员方法\n\n+   ◆ 实例成员方法既可以调用类成员方法，也可以调用实例成员方法。\n\n\
+    ```\n```java\ndouble perimeter(double x, double y) { // 实例成员方法\n    return 2*(x+y);\n\
+    }\nstatic double area(double x, double y) { // 类成员方法\n    return x*y;\n}\nvoid\
+    \ print_message() { // 实例成员方法，可使用类的其他成员方法\n    System.out.println(perimeter(2.1,3.5));\n\
+    \    System.out.println(area(2.1,3.5));\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 302
+  md: '+   - 实例方法只能通过对象访问
+
+    +   - 类成员方法既可以通过类名访问，也可以通过对象名访问
+
+
+    实例成员方法的访问方式为：
+
+
+    ```
+
+    `对象名.实例成员方法名()`
+
+    ```
+
+
+    类成员变量的访问方法为
+
+
+    ```
+
+    对象名.类成员方法名()
+
+
+    或
+
+
+    类名.类成员方法名()
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 303
+  md: "# # 例：类成员方法和实例成员方法的对比\n\n```\n```java\nclass Course {\n    String no;     \
+    \     //实例成员变量：课程编号\n    int score;          //实例成员变量：成绩\n    static int sum=0;\
+    \   //类成员变量：总成绩\n\n    public Course(String n, int s) { // Course的构造方法\n     \
+    \   no=n;\n        score=s;\n    }\n\n    //类方法：统计总成绩\n    public static void\
+    \ summarize(int s) { // Course的类成员方法\n        sum+=s;\n    }\n}// 类 Course结束\n\
+    ```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 304
+  md: "```\n```java\npublic class Statistic {\n\n    public static void main(String\
+    \ args[]) {\n        Course c1,c2;  // 定义Course对象c1、c2\n        c1=new Course(\"\
+    210\",90);  // 学号210，成绩90\n        Course.summarize(90);\n        System.out.println(\"\
+    sum=\"+c1.sum);\n        c2=new Course(\"300\",80);  // 学号300，成绩80\n        c2.summarize(80);\n\
+    \        System.out.println(\"sum=\"+Course.sum); // 输出累加和\n    }\n} // 类Statistic结束\n\
+    ```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 305
+  md: '程序运行结果如下：
+
+
+    sum=90
+
+
+    sum=170'
+  merge: -1
+  img_proc: true
+- pgno: 306
+  md: '# 数学函数类—— Math类库
+
+
+    Java类库中的Math类提供了很多常用数学函数的实现方法，这些方法都是static方法，通过类名Math调用，其调用方式如下：
+
+
+    Math.方法名'
+  merge: -1
+  img_proc: true
+- pgno: 307
+  md: '# # Math类中的常用方法
+
+
+    | 函数 | 说明 |
+
+    | --- | --- |
+
+    | sin(double x) | 返回x的正弦值 |
+
+    | cos(double x) | 返回x的余弦值 |
+
+    | log(double x) | 返回x的自然对数 |
+
+    | exp(double x) | 返回e^x |
+
+    | abs(double x) | 返回x的绝对值 |
+
+    | max(double x, double y) | 返回x和y中的较大值 |
+
+    | sqrt(double x) | 返回x的平方根 |
+
+    | random(double x) | 返回[0, 1)区间内的随机数 |
+
+    | pow(double y, double x) | 返回y^x |'
+  merge: -1
+  img_proc: true
+- pgno: 308
+  md: "# 例6-10 输出两个数中较大者\n\n```\n```java\npublic class Max {\n\n    public static\
+    \ void main(String args[]) {\n\n        int x,y;\n        x=Integer.parseInt(args[0]);\n\
+    \        y= Integer.parseInt(args[1]);\n        System.out.println(\"最大值是\"+Math.max(x,y));\n\
+    \    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 309
+  md: '# Chapter 7
+
+
+    # 类的继承
+
+
+    and
+
+
+    多态机制'
+  merge: -1
+  img_proc: true
+- pgno: 310
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 311
+  md: "# # 一个例子\n\n+   假设我们定义一个类 student  \n+   其中包含了一个学生的所有信息，包括学号、姓名、性别、籍贯、院系、年级、专业、各课程的成绩......\n\
+    \n+   现在，有部分学生还有一些其他信息，例如获奖信息\n\n+   How to Do?\n\n+   这一类问题特别普遍......"
+  merge: -1
+  img_proc: true
+- pgno: 312
+  md: '# # In Java
+
+
+    显然，部分学生应该“继承”类student的所有属性，再加上一些获奖的属性
+
+    class Student{
+
+    ......
+
+    }
+
+    class ExStudent extends Student{
+
+    // 加上有关获奖的成员变量和方法
+
+    }'
+  merge: -1
+  img_proc: true
+- pgno: 313
+  md: "# In Java\n\n+   - 关键字 extends\n+     - 指示所建立的新的类 ExStudent 派生于已经存在的类 Student\
+    \ —— 继承\n+     - 已经存在的类 Student 称为\n+       - 超类 superclass，或者\n+       - 基类 base\
+    \ class，或者\n+       - 父类 parent class\n+     - 新的类 ExStudent 称为\n+       - 派生类\
+    \ derived class，或者\n+       - 子类 subclass，或者\n+       - 孩子类 child class\n+   -\
+    \ 有趣的：\n+     - 子类比父类具有更多的功能\n\n```\nclass Student {\n    ......\n}\nclass ExStudent\
+    \ extends Student {\n    // 加上有关获类的成员变量和方法\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 314
+  md: '# And more
+
+
+    +   - Java类是一个层次结构
+
+    +     - Java有一个叫做Object的超类，是所有类的祖先
+
+    +     - 所有类都直接或间接地继承自Object类
+
+    +     - 如果在定义类的时候没有指出其超类，默认继承Object
+
+    +   - 一旦定义了一个类，就自动继承了Object类的许多成员和成员方法，例如
+
+    +     - `hashCode()` // 获取hash码
+
+    +     - `equals()` // 检测是否与另外一个对象相等
+
+    +     - `toString()` // 返回表示对象值的字符串'
+  merge: -1
+  img_proc: true
+- pgno: 315
+  md: '# # And More
+
+
+    +   - 子类继承父类的
+
+    +     - 属性和方法
+
+    +     - 可修改父类的属性或重载父类的方法
+
+    +     - 在父类的基础上添加新的属性和方法
+
+    +   - 继承的关系：
+
+    +     - 父类 —— 一般情况
+
+    +     - 子类 —— 包含一般情况下的特殊情况
+
+    +   - 多个子类共同继承一个父类，那么该父类就是多个子类的基类
+
+    +   - Java语言只支持单继承
+
+    +     - 如果要定义多继承，可以使用“接口”'
+  merge: -1
+  img_proc: true
+- pgno: 316
+  md: "# 定义子类的形式\n\n```\n【访问权限】 class 类名 extends 父类名{\n    类体\n}\n```\n\n+   - **Extends**\n\
+    +     - 指明新定义子类及其继承的父类"
+  merge: -1
+  img_proc: true
+- pgno: 317
+  md: '# # 类的继承原则
+
+
+    # ## Rules:
+
+
+    +   1. 子类继承父类的成员变量
+
+    +      - 实例成员变量
+
+    +      - 类成员变量
+
+
+    +   2. 子类继承父类成员方法
+
+    +      - 实例成员方法
+
+    +      - 类成员方法
+
+    +      - 但不包括构造方法
+
+    +      - 父类的构造方法 → 创建父类对象
+
+    +      - 子类需定义自己的构造方法 → 创建子类的对象
+
+
+    +   3. 子类可以重新定义父类成员'
+  merge: -1
+  img_proc: true
+- pgno: 318
+  md: '# # 访问权限
+
+
+    +   本质上说，子类和父类都是“类”，因此存在访问权限问题
+
+
+    +   子类继承了父类的成员变量和成员方法
+
+
+    +   但并非对父类所有成员变量和成员方法都有访问权限，换句话说：
+
+
+    +   子类声明的方法中并不能访问父类所有成员变量或成员方法！
+
+
+    +   子类访问父类成员的权限如下
+
+
+    +   对父类的private成员没有访问权限。
+
+
+    +   对父类的public和protected成员具有访问权限。
+
+
+    +   对父类的缺省权限成员访问权限分2种情况
+
+
+    +   1. 对同一包中父类的缺省权限成员具有访问权限
+
+
+    +   2. 对其它包中父类的缺省权限成员没有访问权限'
+  merge: -1
+  img_proc: true
+- pgno: 319
+  md: '# # Java实例——类的继承
+
+
+    ```
+
+    public class Person1 {
+
+    private String name;
+
+    protected int age;
+
+
+    public void setName(String na) {
+
+    name=na;
+
+    }
+
+    public void setAge(int ag) {
+
+    age=ag;
+
+    }
+
+    public String getName() {
+
+    return name;
+
+    }
+
+    public int getAge() {
+
+    return age;
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 320
+  md: "# # Java实例——（续）\n\n```\npublic void print_p() {\n    System.out.println(\"\
+    Name:\"+name+\"  Age:\"+age);\n}\n} 类Person1结束\n```\n\n```\npublic class Teacher1\
+    \ extends Person1 { // 子类派生于父类\n    protected String department; // 定义了成员变量 系部\n\
+    \n    public Teacher1(String na, int ag, String de) {\n        setName(na);\n\
+    \        setAge(ag);\n        department=de;\n    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 321
+  md: "```\npublic void print_s() {\n    print_p(); // 访问父类成员方法\n    System.out.println(\"\
+    Department:\"+department);\n}\npublic static void main(String arg[]) {\n    Teacher1\
+    \ t; // 定义子类的对象 t\n    t=new Teacher1(\"Wang\",40,\"Computer Science\");\n   \
+    \ t.print_s();\n    t.setName(\"Wang Gang\");\n    t.age=50;\n    //可以直接访问父类中protected成员变量age，但不能访问父\n\
+    \    //类的private成员变量name\n    t.print_s();\n}\n} // 子类Teacher结束\n```"
+  merge: -1
+  img_proc: true
+- pgno: 322
+  md: '程序运行结果如下：
+
+
+    Name: Wang   Age: 40
+
+
+    Department: Computer Science
+
+
+    Name: Wang Gang   Age: 50
+
+
+    Department: Computer Science'
+  merge: -1
+  img_proc: true
+- pgno: 323
+  md: '# Java的两个关键字
+
+
+    +   - super
+
+    +     - 指父类的对象
+
+    +   - this
+
+    +     - 通常指当前对象'
+  merge: -1
+  img_proc: true
+- pgno: 324
+  md: '# super
+
+
+    +   - 可以使用super引用父类成员变量
+
+    +     - `super.成员变量名`
+
+    +   - 调用父类成员方法
+
+    +     - `super.成员方法名(参数表)`
+
+    +   - 调用父类构造方法
+
+    +     - `super(参数表)`'
+  merge: -1
+  img_proc: true
+- pgno: 325
+  md: "# # this\n\n使用this引用当前对象的成员变量  \nthis.成员变量名  \n调用当前对象的成员方法  \nthis.成员方法名(参数表)\
+    \  \n调用当前对象的构造方法  \nthis(参数表)"
+  merge: -1
+  img_proc: true
+- pgno: 326
+  md: "# 例7-2--利用super访问父类成员\n\n```\nclass Person2 {\n    protected String name;\n\
+    \    protected int age;\n\n    public Person2(String na, int ag) { // 构造方法\n \
+    \       name=na;\n        age=ag;\n    }\n\n    public void print() { // print方法\n\
+    \        System.out.println(\"Parent:Name=\"+name+\"\nAge=\"+age);\n    }\n} //\
+    \ 类 Person2结束\n```"
+  merge: -1
+  img_proc: true
+- pgno: 327
+  md: "```\n// Teacher2为Person2的子类\npublic class Teacher2 extends Person2 {\n    String\
+    \ department, name; // 子类的成员变量\n\n    public Teacher2(String na, int ag, String\
+    \ de, String na1) {\n        super(na,ag); // super关键字指出调用的是父类的构造方法\n        department=de;\n\
+    \        name=na1;\n    }\n\n    public void setName_p(String na) {\n        super.name=na;\
+    \ // super指出这里的成员变量是父类的\n    }\n\n    public void setName_s(String na1) { // 子类的方法\n\
+    \        name=na1;\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 328
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 329
+  md: '程序运行结果如下：
+
+
+    Parent:Name=Wang  Age=40
+
+
+    Son:Name=Gu  Department=Computer Science
+
+
+    Parent:Name=Wang Qiang  Age=40
+
+
+    Son:Name=Gu Li  Department=Computer Science'
+  merge: -1
+  img_proc: true
+- pgno: 330
+  md: '# 例7-3——this访问当前对象成员
+
+
+    ```
+
+    class Point {
+
+    protected int x, y;
+
+    public Point(int x, int y) { //带参数的构造方法
+
+    this.x=x;
+
+    this.y=y;
+
+    System.out.print( "["+this.x+","+this.y+"]" );
+
+    }
+
+    public Point() { //不带参数的构造方法
+
+    this(5,5); //调用带参数的构造方法
+
+    }
+
+    } // Point类结束
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 331
+  md: '```
+
+    class Circle extends Point   {
+
+    protected int radius;
+
+    public Circle(int x, int y, int radius) {
+
+    super(x,y);
+
+    this.radius=radius;
+
+    System.out.println( ", r="+radius );
+
+    }
+
+    public Circle( int radius) {
+
+    super();
+
+    this.radius=radius;
+
+    System.out.println( ", r="+this.radius );
+
+    }
+
+    } //子类Circle结束
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 332
+  md: "```\npublic class Test {\n    public static void main( String [] args ) {\n\
+    \        Circle circle1=new Circle(50,100,200); //创建Circle对象circle1\n        Circle\
+    \ circle2=new Circle(10); //创建Circle对象circle2\n    }\n} // Test类结束\n```\n\n# 例7-3\
+    \ 程序运行结果如下：\n\n[50,100], r=200\n\n[5,5], r=10"
+  merge: -1
+  img_proc: true
+- pgno: 333
+  md: '# # Java —— super和this的使用
+
+
+    ```
+
+    class Employee { // 类Employee
+
+    String name;
+
+    Employee(String name){
+
+    this.name=name;
+
+    }
+
+    public void showInfo(){
+
+    System.out.println("this is superClass call:"+name);
+
+    }
+
+    public void getInfo() {
+
+    showInfo();
+
+    }
+
+    } // 类Employee结束
+
+
+    class Manage extends Employee{ // 类Manage 继承了Employee
+
+    String name; // 注意与父类同名的成员变量
+
+    String department;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 334
+  md: "```\nManage(String n) { // Manage的构造方法， 初始化父类的name\n    super(n);\n}\n\npublic\
+    \ void showInfo(){\n    super.showInfo(); //调用父类的方法\n    System.out.println(\"\
+    this is subClass call:\"+name);\n    System.out.println(department);\n}\n} //\
+    \ 类 manage结束\n\npublic class CoverMethod { // 类CoverMethod\n    public static\
+    \ void main(String args[]){\n        Manage aa=new Manage(\"李四\");\n        aa.name=\"\
+    张三\";\n        aa.department=\"经理室\";\n        aa.getInfo();\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 335
+  md: '# # 7.2 多态性
+
+
+    多态性指同一名字的方法可以有多种实现，即不同的方法体。在面向对象的程序中多态表现为，可以利用重载在同一类中定义多个同名的不同方法实现多态，也可以通过子类对父类方法的覆盖实现多态。'
+  merge: -1
+  img_proc: true
+- pgno: 336
+  md: '# # 1 方法的重载
+
+
+    重载是指在同一类中，多个方法具有相同的方法名，但采用不同的形式参数列表，包括形参的个数、类型或顺序不同。调用方法时，系统是通过方法名和参数列表确定所调用的具体方法。'
+  merge: -1
+  img_proc: true
+- pgno: 337
+  md: '# # 重载：形参个数、类型、顺序
+
+
+    重载方法中的参数表必然不同，表现为
+
+
+    +   - 参数个数不同，或
+
+
+    +   - 参数类型不同，或
+
+
+    +   - 参数顺序不同
+
+
+    # ## ≡正确的重载方法头
+
+
+    ```
+
+    ```java
+
+    public double area(double r)
+
+    public double area(int a, double b)
+
+    public double area(double a, int b)
+
+    ```
+
+    ```
+
+
+    # ## ≡不是正确的重载方法：
+
+
+    ```
+
+    ```java
+
+    public int volume(int a, int b)
+
+    public void volume(int x, int y)
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 338
+  md: '# # Example
+
+
+    例如，计算圆、三角形和长方形的面积
+
+
+    可以定义具有以下方法头的3个重载方法：
+
+
+    // 圆面积
+
+
+    public double area(double r)
+
+
+    // 计算三角形面积
+
+
+    public double area(double a, double b, double c)
+
+
+    // 计算长方形面积
+
+
+    public double area(double a, double b)'
+  merge: -1
+  img_proc: true
+- pgno: 339
+  md: "# Java重载实例 7-4\n\n```\n```java\nclass Distance_p {    // 类Distance_P\n\n  \
+    \  public double distance(double x, double y){\n        return Math.sqrt(x*x+y*y);\n\
+    \    }\n\n    public double distance(double x, double y, double z) {\n       \
+    \ return Math.sqrt(x*x+y*y+z*z);\n    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 340
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 341
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 342
+  md: '# ## 2 方法的覆盖
+
+
+    +   ### 覆盖
+
+    +   - 子类定义了父类中的同名方法
+
+    +   - 覆盖表现为父类与子类之间方法的多态性。
+
+
+    +   ### 程序运行时
+
+    +   - 根据调用方法的对象所属的类决定执行父类中的方法还是子类中的同名方法
+
+
+    +   ### 寻找执行方法的原则是
+
+    +   - 首先从对象所属类开始，寻找匹配的方法
+
+    +   - 如果当前类中没有匹配的方法，则依此在父类（祖先类）寻找匹配方法。'
+  merge: -1
+  img_proc: true
+- pgno: 343
+  md: '# # 方法覆盖举例 7-5
+
+
+    ```
+
+    class CCircle {
+
+    protected double radius;
+
+    public CCircle(double r) {
+
+    radius=r;
+
+    }
+
+    public void show() {
+
+    System.out.println("Radius="+radius);
+
+    }
+
+    }
+
+    public class CCoin extends CCircle {
+
+    private int value;
+
+    public CCoin(double r, int v) {
+
+    super(r);
+
+    value=v;
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 344
+  md: "# 例7-5\n\n```\npublic void show() {\n    System.out.println(\"Radius=\"+radius+\"\
+    \ Value=\"+value);\n}\n\npublic static void main(String[] args) {// Test 覆盖\n\
+    \    CCircle circle=new CCircle(2.0);\n    CCoin coin=new CCoin(3.0,5);\n    circle.show();\
+    \ // show , which one?\n    coin.show();\n}\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 345
+  md: '程序运行结果如下：
+
+
+    Radius=2.0
+
+    Radius=3.0 Value=5'
+  merge: -1
+  img_proc: true
+- pgno: 346
+  md: "# # 7.3 final类和final成员\n\n+   - Java中， 有一个非常重要的关键字final  \n+     - 定义符号常量 \
+    \ \n+   - Too:  \n+     - 修饰类及类中的成员变量和成员方法  \n+   - 特点  \n+     - 用final修饰的类不能被继承\
+    \  \n+     - 用final修饰的成员方法不能被覆盖  \n+     - 用final修饰的成员变量不能被修改。"
+  merge: -1
+  img_proc: true
+- pgno: 347
+  md: '# # 1 final类
+
+
+    +   - 出于安全性考虑，有些类不允许被继承，称为final类
+
+    +   - 在下列情况下，通常将类定义为final类：
+
+    +     1. 具有固定作用，用来完成某种标准功能的类
+
+    +     2. 类的定义已经很完美，不需要再生成其子类。
+
+
+    ```
+
+    final class 类名{
+
+    类体
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 348
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 349
+  md: '程序编译时的错误信息如下：
+
+
+    无法从最终 C1 进行继承
+
+
+    ```
+
+    public class C2 extends C1
+
+    ```
+
+
+    ^
+
+
+    1 错误'
+  merge: -1
+  img_proc: true
+- pgno: 350
+  md: '# # 2 final成员方法
+
+
+    出于安全性考虑，有些方法不允许被覆盖，称为final方法。将方法声明为final方法，可以确保调用的是正确的、原始的方法，而不是在子类中重新定义的方法。'
+  merge: -1
+  img_proc: true
+- pgno: 351
+  md: "# 例 覆盖final方法。\n\n```\nclass Mother\n{\n    int x=100,y=20;\n    public final\
+    \ void sum()\n    {\n        int s;\n        s=x+y;\n        System.out.println(\"\
+    s=\"+s);\n    }\n}\npublic class Children extends Mother\n{\n    int m=20,n=30;\n\
+    \    public void sum()\n```"
+  merge: -1
+  img_proc: true
+- pgno: 352
+  md: "```\n{\n    int f;  f=m+n;\n    System.out.println(\"f=\"+f);\n}\npublic static\
+    \ void main(String args[])\n{\n    Children aa=new Children();\n    aa.sum();\n\
+    }\n}\n```\n\n程序编译时的错误信息如下：\nChildren中的sum() 不能覆盖Mother中的sum(); 被覆盖的方法是 final public\
+    \ void sum()\n^\n\n1 个错误"
+  merge: -1
+  img_proc: true
+- pgno: 353
+  md: '# # 3 final成员变量
+
+
+    如果一个变量被final修饰，则其值不能改变，成为一个常量。如果在程序中企图改变其值，将引起编译错误。如：
+
+    final int i=23;
+
+    在程序中不能再给i赋值，否则产生编译错误。'
+  merge: -1
+  img_proc: true
+- pgno: 354
+  md: '# # 第八章
+
+
+    # # 接口和包'
+  merge: -1
+  img_proc: true
+- pgno: 355
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 356
+  md: '# # Overview
+
+
+    +   - Java 只有单继承——For security
+
+    +   - 为实现多继承
+
+    +     - 接口
+
+    +   - 接口是什么？
+
+    +     - 一组常量
+
+    +     - 抽象方法
+
+    +   - 包
+
+    +     - Java程序的组织形式
+
+    +     - 包括一组类、接口'
+  merge: -1
+  img_proc: true
+- pgno: 357
+  md: '# 8.1 抽象类和方法
+
+
+    +   - 建立一个类，通过这个类创建实例——常规做法
+
+    +   - 抽象类是供子类继承、却不能创建实例的类
+
+    +   - 抽象类中
+
+    +     - 声明只有方法头、没有方法体的抽象方法
+
+    +   - 抽象类用于描述抽象的概念，其中的
+
+    +     - 抽象方法约定了多个子类共用的方法头
+
+    +     - 每个子类可以根据自身实际情况，给出抽象方法的具体实现'
+  merge: -1
+  img_proc: true
+- pgno: 358
+  md: '# # 抽象类的子类
+
+
+    +   ◆ Java中，任何一个类都可以定义子类
+
+
+    +   ◆ 抽象类的子类
+
+
+    +   ◆ 必须完成父类定义的每一个抽象方法，除非该子类也是抽象类。
+
+
+    +   ◆ 它的主要用途是用来描述概念性的内容，这样可以提高开发效率，更好地统一用户“接口”'
+  merge: -1
+  img_proc: true
+- pgno: 359
+  md: '# # 声明抽象方法
+
+
+    [权限修饰符] abstract 返回类型 方法名(参数表);
+
+
+    例如，计算图形面积的抽象方法area()可采用如下的声明：
+
+
+    ```
+
+    public abstract area();
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 360
+  md: "# # 声明抽象类\n\n```\n```java\n[权限修饰符] abstract class 类名{\n    成员变量;\n    abstract\
+    \ 方法名(); //定义抽象方法\n}\n```\n```\n\n说明：抽象类中也可以定义非抽象方法"
+  merge: -1
+  img_proc: true
+- pgno: 361
+  md: '# Java实例 8.1——利用抽象类表示多类图书
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_361_0.png)
+
+
+    图8-1 各类图书的属性和行为'
+  merge: -1
+  img_proc: true
+- pgno: 362
+  md: '| 科技书类 | 文艺书类 | 教材类 |
+
+    |---|---|---|
+
+    | 页码<br>折扣<br>价格 | 页码<br>折扣<br>价格 | 页码<br>折扣<br>价格 |
+
+    | 显示图书种类<br>计算图书价格<br>计算折扣 | 显示图书种类<br>计算图书价格<br>计算折扣 | 显示图书种类<br>计算图书价格<br>计算折扣
+    |
+
+
+    # ## 三类图书
+
+
+    +   - 相同的行为——种类、价格、折扣
+
+    +   - 不同的页码、价格和折扣
+
+
+    # ## 处理方法1
+
+
+    +   - 为每一类图书编写一个处理程序（Java 类）
+
+    +   - 代码大，重用性差'
+  merge: -1
+  img_proc: true
+- pgno: 363
+  md: '| 科技书类 | 文艺书类 | 教材类 |
+
+    |---|---|---|
+
+    | 页码 折扣 价格 | 页码 折扣 价格 | 页码 折扣 价格 |
+
+    | 显示图书种类 计算图书价格 计算折扣 | 显示图书种类 计算图书价格 计算折扣 | 显示图书种类 计算图书价格 计算折扣 |
+
+
+    # ## 另一种方法
+
+
+    +   - 定义一个父类：抽象类声明共同的变量、成员方法
+
+
+    +   - 分别为不同的图书类定义子类，在子类中完成不同的处理“方法”
+
+
+    +   - 程序代码——重用'
+  merge: -1
+  img_proc: true
+- pgno: 364
+  md: "# # （1）定义抽象类(P106)\n\n```\nabstract class Book {\n    int bookPage;    //图书页码\n\
+    \    float discount;  //图书折扣\n    double price;    //图书价格\n\n    public Book(int\
+    \ bookPage,float discount) { // 非抽象方法： 图书公共行为\n        this.bookPage=bookPage;\
+    \    // 页码\n        this.discount=discount;    // 折扣\n    }\n\n    //抽象方法\n  \
+    \  abstract void show_kind();    //显示图书种类\n    abstract double getPrice(int bookPage,float\
+    \ discount); //计算价格\n\n    public void show_price() {    // 非抽象方法： 显示价格\n    \
+    \    System.out.println(\"This book's price is \"+price);\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 365
+  md: "# （2）各子类：定义科技书类\n\n```\n```java\nclass Science_book extends Book {\n\n    public\
+    \ Science_book(int bookPage,float discount) {\n        super(bookPage,discount);\
+    \    //引用父类的构造方法\n    }\n\n    public void show_kind() {       //实现抽象方法\n    \
+    \    System.out.println(\"The book's kind is science\");\n    }\n\n    public\
+    \ double getPrice(int bookPage,float discount) { //实现抽象类方法\n        return bookPage*0.1*discount;\n\
+    \    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 366
+  md: "# （2）各子类：定义文艺书类\n\n```\n```java\nclass Literature_book extends Book {\n\n \
+    \   public Literature_book(int bookPage,float discount) {\n        super(bookPage,discount);\n\
+    \    }\n\n    public void show_kind() {\n        System.out.println(\"The book's\
+    \ kind is literature\");\n    }\n\n    public double getPrice(int bookPage,float\
+    \ discount) {\n        return bookPage*0.08*discount;\n    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 367
+  md: "# （2）各子类：**定义教材类**\n\n```\n```java\nclass Teaching_book extends Book {\n\n\
+    \    public Teaching_book(int bookPage,float discount) {\n        super(bookPage,discount);\n\
+    \    }\n\n    public void show_kind() {\n        System.out.println(\"The book's\
+    \ kind is teaching book\");\n    }\n\n    public double getPrice(int bookPage,float\
+    \ discount) {\n        return bookPage*0.05*discount;\n    }\n}  // 其类的结果和代码与前面的几个子类相同\n\
+    ```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 368
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 369
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 370
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 371
+  md: '# ## 8.2 接口
+
+
+    +   - 接口(interface)可以被用来实现类间多继承结构
+
+    +   - 接口内部只能定义 public 的抽象方法和静态的、公有常量。所有的方法需要在实现接口的类中实现
+
+    +   - 接口提供了方法声明与实现相分离的机制
+
+    +     - 实现接口的多个类表现出相同的行为模式
+
+    +     - 每个实现接口的类可以根据各自要求，给出抽象方法的具体实现'
+  merge: -1
+  img_proc: true
+- pgno: 372
+  md: '# 1 接口声明
+
+
+    ```
+
+    [访问权限] interface 接口名 [extends 父接口名] {
+
+    ```
+
+
+    ```
+
+    成员变量表(常量)
+
+    ```
+
+
+    ```
+
+    成员方法列表（抽象）
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    +   - 接口访问权限只有两种：**public**和缺省
+
+
+    +   - 接口体中定义的方法都是抽象、公有的
+
+    +     - 关键字 **public**和**abstract** 可以省略
+
+
+    +   - 成员变量只能是静态、公有的常量
+
+    +     - 关键字 **public**、**static** 和 **final** 都可以省略。'
+  merge: -1
+  img_proc: true
+- pgno: 373
+  md: "# Example“\n\n以下是一个接口声明：\n\n```\npublic interface Shape1 {\n    public static\
+    \ final PI=3.14159; // 成员变量， 常量\n    // 抽象成员方法\n    public abstract double area();\n\
+    \    public abstract double volume( double x);\n    public abstract void show();\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 374
+  md: '# # 2 接口实现
+
+
+    ```
+
+    class 类名 [extends 父类名] implements 接口名列表{
+
+    类体
+
+    }
+
+    ```
+
+
+    # ## 说明
+
+
+    +   - 一个类可以实现多个接口，各个接口之间用逗号分开
+
+    +   - 该类必须要实现接口中所有的抽象方法，即使本类中不使用的抽象方法也要实现
+
+    +   - 对不使用的抽象方法
+
+    +     - 空方法：方法中没有语句，实现不需要返回值的方法
+
+    +     - 返回默认值：在方法中使用默认值返回，如0
+
+    +   - 实现抽象方法，需指定访问权限为public'
+  merge: -1
+  img_proc: true
+- pgno: 375
+  md: "# # 接口的特点\n\n+   - 接口不存在最高层  \n+     - 类有最高层：Object类\n\n+   - 接口中的方法只能被声明为public和abstract，如果不声明，则默认为public\
+    \ abstract；\n\n+   - 接口中的成员变量只能用public、static和final来声明，如果不声明，则默认为public static\
+    \ final。\n\n+   - 接口中只给出方法名、返回值和参数表，而不能定义方法体"
+  merge: -1
+  img_proc: true
+- pgno: 376
+  md: "# Java实例 8-2——实现接口\n\n```\n```java\npublic interface Shape1 {\n\n    public\
+    \ static final double PI=3.14159;\n    public abstract double area();        \
+    \  //计算图形面积\n    public abstract double volume( double x);   //计算图形体积\n    public\
+    \ abstract void show_height();        //显示图形高度\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 377
+  md: "```\npublic class Circle1 implements Shape1 {\n    double radius;\n\n    public\
+    \ Circle1(double r) {\n        radius = r;\n    }\n\n    public double area()\
+    \ {\n        return PI*radius*radius;\n    }\n\n    public double volume( double\
+    \ x) { // 类中不用的抽象方法\n        return 0;\n    }\n\n    public void show_height()\
+    \ { // 空方法\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 378
+  md: "```\n// 测试例8-2\npublic static void main(String args[]) {\n    Circle1 circle=new\
+    \ Circle1(3);\n    System.out.println(\"Radius=\"+circle.radius+\" \" Area=\"\
+    +circle.area());\n}\n}\n```\n\n程序运行结果如下：\nRadius=3.0 Area=28.2743099999999996"
+  merge: -1
+  img_proc: true
+- pgno: 379
+  md: '# 实现接口并继承类举例
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_379_0.png)
+
+
+    图给出了本例中用到的接口、类及其实现和继承关系。可以看到，Little_car、Big_car及Jeep类实现Automobile接口，Microbus和Bus类继承对Big_car类。'
+  merge: -1
+  img_proc: true
+- pgno: 380
+  md: '| interface 汽车（Automobile） |
+
+    |---|
+
+    | • 加速 `void acelent()`  |
+
+    | • 维修 `void maintain()`  |
+
+    | • 前进 `String forward()`  |
+
+    | • 后退 `String reverse()`  |
+
+
+    | class 小轿车（Little car） |
+
+    |---|
+
+    | • 加速 `void acelent()`  |
+
+    | • 维修 `void maintain()`  |
+
+    | • 前进 `String forward()`  |
+
+    | • 后退 `String reverse()`  |
+
+
+    | class 大轿车（Big car） |
+
+    |---|
+
+    | • 加速 `void acelent()`  |
+
+    | • 维修 `void maintain()`  |
+
+    | • 前进 `String forward()`  |
+
+    | • 后退 `String reverse()`  |
+
+
+    | class 越野车（Jeep） |
+
+    |---|
+
+    | • 加速 `void acelent()`  |
+
+    | • 维修 `void maintain()`  |
+
+    | • 前进 `String forward()`  |
+
+    | • 后退 `String reverse()`  |
+
+
+    | class 面包车（Microbus） |
+
+    |---|
+
+    | • 加速 `void acelent()`  |
+
+    | • 维修 `void maintain()`  |
+
+
+    | class 公共汽车（Bus） |
+
+    |---|
+
+    | • 前进 `String forward()`  |
+
+    | • 后退 `String reverse()`  |
+
+
+    implements
+
+
+    implements
+
+
+    implements
+
+
+    extends
+
+
+    extends'
+  merge: -1
+  img_proc: true
+- pgno: 381
+  md: '# # 源程序Car.java的内容如下：
+
+
+    ```
+
+    interface Automobile { // 接口
+
+    int i = 5; // public、static和final可以省略
+
+    void accelent(); // public和abstract可以省略
+
+    void maintain();
+
+    String forward();
+
+    String reverse();
+
+    }// 接口定义结束
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 382
+  md: "```\n// 定义Automobile类，在其中定义接口内的方法\nclass Little_car implements Automobile {\n\
+    \    public void accelent() {\n        System.out.println(\"Little_car.accelent()\"\
+    );\n    }\n    public void maintain() {\n    }\n    public String forward() {\n\
+    \        return \"Little_car forward\";\n    }\n    public String reverse() {\n\
+    \        return \"Little_car reverse\";\n    }\n}\ninterface Automobile { // 接口\n\
+    \    int i = 5;\n    void accelent();\n    void maintain();\n    String forward();\n\
+    \    String reverse();\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 383
+  md: '```
+
+    class Big_car implements Automobile { // 继承接口
+
+    public void accelent() {
+
+    System.out.println("Big_car.accelent()");
+
+    }
+
+    public void maintain() {
+
+    }
+
+    public String forward() {
+
+    return "Big_car forward";
+
+    }
+
+    public String reverse() {
+
+    return "Big_car reverse";
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 384
+  md: "```\n```java\nclass Jeep implements Automobile{\n    public void accent() {\n\
+    \        System.out.println(\"Jeep.accent()\");\n    }\n    public void maintain()\
+    \ { }\n    public String forward() { return \"Jeep forward\"; }\n    public String\
+    \ reverse() { return \"Jeep reverse\"; }\n}\n\nclass Microbus extends Big_car{\n\
+    \    public void accent() {\n        System.out.println(\"Microbus.accent()\"\
+    );\n    }\n    public void maintain() {\n        System.out.println(\"Microbus.maintain()\"\
+    );\n    }\n}\n\nclass Bus extends Big_car{\n    public String forward() { return\
+    \ \"Bus forward\"; }\n    public String reverse() { return \"Bus reverse\"; }\n\
+    }\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 385
+  md: "```\npublic class Car {\n    public static void main(String[] args) {\n   \
+    \     Automobile[] cars=new Automobile[5];\n        int i = 0;\n        cars[i++]=new\
+    \ Little_car();\n        cars[i++]=new Big_car();\n        cars[i++]=new Jeep();\n\
+    \        cars[i++]=new Microbus();\n        cars[i++]=new Bus();\n        for(\
+    \ i=0;i<cars.length;i++)\n            cars[i].accelent();\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 386
+  md: '程序运行结果如下：
+
+
+    +   - `Little_car.accelent()`
+
+    +   - `Big_car.accelent()`
+
+    +   - `Jeep.accelent()`
+
+    +   - `Microbus.accelent()`
+
+    +   - `Big_car.accelent()`'
+  merge: -1
+  img_proc: true
+- pgno: 387
+  md: '# 8.3 包
+
+
+    包是一组相关的类和接口的集合。将类和接口分装在不同的包中，可以避免重名类的冲突，限定包之间类的访问权限，更有效地管理众多的类和接口。'
+  merge: -1
+  img_proc: true
+- pgno: 388
+  md: '# # 包的声明
+
+
+    使用包机制，首先要建立与包名相同的文件夹；
+
+    再声明类或接口所在的包，并且包中所包含的所有类
+
+    或接口的字节码文件存放于与包同名的文件夹中；再
+
+    在程序中导入包中包含的类或接口。
+
+
+    包的定义通过关键字package来实现的，package
+
+    语句的一般形式：
+
+
+    package 包名；
+
+
+    若需将类放在包中，只需在程序的第一行写上：
+
+
+    package 包名；'
+  merge: -1
+  img_proc: true
+- pgno: 389
+  md: '# 说明：
+
+
+    +   package是关键字， 包名是用户自定义的标识符。
+
+
+    +   如果要声明类或接口位于一个子包中， 子包和其父包及祖先包名之间用 “.”隔开。
+
+
+    +   package语句必须位于程序中的第1行。 一个源程序文件中只能有1条package语句， 在该源程序文件中所定义的所有类和接口， 都属于package语句所声明的包。
+
+
+    +   包名与文件夹名大小写要完全一致。'
+  merge: -1
+  img_proc: true
+- pgno: 390
+  md: "// 例如，声明 CPoint 类和 CCircle 类属于 mypackage 包的程序结构如下：\n\n```\npackage mypackage\
+    \  // 包的名字为 mypackage\n\npublic class CPoint {\n    // CPoint 类体\n}\n\nclass CCircle\
+    \ {\n    //CCircle 类体\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 391
+  md: '```
+
+    //声明Person接口和Teacher类属于subpack包
+
+    （是mypackage的子包）的程序结构如下：
+
+    package mypackage.subpack
+
+    public interface Person {
+
+    // Person 接口体
+
+    }
+
+
+    class Teacher implements Person{
+
+    // Teacher类体
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 392
+  md: '# 引用包中的类
+
+
+    一个类如果需要引用其他包中的类或接口，格式为：
+
+
+    +   - `包名.类名` 或
+
+    +   - `包名.接口名`
+
+
+    例如，类CLine要继承mypackage包中的CPoint类：
+
+
+    ```
+
+    public class CLine extends mypackage.CPoint
+
+    ```
+
+
+    Graduate类实现mypackage.subpack中接口Person的声明格式如下：
+
+
+    ```
+
+    public class Graduate implements mypackage.subpack.Person
+
+    ```
+
+
+    声明CPoint类对象point的格式如下：
+
+
+    ```
+
+    mypackage.CPoint point
+
+    ```
+
+
+    实例化Cpoint类的格式如下：
+
+
+    ```
+
+    point = new mypackage.CPoint(参数表)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 393
+  md: '# # 导入包中的类
+
+
+    导入一个包中类或接口的语句格式如下：
+
+
+    import 包名.类名
+
+
+    或
+
+
+    import 包名.接口名
+
+
+    或
+
+
+    import 包名.*
+
+
+    例子：
+
+
+    import java.util.* // 导入java中的util包中的......'
+  merge: -1
+  img_proc: true
+- pgno: 394
+  md: '```
+
+    //可以采用以下程序段引用mypackage包中
+
+    的CPoint类：
+
+    import mypackage.CPoint;
+
+    public CLine extends CPoint;  {
+
+    ··
+
+    CPoint point;  // 定义实例point
+
+    point =new CPoint(参数表); // 初始化实例
+
+    ··
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 395
+  md: '# # 例一包的建立和使用
+
+
+    在文件Point.java中定义Point类，并声明所在包为pack1。
+
+
+    ```
+
+    package pack1; //声明所在包是pack1
+
+    public class Point
+
+    {
+
+    protected int x, y;
+
+    public Point()
+
+    { setPoint( 0, 0 ); }
+
+    public Point( int a, int b )
+
+    { setPoint( a, b ); }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 396
+  md: "```\n```java\npublic void setPoint( int a, int b )\n{\n    x = a;\n    y =\
+    \ b;\n}\npublic int getX() { return x; }\npublic int getY() { return y; }\npublic\
+    \ String toString()\n    { return \"[\" + x + \", \" + y + \"]\"; }\n}\n```\n\
+    ```\n\n在当前文件夹下建立子文件夹pack1，并将Point.class存放于文件夹pack1。"
+  merge: -1
+  img_proc: true
+- pgno: 397
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 398
+  md: '编译源程序PTest.java，产生PTest.class字节码文件，并存放在当前文件夹中。运行PTest类文件，运行结果如下：
+
+
+    x1=72, y1=115
+
+
+    x2=10, y2=10'
+  merge: -1
+  img_proc: true
+- pgno: 399
+  md: "# 例--一个包中包含多个类\n\n在X1.java文件中定义bag包中的X1类。\n\n```\n```java\npackage bag;   \
+    \ //声明所在包为bag\npublic class X1\n{\n    int x,y;\n    public X1(int i,int j)\n\
+    \    {\n        x=i;\n        y=j;\n        System.out.println(\"x=\"+x+\" \"\
+    +\"y=\"+y);\n    }\n    public void show()\n    {\n        System.out.println(\"\
+    This class is X1\");\n    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 400
+  md: "在X2.java文件中定义bag包中的X2类。\n\n```\n```java\npackage bag;    //声明所在包为bag\npublic\
+    \ class X2\n{\n    int m,n;\n    public X2(int i,int j)\n    {\n        m=i;\n\
+    \        n=j;\n        System.out.println(\"m=\"+m+\" \"+\"n=\"+n);\n    }\n \
+    \   public void show()\n    {\n        System.out.println(\"This class is X2\"\
+    );\n    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 401
+  md: '# 编译bag包中的X1和X2类
+
+
+    键入下列命令，分别对X1和X2类编译：
+
+
+    ```
+
+    ```bash
+
+    javac X1.java
+
+    javac X2.java
+
+    ```
+
+    ```
+
+
+    由于X1.java和X2.java中指定X1和X2类属于bag包，所以编译时，系统自动在当前文件夹下生成子文件夹bag，并将生成的X1.class和X2.class放在当前文件夹的子文件夹bag中。'
+  merge: -1
+  img_proc: true
+- pgno: 402
+  md: "# 在PImport.java文件中，引用bag包的X1和X2类。\n\n```\nimport bag.X1; //导入bag包中的X1类\nimport\
+    \ bag.X2; //导入bag包中的X2类\npublic class PImport\n{\n    public static void main(String\
+    \ args[])\n    {\n        X1 aa=new X1(4,5);\n        aa.show();\n        X2 bb=new\
+    \ X2(10,20);\n        bb.show();\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 403
+  md: '编译PImport类。键入下列命令，对PImport类进行编译：
+
+
+    ```
+
+    javac PImport.java
+
+    ```
+
+
+    编译生成的PImport.class存放于当前文件夹中。
+
+
+    运行PImport类。键入下列命令，运行PImport类
+
+
+    ```
+
+    java PImport
+
+    ```
+
+
+    程序运行结果：
+
+
+    ```
+
+    x=4 y=5
+
+    This class is X1
+
+    m=10 n=20
+
+    This class is X2
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 404
+  md: '# 包中类及其成员的访问权限
+
+
+    包中类及其接口只有public和缺省2种访问权限，具体规定如下：
+
+
+    +   public权限的类能够被所有包中的类访问，与所在的包无关。
+
+
+    +   缺省权限的类只能被其所在包中的类访问，不能在其包外访问。'
+  merge: -1
+  img_proc: true
+- pgno: 405
+  md: '类中成员的访问权限有4种,具体规定如下：
+
+
+    +   - 类中的public权限成员，能够被所有包中的类访问，与所在的包无关。
+
+    +   - 类中的private权限成员，只能被本类访问，在类外不能访问。
+
+    +   - 类中的缺省权限成员，能够被所在包中的所有类访问，不能在其包外访问。
+
+    +   - 类中的protected权限成员，能够被所在包中的所有类访问，也能够被其它包中的子类访问。'
+  merge: -1
+  img_proc: true
+- pgno: 406
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 407
+  md: "# 说明：\n\n+   ① 一个源程序文件中，最多只能有一条package语句，并且必须是第1条语句。\n+   \n+   ② 一个源程序文件中，可以有多条import语句，并且必须位于其它类或接口声明之前。\n\
+    +   \n+   ③ 一个源程序文件中，可以定义多个类或接口，但只能定义一个public权限类或public权限接口，并且该类或接口名与文件名相同。"
+  merge: -1
+  img_proc: true
+- pgno: 408
+  md: '# 第九章
+
+
+    # 异常处理'
+  merge: -1
+  img_proc: true
+- pgno: 409
+  md: '# # Overview
+
+
+    # ## 9.1 Java异常处理机制
+
+
+    # ## 9.2 异常处理方式'
+  merge: -1
+  img_proc: true
+- pgno: 410
+  md: '# 9.1 异常处理机制
+
+
+    Java使用异常对程序给出一个统一和相对简单的抛出和处理错误的机制。如果一个方法本身能抛出异常，调用者可以捕获异常使之得到处理；也可以回避异常，这时异常将在调用的堆栈中向下传递，直到被处理。'
+  merge: -1
+  img_proc: true
+- pgno: 411
+  md: '# 异常类
+
+
+    在Java中，将异常情况分为 **Exception**（异常）和 **Error**（错误）两大类。 **Error** 类对象由 Java 虚拟机生成并抛出；**Exception**
+    类对象由应用程序处理或抛出。
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_411_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 412
+  md: '# # Exception子类的继承关系
+
+
+    +   Exception
+
+    +   ClassNotFoundException
+
+    +   ClassNotSupportedException
+
+    +   IllegalAccessException
+
+    +   InstantiationException
+
+    +   InterruptedException
+
+    +   NoSuchMethodException
+
+    +   RuntimeException
+
+    +   ArithmeticException
+
+    +   ArrayStoreException
+
+    +   ClassCastException
+
+    +   IllegalArgumentException
+
+    +   IllegalThreadStateException
+
+    +   NumberFormatException'
+  merge: -1
+  img_proc: true
+- pgno: 413
+  md: '# # Exception子类（续）
+
+
+    +   - IllegalMonitorStateException
+
+    +   - IndexOutOfBoundsException
+
+    +     - ArrayIndexOutOfBoundsException
+
+    +     - StringIndexOutOfBoundsException
+
+    +   - NegativeArraySizeException
+
+    +   - NullPointerException
+
+    +   - SecurityException'
+  merge: -1
+  img_proc: true
+- pgno: 414
+  md: '# # Exception 类的主要方法
+
+
+    public Exception();
+
+
+    public Exception(String s);
+
+
+    public String toString();
+
+
+    public String getMessage();'
+  merge: -1
+  img_proc: true
+- pgno: 415
+  md: '# 9.2 异常处理方法
+
+
+    异常处理的方法有两种：
+
+
+    +   1. 使用try…catch…finally结构对异常进行捕获和处理；
+
+    +   2. 通过throws和throw抛出异常。'
+  merge: -1
+  img_proc: true
+- pgno: 416
+  md: '# # 1、try...catch...finally结构
+
+
+    Java通过try...catch...finally结构对异常进行捕获和处理：
+
+    Try {
+
+    可能出现异常的程序代码
+
+    }
+
+    catch （异常类名1 异常对象名1）{
+
+    异常类名1对应的异常处理代码
+
+    }
+
+    catch （异常类名2 异常对象名2）{
+
+    异常类名2对应的异常处理代码
+
+    }
+
+    ···
+
+    [finally {
+
+    必须执行的代码
+
+    }]'
+  merge: -1
+  img_proc: true
+- pgno: 417
+  md: '# # Java实例——捕获数组下标越界异常
+
+
+    ```
+
+    public class Exception1 {
+
+    public static void main(String args[]) {
+
+    try {
+
+    int a[]={1,2,3,4,5}, sum=0;
+
+    for (int i=0; i<=5; i++)
+
+    sum=sum+a[i];
+
+    System.out.println("sum="+sum);
+
+    System.out.println("Successfully!" );
+
+    }
+
+    catch (ArrayIndexOutOfBoundsException e) {
+
+    System.out.println("ArrayIndexOutOfBoundsException detected");
+
+    }
+
+    finally {
+
+    System.out.println(" Programmm Finished! ");
+
+    }
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 418
+  md: '# # 例--捕获算术异常
+
+
+    ```
+
+    public class Exception2{
+
+    public static void main(String args[]){
+
+    try {
+
+    int x, y;
+
+    x=15;
+
+    y=0;
+
+    System.out.println(x/y);
+
+    System.out.println("Computing successfully!");
+
+    }
+
+    catch (ArithmeticException e){
+
+    System.out.println(" ArithmeticException caught ! " );
+
+    System.out.println("Exception message:"+e.toString());
+
+    }
+
+    finally {
+
+    System.out.println("Finally block.");
+
+    }
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 419
+  md: '# ## 2 抛出异常
+
+
+    +   - 抛出异常语句
+
+
+    通常情况下，异常是由系统自动捕获的。但程序员也可以自己通过throw语句抛出异常。throw语句的格式为：
+
+
+    throw new 异常类名（信息）
+
+
+    其中异常类名为系统异常类名或用户自定义的异常类名，“信息”是可选信息。如果提供了该信息，toString()方法的返回值中将增加该信息内容。'
+  merge: -1
+  img_proc: true
+- pgno: 420
+  md: "# # Java实例——抛出多个异常\n\n```\npublic class Exception3\n{\n   public static int\
+    \ Sum(int n){\n   if (n < 0)\n   throw new IllegalArgumentException(\"n应该为正整数！\
+    \ \");\n   int s = 0;\n   for (int i=0; i<=n; i++) s = s + i;\n   return s;\n\
+    \   }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 421
+  md: "```\npublic static void main(String args[]){\ntry {\n    int n = Integer.parseInt(args[0]);\n\
+    \    System.out.println(Sum(n));\n}\ncatch (ArrayIndexOutOfBoundsException e)\
+    \ {\n    System.out.println(\"命令行为: \"+\"java Exception3 <number>\");\n}\ncatch\
+    \ (NumberFormatException e2) {\n    System.out.println(\"参数<number>应为整数!\");\n\
+    }\ncatch (IllegalArgumentException e3) {\n    System.out.println(\"错误参数:\"+e3.toString());\n\
+    }\nfinally {\n    System.out.println(\"程序结束!\");\n}\n}\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 422
+  md: "# 3 自定义异常类\n\n自定义异常类可以通过继承Exception类来实现。\n其一般形式为：\n\n```\nclass 自定义异常名    extends\
+    \ Exception\n{\n        异常类体;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 423
+  md: '# # 第十章
+
+
+    # # 输入与输出'
+  merge: -1
+  img_proc: true
+- pgno: 424
+  md: '# Overview
+
+
+    +   10.0 控制台输入/输出
+
+    +   10.1 输入输出类库
+
+    +   10.2 标准输入输出及标准错误
+
+    +   10.3 文件操作'
+  merge: -1
+  img_proc: true
+- pgno: 425
+  md: '# 输入和输出
+
+
+    # 输入
+
+
+    +   - 命令行
+
+    +   - Scanner类中的方法
+
+    +     - `nextDouble()`, `nextFloat`, `nextInt()`, `nextLine()`……
+
+    +     - （JDK1.5以上）
+
+    +   - BufferedReader类的方法`read()`, `readLine()`
+
+    +   - JoptionPane类中的`showInputDialog`方法
+
+
+    # 输出
+
+
+    +   - Print()方法；Println()方法；Printf()方法
+
+    +     - （JDK1.5以上）
+
+    +   - JoptionPane类中的`showMessageDialog`方法'
+  merge: -1
+  img_proc: true
+- pgno: 426
+  md: '# 使用print、println、printf方法输出
+
+
+    +   System.out.print(表达式); //输出,不换行
+
+
+    +   System.out.println(表达式); //输出,换行
+
+
+    +   System.out.printf("格式",表达式); //输出
+
+
+    +   格式:
+
+
+    +   %d 整型表达式(short,int,long),输出十进制数
+
+
+    +   %x 整型表达式(short,int,long),输出十六进制数
+
+
+    +   %o 整型表达式(short,int,long),输出八进制数
+
+
+    +   %f 浮点数输出(float,double)
+
+
+    +   %s 字符串输出
+
+
+    +   %c 字符输出
+
+
+    +   %5d, %-5d, %.2f, %10.2f'
+  merge: -1
+  img_proc: true
+- pgno: 427
+  md: "# # 使用对话框输出\n\n需要导入swing包。使用JOptionPane对象的showMessageDialog()方法：\nJOptionPane.showMessageDialog(null,输出字符串);\n\
+    \n举例：\n\n```\n```java\nimport javax.swing.*;\nclass T1 {\n    public static void\
+    \ main(String args[]) {\n        String st = \"王小红\";\n        JOptionPane.showMessageDialog(null,\
+    \ st + \"你好!!\");\n        System.exit(0);\n    }\n}\n```\n```\n\n![](img/80da1d99a94a92757465da523b64f0ce_427_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 428
+  md: "# 命令行输入\n\n+   - Eclipse“运行设置”中的参数\n+   - 直接在命令行中输入——Like C Language\n+   -\
+    \ 得到的是字符串：args[i]\n+   - 必要时转换成其它类型。\n+     - 已在第5章介绍。\n\n```\nfor (i=0; i<args.length;\
+    \ i++)\n    System.out.println(args[i]);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 429
+  md: '# # 利用Scanner类中的方法输入数据
+
+
+    +   - 使用java.util.Scanner,建立一个Scanner对象,就可以输入数据了。
+
+    +     ```java
+
+    +     import java.util.Scanner;
+
+    +     Scanner in=new Scanner(System.in);
+
+    +     ```
+
+
+    +   - 输入各类数据：
+
+    +     ```java
+
+    +     short a;int b;long c;float d;double e;String f,g;
+
+    +     a=in.nextShort();
+
+    +     b=in.nextInt();
+
+    +     c=in.nextLong();
+
+    +     d=in.nextFloat();
+
+    +     e=in.nextDouble();
+
+    +     f=in.next();
+
+    +     g=in.nextLine();
+
+    +     ```'
+  merge: -1
+  img_proc: true
+- pgno: 430
+  md: "# # 使用对话框输入\n\n+   - 程序顶部加入语句\n+     ```java\n+     import javax.swing.*;\n\
+    +     ```\n+   - 在程序中使用： `JOptionPane.showInputDialog()`\n+   - 例如：\n+     ```java\n\
+    +     String st = JOptionPane.showInputDialog(\"请输入:\");\n+     ```\n+   - 使用对话框输入的也是字符串，需要\
+    \ `Integer.ParseInt()`等转换\n\n+   - 注意：使用对话框，会启动一个线程  \n+     - 使用`System.exit(0);`可以结束线程"
+  merge: -1
+  img_proc: true
+- pgno: 431
+  md: '# # 对话框输入 / 输出举例
+
+
+    ```
+
+    ```java
+
+    import javax.swing.*;
+
+    class T1{
+
+    public static void main(String args[]) {
+
+    String st = JOptionPane.showInputDialog("请输入姓名:");
+
+    JOptionPane.showMessageDialog(null,st+"你好!");
+
+    System.exit(0);
+
+    }
+
+    }
+
+    ```
+
+    ```
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_431_0.png)
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_431_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 432
+  md: '# # 10.1 输入\输出类库
+
+
+    # ## java.io
+
+
+    +   - 实现java程序的输入输出功能
+
+
+    +   - 输入输出类库包
+
+
+    +   - 其中大部分是用来完成流式输入输出的类'
+  merge: -1
+  img_proc: true
+- pgno: 433
+  md: '# 流、程序、外设之间的关系
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_433_0.png)
+
+
+    +   - **流**：计算机的输入与输出之间的流动数据的序列
+
+    +   - **Java数据流**：位流（字节流）、字符流'
+  merge: -1
+  img_proc: true
+- pgno: 434
+  md: '# 2 输入输出流类
+
+
+    +   - Java的流类，主要是：
+
+    +     1. 输入流类InputStream
+
+    +     2. 输出流类OutputStream
+
+    +   - 其他流类
+
+    +     - 是为了方便处理各种特定流而设置的
+
+    +     - 都属于InputStream或OutputStream的子类'
+  merge: -1
+  img_proc: true
+- pgno: 435
+  md: "# # InputStream类\n\n+   - 每个流有一个指针，每次读入从指针位置开始。\n+   - 每读入一个数据，指针自动后移。\n+ \
+    \  - 输入流类InputStream及其子类用来处理字节流\n+   - InputStream是抽象类\n\nint read(); //读入数据 \
+    \ \nlong skip(); //指针后跳n个字节  \nvoid mark(); //指针位置做标记  \nvoid close(); //断开与外设的连接\
+    \  \nvoid reset(); //指针移到标记位置\n\n# ## InputStream类的主要方法\n\nInputStream 输入流类（抽象类）\
+    \  \nFileInputStream 文件输入流  \nFilterInputStream  \nDataInputStream  \nBufferedInputStream\n\
+    \n# ## InputStream子类的继承关系"
+  merge: -1
+  img_proc: true
+- pgno: 436
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 437
+  md: '# # Reader类
+
+
+    Reader是抽象类，以字符方式从流中读入数据。
+
+    int read()
+
+    long skip()
+
+    void mark()
+
+    void close()
+
+    void reset()
+
+
+    Reader类的主要方法
+
+
+    Reader子类的继承关系
+
+
+    Reader
+
+    BufferedReader
+
+    InputStreamReader
+
+    FileReader
+
+
+    +   - BufferedReader:具备缓冲功能的字符输入类
+
+    +   - InputStreamReader: 字节/字符输入流的桥梁
+
+    +     - 从字节流读入数据，转为字符'
+  merge: -1
+  img_proc: true
+- pgno: 438
+  md: "# # Writer类\n\n+   - Writer类是抽象类\n+   - 包含了所有字符输出流都需要的方法。\n\nvoid write() \
+    \ \nvoid flash()  \nvoid close()\n\nWriter  \nPrintWriter  \nBufferedWriter  \n\
+    OutputStreamWriter  \nFileWriter\n\nWriter类的主要方法\n\nWriter子类的继承关系"
+  merge: -1
+  img_proc: true
+- pgno: 439
+  md: '# 10.2 标准输入输出及标准错误
+
+
+    +   - 程序与外设进行I/O时，要先建立I/O类对象。
+
+    +   - Java系统预先定义好3个流对象，静态属性和方法
+
+
+    +   - **System.out** 标准输出设备：显示器
+
+    +   - **System.in** 标准输入设备：键盘
+
+    +   - **System.err** 标准错误设备：屏幕
+
+
+    +   - System是Java中一个功能非常强大的类
+
+    +     - **System.out**
+
+    +       - PrintStream类对象，输出字节数据流
+
+    +     - **System.in**
+
+    +       - InputStream类对象，输入字节数据流
+
+    +     - **System.err**
+
+    +       - PrintStream类对象，输出系统错误信息
+
+    +       - 各种错误信息输出到标准错误设备，即显示器。'
+  merge: -1
+  img_proc: true
+- pgno: 440
+  md: "# # Java实例——从键盘输入字符\n\n```\n//当需要从键盘输入时，可直接使用该类的read()方法\nimport java.io.*;\
+    \ // 声明导入IO包\npublic class StandardIn1 { // 定义类\n    public static void main(String[]\
+    \ args) throws IOException{\n        char c;\n        System.out.println(\" 输入一个字符\"\
+    );\n        c=(char)System.in.read(); //返回一个字符的ASCII码\n        System.out.print(\
+    \ \"输入的字符是: \"+c);\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 441
+  md: '# # 例--利用read()语句暂缓程序运行
+
+
+    ```
+
+    import java.io.*;
+
+    public class E10_2{
+
+    public static void main(String []args)throws IOException{
+
+    int i;
+
+    for(i=1;i<=5;i++){
+
+    System.out.println(i);
+
+    System.out.println("按回车键继续..."); //回车是两个字符
+
+    System.in.read(); // \r
+
+    System.in.read(); // \n
+
+    }
+
+    System.out.println("程序结束!");
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 442
+  md: '# # 例--输入字符串
+
+
+    ```
+
+    import java.io.*;
+
+    public class StandardIn3 {
+
+    public static void main(String[] args) throws IOException{
+
+    InputStreamReader iin=new InputStreamReader(System.in);
+
+    BufferedReader bin =new BufferedReader(iin);
+
+    String s;
+
+    float f;
+
+    int i;
+
+    boolean b;
+
+    System.out.println("输入任一字符串");
+
+    s=bin.readLine();
+
+    System.out.println("输入浮点数");
+
+    f=Float.parseFloat(bin.readLine());
+
+    System.out.println("输入整数");
+
+    i=Integer.parseInt(bin.readLine());
+
+    System.out.println("输入布尔量");
+
+    b=Boolean.parseBoolean(bin.readLine());
+
+    System.out.println("输入的字符串:"+s);
+
+    System.out.println("输入的浮点数:"+f);
+
+    System.out.println("输入的整数:"+i);
+
+    System.out.println("输入的布尔量:"+b);
+
+    }
+
+    }
+
+    ```
+
+
+    +   - 利用BufferedReader类的readLine()方法读入字符串
+
+    +   - BufferedReader类构造方法可接收InputStreamReader类对象作为参数。但不能直接接收System.in作为参数。
+
+    +   - 故先建立与System.in有联系的InputStreamReader类对象
+
+    +   - 再用InputStreamReader类对象建立BufferedReader类对象。'
+  merge: -1
+  img_proc: true
+- pgno: 443
+  md: '# # BufferedReader类的方法read(),readLine()
+
+
+    InputStreamReader iin=new InputStreamReader(System.in);
+
+    BufferedReader bin =new BufferedReader(iin);
+
+
+    # ## 两句可以合为一句：
+
+
+    BufferedReader bin=new BufferedReader(new InputStreamReader(System.in));
+
+
+    # ## 接着就可以使用read()和readLine()方法
+
+
+    char c=(char)bin.read(); //输入字符
+
+    String st=bin.readLine(); //输入字符串'
+  merge: -1
+  img_proc: true
+- pgno: 444
+  md: '# # 10.3 文件操作
+
+
+    +   - Java提供了功能强大的文件及目录操作功能。
+
+    +   - 对文件及目录进行操作：
+
+    +     - 应先对目录或文件建立连接。
+
+    +     - File类可以实现这些连接。
+
+    +   - File类也位于java.io包中，但不是流类。
+
+    +     - 不负责数据输入和输出
+
+    +     - 专门用来管理文件和目录
+
+    +   - 一个File类对象表示一个磁盘文件或目录。
+
+    +     - 对象属性包含了名称、长度等信息
+
+    +     - 对象的方法可以实现文件或目录的常用管理。'
+  merge: -1
+  img_proc: true
+- pgno: 445
+  md: '# 以字节流的方式读文件
+
+
+    ```
+
+    import java.io.*;
+
+    public class E10_5{
+
+    public static void main(String []args)throws IOException{
+
+    try{
+
+    FileInputStream fr=new FileInputStream("d:\td\E10_4.txt");
+
+    int i;
+
+    while(((i=fr.read())!= -1))
+
+    // -1为文件结束符
+
+    System.out.print((char)i);
+
+    fr.close();
+
+    }
+
+    catch(FileNotFoundException e){
+
+    System.out.println(e);
+
+    }
+
+    catch(IOException e){
+
+    System.out.println(e);
+
+    }
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 446
+  md: '# 第十章
+
+
+    # 输入与输出'
+  merge: -1
+  img_proc: true
+- pgno: 447
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 448
+  md: '# # 10.1 输入\输出类库
+
+
+    # ## java.io
+
+
+    +   - 实现java程序的输入输出功能
+
+
+    +   - 输入输出类库包
+
+
+    +   - 其中大部分是用来完成流式输入输出的类'
+  merge: -1
+  img_proc: true
+- pgno: 449
+  md: "# # 流、程序、外设之间的关系\n\n![](img/80da1d99a94a92757465da523b64f0ce_449_0.png)\n\n\
+    - 流：计算机的输入与输出之间的数据的序列  \n- Java数据流：位流（字节流）、字符流"
+  merge: -1
+  img_proc: true
+- pgno: 450
+  md: "# # 2 输入输出流类\n\n+   Java的流类，主要是：\n+   1. 输入流类InputStream\n+   2. 输出流类OutputStream\n\
+    \n+   其他流类\n+   \n+   都是为了方便处理各种特定流而设置的，属于InputStream或OutputStream的子类"
+  merge: -1
+  img_proc: true
+- pgno: 451
+  md: "# # InputStream类\n\nint read()  \nlong skip()  \nvoid mark()  \nvoid close()\
+    \  \nvoid reset()\n\nInputStream  \nFileInputStream  \nFilterInputStream  \nDataInputStream\
+    \  \nBufferedInputStream\n\nInputStream类的主要方法\n\nInputStream子类的继承关系"
+  merge: -1
+  img_proc: true
+- pgno: 452
+  md: '# # OutputStream类
+
+
+    void write()
+
+    void flush()
+
+    void close()
+
+
+    OutputStream
+
+    FileOutputStream
+
+    FilterOutputStream
+
+    PrintStream
+
+    DataOutputStream
+
+
+    OutputStream类的主要方法
+
+
+    OutputStream子类的继承关系'
+  merge: -1
+  img_proc: true
+- pgno: 453
+  md: '# Reader类
+
+
+    +   int read()
+
+    +   long skip()
+
+    +   void mark()
+
+    +   void close()
+
+    +   void reset()
+
+
+    Reader类的主要方法
+
+
+    +   Reader
+
+    +   BufferedReader:
+
+    +     InputStreamReader
+
+    +       FileReader
+
+
+    Reader子类的继承关系'
+  merge: -1
+  img_proc: true
+- pgno: 454
+  md: '# # Writer类
+
+
+    void write()
+
+    void flash()
+
+    void close()
+
+
+    Writer类的主要方法
+
+
+    Writer
+
+    PrintWriter
+
+    BufferedWriter
+
+    OutputStreamWriter
+
+    FileWriter
+
+
+    Writer子类的继承关系'
+  merge: -1
+  img_proc: true
+- pgno: 455
+  md: "# # 10.2 标准输入输出及标准错误\n\n+   Java系统预先定义好3个流对象，静态属性\n+   \n+   - System.out 标准输出设备：显示器\n\
+    +   - System.in 标准输入设备：键盘\n+   - System.err 标准错误设备：屏幕\n\n+   System.out\n+   \n\
+    +   PrintStream类对象，输出字节数据流\n\n+   System.in\n+   \n+   InputStream类对象，输入字节数据流\n\
+    \n+   System.err\n+   \n+   PrintStream类对象，输出系统错误信息"
+  merge: -1
+  img_proc: true
+- pgno: 456
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 457
+  md: "# 例--利用read()语句暂停程序运行\n\n```\n```java\nimport java.io.IOException;\npublic\
+    \ class StandardIn2\n{\n    public static void main(String[] args)   throws IOException\n\
+    \    {\n        for (int i=1; i<=5; i++)\n        System.out.println(i);\n   \
+    \     System.out.println(\"按回车键继续...\");\n        System.in.read();\n        System.out.print(\"\
+    程序继续运行！\");\n    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 458
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 459
+  md: '# 2 标准输出
+
+
+    +   - Java的标准输入设备
+
+    +     - 显示器用System.out表示
+
+    +     - System.out属于PrintStream类对象。
+
+    +   - PrintStream 输出各类数据
+
+    +     - print()
+
+    +     - println()
+
+    +     - 唯一区别是换行'
+  merge: -1
+  img_proc: true
+- pgno: 460
+  md: '# # 3 标准错误
+
+
+    运行或编译Java程序时，各种错误信息输出到标准错误设备，即显示器。在Java中，标准错误设备用System.err表示。System.err属于PrintStream类对象。'
+  merge: -1
+  img_proc: true
+- pgno: 461
+  md: '# 10.3 文件操作
+
+
+    +   - 程序对磁盘文件或目录进行操作
+
+    +     - 首先对文件或目录建立连接
+
+    +     - Java提供了File类
+
+    +   - File类也位于java.io包中
+
+    +     - File类不是流
+
+    +     - 专门用来管理磁盘文件和目录
+
+    +   - 一个File类对象
+
+    +     - 表示一个磁盘文件或目录
+
+    +     - 对象属性中包含了文件或目录的相关信息，如
+
+    +       - 名称、长度、所含文件个数等
+
+    +       - 其方法完成对文件/目录的操作，如创建、删除等'
+  merge: -1
+  img_proc: true
+- pgno: 462
+  md: '# # 1 建立File对象
+
+
+    File类提供了3个不同的构造方法：
+
+
+    +   ◆ File(String path)
+
+    +   String类参数path指定所建对象对应的磁盘文件名或目录名及其路径名。
+
+
+    +   ◆ File(String path, String name)
+
+    +   此构造方法中的参数path表示文件或目录的路径，参数name表示文件或目录名。
+
+
+    +   ◆ File(File dir, String name)
+
+    +   此构造方法中的参数dir表示一个磁盘目录对应的File对象，参数name表示文件名或目录名。'
+  merge: -1
+  img_proc: true
+- pgno: 463
+  md: '# 2 File对象的属性和操作
+
+
+    public String getName(): 得到文件名
+
+    public String getPath(): 得到文件路径
+
+    public boolean exists(): 判断文件或目录是否存在
+
+    public long length(): 返回文件的字节数
+
+    public boolean canRead(): 返回当前文件是否可读
+
+    public boolean canWrite(): 返回当前文件是否可写
+
+    public boolean equals(File file): 比较文件或目录
+
+    public boolean isFile(): 检测是否是文件
+
+    public boolean isDirectiry(): 检测是否是目录
+
+    public boolean renameTo(File file): 重命名文件
+
+    public void delete(): 删除文件'
+  merge: -1
+  img_proc: true
+- pgno: 464
+  md: '# FileOutputStream流类
+
+
+    FileOutputStream流类的构造方法有两个：
+
+
+    FileOutputStream(String fileName):
+
+
+    参数fileName表示带路径的磁盘文件名。
+
+
+    FileOutputStream(File file):
+
+
+    参数file表示为磁盘文件所建立的File对象名'
+  merge: -1
+  img_proc: true
+- pgno: 465
+  md: "# Java实例——以字节流方式写入文件\n\n```\n```java\nimport java.io.*;\npublic class File2{\n\
+    \    public static void main(String[] args) throws IOException{\n        char\
+    \ ch;\n        File file1=new File(\"c:\\\\jdk1.3\\\\example\\\\newFile.txt\"\
+    );\n        try{\n            FileOutputStream fout= new FileOutputStream(file1);\n\
+    \            System.out.println(\"输入任一字符串，以?结束\");\n            ch=(char) System.in.read();\n\
+    \            while (ch != '?'){\n                fout.write(ch);\n           \
+    \     ch=(char) System.in.read();\n            }\n            fout.close();\n\
+    \        }\n        catch (FileNotFoundException e) { System.out.println(e);}\n\
+    \        catch (IOException e) { System.out.println(e);}\n    }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 466
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 467
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 468
+  md: "# # DataOutputStream流类\n\nDataOutputStream类文件中写操作步骤：\n1. 为磁盘文件建立File类对象\n2.\
+    \ 为该File对象建立FileOutputStream类流对象，建立其与磁盘文件的连接\n3. 为FileOutputStream类对象\n   - 建立DataOutputStream类对象\n\
+    \   - 利用DataOutputStream类的writeInt(), writeFloat(), writeDouble(), writeBoolean()等方法分别向文件中写入整型、单精度型、双精度型、布尔型等数据\n\
+    4. 写入操作完成后，利用close()方法将流关闭，断开与磁盘文件的联系"
+  merge: -1
+  img_proc: true
+- pgno: 469
+  md: "# Java实例——向磁盘文件写入各类数据\n\n```\n```java\nimport java.io.*;\npublic class File4\
+    \  {\n    public static void main(String[] args)    {\n        int ch;\n     \
+    \   InputStreamReader iin=new InputStreamReader(System.in);\n        BufferedReader\
+    \ bin =new BufferedReader(iin);\n        File file1=new File(\"c:\\\\jdk1.3\\\\\
+    example\\\\dataFile.txt\");\ntry{\n        FileOutputStream fout= new FileOutputStream(file1);\n\
+    \        DataOutputStream dout =new DataOutputStream(fout);\n        System.out.println(\"\
+    输入整数\");\n        int i=Integer.parseInt(bin.readLine());\n        System.out.println(\"\
+    输入浮点数\");\n        float f=Float.parseFloat(bin.readLine());\n        System.out.println(\"\
+    输入布尔量\");\n        boolean b=new Boolean(bin.readLine()).booleanValue();\n   \
+    \     dout.writeInt(i);\n        dout.writeFloat(f);\n        dout.writeBoolean(b);\n\
+    \        dout.close();\n```\n\n```"
+  merge: -1
+  img_proc: true
+- pgno: 470
+  md: "# 例一从磁盘文件读取各类数据\n\n```\n```java\nimport java.io.*;\npublic class File5 {\n\
+    \    public static void main(String[] args) {\n        int ch;\n        File file1=new\
+    \ File(\"c:\\\\jdk1.3\\\\example\\\\dataFile.txt\");\n        File file2=new File(\"\
+    c:\\\\jdk1.3\\\\example\\\\outFile.txt\");\n        try {\n            FileInputStream\
+    \ fin = new FileInputStream(file1);\n            DataInputStream din = new DataInputStream(fin);\n\
+    \            int i=din.readInt();\n            float f=din.readFloat();\n    \
+    \        boolean b=din.readBoolean();    din.close();\n            FileOutputStream\
+    \ fout = new FileOutputStream(file2);\n            DataOutputStream dout = new\
+    \ DataOutputStream(fout);\n            dout.writeInt(i);\n            dout.writeFloat(f);\n\
+    \            dout.writeBoolean(b);\n            dout.close();\n            System.out.println(\"\
+    整数：\"+i);\n            System.out.println(\"浮点数：\"+f);\n            System.out.println(\"\
+    布尔量：\"+b);\n        }\n        catch(FileNotFoundException e)\n        {System.out.println(e);}\n\
+    \        catch(IOException e)\n        {System.out.println(e);}\n    }\n}\n```\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 471
+  md: '# # Writer和Reader
+
+
+    以字符流方式向文件写入或从文件中读取数据，可以使用Writer和Reader类及其子类。
+
+
+    Writer和Reader类都是抽象类，不能建立它们的对象，所以只能通过它们子类对象对文件进行操作。常用的Writer类的子类包括FileWriter类和BufferedFileWriter类。
+
+
+    FileWriter类构造方法如下：
+
+
+    +   ◆FileWriter(String fileName):
+
+
+    参数fileName表示带路径的磁盘文件名。
+
+
+    +   ◆FileWriter(File file):
+
+
+    参数file表示为磁盘文件所建立的File对象名。
+
+
+    注：使用FileWriter进行文件操作时，为了减少磁盘读写次数，常常使用具有缓冲功能的BufferedWriter类。'
+  merge: -1
+  img_proc: true
+- pgno: 472
+  md: "# Java实例—以字符流方式写入文件\n\n```\n```java\nimport java.io.*;\npublic class File8\
+    \ {\n  public static void main(String args[]) throws Exception {\n    InputStreamReader\
+    \ iin =new InputStreamReader(System.in);\n    BufferedReader br=new BufferedReader(iin);\n\
+    \    FileWriter fw1=new FileWriter(\"c:\\\\jdk1.3\\\\example\\\\dataFile.txt\"\
+    );\n    BufferedWriter bw = new BufferedWriter(fw1);\n    String s;\n    while\
+    \ (true){\n      System.out.print(\"输入一个字符串: \");\n      System.out.flush();\n\
+    \      s=br.readLine();\n      if (s.length()==0) break;\n      bw.write(s);\n\
+    \      bw.newLine();\n    }\n    bw.close();\n  }\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 473
+  md: "# 例一以字符流方式读取文件\n\n```\n```java\nimport java.io.*;\npublic class File9\n{\n\
+    \    public static void main(String args[]) throws Exception\n    {\n        FileReader\
+    \ fr1 = new FileReader(\"c:\\\\jdk1.3\\\\example\\\\dataFile.txt\");\n       \
+    \ BufferedReader br1 = new BufferedReader(fr1);\n        BufferedWriter bw1 =\
+    \ new BufferedWriter(\n        new FileWriter(\"c:\\\\jdk1.3\\\\example\\\\targetFile.txt\"\
+    ));\n        int lineNum=0;\n        String s=br1.readLine();\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 474
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 475
+  md: "# 例一 以字符流方式向显示器输出\n\n```\n```java\nimport java.io.*;\npublic class File11\n\
+    {\n    public static void main(String args[]) throws Exception\n    {\n      \
+    \  FileReader fr1 = new FileReader(\"c:\\\\jdk1.3\\\\example\\\\dataFile.txt\"\
+    );\n        BufferedReader br1 = new BufferedReader(fr1);\n        BufferedWriter\
+    \ bw1 = new BufferedWriter(\n                new OutputStreamWriter(System.out));\n\
+    \        int lineNum=0;\n        String s=br1.readLine();\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 476
+  md: "```\nwhile (s != null)\n{\n    lineNum++;\n    bw1.write(String.valueOf(lineNum));\n\
+    \    bw1.write(\" \");\n    bw1.write(s);\n    bw1.newLine();\n    s=br1.readLine();\n\
+    }\nbw1.close();\n}\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 477
+  md: '# # 第十一章
+
+
+    # # 图形用户界面（GUI）设计
+
+
+    # # 第十二章 Swing组件'
+  merge: -1
+  img_proc: true
+- pgno: 478
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 479
+  md: '# AWT组件概述
+
+
+    ▪ 图形用户界面方便用户与程序的交互。
+
+
+    +   ▪ Java的AWT（抽象窗口工具集Abstract Window ToolKit）提供：
+
+    +     - 组件类
+
+    +     - 窗口布局管理器类
+
+    +     - 事件处理类'
+  merge: -1
+  img_proc: true
+- pgno: 480
+  md: "# # AWT组件概述\n\n+   - AWT组件定义在Java.awt包中。\n+   - 它包括组件类、组件布局类等。\n+   - 主要类与继承关系如图：\n\
+    \n+   1. 组件  \n+      构成图形用户界面的基本成分和核心元素。  \n+   2. 容器  \n+      是一种特殊的组件。能容纳其它组件。\n\
+    \n![](img/80da1d99a94a92757465da523b64f0ce_480_0.png)\n\n+   3. Color类：设置颜色  \n\
+    +   4. Font类：设置字体样式"
+  merge: -1
+  img_proc: true
+- pgno: 481
+  md: "# # AWT组件举例--在窗口中建立一个标签\n\n```\nimport java.awt.*;\nclass E11_2{\npublic static\
+    \ void main(String []args){\n    Frame fra=new Frame(\"FrmApp\");    //创建窗口，并设置标题\n\
+    \    Label lab=new Label(\"Hello\",Label.CENTER); //创建标签，并设置标题和对齐方\n    式\n  \
+    \  fra.setSize(250,150);\n    lab.setForeground(Color.blue);    //设置标签前景色\n  \
+    \  lab.setBackground(Color.red);    //设置标签背景色\n    //创建字体对象 （字体、字型、字号）\n    Font\
+    \ fnt=new Font(\"Serief\",Font.ITALIC+Font.BOLD,22);\n    lab.setFont(fnt);  \
+    \  //设置标签字体\n    fra.add(lab);    //在窗口中加载标签\n    fra.setVisible(true);\n    System.out.println(\"\
+    Text:\"+lab.getText());\n}\n}\n```\n\n![](img/80da1d99a94a92757465da523b64f0ce_481_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 482
+  md: "# AWT组件举例---在窗口中建立一个按钮\n\n```\n```java\nimport java.awt.*;\npublic class E11_3{\n\
+    \    public static void main(String []args){\n        Frame fra=new Frame(\"按钮练习\"\
+    );\n        Button but=new Button(\"click\");\n        fra.setLayout(null);  \
+    \ //没有这句，按钮会充满整个窗口\n            //（加了这句，还要设置按钮大小，位置）\n        fra.setSize(250,170);\n\
+    \        but.setSize(100,50);\n        but.setLocation(75,60);\n        fra.add(but);\n\
+    \        fra.setVisible(true);\n    }\n}\n```\n```\n\n![](img/80da1d99a94a92757465da523b64f0ce_482_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 483
+  md: '# # 11.2布局管理
+
+
+    +   当窗口中组件较多时，用setSize和setLocation显得不方便。
+
+
+    +   Java提供了多种布局管理器（Layout manager）：
+
+
+    +   用来对组件相对定位，会根据窗口大小，自动改变组件大小。
+
+
+    +   每一种布局管理器指定一种组件的相对布置和大小布局。
+
+
+    +   Java提供了五种布局管理器类：
+
+
+    +   FlowLayout （提供按行布局组件的方式）
+
+
+    +   BorderLayout （把容器空间划分为东、南、西、北、中五个区域）
+
+
+    +   GridLayout （将容器划分为大小相等的若干行乘若干列的网格）
+
+
+    +   CardLayout
+
+
+    +   GridBagLayout
+
+
+    +   这些布局管理器类都是java.lang.Object的子类。'
+  merge: -1
+  img_proc: true
+- pgno: 484
+  md: '# # 布局管理举例---使用FlowLayout布局。
+
+
+    ```
+
+    import java.awt.*;
+
+    public class E11_6{
+
+    public static void main(String []args){
+
+    Frame frm=new Frame("布局练习");
+
+    FlowLayout fl=new FlowLayout(FlowLayout.LEFT,5,10);//对齐，水平、垂直间距
+
+    frm.setBounds(0,0,300,200); //窗口初始位置和大小
+
+    frm.setLayout(fl); //采用FlowLayout布局
+
+    Button but1=new Button("Button1");
+
+    Button but2=new Button("Button2");
+
+    Button but3=new Button("Button3");
+
+    Button but4=new Button("Button4");
+
+    Button but5=new Button("Button5");
+
+    frm.add(but1);
+
+    frm.add(but2);
+
+    frm.add(but3);
+
+    frm.add(but4);
+
+    frm.add(but5);
+
+    frm.setVisible(true);
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 485
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 486
+  md: '# # 11.3 事件处理
+
+
+    # ## 开发程序时的实现方法
+
+
+    +   - 向事件源注册事件监听器
+
+    +     - 调用事件源的addXXXListener()之类的方法。
+
+    +     - 如：向按钮butt注册单击事件监听器，需要调用：
+
+    +       butt.addActionListener(this);
+
+    +     - 这样单击按钮时，事件监听器创建单击事件类ActionEvent对象
+
+
+    +   - 实现事件处理方法
+
+    +     - 其方法体即为事件发生时要执行的语句序列'
+  merge: -1
+  img_proc: true
+- pgno: 487
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 488
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 489
+  md: '# 11.4 绘图
+
+
+    +   - Java提供了绘图类Graphics。
+
+    +   - 可以在组件上绘制直线、圆、圆弧、任意曲线等。
+
+    +   - 绘图所用的坐标系与屏幕、窗口相同。
+
+    +   - 水平为X轴，向右为正。
+
+    +   - 垂直为Y轴，向下为正。
+
+    +   - 原点(0,0)位于左上角。
+
+    +   - 点(x,y)中的x和y为距原点的水平和垂直像素。'
+  merge: -1
+  img_proc: true
+- pgno: 490
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 491
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 492
+  md: '# # javax.swing中类的继承关系
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_492_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 493
+  md: "Swing组合框举例：窗口中有一个组合框和一个标签，当选择组合框中某项时，在标签中显示所选的信息。\n\n```\nimport java.awt.*;\n\
+    import java.awt.event.*;\nimport javax.swing.*;\nimport javax.swing.event.*;\n\
+    public class T1 extends JFrame{\n    private JComboBox jcb;\n    private JLabel\
+    \ jlb;\n    public T1(){\n        super(\"组合框举例\");              //构造方法\n    \
+    \    setSize(200,150);\n        Object obj[]={\"杭州\",\"宁波\",\"温州\",\"金华\",\"绍兴\"\
+    ,\"嘉兴\",\"湖州\"};\n        jcb=new JComboBox(obj);\n        jcb.setMaximumRowCount(4);\
+    \    //设置下拉列表框显示的最大行数\n        jlb=new JLabel(\"\");\n        Container c=getContentPane();\
+    \       //获得默认的内容窗格\n        c.setLayout(new FlowLayout());\n        c.add(jcb);\n\
+    \        c.add(jlb);\n        jcb.addItemListener(new ItListener());   //构造方法中添加监听组合框事件\n\
+    \        setVisible(true);\n    }\n}\n```\n\n![](img/80da1d99a94a92757465da523b64f0ce_493_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 494
+  md: "```\n```java\npublic static void main(String []args){\n    T1 frm=new T1();\n\
+    \    frm.addWindowListener(new winListen());    //在main中添加监听窗口事件\n}\nclass ItListen\
+    \ implements ItemListener{    //内部类,监听是否发生ItemEvent事件\n    public void itemStateChanged(ItemEvent\
+    \ e){    //选择项目时执行\n        jlb.setText(\"你选中了\"+jcb.getSelectedItem());    //getSelectedItem():获得选项\n\
+    \    }\n}\nstatic class winListen extends WindowAdapter{    //内部类,监听是否发生WindowEvent事件\n\
+    \    public void windowClosing(WindowEvent e){    //关闭窗口时执行\n        System.exit(0);\
+    \    //终止程序执行\n    }\n}\n```\n\n```\n\n![](img/80da1d99a94a92757465da523b64f0ce_494_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 495
+  md: '# 第十三章
+
+
+    # Applet程序'
+  merge: -1
+  img_proc: true
+- pgno: 496
+  md: '# # Applet程序
+
+
+    +   Java有两种程序
+
+    +   - 独立应用程序
+
+    +   - Applet程序
+
+
+    +   Applet程序不能独立运行，必须依附于网页，借助浏览器才能运行。'
+  merge: -1
+  img_proc: true
+- pgno: 497
+  md: '# # Applet简介
+
+
+    +   - Applet类
+
+    +     - Applet程序继承自Java.applet.Applet类；
+
+    +   - 程序嵌入HTML文档中，常置于服务器端，下载到本地后由浏览器执行
+
+    +   - Applet类提供了Applet程序与执行环境间的标准接口，包括4个方法：
+
+    +     1）init()方法：初始化。如获取Applet运行参数、加载图片等。
+
+    +        它在网页第一次加载（或重新加载）时调用。
+
+    +     2）start()方法：在执行init()方法后，执行start()方法。
+
+    +        或该网页重新激活时，再执行start()方法。
+
+    +     3）stop()方法：当离开Applet网页，使它不活动或最小时，执行该方法。
+
+    +     4）destroy()方法：用户真正离开浏览器时执行。
+
+    +        在stop之后执行。清除Applet占用的资源。（事实上系统会自动清除）
+
+    +   - Applet程序运行时，会出现一个窗口界面。当窗口大小或内容改变需要重绘窗口时，调用paint()方法。'
+  merge: -1
+  img_proc: true
+- pgno: 498
+  md: '# # 13.1.2 Applet程序的运行过程
+
+
+    +   当浏览器装载有带Applet程序的网页时：
+
+    +   1）首先为Applet及其全程变量分配存储空间。
+
+    +   2）执行Applet的init()方法。
+
+    +   3）执行Applet的start()方法。
+
+    +   4）执行Applet的paint()方法。
+
+    +   当离开Applet网页，又重新激活时：
+
+    +   1）执行Applet的start()方法。
+
+    +   2）执行Applet的paint()方法。
+
+    +   当用户真正离开浏览器时：
+
+    +   1）执行Applet的stop()方法。
+
+    +   2）执行Applet的destroy()方法。'
+  merge: -1
+  img_proc: true
+- pgno: 499
+  md: '# 13.1.3 Applet程序的建立和运行
+
+
+    建立方法：
+
+    1）用文本编辑器编辑源程序：文件名.java
+
+    2）用javac.exe编译源程序，生成字节码文件：文件名.class
+
+    3）将字节码文件嵌入到HTML文件中。
+
+    4）浏览加载HTML文件时，执行Applet程序。
+
+
+    ```
+
+    ```html
+
+    <HTML>
+
+    <APPLET CODE="applet类名.class" WIDTH=窗口宽度 HEIGHT=窗口高度></APPLET>
+
+    </HTML>
+
+    ```
+
+    ```
+
+
+    applet类名.class：即为字节码文件
+
+
+    窗口宽和高度是指Applet程序运行时的窗口初始尺寸。
+
+
+    运行Applet程序的几种方式：
+
+    1）利用浏览器运行Applet程序。
+
+    2）利用appletviewer运行Applet程序。appletviewer html文件名.htm
+
+    3）利用JCreator或Eclipse建立和运行Applet程序。'
+  merge: -1
+  img_proc: true
+- pgno: 500
+  md: '# # Applet程序举例：显示文字：Hello Applet!
+
+
+    ```
+
+    import java.awt.Graphics;
+
+    import javax.swing.JApplet;
+
+    public class T1 extends JApplet{
+
+    public void paint(Graphics g){
+
+    g.drawString("Hello Applet!",50,60);
+
+    }
+
+    }
+
+    ```
+
+
+    HTML文件(在T1.class同一文件夹中):
+
+
+    ```
+
+    <HTML>
+
+    <APPLET CODE="T1.class" WIDTH=250
+
+    HEIGHT=100></APPLET>
+
+    </HTML>
+
+    ```
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_500_0.png)
+
+
+    使用浏览器执行(HTML)
+
+
+    ![](img/80da1d99a94a92757465da523b64f0ce_500_1.png)
+
+
+    使用Eclipse执行'
+  merge: -1
+  img_proc: true
+- pgno: 501
+  md: "# Applet程序举例：绘制图形\n\n```\n```java\nimport java.awt.Graphics;\nimport javax.swing.JApplet;\n\
+    public class E13_2 extends JApplet{\n    public void paint(Graphics g){\n    \
+    \    g.drawLine(40,30,200,30);  //画横线，两点：(40,30)和(200,30)\n        g.drawRect(40,50,160,100);\
+    \  //画矩形，(40,50)为左上角，宽和高分别为160和100\n        g.drawOval(40,50,160,100);  //画椭圆。(40,50)为左上角，宽160高100的矩形为切椭圆\n\
+    \        g.drawLine(40,170,200,170);\n        g.drawString(\"Drawing!\",100,105);\
+    \  //(100,100)处输出字符串\n    }\n}\n```\n\n```\n\nHTML文件：\n\n```\n```html\n<HTML>\n\
+    <APPLET CODE=\"E13_2.class\"\n             WIDTH=250 HEIGHT=200>\n</APPLET>\n\
+    </HTML>\n```\n```\n\n![](img/80da1d99a94a92757465da523b64f0ce_501_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 502
+  md: "Applet举例：覆盖init()方法的Applet程序。利用init()方法输入一个整数，利用paint()方法计算并输出阶乘。\n\n```\n\
+    ```java\nimport java.awt.Graphics;\nimport javax.swing.*;   // JOptionPane和JApplet\n\
+    public class T1 extends JApplet{\n    int n;\n    long s=1;\n    public void init(){\n\
+    \        String nStr=JOptionPane.showInputDialog(\"请输入一个整数：\");\n        n=Integer.parseInt(nStr);\n\
+    \    }\n    public void paint(Graphics g){\n        for(int i=1;i<=n;i++)s*=i;\n\
+    \        g.drawString (n+\"!=\"+s,10,10);\n    }\n}\n<HTML>\n<Applet code=T1.class\
+    \ width=300 height=100></Applet>\n</Html>\n```\n```\n\n![](img/80da1d99a94a92757465da523b64f0ce_502_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 503
+  md: '# 第十四章
+
+
+    # 多线程'
+  merge: -1
+  img_proc: true
+- pgno: 504
+  md: '# 多线程
+
+
+    +   - 许多程序都包含了一些独立的代码段，如果让它们在执行时间上重叠，可以提高执行效率。
+
+    +   - **线程是为了实现重叠执行而引入的一个概念。**
+
+    +   - **线程是可以独立、并发执行的程序单元。**
+
+    +   - 多线程是指程序中存在多个执行体，按自己的执行步骤并发工作，独立完成各自功能，互不干扰。'
+  merge: -1
+  img_proc: true
+- pgno: 505
+  md: '# # 14.1 Java的多线程机制
+
+
+    +   多线程机制是Java的重要特征。
+
+
+    +   每个Java程序都有一个主线程
+
+
+    +   ——main()方法对应的线程。
+
+
+    +   实现多线程， 必须在主线程中创建新线程。
+
+
+    +   Java线程用Thread类及子类的对象来表示。
+
+
+    +   每个线程经历五种状态。 从新生到死亡的过 程为生命周期。'
+  merge: -1
+  img_proc: true
+- pgno: 506
+  md: '# 线程的生命周期
+
+
+    +   1. 新生状态：用new运算符和Thread类或子类建立一个线程。
+
+    +      - 新生状态的线程有自己的内存空间。
+
+    +      - 通过调用start()方法进入就绪状态。
+
+    +   2. 就绪状态：已具备运行条件，等待系统为它分配CPU。
+
+    +      - 一旦获得CPU，就进入运行状态，并自动调用run()方法。
+
+    +   3. 运行状态：执行run()方法中的代码，直到调用其他方法而终止。或等待某资源而阻塞，或完成任务而死亡。
+
+    +   4. 阻塞状态：运行状态下，若执行了sleep()方法、或等待I/O设备等，让出CPU而暂停运行，即进入了阻塞状态。
+
+    +      - 阻塞状态了线程不能进入就绪队列。
+
+    +      - 只有当阻塞原因消除后，才转入就绪状态。
+
+    +   5. 死亡状态：正常运行的线程完成了它全部工作。或强制终止，如执行了stop()或destroy()方法。'
+  merge: -1
+  img_proc: true
+- pgno: 507
+  md: '# 14.1.2 多线程的实现方法
+
+
+    +   - 有两种方法：
+
+    +     1. 通过创建Thread类的子类来实现。
+
+    +     2. 通过实现Runnable接口的类来实现。
+
+
+    两者无本质区别，只是由于Java不允许多重继承，所以当一个类既要继承一个非Thread类，又要实现多线程时，可以使用Runnable接口的方式。'
+  merge: -1
+  img_proc: true
+- pgno: 508
+  md: '# 举例:通过Thread类实现多线程
+
+
+    +   1）先设计Thread类的子类（即继承Thread类）
+
+    +   2）设计线程的run()方法
+
+    +   3）建立该类的对象
+
+    +   4）使用start()方法启动线程，将执行权交给run()方法。'
+  merge: -1
+  img_proc: true
+- pgno: 509
+  md: '[例14-1]通过继承Thread类实现多线程。启动两个线程执行。它们分别相隔m毫秒输出一个字母A或B（m分别为50和100）。共输出20个A和20个B。
+
+
+    ```
+
+    public class T1 extends Thread{ //继承Thread
+
+    String s;
+
+    int m,count=0;
+
+    T1(String ss,int mm){ s=ss; m=mm; }
+
+    public void run(){
+
+    try{
+
+    while(true){
+
+    System.out.print(s);
+
+    sleep(m); //sleep m毫秒
+
+    count++;
+
+    if(count>=20)break;
+
+    }
+
+    System.out.println("finished"+s+"!");
+
+    }
+
+    catch(InterruptedException e){
+
+    return ;
+
+    }
+
+    }
+
+    ```
+
+
+    ```
+
+    public static void main(...){
+
+    T1 threadA=new T1("A ",50);
+
+    T1 threadB=new T1("B ",100);
+
+    threadA.start(); //启动线程
+
+    threadB.start(); //启动线程
+
+    }
+
+    }
+
+    ```
+
+
+    ```
+
+    运行后的输出：
+
+    A B A A B A A B B A A B A A B A A B B
+
+    A A B A A B A A B A A B A finishedA !
+
+    B B B B B B B B B B finishedB !
+
+    ```'
+  merge: -1
+  img_proc: true

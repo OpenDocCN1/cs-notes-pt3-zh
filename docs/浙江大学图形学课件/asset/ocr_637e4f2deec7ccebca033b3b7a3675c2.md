@@ -1,0 +1,11 @@
+# OpenGl Commands
+
+# gluOrtho2D( left, right, bottom, top )
+
+Creates a matrix for projecting 2D coordinates onto the screen and multiplies the current matrix by it.
+
+# glViewport( x, y, width, height )
+
+Define a pixel rectangle into which the final image is mapped.
+(x, y) specifies the lower-left corner of the viewport.
+(width, height) specifies the size of the viewport rectangle.

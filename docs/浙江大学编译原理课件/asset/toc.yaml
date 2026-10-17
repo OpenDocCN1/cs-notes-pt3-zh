@@ -1,0 +1,262 @@
+- - '#'
+  - Chapter 3 Context-Free Grammars and Parsing
+- - '###'
+  - Source code
+- - '###'
+  - Token stream
+- - '###'
+  - Abstract Syntax Tree (AST)
+- - '###'
+  - Lexical Analysis
+- - '###'
+  - Syntax Analysis
+- - '###'
+  - Semantic Analysis
+- - '###'
+  - 3.2.2 Specification of context-free grammar rules
+- - '###'
+  - 3.2.3 Derivations and the language defined by a grammar
+- - '###'
+  - 3.3.2 Abstract syntax trees
+- - '###'
+  - 3.4.1 Ambiguity grammars
+- - '###'
+  - 3.4.2 Precedence and associativity
+- - '###'
+  - 3.4.3 The dangling else problem
+- - '###'
+  - 3.4.4 Inessential ambiguity
+- - '###'
+  - 3.6.1 A formal definition of context-free language
+- - '#'
+  - 'Chapter 4: Top-Down Parsing'
+- - '##'
+  - Outline
+- - '##'
+  - Where We Are
+- - '###'
+  - 4.1.1 The Basic Method of Recursive-Descent
+- - '###'
+  - '4.1.2 Repetition and Choice: Using EBNF'
+- - '###'
+  - 4.1.3 Further Decision Problems
+- - '###'
+  - 4.2.1 The Basic Method of LL(1) Parsing
+- - '###'
+  - 4.2.2 The LL(1) Parsing Table and Algorithm
+- - '###'
+  - 4.2.3 Left Recursion Removal and Left Factoring
+- - '####'
+  - 'CASE 1: Simple immediate left recursion'
+- - '####'
+  - 'CASE 2: General immediate left recursion'
+- - '####'
+  - 'Algorithm for left factoring a grammar:'
+- - '###'
+  - 4.2.4 Syntax Tree Construction in LL(1) Parsing
+- - '####'
+  - 'The solution:'
+- - '#'
+  - Chapter 4 Top-Down Parsing
+- - '###'
+  - 4.3.2 Follow Sets
+- - '####'
+  - 'Example: the simple expression grammar.'
+- - '###'
+  - 4.3.3 Constructing LL(1) Parsing Tables
+- - '###'
+  - 4.5.2 Error Recovery in LL(1) Parsers
+- - '#'
+  - Bottom-Up Parsing
+- - '##'
+  - 5.1 OVERVIEW OF BOTTOM-UP PARSING
+- - '###'
+  - 5.2.2 Finite Automata of Items
+- - '###'
+  - 5.2.3 The LR(0) Parsing Algorithm
+- - '###'
+  - 5.3.1 The SLR(1) Parsing Algorithm
+- - '###'
+  - 5.3.2 Disambiguating Rules for Parsing Conflicts
+- - '####'
+  - Example 5.12
+- - '###'
+  - 5.3.3 Limits of SLR(1) Parsing Power
+- - '###'
+  - 5.4.1 Finite Automata of LR(1) Items
+- - '####'
+  - Definition of LR(1) transitions (part 1).
+- - '####'
+  - Definition of LR(1) transitions (part 2).
+- - '###'
+  - 5.4.2 The LR(1) Parsing Algorithm
+- - '####'
+  - 'The General LR(1) parsing algorithm:'
+- - '###'
+  - 5.4.3 LALR(1) Parsing
+- - '####'
+  - FIRST PRINCIPLE OF LALR(1) PARSING
+- - '####'
+  - SECOND PRINCIPLE OF LALR(1) PARSING
+- - '####'
+  - Example 5.17
+- - '##'
+  - '5.5 Yacc: LALR(1) PARSING GENERATOR'
+- - '#'
+  - Chapter 6
+- - '#'
+  - Semantic Analysis
+- - '##'
+  - outline
+- - '###'
+  - 6.1.1 Attribute grammars
+- - '####'
+  - 'Example 6.1:'
+- - '####'
+  - 'Example 6.2:'
+- - '####'
+  - 'Example 6.3:'
+- - '####'
+  - Example 6.4
+- - '###'
+  - 6.1.2 Simplifications and Extensions to Attribute Grammars
+- - '####'
+  - Example 6.5
+- - '###'
+  - 6.2.1 dependency graphs and evaluation order
+- - '###'
+  - 6.2.2 Synthesized and inherited attributes
+- - '####'
+  - Synthesized attributes
+- - '####'
+  - inherited attributes
+- - '####'
+  - Example 6.12
+- - '####'
+  - Example 6.14
+- - '###'
+  - 6.2.3 Attributes as parameters and returned values.
+- - '####'
+  - Example 6.15
+- - '###'
+  - 6.2.4 The use of external data structures to store attributes values.
+- - '###'
+  - 6.2.5 The computation of attributes during parsing.
+- - '####'
+  - Computing synthesized attributes during LR parsing
+- - '###'
+  - 6.2.6 The dependence of attributes computation on the syntax
+- - '####'
+  - Theorem
+- - '####'
+  - Example 6.18
+- - '#'
+  - Chapter 6 Semantic Analysis
+- - '###'
+  - 6.3.1 The structure of the symbol table
+- - '####'
+  - the hash table
+- - '####'
+  - Collision resolution
+- - '####'
+  - The algorithm of the hash function
+- - '###'
+  - 6.3.2 Declarations
+- - '####'
+  - type declarations
+- - '####'
+  - variable declarations
+- - '####'
+  - procedure/function declarations
+- - '###'
+  - 6.3.3 Scope rules and block structure
+- - '####'
+  - declaration before use
+- - '####'
+  - the most closely nested rule for block structure
+- - '###'
+  - 6.3.4 Interaction of same-level declarations
+- - '###'
+  - 6.3.5 An extended example of an attribute grammar using a symbol table
+- - '####'
+  - Semantic Rules
+- - '####'
+  - Structured type
+- - '###'
+  - 6.4.1 Type expressions and type constructors
+- - '####'
+  - Array
+- - '####'
+  - record
+- - '####'
+  - union
+- - '####'
+  - pointer
+- - '####'
+  - function
+- - '####'
+  - class
+- - '###'
+  - 6.4.2 Type names, type declarations and recursive type
+- - '###'
+  - 6.4.3 Type equivalence
+- - '####'
+  - Structural equivalence
+- - '####'
+  - Name equivalence
+- - '####'
+  - Declaration equivalence
+- - '###'
+  - 6.4.4 Type inference and type checking
+- - '###'
+  - 6.4.5 Additional topics in type checking
+- - '###'
+  - Procedure activation record
+- - '###'
+  - Processor registers
+- - '###'
+  - calling sequence
+- - '###'
+  - The entire program memory
+- - '###'
+  - 7.3.1 Stack-Based Environments Without Local Procedures
+- - '####'
+  - Example
+- - '####'
+  - (a) Runtime environment of the above program during the second call to g
+- - '####'
+  - (b) Runtime environment of the above program during the third call to g
+- - '####'
+  - Access to Names
+- - '####'
+  - Example 7.4
+- - '####'
+  - The calling sequence
+- - '####'
+  - When a procedure exits
+- - '####'
+  - Dealing with variable-length data
+- - '####'
+  - Local Temporaries and Nested Declarations
+- - '###'
+  - 7.3.2 Stack-Based Environment with local Procedures
+- - '###'
+  - 7.3.3 Stack-Based Environment with Procedure Parameters
+- - '###'
+  - 7.4.1 Fully Dynamic Runtime Environments
+- - '###'
+  - 7.4.2 Dynamic Memory in Object-Oriented Languages
+- - '###'
+  - 7.4.3 Heap Management
+- - '#'
+  - Chapter 7 Runtime Environments
+- - '###'
+  - 7.4.4 Automatic Management of the heap
+- - '###'
+  - 7.5.3 Pass by Value-Result
+- - '###'
+  - 7.5.4 Pass by Name
+- - '#'
+  - Chapter 8 Code Generation
+- - '###'
+  - example

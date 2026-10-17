@@ -1,0 +1,13 @@
+# # A More Intuitive Approach Offered by glu:
+
+```
+gluLookAt(eyex, eyey, eyez, atx, aty,
+atz,
+upx, upy, upz);
+```
+
+eyex, eyey, eyez specify the position of the eye point and are mapped to the origin.
+
+atx, aty, atz specify a point being looked at, which will be rendered in center of view port. It is mapped to the -z axis.
+
+upx, upy, upz specify components of the camera up vector.

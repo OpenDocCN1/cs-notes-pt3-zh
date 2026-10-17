@@ -1,0 +1,242 @@
+- - '##'
+  - Introduction
+- - '##'
+  - Chapter 1. A Tutorial Introduction
+- - '###'
+  - Let us begin with a quick introduction to C
+- - '###'
+  - 【example】Calculate 1+2+3+ ...... + 100
+- - '###'
+  - How to calculate 1+2+3+......+100
+- - '###'
+  - If a,b inputted from keyboard with different values ?
+- - '##'
+  - 1.2 Variables and Arithmetic Expressions
+- - '##'
+  - 1.3 The FOR statement
+- - '##'
+  - 1.4 Symbolic Constants
+- - '##'
+  - 1.5 Character Input and Output
+- - '###'
+  - 'Important View:'
+- - '###'
+  - 'Tow simplest I/O functions:'
+- - '###'
+  - Version 2
+- - '##'
+  - 1.5 Character Input and Output Line Counting
+- - '##'
+  - 1.7 Functions
+- - '###'
+  - 'Function definition form:'
+- - '###'
+  - 'Example: call n-th power.'
+- - '##'
+  - 1.8 Arguments——call by Value
+- - '##'
+  - 1.9 Character Arrays
+- - '###'
+  - 'Example: reads a set of text lines and prints the longest'
+- - '###'
+  - 'Algorithm:'
+- - '###'
+  - 'Program:'
+- - '##'
+  - 1.10 External Variables and Scope
+- - '###'
+  - file1.c
+- - '###'
+  - file2.c
+- - '##'
+  - 'Chapter 2: Types, Operators, and Expressions'
+- - '###'
+  - 2.1 Variable Names
+- - '###'
+  - 2.3 Constants
+- - '###'
+  - 2.4 Declarations
+- - '###'
+  - 2.5 Arithmetic Operators
+- - '###'
+  - 2.6 Relational and Logical Operators
+- - '###'
+  - 2.7 Type Conversions
+- - '###'
+  - 2.8 Increment and Decrement Operators
+- - '##'
+  - 2.9 Bitwise Operators
+- - '##'
+  - Examples
+- - '##'
+  - 2.11 Conditional Expressions
+- - '##'
+  - 2.12 Precedence and Order of Evaluation
+- - '##'
+  - Chapter 3. Control Flow
+- - '##'
+  - 3.2 If-else
+- - '###'
+  - 'Example:'
+- - '##'
+  - 3.3 Else-if
+- - '##'
+  - 3.4 Switch
+- - '###'
+  - 'Example:'
+- - '##'
+  - 3.5 Loops — While and For
+- - '###'
+  - 'Example 1:'
+- - '###'
+  - 'Example 2:'
+- - '###'
+  - 'Example 3:'
+- - '##'
+  - 3.6 Loops — Do-while
+- - '###'
+  - 'Example:'
+- - '##'
+  - 3.8 Goto and Labels
+- - '###'
+  - 'Example 1:'
+- - '##'
+  - 【Example 2】求 Sn=a+aa+aaa+…+aaa…a 之值，其中 a 是一个数字。
+- - '##'
+  - '☆ Solution 2:'
+- - '##'
+  - 【Example 3】
+- - '##'
+  - Chapter 4. Function and Program Struction
+- - '###'
+  - 4.1 Basics of Functions
+- - '##'
+  - 'Form of function definition:'
+- - '##'
+  - 4.2 Functions Returning Non-integers
+- - '###'
+  - calling atof()
+- - '##'
+  - 4.3 External Variables
+- - '##'
+  - 4.4 Scope Rules
+- - '##'
+  - Discussion
+- - '###'
+  - 【说明】
+- - '##'
+  - 4.5 Header Files
+- - '###'
+  - 'calc.h:'
+- - '###'
+  - 'main.c:'
+- - '###'
+  - 'getop.c:'
+- - '###'
+  - 'stack.c:'
+- - '###'
+  - getch.c
+- - '##'
+  - 4.6 Static Variables
+- - '###'
+  - '(1) applied to an external variables or function:'
+- - '###'
+  - '(2) applied to an internal variable:'
+- - '##'
+  - 4.7 Register Variables
+- - '##'
+  - 4.8 Block Structure
+- - '##'
+  - 4.9 Initialization
+- - '##'
+  - 4.10 Recursion
+- - '##'
+  - 4.11 The C Preprocessor
+- - '###'
+  - 4.11.3 Conditional Inclusion
+- - '##'
+  - Chapter 5. Pointers and Arrays
+- - '###'
+  - 5.1 Pointers and Addresses
+- - '###'
+  - 5.2 Pointers and Function Arguments
+- - '####'
+  - An example
+- - '###'
+  - 5.3 Pointers and Arrays
+- - '##'
+  - 5.4 Address Arithmetic
+- - '##'
+  - 5.5 Character Pointers and Functions
+- - '##'
+  - '5.6 Pointer Arrays: Pointer to Pointer'
+- - '###'
+  - 'Algorithm:'
+- - '##'
+  - 5.7 Multi-Dimensional Arrays
+- - '##'
+  - 5.8 Initialization of Pointer Arrays
+- - '##'
+  - 5.9 Pointers vs. Multi-dimensional Array
+- - '##'
+  - 5.10 Command-line Arguments
+- - '##'
+  - 5.11 Pointers to Functions
+- - '##'
+  - 5.12 Complicated Declarations
+- - '##'
+  - 'Chapter 6: Structures'
+- - '##'
+  - 6.1 Basics of Structures
+- - '##'
+  - 6.2 Structures and Functions
+- - '##'
+  - 6.3 Arrays of Structures
+- - '##'
+  - 6.4 Pointers to Structures
+- - '#'
+  - define MAXWORD 100
+- - '##'
+  - 6.5 Self-referential Structures
+- - '##'
+  - 6.6 Table Lookup
+- - '##'
+  - 6.7 Typedef
+- - '##'
+  - 6.8 Unions
+- - '##'
+  - Chapter 7. Input and Output
+- - '###'
+  - 7.1 Standard Input and Output
+- - '###'
+  - 7.2 Formatted Output - printf
+- - '##'
+  - 7.2 Formatted Output-Printf
+- - '##'
+  - 7.3 Variable-length Argument Lists
+- - '##'
+  - 7.4 Formatted Input-Scanf
+- - '##'
+  - 7.5 File Access
+- - '##'
+  - 7.6 Line Input and Output
+- - '##'
+  - Some examples
+- - '###'
+  - 1、putchar函数可以向终端输出一个________。
+- - '###'
+  - 2、以下程序的输出结果是________。
+- - '###'
+  - 3、以下程序
+- - '###'
+  - 4、若火灾报警控制器显示“scan”相关信息，正确选项为：
+- - '###'
+  - 5、阅读以下程序，其运行结果为（　　）
+- - '###'
+  - 5、阅读以下程序，写出运行结果
+- - '###'
+  - 6、已有变量，若从变量 y 的值为
+- - '###'
+  - 7、以下说法正确的是（ ）
+- - '###'
+  - 7、以下关于scanf函数的叙述中，正确的是（ ）。

@@ -1,0 +1,770 @@
+- - '##'
+  - 课程地位
+- - '##'
+  - 课程体系：三位一体、循序递进
+- - '##'
+  - 如何学好这门课？——耕耘与收获
+- - '##'
+  - 成功的秘诀
+- - '##'
+  - 课堂教学的作用
+- - '##'
+  - 课堂教学——实践的指导方针
+- - '##'
+  - 实验教学——知识的感性化
+- - '##'
+  - 考核
+- - '##'
+  - 计算机组成原理
+- - '##'
+  - 1.1 Introduction
+- - '##'
+  - Classes of Computer Applications and Their Characteristics
+- - '##'
+  - Brief introduction to this course
+- - '##'
+  - Brief introduction to Chapter 1
+- - '##'
+  - Where is the performance bottleneck?
+- - '##'
+  - '1.2 Below Your Program: From a High-Level Language to the Language of Hardware'
+- - '##'
+  - Motherboard
+- - '##'
+  - The five classic components of a computer
+- - '##'
+  - 'Important concept: Virtual machine'
+- - '##'
+  - A safe place for data --- secondary memory
+- - '##'
+  - Communicating with Other Computer
+- - '##'
+  - '1.4 Real Stuff: Manufacturing Pentium 4 Chips'
+- - '##'
+  - Growth of capacity per DRAM chip over time
+- - '##'
+  - The semiconductor silicon and the chip manufacturing process
+- - '##'
+  - Manufacturing Pentium 4 Chips
+- - '##'
+  - Digital circuits vs Computer organization
+- - '##'
+  - Board
+- - '##'
+  - FPGA
+- - '##'
+  - VGA Interface
+- - '##'
+  - MIPS/X86
+- - '##'
+  - CPU
+- - '##'
+  - Controller
+- - '##'
+  - Datapath
+- - '##'
+  - BUS Interface
+- - '##'
+  - RS-232 Interface
+- - '##'
+  - PS/2 Interface
+- - '##'
+  - VRAM
+- - '##'
+  - Memory(256K × 32bit)
+- - '##'
+  - DBUS
+- - '##'
+  - ABUS
+- - '##'
+  - PC Terminal
+- - '##'
+  - KEY Board
+- - '##'
+  - VGA Monitor
+- - '##'
+  - 1.5 History of Computer Development
+- - '##'
+  - Commercial Developments
+- - '##'
+  - Cray Research, Inc.
+- - '##'
+  - Personal computer
+- - '##'
+  - Computer Generations
+- - '#'
+  - Example 2.2 Compiling a complex C statement
+- - '#'
+  - 'C code:'
+- - '#'
+  - 'MIPS code:'
+- - '#'
+  - MIPS assembly language
+- - '##'
+  - Memory operands
+- - '#'
+  - Example 2.4 Compiling with an operand in memory
+- - '#'
+  - Byte addressing
+- - '#'
+  - Alignment restriction
+- - '##'
+  - Software/hardware interface
+- - '##'
+  - Compiler allocates data structures to memory
+- - '##'
+  - Compiler associating variables with registers
+- - '##'
+  - Actual MIPS memory addresses and contents
+- - '##'
+  - MIPS operands
+- - '##'
+  - MIPS assembly language
+- - '##'
+  - MIPS machine language
+- - '##'
+  - 2.8 Communicating with People Beyond Numbers
+- - '#'
+  - Example 2.17 Compiling a string copy procedure
+- - '#'
+  - MIPS addressing mode summary
+- - '#'
+  - Five MIPS addressing modes
+- - '#'
+  - Example 2.22 Decoding machine code
+- - '#'
+  - Machine instruction
+- - '#'
+  - Decoding
+- - '#'
+  - Summary of MIPS architecture in Chapter 2
+- - '#'
+  - MIPS instruction format
+- - '#'
+  - MIPS operands
+- - '#'
+  - MIPS assembly language
+- - '#'
+  - Data transfer
+- - '#'
+  - Conditional branch
+- - '#'
+  - Unconditional jump
+- - '#'
+  - 2.10 Translating and starting a Program
+- - '#'
+  - A translation hierarchy
+- - '#'
+  - Start a C program in a file on disk to run
+- - '##'
+  - 2.13 A C Sort Example to Put it All Together
+- - '#'
+  - $t1 has the address of v[ k ]
+- - '##'
+  - 2.15 Arrays versus Pointers
+- - '##'
+  - '2.16 Real Stuff: IA-32 Instructions'
+- - '##'
+  - 2.12 PowerPC and 80x86 Instructions
+- - '##'
+  - Some typical IA-32 Integer Operations
+- - '##'
+  - Typical 80x86 instruction format
+- - '##'
+  - 2.18 Concluding Remarks
+- - '##'
+  - 2.19 History of Instruction Set Development
+- - '##'
+  - Computer Organization & Design
+- - '##'
+  - Chapter 3
+- - '##'
+  - Contents of Chapter 3
+- - '##'
+  - Numbers
+- - '##'
+  - Do you Know?
+- - '##'
+  - For binary integer
+- - '##'
+  - 3.2 Signed and Unsigned Numbers
+- - '##'
+  - Numbers and their representation
+- - '##'
+  - Number systems
+- - '##'
+  - Number types
+- - '##'
+  - Number formats
+- - '##'
+  - Signed number representation
+- - '##'
+  - Two's Complement Operations
+- - '##'
+  - 2's Complement for n=3
+- - '##'
+  - 'More Common: Use of 2''s Complement'
+- - '##'
+  - Two's Biased notation
+- - '##'
+  - sign extension (Iou vs. lb)
+- - '##'
+  - Compare operations
+- - '##'
+  - Example for Compare
+- - '##'
+  - Bounds check Shortcut
+- - '##'
+  - Adition & subtraction
+- - '##'
+  - Overflow
+- - '##'
+  - Overflow conditions
+- - '##'
+  - Which instructions cause Overflow
+- - '##'
+  - New MIPS instructions
+- - '##'
+  - Logical operations
+- - '##'
+  - A half adder
+- - '##'
+  - A full adder
+- - '##'
+  - Full adder Logic circuit
+- - '##'
+  - 1 bit ALU
+- - '##'
+  - Basic 32 bit ALU
+- - '##'
+  - Extended 1 bit ALU — Subtraction
+- - '##'
+  - Extended 1 bit ALU — comparison
+- - '##'
+  - Most significant bit
+- - '##'
+  - Complete ALU
+- - '##'
+  - Complete ALU — with Zero detector
+- - '##'
+  - ALU symbol & Control
+- - '##'
+  - ALU Hardware Code
+- - '##'
+  - How do you write with overflow code?
+- - '##'
+  - What is the difference The codes in the Synthesize?
+- - '##'
+  - Speed considerations
+- - '##'
+  - Fast adders
+- - '##'
+  - Fast adders
+- - '##'
+  - Carry look ahead adder (CLA)
+- - '##'
+  - Carry look ahead adder
+- - '##'
+  - Four bit carry look ahead adder
+- - '##'
+  - Four bit carry look ahead adder
+- - '##'
+  - Four bit carry look ahead adder
+- - '##'
+  - Hybrid CLA + Ripple carry
+- - '##'
+  - Carry skip adder
+- - '##'
+  - Carry select adder (CSA)
+- - '##'
+  - Carry select adder
+- - '##'
+  - 3.4 Multiplication
+- - '##'
+  - Multiplier V1 – Logic Diagram
+- - '##'
+  - Multiplier V1 – Algorithmic rule
+- - '##'
+  - Multiplier V2
+- - '##'
+  - Multiplier V2 – Logic Diagram
+- - '##'
+  - Multiplier V2 – Algorithmic rule
+- - '##'
+  - Revised 4-bit example with V2
+- - '##'
+  - Multiplier V3
+- - '##'
+  - Multiplier V3 Logic Diagram
+- - '##'
+  - Example with V3
+- - '##'
+  - Signed multiplication
+- - '##'
+  - Booth's Algorithm
+- - '##'
+  - Example for Booth’s Algorithm
+- - '##'
+  - Booth's Algorithm rule
+- - '##'
+  - Two questions
+- - '##'
+  - Division V 2
+- - '##'
+  - Division V 3
+- - '##'
+  - Algorithm V 3
+- - '##'
+  - Example 7/2 for Division V3
+- - '##'
+  - Signed division
+- - '##'
+  - 3.6 Floating point numbers
+- - '##'
+  - Floating point numbers
+- - '##'
+  - Example
+- - '##'
+  - Limitations
+- - '##'
+  - Floating point addition
+- - '##'
+  - Example for Decimal
+- - '##'
+  - Algorithm
+- - '##'
+  - Example y=0.5+(-0.4375) in binary
+- - '##'
+  - Algorithm
+- - '##'
+  - Multiplication
+- - '##'
+  - Multiplication
+- - '##'
+  - Data Flow
+- - '#'
+  - Computer Organization & Design
+- - '#'
+  - The Hardware/Software Interface
+- - '#'
+  - Chapter 5  The processor -
+- - '##'
+  - Chapter 5
+- - '#'
+  - 'The processor : Datapath and control'
+- - '#'
+  - Chapter Five
+- - '#'
+  - 'The processor : Datapath and control'
+- - '#'
+  - What is the MIPS?
+- - '#'
+  - Microprocessor
+- - '#'
+  - 5.1 Introduction
+- - '#'
+  - '# An abstract view of the implementation of MIPS'
+- - '#'
+  - Chapter Five
+- - '#'
+  - 'The processor : Datapath and control'
+- - '#'
+  - '# State Elements'
+- - '#'
+  - '# D-Latch for state'
+- - '#'
+  - '# Chapter Five'
+- - '#'
+  - '# The processor : Datapath and control'
+- - '#'
+  - '## 5.1 Introduction'
+- - '#'
+  - '## 5.2 Logic Design Conventions (skip)'
+- - '#'
+  - '## 5.3 Building a datapath'
+- - '#'
+  - '## 5.4 A Simple Implementation Scheme'
+- - '#'
+  - '## 5.5 A Multicycle Implementation'
+- - '#'
+  - '## 5.5 Microprogramming'
+- - '#'
+  - '## 5.6 Exception'
+- - '#'
+  - The datapath there are ......
+- - '#'
+  - '# ALU OP for MIPS machine language'
+- - '##'
+  - Instruction execution in MIPS
+- - '##'
+  - Instruction fetching unit
+- - '##'
+  - More Implementation Details
+- - '##'
+  - Register File--Built using D flip-flops
+- - '##'
+  - Register File
+- - '##'
+  - Register files
+- - '##'
+  - 'Description: 32×32bits Register files'
+- - '##'
+  - Path Built using Multiplexer
+- - '##'
+  - R type Instruction & Data stream
+- - '##'
+  - I type Instruction & Data stream
+- - '##'
+  - Combine the datapath R & I type
+- - '##'
+  - Combine the datapath R & I type
+- - '##'
+  - Combine the datapath R & I type
+- - '##'
+  - 'Chapter Five: The processor: Datapath and control'
+- - '##'
+  - Our Simple Control Structure
+- - '##'
+  - The simple Datapath with the control unit
+- - '##'
+  - The Datapath in operation for R-type
+- - '##'
+  - The Datapath in operation for load
+- - '##'
+  - The Datapath in operation for beq
+- - '##'
+  - j instruction
+- - '##'
+  - The Datapath in operation for Jump
+- - '##'
+  - Single Cycle Implementation performance for lw
+- - '##'
+  - The CPU Performance Equation
+- - '##'
+  - MIPS (*million instruction per second*)
+- - '##'
+  - Single Cycle Problems
+- - '##'
+  - One Solution for Single Cycle Problems
+- - '##'
+  - Chapter Five
+- - '##'
+  - 'The processor : Datapath and control'
+- - '##'
+  - Multicycle Approach
+- - '##'
+  - 'Analyse events: Five Execution Steps'
+- - '##'
+  - 'Step 1: Instruction Fetch'
+- - '##'
+  - 'Step 2: Instruction Decode and Register Fetch'
+- - '##'
+  - Step 3 (instruction dependent)
+- - '##'
+  - Step 4 (R-type or memory-access)
+- - '##'
+  - Write-back step (step 5)
+- - '##'
+  - 'Summary:'
+- - '##'
+  - Simple Questions
+- - '##'
+  - Reusing Resource
+- - '##'
+  - Scheme of Controller of Multicycle
+- - '##'
+  - How does it control in Multicycle Approach
+- - '##'
+  - signals for datapath of Multicycle
+- - '##'
+  - Control signals
+- - '##'
+  - 'seq: pc = pc + 4'
+- - '##'
+  - Implementing the Control
+- - '##'
+  - Review for single-cycle
+- - '##'
+  - Main control unit in the single-cycle implementation
+- - '##'
+  - Review
+- - '##'
+  - 'Review: Finite state machines'
+- - '##'
+  - Difference in controller
+- - '##'
+  - State diagram for Instruction execute flow
+- - '##'
+  - Instruction fetch / decode and Reg fetch
+- - '##'
+  - lw and sw
+- - '##'
+  - R-type
+- - '##'
+  - Branch
+- - '##'
+  - Graphical Specification of FSM
+- - '##'
+  - The logic equations for the control unit shown in a shorthand form
+- - '##'
+  - Implemented using a block of combinational logic and a register to hold the current
+    state
+- - '##'
+  - Microinstruction format
+- - '##'
+  - Microoperation
+- - '##'
+  - 微指令编码
+- - '##'
+  - Microprogramming
+- - '##'
+  - Details
+- - '##'
+  - Seeing to CD
+- - '##'
+  - 5.6 Exception
+- - '##'
+  - How Exceptions Are Handled
+- - '##'
+  - How Exceptions Are Handled
+- - '##'
+  - How Control Checks for Exceptions
+- - '#'
+  - Chapter Seven
+- - '#'
+  - Large and Fast:\
+- - '#'
+  - 'Memories: Review'
+- - '##'
+  - DRAM logical organization (64 Mbit)
+- - '##'
+  - Problems in Memory Designing
+- - '##'
+  - Locality — Two Important Concepts
+- - '##'
+  - Solutions
+- - '##'
+  - Some Important Items
+- - '##'
+  - Exploiting Memory Hierarchy
+- - '##'
+  - There Has Been Exploited Memory Hierarchy
+- - '##'
+  - 7.2 The Basics of Cache
+- - '##'
+  - Accessing a Cache — How Do We Find It?
+- - '##'
+  - Access Sequence
+- - '##'
+  - Access sequence-2
+- - '##'
+  - Direct Mapped Cache construction
+- - '##'
+  - Bits in Cache
+- - '##'
+  - Mapping an Address to Multiword Cache Block
+- - '##'
+  - Handling Cache reads hit and Misses
+- - '##'
+  - Handling Cache Writes hit and Misses
+- - '##'
+  - Deep concept in Cache
+- - '##'
+  - Four Questions for Memory Hierarchy Designers
+- - '##'
+  - 'Q1: Block Placement'
+- - '##'
+  - Figure 8-32 Block Placement
+- - '##'
+  - 'Q2: Block Identification'
+- - '##'
+  - The Format of the Physical Address
+- - '##'
+  - Direct-mapped Cache Example (1-word Blocks)
+- - '##'
+  - Fully-Associative Cache example (1-word Blocks)
+- - '##'
+  - 2-Way Set-Associative Cache
+- - '##'
+  - 'Q3: Block Replacement'
+- - '##'
+  - Write buffers
+- - '##'
+  - Write misses
+- - '##'
+  - Larger blocks exploit spatial locality
+- - '##'
+  - Designing the Memory system to Support Cache
+- - '##'
+  - Performance basic memory organization
+- - '##'
+  - Performance in Wider Main Memory
+- - '##'
+  - Performance in Four-way interleaved memory
+- - '##'
+  - Performance in different block size
+- - '##'
+  - 7.3 Measuring and improving cache performance
+- - '##'
+  - Measuring cache performance
+- - '##'
+  - Combine the reads and writes
+- - '##'
+  - Calculating cache performance
+- - '##'
+  - How faster a processor for ideal
+- - '##'
+  - Calculating cache performance with Increased Clock Rate
+- - '##'
+  - Solution 1
+- - '##'
+  - Reducing cache misses by more flexible placement of blocks
+- - '##'
+  - The disadvantage of a direct-mapped cache
+- - '##'
+  - The basics of a set-associative cache
+- - '##'
+  - Miss rate versus set-associativity
+- - '##'
+  - How much of a reduction in the miss rate is achieved by associativity?
+- - '##'
+  - Locating a block in the set-associative cache
+- - '##'
+  - Size of tags versus set associativity
+- - '##'
+  - Choosing which block to replace
+- - '##'
+  - 7.4 Virtual Memory
+- - '##'
+  - 'Pages: virtual memory blocks'
+- - '##'
+  - Page Tables
+- - '##'
+  - Page faults
+- - '##'
+  - What about writes?
+- - '##'
+  - Making Address Translation Fast----TLB
+- - '##'
+  - TLBs and caches
+- - '##'
+  - Modern Systems
+- - '##'
+  - Some Issues
+- - '##'
+  - Contents of Chapter 8
+- - '##'
+  - 8.1 Introduction
+- - '##'
+  - Three characteristics
+- - '##'
+  - 2.How many I/O operations can we do per unit of time?
+- - '##'
+  - The diversity of I/O devices
+- - '##'
+  - Important but neglected
+- - '##'
+  - Amdahl's law remind us that ignoring I/O is dangerous
+- - '##'
+  - 8.2 Disk Storage and Dependability
+- - '##'
+  - The organization of hard disk
+- - '##'
+  - What's Inside A Disk Drive?
+- - '##'
+  - Dependability, Reliability, Availability
+- - '##'
+  - Use Arrays of Small Disks?
+- - '##'
+  - 'RAID 1: Disk Mirroring/Shadowing'
+- - '##'
+  - 'RAID 3: Bit-Interleaved Parity Disk'
+- - '##'
+  - Inspiration for RAID 4
+- - '##'
+  - 'RAID 4: High I/O Rate Parity'
+- - '##'
+  - Inspiration for RAID 5
+- - '##'
+  - 'RAID 5: High I/O Rate Interleaved Parity'
+- - '##'
+  - 'Problems of Disk Arrays: Small Writes'
+- - '##'
+  - 'Summary: RAID Techniques: Goal was performance, popularity due to reliability
+    of storage'
+- - '##'
+  - 8.3 Networks *(skim)*
+- - '##'
+  - 8.4 Buses and Other Connections between Processors, Memory, and I/O Devices
+- - '##'
+  - 'Types of buses:'
+- - '##'
+  - Synchronous vs. Asynchronous
+- - '##'
+  - Handshaking protocol
+- - '##'
+  - Obtaining Access to the Bus
+- - '##'
+  - ❖ Bus Arbitration
+- - '##'
+  - '❖ Two factors in choosing which device to grant the bus:'
+- - '##'
+  - The Buses and Networks of Pentium
+- - '##'
+  - 8.5 Interfacing I/O Devices to the Memory, Processor, and Operating System
+- - '##'
+  - Three characteristics of I/O systems
+- - '##'
+  - 'Three types of communication are required:'
+- - '##'
+  - Giving Commands to I/O Devices
+- - '##'
+  - Communication with the Processor
+- - '##'
+  - I/O SYSTEM DATA TRANSFER CONTROL MODE
+- - '##'
+  - Compare polling, interrupts, DMA
+- - '##'
+  - Interrupt-Driven I/O mode
+- - '##'
+  - DMA transfer mode
+- - '##'
+  - 'A DMA transfer need three steps:'
+- - '##'
+  - Performance analysis of Synchronous versus Asynchronous buses
+- - '##'
+  - 'asynchronous bus:'
+- - '##'
+  - Find the sustained bandwidth and the latency for a read of 256 words for transfers
+    that use 4-word blocks and for transfers that use 16-word blocks. Also compute
+    effective number of bus transactions per second for each case.
+- - '##'
+  - 'Answer:'
+- - '##'
+  - 'The number of bus transactions per second with 16-word blocks is:'
+- - '##'
+  - 'The bus bandwidth with 16-word blocks is:'
+- - '##'
+  - 'Now, let’s put two bus bandwidth together:'
+- - '##'
+  - Overhead of Polling in an I/O System
+- - '##'
+  - 'Answer:'
+- - '##'
+  - 'the hard disk:'
+- - '##'
+  - 'The number of polling access per second :'
+- - '##'
+  - 4MB/16B = 250K
+- - '##'
+  - Overhead of Interrupt-Driven I/O
+- - '##'
+  - Overhead of I/O Using DMA
+- - '##'
+  - 'Answer:'
+- - '##'
+  - 8.7 Designing an I/O system
+- - '##'
+  - I/O System Design
+- - '##'
+  - 'Answer:'

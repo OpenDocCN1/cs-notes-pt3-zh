@@ -1,6 +1,6 @@
 # NUS CS1101S：SICP JavaScript 描述
 
-![](sicpjs-cover.png)
+![](img/sicpjs-cover.png)
 
 > 原文：[SICP JavaScript](https://sourceacademy.org/sicpjs)
 > 

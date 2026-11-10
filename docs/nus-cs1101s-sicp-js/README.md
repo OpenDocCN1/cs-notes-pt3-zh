@@ -30,6 +30,10 @@ sicp-js-zh <port>
 # 访问 http://localhost:{port} 查看文档
 ```
 
+## 购买纸质书
+
+![](img/opendoccn_print_20261110.png)
+
 ## 赞助我
 
 ![](https://img-blog.csdnimg.cn/20200112005920729.png)

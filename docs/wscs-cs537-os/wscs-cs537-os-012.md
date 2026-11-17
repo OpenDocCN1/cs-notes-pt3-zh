@@ -15,6 +15,9 @@
 
 我们之前看过的**票据锁**是一种公平的实现，它通过`ticket`和`turn`两个变量，严格按照线程请求的顺序分配锁。其核心代码如下：
 
+
+![](img/d3b699e98bf7ecea72c72a565a9038fd_1.png)
+
 ```c
 // 票据锁结构
 typedef struct __lock_t {
@@ -27,9 +30,6 @@ void lock(lock_t *lock) {
     while (lock->turn != myturn) // 等待叫号
         yield(); // 让出CPU，比忙等待好
 }
-
-![](img/d3b699e98bf7ecea72c72a565a9038fd_1.png)
-
 void unlock(lock_t *lock) {
     lock->turn = lock->turn + 1; // 叫下一个号
 }

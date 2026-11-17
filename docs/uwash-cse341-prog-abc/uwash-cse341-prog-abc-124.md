@@ -28,6 +28,9 @@
 
 首先，我们需要一些辅助函数来“构造”表达式：
 
+
+![](img/1d4d0bf014fcb12571e1a45960f7a801_3.png)
+
 ```racket
 ; 构造一个常量表达式
 (define (constant i) (list 'constant i))
@@ -37,9 +40,6 @@
 
 ; 构造一个加法表达式
 (define (add e1 e2) (list 'add e1 e2))
-
-![](img/1d4d0bf014fcb12571e1a45960f7a801_3.png)
-
 ; 构造一个乘法表达式
 (define (multiply e1 e2) (list 'multiply e1 e2))
 ```

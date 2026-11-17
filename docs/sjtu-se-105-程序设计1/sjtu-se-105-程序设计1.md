@@ -2210,6 +2210,9 @@ int max(int a, int b) // this function takes 2 parameters
 int x = max(7, 9);    // x becomes 9
 int y = max(19, -27); // y becomes 19
 int z = max(20, 20);  // z becomes 20
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_162_0.png)
+
 ```
 
 ## 程序设计的基本思路
@@ -2265,9 +2268,6 @@ int z = max(20, 20);  // z becomes 20
 
 - 抽象的过程可以被看作是一种“多对一”的映射
 - 忽略某些信息，将不同的事物看作是相同的事物处理
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_162_0.png)
-
 ```
 found = false;
 for (int i = 0; i < a.length; i++)
@@ -2369,6 +2369,12 @@ string GetMaxNumber(string str){
 
     return max_number;
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_169_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_170_0.png)
+
 ```
 
 - 我们只有了一个简单的算法
@@ -2382,18 +2388,12 @@ string GetMaxNumber(string str){
 - *Programming I*
 
 Thank You!
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_169_0.png)
-
 ## 程序设计 1
 ## Programming and Data Structure I
 ## 第4课
 编程实例1
 ## Episode Four
 Programming Examples 1
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_170_0.png)
-
 - 质数
   - 也是称为素数 Prime Number
   - 只能被1和它自身整除的数字
@@ -2676,15 +2676,21 @@ while (n!=-1){
     vector<int> primeNumbers;
     ......
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_188_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_189_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_191_0.png)
+
 ```
 
 - 程序设计 I
 - *Programming I*
 
 Thank You!
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_188_0.png)
-
 ## 程序设计 1
 
 *Programming and Data Structure I*
@@ -2700,9 +2706,6 @@ Episode Five
 部分翻译自Bjarne Stroustrup的课件
 
 部分来自于《C++ Primer》
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_189_0.png)
-
 - 指针与引用
 - 函数
   - 声明和定义
@@ -2724,9 +2727,6 @@ Episode Five
   int *ip1;
   int i = 255;
   ip1 = &i;
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_191_0.png)
-
 ## Example 1: 指针
 ```cpp
 int i=255;
@@ -2735,10 +2735,10 @@ int *pi = &i;
 // i 加2 (i = i + 2)
 pi = pi + 2;
 // 加到pi 包含的地址上
-```
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_192_0.png)
 
+```
 ## 指针赋值
 
 - 指针不能被初始化或赋值为其他类型对象的地址值（&obj）
@@ -2842,6 +2842,9 @@ int *pi = &refVal;         // 用ival 的地址初始化pi
   int *iap [] = { &ix, &jx, &kx };      // ok: 类型为int*的指针的数组
   int &iar[] = { ix, jx, kx };          // 错误: 不允许引用数组
   int ia2[] = ia;                       // 错误: 不能用另一个数组来初始化一个数组
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_201_0.png)
+
   ```
 
 - 要把一个数组拷贝到另一个中去，必须按顺序拷贝每个元素
@@ -2851,9 +2854,6 @@ int *pi = &refVal;         // 用ival 的地址初始化pi
   - *ia==ia[0]
   - ia+1==&ia[1]
   - ia[5] == *(ia+5)
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_201_0.png)
-
 ## 多维数组
 
 - **定义**
@@ -2882,12 +2882,12 @@ int gcd( int v1, int v2 ){     // 返回最大公约数
     }
     return v1;
 }
-```
-
-- 函数需要先定义再使用
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_205_0.png)
 
+```
+
+- 函数需要先定义再使用
 ## 函数声明
 
 - 函数声明可以使得函数被提前使用
@@ -2998,12 +2998,12 @@ int main()
     cout << f(yy) << endl; // writes 8; f() doesn't change yy
     cout << yy << endl; // writes 7
 }
-```
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_213_0.png)
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_213_1.png)
 
+```
 // call-by-reference (pass a reference to the argument)
 int f(int& a) { a = a+1; return a; }
 
@@ -3170,6 +3170,9 @@ double term(Token_stream& ts){
         //...
     //...
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_229_0.png)
+
 ```
 
 当函数被调用时，语言实现会设置一块内存空间，用于存放包含所有参数和局部变量副本的数据结构
@@ -3213,9 +3216,6 @@ double term(Token_stream& ts){
 栈增长方向
 
 ## 函数调用实现
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_229_0.png)
-
 ## 函数调用实现
 
 |  |  |
@@ -3260,6 +3260,12 @@ int rgcd( int v1, int v2 )
   {
       return( v1 < v2 << v1 : v2 );
   }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_233_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_234_0.png)
+
   ```
 - 若一个函数被指定为内联函数，则它的函数体可能在编译期间，在程序中每个调用点上被内联地展开
   `int minVal2 = min(i, j); ⇒ int minVal2 = i < j << i : j;`
@@ -3271,9 +3277,6 @@ int rgcd( int v1, int v2 )
 - *程序设计 I*
 
 谢谢！
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_233_0.png)
-
 ## 程序设计 1
 
 *程序设计与数据结构 I*
@@ -3289,9 +3292,6 @@ int rgcd( int v1, int v2 )
 部分翻译自Bjarne Stroustrup的课件
 
 部分来自于《C++ Primer》
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_234_0.png)
-
 ## 概览
 
 - 技术细节
@@ -3424,12 +3424,12 @@ double sqrt(double d)
 
 ```cpp
 int x = 7;
-```
-
-## 为什么既有声明又有定义？
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_244_0.png)
 
+```
+
+## 为什么既有声明又有定义？
 ## 声明的类型
 
 - 变量
@@ -3486,15 +3486,15 @@ b.cpp:
 ...
 set(get());
 ...
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_248_0.png)
+
 ```
 
 - 头文件 (a.h)定义了用户代码和实现代码之间的接口
 - 在两个.cpp文件中使用相同的 `#include` 声明可以方便一致性检查
 
 ## 源文件-陷阱
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_248_0.png)
-
 ```cpp
 // a.h
 // definitions:
@@ -3961,6 +3961,15 @@ void manip() {
     int bk = 97; // 局部 bk，隐藏 blip::bk
     ++bk;        // 设置局部 bk 为 98
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_285_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_286_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_287_0.png)
+
 ```
 
 +   - 名字空间域
@@ -3978,9 +3987,6 @@ void manip() {
 +   - *编程 I*
 
 谢谢！
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_285_0.png)
-
 ## 程序设计 1
 
 *编程与数据结构 I*
@@ -3994,9 +4000,6 @@ void manip() {
 ## 错误
 
 翻译自Bjarne Stroustrup的课件
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_286_0.png)
-
 ## 概览
 
 +   - 错误的种类
@@ -4006,9 +4009,6 @@ void manip() {
 +     - 异常
 +   - 调试
 +   - 测试
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_287_0.png)
-
 > “... I realized that from now on a large part of my life would be spent finding and correcting my own mistakes.”  
 > — Maurice Wilkes, 1949
 > “... 我意识到从现在开始，我生活的很大一部分将花费在寻找和纠正我自己的错误上。”  
@@ -4025,10 +4025,6 @@ void manip() {
 +   - Bjarne Stroustrup 估计避免、查找和纠正错误的代价占到重要软件的开发总代价的95%以上
 +     - 在小程序开发中你可以做得更好
 +       - 也可能更差，如果你偷懒的话
-
-
-
-
 
 - 编译时错误
   - 语法错误
@@ -4104,10 +4100,10 @@ void manip() {
 int x4 = area(10,-7); // OK: 但是宽度为-7的矩形面积是多少呢？
 int x5 = area(10.7,9.3); // OK: 会以area(10,9)的形式调用
 char x6 = area(100,9999); // OK: 但是会对结果截尾
-```
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_294_0.png)
 
+```
 ## 连接时错误
 
 - 程序由多个彼此分离的通过编译的部分构成
@@ -4512,6 +4508,12 @@ int area(int length, int width) // 计算矩形面积
     // 没有任何变量的值会改变
     return length*width;
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_326_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_327_0.png)
+
 ```
 
 - 如何测试程序？
@@ -4523,9 +4525,6 @@ int area(int length, int width) // 计算矩形面积
 
 - 程序设计 I
 - *程序设计 I*
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_326_0.png)
-
 谢谢！
 
 ## 程序设计 1
@@ -4538,9 +4537,6 @@ int area(int length, int width) // 计算矩形面积
 第八集
 
 ## 递归
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_327_0.png)
-
 ## 递归
 
 请出示您的护照好吗？
@@ -4619,10 +4615,6 @@ int area(int length, int width) // 计算矩形面积
   - 通常可以通过递归函数来高效地解决
   - 遵循归纳证明的结构
 
-
-
-
-
 ## 递归函数
 
 - 直接或间接调用自己的函数被称为递归函数
@@ -4697,10 +4689,34 @@ int main()
 2   int x;
 3   x = factorial(3);
 4 }
-```
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_341_0.png)
 
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_342_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_342_1.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_343_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_344_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_345_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_346_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_347_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_348_0.png)
+
+```
 ## 递归的执行
 
 - 主函数用参数 3 调用阶乘函数，调用时：
@@ -4708,43 +4724,25 @@ int main()
 - 创建一条活动记录
 - 将实参的值复制给形参
 - 赋值发生在主函数的第三行
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_342_0.png)
-
 - 在阶乘函数体中：
 - n 不等于 0
 - 于是执行 if 语句的另一条分支
 - `return 3*factorial(2)`
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_342_1.png)
-
 因此，阶乘函数必须调用它自身
 
 ## 递归的执行
 
 - 在阶乘函数调用阶乘函数时：
 - 对新的阶乘函数实例创建一条新的活动记录
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_343_0.png)
-
 发生在阶乘函数的第5行
 
 - n 仍就 不等于 0:
 - 所以再次计算执行的 if 分支
 return 2*factorial(1)
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_344_0.png)
-
 - n 再次调用时为 0:
 - 执行 if 分支
 return 1
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_345_0.png)
-
 - 从栈中弹出最近的活动记录：
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_346_0.png)
-
 ## 递归的执行
 
 - 弹出的活动记录对应的调用是：
@@ -4752,18 +4750,12 @@ return 1*factorial(0)
 - 现在已经知道 factorial(0) 的值为1，因此直接可知
 return 1*1 ➔ return 1;
 - 然后依次再弹出栈一个活动记录：
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_347_0.png)
-
 - 同理，执行：
 return 2*factorial(1) ➔ return 2*1 ➔ return 2
 - 再弹出栈一个活动记录：
 - 接着，解决最后一个未完成的乘法
 return 3*factorial(2) ➔ return 3*2 ➔ return 6
 - 至此，执行完毕
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_348_0.png)
-
 ## 递归的问题
 
 - 递归程序中每一次递归调用都需要占用栈中的一帧
@@ -4798,6 +4790,9 @@ factorial(2)
 ← 1*1 (==1)
 ← 2*1 (==2)
 ← 2
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_356_0.png)
+
 ```
 
 ## 尾递归
@@ -4831,9 +4826,6 @@ factorial(2)
 - 我们可以重用活动记录而不是创建新的活动记录
 
 - 新版本按如下方式工作：
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_356_0.png)
-
 ## 尾递归
 
 - n 不等于0，因此执行：
@@ -4855,10 +4847,6 @@ return fact_helper(2,3)
 | 结果 | 3 |
 | 返回地址：factorial，第1行 | |
 
-
-
-
-
 - 同理，执行：
 
 ```
@@ -4869,12 +4857,12 @@ return fact_helper(1,6)
 
 ```
 return fact_helper(0,6)
-```
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_358_0.png)
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_358_1.png)
 
+```
 - 将新版本转换成迭代版本：
 ```c
 int fact_helper(int n, int result){
@@ -4937,6 +4925,9 @@ int factorial(int num)
     int result = 1;
     ......
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_367_0.png)
+
 ```
 
 ## 4 终止/返回
@@ -4955,9 +4946,6 @@ int factorial(int num)
 - 首先，必须理解
 - 尾递归调用被调用时实际做了些什么
 - 再次检查递归中调用栈的情况：
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_367_0.png)
-
 ## 5 循环体
 
 - 实际上，n和result被重新赋值
@@ -5072,6 +5060,16 @@ int bar_new = baz-1;
 int baz_new = bar-1;
 bar = bar_new;
 baz = baz_new;
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_383_0.png)
+
+
+
+
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_384_0.png)
+
 ```
 
 ## 5 循环体
@@ -5114,13 +5112,6 @@ baz = baz_new;
 - *Programming I*
 
 Thank You!
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_383_0.png)
-
-
-
-
-
 ## 程序设计 1
 *程序设计与数据结构 I*
 
@@ -5128,9 +5119,6 @@ Thank You!
 ## 编程实例2
 第九集
 ## 编程实例 2
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_384_0.png)
-
 ## 实例-排序
 - 问题1:
   - 对于一组给定的整数，进行从小到大的排序
@@ -5282,6 +5270,12 @@ int RBS(int *arr,int begin,int end, int num){
 int RecursiveBinarySearch(int *arr,int length,int num){
     return RBS(arr, 0, length-1, num);
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_394_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_395_0.png)
+
 ```
 
 - 程序设计 I
@@ -5289,9 +5283,6 @@ int RecursiveBinarySearch(int *arr,int length,int num){
 
 Thank You!
 谢谢！
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_394_0.png)
-
 ## 程序设计 1
 *程序设计与数据结构 I*
 
@@ -5300,9 +5291,6 @@ Thank You!
 
 第十集
 ## 重载
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_395_0.png)
-
 ## 本节内容
 - 重载函数声明
 - 重载解析的三个步骤
@@ -5548,6 +5536,27 @@ int main() {
     f( 5.6 );
     return 0;
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_417_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_418_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_420_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_421_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_422_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_423_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_425_0.png)
+
 ```
 
 - 从重载函数集合中选择函数，该函数可以在给出实参个数和类型的情况下调用中指定的实参进行调用
@@ -5557,10 +5566,6 @@ int main() {
   - f(double, double)
 
 - 也有可能出现无匹配情况
-
-
-
-
 
 - 函数重载解析的过程有三个步骤
 void f();
@@ -5581,9 +5586,6 @@ int main() {
 - *Programming I*
 
 Thank You!
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_417_0.png)
-
 ## 程序设计1
 
 ## *Programming I*
@@ -5595,9 +5597,6 @@ Thank You!
 Input/Output Streams
 
 翻译自Bjarne Stroustrup的课件
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_418_0.png)
-
 ## 概览
 
 - 基本 I/O 概念
@@ -5624,13 +5623,7 @@ output library
 device driver
 
 output device
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_420_0.png)
-
 ## 流模型
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_421_0.png)
-
 - ostream
   - 将各种类型的值转换成为字符序列
   - 将这些字符发送到某处
@@ -5640,9 +5633,6 @@ output device
   - 将字符序列转换为各种类型的值
   - 从某处获取这些字符
     - 例如, 控制台、文件、主存、其他的计算机
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_422_0.png)
-
 ## 流模型
 
 - 读和写
@@ -5655,9 +5645,6 @@ output device
   - 是可扩展的
     - 可以为自己的类型定义自己的I/O操作
   - 流可以附着在其他流或存储设备上
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_423_0.png)
-
 ## 文件
 
 - 计算机会经常开关
@@ -5672,9 +5659,6 @@ output device
   
 - 我们可以读/写文件
   - 只要我们知道它的名字和格式
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_425_0.png)
-
 - 在最底层，文件是从0开始向上计数的一个字节序列
 - 其他概念由解释“文件格式”的程序提供
   - 例如，6个字节的“123.45”可以被解释成浮点数123.45
@@ -6018,15 +6002,18 @@ istream& operator>>(istream& is, Date& dd)
     dd = Date(y,Month(m),d);        // update dd
     return is;                // and leave with is in the good() state
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_452_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_453_0.png)
+
 ```
 
 - 程序设计 I
 - *程序设计 I*
 
 谢谢！
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_452_0.png)
-
 ## 程序设计1
 
 *程序设计 I*
@@ -6040,9 +6027,6 @@ istream& operator>>(istream& is, Date& dd)
 ## 定制I/O
 
 翻译自Bjarne Stroustrup的课件
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_453_0.png)
-
 - 输入：连续输入一组字符串，以空格分割；（10%）
 - 输出：
   - 输出该组字符串中具有最大长度的某一个字符串（50%）
@@ -6286,6 +6270,31 @@ cout << 1234.56 << "|" << setw(4) << 1234.56 << "|"
     << setw(8) << 1234.56 << "|" << 1234.56 << "\n";
 cout << "asdfgh" << "|" << setw(4) << "asdfgh" << "|"
     << setw(8) << "asdfgh" << "|" << "asdfgh" << "\n";
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_471_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_473_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_473_1.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_473_2.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_473_3.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_473_4.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_473_5.png)
+
+
+
+
+
 ```
 
 // results:
@@ -6293,9 +6302,6 @@ cout << "asdfgh" << "|" << setw(4) << "asdfgh" << "|"
 123456|123456| 123456|123456|
 1234.56|1234.56| 1234.56|1234.56|
 asdfgh|asdfgh|  asdfgh|asdfgh|
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_471_0.png)
-
 - 在最底层，文件是从0开始向上计数的一个字节序列
 - 其他概念由解释“文件格式”的程序提供
   - 例如，6个字节的“123.45”可以被解释成浮点数123.45
@@ -6319,37 +6325,15 @@ asdfgh|asdfgh|  asdfgh|asdfgh|
 
 ## 文本 vs. 二进制文件
 123 as characters:
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_473_0.png)
-
 12345 as characters:
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_473_1.png)
-
 123 as binary:
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_473_2.png)
-
 In binary files, we use sizes to delimit values
 
 12345 as binary:
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_473_3.png)
-
 In text files, we use separation/termination characters
 
 123456 as characters:
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_473_4.png)
-
 123 456 as characters:
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_473_5.png)
-
-
-
-
-
 ## 文本 vs.二进制文件
 
 +   - 在使用文本文件时，我们可以
@@ -6379,10 +6363,10 @@ int main()
 
     // “binary” tells the stream not to try anything clever with the bytes
 }
-```
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_477_0.png)
 
+```
 ```
 fstream fs(name.c_str());    // open for input and output
 // ...
@@ -6589,15 +6573,15 @@ Punct_stream::operator bool()
 {
     return !(source.fail() || source.bad()) && source.good();
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_492_0.png)
+
 ```
 
 - 程序设计 I
 - *程序设计 I*
 
 谢谢！
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_492_0.png)
-
 ## 概览
 
 - 一些软件开发的思想
@@ -6737,11 +6721,13 @@ catch (...) {
   cerr << "Oops: unknown exception!\n";
   return 2;
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_507_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_509_0.png)
+
 ```
-
-
-
-
 
 ## 表达式语法
 
@@ -6797,9 +6783,6 @@ Verb :
 "rules"
 "fly"
 "swim"
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_507_0.png)
-
 ## Parsing the number 2
 
 Expression:
@@ -6845,9 +6828,6 @@ floating-point-literal
 - " ( " Expression " ) "
 - Number:
 - floating-point-literal
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_509_0.png)
-
 ## Parsing the expression 45 + 11.5 * 7
 
 Expression:
@@ -6929,6 +6909,11 @@ double term ();      // 处理 *,/ 和 %
 //        返回乘积(或商和余数)
 double primary();    // 处理数字和括号
 //        返回值
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_514_0.png)
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_514_1.png)
+
 ```
 
 - 什么是符号？
@@ -6943,11 +6928,6 @@ double primary();    // 处理数字和括号
 - 我们认为每一个符号都包含两个部分
 - “种类”; e.g., 数字 number
 - 值; e.g., 4.5
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_514_0.png)
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_514_1.png)
-
 - 我们需要一种类型来表示“符号”
 - get_token() 从输入中获取下一个符号
 - t.kind 获取符号的类型
@@ -7355,12 +7335,12 @@ Token Token_stream::get()
     default: error("Bad token");
     }
 }
-```
-
-## 程序结构
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_536_0.png)
 
+```
+
+## 程序结构
 ```
 #include "std_lib_facilities.h"
 class Token {/*......*/}
@@ -7378,19 +7358,18 @@ double term() {/*......*/}
 double expression() {/*......*/}
 
 int main() {/*......*/}
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_538_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_539_0.png)
+
 ```
-
-
-
-
 
 - Programming I
 - *程序设计 I*
 
 感谢！
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_538_0.png)
-
 ## 程序设计 I
 
 程序设计 I
@@ -7403,9 +7382,6 @@ int main() {/*......*/}
 ## 完成程序
 
 翻译自 Bjarne Stroustrup 的课件
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_539_0.png)
-
 - 输入和输出
 - 错误处理
 - 负数
@@ -8019,9 +7995,13 @@ public:
     Token(char ch, double val) : kind(ch), value(val) {}
     Token(char ch, string n)  : kind(ch), name(n)  {}
 };
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_576_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_577_0.png)
+
 ```
-
-
 
 Token Token_stream::get() // read characters from cin and compose a Token
 {
@@ -8065,9 +8045,6 @@ catch (...) {
 - *Programming I*
 
 Thank You!
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_576_0.png)
-
 程序设计1
 
 Programming I
@@ -8080,9 +8057,6 @@ Chapter Fifteen
 ## Class
 
 翻译自Bjarne Stroustrup的课件
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_577_0.png)
-
 ## 概览
 
 - 类
@@ -8213,13 +8187,16 @@ void init_day(Date& dd, int y, int m, int d); // check for valid date and initia
 void add_day(Date&, int n);        // increase the Date by n days
 // ...
 init_day(my_birthday, 12, 30, 1950); // run time error: no day 1950 in month 30
-```
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_585_0.png)
 
 
 
 
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_589_0.png)
+
+```
 // simple Date
 //     guarantee initialization with constructor
 //     provide some notational convenience
@@ -8288,9 +8265,6 @@ Date::Date(int yy, int mm, int dd)    // definition; note :: "member of"
     :y(yy), m(mm), d(dd) { /* ... */ };  // note: member initializers
 
 void Date::add_day(int n) { /* ... */ };  // definition
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_589_0.png)
-
 // simple Date (some people prefer implementation details last)  d
 class Date {
 public:
@@ -8528,6 +8502,12 @@ bool operator!=(const Date& a, const Date& b) { return !(a==b); }
       unsigned int rounds  // Rounds remaining to play
       bool isSim; // True->no move-by-move output
   };
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_614_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_615_0.png)
+
   ```
   - 每个函数都确切地知道所有有关游戏是如何表示的细节
   - 对游戏定义的修改需要重新编译所有代码
@@ -8544,10 +8524,6 @@ bool operator!=(const Date& a, const Date& b) { return !(a==b); }
   - 程序中任何别的组成部分都无需了解这个细节
 - 要想解决此问题，就需要定义抽象数据类型
   - 抽象数据类型，ADT
-
-
-
-
 
 ## 抽象数据类型
 
@@ -8594,9 +8570,6 @@ bool operator!=(const Date& a, const Date& b) { return !(a==b); }
 - *Programming I*
 
 谢谢！
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_614_0.png)
-
 ## 程序设计1
 *Programming I*
 
@@ -8605,9 +8578,6 @@ bool operator!=(const Date& a, const Date& b) { return !(a==b); }
 
 Chapter Sixteen
 Subtype and Subclass
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_615_0.png)
-
 ## C++类
 
 - C++提供了一种“真正”的封装机制
@@ -8680,6 +8650,12 @@ void anInt::set_value(int newValue)
 {
     v = newValue;
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_625_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_627_0.png)
+
 ```
 
 ## 成员函数
@@ -8689,9 +8665,6 @@ anInt foo;
 anInt bar;
 
 - 这会产生一个包含两个对象的内存环境
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_625_0.png)
-
 ## 类成员访问
 
 - 不做任何处理的话，这些值是未定义的
@@ -8708,9 +8681,6 @@ anInt bar;
 - 由于成员函数是在类定义的内部声明的
 - 因此，它能够访问在类定义语句块中定义的成员变量
 - 于是，这个方法将对foo的v进行赋值
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_627_0.png)
-
 ## 类成员访问
 
 - 不能直接访问v
@@ -9291,12 +9261,12 @@ int MaxIntSet::max() {
         if (query(i)) return i;
     }
 }
-```
-
-- 这是一个非常搞笑的实现！
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_678_0.png)
 
+```
+
+- 这是一个非常搞笑的实现！
 - 如果一个成员是protected的，那就意味着：
   - 它可以被这个类以及所有的导出类的成员访问
 
@@ -9474,6 +9444,15 @@ class baz : public bar {
 
 ```
 baz *bz p = new baz;
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_695_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_696_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_697_0.png)
+
 ```
 
 ## 链式初始化
@@ -9490,9 +9469,6 @@ baz *bz p = new baz;
 - *程序设计 I*
 
 谢谢！
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_695_0.png)
-
 ## 程序设计1
 
 *程序设计 I*
@@ -9503,18 +9479,12 @@ baz *bz p = new baz;
 第十七章
 
 ## 虚函数
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_696_0.png)
-
 ## 内容提纲
 
 - 虚函数
 - 虚函数示例
 - 扩展的类型兼容性
 - 向下转型与向上转型
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_697_0.png)
-
 ## 静态与动态实例
 
 ```
@@ -9523,6 +9493,9 @@ IntSet s;
 PosIntSet p;
 foo(s);
 foo(p);
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_701_0.png)
+
 ```
 
 - 由于同一个引用同时指向了IntSet和PosIntSet
@@ -9554,9 +9527,6 @@ foo(p);
   - 其中包含一组函数指针
   - 每个指针指向一个虚函数
 - 这些指针都将初始化为指向恰当的实现
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_701_0.png)
-
 ## 虚方法很特殊
 
 - 具有虚方法的类的每个实例都拥有类的状态
@@ -9612,10 +9582,6 @@ MaxIntSet vtable
   r.draw(); //调用rectangle类的draw
   c.draw(); //调用circle类的draw
 - 目前为止，还没有任何新知识点
-
-
-
-
 
 ## Figure 类:center()
 
@@ -9810,6 +9776,35 @@ pdog = new Dog;
 pdog->name = "Tiny";
 pdog->breed = "Great Dane";
 ppet = pdog;
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_731_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_732_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_735_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_735_1.png)
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_736_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_737_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_738_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_740_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_744_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_745_0.png)
+
 ```
 
 - 不能访问ppet指针指向的对象的breed域
@@ -9836,10 +9831,6 @@ ppet = pdog;
 - 是可以的，因为向上转型是合法的
   - 向上转型（Upcast）是指从子孙类型转型成祖先类型
 
-
-
-
-
 ## 向下转型 Downcast
 
 - 有什么方法可以合法地向下转型吗？
@@ -9857,9 +9848,6 @@ ppet = pdog;
 - *Programming I*
 
 谢谢！
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_731_0.png)
-
 ## 程序设计 1
 
 程序设计 I
@@ -9870,9 +9858,6 @@ ppet = pdog;
 第十八章
 
 ## 纯虚函数
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_732_0.png)
-
 ## 内容提纲
 
 - 继承
@@ -9887,20 +9872,9 @@ ppet = pdog;
 - 这些指针都将初始化为指向恰当的实现
 
 ## IntSet 虚表
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_735_0.png)
-
 ## MaxIntSet 虚表
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_735_1.png)
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_736_0.png)
-
 - 继承以现有的类为基础，复制它，然后通过添加和修改这个副本来创建新类
 - 继承使用基类和派生类的概念表示了类型之间的相似性。一个基类包含其所有派生类共享的特性和行为。
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_737_0.png)
-
 ## 继承：复用接口
 
 - 当继承现有类型时，也就创造了新的类型。
@@ -9909,16 +9883,10 @@ ppet = pdog;
   - 而且更重要的是它复制了基类的接口。
 
 通过继承而产生的类型等价（type equivalence）是理解面向对象程序设计方法内涵的重要门槛。
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_738_0.png)
-
 ## 继承：复用接口
 
 - 第二种以及其他使派生类和基类之间产生差异的方法是改变现有基类的方法的行为
 - 这被称为覆盖（overriding）
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_740_0.png)
-
 ## is-a 关系
 
 - 对于继承可能会引发某种争论：
@@ -9947,9 +9915,6 @@ ppet = pdog;
   - 新类型具有旧类型的接口，但是它还包含其他方法，所以你不能说它们完全相同
 
 ## is-like-a 关系
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_744_0.png)
-
 **恒温器**  
 `lowerTemperature()`
 
@@ -9970,9 +9935,6 @@ ppet = pdog;
 - 将派生类看作是其基类称为向上转型（upcasting）
   - “转型（cast）”这个名称的灵感来自于模型铸造的塑模动作，而“向上（up）”这个词来源于继承图的典型布局方式：通常基类在顶部，而派生类在其下部散开。
   - 因此，转型为一个基类就是在继承图中向上移动，即“向上转型（upcasting）”
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_745_0.png)
-
 ## 类机制的问题
 
 - 在类定义中包含这些内容有两个副作用
@@ -10114,6 +10076,12 @@ public:
   
   ```cpp
   // EFFECTS: returns a pointer to the IntSet
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_763_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_764_0.png)
+
   ```
 
 - Static 作用于类的成员
@@ -10161,9 +10129,6 @@ public:
 - *Programming I*
 
 Thank You!
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_763_0.png)
-
 ## 程序设计 1
 
 Programming and Data Structure I
@@ -10174,9 +10139,6 @@ Programming and Data Structure I
 Episode Nineteen
 
 ## Programming Examples 3
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_764_0.png)
-
 - 本练习和接下来的几个练习要求你设计并实现一个 Book 类，就像可以想象为图书馆软件的一部分。
 - Class Book 应该
   - 具有 ISBN、标题、作者和版权日期的成员。还存储书籍是否已借出的信息。
@@ -10785,6 +10747,15 @@ public class Poly {
         }
     }
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_804_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_805_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_810_0.png)
+
 ```
 
 IntSet.java
@@ -10813,9 +10784,6 @@ public class MaxIntSet implements IntSet {
 - *Programming I*
 
 Thank You!
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_804_0.png)
-
 ## 程序设计 1
 
 *Programming and Data Structure I*
@@ -10827,9 +10795,6 @@ Thank You!
 Episode Twenty
 
 ## A display model
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_805_0.png)
-
 - 为什么要使用图形用户界面?
 - 一个图形模型
 - 例子
@@ -10861,9 +10826,6 @@ Episode Twenty
 - 概念、代码和输出三者之间的直接一致性
 
 ## 一个显示模型
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_810_0.png)
-
 - 对象Objects (如Shape) 被附着到Windows对象
 - “显示引擎” 为Windows中的对象调用draw()指令 (例如 “从点x到点y画一条直线”)
 - 对象（如Square）包含一组lines、text等，需要绘制在窗口中
@@ -10887,6 +10849,9 @@ int main()
     
     win.wait_for_button();    // give control to the display engine
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_815_0.png)
+
 ```
 
 - 你将会用到GUI库中已经写好的一些接口类
@@ -10925,14 +10890,7 @@ Our screen
 
 即所谓的“分层体系结构”
 
-
-
-
-
 ## 坐标系Coordinates
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_815_0.png)
-
 - Y坐标正向向下// right, down
 - 坐标系标识屏幕窗口中的各个像素pixel
 - 可用 x_max() and y_max()改变窗口的尺寸
@@ -11001,10 +10959,10 @@ ya.label.set_color(Color::dark_red);  // choose a color for the text
 
 win.attach(ya);
 win.wait_for_button();
-```
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_823_0.png)
 
+```
 ```
 win.set_label("Canvas #4");
 
@@ -11016,6 +10974,9 @@ Function sine(sin,0,100,Point(20,150),1000,50,50);  // sine curve
 
 win.attach(sine);
 win.wait_for_button();
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_825_0.png)
+
 ```
 
 ## 添加一条正弦曲线
@@ -11027,9 +10988,6 @@ y axis
 x axis
 
 Next
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_825_0.png)
-
 ## Demo code 5
 
 ```
@@ -11064,6 +11022,9 @@ Rectangle r(Point(200,200), 100, 50);
 
 win.attach(r);
 win.wait_for_button();
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_829_0.png)
+
 ```
 
 ## Canvas #6
@@ -11073,9 +11034,6 @@ y axis
 x axis
 
 Next
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_829_0.png)
-
 //Add a shape that looks like a rectangle-绘制封闭的折线组
 
 ```
@@ -11312,15 +11270,21 @@ chapter12.cpp:
 #include "Graph.h"
 #include "Window.h"
 int main() { ... }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_849_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_850_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_852_0.png)
+
 ```
 
 - 程序设计 I
 - *Programming I*
 
 Thank You!
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_849_0.png)
-
 程序设计1
 
 *Programming I*
@@ -11332,9 +11296,6 @@ Thank You!
 Graphics Classe Design
 
 翻译自Bjarne Stroustrup的课件
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_850_0.png)
-
 - 绘图
   - 模型
   - 代码组织
@@ -11352,9 +11313,6 @@ Graphics Classe Design
 - > 对象Objects (如图形) 被附着（“放到”）到窗口对象
 > “显示引擎”为窗口中的图形对象调用绘制指令(例如“从点x到点y画一条直线”)
 > 对象（如Rectangle）包含一组的lines, text等需要在窗口中绘制
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_852_0.png)
-
 ## FLTK headers
 
 ## FLTK code
@@ -11456,7 +11414,6 @@ Line::Line(Point p1, Point p2) // 构造一条从p1 到 p2的线段
 ```
 horizontal.set_color(Color::red);
 vertical.set_color(Color::green);
-```
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_859_0.png)
 
@@ -11464,6 +11421,7 @@ vertical.set_color(Color::green);
 
 
 
+```
 ## 线段组 Lines
 
 ```
@@ -11491,12 +11449,12 @@ x.add(Point(150,50), Point(150,150));    // 垂直线
 
 win.attach(x);        // 将 Lines x 附着到窗口 win
 win.wait_for_button();  // 绘制!
-```
-
-## Lines 示例
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_862_0.png)
 
+```
+
+## Lines 示例
 - - 看上去和两个Line的例子很像
 
 ```
@@ -11536,12 +11494,12 @@ for (int y = y_grid; y<y_size; y+=y_grid)  // horizontal lines
     grid.add(Point(0,y),Point(x_size,y));
 
 win.attach(grid); //将网格附着到视窗上(注意grid是一个对象)
-```
-
-## 绘制网格
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_865_0.png)
 
+```
+
+## 绘制网格
 ```
 struct Color {  // 映射 FLTK 中的颜色，并确定其作用域;
 // 处理可视性和透明度
@@ -11565,10 +11523,10 @@ private:
 
 ```
 grid.set_color(Color::red);
-```
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_867_0.png)
 
+```
 ```
 struct Line_style {
     enum Line_style_type {
@@ -11595,10 +11553,10 @@ private:
 
 ```
 grid.set_style(Line_style(Line_style::dash,2));
-```
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_869_0.png)
 
+```
 ## 折线组 Polylines
 
 ```
@@ -11627,34 +11585,30 @@ opl.add(Point(100,100));
 opl.add(Point(150,200));
 opl.add(Point(250,250));
 opl.add(Point(300,200));
-```
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_871_0.png)
 
+```
 ```
 Closed_polyline cpl;
 cpl.add(Point(100,100));
 cpl.add(Point(150,200));
 cpl.add(Point(250,250));
 cpl.add(Point(300,200));
-```
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_872_0.png)
 
 ```
-cpl.add(Point(100,250));
 ```
+cpl.add(Point(100,250));
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_873_0.png)
 
+```
 - - 一个封闭直线组并不是一个多边形
   - 看上去象
   - 多边形是一组封闭折线，并且任意两条线段都不相交
     - Polygon 比 Closed_polyline 具有更强的不变式约束
-
-
-
-
 
 ```cpp
 struct Text : Shape {
@@ -11677,23 +11631,23 @@ private:
 ```cpp
 Text t(Point(200,200), "A closed polyline that isn’t a polygon");
 t.set_color(Color::blue);
-```
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_875_0.png)
 
+```
 ```cpp
 void Text::draw_lines() const
 {
     fl_draw(lab.c_str(), point(0).x, point(0).y);
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_877_0.png)
+
 ```
 
 - fl_draw() 是底层图形库FLTK 中的一个文本绘制函数
 
 ## 比色表 Color matrix
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_877_0.png)
-
 - 绘制一个比色表
   - 看看我们常用的颜色
   - 了解一下二维寻址的烦琐程度
@@ -11750,14 +11704,14 @@ win.attach(ln);
 
 // add points to ln (make copies)
 // attach ln to window
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_882_0.png)
+
 ```
 
 - 为什么不使用win.add(ln)?
   - add() 是拷贝副本; attach() 是采用引用方式（共享单一对象）
   - 我们能在在使用attach 连接之后，改变显示的对象，而add不能
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_882_0.png)
-
 ## 相同的暴露策略
 
 - 数据应该是私有的（private）
@@ -11806,6 +11760,9 @@ Square s1(Point(100,200),200,300);     // width==200 height==300
 Square s2(Point(100,200),Point(200,300)); // width==100 height==100
 
 Square s3(100,200,200,300); // is 200,300 a point  or a width plus a height?
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_887_0.png)
+
 ```
 
 - 类和函数的集合表示它们要一起使用
@@ -11819,17 +11776,10 @@ Square s3(100,200,200,300); // is 200,300 a point  or a width plus a height?
 - 我们不能孤立的定义每一个库的类和函数
   - 一个好的库要采用统一的风格(“规范性”)
 
-
-
-
-
 ## Shape类
 
 - 所有我们的shapes都是基于Shape类
   - 比如, 多边形是一种 Shape
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_887_0.png)
-
 - 我们不能创建一个“普通的”Shape
   protected:
   Shape();  // protected to make class Shape abstract
@@ -11974,15 +11924,18 @@ private:
     Color fcolor;                         // fill color
     // ... prevent copying ...
 };
-```
-
-
-
-
-## 完成的显示模型
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_897_0.png)
 
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_899_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_902_0.png)
+
+```
+
+## 完成的显示模型
 ## 语言机制
 
 - 常用的面向对象编程的定义：
@@ -11999,9 +11952,6 @@ private:
 
 - 我们选择使用一个简单的类层次结构
   - 基于Shape
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_899_0.png)
-
 - 派生类的成员数据直接添加到基类的后面
   - Circle 是拥有半径的 Shape
 
@@ -12030,9 +11980,6 @@ r
     - 可以在一处提供公共的功能
     - 一处改变全局生效
       - 另一项 “必杀技”
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_902_0.png)
-
 - 成员（数据、函数或类型成员）或基类可以是
   - 私有的（Private）、受保护的（protected）或者公开的（public）
 
@@ -12119,15 +12066,18 @@ struct D : B {
     void f3(char);    // doesn't override
     void f4(int);     // overrides
 };
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_907_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_908_0.png)
+
 ```
 
 - 程序设计 I
 - *Programming I*
 
 Thank You!
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_907_0.png)
-
 程序设计1
 
 Programming I
@@ -12140,9 +12090,6 @@ Chapter Twenty-second
 ## Graphing and GUI
 
 翻译自Bjarne Stroustrup的课件
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_908_0.png)
-
 - 这门课程是关于编程的
   - 所有示例，例如图形的示例，都是很简单的
     - 有用的编程技巧
@@ -12173,10 +12120,10 @@ Chapter Twenty-second
 double one(double x) { return 1; }    // y==1
 double slope(double x) { return x/2; }    // y==x/2
 double square(double x) { return x*x; }    // y==x*x
-```
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_911_0.png)
 
+```
 ```
 Simple_window win0(Point(100,100),xmax,ymax,"Function graphing");
 Function s(one,-10,11,orig,n_points,x_scale,y_scale);
@@ -12220,34 +12167,34 @@ const int y_scale = 20;
 
 // Choosing a center (0,0), scales, and number of points can be fiddly
 // The range usually comes from the definition of what you are doing
-```
-
-## 函数图 - 但是它们的含义是什么？
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_914_0.png)
 
-- 问题出在哪里？
-- 没有坐标轴(没有刻度)
-- 没有标签
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_915_0.png)
 
 ```
+
+## 函数图 - 但是它们的含义是什么？
+- 问题出在哪里？
+- 没有坐标轴(没有刻度)
+- 没有标签
+```
 Text ts(Point(100,y_orig-30),"one");
 Text ts2(Point(100,y_orig+y_orig/2-10),"x/2");
 Text ts3(Point(x_orig-90,20),"x*x");
-```
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_916_0.png)
 
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_917_0.png)
+
+```
 - 我们可以使用坐标轴去表示点 (0,0)和刻度
   - Axis x(Axis::x, Point(20,y_orig), xlength/x_scale, "one notch == 1 ");
   - Axis y(Axis::y, Point(x_orig, ylength+20, ylength/y_scale, "one notch == 1");
 
 ## 使用颜色（适度）
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_917_0.png)
-
 ```
 s.set_color(Color::green);    x.set_color(Color::red);  
 y.set_color(Color::red);      ts.set_color(Color::green);
@@ -12343,9 +12290,6 @@ double sloping_cos(double x) { return cos(x)+slope(x); }
 Function s4(cos,-10,11,orig,400,20,20);
 s4.set_color(Color::blue);
 Function s5(sloping_cos,-10,11,orig,400,20,20);
-```
-
-## Function graphing: more functions
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_924_0.png)
 
@@ -12353,6 +12297,9 @@ Function s5(sloping_cos,-10,11,orig,400,20,20);
 
 
 
+```
+
+## Function graphing: more functions
 ## 标准数学函数（<cmath>）
 
 - double abs(double); // 绝对值
@@ -12444,37 +12391,21 @@ for (int n = 0; n<50; ++n) {
     wait_for_button();      // give the user time to look
     win.detach(e);
 }
-```
-
-## 演示
-
-- 接下来的截图成功的使用expe(x,n)完成对exp(x)的近似
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_934_0.png)
 
-exp approximation; n==1
-
-1==20pixels
-
-1==20pixels
-
-Next
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_936_0.png)
 
-## 演示 n = 3
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_937_0.png)
 
-## 演示 n = 4
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_938_0.png)
 
-## 演示 n = 5
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_939_0.png)
 
-## 演示 n = 6
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_940_0.png)
 
@@ -12482,23 +12413,12 @@ Next
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_941_0.png)
 
-## 演示 n = 8
-
-exp approximation; n==8
-
-1==20pixels
-
-1==20pixels
-
-Next
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_942_0.png)
 
-## 演示 n = 18
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_943_0.png)
 
-## 演示 n = 19
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_944_0.png)
 
@@ -12512,6 +12432,39 @@ Next
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_949_0.png)
 
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_951_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_952_0.png)
+
+```
+
+## 演示
+
+- 接下来的截图成功的使用expe(x,n)完成对exp(x)的近似
+exp approximation; n==1
+
+1==20pixels
+
+1==20pixels
+
+Next
+## 演示 n = 3
+## 演示 n = 4
+## 演示 n = 5
+## 演示 n = 6
+## 演示 n = 8
+
+exp approximation; n==8
+
+1==20pixels
+
+1==20pixels
+
+Next
+## 演示 n = 18
+## 演示 n = 19
 ## 为什么图形变得不可控?
 
 - 浮点数是对实数的近似
@@ -12527,20 +12480,10 @@ Next
     - 在任何人使用之前，我们希望我们的代码尽早崩溃
 
 ## 用图绘制数据
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_951_0.png)
-
 - 通常，我们是对数据进行绘图，而不是对一个定义良好的数学函数进行绘图
 - 这里，我们使用三个Open_polyline来绘制
 
-
-
-
-
 ## 用图绘制数据
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_952_0.png)
-
 - 仔细设计我们的屏幕布局
 
 ## 关于坐标轴的代码
@@ -12588,6 +12531,29 @@ Axis::Axis(Orientation d, Point xy, int length, int n, string lab)
     }
     // ...
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_961_0.png)
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_961_1.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_962_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_963_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_964_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_965_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_966_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_967_0.png)
+
 ```
 
 ## GUI 概览
@@ -12632,11 +12598,6 @@ Axis::Axis(Orientation d, Point xy, int length, int n, string lab)
     - 负责将一个事件（比如鼠标点击）和程序动作联系起来
 
 ## 软件分层
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_961_0.png)
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_961_1.png)
-
 ## 层的实例
 
 - 提供服务
@@ -12644,30 +12605,12 @@ Axis::Axis(Orientation d, Point xy, int length, int n, string lab)
 
 - 窗口
   - 有两个按钮Button、两个输入框In_box和一个输出框Out_box
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_962_0.png)
-
 ## GUI 实例
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_963_0.png)
-
 - 在输入框In_box中输入一个点
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_964_0.png)
-
 - 当用户点击 ‘next point’ 按钮时候，这个当前的位置变成(x,y)，同时在输出框Out_box中显示
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_965_0.png)
-
 - 添加另外的点，这样就形成了一条直线
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_966_0.png)
-
 - 三个点就形成了两条线
   - 显然，我们在构造折线
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_967_0.png)
-
 - 以此类推，直到点击 Quit 为止
 
 ## 界面元素和实现
@@ -12711,10 +12654,10 @@ private:
     static void cb_next(Address, Address window);    // callback for next_button
     static void cb_quit(Address, Address window);    // callback for quit_button
 };
-```
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_971_0.png)
 
+```
 - 窗口
   - 有两个按钮、两个输入框和一个输出框
 
@@ -12763,6 +12706,9 @@ struct Button : Widget {
     Button(Point xy, int w, int h, const string& s, Callback cb)
     :Widget(xy,w,h,s,cb) {}
 };
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_976_0.png)
+
 ```
 
 Describe where the button is  
@@ -12778,9 +12724,6 @@ FLTK
 Attach Button
 
 Call “callback” when Button is pressed
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_976_0.png)
-
 - 添加另外的点，这样就形成了一条直线
 
 - 按钮是一种控件
@@ -12863,6 +12806,24 @@ int In_box::get_int()
     return atoi(pi.value());      // get the value and convert
                                   // it from characters (alpha) to int
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_984_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_986_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_987_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_989_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_990_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1003_0.png)
+
 ```
 
 ## 总结
@@ -12886,22 +12847,13 @@ int In_box::get_int()
 - *Programming I*
 
 Thank You!
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_984_0.png)
-
 ## 图形化编程实例
 
 - 计算器
   - 参照教材第6章、第7章代码实现计算功能
   - 实现图形化操作界面
   - 支持加减乘除四则混合运算
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_986_0.png)
-
 ## 设计
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_987_0.png)
-
 - CalculatorGUI
   - 负责从图形化界面接受用户的输入
   - 将表达式字符串组装成Token-stream对象并传递给Calculator处理
@@ -12917,9 +12869,6 @@ Thank You!
 - *Programming I*
 
 Thank You!
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_989_0.png)
-
 程序设计 I
 
 Programming I
@@ -12929,9 +12878,6 @@ Programming I
 Chapter Twenty-four
 
 ## New and Delete
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_990_0.png)
-
 ## 内容提纲
 
 - 固定尺寸结构
@@ -12953,10 +12899,6 @@ Chapter Twenty-four
   - 但目前我们只了解如何创建静态的、固定尺寸的结构
 - 我们必须声明这些类型的变量能够存放多大的数据
   - 并且需要编写代码处理溢出的情况（例如IntSet）
-
-
-
-
 
 ## 固定尺寸结构
 
@@ -13046,9 +12988,6 @@ Chapter Twenty-four
    - 这是一个动态分配的内存空间
    - 并且存活于某个地方
    - 它没有自己的名字——它就是由ip指向的整数
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1003_0.png)
-
 ## 对象创建
 
 - 从堆中分配足够的内容去持有一个 `IntSet` 对象
@@ -13083,11 +13022,19 @@ Chapter Twenty-four
   int *p1 = new int(1);
   int *p2 = new int(2);
   p1 = p2;
-  ```
-- 这会使内存像右图一样
 
 ![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1008_0.png)
 
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1018_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1019_0.png)
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1019_1.png)
+
+  ```
+- 这会使内存像右图一样
 ## 对象删除
 
 - 两个指针指向对象"2"
@@ -13173,10 +13120,6 @@ Chapter Twenty-four
 - 与单个整数一样
 - 整数数组不必初始化
 
-
-
-
-
 ## 动态数组
 
 - 释放一个数组的工作与释放单个对象略有差异
@@ -13196,20 +13139,12 @@ Chapter Twenty-four
 - 当 new 操作符发现需要分配数组时
   - 它会将数组的尺寸和数组一起存储
 - 它会从数组的空间中辟出一块
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1018_0.png)
-
 - 在数组之前的空间中记录了数组中元素的位置
 - 返回的指针指向数组的首元素
 - 现在，如果只是 delete ia
   - delete 操作符就会认为它只需要释放足够在堆上存放一个整数的空间即可
 - delete[] 操作符则可以看到紧挨指针之前的信息
   - 即看到需要将多少元素的内存返回给堆
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1019_0.png)
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1019_1.png)
-
 ## 使用动态数组的IntSet
 
 - 我们可以构建一个新的 IntSet 版本
@@ -13414,6 +13349,9 @@ void f(void* pv)
     int* pi = static_cast<int*>(pv);    // ok: 显示转换
     // ...
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1044_0.png)
+
 ```
 
 - static_cast能够被用于显式将指针转化到某个对象类型
@@ -13438,9 +13376,6 @@ void f(void* pv)
 - *Programming I*
 
 Thank You!
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1044_0.png)
-
 ## 内容提纲
 
 - 浅复制 vs. 深复制
@@ -13716,6 +13651,16 @@ void grow()
     elts = tmp;
     sizeElts *= 2;
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1087_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1088_0.png)
+
+
+
+
+
 ```
 
 - 唯一的不同就是数组扩展了两倍而不是一个空位
@@ -13753,9 +13698,6 @@ $$\sum_{i=0}^{n-1} a * r^{i} = a * \frac{1 - r^{n}}{1 - r}$$
 
 - 程序设计 I
 - *程序设计 I*
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1087_0.png)
-
 谢谢！
 
 程序设计 I
@@ -13763,13 +13705,6 @@ $$\sum_{i=0}^{n-1} a * r^{i} = a * \frac{1 - r^{n}}{1 - r}$$
 程序设计 I
 
 ## 第26章 模板1
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1088_0.png)
-
-
-
-
-
 - 模板定义
   - 定义函数模板
   - 定义类模板
@@ -14095,6 +14030,15 @@ template <class Type> Type sum(const Type &op1, int op2)
 {
     return op1 + op2;
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1120_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1121_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1126_0.png)
+
 ```
 - 由于op2的类型是固定的，在调用sum的时候，可以对传递给op2的实参应用常规转换
 double d = 3.14;
@@ -14121,9 +14065,6 @@ sum(s1, s2);  // error: s2 cannot be converted to int
 
 - 程序设计 I
 - *程序设计 I*
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1120_0.png)
-
 谢谢！
 
 ## 程序设计1
@@ -14137,9 +14078,6 @@ sum(s1, s2);  // error: s2 cannot be converted to int
 第二十七章
 
 ## 模板 II
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1121_0.png)
-
 ## 内容提纲
 
 - 类模板成员
@@ -14175,17 +14113,10 @@ template <class Type> class Queue {
 - 包含两个数据成员：head和tail
 - 都是指向QueueItem类型的指针
 
-
-
-
-
 ## 定义类模板
 
 - Queue类的实现
   - 使用链表来实现
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1126_0.png)
-
 - QueueItem类
   ```
   template <class Type> class QueueItem{
@@ -14557,6 +14488,12 @@ template <class Type> class Queue{
     friend std::ostream& operator<<
         (std::ostream &, const Queue<Type>);
 }
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1156_0.png)
+
+
+![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1157_0.png)
+
 ```
 
 ## Queue和QueueItem的友元声明
@@ -14570,9 +14507,6 @@ template <class Type> class Queue{
 - 《C++ Primer（第四版）》， Stanley B. Lippman、 Barbara E. Moo、 Josée LaJoie著，李师贤等人译，人民邮电出版社
 
 Thank You!
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1156_0.png)
-
 ## 程序设计1
 
 Programming I
@@ -14582,9 +14516,6 @@ Programming I
 
 ## Chapter Twenty-eight
 Template III
-
-![](img/d2d3f908f0e1c0f8ca98d9dfbe006a9f_1157_0.png)
-
 ## 内容提纲
 
 - 成员模板

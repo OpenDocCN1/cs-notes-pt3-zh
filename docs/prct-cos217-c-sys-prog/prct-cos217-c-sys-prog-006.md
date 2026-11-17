@@ -106,13 +106,13 @@ C语言提供了多种循环结构，包括`for`循环、`while`循环和`do-whi
 ![](img/86c74e9eb66818027b334914322c7ace_27.png)
 
 以下是循环语句的示例：
+
+![](img/86c74e9eb66818027b334914322c7ace_29.png)
+
 ```c
 for (int i = 0; i < n; i++) {
     // 循环体
 }
-
-![](img/86c74e9eb66818027b334914322c7ace_29.png)
-
 while (condition) {
     // 循环体
 }

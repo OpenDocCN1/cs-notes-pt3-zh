@@ -115,14 +115,14 @@ public Rectangle(int length, int width)
 
 ![](img/afbf3e8a278ff198478d4e5c0eb42c15_55.png)
 
-```csharp
-public int GetLength() { return length; }
-public void SetLength(int newLength) { length = (newLength < 0) ? 0 : newLength; }
 
 ![](img/afbf3e8a278ff198478d4e5c0eb42c15_57.png)
 
 ![](img/afbf3e8a278ff198478d4e5c0eb42c15_59.png)
 
+```csharp
+public int GetLength() { return length; }
+public void SetLength(int newLength) { length = (newLength < 0) ? 0 : newLength; }
 public int GetWidth() { return width; }
 public void SetWidth(int newWidth) { width = (newWidth < 0) ? 0 : newWidth; }
 ```

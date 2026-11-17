@@ -20,6 +20,9 @@
 *   `value_or(default)`：获取值，若为空则返回默认值。
 
 **代码示例**：
+
+![](img/e0624d2b55788b18da8e80a95dcc562f_1.png)
+
 ```cpp
 #include <optional>
 #include <string>
@@ -35,9 +38,6 @@ std::optional<std::string> might_fail(bool success) {
         // 等价于: return {};
     }
 }
-
-![](img/e0624d2b55788b18da8e80a95dcc562f_1.png)
-
 int main() {
     auto result = might_fail(true);
     if (result) { // 或 if (result.has_value())

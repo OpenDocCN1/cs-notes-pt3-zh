@@ -201,12 +201,12 @@ export default function MyButton({ children, width }) {
 
 ![](img/3e6116d87aade573294f65d0255cabd6_36.png)
 
-```jsx
-// App.js
-import MyButton from './components/MyButton';
 
 ![](img/3e6116d87aade573294f65d0255cabd6_38.png)
 
+```jsx
+// App.js
+import MyButton from './components/MyButton';
 function App() {
   return (
     <div>

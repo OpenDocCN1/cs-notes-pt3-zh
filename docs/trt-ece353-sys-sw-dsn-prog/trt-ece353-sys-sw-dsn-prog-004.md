@@ -48,14 +48,14 @@ int main(void) {
 
 ![](img/4412766116f36f74ac92cbbcd362df42_5.png)
 
+
+![](img/4412766116f36f74ac92cbbcd362df42_7.png)
+
 ```c
 #include <assert.h>
 #include <fcntl.h>
 #include <stdio.h>
 #include <unistd.h>
-
-![](img/4412766116f36f74ac92cbbcd362df42_7.png)
-
 int main(int argc, char *argv[]) {
     if (argc != 2) {
         fprintf(stderr, "Usage: %s <filename>\n", argv[0]);
@@ -135,6 +135,9 @@ int main(int argc, char *argv[]) {
 
 以下是一个忽略 `SIGINT` 和 `SIGTERM` 信号的程序示例：
 
+
+![](img/4412766116f36f74ac92cbbcd362df42_17.png)
+
 ```c
 #include <signal.h>
 #include <stdio.h>
@@ -143,9 +146,6 @@ int main(int argc, char *argv[]) {
 void handle_signal(int sig) {
     printf("Ignoring signal %d\n", sig);
 }
-
-![](img/4412766116f36f74ac92cbbcd362df42_17.png)
-
 int main(void) {
     struct sigaction sa = {.sa_handler = handle_signal};
     sigaction(SIGINT, &sa, NULL);

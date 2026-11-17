@@ -285,9 +285,6 @@ void adjacent_find_for_pred(const Container& c, BinaryPredicate pred) {
 
 首先，我们使用 `binary_search`：
 
-```cpp
-std::string search_words[] = {"find", "all", "good", "people"};
-std::string quote[] = {"now", "is", "the", "time", "for", "all", "good", "people", "to", "come", "to", "the", "aid", "of", "their", "party"};
 
 ![](img/8744adf2f3fcbed1db7dde3c46f26bf3_124.png)
 
@@ -297,8 +294,6 @@ std::string quote[] = {"now", "is", "the", "time", "for", "all", "good", "people
 
 ![](img/8744adf2f3fcbed1db7dde3c46f26bf3_127.png)
 
-// 必须先排序
-std::sort(std::begin(quote), std::end(quote));
 
 ![](img/8744adf2f3fcbed1db7dde3c46f26bf3_129.png)
 
@@ -306,6 +301,11 @@ std::sort(std::begin(quote), std::end(quote));
 
 ![](img/8744adf2f3fcbed1db7dde3c46f26bf3_131.png)
 
+```cpp
+std::string search_words[] = {"find", "all", "good", "people"};
+std::string quote[] = {"now", "is", "the", "time", "for", "all", "good", "people", "to", "come", "to", "the", "aid", "of", "their", "party"};
+// 必须先排序
+std::sort(std::begin(quote), std::end(quote));
 for (const auto& word : search_words) {
     if (std::binary_search(std::begin(quote), std::end(quote), word)) {
         std::cout << "找到单词: " << word << std::endl;
@@ -325,13 +325,6 @@ for (const auto& word : search_words) {
 
 ![](img/8744adf2f3fcbed1db7dde3c46f26bf3_137.png)
 
-```cpp
-template <typename ForwardIterator, typename T, typename Compare = std::less<>>
-ForwardIterator binary_find(ForwardIterator first, ForwardIterator last, const T& value, Compare comp = {}) {
-    first = std::lower_bound(first, last, value, comp);
-    // 确保找到的元素确实等于 value，而不仅仅是“不小于”
-    return (first != last && !comp(value, *first)) ? first : last;
-}
 
 ![](img/8744adf2f3fcbed1db7dde3c46f26bf3_139.png)
 
@@ -339,6 +332,13 @@ ForwardIterator binary_find(ForwardIterator first, ForwardIterator last, const T
 
 ![](img/8744adf2f3fcbed1db7dde3c46f26bf3_141.png)
 
+```cpp
+template <typename ForwardIterator, typename T, typename Compare = std::less<>>
+ForwardIterator binary_find(ForwardIterator first, ForwardIterator last, const T& value, Compare comp = {}) {
+    first = std::lower_bound(first, last, value, comp);
+    // 确保找到的元素确实等于 value，而不仅仅是“不小于”
+    return (first != last && !comp(value, *first)) ? first : last;
+}
 // 使用 binary_find
 std::vector<std::string> sorted_vec(std::begin(quote), std::end(quote)); // 已排序的副本
 for (const auto& word : search_words) {

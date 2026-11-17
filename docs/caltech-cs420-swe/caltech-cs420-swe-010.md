@@ -38,13 +38,13 @@ Python内置了`csv`模块，可以方便地读写CSV文件。
 3.  创建`csv.reader`对象来读取文件内容。
 4.  遍历读取器对象以获取每一行数据。
 
-```python
-import csv
 
 ![](img/6abb0c5c857356614e7323b78c26317a_9.png)
 
 ![](img/6abb0c5c857356614e7323b78c26317a_11.png)
 
+```python
+import csv
 def read_csv_file(filename):
     with open(filename, mode='r') as file:
         csv_reader = csv.reader(file)
@@ -127,6 +127,9 @@ Pickle的强大之处在于其**无与伦比的灵活性**。它不仅可以序�
 
 #### 序列化（Pickling）
 
+
+![](img/6abb0c5c857356614e7323b78c26317a_22.png)
+
 ```python
 import pickle
 
@@ -135,22 +138,19 @@ data = {'task': 'Finish report', 'due': '2023-10-26', 'priority': 'High'}
 def pickle_data(filename, obj):
     with open(filename, 'wb') as file:  # 注意是二进制写入模式 'wb'
         pickle.dump(obj, file)
-
-![](img/6abb0c5c857356614e7323b78c26317a_22.png)
-
 pickle_data('data.pkl', data)
 ```
 
 #### 反序列化（Unpickling）
+
+
+![](img/6abb0c5c857356614e7323b78c26317a_24.png)
 
 ```python
 def unpickle_data(filename):
     with open(filename, 'rb') as file:  # 二进制读取模式 'rb'
         loaded_data = pickle.load(file)
         return loaded_data
-
-![](img/6abb0c5c857356614e7323b78c26317a_24.png)
-
 restored_data = unpickle_data('data.pkl')
 print(restored_data)  # 输出: {'task': 'Finish report', 'due': '2023-10-26', 'priority': 'High'}
 ```
@@ -195,13 +195,13 @@ Python的`json`模块使得JSON的编解码非常方便。
 
 #### 将Python对象转换为JSON字符串
 
-```python
-import json
 
 ![](img/6abb0c5c857356614e7323b78c26317a_28.png)
 
 ![](img/6abb0c5c857356614e7323b78c26317a_30.png)
 
+```python
+import json
 python_dict = {"name": "Alice", "age": 30, "city": "New York"}
 json_string = json.dumps(python_dict)  # 序列化
 print(json_string)  # 输出: {"name": "Alice", "age": 30, "city": "New York"}
@@ -308,13 +308,13 @@ for student in a_students:
 
 #### 更新与删除数据
 
+
+![](img/6abb0c5c857356614e7323b78c26317a_34.png)
+
 ```python
 # 更新数据
 cursor.execute("UPDATE students SET age = ? WHERE name = ?", (21, 'Alice'))
 conn.commit()
-
-![](img/6abb0c5c857356614e7323b78c26317a_34.png)
-
 # 删除数据
 cursor.execute("DELETE FROM students WHERE grade = ?", ('F',))
 conn.commit()

@@ -154,15 +154,15 @@ end
 
 ![](img/be9290573c98decac80aa57bbf0d6d2a_48.png)
 
-```oz
-fun {Producer N S}
-    S = N|{Producer N+1}
-end
 
 ![](img/be9290573c98decac80aa57bbf0d6d2a_50.png)
 
 ![](img/be9290573c98decac80aa57bbf0d6d2a_52.png)
 
+```oz
+fun {Producer N S}
+    S = N|{Producer N+1}
+end
 fun {Consumer S}
     case S of H|T then
         {Browse H}

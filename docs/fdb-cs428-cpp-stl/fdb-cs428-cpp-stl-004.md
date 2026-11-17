@@ -278,6 +278,9 @@ C++标准库中的 `std::thread` 构造函数是使用可变参数模板的绝�
 
 以下是一个使用两个线程交替打印“ping”和“pong”的示例，使用信号量进行同步：
 
+
+![](img/d51744ca5d7f730582434df7881e2b96_1.png)
+
 ```cpp
 void playPingPong(int max, const std::string& str,
                   Semaphore& mySem, Semaphore& otherSem) {
@@ -287,9 +290,6 @@ void playPingPong(int max, const std::string& str,
         otherSem.release();
     }
 }
-
-![](img/d51744ca5d7f730582434df7881e2b96_1.png)
-
 int main() {
     Semaphore pingSem(1); // 初始可用
     Semaphore pongSem(0); // 初始不可用

@@ -91,6 +91,9 @@ CREATE TABLE comment (
 
 通常，我们会将一系列 SQL 命令（如 `DELETE`、`INSERT`）保存到一个 `.sql` 文件中。例如，一个名为 `03_techniques_load.sql` 的文件可能包含以下内容：
 
+
+![](img/4a148343c847ec4b1de6813ef1f8c7e9_4.png)
+
 ```sql
 -- 清空 account 表并重置序列（仅用于演示，生产环境慎用）
 DELETE FROM account;
@@ -99,9 +102,6 @@ ALTER SEQUENCE account_id_seq RESTART;
 -- 插入示例用户数据
 INSERT INTO account (email) VALUES ('user1@example.com');
 INSERT INTO account (email) VALUES ('user2@example.com');
-
-![](img/4a148343c847ec4b1de6813ef1f8c7e9_4.png)
-
 -- 插入示例帖子数据
 INSERT INTO post (title, content, account_id) VALUES ('First Post', 'Hello World!', 1);
 INSERT INTO post (title, content, account_id) VALUES ('Another Post', 'Database tutorial.', 2);

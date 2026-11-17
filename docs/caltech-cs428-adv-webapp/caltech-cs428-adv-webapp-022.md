@@ -42,6 +42,9 @@ mongod --dbpath ./data --port 27017 --bind_ip 127.0.0.1
 
 **`app.js` 基础代码：**
 
+
+![](img/6c68f1f2b6558d155ff370ad0b7cb864_2.png)
+
 ```javascript
 const express = require('express');
 const app = express();
@@ -49,9 +52,6 @@ const port = 3000;
 
 // 提供静态文件
 app.use(express.static('public'));
-
-![](img/6c68f1f2b6558d155ff370ad0b7cb864_2.png)
-
 // 根路由，返回首页
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
@@ -117,12 +117,12 @@ module.exports = {
 
 ![](img/6c68f1f2b6558d155ff370ad0b7cb864_28.png)
 
-```javascript
-const mongoose = require('mongoose');
-const { database } = require('./config/database');
 
 ![](img/6c68f1f2b6558d155ff370ad0b7cb864_30.png)
 
+```javascript
+const mongoose = require('mongoose');
+const { database } = require('./config/database');
 // 连接MongoDB
 mongoose.connect(database, {
     useNewUrlParser: true,
@@ -150,22 +150,22 @@ mongoose.connect(database, {
 
 **`models/User.js`：**
 
-```javascript
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
 ![](img/6c68f1f2b6558d155ff370ad0b7cb864_38.png)
 
 ![](img/6c68f1f2b6558d155ff370ad0b7cb864_40.png)
 
+
+![](img/6c68f1f2b6558d155ff370ad0b7cb864_42.png)
+
+```javascript
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 // 定义用户模式
 const userSchema = new Schema({
     email: String,
     password: String
 });
-
-![](img/6c68f1f2b6558d155ff370ad0b7cb864_42.png)
-
 // 创建并导出模型
 module.exports = mongoose.model('User', userSchema);
 ```
@@ -198,14 +198,14 @@ module.exports = mongoose.model('User', userSchema);
 
 ![](img/6c68f1f2b6558d155ff370ad0b7cb864_54.png)
 
-```javascript
-const bodyParser = require('body-parser');
-const userRoutes = require('./api/user-routes');
 
 ![](img/6c68f1f2b6558d155ff370ad0b7cb864_56.png)
 
 ![](img/6c68f1f2b6558d155ff370ad0b7cb864_58.png)
 
+```javascript
+const bodyParser = require('body-parser');
+const userRoutes = require('./api/user-routes');
 app.use(bodyParser.json()); // 解析JSON格式的请求体
 app.use('/', userRoutes); // 使用用户路由
 ```
@@ -219,6 +219,9 @@ app.use('/', userRoutes); // 使用用户路由
 **`api/user-routes.js` 中的实现：**
 
 ![](img/6c68f1f2b6558d155ff370ad0b7cb864_64.png)
+
+
+![](img/6c68f1f2b6558d155ff370ad0b7cb864_66.png)
 
 ```javascript
 const express = require('express');
@@ -236,9 +239,6 @@ router.post('/register', async (req, res) => {
         data: savedUser
     });
 });
-
-![](img/6c68f1f2b6558d155ff370ad0b7cb864_66.png)
-
 module.exports = router;
 ```
 
@@ -398,11 +398,11 @@ JWT是一种令牌，包含三部分：
 
 **`api/user-routes.js` 中的登录实现：**
 
-```javascript
-const jwt = require('jsonwebtoken');
 
 ![](img/6c68f1f2b6558d155ff370ad0b7cb864_116.png)
 
+```javascript
+const jwt = require('jsonwebtoken');
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
     const user = await User.findOne({ email });

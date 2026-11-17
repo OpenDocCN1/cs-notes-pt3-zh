@@ -147,16 +147,16 @@
 ![](img/677ea37b47e422d4caae94d7b6de0b79_79.png)
 
 我们可以用代码来定义这个过程：
-```python
-class Multipole:
-    def __init__(self, center, q_list): # q_list 是各阶系数
-        self.center = center
-        self.coeffs = q_list # 例如 [Q, q1, q2, ...]
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_81.png)
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_83.png)
 
+```python
+class Multipole:
+    def __init__(self, center, q_list): # q_list 是各阶系数
+        self.center = center
+        self.coeffs = q_list # 例如 [Q, q1, q2, ...]
 def M2M_transform(source_multipoles):
     """ 将多个源多极子合并为一个新的多极子 """
     new_center = compute_weighted_center(source_multipoles)

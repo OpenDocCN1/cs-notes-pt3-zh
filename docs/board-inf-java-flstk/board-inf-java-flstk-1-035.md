@@ -88,12 +88,12 @@ if (sellingPrice > costPrice) {
 
 我们也可以使用嵌套的`if-else`语句来实现相同的逻辑：
 
-```java
-float sellingPrice = 1200;
-float costPrice = 1000;
 
 ![](img/d59779a97f3f7b6a7adbd69df60406ed_4.png)
 
+```java
+float sellingPrice = 1200;
+float costPrice = 1000;
 if (sellingPrice > costPrice) {
     System.out.println("Profit");
 } else {

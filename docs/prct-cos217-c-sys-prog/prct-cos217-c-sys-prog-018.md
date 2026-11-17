@@ -109,6 +109,9 @@ void (*signal(int sig, void (*handler)(int)))(int);
 
 ![](img/1205394fb9aa43f4ce919e147e1d0445_15.png)
 
+
+![](img/1205394fb9aa43f4ce919e147e1d0445_17.png)
+
 ```c
 #define _GNU_SOURCE
 #include <stdio.h>
@@ -118,9 +121,6 @@ void (*signal(int sig, void (*handler)(int)))(int);
 void handle_sigint(int sig) {
     printf("\nCaught signal %d (SIGINT). I won't terminate!\n", sig);
 }
-
-![](img/1205394fb9aa43f4ce919e147e1d0445_17.png)
-
 int main() {
     // 安装 SIGINT 的信号处理器
     signal(SIGINT, handle_sigint);
@@ -142,6 +142,9 @@ int main() {
 
 为了解决这个问题，我们可以安装一个 `SIGINT` 处理器来执行清理工作。
 
+
+![](img/1205394fb9aa43f4ce919e147e1d0445_19.png)
+
 ```c
 #define _GNU_SOURCE
 #include <stdio.h>
@@ -160,9 +163,6 @@ void cleanup(int sig) {
     printf("Cleaned up before exit.\n");
     exit(sig); // 退出，使用信号编号作为退出状态
 }
-
-![](img/1205394fb9aa43f4ce919e147e1d0445_19.png)
-
 int main() {
     // 安装信号处理器
     signal(SIGINT, cleanup);

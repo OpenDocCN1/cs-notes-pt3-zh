@@ -42,12 +42,12 @@
 
 ![](img/607c0b39ee9e4dd20c9c2c60affe5347_22.png)
 
-```python
-from django.core.validators import MinLengthValidator
-from django.db import models
 
 ![](img/607c0b39ee9e4dd20c9c2c60affe5347_24.png)
 
+```python
+from django.core.validators import MinLengthValidator
+from django.db import models
 class Make(models.Model):
     name = models.CharField(
             max_length=200,
@@ -111,9 +111,6 @@ URL配置文件将不同的网址路径映射到对应的视图函数。Autos应
 
 每个路径都通过`name`参数被赋予了易于引用的名称。
 
-```python
-from django.urls import path
-from . import views
 
 ![](img/607c0b39ee9e4dd20c9c2c60affe5347_31.png)
 
@@ -121,6 +118,9 @@ from . import views
 
 ![](img/607c0b39ee9e4dd20c9c2c60affe5347_34.png)
 
+```python
+from django.urls import path
+from . import views
 urlpatterns = [
     path('', views.MainView.as_view(), name='all'),
     path('main/create/', views.AutoCreate.as_view(), name='auto_create'),
@@ -165,26 +165,26 @@ urlpatterns = [
 
 ![](img/607c0b39ee9e4dd20c9c2c60affe5347_56.png)
 
+
+![](img/607c0b39ee9e4dd20c9c2c60affe5347_57.png)
+
+
+![](img/607c0b39ee9e4dd20c9c2c60affe5347_59.png)
+
+![](img/607c0b39ee9e4dd20c9c2c60affe5347_61.png)
+
 ```python
 from django.views import View
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Auto, Make
 from .forms import MakeForm
-
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_57.png)
-
 class MainView(LoginRequiredMixin, View):
     def get(self, request):
         make_count = Make.objects.all().count()
         auto_list = Auto.objects.all()
         ctx = {'make_count': make_count, 'auto_list': auto_list}
         return render(request, 'autos/auto_list.html', ctx)
-
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_59.png)
-
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_61.png)
-
 class MakeView(LoginRequiredMixin, View):
     def get(self, request):
         make_list = Make.objects.all()
@@ -302,17 +302,9 @@ class MakeDelete(LoginRequiredMixin, View):
 
 ![](img/607c0b39ee9e4dd20c9c2c60affe5347_99.png)
 
-```python
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.urls import reverse_lazy
-from .models import Auto
 
 ![](img/607c0b39ee9e4dd20c9c2c60affe5347_101.png)
 
-class AutoCreate(LoginRequiredMixin, CreateView):
-    model = Auto
-    fields = '__all__'
-    success_url = reverse_lazy('autos:all')
 
 ![](img/607c0b39ee9e4dd20c9c2c60affe5347_103.png)
 
@@ -320,13 +312,21 @@ class AutoCreate(LoginRequiredMixin, CreateView):
 
 ![](img/607c0b39ee9e4dd20c9c2c60affe5347_107.png)
 
+
+![](img/607c0b39ee9e4dd20c9c2c60affe5347_109.png)
+
+```python
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+from .models import Auto
+class AutoCreate(LoginRequiredMixin, CreateView):
+    model = Auto
+    fields = '__all__'
+    success_url = reverse_lazy('autos:all')
 class AutoUpdate(LoginRequiredMixin, UpdateView):
     model = Auto
     fields = '__all__'
     success_url = reverse_lazy('autos:all')
-
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_109.png)
-
 class AutoDelete(LoginRequiredMixin, DeleteView):
     model = Auto
     fields = '__all__'

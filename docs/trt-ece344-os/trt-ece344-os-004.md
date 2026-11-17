@@ -126,12 +126,12 @@ int main() {
 
 以下是一个使用`execve()`运行`ls`命令的示例：
 
-```c
-#include <stdio.h>
-#include <unistd.h>
 
 ![](img/60feb7e4ea5222f1f5d369798d1dc5e2_25.png)
 
+```c
+#include <stdio.h>
+#include <unistd.h>
 int main() {
     printf("I‘m going to become another process!\n");
 

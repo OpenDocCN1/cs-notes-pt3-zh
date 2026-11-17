@@ -61,12 +61,6 @@ decltype(j) b = i; // b 是 int&，必须初始化
 那么，`decltype`的实际用途是什么？一个典型的场景是在编写泛型函数时确定返回类型。
 
 **代码示例：**
-```cpp
-// 旧的写法（在某些上下文中无效）
-template <typename Iterator>
-decltype(*begin) find(Iterator begin, Iterator end, int index) {
-    // ... 查找逻辑
-}
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_22.png)
 
@@ -74,6 +68,12 @@ decltype(*begin) find(Iterator begin, Iterator end, int index) {
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_25.png)
 
+```cpp
+// 旧的写法（在某些上下文中无效）
+template <typename Iterator>
+decltype(*begin) find(Iterator begin, Iterator end, int index) {
+    // ... 查找逻辑
+}
 // 使用尾置返回类型的现代写法（有效）
 template <typename Iterator>
 auto find(Iterator begin, Iterator end, int index) -> decltype(*begin) {
@@ -98,11 +98,11 @@ auto find(Iterator begin, Iterator end, int index) -> decltype(*begin) {
 ![](img/e82bc31b31dc2045370c217ef829b1b7_31.png)
 
 **代码示例：**
-```cpp
-#include <type_traits>
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_33.png)
 
+```cpp
+#include <type_traits>
 int main() {
     using std::is_same_v;
     // 类型特征：检查两个类型是否相同
@@ -219,14 +219,14 @@ int main() {
 ![](img/e82bc31b31dc2045370c217ef829b1b7_80.png)
 
 **代码示例：**
-```cpp
-using int_lref = int&;
-using int_rref = int&&;
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_82.png)
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_84.png)
 
+```cpp
+using int_lref = int&;
+using int_rref = int&&;
 // 根据引用折叠规则：
 int_lref&  a = ...; // 类型为 int&  (规则1)
 int_lref&& b = ...; // 类型为 int&  (规则2)

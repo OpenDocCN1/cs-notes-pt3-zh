@@ -90,17 +90,17 @@
 哈希表主要有两种实现方式：**链地址法** 和 **开放地址法**。我们以链地址法为例说明基本结构和挑战。
 
 一个简单的链式哈希表结构如下：
+
+![](img/1b82367e9d3f3ab4bcbd7db290d13970_30.png)
+
+![](img/1b82367e9d3f3ab4bcbd7db290d13970_32.png)
+
 ```c
 typedef struct Entry {
     int key;
     struct Entry* next;
     // ... 可能的负载数据
 } Entry;
-
-![](img/1b82367e9d3f3ab4bcbd7db290d13970_30.png)
-
-![](img/1b82367e9d3f3ab4bcbd7db290d13970_32.png)
-
 Entry* hash_table[HASH_TABLE_SIZE]; // 初始化为NULL
 ```
 查找一个键 `k` 时，计算 `slot = hash(k) % HASH_TABLE_SIZE`，然后遍历该槽位对应的链表。

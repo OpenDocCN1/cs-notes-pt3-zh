@@ -43,6 +43,11 @@ void* thread_function(void* arg) {
 
 为了更深入地理解锁的必要性，我们来看一个并发操作链表的例子。假设我们有一个简单的链表，支持插入和查找操作。
 
+
+![](img/b8a88378b271494f8fffe2466093286e_1.png)
+
+![](img/b8a88378b271494f8fffe2466093286e_3.png)
+
 ```c
 typedef struct __node_t {
     int key;
@@ -58,11 +63,6 @@ void List_Init(list_t *L) {
     L->head = NULL;
     pthread_mutex_init(&L->lock, NULL);
 }
-
-![](img/b8a88378b271494f8fffe2466093286e_1.png)
-
-![](img/b8a88378b271494f8fffe2466093286e_3.png)
-
 void List_Insert(list_t *L, int key) {
     node_t *new = malloc(sizeof(node_t));
     if (new == NULL) {

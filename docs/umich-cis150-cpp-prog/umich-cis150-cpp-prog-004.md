@@ -74,10 +74,6 @@ else {
 ![](img/aca4d2d45dff76f8d9b0ad6480cab151_16.png)
 
 **核心代码示例：**
-```cpp
-const double TARIFF_ORDER_MINIMUM = 800.0;
-const double TARIFF_RATE_INDIA = 0.25;
-const double TARIFF_RATE_BRAZIL = 0.50;
 
 ![](img/aca4d2d45dff76f8d9b0ad6480cab151_18.png)
 
@@ -89,11 +85,22 @@ const double TARIFF_RATE_BRAZIL = 0.50;
 
 ![](img/aca4d2d45dff76f8d9b0ad6480cab151_25.png)
 
-double orderCost, tariffCost = 0.0;
-string countryOfOrigin;
 
 ![](img/aca4d2d45dff76f8d9b0ad6480cab151_27.png)
 
+
+![](img/aca4d2d45dff76f8d9b0ad6480cab151_29.png)
+
+![](img/aca4d2d45dff76f8d9b0ad6480cab151_31.png)
+
+![](img/aca4d2d45dff76f8d9b0ad6480cab151_33.png)
+
+```cpp
+const double TARIFF_ORDER_MINIMUM = 800.0;
+const double TARIFF_RATE_INDIA = 0.25;
+const double TARIFF_RATE_BRAZIL = 0.50;
+double orderCost, tariffCost = 0.0;
+string countryOfOrigin;
 // ... 获取用户输入
 
 if (orderCost <= TARIFF_ORDER_MINIMUM) {
@@ -109,13 +116,6 @@ else if (countryOfOrigin == "Brazil") {
     tariffCost = orderCost * TARIFF_RATE_BRAZIL;
 }
 // ... 可以添加更多国家的判断
-
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_29.png)
-
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_31.png)
-
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_33.png)
-
 cout << "Your tariff cost is $" << tariffCost << endl;
 ```
 **关键点：** 使用常量便于集中管理可能变化的数值（如税率）。逻辑运算符`||`（或）可用于检查无效输入，例如`if (percentage < 0 || percentage > 100)`。
@@ -144,13 +144,6 @@ cout << "Your tariff cost is $" << tariffCost << endl;
 ![](img/aca4d2d45dff76f8d9b0ad6480cab151_44.png)
 
 **代码示例对比：**
-```cpp
-// 使用 if-else
-if (orderCost <= TARIFF_ORDER_MINIMUM) {
-    tariffCost = 0.0;
-} else {
-    tariffCost = orderCost * someRate;
-}
 
 ![](img/aca4d2d45dff76f8d9b0ad6480cab151_46.png)
 
@@ -158,6 +151,13 @@ if (orderCost <= TARIFF_ORDER_MINIMUM) {
 
 ![](img/aca4d2d45dff76f8d9b0ad6480cab151_50.png)
 
+```cpp
+// 使用 if-else
+if (orderCost <= TARIFF_ORDER_MINIMUM) {
+    tariffCost = 0.0;
+} else {
+    tariffCost = orderCost * someRate;
+}
 // 使用条件运算符实现相同功能
 tariffCost = (orderCost <= TARIFF_ORDER_MINIMUM) ? 0.0 : (orderCost * someRate);
 ```
@@ -245,21 +245,21 @@ if (fabs(a - b) < EPSILON) {
 }
 ```
 **代码示例：**
-```cpp
-#include <cmath> // 用于 fabs
-const double EPSILON = 0.000001;
-double result = 1.0 / 3.0;
-double expected = 0.3333333333333333;
 
 ![](img/aca4d2d45dff76f8d9b0ad6480cab151_83.png)
 
-// 不安全的比较
-// if (result == expected) ... 
 
 ![](img/aca4d2d45dff76f8d9b0ad6480cab151_85.png)
 
 ![](img/aca4d2d45dff76f8d9b0ad6480cab151_87.png)
 
+```cpp
+#include <cmath> // 用于 fabs
+const double EPSILON = 0.000001;
+double result = 1.0 / 3.0;
+double expected = 0.3333333333333333;
+// 不安全的比较
+// if (result == expected) ... 
 // 安全的比较
 if (fabs(result - expected) < EPSILON) {
     cout << "The result is approximately one third." << endl;

@@ -105,15 +105,15 @@ Rust 使用特征来对闭包进行分类，这影响了闭包如何被调用和
 
 ![](img/168c04572cb3d6fc65f9da9b403c43bc_14.png)
 
+
+![](img/168c04572cb3d6fc65f9da9b403c43bc_16.png)
+
 ```rust
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32,
 }
-
-![](img/168c04572cb3d6fc65f9da9b403c43bc_16.png)
-
 fn main() {
     let mut list = [
         Rectangle { width: 10, height: 1 },

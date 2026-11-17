@@ -96,12 +96,12 @@ cout << “通过pptr访问a的值 (**pptr): ” << **pptr << endl;
 ![](img/47b43e092d6b13a93e9507bb0e4321dc_15.png)
 
 以下是解引用运算符的示例：
-```cpp
-int a = 10;
-int* ptr = &a;
 
 ![](img/47b43e092d6b13a93e9507bb0e4321dc_17.png)
 
+```cpp
+int a = 10;
+int* ptr = &a;
 cout << “指针ptr存储的地址: ” << ptr << endl;
 cout << “指针ptr指向地址中的值 (*ptr): ” << *ptr << endl; // 输出 10
 
@@ -126,14 +126,14 @@ cout << “**pptr 的值是: ” << **pptr << endl; // 输出 10
 在C++中，数组名本身就是一个指向数组第一个元素（索引0）的**常量指针**。这意味着你可以像使用指针一样使用数组名。
 
 以下是指针与数组关系的示例：
+
+![](img/47b43e092d6b13a93e9507bb0e4321dc_19.png)
+
 ```cpp
 int arr[5] = {1, 2, 3, 4, 5};
 
 cout << “数组名arr的值（首地址）: ” << arr << endl;
 cout << “第一个元素的地址 (&arr[0]): ” << &arr[0] << endl; // 与上一行输出相同
-
-![](img/47b43e092d6b13a93e9507bb0e4321dc_19.png)
-
 // 使用指针语法访问数组元素
 cout << “第一个元素的值 (*arr): ” << *arr << endl; // 输出 1
 cout << “第二个元素的值 (*(arr + 1)): ” << *(arr + 1) << endl; // 输出 2
@@ -155,6 +155,9 @@ cout << “第二个元素的值 (*(arr + 1)): ” << *(arr + 1) << endl; // 输
 3.  **指针相减**: 计算两个指针之间相隔多少个元素。
 
 以下是示例：
+
+![](img/47b43e092d6b13a93e9507bb0e4321dc_21.png)
+
 ```cpp
 int arr[5] = {10, 20, 30, 40, 50};
 int* ptr = arr; // ptr指向arr[0]
@@ -164,9 +167,6 @@ cout << “*ptr after ptr++: ” << *ptr << endl; // 输出 20
 
 ptr = ptr + 2; // ptr现在指向arr[3]
 cout << “*ptr after ptr+2: ” << *ptr << endl; // 输出 40
-
-![](img/47b43e092d6b13a93e9507bb0e4321dc_21.png)
-
 int* ptr2 = &arr[4];
 cout << “两个指针之间的元素差 (ptr2 - ptr): ” << (ptr2 - ptr) << endl; // 输出 1 (因为ptr指向arr[3], ptr2指向arr[4])
 ```
@@ -189,14 +189,14 @@ cout << “两个指针之间的元素差 (ptr2 - ptr): ” << (ptr2 - ptr) << e
 在默认的“传值调用”中，函数获得的是参数的一个副本，修改副本不影响原始值。
 
 以下是对比示例：
+
+![](img/47b43e092d6b13a93e9507bb0e4321dc_32.png)
+
 ```cpp
 // 传值调用 - 无法修改原始值
 void passByValue(int x) {
     x = 20;
 }
-
-![](img/47b43e092d6b13a93e9507bb0e4321dc_32.png)
-
 // 传引用调用（使用指针）- 可以修改原始值
 void passByReference(int* xPtr) {
     *xPtr = 20;

@@ -62,6 +62,17 @@ class Article(models.Model):
 
 以下是`owner.py`文件的基本结构：
 
+
+![](img/89c28e67cdf3f58cc5fa0f53318ad234_15.png)
+
+![](img/89c28e67cdf3f58cc5fa0f53318ad234_16.png)
+
+
+![](img/89c28e67cdf3f58cc5fa0f53318ad234_18.png)
+
+
+![](img/89c28e67cdf3f58cc5fa0f53318ad234_20.png)
+
 ```python
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -69,11 +80,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class OwnerListView(ListView):
     """所有者的列表视图基类。"""
     pass
-
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_15.png)
-
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_16.png)
-
 class OwnerDetailView(DetailView):
     """所有者的详情视图基类。"""
     pass
@@ -81,15 +87,9 @@ class OwnerDetailView(DetailView):
 class OwnerCreateView(LoginRequiredMixin, CreateView):
     """所有者的创建视图基类。"""
     pass
-
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_18.png)
-
 class OwnerUpdateView(LoginRequiredMixin, UpdateView):
     """所有者的更新视图基类。"""
     pass
-
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_20.png)
-
 class OwnerDeleteView(LoginRequiredMixin, DeleteView):
     """所有者的删除视图基类。"""
     pass
@@ -187,19 +187,22 @@ class OwnerCreateView(LoginRequiredMixin, CreateView):
 
 ![](img/89c28e67cdf3f58cc5fa0f53318ad234_42.png)
 
-```python
-from .models import Article
-from .owner import OwnerCreateView, OwnerUpdateView, OwnerDeleteView, OwnerListView, OwnerDetailView
 
 ![](img/89c28e67cdf3f58cc5fa0f53318ad234_44.png)
 
+
+![](img/89c28e67cdf3f58cc5fa0f53318ad234_46.png)
+
+
+![](img/89c28e67cdf3f58cc5fa0f53318ad234_48.png)
+
+```python
+from .models import Article
+from .owner import OwnerCreateView, OwnerUpdateView, OwnerDeleteView, OwnerListView, OwnerDetailView
 class ArticleListView(OwnerListView):
     model = Article
     # template_name 默认为 'article_list.html'
     # context_object_name 默认为 'article_list'
-
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_46.png)
-
 class ArticleDetailView(OwnerDetailView):
     model = Article
 
@@ -210,9 +213,6 @@ class ArticleCreateView(OwnerCreateView):
 class ArticleUpdateView(OwnerUpdateView):
     model = Article
     fields = ['title', 'text']
-
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_48.png)
-
 class ArticleDeleteView(OwnerDeleteView):
     model = Article
 ```

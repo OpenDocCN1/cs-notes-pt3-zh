@@ -117,6 +117,15 @@ typedef struct {
 然后，我们可以创建一个TCB数组 `taskList[MAX_TASKS]` 来管理所有任务。这种方法将所有数据封装在一起，比维护多个独立数组更清晰。
 
 以下是使用TCB初始化任务的伪代码示例：
+
+![](img/698053f8fc1180b32d4f92e2d731fa79_28.png)
+
+![](img/698053f8fc1180b32d4f92e2d731fa79_30.png)
+
+![](img/698053f8fc1180b32d4f92e2d731fa79_32.png)
+
+![](img/698053f8fc1180b32d4f92e2d731fa79_34.png)
+
 ```c
 TCB taskList[10];
 int j = 0;
@@ -135,15 +144,6 @@ taskList[j].argPtr = (void*)&period; // 将int指针转换为void指针
 taskList[j].state = READY;
 taskList[j].delay = 0;
 j++;
-
-![](img/698053f8fc1180b32d4f92e2d731fa79_28.png)
-
-![](img/698053f8fc1180b32d4f92e2d731fa79_30.png)
-
-![](img/698053f8fc1180b32d4f92e2d731fa79_32.png)
-
-![](img/698053f8fc1180b32d4f92e2d731fa79_34.png)
-
 // 标记列表结束
 taskList[j].taskPtr = NULL;
 ```

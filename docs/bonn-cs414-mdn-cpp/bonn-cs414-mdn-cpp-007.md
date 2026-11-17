@@ -302,6 +302,9 @@ public:
 
 枚举类（有作用域的枚举）是C++11引入的类型安全的枚举。与传统的C风格枚举相比，它们不会隐式转换为整数，并且其枚举值位于枚举类的作用域内，避免了名称污染。
 
+
+![](img/4fc819c93120c64eeeeae988b963ac19_17.png)
+
 ```cpp
 enum class FileMode { Read, Write, Append };
 enum class StatusCode { OK = 200, NotFound = 404, Error = 500 };
@@ -309,9 +312,6 @@ enum class StatusCode { OK = 200, NotFound = 404, Error = 500 };
 FileMode mode = FileMode::Read;
 // int i = mode; // 错误！不能隐式转换
 int i = static_cast<int>(mode); // 正确，需要显式转换
-
-![](img/4fc819c93120c64eeeeae988b963ac19_17.png)
-
 if (mode == FileMode::Write) { ... } // 清晰，不会与其他枚举冲突
 ```
 

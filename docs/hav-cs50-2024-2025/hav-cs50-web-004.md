@@ -104,11 +104,11 @@ print(f"Hello, {name}")
 
 ![](img/42813ff5ff6dd9c25a6250e137ad3fb8_41.png)
 
-```python
-n = int(input("Number: "))
 
 ![](img/42813ff5ff6dd9c25a6250e137ad3fb8_43.png)
 
+```python
+n = int(input("Number: "))
 if n > 0:
     print("n is positive")
 elif n < 0:
@@ -214,14 +214,14 @@ print(f"The set has {len(s)} elements.")
 
 ![](img/42813ff5ff6dd9c25a6250e137ad3fb8_88.png)
 
-```python
-houses = {"Harry": "Gryffindor", "Draco": "Slytherin"}
-print(houses["Harry"]) # 输出: Gryffindor
 
 ![](img/42813ff5ff6dd9c25a6250e137ad3fb8_90.png)
 
 ![](img/42813ff5ff6dd9c25a6250e137ad3fb8_91.png)
 
+```python
+houses = {"Harry": "Gryffindor", "Draco": "Slytherin"}
+print(houses["Harry"]) # 输出: Gryffindor
 houses["Hermione"] = "Gryffindor" # 添加新的键值对
 ```
 
@@ -235,20 +235,20 @@ houses["Hermione"] = "Gryffindor" # 添加新的键值对
 
 ![](img/42813ff5ff6dd9c25a6250e137ad3fb8_96.png)
 
+
+![](img/42813ff5ff6dd9c25a6250e137ad3fb8_98.png)
+
+
+![](img/42813ff5ff6dd9c25a6250e137ad3fb8_100.png)
+
 ```python
 # 遍历数字范围
 for i in range(6):
     print(i)
-
-![](img/42813ff5ff6dd9c25a6250e137ad3fb8_98.png)
-
 # 遍历列表
 names = ["Harry", "Ron", "Hermione"]
 for name in names:
     print(name)
-
-![](img/42813ff5ff6dd9c25a6250e137ad3fb8_100.png)
-
 # 遍历字符串（字符序列）
 name = "Harry"
 for char in name:
@@ -320,6 +320,9 @@ print(p.y) # 输出: 8
 
 让我们看一个更复杂的例子，模拟航班订座：
 
+
+![](img/42813ff5ff6dd9c25a6250e137ad3fb8_116.png)
+
 ```python
 class Flight:
     def __init__(self, capacity):
@@ -334,9 +337,6 @@ class Flight:
             return False
         self.passengers.append(name)
         return True
-
-![](img/42813ff5ff6dd9c25a6250e137ad3fb8_116.png)
-
 flight = Flight(3)
 people = ["Harry", "Ron", "Hermione", "Ginny"]
 for person in people:
@@ -352,6 +352,9 @@ for person in people:
 
 装饰器(`decorator`)是Python中一个强大的功能，它允许我们修改或增强函数的行为，而不改变其原始代码。装饰器本身是一个函数，它接收一个函数作为参数并返回一个新的函数。
 
+
+![](img/42813ff5ff6dd9c25a6250e137ad3fb8_120.png)
+
 ```python
 def announce(f):
     def wrapper():
@@ -363,9 +366,6 @@ def announce(f):
 @announce
 def hello():
     print("Hello, world!")
-
-![](img/42813ff5ff6dd9c25a6250e137ad3fb8_120.png)
-
 hello()
 # 输出:
 # About to run the function...
@@ -381,15 +381,15 @@ hello()
 
 ![](img/42813ff5ff6dd9c25a6250e137ad3fb8_124.png)
 
+
+![](img/42813ff5ff6dd9c25a6250e137ad3fb8_126.png)
+
 ```python
 people = [
     {"name": "Harry", "house": "Gryffindor"},
     {"name": "Cho", "house": "Ravenclaw"},
     {"name": "Draco", "house": "Slytherin"}
 ]
-
-![](img/42813ff5ff6dd9c25a6250e137ad3fb8_126.png)
-
 # 使用lambda表达式按姓名排序
 people.sort(key=lambda person: person["name"])
 print(people)
@@ -415,28 +415,28 @@ print(people)
 
 ![](img/42813ff5ff6dd9c25a6250e137ad3fb8_140.png)
 
-```python
-import sys
 
 ![](img/42813ff5ff6dd9c25a6250e137ad3fb8_142.png)
 
+
+![](img/42813ff5ff6dd9c25a6250e137ad3fb8_144.png)
+
+
+![](img/42813ff5ff6dd9c25a6250e137ad3fb8_146.png)
+
+```python
+import sys
 try:
     x = int(input("x: "))
     y = int(input("y: "))
 except ValueError:
     print("Error: Invalid input.")
     sys.exit(1)
-
-![](img/42813ff5ff6dd9c25a6250e137ad3fb8_144.png)
-
 try:
     result = x / y
 except ZeroDivisionError:
     print("Error: Cannot divide by 0.")
     sys.exit(1)
-
-![](img/42813ff5ff6dd9c25a6250e137ad3fb8_146.png)
-
 print(f"{x} / {y} = {result}")
 ```
 

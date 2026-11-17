@@ -26,12 +26,12 @@ Python 的 `unittest` 模块提供了另一个测试框架，允许我们将测�
 
 ![](img/7bb18c1c8810a2ef6189869eadf8e020_4.png)
 
-```python
-# 使用 doctest
-import doctest
 
 ![](img/7bb18c1c8810a2ef6189869eadf8e020_6.png)
 
+```python
+# 使用 doctest
+import doctest
 # 使用 unittest
 import unittest
 ```

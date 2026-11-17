@@ -48,15 +48,15 @@ int compare_and_swap(int *ptr, int old, int new) {
 利用 `compare_and_swap`，我们可以实现一个最简单的锁——**自旋锁（Spinlock）**。
 
 以下是其实现思路：
+
+![](img/881f3d132fd2c43b4a7f436588c39afa_3.png)
+
 ```c
 void lock(int *lock) {
     while (compare_and_swap(lock, 0, 1) == 1) {
         // 忙等待，不断尝试获取锁
     }
 }
-
-![](img/881f3d132fd2c43b4a7f436588c39afa_3.png)
-
 void unlock(int *lock) {
     *lock = 0;
 }

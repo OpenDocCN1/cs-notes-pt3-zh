@@ -131,8 +131,9 @@ git push
 为了让项目的质量状态一目了然，我们可以创建一个状态徽章（Status Badge）并添加到项目的README文件中。
 
 在GitHub Actions页面，可以找到“Create status badge”的选项。复制生成的Markdown代码，将其粘贴到项目的 `README.md` 文件中。例如：
-```markdown
 ![CI Status](https://github.com/your-username/your-repo/actions/workflows/rust.yml/badge.svg)
+
+```markdown
 ```
 我们还可以更新README的标题，例如改为“一个Rust CI管道示例”，并说明本项目使用GitHub Actions测试Rust代码。
 

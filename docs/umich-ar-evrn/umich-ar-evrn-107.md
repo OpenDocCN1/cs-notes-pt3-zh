@@ -143,14 +143,6 @@
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_69.png)
 
-```html
-<a-scene physics="debug: false;">
-
-  <!-- 静态地面 -->
-  <a-plane static-body position="0 -1 0" rotation="-90 0 0" width="100" height="100" color="#000" shadow></a-plane>
-
-  <!-- 动态小球（食物） -->
-  <a-sphere class="interactable" dynamic-body position="0 2 -4" radius="0.3" color="green" shadow></a-sphere>
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_71.png)
 
@@ -164,6 +156,14 @@
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_79.png)
 
+```html
+<a-scene physics="debug: false;">
+
+  <!-- 静态地面 -->
+  <a-plane static-body position="0 -1 0" rotation="-90 0 0" width="100" height="100" color="#000" shadow></a-plane>
+
+  <!-- 动态小球（食物） -->
+  <a-sphere class="interactable" dynamic-body position="0 2 -4" radius="0.3" color="green" shadow></a-sphere>
 </a-scene>
 ```
 
@@ -260,14 +260,14 @@ A-Frame的`teleport-controls`组件允许用户通过手柄指定传送点进行
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_124.png)
 
-```html
-<!-- 可抓取的食物 -->
-<a-sphere class="interactable" grabbable dynamic-body ... ></a-sphere>
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_126.png)
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_128.png)
 
+```html
+<!-- 可抓取的食物 -->
+<a-sphere class="interactable" grabbable dynamic-body ... ></a-sphere>
 <!-- 右手控制器，具备抓取能力 -->
 <a-entity hand-controls="hand: right"
           super-hands
@@ -365,16 +365,16 @@ HUD将UI元素（如分数、状态）固定在摄像机前方，始终处于用
 
 例如，可以实现“凝视传送”：用户注视场景中的特定传送点一段时间后，自动传送到该位置。
 
-```html
-<a-entity cursor="fuse: true; fuseTimeout: 1500;"
-         animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150">
-  <a-entity position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: white; shader: flat"></a-entity>
-</a-entity>
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_186.png)
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_188.png)
 
+```html
+<a-entity cursor="fuse: true; fuseTimeout: 1500;"
+         animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150">
+  <a-entity position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: white; shader: flat"></a-entity>
+</a-entity>
 <!-- 传送点 -->
 <a-ring class="teleport-spot" radius-inner="0.5" radius-outer="0.6" color="blue" position="2 0 -3"
         event-set__enter="_event: mouseenter; scale: 1.2 1.2 1.2"

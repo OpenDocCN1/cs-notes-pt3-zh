@@ -78,6 +78,12 @@ end
 ![](img/ac4f7550dbb27f1025eb49558cd3136b_13.png)
 
 以下是 `main` 函数中与调用相关的关键汇编代码片段：
+
+![](img/ac4f7550dbb27f1025eb49558cd3136b_15.png)
+
+
+![](img/ac4f7550dbb27f1025eb49558cd3136b_17.png)
+
 ```assembly
 ; ... 序言和局部变量分配代码 ...
 
@@ -86,14 +92,8 @@ movq    -32(%rbp), %rdi
 
 ; 2. 调用函数
 call    param_test
-
-![](img/ac4f7550dbb27f1025eb49558cd3136b_15.png)
-
 ; 3. 调用后清理栈（此例中无栈传参，所以加0）
 addq    $0, %rsp
-
-![](img/ac4f7550dbb27f1025eb49558cd3136b_17.png)
-
 ; 4. 保存返回值：将 RAX 中的返回值存入局部变量 `ret_val`（位于 RBP-24）
 movq    %rax, -24(%rbp)
 
@@ -197,6 +197,19 @@ end
 ![](img/ac4f7550dbb27f1025eb49558cd3136b_50.png)
 
 以下是调用 `param_test8` 的关键汇编代码片段：
+
+![](img/ac4f7550dbb27f1025eb49558cd3136b_52.png)
+
+
+![](img/ac4f7550dbb27f1025eb49558cd3136b_54.png)
+
+![](img/ac4f7550dbb27f1025eb49558cd3136b_56.png)
+
+
+![](img/ac4f7550dbb27f1025eb49558cd3136b_58.png)
+
+![](img/ac4f7550dbb27f1025eb49558cd3136b_60.png)
+
 ```assembly
 ; 设置前6个参数到寄存器
 movq    -32(%rbp), %rdi  ; 参数 a -> RDI
@@ -209,23 +222,10 @@ movq    -72(%rbp), %r9   ; 参数 f -> R9
 ; 将第7、8个参数压栈（注意顺序：先压h，再压g）
 pushq   -88(%rbp)        ; 参数 h
 pushq   -80(%rbp)        ; 参数 g
-
-![](img/ac4f7550dbb27f1025eb49558cd3136b_52.png)
-
 ; 调用函数
 call    param_test8
-
-![](img/ac4f7550dbb27f1025eb49558cd3136b_54.png)
-
-![](img/ac4f7550dbb27f1025eb49558cd3136b_56.png)
-
 ; 调用后清理栈：弹出两个8字节参数
 addq    $16, %rsp
-
-![](img/ac4f7550dbb27f1025eb49558cd3136b_58.png)
-
-![](img/ac4f7550dbb27f1025eb49558cd3136b_60.png)
-
 ; 保存返回值
 movq    %rax, -24(%rbp)
 ```

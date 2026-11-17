@@ -95,14 +95,14 @@ int main() {
 ### Python的替代方案
 Python（1989年）本身没有按引用调用的概念。一个优秀的折中方案是使用元组返回多个值。
 
+
+![](img/1678f5a24a6322ca24b22e360715137e_14.png)
+
 ```python
 def funk(a, b):
     a = 1
     b = 2
     return a, b
-
-![](img/1678f5a24a6322ca24b22e360715137e_14.png)
-
 x, y = 42, 43
 x, y = funk(x, y)
 ```

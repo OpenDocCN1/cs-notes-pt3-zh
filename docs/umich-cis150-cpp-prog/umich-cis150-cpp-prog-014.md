@@ -59,11 +59,6 @@ int main() {
 ![](img/c4172b75d9daff1b3143444ea32988f3_19.png)
 
 以下是实现该过程的代码示例：
-```cpp
-#include <fstream>
-#include <string>
-#include <iostream>
-using namespace std;
 
 ![](img/c4172b75d9daff1b3143444ea32988f3_21.png)
 
@@ -73,6 +68,11 @@ using namespace std;
 
 ![](img/c4172b75d9daff1b3143444ea32988f3_26.png)
 
+```cpp
+#include <fstream>
+#include <string>
+#include <iostream>
+using namespace std;
 int main() {
     ifstream inFile;
     inFile.open("list.txt");

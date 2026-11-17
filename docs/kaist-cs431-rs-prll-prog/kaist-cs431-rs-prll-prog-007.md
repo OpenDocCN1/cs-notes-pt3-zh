@@ -207,10 +207,6 @@ impl<T> Arc<T> {
 
 它们之间存在一个重要的理论关系，这个关系也体现在标准库的源码中：
 
-```rust
-// 如果 &T 是 Send 的，那么 T 就是 Sync 的。
-// 这意味着可以安全地将 &T 的引用跨线程传递。
-unsafe impl<T: ?Sized + Sync> Send for &T {}
 
 ![](img/09c92e290f820bf38997580ee22fd04c_67.png)
 
@@ -220,6 +216,10 @@ unsafe impl<T: ?Sized + Sync> Send for &T {}
 
 ![](img/09c92e290f820bf38997580ee22fd04c_73.png)
 
+```rust
+// 如果 &T 是 Send 的，那么 T 就是 Sync 的。
+// 这意味着可以安全地将 &T 的引用跨线程传递。
+unsafe impl<T: ?Sized + Sync> Send for &T {}
 // 这个关系是定义性的：T 是 Sync 当且仅当 &T 是 Send。
 // 用代码表示逻辑关系，并非直接实现。
 // `Sync` 的定义本质上等价于要求 `&T: Send`。

@@ -54,6 +54,9 @@ AWS官方文档《在无服务器应用程序中将Amazon EFS用于Lambda》提�
 
 以下是一个简化的代码结构示例：
 
+
+![](img/bad4d7d40a9f9d22be5587fd249ed029_7.png)
+
 ```rust
 // 引入必要的库，如onnxruntime-rs
 use onnxruntime::{environment::Environment, session::Session};
@@ -68,9 +71,6 @@ fn load_model_from_efs(model_path: &str) -> Session {
         .unwrap();
     session
 }
-
-![](img/bad4d7d40a9f9d22be5587fd249ed029_7.png)
-
 fn run_inference(session: &Session, input_data: &[f32]) -> Vec<f32> {
     // 准备输入，运行推理，并返回结果
     // ... 具体实现取决于模型输入输出格式

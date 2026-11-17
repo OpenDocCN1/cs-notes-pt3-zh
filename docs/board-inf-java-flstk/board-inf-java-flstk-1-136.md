@@ -96,13 +96,13 @@ span1.id = 'newUniqueId';
 
 ![](img/b680387ab2aea7740997c47b605df7c0_19.png)
 
+
+![](img/b680387ab2aea7740997c47b605df7c0_21.png)
+
 ```javascript
 // 添加类
 span2.classList.add('new-class');
 // 执行后，span2会拥有一个名为“new-class”的CSS类
-
-![](img/b680387ab2aea7740997c47b605df7c0_21.png)
-
 // 移除类
 span2.classList.remove('new-class');
 // 执行后，“new-class”类被从span2上移除
@@ -117,15 +117,15 @@ span2.classList.remove('new-class');
 
 以下是修改颜色和背景色的示例。
 
-```javascript
-// 修改文本颜色
-span1.style.color = 'red';
-// 执行后，span1的文本颜色变为红色
 
 ![](img/b680387ab2aea7740997c47b605df7c0_26.png)
 
 ![](img/b680387ab2aea7740997c47b605df7c0_27.png)
 
+```javascript
+// 修改文本颜色
+span1.style.color = 'red';
+// 执行后，span1的文本颜色变为红色
 // 修改背景颜色
 span2.style.backgroundColor = 'green';
 // 执行后，span2的背景颜色变为绿色

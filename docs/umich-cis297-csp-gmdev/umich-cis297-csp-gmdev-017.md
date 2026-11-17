@@ -183,12 +183,6 @@ public class PokerHand : IComparable<PokerHand>
 
 ![](img/9832b4c3f637ce48ed90d1bed529770e_46.png)
 
-```csharp
-// 在方法中抛出异常
-if (sideLength < 0)
-{
-    throw new ArgumentException("Side length cannot be less than 0.");
-}
 
 ![](img/9832b4c3f637ce48ed90d1bed529770e_48.png)
 
@@ -196,6 +190,12 @@ if (sideLength < 0)
 
 ![](img/9832b4c3f637ce48ed90d1bed529770e_52.png)
 
+```csharp
+// 在方法中抛出异常
+if (sideLength < 0)
+{
+    throw new ArgumentException("Side length cannot be less than 0.");
+}
 // 在调用方捕获并处理异常
 try
 {

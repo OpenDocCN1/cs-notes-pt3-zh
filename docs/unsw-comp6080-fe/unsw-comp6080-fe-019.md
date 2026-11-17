@@ -69,26 +69,26 @@ console.log(minimum(3, 5));
 *   `let` 用于声明**可以改变**的变量。
 *   `const` 用于声明**不可改变**的常量（注意：对于对象和数组，`const` 保证的是变量指向的引用不变，但对象内部属性或数组元素可以改变）。
 
-```javascript
-let changeable = 10; // 这个值以后可以改变
-changeable = 20; // 正确
 
 ![](img/af879d0ef4b899e7e429a73a844847fb_19.png)
 
-const constantVal = 5; // 这个值不能改变
-// constantVal = 6; // 错误！不能给常量赋值
 
 ![](img/af879d0ef4b899e7e429a73a844847fb_21.png)
 
-// 对于对象和数组
-const myArray = [1, 2, 3];
-myArray.push(4); // 正确：修改了数组内容
-// myArray = [5, 6, 7]; // 错误：不能改变 myArray 指向的引用
 
 ![](img/af879d0ef4b899e7e429a73a844847fb_23.png)
 
 ![](img/af879d0ef4b899e7e429a73a844847fb_25.png)
 
+```javascript
+let changeable = 10; // 这个值以后可以改变
+changeable = 20; // 正确
+const constantVal = 5; // 这个值不能改变
+// constantVal = 6; // 错误！不能给常量赋值
+// 对于对象和数组
+const myArray = [1, 2, 3];
+myArray.push(4); // 正确：修改了数组内容
+// myArray = [5, 6, 7]; // 错误：不能改变 myArray 指向的引用
 const myObject = { name: 'Alice' };
 myObject.age = 25; // 正确：修改了对象属性
 // myObject = { name: 'Bob' }; // 错误：不能改变 myObject 指向的引用
@@ -191,9 +191,6 @@ console.log(result); // 输出: 10
 
 以下是数组的基本操作：
 
-```javascript
-// 1. 创建数组
-const names = ['Hayden', 'Jake', 'Nick', 'Emily'];
 
 ![](img/af879d0ef4b899e7e429a73a844847fb_45.png)
 
@@ -201,9 +198,6 @@ const names = ['Hayden', 'Jake', 'Nick', 'Emily'];
 
 ![](img/af879d0ef4b899e7e429a73a844847fb_48.png)
 
-// 2. 访问和打印
-console.log(names); // 打印整个数组: ['Hayden', 'Jake', 'Nick', 'Emily']
-console.log(names[1]); // 访问第二个元素 (索引从0开始): 'Jake'
 
 ![](img/af879d0ef4b899e7e429a73a844847fb_50.png)
 
@@ -213,33 +207,39 @@ console.log(names[1]); // 访问第二个元素 (索引从0开始): 'Jake'
 
 ![](img/af879d0ef4b899e7e429a73a844847fb_54.png)
 
-// 3. 修改元素
-names[1] = 'Jacob'; // 数组变为: ['Hayden', 'Jacob', 'Nick', 'Emily']
 
 ![](img/af879d0ef4b899e7e429a73a844847fb_56.png)
 
-// 4. 添加元素到末尾
-names.push('Rennie'); // 数组变为: ['Hayden', 'Jacob', 'Nick', 'Emily', 'Rennie']
 
 ![](img/af879d0ef4b899e7e429a73a844847fb_58.png)
 
-// 5. 遍历数组
-// 方式一：传统的 for 循环
-for (let i = 0; i < names.length; i++) {
-    console.log(names[i]);
-}
 
 ![](img/af879d0ef4b899e7e429a73a844847fb_60.png)
 
 ![](img/af879d0ef4b899e7e429a73a844847fb_62.png)
 
+
+![](img/af879d0ef4b899e7e429a73a844847fb_64.png)
+
+```javascript
+// 1. 创建数组
+const names = ['Hayden', 'Jake', 'Nick', 'Emily'];
+// 2. 访问和打印
+console.log(names); // 打印整个数组: ['Hayden', 'Jake', 'Nick', 'Emily']
+console.log(names[1]); // 访问第二个元素 (索引从0开始): 'Jake'
+// 3. 修改元素
+names[1] = 'Jacob'; // 数组变为: ['Hayden', 'Jacob', 'Nick', 'Emily']
+// 4. 添加元素到末尾
+names.push('Rennie'); // 数组变为: ['Hayden', 'Jacob', 'Nick', 'Emily', 'Rennie']
+// 5. 遍历数组
+// 方式一：传统的 for 循环
+for (let i = 0; i < names.length; i++) {
+    console.log(names[i]);
+}
 // 方式二：for...of 循环 (遍历值)
 for (const name of names) {
     console.log(name);
 }
-
-![](img/af879d0ef4b899e7e429a73a844847fb_64.png)
-
 // 方式三：for...in 循环 (遍历索引)
 for (const index in names) {
     console.log(`Index ${index}: ${names[index]}`);
@@ -258,6 +258,27 @@ for (const index in names) {
 
 ![](img/af879d0ef4b899e7e429a73a844847fb_68.png)
 
+
+![](img/af879d0ef4b899e7e429a73a844847fb_70.png)
+
+![](img/af879d0ef4b899e7e429a73a844847fb_72.png)
+
+![](img/af879d0ef4b899e7e429a73a844847fb_74.png)
+
+
+![](img/af879d0ef4b899e7e429a73a844847fb_76.png)
+
+
+![](img/af879d0ef4b899e7e429a73a844847fb_78.png)
+
+![](img/af879d0ef4b899e7e429a73a844847fb_80.png)
+
+![](img/af879d0ef4b899e7e429a73a844847fb_82.png)
+
+![](img/af879d0ef4b899e7e429a73a844847fb_84.png)
+
+![](img/af879d0ef4b899e7e429a73a844847fb_85.png)
+
 ```javascript
 // 1. 创建对象
 const student = {
@@ -270,37 +291,16 @@ const student = {
 console.log(student); // 打印整个对象
 console.log(student.name); // 使用点语法访问: 'Sally'
 console.log(student['score']); // 使用方括号语法访问: 95
-
-![](img/af879d0ef4b899e7e429a73a844847fb_70.png)
-
-![](img/af879d0ef4b899e7e429a73a844847fb_72.png)
-
-![](img/af879d0ef4b899e7e429a73a844847fb_74.png)
-
 // 3. 修改属性
 student.name = 'Hayden';
 
 // 4. 动态添加新属性
 student.height = 159; // 对象现在拥有 height 属性
-
-![](img/af879d0ef4b899e7e429a73a844847fb_76.png)
-
 // 5. 遍历对象
 // 遍历对象的键
 for (const key in student) {
     console.log(`Key: ${key}, Value: ${student[key]}`);
 }
-
-![](img/af879d0ef4b899e7e429a73a844847fb_78.png)
-
-![](img/af879d0ef4b899e7e429a73a844847fb_80.png)
-
-![](img/af879d0ef4b899e7e429a73a844847fb_82.png)
-
-![](img/af879d0ef4b899e7e429a73a844847fb_84.png)
-
-![](img/af879d0ef4b899e7e429a73a844847fb_85.png)
-
 // 使用 Object.keys(), Object.values(), Object.entries()
 const keys = Object.keys(student); // 返回键的数组: ['name', 'score', 'rank', 'height']
 const values = Object.values(student); // 返回值的数组: ['Hayden', 95, 1, 159]
@@ -332,6 +332,11 @@ if ('name' in student) {
 
 ![](img/af879d0ef4b899e7e429a73a844847fb_99.png)
 
+
+![](img/af879d0ef4b899e7e429a73a844847fb_101.png)
+
+![](img/af879d0ef4b899e7e429a73a844847fb_102.png)
+
 ```javascript
 // 一个包含学生对象的数组
 const students = [
@@ -346,11 +351,6 @@ for (const student of students) {
         console.log(`${student.name} got a High Distinction!`);
     }
 }
-
-![](img/af879d0ef4b899e7e429a73a844847fb_101.png)
-
-![](img/af879d0ef4b899e7e429a73a844847fb_102.png)
-
 // 也可以是一个以字符串为键，对象为值的对象
 const classData = {
     'Alice': { age: 20, grade: 'A' },

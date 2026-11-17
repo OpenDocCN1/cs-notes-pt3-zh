@@ -227,16 +227,16 @@ free(p2);
 
 **point.h (头文件)**
 
-```c
-#ifndef POINT_H // 防止头文件被重复包含
-#define POINT_H
-
-typedef struct point point_t; // 前向声明，隐藏结构体细节
 
 ![](img/74545d798592828a5ec93a4607a17e44_3.png)
 
 ![](img/74545d798592828a5ec93a4607a17e44_5.png)
 
+```c
+#ifndef POINT_H // 防止头文件被重复包含
+#define POINT_H
+
+typedef struct point point_t; // 前向声明，隐藏结构体细节
 // 函数原型
 point_t* point_create(double x, double y);
 double point_distance(point_t *p1, point_t *p2);
@@ -250,6 +250,11 @@ void point_set_x(point_t *p, double x);
 
 **point.c (源文件)**
 
+
+![](img/74545d798592828a5ec93a4607a17e44_7.png)
+
+![](img/74545d798592828a5ec93a4607a17e44_8.png)
+
 ```c
 #include "point.h"
 #include <math.h>
@@ -261,11 +266,6 @@ struct point {
     double x;
     double y;
 };
-
-![](img/74545d798592828a5ec93a4607a17e44_7.png)
-
-![](img/74545d798592828a5ec93a4607a17e44_8.png)
-
 // 函数定义
 point_t* point_create(double x, double y) {
     point_t *p = malloc(sizeof(point_t));

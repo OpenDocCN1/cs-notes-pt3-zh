@@ -28,6 +28,9 @@
 
 以下是自旋锁 `lock` 和 `unlock` 函数的伪代码：
 
+
+![](img/3d9859334b93c3a50952732df984ab76_8.png)
+
 ```rust
 // lock 函数
 fn lock(lock: &AtomicBool) {
@@ -35,9 +38,6 @@ fn lock(lock: &AtomicBool) {
         // 自旋等待
     }
 }
-
-![](img/3d9859334b93c3a50952732df984ab76_8.png)
-
 // unlock 函数
 fn unlock(lock: &AtomicBool) {
     lock.store(false, Ordering::Release);
@@ -177,11 +177,11 @@ counter.fetch_add(1, Ordering::Relaxed);
 以下是两个经典的宽松行为示例：
 
 **a) 加载上浮**
-```rust
-// 初始状态: x = 0, y = 0
 
 ![](img/3d9859334b93c3a50952732df984ab76_37.png)
 
+```rust
+// 初始状态: x = 0, y = 0
 // Thread 1           // Thread 2
 x = 1;                y = 1;
 r1 = y;               r2 = x;
@@ -195,11 +195,11 @@ r1 = y;               r2 = x;
 ![](img/3d9859334b93c3a50952732df984ab76_41.png)
 
 **b) 存储下沉**
-```rust
-// 初始状态: x = 0, y = 0
 
 ![](img/3d9859334b93c3a50952732df984ab76_43.png)
 
+```rust
+// 初始状态: x = 0, y = 0
 // Thread 1           // Thread 2
 r1 = x;               r2 = y;
 y = 1;                x = 1;

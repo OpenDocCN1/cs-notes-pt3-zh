@@ -61,11 +61,11 @@ void main(void) {
 ```
 
 **片段着色器 (Fragment Shader)**：
-```glsl
-precision highp float; // 声明精度
 
 ![](img/0d58a8c29783fcce5ddad5b755e51885_2.png)
 
+```glsl
+precision highp float; // 声明精度
 varying vec2 vTextureCoord; // 输入：从顶点着色器传来，已插值
 varying vec3 vNormal;       // 输入：从顶点着色器传来，已插值
 

@@ -12,6 +12,9 @@ CSS本身没有提供内置的图标功能。为了在HTML网页中使用图标�
 
 首先，我们从一个空白的HTML页面开始。当前页面仅移除了默认的边距和内边距。
 
+
+![](img/f4785bf6339fa295b0a2c862c9a95cab_1.png)
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -27,9 +30,6 @@ CSS本身没有提供内置的图标功能。为了在HTML网页中使用图标�
     </style>
 </head>
 <body>
-
-![](img/f4785bf6339fa295b0a2c862c9a95cab_1.png)
-
 </body>
 </html>
 ```
@@ -46,6 +46,9 @@ CSS本身没有提供内置的图标功能。为了在HTML网页中使用图标�
 ```
 
 添加后，我们的HTML文档结构如下。
+
+
+![](img/f4785bf6339fa295b0a2c862c9a95cab_5.png)
 
 ```html
 <!DOCTYPE html>
@@ -64,9 +67,6 @@ CSS本身没有提供内置的图标功能。为了在HTML网页中使用图标�
     </style>
 </head>
 <body>
-
-![](img/f4785bf6339fa295b0a2c862c9a95cab_5.png)
-
 </body>
 </html>
 ```

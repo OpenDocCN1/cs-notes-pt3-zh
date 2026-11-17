@@ -89,11 +89,6 @@ auto d = static_cast<double>(i); // 显式将 int 转换为 double
 函数是组织代码的基本单元。C++中的函数定义与其他语言类似。
 
 以下是函数的基本语法示例：
-```cpp
-// 传统风格（C风格）
-int add(int a, int b) {
-    return a + b;
-}
 
 ![](img/19b429d67b955be61d2c4d78f317efc9_44.png)
 
@@ -103,6 +98,11 @@ int add(int a, int b) {
 
 ![](img/19b429d67b955be61d2c4d78f317efc9_48.png)
 
+```cpp
+// 传统风格（C风格）
+int add(int a, int b) {
+    return a + b;
+}
 // C++20 引入的新风格（返回类型后置）
 auto add(int a, int b) -> int {
     return a + b;
@@ -175,6 +175,9 @@ C++提供了常见的控制流语句，如 `if`、`switch` 和循环。
 `if` 语句用于条件判断。此外，C++也支持三元运算符 `? :` 进行简化的条件赋值。
 
 以下是控制流的示例：
+
+![](img/19b429d67b955be61d2c4d78f317efc9_75.png)
+
 ```cpp
 // if 语句
 if (condition) {
@@ -182,9 +185,6 @@ if (condition) {
 } else {
     // 代码块
 }
-
-![](img/19b429d67b955be61d2c4d78f317efc9_75.png)
-
 // 三元运算符
 int max = (a > b) ? a : b;
 ```
@@ -218,14 +218,14 @@ switch (value) {
 `std::vector` 是C++中最常用的动态数组容器，类似于其他语言中的列表（List）或数组列表（ArrayList）。
 
 以下是 `vector` 的基本操作示例：
-```cpp
-#include <vector>
-#include <iostream>
 
 ![](img/19b429d67b955be61d2c4d78f317efc9_83.png)
 
 ![](img/19b429d67b955be61d2c4d78f317efc9_85.png)
 
+```cpp
+#include <vector>
+#include <iostream>
 int main() {
     // 创建并初始化 vector
     std::vector<int> single_digits = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -287,15 +287,15 @@ void print_vector(std::vector<int> const& vec) {
 通过使用引用作为函数参数，我们可以实现经典的“交换两个数”功能，而无需使用指针。
 
 以下是使用引用交换两个数的示例：
+
+![](img/19b429d67b955be61d2c4d78f317efc9_95.png)
+
 ```cpp
 void swap(int& a, int& b) {
     int temp = a;
     a = b;
     b = temp;
 }
-
-![](img/19b429d67b955be61d2c4d78f317efc9_95.png)
-
 int main() {
     int x = 5, y = 10;
     swap(x, y); // x 和 y 的值被交换
@@ -335,6 +335,9 @@ C++标准库提供了基于哈希表实现的高效容器：`std::unordered_set`
 ![](img/19b429d67b955be61d2c4d78f317efc9_107.png)
 
 以下是 `unordered_set` 和 `unordered_map` 的示例：
+
+![](img/19b429d67b955be61d2c4d78f317efc9_109.png)
+
 ```cpp
 #include <unordered_set>
 #include <unordered_map>
@@ -346,9 +349,6 @@ names.insert("Charlie");
 if (names.find("Alice") != names.end()) {
     // 找到了 "Alice"
 }
-
-![](img/19b429d67b955be61d2c4d78f317efc9_109.png)
-
 // 无序映射：键值对
 std::unordered_map<std::string, int> age_map = {{"Alice", 30}, {"Bob", 25}};
 age_map["Charlie"] = 28; // 插入或修改

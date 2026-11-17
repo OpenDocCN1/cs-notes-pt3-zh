@@ -85,31 +85,31 @@ Tony Hoare将空引用的发明称为“十亿美元的错误”，因为它导�
 接下来，我们开始学习Rust中最常用的集合类型。首先从向量（`Vec`）开始，它是一种可增长的数据列表。
 
 以下是向量的基本操作：
-```rust
-let mut v = vec![1, 2, 3]; // 使用宏创建向量
-v.push(4);
-v.push(5);
-println!("向量是: {:?}", v); // 调试打印
 
 ![](img/3b63af0e858d6dc6e92f83ad721cef04_28.png)
 
 ![](img/3b63af0e858d6dc6e92f83ad721cef04_30.png)
 
-// 索引访问（可能恐慌）
-println!("第一个元素: {}", v[0]);
 
 ![](img/3b63af0e858d6dc6e92f83ad721cef04_32.png)
 
 ![](img/3b63af0e858d6dc6e92f83ad721cef04_34.png)
 
-// 安全索引访问
-println!("安全访问第五个元素: {:?}", v.get(4)); // Some(5)
-println!("安全访问第十个元素: {:?}", v.get(9)); // None
 
 ![](img/3b63af0e858d6dc6e92f83ad721cef04_36.png)
 
 ![](img/3b63af0e858d6dc6e92f83ad721cef04_38.png)
 
+```rust
+let mut v = vec![1, 2, 3]; // 使用宏创建向量
+v.push(4);
+v.push(5);
+println!("向量是: {:?}", v); // 调试打印
+// 索引访问（可能恐慌）
+println!("第一个元素: {}", v[0]);
+// 安全索引访问
+println!("安全访问第五个元素: {:?}", v.get(4)); // Some(5)
+println!("安全访问第十个元素: {:?}", v.get(9)); // None
 // 迭代
 for num in &v { // 注意使用引用，避免所有权转移
     println!("{}", num);
@@ -212,13 +212,13 @@ fn word_count(text: &str) -> usize {
 哈希映射存储键值对。要使用自定义类型作为键，该类型必须实现`Eq`和`Hash` trait，通常可以通过`#[derive(PartialEq, Eq, Hash)]`自动派生。
 
 以下是哈希映射的基本用法：
-```rust
-use std::collections::HashMap;
 
 ![](img/3b63af0e858d6dc6e92f83ad721cef04_73.png)
 
 ![](img/3b63af0e858d6dc6e92f83ad721cef04_75.png)
 
+```rust
+use std::collections::HashMap;
 #[derive(PartialEq, Eq, Hash)] // 使Student可作为键
 struct Student {
     name: String,

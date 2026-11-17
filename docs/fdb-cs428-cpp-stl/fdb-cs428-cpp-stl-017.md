@@ -262,23 +262,11 @@ float (ExampleClass::*pt2ConstMember)(float, char, char) const = nullptr;
 ![](img/fe83c9eb79a2f981ea56556877891722_118.png)
 
 我们可以这样赋值和使用它们：
-```cpp
-// 为指针赋值
-pt2ConstMember = &ExampleClass::anotherFun;
-pt2Member = &ExampleClass::aFun;
-pt2Function = &ExampleClass::aStaticFun;
 
 ![](img/fe83c9eb79a2f981ea56556877891722_120.png)
 
 ![](img/fe83c9eb79a2f981ea56556877891722_122.png)
 
-// 创建对象
-ExampleClass instance1(10);
-// 通过对象调用成员函数指针
-float result1 = (instance1.*pt2Member)(12.5, 'a', 'b');
-float result2 = (instance1.*pt2ConstMember)(12.5, 'a', 'b');
-// 调用普通函数指针
-float result3 = pt2Function(12.5, 'a', 'b');
 
 ![](img/fe83c9eb79a2f981ea56556877891722_124.png)
 
@@ -296,6 +284,18 @@ float result3 = pt2Function(12.5, 'a', 'b');
 
 ![](img/fe83c9eb79a2f981ea56556877891722_131.png)
 
+```cpp
+// 为指针赋值
+pt2ConstMember = &ExampleClass::anotherFun;
+pt2Member = &ExampleClass::aFun;
+pt2Function = &ExampleClass::aStaticFun;
+// 创建对象
+ExampleClass instance1(10);
+// 通过对象调用成员函数指针
+float result1 = (instance1.*pt2Member)(12.5, 'a', 'b');
+float result2 = (instance1.*pt2ConstMember)(12.5, 'a', 'b');
+// 调用普通函数指针
+float result3 = pt2Function(12.5, 'a', 'b');
 // 通过对象指针调用
 std::unique_ptr<ExampleClass> instance2(new ExampleClass(20));
 float result4 = (instance2.get()->*pt2Member)(12.5, 'a', 'b');
@@ -344,9 +344,6 @@ void passPTf(float (*pt2Func)(float, char, char)) {
 ![](img/fe83c9eb79a2f981ea56556877891722_151.png)
 
 返回函数指针则更复杂，通常使用`typedef`或`using`来简化语法：
-```cpp
-// 使用 typedef 定义函数指针类型
-typedef float (*TMyFunPtr)(float, float);
 
 ![](img/fe83c9eb79a2f981ea56556877891722_153.png)
 
@@ -356,6 +353,9 @@ typedef float (*TMyFunPtr)(float, float);
 
 ![](img/fe83c9eb79a2f981ea56556877891722_156.png)
 
+```cpp
+// 使用 typedef 定义函数指针类型
+typedef float (*TMyFunPtr)(float, float);
 // 工厂函数，根据操作码返回对应的函数指针
 TMyFunPtr getPTf(char opCode) {
     if (opCode == '+') return &plus;
@@ -375,9 +375,6 @@ TMyFunPtr getPTf(char opCode) {
 ![](img/fe83c9eb79a2f981ea56556877891722_163.png)
 
 在主函数中可以这样使用：
-```cpp
-// 传递函数
-passPTf(&aFun); // aFun 需匹配签名
 
 ![](img/fe83c9eb79a2f981ea56556877891722_165.png)
 
@@ -389,6 +386,9 @@ passPTf(&aFun); // aFun 需匹配签名
 
 ![](img/fe83c9eb79a2f981ea56556877891722_171.png)
 
+```cpp
+// 传递函数
+passPTf(&aFun); // aFun 需匹配签名
 // 获取并使用函数指针
 TMyFunPtr pt2Func = getPTf('+');
 float r1 = pt2Func(2.4, 4.2); // 加法

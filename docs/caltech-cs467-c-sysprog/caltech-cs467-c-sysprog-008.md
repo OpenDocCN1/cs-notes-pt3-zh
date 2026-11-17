@@ -26,6 +26,12 @@
 
 以下是展示系统字节序的代码示例：
 
+
+![](img/d8f3398b96f832df1a25f4152f63d6de_4.png)
+
+
+![](img/d8f3398b96f832df1a25f4152f63d6de_6.png)
+
 ```c
 #include <stdio.h>
 
@@ -37,15 +43,9 @@ void show_bytes(byte_pointer start, size_t len) {
         printf(" %.2x", start[i]);
     printf("\n");
 }
-
-![](img/d8f3398b96f832df1a25f4152f63d6de_4.png)
-
 void show_int(int x) {
     show_bytes((byte_pointer) &x, sizeof(int));
 }
-
-![](img/d8f3398b96f832df1a25f4152f63d6de_6.png)
-
 void show_float(float x) {
     show_bytes((byte_pointer) &x, sizeof(float));
 }
@@ -211,6 +211,9 @@ img = Image.fromarray(pixel_array.reshape(1, 4, 3), 'RGB')
 img.show()
 ```
 **生成简单音调：**
+
+![](img/d8f3398b96f832df1a25f4152f63d6de_22.png)
+
 ```python
 import numpy as np
 import sounddevice as sd
@@ -224,9 +227,6 @@ def generate_tone(frequency, duration, sample_rate=44100):
 A4 = 440.00
 C5 = 523.25
 E5 = 659.25
-
-![](img/d8f3398b96f832df1a25f4152f63d6de_22.png)
-
 # 生成并播放和弦
 duration = 2.0
 chord = generate_tone(A4, duration) + generate_tone(C5, duration) + generate_tone(E5, duration)
@@ -243,11 +243,11 @@ sd.wait()
 
 掩码是一个比特模式，用于“保留”原数据中与之对应的位（通过与操作`&`），而“屏蔽”或清零其他位。这在需要提取数据的特定部分（如从一个多字节值中取出低字节）时非常有用。
 
-```c
-#include <stdio.h>
 
 ![](img/d8f3398b96f832df1a25f4152f63d6de_24.png)
 
+```c
+#include <stdio.h>
 int main() {
     unsigned int x = 0x89ABCDEF; // 一个多字节值
     unsigned int mask = 0xFF;    // 掩码：保留最低字节
@@ -276,11 +276,11 @@ int main() {
 
 ![](img/d8f3398b96f832df1a25f4152f63d6de_30.png)
 
-```c
-#include <stdio.h>
 
 ![](img/d8f3398b96f832df1a25f4152f63d6de_32.png)
 
+```c
+#include <stdio.h>
 int main() {
     int x_signed = -100;        // 有符号整数
     unsigned int x_unsigned = 100; // 无符号整数

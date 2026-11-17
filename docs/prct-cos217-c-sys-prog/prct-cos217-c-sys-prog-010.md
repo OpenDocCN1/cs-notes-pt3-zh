@@ -93,6 +93,12 @@ intmath.o: intmath.c intmath.h
 *   `clobber`：更彻底的清理，可能包括删除编辑器生成的备份文件等。
 
 以下是包含伪目标的 Makefile 示例：
+
+![](img/e90c0636e9f101040951de366d26fd2b_19.png)
+
+
+![](img/e90c0636e9f101040951de366d26fd2b_21.png)
+
 ```makefile
 all: testintmath
 
@@ -104,14 +110,8 @@ testintmath.o: testintmath.c intmath.h
 
 intmath.o: intmath.c intmath.h
 	gcc217 -c intmath.c
-
-![](img/e90c0636e9f101040951de366d26fd2b_19.png)
-
 clean:
 	rm -f testintmath *.o
-
-![](img/e90c0636e9f101040951de366d26fd2b_21.png)
-
 clobber: clean
 	rm -f *~ *# .#*
 ```

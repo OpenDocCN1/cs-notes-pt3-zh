@@ -124,6 +124,9 @@ Rust语言本身**不提供**内置的异步运行时。这是一个明智的设
 
 让我们看一个更实际的例子：异步获取一个网页并提取其标题。
 
+
+![](img/93658ca2a10b3b3dc0bd7dd8210a8251_10.png)
+
 ```rust
 use reqwest; // HTTP客户端库
 use scraper; // HTML解析库
@@ -141,9 +144,6 @@ async fn page_title(url: &str) -> Option<String> {
     let title_element = document.select(&selector).next()?;
     Some(title_element.inner_html())
 }
-
-![](img/93658ca2a10b3b3dc0bd7dd8210a8251_10.png)
-
 #[tokio::main]
 async fn main() {
     let url = "https://www.rust-lang.org";

@@ -84,6 +84,11 @@ JavaScript 中的函数是“一等公民”或“一等函数”。这意味着
 
 ![](img/385031d2a9f0b9ff6eba7402c73d3934_29.png)
 
+
+![](img/385031d2a9f0b9ff6eba7402c73d3934_31.png)
+
+![](img/385031d2a9f0b9ff6eba7402c73d3934_33.png)
+
 ```typescript
 // 定义两个格式化函数
 const brackets = (str: string): string => `(${str})`;
@@ -93,11 +98,6 @@ const fullStop = (str: string): string => `${str}.`;
 const sayHi = (name: string, format: (str: string) => string): string => {
     return `Hello ${format(name)}`;
 };
-
-![](img/385031d2a9f0b9ff6eba7402c73d3934_31.png)
-
-![](img/385031d2a9f0b9ff6eba7402c73d3934_33.png)
-
 // 使用
 const result = sayHi("Hayden", brackets) + " " + sayHi("Hayden", fullStop);
 console.log(result); // 输出：Hello (Hayden) Hello Hayden.
@@ -215,6 +215,11 @@ const shoutedTutorsMap = tutors.map(tutor => tutor.toUpperCase() + "!");
 
 ![](img/385031d2a9f0b9ff6eba7402c73d3934_97.png)
 
+
+![](img/385031d2a9f0b9ff6eba7402c73d3934_99.png)
+
+![](img/385031d2a9f0b9ff6eba7402c73d3934_101.png)
+
 ```javascript
 // 使用循环
 const marks = [39, 43, 48, 24, 33];
@@ -224,11 +229,6 @@ for (const mark of marks) {
         passMarks.push(mark);
     }
 }
-
-![](img/385031d2a9f0b9ff6eba7402c73d3934_99.png)
-
-![](img/385031d2a9f0b9ff6eba7402c73d3934_101.png)
-
 // 使用 filter 方法
 const passMarksFilter = marks.filter(mark => mark >= 50);
 ```
@@ -288,17 +288,17 @@ const congratulateMarkCredit = (name: string) => `Congratulations ${name} on you
 
 ![](img/385031d2a9f0b9ff6eba7402c73d3934_117.png)
 
+
+![](img/385031d2a9f0b9ff6eba7402c73d3934_119.png)
+
+![](img/385031d2a9f0b9ff6eba7402c73d3934_121.png)
+
 ```typescript
 // 高阶函数：生成特定祝贺语的函数
 const generateCongratulateMark = (mark: string) => {
     // 返回一个新的函数
     return (name: string) => `Congratulations ${name} on your ${mark}!`;
 };
-
-![](img/385031d2a9f0b9ff6eba7402c73d3934_119.png)
-
-![](img/385031d2a9f0b9ff6eba7402c73d3934_121.png)
-
 // 使用高阶函数“工厂”来创建我们需要的具体函数
 const congratulateMarkPass = generateCongratulateMark("pass");
 const congratulateMarkCredit = generateCongratulateMark("credit");

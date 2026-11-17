@@ -7969,6 +7969,9 @@ while(true){
     dis.readChar() ;                    // 读出\n
     System.out.printf("名称: %s; 价格: %5.2f; 数量: %d\n",name,price,num) ;
 }
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_636_0.png)
+
 ```
 
 ## JAVA IO
@@ -7982,9 +7985,6 @@ while(true){
 ## 乱码的产生
 
 - 在程序中如果处理不好字符的编码，则就有可能出现乱码问题，如果现在本机的默认编码是GBK，但在程序中使用了ISO8859-1编码，则就会出现字符的乱码问题，就好比两个人交谈，一个人说的是中文，另外一个人说的是其他语言，如果语言不同，则肯定无法沟通
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_636_0.png)
-
 ## 得到本机的编码显示
 
 - 使用System类可以取得与系统有关的信息，那么直接使用此类就可以找到系统的默认编码，使用如下方法：
@@ -8018,9 +8018,10 @@ public class CharSetDemo02 {
         out.close();
     }
 }
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_642_0.png)
+
 ```
-
-
 
 ## JAVA IO
 —— 对象序列化
@@ -8037,9 +8038,6 @@ public class CharSetDemo02 {
 ## 对象序列化
 
 - 对象序列化，就是把一个对象变为二进制的数据流的一种方法，通过对象序列化可以方便的实现对象的传输或存储。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_642_0.png)
-
 - 如果一个类的对象想被序列化，则对象所在的类必须实现 java.io.Serializable接口。此接口定义如下：
 
 ```
@@ -8062,15 +8060,15 @@ public class Person implements Serializable {    // 此类的对象可以被序�
         return "姓名: " + this.name + "; 年龄: " + this.age;
     }
 }
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_644_0.png)
+
 ```
 
 ## 对象的序列化和反序列化
 
 - ✧ 要想完成对象的输入或输出，还必须依靠对象输出流（ObjectOutputStream）和对象输入流（ObjectInputStream）
 - ✧ 使用对象输出流输出序列化对象的步骤，有时也称为序列化，而使用对象输入流读入对象的过程，有时也称为反序列化
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_644_0.png)
-
 ## serialVersionUID
 
 序列化时为了保持版本的兼容性，即在版本升级时反序列化仍保持对象的唯一性。有两种生成方式：
@@ -8251,6 +8249,9 @@ public class Person implements Serializable {    // 此类的对象可以被序�
         return "姓名: " + this.name + "; 年龄: " + this.age;
     }
 }
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_659_0.png)
+
 ```
 
 ## Java类集
@@ -8275,9 +8276,6 @@ public class Person implements Serializable {    // 此类的对象可以被序�
 - 元素包括“键”对象和“值”对象。键必须是唯一的，值可以重复。
 
 ## 容器完整关系图
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_659_0.png)
-
 ## Collection接口的定义
 
 - Collection是保存单值集合的最大父接口。
@@ -8304,8 +8302,6 @@ public class Person implements Serializable {    // 此类的对象可以被序�
 | 13 | public int size() | 普通 | 求出集合的大小 |
 | 14 | public Object[] toArray() | 普通 | 将一个集合变为对象数组 |
 | 15 | public <T> T[] toArray(T[] a) | 普通 | 指定好返回的对象数组类型 |
-
-
 
 ## Collection子接口的定义
 
@@ -8421,9 +8417,10 @@ public class ArrayListDemo03 {
         }
     }
 }
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_671_0.png)
+
 ```
-
-
 
 ## Java类集
 —— LinkedList类
@@ -8435,9 +8432,6 @@ public class ArrayListDemo03 {
 
 - Queue接口是Collection的子接口，此接口定义如下：
 - public interface Queue<E> extends Collection<E>
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_671_0.png)
-
 ## Queue接口定义的方法
 
 | No. | 方法 | 类型 | 描述 |
@@ -8534,6 +8528,9 @@ public class HashSetDemo01 {
         System.out.println(allSet) ;           // 输出集合对象，调用toString()
     }
 }
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_682_0.png)
+
 ```
 
 ## Java类集
@@ -8552,9 +8549,6 @@ public class HashSetDemo01 {
 
 - Iterator接口的操作原理：
 - Iterator是专门的迭代输出接口，所谓的迭代输出就是将元素一个个进行判断，判断是否有内容，如果有内容则把内容取出
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_682_0.png)
-
 ## Iterator接口中的常用方法
 
 | No. | 方法 | 类型 | 描述 |
@@ -8562,8 +8556,6 @@ public class HashSetDemo01 {
 | 1 | public boolean hasNext() | 普通 | 判断是否有下一个值 |
 | 2 | public E next() | 普通 | 取出当前元素 |
 | 3 | public void remove() | 普通 | 移除当前元素 |
-
-
 
 ## 实例操作一：输出Collection中的全部内容
 
@@ -8784,6 +8776,29 @@ public class HashMapDemo04 {
         }
     }
 }
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_703_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_705_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_706_0.png)
+
+
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_707_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_708_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_709_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_710_0.png)
+
 ```
 
 ## 图形界面
@@ -8819,46 +8834,23 @@ public class HashMapDemo04 {
 - 组件： Component
 - 容器： Container
 - 布局管理器： LayoutManager
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_703_0.png)
-
 ## Component
 
 在整个AWT包中，所有的组件类（例如：按钮、文本框等）都是从Component和MenuComponent扩展而来的，这些类会继承这两个类的公共操作。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_705_0.png)
-
 ## 容器
 
 所有的AWT组件都应该放到容器之中。在容器之中，所有的组件都可以设置在容器中的位置、大小等等，所有的容器都是Component的子类，在AWT中包含以下几种容器。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_706_0.png)
-
-
-
 ## 布局管理器
 
 +   使用布局管理器可以使容器中的组件按照指定的位置进行摆放，另外的一个好处是，即使容器改变了大小，布局管理器也可以准确的把组件放到指定的位置，这样就可以有效的保证版面不会混乱。在AWT中所有的布局管理器都是LayoutManager的子类。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_707_0.png)
-
 ## Swing简介
 
 - AWT大量的引入了Windows函数，所以经常被称为重量级组件，在Java 2中提供了轻量级的图形界面组件 —— Swing，Swing使用Java语言实现，是以AWT平台为基础构建起来的新组件，直接使用Swing可以更加轻松的构建用户界面。
 - 在Java中所有的Swing都保存在javax.swing包中，从包的名称中（javax）就可以清楚的发现它是一个扩展包，所有的组件是从JComponent扩展出来的。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_708_0.png)
-
 ## JComponent的常用子类
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_709_0.png)
-
 ## 下一章内容
 
 ## 基本容器： JFrame
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_710_0.png)
-
 ## 图形界面
 
 —— 基本容器： JFrame
@@ -8906,10 +8898,10 @@ public class JFrameDemo01 {
         f.setVisible(true);    // 让组件显示
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_715_0.png)
 
+```
 ## Dimension类
 
 在JFrame中设置窗体的大小，也可以​使用Dimension类完成，此类封装的就是组件的显示宽度和高度，此类的常用操作方法如下
@@ -8955,14 +8947,14 @@ public class JFrameDemo02 {
         f.setVisible(true);    // 让组件显示
     }
 }
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_719_0.png)
+
 ```
 
 ## 下一章内容
 
 ## 标签组件： JLabel
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_719_0.png)
-
 ## 图形界面
 
 ——标签组件： JLabel
@@ -8972,8 +8964,6 @@ public class JFrameDemo02 {
 - 了解JLabel类的作用
 - 可以设置设置标签的文字显示风格
 - 可以设置标签的内容及图片
-
-
 
 ## JLabel组件
 
@@ -9019,10 +9009,10 @@ public class JLabelDemo01 {
         frame.setVisible(true);                 // 让组件显示
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_724_0.png)
 
+```
 ## 更改JLabel的文字样式
 
 如果现在要想更改使用的字体，则可以直接使用Component类中定义的以下方法：
@@ -9113,10 +9103,10 @@ public class JLabelDemo03 {
         frame.setVisible(true);                              // 让组件显示
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_729_0.png)
 
+```
 ## 在标签上设置图象 —— 另一种ImageIcon的使用
 
 ```
@@ -9143,16 +9133,16 @@ public class JLabelDemo04 {
         frame.setVisible(true) ;    // 让组件显示
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_730_0.png)
 
-## 下一章内容
-
-## 按钮组件： JButton
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_731_0.png)
 
+```
+## 下一章内容
+
+## 按钮组件： JButton
 ## 图形界面
 —— 按钮组件：JButton
 
@@ -9196,12 +9186,12 @@ public class JButtonDemo01 {
         frame.setVisible(true);                             // 让组件显示
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_735_0.png)
 
 
 
+```
 # 在按钮上显示图片
 
 ```
@@ -9223,12 +9213,12 @@ public class JButtonDemo02 {
         frame.setVisible(true) ;    // 让组件显示
     }
 }
-```
-
-# 布局管理器
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_737_0.png)
 
+```
+
+# 布局管理器
 图形界面
 —— 布局管理器
 
@@ -9283,10 +9273,10 @@ public class FlowLayoutDemo01 {
         frame.setVisible(true);                     // 设置窗体可见
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_742_0.png)
 
+```
 # BorderLayout
 
 - BorderLayout将一个窗体的版面划分成东、西、南、北、中五个区域，可以直接将需要的组件放到这五个区域中即可。
@@ -9324,12 +9314,12 @@ public class BorderLayoutDemo01 {
         frame.setVisible(true);     // 设置窗体可见
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_745_0.png)
 
 
 
+```
 ## GridLayout
 
 GridLayout布局管理器是以表格的形式进行管理的，在使用此布局管理器的时候必须设置显示的行数和列数，常用的方法如下所示。
@@ -9360,10 +9350,10 @@ public class GridLayoutDemo01 {
         frame.setVisible(true); // 设置窗体可见
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_747_0.png)
 
+```
 ## CardLayout
 
 - CardLayout就是将一组组件彼此重叠的进行布局，就像一张张卡片一样，这样每次只会展现一个界面。
@@ -9419,10 +9409,10 @@ public class CardLayoutDemo01 {
 
 ```
 public void setBounds(int x,int y,int width,int height)
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_751_0.png)
 
+```
 ## 使用绝对定位排版
 
 ```
@@ -9447,12 +9437,12 @@ public class AbsoluteLayoutDemo01 {
         frame.setVisible(true);                            // 设置窗体可见
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_752_0.png)
 
 
 
+```
 ## 图形界面——文本组件：JTextComponent
 
 ## 本章目标
@@ -9520,10 +9510,10 @@ public class JTextDemo01 {
         frame.setVisible(true);                             // 让按钮显示
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_758_0.png)
 
+```
 ### 使用绝对定位显示
 
 ```java
@@ -9553,12 +9543,12 @@ public class JTextDemo02 {
         frame.setVisible(true);                            // 让组件显示
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_759_0.png)
 
 
 
+```
 ## 密文输入组件：JPasswordField
 
 JTextField是使用明文方式进行数据显示的，如果现在需要将回显的内容设置成其他字符，则可以使用JPasswordField类，此类的常用方法如下所示
@@ -9600,10 +9590,10 @@ public class JPasswordDemo01 {
         frame.setVisible(true);                               // 让组件显示
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_761_0.png)
 
+```
 ## 多行文本输入组件： JTextArea
 
 如果要想输入多行文本，则可以使用JTextArea实现多行文本的输入，此类扩展了JTextComponent类
@@ -9640,10 +9630,10 @@ public class JTextAreaDemo01 {
         frame.setVisible(true);
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_763_0.png)
 
+```
 ## 为文本域加入滚动条
 
 ```
@@ -9671,12 +9661,15 @@ public class JTextAreaDemo02 {
         frame.setVisible(true);                                 // 让组件显示
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_764_0.png)
 
 
 
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_768_0.png)
+
+```
 ## 下一章内容
 ## 事件处理
 
@@ -9692,9 +9685,6 @@ public class JTextAreaDemo02 {
 ## 事件和监听器
 - 每当一个按钮按下时，实际上按钮的状态就发生了改变，那么此时就会产生一个事件，而如果要想处理此事件，则就需要事件的监听者不断的监听事件的变化，并根据这些事件进行相应的处理。
 - 在Swing编程中，依然使用了最早AWT的事件处理方式，所有的事件类（基本上任意的一个组件都有对应的事件）都是EventObject类的子类
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_768_0.png)
-
 ## EventObject类
 ```
 public class EventObject extends Object
@@ -9706,11 +9696,11 @@ public class EventObject extends Object
     public String toString(){             // 得到信息
     }
 }
+![](img/b706331eacf49a62651c2c9b2de81ca5_770_0.png)
+
 ```
 
 ## Java事件处理流程
-![](img/b706331eacf49a62651c2c9b2de81ca5_770_0.png)
-
 ## 事件与事件处理
 JFrame
 Test
@@ -9866,12 +9856,12 @@ class ActionHandle{
         ...
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_779_0.png)
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_779_1.png)
 
+```
 ## 键盘事件及监听处理
 
 在Swing的事件处理中也可以对键盘的操作进行监听，直接使用 KeyListener接口即可。此接口定义了如下的方法。
@@ -9919,10 +9909,10 @@ class MyKeyHandle extends JFrame implements KeyListener {
         text.append("输入的内容是: " + e.getKeyChar() + "\n");
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_781_0.png)
 
+```
 ## 鼠标事件及监听处理
 
 如果想对一个鼠标的操作进行监听，例如，鼠标按下、松开等，则可以实现MouseListener接口
@@ -9934,8 +9924,6 @@ class MyKeyHandle extends JFrame implements KeyListener {
 | 3 | void mouseReleased(MouseEvent e) | 普通 | 鼠标松开时调用 |
 | 4 | void mouseEntered(MouseEvent e) | 普通 | 鼠标进入到组件时调用 |
 | 5 | void mouseExited(MouseEvent e) | 普通 | 鼠标离开组件时调用 |
-
-
 
 ## MouseEvent
 
@@ -9987,10 +9975,10 @@ class MyMouseHandle extends JFrame implements MouseListener {
         text.append("鼠标松开。\n");
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_785_0.png)
 
+```
 ## 通过MouseAdapter实现对指定鼠标操作监听
 
 ```
@@ -10118,10 +10106,10 @@ public MyRadio() {    // 定义一个面板的边框显示条
         }
     });
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_794_0.png)
 
+```
 ### 增加按钮组
 
 ```java
@@ -10129,10 +10117,10 @@ ButtonGroup group = new ButtonGroup();    // 定义一个按钮组
 group.add(this.jrb1);    // 将所有单选按钮加入到一个组中
 group.add(this.jrb2);    // 将所有单选按钮加入到一个组中
 group.add(this.jrb3);    // 将所有单选按钮加入到一个组中
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_795_0.png)
 
+```
 ### JRadioButton事件处理
 
 在单选钮操作中，可以使用ItemListener接口进行事件的监听，此接口定义了如下的方法。
@@ -10177,12 +10165,12 @@ class MyRadio implements ItemListener{
         }
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_797_0.png)
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_797_1.png)
 
+```
 下一章内容
 
 ## 图形界面 —— 复选框：JCheckBox
@@ -10203,8 +10191,6 @@ class MyRadio implements ItemListener{
 | 3 | public JCheckBox(String text) | 构造 | 创建一个带文本的对象，但不选定 |
 | 4 | public JCheckBox(String text,boolean selected) | 构造 | 创建一个带文本的对象，并指定其是否选定 |
 | 5 | public JCheckBox(String text,Icon icon,boolean selected) | 构造 | 创建一个带文本和图标的对象，并指定是否被选定 |
-
-
 
 ## 定义复选框
 
@@ -10265,16 +10251,16 @@ class MyCheckBox {
         jcb3.addItemListener(new MyItemListener()); // 加上监听
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_803_0.png)
 
-## 下一章内容
-
-### 列表框：JList
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_804_0.png)
 
+```
+## 下一章内容
+
+### 列表框：JList
 ## 图形界面 —— 列表框：JList
 
 ## 本章目标
@@ -10332,12 +10318,12 @@ class MyList {
         ...
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_809_0.png)
 
 
 
+```
 ## 使用ListModel构造JList
 
 在JList的构造方法中有一个使用ListModel构造JList对象的操作，ListModel是一个专门用于创建JList列表内容操作的接口。
@@ -10385,10 +10371,10 @@ list1.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION) ;
 // 定义一个列表框的边框显示条
 // 第一个列表框每次可以选择多个选项
 // 设置选择模式
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_811_0.png)
 
+```
 ## JList事件处理
 
 在JList中可以使用ListSelectionListener的监听接口实现对JList中所选项进行监听，此接口定义了如下的方法。
@@ -10440,10 +10426,13 @@ class MyList implements ListSelectionListener{
         System.out.println();
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_813_0.png)
 
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_816_0.png)
+
+```
 图形界面
 —— 菜单组件
 
@@ -10455,9 +10444,6 @@ class MyList implements ListSelectionListener{
 ## JMenu与JMenuBar
 
 - 若在Java中实现菜单，则可以使用JMenu组件，当然，如果要使用JMenu则首先要了解JMenuBar组件，JMenuBar组件的功能是用来摆放JMenu组件，当建立完许多的JMenu组件之后，需要通过JMenuBar组件来将JMenu组件加入到窗口中
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_816_0.png)
-
 ## JMenuBar的常用方法
 
 | No. | 方法 | 类型 | 描述 |
@@ -10577,6 +10563,22 @@ exitItem.addActionListener(new ActionListener() {
         text.append("=== 选择了“退出”菜单项\n");
     }});
     // 为菜单项加入事件监听
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_831_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_832_0.png)
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_832_1.png)
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_832_2.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_833_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_834_0.png)
+
 ```
 
 ## 数组与方法
@@ -10588,8 +10590,6 @@ exitItem.addActionListener(new ActionListener() {
 - □ 掌握数组的声明及内存分配
 - □ 通过数组的简单范例加深数组操作的理解
 - □ 掌握多维数组的定义及使用
-
-
 
 ## 数组
 
@@ -10635,9 +10635,6 @@ exitItem.addActionListener(new ActionListener() {
 ## 堆栈内存的解释
 
 数组操作中，在栈内存中开辟的空间是固定的，只开辟了栈内存空间数组是永远无法使用的，必须有指向的堆内存才可以使用，要想开辟新的堆内存则必须使用new关键字，之后只是将此堆内存的使用权交给了对应的栈内存空间，而且一个堆内存空间可以同时被多个栈内存空间指向，即：一个人可以有多个名字，人就相当于堆内存，名字就相当于栈内存
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_831_0.png)
-
 一个人可以有多个名字，多个名字指向一个共同的人
 
 ## 数组
@@ -10646,13 +10643,6 @@ int [] x;
 x = new int[100];
 x=null;
 的内存状态变化情况
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_832_0.png)
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_832_1.png)
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_832_2.png)
-
 ## 声明数组的同时分配内存空间
 
 - 声明数组的同时分配内存：
@@ -10660,15 +10650,9 @@ x=null;
 - int score[] = new int[10];
 - 声明一个元素个数为10的整型数组score，同时开辟一块内存空间供其使用
 - 在Java中，由于整数数据类型所占用的空间为4个bytes，而整型数组score可保存的元素有10个，所以上例中占用的内存共有4 * 10 = 40个字节
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_833_0.png)
-
 ## 数组中元素的表示方法
 
 想要访问数组里的元素，可以利用索引来完成。Java的数组索引编号由0开始，以一个的score[10]的整形数组为例，score[0]代表第1个元素，score[1]代表第2个元素，score[9]为数组中第10个元素（也就是最后一个元素）。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_834_0.png)
-
 ## 数组的声明及输出
 
 ```
@@ -10720,12 +10704,12 @@ public class ArrayDemo02 {
         }
     }
 }
-```
-
-☆为代码的执行位置
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_839_0.png)
 
+```
+
+☆为代码的执行位置
 ## 取得数组长度
 
 要特别注意的是，在Java中取得数组的长度（也就是数组元素的长度）可以利用“数组名称.length”完成，如下面的格式；
@@ -10786,10 +10770,10 @@ public class ArrayDemo05 {
         System.out.println("最低成绩: " + min);
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_844_0.png)
 
+```
 ## 对整型数组按照由小到大的顺序进行排列
 
 ```
@@ -10810,14 +10794,14 @@ public class ArrayDemo06 {
 		}
 	}
 }
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_846_0.png)
+
 ```
 
 ## 二维数组
 
 如果说可以把一维数组当成几何中的线性图形，那么二维数组就相当于是一个表格。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_846_0.png)
-
 二维数组声明的方式和一维数组类似，内存的分配也一样是用new这个关键字。其声明与分配内存的格式如下所示：
 
 - 动态初始化：
@@ -11113,14 +11097,14 @@ public class MethodDemo05 {
         System.out.println("4、正常执行完fun()方法。");
     }
 }
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_866_0.png)
+
 ```
 
 ## 方法的递归调用
 
 - 递归调用是一种特殊的调用形式，是方法自己调用自己
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_866_0.png)
-
 ## 递归调用 —— 数字的累加操作
 
 ```java
@@ -11167,12 +11151,12 @@ public class ArrayRefDemo01 {
         x[0] == 6;                             // 修改第一个元素的内容
     }
 }
-```
-
-## 内存状态
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_872_0.png)
 
+```
+
+## 内存状态
 ## 使用方法返回一个数组
 
 既然方法可以接收一个数组，那么方法也就可以返回一个数组，则此时，只需要在返回值类型声明处明确的写出返回的数组类型即可
@@ -11249,12 +11233,12 @@ public static void sort(int temp[])
 
 ```
 public static void print(int temp[])
-```
-
-数组的内容
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_875_0.png)
 
+```
+
+数组的内容
 ## 使用Java类库完成数组的排序操作
 
 ```
@@ -11322,6 +11306,21 @@ public class ArrayCopyDemo02 {
         }
     }
 }
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_880_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_881_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_882_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_883_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_884_0.png)
+
 ```
 
 ## 面向接口编程3-1
@@ -11329,9 +11328,6 @@ public class ArrayCopyDemo02 {
 ## 实现防盗门功能
 
 问题
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_880_0.png)
-
 轻轻拉门，门关上了。
 插进钥匙，向左旋转钥匙三圈，锁上了，拔出钥匙。
 插进钥匙，向右旋转钥匙三圈，锁打开了，拔出钥匙。
@@ -11371,9 +11367,6 @@ like a的关系
 让防盗门关门、上锁、开锁、开门
 
 演示示例3：防盗门功能
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_881_0.png)
-
 ## 面向接口编程3-3
 
 一个人可以具有多项能力
@@ -11382,9 +11375,6 @@ like a的关系
 ## 扩展防盗门门铃功能，主要实现拍照存档
 
 问题
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_882_0.png)
-
 轻轻拉门，门关上了。
 插入钥匙，向左旋转钥匙三圈，锁上了，拔出钥匙。
 铃…… 咔嚓…… 照片已存储
@@ -11398,16 +11388,10 @@ like a的关系
 ## 需求说明
 
 原始的手机，可以发短信，通电话。随着发展，手机增加了功能：音频、视频播放、拍照、上网。使用接口实现手机功能
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_883_0.png)
-
 ## 练习1: 接口实现手机
 
 - 编写类及接口，参照以下类的结构图
 - 编写测试类，让普通手机播放音频、发信息和通电话，让智能手机上网、播放视频、照相、发信息和通电话
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_884_0.png)
-
 ## 接口是一种约定
 
 - 生活中，我们使用的两相电源插座，规定了：
@@ -11436,6 +11420,9 @@ like a的关系
 使用黑白墨盒在A4纸张上打印。
 使用彩色墨盒在B5纸张上打印。
 使用彩色墨盒在A4纸张上打印。
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_888_0.png)
+
 ```
 
 ## 面向接口编程
@@ -11461,8 +11448,6 @@ like a的关系
 
 演示示例5：打印机
 
-
-
 ## 练习2：组装一台计算机
 
 ### 需求说明
@@ -11472,9 +11457,6 @@ like a的关系
   - CPU
   - 硬盘
   - 内存
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_888_0.png)
-
 ### 实现思路
 
 - 定义CPU的接口CPU，返回CPU品牌和主频
@@ -11498,6 +11480,18 @@ public interface MyInterface {
     int method5();
     int TYPE = 1;
 }
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_896_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_896_1.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_896_2.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_896_3.png)
+
 ```
 
 ## 抽象类 vs 接口
@@ -11537,23 +11531,11 @@ kgc.cn | 出品
 ### 生活中的异常
 
 - 正常情况下，小王每日开车去上班，耗时大约30分钟
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_896_0.png)
-
 一路畅通
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_896_1.png)
-
 - 但是，异常情况迟早要发生！
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_896_2.png)
-
 堵车！
 
 撞车！
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_896_3.png)
-
 ### 以下程序运行时会出现错误吗？
 
 ```java
@@ -11564,6 +11546,12 @@ System.out.print("请输入除数:");
 int num2 = in.nextInt();
 System.out.println(num1 + "/" + num2 + "=" + num1 / num2);
 System.out.println("感谢使用本程序！");
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_899_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_901_0.png)
+
 ```
 
 ### 程序中的异常
@@ -11582,9 +11570,6 @@ System.out.println("感谢使用本程序！");
 异常是指在程序的运行过程中所发生的异常事件，它会中断正在运行的程序。
 
 生活中面对异常通常会这样处理：
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_899_0.png)
-
 生活中，根据不同的异常进行相应的处理，而不会就此中断我们的生活。
 
 ### 什么是异常处理
@@ -11598,9 +11583,6 @@ Java编程语言使用异常处理机制为程序提供了错误处理的能力�
 ### Java中如何进行异常处理
 
 Java的异常处理是通过5个关键字来实现的：try、catch、finally、throw、throws。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_901_0.png)
-
 ### try-catch块
 
 #### 使用try-catch块捕获异常，分为三种情况
@@ -11689,6 +11671,9 @@ System.err.println("出现错误：被除数和除数必须是整数");
 
 ```java
 e.printStackTrace();
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_908_0.png)
+
 ```
 
 - 异常对象常用的方法
@@ -11711,17 +11696,12 @@ e.printStackTrace();
 | ClassCastException | 对象强制类型转换出错 |
 | NumberFormatException | 数字格式转换异常，如把"abc"转换成为数字 |
 
-
-
 ## try-catch-finally 2-1
 
 在try-catch块后加入finally块
 
 - 是否发生异常都执行
 - 不执行的唯一情况
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_908_0.png)
-
 演示示例4：使用try-catch-finally处理异常
 
 ## try-catch-finally 2-2
@@ -11740,14 +11720,20 @@ public void method(){
         // 代码段 4
     }
 }
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_909_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_912_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_915_0.png)
+
 ```
 
 执行Return退出方法
 
 ### try块中有return语句执行过程与此类似
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_909_0.png)
-
 ### 演示示例5：try块和catch块中return语句的执行
 
 ## 多重catch块
@@ -11775,9 +11761,6 @@ public void method(){
 - 按照控制台提示输入1~3之间任一个数字，程序将输出相应的课程名称
 - 根据键盘输入进行判断。如果输入正确，输出对应课程名称。如果输入错误，给出错误提示
 - 不管输入是否正确，均输出 “欢迎提出建议！” 语句
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_912_0.png)
-
 ## 声明异常
 
 如果在一个方法体中抛出了异常，如何通知调用者？
@@ -11816,9 +11799,6 @@ Exception和Error类的父类
 Checked异常, 程序必须处理该类异常
 
 演示示例9：Checked异常必须处理
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_915_0.png)
-
 ## 练习2: 使用throw抛出年龄异常
 
 - 在setAge(int age) 中对年龄进行判断，如果年龄介于1 到100直接赋值，否则抛出异常
@@ -11828,6 +11808,15 @@ Checked异常, 程序必须处理该类异常
 java.lang.IllegalArgumentException: 年龄必须在1到100之间！
 at cn.jbit.exception.Person.setAge(Person.java:28)
 at cn.jbit.exception.TestException2.main(TestException2.java:12)
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_922_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_922_1.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_925_0.png)
+
 ```
 
 ## 自定义异常
@@ -11880,13 +11869,7 @@ A方法调用B方法时，B方法却抛出了异常。那A方法继续抛出原�
 集中问题&课后作业
 
 ## 扫我有更多精彩课程哟
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_922_0.png)
-
 扫一扫 关注课工场公众号
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_922_1.png)
-
 课工场APP客户端下载
 
 ## 练习
@@ -11897,9 +11880,6 @@ A方法调用B方法时，B方法却抛出了异常。那A方法继续抛出原�
   - 接口MailPost定义两个邮寄方法的原型：callPrice()计算邮费并以浮点数形式返回、post()完成邮寄；
   - 在Parcel(包裹)和Remittance(汇款)的基础上分别派生出可邮寄的包裹和汇款：PostParcel和Postemit两个子类；
   - 类Show用于实际执行，完成对各类邮件的管理工作.
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_925_0.png)
-
 - 运用Java的类继承、抽象类、接口等机制设计和实现组类：
   - 定义一个抽象类Mails（包括两个表示邮件寄出和送往地址的变量和一个显示邮件自身信息的方法showMe()），然后派生出它的两个子类Parcel(包裹)和Remittance(汇款);
   - 类ShowMails用于存取邮件（包括类型为Mails的邮件列表[数组]变量showList[]、最大邮件个数变量和当前邮件个数变量，以及加入putMails()、获取getMails()、展示邮件的方法showAll()）
@@ -11916,16 +11896,16 @@ A方法调用B方法时，B方法却抛出了异常。那A方法继续抛出原�
 
 ```
 BufferedReader reader=new BufferedReader(new InputStreamReader(System.in))
-```
-
-将创建的对象通过ShowMails类来管理 (putMails);
-
-最后通过ShowMails类的getMails方法输出所有的对象。
 
 
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_928_0.png)
 
+```
+
+将创建的对象通过ShowMails类来管理 (putMails);
+
+最后通过ShowMails类的getMails方法输出所有的对象。
 ## Show
 main()
 
@@ -12294,6 +12274,36 @@ while(true){
 }
 }
 }
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_947_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_948_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_951_0.png)
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_951_1.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_952_0.png)
+
+
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_956_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_958_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_959_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_961_0.png)
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_961_1.png)
+
 ```
 
 ## 面向对象设计原则
@@ -12317,9 +12327,6 @@ while(true){
 - 过于脆弱(Fragility)：易出故障
 - 复用率低(Immobility)：效率
 - 黏度过高(Viscosity)：影响复用
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_947_0.png)
-
 ## 什么是复用
 
 - 复用： Reuse，使用已有资源来促进产品开发的过程。
@@ -12334,9 +12341,6 @@ while(true){
   - 详细说明
   - 源程序
   - 测试用例
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_948_0.png)
-
 ## 常见的软件复用形式：
 
 - 函数库（结构化方法中的子程序）
@@ -12369,11 +12373,6 @@ while(true){
     » 效率
 
 Peter Coad
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_951_0.png)
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_951_1.png)
-
 ## 可复用性
 
 - 软件的复用(Reuse)或重用拥有众多优点，如可以提高软件的开发效率，提高软件质量，节约开发成本，恰当的复用还可以改善系统的可维护性。
@@ -12384,11 +12383,6 @@ Peter Coad
 - 抽象、继承支持类的定义可以复用；多态支持类的实现复用；抽象封装支持可维护性。
 
 在面向对象的设计里面，人们已经发现了一些设计原则，遵循这些设计原则可以有效提高系统的复用性，同时提高系统的可维护性。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_952_0.png)
-
-
-
 ## 面向对象设计原则与设计模式
 
 - 设计模式是支持面向对象设计原则的设计方案，是贯彻面向对象设计原则的最好方式和途径
@@ -12432,9 +12426,6 @@ Martin Fowler
 
 - ✓ 其英文定义为：
   - There should never be more than one reason for a class to change.
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_956_0.png)
-
 ### 单一职责原则分析
 
 - ✓ 一个类（或者大到模块，小到方法）承担的职责越多，它被复用的可能性越小，而且如果一个类承担的职责过多，就相当于将这些职责耦合在一起，当其中一个职责变化时，可能会影响其他职责的运作。
@@ -12455,15 +12446,9 @@ Martin Fowler
 | main(String args[]) | void |
 
 现使用单一职责原则对其进行重构。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_958_0.png)
-
 - ✓ 实例解析
 
 提高了复用
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_959_0.png)
-
 ## 开闭原则
 
 ### 开闭原则定义
@@ -12480,11 +12465,6 @@ Martin Fowler
 
 - ✓ 开闭原则由 Bertrand Meyer 于 1988 年提出，它是面向对象设计中最重要的原则之一。
 - ✓ 在开闭原则的定义中，软件实体可以指一个软件模块、一个由多个类组成的局部结构或一个独立的类。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_961_0.png)
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_961_1.png)
-
 - ✓ 系统需求随时间发生变化，面对变化要修改升级系统。希望系统易扩展，扩展的同时保持原系统的稳定。也即支持开闭原则。
 - ✓ 抽象化是实现开闭原则的关键。分析系统需求的稳定部分和易变部分，分别加以封装。其中 “对可变性封装” 尤为重要。
 
@@ -12516,6 +12496,14 @@ config xml
 
 ```
 <className>CircleButton</className>
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_967_0.png)
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_967_1.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_971_0.png)
+
 ```
 
 LoginForm
@@ -12553,8 +12541,6 @@ RectangleButton
 - 其英文定义为：
   - Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.
 
-
-
 ## 里氏代换原则
 ### 里氏代换原则分析
 
@@ -12563,11 +12549,6 @@ RectangleButton
 周以真（Jeannette M. Wing），美国计算机科学家，卡内基梅隆大学教授，美国国家自然基金会计算与信息科学工程部助理部长，ACM和IEEE会士。
 
 芭芭拉·利斯科夫（Barbara Liskov），美国计算机科学家，2008年图灵奖得主，2004年约翰·冯诺依曼奖得主，美国工程院院士，美国艺术与科学院院士，美国计算机协会会士。现任麻省理工学院电子电气与计算机科学系教授。她是美国第一个计算机科学女博士。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_967_0.png)
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_967_1.png)
-
 - ✓ 里氏代换原则可以通俗表述为：在软件中如果能够使用基类对象，那么一定能够使用其子类对象。把基类都替换成它的子类，程序将不会产生任何错误和异常，反过来则不成立，如果一个软件实体使用的是一个子类的话，那么它不一定能够使用基类。
 - ✓ 里氏代换原则是实现开闭原则的重要方式之一，由于使用基类对象的地方都可以使用子类对象，因此在程序中尽量使用基类类型来对对象进行定义，而在运行时再确定其子类类型，用子类对象来替换父类对象。
 
@@ -12603,9 +12584,6 @@ CipherB
 
 - 如果需要更换一个加密算法类或者增加并使用一个新的加密算法类，如将CipherA改为CipherB，则需要修改客户端类Client和数据操作类DataOperator的源代码，违背了开闭原则。
 - 现使用里氏代换原则对其进行重构，使得系统可以灵活扩展，符合开闭原则。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_971_0.png)
-
 ### 实例解析
 
 Client
@@ -12625,6 +12603,58 @@ CipherB
 ```
 config.xml
 <className>CipherB</className>
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_974_0.png)
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_974_1.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_976_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_981_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_985_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_987_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_988_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_989_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_993_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_995_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_999_0.png)
+
+
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1000_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1002_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1003_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1004_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1007_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1007_1.png)
+
 ```
 
 ## 依赖倒转原则
@@ -12642,20 +12672,12 @@ config.xml
 ### 依赖倒转原则分析
 
 - ✓ 依赖倒转原则是 **Robert C. Martin** 在 **1996** 年为 《C++ Reporter》 所写的专栏 **Engineering Notebook** 的第三篇，后来加入到他在 **2002** 年出版的经典著作 《**Agile Software Development, Principles, Patterns, and Practices**》 中。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_974_0.png)
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_974_1.png)
-
 依赖倒转原则的常用实现方式之一是在代码中使用抽象类，而将具体类放在配置文件中。
 
 - “将抽象放进代码，将细节放进元数据”
 - Put Abstractions in Code, Details in Metadata
 
 （《程序员修炼之道：从小工到专家》(The Pragmatic programmer: from journeyman to master)）
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_976_0.png)
-
 - ✓ 类之间的耦合
   - • 零耦合关系：两个类之间没有耦合。
   - • 具体耦合关系：耦合发生在两个具体类之间。
@@ -12682,16 +12704,11 @@ Last significant update: 23 Jan 04
 - 设值注入(Setter Injection)： 通过Setter方法注入实例变量。
 - 接口注入(Interface Injection)： 通过接口方法注入实例变量。
 
-
-
 ## 依赖倒转原则
 
 ### 依赖倒转原则实例
 
 由于需求的改变，该系统可能需要增加新的数据源或者新的文件格式，每增加一个新的类型的数据源或者新的类型的文件格式，客户类MainClass都需要修改源代码，以便使用新的类，但违背了开闭原则。现使用依赖倒转原则对其进行重构。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_981_0.png)
-
 ## 接口隔离原则
 
 ### 接口隔离原则定义
@@ -12725,9 +12742,6 @@ Last significant update: 23 Jan 04
 
 - 1. 一个接口就只代表一个角色，每个角色都有它特定的一个接口，此时这个原则可以叫做“角色隔离原则”。
 - 2. 接口仅仅提供客户端需要的行为，即所需的方法，客户端不需要的行为则隐藏起来，应当为客户端提供尽可能小的单独的接口，而不要提供大的总接口。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_985_0.png)
-
 ### 接口隔离原则分析
 
 使用接口隔离原则拆分接口时，首先必须满足单一职责原则，将一组相关的操作定义在一个接口中，且在满足高内聚的前提下，接口中的方法越少越好。
@@ -12739,13 +12753,7 @@ Last significant update: 23 Jan 04
 实例说明：
 
 下图展示了一个拥有多个客户类的系统，在系统中定义了一个巨大的接口（胖接口）AbstractService来服务所有的客户类。可以使用接口隔离原则对其进行重构。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_987_0.png)
-
 实例解析：
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_988_0.png)
-
 ## 合成复用原则
 
 合成复用原则(Composite Reuse Principle, CRP)又称为组合/聚合复用原则(Composition/Aggregate Reuse Principle, CARP)，其定义如下：
@@ -12755,9 +12763,6 @@ Last significant update: 23 Jan 04
 其英文定义为：
 
 - Favor composition of objects over inheritance as a reuse mechanism.
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_989_0.png)
-
 ### 合成复用原则分析
 
 合成复用原则就是指在一个新的对象里通过关联关系（包括组合关系和聚合关系）来使用一些已有的对象，使之成为新对象的一部分；新对象通过委派调用已有对象的方法达到复用其已有功能的目的。简言之：要尽量使用组合/聚合关系，少用继承。
@@ -12774,17 +12779,11 @@ Last significant update: 23 Jan 04
 实例说明：
 
 某教学管理系统部分数据库访问类设计如图所示：
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_993_0.png)
-
 如果需要更换数据库连接方式，如原来采用JDBC连接数据库，现在采用数据库连接池连接，则需要修改DBUtil类源代码。如果StudentDAO采用JDBC连接，但是TeacherDAO采用连接池连接，则需要增加一个新的DBUtil类，并修改StudentDAO或TeacherDAO的源代码，使之继承新的数据库连接类，这将违背开闭原则，系统扩展性较差。
 
 现使用合成复用原则对其进行重构。
 
 实例解析：
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_995_0.png)
-
 ## 迪米特法则
 
 ### 迪米特法则定义
@@ -12812,20 +12811,12 @@ Last significant update: 23 Jan 04
 任何一个对象，如果满足上面的条件之一，就是当前对象的“朋友”，否则就是“陌生人”。
 
 迪米特法则可分为狭义法则和广义法则。在狭义的迪米特法则中，如果两个类之间不必彼此直接通信，那么这两个类就不应当发生直接的相互作用，如果其中的一个类需要调用另一个类的某一个方法的话，可以通过第三者转发这个调用。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_999_0.png)
-
-
-
 ## 迪米特法则
 ## 迪米特法则分析
 
 - 狭义的迪米特法则：可以**降低类之间的耦合**，但是会在系统中增加大量的小方法并散落在系统的各个角落，它可以使一个系统的局部设计简化，因为每一个局部都不会和远距离的对象有直接的关联，但是也会**造成系统的不同模块之间的通信效率降低**，使得系统的不同模块之间不容易协调。
 
 - 广义的迪米特法则：**指对对象之间的信息流量、流向以及信息的影响的控制**，主要是**对信息隐藏的控制**。信息的隐藏可以使各个子系统之间脱耦，从而允许它们独立地被开发、优化、使用和修改，同时可以促进软件的复用，由于每一个模块都不依赖于其他模块而存在，因此每一个模块都可以独立地在其他的地方使用。一个系统的规模越大，信息的隐藏就越重要，而信息隐藏的重要性也就越明显。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1000_0.png)
-
 ## 迪米特法则
 ## 迪米特法则分析
 
@@ -12842,16 +12833,10 @@ Last significant update: 23 Jan 04
 - 实例说明
 
 某系统界面类(如Form1、Form2等类)与数据访问类(如DAO1、DAO2等类)之间的调用关系较为复杂，如图所示：
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1002_0.png)
-
 ## 迪米特法则
 ## 迪米特法则实例
 
 - ✓ 实例解析
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1003_0.png)
-
 ## 本章小结
 
 - 对于面向对象的软件系统设计来说，在支持可维护性的同时，需要提高系统的可复用性。
@@ -12859,9 +12844,6 @@ Last significant update: 23 Jan 04
 - 单一职责原则要求在软件系统中，一个类只负责一个功能领域中的相应职责。
 - 开闭原则要求一个软件实体应当对扩展开放，对修改关闭，即在不修改源代码的基础上扩展一个系统的行为。
 - 里氏代换原则可以通俗表述为在软件中如果能够使用基类对象，那么一定能够使用其子类对象。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1004_0.png)
-
 ## 本章小结
 
 - 依赖倒转原则要求抽象不应该依赖于细节，细节应该依赖于抽象；要针对接口编程，不要针对实现编程。
@@ -12872,14 +12854,8 @@ Last significant update: 23 Jan 04
 ## 设计模式
 
 ## 推荐的图书
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1007_0.png)
-
 阎宏  
 电子工业出版社
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1007_1.png)
-
 蔡学镛  
 电子工业出版社
 
@@ -12983,6 +12959,9 @@ public class Magnate{
             car.drive();
         }
         ...
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1019_0.png)
+
 ```
 
 驰
@@ -12994,8 +12973,6 @@ public class Magnate{
 
 下面我们从开闭原则（对扩展开放；对修改封闭）上来分析下简单工厂模式。当暴发户增加了一辆车的时候，只要符合抽象产品制定的合同，那么只要通知工厂类知道就可以被客户使用了。所以对产品部分来说，它是符合开闭原则的；但是工厂部分好像不太理想，因为每增加一辆车，都要在工厂类中增加相应的业务逻辑或者判断逻辑，这显然是违背开闭原则的。可想而知对于新产品的加入，工厂类是很被动的。
 
-
-
 ## 生成器(Builder)
 
 ## 为何使用？
@@ -13004,9 +12981,6 @@ public class Magnate{
 - 因为一个复杂的对象,不但有很多大量组成部分,如汽车,有很多部件:车轮 方向盘 发动机还有各种小零件等等,部件很多,但远不止这些,如何将这些部件装配成一辆汽车,这个装配过程也很复杂(需要很好的组装技术),Builder模式就是为了将部件和组装过程分开。
 
 ## 生成器
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1019_0.png)
-
 ## 需要一个接口,它定义如何创建复杂对象的各个部件
 
 ```
@@ -13073,6 +13047,12 @@ public class Client
         product = builder.getResult();
     }
 }
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1025_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1026_0.png)
+
 ```
 
 ## 单例模式(Singleton)
@@ -13086,15 +13066,9 @@ public class Client
 一个例子： Windows 回收站
 
 Windows 9x 以后的视窗系统中都有一个回收站，下图就显示了 Windows 2000 的回收站。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1025_0.png)
-
 在整个视窗系统中，回收站只能有一个实例，整个系统都使用这个惟一的实例，而且回收站自行提供自己的实例。因此，回收站是单例模式的应用。
 
 ## 单例模式(Singleton)
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1026_0.png)
-
 ## 单例模式(Singleton)
 
 ```
@@ -13114,6 +13088,74 @@ public class EagerSingleton
         return m_instance;
     }
 }
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1031_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1031_1.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1032_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1034_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1036_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1038_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1039_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1040_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1042_0.png)
+
+
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1044_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1045_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1047_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1049_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1051_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1053_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1056_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1057_0.png)
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1057_1.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1058_0.png)
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1058_1.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1059_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1064_0.png)
+
+
+
 ```
 
 ## 单例模式(Singleton)
@@ -13133,21 +13175,12 @@ Java 语言中单例类的一个最重要的特点是类的构造子是私有的
 把一个类用用户希望的形式描述,即用用户希望的接口适配这个类。在这个模式中，这个类叫做被适配者（Adaptee），用户定义的接口叫适配接口，用户实现适配接口的类叫适配器（Adapter）。
 
 ## 例子：动物图形编辑器
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1031_0.png)
-
 重用
 
 我们的程序
 
 现成的程序
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1031_1.png)
-
 ## 策略1—对象适配器
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1032_0.png)
-
 ## 策略1—对象适配器
 
 - //这是个适配器程序，适配Tiger使其具有Tookit的接口
@@ -13166,9 +13199,6 @@ Java 语言中单例类的一个最重要的特点是类的构造子是私有的
 -
 
 ## 策略2—类适配器
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1034_0.png)
-
 ## 策略2—采用继承
 
 - public class TigerAdaptor1 extends Tiger implements Toolkit
@@ -13186,9 +13216,6 @@ Java 语言中单例类的一个最重要的特点是类的构造子是私有的
 ## 设计模式之Proxy(代理)
 
 - ■ 例子：Windows的快捷方式
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1036_0.png)
-
 ## 设计模式之Proxy(代理)
 
 设计模式中定义：
@@ -13198,51 +13225,25 @@ Java 语言中单例类的一个最重要的特点是类的构造子是私有的
 某个客户端不能直接操作到某个对象,但又必须和那个对象有所互动。
 
 ## 设计模式之Proxy(代理)
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1038_0.png)
-
 ## 设计模式之Proxy(代理)
 
 高三小姐的神貌和本人
 
 悟空扮演并代替高三小姐
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1039_0.png)
-
 ## 八戒分辨不出真假老婆
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1040_0.png)
-
 ## 设计模式之Facade(门面)
 
 门面模式要求一个子系统的外部与其内部的通信必须通过一个统一的门面（Facade）对象进行。门面模式提供一个高层次接口，使得子系统更易于使用。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1042_0.png)
-
-
-
 ## 设计模式之Facade(门面)
 
 一个例子：保安系统。一个保安系统由两个录像机，三个电灯，一个遥感器和一个报警器组成。操作人员需要经常将这些仪器启动和关闭。
 
 ### 不使用Facade(门面)
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1044_0.png)
-
 ### 使用Facade(门面)
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1045_0.png)
-
 ## 模板方法(Template Method)
 
 - 目的：准备一个抽象类，将部分逻辑用具体方法或者具体构造方法来实现，然后声明一些抽象方法迫使子类实现剩余的逻辑。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1047_0.png)
-
 - 例子：计算存款利息。假设系统需要支持两种存款账号，即货币市场（Money Market）账号和定期存款（CD或Certificate of Deposit）。这两种利息的计算方法不同。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1049_0.png)
-
 西天取经
 
 | 取经人 |
@@ -13269,9 +13270,6 @@ Java 语言中单例类的一个最重要的特点是类的构造子是私有的
 房屋建筑
 
 房屋建筑师在开发新项目时会使用模板方法。一个典型的规划包括一些建筑平面图，每个平面图体现了不同部分。在一个平面图中，地基、结构、上下水和走线对于每个房间都是一样的。只有在建筑的后期才开始有差别而产生了不同的房屋样式。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1051_0.png)
-
 图 22: 使用建筑平面图为例子 的模板方法模式
 
 ## 策略(Strategy)
@@ -13280,33 +13278,14 @@ Java 语言中单例类的一个最重要的特点是类的构造子是私有的
 - 适用：
   - 许多相关的类仅仅是行为有异
   - 可以使用一个算法的不同变体
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1053_0.png)
-
 ## 设计原则
 
 ### 曹操吟诗
 
 话说三国时期，曹操带领百万大军攻打东吴，大军在长江赤壁驻扎，军船连成一片，眼看就要灭掉东吴，统一天下，曹操大悦，于是大宴众文武，在酒席间，曹操诗性大发，不觉吟道：“喝酒唱歌，人生真爽……”。众文武齐呼：“丞相好诗！”于是一臣子速命印刷工匠刻版印刷，以便流传天下。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1056_0.png)
-
 样张出来给曹操一看，曹操感觉不妥，说道：“喝与唱，此话过俗，应改为‘对酒当歌’较好！”，于是此臣就命工匠重新来过。工匠眼看着连夜刻版之工，彻底白费，心中叫苦不迭。只得照办。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1057_0.png)
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1057_1.png)
-
 样张再次出来请曹操过目，曹操细细一品，觉得还是不好，说：“人生真爽太过直接，应改问句才够意境，因此应改为‘对酒当歌，人生几何？............！’当臣转告工匠之时，工匠晕倒............！”
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1058_0.png)
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1058_1.png)
-
 可惜三国时期活字印刷还未发明，所以类似事情应该时有发生，如果是有了活字印刷，则只需更改四个字就可，其余工作都未白做。实在妙哉。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1059_0.png)
-
 ### 结论
 
 - 第一，要改，只需更改要改的字，此为**可维护**；
@@ -13357,11 +13336,6 @@ Java 语言中单例类的一个最重要的特点是类的构造子是私有的
 - 抽象技术： **abstract class, Interface**
 - 抽象预见了可能的所有扩展（闭）
 - 由抽象可以随时导出新的类（开）
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1064_0.png)
-
-
-
 ## 实例 - 解决方案1
 
 ```
@@ -13373,7 +13347,6 @@ return ((Phone)o).getNumber();
 else
 return null;
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_1065_0.png)
 
@@ -13381,6 +13354,10 @@ return null;
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_1065_2.png)
 
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1068_0.png)
+
+```
 ## 范例：手与门
 
 +   - 如何在程序中模拟用手去开门和关门?
@@ -13388,9 +13365,6 @@ return null;
 +     - 开门（open）
 +     - 关门（close）
 +     - 判断门的状态（isOpened）
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1068_0.png)
-
 ```
 public class Door {
     private boolean _isOpen=false;
@@ -13515,25 +13489,34 @@ public class Refrigerator implements Excitable {
         _isOpen = false;
     }
 }
-```
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_1073_0.png)
 
-## 里氏代换原则（LSP）
-
-如果一个软件实体使用的是基类的话那么也一定适用于子类，即子类型(subtype)必须能够替换他们的基类型。但反过来的代换不成立。
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_1074_0.png)
 
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1075_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1078_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1079_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1083_0.png)
+
+```
+## 里氏代换原则（LSP）
+
+如果一个软件实体使用的是基类的话那么也一定适用于子类，即子类型(subtype)必须能够替换他们的基类型。但反过来的代换不成立。
 ## 里氏替换原则（LSP）
 
 如果一个软件实体使用的是基类的话那么也一定适用于子类，即子类型(subtype)必须能够替换它们的基类型。但反过来的代换不成立。
 
 +   - 解释
 +     - “娌，美人也，爱娌，非爱美人也…”（《墨子·小取》）
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1075_0.png)
-
 ## DIP
 
 +   - **DIP（依赖倒置原则，The Dependency Inversion Principle）**
@@ -13551,13 +13534,7 @@ public class Refrigerator implements Excitable {
 +     一个具体类和一个抽象类（或接口）之间的耦合关系
 
 ## 具体耦合例子
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1078_0.png)
-
 ## 抽象耦合例子
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1079_0.png)
-
 ## DIP 实施重点
 
 从问题的具体细节中分离出抽象，以抽象方式对类进行耦合
@@ -13574,9 +13551,6 @@ public class Refrigerator implements Excitable {
 从客户的角度来说：一个类对另外一个类的依赖性应当是建立在最小的接口上的。如果客户端只需要某一些方法的话，那么就应当向客户端提供这些需要的方法，而不要提供不需要的方法。提供接口意味着向客户端作出承诺，过多的承诺会给系统的维护造成不必要的负担。
 
 ## ISP 例子
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1083_0.png)
-
 ## ISP例子
 
 ```
@@ -13617,9 +13591,16 @@ interface Resultset
 +previous():void
 +getExcerpt():String
 +getFullRecord():String
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1086_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1087_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1091_0.png)
+
 ```
-
-
 
 ## 合成、聚合复用原则（CARP）
 
@@ -13628,13 +13609,7 @@ interface Resultset
 这个原则有一个简短的描述：要尽量使用合成、聚合，尽量不要使用继承。
 
 ## CARP例子
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1086_0.png)
-
 ## CARP例子
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1087_0.png)
-
 ## 迪米特法则 LoD
 Law of Demeter
 
@@ -13681,9 +13656,6 @@ Call Forwarding
 - 当前对象所创建的对象
 
 ## 不满足迪米特法则的系统
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1091_0.png)
-
 ## 不满足迪米特法则的系统
 
 ```
@@ -13704,12 +13676,12 @@ public class Friend
     public Stranger provide()
     { return stranger;}
 }
-```
-
-## 满足迪米特法则的系统
 
 ![](img/b706331eacf49a62651c2c9b2de81ca5_1093_0.png)
 
+```
+
+## 满足迪米特法则的系统
 ## 满足迪米特法则的系统
 
 ```
@@ -13731,6 +13703,17 @@ public class Friend
         stranger.operation3();
     }
 }
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1097_0.png)
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1098_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1100_0.png)
+
+
+![](img/b706331eacf49a62651c2c9b2de81ca5_1101_0.png)
+
 ```
 
 ## 总结
@@ -13762,11 +13745,6 @@ TCP/IP网络参考模型包括五个层次：
 应用层、传输层、网络层、链路层、物理层。
 
 大多数基于Internet的应用程序被看作TCP/IP网络的最上层，如： ftp， http， smtp， pop3， telnet等。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1097_0.png)
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1098_0.png)
-
 传输层：在TCP/IP网络中，不同的机器之间进行通信时，数据的传输是由传输层控制的，这包括数据要发往的目标机器及应用程序、数据的质量控制等。TCP/IP网络中最常用的传输协议就是TCP（Transport Control Protocol）和UDP（User Datagram Protocol）。
 
 网络层：对TCP/IP网络中的硬件资源进行标识。连接到网络中的每台计算机（或其他设备）都有唯一的地址，这就是IP地址。IP地址实质上是一个32位的整数，通常以“d.d.d.d”的形式表示，每个d是一个8位整数。
@@ -13790,15 +13768,9 @@ TCP/IP网络参考模型包括五个层次：
 端口号是一个标记机器的逻辑通信信道的正整数，端口号不是物理实体。IP 地址和端口号组成了所谓的 Socket，Socket 是网络上运行的程序之间双向通信链路的最后终结点。
 
 IP与端口号组合而得出的Socket，可以完全分辨 Internet上运行的程序。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1100_0.png)
-
 ## Java与Internet ——端口号
 
 端口号是用一个16位的整数来表达的，其范围为0～65535，其中0～1023为系统所保留，专门给那些通用的服务（well-known services），如http服务的端口号为80，telnet服务的端口号为21，ftp服务的端口为23，...因此，当我们编写通信程序时，应选择一个大于1023的数作为端口号，以免发生冲突。
-
-![](img/b706331eacf49a62651c2c9b2de81ca5_1101_0.png)
-
 ## Java与Internet —— Java中的网络支持
 
 针对网络通信的不同层次，Java提供的网络功能有四大类：InetAddress、URL、Socket、Datagram。

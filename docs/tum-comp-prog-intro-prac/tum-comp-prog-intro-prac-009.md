@@ -53,16 +53,16 @@
 
 ![](img/1942ea91769e5da2ac952068229ab2d6_3.png)
 
-```java
-// 语句1: 声明变量
-int x;
-int y;
-int result;
 
 ![](img/1942ea91769e5da2ac952068229ab2d6_4.png)
 
 ![](img/1942ea91769e5da2ac952068229ab2d6_5.png)
 
+```java
+// 语句1: 声明变量
+int x;
+int y;
+int result;
 // 语句2 & 3: 使用InputReader读取输入（表达式‘InputReader.readInt(...)’的结果被赋值给变量）
 x = InputReader.readInt("Please enter number one: ");
 y = InputReader.readInt("Please enter number two: ");

@@ -30,6 +30,11 @@
 
 ![](img/1cf2d4a3676bd07f018d133fbc027662_12.png)
 
+
+![](img/1cf2d4a3676bd07f018d133fbc027662_14.png)
+
+![](img/1cf2d4a3676bd07f018d133fbc027662_15.png)
+
 ```cpp
 int a1[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 int a2[] = {2, 4, 6, 8, 10, 12, 14};
@@ -37,11 +42,6 @@ int answer[std::distance(std::begin(a1), std::end(a1))];
 
 std::sort(std::begin(a1), std::end(a1));
 std::sort(std::begin(a2), std::end(a2));
-
-![](img/1cf2d4a3676bd07f018d133fbc027662_14.png)
-
-![](img/1cf2d4a3676bd07f018d133fbc027662_15.png)
-
 auto it = std::set_difference(std::begin(a1), std::end(a1),
                               std::begin(a2), std::end(a2),
                               std::begin(answer));
@@ -62,13 +62,13 @@ int diff_size = std::distance(std::begin(answer), it);
 
 ![](img/1cf2d4a3676bd07f018d133fbc027662_23.png)
 
+
+![](img/1cf2d4a3676bd07f018d133fbc027662_25.png)
+
 ```cpp
 std::set<int> s1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 std::set<int> s2 = {2, 4, 6, 8, 10, 12, 14};
 std::set<int> s3;
-
-![](img/1cf2d4a3676bd07f018d133fbc027662_25.png)
-
 std::set_difference(s1.begin(), s1.end(),
                     s2.begin(), s2.end(),
                     std::inserter(s3, s3.end()));

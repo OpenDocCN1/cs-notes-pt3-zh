@@ -22,6 +22,9 @@ Python的字典是一种非常方便的数据结构，它允许我们通过“�
 
 以下是核心的结构体定义：
 
+
+![](img/b256fa6f0fef9837b4b46376a8d3c300_4.png)
+
 ```c
 // 字典节点结构体
 typedef struct DNode {
@@ -29,9 +32,6 @@ typedef struct DNode {
     char *value;         // 指向值字符串的指针
     struct DNode *next;  // 指向下一个节点的指针
 } DNode;
-
-![](img/b256fa6f0fef9837b4b46376a8d3c300_4.png)
-
 // 字典结构体
 typedef struct {
     DNode *head;  // 指向链表头节点的指针

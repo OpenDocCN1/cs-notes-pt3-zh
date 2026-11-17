@@ -147,14 +147,14 @@ Coq的归纳类型定义可以包含参数，从而构建更复杂的数据结�
 
 例如，我们可以先定义一个基本颜色类型`rgb`，然后定义一个扩展的颜色类型`color`，它除了包含黑白两色，还能包含一个`rgb`类型的基本色：
 
+
+![](img/b91fd178918432bd80196357f902b4d5_9.png)
+
 ```coq
 Inductive rgb : Type :=
   | red
   | green
   | blue.
-
-![](img/b91fd178918432bd80196357f902b4d5_9.png)
-
 Inductive color : Type :=
   | white
   | black

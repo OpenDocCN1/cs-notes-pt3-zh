@@ -30,6 +30,9 @@
 
 以下是一个代码示例，展示了如何使用指针的高16位来存储信息：
 
+
+![](img/cc12215d4cecc46cd2a2267e394d9d37_5.png)
+
 ```cpp
 // 辅助常量
 constexpr int kPointerBits = 48;
@@ -41,9 +44,6 @@ uintptr_t AddTag(void* ptr, uint16_t tag) {
     // 清除指针的高16位，然后将标记左移到高16位，最后组合
     return (int_ptr & kPointerMask) | (static_cast<uintptr_t>(tag) << kPointerBits);
 }
-
-![](img/cc12215d4cecc46cd2a2267e394d9d37_5.png)
-
 // 从带标记的指针中提取原始指针
 void* GetPointer(uintptr_t tagged_ptr) {
     return reinterpret_cast<void*>(tagged_ptr & kPointerMask);

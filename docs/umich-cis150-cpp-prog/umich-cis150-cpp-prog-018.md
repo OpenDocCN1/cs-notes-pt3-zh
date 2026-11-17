@@ -62,13 +62,13 @@ int totalPeople = numberOfGuests + 1;
 
 ![](img/04785d3c771cf9f526d2a80f5095a48f_33.png)
 
+
+![](img/04785d3c771cf9f526d2a80f5095a48f_35.png)
+
 ```cpp
 string choice;
 cout << "Are you serving cake, pizza, or pop? ";
 cin >> choice;
-
-![](img/04785d3c771cf9f526d2a80f5095a48f_35.png)
-
 // 验证循环：确保输入是“cake”、“pizza”或“pop”之一
 while (choice != "cake" && choice != "pizza" && choice != "pop") {
     cout << "Invalid choice. Please enter cake, pizza, or pop: ";
@@ -111,15 +111,15 @@ if (choice == "cake") {
 
 ![](img/04785d3c771cf9f526d2a80f5095a48f_50.png)
 
-```cpp
-double pricePerItem;
-cout << "How much does it cost to buy one " << choice << "? ";
-cin >> pricePerItem;
 
 ![](img/04785d3c771cf9f526d2a80f5095a48f_52.png)
 
 ![](img/04785d3c771cf9f526d2a80f5095a48f_54.png)
 
+```cpp
+double pricePerItem;
+cout << "How much does it cost to buy one " << choice << "? ";
+cin >> pricePerItem;
 // 计算所需物品数量并向上取整
 double itemsNeeded = totalPeople * amountPerPerson;
 itemsNeeded = ceil(itemsNeeded); // 使用ceil函数向上取整

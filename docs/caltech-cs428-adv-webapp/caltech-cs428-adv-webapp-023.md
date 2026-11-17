@@ -47,14 +47,6 @@
 
 在 `app.js` 中，我们设置一个监听端口的简单Express服务器。
 
-```javascript
-const express = require('express');
-const app = express();
-const port = 3000;
-
-function setupApp() {
-  // 中间件和路由设置将在这里进行
-}
 
 ![](img/522462dd3645ce38022515a28b7a2663_2.png)
 
@@ -68,6 +60,14 @@ function setupApp() {
 
 ![](img/522462dd3645ce38022515a28b7a2663_10.png)
 
+```javascript
+const express = require('express');
+const app = express();
+const port = 3000;
+
+function setupApp() {
+  // 中间件和路由设置将在这里进行
+}
 setupApp();
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);

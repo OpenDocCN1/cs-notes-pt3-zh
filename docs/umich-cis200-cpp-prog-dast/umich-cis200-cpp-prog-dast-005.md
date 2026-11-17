@@ -124,22 +124,22 @@ while (input != "quit") {
 
 ![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_41.png)
 
-```cpp
-cout << "Which class do you want to drop? ";
-string classToDrop;
-getline(cin, classToDrop);
 
 ![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_43.png)
 
 ![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_45.png)
 
-vector<string>::iterator toErase; // 用于保存要删除元素的迭代器
-bool found = false;
 
 ![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_47.png)
 
 ![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_49.png)
 
+```cpp
+cout << "Which class do you want to drop? ";
+string classToDrop;
+getline(cin, classToDrop);
+vector<string>::iterator toErase; // 用于保存要删除元素的迭代器
+bool found = false;
 // 遍历查找
 for (auto it = classes.begin(); it != classes.end(); it++) {
     if (*it == classToDrop) {

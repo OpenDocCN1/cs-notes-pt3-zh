@@ -79,8 +79,9 @@ import re
 
 以下是构建正则表达式并提取字典的步骤：
 
-```python
 # 正则表达式模式：匹配 ![...](attachment:文件名.扩展名|尺寸)
+
+```python
 # 我们使用括号捕获“文件名”和“完整的链接部分”
 pat = r'!\[[^\]]+\]\(attachment:([^\.]+)\.[^\)]+\)'
 founds = re.findall(pat, src)
@@ -90,6 +91,8 @@ print(founds[:5])
 
 然而，我们实际需要的是一个从图片名（如`add_to_class`）到其完整引用字符串的映射。我们需要调整正则表达式以捕获更多信息。
 
+    # 提取图片名，例如从 `![add_to_class](attachment:add_to_class.png|690x184)` 中提取 `add_to_class`
+
 ```python
 # 改进的正则表达式，捕获图片名和完整的attachment链接
 pat = r'(!\[[^\]]+\]\(attachment:[^\)]+\))'
@@ -97,7 +100,6 @@ founds = re.findall(pat, src)
 # 现在 founds 包含了完整的图片标记字符串
 img_dict = {}
 for img_tag in founds:
-    # 提取图片名，例如从 `![add_to_class](attachment:add_to_class.png|690x184)` 中提取 `add_to_class`
     # 使用另一个正则表达式
     name_match = re.search(r'!\[[^\]]+\]\(attachment:([^\.]+)', img_tag)
     if name_match:
@@ -112,8 +114,9 @@ print(list(img_dict.items())[:3])
 
 目标文本中的引用格式为：`![](图片名.扩展名)`。我们需要构建另一个正则表达式来匹配这种模式，并使用一个函数来执行替换。
 
-```python
 # 匹配目标文本中的图片引用，例如 ![](add_to_class.png)
+
+```python
 dest_pat = r'!\[\]\(([^\)]+)\)'
 
 def replace_img(match):
@@ -165,12 +168,15 @@ for img_tag in founds:
 
 ![](img/1384873c931a89256e4bfce00d2850c8_36.png)
 
-```python
-# 更新目标正则表达式，匹配可能的尺寸
-dest_pat = r'!\[\]\(([^\)]+?(?:\|\d+)?)\)'
 
 ![](img/1384873c931a89256e4bfce00d2850c8_38.png)
 
+
+![](img/1384873c931a89256e4bfce00d2850c8_40.png)
+
+```python
+# 更新目标正则表达式，匹配可能的尺寸
+dest_pat = r'!\[\]\(([^\)]+?(?:\|\d+)?)\)'
 def replace_img_v2(match):
     filename_part = match.group(1)  # 例如 'add_to_class.png' 或 'add_to_class.png|900'
     # 分离文件名和尺寸
@@ -186,9 +192,6 @@ def replace_img_v2(match):
         return full_tag
     else:
         return f"![缺失图片: {key}]"
-
-![](img/1384873c931a89256e4bfce00d2850c8_40.png)
-
 new_dest_v2 = re.sub(dest_pat, replace_img_v2, dest)
 ```
 

@@ -14,6 +14,12 @@ LLVM的中间表示具有文本形式，便于人类阅读和理解。其设计�
 
 以下是LLVM IR的一个简单示例，它计算一个整数的阶乘。
 
+
+![](img/9b0cf13e407e569bd4a962ad31dba6e9_3.png)
+
+
+![](img/9b0cf13e407e569bd4a962ad31dba6e9_5.png)
+
 ```llvm
 define i64 @factorial(i64 %n) {
 entry:
@@ -22,9 +28,6 @@ entry:
   store i64 %n, i64* %1
   store i64 1, i64* %acc
   br label %start
-
-![](img/9b0cf13e407e569bd4a962ad31dba6e9_3.png)
-
 start:
   %2 = load i64, i64* %1
   %3 = icmp sgt i64 %2, 0
@@ -39,9 +42,6 @@ then:
   %8 = sub i64 %7, 1
   store i64 %8, i64* %1
   br label %start
-
-![](img/9b0cf13e407e569bd4a962ad31dba6e9_5.png)
-
 else:
   %9 = load i64, i64* %acc
   ret i64 %9

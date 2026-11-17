@@ -293,14 +293,14 @@ fn parse_number(s: &str) -> Result<i32, std::num::ParseIntError> {
 
 **解决方案**： 使用 `?` 操作符可以简化错误处理。
 
+
+![](img/0e9e476969b75e1bbc8784dc39e2e2cc_27.png)
+
 ```rust
 fn main() {
     let result = parse_number("42");
     println!("解析结果为：{:?}", result);
 }
-
-![](img/0e9e476969b75e1bbc8784dc39e2e2cc_27.png)
-
 fn parse_number(s: &str) -> Result<i32, std::num::ParseIntError> {
     Ok(s.parse()?)
 }
@@ -383,25 +383,25 @@ fn main() {
 
 **解决方案**： 泛型结构体和实现已经正确。
 
-```rust
-struct Wrapper<T> {
-    value: T,
-}
 
 ![](img/0e9e476969b75e1bbc8784dc39e2e2cc_39.png)
 
 ![](img/0e9e476969b75e1bbc8784dc39e2e2cc_41.png)
 
-impl<T> Wrapper<T> {
-    pub fn new(value: T) -> Self {
-        Wrapper { value }
-    }
-}
 
 ![](img/0e9e476969b75e1bbc8784dc39e2e2cc_43.png)
 
 ![](img/0e9e476969b75e1bbc8784dc39e2e2cc_45.png)
 
+```rust
+struct Wrapper<T> {
+    value: T,
+}
+impl<T> Wrapper<T> {
+    pub fn new(value: T) -> Self {
+        Wrapper { value }
+    }
+}
 fn main() {
     let w = Wrapper::new(42);
     println!("包装器的值为：{}", w.value);

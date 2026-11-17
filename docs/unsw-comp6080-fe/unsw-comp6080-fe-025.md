@@ -30,13 +30,13 @@
 
 ![](img/9b2334de6b7bce29a33363e7b68f3198_13.png)
 
+
+![](img/9b2334de6b7bce29a33363e7b68f3198_15.png)
+
 ```javascript
 // hello.js
 const process = require('process');
 const argv = process.argv;
-
-![](img/9b2334de6b7bce29a33363e7b68f3198_15.png)
-
 let dates = [];
 for (let i = 2; i < argv.length; i++) {
     dates.push(argv[i]);
@@ -104,11 +104,11 @@ console.log(dateDaysSincePairs);
 
 ![](img/9b2334de6b7bce29a33363e7b68f3198_40.png)
 
-```javascript
-const fs = require('fs');
 
 ![](img/9b2334de6b7bce29a33363e7b68f3198_42.png)
 
+```javascript
+const fs = require('fs');
 let jsonOutput = JSON.stringify(dateDaysSincePairs);
 fs.writeFileSync('dates.json', jsonOutput);
 console.log('数据已写入 dates.json 文件。');
@@ -162,6 +162,11 @@ npm install express
 
 ![](img/9b2334de6b7bce29a33363e7b68f3198_70.png)
 
+
+![](img/9b2334de6b7bce29a33363e7b68f3198_72.png)
+
+![](img/9b2334de6b7bce29a33363e7b68f3198_74.png)
+
 ```javascript
 // server.js
 const express = require('express');
@@ -171,11 +176,6 @@ const port = 3000;
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
-
-![](img/9b2334de6b7bce29a33363e7b68f3198_72.png)
-
-![](img/9b2334de6b7bce29a33363e7b68f3198_74.png)
-
 app.listen(port, () => {
     console.log(`服务器运行在 http://localhost:${port}`);
 });

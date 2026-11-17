@@ -116,6 +116,9 @@ function App() {
 
 ![](img/a0329e44501b9a4d61bb7af00f2f1afc_31.png)
 
+
+![](img/a0329e44501b9a4d61bb7af00f2f1afc_33.png)
+
 ```jsx
 // 定义一个布局组件 SiteLayout.jsx
 import { Outlet } from 'react-router-dom';
@@ -129,9 +132,6 @@ function SiteLayout() {
     </div>
   );
 }
-
-![](img/a0329e44501b9a4d61bb7af00f2f1afc_33.png)
-
 // 在 App.jsx 中配置嵌套路由
 <Routes>
   <Route path="/" element={<SiteLayout />}>

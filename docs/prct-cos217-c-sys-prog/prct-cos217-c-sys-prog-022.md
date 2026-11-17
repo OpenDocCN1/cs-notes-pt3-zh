@@ -123,6 +123,9 @@ loop_end:
 我们以之前的 `if (i < 0)` 为例。假设 `i` 是一个存储在 `.bss` 段的 `int` 类型变量。
 
 **汇编代码：**
+
+![](img/3c57828b641426d11ffcd0eba064f8fb_29.png)
+
 ```assembly
         .section .bss
 i:      .skip 4          // 为 int 类型的 i 分配4字节空间
@@ -139,9 +142,6 @@ i:      .skip 4          // 为 int 类型的 i 分配4字节空间
         // if 块主体：i = -i;
         NEG  W1, W1      // W1 = -W1
         STR  W1, [X0]    // 将结果存回 i 的内存地址
-
-![](img/3c57828b641426d11ffcd0eba064f8fb_29.png)
-
 end_if:
         // 后续代码...
 ```
@@ -154,6 +154,12 @@ end_if:
 现在看带有 `else` 的版本，假设 `i`, `j`, `smaller` 都是 `int` 类型变量。
 
 **汇编代码：**
+
+![](img/3c57828b641426d11ffcd0eba064f8fb_31.png)
+
+
+![](img/3c57828b641426d11ffcd0eba064f8fb_33.png)
+
 ```assembly
         // 加载 i 和 j 的值到寄存器
         ADR  X0, i
@@ -169,16 +175,10 @@ end_if:
         ADR  X0, smaller
         STR  W1, [X0]    // 存储 i 到 smaller
         B    end_if      // 跳过 else 块
-
-![](img/3c57828b641426d11ffcd0eba064f8fb_31.png)
-
 else_clause:
         // else 块：smaller = j;
         ADR  X0, smaller
         STR  W2, [X0]    // 存储 j 到 smaller
-
-![](img/3c57828b641426d11ffcd0eba064f8fb_33.png)
-
 end_if:
 ```
 *   在 `if` 块结束后，需要使用无条件分支 `B end_if` 来跳过 `else` 块。

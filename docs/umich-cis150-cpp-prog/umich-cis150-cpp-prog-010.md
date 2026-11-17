@@ -275,11 +275,6 @@ void printGallows(int incorrectGuesses) {
 
 ![](img/1cbd3c47fe55f0035380d791f7cc47f5_42.png)
 
-```cpp
-#include <iostream>
-#include <vector>
-#include <string>
-using namespace std;
 
 ![](img/1cbd3c47fe55f0035380d791f7cc47f5_44.png)
 
@@ -287,6 +282,11 @@ using namespace std;
 
 ![](img/1cbd3c47fe55f0035380d791f7cc47f5_48.png)
 
+```cpp
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
 int main() {
     vector<string> playerNames;
     vector<int> jerseyNumbers;

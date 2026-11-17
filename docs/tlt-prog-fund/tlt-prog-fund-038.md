@@ -75,14 +75,14 @@ to_filename = tkinter.filedialog.asksaveasfilename()
 4.  **写入原内容**：接着，将之前读取的源文件内容字符串写入目标文件。
 5.  **关闭目标文件**：完成写入后，关闭文件以确保所有数据都保存到磁盘。
 
+
+![](img/6c3aed95befe51bdb58a5bfc593001c2_12.png)
+
 ```python
 # 1. 读取源文件内容
 read_file = open(from_filename, 'r')
 contents = read_file.read()
 read_file.close()
-
-![](img/6c3aed95befe51bdb58a5bfc593001c2_12.png)
-
 # 2. 打开目标文件用于写入
 write_file = open(to_filename, 'w')
 

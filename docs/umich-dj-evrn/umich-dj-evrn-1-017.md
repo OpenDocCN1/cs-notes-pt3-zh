@@ -96,16 +96,16 @@ body {
 
 一个常见的样式设置是移除默认的下划线，并在鼠标悬停时重新添加或改变颜色：
 
-```css
-a {
-    color: black;
-    text-decoration: none; /* 移除下划线 */
-}
 
 ![](img/d3ed335669f46a6aba39302c6248b43e_20.png)
 
 ![](img/d3ed335669f46a6aba39302c6248b43e_21.png)
 
+```css
+a {
+    color: black;
+    text-decoration: none; /* 移除下划线 */
+}
 a:hover {
     text-decoration: underline; /* 悬停时显示下划线 */
     color: blue;

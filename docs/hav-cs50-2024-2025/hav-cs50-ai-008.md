@@ -71,11 +71,17 @@
 ![](img/d9319b12ddf61fce8d3b519a2e204442_18.png)
 
 以下是使用NLTK解析句子的核心代码示例：
-```python
-import nltk
 
 ![](img/d9319b12ddf61fce8d3b519a2e204442_20.png)
 
+
+![](img/d9319b12ddf61fce8d3b519a2e204442_22.png)
+
+
+![](img/d9319b12ddf61fce8d3b519a2e204442_24.png)
+
+```python
+import nltk
 # 定义语法规则
 grammar = nltk.CFG.fromstring("""
     S -> NP VP
@@ -85,14 +91,8 @@ grammar = nltk.CFG.fromstring("""
     N -> "she" | "city" | "car"
     V -> "saw" | "walked"
 """)
-
-![](img/d9319b12ddf61fce8d3b519a2e204442_22.png)
-
 # 创建解析器
 parser = nltk.ChartParser(grammar)
-
-![](img/d9319b12ddf61fce8d3b519a2e204442_24.png)
-
 # 解析句子
 sentence = "she saw the city".split()
 for tree in parser.parse(sentence):
@@ -166,12 +166,12 @@ most_common_bigrams = Counter(bigrams).most_common(10)
 ![](img/d9319b12ddf61fce8d3b519a2e204442_34.png)
 
 以下是情感分析分类器的核心思路：
-```python
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.feature_extraction.text import CountVectorizer
 
 ![](img/d9319b12ddf61fce8d3b519a2e204442_36.png)
 
+```python
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.feature_extraction.text import CountVectorizer
 # 训练数据
 train_texts = ["it was great", "so much fun", ...] # 正面
 train_labels = [1, 1, ...] # 1代表正面

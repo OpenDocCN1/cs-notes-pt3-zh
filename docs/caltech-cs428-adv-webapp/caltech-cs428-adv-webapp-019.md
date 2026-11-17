@@ -72,11 +72,6 @@ findUser(key, value) {
 
 ![](img/517e2071587e8157cfa6c9556183a85f_28.png)
 
-```javascript
-// middlewares/passport-config.js
-const LocalStrategy = require('passport-local').Strategy;
-const passport = require('passport');
-const users = require('../models/users.model');
 
 ![](img/517e2071587e8157cfa6c9556183a85f_30.png)
 
@@ -84,6 +79,16 @@ const users = require('../models/users.model');
 
 ![](img/517e2071587e8157cfa6c9556183a85f_34.png)
 
+
+![](img/517e2071587e8157cfa6c9556183a85f_36.png)
+
+![](img/517e2071587e8157cfa6c9556183a85f_38.png)
+
+```javascript
+// middlewares/passport-config.js
+const LocalStrategy = require('passport-local').Strategy;
+const passport = require('passport');
+const users = require('../models/users.model');
 const formNames = {
   usernameField: 'email',
   passwordField: 'password'
@@ -119,11 +124,6 @@ passport.deserializeUser((id, done) => {
   const user = users.findUser('id', id);
   done(null, user);
 });
-
-![](img/517e2071587e8157cfa6c9556183a85f_36.png)
-
-![](img/517e2071587e8157cfa6c9556183a85f_38.png)
-
 module.exports = passport;
 ```
 
@@ -137,9 +137,6 @@ module.exports = passport;
 
 ![](img/517e2071587e8157cfa6c9556183a85f_44.png)
 
-```javascript
-// app.js
-const passport = require('./middlewares/passport-config');
 
 ![](img/517e2071587e8157cfa6c9556183a85f_46.png)
 
@@ -147,6 +144,9 @@ const passport = require('./middlewares/passport-config');
 
 ![](img/517e2071587e8157cfa6c9556183a85f_49.png)
 
+```javascript
+// app.js
+const passport = require('./middlewares/passport-config');
 // 在 express-session 之后，定义路由之前
 app.use(passport.initialize());
 app.use(passport.session());
@@ -164,9 +164,6 @@ app.use(passport.session());
 
 ![](img/517e2071587e8157cfa6c9556183a85f_59.png)
 
-```javascript
-// controllers/users.controller.js
-const passport = require('../middlewares/passport-config');
 
 ![](img/517e2071587e8157cfa6c9556183a85f_61.png)
 
@@ -174,6 +171,9 @@ const passport = require('../middlewares/passport-config');
 
 ![](img/517e2071587e8157cfa6c9556183a85f_65.png)
 
+```javascript
+// controllers/users.controller.js
+const passport = require('../middlewares/passport-config');
 exports.postLogin = (req, res, next) => {
   const config = {
     successRedirect: '/',
@@ -264,6 +264,11 @@ exports.getIndex = (req, res) => {
 
 ![](img/517e2071587e8157cfa6c9556183a85f_109.png)
 
+
+![](img/517e2071587e8157cfa6c9556183a85f_111.png)
+
+![](img/517e2071587e8157cfa6c9556183a85f_113.png)
+
 ```javascript
 // middlewares/auth.js
 exports.checkAuthenticated = (req, res, next) => {
@@ -272,11 +277,6 @@ exports.checkAuthenticated = (req, res, next) => {
   }
   res.redirect('/login');
 };
-
-![](img/517e2071587e8157cfa6c9556183a85f_111.png)
-
-![](img/517e2071587e8157cfa6c9556183a85f_113.png)
-
 exports.checkNotAuthenticated = (req, res, next) => {
   if (req.isAuthenticated()) {
     return res.redirect('/');
@@ -295,9 +295,6 @@ exports.checkNotAuthenticated = (req, res, next) => {
 
 ![](img/517e2071587e8157cfa6c9556183a85f_121.png)
 
-```javascript
-// routes/users.routes.js
-const { checkAuthenticated, checkNotAuthenticated } = require('../middlewares/auth');
 
 ![](img/517e2071587e8157cfa6c9556183a85f_123.png)
 
@@ -309,6 +306,9 @@ const { checkAuthenticated, checkNotAuthenticated } = require('../middlewares/au
 
 ![](img/517e2071587e8157cfa6c9556183a85f_130.png)
 
+```javascript
+// routes/users.routes.js
+const { checkAuthenticated, checkNotAuthenticated } = require('../middlewares/auth');
 router.get('/', checkAuthenticated, usersController.getIndex);
 router.get('/login', checkNotAuthenticated, usersController.getLogin);
 router.get('/register', checkNotAuthenticated, usersController.getRegister);

@@ -139,13 +139,16 @@ library(testthat)
 
 然后，我们可以用更简洁的方式编写测试：
 
-```r
-source("average.R")
 
 ![](img/aced9c412703fb4bc1e0ea743fd84559_22.png)
 
 ![](img/aced9c412703fb4bc1e0ea743fd84559_23.png)
 
+
+![](img/aced9c412703fb4bc1e0ea743fd84559_25.png)
+
+```r
+source("average.R")
 test_that("average 正确计算平均值", {
   expect_equal(average(c(1, 2, 3)), 2)
   expect_equal(average(c(-1, -2, -3)), -2)
@@ -155,9 +158,6 @@ test_that("average 正确计算平均值", {
 test_that("average 对包含 NA 的输入发出警告", {
   expect_warning(average(c(1, NA, 3)))
 })
-
-![](img/aced9c412703fb4bc1e0ea743fd84559_25.png)
-
 test_that("average 对非数字输入抛出错误", {
   expect_error(average(c("1", "2", "3")))
 })

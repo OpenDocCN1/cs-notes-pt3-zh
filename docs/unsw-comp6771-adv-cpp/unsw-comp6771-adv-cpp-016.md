@@ -221,6 +221,16 @@ public:
 
 ![](img/21104176e331387dea78d85347debcac_76.png)
 
+
+![](img/21104176e331387dea78d85347debcac_78.png)
+
+![](img/21104176e331387dea78d85347debcac_79.png)
+
+
+![](img/21104176e331387dea78d85347debcac_81.png)
+
+![](img/21104176e331387dea78d85347debcac_83.png)
+
 ```cpp
 IntStack s;
 s.push(5);
@@ -228,21 +238,11 @@ s.push(4);
 s.push(3);
 s.push(2);
 s.push(1);
-
-![](img/21104176e331387dea78d85347debcac_78.png)
-
-![](img/21104176e331387dea78d85347debcac_79.png)
-
 // 使用迭代器遍历
 for (auto it = s.begin(); it != s.end(); ++it) {
     std::cout << *it << ' ';
 }
 // 输出: 1 2 3 4 5
-
-![](img/21104176e331387dea78d85347debcac_81.png)
-
-![](img/21104176e331387dea78d85347debcac_83.png)
-
 // 使用基于范围的for循环
 for (int val : s) {
     std::cout << val << ' ';

@@ -52,15 +52,15 @@ return_type (*pointer_name)(parameter_list);
 初始化后，可以通过解引用指针来调用函数。
 
 以下是一个使用函数指针的示例：
+
+![](img/6eb4b484dfc8ca7e41440a91e921bb70_11.png)
+
 ```cpp
 // 声明一个函数，它接受一个函数指针和两个整数作为参数
 int call_function(int (*func)(int, int), int a, int b) {
     return (*func)(a, b); // 通过指针调用函数
     // 也可以简写为：return func(a, b); // 编译器会自动解引用
 }
-
-![](img/6eb4b484dfc8ca7e41440a91e921bb70_11.png)
-
 // 定义两个匹配签名的函数
 int add(int x, int y) { return x + y; }
 int add_four(int x, int y) { return x + y + 4; }

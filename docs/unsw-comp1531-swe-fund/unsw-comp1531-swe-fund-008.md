@@ -100,19 +100,19 @@ fs.writeFileSync('export.json', jsonString, { flag: 'w' });
 ```
 
 **从JSON文件读取数据：**
+
+![](img/96822b5c0dd7257b1aac86c81918d9a3_24.png)
+
+
+![](img/96822b5c0dd7257b1aac86c81918d9a3_26.png)
+
 ```javascript
 const fs = require('fs');
 
 // 从文件读取文本（JSON字符串）
 const jsonStringFromFile = fs.readFileSync('export.json', { encoding: 'utf8', flag: 'r' });
-
-![](img/96822b5c0dd7257b1aac86c81918d9a3_24.png)
-
 // 将JSON字符串解析为JavaScript对象
 const parsedData = JSON.parse(jsonStringFromFile);
-
-![](img/96822b5c0dd7257b1aac86c81918d9a3_26.png)
-
 // 现在可以使用数据了
 console.log(parsedData.locations[0].suburb); // 输出: Kensington
 ```

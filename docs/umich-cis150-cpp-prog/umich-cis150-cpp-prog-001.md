@@ -157,12 +157,12 @@ git push           # 推送到GitHub
 
 让我们编写经典的"Hello World"程序：
 
-```cpp
-#include <iostream>
-using namespace std;
 
 ![](img/40ee3330a125bd525437ea6b86b825ec_12.png)
 
+```cpp
+#include <iostream>
+using namespace std;
 int main() {
     cout << "Hello, World!" << endl;
     return 0;

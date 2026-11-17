@@ -40,13 +40,6 @@
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_14.png)
 
-```python
-class Package:
-    def __init__(self, number, sender, recipient, weight):
-        self.number = number
-        self.sender = sender
-        self.recipient = recipient
-        self.weight = weight
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_15.png)
 
@@ -54,6 +47,13 @@ class Package:
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_17.png)
 
+```python
+class Package:
+    def __init__(self, number, sender, recipient, weight):
+        self.number = number
+        self.sender = sender
+        self.recipient = recipient
+        self.weight = weight
 # 创建实例
 package1 = Package(1, "Alice", "Bob", 10)
 package2 = Package(2, "Charlie", "David", 5)
@@ -230,6 +230,11 @@ print(package1)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_78.png)
 
+
+![](img/2749873fe240ad6c6aff3cb9929078a9_80.png)
+
+![](img/2749873fe240ad6c6aff3cb9929078a9_81.png)
+
 ```python
 class Package:
     def __init__(self, number, sender, recipient, weight):
@@ -244,11 +249,6 @@ class Package:
     def calculate_cost(self, cost_per_kg):
         """计算包裹的运费"""
         return self.weight * cost_per_kg
-
-![](img/2749873fe240ad6c6aff3cb9929078a9_80.png)
-
-![](img/2749873fe240ad6c6aff3cb9929078a9_81.png)
-
 # 使用实例方法
 package1 = Package(1, "Alice", "Bob", 10)
 shipping_cost = package1.calculate_cost(2)  # 每公斤2美元
@@ -280,6 +280,9 @@ print(f"{package1} costs ${shipping_cost} to ship.")
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_91.png)
 
+
+![](img/2749873fe240ad6c6aff3cb9929078a9_93.png)
+
 ```python
 class Package:
     def __init__(self, number, sender, recipient, weight):
@@ -294,9 +297,6 @@ class Package:
     def calculate_cost(self, cost_per_kg):
         """计算包裹的运费"""
         return self.weight * cost_per_kg
-
-![](img/2749873fe240ad6c6aff3cb9929078a9_93.png)
-
 # 创建包裹列表
 packages = [
     Package(1, "Alice", "Bob", 10),

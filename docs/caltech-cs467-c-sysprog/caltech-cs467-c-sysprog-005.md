@@ -45,14 +45,14 @@ C语言版本的程序运行起来，其外观和功能与Java版本完全一致
 
 以下是可供参考的核心C语言概念示例代码。
 
+
+![](img/c24a76055b5e33e33e0bae0ae502514b_5.png)
+
 ```c
 // 示例：函数指针的用法
 int (*operation)(int, int); // 声明一个函数指针
 operation = add; // 指向add函数
 int result = operation(5, 3); // 通过指针调用函数
-
-![](img/c24a76055b5e33e33e0bae0ae502514b_5.png)
-
 // 示例：动态字符串数组（指针的指针）
 char **task_list = malloc(sizeof(char*) * capacity);
 task_list[0] = malloc(strlen("Task 1") + 1);

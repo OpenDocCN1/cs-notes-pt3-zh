@@ -59,6 +59,9 @@ void loop() {
 
 ![](img/7da695834909deee38ddac8086a3ff97_14.png)
 
+
+![](img/7da695834909deee38ddac8086a3ff97_16.png)
+
 ```cpp
 void taskA() {
     static unsigned long time = 0; // 静态变量，在调用间保持值
@@ -74,9 +77,6 @@ void taskA() {
         time = 0;
     }
 }
-
-![](img/7da695834909deee38ddac8086a3ff97_16.png)
-
 void taskB() {
     static unsigned long time = 0;
     time++;

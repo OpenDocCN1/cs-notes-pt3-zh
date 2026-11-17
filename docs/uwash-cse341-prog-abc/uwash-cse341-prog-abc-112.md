@@ -47,15 +47,9 @@
 *   **`(mpair? obj)`**: 判断 `obj` 是否是一个可变对。
 
 让我们看一个例子：
-```racket
-(define mpr (mcons 1 (mcons #t "hi")))
-; mpr 指向一个 MCons，其 car 是 1，cdr 是另一个 MCons (其 car 是 #t, cdr 是 "hi")
 
 ![](img/7d6ca30fbc3682cea34f7dc79dc2f00a_7.png)
 
-(mcar mpr)               ; => 1
-(mcdr mpr)               ; => (mcons #t "hi")
-(mcar (mcdr mpr))        ; => #t
 
 ![](img/7d6ca30fbc3682cea34f7dc79dc2f00a_8.png)
 
@@ -63,6 +57,12 @@
 
 ![](img/7d6ca30fbc3682cea34f7dc79dc2f00a_10.png)
 
+```racket
+(define mpr (mcons 1 (mcons #t "hi")))
+; mpr 指向一个 MCons，其 car 是 1，cdr 是另一个 MCons (其 car 是 #t, cdr 是 "hi")
+(mcar mpr)               ; => 1
+(mcdr mpr)               ; => (mcons #t "hi")
+(mcar (mcdr mpr))        ; => #t
 (set-mcdr! mpr 47)       ; 修改 mpr 的 cdr 部分
 mpr                      ; => (mcons 1 47)
 

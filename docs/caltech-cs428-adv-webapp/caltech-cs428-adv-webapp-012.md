@@ -52,13 +52,13 @@ async function fetchData(url) {
 *   **`export`**：提供对模块内函数或对象的外部访问权限。可以导出多个命名项，也可以设置一个**默认导出（default export）**。
 
 **代码示例：模块导出与导入**
+
+![](img/e97df8272633486bf8030c3a32dc8a45_2.png)
+
 ```javascript
 // bar.js - 导出模块
 const myObject = { name: "Bar" };
 export default myObject;
-
-![](img/e97df8272633486bf8030c3a32dc8a45_2.png)
-
 // foo.js - 导入模块
 import importedObject from './bar.js';
 console.log(importedObject.name); // 输出: "Bar"

@@ -159,16 +159,16 @@ where
 ![](img/faca3d266a1f263ca20b61e3a71efe74_78.png)
 
 对应的`MyMap`结构体和迭代器实现也需要更新泛型参数。
-```rust
-struct MyMap<I, F, NewItem> {
-    iter: I,
-    func: F,
-}
 
 ![](img/faca3d266a1f263ca20b61e3a71efe74_80.png)
 
 ![](img/faca3d266a1f263ca20b61e3a71efe74_82.png)
 
+```rust
+struct MyMap<I, F, NewItem> {
+    iter: I,
+    func: F,
+}
 impl<I, F, NewItem> Iterator for MyMap<I, F, NewItem>
 where
     I: Iterator,
@@ -255,6 +255,9 @@ assert_eq!(result, vec![1, 4, 9]); // 1*1, 2*2, 3*3
 ![](img/faca3d266a1f263ca20b61e3a71efe74_125.png)
 
 最后，我们来看一个使用`FnOnce`的实用示例：一个测量任何闭包执行时间的通用函数。
+
+![](img/faca3d266a1f263ca20b61e3a71efe74_127.png)
+
 ```rust
 use std::time::{Instant, Duration};
 
@@ -267,9 +270,6 @@ where
     let duration = start.elapsed();
     (result, duration)
 }
-
-![](img/faca3d266a1f263ca20b61e3a71efe74_127.png)
-
 fn main() {
     let (answer, time_taken) = time_closure(|| {
         // 模拟一些工作

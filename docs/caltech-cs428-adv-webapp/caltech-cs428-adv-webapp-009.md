@@ -113,17 +113,17 @@ function giveClue(guess) {
 然后，在JavaScript中获取这些元素，并修改`guessNumber`和`giveClue`函数，使用`innerHTML`属性更新视图。
 
 **代码示例：**
+
+![](img/326ced8ce00a14764095137ccda43ca2_2.png)
+
+![](img/326ced8ce00a14764095137ccda43ca2_4.png)
+
 ```javascript
 const attemptsView = document.getElementById('attempts');
 const cluesView = document.getElementById('clues');
 
 // 在 guessNumber 函数中更新尝试次数
 attemptsView.innerHTML = `Number of attempts left: ${tries}`;
-
-![](img/326ced8ce00a14764095137ccda43ca2_2.png)
-
-![](img/326ced8ce00a14764095137ccda43ca2_4.png)
-
 // 在 giveClue 函数中添加提示
 cluesView.innerHTML += `<li>${guess} is too high.</li>`;
 ```

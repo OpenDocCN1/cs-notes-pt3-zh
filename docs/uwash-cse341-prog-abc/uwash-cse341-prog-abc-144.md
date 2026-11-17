@@ -37,6 +37,9 @@ Ruby拥有一项称为**混入**的优秀特性。它有点像Java的接口，�
 
 以下是一个基础的Ruby程序示例。注释以 `#` 开头。代码通常组织在类中。`puts` 是一个内置方法，用于输出字符串。
 
+
+![](img/7e5c5bf955ab21f7a69e0879703a340c_1.png)
+
 ```ruby
 # 定义一个类
 class Hello
@@ -45,9 +48,6 @@ class Hello
     puts "Hello World"
   end
 end
-
-![](img/7e5c5bf955ab21f7a69e0879703a340c_1.png)
-
 # 创建类的实例并调用方法
 x = Hello.new
 x.my_first_method

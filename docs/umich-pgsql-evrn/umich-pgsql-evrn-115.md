@@ -42,14 +42,14 @@ elastic_pass = 'your_password'
 
 在 `elasticbook.py` 脚本的开头，我们导入这些配置并创建Elasticsearch客户端实例。
 
-```python
-import hidden
-from elasticsearch import Elasticsearch
 
 ![](img/e5a4177a7f6989df650e9136f7aa6331_18.png)
 
 ![](img/e5a4177a7f6989df650e9136f7aa6331_19.png)
 
+```python
+import hidden
+from elasticsearch import Elasticsearch
 # 从配置文件获取凭证
 secrets = hidden.elastic()
 es = Elasticsearch(

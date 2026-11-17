@@ -66,15 +66,15 @@ void quicksort(int arr[], int low, int high) {
 ### Bozo排序示例代码
 
 以下是一个Bozo排序的简单实现，用于展示其思想：
-```c
-#include <stdbool.h>
-#include <stdlib.h>
-#include <time.h>
 
 ![](img/8cb3def1e3cf85963e7df78762b35dbf_2.png)
 
 ![](img/8cb3def1e3cf85963e7df78762b35dbf_3.png)
 
+```c
+#include <stdbool.h>
+#include <stdlib.h>
+#include <time.h>
 // 检查数组是否已排序
 bool in_order(int arr[], int len) {
     for (int i = 1; i < len; i++) {
@@ -129,14 +129,14 @@ void qsort(void *base, size_t nmemb, size_t size,
 
 ### 示例1：排序整数数组
 
-```c
-#include <stdio.h>
-#include <stdlib.h>
 
 ![](img/8cb3def1e3cf85963e7df78762b35dbf_5.png)
 
 ![](img/8cb3def1e3cf85963e7df78762b35dbf_7.png)
 
+```c
+#include <stdio.h>
+#include <stdlib.h>
 // 比较函数，用于升序排序整数
 int compare_ints(const void *a, const void *b) {
     // 将void指针转换为int指针，再解引用获取值

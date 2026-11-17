@@ -281,14 +281,14 @@ export default leaderMenu;
 
 首先，导入 `LeaderMenu` 组件并创建一个判断函数。
 
-```javascript
-// 在 view.js 中
-import leaderMenu from './components/LeaderMenu.js';
 
 ![](img/72c674e5898482865379c8508aff778e_9.png)
 
 ![](img/72c674e5898482865379c8508aff778e_10.png)
 
+```javascript
+// 在 view.js 中
+import leaderMenu from './components/LeaderMenu.js';
 // 辅助函数：判断分数是否足以进入排行榜
 const isTopFive = (score, topScores) => {
   // 如果排行榜不满5人，或者当前分数高于最后一名，则返回true

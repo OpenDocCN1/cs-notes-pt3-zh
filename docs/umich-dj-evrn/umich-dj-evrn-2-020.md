@@ -226,6 +226,13 @@ class CreateForm(forms.ModelForm):
 
 以下是`form.html`模板的关键部分：
 
+
+![](img/a1805a9eacddcae358ce378cd48505b8_10.png)
+
+![](img/a1805a9eacddcae358ce378cd48505b8_12.png)
+
+![](img/a1805a9eacddcae358ce378cd48505b8_14.png)
+
 ```html
 <!-- form.html -->
 <form method="post" enctype="multipart/form-data">
@@ -234,13 +241,6 @@ class CreateForm(forms.ModelForm):
     <button type="submit" class="btn btn-primary">Submit</button>
     <a href="{% url ‘pics:all‘ %}" class="btn btn-secondary">Cancel</a>
 </form>
-
-![](img/a1805a9eacddcae358ce378cd48505b8_10.png)
-
-![](img/a1805a9eacddcae358ce378cd48505b8_12.png)
-
-![](img/a1805a9eacddcae358ce378cd48505b8_14.png)
-
 <script>
 $(document).ready(function(){
     $(‘#upload-form‘).submit(function(event){
@@ -278,12 +278,17 @@ $(document).ready(function(){
 
 ![](img/a1805a9eacddcae358ce378cd48505b8_24.png)
 
-```html
-<!-- detail.html -->
-{% extends ‘base_bootstrap.html‘ %}
 
 ![](img/a1805a9eacddcae358ce378cd48505b8_25.png)
 
+
+![](img/a1805a9eacddcae358ce378cd48505b8_27.png)
+
+![](img/a1805a9eacddcae358ce378cd48505b8_29.png)
+
+```html
+<!-- detail.html -->
+{% extends ‘base_bootstrap.html‘ %}
 {% block content %}
 <h1>{{ pic.title }}</h1>
 <p>{{ pic.text }}</p>
@@ -292,11 +297,6 @@ $(document).ready(function(){
      style="max-width: 200px; float: right;"
      onclick="document.getElementById(‘overlay‘).style.display = ‘block‘"
      alt="{{ pic.title }}">
-
-![](img/a1805a9eacddcae358ce378cd48505b8_27.png)
-
-![](img/a1805a9eacddcae358ce378cd48505b8_29.png)
-
 <!-- 全屏遮罩层，初始隐藏 -->
 <div id="overlay" style="position: fixed; display: none; ..." onclick="this.style.display=‘none‘">
     <!-- 大图 -->

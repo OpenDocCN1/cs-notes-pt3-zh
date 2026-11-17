@@ -283,12 +283,6 @@ switch (lastName)
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_150.png)
 
 以下是声明和初始化数组的几种方式：
-```csharp
-// 方式1：先声明，后逐个赋值
-int[] scores = new int[5];
-scores[0] = 100;
-scores[1] = 95;
-// … 赋值 scores[2], scores[3], scores[4]
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_152.png)
 
@@ -300,6 +294,12 @@ scores[1] = 95;
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_160.png)
 
+```csharp
+// 方式1：先声明，后逐个赋值
+int[] scores = new int[5];
+scores[0] = 100;
+scores[1] = 95;
+// … 赋值 scores[2], scores[3], scores[4]
 // 方式2：使用初始化器语法
 int[] fasterScores = new int[] { 100, 95, 90, 85, 80 };
 // 或者更简洁的写法

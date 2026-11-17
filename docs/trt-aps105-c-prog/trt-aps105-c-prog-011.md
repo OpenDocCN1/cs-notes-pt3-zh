@@ -168,6 +168,11 @@ int main() {
 
 一种绕过作用域限制（但不推荐）的方法是使用**全局变量**。全局变量在所有函数之外声明，其作用域从声明处开始直到文件结束，可以被任何函数访问和修改。
 
+
+![](img/f322d9aed16b448fd9f16ac12d2c0431_2.png)
+
+![](img/f322d9aed16b448fd9f16ac12d2c0431_4.png)
+
 ```c
 #include <stdio.h>
 
@@ -178,11 +183,6 @@ void swap(void) {
     a = b;
     b = temp;
 }
-
-![](img/f322d9aed16b448fd9f16ac12d2c0431_2.png)
-
-![](img/f322d9aed16b448fd9f16ac12d2c0431_4.png)
-
 int main() {
     a = 1; b = 2;
     swap();

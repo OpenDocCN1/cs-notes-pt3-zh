@@ -57,12 +57,6 @@
 
 ![](img/d8aac71e53b5447a58cc84cf3b92bf5b_22.png)
 
-```
-形式1:
-P ↔ Q
-P
-——— (=E)
-Q
 
 ![](img/d8aac71e53b5447a58cc84cf3b92bf5b_23.png)
 
@@ -72,6 +66,12 @@ Q
 
 ![](img/d8aac71e53b5447a58cc84cf3b92bf5b_27.png)
 
+```
+形式1:
+P ↔ Q
+P
+——— (=E)
+Q
 形式2:
 P ↔ Q
 Q

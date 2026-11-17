@@ -48,14 +48,14 @@ pid_t wait(int *status);
 ![](img/d0b5b69e3a7cf6895e74774f875e77e9_7.png)
 
 以下是一个使用 `wait` 的代码示例及其解析：
+
+![](img/d0b5b69e3a7cf6895e74774f875e77e9_9.png)
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
-
-![](img/d0b5b69e3a7cf6895e74774f875e77e9_9.png)
-
 int main() {
     pid_t pid = fork();
 

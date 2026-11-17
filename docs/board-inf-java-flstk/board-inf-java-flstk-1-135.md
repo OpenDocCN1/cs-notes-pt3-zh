@@ -26,30 +26,30 @@
 
 首先，我们可以访问 `document` 对象的各种属性。以下是一些基本示例：
 
-```javascript
-// 获取并打印当前页面的域名
-console.log(document.domain);
 
 ![](img/e3d62bedadbc423dac23fd386405a16d_9.png)
 
-// 获取并打印当前页面的完整 URL
-console.log(document.URL);
 
 ![](img/e3d62bedadbc423dac23fd386405a16d_11.png)
 
-// 获取并修改页面标题
-document.title = "DOM 操作";
-console.log(document.title);
 
 ![](img/e3d62bedadbc423dac23fd386405a16d_13.png)
 
-// 获取整个文档的 body 元素
-console.log(document.body);
 
 ![](img/e3d62bedadbc423dac23fd386405a16d_15.png)
 
 ![](img/e3d62bedadbc423dac23fd386405a16d_17.png)
 
+```javascript
+// 获取并打印当前页面的域名
+console.log(document.domain);
+// 获取并打印当前页面的完整 URL
+console.log(document.URL);
+// 获取并修改页面标题
+document.title = "DOM 操作";
+console.log(document.title);
+// 获取整个文档的 body 元素
+console.log(document.body);
 // 获取整个文档的 head 元素
 console.log(document.head);
 ```
@@ -75,12 +75,12 @@ console.log(document.head);
 
 ![](img/e3d62bedadbc423dac23fd386405a16d_28.png)
 
-```javascript
-// 1. 选中 body 元素
-const body = document.body;
 
 ![](img/e3d62bedadbc423dac23fd386405a16d_30.png)
 
+```javascript
+// 1. 选中 body 元素
+const body = document.body;
 // 2. 向 body 追加文本
 body.append("Hello");
 ```
@@ -95,12 +95,12 @@ body.append("Hello");
 
 除了添加文本，我们还可以创建全新的 HTML 元素并将其添加到文档中。以下是创建一个 `<div>` 元素并添加文本的步骤：
 
-```javascript
-// 1. 创建一个新的 div 元素
-const div = document.createElement('div');
 
 ![](img/e3d62bedadbc423dac23fd386405a16d_36.png)
 
+```javascript
+// 1. 创建一个新的 div 元素
+const div = document.createElement('div');
 // 2. 为这个 div 元素设置文本内容
 div.innerText = "这是一个用 JavaScript 创建的 div";
 

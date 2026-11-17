@@ -117,23 +117,23 @@ print(paste0("hello, ", name))
 
 假设我们为三个候选人（Mario, Peach, Bowser）统计票数。我们需要从用户那里获取每位候选人的得票数，然后计算总票数。
 
-```r
-# Get votes for each candidate
-mario <- as.integer(readline("Enter votes for Mario: "))
-peach <- as.integer(readline("Enter votes for Peach: "))
-bowser <- as.integer(readline("Enter votes for Bowser: "))
 
 ![](img/33d1fc99e50bfab6f40912495b0158a2_35.png)
 
 ![](img/33d1fc99e50bfab6f40912495b0158a2_37.png)
 
-# Calculate total votes
-total <- sum(mario, peach, bowser)
 
 ![](img/33d1fc99e50bfab6f40912495b0158a2_39.png)
 
 ![](img/33d1fc99e50bfab6f40912495b0158a2_40.png)
 
+```r
+# Get votes for each candidate
+mario <- as.integer(readline("Enter votes for Mario: "))
+peach <- as.integer(readline("Enter votes for Peach: "))
+bowser <- as.integer(readline("Enter votes for Bowser: "))
+# Calculate total votes
+total <- sum(mario, peach, bowser)
 # Print the result
 print(paste("Total votes:", total))
 ```

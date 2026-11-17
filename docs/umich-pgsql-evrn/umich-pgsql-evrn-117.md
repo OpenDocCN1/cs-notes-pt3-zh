@@ -31,19 +31,19 @@
 
 首先，我们需要导入必要的库并建立与Elasticsearch服务的连接。我们会从环境变量中读取配置信息，以确保安全。
 
-```python
-import os
-from elasticsearch import Elasticsearch
 
 ![](img/829e6cd757e6a2ce8a5605e1623d92a7_9.png)
 
+
+![](img/829e6cd757e6a2ce8a5605e1623d92a7_11.png)
+
+```python
+import os
+from elasticsearch import Elasticsearch
 # 从环境变量读取配置（避免在代码中硬编码敏感信息）
 host = os.environ.get('ES_HOST')
 user = os.environ.get('ES_USER')
 password = os.environ.get('ES_PASSWORD')
-
-![](img/829e6cd757e6a2ce8a5605e1623d92a7_11.png)
-
 # 创建Elasticsearch客户端实例
 es = Elasticsearch(
     hosts=[host],
@@ -61,11 +61,11 @@ es = Elasticsearch(
 
 在插入数据之前，我们通常需要初始化索引。为了演示的清晰性，我们会先删除可能已存在的同名索引，然后创建一个新索引。
 
-```python
-index_name = "demo-tweets"
 
 ![](img/829e6cd757e6a2ce8a5605e1623d92a7_15.png)
 
+```python
+index_name = "demo-tweets"
 # 如果索引已存在，则删除它
 if es.indices.exists(index=index_name):
     es.indices.delete(index=index_name)
@@ -120,13 +120,13 @@ print("插入成功:", response['result'])
 
 ![](img/829e6cd757e6a2ce8a5605e1623d92a7_24.png)
 
+
+![](img/829e6cd757e6a2ce8a5605e1623d92a7_25.png)
+
 ```python
 # 1. 通过主键检索文档
 get_response = es.get(index=index_name, id="abc123")
 print("检索到的文档:", get_response['_source'])
-
-![](img/829e6cd757e6a2ce8a5605e1623d92a7_25.png)
-
 # 2. 刷新索引
 # 此操作会等待所有索引操作完成，确保新文档可被搜索。
 # 注意：在生产环境中，频繁刷新可能影响性能，此处仅用于演示。

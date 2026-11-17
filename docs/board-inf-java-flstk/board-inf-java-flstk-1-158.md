@@ -63,6 +63,9 @@ export class AppComponent {
 接下来，在 `app.component.html` 模板文件中使用 `*ngIf` 指令。
 
 以下是模板内容：
+
+![](img/b83f4db66538c0ac3c35f15ea838b074_13.png)
+
 ```html
 <h2>*ngIf 指令示例</h2>
 
@@ -70,9 +73,6 @@ export class AppComponent {
 <p *ngIf="showMessage">
   这段信息会根据条件渲染。
 </p>
-
-![](img/b83f4db66538c0ac3c35f15ea838b074_13.png)
-
 <!-- 点击按钮触发 toggleMessage 方法 -->
 <button (click)="toggleMessage()">切换信息显示</button>
 ```

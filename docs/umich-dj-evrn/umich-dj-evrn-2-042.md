@@ -33,13 +33,13 @@
 
 ![](img/93f7b6f482b038f42d521918ac98ff02_15.png)
 
+
+![](img/93f7b6f482b038f42d521918ac98ff02_17.png)
+
 ```python
 # favs/models.py
 from django.db import models
 from django.contrib.auth.models import User
-
-![](img/93f7b6f482b038f42d521918ac98ff02_17.png)
-
 class Thing(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
@@ -91,15 +91,15 @@ class Fav(models.Model):
 
 URL配置将特定的网页地址映射到处理该请求的视图函数。以下是本项目的主要URL模式：
 
-```python
-# favs/urls.py
-from django.urls import path
-from . import views
 
 ![](img/93f7b6f482b038f42d521918ac98ff02_31.png)
 
 ![](img/93f7b6f482b038f42d521918ac98ff02_32.png)
 
+```python
+# favs/urls.py
+from django.urls import path
+from . import views
 urlpatterns = [
     path(‘’, views.ThingListView.as_view(), name=‘thing_list’),
     path(‘thing/<int:pk>’, views.ThingDetailView.as_view(), name=‘thing_detail’),
@@ -280,6 +280,11 @@ function favPost(url, thing_id) {
 
 ![](img/93f7b6f482b038f42d521918ac98ff02_62.png)
 
+
+![](img/93f7b6f482b038f42d521918ac98ff02_64.png)
+
+![](img/93f7b6f482b038f42d521918ac98ff02_65.png)
+
 ```python
 # favs/views.py
 from django.views.decorators.csrf import csrf_exempt
@@ -287,11 +292,6 @@ from django.utils.decorators import method_decorator
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
-
-![](img/93f7b6f482b038f42d521918ac98ff02_64.png)
-
-![](img/93f7b6f482b038f42d521918ac98ff02_65.png)
-
 @method_decorator(csrf_exempt, name=‘dispatch‘)
 class AddFavoriteView(LoginRequiredMixin, View):
     def post(self, request, pk):

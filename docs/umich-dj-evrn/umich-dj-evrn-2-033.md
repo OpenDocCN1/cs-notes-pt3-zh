@@ -34,18 +34,18 @@
 
 以下是实现这个模型的代码示例。我们首先定义 `Person` 和 `Course` 模型，然后定义包含额外字段的 `Membership` 模型。
 
-```python
-from django.db import models
 
 ![](img/16efea47d2ec2815fcf84bcc32918293_9.png)
 
+
+![](img/16efea47d2ec2815fcf84bcc32918293_11.png)
+
+```python
+from django.db import models
 class Person(models.Model):
     name = models.CharField(max_length=128)
     def __str__(self):
         return self.name
-
-![](img/16efea47d2ec2815fcf84bcc32918293_11.png)
-
 class Course(models.Model):
     title = models.CharField(max_length=128)
     members = models.ManyToManyField(Person, through='Membership')
@@ -97,6 +97,9 @@ class Membership(models.Model):
 2.  然后，创建一个人（Person）对象和一门课程（Course）对象。
 3.  最后，通过创建 `Membership` 对象来将这个人以特定角色（如讲师）添加到课程中。
 
+
+![](img/16efea47d2ec2815fcf84bcc32918293_17.png)
+
 ```python
 # 在 Django Shell 中操作
 from many.models import Person, Course, Membership
@@ -106,9 +109,6 @@ p = Person(name="Dr. Chuck")
 p.save()
 c = Course(title="Python for Everybody")
 c.save()
-
-![](img/16efea47d2ec2815fcf84bcc32918293_17.png)
-
 # 初始时，课程没有会员
 print(c.members.all())  # 输出：<QuerySet []>
 

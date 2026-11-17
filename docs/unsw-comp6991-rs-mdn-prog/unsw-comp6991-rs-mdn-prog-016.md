@@ -235,9 +235,6 @@ FFI 允许 Rust 程序与 C 库在同一进程中交互，这非常强大但也�
 
 首先，需要在Rust中声明C库提供的函数和类型。这通过 `extern` 块完成。
 
-```rust
-use std::ffi::CString;
-use std::os::raw::{c_void, c_long, c_char};
 
 ![](img/f64999e9bb3be52c75cf9a34aa5850b1_41.png)
 
@@ -247,6 +244,12 @@ use std::os::raw::{c_void, c_long, c_char};
 
 ![](img/f64999e9bb3be52c75cf9a34aa5850b1_47.png)
 
+
+![](img/f64999e9bb3be52c75cf9a34aa5850b1_49.png)
+
+```rust
+use std::ffi::CString;
+use std::os::raw::{c_void, c_long, c_char};
 // 定义C库中使用的类型
 type CURL = c_void;
 enum CURLoption {
@@ -256,9 +259,6 @@ enum CURLcode {
     CURLE_OK = 0,
     // ... 其他代码
 }
-
-![](img/f64999e9bb3be52c75cf9a34aa5850b1_49.png)
-
 // 声明外部C函数
 #[link(name = "curl")]
 extern "C" {

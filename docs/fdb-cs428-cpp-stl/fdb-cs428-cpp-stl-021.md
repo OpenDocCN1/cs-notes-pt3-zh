@@ -100,11 +100,11 @@ std::for_each(vec.begin(), vec.end(),
 
 ![](img/d889eb1916173ae7b05efd39f2b79e53_1.png)
 
-```cpp
-bool my_function(int i) { return i > 10; } // 普通函数
 
 ![](img/d889eb1916173ae7b05efd39f2b79e53_3.png)
 
+```cpp
+bool my_function(int i) { return i > 10; } // 普通函数
 int main() {
     bool (*ptr_func)(int) = &my_function; // 定义函数指针
     bool result = ptr_func(11); // 通过指针调用函数

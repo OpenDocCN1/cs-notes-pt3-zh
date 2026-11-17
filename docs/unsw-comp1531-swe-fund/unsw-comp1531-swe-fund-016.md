@@ -24,12 +24,17 @@
 
 ![](img/26c5d7975cd77b4ac458eb3afb3519a5_13.png)
 
-```javascript
-import promptSync from 'prompt-sync';
-const prompt = promptSync({});
 
 ![](img/26c5d7975cd77b4ac458eb3afb3519a5_15.png)
 
+
+![](img/26c5d7975cd77b4ac458eb3afb3519a5_17.png)
+
+![](img/26c5d7975cd77b4ac458eb3afb3519a5_18.png)
+
+```javascript
+import promptSync from 'prompt-sync';
+const prompt = promptSync({});
 function sqrt(x: number): number {
     if (x < 0) {
         console.error('Error: Input less than 0');
@@ -37,11 +42,6 @@ function sqrt(x: number): number {
     }
     return Math.pow(x, 0.5);
 }
-
-![](img/26c5d7975cd77b4ac458eb3afb3519a5_17.png)
-
-![](img/26c5d7975cd77b4ac458eb3afb3519a5_18.png)
-
 const input = prompt('Please enter a number: ');
 console.log(sqrt(parseInt(input)));
 ```
@@ -152,11 +152,11 @@ while (!success) {
 
 在编写单元测试时，我们也需要测试函数是否会按预期抛出异常。以下是使用 Jest 测试框架的示例：
 
-```javascript
-import { sqrt } from ‘./sqrt’;
 
 ![](img/26c5d7975cd77b4ac458eb3afb3519a5_48.png)
 
+```javascript
+import { sqrt } from ‘./sqrt’;
 describe(‘sqrt function‘, () => {
     test(‘sqrt of positive number‘, () => {
         expect(sqrt(4)).toBe(2);

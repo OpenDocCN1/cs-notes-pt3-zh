@@ -79,9 +79,6 @@ This is the email body.
 ![](img/a8f663f95896eb52ada4fd5190f84b82_24.png)
 
 连接和初始化索引的代码如下：
-```python
-es = elasticsearch.Elasticsearch([{'host': host, 'port': port, 'scheme': scheme}], basic_auth=(key, secret))
-index_name = “mail_index”
 
 ![](img/a8f663f95896eb52ada4fd5190f84b82_26.png)
 
@@ -89,12 +86,15 @@ index_name = “mail_index”
 
 ![](img/a8f663f95896eb52ada4fd5190f84b82_28.png)
 
-# 删除旧索引（演示用）
-if es.indices.exists(index=index_name):
-    es.indices.delete(index=index_name)
 
 ![](img/a8f663f95896eb52ada4fd5190f84b82_30.png)
 
+```python
+es = elasticsearch.Elasticsearch([{'host': host, 'port': port, 'scheme': scheme}], basic_auth=(key, secret))
+index_name = “mail_index”
+# 删除旧索引（演示用）
+if es.indices.exists(index=index_name):
+    es.indices.delete(index=index_name)
 # 创建新索引
 es.indices.create(index=index_name)
 ```

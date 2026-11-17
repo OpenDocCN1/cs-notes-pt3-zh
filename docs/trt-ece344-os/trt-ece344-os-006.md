@@ -106,6 +106,9 @@ int main(void) {
 
 以下程序演示了如何捕获 `SIGINT` 和 `SIGTERM` 信号，并忽略它们。
 
+
+![](img/1aa07fb742feec20ec39bc88f3dd92f2_21.png)
+
 ```c
 #include <signal.h>
 #include <stdio.h>
@@ -125,9 +128,6 @@ void register_signal(int signal_number) {
         _exit(1);
     }
 }
-
-![](img/1aa07fb742feec20ec39bc88f3dd92f2_21.png)
-
 int main(void) {
     register_signal(SIGINT);
     register_signal(SIGTERM);

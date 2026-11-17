@@ -127,6 +127,16 @@ npm install
 
 ![](img/9cfac7f54709a60a64f397cb3bb38731_16.png)
 
+
+![](img/9cfac7f54709a60a64f397cb3bb38731_18.png)
+
+![](img/9cfac7f54709a60a64f397cb3bb38731_19.png)
+
+![](img/9cfac7f54709a60a64f397cb3bb38731_20.png)
+
+
+![](img/9cfac7f54709a60a64f397cb3bb38731_22.png)
+
 ```javascript
 // 导入所需模块
 const express = require(‘express‘);
@@ -136,18 +146,8 @@ const http = require(‘http‘); // 需要 http 模块来创建服务器
 const app = express();
 // 使用 http 模块基于 Express 应用创建服务器
 const server = http.createServer(app);
-
-![](img/9cfac7f54709a60a64f397cb3bb38731_18.png)
-
-![](img/9cfac7f54709a60a64f397cb3bb38731_19.png)
-
-![](img/9cfac7f54709a60a64f397cb3bb38731_20.png)
-
 // 设置静态文件中间件，public 目录下的文件可通过 HTTP 直接访问
 app.use(express.static(‘public‘));
-
-![](img/9cfac7f54709a60a64f397cb3bb38731_22.png)
-
 // 服务器开始监听 3000 端口
 server.listen(3000, () => {
     console.log(‘Server listening on port 3000‘);
@@ -213,23 +213,28 @@ npm install socket.io
 
 修改 `app.js`，引入 Socket.IO 并将其绑定到我们的 HTTP 服务器上。
 
+
+![](img/9cfac7f54709a60a64f397cb3bb38731_43.png)
+
+
+![](img/9cfac7f54709a60a64f397cb3bb38731_45.png)
+
+
+![](img/9cfac7f54709a60a64f397cb3bb38731_47.png)
+
+
+![](img/9cfac7f54709a60a64f397cb3bb38731_49.png)
+
+![](img/9cfac7f54709a60a64f397cb3bb38731_50.png)
+
 ```javascript
 const express = require(‘express‘);
 const http = require(‘http‘);
 const socketIo = require(‘socket.io‘); // 导入 Socket.IO
-
-![](img/9cfac7f54709a60a64f397cb3bb38731_43.png)
-
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server); // 将 Socket.IO 绑定到 HTTP 服务器
-
-![](img/9cfac7f54709a60a64f397cb3bb38731_45.png)
-
 app.use(express.static(‘public‘));
-
-![](img/9cfac7f54709a60a64f397cb3bb38731_47.png)
-
 // 监听客户端连接事件
 io.on(‘connection‘, (socket) => {
     console.log(‘A user connected‘);
@@ -239,11 +244,6 @@ io.on(‘connection‘, (socket) => {
         console.log(‘User disconnected‘);
     });
 });
-
-![](img/9cfac7f54709a60a64f397cb3bb38731_49.png)
-
-![](img/9cfac7f54709a60a64f397cb3bb38731_50.png)
-
 server.listen(3000, () => {
     console.log(‘Server listening on port 3000‘);
 });
@@ -308,15 +308,15 @@ const socket = io();
 
 首先，在客户端处理表单提交，将输入框中的消息发送给服务器。更新 `public/scripts/chat.js`：
 
+
+![](img/9cfac7f54709a60a64f397cb3bb38731_73.png)
+
 ```javascript
 const socket = io();
 // 获取 DOM 元素
 const form = document.getElementById(‘form‘);
 const input = document.getElementById(‘input‘);
 const chat = document.getElementById(‘chat‘); // 消息列表容器
-
-![](img/9cfac7f54709a60a64f397cb3bb38731_73.png)
-
 // 监听表单提交事件
 form.addEventListener(‘submit‘, (event) => {
     event.preventDefault(); // 阻止表单默认的 HTTP 提交行为

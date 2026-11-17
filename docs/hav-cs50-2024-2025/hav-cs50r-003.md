@@ -295,13 +295,13 @@ casein_chicks <- subset(chicks, feed == "casein")
 
 为了在后续分析中避免反复使用`na.rm = TRUE`，最好先移除体重为`NA`的行。我们可以使用`is.na()`函数来检测`NA`值。
 
+
+![](img/5fbdff023c27189e23ec53d7f4eda959_53.png)
+
 ```r
 # 找出体重不是NA的行
 weight_not_na <- !is.na(chicks$weight)
 chicks <- chicks[weight_not_na, ]
-
-![](img/5fbdff023c27189e23ec53d7f4eda959_53.png)
-
 # 或者使用 subset 函数
 chicks <- subset(chicks, !is.na(weight))
 ```

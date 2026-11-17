@@ -168,14 +168,14 @@ public class Stack {
 3.  依次从栈中 `pop` 出所有余数并打印，由于栈的 LIFO 特性，自然就得到了正确的从高位到低位的二进制序列。
 
 以下是解决方案的核心代码：
-```java
-import java.util.Scanner;
-import java.util.Stack; // 这里可以使用java.util.Stack或我们自己实现的Stack
 
 ![](img/6758e67e9a756ca50752db0efa9141fc_2.png)
 
 ![](img/6758e67e9a756ca50752db0efa9141fc_4.png)
 
+```java
+import java.util.Scanner;
+import java.util.Stack; // 这里可以使用java.util.Stack或我们自己实现的Stack
 public class BinaryConversion {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

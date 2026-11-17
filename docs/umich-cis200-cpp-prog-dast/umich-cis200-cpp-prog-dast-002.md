@@ -130,6 +130,9 @@ g++ [源代码文件.cpp] -o [输出程序名]
 ![](img/c0f058e449443410ad2f6fd63351f587_44.png)
 
 以下是`PowerballTicket`类的基本框架代码：
+
+![](img/c0f058e449443410ad2f6fd63351f587_46.png)
+
 ```cpp
 // PowerballTicket.h
 #include <vector>
@@ -139,9 +142,6 @@ using namespace std;
 class PowerballTicket {
 private:
     vector<int> numbers; // 私有属性，存储号码
-
-![](img/c0f058e449443410ad2f6fd63351f587_46.png)
-
 public:
     // 构造函数1：生成随机号码
     PowerballTicket();

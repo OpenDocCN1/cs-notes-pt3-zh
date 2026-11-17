@@ -66,6 +66,11 @@ Rust编译器会在你违反这些规则时给出明确的错误提示，这比�
 
 切片的美妙之处在于，它可以很容易地从数组或向量创建，并且可以获取子序列。
 
+
+![](img/df16baaba13d0da1fc4ef9f4e463a28a_26.png)
+
+![](img/df16baaba13d0da1fc4ef9f4e463a28a_27.png)
+
 ```rust
 let arr = [1, 2, 3, 4, 5];
 let vec = vec![1, 2, 3, 4, 5];
@@ -73,11 +78,6 @@ let vec = vec![1, 2, 3, 4, 5];
 // 创建整个数组/向量的切片
 let slice_from_arr: &[i32] = &arr[..];
 let slice_from_vec: &[i32] = &vec[..];
-
-![](img/df16baaba13d0da1fc4ef9f4e463a28a_26.png)
-
-![](img/df16baaba13d0da1fc4ef9f4e463a28a_27.png)
-
 // 创建子切片 (索引1到3，不包含4)
 let sub_slice: &[i32] = &arr[1..4]; // 包含元素 [2, 3, 4]
 ```
@@ -200,13 +200,13 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 
 ![](img/df16baaba13d0da1fc4ef9f4e463a28a_72.png)
 
+
+![](img/df16baaba13d0da1fc4ef9f4e463a28a_74.png)
+
 ```rust
 struct StructWithBorrow<'a> {
     x: &'a str,
 }
-
-![](img/df16baaba13d0da1fc4ef9f4e463a28a_74.png)
-
 enum EnumWithBorrow<'a> {
     SomeVariant(&'a str),
 }

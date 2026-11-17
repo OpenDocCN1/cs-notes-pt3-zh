@@ -34,14 +34,14 @@
 
 一个基本的C++程序结构包含预处理指令和主函数。
 
-```cpp
-#include <iostream>
-using namespace std;
 
 ![](img/6b3cc1a9ec6918dde64b75212ab80f20_16.png)
 
 ![](img/6b3cc1a9ec6918dde64b75212ab80f20_18.png)
 
+```cpp
+#include <iostream>
+using namespace std;
 int main() {
     // 你的代码写在这里
     return 0;
@@ -55,12 +55,12 @@ int main() {
 
 让我们写一个打印“Hello World”的程序。
 
-```cpp
-#include <iostream>
-using namespace std;
 
 ![](img/6b3cc1a9ec6918dde64b75212ab80f20_20.png)
 
+```cpp
+#include <iostream>
+using namespace std;
 int main() {
     cout << "Hello World";
     return 0;

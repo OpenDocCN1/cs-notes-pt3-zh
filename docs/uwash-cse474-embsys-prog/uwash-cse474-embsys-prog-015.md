@@ -60,6 +60,9 @@ FreeRTOS的调度器节拍默认最快为15毫秒，它通常使用芯片的**�
 
 以下是使用FreeRTOS创建和运行任务的基本代码结构：
 
+
+![](img/3fe3db080d806f2c710d921dd4f374c2_8.png)
+
 ```c
 #include <Arduino_FreeRTOS.h>
 
@@ -84,9 +87,6 @@ void TaskCounter(void *pvParameters) {
         vTaskDelay(50); // 延迟50个调度节拍（约750毫秒）
     }
 }
-
-![](img/3fe3db080d806f2c710d921dd4f374c2_8.png)
-
 void setup() {
     // 创建任务
     xTaskCreate(TaskBlink, "Blink", 128, NULL, 3, NULL);

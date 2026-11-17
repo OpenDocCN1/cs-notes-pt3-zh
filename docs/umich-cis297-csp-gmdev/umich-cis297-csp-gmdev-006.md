@@ -76,12 +76,12 @@ public class Student
 
 ![](img/6fd630df18ef8be921ebbea0afd081fa_24.png)
 
-```csharp
-// 假设 `section` 是一个可能为 null 的 Section 对象
-List<Student> studentList = section?.GetStudents();
 
 ![](img/6fd630df18ef8be921ebbea0afd081fa_26.png)
 
+```csharp
+// 假设 `section` 是一个可能为 null 的 Section 对象
+List<Student> studentList = section?.GetStudents();
 // 如果 section 为 null，则 studentList 也为 null，不会抛出异常。
 ```
 
@@ -104,6 +104,11 @@ List<Student> students = section.GetStudents() ?? new List<Student>();
 
 从C# 8.0开始，你可以使用 `?` 后缀显式声明一个引用类型可以为 `null`。这有助于编译器提供警告，提醒你进行空值检查。
 
+
+![](img/6fd630df18ef8be921ebbea0afd081fa_34.png)
+
+![](img/6fd630df18ef8be921ebbea0afd081fa_36.png)
+
 ```csharp
 public class Student
 {
@@ -111,11 +116,6 @@ public class Student
     public string? PhoneNumber { get; set; } // PhoneNumber 可能为 null
     public string? Email { get; set; }       // Email 可能为 null
 }
-
-![](img/6fd630df18ef8be921ebbea0afd081fa_34.png)
-
-![](img/6fd630df18ef8be921ebbea0afd081fa_36.png)
-
 // 使用时进行检查
 if (student.Email != null)
 {
@@ -274,14 +274,19 @@ public class Triangle : Polygon
 
 多态允许我们将派生类对象视为其基类类型。这意味着我们可以创建一个基类类型的集合（如 `List<Polygon>`），其中可以包含任何派生类（`Rectangle`, `Triangle`）的对象。当调用一个虚方法（如 `Area()`）时，C# 会自动调用对象实际类型的重写版本。
 
-```csharp
-// 创建一个多边形列表
-List<Polygon> shapes = new List<Polygon>();
 
 ![](img/6fd630df18ef8be921ebbea0afd081fa_58.png)
 
 ![](img/6fd630df18ef8be921ebbea0afd081fa_60.png)
 
+
+![](img/6fd630df18ef8be921ebbea0afd081fa_62.png)
+
+![](img/6fd630df18ef8be921ebbea0afd081fa_64.png)
+
+```csharp
+// 创建一个多边形列表
+List<Polygon> shapes = new List<Polygon>();
 // 添加不同类型的多边形
 shapes.Add(new Rectangle("我的矩形", 5, 3));
 shapes.Add(new Triangle("我的三角形"));
@@ -289,11 +294,6 @@ shapes.Add(new Triangle("我的三角形"));
 shapes[1].SetSideLength(0, 3);
 shapes[1].SetSideLength(1, 4);
 shapes[1].SetSideLength(2, 5);
-
-![](img/6fd630df18ef8be921ebbea0afd081fa_62.png)
-
-![](img/6fd630df18ef8be921ebbea0afd081fa_64.png)
-
 // 遍历列表，多态确保调用正确的 Area 方法
 foreach (Polygon shape in shapes)
 {

@@ -80,16 +80,16 @@ CREATE TABLE longlist (
 
 以下是创建 `cards`（卡）表和 `stations`（车站）表的示例：
 
-```sql
-CREATE TABLE cards (
-    id INTEGER,
-    name TEXT
-);
 
 ![](img/32c8c9c87596bc3705e1c0f49d7a51e3_27.png)
 
 ![](img/32c8c9c87596bc3705e1c0f49d7a51e3_29.png)
 
+```sql
+CREATE TABLE cards (
+    id INTEGER,
+    name TEXT
+);
 CREATE TABLE stations (
     id INTEGER,
     name TEXT,
@@ -136,6 +136,9 @@ CREATE TABLE stations (
 
 ![](img/32c8c9c87596bc3705e1c0f49d7a51e3_43.png)
 
+
+![](img/32c8c9c87596bc3705e1c0f49d7a51e3_45.png)
+
 ```sql
 CREATE TABLE cards (
     id INTEGER PRIMARY KEY
@@ -146,9 +149,6 @@ CREATE TABLE stations (
     name TEXT NOT NULL UNIQUE,
     line TEXT NOT NULL
 );
-
-![](img/32c8c9c87596bc3705e1c0f49d7a51e3_45.png)
-
 CREATE TABLE swipes (
     id INTEGER PRIMARY KEY,
     card_id INTEGER,

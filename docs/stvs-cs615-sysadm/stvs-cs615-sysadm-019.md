@@ -41,12 +41,12 @@
 
 ![](img/6e1e1052ab0b6c945f559886f6d9fb00_13.png)
 
-```bash
-# 启动 fdisk 对指定磁盘进行操作
-sudo fdisk /dev/nvme1n1
 
 ![](img/6e1e1052ab0b6c945f559886f6d9fb00_15.png)
 
+```bash
+# 启动 fdisk 对指定磁盘进行操作
+sudo fdisk /dev/nvme1n1
 # 在 fdisk 交互界面中：
 # 输入 ‘n’ 创建新分区
 # 选择 ‘p’ 创建主分区
@@ -80,13 +80,13 @@ sudo mkfs.ext2 /dev/nvme1n1p2
 
 ![](img/6e1e1052ab0b6c945f559886f6d9fb00_23.png)
 
+
+![](img/6e1e1052ab0b6c945f559886f6d9fb00_25.png)
+
 ```bash
 # 创建挂载点并挂载分区
 sudo mkdir /mnt/test
 sudo mount /dev/nvme1n1p1 /mnt/test
-
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_25.png)
-
 # 创建测试文件
 sudo touch /mnt/test/our_test_file.txt
 ```

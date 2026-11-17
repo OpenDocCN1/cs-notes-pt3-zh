@@ -26,8 +26,9 @@
 
 让我们通过一个例子来具体操作。假设我们想显示一张在线图片，其URL为 `https://example.com/image.jpg`。
 
-```html
 <img src="https://example.com/image.jpg" alt="用户个人资料图片">
+
+```html
 ```
 
 ![](img/ca9e3e64d0bd16b92777e48fc3f283e9_3.png)

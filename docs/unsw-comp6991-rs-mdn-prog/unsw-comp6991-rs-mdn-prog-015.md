@@ -106,12 +106,12 @@ Rust通过`unsafe`关键字来提供底层操作能力。关键理念是：**不
 
 ![](img/c899e11dafb20a212ff9d2ea1c721164_56.png)
 
-```rust
-// 安全代码中无法调用
-// let s = String::from_utf8_unchecked(invalid_bytes);
 
 ![](img/c899e11dafb20a212ff9d2ea1c721164_58.png)
 
+```rust
+// 安全代码中无法调用
+// let s = String::from_utf8_unchecked(invalid_bytes);
 unsafe {
     // 调用者必须确保 bytes 是有效的 UTF-8
     let s = String::from_utf8_unchecked(valid_bytes);

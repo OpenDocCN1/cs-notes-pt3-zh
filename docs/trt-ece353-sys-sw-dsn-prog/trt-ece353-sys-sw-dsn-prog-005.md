@@ -132,14 +132,14 @@ int pipe(int pipefd[2]);
 
 ![](img/cd9b9944f21d6e9de91d952f21d62664_37.png)
 
+
+![](img/cd9b9944f21d6e9de91d952f21d62664_39.png)
+
 ```c
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
 #include <stdlib.h>
-
-![](img/cd9b9944f21d6e9de91d952f21d62664_39.png)
-
 void check(int ret, const char* msg) {
     if(ret < 0) { perror(msg); exit(EXIT_FAILURE); }
 }
@@ -193,6 +193,14 @@ int dup2(int oldfd, int newfd);
 ![](img/cd9b9944f21d6e9de91d952f21d62664_43.png)
 
 以下是实现双向通信子进程的框架：
+
+![](img/cd9b9944f21d6e9de91d952f21d62664_45.png)
+
+
+![](img/cd9b9944f21d6e9de91d952f21d62664_47.png)
+
+![](img/cd9b9944f21d6e9de91d952f21d62664_49.png)
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -200,15 +208,7 @@ int dup2(int oldfd, int newfd);
 #include <sys/wait.h>
 #include <assert.h>
 #include <string.h>
-
-![](img/cd9b9944f21d6e9de91d952f21d62664_45.png)
-
 void check(int ret, const char* msg) { if(ret < 0) { perror(msg); exit(EXIT_FAILURE); } }
-
-![](img/cd9b9944f21d6e9de91d952f21d62664_47.png)
-
-![](img/cd9b9944f21d6e9de91d952f21d62664_49.png)
-
 void child_proc(int in_pipe[2], int out_pipe[2], const char* program) {
     // 关闭父进程使用的管道端
     close(in_pipe[1]);  // 子进程不从in_pipe写

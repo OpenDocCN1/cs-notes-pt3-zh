@@ -108,15 +108,15 @@ C++中有三个主要的访问修饰符：`private`、`public`和`protected`。
 
 ![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_58.png)
 
-```cpp
-class Teacher {
-private:
-    double salary; // 私有数据，外部无法直接访问
 
 ![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_60.png)
 
 ![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_62.png)
 
+```cpp
+class Teacher {
+private:
+    double salary; // 私有数据，外部无法直接访问
 public:
     // 公有方法，用于安全地访问和修改私有数据
     void setSalary(double s) {
@@ -176,17 +176,17 @@ public:
 
 ![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_91.png)
 
+
+![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_93.png)
+
+![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_95.png)
+
 ```cpp
 class BankAccount {
 private:
     string accountId; // 隐藏内部数据
     string password;
     double balance;
-
-![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_93.png)
-
-![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_95.png)
-
 public:
     // 暴露安全的操作接口
     bool withdraw(double amount) {
@@ -222,6 +222,9 @@ public:
 
 ![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_108.png)
 
+
+![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_110.png)
+
 ```cpp
 class Teacher {
 public:
@@ -234,9 +237,6 @@ public:
         department = "计算机科学"; // 初始化部门
     }
 };
-
-![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_110.png)
-
 int main() {
     Teacher t1; // 创建对象时，构造函数自动执行
     cout << t1.department << endl; // 输出：计算机科学
@@ -327,6 +327,9 @@ public:
 
 ![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_137.png)
 
+
+![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_139.png)
+
 ```cpp
 // 基类（父类）
 class Person {
@@ -339,9 +342,6 @@ class Student : public Person { // ‘public’ 表示继承方式
 public:
     int rollNumber;
 };
-
-![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_139.png)
-
 int main() {
     Student s1;
     s1.name = "小明"; // 继承自Person的属性
@@ -419,6 +419,11 @@ int main() {
 
 ![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_154.png)
 
+
+![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_156.png)
+
+![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_158.png)
+
 ```cpp
 // 抽象类
 class Shape {
@@ -432,11 +437,6 @@ public:
         cout << "绘制圆形" << endl; // 实现纯虚函数
     }
 };
-
-![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_156.png)
-
-![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_158.png)
-
 int main() {
     // Shape s; // 错误！不能创建抽象类的对象
     Circle c;
@@ -454,6 +454,11 @@ int main() {
 
 ![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_160.png)
 
+
+![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_162.png)
+
+![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_164.png)
+
 ```cpp
 class Counter {
 public:
@@ -467,11 +472,6 @@ public:
     }
 };
 int Counter::count = 0; // 静态变量定义和初始化
-
-![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_162.png)
-
-![](img/489e2eadd5da3b1b0c0c78249ff6c8ec_164.png)
-
 int main() {
     Counter c1, c2, c3;
     Counter::showCount(); // 输出：对象总数: 3

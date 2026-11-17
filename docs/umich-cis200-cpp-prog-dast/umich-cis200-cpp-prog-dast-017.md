@@ -212,6 +212,17 @@ std::cout << number;           // 输出: 77 (原始变量也被修改)
 
 ![](img/ca0731a6e5357153f1812b304e484111_115.png)
 
+
+![](img/ca0731a6e5357153f1812b304e484111_117.png)
+
+![](img/ca0731a6e5357153f1812b304e484111_119.png)
+
+![](img/ca0731a6e5357153f1812b304e484111_121.png)
+
+![](img/ca0731a6e5357153f1812b304e484111_123.png)
+
+![](img/ca0731a6e5357153f1812b304e484111_124.png)
+
 ```cpp
 int numValues;
 std::cout << "你需要存储多少个整数？";
@@ -224,17 +235,6 @@ for (int i = 0; i < numValues; ++i) {
     std::cout << "输入值 " << i + 1 << ": ";
     std::cin >> values[i]; // 像普通数组一样使用
 }
-
-![](img/ca0731a6e5357153f1812b304e484111_117.png)
-
-![](img/ca0731a6e5357153f1812b304e484111_119.png)
-
-![](img/ca0731a6e5357153f1812b304e484111_121.png)
-
-![](img/ca0731a6e5357153f1812b304e484111_123.png)
-
-![](img/ca0731a6e5357153f1812b304e484111_124.png)
-
 // 使用完毕后，必须用 delete[] 释放内存
 delete[] values;
 values = nullptr; // 好习惯：释放后将指针置空
@@ -268,13 +268,13 @@ values = nullptr; // 好习惯：释放后将指针置空
 
 ![](img/ca0731a6e5357153f1812b304e484111_146.png)
 
+
+![](img/ca0731a6e5357153f1812b304e484111_148.png)
+
 ```cpp
 // 在栈上创建对象
 Rectangle smallRect(2, 3);
 std::cout << smallRect.getLength(); // 使用点运算符 .
-
-![](img/ca0731a6e5357153f1812b304e484111_148.png)
-
 // 在堆上动态创建对象
 Rectangle* bigRect = new Rectangle(5, 10);
 std::cout << bigRect->getLength(); // 使用箭头运算符 ->
@@ -302,9 +302,6 @@ bigRect = nullptr;
 
 ![](img/ca0731a6e5357153f1812b304e484111_156.png)
 
-```cpp
-int* values = new int[5]{10, 20, 30, 40, 50};
-int* current = values; // current 指向数组开头
 
 ![](img/ca0731a6e5357153f1812b304e484111_158.png)
 
@@ -314,6 +311,9 @@ int* current = values; // current 指向数组开头
 
 ![](img/ca0731a6e5357153f1812b304e484111_164.png)
 
+```cpp
+int* values = new int[5]{10, 20, 30, 40, 50};
+int* current = values; // current 指向数组开头
 for (int i = 0; i < 5; ++i) {
     std::cout << *current << " "; // 输出当前指向的值
     current++; // 指针向前移动一个‘int’大小的内存单元

@@ -51,6 +51,9 @@ let tensor = Tensor::randn(&[1000, 1000], (Kind::Float, device));
 接下来，我们看一个更实际的例子：使用卷积神经网络训练MNIST手写数字识别模型。
 
 以下是构建神经网络的关键代码结构：
+
+![](img/5a2c0226ebcb7841da8dda69202505b3_9.png)
+
 ```rust
 // 示例代码：定义卷积神经网络结构
 struct Net {
@@ -59,9 +62,6 @@ struct Net {
     fc1: nn::Linear,
     fc2: nn::Linear,
 }
-
-![](img/5a2c0226ebcb7841da8dda69202505b3_9.png)
-
 impl Net {
     fn new() -> Net {
         Net {

@@ -176,6 +176,11 @@ public class Player
 
 以下是开始新游戏和处理“检查”操作的简化代码：
 
+
+![](img/1e97eb832ff272c44cb012e8767b6762_39.png)
+
+![](img/1e97eb832ff272c44cb012e8767b6762_40.png)
+
 ```csharp
 private void btnNewHand_Click(object sender, EventArgs e)
 {
@@ -189,11 +194,6 @@ private void btnNewHand_Click(object sender, EventArgs e)
     UpdateMoneyLabels();
     // 更新UI显示
 }
-
-![](img/1e97eb832ff272c44cb012e8767b6762_39.png)
-
-![](img/1e97eb832ff272c44cb012e8767b6762_40.png)
-
 private void btnCheckCall_Click(object sender, EventArgs e)
 {
     if (btnCheckCall.Text == "Check")

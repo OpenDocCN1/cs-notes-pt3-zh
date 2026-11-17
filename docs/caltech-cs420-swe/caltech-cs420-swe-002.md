@@ -149,8 +149,6 @@ pip install requests
 ![](img/bb2ea41e84c7519b60956e42cfce338b_53.png)
 
 一个GET请求的示例代码如下：
-```python
-import requests
 
 ![](img/bb2ea41e84c7519b60956e42cfce338b_55.png)
 
@@ -162,12 +160,14 @@ import requests
 
 ![](img/bb2ea41e84c7519b60956e42cfce338b_62.png)
 
-BASE_URL = “https://pokeapi.co/api/v2"
 
 ![](img/bb2ea41e84c7519b60956e42cfce338b_64.png)
 
 ![](img/bb2ea41e84c7519b60956e42cfce338b_66.png)
 
+```python
+import requests
+BASE_URL = “https://pokeapi.co/api/v2"
 # 获取所有Pokemon
 response = requests.get(f“{BASE_URL}/pokemon”)
 print(response.status_code) # 输出状态码，如200
@@ -224,11 +224,11 @@ FastAPI是一个现代、高性能的Python Web框架，用于构建API。它简
 
 ### 1. 创建第一个端点
 首先，导入FastAPI并创建一个应用实例。
-```python
-from fastapi import FastAPI
 
 ![](img/bb2ea41e84c7519b60956e42cfce338b_74.png)
 
+```python
+from fastapi import FastAPI
 app = FastAPI()
 ```
 然后，使用装饰器定义一个处理根路径`/`的GET请求端点。
@@ -267,6 +267,12 @@ API通常需要接收参数。
 当需要客户端发送数据（如创建新项）时，使用请求体。**不要**在GET请求中使用请求体。
 
 FastAPI使用Pydantic库来定义请求体的数据结构，并自动进行数据验证和转换。
+
+![](img/bb2ea41e84c7519b60956e42cfce338b_80.png)
+
+
+![](img/bb2ea41e84c7519b60956e42cfce338b_82.png)
+
 ```python
 from pydantic import BaseModel
 from typing import Optional
@@ -276,13 +282,7 @@ class Item(BaseModel):
     description: Optional[str] = None
     price: float
     tax: Optional[float] = None
-
-![](img/bb2ea41e84c7519b60956e42cfce338b_80.png)
-
 items_db = []
-
-![](img/bb2ea41e84c7519b60956e42cfce338b_82.png)
-
 @app.post(“/items/”, status_code=201)
 async def create_item(item: Item):
     # 检查是否已存在同名项
@@ -298,9 +298,6 @@ async def create_item(item: Item):
 
 ### 4. 后台任务与异步操作
 对于需要长时间处理但客户端无需立即等待结果的任务，可以使用后台任务。
-```python
-from fastapi import BackgroundTasks
-import time
 
 ![](img/bb2ea41e84c7519b60956e42cfce338b_86.png)
 
@@ -308,9 +305,6 @@ import time
 
 ![](img/bb2ea41e84c7519b60956e42cfce338b_90.png)
 
-def delayed_print(message: str):
-    time.sleep(10) # 模拟耗时操作
-    print(f“Delayed message: {message}”)
 
 ![](img/bb2ea41e84c7519b60956e42cfce338b_92.png)
 
@@ -318,6 +312,12 @@ def delayed_print(message: str):
 
 ![](img/bb2ea41e84c7519b60956e42cfce338b_96.png)
 
+```python
+from fastapi import BackgroundTasks
+import time
+def delayed_print(message: str):
+    time.sleep(10) # 模拟耗时操作
+    print(f“Delayed message: {message}”)
 @app.get(“/background/”)
 async def background_task(background_tasks: BackgroundTasks, message: str = “Hello”):
     background_tasks.add_task(delayed_print, message)
@@ -339,16 +339,16 @@ async def background_task(background_tasks: BackgroundTasks, message: str = “H
 
 ### 5. 测试API
 为API编写测试至关重要。FastAPI提供了`TestClient`，使得测试变得简单。
-```python
-from fastapi.testclient import TestClient
-from .main import app # 导入你的FastAPI应用
 
 ![](img/bb2ea41e84c7519b60956e42cfce338b_108.png)
 
-client = TestClient(app)
 
 ![](img/bb2ea41e84c7519b60956e42cfce338b_110.png)
 
+```python
+from fastapi.testclient import TestClient
+from .main import app # 导入你的FastAPI应用
+client = TestClient(app)
 def test_read_root():
     response = client.get(“/”)
     assert response.status_code == 200

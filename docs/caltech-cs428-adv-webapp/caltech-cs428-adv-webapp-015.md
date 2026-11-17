@@ -46,6 +46,9 @@
 5.  在处理函数中，使用`response.send()`方法向客户端发送“Hello World”消息。
 6.  最后，让应用开始监听指定的端口。
 
+
+![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_2.png)
+
 ```javascript
 // 导入express模块
 const express = require('express');
@@ -53,9 +56,6 @@ const express = require('express');
 const app = express();
 // 定义端口
 const port = 3000;
-
-![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_2.png)
-
 // 定义根路径的GET请求处理函数
 function serveIndex(request, response) {
   response.send('Hello World');
@@ -93,14 +93,14 @@ app.listen(port, () => {
 
 ![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_12.png)
 
+
+![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_14.png)
+
 ```javascript
 // 修改serveIndex函数以发送HTML文件
 function serveIndex(request, response) {
   response.sendFile('index.html', { root: __dirname });
 }
-
-![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_14.png)
-
 // 路由设置保持不变
 app.get('/', serveIndex);
 ```
@@ -141,11 +141,6 @@ app.get('/', serveIndex);
 
 ![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_28.png)
 
-```javascript
-// 新增处理函数，用于发送联系页面
-function serveContact(request, response) {
-  response.sendFile('contact.html', { root: __dirname });
-}
 
 ![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_30.png)
 
@@ -153,6 +148,11 @@ function serveContact(request, response) {
 
 ![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_33.png)
 
+```javascript
+// 新增处理函数，用于发送联系页面
+function serveContact(request, response) {
+  response.sendFile('contact.html', { root: __dirname });
+}
 // 为联系页面设置新的GET路由
 app.get('/contact.html', serveContact);
 ```
@@ -223,14 +223,14 @@ app.post('/contact/send', contactHandler);
 
 ![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_62.png)
 
-```javascript
-// 导入body-parser模块
-const bodyParser = require('body-parser');
 
 ![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_64.png)
 
 ![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_66.png)
 
+```javascript
+// 导入body-parser模块
+const bodyParser = require('body-parser');
 // 在设置路由前，使用body-parser中间件
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -257,9 +257,6 @@ function contactHandler(request, response) {
 3.  创建一个新的GET路由，例如`/submissions`。
 4.  为该路由创建一个处理函数（例如`serveSubmissions`），使用`response.json()`方法将`submissions`数组作为JSON数据发送给客户端。
 
-```javascript
-// 用于存储提交数据的数组
-let submissions = [];
 
 ![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_70.png)
 
@@ -267,6 +264,9 @@ let submissions = [];
 
 ![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_74.png)
 
+```javascript
+// 用于存储提交数据的数组
+let submissions = [];
 // 修改contactHandler，存储数据
 function contactHandler(request, response) {
   submissions.push(request.body); // 将新数据存入数组

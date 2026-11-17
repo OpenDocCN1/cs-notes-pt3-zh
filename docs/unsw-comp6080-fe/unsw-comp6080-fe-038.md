@@ -87,21 +87,21 @@
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_30.png)
 
-```javascript
-import express from 'express';
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_32.png)
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_34.png)
 
-const app = express();
-const port = 3000;
-app.use(express.json());
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_36.png)
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_38.png)
 
+```javascript
+import express from 'express';
+const app = express();
+const port = 3000;
+app.use(express.json());
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
@@ -201,27 +201,27 @@ app.listen(port, () => {
 
 Express的强大之处在于可以轻松定义多个路由来处理不同的URL请求。以下是如何扩展我们的服务器：
 
-```javascript
-app.get('/', (req, res) => {
-    res.send('Hello World');
-});
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_75.png)
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_76.png)
 
-app.get('/1', (req, res) => {
-    res.send('1');
-});
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_78.png)
 
-app.get('/1/2', (req, res) => {
-    res.send('2');
-});
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_80.png)
 
+```javascript
+app.get('/', (req, res) => {
+    res.send('Hello World');
+});
+app.get('/1', (req, res) => {
+    res.send('1');
+});
+app.get('/1/2', (req, res) => {
+    res.send('2');
+});
 app.get('/oh/my/god/why/is/this/url/so/long', (req, res) => {
     res.send('You found the long URL!');
 });

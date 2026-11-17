@@ -60,19 +60,19 @@ print(even_numbers)
 
 ![](img/547b82bf0866d34b0a9197702411f6eb_8.png)
 
-```python
-even_count = 0  # 初始化偶数计数器
-even_numbers = []
 
 ![](img/547b82bf0866d34b0a9197702411f6eb_10.png)
 
+
+![](img/547b82bf0866d34b0a9197702411f6eb_12.png)
+
+```python
+even_count = 0  # 初始化偶数计数器
+even_numbers = []
 for number in numbers:
     if number % 2 == 0:
         even_numbers.append(number)
         even_count += 1  # 计数器加一
-
-![](img/547b82bf0866d34b0a9197702411f6eb_12.png)
-
 print(even_numbers)
 print(f"There are {even_count} numbers in the even list.")
 ```

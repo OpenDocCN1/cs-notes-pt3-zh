@@ -217,6 +217,9 @@ switch (input) {
 *   `!true` 结果为 `false`
 
 **代码示例**：组合条件判断
+
+![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_54.png)
+
 ```cpp
 if (moneyInPocket > 10 && choice == 1) {
     cout << "You can afford a Coke at Picasso." << endl;
@@ -225,9 +228,6 @@ if (moneyInPocket > 10 && choice == 1) {
 if (input == 'y' || input == 'Y') {
     cout << "Proceed with purchase." << endl;
 }
-
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_54.png)
-
 if (!isHungry) { // 相当于 if (isHungry == false)
     cout << "Skip lunch." << endl;
 }

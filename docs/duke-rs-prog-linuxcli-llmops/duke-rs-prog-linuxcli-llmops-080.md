@@ -89,13 +89,14 @@ fn run_inference(input_data: &[f32]) -> Result<Vec<f32>, ort::Error> {
 
 为了便于测试和部署，可以创建一个`Makefile`：
 
+  		--data-ascii '{"image_url": "https://example.com/cat.jpg"}' \
+
 ```makefile
 deploy:
 	cargo lambda deploy --profile your-aws-profile
 
 invoke:
 	cargo lambda invoke --remote \
-  		--data-ascii '{"image_url": "https://example.com/cat.jpg"}' \
   		--profile your-aws-profile
 ```
 

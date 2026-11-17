@@ -48,6 +48,9 @@ vec.push_back(std::make_unique<SubClass2>());
 
 **规则**：每个派生类的构造函数**必须**首先调用其直接基类的构造函数。这是为了确保基类的私有成员能被正确初始化。
 
+
+![](img/4b7813cdcebb076c3b3883056527f58c_12.png)
+
 ```cpp
 class Base {
 private:
@@ -55,9 +58,6 @@ private:
 public:
     Base(int m) : member{m} {}
 };
-
-![](img/4b7813cdcebb076c3b3883056527f58c_12.png)
-
 class Derived : public Base {
 private:
     std::unique_ptr<int> ptr;

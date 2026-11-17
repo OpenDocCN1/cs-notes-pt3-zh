@@ -189,6 +189,13 @@ std::copy(ArgvIterator<Meeting>(argc - 1, argv + 1, 4),
 
 ![](img/d0a7ff755611e40bbce27dc51146699e_69.png)
 
+
+![](img/d0a7ff755611e40bbce27dc51146699e_71.png)
+
+![](img/d0a7ff755611e40bbce27dc51146699e_73.png)
+
+![](img/d0a7ff755611e40bbce27dc51146699e_74.png)
+
 ```cpp
 struct Meeting {
     std::string title;
@@ -200,13 +207,6 @@ struct Meeting {
     bool operator==(const Meeting& other) const; // 检测时间重叠
     bool operator<(const Meeting& other) const;  // 用于排序
 };
-
-![](img/d0a7ff755611e40bbce27dc51146699e_71.png)
-
-![](img/d0a7ff755611e40bbce27dc51146699e_73.png)
-
-![](img/d0a7ff755611e40bbce27dc51146699e_74.png)
-
 std::ostream& operator<<(std::ostream& os, const Meeting& m);
 ```
 

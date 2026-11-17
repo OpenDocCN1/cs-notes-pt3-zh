@@ -155,12 +155,17 @@ this.KeyUp += MainPage_KeyUp;
 ![](img/8a4c893755b14b0e6bd2267e1a5a46ff_39.png)
 
 在事件处理程序中，设置标志位来跟踪玩家是否按下了左键或右键：
-```csharp
-private bool userPaddleGoingLeft = false;
-private bool userPaddleGoingRight = false;
 
 ![](img/8a4c893755b14b0e6bd2267e1a5a46ff_41.png)
 
+
+![](img/8a4c893755b14b0e6bd2267e1a5a46ff_43.png)
+
+![](img/8a4c893755b14b0e6bd2267e1a5a46ff_45.png)
+
+```csharp
+private bool userPaddleGoingLeft = false;
+private bool userPaddleGoingRight = false;
 private void MainPage_KeyDown(object sender, KeyRoutedEventArgs e)
 {
     if (e.Key == Windows.System.VirtualKey.Left)
@@ -172,11 +177,6 @@ private void MainPage_KeyDown(object sender, KeyRoutedEventArgs e)
         userPaddleGoingRight = true;
     }
 }
-
-![](img/8a4c893755b14b0e6bd2267e1a5a46ff_43.png)
-
-![](img/8a4c893755b14b0e6bd2267e1a5a46ff_45.png)
-
 private void MainPage_KeyUp(object sender, KeyRoutedEventArgs e)
 {
     if (e.Key == Windows.System.VirtualKey.Left)

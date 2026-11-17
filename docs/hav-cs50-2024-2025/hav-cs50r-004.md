@@ -164,6 +164,12 @@ for (i in 1:3) {
 
 现在，让我们将函数和循环结合起来，改进我们的投票程序。目标是持续提示用户，直到他们输入有效的数字。
 
+
+![](img/568f3adcc82ce5b7d5a9530fec3c6293_37.png)
+
+
+![](img/568f3adcc82ce5b7d5a9530fec3c6293_39.png)
+
 ```r
 get_votes <- function(prompt = "Enter votes: ") {
   repeat {
@@ -178,16 +184,10 @@ get_votes <- function(prompt = "Enter votes: ") {
 # 使用 for 循环为每个候选人获取投票
 candidates <- c("Mario", "Peach", "Bowser")
 total <- 0
-
-![](img/568f3adcc82ce5b7d5a9530fec3c6293_37.png)
-
 for (candidate in candidates) {
   votes <- get_votes(paste0(candidate, ": "))
   total <- total + votes
 }
-
-![](img/568f3adcc82ce5b7d5a9530fec3c6293_39.png)
-
 cat("Total votes:", total, "\n")
 ```
 
@@ -203,21 +203,21 @@ cat("Total votes:", total, "\n")
 
 假设我们有一个数据框 `votes`，包含候选人在不同投票方式下的得票数。
 
+
+![](img/568f3adcc82ce5b7d5a9530fec3c6293_44.png)
+
+
+![](img/568f3adcc82ce5b7d5a9530fec3c6293_46.png)
+
 ```r
 # 假设 votes 数据框
 #          Poll Mail
 # Mario     37   63
 # Peach     43  107
 # Bowser    21   99
-
-![](img/568f3adcc82ce5b7d5a9530fec3c6293_44.png)
-
 # 使用 apply 计算每行的总和（每个候选人的总票数）
 row_totals <- apply(votes, 1, sum)
 # 结果: Mario: 100, Peach: 150, Bowser: 120
-
-![](img/568f3adcc82ce5b7d5a9530fec3c6293_46.png)
-
 # 使用 apply 计算每列的总和（每种投票方式的总票数）
 col_totals <- apply(votes, 2, sum)
 # 结果: Poll: 101, Mail: 269

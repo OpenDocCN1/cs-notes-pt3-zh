@@ -63,6 +63,11 @@ VALUES
 
 在定义表模式时，我们可以将主键列设置为 `INTEGER PRIMARY KEY`。这样，在插入新行时，如果省略主键值，SQLite会自动为其分配一个递增的整数。
 
+
+![](img/e91ec5e8abcbc435b7f967158a79c4a3_12.png)
+
+![](img/e91ec5e8abcbc435b7f967158a79c4a3_14.png)
+
 ```sql
 -- 创建表时定义自增主键
 CREATE TABLE collections (
@@ -71,11 +76,6 @@ CREATE TABLE collections (
     accession_number TEXT NOT NULL UNIQUE,
     acquired TEXT
 );
-
-![](img/e91ec5e8abcbc435b7f967158a79c4a3_12.png)
-
-![](img/e91ec5e8abcbc435b7f967158a79c4a3_14.png)
-
 -- 插入数据时无需指定id
 INSERT INTO collections (title, accession_number, acquired)
 VALUES ('Spring Outing', '14.76', '1914-01-08');
@@ -164,15 +164,15 @@ WHERE collection_id = (SELECT id FROM collections WHERE title = 'Farmers Working
 
 在处理如投票结果等用户输入数据时，常需要清洗数据（如修正拼写、统一格式）。
 
+
+![](img/e91ec5e8abcbc435b7f967158a79c4a3_34.png)
+
 ```sql
 -- 1. 去除标题首尾空格
 UPDATE votes SET title = TRIM(title);
 
 -- 2. 将标题统一为大写，解决大小写不一致问题
 UPDATE votes SET title = UPPER(title);
-
-![](img/e91ec5e8abcbc435b7f967158a79c4a3_34.png)
-
 -- 3. 修正特定的拼写错误（使用LIKE进行模式匹配）
 UPDATE votes
 SET title = 'FARMERS WORKING AT DAWN'

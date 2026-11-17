@@ -68,15 +68,15 @@ PHP为操作Cookie提供了出色的支持，就像处理`$_GET`和`$_POST`一�
 Cookie数据会自动被PHP解析，并存储在一个名为`$_COOKIE`的超全局数组中。这是一个键值对数组，你可以直接访问其中的值。
 
 **核心概念代码**：
+
+![](img/2371360732cd30a82a78008456b5af87_22.png)
+
 ```php
 // 读取名为 ‘username‘ 的Cookie值
 if (isset($_COOKIE[‘username‘])) {
     $name = $_COOKIE[‘username‘];
     echo “欢迎回来, “ . $name;
 }
-
-![](img/2371360732cd30a82a78008456b5af87_22.png)
-
 // 设置一个Cookie，有效期为1小时
 $value = ‘new_user_data‘;
 $expire = time() + 3600; // 当前时间戳 + 3600秒

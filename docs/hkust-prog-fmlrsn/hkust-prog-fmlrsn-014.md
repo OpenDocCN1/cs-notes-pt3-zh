@@ -212,6 +212,11 @@ Inductive multi_step : (com * state) -> (com * state) -> Prop :=
 
 在霍尔逻辑中，我们需要替换表达式中的变量。我们定义函数 `subst_aexp` 和 `subst_bexp` 来分别替换算术表达式和布尔表达式中的变量。
 
+
+![](img/4debc5e56b4042b5bf5b836f390d37ca_20.png)
+
+![](img/4debc5e56b4042b5bf5b836f390d37ca_21.png)
+
 ```coq
 Fixpoint subst_aexp (x : string) (e : aexp) (a : aexp) : aexp :=
   match a with
@@ -221,11 +226,6 @@ Fixpoint subst_aexp (x : string) (e : aexp) (a : aexp) : aexp :=
   | AMinus a1 a2 => AMinus (subst_aexp x e a1) (subst_aexp x e a2)
   | AMult a1 a2 => AMult (subst_aexp x e a1) (subst_aexp x e a2)
   end.
-
-![](img/4debc5e56b4042b5bf5b836f390d37ca_20.png)
-
-![](img/4debc5e56b4042b5bf5b836f390d37ca_21.png)
-
 Fixpoint subst_bexp (x : string) (e : aexp) (b : bexp) : bexp :=
   match b with
   | BTrue => BTrue
@@ -244,14 +244,14 @@ Fixpoint subst_bexp (x : string) (e : aexp) (b : bexp) : bexp :=
 
 我们首先定义布尔表达式之间的蕴含关系。
 
-```coq
-Definition entails (P Q : bexp) : Prop :=
-  forall st, beval st P = true -> beval st Q = true.
 
 ![](img/4debc5e56b4042b5bf5b836f390d37ca_23.png)
 
 ![](img/4debc5e56b4042b5bf5b836f390d37ca_24.png)
 
+```coq
+Definition entails (P Q : bexp) : Prop :=
+  forall st, beval st P = true -> beval st Q = true.
 Notation "P |== Q" := (entails P Q) (at level 80).
 ```
 

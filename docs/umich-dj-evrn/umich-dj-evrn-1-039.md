@@ -69,12 +69,12 @@ context = {'guess': 200}
 
 让我们看一个实际的代码示例。我们有一个名为 `Tmpl` 的应用，其中包含一个视图函数 `game`，它接收一个参数（猜测的数字）。
 
-```python
-# views.py 中的视图函数
-from django.shortcuts import render
 
 ![](img/43f5809944415a97856564e3c2f35e39_15.png)
 
+```python
+# views.py 中的视图函数
+from django.shortcuts import render
 def game(request, guess):
     # 将URL中的参数转换为整数
     guess_int = int(guess)

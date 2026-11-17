@@ -133,14 +133,14 @@ unsigned int u3 = static_cast<unsigned int>(x); // 推荐：static_cast
 
 ![](img/b485c624220a8c34268915d344f57863_5.png)
 
-```cpp
-// 定义一个名为 Color 的枚举类型
-enum Color { RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET };
 
 ![](img/b485c624220a8c34268915d344f57863_7.png)
 
 ![](img/b485c624220a8c34268915d344f57863_9.png)
 
+```cpp
+// 定义一个名为 Color 的枚举类型
+enum Color { RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET };
 int main() {
     Color myColor = RED; // 声明一个 Color 类型的变量并赋值
     // myColor = 5; // 错误：不能直接用整数赋值

@@ -199,20 +199,20 @@ Rust的所有权规则通常要求一个数据只有一个所有者。`Rc<T>` �
 `Rc<T>` 只适用于单线程场景，并且它提供的是不可变引用，意味着数据是只读的。这在需要共享数据但不需要修改的场景中非常有用，例如图结构中的多个边指向同一个节点。
 
 以下是 `Rc<T>` 的基本用法：
-```rust
-use std::rc::Rc;
 
 ![](img/f0ff31812e93ed4785df1d52bdc08a0f_62.png)
 
 ![](img/f0ff31812e93ed4785df1d52bdc08a0f_63.png)
 
-let first = Rc::new(String::from("hello"));
-println!("count after creating first = {}", Rc::strong_count(&first)); // 计数为1
 
 ![](img/f0ff31812e93ed4785df1d52bdc08a0f_65.png)
 
 ![](img/f0ff31812e93ed4785df1d52bdc08a0f_67.png)
 
+```rust
+use std::rc::Rc;
+let first = Rc::new(String::from("hello"));
+println!("count after creating first = {}", Rc::strong_count(&first)); // 计数为1
 {
     let second = Rc::clone(&first); // 克隆Rc，增加计数，不克隆底层数据
     println!("count after creating second = {}", Rc::strong_count(&first)); // 计数为2
@@ -236,34 +236,18 @@ println!("count after second goes out of scope = {}", Rc::strong_count(&first));
 `RefCell<T>` 通常与 `Rc<T>` 结合使用，以在单线程场景下实现共享的可变状态。
 
 以下是 `RefCell<T>` 与 `Rc<T>` 结合使用的示例：
-```rust
-use std::rc::Rc;
-use std::cell::RefCell;
 
 ![](img/f0ff31812e93ed4785df1d52bdc08a0f_73.png)
 
-let counter = Rc::new(RefCell::new(0)); // 用Rc包装RefCell
 
 ![](img/f0ff31812e93ed4785df1d52bdc08a0f_75.png)
 
-let c1 = Rc::clone(&counter);
-let c2 = Rc::clone(&counter);
 
 ![](img/f0ff31812e93ed4785df1d52bdc08a0f_76.png)
 
-// 通过第一个引用修改值
-{
-    let mut num = c1.borrow_mut(); // 获取可变借用
-    *num += 1;
-} // num离开作用域，可变借用释放
 
 ![](img/f0ff31812e93ed4785df1d52bdc08a0f_78.png)
 
-// 通过第二个引用修改值
-{
-    let mut num = c2.borrow_mut();
-    *num += 2;
-}
 
 ![](img/f0ff31812e93ed4785df1d52bdc08a0f_80.png)
 
@@ -273,6 +257,22 @@ let c2 = Rc::clone(&counter);
 
 ![](img/f0ff31812e93ed4785df1d52bdc08a0f_86.png)
 
+```rust
+use std::rc::Rc;
+use std::cell::RefCell;
+let counter = Rc::new(RefCell::new(0)); // 用Rc包装RefCell
+let c1 = Rc::clone(&counter);
+let c2 = Rc::clone(&counter);
+// 通过第一个引用修改值
+{
+    let mut num = c1.borrow_mut(); // 获取可变借用
+    *num += 1;
+} // num离开作用域，可变借用释放
+// 通过第二个引用修改值
+{
+    let mut num = c2.borrow_mut();
+    *num += 2;
+}
 // 读取最终值
 println!("Final counter value: {}", *counter.borrow()); // 输出: 3
 ```

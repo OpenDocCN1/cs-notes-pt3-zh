@@ -150,6 +150,9 @@ view.picture(bg, 0, 0, 500, 500);
 9.  添加一个脚本，在文档加载完成后，调用`Game.main()`启动游戏循环。
 
 以下是`Game.js`的代码：
+
+![](img/3749376bc3066f41ab4d109fbb68a12c_18.png)
+
 ```javascript
 class Game {
     #isOver;
@@ -176,9 +179,6 @@ class Game {
         }
     }
 }
-
-![](img/3749376bc3066f41ab4d109fbb68a12c_18.png)
-
 const game = new Game();
 ```
 

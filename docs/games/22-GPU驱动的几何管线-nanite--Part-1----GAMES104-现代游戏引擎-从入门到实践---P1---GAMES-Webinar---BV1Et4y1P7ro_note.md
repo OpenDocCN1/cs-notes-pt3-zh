@@ -121,17 +121,17 @@ foreach (visibleInstance in instanceList) {
     *   最后进行光照计算。
 
 **公式/代码示意：重心坐标插值**
+
+![](img/77ec56eb2839180024d812bbea79def6_3.png)
+
+![](img/77ec56eb2839180024d812bbea79def6_5.png)
+
 ```cpp
 // 伪代码：在Shading Pass中重建像素属性
 struct Vertex { float3 pos; float2 uv; };
 Vertex v0 = GetVertex(primitiveId, 0);
 Vertex v1 = GetVertex(primitiveId, 1);
 Vertex v2 = GetVertex(primitiveId, 2);
-
-![](img/77ec56eb2839180024d812bbea79def6_3.png)
-
-![](img/77ec56eb2839180024d812bbea79def6_5.png)
-
 // 将顶点投影到屏幕空间，计算当前像素的重心坐标 (bary)
 float3 bary = CalculateBarycentricCoords(screenPos, v0.pos_proj, v1.pos_proj, v2.pos_proj);
 

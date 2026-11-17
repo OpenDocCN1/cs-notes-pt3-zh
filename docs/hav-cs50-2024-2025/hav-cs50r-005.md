@@ -58,14 +58,14 @@ storms
 
 假设我们只想保留与风暴强度和名称相关的列，而去除经纬度、气压等列。我们可以使用 `select()` 函数。
 
-```r
-# 方法1：明确列出要删除的列
-dplyr::select(storms, -lat, -long, -pressure, -tropicalstorm_force_diameter, -hurricane_force_diameter)
 
 ![](img/63a951aa0861a60d0afe93bd1135a649_11.png)
 
 ![](img/63a951aa0861a60d0afe93bd1135a649_13.png)
 
+```r
+# 方法1：明确列出要删除的列
+dplyr::select(storms, -lat, -long, -pressure, -tropicalstorm_force_diameter, -hurricane_force_diameter)
 # 方法2：使用辅助函数（更简洁）
 dplyr::select(storms, -ends_with("diameter"), -lat, -long, -pressure)
 ```
@@ -220,14 +220,14 @@ hurricanes %>%
 
 假设有一个 `students` 数据集，其中 `attribute` 列的值（“major”, “GPA”）应该作为列名，而 `value` 列则是对应的值。
 
-```r
-# 原始不整洁数据
-students
 
 ![](img/63a951aa0861a60d0afe93bd1135a649_40.png)
 
 ![](img/63a951aa0861a60d0afe93bd1135a649_42.png)
 
+```r
+# 原始不整洁数据
+students
 # 使用 pivot_wider 进行整理
 students_tidy <- students %>%
   pivot_wider(
@@ -279,12 +279,20 @@ students_tidy %>%
 
 ![](img/63a951aa0861a60d0afe93bd1135a649_63.png)
 
-```r
-# 读取数据
-shows <- read_csv("shows.csv")
 
 ![](img/63a951aa0861a60d0afe93bd1135a649_65.png)
 
+
+![](img/63a951aa0861a60d0afe93bd1135a649_67.png)
+
+
+![](img/63a951aa0861a60d0afe93bd1135a649_69.png)
+
+![](img/63a951aa0861a60d0afe93bd1135a649_70.png)
+
+```r
+# 读取数据
+shows <- read_csv("shows.csv")
 # 1. 去除首尾空格
 shows <- shows %>%
   mutate(show = str_trim(show))
@@ -292,17 +300,9 @@ shows <- shows %>%
 # 2. 将内部多个空格压缩为一个
 shows <- shows %>%
   mutate(show = str_squish(show))
-
-![](img/63a951aa0861a60d0afe93bd1135a649_67.png)
-
 # 3. 统一为标题大小写（每个单词首字母大写）
 shows <- shows %>%
   mutate(show = str_to_title(show))
-
-![](img/63a951aa0861a60d0afe93bd1135a649_69.png)
-
-![](img/63a951aa0861a60d0afe93bd1135a649_70.png)
-
 # 4. 检测并标准化特定名称（例如，所有包含“Avatar”的节目都统一为全称）
 # 注意：此操作需谨慎，确保不会错误覆盖其他含义的相同词汇
 shows <- shows %>%

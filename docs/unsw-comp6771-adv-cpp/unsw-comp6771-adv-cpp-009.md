@@ -121,6 +121,9 @@ std::cout << mc.get_val(); // 调用公有成员函数
 ```
 **类定义与实现分离**：
 通常，类声明（包含成员函数原型）放在头文件（`.h`）中，而成员函数的定义则放在源文件（`.cpp`）中。在类外定义成员函数时，需要使用类名和作用域解析运算符`::`。
+
+![](img/d918ba9e763f55bad3f71ae57e77662b_52.png)
+
 ```cpp
 // person.h
 class Person {
@@ -132,9 +135,6 @@ class Person {
   std::string name_;
   int age_;
 };
-
-![](img/d918ba9e763f55bad3f71ae57e77662b_52.png)
-
 // person.cpp
 #include "person.h"
 Person::Person(const std::string& name, int age) : name_{name}, age_{age} {}
@@ -225,6 +225,9 @@ auto a2 = Age{20}; // 正确：显式构造
 ![](img/d918ba9e763f55bad3f71ae57e77662b_74.png)
 
 因此，在设计类时，所有不修改对象状态的成员函数都应该声明为`const`，以确保常量对象也能使用它们。
+
+![](img/d918ba9e763f55bad3f71ae57e77662b_76.png)
+
 ```cpp
 class Person {
  public:
@@ -233,9 +236,6 @@ class Person {
  private:
   std::string name_;
 };
-
-![](img/d918ba9e763f55bad3f71ae57e77662b_76.png)
-
 int main() {
   auto p1 = Person{"Hayden"};
   p1.set_name("Chris"); // 正确：非常量对象调用非常量函数
@@ -294,6 +294,9 @@ if (User::valid_name("Santa Claus")) {
 
 *   `= default`：显式请求编译器生成该函数的默认版本。
 *   `= delete`：禁止编译器生成该函数，使得相应的操作（如拷贝）不可用。
+
+![](img/d918ba9e763f55bad3f71ae57e77662b_93.png)
+
 ```cpp
 class MyVector {
  public:
@@ -308,9 +311,6 @@ class MyVector {
  private:
   std::vector<int> data_;
 };
-
-![](img/d918ba9e763f55bad3f71ae57e77662b_93.png)
-
 MyVector v1; // 正确：使用默认构造函数
 MyVector v2{v1}; // 错误：拷贝构造函数被删除
 ```

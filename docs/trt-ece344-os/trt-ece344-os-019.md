@@ -68,13 +68,13 @@ free(elem2); // 记得释放内存
 
 首先，我们需要一个辅助函数来为线程分配栈空间：
 
+
+![](img/5e17fa6fbe687aa8a9d217a17617c9f1_5.png)
+
 ```c
 #include <ucontext.h>
 #include <stdlib.h>
 #include <sys/mman.h>
-
-![](img/5e17fa6fbe687aa8a9d217a17617c9f1_5.png)
-
 #define STACK_SIZE SIGSTKSZ // 系统定义的默认栈大小
 
 void* new_stack() {

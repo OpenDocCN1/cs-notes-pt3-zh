@@ -12,14 +12,14 @@
 
 首先，我们来看一段典型的、结构较为基础的PHP脚本。它的主要功能是让用户猜测一个预设的数字（例如42）。
 
+
+![](img/77eb364cf79ccf0bfe9380087c3af294_3.png)
+
 ```php
 <?php
 // ... 一些初始的PHP逻辑和HTML混合代码
 $guess = $_POST['guess'] ?? false;
 $number = 42;
-
-![](img/77eb364cf79ccf0bfe9380087c3af294_3.png)
-
 if ($guess === false) {
     echo "请提交一个猜测值。";
 } elseif (!is_numeric($guess)) {
@@ -59,6 +59,9 @@ MVC是一种将应用程序分为三个核心部件的设计模式：
 
 ![](img/77eb364cf79ccf0bfe9380087c3af294_7.png)
 
+
+![](img/77eb364cf79ccf0bfe9380087c3af294_9.png)
+
 ```php
 <?php
 // ========== 模型/控制器部分 (数据处理与逻辑) ==========
@@ -66,9 +69,6 @@ MVC是一种将应用程序分为三个核心部件的设计模式：
 $oldguess = $_POST['guess'] ?? '';
 $message = false;
 $number = 42; // 模型数据
-
-![](img/77eb364cf79ccf0bfe9380087c3af294_9.png)
-
 // 控制器逻辑：检查是否有POST请求并处理
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // 模型逻辑：验证和处理数据

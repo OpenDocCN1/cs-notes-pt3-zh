@@ -38,11 +38,11 @@ print(json_string)
 
 ![](img/db907075d6d89b909b79ee181fc4c27b_5.png)
 
-```python
-import json
 
 ![](img/db907075d6d89b909b79ee181fc4c27b_7.png)
 
+```python
+import json
 data = '''
 {
     "name": "Chuck",

@@ -85,6 +85,9 @@ img {
 
 ![](img/1ef961c43cd771febda14d52c27f1fc9_19.png)
 
+
+![](img/1ef961c43cd771febda14d52c27f1fc9_21.png)
+
 ```css
 .polaroid {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -92,9 +95,6 @@ img {
   padding: 10px;
   background-color: white; /* 通常宝丽来相纸是白色的 */
 }
-
-![](img/1ef961c43cd771febda14d52c27f1fc9_21.png)
-
 #text {
   text-align: center;
 }

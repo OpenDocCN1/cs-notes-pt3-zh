@@ -9473,9 +9473,13 @@ void f()
 {
     x = -0.0;
 }
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_800_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_801_0.png)
+
 ```
-
-
 
 ## 常用函数的打包
 
@@ -9500,9 +9504,6 @@ void f()
   - 如果归档成员文件解析了引用，则将其链接到可执行文件
 
 ## 静态库（归档）
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_800_0.png)
-
 可重定位目标文件串联成一个文件的静态库（归档）。
 
 可执行目标文件（仅包含从 p1.c 和 p2.c 调用的 libc 函数的代码和数据）
@@ -9512,9 +9513,6 @@ void f()
 链接器有选择地仅将归档中程序实际需要的 .o 文件链接进去。
 
 ## 创建静态库
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_801_0.png)
-
 归档器允许增量更新：
 
 - 重新编译发生变化的函数并替换归档中的 .o 文件。
@@ -10447,12 +10445,12 @@ int main()
     printf("z = [%d %d]\n", z[0], z[1]);
     return 0;
 }
-```
-
-## 静态链接库
 
 ![](img/b3f8b91675c485f1e811aa092ebbf3d4_876_0.png)
 
+```
+
+## 静态链接库
 ```
 unix> gcc -O2 -c main2.c
 unix> gcc -static -o p2 main2.o ./libvector.a
@@ -10472,6 +10470,9 @@ Unix> gcc -shared -fPIC -o libvector.so addvec.c multvec.c
 
 ```
 Unix>gcc -o p2 main2.c ./libvector.so
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_879_0.png)
+
 ```
 
 - 加载时链接
@@ -10481,9 +10482,6 @@ Unix>gcc -o p2 main2.c ./libvector.so
 - 共享库例程可以由多个进程共享。
 
 ## 动态链接的共享库
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_879_0.png)
-
 ## 位置无关代码（PIC）
 
 - 允许多个正在运行的进程共享相同的库代码
@@ -10754,6 +10752,9 @@ Unix> gcc -shared -fPIC -o libvector.so addvec.c multvec.c
 
 ```
 Unix>gcc -o p2 main2.c ./libvector.so
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_911_0.png)
+
 ```
 
 # 部分链接
@@ -10786,10 +10787,6 @@ Fully linked executable in memory
   - 重定位 p2 中由 libc.so 和 libvector.so 定义的符号的任何引用
 - ld-linux.so 的路径包含在 p2 的 .interp 段中
 - 链接后，共享库的位置固定，在执行期间不会改变
-
-
-
-
 
 Kernel virtual memory
 
@@ -10855,9 +10852,6 @@ FinRL 是一个用于金融强化学习的开源框架，旨在弥合算法交�
 | agent | 强化学习算法实现 |
 | backtest | 回测引擎 |
 | deploy | 实盘对接模块 |
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_911_0.png)
-
 > “投资是科学的艺术，FinRL 让强化学习在金融市场中落地生根。”
 
 ## Position-Independent Code (PIC)
@@ -11199,10 +11193,20 @@ Loaded from the hello executable file
 10        scanf("%d", &array[i]);
 11    exit(0);
 12 }
-```
 
 ![](img/b3f8b91675c485f1e811aa092ebbf3d4_938_0.png)
 
+
+
+
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_939_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_941_0.png)
+
+```
 Kernel virtual memory
 
 Memory invisible to user code
@@ -11228,13 +11232,6 @@ Loaded from the `hello` executable file
 `0x00400000 (64)`
 
 `0`
-
-
-
-
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_939_0.png)
-
 内核虚拟内存
 
 用户栈（运行时创建）
@@ -11262,9 +11259,6 @@ sbrk
 
 - 本讲座中做出的假设
 - 内存是按字寻址的（每个字可以容纳一个指针）
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_941_0.png)
-
 ## 分配示例
 
 ```
@@ -11285,6 +11279,9 @@ free(p2)
 
 ```
 p4 = malloc(2*sizeof(long))
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_949_0.png)
+
 ```
 
 ## 要求
@@ -11336,9 +11333,6 @@ p4 = malloc(2*sizeof(long))
 
 - 内部碎片
 - 对于某个块，内部碎片是块大小与有效载荷大小之间的差值
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_949_0.png)
-
 ## 内部碎片
 
 - 内部碎片
@@ -11367,6 +11361,9 @@ free(p2)
 
 ```
 p4 = malloc(6*sizeof(long))
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_953_0.png)
+
 ```
 
 ## 外部碎片
@@ -11379,15 +11376,44 @@ p4 = malloc(6*sizeof(long))
 
 - 我们如何仅凭指针就知道要释放多少内存？
 - 我们如何跟踪空闲块？
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_953_0.png)
-
 ```
 free(p0)
 ```
 
 ```
 p1 = malloc(1)
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_961_0.png)
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_961_1.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_962_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_963_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_965_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_965_1.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_966_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_967_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_968_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_969_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_970_0.png)
+
 ```
 
 ## 实现问题
@@ -11403,10 +11429,6 @@ p1 = malloc(1)
 - 在结构前一个字中保存结构的长度
 - 该字通常称为头部字段或头
 - 每个已分配结构需要一个额外的字
-
-
-
-
 
 ## 寻找空闲块
 
@@ -11429,11 +11451,6 @@ p1 = malloc(1)
 
 - 在空闲块中分配 - *拆分*
   - 由于已分配空间可能小于空闲空间，我们可能希望拆分该块
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_961_0.png)
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_961_1.png)
-
 ## 释放块
 
 - 最简单的实现：
@@ -11444,9 +11461,6 @@ p1 = malloc(1)
 free(p)
 
 malloc(5)
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_962_0.png)
-
 ## 合并
 
 - 如果相邻的下一个和/或上一个块是空闲的，则合并它们
@@ -11454,9 +11468,6 @@ malloc(5)
   - 但我们如何与上一个块合并？
 
 free(p)
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_963_0.png)
-
 ## 双向
 
 - 边界标签 [Knuth73]
@@ -11467,9 +11478,6 @@ free(p)
 ## 双向
 
 已分配块和空闲块的格式
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_965_0.png)
-
 1 word
 
 header
@@ -11483,17 +11491,8 @@ size: block size
 
 payload: application data
 (allocated blocks only)
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_965_1.png)
-
 ## 常数时间合并
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_966_0.png)
-
 ## 常数时间合并 (case 1)
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_967_0.png)
-
 ## 常数时间合并 (case 2)
 
 | m1 | 1 |
@@ -11506,9 +11505,6 @@ payload: application data
 | m2 | 0 |
 |   |   |
 | m2 | 0 |
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_968_0.png)
-
 | m1 | 1 |
 |---|---|
 |   |   |
@@ -11520,13 +11516,7 @@ payload: application data
 | n+m2 | 0 |
 
 ## 常数时间合并 (case 3)
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_969_0.png)
-
 ## 常数时间合并 (case 4)
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_970_0.png)
-
 ## 动态内存分配
 
 ## 大纲
@@ -11585,10 +11575,6 @@ Loaded from the hello executable file
   - returns the block pointed at by p to pool of available memory
   - p must come from a previous call to malloc,calloc or realloc.
 
-
-
-
-
 # 为什么需要动态内存分配
 
 ```c
@@ -11628,6 +11614,12 @@ int array[MAXN];
 10        scanf("%d", &array[i]);
 11    exit(0);
 12 }
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_981_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_982_0.png)
+
 ```
 
 # sbrk() 函数
@@ -11642,9 +11634,6 @@ int array[MAXN];
   - If incr is zero
     - It returns the current value
   - incr can be a negative number
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_981_0.png)
-
 内核虚拟内存
 
 用户代码不可见的内存
@@ -11670,9 +11659,6 @@ int array[MAXN];
 `0x00400000 (64)`
 
 `0`
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_982_0.png)
-
 内核虚拟内存
 
 用户栈（运行时创建）
@@ -11700,34 +11686,40 @@ sbrk
 
 ```
 p1 = malloc(4*sizeof(long))
-```
 
 ![](img/b3f8b91675c485f1e811aa092ebbf3d4_985_0.png)
 
 ```
-p2 = malloc(5*sizeof(long))
 ```
+p2 = malloc(5*sizeof(long))
 
 ![](img/b3f8b91675c485f1e811aa092ebbf3d4_985_1.png)
 
 ```
-p3 = malloc(6*sizeof(long))
 ```
+p3 = malloc(6*sizeof(long))
 
 ![](img/b3f8b91675c485f1e811aa092ebbf3d4_985_2.png)
 
 ```
-free(p2)
 ```
+free(p2)
 
 ![](img/b3f8b91675c485f1e811aa092ebbf3d4_985_3.png)
 
 ```
-p4 = malloc(2*sizeof(long))
 ```
+p4 = malloc(2*sizeof(long))
 
 ![](img/b3f8b91675c485f1e811aa092ebbf3d4_985_4.png)
 
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_992_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_994_0.png)
+
+```
 # 要求
 
 - 处理任意请求序列
@@ -11770,27 +11762,20 @@ p4 = malloc(2*sizeof(long))
 
 - 内部碎片
   - 对于某个块，内部碎片是块大小与有效载荷大小之间的差值
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_992_0.png)
-
 # 内部碎片
 
 - 内部碎片
   - 由维护堆数据结构的开销、对齐目的的填充，或显式策略决策（例如不拆分块）引起。
   - 仅取决于之前的请求模式，因此易于测量。
 
-
-
-
-
 ## 外部碎片
 
 - 当总体堆内存足够，但没有单个空闲块足够大时发生
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_994_0.png)
-
 ```
 p4 = malloc(6*sizeof(long))
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_996_0.png)
+
 ```
 
 ## 外部碎片
@@ -11803,13 +11788,13 @@ p4 = malloc(6*sizeof(long))
 
 1. 如何仅凭指针知道要释放多少内存？
 2. 如何跟踪空闲块？
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_996_0.png)
-
 ```
 free(p0)
 
 p1 = malloc(1)
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_999_0.png)
+
 ```
 
 ## 实现问题
@@ -11829,23 +11814,54 @@ p1 = malloc(1)
   - 每个已分配结构都需要一个额外的字
 
 ## 知道要释放多少
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_999_0.png)
-
 ```
 p0 = malloc(4)
-```
 
 ![](img/b3f8b91675c485f1e811aa092ebbf3d4_999_1.png)
 
 ```
-free(p0)
 ```
-
-块大小数据
+free(p0)
 
 ![](img/b3f8b91675c485f1e811aa092ebbf3d4_999_2.png)
 
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1001_0.png)
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1001_1.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1004_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1005_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1006_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1008_0.png)
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1008_1.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1009_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1010_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1011_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1012_0.png)
+
+
+![](img/b3f8b91675c485f1e811aa092ebbf3d4_1013_0.png)
+
+```
+
+块大小数据
 ## 隐式列表
 
 - 需要识别每个块是空闲还是已分配
@@ -11855,11 +11871,6 @@ free(p0)
 ## 隐式列表
 
 已分配块和空闲块的格式
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_1001_0.png)
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_1001_1.png)
-
 ## 查找空闲块
 
 - 首 fit：
@@ -11881,18 +11892,12 @@ free(p0)
 
 - 在空闲块中分配 - *分割*
   - 由于已分配空间可能小于空闲空间，我们可能希望分割块
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_1004_0.png)
-
 ## 释放块
 
 - 最简单的实现：
   - 只需清除已分配标志
   - 但可能导致“假碎片”
   - 有足够的空闲空间，但分配器无法找到它
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_1005_0.png)
-
 free(p)
 
 malloc(5)
@@ -11904,9 +11909,6 @@ malloc(5)
   - 但我们如何与上一个块合并？
 
 free(p)
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_1006_0.png)
-
 ## 双向
 
 已分配块和空闲块的格式
@@ -11929,15 +11931,7 @@ a = 0: free block
 size: block size
 
 payload: application data (allocated blocks only)
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_1008_0.png)
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_1008_1.png)
-
 ## 常数时间合并
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_1009_0.png)
-
 ## 常数时间合并（情况 1）
 
 | m1 | 1 |
@@ -11950,9 +11944,6 @@ payload: application data (allocated blocks only)
 | m2 | 1 |
 |   |   |
 | m2 | 1 |
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_1010_0.png)
-
 | m1 | 1 |
 |---|---|
 |   |   |
@@ -11964,22 +11955,9 @@ payload: application data (allocated blocks only)
 |   |   |
 | m2 | 1 |
 
-
-
-
-
 ## 常数时间合并（情况 2）
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_1011_0.png)
-
 ## 常数时间合并（情况 3）
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_1012_0.png)
-
 ## 常数时间合并（情况 4）
-
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_1013_0.png)
-
 ## 动态内存分配
 
 ## 大纲

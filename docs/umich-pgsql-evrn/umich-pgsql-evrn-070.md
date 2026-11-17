@@ -197,11 +197,11 @@ LEFT JOIN docs_stem AS s ON k.keyword = s.word;
 
 现在，我们将整合了停用词移除和词干提取的查询结果，插入到最终的倒排索引表中。
 
-```sql
-DELETE FROM docs_gin; -- 清空旧数据
 
 ![](img/e67290a99fc24f23f63fcf0eb26b9f66_63.png)
 
+```sql
+DELETE FROM docs_gin; -- 清空旧数据
 INSERT INTO docs_gin (keyword, doc_id)
 SELECT
     id,

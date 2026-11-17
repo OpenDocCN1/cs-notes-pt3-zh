@@ -103,6 +103,11 @@
 
 ![](img/8793dfee62c143b0ad952eb672c3ea65_58.png)
 
+
+![](img/8793dfee62c143b0ad952eb672c3ea65_60.png)
+
+![](img/8793dfee62c143b0ad952eb672c3ea65_61.png)
+
 ```cpp
 // 为前向迭代器定义
 template <std::forward_iterator I>
@@ -111,11 +116,6 @@ void advance(I& iter, int n) { /* 前向移动逻辑 */ }
 // 为双向迭代器定义
 template <std::bidirectional_iterator I>
 void advance(I& iter, int n) { /* 双向移动逻辑 */ }
-
-![](img/8793dfee62c143b0ad952eb672c3ea65_60.png)
-
-![](img/8793dfee62c143b0ad952eb672c3ea65_61.png)
-
 // 为随机访问迭代器定义
 template <std::random_access_iterator I>
 void advance(I& iter, int n) { iter += n; } // 直接跳转
@@ -170,15 +170,15 @@ void advance(I& iter, int n) { iter += n; } // 直接跳转
 
 以下是基于类型特征定义概念的示例：
 
-```cpp
-// 基于类型特征定义“整型”概念
-template <typename T>
-concept Integral = std::is_integral_v<T>;
 
 ![](img/8793dfee62c143b0ad952eb672c3ea65_87.png)
 
 ![](img/8793dfee62c143b0ad952eb672c3ea65_89.png)
 
+```cpp
+// 基于类型特征定义“整型”概念
+template <typename T>
+concept Integral = std::is_integral_v<T>;
 // 基于现有概念定义“有符号整型”概念
 template <typename T>
 concept SignedIntegral = Integral<T> && std::is_signed_v<T>;

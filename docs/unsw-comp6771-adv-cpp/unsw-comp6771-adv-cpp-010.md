@@ -195,13 +195,6 @@ Point operator+(const Point& lhs, const Point& rhs) {
 
 ![](img/52d03b547472f794a9e3ad7b22d66390_33.png)
 
-```cpp
-class Point {
-public:
-    // ... 其他成员 ...
-    friend bool operator==(const Point& lhs, const Point& rhs);
-    friend bool operator<(const Point& lhs, const Point& rhs);
-};
 
 ![](img/52d03b547472f794a9e3ad7b22d66390_35.png)
 
@@ -209,20 +202,27 @@ public:
 
 ![](img/52d03b547472f794a9e3ad7b22d66390_39.png)
 
-bool operator==(const Point& lhs, const Point& rhs) {
-    return lhs.x_ == rhs.x_ && lhs.y_ == rhs.y_;
-}
 
 ![](img/52d03b547472f794a9e3ad7b22d66390_41.png)
 
-bool operator!=(const Point& lhs, const Point& rhs) {
-    return !(lhs == rhs); // 基于 operator==
-}
 
 ![](img/52d03b547472f794a9e3ad7b22d66390_43.png)
 
 ![](img/52d03b547472f794a9e3ad7b22d66390_45.png)
 
+```cpp
+class Point {
+public:
+    // ... 其他成员 ...
+    friend bool operator==(const Point& lhs, const Point& rhs);
+    friend bool operator<(const Point& lhs, const Point& rhs);
+};
+bool operator==(const Point& lhs, const Point& rhs) {
+    return lhs.x_ == rhs.x_ && lhs.y_ == rhs.y_;
+}
+bool operator!=(const Point& lhs, const Point& rhs) {
+    return !(lhs == rhs); // 基于 operator==
+}
 bool operator<(const Point& lhs, const Point& rhs) {
     // 定义一种排序规则，例如先比较 x，再比较 y
     if (lhs.x_ != rhs.x_) return lhs.x_ < rhs.x_;

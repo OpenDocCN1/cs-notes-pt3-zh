@@ -3713,10 +3713,23 @@ void sort(Vector<int> & vec) {
     }
 }
 ```
-```
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_285_0.png)
 
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_290_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_293_0.png)
+
+
+
+
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_296_0.png)
+
+```
 | 809 | 503 | 946 | 367 | 987 | 838 | 259 | 236 | 659 | 361 |
 |---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
@@ -3745,10 +3758,6 @@ void sort(Vector<int> & vec) {
 | 1000 | 13.40 | 12.90 | 13.80 | 17.60 | 12.90 | 14.10 | 12.70 |  | 16.00 | 15.50 | 14.32 | 1.69 |
 | 5000 | 322.5 | 355.9 | 391.7 | 321.6 | 388.3 | 321.3 | 321.3 | 398.7 | 322.1 | 321.3 | 346.4 | 33.83 |
 | 10000 | 1319. |  | 1327. | 1318. | 1331. | 1336. | 1318. | 1335. | 1325. | 1319. | 1326. | 7.50 |
-
-
-
-
 
 ## 选择排序的运行时间
 
@@ -3781,9 +3790,6 @@ void sort(Vector<int> & vec) {
 
 - 左侧公式中的项可以排列成一个三角形，如本幻灯片底部所示，N = 6 的情况。
 - 如果你复制该三角形并将其旋转 180°，你会得到一个矩形，在本例中包含 6 × 7 个点，其中一半属于每个三角形。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_290_0.png)
-
 ## 二次增长
 
 - 选择排序运行时间快速增长的原因变得清晰，如果你制作一个表格，显示各种 N 值下 $\frac{N \times (N + 1)}{2}$ 的值：
@@ -3821,13 +3827,6 @@ void sort(Vector<int> & vec) {
   而不是
 
   $O\left(\frac{N \times (N+1)}{2}\right)$
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_293_0.png)
-
-
-
-
-
 ## 从代码中推导复杂度
 
 - 在很多情况下，你可以直接从代码的结构中推导出程序的计算复杂度。
@@ -3853,9 +3852,6 @@ void sort(Vector<int> & vec) {
 2. 递归地对 v1 和 v2 分别排序。
 3. 清空原向量。
 4. 在每一轮循环中从 v1 或 v2 中选出最小的元素，合并回原向量。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_296_0.png)
-
 ## 归并排序的实现
 
 ```
@@ -3913,6 +3909,9 @@ void merge(Vector<int> & vec, Vector<int> & v1, Vector<int> & v2) {
     while (p1 < n1) vec.add(v1[p1++]);
     while (p2 < n2) vec.add(v2[p2++]);
 }
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_303_0.png)
+
 ```
 
 ## 归并排序的复杂度
@@ -3948,10 +3947,6 @@ $$2^k = N$$
 $$k = \log_2 N$$
 
 - 因此，归并排序的复杂度为 $O(N \log N)$。
-
-
-
-
 
 ## 比较 *N*² 和 *N* log *N*
 
@@ -3999,9 +3994,6 @@ NLogN
 Quadratic
 
 Exponential
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_303_0.png)
-
 ## 冒泡排序
 
 - 最简单的排序算法
@@ -4062,6 +4054,49 @@ void bubbleSort (Array S, length n) {
         }
     }
 }
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_310_0.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_310_1.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_310_2.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_311_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_312_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_312_1.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_312_2.png)
+
+
+
+
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_313_0.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_313_1.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_313_2.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_313_3.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_319_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_320_0.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_320_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_320_2.png)
+
 ```
 
 ## 冒泡排序的运行时间
@@ -4093,45 +4128,13 @@ G, 包含大于 x 的 S 的元素
 - 1) **Select**: 选择一个元素
 - 2) **Divide**: 重新排列元素使 x 移动到其最终位置 E
 - 3) **Recurse and Conquer**: 递归排序
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_310_0.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_310_1.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_310_2.png)
-
 ## 快速排序树
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_311_0.png)
-
 ## 原地快速排序
 
 Divide 步骤：l 从左侧扫描序列。r 从右侧扫描。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_312_0.png)
-
 当 l 位于大于枢轴的元素处且 r 位于小于枢轴的元素处时执行交换
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_312_1.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_312_2.png)
-
-
-
-
-
 ## 原地快速排序（续）
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_313_0.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_313_1.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_313_2.png)
-
 一次最终的与枢轴的交换完成了划分步骤
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_313_3.png)
-
 ## 运行时间分析
 
 - 平均情况分析
@@ -4184,24 +4187,13 @@ Divide 步骤：l 从左侧扫描序列。r 从右侧扫描。
 ## 桶排序
 
 数组的每个元素被放入 N 个“桶”之一
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_319_0.png)
-
 现在每个元素都在正确的桶中：
 
 ## 桶排序
 
 现在，从桶中取出元素放入数组
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_320_0.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_320_1.png)
-
 最后，排序好的数组
 （以稳定方式排序）：
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_320_2.png)
-
 ## 它适用于实数吗？
 
 - 如果键不是整数怎么办？
@@ -4223,6 +4215,19 @@ Divide 步骤：l 从左侧扫描序列。r 从右侧扫描。
 RadixSort(A, d)
     for i=1 to d
         StableSort(A) on digit i
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_328_0.png)
+
+
+
+
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_338_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_349_0.png)
+
 ```
 
 ## 1、基数排序：
@@ -4324,13 +4329,6 @@ e.g: B = 5、2、9、7、18、17、52 用基数排序法进行排序。
 B = 5、2、9、7、18、17、52
 
 根据所指向的数，进行分配动作，将其分配到相应的口袋。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_328_0.png)
-
-
-
-
-
 ## 7、基数排序
 
 ### 1、基数排序：
@@ -4456,9 +4454,6 @@ B₉  9
 - B₇  7   17
 - B₈  18
 - B₉  9
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_338_0.png)
-
 分配完毕，按照红色箭头所指的方向进行收集动作。注意：收集后的序列已经按照右起第一位（个位数字）排好序了。
 
 收集后的序列：2、52、5、7、17、18、9、
@@ -4594,10 +4589,6 @@ B₉
 - B₈
 - B₉
 
-
-
-
-
 ## 7、基数排序
 
 - 1、基数排序：
@@ -4605,9 +4596,6 @@ B₉
 例如：B = 5、2、9、7、18、17、52 用基数排序法进行排序。
 
 B = 2、52、5、7、17、18、9（第一次收集的结果）
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_349_0.png)
-
 根据箭头所指向的数，进行分配动作，将其分配到相应的口袋。和第一次不同，这次根据右起第二位数字（十位数字）进行分配。
 
 口袋：
@@ -4695,10 +4683,6 @@ B = 2、52、5、7、17、18、9（第一次收集的结果）
   - 它仅通过 replaceElement 和 swapElements 操作更新输入序列
 - 到目前为止所见的排序算法中，哪些可以原地工作？
   - 冒泡、插入、选择、归并、快速、桶、基数
-
-
-
-
 
 ## Maps and Hashing
 
@@ -5173,6 +5157,9 @@ bool HashMap<KeyType,ValueType>::containsKey(KeyType key) {
 }
 
 #endif
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_390_0.png)
+
 ```
 
 ## Part II: Advanced Concepts
@@ -5201,9 +5188,6 @@ Jingyu Zhou
   - 键为学号（951000 - 952000），不超过 100 名学生
   - 哈希函数：h(k) = k-951000 将 ID 映射到不同的表位置 0-1000
   - `array table[1001]`
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_390_0.png)
-
 ## Analysis (Ideal Case)
 
 - 初始化哈希表需要 O(b) 时间（b 为哈希表中位置或桶的数量）
@@ -5229,10 +5213,6 @@ Jingyu Zhou
   h(k) = k%11
   80 → 3（80%11 = 3），40 → 7，65 → 10
   58 → 3 发生冲突！
-
-
-
-
 
 ## 冲突解决策略
 
@@ -5357,10 +5337,6 @@ insert 1052 (h.b. 7)
 
 下一个元素在桶 3 中，p = 8/11
 
-
-
-
-
 ## 哈希函数 - 数值
 
 - **考虑：**
@@ -5400,6 +5376,37 @@ insert 1052 (h.b. 7)
       }
       return h%D;
   }
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_408_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_414_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_420_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_420_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_425_0.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_425_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_426_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_427_0.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_427_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_429_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_430_0.png)
+
   ```
 
 ## 哈希方法
@@ -5448,9 +5455,6 @@ insert 1052 (h.b. 7)
 - 所有哈希到某个特定桶的元素都放在该桶的链表中
 - 桶内的记录可以按多种方式排序
   - 按插入顺序、按键值顺序，或按访问频率顺序
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_408_0.png)
-
 ## 分析
 
 - 当哈希表保存在主存中，并使用标准的内存链表实现时，开散列法最为合适
@@ -5488,9 +5492,6 @@ insert 1052 (h.b. 7)
 - 注意：强抗碰撞性 ⇒ 弱抗碰撞性 ⇒ 单向性
 - 设 m 为某个消息。h(x) 称为消息摘要。
 
-
-
-
 ## 生日攻击
 
 - **生日悖论：**
@@ -5499,9 +5500,6 @@ insert 1052 (h.b. 7)
 - 若要有超过一半的机会在同一个箱子中找到至少两个球，  
   k ≈ 1.17 n^{1/2}
   - 例如：n = 365 ⇒ k ≈ 23
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_414_0.png)
-
 ## 对哈希函数的生日攻击
 
 - 利用生日悖论寻找哈希函数的碰撞。
@@ -5543,17 +5541,11 @@ insert 1052 (h.b. 7)
 问：*找到 SHA-1 碰撞有多难？*
 
 答：已报道的攻击估计需要约 2^69（约 5.9 × 10^20）次哈希计算的工作量。尽管这远远超出了普通计算机当前可行的范围，但对于拥有专用硬件的攻击者来说，可能可行。例如，如果有 10,000 个定制 ASIC，每个每秒可执行 20 亿次哈希运算，攻击大约需要一年时间。摩尔定律预测的计算性能提升将随时间推移使这种攻击变得更加可行，例如，一种广泛传播的互联网病毒也可能利用被攻陷的计算机来发起此类攻击。一旦找到一个碰撞，只需将数据拼接到匹配的消息上，就能轻而易举地找到其他碰撞。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_420_0.png)
-
 ## 计算机程序设计艺术（第三卷）
 
 插入
 
 搜索
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_420_1.png)
-
 ## 结束
 
 ## 我们接下来要做什么？
@@ -5572,18 +5564,9 @@ insert 1052 (h.b. 7)
   - 表达式的递归性质
 - 综合来看，这些想法将使得定义表示算术表达式的数据结构成为可能。
 
-
-
-
-
 ## Trees
 
 - 在本文中，我用来说明树结构的第一个例子是诺曼王朝 (诺曼王朝 (1066年–1135)) 的皇室家谱：
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_425_0.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_425_1.png)
-
 - 这个例子有助于定义术语：
   - William I 是树的*root*。
   - Adela 是 William I 的 *child* 并且是 Stephen 的 *parent*。
@@ -5595,31 +5578,17 @@ insert 1052 (h.b. 7)
 
 - 英格兰皇室的家谱可能变得非常复杂。例如，右边的树就展示了玫瑰战争时期的皇室血统，涵盖了金雀花王朝、约克家族和兰开斯特家族。
 - 这种树状图非常有帮助，例如，如果你想理解莎士比亚的历史剧。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_426_0.png)
-
 ## Family Trees
 
 而这里是我最喜欢的来自 J. R. R. Tolkien（《指环王》）的家谱：
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_427_0.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_427_1.png)
-
 ## Trees Are Everywhere
 
 - 进化树的结构在恩斯特·海克尔 1866 年的生命之树图示中体现得更为清晰。
 - 过去 150 年间，进化树图的细节发生了显著变化，但其总体结构——从单一根部开始并分支形成新的谱系——保持不变。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_429_0.png)
-
 ## Representing Family Trees
 
 - 编写处理树的程序的第一步是设计合适的数据结构。
 - 在图表形式中，目标是将树状图转换为如下所示的内部表示：
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_430_0.png)
-
 ## A Recursive Definition for Trees
 
 - 当你以表示其内部结构为目的思考树时，以下定义非常有用：
@@ -5728,6 +5697,12 @@ PersonNode *PersonNode::getParent() {
 Vector<PersonNode *> PersonNode::getChildren() {
     return children;
 }
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_439_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_440_0.png)
+
 ```
 
 ## 树和类层次结构
@@ -5758,15 +5733,9 @@ Vector<PersonNode *> PersonNode::getChildren() {
 
 - *词法分析*，其中源文本被分解为称为 *标记* 的单元。
 - *解析*，其中标记被组装成一个递归结构，称为 *解析树*，体现其结构。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_439_0.png)
-
 ## 表达式类层次结构
 
 - 由于表达式有多种形式，表示表达式的 C++ 类最容易用类层次结构来表示，其中每种表达式类型都是一个单独的子类，如下图所示：
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_440_0.png)
-
 ## C++ 中继承的表示
 
 - 创建 C++ 子类的第一步是在头行上指明超类，使用以下语法：
@@ -5989,6 +5958,12 @@ int CompoundExp::eval(EvalState & state) {
     error("Illegal operator in expression");
     return 0;
 }
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_452_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_455_0.png)
+
 ```
 
 ## 示例
@@ -6000,10 +5975,6 @@ int CompoundExp::eval(EvalState & state) {
 
 ## 结束
 
-
-
-
-
 ## 解析策略
 
 ## 郑伟 齐
@@ -6011,9 +5982,6 @@ int CompoundExp::eval(EvalState & state) {
 大部分幻灯片来自 Eric Roberts，CS 106B，斯坦福大学
 
 ## 更新后的就业前景幻灯片
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_452_0.png)
-
 > 我们对来自这所大学的学生非常满意……我们只是希望能雇佣到两到三倍于他们的数量。
 > ——比尔·盖茨在斯坦福大学，2008年2月19日
 
@@ -6029,9 +5997,6 @@ int CompoundExp::eval(EvalState & state) {
 ## 表达式层次结构
 
 - 在上一门课程中，我定义了一个抽象的 `Expression` 类，包含三个具体的子类，每个对应一种表达式类型：
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_455_0.png)
-
 ## eval 方法的代码
 
 ```
@@ -6061,6 +6026,9 @@ int CompoundExp::eval(EvalState & state) {
     error("Illegal operator in expression");
     return 0;
 }
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_457_0.png)
+
 ```
 
 ## 练习：求值表达式
@@ -6068,9 +6036,6 @@ int CompoundExp::eval(EvalState & state) {
 - 假设 **x** 绑定为 3，追踪求值步骤
 
 y = ( 9 - x ) * 7
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_457_0.png)
-
 ## 解析问题
 
 - 在上一门课程中，我指出形成表达式的规则可以用 **文法** 的形式表达，如下所示：
@@ -6097,16 +6062,19 @@ E → E op E
 T → constant
 T → identifier
 T → ( E )
-```
-
-## 解析结构中的歧义
-
-- 尽管上一张幻灯片中的两级文法可以识别任何表达式，但它是 *歧义* 的，因为同一个输入字符串可以生成多个解析树。
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_460_0.png)
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_460_1.png)
 
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_461_0.png)
+
+```
+
+## 解析结构中的歧义
+
+- 尽管上一张幻灯片中的两级文法可以识别任何表达式，但它是 *歧义* 的，因为同一个输入字符串可以生成多个解析树。
 - 文法中的歧义通常通过为解析器提供有关运算符 *优先级* 的信息来解决。文本描述了两种策略：*Iversonian precedence*，其中运算符全部向右结合，以及 *operator precedence*，其中每个运算符都关联一个整数，定义其在优先级层次结构中的位置。
 
 ## 练习：解析表达式
@@ -6114,9 +6082,6 @@ T → ( E )
 - 绘制输入字符串生成的表达式树
 
 odd = 2 * n + 1
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_461_0.png)
-
 ## parser.cpp 实现
 
 ```
@@ -6276,10 +6241,10 @@ int main() {
     }
     scanner    prec    newPrec    token    exp    rhs
     odd ^ = 2 * n + 1    0    1    =    •
-```
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_469_0.png)
 
+```
 ## Tracing the Precedence Parser
 
 ```
@@ -6298,13 +6263,13 @@ exp = new CompoundExp(token, exp, rhs);
 scanner.saveToken(token);
 return exp;
 }
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_470_0.png)
+
 ```
 
 | scanner | prec | newPrec | token | exp | rhs |
 | odd = 2 * n + 1 | 1 |  |  |  |  |
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_470_0.png)
-
 ## Tracing the Precedence Parser
 
 ```
@@ -6384,15 +6349,15 @@ scanner.saveToken(token);
 return exp;
 }
 }
-```
-
-| scanner | prec | newPrec | token | exp | rhs |
-| odd = 2 ^ ^ n + 1 | 1 | 3 | * | • |  |
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_473_0.png)
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_473_1.png)
 
+```
+
+| scanner | prec | newPrec | token | exp | rhs |
+| odd = 2 ^ ^ n + 1 | 1 | 3 | * | • |  |
 ## 跟踪优先级解析器
 
 ```
@@ -6413,16 +6378,16 @@ scanner.saveToken(token);
 return exp;
 }
 }
-```
-
-| scanner | prec | newPrec | token | exp | rhs |
-|---|---|---|---|---|---|
-| odd = 2 * n + 1 | 3 |  |  |  |  |
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_474_0.png)
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_474_1.png)
 
+```
+
+| scanner | prec | newPrec | token | exp | rhs |
+|---|---|---|---|---|---|
+| odd = 2 * n + 1 | 3 |  |  |  |  |
 ## 跟踪优先级解析器
 
 ```
@@ -6519,10 +6484,6 @@ exp = new CompoundExp(token, exp, rhs);
 scanner.saveToken(token);
 return exp;
 }
-```
-
-| scanner | prec | newPrec | token | exp | rhs |
-| odd = 2 * n + 1 | 3 | 2 | + | • |  |
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_477_0.png)
 
@@ -6534,6 +6495,10 @@ return exp;
 
 
 
+```
+
+| scanner | prec | newPrec | token | exp | rhs |
+| odd = 2 * n + 1 | 3 | 2 | + | • |  |
 ## 追踪优先级解析器
 
 ```
@@ -6584,14 +6549,14 @@ Expression *readE(TokenScanner & scanner, int prec) {
         return exp;
     }
 }
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_479_0.png)
+
 ```
 
 | 扫描器 | 优先级 | 新优先级 | 标记 | 表达式 | 右操作数 |
 |---|---|---|---|---|---|
 | odd = 2 * n + 1 | 1 | 2 | + | • | • |
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_479_0.png)
-
 ## 追踪优先级解析器
 
 ```
@@ -6612,11 +6577,6 @@ scanner.saveToken(token);
 return exp;
 }
 }
-```
-
-| 扫描器 | 优先级 | 新优先级 | 标记 | 表达式 | 右操作数 |
-|---|---|---|---|---|---|
-| odd = 2 * n + 1 | 2 |  |  |  |  |
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_480_0.png)
 
@@ -6626,6 +6586,11 @@ return exp;
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_480_3.png)
 
+```
+
+| 扫描器 | 优先级 | 新优先级 | 标记 | 表达式 | 右操作数 |
+|---|---|---|---|---|---|
+| odd = 2 * n + 1 | 2 |  |  |  |  |
 ## 追踪优先级解析器
 
 ```
@@ -6721,13 +6686,13 @@ scanner.saveToken(token);
 return exp;
 }
 }
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_485_0.png)
+
 ```
 
 | scanner | prec | newPrec | token | exp | rhs |
 | odd = 2 * n + 1 | 1 | 0 |  | • | • |
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_485_0.png)
-
 ## 追踪优先级解析器
 
 ```
@@ -6746,10 +6711,10 @@ Expression *readE(TokenScanner & scanner, int prec) {
     return exp;
 }
 }
-```
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_486_0.png)
 
+```
 ## 追踪优先级解析器
 
 ```
@@ -6784,6 +6749,12 @@ int main() {
     Expression *exp = readE(scanner);
     ...
 }
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_489_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_492_0.png)
+
 ```
 
 scanner
@@ -6791,9 +6762,6 @@ odd = 2 * n + 1
 ^
 
 exp
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_489_0.png)
-
 ## 基础入门项目
 
 ## Starter 文件夹中的模块
@@ -6825,9 +6793,6 @@ statement.cpp
 ## 语句类层次结构
 
 - 学生需要构建一个语句形式层次结构，其结构与表达式类平行：
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_492_0.png)
-
 ```
 #include <iostream>
 #include "exp.h"
@@ -6855,6 +6820,15 @@ int main() {
     }
     return 0;
 }
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_500_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_501_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_503_0.png)
+
 ```
 
 ## 示例
@@ -6872,9 +6846,6 @@ int main() {
 ## 郑伟 齐
 
 大部分幻灯片来自 Eric Roberts，CS 106B，斯坦福大学
-
-
-
 
 ## 大纲
 
@@ -6899,9 +6870,6 @@ int main() {
 ## 有序数组中的二分查找
 
 - 假设不使用映射，而是将所有的州缩写（连同它们的名称）输入到一个数组中，并让这些缩写按字母顺序排列：
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_500_0.png)
-
 - 查找一个州缩写（例如 "GA"）需要多少次操作（作为规模 N 的函数）？
 
 - 有序数组中的查找操作运行时间为 O(log N)。
@@ -6909,9 +6877,6 @@ int main() {
 ## 有序数组中的插入
 
 - 但添加新键又如何呢？例如，假设波多黎各（PR）成为一个州：
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_501_0.png)
-
 - 数组末尾的所有单元都需要移动以腾出空间。
 
 - 有序数组中的添加操作运行时间为 O(N)。
@@ -6926,9 +6891,6 @@ int main() {
 
 - 最终解决这个问题的结构称为*二叉搜索树*（简称 *BST*）。BST 中的每个节点恰好有两个子树：一个*左子树*，包含当前节点之前的所有节点；一个*右子树*，包含当前节点之后的所有节点。这两个子树中的一个或两个都可以为 `NULL`。
 - 二叉搜索树的经典示例使用了沃尔特·迪士尼的*白雪公主与七个小矮人*中的名字：
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_503_0.png)
-
 ## 一个简单的 BST 实现
 
 - 为了理解二叉搜索树的工作原理，从一个简单设计入手会很有帮助，该设计中的键始终是字符串。
@@ -7008,10 +6970,13 @@ insertNode(colors, "green");
 insertNode(colors, "blue");
 insertNode(colors, "indigo");
 insertNode(colors, "violet");
-```
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_507_0.png)
 
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_509_0.png)
+
+```
 ## 遍历策略
 
 - 编写一个对二叉搜索树中每个键执行某些操作的函数很容易，因为递归使得将该操作应用于每个子树变得简单。
@@ -7021,9 +6986,6 @@ insertNode(colors, "violet");
   - 如果在完成两个递归调用之后才处理当前节点，结果是 *后序遍历*。后序遍历在尝试释放树中的所有节点时特别有用。
 
 ## 练习：前序遍历
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_509_0.png)
-
 ```
 void preorderTraversal(Node *t) {
     if (t != null) {
@@ -7032,14 +6994,14 @@ void preorderTraversal(Node *t) {
         preorderTraversal(t->right);
     }
 }
-```
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_509_1.png)
 
-## 练习：中序遍历
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_510_0.png)
 
+```
+## 练习：中序遍历
 ```
 void inorderTraversal(Node *t) {
     if (t != null) {
@@ -7048,14 +7010,14 @@ void inorderTraversal(Node *t) {
         inorderTraversal(t->right);
     }
 }
-```
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_510_1.png)
 
-## 练习：后序遍历
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_511_0.png)
 
+```
+## 练习：后序遍历
 ```
 void postorderTraversal(Node *t) {
     if (t != null) {
@@ -7064,18 +7026,209 @@ void postorderTraversal(Node *t) {
         cout << t->key << endl;
     }
 }
-```
 
 ![](img/af430dff16b82a0fe61ce7dee05dcf9c_511_1.png)
 
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_512_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_514_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_515_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_516_0.png)
+
+
+
+
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_517_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_518_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_519_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_520_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_521_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_522_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_523_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_524_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_525_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_528_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_530_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_533_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_535_0.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_535_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_536_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_537_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_538_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_538_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_539_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_540_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_541_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_542_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_542_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_542_2.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_545_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_545_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_546_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_549_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_549_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_550_0.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_550_1.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_550_2.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_550_3.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_550_4.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_551_0.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_551_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_551_2.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_551_3.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_551_4.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_553_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_554_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_554_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_555_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_555_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_556_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_556_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_557_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_557_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_558_0.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_558_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_559_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_563_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_565_0.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_565_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_565_2.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_566_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_566_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_567_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_568_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_570_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_571_0.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_571_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_573_0.png)
+
+```
 ## 平衡问题
 
 - 理想情况下，包含迪士尼七个小矮人名字的二叉搜索树应该看起来像这样：
 - 然而，如果你恰好按字母顺序输入名字，这棵树最终会变成一个简单的链表，其中所有左子树都为 NULL，右链接形成一条简单的链。在该树上运行的算法将以 O(N) 时间运行而不是 O(log N) 时间。
 - 二叉搜索树是 *平衡* 的，如果其左右子树的高度相差最多为一，并且这两个子树本身也是平衡的。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_512_0.png)
-
 ## 说明 AVL 算法
 
 - H
@@ -7084,9 +7237,6 @@ void postorderTraversal(Node *t) {
 - Be
 - B
 - C
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_514_0.png)
-
 ## 说明 AVL 算法
 
 H
@@ -7100,9 +7250,6 @@ Be
 B
 
 C
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_515_0.png)
-
 ## 说明 AVL 算法
 
 - H
@@ -7111,13 +7258,6 @@ C
 - Be
 - B
 - C
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_516_0.png)
-
-
-
-
-
 ## 图解 AVL 算法
 
 - H
@@ -7126,9 +7266,6 @@ C
 - Be
 - B
 - C
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_517_0.png)
-
 ## 图解 AVL 算法
 
 - H
@@ -7137,9 +7274,6 @@ C
 - Be
 - B
 - C
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_518_0.png)
-
 ## 图解 AVL 算法
 
 - H
@@ -7150,9 +7284,6 @@ C
 - C
 
 左旋
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_519_0.png)
-
 ## 图解 AVL 算法
 
 - H
@@ -7161,9 +7292,6 @@ C
 - Be
 - B
 - C
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_520_0.png)
-
 ## 图解 AVL 算法
 
 - H
@@ -7172,9 +7300,6 @@ C
 - Be
 - B
 - C
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_521_0.png)
-
 ## 图解 AVL 算法
 
 - H
@@ -7183,9 +7308,6 @@ C
 - Be
 - B
 - C
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_522_0.png)
-
 ## 图解 AVL 算法
 
 - H
@@ -7194,9 +7316,6 @@ C
 - Be
 - B
 - C
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_523_0.png)
-
 ## 图解 AVL 算法
 
 - H
@@ -7205,9 +7324,6 @@ C
 - Be
 - B
 - C
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_524_0.png)
-
 ## 图解 AVL 算法
 
 - H
@@ -7216,9 +7332,6 @@ C
 - Be
 - B
 - C
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_525_0.png)
-
 ## 图解 AVL 算法
 
 - H
@@ -7227,9 +7340,6 @@ C
 - Be
 - B
 - C
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_528_0.png)
-
 ## 图解 AVL 算法
 
 右旋
@@ -7240,9 +7350,6 @@ C
 - Be
 - B
 - C
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_530_0.png)
-
 ## 树的平衡算法
 
 AVL 算法是最早的树平衡策略，已被在实践中更有效的新算法所取代。这些算法包括：
@@ -7266,20 +7373,12 @@ AVL 算法是最早的树平衡策略，已被在实践中更有效的新算法�
 Hengming Zou 所著的《数据结构》
 
 Yanping Dou 所著的《数据结构（C++）》
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_533_0.png)
-
 ## 平衡二叉排序树（AVL树）
 
 - 平衡二叉排序树
 - 平衡因子（平衡度）：节点的平衡度是节点的左子树的高度 - 右子树的高度。
 - 平衡二叉树：每个节点的平衡因子都为 +1、-1、0 的二叉树。或者说每个节点的左右子树的高度最多差一的二叉树。
 - 注意：满树必为平衡树，平衡树不一定是满树。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_535_0.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_535_1.png)
-
 ## 平衡二叉排序树（AVL树）
 
 - 平衡二叉排序树
@@ -7288,9 +7387,6 @@ Yanping Dou 所著的《数据结构（C++）》
 
 在左图所示的平衡树中插入数据域为 2 的结点。
 插入之后仍应保持平衡二叉排序树的性质不变。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_536_0.png)
-
 如何用最简单、最有效的办法保持平衡二叉排序树的性质不变？
 
 ## 平衡二叉排序树（AVL树）
@@ -7301,9 +7397,6 @@ Yanping Dou 所著的《数据结构（C++）》
 
 在左图所示的平衡树中插入数据域为 2 的结点。
 插入之后仍应保持平衡二叉排序树的性质不变。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_537_0.png)
-
 如何用最简单、最有效的办法保持平衡二叉排序树的性质不变？
 
 解决方案：
@@ -7321,13 +7414,7 @@ Yanping Dou 所著的《数据结构（C++）》
 
 在左图所示的平衡树中插入数据域为 2 的结点。
 插入之后仍应保持平衡二叉排序树的性质不变。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_538_0.png)
-
 如何用最简单、最有效的方法保持平衡二叉排序树的性质不变？
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_538_1.png)
-
 不可以以结点 7 为子树的根结点！！虽然，对本例来说是可以行得通的。
 
 ## 平衡二叉排序树（AVL树）
@@ -7338,14 +7425,7 @@ Yanping Dou 所著的《数据结构（C++）》
 
 在左图所示的平衡树中插入数据域为 2 的结点。
 插入之后仍应保持平衡二叉排序树的性质不变。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_539_0.png)
-
 > 关键：将导致出现危机结点的情况全部分析清楚，就可以使得平衡二叉排序树的性质保持不变！！
-
-
-
-
 
 ## 平衡二叉排序树（AVL树）
 
@@ -7355,9 +7435,6 @@ Yanping Dou 所著的《数据结构（C++）》
 ## 1、LL 情况：（LL：表示新插入结点在危机结点的左子树的左子树上），左旋还是右旋？
 
 插入一个新节点到根节点的左子树（Left）的左子树（Left），导致根节点的平衡因子由1变为2
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_540_0.png)
-
 改组前：高度为 h + 1
 
 中序序列： B_L B B_R A A_R
@@ -7375,9 +7452,6 @@ Yanping Dou 所著的《数据结构（C++）》
 · 左改组（新插入结点出现在危机结点的左子树上进行的调整）的情况分析：
 
 **2、LR 情况：**（LR：表示新插入结点在危机结点的左子树的右子树上）导致根节点的平衡因子由1变为2
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_541_0.png)
-
 情况A：
 
 改组前：
@@ -7398,21 +7472,12 @@ Yanping Dou 所著的《数据结构（C++）》
 2、LR 情况：（LR：表示新插入结点在危机结点的左子树的右子树上）
 
 情况B：
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_542_0.png)
-
 改组前：
 高度为 h + 1
 中序序列：
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_542_1.png)
-
 改组后：
 高度为 h + 1
 中序序列：
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_542_2.png)
-
 注意：改组后 B C A 平衡度为 +1,0,0
 
 ## 平衡二叉排序树（AVL树）
@@ -7435,21 +7500,12 @@ Yanping Dou 所著的《数据结构（C++）》
 • 左改组（新插入结点出现在危机结点的左子树上进行的调整）的情况分析：
 
 **LL 情况：**（LL：表示新插入结点在危机结点的左子树的左子树上）
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_545_0.png)
-
 • 右改组（新插入结点出现在危机结点的右子树上进行的调整）的情况分析：
 
 **RR 情况：**（RR：表示新插入结点在危机结点的右子树的右子树上）
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_545_1.png)
-
 # 四种情况总览
 
 Root 是失去平衡的树的根节点。Pivot 是旋转后重新平衡的树的根节点。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_546_0.png)
-
 # 情况总结：
 
 有四种情况可能导致二叉查找树不平衡，分别为：
@@ -7473,15 +7529,9 @@ Root 是失去平衡的树的根节点。Pivot 是旋转后重新平衡的树的
 证明：1、高度为 h 的二叉树最多有 2ʰ - 1 个结点，平衡树的结点个数不会超过 2ʰ - 1 个。
 
 即：N <= 2ʰ - 1；N + 1 <= 2ʰ；N + 1 <= 2ʰ，所以：log₂(N+1) <= h
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_549_0.png)
-
 如：高度 2 的平衡树，丰满树结点个数最多为 2² - 1 个。
 
 2、为了证第二步，构造一系列平衡树，T₁、T₂、T₃、……Tₕ；这种树的高度分别为 1、2、3、……h。且是具有高度为 1、2、3、……H 的平衡树中结点个数最少的二叉树，或者是用同样的结点构造的尽可能高的二叉树。即 h <= H。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_549_1.png)
-
 注意：sqr(5) 表示 5 的平方根，余此类推。
 
 ## 平衡二叉排序树（AVL树）
@@ -7494,17 +7544,6 @@ T₁ 高度 H = 1 结点个数最少
 T₂ 高度 H = 2 结点个数最少
 
 T₃ 高度 H = 3 结点个数最少
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_550_0.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_550_1.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_550_2.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_550_3.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_550_4.png)
-
 对照
 
 对照
@@ -7516,21 +7555,9 @@ T₃ 高度 H = 3 结点个数最少
 T₃ 高度 H = 3 节点个数最少
 
 对照
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_551_0.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_551_1.png)
-
 T₄ 高度 H = 4 节点个数最少
 
 对照
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_551_2.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_551_3.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_551_4.png)
-
 T_H 高度 H 节点个数最少的平衡树
 左子树为 T_{H-1} 右子树为 T_{H-2}
 
@@ -7569,18 +7596,11 @@ T_H 高度 H 节点个数最少的平衡树
 
 根据上式可求出： h <= 1.44log₂(N+1) - 0.328
 
-
-
-
-
 ## 平衡二叉排序树（AVL树）
 
 - 删除具有给定关键字的结点：
   - 操作：删除左子树中最大的结点，按照在二叉排序树中的规则进行删除。
   - 若删除右子树中的最小结点，方法类似。参见下图，删除关键字为 122 的结点。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_553_0.png)
-
 被删结点
 
 替身
@@ -7599,13 +7619,7 @@ T_H 高度 H 节点个数最少的平衡树
 下面以删除操作发生在左侧时为例，来分析在调整过程中遇到的各种情况。
 
 - 情况A：调整后，不需继续调整了。因为子树调整前后的高度都为 h+1。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_554_0.png)
-
 - 情况B：调整后，需继续调整。因为子树调整后的高度减少 1。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_554_1.png)
-
 ## 平衡二叉排序树（AVL树）
 
 ### 2、调整
@@ -7616,13 +7630,7 @@ T_H 高度 H 节点个数最少的平衡树
 下面分析在调整过程中遇到的各种情况：
 
 - 情况C.1: 调整后，不需继续调整。因为子树调整前后的高度都为 h+1。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_555_0.png)
-
 - 情况C.2: 调整后，必须继续调整。因为子树调整后的高度减少了 1。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_555_1.png)
-
 ## 平衡二叉排序树（AVL树）
 
 ### 2、调整
@@ -7633,13 +7641,7 @@ T_H 高度 H 节点个数最少的平衡树
 下面分析在调整过程中遇到的各种情况：
 
 - 情况C.3a：调整后，必须继续调整。因子树调整后的高度减少了 1。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_556_0.png)
-
 调整后
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_556_1.png)
-
 ## 平衡二叉排序树（AVL树）
 
 ### 2、调整
@@ -7650,13 +7652,7 @@ T_H 高度 H 节点个数最少的平衡树
 下面分析在调整过程中遇到的各种情况：
 
 - 情况C.3b: 调整后，必须继续调整。因子树调整后的高度减少了1。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_557_0.png)
-
 调整后
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_557_1.png)
-
 ## 平衡二叉排序树（AVL树）
 
 ### 2、调整
@@ -7667,19 +7663,11 @@ T_H 高度 H 节点个数最少的平衡树
 下面分析在调整过程中遇到的各种情况：
 
 情况C.3c: 调整后，必须继续调整。因子树调整后的高度减少了1。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_558_0.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_558_1.png)
-
 ## 练习：AVL树
 
 插入序列为：50, 25, 10, 5, 7, 3, 30, 20, 8, 15，请给出每一步插入后的AVL树。
 
 例如：1,2,3,4,5,6,7
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_559_0.png)
-
 ## 示例
 
 - 100个节点的AVL树最多多少层？
@@ -7708,9 +7696,6 @@ T_H 高度 H 节点个数最少的平衡树
   - 森林 m >= 0 棵互不相交树的集合
 
 例如：高度为 4、度为 3 的树
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_563_0.png)
-
 其它表示方法：
 (A(B(L,E),C(F),D(G(I),H)))
 还有其它表示方法，如：类似于书籍的目录表示法。
@@ -7776,23 +7761,12 @@ T_H 高度 H 节点个数最少的平衡树
 左右子树有序，不可颠倒
 
 例如：二叉树
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_565_0.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_565_1.png)
-
 例如：结点总数为3时的所有二叉树的形状
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_565_2.png)
-
 ## 2、二叉树
 
 ### 2、性质：
 
 - • 性质1：在二叉树的第 i 层上至多有 2^{i-1} 个结点
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_566_0.png)
-
 1层：结点个数 2^{1-1}=2^0 个
 
 2层：结点个数 2^{2-1}=2^1 个
@@ -7804,9 +7778,6 @@ T_H 高度 H 节点个数最少的平衡树
 - • 性质2：高度为 K 的二叉树至多有 2^{k} -1 个结点
 
 证：利用性质 1，将第 1 层至第 k 层的最多的结点数进行相加： 1 + 2 + 2^2 + ............ + 2^{k-2} + 2^{k-1} = 2^{k} -1
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_566_1.png)
-
 - • 性质3：二叉树的叶子结点数 n0 等于度为 2 的结点数 n2 +1
 
 证：设度为 1 的结点数为 n1，树枝的总数为 B 则： B = n-1 = n0 + n1 + n2 -1
@@ -7826,9 +7797,6 @@ T_H 高度 H 节点个数最少的平衡树
 - 2、从满二叉树
 - 最底层从右向左
 - 依次去掉若干结点形成的
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_567_0.png)
-
 性质4：具有 n 个结点的完全二叉树高度为 ⌈log₂n⌉ + 1
 
 证：根据性质 2 和完全二叉树的定义：设其高度为 k
@@ -7841,10 +7809,6 @@ T_H 高度 H 节点个数最少的平衡树
 
 故：k-1 <= log₂n < k；原命题得证。
 
-
-
-
-
 ## 2、二叉树
 
 性质5: 对一棵有 n 个结点的完全二叉树按照从第一层（根所在的层次）到最后一层，并且每一层都按照从左到右的次序进行编号。根结点的编号为 1，最后一个结点的编号为 n。
@@ -7853,9 +7817,6 @@ T_H 高度 H 节点个数最少的平衡树
 - 2: 对任何一个编号为 j 的结点而言，它的父亲结点的编号为 ⌊j/2⌋。根结点无父结点。
 
 证：
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_568_0.png)
-
 ## 2、二叉树
 
 3、二叉树的存储结构：
@@ -7863,9 +7824,6 @@ T_H 高度 H 节点个数最少的平衡树
 - • 顺序存储结构：
 
 特殊情况：
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_570_0.png)
-
 |  | data | left | right |
 |---|---|---|---|
 | 0 |  |  |  |
@@ -7889,19 +7847,11 @@ T_H 高度 H 节点个数最少的平衡树
 - • 顺序存储结构：
 
 特殊情况：若不是完全二叉树，许多数据场为空，不合算。如下例所示：
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_571_0.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_571_1.png)
-
 ## 2、二叉树
 
 3、二叉树的存储结构：
 
 - - 链接存储结构：
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_573_0.png)
-
 ## 2、二叉树
 
 ·二叉树的 ADT:
@@ -8018,8 +7968,21 @@ void BinaryTree<Type> :: DelTree ( BinaryNode < Type> * T ) {
         delete T;
     }
 }
-```
 
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_579_0.png)
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_579_1.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_580_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_581_0.png)
+
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_581_1.png)
+
+```
 
 ## 3、二叉树遍历
 
@@ -8032,19 +7995,11 @@ void BinaryTree<Type> :: DelTree ( BinaryNode < Type> * T ) {
 前序： A、L、B、E、C、D、W、X
 中序： B、L、E、A、C、W、X、D
 后序： B、E、L、X、W、D、C、A
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_579_0.png)
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_579_1.png)
-
 1、遍历二叉树：续
 
 - a. 前序分析：节点的左儿子、左孙子、左后代、……将连续输出。节点的右儿子将在节点、节点的左子树全部输出之后才输出。
 - b. 中序分析：最先输出的节点是根节点的最左的左后代。将二叉树中的节点投影到水平轴线上，则得到中序遍历的序列。
 - c. 后序分析：根节点（或子树的根节点）将在它的左、右子树的节点输出之后。因此，根节点（或子树的根节点）在中序序列中的序号等于它的左右子树的节点个数＋左右子树中的最先被访问的节点的序号。注意，节点、右父亲、右祖父、……将连续输出。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_580_0.png)
-
 1、遍历二叉树：续
 
 •前序的程序实现：
@@ -8053,9 +8008,6 @@ void BinaryTree<Type> :: DelTree ( BinaryNode < Type> * T ) {
 - 2、结点出栈，被访问
 - 3、结点的右、左儿子（非空）进栈
 - 4、反复执行 2、3，至栈空为止。
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_581_0.png)
-
 A进栈
 
 A出栈 访问
@@ -8075,9 +8027,6 @@ C出栈 访问
 D进栈
 
 D出栈访问后，栈空结束
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_581_1.png)
-
 分析：p的前序的直接后继q：1、p有左儿子，则q=该左儿子 2、p无左儿子，有右儿子，则q=该右儿子 3、p无左儿子、右儿子，搜索其祖先结点的右儿子送q。找不到结束。
 
 ## 遍历递归算法– Too easy!
@@ -8166,6 +8115,9 @@ void Preorder <Type> :: First () {
     operator ++ ();
 }
     // 堆栈清空。若二叉树T非空，则根结点进栈，并得到当前结点。
+
+![](img/af430dff16b82a0fe61ce7dee05dcf9c_586_0.png)
+
 ```
 
 • 遍历二叉树：设根节点初始时非空
@@ -8177,9 +8129,6 @@ void Preorder <Type> :: First () {
 6、反复1到5，至栈空为止。
 
 e.g:
-
-![](img/af430dff16b82a0fe61ce7dee05dcf9c_586_0.png)
-
 后序：E、L、D、C、A
 
 - 分析：1、二叉树最先被访问的节点是二叉树中最左方的叶子。

@@ -35,12 +35,12 @@ else:
 
 以下是多个独立`if`语句的示例：
 
-```python
-if number > 20:
-    print(f"数字大于20: {number}")
 
 ![](img/a0bdadb1d76870811c20a62f9d276b5f_6.png)
 
+```python
+if number > 20:
+    print(f"数字大于20: {number}")
 if number > 10:
     print(f"数字大于10: {number}")
 

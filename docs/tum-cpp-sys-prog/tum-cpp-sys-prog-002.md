@@ -16,11 +16,11 @@
 
 以下是一个基础的C++程序示例：
 
-```cpp
-#include <iostream>
 
 ![](img/585e08ba0be731e56ba27e086917200e_5.png)
 
+```cpp
+#include <iostream>
 int main(int argc, char* argv[]) {
     std::cout << "Hello " << argv[1] << std::endl;
     return 0;

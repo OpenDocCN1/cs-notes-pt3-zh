@@ -62,11 +62,11 @@ def my_view(request):
 
 以下是视图代码（`views.py`）：
 
-```python
-from django.shortcuts import render
 
 ![](img/5ee9f9d6f7c269e1788997336852b116_13.png)
 
+```python
+from django.shortcuts import render
 def game_view(request, guess):
     # 1. 准备上下文数据
     context = {

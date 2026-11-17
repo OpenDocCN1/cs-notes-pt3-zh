@@ -15,15 +15,15 @@
 我们的性能指标是 **每个元素消耗的CPU周期数 (Cycles Per Element)**。目标是从初始的20个周期/元素，通过优化降低到接近甚至低于1个周期/元素。
 
 **初始代码框架**：
+
+![](img/37d0d544a4e354416b7ef1c27b5098d9_5.png)
+
 ```c
 // 向量结构（简化）
 typedef struct {
     int* data;
     size_t length;
 } vector_t;
-
-![](img/37d0d544a4e354416b7ef1c27b5098d9_5.png)
-
 // 需要优化的函数
 void combined(int* dest, vector_t* v, int identity) {
     *dest = identity;

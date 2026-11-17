@@ -156,11 +156,6 @@ cout << "Green means go!" << endl;
 4.  根据生成的随机数，增加对应点数的计数器。
 5.  循环结束后，输出每个点数出现的次数。
 
-```cpp
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
-using namespace std;
 
 ![](img/8a6c773aaca9051b333cb31051acb3c1_61.png)
 
@@ -168,6 +163,11 @@ using namespace std;
 
 ![](img/8a6c773aaca9051b333cb31051acb3c1_65.png)
 
+```cpp
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
 int main() {
     srand(time(0)); // 设置随机数种子
 

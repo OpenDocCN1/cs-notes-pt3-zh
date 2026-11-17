@@ -199,6 +199,13 @@ public class RectangleObject
 
 在`MainPage`中，我们可以这样使用它：
 
+
+![](img/4ccaea22269bdc9a453fa1e4cabf5866_25.png)
+
+![](img/4ccaea22269bdc9a453fa1e4cabf5866_27.png)
+
+![](img/4ccaea22269bdc9a453fa1e4cabf5866_29.png)
+
 ```csharp
 // 声明墙壁对象
 private RectangleObject leftWall;
@@ -211,13 +218,6 @@ public MainPage()
     leftWall = new RectangleObject(50, 100, 10, 400, Colors.White);
     rightWall = new RectangleObject(850, 100, 10, 400, Colors.White);
 }
-
-![](img/4ccaea22269bdc9a453fa1e4cabf5866_25.png)
-
-![](img/4ccaea22269bdc9a453fa1e4cabf5866_27.png)
-
-![](img/4ccaea22269bdc9a453fa1e4cabf5866_29.png)
-
 private void gameCanvas_Draw(CanvasAnimatedControl sender, CanvasDrawEventArgs args)
 {
     // 绘制墙壁

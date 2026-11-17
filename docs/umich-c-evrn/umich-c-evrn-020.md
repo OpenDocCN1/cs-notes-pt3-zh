@@ -66,15 +66,15 @@ printf(“%f %f\n”, p2.x, p2.y); // 输出：3.0 4.0
 
 ![](img/31bfcd4c175bf603475ce9fd0a836013_14.png)
 
+
+![](img/31bfcd4c175bf603475ce9fd0a836013_16.png)
+
 ```c
 void funk(struct point pf) {
     pf.x = 9.0; // 修改副本的成员
     pf.y = 8.0;
     printf(“Inside funk: %f %f\n”, pf.x, pf.y);
 }
-
-![](img/31bfcd4c175bf603475ce9fd0a836013_16.png)
-
 int main() {
     struct point pm = {3.0, 4.0};
     funk(pm); // 传递pm的副本

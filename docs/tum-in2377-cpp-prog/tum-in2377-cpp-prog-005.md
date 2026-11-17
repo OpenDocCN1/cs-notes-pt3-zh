@@ -89,6 +89,9 @@ int Foo::magic_value = 0; // 静态成员的定义
 ![](img/e117ecb35c9d55ed6eb3400c243982f0_39.png)
 
 **示例：**
+
+![](img/e117ecb35c9d55ed6eb3400c243982f0_41.png)
+
 ```cpp
 // 头文件 foo.hpp
 class Foo {
@@ -98,9 +101,6 @@ public:
 private:
     int value_;
 };
-
-![](img/e117ecb35c9d55ed6eb3400c243982f0_41.png)
-
 // 源文件 foo.cpp
 #include "foo.hpp"
 void Foo::do_something() { // 外联定义

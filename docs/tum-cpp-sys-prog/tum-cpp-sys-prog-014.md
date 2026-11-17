@@ -42,11 +42,11 @@ std::thread thread_object(callable_function, arg1, arg2, ...);
 
 以下是创建和运行线程的一个简单示例：
 
-```cpp
-#include <thread>
 
 ![](img/7770c707f909ac38cd761f28c53303f2_3.png)
 
+```cpp
+#include <thread>
 void foo(int a, int b) {
     // 执行一些工作
 }

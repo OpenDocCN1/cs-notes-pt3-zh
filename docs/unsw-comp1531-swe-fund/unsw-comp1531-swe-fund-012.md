@@ -72,10 +72,6 @@ const sum = (a, b) => a + b;
 
 ![](img/2a025dce3cfb679d25c2c4c37cada74f_27.png)
 
-```javascript
-// 定义两个格式化函数
-const brackets = (str) => `(${str})`;
-const fullStop = (str) => `${str}.`;
 
 ![](img/2a025dce3cfb679d25c2c4c37cada74f_29.png)
 
@@ -83,10 +79,6 @@ const fullStop = (str) => `${str}.`;
 
 ![](img/2a025dce3cfb679d25c2c4c37cada74f_33.png)
 
-// 定义一个接受函数作为参数的函数
-const sayHi = (name, format) => {
-    console.log(`Hello ${format(name)}`);
-};
 
 ![](img/2a025dce3cfb679d25c2c4c37cada74f_35.png)
 
@@ -94,6 +86,14 @@ const sayHi = (name, format) => {
 
 ![](img/2a025dce3cfb679d25c2c4c37cada74f_38.png)
 
+```javascript
+// 定义两个格式化函数
+const brackets = (str) => `(${str})`;
+const fullStop = (str) => `${str}.`;
+// 定义一个接受函数作为参数的函数
+const sayHi = (name, format) => {
+    console.log(`Hello ${format(name)}`);
+};
 // 调用sayHi，并传入不同的格式化函数
 sayHi('Hayden', brackets); // 输出: Hello (Hayden)
 sayHi('Hayden', fullStop); // 输出: Hello Hayden.
@@ -230,6 +230,9 @@ const congratulateMarkCredit = (name) => `Congratulations ${name} on your credit
 
 使用高阶函数可以更优雅地解决：
 
+
+![](img/2a025dce3cfb679d25c2c4c37cada74f_109.png)
+
 ```javascript
 // 高阶函数：生成祝贺函数的工厂
 const generateCongratulateMark = (mark: string) => {
@@ -240,9 +243,6 @@ const generateCongratulateMark = (mark: string) => {
 // 使用工厂创建特定函数
 const congratulateMarkPass = generateCongratulateMark('pass');
 const congratulateMarkCredit = generateCongratulateMark('credit');
-
-![](img/2a025dce3cfb679d25c2c4c37cada74f_109.png)
-
 // 使用它们
 console.log(congratulateMarkPass('Hayden')); // Congratulations Hayden on your pass.
 console.log(congratulateMarkCredit('Juliana')); // Congratulations Juliana on your credit.

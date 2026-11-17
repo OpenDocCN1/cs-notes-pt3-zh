@@ -107,6 +107,9 @@ p {
 
 链接有以下几种主要状态，可以使用**伪类选择器**来分别定义样式：
 
+
+![](img/5a0b9cd2614fbc79e29a6e109b1c96b5_24.png)
+
 ```css
 /* 默认/未访问的链接 */
 a:link {
@@ -118,9 +121,6 @@ a:link {
 a:visited {
     color: purple;
 }
-
-![](img/5a0b9cd2614fbc79e29a6e109b1c96b5_24.png)
-
 /* 鼠标悬停在链接上时 */
 a:hover {
     color: red;

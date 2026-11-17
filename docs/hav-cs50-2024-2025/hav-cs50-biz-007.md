@@ -671,9 +671,6 @@ JavaScript 采用**事件驱动**编程模型。你可以让代码“监听”�
 
 ![](img/b24c2807aef11fc612696c6543042792_267.png)
 
-```javascript
-// 选择按钮
-let myButton = document.querySelector('#myButton');
 
 ![](img/b24c2807aef11fc612696c6543042792_269.png)
 
@@ -683,14 +680,6 @@ let myButton = document.querySelector('#myButton');
 
 ![](img/b24c2807aef11fc612696c6543042792_273.png)
 
-// 为按钮添加点击事件监听器
-myButton.addEventListener('click', function(event) {
-    // 阻止按钮的默认行为（如表单提交）
-    event.preventDefault();
-    // 执行你的代码
-    console.log('按钮被点击了！');
-    document.body.style.backgroundColor = 'lightblue';
-});
 
 ![](img/b24c2807aef11fc612696c6543042792_275.png)
 
@@ -700,6 +689,17 @@ myButton.addEventListener('click', function(event) {
 
 ![](img/b24c2807aef11fc612696c6543042792_281.png)
 
+```javascript
+// 选择按钮
+let myButton = document.querySelector('#myButton');
+// 为按钮添加点击事件监听器
+myButton.addEventListener('click', function(event) {
+    // 阻止按钮的默认行为（如表单提交）
+    event.preventDefault();
+    // 执行你的代码
+    console.log('按钮被点击了！');
+    document.body.style.backgroundColor = 'lightblue';
+});
 // 监听键盘事件
 document.addEventListener('keyup', function(event) {
     console.log(`你松开了键：${event.key}`);

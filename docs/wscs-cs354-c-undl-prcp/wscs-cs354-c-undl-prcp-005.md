@@ -59,11 +59,11 @@ struct student {
 ![](img/c027cd881a09cfe95dd09079c3f66e22_25.png)
 
 示例代码如下：
-```c
-#include <stdio.h>
 
 ![](img/c027cd881a09cfe95dd09079c3f66e22_27.png)
 
+```c
+#include <stdio.h>
 struct student {
     char *name;
     int id;
@@ -123,15 +123,15 @@ printf("Address of student.id: %p\n", &(student1.id));
 ### 按值传递结构体
 
 以下是一个按值传递结构体的函数示例：
+
+![](img/c027cd881a09cfe95dd09079c3f66e22_44.png)
+
 ```c
 void printStudent(struct student s) {
     printf("Name (in function): %s\n", s.name);
     printf("ID (in function): %d\n", s.id);
     printf("Address of s in function: %p\n", &s);
 }
-
-![](img/c027cd881a09cfe95dd09079c3f66e22_44.png)
-
 int main() {
     struct student student1 = {"Mike", 123456};
     printStudent(student1); // 传递结构体副本
@@ -173,6 +173,9 @@ int main() {
 当使用指针时，我们需要使用箭头运算符（`->`）来访问结构体成员。
 
 以下是一个按指针传递结构体的函数示例：
+
+![](img/c027cd881a09cfe95dd09079c3f66e22_67.png)
+
 ```c
 void printStudentByPointer(struct student *s) {
     // 使用箭头运算符访问成员
@@ -180,9 +183,6 @@ void printStudentByPointer(struct student *s) {
     printf("ID (via pointer): %d\n", s->id);
     printf("Address of pointer s: %p\n", s); // s本身存储的是地址
 }
-
-![](img/c027cd881a09cfe95dd09079c3f66e22_67.png)
-
 int main() {
     struct student student1 = {"Mike", 123456};
     printStudentByPointer(&student1); // 传递结构体的地址
@@ -212,17 +212,17 @@ int main() {
 ![](img/c027cd881a09cfe95dd09079c3f66e22_78.png)
 
 **方式一：先定义结构体，再创建别名**
+
+![](img/c027cd881a09cfe95dd09079c3f66e22_80.png)
+
+![](img/c027cd881a09cfe95dd09079c3f66e22_81.png)
+
 ```c
 struct student {
     char *name;
     int id;
 };
 typedef struct student Student; // 现在可以用Student代替struct student
-
-![](img/c027cd881a09cfe95dd09079c3f66e22_80.png)
-
-![](img/c027cd881a09cfe95dd09079c3f66e22_81.png)
-
 Student stu1; // 声明变量
 ```
 

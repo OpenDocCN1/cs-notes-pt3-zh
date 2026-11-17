@@ -12,6 +12,9 @@
 
 例如，假设我们有三个类：`Int`、`MyString` 和 `MyRational`，它们之间可以任意组合进行加法运算。我们可以为每个类定义三个同名方法 `add_values`，分别处理不同类型的参数：
 
+
+![](img/e8cb8cc8d920caff60b9de368e0199ec_3.png)
+
 ```ruby
 # 伪代码示例，展示多方法的结构
 class Int
@@ -19,9 +22,6 @@ class Int
   def add_values(other: MyString) # 处理 Int + MyString
   def add_values(other: MyRational) # 处理 Int + MyRational
 end
-
-![](img/e8cb8cc8d920caff60b9de368e0199ec_3.png)
-
 class MyString
   def add_values(other: Int)      # 处理 MyString + Int
   def add_values(other: MyString) # 处理 MyString + MyString

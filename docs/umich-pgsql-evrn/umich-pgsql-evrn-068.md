@@ -100,14 +100,14 @@ ORDER BY id;
 
 ![](img/d3d291188f9a1470e9d53a0ffdb24458_28.png)
 
+
+![](img/d3d291188f9a1470e9d53a0ffdb24458_30.png)
+
 ```sql
 CREATE TABLE docs_gin (
     keyword TEXT,
     doc_id INTEGER REFERENCES docs(id) ON DELETE CASCADE
 );
-
-![](img/d3d291188f9a1470e9d53a0ffdb24458_30.png)
-
 INSERT INTO docs_gin (doc_id, keyword)
 SELECT DISTINCT id, unnest(string_to_array(doc, ' ')) AS keyword
 FROM docs;

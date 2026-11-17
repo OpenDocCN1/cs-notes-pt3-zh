@@ -20,12 +20,12 @@ MPI是用于分布式内存并行编程的标准。它允许运行在不同处�
 
 以下是一个“Hello World”MPI程序的代码框架：
 
-```c
-#include <mpi.h>
-#include <stdio.h>
 
 ![](img/a0e60a92f1a4c1643c30c0c11fc23ddb_4.png)
 
+```c
+#include <mpi.h>
+#include <stdio.h>
 int main(int argc, char** argv) {
     // 初始化MPI环境
     MPI_Init(&argc, &argv);

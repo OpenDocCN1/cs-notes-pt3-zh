@@ -16,8 +16,6 @@
 
 首先，我们需要在抽象语法树（AST）中表示加法这样的二元运算符。
 
-```ocaml
-type binop = Add | Mult
 
 ![](img/27ded28b91303152d0f34b0bdbce9d2f_7.png)
 
@@ -25,6 +23,8 @@ type binop = Add | Mult
 
 ![](img/27ded28b91303152d0f34b0bdbce9d2f_9.png)
 
+```ocaml
+type binop = Add | Mult
 type expr =
   | Int of int
   | Binop of binop * expr * expr

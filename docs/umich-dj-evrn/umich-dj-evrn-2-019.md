@@ -137,14 +137,14 @@ function PartyAnimal(name) {
 类的强大之处在于可以根据同一个模板创建多个相互独立的实例，每个实例都拥有自己独立的属性值。
 
 以下是创建多个实例的示例：
-```javascript
-let s = new PartyAnimal("Sally");
-let j = new PartyAnimal("Jim");
 
 ![](img/16fad4d178a71749f2d47b9e5a440cb0_42.png)
 
 ![](img/16fad4d178a71749f2d47b9e5a440cb0_43.png)
 
+```javascript
+let s = new PartyAnimal("Sally");
+let j = new PartyAnimal("Jim");
 s.party(); // 输出: Sally=1
 j.party(); // 输出: Jim=1
 s.party(); // 输出: Sally=2

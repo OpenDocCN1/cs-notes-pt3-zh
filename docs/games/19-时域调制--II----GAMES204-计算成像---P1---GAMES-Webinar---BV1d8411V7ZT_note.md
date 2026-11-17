@@ -91,8 +91,6 @@
 
 ![](img/a90f0abe78d74cf5f8c1d0a03ca886cf_45.png)
 
-```python
-import numpy as np
 
 ![](img/a90f0abe78d74cf5f8c1d0a03ca886cf_47.png)
 
@@ -100,6 +98,8 @@ import numpy as np
 
 ![](img/a90f0abe78d74cf5f8c1d0a03ca886cf_51.png)
 
+```python
+import numpy as np
 def non_visual_imaging(data):
   """
   非视域成像

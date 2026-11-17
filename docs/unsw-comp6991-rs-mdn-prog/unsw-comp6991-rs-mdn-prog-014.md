@@ -116,6 +116,13 @@ let (tx, rx) = mpsc::channel(); // 创建一个可以发送i32的通道
 
 以下是一个简单示例：
 
+
+![](img/271be3da1e0887f3f604182c6e4a8546_30.png)
+
+![](img/271be3da1e0887f3f604182c6e4a8546_32.png)
+
+![](img/271be3da1e0887f3f604182c6e4a8546_34.png)
+
 ```rust
 use std::sync::mpsc;
 use std::thread;
@@ -128,13 +135,6 @@ thread::spawn(move || {
     thread::sleep(std::time::Duration::from_secs(1));
     tx1.send("Hello from thread 1").unwrap();
 });
-
-![](img/271be3da1e0887f3f604182c6e4a8546_30.png)
-
-![](img/271be3da1e0887f3f604182c6e4a8546_32.png)
-
-![](img/271be3da1e0887f3f604182c6e4a8546_34.png)
-
 thread::spawn(move || {
     thread::sleep(std::time::Duration::from_secs(2));
     tx.send("Hello from thread 2").unwrap();
@@ -207,8 +207,6 @@ Rust的标准迭代器是顺序执行的。Rayon提供了几乎完全相同的AP
 
 ![](img/271be3da1e0887f3f604182c6e4a8546_49.png)
 
-```rust
-use rayon::prelude::*; // 引入必要的特质
 
 ![](img/271be3da1e0887f3f604182c6e4a8546_51.png)
 
@@ -216,6 +214,8 @@ use rayon::prelude::*; // 引入必要的特质
 
 ![](img/271be3da1e0887f3f604182c6e4a8546_55.png)
 
+```rust
+use rayon::prelude::*; // 引入必要的特质
 fn main() {
     let sum: f64 = (1..=10_000_000_000u64) // 100亿个数
         .into_par_iter() // 改为并行迭代器

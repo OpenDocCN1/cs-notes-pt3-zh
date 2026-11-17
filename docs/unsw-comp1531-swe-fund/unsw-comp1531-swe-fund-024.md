@@ -25,17 +25,17 @@
 ![](img/4a999000b3e5b67a409ca520302b7c81_9.png)
 
 以下是一个简化的代码示例：
+
+![](img/4a999000b3e5b67a409ca520302b7c81_11.png)
+
+![](img/4a999000b3e5b67a409ca520302b7c81_13.png)
+
 ```javascript
 function register(email, password) {
     // 将 email 和 password 存储到数据对象中
     dataStore.users.push({ email, password });
     return { success: true };
 }
-
-![](img/4a999000b3e5b67a409ca520302b7c81_11.png)
-
-![](img/4a999000b3e5b67a409ca520302b7c81_13.png)
-
 function login(email, password) {
     const user = dataStore.users.find(u => u.email === email);
     if (user && user.password === password) {

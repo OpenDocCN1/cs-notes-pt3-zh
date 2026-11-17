@@ -26,11 +26,11 @@
 
 ![](img/a8a0f7d99052164338cfe898a6e75d86_9.png)
 
-```python
-from django.views.decorators.csrf import csrf_exempt
 
 ![](img/a8a0f7d99052164338cfe898a6e75d86_11.png)
 
+```python
+from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 def my_first_form(request):
     # ... 处理表单的代码
@@ -58,11 +58,11 @@ def my_first_form(request):
 
 ![](img/a8a0f7d99052164338cfe898a6e75d86_17.png)
 
-```python
-from django.middleware.csrf import get_token
 
 ![](img/a8a0f7d99052164338cfe898a6e75d86_18.png)
 
+```python
+from django.middleware.csrf import get_token
 def manual_csrf_form(request):
     # 获取CSRF令牌
     csrf_token = get_token(request)
@@ -99,11 +99,11 @@ Django的中间件会在请求到达视图之前验证这个令牌。**只有验
 以下是一个示例：
 
 **views.py**
-```python
-from django.shortcuts import render
 
 ![](img/a8a0f7d99052164338cfe898a6e75d86_23.png)
 
+```python
+from django.shortcuts import render
 def easy_csrf_form(request):
     return render(request, 'myapp/form_template.html')
 ```
@@ -130,12 +130,12 @@ def easy_csrf_form(request):
 现在，我们将应用所学知识，构建一个功能完整的猜数游戏视图。这次我们将使用**基于类的视图**，它可以将GET和POST请求的处理逻辑清晰地分离到不同方法中。
 
 **views.py**
-```python
-from django.views import View
-from django.shortcuts import render
 
 ![](img/a8a0f7d99052164338cfe898a6e75d86_28.png)
 
+```python
+from django.views import View
+from django.shortcuts import render
 class GuessingGameView(View):
     
     def get(self, request):
@@ -170,6 +170,11 @@ class GuessingGameView(View):
 ```
 
 **game.html**
+
+![](img/a8a0f7d99052164338cfe898a6e75d86_30.png)
+
+![](img/a8a0f7d99052164338cfe898a6e75d86_31.png)
+
 ```html
 <h1>猜数字游戏</h1>
 <form method="post">
@@ -178,11 +183,6 @@ class GuessingGameView(View):
     <input type="text" id="guess" name="guess">
     <input type="submit" value="提交猜测">
 </form>
-
-![](img/a8a0f7d99052164338cfe898a6e75d86_30.png)
-
-![](img/a8a0f7d99052164338cfe898a6e75d86_31.png)
-
 {% if message %}
     <p><strong>{{ message }}</strong></p>
 {% endif %}

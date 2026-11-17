@@ -237,14 +237,14 @@ int main() {
 
 浮点数（`float`和`double`）在计算机中是近似值。直接使用相等运算符（`==`）比较它们可能导致错误结果。
 
-```c
-#include <stdio.h>
-#include <math.h>
 
 ![](img/86d2e7e4a1e2be61d7319ea32b06403f_6.png)
 
 ![](img/86d2e7e4a1e2be61d7319ea32b06403f_7.png)
 
+```c
+#include <stdio.h>
+#include <math.h>
 int main() {
     float a = 0.1f;
     float b = 0.8f;

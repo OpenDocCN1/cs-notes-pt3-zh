@@ -50,12 +50,12 @@ Rust显然支持多线程编程。标准库使用所谓的**内核线程模型**
 
 以下是创建并运行线程的代码示例：
 
-```rust
-use std::thread;
-use std::time::Duration;
 
 ![](img/b9ed38e15f7dcec9b0d6d4af9a4f2cfe_3.png)
 
+```rust
+use std::thread;
+use std::time::Duration;
 fn main() {
     thread::spawn(|| {
         for i in 1..10 {

@@ -108,14 +108,14 @@ console.log(manyString(5, 'hello'));
 以下是导出多个函数的方法：
 
 **代码示例：命名导出多个函数**
-```javascript
-function manyString(repeats, str) { /* ... */ }
-function addBrackets(str) { return `[${str}]`; }
 
 ![](img/30048eb94109afe9681ad3efd8cd0124_45.png)
 
 ![](img/30048eb94109afe9681ad3efd8cd0124_47.png)
 
+```javascript
+function manyString(repeats, str) { /* ... */ }
+function addBrackets(str) { return `[${str}]`; }
 // 使用花括号 {} 进行命名导出
 export { manyString, addBrackets };
 ```
@@ -132,14 +132,14 @@ export { manyString, addBrackets };
 相应地，在导入时，也需要使用花括号来指定要导入的具体项目。
 
 **代码示例：导入多个命名导出**
-```javascript
-// 从指定文件导入多个函数
-import { manyString, addBrackets } from './2.2_multi_export_lib_p2.js';
 
 ![](img/30048eb94109afe9681ad3efd8cd0124_55.png)
 
 ![](img/30048eb94109afe9681ad3efd8cd0124_57.png)
 
+```javascript
+// 从指定文件导入多个函数
+import { manyString, addBrackets } from './2.2_multi_export_lib_p2.js';
 let b = addBrackets('Hello');
 let result = manyString(3, b);
 console.log(result); // 输出: [Hello] [Hello] [Hello]

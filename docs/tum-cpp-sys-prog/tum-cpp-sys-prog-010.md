@@ -71,12 +71,12 @@
 
 ![](img/b94b5610af9341bd67cb7ea4fb7502df_23.png)
 
-```cpp
-#include <string>
-#include <iostream>
 
 ![](img/b94b5610af9341bd67cb7ea4fb7502df_25.png)
 
+```cpp
+#include <string>
+#include <iostream>
 int main() {
     std::string str = "Hello, Systems Programming!";
     // 获取长度

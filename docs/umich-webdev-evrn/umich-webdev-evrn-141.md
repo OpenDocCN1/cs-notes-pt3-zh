@@ -108,21 +108,21 @@ $(document).ready(function() {
 
 ![](img/4111cd997d6ccf7c84f350ce6a8749ea_17.png)
 
-```php
-<?php
-require_once 'pdo.php'; // 数据库连接
 
 ![](img/4111cd997d6ccf7c84f350ce6a8749ea_19.png)
 
 ![](img/4111cd997d6ccf7c84f350ce6a8749ea_21.png)
 
+
+![](img/4111cd997d6ccf7c84f350ce6a8749ea_23.png)
+
+```php
+<?php
+require_once 'pdo.php'; // 数据库连接
 header('Content-Type: application/json'); // 设置正确的响应头
 
 $stmt = $pdo->query('SELECT title, plays, rating, id FROM tracks');
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC); // 获取所有行作为关联数组
-
-![](img/4111cd997d6ccf7c84f350ce6a8749ea_23.png)
-
 echo json_encode($rows); // 编码并输出JSON
 ?>
 ```

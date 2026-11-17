@@ -148,6 +148,9 @@ cout << endl;
 
 让我们看一个例子。我们将使用我们的老朋友`deque`，向其中推入0到9的一些值。然后我们将使用`rbegin`和`rend`以相反的顺序打印`deque`。`rbegin`和`rend`返回反向迭代器。在容器上调用`rbegin`时，它会找到容器的末尾，然后将其包装在反向迭代器中。同样，调用`rend`时，它会取容器的开头并将其包装为反向迭代器。这有点像“镜像世界”的概念。一旦我们有了这些，我们就可以向后打印东西了。
 
+
+![](img/7eb950039027c6704d4c327a872e49da_10.png)
+
 ```cpp
 deque<int> aDeque;
 for (int i = 0; i < 10; ++i) {
@@ -158,9 +161,6 @@ for (int i = 0; i < 10; ++i) {
 cout << "Reverse with rbegin/rend: ";
 copy(aDeque.rbegin(), aDeque.rend(), ostream_iterator<int>(cout, " "));
 cout << endl;
-
-![](img/7eb950039027c6704d4c327a872e49da_10.png)
-
 // 显式使用反向迭代器适配器
 reverse_iterator<deque<int>::iterator> rfirst(aDeque.end());
 reverse_iterator<deque<int>::iterator> rlast(aDeque.begin());

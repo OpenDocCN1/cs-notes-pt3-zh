@@ -211,13 +211,13 @@ std::vector<std::vector<int>> matrix; // 注意 >> 间的空格
 
 ### 关系运算符
 `vector`支持`==`, `!=`, `<`, `<=`, `>`, `>=`等比较操作。比较是**逐元素**进行的，类似于字典序比较。
+
+![](img/e521902e74075f33fefe24747695d0db_3.png)
+
 ```cpp
 std::vector<int> a {1, 2, 3};
 std::vector<int> b {1, 2, 3};
 std::vector<int> c {1, 2, 4};
-
-![](img/e521902e74075f33fefe24747695d0db_3.png)
-
 bool eq1 = (a == b); // true
 bool eq2 = (a == c); // false
 bool lt = (a < c);   // true (比较到3<4)

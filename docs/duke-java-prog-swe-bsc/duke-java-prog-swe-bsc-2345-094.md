@@ -42,11 +42,11 @@
 
 ![](img/7c5d0b89b05bf4b6f03ab67d148bbb74_11.png)
 
-```java
-import java.util.ArrayList;
 
 ![](img/7c5d0b89b05bf4b6f03ab67d148bbb74_13.png)
 
+```java
+import java.util.ArrayList;
 ArrayList<String> stringList = new ArrayList<String>();
 ```
 

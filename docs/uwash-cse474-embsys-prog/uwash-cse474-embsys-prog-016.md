@@ -136,11 +136,11 @@ MOV X, #0 ; 退出临界区，释放资源
 
 ![](img/a4bf4163983f4383713db818e20d01d1_14.png)
 
-```c
-SemaphoreHandle_t xSemaphore;
 
 ![](img/a4bf4163983f4383713db818e20d01d1_16.png)
 
+```c
+SemaphoreHandle_t xSemaphore;
 // 任务A（获取资源）
 void taskA(void *pvParameters) {
     while (1) {
@@ -201,13 +201,18 @@ void taskB(void *pvParameters) {
 
 以下是核心任务框架：
 
+
+![](img/a4bf4163983f4383713db818e20d01d1_24.png)
+
+
+![](img/a4bf4163983f4383713db818e20d01d1_26.png)
+
+![](img/a4bf4163983f4383713db818e20d01d1_28.png)
+
 ```c
 // 共享变量
 volatile int adc_value = 0;
 volatile int blinker_pin = OFFBOARD_LED_PIN;
-
-![](img/a4bf4163983f4383713db818e20d01d1_24.png)
-
 // 任务1：闪烁LED
 void blink_task(void *pvParameters) {
     pinMode(blinker_pin, OUTPUT);
@@ -218,11 +223,6 @@ void blink_task(void *pvParameters) {
         vTaskDelay(100 / portTICK_PERIOD_MS);
     }
 }
-
-![](img/a4bf4163983f4383713db818e20d01d1_26.png)
-
-![](img/a4bf4163983f4383713db818e20d01d1_28.png)
-
 // 任务2：读取模拟输入并更新共享变量
 void analog_read_task(void *pvParameters) {
     while (1) {

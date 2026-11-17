@@ -200,6 +200,9 @@ println!("{:?}", map);
 
 假设我们需要一个函数来查找向量中的最大元素。最初，我们可能为每种类型编写单独的函数：
 
+
+![](img/da8faab7b76be12ee92cd785ea9660a3_9.png)
+
 ```rust
 fn largest_i32(list: &[i32]) -> &i32 {
     let mut largest = &list[0];
@@ -210,9 +213,6 @@ fn largest_i32(list: &[i32]) -> &i32 {
     }
     largest
 }
-
-![](img/da8faab7b76be12ee92cd785ea9660a3_9.png)
-
 fn largest_char(list: &[char]) -> &char {
     let mut largest = &list[0];
     for item in list {
@@ -246,28 +246,28 @@ fn largest<T: PartialOrd>(list: &[T]) -> &T {
 
 我们也可以在结构体中使用泛型：
 
+
+![](img/da8faab7b76be12ee92cd785ea9660a3_13.png)
+
 ```rust
 struct Point<T> {
     x: T,
     y: T,
 }
-
-![](img/da8faab7b76be12ee92cd785ea9660a3_13.png)
-
 let integer_point = Point { x: 5, y: 10 };
 let float_point = Point { x: 1.0, y: 4.0 };
 ```
 
 如果需要结构体的字段具有不同的类型，可以使用多个泛型参数：
 
+
+![](img/da8faab7b76be12ee92cd785ea9660a3_15.png)
+
 ```rust
 struct Point<T, U> {
     x: T,
     y: U,
 }
-
-![](img/da8faab7b76be12ee92cd785ea9660a3_15.png)
-
 let both_integer = Point { x: 5, y: 10 };
 let integer_and_float = Point { x: 5, y: 4.0 };
 ```
@@ -276,14 +276,14 @@ let integer_and_float = Point { x: 5, y: 4.0 };
 
 枚举也可以使用泛型，例如标准库中的 `Option<T>` 和 `Result<T, E>`：
 
+
+![](img/da8faab7b76be12ee92cd785ea9660a3_17.png)
+
 ```rust
 enum Option<T> {
     Some(T),
     None,
 }
-
-![](img/da8faab7b76be12ee92cd785ea9660a3_17.png)
-
 enum Result<T, E> {
     Ok(T),
     Err(E),

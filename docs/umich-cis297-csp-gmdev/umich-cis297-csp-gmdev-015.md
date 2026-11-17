@@ -254,6 +254,11 @@ private List<int> GetDieValueOccurrences()
 
 ![](img/06e94836b3947e1792cafc0b09665c60_50.png)
 
+
+![](img/06e94836b3947e1792cafc0b09665c60_52.png)
+
+![](img/06e94836b3947e1792cafc0b09665c60_54.png)
+
 ```csharp
 public Scorecard GetPossibleScores()
 {
@@ -286,11 +291,6 @@ public Scorecard GetPossibleScores()
 
     return possibleScores;
 }
-
-![](img/06e94836b3947e1792cafc0b09665c60_52.png)
-
-![](img/06e94836b3947e1792cafc0b09665c60_54.png)
-
 // 检查小顺子（四个连续数字）
 private bool HasSmallStraight(int[] sortedDice)
 {

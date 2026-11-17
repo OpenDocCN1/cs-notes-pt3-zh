@@ -231,13 +231,13 @@ let f = match f {
 在实际开发中，一个函数中发生的错误，常常需要传递给它的调用者来处理，这被称为错误传播。在Rust中，错误传播可以手动实现，但比较繁琐。幸运的是，Rust提供了`?`运算符来极大地简化这个过程。
 
 假设我们有一个从文件中读取用户名的函数：
+
+![](img/e95802b4e94c378792c74e96d48941f5_5.png)
+
 ```rust
 use std::fs::File;
 use std::io;
 use std::io::Read;
-
-![](img/e95802b4e94c378792c74e96d48941f5_5.png)
-
 fn read_username_from_file() -> Result<String, io::Error> {
     let mut f = File::open("hello.txt")?; // 如果打开失败，`?`会立即将错误返回给调用者
     let mut s = String::new();

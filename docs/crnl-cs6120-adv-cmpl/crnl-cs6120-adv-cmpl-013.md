@@ -20,15 +20,15 @@
 
 ![](img/bf46f33754c69dc0ed7ea920f3cc5104_8.png)
 
+
+![](img/bf46f33754c69dc0ed7ea920f3cc5104_10.png)
+
 ```pseudocode
 function main():
     for i in range(100):
         x = i * 42
         y = F(x)
         print(y)
-
-![](img/bf46f33754c69dc0ed7ea920f3cc5104_10.png)
-
 function F(a):
     return a * 42
 ```

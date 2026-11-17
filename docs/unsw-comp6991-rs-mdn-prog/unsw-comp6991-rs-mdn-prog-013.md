@@ -138,9 +138,6 @@ fn main() {
 互斥锁（Mutex， Mutual Exclusion）确保一次只有一个线程可以访问受保护的数据。Rust标准库提供了`std::sync::Mutex`。其设计巧妙之处在于，数据被封装在`Mutex`内部，访问数据**必须**先通过`lock`方法获取锁。锁返回一个`MutexGuard`，它提供了对内部数据的访问，并在其离开作用域被`drop`时自动释放锁，避免了忘记解锁的问题。
 
 以下是使用`Mutex`修正计数问题的示例：
-```rust
-use std::sync::{Arc, Mutex};
-use std::thread;
 
 ![](img/9aedf169c5ff7cb375a8cc0c27b3efb2_24.png)
 
@@ -150,6 +147,9 @@ use std::thread;
 
 ![](img/9aedf169c5ff7cb375a8cc0c27b3efb2_29.png)
 
+```rust
+use std::sync::{Arc, Mutex};
+use std::thread;
 fn main() {
     let counter = Arc::new(Mutex::new(0));
     let mut handles = vec![];
@@ -223,16 +223,16 @@ fn main() {
 ![](img/9aedf169c5ff7cb375a8cc0c27b3efb2_43.png)
 
 使用原子类型实现计数器：
-```rust
-use std::sync::atomic::{AtomicUsize, Ordering};
-use std::thread;
-
-static COUNTER: AtomicUsize = AtomicUsize::new(0);
 
 ![](img/9aedf169c5ff7cb375a8cc0c27b3efb2_45.png)
 
 ![](img/9aedf169c5ff7cb375a8cc0c27b3efb2_47.png)
 
+```rust
+use std::sync::atomic::{AtomicUsize, Ordering};
+use std::thread;
+
+static COUNTER: AtomicUsize = AtomicUsize::new(0);
 fn main() {
     let mut handles = vec![];
 

@@ -236,13 +236,13 @@ pub fn notify<T: Summary>(item: &T) {
 `impl Trait` 语法是特质约束的语法糖，但在某些情况下，特质约束更具表达力。
 
 考虑以下两个函数：
+
+![](img/edb8e9b2463f8e58904a22c6551dab8b_30.png)
+
 ```rust
 // 版本 1: 使用 impl Trait
 pub fn notify(item1: &impl Summary, item2: &impl Summary) {...}
 // item1 和 item2 可以是实现了 Summary 的 *不同* 类型。
-
-![](img/edb8e9b2463f8e58904a22c6551dab8b_30.png)
-
 // 版本 2: 使用特质约束
 pub fn notify<T: Summary>(item1: &T, item2: &T) {...}
 // item1 和 item2 必须是 *相同* 的具体类型 T，且 T 需实现 Summary。
@@ -303,11 +303,11 @@ fn returns_summarizable() -> impl Summary {
 
 ![](img/edb8e9b2463f8e58904a22c6551dab8b_37.png)
 
-```rust
-use std::fmt::Display;
 
 ![](img/edb8e9b2463f8e58904a22c6551dab8b_39.png)
 
+```rust
+use std::fmt::Display;
 struct Pair<T> {
     x: T,
     y: T,

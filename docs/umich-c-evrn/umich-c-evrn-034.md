@@ -130,6 +130,9 @@ MapEntry *mapit_next(MapIt *it) {
 使用迭代器的客户端代码变得非常简洁和通用。它只需要知道如何获取迭代器、调用 `next` 以及判断结束。
 
 以下是使用迭代器遍历Map并打印所有键值对的示例代码：
+
+![](img/37803759d728039e286da3d071c0fe8b_23.png)
+
 ```c
 // 获取Map的迭代器
 MapIt *it = map->iterator(map);
@@ -143,9 +146,6 @@ while (1) {
     // 处理当前条目（MapEntry的key和value是公共的）
     printf("Key: %s, Value: %d\n", cur->key, cur->value);
 }
-
-![](img/37803759d728039e286da3d071c0fe8b_23.png)
-
 // 清理迭代器
 it->del(it);
 ```

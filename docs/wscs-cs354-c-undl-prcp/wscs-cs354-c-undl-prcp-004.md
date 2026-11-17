@@ -18,12 +18,12 @@
 
 ![](img/b0e15b4171dcd21b16fb58832af05d93_7.png)
 
-```c
-#define MAX_ROWS 3
-#define MAX_COLS 5
 
 ![](img/b0e15b4171dcd21b16fb58832af05d93_9.png)
 
+```c
+#define MAX_ROWS 3
+#define MAX_COLS 5
 int main() {
     int m[MAX_ROWS][MAX_COLS];
     for (int i = 0; i < MAX_ROWS; i++) {
@@ -102,6 +102,13 @@ int value = *(*(m + i) + j); // 等价于 m[i][j]
 
 ![](img/b0e15b4171dcd21b16fb58832af05d93_37.png)
 
+
+![](img/b0e15b4171dcd21b16fb58832af05d93_39.png)
+
+![](img/b0e15b4171dcd21b16fb58832af05d93_41.png)
+
+![](img/b0e15b4171dcd21b16fb58832af05d93_43.png)
+
 ```c
 void print_matrix(int mat[][MAX_COLS], int rows) {
     for (int i = 0; i < rows; i++) {
@@ -111,13 +118,6 @@ void print_matrix(int mat[][MAX_COLS], int rows) {
         printf("\n");
     }
 }
-
-![](img/b0e15b4171dcd21b16fb58832af05d93_39.png)
-
-![](img/b0e15b4171dcd21b16fb58832af05d93_41.png)
-
-![](img/b0e15b4171dcd21b16fb58832af05d93_43.png)
-
 int main() {
     int m[MAX_ROWS][MAX_COLS];
     // ... 初始化数组

@@ -410,14 +410,14 @@ total_sales <- rbind(q1, q2, q3, q4)
 
 合并后，`total_sales` 数据框包含了所有季度的数据。但是，我们丢失了每条销售记录属于哪个季度的信息。为了解决这个问题，我们可以在合并前，为每个季度的数据框添加一个标识列。
 
+
+![](img/9706ef4bb49cc114945c336274d0dcce_92.png)
+
 ```r
 q1$quarter <- "Q1"
 q2$quarter <- "Q2"
 q3$quarter <- "Q3"
 q4$quarter <- "Q4"
-
-![](img/9706ef4bb49cc114945c336274d0dcce_92.png)
-
 total_sales <- rbind(q1, q2, q3, q4)
 ```
 

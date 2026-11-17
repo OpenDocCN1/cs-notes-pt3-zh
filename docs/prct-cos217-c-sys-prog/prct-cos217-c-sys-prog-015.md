@@ -44,14 +44,14 @@
 
 让我们看一个具体的例子，这是我们在准备作业3时已经见过一点的**列表ADT**。以下是一个合理的列表数据类型实现：
 
+
+![](img/f8bbffc81a7a5701200691e3d856cb09_13.png)
+
 ```c
 struct node {
     int payload;
     struct node *next;
 };
-
-![](img/f8bbffc81a7a5701200691e3d856cb09_13.png)
-
 struct list {
     struct node *first;
 };
@@ -67,15 +67,15 @@ struct list {
 
 让我们探讨一下“客户端只需要知道结构体存在，而不需要知道其细节”这个想法。请看以下接口：
 
+
+![](img/f8bbffc81a7a5701200691e3d856cb09_15.png)
+
 ```c
 // list.h
 struct node {
     int payload;
     struct node *next;
 };
-
-![](img/f8bbffc81a7a5701200691e3d856cb09_15.png)
-
 struct list {
     struct node *first;
 };

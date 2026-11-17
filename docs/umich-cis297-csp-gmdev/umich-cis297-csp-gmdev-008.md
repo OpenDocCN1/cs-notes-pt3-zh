@@ -117,6 +117,13 @@ private void button1_Click(object sender, EventArgs e)
 3.  找到 `KeyPress` 事件，双击它生成事件处理方法。
 4.  在生成的方法中，判断按下的键是否是回车键，如果是，则执行与按钮点击相同的操作。
 
+
+![](img/ebec260aa31c2af2c1d0b7e869071eed_52.png)
+
+![](img/ebec260aa31c2af2c1d0b7e869071eed_54.png)
+
+![](img/ebec260aa31c2af2c1d0b7e869071eed_55.png)
+
 ```csharp
 private void nameTextBox_KeyPress(object sender, KeyPressEventArgs e)
 {
@@ -131,13 +138,6 @@ private void UpdateLabel()
 {
     clickMeLabel.Text = $"你好, {nameTextBox.Text}!";
 }
-
-![](img/ebec260aa31c2af2c1d0b7e869071eed_52.png)
-
-![](img/ebec260aa31c2af2c1d0b7e869071eed_54.png)
-
-![](img/ebec260aa31c2af2c1d0b7e869071eed_55.png)
-
 // 修改按钮点击事件，也调用同一个方法
 private void button1_Click(object sender, EventArgs e)
 {

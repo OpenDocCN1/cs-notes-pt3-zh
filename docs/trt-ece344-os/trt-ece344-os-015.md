@@ -97,6 +97,11 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
 *   **返回值**: 成功返回0，失败返回错误码。
 
 **示例：基本创建**
+
+![](img/84a901c2626e760e1ddbd6fd43eb6ea3_11.png)
+
+![](img/84a901c2626e760e1ddbd6fd43eb6ea3_13.png)
+
 ```c
 #include <stdio.h>
 #include <pthread.h>
@@ -105,11 +110,6 @@ void* run(void* arg) {
     printf("In run\n");
     return NULL;
 }
-
-![](img/84a901c2626e760e1ddbd6fd43eb6ea3_11.png)
-
-![](img/84a901c2626e760e1ddbd6fd43eb6ea3_13.png)
-
 int main() {
     pthread_t thread;
     pthread_create(&thread, NULL, run, NULL);

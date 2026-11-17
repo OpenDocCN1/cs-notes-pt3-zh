@@ -376,6 +376,9 @@ class BlockTest {
         }
     }
 }
+
+![](img/489adce8323ca3a7b0e9fe701e6e665c_46_0.png)
+
 ```
 
 Ans:
@@ -400,9 +403,6 @@ This is X: 8
 This is Y: 4
 This is X: 9
 This is Y: 2
-
-![](img/489adce8323ca3a7b0e9fe701e6e665c_46_0.png)
-
 ## 2.6 基本词汇
 
 ### 2.6.1 空白分隔符（whitespace）
@@ -522,19 +522,19 @@ class Light {
         System.out.println(distance + " miles.");
     }
 }
-```
 
 ![](img/489adce8323ca3a7b0e9fe701e6e665c_59_0.png)
 
 
 
 
-## Ans:
-
-In 1000 days light will travel about 16070400000000 miles.
 
 ![](img/489adce8323ca3a7b0e9fe701e6e665c_60_0.png)
 
+```
+## Ans:
+
+In 1000 days light will travel about 16070400000000 miles.
 ## 3.4.1 单精度浮点型（float）
 
 - 占用32位存储空间的单精度（single-precision）值。
@@ -544,10 +544,10 @@ In 1000 days light will travel about 16070400000000 miles.
 
 ```java
 float hightemp, lowtemp;
-```
 
 ![](img/489adce8323ca3a7b0e9fe701e6e665c_62_0.png)
 
+```
 ## 3.4.2 双精度浮点型（double）
 
 - 占用64位的存储空间。
@@ -567,6 +567,9 @@ class Area {
         System.out.println("Area of circle is " + a);
     }
 }
+
+![](img/489adce8323ca3a7b0e9fe701e6e665c_65_0.png)
+
 ```
 
 ## 3.5 字符
@@ -574,9 +577,6 @@ class Area {
 - Java 使用 Unicode 码代表字符。
 - Java 中的 `char` 类型是16位，其范围是0～65,535，没有负数的 `char`。
 - 有关 Unicode 码的更多信息可在网址 http://www.unicode.org 上找到。
-
-![](img/489adce8323ca3a7b0e9fe701e6e665c_65_0.png)
-
 ### 例 P32
 
 ```java
@@ -590,10 +590,10 @@ class CharDemo {
         System.out.println(ch1 + " " + ch2);
     }
 }
-```
 
 ![](img/489adce8323ca3a7b0e9fe701e6e665c_66_0.png)
 
+```
 ### Ans:
 
 ch1 and ch2: X Y
@@ -611,6 +611,9 @@ class CharDemo2 {
         System.out.println("ch1 is now " + ch1);
     }
 }
+
+![](img/489adce8323ca3a7b0e9fe701e6e665c_69_0.png)
+
 ```
 
 ### Ans:
@@ -618,9 +621,6 @@ class CharDemo2 {
 ch1 contains X
 
 ch1 is now Y
-
-![](img/489adce8323ca3a7b0e9fe701e6e665c_69_0.png)
-
 ## 3.6 布尔型
 
 - 表示逻辑值的简单类型。
@@ -648,10 +648,10 @@ class BoolTest {
         System.out.println("10 > 9 is " + (10 > 9));
     }
 }
-```
 
 ![](img/489adce8323ca3a7b0e9fe701e6e665c_71_0.png)
 
+```
 ## 3.7 进一步研究字面量
 
 ### 3.7.1 整数字面量
@@ -757,10 +757,10 @@ class Scope {
         System.out.println("x is " + x);
     }
 }
-```
 
 ![](img/489adce8323ca3a7b0e9fe701e6e665c_83_0.png)
 
+```
 - 变量可以在程序块内的任何地方被声明，但是只有在它们被声明以后才是合法有效的。
 - 例如：
 
@@ -817,10 +817,13 @@ class ScopeErr {
         }
     }
 }
-```
 
 ![](img/489adce8323ca3a7b0e9fe701e6e665c_88_0.png)
 
+
+![](img/489adce8323ca3a7b0e9fe701e6e665c_90_0.png)
+
+```
 ## 3.9 类型转换与强制类型转换
 
 - 编程时把一种类型的值赋给另外类型的一个变量是相当常见的。
@@ -835,9 +838,6 @@ class ScopeErr {
 - 数字类型（包括整数和浮点）都是彼此兼容。
 - 数字类型和字符类型或布尔类型是不兼容的
 - 字符类型和布尔类型是不兼容的。
-
-![](img/489adce8323ca3a7b0e9fe701e6e665c_90_0.png)
-
 ## 3.9.2 不兼容类型的强制转换
 
 - 强制类型转换是一种显式的类型变换。
@@ -1000,14 +1000,14 @@ class Array {
     System.out.println("April has " + month_days[3] + " days.");
   }
 }
+
+![](img/489adce8323ca3a7b0e9fe701e6e665c_100_0.png)
+
 ```
 
 Ans:
 
 April has 30 days.
-
-![](img/489adce8323ca3a7b0e9fe701e6e665c_100_0.png)
-
 ### 例 P44
 
 ```java
@@ -1053,13 +1053,13 @@ Average is 12.3
 
 ```java
 int twoD[][] = new int[4][5];
+
+![](img/489adce8323ca3a7b0e9fe701e6e665c_104_0.png)
+
 ```
 
 - 该语句分配了一个4行5列的数组并把它分配给数组 twoD。
 - 二维数组（4行5列）的概念性表示
-
-![](img/489adce8323ca3a7b0e9fe701e6e665c_104_0.png)
-
 例 P46上 从左到右，从上到下为数组的每个元素赋值，显示数组的值
 
 ```java
@@ -1099,12 +1099,12 @@ twoD[0] = new int[5];
 twoD[1] = new int[5];
 twoD[2] = new int[5];
 twoD[3] = new int[5];
-```
-
-- 程序定义了一个二维数组，它的第二维的大小可以是不相等的。
 
 ![](img/489adce8323ca3a7b0e9fe701e6e665c_107_0.png)
 
+```
+
+- 程序定义了一个二维数组，它的第二维的大小可以是不相等的。
 例 P46下 三维数组第二维的大小是不相等
 
 ```java
@@ -1163,6 +1163,9 @@ class Matrix {
         }
     }
 }
+
+![](img/489adce8323ca3a7b0e9fe701e6e665c_111_0.png)
+
 ```
 
 Ans:
@@ -1172,9 +1175,6 @@ Ans:
 | 0.0 | 1.0 | 2.0 | 3.0 |
 | 0.0 | 2.0 | 4.0 | 6.0 |
 | 0.0 | 3.0 | 6.0 | 9.0 |
-
-![](img/489adce8323ca3a7b0e9fe701e6e665c_111_0.png)
-
 ## Ans:
 
 | 0 | 0 | 0 | 0 | 0 |
@@ -1206,15 +1206,15 @@ Ans:
   ```java
   char twood1[][] = new char[3][4];
   char[][] twood2 = new char[3][4];
+
+![](img/489adce8323ca3a7b0e9fe701e6e665c_117_0.png)
+
   ```
 - 包含这种数组声明格式主要是为了方便。
 
 # 第一部分 Java语言
 
 ## 第04章 运算符
-
-![](img/489adce8323ca3a7b0e9fe701e6e665c_117_0.png)
-
 - Java有4大类运算符：算术运算、位运算、关系运算和逻辑运算。
 - Java 的绝大多数运算符和 C/C++ 中的用法一样。
 
@@ -1238,10 +1238,10 @@ class BasicMath {
         System.out.println("e = " + e);
     }
 }
-```
 
 ![](img/489adce8323ca3a7b0e9fe701e6e665c_120_0.png)
 
+```
 ```java
 // arithmetic using doubles
 System.out.println("\nFloating Point Arithmetic");
@@ -1331,6 +1331,9 @@ class OpEquals {
     System.out.println("c = " + c);
   }
 }
+
+![](img/489adce8323ca3a7b0e9fe701e6e665c_127_0.png)
+
 ```
 
 Ans:
@@ -1338,9 +1341,6 @@ Ans:
 - a = 6
 - b = 8
 - c = 3
-
-![](img/489adce8323ca3a7b0e9fe701e6e665c_127_0.png)
-
 ## 例 P55
 
 ```java
@@ -1360,7 +1360,6 @@ class IncDec {
         System.out.println("d = " + d);
     }
 }
-```
 
 ![](img/489adce8323ca3a7b0e9fe701e6e665c_129_0.png)
 
@@ -1368,6 +1367,7 @@ class IncDec {
 
 
 
+```
 ## 4.2 位运算符
 
 - 位运算（bitwise operators）直接对整数类型的位进行操作。
@@ -1603,10 +1603,10 @@ class ByteUShift {
             + hex[(e >> 4) & 0x0f] + hex[e & 0x0f]);
     }
 }
-```
 
 ![](img/489adce8323ca3a7b0e9fe701e6e665c_149_0.png)
 
+```
 Ans:
 
 B = 0xf1
@@ -1674,6 +1674,12 @@ c = 6
   int a = 4;
   int b = 1;
   boolean c = a < b;  // c = false
+
+![](img/489adce8323ca3a7b0e9fe701e6e665c_156_0.png)
+
+
+![](img/489adce8323ca3a7b0e9fe701e6e665c_157_0.png)
+
   ```
 
 ## 4.4 布尔逻辑运算符
@@ -1691,9 +1697,6 @@ c = 6
   - `==` 相等
   - `!=` 不相等
   - `?:` 三元运算符（IF-THEN-ELSE）
-
-![](img/489adce8323ca3a7b0e9fe701e6e665c_156_0.png)
-
 ### 布尔逻辑运算符（续）
 
 - 布尔逻辑运算符的运算数只能是布尔型，而且结果也是布尔类型。
@@ -1705,9 +1708,6 @@ c = 6
 | True | False | True | False | True | False |
 | False | True | True | False | True | True |
 | True | True | True | True | False | False |
-
-![](img/489adce8323ca3a7b0e9fe701e6e665c_157_0.png)
-
 ### 例 P65
 
 ```java
@@ -1834,6 +1834,9 @@ x = y = z = 100; // set x, y, and z to 100
     ```java
     a | 4 + c >> b & 7
     (a | ((((4 + c) >> b) & 7)))
+
+![](img/489adce8323ca3a7b0e9fe701e6e665c_168_0.png)
+
     ```
 
 - 圆括号（不管是不是多余的）不会降低你程序的运行速度。
@@ -1841,9 +1844,6 @@ x = y = z = 100; // set x, y, and z to 100
 ## 第1部分 Java语言
 
 ## 第05章 程序控制语句
-
-![](img/489adce8323ca3a7b0e9fe701e6e665c_168_0.png)
-
 - 编程语言使用控制（control）语句来产生执行流，从而完成程序状态的改变。
 - 重复：（Iteration）语句使程序能够重复执行一个或一个以上语句（也就是说，重复语句形成循环）。
 - 跳转：（Jump）语句允许你的程序以非线性的方式执行。
@@ -1952,14 +1952,14 @@ class IfElse {
         System.out.println("April is in the " + season + ".");
     }
 }
+
+![](img/489adce8323ca3a7b0e9fe701e6e665c_175_0.png)
+
 ```
 
 Ans:
 
 April is in the Spring.
-
-![](img/489adce8323ca3a7b0e9fe701e6e665c_175_0.png)
-
 ### 5.1.2 switch语句
 
 - 基于一个表达式的值来使程序执行不同部分的简单方法。
@@ -2008,12 +2008,15 @@ class SampleSwitch {
             }
     }
 }
-```
 
 ![](img/489adce8323ca3a7b0e9fe701e6e665c_177_0.png)
 
 
 
+
+![](img/489adce8323ca3a7b0e9fe701e6e665c_178_0.png)
+
+```
 ### Ans:
 
 - i is zero.
@@ -2022,9 +2025,6 @@ class SampleSwitch {
 - i is three.
 - i is greater than 3.
 - i is greater than 3.
-
-![](img/489adce8323ca3a7b0e9fe701e6e665c_178_0.png)
-
 ### Ans:
 
 ```text
@@ -2147,10 +2147,13 @@ class While {
         }
     }
 }
-```
 
 ![](img/489adce8323ca3a7b0e9fe701e6e665c_187_0.png)
 
+
+![](img/489adce8323ca3a7b0e9fe701e6e665c_188_0.png)
+
+```
 ### Ans:
 
 - tick 10
@@ -2163,9 +2166,6 @@ class While {
 - tick 3
 - tick 2
 - tick 1
-
-![](img/489adce8323ca3a7b0e9fe701e6e665c_188_0.png)
-
 ### 5.2.2 do-while 循环
 
 - 因为条件表达式在循环的结尾，do-while 循环总是执行它的循环体至少一次。

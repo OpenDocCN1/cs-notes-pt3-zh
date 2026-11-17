@@ -42,13 +42,13 @@ URL反转的核心思想是：当我们在代码中（例如在视图或模板�
 
 假设我们有一个名为 `route` 的应用，其 `urls.py` 文件如下：
 
+
+![](img/abddbb243fb7959f5f313c296acf81f4_10.png)
+
 ```python
 # urls.py (在 route 应用中)
 from django.urls import path
 from . import views
-
-![](img/abddbb243fb7959f5f313c296acf81f4_10.png)
-
 urlpatterns = [
     path('first/', views.first_view, name='first_view'),
     path('second/', views.second_view, name='second_view'),

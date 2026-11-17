@@ -107,20 +107,12 @@ getline(cin, fullName); // 获取整行输入，包括空格，直到遇到回�
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_59.png)
 
-```cpp
-#include <sstream>
-#include <string>
-using namespace std;
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_61.png)
 
-string vehicleInfo = "2011 Ford Fiesta";
-istringstream iss(vehicleInfo); // 创建字符串输入流
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_63.png)
 
-string year, make, model;
-iss >> year >> make >> model; // 从字符串流中提取数据
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_65.png)
 
@@ -134,6 +126,14 @@ iss >> year >> make >> model; // 从字符串流中提取数据
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_75.png)
 
+```cpp
+#include <sstream>
+#include <string>
+using namespace std;
+string vehicleInfo = "2011 Ford Fiesta";
+istringstream iss(vehicleInfo); // 创建字符串输入流
+string year, make, model;
+iss >> year >> make >> model; // 从字符串流中提取数据
 cout << "Year: " << year << ", Make: " << make << ", Model: " << model << endl;
 ```
 
@@ -157,17 +157,17 @@ cout << "Year: " << year << ", Make: " << make << ", Model: " << model << endl;
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_89.png)
 
-```cpp
-#include <sstream>
-using namespace std;
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_91.png)
 
-ostringstream oss; // 创建字符串输出流
-oss << "The result is: " << 42 << " and " << 3.14;
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_93.png)
 
+```cpp
+#include <sstream>
+using namespace std;
+ostringstream oss; // 创建字符串输出流
+oss << "The result is: " << 42 << " and " << 3.14;
 string finalString = oss.str(); // 获取构建好的字符串
 cout << finalString << endl; // 输出：The result is: 42 and 3.14
 ```
@@ -206,10 +206,6 @@ cout << finalString << endl; // 输出：The result is: 42 and 3.14
 5.  使用 `>>` 或 `getline()` 从文件流中读取数据。
 6.  使用 `.close()` 方法关闭文件。
 
-```cpp
-#include <fstream>
-#include <iostream>
-using namespace std;
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_113.png)
 
@@ -219,6 +215,10 @@ using namespace std;
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_119.png)
 
+```cpp
+#include <fstream>
+#include <iostream>
+using namespace std;
 int main() {
     ifstream inputFile; // 创建输入文件流对象
     inputFile.open("data.txt"); // 打开名为"data.txt"的文件
@@ -271,15 +271,15 @@ int main() {
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_140.png)
 
-```cpp
-#include <fstream>
-#include <iostream>
-using namespace std;
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_142.png)
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_143.png)
 
+```cpp
+#include <fstream>
+#include <iostream>
+using namespace std;
 int main() {
     ifstream inputFile("numbers.txt"); // 创建并打开文件（构造函数方式）
 

@@ -118,13 +118,13 @@ if (r2 == 1) {
 ## 重新认证的重要性
 
 考虑一个额外示例，说明为何每一步都需要重新认证：
+
+![](img/c9dae6cee649c71c400db374ec1e673b_11.png)
+
 ```rust
 // 线程1
 r1 = x.load();
 y.store(r1);
-
-![](img/c9dae6cee649c71c400db374ec1e673b_11.png)
-
 // 线程2
 r2 = y.load();
 r3 = x.load(); // 额外读取 x

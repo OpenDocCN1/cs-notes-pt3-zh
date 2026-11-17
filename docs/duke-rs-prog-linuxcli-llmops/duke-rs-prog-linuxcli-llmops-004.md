@@ -75,14 +75,14 @@ if __name__ == '__main__':
 
 以下是实现此功能的脚本 `disk_info.py` 的核心部分：
 
+
+![](img/a5e2dfb574afef143924f97ca6102269_1.png)
+
 ```python
 #!/usr/bin/env python3
 import subprocess
 import json
 import click
-
-![](img/a5e2dfb574afef143924f97ca6102269_1.png)
-
 def get_lsblk_json():
     """调用 lsblk 命令并以JSON格式获取输出"""
     result = subprocess.run(['lsblk', '--json', '--output', 'NAME,SIZE,TYPE,MOUNTPOINT'],

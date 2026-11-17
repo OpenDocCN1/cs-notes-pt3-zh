@@ -155,9 +155,6 @@ int main() {
 
 ![](img/2234d19c866af44cea776f9097826c88_60.png)
 
-```cpp
-auto shared = std::make_shared<int>(10);
-std::weak_ptr<int> weak = shared; // 创建弱指针，引用计数仍为1
 
 ![](img/2234d19c866af44cea776f9097826c88_62.png)
 
@@ -165,6 +162,9 @@ std::weak_ptr<int> weak = shared; // 创建弱指针，引用计数仍为1
 
 ![](img/2234d19c866af44cea776f9097826c88_66.png)
 
+```cpp
+auto shared = std::make_shared<int>(10);
+std::weak_ptr<int> weak = shared; // 创建弱指针，引用计数仍为1
 // 要使用 weak_ptr，必须先将其“锁定”为一个 shared_ptr
 if (auto temp = weak.lock()) { // 如果对象还存在，lock() 返回一个有效的 shared_ptr
     std::cout << *temp << std::endl;

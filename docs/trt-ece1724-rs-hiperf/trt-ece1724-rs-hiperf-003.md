@@ -170,13 +170,13 @@ match guess.cmp(&secret_number) {
 
 以下是添加循环后的核心代码结构：
 
+
+![](img/c81e2d16bcae0e91aac47afd71d2f6e3_21.png)
+
 ```rust
 use std::io;
 use rand::Rng;
 use std::cmp::Ordering;
-
-![](img/c81e2d16bcae0e91aac47afd71d2f6e3_21.png)
-
 fn main() {
     println!("猜数字游戏！");
 

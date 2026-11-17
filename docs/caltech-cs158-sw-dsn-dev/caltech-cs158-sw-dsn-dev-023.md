@@ -21,15 +21,15 @@
 我们为`Account`类定义了`deposit`（存款）和`withdraw`（取款）方法。这些方法是改变余额状态的主要途径。
 
 最初的简单实现可能如下：
-```java
-public void deposit(double amount) {
-    balance = balance + amount;
-}
 
 ![](img/e8cce61e2a25e12f97838016387638a0_2.png)
 
 ![](img/e8cce61e2a25e12f97838016387638a0_4.png)
 
+```java
+public void deposit(double amount) {
+    balance = balance + amount;
+}
 public void withdraw(double amount) {
     balance = balance - amount;
 }

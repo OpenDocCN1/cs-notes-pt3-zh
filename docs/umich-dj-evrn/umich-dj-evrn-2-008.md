@@ -53,15 +53,15 @@
 
 ![](img/be22e7f381c283e91cf00876c37f4d57_29.png)
 
-```python
-# models.py
-from django.db import models
-from django.conf import settings
 
 ![](img/be22e7f381c283e91cf00876c37f4d57_31.png)
 
 ![](img/be22e7f381c283e91cf00876c37f4d57_33.png)
 
+```python
+# models.py
+from django.db import models
+from django.conf import settings
 class Article(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
@@ -117,33 +117,17 @@ urlpatterns = [
 ]
 ```
 
-```python
-# views.py
-from django.views import generic
-from .models import Article
-from .owner import OwnerListView, OwnerDetailView, OwnerCreateView, OwnerUpdateView, OwnerDeleteView
 
 ![](img/be22e7f381c283e91cf00876c37f4d57_51.png)
 
-class ArticleListView(OwnerListView):
-    model = Article
 
 ![](img/be22e7f381c283e91cf00876c37f4d57_53.png)
 
-class ArticleDetailView(OwnerDetailView):
-    model = Article
-
-class ArticleCreateView(OwnerCreateView):
-    model = Article
-    fields = ['title', 'text'] # 注意：这里不包含‘owner’字段
 
 ![](img/be22e7f381c283e91cf00876c37f4d57_55.png)
 
 ![](img/be22e7f381c283e91cf00876c37f4d57_57.png)
 
-class ArticleUpdateView(OwnerUpdateView):
-    model = Article
-    fields = ['title', 'text'] # 注意：这里不包含‘owner’字段
 
 ![](img/be22e7f381c283e91cf00876c37f4d57_59.png)
 
@@ -151,6 +135,22 @@ class ArticleUpdateView(OwnerUpdateView):
 
 ![](img/be22e7f381c283e91cf00876c37f4d57_63.png)
 
+```python
+# views.py
+from django.views import generic
+from .models import Article
+from .owner import OwnerListView, OwnerDetailView, OwnerCreateView, OwnerUpdateView, OwnerDeleteView
+class ArticleListView(OwnerListView):
+    model = Article
+class ArticleDetailView(OwnerDetailView):
+    model = Article
+
+class ArticleCreateView(OwnerCreateView):
+    model = Article
+    fields = ['title', 'text'] # 注意：这里不包含‘owner’字段
+class ArticleUpdateView(OwnerUpdateView):
+    model = Article
+    fields = ['title', 'text'] # 注意：这里不包含‘owner’字段
 class ArticleDeleteView(OwnerDeleteView):
     model = Article
 ```
@@ -216,10 +216,6 @@ class ArticleDeleteView(OwnerDeleteView):
 
 当用户创建新文章时，我们需要自动将当前登录用户设置为文章的所有者。
 
-```python
-# owner.py
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import CreateView
 
 ![](img/be22e7f381c283e91cf00876c37f4d57_83.png)
 
@@ -227,6 +223,10 @@ from django.views.generic import CreateView
 
 ![](img/be22e7f381c283e91cf00876c37f4d57_87.png)
 
+```python
+# owner.py
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import CreateView
 class OwnerCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         # 在保存到数据库之前，临时将表单数据存入对象
@@ -275,14 +275,14 @@ class OwnerCreateView(LoginRequiredMixin, CreateView):
 
 ![](img/be22e7f381c283e91cf00876c37f4d57_109.png)
 
-```python
-# owner.py
-from django.views.generic import UpdateView, DeleteView
 
 ![](img/be22e7f381c283e91cf00876c37f4d57_111.png)
 
 ![](img/be22e7f381c283e91cf00876c37f4d57_112.png)
 
+```python
+# owner.py
+from django.views.generic import UpdateView, DeleteView
 class OwnerUpdateView(LoginRequiredMixin, UpdateView):
     def get_queryset(self):
         # 首先获取默认的查询集（根据URL中的pk查找对象）

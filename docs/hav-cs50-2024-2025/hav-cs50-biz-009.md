@@ -153,14 +153,14 @@
 
 ![](img/fb8f024423da279c5a8671bafebdcc5d_72.png)
 
-```python
-from string import digits
-from itertools import product
 
 ![](img/fb8f024423da279c5a8671bafebdcc5d_74.png)
 
 ![](img/fb8f024423da279c5a8671bafebdcc5d_75.png)
 
+```python
+from string import digits
+from itertools import product
 for passcode in product(digits, repeat=4):
     print(''.join(passcode))
 ```

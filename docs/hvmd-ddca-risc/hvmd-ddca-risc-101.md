@@ -24,19 +24,19 @@
 
 ![](img/5946d95f116a18f7be260544864ccd36_8.png)
 
-```systemverilog
-// 实例化被测设备（整个处理器）
-riscv_singlecycle dut (.clk(clk), .reset(reset), ...);
 
 ![](img/5946d95f116a18f7be260544864ccd36_10.png)
 
 ![](img/5946d95f116a18f7be260544864ccd36_11.png)
 
-// 生成周期为10个时间单位的时钟
-always #5 clk = ~clk;
 
 ![](img/5946d95f116a18f7be260544864ccd36_13.png)
 
+```systemverilog
+// 实例化被测设备（整个处理器）
+riscv_singlecycle dut (.clk(clk), .reset(reset), ...);
+// 生成周期为10个时间单位的时钟
+always #5 clk = ~clk;
 // 应用持续22个时间单位的复位信号
 initial begin
     reset = 1;

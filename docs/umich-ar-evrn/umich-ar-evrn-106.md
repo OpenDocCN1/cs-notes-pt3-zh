@@ -233,14 +233,14 @@ A-Frame提供了内置的动画组件。我们可以通过`animation`属性来�
 
 ![](img/04166cf832cf3cd5409b884aa894351f_121.png)
 
-```html
-<!-- 环境光，为整个场景提供基础照明 -->
-<a-light type="ambient" color="#333"></a-light>
 
 ![](img/04166cf832cf3cd5409b884aa894351f_123.png)
 
 ![](img/04166cf832cf3cd5409b884aa894351f_124.png)
 
+```html
+<!-- 环境光，为整个场景提供基础照明 -->
+<a-light type="ambient" color="#333"></a-light>
 <!-- 聚光灯，聚焦照亮长颈鹿 -->
 <a-entity light="type: spot;
                  angle: 20;
@@ -274,16 +274,16 @@ A-Frame提供了内置的动画组件。我们可以通过`animation`属性来�
 
 为了让阴影正确显示，我们还需要确保接收阴影的平面（`a-plane`）和投射阴影的模型（长颈鹿）设置了正确的属性。
 
-```html
-<!-- 平面接收阴影 -->
-<a-plane ...
-         shadow="receive: true">
-</a-plane>
 
 ![](img/04166cf832cf3cd5409b884aa894351f_137.png)
 
 ![](img/04166cf832cf3cd5409b884aa894351f_139.png)
 
+```html
+<!-- 平面接收阴影 -->
+<a-plane ...
+         shadow="receive: true">
+</a-plane>
 <!-- 模型投射阴影（需模型本身支持） -->
 <a-entity google-poly="..."
           shadow="cast: true">

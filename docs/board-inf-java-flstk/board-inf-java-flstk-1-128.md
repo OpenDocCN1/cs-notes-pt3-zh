@@ -16,6 +16,9 @@
 
 让我们通过代码示例来看这两种方法。
 
+
+![](img/0420f658f0a9bfba4e8630b866995404_3.png)
+
 ```javascript
 let str1 = "Hello";
 let str2 = "World";
@@ -23,9 +26,6 @@ let str2 = "World";
 // 使用加号 (+) 运算符连接字符串
 let result1 = str1 + " " + str2;
 console.log(result1); // 输出: Hello World
-
-![](img/0420f658f0a9bfba4e8630b866995404_3.png)
-
 // 使用 concat() 方法连接字符串
 let result2 = str1.concat(" ", str2);
 console.log(result2); // 输出: Hello World

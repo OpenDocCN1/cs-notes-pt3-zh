@@ -65,6 +65,12 @@ int execlp(const char *file, const char *arg, ... /* (char  *) NULL */);
 
 以下是程序的基本结构，我们定义了一个错误检查函数 `check`，并完成了 `fork` 和 `execlp` 的调用。
 
+
+![](img/908a23dbe53aa0d60eec892905f83f25_15.png)
+
+
+![](img/908a23dbe53aa0d60eec892905f83f25_17.png)
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -72,18 +78,12 @@ int execlp(const char *file, const char *arg, ... /* (char  *) NULL */);
 #include <sys/wait.h>
 #include <string.h>
 #include <assert.h>
-
-![](img/908a23dbe53aa0d60eec892905f83f25_15.png)
-
 void check(int rc, const char* msg) {
     if (rc == -1) {
         perror(msg);
         exit(1);
     }
 }
-
-![](img/908a23dbe53aa0d60eec892905f83f25_17.png)
-
 int main(int argc, char* argv[]) {
     // 检查参数数量
     if (argc != 2) {

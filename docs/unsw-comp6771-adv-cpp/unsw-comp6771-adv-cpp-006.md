@@ -93,14 +93,14 @@ int main() {
 
 ![](img/290c3a372105c2e0532361e8593f92eb_33.png)
 
-```cpp
-#include <vector>
-#include <iostream>
 
 ![](img/290c3a372105c2e0532361e8593f92eb_35.png)
 
 ![](img/290c3a372105c2e0532361e8593f92eb_37.png)
 
+```cpp
+#include <vector>
+#include <iostream>
 int main() {
     std::vector<int> v = {1, 2, 3};
     std::cout << "大小: " << v.size() << "\n";
@@ -160,15 +160,15 @@ int main() {
 
 ![](img/290c3a372105c2e0532361e8593f92eb_54.png)
 
-```cpp
-#include <map>
-#include <string>
-#include <iostream>
 
 ![](img/290c3a372105c2e0532361e8593f92eb_56.png)
 
 ![](img/290c3a372105c2e0532361e8593f92eb_57.png)
 
+```cpp
+#include <map>
+#include <string>
+#include <iostream>
 int main() {
     // 现代C++风格声明
     auto m = std::map<std::string, int>{};

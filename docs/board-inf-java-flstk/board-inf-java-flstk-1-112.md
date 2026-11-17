@@ -87,6 +87,13 @@
 
 以下是用于美化按钮和下拉内容框的CSS样式：
 
+
+![](img/c1a8ade28e60f55041e62a5915da3243_19.png)
+
+![](img/c1a8ade28e60f55041e62a5915da3243_21.png)
+
+![](img/c1a8ade28e60f55041e62a5915da3243_23.png)
+
 ```css
 /* 美化按钮 */
 .dropdown-btn {
@@ -97,13 +104,6 @@
   font-weight: 900;
   margin: 20px;
 }
-
-![](img/c1a8ade28e60f55041e62a5915da3243_19.png)
-
-![](img/c1a8ade28e60f55041e62a5915da3243_21.png)
-
-![](img/c1a8ade28e60f55041e62a5915da3243_23.png)
-
 /* 美化下拉选项框 */
 .dropdown-content {
   /* 之前的样式保持不变 */

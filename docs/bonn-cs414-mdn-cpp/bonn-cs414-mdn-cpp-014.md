@@ -178,14 +178,14 @@ target_link_libraries(main ${OpenCV_LIBS})
 ## 示例代码
 
 以下是一个简单的OpenCV示例，演示如何读取和显示图像：
-```cpp
-#include <opencv2/opencv.hpp>
-#include <iostream>
 
 ![](img/ddcd3f1d2fa105a8938e9e8f9d9f26b1_4.png)
 
 ![](img/ddcd3f1d2fa105a8938e9e8f9d9f26b1_6.png)
 
+```cpp
+#include <opencv2/opencv.hpp>
+#include <iostream>
 int main() {
     cv::Mat image = cv::imread("lena.png", cv::IMREAD_GRAYSCALE);
     if (image.empty()) {

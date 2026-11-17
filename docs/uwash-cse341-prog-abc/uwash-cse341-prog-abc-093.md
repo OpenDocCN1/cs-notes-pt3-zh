@@ -14,6 +14,9 @@
 
 ![](img/406d449ff4f890abc90140c4ac48e91b_1.png)
 
+
+![](img/406d449ff4f890abc90140c4ac48e91b_2.png)
+
 ```sml
 (* 签名定义 *)
 signature RATIONAL_C =
@@ -22,9 +25,6 @@ sig
   val make_frac : int * int -> rational
   val to_string : rational -> string
 end
-
-![](img/406d449ff4f890abc90140c4ac48e91b_2.png)
-
 (* 结构1：使用约分实现 *)
 structure Rational1 : RATIONAL_C =
 struct

@@ -55,15 +55,15 @@
 ![](img/b31fc10609875d7fa0dbda4825da5b81_23.png)
 
 **代码示例：**
-```cpp
-class BaseClass {
-    // ... 基类成员
-};
 
 ![](img/b31fc10609875d7fa0dbda4825da5b81_25.png)
 
 ![](img/b31fc10609875d7fa0dbda4825da5b81_27.png)
 
+```cpp
+class BaseClass {
+    // ... 基类成员
+};
 class DerivedClass : public BaseClass {
     // ... 派生类成员，继承了 BaseClass 的成员
 };
@@ -186,13 +186,13 @@ public:
 ![](img/b31fc10609875d7fa0dbda4825da5b81_66.png)
 
 **问题示例：**
+
+![](img/b31fc10609875d7fa0dbda4825da5b81_68.png)
+
 ```cpp
 void print_name(Base b) { // 按值传递
     std::cout << b.get_class_name() << std::endl;
 }
-
-![](img/b31fc10609875d7fa0dbda4825da5b81_68.png)
-
 int main() {
     Base b;
     Derived d;
@@ -247,6 +247,9 @@ void print_name(const Base* b) { // 按指针传递
 *   在派生类中，使用 `override` 关键字来显式表明你正在覆盖基类的虚函数。
 
 **修正后的代码示例：**
+
+![](img/b31fc10609875d7fa0dbda4825da5b81_84.png)
+
 ```cpp
 class Base {
 public:
@@ -256,9 +259,6 @@ public:
 private:
     int member_;
 };
-
-![](img/b31fc10609875d7fa0dbda4825da5b81_84.png)
-
 class Derived : public Base {
 public:
     std::string get_class_name() const override { return "Derived"; }
@@ -364,12 +364,12 @@ C++的设计哲学是“不为未使用的功能付出代价”。如果不将�
 *   **动态绑定（晚期绑定）**： 在运行时才能确定调用哪个函数。通过基类指针或引用调用虚函数时发生。它关联的是指针/引用所指向对象的**动态类型**（实际对象的类型）。
 
 **示例：**
-```cpp
-Derived d;
-Base& b_ref = d; // b_ref 是 Base 的引用，但指向 Derived 对象
 
 ![](img/b31fc10609875d7fa0dbda4825da5b81_132.png)
 
+```cpp
+Derived d;
+Base& b_ref = d; // b_ref 是 Base 的引用，但指向 Derived 对象
 // 静态类型：Base&
 // 动态类型：Derived
 std::cout << b_ref.get_class_name(); // 动态绑定，输出 "Derived"

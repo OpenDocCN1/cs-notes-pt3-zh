@@ -7133,12 +7133,12 @@ public:
 private:
     // ...
 };
-```
-
-## 标准异常类层次结构图
 
 ![](img/9e3666dc2c45ec31b2bed73748eb38f1_133_0.png)
 
+```
+
+## 标准异常类层次结构图
 ## 14.11 忠告
 
 - [1] 用异常做错误处理
@@ -7192,10 +7192,6 @@ private:
 
 - 一个类可以有多个直接基类，采用多个直接基类的情况通常称为多重继承
 - 假设Satellite从Task和Displayed多重继承，那么在实际应用中，就可以将一个Satellite传递给那些期望Task或者Displayed的函数
-
-
-
-
 
 ## 15.2.3.1 覆盖
 
@@ -7445,12 +7441,12 @@ public:
   using B::a; // 转换: B::a 为 private
   using B::b; // 转换: B::b 为整个类 D 可以继承
 };
-```
-
-## 15.4 运行时类型信息
 
 ![](img/9e3666dc2c45ec31b2bed73748eb38f1_141_0.png)
 
+```
+
+## 15.4 运行时类型信息
 ## 运行时类型信息
 
 考虑以前设计过的Ival_box类层次结构
@@ -7472,14 +7468,14 @@ void my_event_handler(BBWindow* pw){
     //...
   }
 }
+
+![](img/9e3666dc2c45ec31b2bed73748eb38f1_142_0.png)
+
 ```
 
 ## 运行时类型信息示例
 
 动态pb = dynamic_cast<Ival_box*>(pw)可以表示为
-
-![](img/9e3666dc2c45ec31b2bed73748eb38f1_142_0.png)
-
 由pw和pb的箭头表示的是被传递的对象指针，其他箭头表示被传递对象中的不同部分之间的继承关系
 
 在运行时刻对类型信息的使用一般称为运行时类型信息(RTTI RunTime Type Information)

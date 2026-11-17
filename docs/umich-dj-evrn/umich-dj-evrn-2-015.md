@@ -30,11 +30,11 @@ function functionName(parameters) {
 函数内部定义的变量通常是该函数的局部变量。然而，JavaScript有一个特殊之处：如果不明确声明，函数内赋值的变量可能会成为全局变量。
 
 请看以下示例：
-```javascript
-var GL = 123; // 这是一个全局变量
 
 ![](img/cb3cf5088c1e40e258396cd03f3f8e34_11.png)
 
+```javascript
+var GL = 123; // 这是一个全局变量
 function check() {
     GL = 456; // 如果没有使用 `var`，这里会修改全局的 GL
 }

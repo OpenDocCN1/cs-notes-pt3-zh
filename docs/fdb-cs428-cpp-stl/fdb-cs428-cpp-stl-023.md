@@ -32,14 +32,9 @@
 
 ![](img/8014d5f1512346ad32cbe277c91c93a0_15.png)
 
-```cpp
-template< class ForwardIt >
-ForwardIt max_element( ForwardIt first, ForwardIt last );
 
 ![](img/8014d5f1512346ad32cbe277c91c93a0_17.png)
 
-template< class ForwardIt, class Compare >
-ForwardIt max_element( ForwardIt first, ForwardIt last, Compare comp );
 
 ![](img/8014d5f1512346ad32cbe277c91c93a0_19.png)
 
@@ -49,13 +44,18 @@ ForwardIt max_element( ForwardIt first, ForwardIt last, Compare comp );
 
 ![](img/8014d5f1512346ad32cbe277c91c93a0_23.png)
 
-template< class ForwardIt >
-ForwardIt min_element( ForwardIt first, ForwardIt last );
 
 ![](img/8014d5f1512346ad32cbe277c91c93a0_25.png)
 
 ![](img/8014d5f1512346ad32cbe277c91c93a0_26.png)
 
+```cpp
+template< class ForwardIt >
+ForwardIt max_element( ForwardIt first, ForwardIt last );
+template< class ForwardIt, class Compare >
+ForwardIt max_element( ForwardIt first, ForwardIt last, Compare comp );
+template< class ForwardIt >
+ForwardIt min_element( ForwardIt first, ForwardIt last );
 template< class ForwardIt, class Compare >
 ForwardIt min_element( ForwardIt first, ForwardIt last, Compare comp );
 ```
@@ -126,13 +126,13 @@ struct MaxOdd {
 
 ![](img/8014d5f1512346ad32cbe277c91c93a0_60.png)
 
+
+![](img/8014d5f1512346ad32cbe277c91c93a0_61.png)
+
 ```cpp
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
-![](img/8014d5f1512346ad32cbe277c91c93a0_61.png)
-
 int main() {
     std::vector<int> stats = {10, 25, -40, 30, 67, 9, 50};
 
@@ -251,9 +251,6 @@ struct Print {
 
 在主程序中，我们使用`for_each`算法：
 
-```cpp
-#include <iostream>
-#include <algorithm>
 
 ![](img/8014d5f1512346ad32cbe277c91c93a0_98.png)
 
@@ -261,6 +258,9 @@ struct Print {
 
 ![](img/8014d5f1512346ad32cbe277c91c93a0_100.png)
 
+```cpp
+#include <iostream>
+#include <algorithm>
 int main() {
     int arr[] = {5, 2, 8, 1, 9};
     int* end = arr + sizeof(arr)/sizeof(arr[0]);
@@ -325,9 +325,6 @@ int main() {
 
 ![](img/8014d5f1512346ad32cbe277c91c93a0_126.png)
 
-```cpp
-template< class InputIt1, class InputIt2 >
-bool equal( InputIt1 first1, InputIt1 last1, InputIt2 first2 );
 
 ![](img/8014d5f1512346ad32cbe277c91c93a0_128.png)
 
@@ -339,6 +336,9 @@ bool equal( InputIt1 first1, InputIt1 last1, InputIt2 first2 );
 
 ![](img/8014d5f1512346ad32cbe277c91c93a0_135.png)
 
+```cpp
+template< class InputIt1, class InputIt2 >
+bool equal( InputIt1 first1, InputIt1 last1, InputIt2 first2 );
 template< class InputIt1, class InputIt2, class BinaryPredicate >
 bool equal( InputIt1 first1, InputIt1 last1, InputIt2 first2, BinaryPredicate p );
 ```
@@ -371,12 +371,12 @@ bool equal( InputIt1 first1, InputIt1 last1, InputIt2 first2, BinaryPredicate p 
 
 ![](img/8014d5f1512346ad32cbe277c91c93a0_149.png)
 
-```cpp
-template< class InputIt1, class InputIt2 >
-std::pair<InputIt1, InputIt2> mismatch( InputIt1 first1, InputIt1 last1, InputIt2 first2 );
 
 ![](img/8014d5f1512346ad32cbe277c91c93a0_151.png)
 
+```cpp
+template< class InputIt1, class InputIt2 >
+std::pair<InputIt1, InputIt2> mismatch( InputIt1 first1, InputIt1 last1, InputIt2 first2 );
 template< class InputIt1, class InputIt2, class BinaryPredicate >
 std::pair<InputIt1, InputIt2> mismatch( InputIt1 first1, InputIt1 last1, InputIt2 first2, BinaryPredicate p );
 ```
@@ -403,11 +403,6 @@ std::pair<InputIt1, InputIt2> mismatch( InputIt1 first1, InputIt1 last1, InputIt
 
 ![](img/8014d5f1512346ad32cbe277c91c93a0_165.png)
 
-```cpp
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <iterator> // for std::distance
 
 ![](img/8014d5f1512346ad32cbe277c91c93a0_167.png)
 
@@ -417,6 +412,11 @@ std::pair<InputIt1, InputIt2> mismatch( InputIt1 first1, InputIt1 last1, InputIt
 
 ![](img/8014d5f1512346ad32cbe277c91c93a0_171.png)
 
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <iterator> // for std::distance
 template<typename InputIt1, typename InputIt2>
 void find_mismatches(InputIt1 first1, InputIt1 last1, InputIt2 first2, InputIt2 last2) {
     // 首先检查两个范围长度是否相同

@@ -213,9 +213,6 @@ const numArray: Array<number> = [1, 2, 3];
 ![](img/71bbe526b35bef4d46131c32b0431a03_75.png)
 
 **代码示例：**
-```typescript
-type ListItem = string | number;
-type StringArray = Array<string>;
 
 ![](img/71bbe526b35bef4d46131c32b0431a03_77.png)
 
@@ -223,6 +220,9 @@ type StringArray = Array<string>;
 
 ![](img/71bbe526b35bef4d46131c32b0431a03_81.png)
 
+```typescript
+type ListItem = string | number;
+type StringArray = Array<string>;
 function processItems(items: ListItem[]): StringArray {
     // ...
 }
@@ -235,6 +235,9 @@ function processItems(items: ListItem[]): StringArray {
 使用`?`标记函数参数或对象属性为可选。
 
 **代码示例：**
+
+![](img/71bbe526b35bef4d46131c32b0431a03_85.png)
+
 ```typescript
 // 可选函数参数
 function substring(str: string, start: number, end?: number): string {
@@ -247,9 +250,6 @@ function substring(str: string, start: number, end?: number): string {
 }
 console.log(substring("Hayden", 0, 3)); // "Hay"
 console.log(substring("Hayden", 2));    // "yden"
-
-![](img/71bbe526b35bef4d46131c32b0431a03_85.png)
-
 // 可选对象属性
 type Person = {
     name: string;
@@ -274,17 +274,17 @@ const person2: Person = { name: "Alex", age: 25 }; // 正确
 ![](img/71bbe526b35bef4d46131c32b0431a03_93.png)
 
 **代码示例：**
+
+![](img/71bbe526b35bef4d46131c32b0431a03_95.png)
+
+![](img/71bbe526b35bef4d46131c32b0431a03_97.png)
+
 ```typescript
 type Person = {
     name: string;
     age?: number;
     height?: number;
 };
-
-![](img/71bbe526b35bef4d46131c32b0431a03_95.png)
-
-![](img/71bbe526b35bef4d46131c32b0431a03_97.png)
-
 const person: Person = {
     name: "Hayden"
 };

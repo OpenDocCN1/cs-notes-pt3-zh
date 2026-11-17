@@ -230,6 +230,12 @@ int main() {
 一个常见用途是实现“克隆”操作或像下面这样，在对象创建时自动打印类型名。
 
 **示例：自动打印类型名**
+
+![](img/b90c7e9589d70c587bec5556eb096635_1.png)
+
+
+![](img/b90c7e9589d70c587bec5556eb096635_3.png)
+
 ```cpp
 #include <iostream>
 #include <typeinfo> // 用于typeid
@@ -248,15 +254,9 @@ public:
 class MyClass : public Printable<MyClass> {
     // ... MyClass 的成员 ...
 };
-
-![](img/b90c7e9589d70c587bec5556eb096635_1.png)
-
 class AnotherClass : public Printable<AnotherClass> {
     // ... AnotherClass 的成员 ...
 };
-
-![](img/b90c7e9589d70c587bec5556eb096635_3.png)
-
 int main() {
     MyClass obj1;       // 输出：Creating object of type: 7MyClass (名称可能被修饰)
     AnotherClass obj2;  // 输出：Creating object of type: 12AnotherClass

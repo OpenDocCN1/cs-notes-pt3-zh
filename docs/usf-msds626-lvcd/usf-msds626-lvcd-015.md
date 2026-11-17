@@ -92,18 +92,9 @@ def weighted_dataloaders(self:DataBlock, source, weights, bs=64, **kwargs):
 
 ![](img/7ed7eb965ba00d29bafec8393f4d6581_21.png)
 
-```python
-# 创建DataBlock
-dblock = DataBlock(blocks=(ImageBlock, CategoryBlock),
-                   get_y=ColReader('label'),
-                   splitter=RandomSplitter(seed=42),
-                   item_tfms=Resize(224),
-                   batch_tfms=aug_transforms(size=128))
 
 ![](img/7ed7eb965ba00d29bafec8393f4d6581_23.png)
 
-# 使用加权数据加载器
-dls = dblock.weighted_dataloaders(source=df, weights=weight_df['weight'], bs=64)
 
 ![](img/7ed7eb965ba00d29bafec8393f4d6581_25.png)
 
@@ -113,6 +104,15 @@ dls = dblock.weighted_dataloaders(source=df, weights=weight_df['weight'], bs=64)
 
 ![](img/7ed7eb965ba00d29bafec8393f4d6581_31.png)
 
+```python
+# 创建DataBlock
+dblock = DataBlock(blocks=(ImageBlock, CategoryBlock),
+                   get_y=ColReader('label'),
+                   splitter=RandomSplitter(seed=42),
+                   item_tfms=Resize(224),
+                   batch_tfms=aug_transforms(size=128))
+# 使用加权数据加载器
+dls = dblock.weighted_dataloaders(source=df, weights=weight_df['weight'], bs=64)
 # 创建学习器并进行训练
 learn = cnn_learner(dls, resnet34, metrics=error_rate)
 learn.fine_tune(5)

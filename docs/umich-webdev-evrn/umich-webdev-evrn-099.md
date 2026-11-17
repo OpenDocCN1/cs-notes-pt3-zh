@@ -79,6 +79,9 @@ if (isset($_POST[‘guess’])) {
 **`guess2.php`（正确的版本）关键修改：**
 
 以下是`guess2.php`中模型部分的核心逻辑：
+
+![](img/16bf5c019465d9e3b0ea1a484ea7984c_10.png)
+
 ```php
 session_start(); // 启用会话支持
 
@@ -105,9 +108,6 @@ $message = $_SESSION[‘message’] ?? false;
 // 5. 可选：清除SESSION中的临时数据，防止重复显示
 unset($_SESSION[‘guess’]);
 unset($_SESSION[‘message’]);
-
-![](img/16bf5c019465d9e3b0ea1a484ea7984c_10.png)
-
 // 6. 使用取出的数据渲染HTML视图
 // ... 包含 $message 和 $oldguess 的HTML模板 ...
 ```

@@ -36,14 +36,14 @@
 
 以下是一个更具体的例子。页面的顶部是一个带有ID的H1标签，我们设置其`id="fun"`。ID在整个文档中必须是唯一的，这与CSS规则一致。DOM元素拥有属性和方法，其中之一就是`innerHTML`。
 
-```html
-<h1 id="fun">原始标题</h1>
-<button onclick="changeHeader()">改变标题</button>
 
 ![](img/5b287a3cedf2ed8f1d3ae0536f312b14_9.png)
 
 ![](img/5b287a3cedf2ed8f1d3ae0536f312b14_10.png)
 
+```html
+<h1 id="fun">原始标题</h1>
+<button onclick="changeHeader()">改变标题</button>
 <script>
 function changeHeader() {
     document.getElementById('fun').innerHTML = '一个很酷的标题';
@@ -70,6 +70,9 @@ function changeHeader() {
 
 以下是实现此功能的源代码。我们有一个按钮（锚点标签），它调用`add`函数。页面上还有一个`<ul>`标签，其`id="zap"`，里面最初有一个列表项`<li>`。
 
+
+![](img/5b287a3cedf2ed8f1d3ae0536f312b14_16.png)
+
 ```html
 <ul id="zap">
     <li>第一个项目</li>
@@ -78,9 +81,6 @@ function changeHeader() {
 
 <script>
 let counter = 1; // 全局变量
-
-![](img/5b287a3cedf2ed8f1d3ae0536f312b14_16.png)
-
 function add() {
     // 创建一个新的LI元素
     const newItem = document.createElement('li');
@@ -114,13 +114,13 @@ function add() {
 
 我们将使用`addEventListener`来绑定事件。虽然也可以使用`onclick`，但这里我想让大家习惯一种做法：通常在文档加载的最后阶段，集中添加所有的事件监听器。这样，HTML先被显示，然后再附加交互行为。
 
+
+![](img/5b287a3cedf2ed8f1d3ae0536f312b14_23.png)
+
 ```html
 <h1 id="fun">可隐藏的标题</h1>
 <button id="show">显示</button>
 <button id="poof">隐藏</button>
-
-![](img/5b287a3cedf2ed8f1d3ae0536f312b14_23.png)
-
 <script>
 // 为“显示”按钮添加点击事件监听器
 document.getElementById('show').addEventListener('click', function() {

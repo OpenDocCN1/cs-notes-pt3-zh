@@ -100,12 +100,12 @@ SELECT name FROM users WHERE email='c7@umich.edu' AND password='' OR '1'='1'
 
 以下是使用PDO重写后的安全登录代码：
 
-```php
-// 1. 准备SQL语句，使用命名占位符
-$stmt = $pdo->prepare(‘SELECT name FROM users WHERE email = :em AND password = :pw’);
 
 ![](img/ff91d4be316a8fa95b84c13b4ff866f6_20.png)
 
+```php
+// 1. 准备SQL语句，使用命名占位符
+$stmt = $pdo->prepare(‘SELECT name FROM users WHERE email = :em AND password = :pw’);
 // 2. 将用户输入的数据绑定到占位符
 $stmt->execute(array( ‘:em’ => $email, ‘:pw’ => $password));
 

@@ -107,9 +107,6 @@ PostgreSQL通过`tsvector`（文本搜索向量）和`tsquery`（文本搜索查
 
 例如，为`docs`表创建一个支持英文全文搜索的索引：
 
-```sql
--- 添加一个存储预处理文本的列
-ALTER TABLE docs ADD COLUMN content_tsvector tsvector;
 
 ![](img/bfdfee65ddb31621d4dad8ae9fcd68c9_8.png)
 
@@ -117,6 +114,9 @@ ALTER TABLE docs ADD COLUMN content_tsvector tsvector;
 
 ![](img/bfdfee65ddb31621d4dad8ae9fcd68c9_10.png)
 
+```sql
+-- 添加一个存储预处理文本的列
+ALTER TABLE docs ADD COLUMN content_tsvector tsvector;
 -- 更新该列，使用英语配置处理内容
 UPDATE docs SET content_tsvector = to_tsvector('english', content);
 

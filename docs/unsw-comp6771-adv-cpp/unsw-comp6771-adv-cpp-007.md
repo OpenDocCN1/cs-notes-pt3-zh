@@ -97,6 +97,9 @@ for (auto it = words.cbegin(); it != words.cend(); ++it) {
 ![](img/6ddd54b810e188f793bbd6c0bf09a40e_47.png)
 
 以下是几种在 `std::map` 中检查元素是否存在并获取其值的方法比较：
+
+![](img/6ddd54b810e188f793bbd6c0bf09a40e_49.png)
+
 ```cpp
 std::map<std::string, int> m = {{"cat", 10}, {"dog", 20}};
 std::string key = "cat";
@@ -107,9 +110,6 @@ if (it != m.end()) {
     // it 是一个指向 std::pair<const std::string, int> 的迭代器
     std::cout << "Value found via iterator: " << it->second << std::endl;
 }
-
-![](img/6ddd54b810e188f793bbd6c0bf09a40e_49.png)
-
 // 方法2：使用 .contains() (C++20) 和 .at()
 if (m.contains(key)) { // 第一次查找
     std::cout << "Value found via contains/at: " << m.at(key) << std::endl; // 第二次查找
@@ -131,6 +131,9 @@ try {
 ![](img/6ddd54b810e188f793bbd6c0bf09a40e_53.png)
 
 迭代器的概念甚至扩展到了输入/输出流。你可以创建 `std::istream_iterator` 来从输入流（如文件或标准输入）中读取数据，就像遍历容器一样。
+
+![](img/6ddd54b810e188f793bbd6c0bf09a40e_55.png)
+
 ```cpp
 #include <iterator>
 #include <fstream>
@@ -138,9 +141,6 @@ try {
 std::ifstream file("data.txt");
 std::istream_iterator<int> input_begin(file);
 std::istream_iterator<int> input_end; // 默认构造的迭代器代表“流结束”
-
-![](img/6ddd54b810e188f793bbd6c0bf09a40e_55.png)
-
 for (auto it = input_begin; it != input_end; ++it) {
     std::cout << *it << " "; // 从文件中读取并打印整数
 }

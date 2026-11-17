@@ -102,13 +102,13 @@ window.addEventListener('resize', myFunc);
 
 以下是注册该事件监听器的代码：
 
+
+![](img/38df08beafe7dd347a4e0950e92c58da_26.png)
+
 ```javascript
 function myFunc() {
     console.log('DOM内容已加载完成！');
 }
-
-![](img/38df08beafe7dd347a4e0950e92c58da_26.png)
-
 document.addEventListener('DOMContentLoaded', myFunc);
 ```
 

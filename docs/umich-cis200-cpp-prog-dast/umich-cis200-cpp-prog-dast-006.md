@@ -164,13 +164,6 @@ public:
 
 ![](img/b2126b3ac604e611deb65ec0b95636fa_50.png)
 
-```cpp
-template <typename T>
-class FasterQueue {
-private:
-    std::vector<T> items;
-    int frontIndex;
-    int itemCount;
 
 ![](img/b2126b3ac604e611deb65ec0b95636fa_52.png)
 
@@ -178,6 +171,13 @@ private:
 
 ![](img/b2126b3ac604e611deb65ec0b95636fa_56.png)
 
+```cpp
+template <typename T>
+class FasterQueue {
+private:
+    std::vector<T> items;
+    int frontIndex;
+    int itemCount;
 public:
     FasterQueue() : frontIndex(0), itemCount(0) {
         items.resize(10); // 预分配一些空间
@@ -223,6 +223,9 @@ public:
 
 ![](img/b2126b3ac604e611deb65ec0b95636fa_70.png)
 
+
+![](img/b2126b3ac604e611deb65ec0b95636fa_72.png)
+
 ```cpp
 template <typename T>
 class LinkedQueue {
@@ -235,9 +238,6 @@ private:
     Node* frontNode;
     Node* backNode;
     int count;
-
-![](img/b2126b3ac604e611deb65ec0b95636fa_72.png)
-
 public:
     LinkedQueue() : frontNode(nullptr), backNode(nullptr), count(0) {}
 

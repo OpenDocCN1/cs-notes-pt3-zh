@@ -54,16 +54,21 @@
 
 ![](img/67b299d44f971e497bba75eb16b39af6_39.png)
 
-```cpp
-// 析构函数：释放动态数组
-Trainer::~Trainer() {
-    delete[] fightingPets;
-}
 
 ![](img/67b299d44f971e497bba75eb16b39af6_40.png)
 
 ![](img/67b299d44f971e497bba75eb16b39af6_42.png)
 
+
+![](img/67b299d44f971e497bba75eb16b39af6_44.png)
+
+![](img/67b299d44f971e497bba75eb16b39af6_46.png)
+
+```cpp
+// 析构函数：释放动态数组
+Trainer::~Trainer() {
+    delete[] fightingPets;
+}
 // 拷贝构造函数：深拷贝
 Trainer::Trainer(const Trainer& other) {
     name = other.name;
@@ -78,11 +83,6 @@ Trainer::Trainer(const Trainer& other) {
         fightingPets[i] = other.fightingPets[i];
     }
 }
-
-![](img/67b299d44f971e497bba75eb16b39af6_44.png)
-
-![](img/67b299d44f971e497bba75eb16b39af6_46.png)
-
 // 拷贝赋值运算符
 Trainer& Trainer::operator=(const Trainer& other) {
     if (this != &other) { // 防止自赋值

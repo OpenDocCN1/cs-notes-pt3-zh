@@ -139,6 +139,11 @@ iss >> a >> b >> c; // a=10, b=20, c=30
 
 要从文件读取数据，我们使用 `ifstream`（输入文件流）。基本步骤是：打开文件、检查是否成功打开、读取数据、关闭文件。
 
+
+![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_73.png)
+
+![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_75.png)
+
 ```cpp
 ifstream inputFile;
 inputFile.open("data.txt");
@@ -147,11 +152,6 @@ if (!inputFile.is_open()) {
     cout << "Failed to open file." << endl;
     return 1; // 非零返回值表示错误
 }
-
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_73.png)
-
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_75.png)
-
 string line;
 while (getline(inputFile, line)) {
     cout << line << endl;
@@ -164,23 +164,14 @@ inputFile.close();
 
 要向文件写入数据，我们使用 `ofstream`（输出文件流）。注意，以默认方式打开文件进行写入会覆盖文件的原有内容。
 
-```cpp
-ofstream outputFile;
-outputFile.open("output.txt");
 
 ![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_77.png)
 
 ![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_79.png)
 
-if (!outputFile.is_open()) {
-    cout << "Failed to open file for writing." << endl;
-    return 1;
-}
 
 ![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_81.png)
 
-outputFile << "Hello, File!" << endl;
-outputFile << 42 << endl;
 
 ![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_83.png)
 
@@ -192,6 +183,15 @@ outputFile << 42 << endl;
 
 ![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_90.png)
 
+```cpp
+ofstream outputFile;
+outputFile.open("output.txt");
+if (!outputFile.is_open()) {
+    cout << "Failed to open file for writing." << endl;
+    return 1;
+}
+outputFile << "Hello, File!" << endl;
+outputFile << 42 << endl;
 outputFile.close();
 ```
 
@@ -222,16 +222,16 @@ Tea
 
 ![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_98.png)
 
-```cpp
-#include <iostream>
-#include <fstream>
-#include <string>
-using namespace std;
 
 ![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_100.png)
 
 ![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_102.png)
 
+```cpp
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
 int main() {
     string item1Name, item2Name, item3Name;
     double item1Price, item2Price, item3Price;

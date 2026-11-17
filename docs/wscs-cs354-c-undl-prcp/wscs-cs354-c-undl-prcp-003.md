@@ -79,9 +79,6 @@ b contains 4 at address 0x0061FF18
 
 接下来，我们创建一个整数数组，并观察其在内存中的布局。
 
-```c
-#include <stdio.h>
-#define ARRAY_MAX 5 // 使用编译器宏定义数组大小
 
 ![](img/88960f0f92259fe66d7c97d5819c0fe3_16.png)
 
@@ -89,6 +86,9 @@ b contains 4 at address 0x0061FF18
 
 ![](img/88960f0f92259fe66d7c97d5819c0fe3_19.png)
 
+```c
+#include <stdio.h>
+#define ARRAY_MAX 5 // 使用编译器宏定义数组大小
 int main() {
     int arr[ARRAY_MAX];
     for(int i = 0; i < ARRAY_MAX; i++) {
@@ -151,9 +151,6 @@ Address of arr (&arr) is also 0x0061FEF4
 
 ![](img/88960f0f92259fe66d7c97d5819c0fe3_39.png)
 
-```c
-int arr[5] = {0, 10, 20, 30, 40};
-int *parr = arr; // parr 是指向数组的指针变量
 
 ![](img/88960f0f92259fe66d7c97d5819c0fe3_41.png)
 
@@ -167,11 +164,6 @@ int *parr = arr; // parr 是指向数组的指针变量
 
 ![](img/88960f0f92259fe66d7c97d5819c0fe3_49.png)
 
-// 以下三行输出相同的结果：0
-printf("arr[0] = %d\n", arr[0]);
-printf("*(arr + 0) = %d\n", *(arr + 0));
-printf("*parr = %d\n", *parr);
-printf("parr[0] = %d\n", parr[0]); // 指针也能用下标！
 
 ![](img/88960f0f92259fe66d7c97d5819c0fe3_51.png)
 
@@ -179,6 +171,14 @@ printf("parr[0] = %d\n", parr[0]); // 指针也能用下标！
 
 ![](img/88960f0f92259fe66d7c97d5819c0fe3_55.png)
 
+```c
+int arr[5] = {0, 10, 20, 30, 40};
+int *parr = arr; // parr 是指向数组的指针变量
+// 以下三行输出相同的结果：0
+printf("arr[0] = %d\n", arr[0]);
+printf("*(arr + 0) = %d\n", *(arr + 0));
+printf("*parr = %d\n", *parr);
+printf("parr[0] = %d\n", parr[0]); // 指针也能用下标！
 // 指针算术：编译器根据类型自动调整步长
 parr = parr + 1; // parr 现在指向 arr[1]，地址增加了4字节(sizeof(int))
 printf("After increment, *parr = %d (should be 10)\n", *parr);
@@ -227,30 +227,30 @@ printf("After increment, *parr = %d (should be 10)\n", *parr);
 
 在C语言中，所有参数都是“按值传递”。但当数组作为函数参数时，传递的实际上是数组首元素的地址（一个值），这模拟了“按引用传递”的效果。
 
-```c
-#include <stdio.h>
-#define ARRAY_MAX 5
 
 ![](img/88960f0f92259fe66d7c97d5819c0fe3_85.png)
 
 ![](img/88960f0f92259fe66d7c97d5819c0fe3_87.png)
 
-// 函数原型：参数可以写为 int arr[] 或 int *arr，它们是等价的。
-void printArray(int arr[], int size); // size 需要额外传递，因为数组“退化”为指针
 
 ![](img/88960f0f92259fe66d7c97d5819c0fe3_89.png)
 
 ![](img/88960f0f92259fe66d7c97d5819c0fe3_91.png)
 
+
+![](img/88960f0f92259fe66d7c97d5819c0fe3_93.png)
+
+```c
+#include <stdio.h>
+#define ARRAY_MAX 5
+// 函数原型：参数可以写为 int arr[] 或 int *arr，它们是等价的。
+void printArray(int arr[], int size); // size 需要额外传递，因为数组“退化”为指针
 int main() {
     int myArr[ARRAY_MAX] = {1, 2, 3, 4, 5};
     printf("In main, address of myArr is %p\n", (void*)myArr);
     printArray(myArr, ARRAY_MAX);
     return 0;
 }
-
-![](img/88960f0f92259fe66d7c97d5819c0fe3_93.png)
-
 // 函数定义
 void printArray(int arr[], int size) { // 这里的arr实际上是一个指针
     printf("In printArray, parameter arr holds address %p\n", (void*)arr);
@@ -292,8 +292,6 @@ void printArray(int arr[], int size) { // 这里的arr实际上是一个指针
 
 在C语言中，字符串本质上是字符数组，以空字符 `'\0'`（ASCII值为0）结尾。
 
-```c
-#include <stdio.h>
 
 ![](img/88960f0f92259fe66d7c97d5819c0fe3_117.png)
 
@@ -313,6 +311,8 @@ void printArray(int arr[], int size) { // 这里的arr实际上是一个指针
 
 ![](img/88960f0f92259fe66d7c97d5819c0fe3_133.png)
 
+```c
+#include <stdio.h>
 int main() {
     // 初始化字符串，编译器会自动添加 '\0'
     char str1[] = "Hello"; // 实际是 {'H','e','l','l','o','\0'}，占6字节

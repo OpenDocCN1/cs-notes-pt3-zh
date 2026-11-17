@@ -46,13 +46,13 @@
 
 根据上述思路，具体的C++实现代码如下。
 
+
+![](img/45b8a528bb3f740d1ad1baae361522f9_3.png)
+
 ```cpp
 #include <vector>
 #include <algorithm>
 using namespace std;
-
-![](img/45b8a528bb3f740d1ad1baae361522f9_3.png)
-
 class Solution {
 private:
     void solve(vector<int>& nums, int index, vector<vector<int>>& ans) {

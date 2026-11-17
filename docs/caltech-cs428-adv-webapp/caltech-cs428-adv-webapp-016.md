@@ -112,14 +112,17 @@ npm install
 
 打开 `app.js` 文件，输入以下代码：
 
+
+![](img/b751a18fb4fe1305e878c78006301e72_12.png)
+
+
+![](img/b751a18fb4fe1305e878c78006301e72_14.png)
+
 ```javascript
 // 1. 导入所需模块
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-
-![](img/b751a18fb4fe1305e878c78006301e72_12.png)
-
 // 2. 创建 Express 应用实例
 const app = express();
 
@@ -131,9 +134,6 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 // 解析 application/x-www-form-urlencoded 格式的请求体（用于查询字符串）
 app.use(bodyParser.urlencoded({ extended: true }));
-
-![](img/b751a18fb4fe1305e878c78006301e72_14.png)
-
 // 5. 启动服务器，监听指定端口
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
@@ -183,6 +183,9 @@ app.listen(PORT, () => {
 
 在 `controllers/` 目录下创建 `game.controller.js` 文件：
 
+
+![](img/b751a18fb4fe1305e878c78006301e72_36.png)
+
 ```javascript
 // 控制器类，包含处理请求的方法
 class GameController {
@@ -191,9 +194,6 @@ class GameController {
     res.json({ success: true });
   }
 }
-
-![](img/b751a18fb4fe1305e878c78006301e72_36.png)
-
 // 导出控制器的一个实例
 module.exports = new GameController();
 ```
@@ -204,13 +204,13 @@ module.exports = new GameController();
 
 ![](img/b751a18fb4fe1305e878c78006301e72_38.png)
 
+
+![](img/b751a18fb4fe1305e878c78006301e72_40.png)
+
 ```javascript
 // 1. 导入 Express 的路由功能
 const express = require('express');
 const router = express.Router();
-
-![](img/b751a18fb4fe1305e878c78006301e72_40.png)
-
 // 2. 从控制器导入处理方法（这里使用解构赋值只导入 test 方法）
 const { test } = require('../controllers/game.controller');
 
@@ -229,6 +229,9 @@ module.exports = router;
 
 ![](img/b751a18fb4fe1305e878c78006301e72_44.png)
 
+
+![](img/b751a18fb4fe1305e878c78006301e72_46.png)
+
 ```javascript
 // ... 之前的导入和中间件设置代码 ...
 
@@ -238,9 +241,6 @@ const gameRoutes = require('./routes/game.routes');
 // 将游戏路由挂载到 `/api/game` 路径下
 // 这意味着所有 `/api/game/*` 的请求都将由 gameRoutes 处理
 app.use('/api/game', gameRoutes);
-
-![](img/b751a18fb4fe1305e878c78006301e72_46.png)
-
 // ... 启动服务器的代码 ...
 ```
 
@@ -308,6 +308,13 @@ module.exports = new GameServer();
 
 修改 `controllers/game.controller.js` 文件：
 
+
+![](img/b751a18fb4fe1305e878c78006301e72_50.png)
+
+![](img/b751a18fb4fe1305e878c78006301e72_52.png)
+
+![](img/b751a18fb4fe1305e878c78006301e72_54.png)
+
 ```javascript
 // 导入游戏模型
 const gameModel = require('../models/game.model');
@@ -330,13 +337,6 @@ class GameController {
     });
   }
 }
-
-![](img/b751a18fb4fe1305e878c78006301e72_50.png)
-
-![](img/b751a18fb4fe1305e878c78006301e72_52.png)
-
-![](img/b751a18fb4fe1305e878c78006301e72_54.png)
-
 module.exports = new GameController();
 ```
 
@@ -350,6 +350,9 @@ module.exports = new GameController();
 
 ![](img/b751a18fb4fe1305e878c78006301e72_59.png)
 
+
+![](img/b751a18fb4fe1305e878c78006301e72_61.png)
+
 ```javascript
 const express = require('express');
 const router = express.Router();
@@ -359,9 +362,6 @@ const { test, newGame } = require('../controllers/game.controller');
 router.get('/test', test);
 // 注册创建游戏的路由
 router.get('/new', newGame);
-
-![](img/b751a18fb4fe1305e878c78006301e72_61.png)
-
 module.exports = router;
 ```
 
@@ -601,15 +601,15 @@ resetGame(req, res) {
 
 ![](img/b751a18fb4fe1305e878c78006301e72_87.png)
 
-```javascript
-const { test, newGame, getGame, makeGuess, resetGame } = require('../controllers/game.controller');
-
-// ... 其他路由 ...
 
 ![](img/b751a18fb4fe1305e878c78006301e72_89.png)
 
 ![](img/b751a18fb4fe1305e878c78006301e72_90.png)
 
+```javascript
+const { test, newGame, getGame, makeGuess, resetGame } = require('../controllers/game.controller');
+
+// ... 其他路由 ...
 router.get('/:id/reset', resetGame);
 ```
 

@@ -156,14 +156,14 @@ def index(request):
 
 ### 配置应用级URL
 在`hello`目录下创建一个`urls.py`文件，并配置URL路由：
-```python
-from django.urls import path
-from . import views
 
 ![](img/79b3a35557dd6fe8a6bc1e96c89db2f5_54.png)
 
 ![](img/79b3a35557dd6fe8a6bc1e96c89db2f5_56.png)
 
+```python
+from django.urls import path
+from . import views
 urlpatterns = [
     path('', views.index, name='index'),
 ]
@@ -171,11 +171,11 @@ urlpatterns = [
 
 ### 配置项目级URL
 在项目的`lecture3/urls.py`文件中，将应用的URL包含进来：
-```python
-from django.urls import include, path
 
 ![](img/79b3a35557dd6fe8a6bc1e96c89db2f5_58.png)
 
+```python
+from django.urls import include, path
 urlpatterns = [
     path('hello/', include('hello.urls')),
     ...
@@ -244,8 +244,6 @@ urlpatterns = [
 ![](img/79b3a35557dd6fe8a6bc1e96c89db2f5_76.png)
 
 修改`greet`视图，使其渲染模板并传递上下文（Context）：
-```python
-from django.shortcuts import render
 
 ![](img/79b3a35557dd6fe8a6bc1e96c89db2f5_78.png)
 
@@ -253,6 +251,8 @@ from django.shortcuts import render
 
 ![](img/79b3a35557dd6fe8a6bc1e96c89db2f5_81.png)
 
+```python
+from django.shortcuts import render
 def greet(request, name):
     return render(request, "hello/greet.html", {
         "name": name.capitalize()
@@ -273,9 +273,6 @@ Django的模板语言不仅支持变量替换，还支持条件判断和循环�
 我们创建一个新应用`newyear`，用于检查当天是否是新年（1月1日）。
 
 创建应用并配置URL后，在`newyear/views.py`中编写视图逻辑：
-```python
-import datetime
-from django.shortcuts import render
 
 ![](img/79b3a35557dd6fe8a6bc1e96c89db2f5_88.png)
 
@@ -283,6 +280,9 @@ from django.shortcuts import render
 
 ![](img/79b3a35557dd6fe8a6bc1e96c89db2f5_91.png)
 
+```python
+import datetime
+from django.shortcuts import render
 def index(request):
     now = datetime.datetime.now()
     return render(request, "newyear/index.html", {
@@ -372,12 +372,12 @@ urlpatterns = [
 
 ### 处理POST请求
 在`views.py`的`add`函数中，我们需要区分GET请求（显示空表单）和POST请求（处理表单数据）：
-```python
-from django.shortcuts import render, redirect
-from django.urls import reverse
 
 ![](img/79b3a35557dd6fe8a6bc1e96c89db2f5_107.png)
 
+```python
+from django.shortcuts import render, redirect
+from django.urls import reverse
 def add(request):
     if request.method == "POST":
         # 处理表单提交
@@ -401,8 +401,6 @@ def add(request):
 ![](img/79b3a35557dd6fe8a6bc1e96c89db2f5_113.png)
 
 在`views.py`中导入forms并定义一个表单类：
-```python
-from django import forms
 
 ![](img/79b3a35557dd6fe8a6bc1e96c89db2f5_115.png)
 
@@ -410,6 +408,8 @@ from django import forms
 
 ![](img/79b3a35557dd6fe8a6bc1e96c89db2f5_119.png)
 
+```python
+from django import forms
 class NewTaskForm(forms.Form):
     task = forms.CharField(label="New Task")
     priority = forms.IntegerField(label="Priority", min_value=1, max_value=5)
@@ -477,11 +477,11 @@ Django会自动生成HTML输入字段并实施客户端验证。
 ![](img/79b3a35557dd6fe8a6bc1e96c89db2f5_131.png)
 
 修改`index.html`和`add.html`，使其继承基础模板：
-```html
-{% extends "tasks/layout.html" %}
 
 ![](img/79b3a35557dd6fe8a6bc1e96c89db2f5_133.png)
 
+```html
+{% extends "tasks/layout.html" %}
 {% block body %}
     <h1>Tasks</h1>
     <ul>
@@ -543,6 +543,9 @@ Django会自动生成HTML输入字段并实施客户端验证。
 
 ![](img/79b3a35557dd6fe8a6bc1e96c89db2f5_153.png)
 
+
+![](img/79b3a35557dd6fe8a6bc1e96c89db2f5_155.png)
+
 ```python
 def index(request):
     # 如果会话中没有“tasks”键，则初始化一个空列表
@@ -551,9 +554,6 @@ def index(request):
     return render(request, "tasks/index.html", {
         "tasks": request.session["tasks"]
     })
-
-![](img/79b3a35557dd6fe8a6bc1e96c89db2f5_155.png)
-
 def add(request):
     if request.method == "POST":
         form = NewTaskForm(request.POST)

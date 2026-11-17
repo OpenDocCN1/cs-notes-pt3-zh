@@ -74,9 +74,6 @@ Web服务可以分为前端和后端两部分：
 
 ![](img/a3dde32a2e306f4b105aa37c943ae8c2_31.png)
 
-```python
-# 后端代码 (Python)
-from flask import Flask, request, render_template
 
 ![](img/a3dde32a2e306f4b105aa37c943ae8c2_33.png)
 
@@ -84,16 +81,19 @@ from flask import Flask, request, render_template
 
 ![](img/a3dde32a2e306f4b105aa37c943ae8c2_37.png)
 
-app = Flask(__name__)
 
 ![](img/a3dde32a2e306f4b105aa37c943ae8c2_39.png)
 
-@app.route('/')
-def index():
-  return render_template('index.html')
 
 ![](img/a3dde32a2e306f4b105aa37c943ae8c2_41.png)
 
+```python
+# 后端代码 (Python)
+from flask import Flask, request, render_template
+app = Flask(__name__)
+@app.route('/')
+def index():
+  return render_template('index.html')
 if __name__ == '__main__':
   app.run()
 ```

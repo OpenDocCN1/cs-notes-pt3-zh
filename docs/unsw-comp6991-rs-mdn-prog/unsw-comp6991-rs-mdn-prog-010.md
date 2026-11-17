@@ -133,6 +133,9 @@ pub trait Iterator {
 ![](img/00b06c43e58fb56fa7b5743bd1f63f91_52.png)
 
 以下是特质定义和结构体：
+
+![](img/00b06c43e58fb56fa7b5743bd1f63f91_53.png)
+
 ```rust
 pub trait Animal {
     fn name(&self) -> String;
@@ -140,9 +143,6 @@ pub trait Animal {
     fn speak(&self) -> String;
     fn say_hello_to<A: Animal>(&self, other: &A) -> String;
 }
-
-![](img/00b06c43e58fb56fa7b5743bd1f63f91_53.png)
-
 struct Sheep {
     name: String,
     age: u32,

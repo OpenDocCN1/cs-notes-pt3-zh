@@ -144,6 +144,11 @@ int main() {
 
 ![](img/6e03c1a39bd1e35c7d4413b41a133aa6_19.png)
 
+
+![](img/6e03c1a39bd1e35c7d4413b41a133aa6_21.png)
+
+![](img/6e03c1a39bd1e35c7d4413b41a133aa6_23.png)
+
 ```cpp
 #include <iostream>
 using namespace std;
@@ -160,11 +165,6 @@ int stepsToOne(int value) {
     }
     return steps;
 }
-
-![](img/6e03c1a39bd1e35c7d4413b41a133aa6_21.png)
-
-![](img/6e03c1a39bd1e35c7d4413b41a133aa6_23.png)
-
 int main() {
     int num;
     cout << "请输入一个整数: ";

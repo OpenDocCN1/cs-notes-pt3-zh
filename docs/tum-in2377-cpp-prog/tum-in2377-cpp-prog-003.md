@@ -39,9 +39,6 @@ C++函数本身不支持直接返回多个值。但我们可以使用标准库�
 *   **`std::tuple`**：用于返回两个或更多值。
 *   **结构化绑定**：C++17引入的特性，可以方便地从 `pair` 或 `tuple` 中提取值并绑定到变量。
 
-```cpp
-#include <tuple>
-#include <string>
 
 ![](img/65f3577f8e5520efbf9ff6b57f8e59f0_11.png)
 
@@ -51,22 +48,25 @@ C++函数本身不支持直接返回多个值。但我们可以使用标准库�
 
 ![](img/65f3577f8e5520efbf9ff6b57f8e59f0_17.png)
 
-// 返回一个pair
-std::pair<int, std::string> getPair() {
-    return std::make_pair(42, "hello");
-}
 
 ![](img/65f3577f8e5520efbf9ff6b57f8e59f0_19.png)
 
 ![](img/65f3577f8e5520efbf9ff6b57f8e59f0_21.png)
 
+
+![](img/65f3577f8e5520efbf9ff6b57f8e59f0_23.png)
+
+```cpp
+#include <tuple>
+#include <string>
+// 返回一个pair
+std::pair<int, std::string> getPair() {
+    return std::make_pair(42, "hello");
+}
 // 返回一个tuple
 std::tuple<int, double, std::string> getTuple() {
     return std::make_tuple(1, 2.0, "three");
 }
-
-![](img/65f3577f8e5520efbf9ff6b57f8e59f0_23.png)
-
 int main() {
     // 使用结构化绑定解包pair
     auto [num, str] = getPair();
@@ -241,14 +241,14 @@ std::cout << add_base_ref(5) << std::endl; // 输出 15, base变为15
 **2. 异常**
 C++内置的异常处理机制。使用 `throw` 抛出异常，使用 `try` 和 `catch` 块捕获并处理异常。
 
-```cpp
-#include <stdexcept>
-#include <iostream>
 
 ![](img/65f3577f8e5520efbf9ff6b57f8e59f0_37.png)
 
 ![](img/65f3577f8e5520efbf9ff6b57f8e59f0_39.png)
 
+```cpp
+#include <stdexcept>
+#include <iostream>
 double divide(int a, int b) {
     if (b == 0) {
         throw std::invalid_argument("Division by zero!");
@@ -274,6 +274,9 @@ int main() {
 **3. `std::expected` (C++23)**
 这是一种受Rust等语言启发的新型错误处理方式。函数返回一个 `std::expected<T, E>` 对象，其中 `T` 是期望的成功结果类型，`E` 是错误类型。调用者必须显式检查是得到了值还是错误。
 
+
+![](img/65f3577f8e5520efbf9ff6b57f8e59f0_41.png)
+
 ```cpp
 #include <expected>
 #include <string>
@@ -286,9 +289,6 @@ std::expected<int, std::string> parseNumber(const std::string& s) {
         return std::unexpected("Parse failed");
     }
 }
-
-![](img/65f3577f8e5520efbf9ff6b57f8e59f0_41.png)
-
 int main() {
     auto result = parseNumber("123");
     if (result.has_value()) {

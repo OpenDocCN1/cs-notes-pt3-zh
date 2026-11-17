@@ -38,6 +38,9 @@ struct PyString {
 
 构建Python列表类非常自然，就是将其实现为一个链表。链表涉及两种结构体：一种是链表本身，它包含头指针、尾指针和一个记录项目数量的计数器；另一种是节点。
 
+
+![](img/105f70b7aec4e17e5214b016b5411441_5.png)
+
 ```c
 // 链表结构
 struct PyList {
@@ -45,9 +48,6 @@ struct PyList {
     struct ListNode *tail;
     int count;
 };
-
-![](img/105f70b7aec4e17e5214b016b5411441_5.png)
-
 // 链表节点结构
 struct ListNode {
     char *text;           // 指向字符串（字符数组）的指针

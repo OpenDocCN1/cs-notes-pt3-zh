@@ -42,9 +42,6 @@ NPM（Node Package Manager）是 Node.js 的包管理器。当你安装 Node.js 
 
 ![](img/a9702cfd27d7d2f4b90bf2efed561a1a_13.png)
 
-```javascript
-// dates.js
-import { isValid } from 'date-fns';
 
 ![](img/a9702cfd27d7d2f4b90bf2efed561a1a_15.png)
 
@@ -52,6 +49,9 @@ import { isValid } from 'date-fns';
 
 ![](img/a9702cfd27d7d2f4b90bf2efed561a1a_18.png)
 
+```javascript
+// dates.js
+import { isValid } from 'date-fns';
 function dateIsValid(year, month, day) {
   return isValid(new Date(year, month, day));
 }

@@ -53,13 +53,13 @@ import myutils
 
 ![](img/a78c8161079c1752d6d2d212b802d3df_11.png)
 
+
+![](img/a78c8161079c1752d6d2d212b802d3df_13.png)
+
 ```python
 if len(sys.argv) < 2:
     print("Usage: python3 loadbook.py book.txt")
     sys.exit(1)
-
-![](img/a78c8161079c1752d6d2d212b802d3df_13.png)
-
 bookfile = sys.argv[1]
 basename = bookfile.replace('.txt', '')
 tablename = basename

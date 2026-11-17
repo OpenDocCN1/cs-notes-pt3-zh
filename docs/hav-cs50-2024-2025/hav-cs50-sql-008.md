@@ -325,15 +325,15 @@ SELECT id FROM users WHERE username = 'attacker' AND password = '' OR '1'='1';
 
 ![](img/751480a06c1c615794ae137cbcb0543f_65.png)
 
+
+![](img/751480a06c1c615794ae137cbcb0543f_67.png)
+
 ```sql
 -- 1. 准备语句
 PREPARE balance_check FROM 'SELECT * FROM accounts WHERE id = ?';
 
 -- 2. 设置用户输入的参数（例如来自变量）
 SET @id = '1 UNION SELECT * FROM accounts'; -- 恶意输入
-
-![](img/751480a06c1c615794ae137cbcb0543f_67.png)
-
 -- 3. 执行语句，并传入参数
 EXECUTE balance_check USING @id;
 ```

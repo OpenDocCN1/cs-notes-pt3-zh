@@ -10,13 +10,13 @@
 
 以下是两个实现“加倍”功能的宏版本，它们并不等价：
 
+
+![](img/4c6affbc865f571d64ba57b6e7447a6d_3.png)
+
 ```racket
 (define-syntax double1
   (syntax-rules ()
     [(_ X) (+ X X)]))
-
-![](img/4c6affbc865f571d64ba57b6e7447a6d_3.png)
-
 (define-syntax double2
   (syntax-rules ()
     [(_ X) (* 2 X)]))

@@ -25,12 +25,12 @@
 
 让我们通过一个具体的C语言程序来理解并发。以下代码创建了两个线程，每个线程都循环递增一个全局计数器。
 
-```c
-#include <stdio.h>
-#include <pthread.h>
 
 ![](img/d293276b6e518e68cf012c9dcaab590a_3.png)
 
+```c
+#include <stdio.h>
+#include <pthread.h>
 volatile int counter = 0; // 全局计数器
 int loops; // 循环次数
 

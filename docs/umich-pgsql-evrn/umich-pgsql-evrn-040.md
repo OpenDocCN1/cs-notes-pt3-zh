@@ -68,15 +68,15 @@ CREATE TRIGGER update_fav_updated_at
 
 同样的逻辑可以应用到其他需要此功能的表上，例如 `post` 表和 `comment` 表。你只需要为每个表分别创建触发器。
 
+
+![](img/2cf6f06250134fbee2f39de780ad6e26_9.png)
+
 ```sql
 -- 为 post 表创建触发器
 CREATE TRIGGER update_post_updated_at
     BEFORE UPDATE ON post
     FOR EACH ROW
     EXECUTE FUNCTION update_updated_at_column();
-
-![](img/2cf6f06250134fbee2f39de780ad6e26_9.png)
-
 -- 为 comment 表创建触发器
 CREATE TRIGGER update_comment_updated_at
     BEFORE UPDATE ON comment

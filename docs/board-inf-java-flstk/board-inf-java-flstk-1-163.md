@@ -78,11 +78,11 @@ import { FormsModule } from '@angular/forms';
 
 ![](img/8230b0349837d5bfa0526eb880621bca_5.png)
 
-```typescript
-import { Component } from '@angular/core';
 
 ![](img/8230b0349837d5bfa0526eb880621bca_7.png)
 
+```typescript
+import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

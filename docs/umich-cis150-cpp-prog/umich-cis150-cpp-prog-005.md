@@ -49,16 +49,16 @@ while (condition) {
 
 ![](img/81de3a9c20c9b4c2c00b2e85dcd977a1_23.png)
 
-```cpp
-int luckyNumber = rand() % 100 + 1; // 生成1到100的随机数
-int guess;
-cout << "猜一个1到100的数字: ";
-cin >> guess;
 
 ![](img/81de3a9c20c9b4c2c00b2e85dcd977a1_25.png)
 
 ![](img/81de3a9c20c9b4c2c00b2e85dcd977a1_27.png)
 
+```cpp
+int luckyNumber = rand() % 100 + 1; // 生成1到100的随机数
+int guess;
+cout << "猜一个1到100的数字: ";
+cin >> guess;
 while (guess != luckyNumber) {
     if (guess < luckyNumber) {
         cout << "太低了。" << endl;
@@ -101,13 +101,13 @@ cout << "恭喜你，猜对了！" << endl;
 
 以下是验证用户输入是否为“Y”或“N”的例子：
 
+
+![](img/81de3a9c20c9b4c2c00b2e85dcd977a1_48.png)
+
 ```cpp
 char playAgain;
 cout << "你想再玩一次吗？(Y/N): ";
 cin >> playAgain;
-
-![](img/81de3a9c20c9b4c2c00b2e85dcd977a1_48.png)
-
 while (playAgain != 'Y' && playAgain != 'N') {
     cout << "无效输入，请输入Y或N: ";
     cin >> playAgain;

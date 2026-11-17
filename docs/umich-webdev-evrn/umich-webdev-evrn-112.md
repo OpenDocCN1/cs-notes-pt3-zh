@@ -123,15 +123,15 @@ console.log(gl); // 输出 456
 
 为了避免这种意外的副作用，**必须**在函数内部使用 `var`、`let` 或 `const` 来声明局部变量。
 
+
+![](img/766b8216287fa00ba65b491195ac2d72_5.png)
+
 ```javascript
 let gl = 123;
 
 function check() {
     let gl = 456; // 这里声明了一个新的局部变量 gl
 }
-
-![](img/766b8216287fa00ba65b491195ac2d72_5.png)
-
 check();
 console.log(gl); // 输出 123，全局变量未被修改
 ```

@@ -18,6 +18,9 @@
 
 以下是一个简单的代码示例，展示了动态分发的概念：
 
+
+![](img/d81f6000bff86aa59580258e74157f00_6.png)
+
 ```ruby
 class C
   def m1
@@ -27,9 +30,6 @@ class C
     puts "Method in C"
   end
 end
-
-![](img/d81f6000bff86aa59580258e74157f00_6.png)
-
 class D < C
   def m2
     puts "Method in D"

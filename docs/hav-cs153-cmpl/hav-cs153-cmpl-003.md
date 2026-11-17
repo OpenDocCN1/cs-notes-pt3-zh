@@ -72,8 +72,6 @@
 
 ![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_34.png)
 
-```ocaml
-type var = string
 
 ![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_36.png)
 
@@ -83,17 +81,19 @@ type var = string
 
 ![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_42.png)
 
+
+![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_44.png)
+
+![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_46.png)
+
+```ocaml
+type var = string
 type exp =
   | Var of var
   | Add of exp * exp
   | Mul of exp * exp
   | Neg of exp
   | Int of int
-
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_44.png)
-
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_46.png)
-
 type cmd =
   | Skip
   | Assign of var * exp

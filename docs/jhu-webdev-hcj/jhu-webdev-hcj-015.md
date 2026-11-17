@@ -40,8 +40,9 @@
 
 接下来，我们尝试使用一张来自网络的外部图片：
 
-```html
 <img src="https://example.com/ants.jpg" width="300" height="200" alt="Ants on grass">
+
+```html
 ```
 
 ## ⚠️ 指定宽高的重要性
@@ -55,9 +56,10 @@
 
 我们可以通过浏览器开发者工具模拟慢速网络来观察第一种情况。即使图像未加载，只要指定了`width`和`height`，浏览器也会预留出相应的空间，保持布局稳定。
 
+<img src="https://broken-link.com/image.jpg" width="300" height="200" alt="示例图片">
+
 ```html
 <!-- 即使此图片链接失效，布局空间仍会保留 -->
-<img src="https://broken-link.com/image.jpg" width="300" height="200" alt="示例图片">
 ```
 
 ## 📚 总结

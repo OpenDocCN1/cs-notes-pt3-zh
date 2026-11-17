@@ -153,16 +153,11 @@ touch hello.html
 ![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_63.png)
 
 以下是操作步骤：
-```bash
-# 1. 将 hello.html 文件添加到暂存区
-git add hello.html
 
 ![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_65.png)
 
 ![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_67.png)
 
-# 2. 提交更改，并附上说明信息
-git commit -m “添加了 hello.html 文件”
 
 ![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_69.png)
 
@@ -172,6 +167,11 @@ git commit -m “添加了 hello.html 文件”
 
 ![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_73.png)
 
+```bash
+# 1. 将 hello.html 文件添加到暂存区
+git add hello.html
+# 2. 提交更改，并附上说明信息
+git commit -m “添加了 hello.html 文件”
 # 3. 将本地的提交推送到 GitHub
 git push
 ```
@@ -252,9 +252,6 @@ git push
 ![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_102.png)
 
 以下是分支的常用命令：
-```bash
-# 查看所有分支，当前分支前会标有 *
-git branch
 
 ![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_104.png)
 
@@ -264,8 +261,6 @@ git branch
 
 ![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_108.png)
 
-# 创建并切换到一个名为 “new-feature” 的新分支
-git checkout -b new-feature
 
 ![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_110.png)
 
@@ -273,8 +268,6 @@ git checkout -b new-feature
 
 ![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_114.png)
 
-# 切换到已存在的 “master” 分支
-git checkout master
 
 ![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_116.png)
 
@@ -292,6 +285,13 @@ git checkout master
 
 ![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_126.png)
 
+```bash
+# 查看所有分支，当前分支前会标有 *
+git branch
+# 创建并切换到一个名为 “new-feature” 的新分支
+git checkout -b new-feature
+# 切换到已存在的 “master” 分支
+git checkout master
 # 将 “new-feature” 分支的更改合并到当前分支（如 master）
 git merge new-feature
 ```

@@ -43,11 +43,11 @@ Ticket锁模仿了银行或服务大厅的排队叫号系统。它使用两个�
 
 以下是Ticket锁的核心数据结构：
 
-```rust
-use std::sync::atomic::{AtomicUsize, Ordering};
 
 ![](img/a155ee5f78d272aaf638bef92ec960f6_9.png)
 
+```rust
+use std::sync::atomic::{AtomicUsize, Ordering};
 pub struct TicketLock {
     next_ticket: AtomicUsize, // 下一个可用的票号
     current_ticket: AtomicUsize, // 当前正在服务的票号

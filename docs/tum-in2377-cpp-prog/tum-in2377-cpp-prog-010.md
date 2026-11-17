@@ -319,16 +319,16 @@ Eigen和Boost.uBLAS等库都使用了表达式模板技术。C++26标准也将�
 
 ![](img/76562bafaa214f560f4acc675a8dc6fe_155.png)
 
-```cpp
-template <typename Derived>
-class Base {
-    // ... 基类可以利用`Derived`类型
-};
 
 ![](img/76562bafaa214f560f4acc675a8dc6fe_157.png)
 
 ![](img/76562bafaa214f560f4acc675a8dc6fe_159.png)
 
+```cpp
+template <typename Derived>
+class Base {
+    // ... 基类可以利用`Derived`类型
+};
 class Derived : public Base<Derived> {
     // ...
 };
@@ -354,15 +354,6 @@ class Derived : public Base<Derived> {
 
 ![](img/76562bafaa214f560f4acc675a8dc6fe_173.png)
 
-```cpp
-template <typename Derived>
-class Amount {
-public:
-    double getValue() const {
-        // 在编译时向下转型为Derived并调用其getValue
-        return static_cast<const Derived&>(*this).getValue();
-    }
-};
 
 ![](img/76562bafaa214f560f4acc675a8dc6fe_175.png)
 
@@ -372,19 +363,9 @@ public:
 
 ![](img/76562bafaa214f560f4acc675a8dc6fe_180.png)
 
-class Constant42 : public Amount<Constant42> {
-public:
-    double getValue() const { return 42.0; }
-};
 
 ![](img/76562bafaa214f560f4acc675a8dc6fe_182.png)
 
-class Variable : public Amount<Variable> {
-    double value_;
-public:
-    Variable(double v) : value_(v) {}
-    double getValue() const { return value_; }
-};
 
 ![](img/76562bafaa214f560f4acc675a8dc6fe_184.png)
 
@@ -394,6 +375,25 @@ public:
 
 ![](img/76562bafaa214f560f4acc675a8dc6fe_189.png)
 
+```cpp
+template <typename Derived>
+class Amount {
+public:
+    double getValue() const {
+        // 在编译时向下转型为Derived并调用其getValue
+        return static_cast<const Derived&>(*this).getValue();
+    }
+};
+class Constant42 : public Amount<Constant42> {
+public:
+    double getValue() const { return 42.0; }
+};
+class Variable : public Amount<Variable> {
+    double value_;
+public:
+    Variable(double v) : value_(v) {}
+    double getValue() const { return value_; }
+};
 // 使用模板函数实现“多态”调用
 template <typename T> // T 被约束为继承自Amount<T>
 void printValue(const Amount<T>& amount) {
@@ -418,11 +418,6 @@ void printValue(const Amount<T>& amount) {
 
 ![](img/76562bafaa214f560f4acc675a8dc6fe_199.png)
 
-```cpp
-template <typename T>
-concept HasValue = requires(const T& t) {
-    { t.getValue() } -> std::convertible_to<double>;
-};
 
 ![](img/76562bafaa214f560f4acc675a8dc6fe_201.png)
 
@@ -436,6 +431,11 @@ concept HasValue = requires(const T& t) {
 
 ![](img/76562bafaa214f560f4acc675a8dc6fe_211.png)
 
+```cpp
+template <typename T>
+concept HasValue = requires(const T& t) {
+    { t.getValue() } -> std::convertible_to<double>;
+};
 template <HasValue T>
 void printValue(const T& obj) {
     std::cout << obj.getValue() << std::endl;

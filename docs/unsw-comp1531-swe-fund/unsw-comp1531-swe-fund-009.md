@@ -168,6 +168,9 @@ run-tests:
 
 ![](img/12415a1067b04aa810e93705a121a5bc_77.png)
 
+
+![](img/12415a1067b04aa810e93705a121a5bc_79.png)
+
 ```yaml
 stages:
   - checks
@@ -177,9 +180,6 @@ lint-code:
   stage: checks
   script:
     - npm run lint
-
-![](img/12415a1067b04aa810e93705a121a5bc_79.png)
-
 unit-tests:
   stage: checks
   script:

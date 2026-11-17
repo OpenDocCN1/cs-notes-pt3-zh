@@ -28,31 +28,14 @@
 
 ![](img/8cb9ce152ecd66b94c2224ec904c8265_10.png)
 
-```sql
-CREATE TABLE artist (
-    id SERIAL,
-    name VARCHAR(128) UNIQUE,
-    PRIMARY KEY(id)
-);
 
 ![](img/8cb9ce152ecd66b94c2224ec904c8265_12.png)
 
 ![](img/8cb9ce152ecd66b94c2224ec904c8265_14.png)
 
-CREATE TABLE album (
-    id SERIAL,
-    title VARCHAR(128) UNIQUE,
-    artist_id INTEGER REFERENCES artist(id) ON DELETE CASCADE,
-    PRIMARY KEY(id)
-);
 
 ![](img/8cb9ce152ecd66b94c2224ec904c8265_16.png)
 
-CREATE TABLE genre (
-    id SERIAL,
-    name VARCHAR(128) UNIQUE,
-    PRIMARY KEY(id)
-);
 
 ![](img/8cb9ce152ecd66b94c2224ec904c8265_18.png)
 
@@ -60,6 +43,23 @@ CREATE TABLE genre (
 
 ![](img/8cb9ce152ecd66b94c2224ec904c8265_20.png)
 
+```sql
+CREATE TABLE artist (
+    id SERIAL,
+    name VARCHAR(128) UNIQUE,
+    PRIMARY KEY(id)
+);
+CREATE TABLE album (
+    id SERIAL,
+    title VARCHAR(128) UNIQUE,
+    artist_id INTEGER REFERENCES artist(id) ON DELETE CASCADE,
+    PRIMARY KEY(id)
+);
+CREATE TABLE genre (
+    id SERIAL,
+    name VARCHAR(128) UNIQUE,
+    PRIMARY KEY(id)
+);
 CREATE TABLE track (
     id SERIAL,
     title VARCHAR(128),
@@ -84,12 +84,12 @@ CREATE TABLE track (
 
 ![](img/8cb9ce152ecd66b94c2224ec904c8265_25.png)
 
-```sql
-INSERT INTO artist (name) VALUES ('Led Zeppelin');
-INSERT INTO artist (name) VALUES ('AC/DC');
 
 ![](img/8cb9ce152ecd66b94c2224ec904c8265_27.png)
 
+```sql
+INSERT INTO artist (name) VALUES ('Led Zeppelin');
+INSERT INTO artist (name) VALUES ('AC/DC');
 SELECT * FROM artist; -- 查看生成的ID，例如 Led Zeppelin -> 1, AC/DC -> 2
 ```
 
@@ -212,6 +212,9 @@ DELETE FROM genre WHERE id = 1;
 
 ![](img/8cb9ce152ecd66b94c2224ec904c8265_74.png)
 
+
+![](img/8cb9ce152ecd66b94c2224ec904c8265_76.png)
+
 ```sql
 CREATE TABLE student (
     id SERIAL,
@@ -219,9 +222,6 @@ CREATE TABLE student (
     email VARCHAR(128) UNIQUE,
     PRIMARY KEY(id)
 );
-
-![](img/8cb9ce152ecd66b94c2224ec904c8265_76.png)
-
 CREATE TABLE course (
     id SERIAL,
     title VARCHAR(128) UNIQUE,

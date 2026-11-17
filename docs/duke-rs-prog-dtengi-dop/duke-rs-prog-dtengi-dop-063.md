@@ -74,12 +74,12 @@ unzip cats_dogs_small.zip
 CloudShell默认使用Bash，但你也可以轻松切换到Zsh或PowerShell。你可以通过编辑相应的配置文件（如 `~/.bashrc` 或 `~/.zshrc`）来自定义Shell环境。
 
 **操作示例：切换与自定义Shell**
-```bash
-# 查看当前Shell
-echo $SHELL
 
 ![](img/84b7999a7bd5f3c62a978f0eac362292_17.png)
 
+```bash
+# 查看当前Shell
+echo $SHELL
 # 切换到Zsh
 zsh
 

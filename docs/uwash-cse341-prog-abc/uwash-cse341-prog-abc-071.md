@@ -16,12 +16,12 @@
 
 以下是 ML 代码的实现：
 
-```ml
-(* 定义自定义多态列表类型 *)
-datatype 'a mylist = Cons of 'a * 'a mylist | Empty
 
 ![](img/aabf3798d6aa4ae8384bcbbd84eb0f47_1.png)
 
+```ml
+(* 定义自定义多态列表类型 *)
+datatype 'a mylist = Cons of 'a * 'a mylist | Empty
 (* map 函数 *)
 fun map f lst =
     case lst of

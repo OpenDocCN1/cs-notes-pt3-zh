@@ -29,11 +29,11 @@ let origin = Point(0, 0, 0);
 
 类单元结构体不包含任何数据，类似于单元类型`()`。它们通常用于实现特定的特质（trait）而不关联数据，这在后续讨论特质时会非常有用。
 
-```rust
-struct AlwaysEqual;
 
 ![](img/63d77797e97179e63cf8099e840ab5b5_5.png)
 
+```rust
+struct AlwaysEqual;
 let subject = AlwaysEqual;
 ```
 

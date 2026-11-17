@@ -75,29 +75,16 @@ async fn create_file_example() -> std::io::Result<()> {
 *   **请求守卫**：这是`Rocket`的一大特色。它允许你利用Rust的类型系统，在请求到达处理函数之前，就对参数进行验证和转换。
 
 例如，我们可以定义一个`PasteId`类型，确保路由参数是一个有效的UUID：
-```rust
-use rocket::request::FromParam;
-use uuid::Uuid;
 
 ![](img/ca8e9cfb69a280d42360d68e547db45c_33.png)
 
 ![](img/ca8e9cfb69a280d42360d68e547db45c_34.png)
 
-struct PasteId(Uuid);
 
 ![](img/ca8e9cfb69a280d42360d68e547db45c_36.png)
 
 ![](img/ca8e9cfb69a280d42360d68e547db45c_38.png)
 
-impl<'a> FromParam<'a> for PasteId {
-    type Error = &'static str;
-
-    fn from_param(param: &'a str) -> Result<Self, Self::Error> {
-        Uuid::parse_str(param)
-            .map(PasteId)
-            .map_err(|_| "无效的 Paste ID")
-    }
-}
 
 ![](img/ca8e9cfb69a280d42360d68e547db45c_40.png)
 
@@ -113,6 +100,19 @@ impl<'a> FromParam<'a> for PasteId {
 
 ![](img/ca8e9cfb69a280d42360d68e547db45c_50.png)
 
+```rust
+use rocket::request::FromParam;
+use uuid::Uuid;
+struct PasteId(Uuid);
+impl<'a> FromParam<'a> for PasteId {
+    type Error = &'static str;
+
+    fn from_param(param: &'a str) -> Result<Self, Self::Error> {
+        Uuid::parse_str(param)
+            .map(PasteId)
+            .map_err(|_| "无效的 Paste ID")
+    }
+}
 #[get("/<id>")]
 async fn retrieve_paste(id: PasteId) -> Option<File> {
     // `id` 在这里已经被验证为有效的UUID

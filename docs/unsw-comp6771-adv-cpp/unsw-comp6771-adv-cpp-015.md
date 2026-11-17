@@ -141,6 +141,13 @@ auto find_min(const std::array<T, size>& a) -> T {
 
 ![](img/4593240dd453c0786024802f0f9d9ea0_65.png)
 
+
+![](img/4593240dd453c0786024802f0f9d9ea0_67.png)
+
+![](img/4593240dd453c0786024802f0f9d9ea0_69.png)
+
+![](img/4593240dd453c0786024802f0f9d9ea0_70.png)
+
 ```cpp
 // stack.h
 template <typename T>
@@ -152,13 +159,6 @@ public:
     auto top() -> T&;
     auto top() const -> const T&;
     friend auto operator<<(std::ostream& os, const Stack& s) -> std::ostream&;
-
-![](img/4593240dd453c0786024802f0f9d9ea0_67.png)
-
-![](img/4593240dd453c0786024802f0f9d9ea0_69.png)
-
-![](img/4593240dd453c0786024802f0f9d9ea0_70.png)
-
 private:
     std::vector<T> data_;
 };
@@ -231,17 +231,17 @@ auto Stack<T>::top() -> T& {
 
 ![](img/4593240dd453c0786024802f0f9d9ea0_106.png)
 
+
+![](img/4593240dd453c0786024802f0f9d9ea0_108.png)
+
+![](img/4593240dd453c0786024802f0f9d9ea0_110.png)
+
 ```cpp
 // stack.h
 template <typename T>
 class Stack {
     // ... 声明
 };
-
-![](img/4593240dd453c0786024802f0f9d9ea0_108.png)
-
-![](img/4593240dd453c0786024802f0f9d9ea0_110.png)
-
 #include "stack.tpp" // 包含定义
 ```
 

@@ -86,11 +86,11 @@ function App() {
 
 让我们尝试使用 `useEffect` 调用。在这个方法中，我们实际上将 `setInterval` 放在了 `useEffect` 函数内部。
 
-```javascript
-import { useState, useEffect } from 'react';
 
 ![](img/7948c9f77b621fec8379dcca8ff91e64_11.png)
 
+```javascript
+import { useState, useEffect } from 'react';
 function App() {
   const [seconds, setSeconds] = useState(0);
 

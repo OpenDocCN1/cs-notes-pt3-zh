@@ -17280,6 +17280,12 @@ r=r->next;
 
 
 
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1289_0.png)
+
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1294_0.png)
+
 ```
 /* p 多项式尾 */
 while (p!=NULL) {
@@ -17356,9 +17362,6 @@ return s ;
 
 - 当增加一张卡片时，只需要向计算机系统申请一块空间，联到链的适当位置上。例如，要增加一张卡片 50 插入到 2、3 之间，则只需要如下修改指针：
 - 若删除一节，只需要将其从链上摘下来即可。例删除2节得链上已经没有2节了，删掉的节所占的存储空间还可以还回计算机系统，以便作其它用途。
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1289_0.png)
-
 这就是一种动态数据结构中的——链表。动态数据结构上的一个项是一个动态变量，指针是标识动态变量的有力手段。动态变量与静态变量的区别在于：
 
 静态变量是程序中由程序员“显式”说明的变量。它有一个名字，在编译时，编译程序已经给它分配存储空间。这块存储空间用变量的名字来标识。
@@ -17382,9 +17385,6 @@ return s ;
 ## 内存
 
 程序运行时，涉及用户程序的内存存储结构如右图所示，首先是目标代码区；然后是静态存储区，用于存放那些可用绝对地址标识的，主要是具有静态存储类别的数据和变量；接着是目标代码运行时用到的库程序代码区；最后剩余空间是栈区和堆区，栈区和堆区从剩余空间的两端，动态的向中间增长。栈区用来存储程序中声明的函数的局部变量等具有自动存储类别的数据和变量；堆区用来存储经过动态申请空间函数申请的变量。
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1294_0.png)
-
 ## sizeof 运算符
 
 - 单目运算符 sizeof 的
@@ -17487,12 +17487,12 @@ typedef struct stackcell {
 } stackcelltype ;
 typedef stackcelltype *pstacktype ;
 pstacktype top ;
-```
-
-top:
 
 ![](img/2c9b154d61523ac3dc02daf316966b8e_1304_0.png)
 
+```
+
+top:
 栈
 
 如下实现栈的操作：
@@ -17517,6 +17517,12 @@ void stackpop ( items *x ) {
         free(p);
     } else printf( "栈下溢\n" );
 }
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1306_0.png)
+
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1307_0.png)
+
 ```
 
 ### 看一下这三个操作：
@@ -17525,9 +17531,6 @@ void stackpop ( items *x ) {
 - 2. 调用一次 stackpush(1) 得。
 - 3. 再调用一次 stackpush(2) 得。
 - 4. 调用一次 stackpop(&b) 得。
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1306_0.png)
-
 ## 队列
 
 如图可用单向链表实现队列，现在要用两个指针变量，一个指向队头（front），一个指向队尾（rear）。队列的操作有
@@ -17535,9 +17538,6 @@ void stackpop ( items *x ) {
 - ① 初始化（queueinitial）
 - ② 进队——排在队尾（inqueue）
 - ③ 出队——从队头删一项（outqueue）
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1307_0.png)
-
 设有如下说明：
 
 ```c
@@ -17585,6 +17585,14 @@ void outqueue ( item *x ) {
         free( p );
     }
 }
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1311_0.png)
+
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1312_0.png)
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1312_1.png)
+
 ```
 
 ### 看一下这三个操作：
@@ -17602,19 +17610,11 @@ rear: NULL
 front: NULL
 
 p:
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1311_0.png)
-
 ## 链表——linkage table
 
 base: 单向链
 
 base: 双向链
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1312_0.png)
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1312_1.png)
-
 base: 环形链
 
 base: 双向环形链
@@ -17669,10 +17669,10 @@ while (p != NULL && p->key !=key0 ) {
 r-> next = p;
 p0-> next = r;
 p0 = r    /*使 p0 仍为 p 的前一项*/
-```
 
 ![](img/2c9b154d61523ac3dc02daf316966b8e_1317_0.png)
 
+```
 ### 从单向链表上删除一项：
 
 设有下图的链表，现在要删除 p 所指项。删除算法是：
@@ -17682,17 +17682,17 @@ q = p;
 p = p-> next ;
 p0-> next = p ;
 free(q);
-```
 
 ![](img/2c9b154d61523ac3dc02daf316966b8e_1318_0.png)
 
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1319_0.png)
+
+```
 ### 交换单向链表上两项:
 
 设有如图所示链表。现在要把 p 所指的项与 q 所指的项交换。
 为了表示操作方便，我们把该链表分两段画出。
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1319_0.png)
-
 ```c
 /*交换 p-> next 、 q-> next */
     g = p-> next;          /* 1 */
@@ -17704,10 +17704,18 @@ free(q);
 /*交换 p 、 q */
     p = p0-> next ;        /* 6 */
     q = q0-> next ;        /* 7 */
-```
 
 ![](img/2c9b154d61523ac3dc02daf316966b8e_1320_0.png)
 
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1321_0.png)
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1322_0.png)
+
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1323_0.png)
+
+```
 ## 树——tree
 
 二叉树，二叉树的每个数据项附带两个指针，分别指向它的两个分支。二叉树的定义：
@@ -17717,11 +17725,6 @@ free(q);
 - 所有结点具有相同的数据类型。
 
 ( a + b / c ) * ( d - e * f )
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1321_0.png)
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1322_0.png)
-
 设 ti 为二叉树的一个结点，一般 ti 由两部分组成：
 
 - ● 基本数据部分------保存本结点上的基本数据；
@@ -17735,17 +17738,12 @@ ti 的指针部分有两个指针：左指针、右指针。
 
 若左、右子树均空，则称 ti 为叶结点。
 
-
-
 为了检索操作方便，一般把二叉树组织成二叉检索树。两叉检索树的定义是：
 
 - 设树中每个结点的数据部分有一个数据项 key 是有序的，称该数据项为关键字。
 - 一个二叉树称为检索树，
 - 如果对每个结点 ti ，它的左子树中所有结点的 key 值都小于 ti 的 key 值；
 - ti 的右子树中所有结点的 key 值都大于 ti 的 key 值。
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1323_0.png)
-
 ## 二叉检索树的操做：
 
 - 遍历
@@ -17792,10 +17790,10 @@ void preorder (treepointer p) {
         preorder( p-> right )
     }
 }
-```
 
 ![](img/2c9b154d61523ac3dc02daf316966b8e_1327_0.png)
 
+```
 * + a / b c - d * e f
 
 中序遍历过程是：
@@ -17810,10 +17808,10 @@ void inorder (treepointer p) { /*中序遍历*/
         inorder( p-> right )
     }
 }
-```
 
 ![](img/2c9b154d61523ac3dc02daf316966b8e_1328_0.png)
 
+```
 a + b / c * d - e * f
 
 ## 后序遍历过程是：
@@ -17830,10 +17828,10 @@ void postorder (treepointer p){ /*后序遍历*/
         printf("%c" , p-> data );
     }
 }
-```
 
 ![](img/2c9b154d61523ac3dc02daf316966b8e_1329_0.png)
 
+```
 a b c / + d e f * - *
 
 ## 检索
@@ -17849,27 +17847,27 @@ treepointer search( typekey c , treepointer p ) {
     else
         return search( c , p-> right ) ;
 }
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1331_0.png)
+
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1332_0.png)
+
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1333_0.png)
+
 ```
 
 1. 主函数中调用 search( 2 , root )
 形参 c: 2
 形参 p: 指向数据项5
 c<p->key  return search(c, p->left)
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1331_0.png)
-
 2. 形参 c: 2
 形参 p: 指向数据项 4
 c<p->key return search(c, p->left);
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1332_0.png)
-
 3. 形参 c: 2
 形参 p: 指向数据项 2
 c=p->key return p;
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1333_0.png)
-
 ## ■ 插入一个结点
 
 插入是指将一个数据项插入到树中某一恰当位置，使树仍保持检索树的性质。显然，首先要按key值查询出应该插入的位置，然后再插入。
@@ -17898,13 +17896,42 @@ insert 的形式参数 p 指向 root，而 root 值为 NULL。
 
 ```
 *p=(treepointer)malloc(sizeof(struct tree))
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1335_0.png)
+
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1336_0.png)
+
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1337_0.png)
+
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1338_0.png)
+
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1339_0.png)
+
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1340_0.png)
+
+
+
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1341_0.png)
+
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1342_0.png)
+
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1344_0.png)
+
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1346_0.png)
+
 ```
 
 得：
 再执行后边的几个赋值语句，得：
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1335_0.png)
-
 ## 2.1) 若调用 insert 时，如图 root 非空。
 
 主函数调用insert(8,&root)
@@ -17916,28 +17943,16 @@ c<(*p)->key 递归调用 insert(8,&((*p)->left))
 root:
 
 p:
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1336_0.png)
-
 ## 2.2) 形参p(指针的指针): 数据项9的左指针的地址
 c>(*p)->key, 递归调用 insert(8,&((*p)->right))
 
 root:
 
 p:
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1337_0.png)
-
 ## 2.3) 形参p(指针的指针): 数据项5的右指针的地址
 c>(*p)->key，递归调用 insert(8,&((*p)->right))
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1338_0.png)
-
 ## 2.4）形参p(指针的指针)：数据项7的右指针的地址
 *p==NULL，申请空间并插入数据项8
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1339_0.png)
-
 ## 图——graph
 
 图G=(V, E)。其中，
@@ -17946,17 +17961,9 @@ c>(*p)->key，递归调用 insert(8,&((*p)->right))
 - vi为图G中结点
 - E={ (vi , vj ) |vi, vj∈V} 是图中边的集合
 - (vi ,vj)表示连接结点vi到结点vj的边。
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1340_0.png)
-
-
-
 ## （一）邻接表方法
 
 设图G有k个结点，使用一个k*k的int型矩阵g表示图G，矩阵g的第i行顺序列出与结点i直接相连的结点编号，最后以“-1”结尾。则图G表示成右图的邻接表。
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1341_0.png)
-
 |   | 1 | 2 | -1 |   |   |   |   |   |
 |---|---|---|---|---|---|---|---|---|
 | 0 | 1 | 2 | -1 |   |   |   |   |   |
@@ -17976,9 +17983,6 @@ c>(*p)->key，递归调用 insert(8,&((*p)->right))
 g[i, j] = { true 表示从结点 i 到结点 j 有直接路; false 表示从结点 i 到结点 j 没有直接路; }
 
 利用这种表示法，左图的网表示成右图 8*8 的 bool 矩阵。
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1342_0.png)
-
 ## 例12-5 找路径
 
 已知一个网g=(v,e)。其中，
@@ -17989,9 +17993,6 @@ g[i, j] = { true 表示从结点 i 到结点 j 有直接路; false 表示从结�
 - (vi ,vj)表示连接结点vi到结点vj的边。
 
 找路径是指求从结点m到结点n的所有路径。
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1344_0.png)
-
 解:这样想该问题,
 
 - 1. 从m点出发沿所有可能的路向前走一步;
@@ -18021,9 +18022,6 @@ route(i,n,r+1)
 在该算法中，关键在于找出m点的所有后继点。
 
 ### (一) 邻接链表方法
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1346_0.png)
-
 设有如下声明：
 
 ```
@@ -18093,6 +18091,9 @@ struct item {
     struct item *next ;
 };
 typedef struct item *pt
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1352_0.png)
+
 ```
 
 以base为链首的链表如下图所示。该算法的思想是：
@@ -18100,9 +18101,6 @@ typedef struct item *pt
 - 1. 开始假设空序列是递增的
 - 2. 若i个元素子序列已经递增，则加一个元素，把插入到序列中一个适当位置使i+1个元素的子序列也递增
 - 3. 直到i=n为止
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1352_0.png)
-
 ## 开始
 
 p = base
@@ -18175,6 +18173,9 @@ q->next = base ; base = q
 ```
 插入到r0,r之间:
 q->next = r ; r0->next = q
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1355_0.png)
+
 ```
 
 ## 结束
@@ -18190,9 +18191,6 @@ q->next = r ; r0->next = q
     q->next = r ;
     r0->next = q;
 现在链表结构是：
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1355_0.png)
-
 ```
 pt sort(pt base ) {        /* 链表排序，base 为链首 */
     pt p ,p0 ,r ,r0 ,q ;
@@ -18221,6 +18219,9 @@ pt sort(pt base ) {        /* 链表排序，base 为链首 */
     }
     return base ;
 } /* sort */
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1358_0.png)
+
 ```
 
 # 例12-3 法雷序列
@@ -18238,9 +18239,6 @@ pt sort(pt base ) {        /* 链表排序，base 为链首 */
 # 分析：
 
 法雷序列的每项是个分数，不能用实数精确的表示，而且这些数的排列顺序是不规则的。用下图形式的链表来表示它。
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1358_0.png)
-
 ```
 struct farlei_item {
 	int numerator , denominator ;
@@ -18294,6 +18292,12 @@ for ( i=2; i<=n; i++ )
         }
     return fn ;
 }
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1363_0.png)
+
+
+![](img/2c9b154d61523ac3dc02daf316966b8e_1364_0.png)
+
 ```
 
 # 例12-4 多项式加法
@@ -18301,17 +18305,11 @@ for ( i=2; i<=n; i++ )
 p(x) = 6.5X⁵ + 3.4X² + X + 0.5
 
 多项式可以用如下形式的链表来存储；
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1363_0.png)
-
 # 例如多项式
 
 p(x) = 6.5 X^5 + 3.4 X^2 + X + 0.5
 
 可以表示成如下形式：
-
-![](img/2c9b154d61523ac3dc02daf316966b8e_1364_0.png)
-
 编一个函数，实现多项式加法: p(X)+q(X) => s(X) 。
 
 设有类型说明：

@@ -53,14 +53,14 @@ let day_to_int d = match d with
 
 现在，假设我想创建一个键为`day`类型的Map。我需要创建一个模块来指定键类型和比较方法。
 
+
+![](img/098348ad41cf4b736a062c38cb028634_3.png)
+
 ```ocaml
 module DayOrdered = struct
   type t = day
   let compare d1 d2 = compare (day_to_int d1) (day_to_int d2)
 end
-
-![](img/098348ad41cf4b736a062c38cb028634_3.png)
-
 module DayMap = Map.Make(DayOrdered)
 ```
 

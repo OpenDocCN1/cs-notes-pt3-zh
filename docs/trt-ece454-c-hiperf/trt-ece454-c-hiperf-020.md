@@ -222,6 +222,9 @@ Rust 不直接支持传统的类继承多态，但通过特征可以实现类似
 
 假设我们想表示会“说话”的动物：
 
+
+![](img/8b4e61fb8e004050e4db6c6f6145d99d_15.png)
+
 ```rust
 trait Speak {
     fn speak(&self);
@@ -233,9 +236,6 @@ impl Speak for Cat {
         println!("Meow");
     }
 }
-
-![](img/8b4e61fb8e004050e4db6c6f6145d99d_15.png)
-
 struct Dog;
 impl Speak for Dog {
     fn speak(&self) {
@@ -413,6 +413,9 @@ struct Vertex {
 
 对于我们的多线程图节点例子，我们需要 `Mutex` 来保护数据，并使用 `Arc`（原子引用计数）来在线程间安全地共享所有权。
 
+
+![](img/8b4e61fb8e004050e4db6c6f6145d99d_24.png)
+
 ```rust
 use std::sync::{Arc, Mutex};
 use std::thread;
@@ -432,9 +435,6 @@ fn increment_all(v: Arc<Vertex>) {
         increment_all(edge.clone());
     }
 } // val 离开作用域，锁自动释放
-
-![](img/8b4e61fb8e004050e4db6c6f6145d99d_24.png)
-
 fn main() {
     // 创建节点并用 Arc 包装
     let a = Arc::new(Vertex {

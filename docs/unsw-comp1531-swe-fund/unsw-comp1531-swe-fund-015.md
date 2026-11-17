@@ -74,6 +74,12 @@ app.listen(3001, () => console.log('Server running on port 3001'));
 *   创建一个 `save` 函数，将 `data` 对象转换为JSON字符串并写入文件。
 *   在POST路由处理程序的末尾调用 `save` 函数。
 
+
+![](img/d341ce4e296d3cc2573418767c12c823_11.png)
+
+
+![](img/d341ce4e296d3cc2573418767c12c823_13.png)
+
 ```javascript
 import express from 'express';
 import fs from 'fs'; // 导入文件系统模块
@@ -92,9 +98,6 @@ function save() {
 app.get('/data', (req, res) => {
   res.json({ x: data.x, y: data.y });
 });
-
-![](img/d341ce4e296d3cc2573418767c12c823_11.png)
-
 app.post('/data', (req, res) => {
   const { inputX, inputY } = req.body;
   data.x = inputX;
@@ -102,9 +105,6 @@ app.post('/data', (req, res) => {
   save(); // 数据修改后，立即保存到文件
   res.sendStatus(200);
 });
-
-![](img/d341ce4e296d3cc2573418767c12c823_13.png)
-
 app.listen(3001, () => console.log('Server running on port 3001'));
 ```
 现在，每次执行POST请求后，当前状态都会被保存到 `database.json` 文件中。

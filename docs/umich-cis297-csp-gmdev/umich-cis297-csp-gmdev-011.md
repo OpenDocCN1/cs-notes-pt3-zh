@@ -138,6 +138,12 @@ bool isTwoPair = counts.Count(c => c == 2) == 2;
 
 又或者在比较两个“两对”牌型的大小时，我们需要先比较较大的对子，再比较较小的对子，最后比较单张牌：
 
+
+![](img/cbfcd160ef5e32b699cb580488c5cbc6_28.png)
+
+
+![](img/cbfcd160ef5e32b699cb580488c5cbc6_30.png)
+
 ```csharp
 // 获取自己手牌中所有“对子”的点数列表（已排序）
 var myPairs = faceValueCounts.Where(fvc => fvc.Count == 2)
@@ -150,18 +156,12 @@ var otherPairs = otherPlayerFaceValueCounts.Where(fvc => fvc.Count == 2)
                                            .Select(fvc => fvc.FaceValue)
                                            .OrderByDescending(fv => fv)
                                            .ToList();
-
-![](img/cbfcd160ef5e32b699cb580488c5cbc6_28.png)
-
 // 逐对比较
 for (int i = 0; i < myPairs.Count; i++)
 {
     if (myPairs[i] > otherPairs[i]) return 1;  // 自己的大
     if (myPairs[i] < otherPairs[i]) return -1; // 对手的大
 }
-
-![](img/cbfcd160ef5e32b699cb580488c5cbc6_30.png)
-
 // 如果所有对子都相等，比较剩下的单张牌
 var myKicker = faceValueCounts.First(fvc => fvc.Count == 1).FaceValue;
 var otherKicker = otherPlayerFaceValueCounts.First(fvc => fvc.Count == 1).FaceValue;

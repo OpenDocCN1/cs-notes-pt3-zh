@@ -64,12 +64,6 @@ C++允许从多个基类继承，这称为多重继承。然而，多重继承�
 ![](img/7ac7689e80af96950a7818eefcfab600_32.png)
 
 以下是如何在派生类构造函数中委托调用基类构造函数的示例：
-```cpp
-class Base {
-public:
-    Base(int a) : value(a) {}
-    int value;
-};
 
 ![](img/7ac7689e80af96950a7818eefcfab600_34.png)
 
@@ -77,6 +71,12 @@ public:
 
 ![](img/7ac7689e80af96950a7818eefcfab600_38.png)
 
+```cpp
+class Base {
+public:
+    Base(int a) : value(a) {}
+    int value;
+};
 class Derived : public Base {
 public:
     Derived(int a, int b) : Base(a), derived_value(b) {}

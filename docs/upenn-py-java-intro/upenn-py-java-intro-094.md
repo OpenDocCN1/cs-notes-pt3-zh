@@ -31,15 +31,15 @@
 
 ![](img/503acde6669ea7ded2286aff59887689_3.png)
 
+
+![](img/503acde6669ea7ded2286aff59887689_5.png)
+
 ```python
 billy = {
     "name": "Billy",
     "grades": [100, 80, 67, 100, 89],
     "attendance": [True, True, True, True, True]
 }
-
-![](img/503acde6669ea7ded2286aff59887689_5.png)
-
 sarah = {
     "name": "Sarah",
     "grades": [0, 99, 0, 100],

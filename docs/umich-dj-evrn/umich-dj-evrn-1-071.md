@@ -44,11 +44,11 @@
 
 以下是构建一个简单HTTP服务器的核心代码结构。我们将逐部分解析其工作原理。
 
-```python
-import socket
 
 ![](img/ff6928b67427fff626520a26f18f8625_20.png)
 
+```python
+import socket
 def create_server():
     # 1. 创建socket（“电话”）
     serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -168,6 +168,9 @@ http://localhost:9000
 ![](img/ff6928b67427fff626520a26f18f8625_44.png)
 
 **方式一：使用底层socket（模拟原始请求）**
+
+![](img/ff6928b67427fff626520a26f18f8625_46.png)
+
 ```python
 import socket
 
@@ -175,9 +178,6 @@ mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 mysock.connect(('127.0.0.1', 9000))
 cmd = 'GET / HTTP/1.1\r\n\r\n'.encode()
 mysock.send(cmd)
-
-![](img/ff6928b67427fff626520a26f18f8625_46.png)
-
 while True:
     data = mysock.recv(512)
     if len(data) < 1:

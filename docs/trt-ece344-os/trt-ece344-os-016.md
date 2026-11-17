@@ -51,15 +51,15 @@
 
 现在，我们通过一个具体例子来看看多线程编程中典型的并发错误。假设我们创建一个程序，它启动8个线程，每个线程都对一个全局变量`counter`执行10000次递增操作。
 
+
+![](img/cfe36ae252af8ba0e154028e8586ddfe_3.png)
+
 ```c
 #include <pthread.h>
 #include <stdio.h>
 
 static int counter = 0;
 #define NUM_THREADS 8
-
-![](img/cfe36ae252af8ba0e154028e8586ddfe_3.png)
-
 void* run(void* arg) {
     for (int i = 0; i < 10000; ++i) {
         ++counter; // 问题所在！

@@ -66,6 +66,9 @@
 
 ![](img/de9ec9acf828c269a97494ae91975815_10.png)
 
+
+![](img/de9ec9acf828c269a97494ae91975815_12.png)
+
 ```javascript
 // 获取表单
 const form = document.forms[0]; // 或 document.forms.sampleForm
@@ -73,9 +76,6 @@ const form = document.forms[0]; // 或 document.forms.sampleForm
 // 访问名为“fname”的输入元素
 const firstNameInput = form.elements.fname; // 或 form.fname (简写)
 const firstNameValue = firstNameInput.value; // 获取用户输入的值
-
-![](img/de9ec9acf828c269a97494ae91975815_12.png)
-
 // 访问名为“age”的单选按钮组
 const ageRadioGroup = form.elements.age; // 返回一个集合
 ```

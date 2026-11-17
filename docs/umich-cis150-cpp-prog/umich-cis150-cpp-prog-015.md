@@ -56,12 +56,12 @@ delete[] arrayPtr; // 释放动态数组的内存
 ![](img/e6d154982b8a44dcdbf0ef77b8fd2046_24.png)
 
 **核心代码示例：**
-```cpp
-Chair* ericsChair = new Chair(); // 在堆上创建一个Chair对象
-ericsChair->setColor("blue"); // 使用箭头操作符调用成员函数
 
 ![](img/e6d154982b8a44dcdbf0ef77b8fd2046_26.png)
 
+```cpp
+Chair* ericsChair = new Chair(); // 在堆上创建一个Chair对象
+ericsChair->setColor("blue"); // 使用箭头操作符调用成员函数
 Chair jebsChair; // 在栈上创建一个Chair对象
 jebsChair.setColor("black"); // 使用点操作符调用成员函数
 ```

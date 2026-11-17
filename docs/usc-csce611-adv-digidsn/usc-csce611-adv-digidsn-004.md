@@ -44,14 +44,14 @@ SystemVerilog 的运算符大多与 C/Java 类似，但专为硬件设计增加�
 对于常量，建议始终指定位宽和基数，格式为：`<位宽>'<基数><数值>`。下划线 `_` 可用于提高可读性。
 
 **公式/代码示例：常量与位拼接**
-```systemverilog
-logic [7:0] data;
-assign data = 8‘b1100_0011; // 8位二进制常量
 
 ![](img/1afc78e303b26428e679de47eeb6efac_8.png)
 
 ![](img/1afc78e303b26428e679de47eeb6efac_10.png)
 
+```systemverilog
+logic [7:0] data;
+assign data = 8‘b1100_0011; // 8位二进制常量
 logic [15:0] extended;
 assign extended = { {16{imm[11]}}, imm[11:0] }; // 12位立即数符号扩展至28位
 // {16{imm[11]}} 表示将 imm[11] 这位重复16次

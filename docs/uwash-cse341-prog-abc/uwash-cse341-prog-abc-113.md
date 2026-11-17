@@ -50,12 +50,12 @@
 
 ![](img/94013c7f5706f1905723185ab29861f8_16.png)
 
-```racket
-(define (my-if-bad e1 e2 e3)
-  (if e1 e2 e3))
 
 ![](img/94013c7f5706f1905723185ab29861f8_18.png)
 
+```racket
+(define (my-if-bad e1 e2 e3)
+  (if e1 e2 e3))
 (define (factorial-bad x)
   (my-if-bad (= x 0)
              1

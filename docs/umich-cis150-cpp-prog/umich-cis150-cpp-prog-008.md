@@ -28,8 +28,6 @@
 ![](img/57c268b08bd56c88e936f4888a44dcda_7.png)
 
 **示例：局部变量与全局变量**
-```cpp
-int globalNumber = 10; // 全局变量
 
 ![](img/57c268b08bd56c88e936f4888a44dcda_8.png)
 
@@ -37,6 +35,8 @@ int globalNumber = 10; // 全局变量
 
 ![](img/57c268b08bd56c88e936f4888a44dcda_11.png)
 
+```cpp
+int globalNumber = 10; // 全局变量
 void addToNumber() {
     int localNumber = 5; // 局部变量，仅在此函数内有效
     globalNumber += localNumber; // 可以访问和修改全局变量
@@ -75,6 +75,11 @@ int main() {
 ![](img/57c268b08bd56c88e936f4888a44dcda_27.png)
 
 **示例：带默认参数的函数**
+
+![](img/57c268b08bd56c88e936f4888a44dcda_29.png)
+
+![](img/57c268b08bd56c88e936f4888a44dcda_31.png)
+
 ```cpp
 // 假设下限默认为1，上限必须提供
 int getInputWithinRange(int upperBound, int lowerBound = 1) {
@@ -82,11 +87,6 @@ int getInputWithinRange(int upperBound, int lowerBound = 1) {
     // ... 验证输入是否在 [lowerBound, upperBound] 范围内的逻辑 ...
     return userInput;
 }
-
-![](img/57c268b08bd56c88e936f4888a44dcda_29.png)
-
-![](img/57c268b08bd56c88e936f4888a44dcda_31.png)
-
 int main() {
     int num1 = getInputWithinRange(10); // 相当于 getInputWithinRange(10, 1)
     int num2 = getInputWithinRange(100, 50); // 提供下限50
@@ -103,11 +103,6 @@ C++允许我们定义多个**同名函数**，只要它们的**参数列表（�
 ![](img/57c268b08bd56c88e936f4888a44dcda_35.png)
 
 **示例：函数重载**
-```cpp
-// 版本1：接受整数参数
-string getDate(int day, int month = 10, int year = 2025) {
-    return to_string(year) + "-" + to_string(month) + "-" + to_string(day);
-}
 
 ![](img/57c268b08bd56c88e936f4888a44dcda_37.png)
 
@@ -117,10 +112,6 @@ string getDate(int day, int month = 10, int year = 2025) {
 
 ![](img/57c268b08bd56c88e936f4888a44dcda_42.png)
 
-// 版本2：接受字符串参数（参数类型不同，构成重载）
-string getDate(string day, string month = "10", string year = "2025") {
-    return year + "-" + month + "-" + day;
-}
 
 ![](img/57c268b08bd56c88e936f4888a44dcda_44.png)
 
@@ -128,6 +119,15 @@ string getDate(string day, string month = "10", string year = "2025") {
 
 ![](img/57c268b08bd56c88e936f4888a44dcda_48.png)
 
+```cpp
+// 版本1：接受整数参数
+string getDate(int day, int month = 10, int year = 2025) {
+    return to_string(year) + "-" + to_string(month) + "-" + to_string(day);
+}
+// 版本2：接受字符串参数（参数类型不同，构成重载）
+string getDate(string day, string month = "10", string year = "2025") {
+    return year + "-" + month + "-" + day;
+}
 int main() {
     cout << getDate(15); // 调用版本1，输出 "2025-10-15"
     cout << getDate("15", "12"); // 调用版本2，输出 "2025-12-15"

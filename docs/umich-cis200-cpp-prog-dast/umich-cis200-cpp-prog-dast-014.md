@@ -74,6 +74,11 @@ printThreeTimes("test");    // T 为 const char*
 
 为了让自定义类 `SomeClass` 能与 `printThreeTimes` 函数配合使用，我们需要为其重载输出流运算符 `<<`。
 
+
+![](img/203e680e368e4730d31709dd3b8a58be_28.png)
+
+![](img/203e680e368e4730d31709dd3b8a58be_30.png)
+
 ```cpp
 class SomeClass {
 private:
@@ -83,11 +88,6 @@ public:
     // 声明友元函数以访问私有成员
     friend std::ostream& operator<<(std::ostream& os, const SomeClass& obj);
 };
-
-![](img/203e680e368e4730d31709dd3b8a58be_28.png)
-
-![](img/203e680e368e4730d31709dd3b8a58be_30.png)
-
 // 定义输出流运算符
 std::ostream& operator<<(std::ostream& os, const SomeClass& obj) {
     os << obj.number;

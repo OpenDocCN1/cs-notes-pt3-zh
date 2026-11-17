@@ -123,6 +123,9 @@ HPC系统是典型的多用户环境，可能有成百上千的用户同时使�
 我们需要创建一个作业提交脚本，告诉调度器如何运行我们的 `hello` 程序。创建一个名为 `submit_hello.job` 的文件。
 
 以下是 `submit_hello.job` 脚本的示例内容：
+
+![](img/30f102f2f2a2cc37cd30044e7f86e36e_12.png)
+
 ```bash
 #!/bin/bash
 #SBATCH --job-name=hello_test   # 作业名称
@@ -131,9 +134,6 @@ HPC系统是典型的多用户环境，可能有成百上千的用户同时使�
 #SBATCH --ntasks=1                # 启动的任务数（进程数），这里为1
 #SBATCH --time=00:01:00           # 作业运行的最大时间（1分钟）
 #SBATCH --partition=normal        # 提交到的分区（队列）名称
-
-![](img/30f102f2f2a2cc37cd30044e7f86e36e_12.png)
-
 # 加载运行所需的模块
 module load openmpi/4.1.2
 

@@ -59,14 +59,14 @@
 
 ![](img/19a916dab9b86403ca44cf2d7894d7ac_9.png)
 
+
+![](img/19a916dab9b86403ca44cf2d7894d7ac_10.png)
+
 ```javascript
 // 获取页面上的元素
 const inputElement = document.getElementById('itemInput');
 const buttonElement = document.getElementById('addButton');
 const listElement = document.getElementById('itemList');
-
-![](img/19a916dab9b86403ca44cf2d7894d7ac_10.png)
-
 // 为按钮添加点击事件监听器
 buttonElement.addEventListener('click', function() {
     // 步骤1：获取用户输入

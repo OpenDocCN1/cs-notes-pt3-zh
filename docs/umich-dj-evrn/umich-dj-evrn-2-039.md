@@ -61,6 +61,9 @@ def talk(request):
 2.  一个用于显示消息列表的`<div>`容器，其初始内容是一个加载动画（旋转图标）。
 3.  引入关键的JavaScript代码。
 
+
+![](img/249a4ce6f6138e185a6c5f82f7a17af5_10.png)
+
 ```html
 <form method="post">
     {% csrf_token %}
@@ -72,9 +75,6 @@ def talk(request):
     <!-- 初始加载动画 -->
     <div class="spinner">Loading...</div>
 </div>
-
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_10.png)
-
 <script src="{% static 'talk/chat.js' %}"></script>
 ```
 

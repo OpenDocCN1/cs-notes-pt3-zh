@@ -135,12 +135,12 @@ CSS 有一个用于数学计算的函数叫 `calc()`。它非常实用，因为�
 
 在 Sass 中，你可以进行更多运算，例如取整、取模、平方根、余弦，甚至可以使用 π 和 e。Sass 还提供了操作颜色的函数，例如使颜色变亮、变暗或更透明。
 
-```scss
-// 使用 Sass 数学运算
-.container { width: math.div(600px, 960px) * 100%; }
 
 ![](img/97a44cf4522e73ab29dec6a18b818577_13.png)
 
+```scss
+// 使用 Sass 数学运算
+.container { width: math.div(600px, 960px) * 100%; }
 // 操作颜色
 $primary: #036;
 .button {

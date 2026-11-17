@@ -90,6 +90,9 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
 *   **返回值**：成功返回0；失败直接返回错误号（不设置`errno`）。
 
 以下是一个简单的创建线程示例：
+
+![](img/c3d642df22f411186a1f9ef99c1bf1c0_13.png)
+
 ```c
 #include <stdio.h>
 #include <pthread.h>
@@ -99,9 +102,6 @@ void *run(void *arg) {
     printf("In run\n");
     return NULL;
 }
-
-![](img/c3d642df22f411186a1f9ef99c1bf1c0_13.png)
-
 int main() {
     pthread_t thread;
     pthread_create(&thread, NULL, run, NULL);
@@ -256,12 +256,15 @@ int main() {
 ## 同步问题初探
 
 线程共享内存带来了强大的能力，也引入了复杂的同步问题。考虑以下程序：
-```c
-#include <stdio.h>
-#include <pthread.h>
 
 ![](img/c3d642df22f411186a1f9ef99c1bf1c0_38.png)
 
+
+![](img/c3d642df22f411186a1f9ef99c1bf1c0_40.png)
+
+```c
+#include <stdio.h>
+#include <pthread.h>
 static int counter = 0;
 #define NUM_THREADS 8
 #define ITERATIONS 10000
@@ -273,9 +276,6 @@ void *run(void *arg) {
     }
     return NULL;
 }
-
-![](img/c3d642df22f411186a1f9ef99c1bf1c0_40.png)
-
 int main() {
     pthread_t threads[NUM_THREADS];
     for (int i = 0; i < NUM_THREADS; i++) {

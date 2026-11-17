@@ -28,11 +28,6 @@ MCS锁的基本数据结构如下：
 
 ![](img/c601eb537c652afd698b09f60225460d_15.png)
 
-```rust
-struct Node {
-    locked: AtomicBool,
-    next: AtomicPtr<Node>,
-}
 
 ![](img/c601eb537c652afd698b09f60225460d_17.png)
 
@@ -40,6 +35,11 @@ struct Node {
 
 ![](img/c601eb537c652afd698b09f60225460d_20.png)
 
+```rust
+struct Node {
+    locked: AtomicBool,
+    next: AtomicPtr<Node>,
+}
 struct McsLock {
     tail: AtomicPtr<Node>,
 }

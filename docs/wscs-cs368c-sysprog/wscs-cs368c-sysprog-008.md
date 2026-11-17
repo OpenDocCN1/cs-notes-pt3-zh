@@ -103,6 +103,9 @@ for (auto it = low; it != up; ++it) {
 
 使用`erase`函数可以删除元素，可以按键值删除，也可以按迭代器范围删除。
 
+
+![](img/54736c00e2f1dcae069df288dee18dd8_4.png)
+
 ```cpp
 // 按键值删除，返回删除的元素数量（0或1）
 size_t num_erased = avengers.erase("Captain America");
@@ -110,9 +113,6 @@ cout << "Erased " << num_erased << " element." << endl;
 
 // 按迭代器范围删除 [low, up)
 avengers.erase(low, up);
-
-![](img/54736c00e2f1dcae069df288dee18dd8_4.png)
-
 // 其他通用操作
 cout << "Size: " << avengers.size() << endl;
 cout << "Empty? " << avengers.empty() << endl;
@@ -144,15 +144,15 @@ for (const auto& hero : u_avengers) {
 
 `multiset`允许存储**重复的元素**。其接口与`set`类似，但`insert`总是成功，且`count(key)`和`erase(key)`的行为会针对重复元素进行调整。
 
+
+![](img/54736c00e2f1dcae069df288dee18dd8_8.png)
+
 ```cpp
 #include <set> // multiset也在<set>头文件中
 
 multiset<string> m_avengers;
 m_avengers.insert("Hawkeye");
 m_avengers.insert("Hawkeye"); // 允许重复
-
-![](img/54736c00e2f1dcae069df288dee18dd8_8.png)
-
 cout << "Count of Hawkeye: " << m_avengers.count("Hawkeye") << endl; // 输出: 2
 
 // 删除所有"Hawkeye"

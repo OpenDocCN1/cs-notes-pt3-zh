@@ -50,12 +50,12 @@ elif grade2 > 50:
 
 现在，我们来看另一种写法。在第 9 行有另一个 `if` 语句，在第 11 行有第三个 `if` 语句。
 
-```python
-if grade1 > 50:
-    print("Grade 1 is greater than 50.")
 
 ![](img/a1c3f3c51b253028d9466c2c3e362e66_16.png)
 
+```python
+if grade1 > 50:
+    print("Grade 1 is greater than 50.")
 if grade2 > 50:
     print("Grade 2 is greater than 50.")
 ```

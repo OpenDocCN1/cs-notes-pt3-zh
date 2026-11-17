@@ -41,6 +41,9 @@ class DerivedClassName : BaseSpecifierList {
 *   **基类名称**：指定要继承的类。
 
 以下是定义派生类的几个示例：
+
+![](img/6031cc006baab58490d3f1dbba76d548_9.png)
+
 ```cpp
 class Base {};
 
@@ -49,9 +52,6 @@ class Derived0 : Base {};
 
 // 示例2：显式私有继承
 class Derived1 : private Base {};
-
-![](img/6031cc006baab58490d3f1dbba76d548_9.png)
-
 // 示例3：公有继承（最常见）
 class Derived2 : public Base {};
 

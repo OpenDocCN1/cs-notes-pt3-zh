@@ -169,16 +169,24 @@
 
 以下是使用信号量实现读者优先锁的核心逻辑：
 
-```c
-// 全局变量
-sem_t lock;      // 保护读者计数的互斥信号量，初始化为1
-sem_t writelock; // 写锁，初始化为1
-int readers = 0; // 当前读者数量
 
 ![](img/19b27f59ecfbe3f6a774612de786eaf9_82.png)
 
 ![](img/19b27f59ecfbe3f6a774612de786eaf9_84.png)
 
+
+![](img/19b27f59ecfbe3f6a774612de786eaf9_86.png)
+
+
+![](img/19b27f59ecfbe3f6a774612de786eaf9_88.png)
+
+![](img/19b27f59ecfbe3f6a774612de786eaf9_89.png)
+
+```c
+// 全局变量
+sem_t lock;      // 保护读者计数的互斥信号量，初始化为1
+sem_t writelock; // 写锁，初始化为1
+int readers = 0; // 当前读者数量
 void acquire_readlock() {
     sem_wait(&lock);
     readers++;
@@ -187,9 +195,6 @@ void acquire_readlock() {
     }
     sem_post(&lock);
 }
-
-![](img/19b27f59ecfbe3f6a774612de786eaf9_86.png)
-
 void release_readlock() {
     sem_wait(&lock);
     readers--;
@@ -198,11 +203,6 @@ void release_readlock() {
     }
     sem_post(&lock);
 }
-
-![](img/19b27f59ecfbe3f6a774612de786eaf9_88.png)
-
-![](img/19b27f59ecfbe3f6a774612de786eaf9_89.png)
-
 void acquire_writelock() {
     sem_wait(&writelock); // 写者直接竞争写锁
 }
@@ -274,14 +274,14 @@ void release_writelock() {
 ![](img/19b27f59ecfbe3f6a774612de786eaf9_113.png)
 
 **问题代码（MySQL中的一个真实Bug）**：
+
+![](img/19b27f59ecfbe3f6a774612de786eaf9_115.png)
+
 ```c
 // 线程1
 if (thd->proc_info) {
     ... // 使用 thd->proc_info
 }
-
-![](img/19b27f59ecfbe3f6a774612de786eaf9_115.png)
-
 // 线程2
 thd->proc_info = NULL;
 ```
@@ -300,10 +300,6 @@ thd->proc_info = NULL;
 ![](img/19b27f59ecfbe3f6a774612de786eaf9_122.png)
 
 **问题代码**：
-```c
-// 线程1 (父线程)
-void *mThread;
-pthread_create(&mThread, NULL, worker, NULL);
 
 ![](img/19b27f59ecfbe3f6a774612de786eaf9_124.png)
 
@@ -311,6 +307,10 @@ pthread_create(&mThread, NULL, worker, NULL);
 
 ![](img/19b27f59ecfbe3f6a774612de786eaf9_128.png)
 
+```c
+// 线程1 (父线程)
+void *mThread;
+pthread_create(&mThread, NULL, worker, NULL);
 // 线程2 (子线程)
 void *worker(void *arg) {
     pthread_t myTid = mThread; // 可能读到未初始化的 mThread!

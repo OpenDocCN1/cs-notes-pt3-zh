@@ -49,15 +49,15 @@
 ![](img/6db8f2471826fc6bae54a3b911133c48_22.png)
 
 **核心概念代码描述**：
-```cpp
-// 从标准输入读取字符串到列表
-list<string> myList;
-copy(istream_iterator<string>(cin), istream_iterator<string>(), back_inserter(myList));
 
 ![](img/6db8f2471826fc6bae54a3b911133c48_24.png)
 
 ![](img/6db8f2471826fc6bae54a3b911133c48_25.png)
 
+```cpp
+// 从标准输入读取字符串到列表
+list<string> myList;
+copy(istream_iterator<string>(cin), istream_iterator<string>(), back_inserter(myList));
 // 对列表排序（使用成员函数）
 myList.sort();
 
@@ -117,20 +117,20 @@ copy(myList.begin(), myList.end(), ostream_iterator<string>(cout, "\n"));
 ![](img/6db8f2471826fc6bae54a3b911133c48_53.png)
 
 **核心概念代码描述**：
+
+![](img/6db8f2471826fc6bae54a3b911133c48_55.png)
+
+
+![](img/6db8f2471826fc6bae54a3b911133c48_57.png)
+
 ```cpp
 // 显式创建流迭代器
 istream_iterator<int> ii(cin);
 ostream_iterator<int> oi(cout, " ");
 istream_iterator<int> eos; // 表示流结束
-
-![](img/6db8f2471826fc6bae54a3b911133c48_55.png)
-
 vector<int> v;
 // 读取输入
 copy(ii, eos, back_inserter(v));
-
-![](img/6db8f2471826fc6bae54a3b911133c48_57.png)
-
 if (!v.empty()) {
     // 输出除最后一个外的所有元素
     copy(v.begin(), v.end() - 1, oi);
@@ -236,6 +236,9 @@ cout << d.back() << "\nSum is " << accumulate(d.begin(), d.end(), 0) << endl;
 ![](img/6db8f2471826fc6bae54a3b911133c48_95.png)
 
 **核心概念代码描述**：
+
+![](img/6db8f2471826fc6bae54a3b911133c48_97.png)
+
 ```cpp
 // 方法A：手动循环
 istreambuf_iterator<char> in_begin(file.rdbuf());
@@ -244,9 +247,6 @@ while (in_begin != in_end) {
     cout << *in_begin;
     ++in_begin;
 }
-
-![](img/6db8f2471826fc6bae54a3b911133c48_97.png)
-
 // 方法B：使用copy算法（更简洁）
 copy(istreambuf_iterator<char>(file.rdbuf()),
      istreambuf_iterator<char>(),

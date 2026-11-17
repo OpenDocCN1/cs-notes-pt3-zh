@@ -67,14 +67,14 @@ print(id(y))  # 输出 y 指向的内存地址，你会发现它与 id(x) 相同
 
 ![](img/abbafe424d25d07754c8bba4f1a6d19d_22.png)
 
+
+![](img/abbafe424d25d07754c8bba4f1a6d19d_23.png)
+
 ```python
 x = []          # 创建一个空列表对象，x 指向它
 print(id(x))    # 输出列表对象的地址
 x.append('hello') # 修改列表对象的内容
 print(id(x))    # 地址没有改变，x 仍然指向同一个列表对象
-
-![](img/abbafe424d25d07754c8bba4f1a6d19d_23.png)
-
 y = x           # y 指向与 x 相同的列表对象
 x.append('world')
 print(y)        # 输出：['hello', 'world']，因为 y 和 x 指向同一个列表
@@ -92,12 +92,12 @@ print(y)        # 输出：['hello', 'world']，因为 y 和 x 指向同一个�
 
 ![](img/abbafe424d25d07754c8bba4f1a6d19d_27.png)
 
-```python
-x = ['hello']
-print(id(x))
 
 ![](img/abbafe424d25d07754c8bba4f1a6d19d_29.png)
 
+```python
+x = ['hello']
+print(id(x))
 # 使用 list() 构造函数创建副本
 y = list(x)     # 遍历 x 中的元素，创建一个包含相同元素的新列表对象
 print(id(y))    # y 的地址与 x 不同，它是一个独立的对象

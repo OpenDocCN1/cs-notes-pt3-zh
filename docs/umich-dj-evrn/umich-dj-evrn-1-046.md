@@ -77,13 +77,13 @@ an.party()
 
 以下是几个我们熟悉的例子：
 
+
+![](img/7ac3ba1234133d5e81fca1b0a2c35d56_13.png)
+
 ```python
 x = list() # 构造一个空的列表对象
 print(type(x)) # 输出：<class 'list'>
 print(dir(x)) # 查看列表对象的所有方法和属性
-
-![](img/7ac3ba1234133d5e81fca1b0a2c35d56_13.png)
-
 y = ‘hello there‘ # 构造一个字符串对象
 print(y.upper()) # 调用字符串对象的 upper 方法
 ```

@@ -112,13 +112,13 @@ file { '/etc/ssh/sshd_config':
 ![](img/7a20602f63ad64a1d1ca08a90edc7f02_13.png)
 
 **Chef 示例**：使用 Ruby 风格的语法定义资源。
+
+![](img/7a20602f63ad64a1d1ca08a90edc7f02_15.png)
+
 ```ruby
 package 'rsyslog' do
   action :install
 end
-
-![](img/7a20602f63ad64a1d1ca08a90edc7f02_15.png)
-
 service 'rsyslog' do
   action [:enable, :start]
 end

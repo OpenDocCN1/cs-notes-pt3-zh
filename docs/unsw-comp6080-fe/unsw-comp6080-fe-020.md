@@ -125,6 +125,9 @@ console.log(obj === "[object Object]"); // false
 
 条件语句 (`if`, `else`, `switch`) 和循环语句 (`for`, `while`) 与其他类 C 语言类似。
 
+
+![](img/66087a5991774271c6a1069657ed2916_8.png)
+
 ```javascript
 // if 语句
 if (condition) {
@@ -148,9 +151,6 @@ const names = ["Hayden", "Jake", "Emily"];
 for (const name of names) {
   console.log(name);
 }
-
-![](img/66087a5991774271c6a1069657ed2916_8.png)
-
 // for...in 循环 (遍历对象键)
 for (const key in person) {
   console.log(key, person[key]);

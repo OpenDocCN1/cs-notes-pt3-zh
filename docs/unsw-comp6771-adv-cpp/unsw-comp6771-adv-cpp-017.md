@@ -169,25 +169,25 @@ public:
 ### 基本原理
 类型特征通常通过特化来实现。它们本质上是包含静态常量的类模板。
 
+
+![](img/015aec1d2084e65be62a50b75655afbc_36.png)
+
+![](img/015aec1d2084e65be62a50b75655afbc_38.png)
+
+
+![](img/015aec1d2084e65be62a50b75655afbc_40.png)
+
 ```cpp
 // 主模板：默认不是 void
 template <typename T>
 struct is_void {
     static const bool value = false;
 };
-
-![](img/015aec1d2084e65be62a50b75655afbc_36.png)
-
-![](img/015aec1d2084e65be62a50b75655afbc_38.png)
-
 // 显式特化：针对 void 类型
 template <>
 struct is_void<void> {
     static const bool value = true;
 };
-
-![](img/015aec1d2084e65be62a50b75655afbc_40.png)
-
 // 使用
 std::cout << is_void<int>::value; // 输出 0 (false)
 std::cout << is_void<void>::value; // 输出 1 (true)
@@ -200,12 +200,15 @@ std::cout << is_void<void>::value; // 输出 1 (true)
 
 ![](img/015aec1d2084e65be62a50b75655afbc_44.png)
 
-```cpp
-#include <iostream>
-#include <type_traits>
 
 ![](img/015aec1d2084e65be62a50b75655afbc_46.png)
 
+
+![](img/015aec1d2084e65be62a50b75655afbc_48.png)
+
+```cpp
+#include <iostream>
+#include <type_traits>
 template <typename T>
 void test_if_number_type(const T& value) {
     if constexpr (std::is_integral_v<T> || std::is_floating_point_v<T>) {
@@ -214,9 +217,6 @@ void test_if_number_type(const T& value) {
         std::cout << value << " is not a number.\n";
     }
 }
-
-![](img/015aec1d2084e65be62a50b75655afbc_48.png)
-
 int main() {
     test_if_number_type(42);      // 输出: 42 is a number.
     test_if_number_type(3.14);    // 输出: 3.14 is a number.
@@ -238,6 +238,11 @@ int main() {
 
 ![](img/015aec1d2084e65be62a50b75655afbc_50.png)
 
+
+![](img/015aec1d2084e65be62a50b75655afbc_52.png)
+
+![](img/015aec1d2084e65be62a50b75655afbc_54.png)
+
 ```cpp
 #include <iostream>
 
@@ -246,11 +251,6 @@ template<typename T>
 void print(const T& t) {
     std::cout << t << '\n';
 }
-
-![](img/015aec1d2084e65be62a50b75655afbc_52.png)
-
-![](img/015aec1d2084e65be62a50b75655afbc_54.png)
-
 // 递归情况：处理一个参数和一包参数
 template<typename T, typename... Args>
 void print(const T& t, const Args&... args) {
@@ -334,6 +334,12 @@ Stack<T>::Stack(const Stack<U>& other) {
 
 ![](img/015aec1d2084e65be62a50b75655afbc_68.png)
 
+
+![](img/015aec1d2084e65be62a50b75655afbc_70.png)
+
+
+![](img/015aec1d2084e65be62a50b75655afbc_72.png)
+
 ```cpp
 // 方式1：普通模板参数，需要指定容器具体类型
 template <typename T, typename Container> // Container 是具体类型，如 std::vector<int>
@@ -342,18 +348,12 @@ class Stack1 {
 };
 
 Stack1<int, std::vector<int>> s1; // 需要写两次 int
-
-![](img/015aec1d2084e65be62a50b75655afbc_70.png)
-
 // 方式2：模板模板参数，只需传递容器模板
 template <typename T,
           template <typename...> class Container = std::vector> // Container 是一个模板
 class Stack2 {
     Container<T> elements; // 用 T 实例化容器模板
 };
-
-![](img/015aec1d2084e65be62a50b75655afbc_72.png)
-
 Stack2<int, std::vector> s2; // 更简洁：Stack2<int>
 Stack2<double, std::list> s3;
 ```
@@ -392,14 +392,14 @@ f(arr); // 推导出 T = int
 
 ![](img/015aec1d2084e65be62a50b75655afbc_84.png)
 
-```cpp
-template <typename T>
-T min(T a, T b) { return (a < b) ? a : b; }
 
 ![](img/015aec1d2084e65be62a50b75655afbc_86.png)
 
 ![](img/015aec1d2084e65be62a50b75655afbc_88.png)
 
+```cpp
+template <typename T>
+T min(T a, T b) { return (a < b) ? a : b; }
 int i = 5;
 double d = 3.14;
 

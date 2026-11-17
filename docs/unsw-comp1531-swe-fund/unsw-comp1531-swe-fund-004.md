@@ -32,14 +32,9 @@
 
 考虑以下代码，它试图使用 `date-fns` 库中的 `isValid` 函数：
 
-```javascript
-import { isValid } from 'date-fns';
 
 ![](img/64d3695b59b7d22417b2e43b2d82445f_11.png)
 
-function dateIsValid(year, month, day) {
-    return isValid(new Date(year, month, day));
-}
 
 ![](img/64d3695b59b7d22417b2e43b2d82445f_13.png)
 
@@ -47,6 +42,11 @@ function dateIsValid(year, month, day) {
 
 ![](img/64d3695b59b7d22417b2e43b2d82445f_16.png)
 
+```javascript
+import { isValid } from 'date-fns';
+function dateIsValid(year, month, day) {
+    return isValid(new Date(year, month, day));
+}
 console.log(dateIsValid(2022, 14, 2)); // 月份14显然无效
 ```
 

@@ -156,10 +156,6 @@ DEFINE_VAR(YourType, YourVarName, “FieldDisplayName”);
 ![](img/a7353a8fe01a4d4e85be5c8f65818da4_67.png)
 
 例如，创建发射器、连接流体求解器、设置边界的C++调用：
-```cpp
-auto emitter = scene->createNode<FluidEmitter>();
-auto solver = scene->createNode<FluidSolver>();
-auto boundary = scene->createNode<VolumeBoundary>();
 
 ![](img/a7353a8fe01a4d4e85be5c8f65818da4_69.png)
 
@@ -171,6 +167,10 @@ auto boundary = scene->createNode<VolumeBoundary>();
 
 ![](img/a7353a8fe01a4d4e85be5c8f65818da4_77.png)
 
+```cpp
+auto emitter = scene->createNode<FluidEmitter>();
+auto solver = scene->createNode<FluidSolver>();
+auto boundary = scene->createNode<VolumeBoundary>();
 // 连接操作对应蓝图中的连线
 emitter->connect(solver); // 将发射器的粒子数据输出到求解器
 solver->connect(boundary->inFluid()); // 将求解后的流体数据连接到边界节点的流体输入端口

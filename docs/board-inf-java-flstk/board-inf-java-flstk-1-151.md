@@ -16,12 +16,12 @@
 
 让我们创建一个示例。
 
-```typescript
-// app.component.ts
-import { Component } from '@angular/core';
 
 ![](img/86d4045322a5afe70ccbf45c79bdeb4d_3.png)
 
+```typescript
+// app.component.ts
+import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
@@ -52,12 +52,12 @@ export class AppComponent {
 
 例如：
 
-```typescript
-// app.component.ts
-import { Component } from '@angular/core';
 
 ![](img/86d4045322a5afe70ccbf45c79bdeb4d_12.png)
 
+```typescript
+// app.component.ts
+import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `

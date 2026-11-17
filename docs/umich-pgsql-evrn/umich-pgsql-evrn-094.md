@@ -91,12 +91,12 @@ SELECT COUNT(*) FROM jtrack;
 
 我们可以使用 `->` 和 `->>` 操作符来访问 JSONB 对象中的键值。`->` 操作符返回一个 JSONB 片段，而 `->>` 操作符返回文本。
 
-```sql
--- 提取 ‘name’ 键的值作为文本
-SELECT body->>'name' AS track_name FROM jtrack LIMIT 5;
 
 ![](img/7a56344963317544ffe97eff4c9fb6b0_39.png)
 
+```sql
+-- 提取 ‘name’ 键的值作为文本
+SELECT body->>'name' AS track_name FROM jtrack LIMIT 5;
 -- 提取 ‘name’ 键的值作为 JSONB 片段
 SELECT body->'name' AS name_jsonb FROM jtrack LIMIT 5;
 ```
@@ -132,14 +132,14 @@ SELECT COUNT(*) FROM jtrack WHERE body->>'name' = 'Summer Nights';
 
 此外，PostgreSQL 提供了专门的 JSONB 操作符 `@>`（包含）和 `?`（存在键）。
 
-```sql
--- 使用 @> 操作符检查 JSONB 是否包含特定片段
-SELECT COUNT(*) FROM jtrack WHERE body @> '{"name": "Summer Nights"}'::jsonb;
 
 ![](img/7a56344963317544ffe97eff4c9fb6b0_47.png)
 
 ![](img/7a56344963317544ffe97eff4c9fb6b0_49.png)
 
+```sql
+-- 使用 @> 操作符检查 JSONB 是否包含特定片段
+SELECT COUNT(*) FROM jtrack WHERE body @> '{"name": "Summer Nights"}'::jsonb;
 -- 使用 ? 操作符检查是否存在 ‘favorite’ 键
 SELECT COUNT(*) FROM jtrack WHERE body ? 'favorite';
 ```

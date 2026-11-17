@@ -153,15 +153,15 @@ int arrLength = counters.length; // 注意：没有括号
 
 以下是核心代码示例：
 
-```java
-// 1. 定义并初始化数组
-int[] counters = new int[26];
-// 数组的26个位置初始值都是0
 
 ![](img/9642db8f70eef95c2a73768431a82caa_46.png)
 
 ![](img/9642db8f70eef95c2a73768431a82caa_48.png)
 
+```java
+// 1. 定义并初始化数组
+int[] counters = new int[26];
+// 数组的26个位置初始值都是0
 // 2. 假设我们有一个字符串 `encryptedMessage`
 String alpha = “abcdefghijklmnopqrstuvwxyz”;
 for (int k = 0; k < encryptedMessage.length(); k++) {

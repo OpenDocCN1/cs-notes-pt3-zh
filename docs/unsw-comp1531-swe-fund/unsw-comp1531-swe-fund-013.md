@@ -58,6 +58,16 @@
 
 以下是一个最基本的Express服务器代码示例：
 
+
+![](img/f4fa3a08b53724cfa2310f0aa5a0d0bb_25.png)
+
+![](img/f4fa3a08b53724cfa2310f0aa5a0d0bb_27.png)
+
+
+![](img/f4fa3a08b53724cfa2310f0aa5a0d0bb_29.png)
+
+![](img/f4fa3a08b53724cfa2310f0aa5a0d0bb_31.png)
+
 ```javascript
 import express from 'express';
 
@@ -65,19 +75,9 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.json());
-
-![](img/f4fa3a08b53724cfa2310f0aa5a0d0bb_25.png)
-
-![](img/f4fa3a08b53724cfa2310f0aa5a0d0bb_27.png)
-
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
-
-![](img/f4fa3a08b53724cfa2310f0aa5a0d0bb_29.png)
-
-![](img/f4fa3a08b53724cfa2310f0aa5a0d0bb_31.png)
-
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 });
@@ -120,10 +120,6 @@ app.listen(PORT, () => {
 
 ![](img/f4fa3a08b53724cfa2310f0aa5a0d0bb_42.png)
 
-```javascript
-app.get('/hey', (req, res) => {
-    res.send('hey');
-});
 
 ![](img/f4fa3a08b53724cfa2310f0aa5a0d0bb_44.png)
 
@@ -131,6 +127,10 @@ app.get('/hey', (req, res) => {
 
 ![](img/f4fa3a08b53724cfa2310f0aa5a0d0bb_47.png)
 
+```javascript
+app.get('/hey', (req, res) => {
+    res.send('hey');
+});
 app.get('/bye/bye', (req, res) => {
     res.send('bye bye');
 });

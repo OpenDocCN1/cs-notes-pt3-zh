@@ -39,19 +39,24 @@ Ajax（异步JavaScript和XML）是一种用于Web开发的技术，它允许网
 
 以下是实现Ajax请求的核心代码逻辑：
 
-```javascript
-// 1. 获取用于显示用户列表的DOM元素
-const userList = document.querySelector('#userList');
 
 ![](img/25314f89c724d8f98398715027d7e75c_3.png)
 
-// 2. 创建新的 XMLHttpRequest 对象
-const xhr = new XMLHttpRequest();
 
 ![](img/25314f89c724d8f98398715027d7e75c_5.png)
 
 ![](img/25314f89c724d8f98398715027d7e75c_7.png)
 
+
+![](img/25314f89c724d8f98398715027d7e75c_9.png)
+
+![](img/25314f89c724d8f98398715027d7e75c_11.png)
+
+```javascript
+// 1. 获取用于显示用户列表的DOM元素
+const userList = document.querySelector('#userList');
+// 2. 创建新的 XMLHttpRequest 对象
+const xhr = new XMLHttpRequest();
 // 3. 定义当请求状态改变时的回调函数
 xhr.onreadystatechange = function() {
     // 检查请求是否完成
@@ -78,11 +83,6 @@ xhr.onreadystatechange = function() {
         }
     }
 };
-
-![](img/25314f89c724d8f98398715027d7e75c_9.png)
-
-![](img/25314f89c724d8f98398715027d7e75c_11.png)
-
 // 4. 初始化一个GET请求，目标URL为提供测试数据的API
 xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
 // 5. 发送请求

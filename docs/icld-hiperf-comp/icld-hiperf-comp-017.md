@@ -63,12 +63,12 @@ OpenMP程序的基本执行模式是**Fork-Join模型**：
 
 ![](img/f48d00de10d0db78d16730f86b1d2503_9.png)
 
-```c
-// 串行区域 (仅主线程执行)
-master_work();
 
 ![](img/f48d00de10d0db78d16730f86b1d2503_11.png)
 
+```c
+// 串行区域 (仅主线程执行)
+master_work();
 // 并行区域开始
 #pragma omp parallel
 {

@@ -18,12 +18,12 @@ NavigableSet接口提供了在集合元素间导航的功能。它类似于Sorte
 
 以下是一个使用NavigableSet的代码示例：
 
-```java
-import java.util.NavigableSet;
-import java.util.TreeSet;
 
 ![](img/937e4ae9576df4e93afa953933bde562_6.png)
 
+```java
+import java.util.NavigableSet;
+import java.util.TreeSet;
 public class NavigableSetExample {
     public static void main(String[] args) {
         // 创建一个NavigableSet

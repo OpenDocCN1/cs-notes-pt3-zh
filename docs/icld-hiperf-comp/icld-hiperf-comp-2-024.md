@@ -58,6 +58,9 @@
 
 以下是一个简单的作业脚本示例，用于运行我们的“Hello World”程序：
 
+
+![](img/52226d86396131d5ee3b78f7e6299663_1.png)
+
 ```bash
 #!/bin/bash
 #SBATCH --job-name=hello_example   # 作业名称
@@ -71,9 +74,6 @@
 
 # 加载必要的软件模块（例如MPI环境）
 module load openmpi/4.1.1
-
-![](img/52226d86396131d5ee3b78f7e6299663_1.png)
-
 # 执行你的程序
 ./hello
 ```
@@ -93,6 +93,11 @@ module load openmpi/4.1.1
 
 以下是常用的Slurm命令：
 
+
+![](img/52226d86396131d5ee3b78f7e6299663_3.png)
+
+![](img/52226d86396131d5ee3b78f7e6299663_4.png)
+
 ```bash
 # 提交作业
 sbatch submit_hello.sh
@@ -102,11 +107,6 @@ squeue
 
 # 查看特定用户的作业
 squeue -u <用户名>
-
-![](img/52226d86396131d5ee3b78f7e6299663_3.png)
-
-![](img/52226d86396131d5ee3b78f7e6299663_4.png)
-
 # 查看已完成的作业详细信息
 sacct -j <作业ID> --format=JobID,JobName,Partition,Elapsed,State,NodeList
 

@@ -49,13 +49,13 @@ ul {
 
 以下是设置列表项和链接样式的代码：
 
+
+![](img/e8aed85609827974a0c1683bd7fc2b19_11.png)
+
 ```css
 li {
     float: left; /* 使列表项水平排列 */
 }
-
-![](img/e8aed85609827974a0c1683bd7fc2b19_11.png)
-
 li a {
     display: block; /* 将链接变为块级元素，方便设置尺寸 */
     color: white; /* 文字颜色 */

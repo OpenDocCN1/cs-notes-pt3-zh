@@ -42,14 +42,14 @@ int main(int argc, char** argv) {
 
 以下是使用非阻塞发送和接收的基本模式：
 
+
+![](img/f47b06b61d5adeb328892b3219184a2c_7.png)
+
 ```c
 MPI_Request request;
 MPI_Isend(&data, count, MPI_INT, dest, tag, MPI_COMM_WORLD, &request); // 非阻塞发送
 // ... 此处可以执行其他计算 ...
 MPI_Wait(&request, MPI_STATUS_IGNORE); // 等待发送完成
-
-![](img/f47b06b61d5adeb328892b3219184a2c_7.png)
-
 MPI_Irecv(&buffer, count, MPI_INT, source, tag, MPI_COMM_WORLD, &request); // 非阻塞接收
 // ... 此处可以执行其他计算 ...
 MPI_Wait(&request, MPI_STATUS_IGNORE); // 等待接收完成

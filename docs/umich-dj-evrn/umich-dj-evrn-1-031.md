@@ -97,11 +97,11 @@ python manage.py shell
 在Shell中，我们可以进行数据的增删改查操作。以下是核心的CRUD操作示例：
 
 **创建数据**
-```python
-from myapp.models import User # 从你的应用导入模型
 
 ![](img/0d752d16c37a1be222fb33c5777caf09_28.png)
 
+```python
+from myapp.models import User # 从你的应用导入模型
 u = User(name='Kristen', email='k@example.com') # 在内存中创建对象
 u.save() # 将对象保存到数据库，执行INSERT操作
 print(u.id) # 保存后，数据库会自动分配一个id

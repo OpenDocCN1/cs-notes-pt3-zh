@@ -88,13 +88,13 @@ def display_header(window):
 
 ![](img/563e4e153d798777d8ca8b2b612af473_2.png)
 
+
+![](img/563e4e153d798777d8ca8b2b612af473_4.png)
+
 ```python
 def create_window():
     # ... 之前的代码 ...
     return window
-
-![](img/563e4e153d798777d8ca8b2b612af473_4.png)
-
 def main():
     window = create_window()
     display_header(window)

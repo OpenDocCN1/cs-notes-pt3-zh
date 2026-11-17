@@ -48,12 +48,12 @@
 
 ![](img/b9abccdfbedad987b10601da82fddb62_29.png)
 
-```python
-import argparse
-from fastai.vision.all import *
 
 ![](img/b9abccdfbedad987b10601da82fddb62_31.png)
 
+```python
+import argparse
+from fastai.vision.all import *
 def train(data_path, model_name, lr=0.008):
     # 1. 加载数据
     dls = ImageDataLoaders.from_folder(...)

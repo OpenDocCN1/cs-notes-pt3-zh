@@ -161,6 +161,11 @@ fetch("https://example.com/payments", request)
 
 在这里，你可以有一个消息类型的规范。我们可以有一个`PaymentRequest`消息和一个`PaymentStatus`消息作为两种不同的消息类型。然后在这里，我们有一个服务的规范。一个`PaymentService`提供一个名为`ProcessPayment`的RPC函数调用。它以`PaymentRequest`作为参数，并返回`PaymentStatus`作为其返回值。
 
+
+![](img/e0cff6680b9bdebf4ea82a22619d602a_18.png)
+
+![](img/e0cff6680b9bdebf4ea82a22619d602a_19.png)
+
 ```protobuf
 message PaymentRequest {
     Card card = 1;
@@ -184,11 +189,6 @@ message PaymentStatus {
     bool success = 1;
     string transaction_id = 2;
 }
-
-![](img/e0cff6680b9bdebf4ea82a22619d602a_18.png)
-
-![](img/e0cff6680b9bdebf4ea82a22619d602a_19.png)
-
 service PaymentService {
     rpc ProcessPayment (PaymentRequest) returns (PaymentStatus);
 }

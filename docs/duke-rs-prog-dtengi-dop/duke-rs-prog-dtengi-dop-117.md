@@ -45,6 +45,9 @@ sudo systemctl start filebeat
 
 以下是配置文件的内容：
 
+
+![](img/d1e6ef1bc025178dadf1dde19af58639_3.png)
+
 ```ruby
 input {
   beats {
@@ -57,9 +60,6 @@ filter {
     match => { "message" => "%{COMBINEDAPACHELOG}" }
   }
 }
-
-![](img/d1e6ef1bc025178dadf1dde19af58639_3.png)
-
 output {
   elasticsearch {
     hosts => ["localhost:9200"]

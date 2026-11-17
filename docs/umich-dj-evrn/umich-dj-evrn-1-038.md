@@ -52,11 +52,11 @@ def bad_view(request):
 Django提供了一个便捷的函数 `django.utils.html.escape()` 来完成这项工作。
 
 以下是安全的视图代码示例：
-```python
-from django.utils.html import escape
 
 ![](img/64119f0f9e9e405ab16ed9f27fcd8ff6_10.png)
 
+```python
+from django.utils.html import escape
 def safe_view(request):
     guess = request.GET.get('guess', '')
     # 关键步骤：转义用户输入
@@ -73,12 +73,12 @@ def safe_view(request):
 除了通过 `request.GET` 获取查询参数，Django还允许我们从URL路径本身提取更美观的参数。
 
 在 `urls.py` 中，我们可以这样定义路径：
-```python
-from django.urls import path
-from . import views
 
 ![](img/64119f0f9e9e405ab16ed9f27fcd8ff6_12.png)
 
+```python
+from django.urls import path
+from . import views
 urlpatterns = [
     path('rest/<int:guess>', views.game, name='game'),
 ]

@@ -28,12 +28,12 @@
 
 在Python中，我们可以使用 `assert` 语句来声明某个条件应为真。如果条件不为真，`assert` 会抛出一个异常。
 
-```python
-def square(x):
-    return x * x
 
 ![](img/d2d778b8327db64cb9b1861e971462ca_10.png)
 
+```python
+def square(x):
+    return x * x
 assert square(10) == 100
 ```
 
@@ -87,12 +87,12 @@ Python内置的 `unittest` 库可以帮助我们快速编写测试，并自动�
 
 ![](img/d2d778b8327db64cb9b1861e971462ca_27.png)
 
-```python
-import unittest
-from prime import is_prime
 
 ![](img/d2d778b8327db64cb9b1861e971462ca_29.png)
 
+```python
+import unittest
+from prime import is_prime
 class PrimeTestCase(unittest.TestCase):
     def test_is_prime_one(self):
         self.assertFalse(is_prime(1))
@@ -271,18 +271,18 @@ class CounterTest(unittest.TestCase):
 
 GitHub Actions允许我们创建工作流，在特定事件（如推送代码）发生时自动执行任务。
 
-```yaml
-# .github/workflows/ci.yml
-name: Testing
 
 ![](img/d2d778b8327db64cb9b1861e971462ca_78.png)
 
-on: [push]
 
 ![](img/d2d778b8327db64cb9b1861e971462ca_80.png)
 
 ![](img/d2d778b8327db64cb9b1861e971462ca_82.png)
 
+```yaml
+# .github/workflows/ci.yml
+name: Testing
+on: [push]
 jobs:
   test-project:
     runs-on: ubuntu-latest

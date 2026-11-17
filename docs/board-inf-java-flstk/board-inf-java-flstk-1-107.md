@@ -44,15 +44,15 @@
 
 ![](img/58204e30325de9e99017497c5c73acf2_7.png)
 
+
+![](img/58204e30325de9e99017497c5c73acf2_9.png)
+
 ```css
 table {
   border: 1px solid black;
   width: 500px;
   margin: 20px; /* 为表格添加一些外边距 */
 }
-
-![](img/58204e30325de9e99017497c5c73acf2_9.png)
-
 td, th {
   border: 1px solid black;
 }

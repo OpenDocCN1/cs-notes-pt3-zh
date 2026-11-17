@@ -91,12 +91,12 @@ node program.js
 *   `const`: 用于声明常量，其值不可改变。
 
 **代码示例**:
-```javascript
-let changeable = 10; // 这个值可以改变
-changeable = 20;     // 正确
 
 ![](img/8745e98bc46b158cc24032f59bc347ef_25.png)
 
+```javascript
+let changeable = 10; // 这个值可以改变
+changeable = 20;     // 正确
 const constant = 5;  // 这个值不可改变
 constant = 8;        // 错误！TypeError
 ```
@@ -258,23 +258,23 @@ console.log(result);      // 输出: 8
     ```
 
 **遍历数组**有多种简洁的方法：
-```javascript
-// 方法1: 传统的 for 循环
-for (let i = 0; i < fruits.length; i++) {
-    console.log(fruits[i]);
-}
 
 ![](img/8745e98bc46b158cc24032f59bc347ef_76.png)
 
-// 方法2: for...of 循环 (获取值)
-for (const fruit of fruits) {
-    console.log(fruit);
-}
 
 ![](img/8745e98bc46b158cc24032f59bc347ef_78.png)
 
 ![](img/8745e98bc46b158cc24032f59bc347ef_80.png)
 
+```javascript
+// 方法1: 传统的 for 循环
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+// 方法2: for...of 循环 (获取值)
+for (const fruit of fruits) {
+    console.log(fruit);
+}
 // 方法3: for...in 循环 (获取索引)
 for (const index in fruits) {
     console.log(index, fruits[index]);
@@ -297,13 +297,6 @@ for (const index in fruits) {
 ![](img/8745e98bc46b158cc24032f59bc347ef_88.png)
 
 **代码示例**:
-```javascript
-// 创建一个对象
-const student = {
-    zid: 'z1234567',
-    name: 'Alice',
-    mark: 85
-};
 
 ![](img/8745e98bc46b158cc24032f59bc347ef_90.png)
 
@@ -315,12 +308,19 @@ const student = {
 
 ![](img/8745e98bc46b158cc24032f59bc347ef_98.png)
 
-// 访问属性
-console.log(student.name); // 输出: 'Alice'
-console.log(student['zid']); // 输出: 'z1234567' (另一种访问方式)
 
 ![](img/8745e98bc46b158cc24032f59bc347ef_100.png)
 
+```javascript
+// 创建一个对象
+const student = {
+    zid: 'z1234567',
+    name: 'Alice',
+    mark: 85
+};
+// 访问属性
+console.log(student.name); // 输出: 'Alice'
+console.log(student['zid']); // 输出: 'z1234567' (另一种访问方式)
 // 修改或添加属性
 student.mark = 90;       // 修改现有属性
 student.grade = 'HD';    // 添加新属性
@@ -361,17 +361,17 @@ for (const key in student) {
 在实际开发中，我们经常组合使用数组和对象来建模复杂数据。
 
 **代码示例**: 一个包含多个学生对象的数组。
+
+![](img/8745e98bc46b158cc24032f59bc347ef_116.png)
+
+![](img/8745e98bc46b158cc24032f59bc347ef_117.png)
+
 ```javascript
 const students = [
     { name: 'Alice', score: 92 },
     { name: 'Bob', score: 78 },
     { name: 'Charlie', score: 88 }
 ];
-
-![](img/8745e98bc46b158cc24032f59bc347ef_116.png)
-
-![](img/8745e98bc46b158cc24032f59bc347ef_117.png)
-
 // 找出成绩高于85分的学生
 for (const student of students) {
     if (student.score > 85) {

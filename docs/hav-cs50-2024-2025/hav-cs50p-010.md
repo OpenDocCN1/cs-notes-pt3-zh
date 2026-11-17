@@ -121,8 +121,6 @@ package2 = Package(2, "Bob", "Charlie", 20)
 
 ![](img/7b25470d5570a713bd45dd40288765bd_44.png)
 
-```python
-packages = [package1, package2]
 
 ![](img/7b25470d5570a713bd45dd40288765bd_45.png)
 
@@ -130,6 +128,8 @@ packages = [package1, package2]
 
 ![](img/7b25470d5570a713bd45dd40288765bd_47.png)
 
+```python
+packages = [package1, package2]
 for package in packages:
     print(package.number)
 ```

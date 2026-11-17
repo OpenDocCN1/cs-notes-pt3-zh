@@ -14,12 +14,12 @@
 
 以下是使用非阻塞通信的一个简单示例的核心代码逻辑：
 
-```c
-MPI_Request request;
-MPI_Status status;
 
 ![](img/ce9b698bbbb38a18fb353ecc10c0a794_5.png)
 
+```c
+MPI_Request request;
+MPI_Status status;
 if (my_rank == 0) {
     // 非阻塞发送
     MPI_Isend(send_buffer, buffer_size, MPI_CHAR, 1, 0, MPI_COMM_WORLD, &request);
@@ -55,31 +55,15 @@ if (my_rank == 0) {
 
 ![](img/ce9b698bbbb38a18fb353ecc10c0a794_12.png)
 
-```c
-int dims[2] = {3, 4}; // 网格维度
-int periods[2] = {1, 1}; // 周期边界条件（1为真，0为假）
-MPI_Comm comm_2d;
 
 ![](img/ce9b698bbbb38a18fb353ecc10c0a794_14.png)
 
-// 从 MPI_COMM_WORLD 创建笛卡尔通信器
-MPI_Cart_create(MPI_COMM_WORLD, 2, dims, periods, 0, &comm_2d);
 
 ![](img/ce9b698bbbb38a18fb353ecc10c0a794_16.png)
 
-int my_cart_rank, my_coords[2];
-// 获取在新通信器中的排名和坐标
-MPI_Comm_rank(comm_2d, &my_cart_rank);
-MPI_Cart_coords(comm_2d, my_cart_rank, 2, my_coords);
 
 ![](img/ce9b698bbbb38a18fb353ecc10c0a794_18.png)
 
-// 准备进行“向下”移位通信
-int shift_direction = 0; // 0 表示第一个维度（行）
-int displacement = 1;    // 位移为1
-int source, dest;
-// 获取源进程和目标进程的排名（不实际通信）
-MPI_Cart_shift(comm_2d, shift_direction, displacement, &source, &dest);
 
 ![](img/ce9b698bbbb38a18fb353ecc10c0a794_20.png)
 
@@ -89,6 +73,22 @@ MPI_Cart_shift(comm_2d, shift_direction, displacement, &source, &dest);
 
 ![](img/ce9b698bbbb38a18fb353ecc10c0a794_25.png)
 
+```c
+int dims[2] = {3, 4}; // 网格维度
+int periods[2] = {1, 1}; // 周期边界条件（1为真，0为假）
+MPI_Comm comm_2d;
+// 从 MPI_COMM_WORLD 创建笛卡尔通信器
+MPI_Cart_create(MPI_COMM_WORLD, 2, dims, periods, 0, &comm_2d);
+int my_cart_rank, my_coords[2];
+// 获取在新通信器中的排名和坐标
+MPI_Comm_rank(comm_2d, &my_cart_rank);
+MPI_Cart_coords(comm_2d, my_cart_rank, 2, my_coords);
+// 准备进行“向下”移位通信
+int shift_direction = 0; // 0 表示第一个维度（行）
+int displacement = 1;    // 位移为1
+int source, dest;
+// 获取源进程和目标进程的排名（不实际通信）
+MPI_Cart_shift(comm_2d, shift_direction, displacement, &source, &dest);
 // 现在可以在 source 和 dest 之间进行实际的通信（例如 MPI_Sendrecv）
 int send_data = my_cart_rank;
 int recv_data;
@@ -115,33 +115,33 @@ MPI_Sendrecv(&send_data, 1, MPI_INT, dest, 0,
 
 ![](img/ce9b698bbbb38a18fb353ecc10c0a794_34.png)
 
-```c
-MPI_Comm comm_2d; // 假设已创建的4x4笛卡尔通信器
-int neighbors[4]; // 存储上、下、左、右邻居的排名
-int my_data, data_from_neighbors[4];
-MPI_Request send_reqs[4], recv_reqs[4];
 
 ![](img/ce9b698bbbb38a18fb353ecc10c0a794_36.png)
 
 ![](img/ce9b698bbbb38a18fb353ecc10c0a794_38.png)
 
-// ... 通过 MPI_Cart_shift 获取四个方向的邻居排名，存入 neighbors 数组 ...
 
 ![](img/ce9b698bbbb38a18fb353ecc10c0a794_40.png)
 
+
+![](img/ce9b698bbbb38a18fb353ecc10c0a794_42.png)
+
+
+![](img/ce9b698bbbb38a18fb353ecc10c0a794_44.png)
+
+```c
+MPI_Comm comm_2d; // 假设已创建的4x4笛卡尔通信器
+int neighbors[4]; // 存储上、下、左、右邻居的排名
+int my_data, data_from_neighbors[4];
+MPI_Request send_reqs[4], recv_reqs[4];
+// ... 通过 MPI_Cart_shift 获取四个方向的邻居排名，存入 neighbors 数组 ...
 // 第一阶段：发起所有非阻塞发送和接收
 for (int i = 0; i < 4; i++) {
     MPI_Isend(&my_data, 1, MPI_INT, neighbors[i], 0, comm_2d, &send_reqs[i]);
     MPI_Irecv(&data_from_neighbors[i], 1, MPI_INT, neighbors[i], 0, comm_2d, &recv_reqs[i]);
 }
-
-![](img/ce9b698bbbb38a18fb353ecc10c0a794_42.png)
-
 // 在等待通信完成的同时，可以进行不依赖于邻居数据的本地计算
 // ... 执行本地计算 ...
-
-![](img/ce9b698bbbb38a18fb353ecc10c0a794_44.png)
-
 // 第二阶段：等待所有通信完成
 MPI_Waitall(4, send_reqs, MPI_STATUSES_IGNORE);
 MPI_Waitall(4, recv_reqs, MPI_STATUSES_IGNORE);

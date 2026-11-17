@@ -195,6 +195,12 @@ library(testthat)
 
 ![](img/69636fccd899480325fbb2bf55edefaa_45.png)
 
+
+![](img/69636fccd899480325fbb2bf55edefaa_47.png)
+
+
+![](img/69636fccd899480325fbb2bf55edefaa_49.png)
+
 ```r
 source("average.R")
 
@@ -208,16 +214,10 @@ test_that("average warns about NAs in input", {
   expect_warning(average(c(1, NA, 3)))
   expect_warning(average(c(NA, NA, NA)))
 })
-
-![](img/69636fccd899480325fbb2bf55edefaa_47.png)
-
 test_that("average returns NA with NAs in input", {
   expect_equal(suppressWarnings(average(c(1, NA, 3))), NA)
   expect_equal(suppressWarnings(average(c(NA, NA, NA))), NA)
 })
-
-![](img/69636fccd899480325fbb2bf55edefaa_49.png)
-
 test_that("average stops if input is non-numeric", {
   expect_error(average(c("1", "2", "3")))
 })

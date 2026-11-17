@@ -187,6 +187,9 @@ class Point {
 
 我们可以通过组合简单的类来构建更复杂的结构。例如，一条`Line`（线段）可以由两个`Point`（点）来定义。
 
+
+![](img/7165d8693c07b463182d9226622838e4_38.png)
+
 ```java
 class Line {
     Point start; // 起点
@@ -197,9 +200,6 @@ class Line {
         this.end = end;
     }
 }
-
-![](img/7165d8693c07b463182d9226622838e4_38.png)
-
 // 使用方式
 Point p1 = new Point(2.0, 2.7);
 Point p2 = new Point(5.8, 16.0);

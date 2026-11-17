@@ -71,13 +71,13 @@ export class AppModule { }
 
 现在，在模板中添加输入控件：
 
+
+![](img/96e34e555263f47cf5aa12296c6d0d3e_9.png)
+
 ```html
 <!-- app.component.html -->
 <label>字体大小：</label>
 <input type="number" [(ngModel)]="fontSize">
-
-![](img/96e34e555263f47cf5aa12296c6d0d3e_9.png)
-
 <label>字体颜色：</label>
 <input type="text" [(ngModel)]="fontColor">
 ```

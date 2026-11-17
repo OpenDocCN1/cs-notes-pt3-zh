@@ -53,6 +53,9 @@
 ### 复杂度分析
 分析以下代码段的时间复杂度。
 
+
+![](img/728011c10b3af4cfb5b51971f9495418_1.png)
+
 ```cpp
 // 代码段1：二分查找变体
 while (high >= low) {
@@ -62,9 +65,6 @@ while (high >= low) {
     else high = mid - 1;
 }
 // 复杂度：O(log n)
-
-![](img/728011c10b3af4cfb5b51971f9495418_1.png)
-
 // 代码段2：嵌套循环
 for (size_t i = 0; i < size; ++i) {
     for (size_t j = 0; j < size; ++j) {

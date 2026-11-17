@@ -72,11 +72,11 @@ ISR(TIMER4_COMPA_vect) {
 ![](img/a80001397d2800ac6b8687ad50a70c9c_16.png)
 
 **代码框架示意**：
-```c
-volatile int isr_flag = 1; // 必须声明为volatile
 
 ![](img/a80001397d2800ac6b8687ad50a70c9c_18.png)
 
+```c
+volatile int isr_flag = 1; // 必须声明为volatile
 ISR(TIMER4_COMPA_vect) {
     isr_flag = 0; // 每毫秒清除一次标志
 }

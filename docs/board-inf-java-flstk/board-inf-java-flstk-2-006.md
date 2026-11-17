@@ -14,12 +14,12 @@
 
 以下是两种声明方式的示例：
 
-```java
-// 使用字符串字面量声明
-String str1 = "Hello";
 
 ![](img/1446e815ab4b67c6d79c3fbab523cb67_4.png)
 
+```java
+// 使用字符串字面量声明
+String str1 = "Hello";
 // 使用字符串对象声明
 String str2 = new String("World");
 ```

@@ -91,15 +91,15 @@ void *mmap(void *addr, size_t length, int prot, int flags, int fd, off_t offset)
 
 以下是如何使用`mmap`读取一个文件的完整内容：
 
+
+![](img/969fa24c500bb7ca007738ce251c2a38_11.png)
+
 ```c
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <stdio.h>
 #include <unistd.h>
-
-![](img/969fa24c500bb7ca007738ce251c2a38_11.png)
-
 int main() {
     int fd = open("example.txt", O_RDONLY);
     struct stat sb;

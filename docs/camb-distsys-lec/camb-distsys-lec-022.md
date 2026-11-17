@@ -73,12 +73,19 @@ def on_receive(t, K, V):
 
 ![](img/51bd85c2e9b7c3fbfebc38202a88a991_13.png)
 
-```python
-# 初始化
-values = set()
 
 ![](img/51bd85c2e9b7c3fbfebc38202a88a991_15.png)
 
+
+![](img/51bd85c2e9b7c3fbfebc38202a88a991_16.png)
+
+![](img/51bd85c2e9b7c3fbfebc38202a88a991_17.png)
+
+![](img/51bd85c2e9b7c3fbfebc38202a88a991_18.png)
+
+```python
+# 初始化
+values = set()
 # 定义合并函数 merge (⊔)
 def merge(S1, S2):
     union = S1 ∪ S2
@@ -88,13 +95,6 @@ def merge(S1, S2):
         if not any((t2, k2, v2) in union for t2 > t and k2 == k):
             result.add((t, k, v))
     return result
-
-![](img/51bd85c2e9b7c3fbfebc38202a88a991_16.png)
-
-![](img/51bd85c2e9b7c3fbfebc38202a88a991_17.png)
-
-![](img/51bd85c2e9b7c3fbfebc38202a88a991_18.png)
-
 # 设置键 K 的值为 V
 def set(K, V):
     t = generate_unique_timestamp()

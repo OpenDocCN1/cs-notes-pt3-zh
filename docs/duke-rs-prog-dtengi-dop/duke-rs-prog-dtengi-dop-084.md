@@ -132,6 +132,9 @@ print(results_aggregated.head(10))
 
 以下是创建可视化图表的完整代码：
 
+
+![](img/d41d61ae5e7b12aae410d4fa00f39944_4.png)
+
 ```python
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -148,9 +151,6 @@ bar_plot = sns.barplot(x=‘views’, y=‘title’, data=top_25, palette=“vir
 bar_plot.set_xlabel(‘Total Views’)
 bar_plot.set_ylabel(‘Page Title’)
 bar_plot.set_title(‘Top 25 Most Viewed Wikipedia Pages on 2023-04-18’)
-
-![](img/d41d61ae5e7b12aae410d4fa00f39944_4.png)
-
 plt.tight_layout()
 plt.show()
 ```

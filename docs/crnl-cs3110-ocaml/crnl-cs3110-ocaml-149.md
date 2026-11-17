@@ -8,12 +8,12 @@
 
 如果从一棵空树（即一个叶子节点）开始，并希望插入一个元素 `X`，我们将创建一个新节点来存储 `X`，并为其分配空的子树。
 
-```ocaml
-type color = Red | Black
-type 'a tree = Leaf | Node of color * 'a * 'a tree * 'a tree
 
 ![](img/e1faa0cbdd5397363a5814abed84a1f8_1.png)
 
+```ocaml
+type color = Red | Black
+type 'a tree = Leaf | Node of color * 'a * 'a tree * 'a tree
 let insert_bst x t = ... (* 标准BST插入逻辑 *)
 ```
 

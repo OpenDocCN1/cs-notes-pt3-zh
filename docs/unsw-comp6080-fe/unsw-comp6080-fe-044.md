@@ -182,14 +182,14 @@ ARIA可以标记模态对话框，但实际的交互锁定仍需JavaScript实现
 ## 构建自定义选择组件 🧩
 
 结合以上ARIA属性，我们可以标记一个自定义的选择组件：
+
+![](img/fba8e31008d96070cd2452447abb914d_7.png)
+
 ```html
 <!-- 触发按钮 -->
 <button aria-controls=“custom-listbox“ aria-expanded=“false“ aria-haspopup=“listbox“>
     选择一项
 </button>
-
-![](img/fba8e31008d96070cd2452447abb914d_7.png)
-
 <!-- 下拉列表 -->
 <ul id=“custom-listbox“
     role=“listbox“

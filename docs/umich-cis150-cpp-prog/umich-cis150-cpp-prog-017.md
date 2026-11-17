@@ -22,14 +22,14 @@
 
 ![](img/2354747665c9aab38f92ad4c45f244f5_8.png)
 
+
+![](img/2354747665c9aab38f92ad4c45f244f5_10.png)
+
 ```cpp
 // lotto_ticket.h
 #pragma once
 #include <vector>
 using namespace std;
-
-![](img/2354747665c9aab38f92ad4c45f244f5_10.png)
-
 class LottoTicket {
 private:
     int number1;

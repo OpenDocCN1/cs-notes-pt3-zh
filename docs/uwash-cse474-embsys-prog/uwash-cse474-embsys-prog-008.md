@@ -110,6 +110,13 @@ PWM是一种通过快速开关来模拟模拟信号的技术。在快速PWM模�
     如果需要，可以启用比较匹配中断，并编写中断服务例程（ISR）。本实验初期可能不需要。
 
 **示例代码框架**：
+
+![](img/5b16509eb0f218c24b933d66ce6d9ad0_7.png)
+
+![](img/5b16509eb0f218c24b933d66ce6d9ad0_9.png)
+
+![](img/5b16509eb0f218c24b933d66ce6d9ad0_11.png)
+
 ```c
 void setupTimer4() {
     // 1. 设置 OC4A 引脚为输出 (例如 Arduino Pin 6)
@@ -125,13 +132,6 @@ void setupTimer4() {
     // 5. 设置初始频率， 例如 1000 Hz (需根据公式计算OCR4A值)
     OCR4A = 124; // 示例值， 16MHz/64/2/(1+124) ≈ 1000Hz
 }
-
-![](img/5b16509eb0f218c24b933d66ce6d9ad0_7.png)
-
-![](img/5b16509eb0f218c24b933d66ce6d9ad0_9.png)
-
-![](img/5b16509eb0f218c24b933d66ce6d9ad0_11.png)
-
 // 在loop中可以通过改变OCR4A来改变频率
 void changeFrequency(unsigned int ocrValue) {
     OCR4A = ocrValue;

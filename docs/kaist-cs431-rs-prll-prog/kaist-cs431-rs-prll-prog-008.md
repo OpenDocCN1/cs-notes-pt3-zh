@@ -106,13 +106,16 @@ while !*started {
 
 这对于“读多写少”的数据访问模式非常高效。以下是示例：
 
+
+![](img/e00c7c1043418153f8c6b04611165f3d_14.png)
+
+
+![](img/e00c7c1043418153f8c6b04611165f3d_16.png)
+
 ```rust
 use parking_lot::RwLock;
 
 let lock = RwLock::new(5);
-
-![](img/e00c7c1043418153f8c6b04611165f3d_14.png)
-
 // 多个线程可以同时获取读锁
 {
     let r1 = lock.read();
@@ -120,9 +123,6 @@ let lock = RwLock::new(5);
     assert_eq!(*r1, 5);
     assert_eq!(*r2, 5);
 } // 读锁在这里自动释放
-
-![](img/e00c7c1043418153f8c6b04611165f3d_16.png)
-
 // 同一时间只能有一个线程获取写锁
 {
     let mut w = lock.write();

@@ -55,11 +55,11 @@ with open('romeo.txt') as hand:
 在C语言中实现相同的功能，我们需要创建一个字符数组来存储每行内容。在Python中，文件行的长度可以是任意的，但在C语言中，我们必须预先声明能处理的最大字符数，因为我们用于读取的 `line` 变量是一个固定大小的数组。
 
 以下是C语言读取文件的等效代码：
-```c
-#include <stdio.h>
 
 ![](img/de08f7b781a5b29c46451061737ced75_10.png)
 
+```c
+#include <stdio.h>
 int main() {
     FILE *hand; // 文件句柄，是指向FILE对象的指针
     char line[1000]; // 声明一个最多存储1000个字符的数组
@@ -121,12 +121,12 @@ for (int i = 0; i < 5; i++) {
 现在让我们看一个更复杂的例子，它涉及非确定循环和条件判断。我们将实现一个寻找最大值和最小值的程序。
 
 在Python中，我们可能会这样写：
-```python
-max_val = None
-min_val = None
 
 ![](img/de08f7b781a5b29c46451061737ced75_20.png)
 
+```python
+max_val = None
+min_val = None
 while True:
     line = input()
     line = line.strip()
@@ -204,11 +204,11 @@ while True:
 这是一个无限循环。我们使用 `try-except` 是因为 `input()` 在遇到EOF时不会明确返回，而是会抛出异常，我们需要捕获它并跳出循环。然后转换输入为整数。如果猜中（42），则打印信息并用 `break` 跳出循环（`break` 作用于循环，而非 `if` 语句）。否则，判断是太低还是太高。
 
 在C语言中，等效的逻辑如下：
-```c
-#include <stdio.h>
 
 ![](img/de08f7b781a5b29c46451061737ced75_28.png)
 
+```c
+#include <stdio.h>
 int main() {
     int guess;
 

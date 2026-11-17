@@ -113,12 +113,12 @@
 此外，我们还可以创建一个**不提交表单的按钮**。通过将 `type` 设置为 `button` 并添加 `onclick` 的JavaScript事件，可以让按钮执行跳转链接等操作，而不触发表单提交。这在实现“取消”或“返回”功能时非常有用。
 
 以下是按钮的代码示例：
-```html
-<!-- 提交按钮 -->
-<input type="submit" name="do_post" value="Submit">
 
 ![](img/39fed7f85ac1accb5bef0955b96fa136_7.png)
 
+```html
+<!-- 提交按钮 -->
+<input type="submit" name="do_post" value="Submit">
 <!-- 作为链接的按钮（不提交表单） -->
 <input type="button" value="Cancel" onclick="location.href='https://example.com'; return false;">
 ```

@@ -88,7 +88,6 @@ DAC的基本思想是，对于一个数字输入值，产生一个对应的模�
 
 ![](img/9eb9b9a7fea0b7239a26ff73e256bf37_23.png)
 
-![](img/9eb9b9a7fea0b7239a26ff73e256bf37_25.png)
 
 
 

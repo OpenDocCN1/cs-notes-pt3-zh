@@ -23,7 +23,6 @@
 
 此时，代码再次从顶部开始执行。因为这次是POST请求，所以 `$_POST[‘name’]`、`$_POST[‘email’]` 和 `$_POST[‘password’]` 这三个变量将被设置。
 
-![](img/9c63b18d293474067bd766f7ff20ea68_10.png)
 
 ### 执行SQL插入
 
@@ -50,7 +49,6 @@ $stmt->execute(array(‘:name’ => $_POST[‘name’],
 
 ### 功能增强
 
-![](img/9c63b18d293474067bd766f7ff20ea68_20.png)
 
 除了包含与 `user1.php` 相同的插入代码外，`user2.php` 在页面底部添加了一个表格。这个表格通过查询数据库并循环遍历所有用户记录来动态生成。
 

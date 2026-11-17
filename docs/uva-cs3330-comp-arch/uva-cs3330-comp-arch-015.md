@@ -20,27 +20,19 @@ HCL RS 工具提供了实现这些功能的机制。主要有两点：
 
 请看以下流水线状态图。假设初始时流水线中包含指令 A, B, C, D, E。我们的目标是在下一个周期（Time 2）让流水线状态变为 F, E, C, nop, B。
 
-![](img/e2fea37768243dfb30d6ce0872aa064a_1.png)
 
 我们需要确定在 Time 1 周期，各个流水线寄存器（如 Fetch->Decode, Decode->Execute 等）的 `stall` 和 `bubble` 信号应如何设置，才能实现上述状态变化。
 
-![](img/e2fea37768243dfb30d6ce0872aa064a_1.png)
 
-![](img/e2fea37768243dfb30d6ce0872aa064a_3.png)
 
 以下是分析过程：
 
-![](img/e2fea37768243dfb30d6ce0872aa064a_5.png)
 
-![](img/e2fea37768243dfb30d6ce0872aa064a_3.png)
 
 首先，我们关注 Memory 阶段。我们的目标是在 Time 2 的 Memory 阶段插入一个 nop。因此，在 Time 1，我们需要设置 **Bubble M = 1**。这样，在下一个时钟沿，Memory 阶段的寄存器就会被填入 nop 值。
 
-![](img/e2fea37768243dfb30d6ce0872aa064a_7.png)
 
-![](img/e2fea37768243dfb30d6ce0872aa064a_8.png)
 
-![](img/e2fea37768243dfb30d6ce0872aa064a_5.png)
 
 对于其他阶段，我们逐一分析：
 *   **Fetch->Decode (F->D)**：正常情况下，指令 E 会从 Fetch 阶段进入 Decode 阶段。这正是我们想要的结果（Time 2 时 Decode 阶段为 E）。因此，我们既不需要暂停（Stall D = 0）也不需要插入空指令（Bubble D = 0），让流水线正常流动即可。
@@ -54,8 +46,6 @@ HCL RS 工具提供了实现这些功能的机制。主要有两点：
 *   **Stall M = 0, Bubble M = 1**
 *   **Stall W = 0, Bubble W = 0**
 
-![](img/e2fea37768243dfb30d6ce0872aa064a_7.png)
-![](img/e2fea37768243dfb30d6ce0872aa064a_8.png)
 
 关于程序计数器（PC）在此场景下的行为，以及当分支预测错误时如何修正 PC 值，我们将在本节课后续部分详细讨论。我们的教科书提到了使用 `stall` 信号来处理 PC，但我们需要更深入地研究其逻辑。
 

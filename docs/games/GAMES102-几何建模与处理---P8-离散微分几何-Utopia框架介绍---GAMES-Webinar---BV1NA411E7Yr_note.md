@@ -78,7 +78,6 @@
 
 ![](img/d4185f64a49599b0e4f858aaabb3a4b5_28.png)
 
-![](img/d4185f64a49599b0e4f858aaabb3a4b5_30.png)
 
 ## 离散微分几何 🔲
 
@@ -103,7 +102,6 @@
 
 ![](img/d4185f64a49599b0e4f858aaabb3a4b5_48.png)
 
-![](img/d4185f64a49599b0e4f858aaabb3a4b5_50.png)
 
 
 
@@ -114,7 +112,6 @@
 
 ![](img/d4185f64a49599b0e4f858aaabb3a4b5_60.png)
 
-![](img/d4185f64a49599b0e4f858aaabb3a4b5_62.png)
 
 
 *   **离散平均曲率向量**：**(1/(2A_i)) * Σ_{j∈N(i)} (cot α_ij + cot β_ij) (v_j - v_i)**
@@ -128,7 +125,6 @@
 
 ![](img/d4185f64a49599b0e4f858aaabb3a4b5_66.png)
 
-![](img/d4185f64a49599b0e4f858aaabb3a4b5_68.png)
 
 
 计算出的曲率值可以通过颜色映射（Color Map）可视化在网格上，直观展示曲面的弯曲情况。

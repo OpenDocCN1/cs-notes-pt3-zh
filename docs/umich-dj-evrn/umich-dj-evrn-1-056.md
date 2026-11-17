@@ -23,7 +23,6 @@
 
 
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_11.png)
 
 ```python
 from django.views.decorators.csrf import csrf_exempt
@@ -162,7 +161,6 @@ class GuessingGameView(View):
 
 **game.html**
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_30.png)
 
 
 ```html

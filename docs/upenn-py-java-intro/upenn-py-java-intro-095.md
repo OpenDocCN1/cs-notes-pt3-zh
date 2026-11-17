@@ -1,24 +1,19 @@
 # 095：01 打开文件 📂
 
-![](img/896a1c6571fa2be1debe0216f6d9b8a8_0.png)
 
 在本节课中，我们将要学习如何在Python中打开文件。这是进行文件读写操作的第一步，理解这个过程对于后续处理文件数据至关重要。
 
 ## 概述
 
-![](img/896a1c6571fa2be1debe0216f6d9b8a8_2.png)
 
-![](img/896a1c6571fa2be1debe0216f6d9b8a8_3.png)
 
 在Python中打开文件，本质上需要完成三个步骤：打开文件、使用文件（即读取、写入或追加内容）以及关闭文件。
 
 ## 打开文件
 
-![](img/896a1c6571fa2be1debe0216f6d9b8a8_5.png)
 
 要打开一个文件，需要使用Python内置的 `open()` 函数。其基本语法如下：
 
-![](img/896a1c6571fa2be1debe0216f6d9b8a8_6.png)
 
 ```python
 file_object = open(path_to_file, mode)
@@ -28,7 +23,6 @@ file_object = open(path_to_file, mode)
 
 ![](img/896a1c6571fa2be1debe0216f6d9b8a8_8.png)
 
-![](img/896a1c6571fa2be1debe0216f6d9b8a8_9.png)
 
 ### 文件路径
 
@@ -36,11 +30,9 @@ file_object = open(path_to_file, mode)
 *   如果文件与程序在同一目录下，可以直接使用文件名。
 *   也可以使用指向该文件的绝对路径或相对路径。
 
-![](img/896a1c6571fa2be1debe0216f6d9b8a8_11.png)
 
 ### 访问模式
 
-![](img/896a1c6571fa2be1debe0216f6d9b8a8_13.png)
 
 要对文件进行读取或写入，`mode` 参数可以是以下值之一：
 *   `'r'`：表示你只想读取文件。
@@ -50,7 +42,6 @@ file_object = open(path_to_file, mode)
 
 ## 总结
 
-![](img/896a1c6571fa2be1debe0216f6d9b8a8_15.png)
 
 ![](img/896a1c6571fa2be1debe0216f6d9b8a8_16.png)
 

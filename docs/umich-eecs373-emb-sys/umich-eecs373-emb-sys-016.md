@@ -27,7 +27,6 @@
 
 ## 实践练习：温度传感器转换
 
-![](img/1fbff5fab56a7b3b6b543c8d10b37485_3.png)
 
 
 ![](img/1fbff5fab56a7b3b6b543c8d10b37485_7.png)

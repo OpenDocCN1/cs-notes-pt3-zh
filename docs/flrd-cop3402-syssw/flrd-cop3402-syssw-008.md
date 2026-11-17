@@ -55,7 +55,6 @@ main: main.c square.c exponent.c
 ### 利用依赖关系
 
 
-![](img/955eca6ba8e7180b915869651d1b34a1_6.png)
 
 `make` 的智能之处在于它能检查文件的时间戳。如果目标文件已经存在，并且比所有依赖文件都新，`make` 就不会重新构建它。
 

@@ -43,9 +43,7 @@
 
 在继续深入讨论RISC与CISC之前，对上节课内容有任何疑问吗？
 
-![](img/0ee0b85037ecbb8ccc5f06d3dbb8e84d_1.png)
 
-![](img/0ee0b85037ecbb8ccc5f06d3dbb8e84d_2.png)
 
 ## 课堂问答解析
 

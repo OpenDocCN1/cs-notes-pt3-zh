@@ -13,7 +13,6 @@
 
 上一节我们介绍了视图的基本概念，本节中我们来看看一个具体的安全隐患。问题通常出现在我们从用户那里获取数据时，例如通过表单或URL参数。
 
-![](img/64119f0f9e9e405ab16ed9f27fcd8ff6_3.png)
 
 例如，我们从请求对象中获取一个名为 `guess` 的参数：
 ```python
@@ -49,7 +48,6 @@ Django提供了一个便捷的函数 `django.utils.html.escape()` 来完成这�
 
 以下是安全的视图代码示例：
 
-![](img/64119f0f9e9e405ab16ed9f27fcd8ff6_10.png)
 
 ```python
 from django.utils.html import escape

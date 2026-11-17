@@ -1,20 +1,13 @@
 # 014：GPU架构1 🚀
 
-![](img/5b2014c8dd3400ef5dfb1d3f3f5524a8_1.png)
 
-![](img/5b2014c8dd3400ef5dfb1d3f3f5524a8_3.png)
 
-![](img/5b2014c8dd3400ef5dfb1d3f3f5524a8_5.png)
 
-![](img/5b2014c8dd3400ef5dfb1d3f3f5524a8_6.png)
 
 在本节课中，我们将学习GPU架构的基础知识。我们将从GPU编程模型开始，了解其核心概念，然后深入到GPU汇编层面，探讨其与CPU架构的关键差异。课程内容将涵盖异构计算、CUDA编程模型、SIMD/SIMT执行模式以及线程组织等核心主题。
 
-![](img/5b2014c8dd3400ef5dfb1d3f3f5524a8_8.png)
 
-![](img/5b2014c8dd3400ef5dfb1d3f3f5524a8_10.png)
 
-![](img/5b2014c8dd3400ef5dfb1d3f3f5524a8_11.png)
 
 ---
 

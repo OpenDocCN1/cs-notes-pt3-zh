@@ -16,21 +16,17 @@ Jupyter Notebook是一个交互式编程环境，允许你在“单元格”中�
 
 ## 创建与保存笔记本
 
-![](img/4db2166a1a4fb0f005e9532a498fc0d9_1.png)
 
 你可以导航到想要创建和保存笔记本文件的文件夹。
 
 要创建一个新笔记本，请点击右上角的“新建”按钮，然后选择最新版本的Python（通常是Python 3）。
 
-![](img/4db2166a1a4fb0f005e9532a498fc0d9_3.png)
 
-![](img/4db2166a1a4fb0f005e9532a498fc0d9_1.png)
 
 这将创建你的第一个笔记本文件。
 
 要重命名它，请点击顶部的标题，输入新名称，然后点击“重命名”。
 
-![](img/4db2166a1a4fb0f005e9532a498fc0d9_3.png)
 
 ## 编写与运行代码
 
@@ -59,13 +55,10 @@ print("Hello, world")
 
 要退出Jupyter Notebook，你可以关闭笔记本文件标签页。
 
-![](img/4db2166a1a4fb0f005e9532a498fc0d9_5.png)
 
-![](img/4db2166a1a4fb0f005e9532a498fc0d9_5.png)
 
 然后，点击右上角的“退出”按钮。这将停止服务器并退出Jupyter Notebook。
 
-![](img/4db2166a1a4fb0f005e9532a498fc0d9_7.png)
 
 ## 总结
 

@@ -34,17 +34,14 @@ Facebook 开发了一个名为 Create React App 的工具，可以帮助我们�
 
 请确保在家的电脑上跟随本讲座中的所有练习进行操作。
 
-![](img/7e67adfde0ce88cf57fd77227bec2eb7_3.png)
 
 我们可以通过 NPM 使用 Create React App。在任何你喜欢的位置打开终端，并输入以下命令：
 
-![](img/7e67adfde0ce88cf57fd77227bec2eb7_5.png)
 
 ```bash
 npx create-react-app my-first-app
 ```
 
-![](img/7e67adfde0ce88cf57fd77227bec2eb7_7.png)
 
 命令完成后，会出现一个名为 `my-first-app` 的文件夹。让我们试试看。
 
@@ -52,13 +49,11 @@ npx create-react-app my-first-app
 
 现在，安装已完成，在编辑器中打开该文件夹，我们开始查看内容。
 
-![](img/7e67adfde0ce88cf57fd77227bec2eb7_9.png)
 
 在文件夹内部，你会看到大量文件。在本幻灯片中，我标明了哪些文件是重要的。你应该已经熟悉其中一些文件，例如 `package.json`，它包含了我们的 NPM 清单。`src` 文件夹内是所有与 React 应用相关的代码。
 
 用黄色高亮显示的是 `App.js` 和 `App.css` 文件，它们是我们根级别的 React 组件文件。在深入了解其工作原理之前，让我们先启动应用，看看它是什么样子。
 
-![](img/7e67adfde0ce88cf57fd77227bec2eb7_11.png)
 
 ## 启动并查看应用
 
@@ -70,7 +65,6 @@ npx create-react-app my-first-app
 
 应用启动后，你应该会看到一个指向本地 3000 端口的链接。在浏览器中打开它，你就能看到应用。让我们试试看。
 
-![](img/7e67adfde0ce88cf57fd77227bec2eb7_15.png)
 
 在终端中运行 `yarn start`。应用启动后，它会在你的浏览器中加载 `localhost:3000` 并显示示例应用。
 
@@ -86,7 +80,6 @@ React 函数通常返回一种我们称之为 JSX 的东西。JSX 代表 JavaScr
 
 现在，JSX 与 HTML 并不完全相同。它实际上提供了许多 HTML 无法提供的功能，并且有一些 HTML 没有的限制。例如，它提供的功能之一是通过使用花括号将 HTML 转义回 JavaScript 的能力。这允许你在 JSX 中嵌入变量，正如你在右侧第三个示例中看到的那样。
 
-![](img/7e67adfde0ce88cf57fd77227bec2eb7_17.png)
 
 在 Web 开发中，React 和 JSX 是紧密相连的，你不能只使用其中一个而不使用另一个。所以，当你在项目中看到一个返回 JSX 的函数时，它很可能是一个 React 组件。
 
@@ -98,7 +91,6 @@ React 函数通常返回一种我们称之为 JSX 的东西。JSX 代表 JavaScr
 
 你可以看到这里的 `App` 函数返回一些 JSX 代码。这里的 JSX 是一个 `div`，`div` 内部有一个 `header`、一张 `image`、一些文本和一个 `link`。所有这些看起来都相当标准的 HTML，但有几个例外。在 JSX 中，我们使用 `className` 而不是 `class`，其中 `N` 是大写的。通常，HTML 中的属性会以这种方式转换为驼峰命名法。这适用于大多数由多个单词组成或包含连字符的 HTML 标签。转换为驼峰命名法可以使其与我们的外部 JavaScript 风格保持一致。
 
-![](img/7e67adfde0ce88cf57fd77227bec2eb7_19.png)
 
 此外，你在 JSX 开头和结尾看到的花括号允许我们将 JSX 整齐地跨越多行。还有许多其他差异，但我们将留到以后的课程中讨论。希望我们今天展示的内容足以让你对 JSX 有一个基本的了解。现在，让我们通过编辑我们的 `App` 文件来看看我们能做什么，以此来巩固所学知识。
 
@@ -120,7 +112,6 @@ React 函数通常返回一种我们称之为 JSX 的东西。JSX 代表 JavaScr
 
 好的，现在做一个更大的改动。我们将删除 `App` 函数中当前存在的所有 JSX，并将其替换为一个简单的 `div`，显示我们加载页面的日期和时间。
 
-![](img/7e67adfde0ce88cf57fd77227bec2eb7_27.png)
 
 首先，我将删除已存在的 JSX。然后，我将创建一个存储当前日期的变量。现在，我可以使用 JSX 的嵌入功能在 `div` 内部将日期转换为字符串。并移除一些未使用的导入。
 

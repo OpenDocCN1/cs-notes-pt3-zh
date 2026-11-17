@@ -1,10 +1,7 @@
 # 019：GPU 架构 3
 
-![](img/028a63253ecae5f3eaf6bf7b58362eec_1.png)
 
-![](img/028a63253ecae5f3eaf6bf7b58362eec_3.png)
 
-![](img/028a63253ecae5f3eaf6bf7b58362eec_5.png)
 
 在本节课中，我们将继续探讨GPU架构，重点介绍GPU的内存系统。这是关于GPU架构的第三讲，也是最后一讲。我们将从回顾计算单元架构开始，逐步深入到内存层次结构、访存合并、缓存一致性等核心概念，帮助你全面理解GPU如何高效地处理数据。
 
@@ -12,7 +9,6 @@
 
 上一节我们介绍了GPU的计算单元架构，本节中我们来看看其核心组件。一个计算单元（Compute Unit，CU）在NVIDIA的术语中也称为流式多处理器（Streaming Multiprocessor，SM）。其前端负责指令的获取与调度。
 
-![](img/028a63253ecae5f3eaf6bf7b58362eec_7.png)
 
 以下是计算单元前端的主要组成部分：
 

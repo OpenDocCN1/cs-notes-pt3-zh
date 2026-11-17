@@ -244,7 +244,6 @@ const passMarksFilter = marks.filter(mark => mark >= 50);
 
 以下是使用循环和使用 `reduce` 方法求总和的对比：
 
-![](img/385031d2a9f0b9ff6eba7402c73d3934_109.png)
 
 ```javascript
 // 使用循环

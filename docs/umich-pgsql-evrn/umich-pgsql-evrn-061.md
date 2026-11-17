@@ -1,6 +1,5 @@
 # 061：平面文件与邮件正则解析演示 📧
 
-![](img/e93034aa19f2b906bb4095f4d29efcaa_1.png)
 
 ![](img/e93034aa19f2b906bb4095f4d29efcaa_3.png)
 

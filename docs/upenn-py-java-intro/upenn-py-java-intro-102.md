@@ -2,7 +2,6 @@
 
 在本节课中，我们将学习如何编写一个Python函数。这个函数会打开并读取一个文件的内容，将其中的文本行顺序反转，然后将反转后的内容追加到另一个文件中。
 
-![](img/24c0ab2c29a9ec9a051af534a2f77e25_1.png)
 
 ## 概述
 
@@ -28,7 +27,6 @@ def open_read_append_new_file(file_to_read, file_to_write):
 
 现在，让我们将上述步骤转化为完整的Python代码。
 
-![](img/24c0ab2c29a9ec9a051af534a2f77e25_3.png)
 
 ```python
 def open_read_append_new_file(file_to_read, file_to_write):
@@ -44,7 +42,6 @@ def open_read_append_new_file(file_to_read, file_to_write):
         fout.writelines(lines_list)
 ```
 
-![](img/24c0ab2c29a9ec9a051af534a2f77e25_4.png)
 
 代码解释：
 *   `with open(file_to_read, 'r') as fin:`：这行代码使用 `with` 上下文管理器打开 `file_to_read` 指定的文件。模式 `'r'` 表示读取。文件对象被赋值给变量 `fin`。`with` 语句确保文件在代码块结束后会被正确关闭。
@@ -55,9 +52,7 @@ def open_read_append_new_file(file_to_read, file_to_write):
 
 ## 调用函数
 
-![](img/24c0ab2c29a9ec9a051af534a2f77e25_6.png)
 
-![](img/24c0ab2c29a9ec9a051af534a2f77e25_7.png)
 
 函数定义好后，我们需要从程序的主入口（例如 `main` 函数或脚本的顶层代码）调用它。
 

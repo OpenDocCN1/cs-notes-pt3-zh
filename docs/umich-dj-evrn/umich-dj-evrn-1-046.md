@@ -58,7 +58,6 @@ an.party()
 
 当我们调用 `an.party()` 时，Python 内部实际上执行的是 `PartyAnimal.party(an)`。`self` 参数就成为了 `an` 的别名。因此，在 `party` 方法内部，`self.x` 指的就是 `an` 这个对象自己的 `x` 属性。
 
-![](img/7ac3ba1234133d5e81fca1b0a2c35d56_11.png)
 
 让我们跟踪一下代码的执行过程：
 1.  构造 `PartyAnimal` 对象，其内部属性 `x` 被初始化为 `0`。

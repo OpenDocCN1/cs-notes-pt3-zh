@@ -16,7 +16,6 @@ Jupyter Notebook是一个基于浏览器的应用程序，它集成了交互式P
 
 第一种方法是通过命令行启动。在macOS上打开“终端”（Terminal），或在Windows上打开“命令提示符”（Command Prompt），然后输入命令 `jupyter notebook` 并按下回车键。
 
-![](img/46b38188a8896e8a38e1c8b4ae088381_3.png)
 
 第二种方法是通过图形界面启动。你可以打开Anaconda Navigator（一个随Anaconda安装的应用程序），在其中找到Jupyter Notebook的图标并点击启动。
 

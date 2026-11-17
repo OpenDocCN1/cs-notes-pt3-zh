@@ -6,7 +6,6 @@
 
 你可以通过使用冒号来获取数据框的一个切片。其基本格式如下：
 
-![](img/9a84501aab608c324424bdfca89ec4d6_1.png)
 
 ```python
 dataframe[start_index:end_index]

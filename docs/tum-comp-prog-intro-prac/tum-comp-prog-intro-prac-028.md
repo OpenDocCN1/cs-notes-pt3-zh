@@ -166,7 +166,6 @@ public class Shelter<T extends Animal> {
 
 ![](img/38d4514f3e41486dbb5330013b3fd4db_3.png)
 
-![](img/38d4514f3e41486dbb5330013b3fd4db_4.png)
 
 
 ![](img/38d4514f3e41486dbb5330013b3fd4db_8.png)

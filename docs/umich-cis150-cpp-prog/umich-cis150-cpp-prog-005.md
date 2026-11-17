@@ -118,7 +118,6 @@ while (playAgain != 'Y' && playAgain != 'N') {
 
 `do-while`循环是另一种循环结构，它与`while`循环类似，但有一个关键区别：`do-while`循环至少会执行一次循环体，然后再检查条件。
 
-![](img/81de3a9c20c9b4c2c00b2e85dcd977a1_70.png)
 
 **基本语法：**
 ```cpp

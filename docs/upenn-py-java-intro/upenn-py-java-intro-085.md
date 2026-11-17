@@ -50,7 +50,6 @@ new_colors = ",".join(colors_list)
 2.  在列表中更新目标位置的字符。
 3.  使用 `join` 方法将列表转换回字符串。
 
-![](img/3f46a8ed84e1834d08a5e3f9025e0621_1.png)
 
 ```python
 my_string = "hello"

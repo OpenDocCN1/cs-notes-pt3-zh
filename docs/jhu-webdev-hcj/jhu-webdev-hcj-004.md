@@ -66,7 +66,6 @@ cd coursera-test
 git checkout gh-pages
 ```
 
-![](img/9d9268fa5334d2a8b0ed6f34414f2d79_5.png)
 
 
 切换后，使用 `ls` 命令查看目录，你会看到GitHub自动生成的网站文件。

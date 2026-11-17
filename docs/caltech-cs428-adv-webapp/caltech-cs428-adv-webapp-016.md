@@ -396,7 +396,6 @@ module.exports = router;
 
 修改 `models/game.model.js` 文件，在 `GameServer` 类中添加：
 
-![](img/b751a18fb4fe1305e878c78006301e72_77.png)
 
 ```javascript
 get(id) {

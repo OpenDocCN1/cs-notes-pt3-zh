@@ -64,7 +64,6 @@ end
 
 ![](img/8bdded7f041bbcf0c36380eed4950d85_7.png)
 
-![](img/8bdded7f041bbcf0c36380eed4950d85_9.png)
 
 ### WHILE 语言的语义
 

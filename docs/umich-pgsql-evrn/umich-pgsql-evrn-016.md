@@ -77,7 +77,6 @@
 
 ## 总结
 
-![](img/3d16907e9d44c28d76efe9c67be0cc62_5.png)
 
 ![](img/3d16907e9d44c28d76efe9c67be0cc62_6.png)
 

@@ -93,7 +93,6 @@ div {
 
 ![](img/98aab824d4b448d096a9479cc5acb8dc_42.png)
 
-![](img/98aab824d4b448d096a9479cc5acb8dc_44.png)
 
 ```css
 #fixed-element {
@@ -110,7 +109,6 @@ div {
 
 ![](img/98aab824d4b448d096a9479cc5acb8dc_50.png)
 
-![](img/98aab824d4b448d096a9479cc5acb8dc_52.png)
 
 
 ![](img/98aab824d4b448d096a9479cc5acb8dc_56.png)

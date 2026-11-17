@@ -17,42 +17,32 @@
 2.  对于要聚合的值，指定评论数列，因为这是我们要计算总和的列。
 3.  对于 `aggfunc`，指定要应用的聚合方法，我们将使用 `NumPy` 包中的 `sum` 方法。
 
-![](img/98f343c197afc71b3657bf6b2fd5f389_1.png)
 
 代码示例如下：
 ```python
 pd.pivot_table(df, index=['state', 'city'], values='review_count', aggfunc=np.sum)
 ```
 
-![](img/98f343c197afc71b3657bf6b2fd5f389_1.png)
 
 ## 使用列参数进一步细分结果
 
-![](img/98f343c197afc71b3657bf6b2fd5f389_3.png)
 
 我们可以通过再次使用 `columns` 参数来进一步细分结果。这里，我们创建一个以州和城市为索引的数据透视表。
 
-![](img/98f343c197afc71b3657bf6b2fd5f389_3.png)
 
-![](img/98f343c197afc71b3657bf6b2fd5f389_5.png)
 
 然后，我们指定要聚合的值（评论数）和要应用的聚合方法。
 
-![](img/98f343c197afc71b3657bf6b2fd5f389_5.png)
 
 我们还指定了 `columns` 参数，以便根据“是否提供外卖”来进一步细分结果。这样，我们可以看到每个城市的评论数量，并根据商家是否提供外卖进行了区分。
 
-![](img/98f343c197afc71b3657bf6b2fd5f389_7.png)
 
-![](img/98f343c197afc71b3657bf6b2fd5f389_7.png)
 
 ## 为不同列应用不同的聚合函数
 
 我们还可以向 `aggfunc` 传递一个字典对象作为参数，该字典包含要对不同值执行的不同聚合函数。字典中可以包含多个键值对。
 
-![](img/98f343c197afc71b3657bf6b2fd5f389_9.png)
 
-![](img/98f343c197afc71b3657bf6b2fd5f389_9.png)
 
 例如，如果我们想查看评论的总数和评分的平均值，可以使用以下格式来指定。
 
@@ -67,15 +57,10 @@ pd.pivot_table(df, index=['state', 'city'], values='review_count', aggfunc=np.su
 pd.pivot_table(df, index=['state', 'city'], values=['review_count', 'stars'], aggfunc={'review_count': np.sum, 'stars': np.mean})
 ```
 
-![](img/98f343c197afc71b3657bf6b2fd5f389_11.png)
 
-![](img/98f343c197afc71b3657bf6b2fd5f389_11.png)
 
-![](img/98f343c197afc71b3657bf6b2fd5f389_13.png)
 
-![](img/98f343c197afc71b3657bf6b2fd5f389_14.png)
 
-![](img/98f343c197afc71b3657bf6b2fd5f389_13.png)
 
 ## 总结
 

@@ -85,7 +85,6 @@ JOIN artist ON album.artist_id = artist.id;
 
 ## 总结
 
-![](img/edaf9c6024c2ebd40a6e925f150c9c7b_5.png)
 
 ![](img/edaf9c6024c2ebd40a6e925f150c9c7b_6.png)
 

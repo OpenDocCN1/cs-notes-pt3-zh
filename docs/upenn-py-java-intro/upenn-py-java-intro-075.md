@@ -2,19 +2,16 @@
 
 在本节课中，我们将要学习什么是PyCharm，并了解它作为Python集成开发环境（IDE）的核心功能。
 
-![](img/1a837a54cb3818318a7aec7007c2e6e5_0.png)
 
 ## 什么是PyCharm？
 
 PyCharm是一个专为Python设计的集成开发环境。它由一家名为JetBrains的公司开发。
 
-![](img/1a837a54cb3818318a7aec7007c2e6e5_2.png)
 
 上一节我们介绍了PyCharm的基本定义，本节中我们来看看它具体包含哪些强大的功能。
 
 ## PyCharm的核心功能
 
-![](img/1a837a54cb3818318a7aec7007c2e6e5_4.png)
 
 PyCharm拥有众多功能，包括但不限于代码辅助和分析。
 

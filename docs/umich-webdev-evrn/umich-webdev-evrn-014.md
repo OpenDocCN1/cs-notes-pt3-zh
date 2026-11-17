@@ -2,7 +2,6 @@
 
 ![](img/84473f2aea6aa3d9e1d4864caae04ad4_0.png)
 
-![](img/84473f2aea6aa3d9e1d4864caae04ad4_1.png)
 
 ![](img/84473f2aea6aa3d9e1d4864caae04ad4_3.png)
 
@@ -180,7 +179,6 @@ p.special {
 
 ## 总结
 
-![](img/84473f2aea6aa3d9e1d4864caae04ad4_27.png)
 
 ![](img/84473f2aea6aa3d9e1d4864caae04ad4_28.png)
 

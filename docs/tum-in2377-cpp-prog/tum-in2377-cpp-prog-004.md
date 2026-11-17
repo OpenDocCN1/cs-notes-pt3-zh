@@ -21,7 +21,6 @@
 
 **代码示例**：
 
-![](img/e0624d2b55788b18da8e80a95dcc562f_1.png)
 
 ```cpp
 #include <optional>

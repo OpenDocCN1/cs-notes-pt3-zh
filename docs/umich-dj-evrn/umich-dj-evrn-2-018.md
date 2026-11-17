@@ -2,7 +2,6 @@
 
 在本节课中，我们将要学习JavaScript中的面向对象编程概念。面向对象编程是一种将代码和数据组织成可重用“对象”的编程范式。我们将探讨类、对象、方法和属性等核心概念，并了解JavaScript实现这些概念的独特方式。
 
-![](img/6db62ae002d1ad401880c83f1bcec768_1.png)
 
 ## 概述
 
@@ -41,13 +40,11 @@
 
 ![](img/6db62ae002d1ad401880c83f1bcec768_12.png)
 
-![](img/6db62ae002d1ad401880c83f1bcec768_13.png)
 
 有些编程思想使用“消息”而非“方法”来描述对象间的通信，即向一个对象发送消息来触发其行为。在本教程中，我们将统一使用“方法”这一术语。
 
 ## JavaScript对象的独特性
 
-![](img/6db62ae002d1ad401880c83f1bcec768_15.png)
 
 如果你接触过Python、PHP、Java或C++中的对象，你会发现JavaScript的对象有些不同。关键在于JavaScript的函数。
 
@@ -63,7 +60,6 @@ let y = "Hello";
 let z = function(a, b) { return a + b; };
 ```
 
-![](img/6db62ae002d1ad401880c83f1bcec768_17.png)
 
 ![](img/6db62ae002d1ad401880c83f1bcec768_18.png)
 

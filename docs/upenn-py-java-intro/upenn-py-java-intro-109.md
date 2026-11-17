@@ -15,7 +15,6 @@ Jupyter Notebook是一个基于浏览器的交互式计算环境。它集成了P
 2.  根据你的操作系统（Windows、macOS或Linux）下载对应的安装程序。
 3.  运行下载的安装程序，并按照提示完成安装。
 
-![](img/d52e3e7310bc6e96d9aa834ca1f891e7_1.png)
 
 ## 启动Jupyter Notebook
 
@@ -35,9 +34,7 @@ jupyter notebook
 ```
 执行此命令后，你的默认浏览器会自动打开，显示Jupyter Notebook的主界面。
 
-![](img/d52e3e7310bc6e96d9aa834ca1f891e7_3.png)
 
-![](img/d52e3e7310bc6e96d9aa834ca1f891e7_3.png)
 
 ### 方法二：通过Anaconda Navigator启动
 
@@ -46,7 +43,6 @@ jupyter notebook
 2.  在Navigator的主界面中，找到Jupyter Notebook的图标。
 3.  点击该图标下方的“Launch”（启动）按钮。
 
-![](img/d52e3e7310bc6e96d9aa834ca1f891e7_5.png)
 
 ![](img/d52e3e7310bc6e96d9aa834ca1f891e7_5.png)
 

@@ -244,7 +244,6 @@ A-Frame的`teleport-controls`组件允许用户通过手柄指定传送点进行
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_119.png)
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_120.png)
 
 然后，为可抓取的物体添加`grabbable`属性，并为手柄控制器添加`super-hands`和`collider`等混入属性（mixins）。
 

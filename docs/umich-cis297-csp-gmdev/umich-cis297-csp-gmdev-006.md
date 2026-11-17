@@ -1,6 +1,5 @@
 # 006：空值处理与继承
 
-![](img/6fd630df18ef8be921ebbea0afd081fa_0.png)
 
 
 ![](img/6fd630df18ef8be921ebbea0afd081fa_4.png)

@@ -51,7 +51,6 @@
 
 因此，在组1中，共有3次缺失。
 
-![](img/d25658da4bcfaf6c1850a3b9220b17cd_1.png)
 
 ![](img/d25658da4bcfaf6c1850a3b9220b17cd_2.png)
 

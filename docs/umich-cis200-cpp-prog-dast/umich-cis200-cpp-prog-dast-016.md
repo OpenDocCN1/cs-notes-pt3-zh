@@ -168,7 +168,6 @@ TEST_METHOD(TestTriangleArea) {
 以下是测试异常抛出的示例：
 
 
-![](img/ab4e85c9dc37672370be7f130bebb445_50.png)
 
 ```cpp
 TEST_METHOD(TestRectangleNegativeWidthThrows) {

@@ -190,7 +190,6 @@ Rust同样有“未定义行为”的概念。如果代码触发了未定义行�
     cargo +nightly miri test
     ```
 
-![](img/c899e11dafb20a212ff9d2ea1c721164_109.png)
 
 *   **Sanitizers**：一系列运行时检测工具，可以集成到编译过程中。
     *   **AddressSanitizer (ASan)**：检测内存错误（如缓冲区溢出、释放后使用）。
@@ -202,11 +201,8 @@ Rust同样有“未定义行为”的概念。如果代码触发了未定义行�
 
 ![](img/c899e11dafb20a212ff9d2ea1c721164_112.png)
 
-![](img/c899e11dafb20a212ff9d2ea1c721164_114.png)
 
-![](img/c899e11dafb20a212ff9d2ea1c721164_116.png)
 
-![](img/c899e11dafb20a212ff9d2ea1c721164_118.png)
 
 ![](img/c899e11dafb20a212ff9d2ea1c721164_119.png)
 
@@ -242,7 +238,6 @@ Rust同样有“未定义行为”的概念。如果代码触发了未定义行�
 
 ![](img/c899e11dafb20a212ff9d2ea1c721164_136.png)
 
-![](img/c899e11dafb20a212ff9d2ea1c721164_137.png)
 
 ![](img/c899e11dafb20a212ff9d2ea1c721164_139.png)
 

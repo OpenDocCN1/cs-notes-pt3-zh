@@ -8,17 +8,13 @@
 
 上一节我们介绍了PyCharm的安装，本节中我们来看看如何创建一个新的项目。
 
-![](img/efc3d1e9bdda31d450b34e80629b1bba_1.png)
 
 下载并安装PyCharm后，打开IDE并创建一个新项目。操作路径为：**File** -> **New Project**。
 
-![](img/efc3d1e9bdda31d450b34e80629b1bba_1.png)
 
-![](img/efc3d1e9bdda31d450b34e80629b1bba_3.png)
 
 为项目命名。
 
-![](img/efc3d1e9bdda31d450b34e80629b1bba_3.png)
 
 点击“Create”。你可以选择将项目附加到当前窗口。
 
@@ -30,9 +26,7 @@
 
 在左侧选中项目，然后依次点击 **File** -> **New** -> **Python File**。接着为你的Python文件命名。
 
-![](img/efc3d1e9bdda31d450b34e80629b1bba_5.png)
 
-![](img/efc3d1e9bdda31d450b34e80629b1bba_5.png)
 
 按下回车键。这将在项目中创建一个Python文件，你可以在左侧的项目导航器中看到你的项目及其包含的文件。
 
@@ -52,7 +46,6 @@
 
 随后，你将在IDE底部看到代码的输出结果。
 
-![](img/efc3d1e9bdda31d450b34e80629b1bba_7.png)
 
 ![](img/efc3d1e9bdda31d450b34e80629b1bba_7.png)
 

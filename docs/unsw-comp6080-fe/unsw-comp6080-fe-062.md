@@ -1,10 +1,7 @@
 # 062：ReactJS 类组件 💥
 
-![](img/288be79a94eec4512de25946cdc4f0b3_1.png)
 
-![](img/288be79a94eec4512de25946cdc4f0b3_3.png)
 
-![](img/288be79a94eec4512de25946cdc4f0b3_5.png)
 
 在本节课中，我们将学习 React 中的类组件。虽然现代 React 开发主要使用函数式组件，但理解类组件对于阅读遗留代码和网络资源仍然至关重要。我们将通过对比函数式组件和类组件，来理解它们的基本结构和核心概念。
 
@@ -12,7 +9,6 @@
 
 React 提供了两种创建组件的方式：**类组件**和**函数式组件**。函数式组件是现代 React 开发的主流，因其简洁性而广受欢迎。然而，互联网上仍存在大量使用类组件的旧项目和教程。本节课的目标是帮助你理解类组件的语法和逻辑，以便你能读懂并转换它们。
 
-![](img/288be79a94eec4512de25946cdc4f0b3_7.png)
 
 ## 函数式组件回顾
 
@@ -39,7 +35,6 @@ function App() {
 
 这个组件管理两个状态（`name` 和 `age`），并使用 `useEffect` 钩子在 `name` 变化时执行副作用。它返回要渲染的 JSX。
 
-![](img/288be79a94eec4512de25946cdc4f0b3_9.png)
 
 ## 类组件基础
 
@@ -139,11 +134,9 @@ class App extends React.Component {
     }
     ```
 
-![](img/288be79a94eec4512de25946cdc4f0b3_11.png)
 
 ### 5. 访问状态与属性
 
-![](img/288be79a94eec4512de25946cdc4f0b3_13.png)
 
 *   **函数式组件**：直接使用状态变量名。
     ```jsx
@@ -154,15 +147,11 @@ class App extends React.Component {
     <p>{this.state.name}</p>
     ```
 
-![](img/288be79a94eec4512de25946cdc4f0b3_15.png)
 
 ## 为什么类组件不再流行？
 
-![](img/288be79a94eec4512de25946cdc4f0b3_16.png)
 
-![](img/288be79a94eec4512de25946cdc4f0b3_17.png)
 
-![](img/288be79a94eec4512de25946cdc4f0b3_18.png)
 
 通过以上对比，我们可以看出类组件的主要缺点：
 1.  **代码冗长**：需要更多的样板代码（如 `constructor`, `render`, `super(props)`）。

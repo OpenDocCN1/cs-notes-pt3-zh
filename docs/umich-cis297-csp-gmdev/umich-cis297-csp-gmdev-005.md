@@ -265,7 +265,6 @@ public class ChildClass : ParentClass
 
 ## 总结
 
-![](img/8f63bde97dd5b09be17f3d6ac3f25454_61.png)
 
 本节课中我们一起学习了面向对象编程的支柱之一：继承与多态。
 

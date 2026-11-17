@@ -165,7 +165,6 @@ console.log(importedObject.name); // 输出: "Bar"
 
 **以下是实现步骤：**
 
-![](img/e97df8272633486bf8030c3a32dc8a45_18.png)
 
 1.  **创建游戏结束场景函数**：在 `view.js` 中，定义一个新的导出函数 `gameOverScene(properties)`。它接收状态，渲染HUD，并添加一个“Game Over”标题以及一个“Start Menu”按钮（按钮的 `onclick` 事件暂定为 `startMenu()`）。
 2.  **修改倒计时逻辑**：在 `app.js` 的 `countdown()` 函数中，添加 `else` 分支。当 `state.timer === 0` 时，调用 `clearInterval(state.intervalId)` 停止计时器，然后调用 `view.gameOverScene(state)` 切换到游戏结束画面。

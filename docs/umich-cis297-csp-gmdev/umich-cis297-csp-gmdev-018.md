@@ -175,7 +175,6 @@ public class Player
 以下是开始新游戏和处理“检查”操作的简化代码：
 
 
-![](img/1e97eb832ff272c44cb012e8767b6762_39.png)
 
 
 ```csharp

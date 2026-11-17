@@ -9,7 +9,6 @@
 
 ![](img/afbf3e8a278ff198478d4e5c0eb42c15_4.png)
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_6.png)
 
 ## 项目回顾与改进
 
@@ -91,7 +90,6 @@ public Rectangle(int length, int width)
 ```
 
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_51.png)
 
 ### 公共方法：Getter 和 Setter
 
@@ -124,7 +122,6 @@ public override string ToString()
 
 
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_65.png)
 
 此外，我们还为矩形定义了计算面积和周长的属性。这里使用了C#的表达式主体属性语法，使代码更简洁。
 

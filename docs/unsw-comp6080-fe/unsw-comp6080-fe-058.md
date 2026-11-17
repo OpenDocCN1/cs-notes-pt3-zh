@@ -22,7 +22,6 @@
 
 ![](img/675820c374322e95a93a1a38bccfbf32_10.png)
 
-![](img/675820c374322e95a93a1a38bccfbf32_11.png)
 
 首先，我们需要创建一个新的 React 应用并安装 React Router Dom 库。
 
@@ -31,23 +30,17 @@
 npm install react-router-dom
 ```
 
-![](img/675820c374322e95a93a1a38bccfbf32_13.png)
 
-![](img/675820c374322e95a93a1a38bccfbf32_14.png)
 
 请注意，本教程基于 React Router Dom v6 版本，它与 v5 版本有较大差异。
 
 ## 关联组件与路由
 
-![](img/675820c374322e95a93a1a38bccfbf32_16.png)
 
 上一节我们安装了库，本节中我们来看看如何将不同的 React 组件映射到不同的 URL 路径上。
 
-![](img/675820c374322e95a93a1a38bccfbf32_18.png)
 
-![](img/675820c374322e95a93a1a38bccfbf32_20.png)
 
-![](img/675820c374322e95a93a1a38bccfbf32_21.png)
 
 核心概念是使用 `BrowserRouter`、`Routes` 和 `Route` 组件。`BrowserRouter` 是路由的容器，`Routes` 定义了路由规则，`Route` 将路径映射到具体的组件。
 
@@ -96,9 +89,7 @@ function Nav() {
 }
 ```
 
-![](img/675820c374322e95a93a1a38bccfbf32_23.png)
 
-![](img/675820c374322e95a93a1a38bccfbf32_24.png)
 
 然后，我们将 `Nav` 组件放入 `App` 组件中，确保它在 `BrowserRouter` 内部，但在 `Routes` 外部，这样它就会在所有页面上显示。
 
@@ -129,9 +120,7 @@ React Router Dom 允许我们在路径中使用“通配符”（或参数）来
 ```
 这里的 `:name` 就是一个参数占位符，可以匹配 `/profile/hayden`、`/profile/emily` 等路径。
 
-![](img/675820c374322e95a93a1a38bccfbf32_26.png)
 
-![](img/675820c374322e95a93a1a38bccfbf32_27.png)
 
 接下来，在 `Profile` 组件内部，我们需要获取这个 `name` 参数的值。这需要使用 `useParams` 钩子。
 
@@ -188,9 +177,7 @@ function NameInput() {
 
 React Router Dom v6 支持嵌套路由，这有助于组织具有共同布局或父级路径的页面。
 
-![](img/675820c374322e95a93a1a38bccfbf32_29.png)
 
-![](img/675820c374322e95a93a1a38bccfbf32_30.png)
 
 例如，假设我们有 `/about`、`/about/team` 和 `/about/history` 这几个页面。我们可以这样组织路由：
 
@@ -205,9 +192,7 @@ React Router Dom v6 支持嵌套路由，这有助于组织具有共同布局或
 
 在父路由组件 `About` 中，我们需要使用 `<Outlet />` 组件来指定子路由组件渲染的位置。
 
-![](img/675820c374322e95a93a1a38bccfbf32_32.png)
 
-![](img/675820c374322e95a93a1a38bccfbf32_34.png)
 
 ```jsx
 import { Outlet } from ‘react-router-dom’;
@@ -236,7 +221,6 @@ function About() {
 
 此外，我们还介绍了如何使用 `useNavigate` 钩子进行**编程式导航**，以及在 v6 版本中如何利用嵌套路由和 `<Outlet />` 组件来**组织复杂的页面结构**。
 
-![](img/675820c374322e95a93a1a38bccfbf32_36.png)
 
 ![](img/675820c374322e95a93a1a38bccfbf32_37.png)
 

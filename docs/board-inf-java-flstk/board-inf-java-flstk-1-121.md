@@ -47,7 +47,6 @@ console.log("Hello World");
 
 
 
-![](img/b94382afce43817e4f982f4c424b2853_3.png)
 
 
 

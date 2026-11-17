@@ -126,7 +126,6 @@ A-Frame是一个基于HTML的WebXR框架，它让构建3D和XR体验变得像编
 
 ---
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_65.png)
 
 
 ## 项目实战：构建太阳系3D场景 🌞
@@ -274,7 +273,6 @@ A-Frame是一个基于HTML的WebXR框架，它让构建3D和XR体验变得像编
 
 ### 创建AR版本
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_149.png)
 
 
 

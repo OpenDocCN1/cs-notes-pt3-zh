@@ -105,7 +105,6 @@ int value = *(*(m + i) + j); // 等价于 m[i][j]
 
 ![](img/b0e15b4171dcd21b16fb58832af05d93_39.png)
 
-![](img/b0e15b4171dcd21b16fb58832af05d93_41.png)
 
 ![](img/b0e15b4171dcd21b16fb58832af05d93_43.png)
 

@@ -187,7 +187,6 @@ pscp doher@bestlinux.cs.wisc.edu:/u/d/o/doher/private/teaching/cs368/homework1/c
 
 ### Mac/Linux 用户文件传输
 
-![](img/2391bf479ff78323f26dd3b4b5070760_13.png)
 
 Mac 和 Linux 用户使用内置的 `scp` (Secure Copy) 命令，语法与 `pscp` 类似，但命令名不同。
 

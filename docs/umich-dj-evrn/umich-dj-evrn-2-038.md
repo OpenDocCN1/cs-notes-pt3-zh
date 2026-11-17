@@ -16,7 +16,6 @@
 
 ### URL配置
 
-![](img/b5c74425154500cbe4a6abf6e8b62cae_4.png)
 
 首先，查看项目的`urls.py`文件。我们定义了两个主要路径：
 
@@ -28,7 +27,6 @@ urlpatterns = [
 ]
 ```
 
-![](img/b5c74425154500cbe4a6abf6e8b62cae_6.png)
 
 *   `talk/`：对应聊天应用的主页面视图。
 *   `messages/`：这是一个JSON端点（API），用于提供最新的聊天消息数据。
@@ -47,7 +45,6 @@ class Message(models.Model):
     created_at = models.DateTimeField(auto_now_add=True) # 创建时间
 ```
 
-![](img/b5c74425154500cbe4a6abf6e8b62cae_8.png)
 
 ![](img/b5c74425154500cbe4a6abf6e8b62cae_9.png)
 
@@ -116,7 +113,6 @@ def messages_json(request):
 </div>
 ```
 
-![](img/b5c74425154500cbe4a6abf6e8b62cae_19.png)
 
 **JavaScript 动态更新**
 页面加载完成后，JavaScript开始接管，实现动态更新。
@@ -130,7 +126,6 @@ def messages_json(request):
 5.  **错误处理**：使用`.catch()`捕获可能的网络或服务器错误，并进行提示。
 6.  **初始化**：通过监听`DOMContentLoaded`事件，在页面完全加载后，等待2秒首次执行`updateMessages`函数（为了让用户能看到初始的加载动画）。
 
-![](img/b5c74425154500cbe4a6abf6e8b62cae_21.png)
 
 ```javascript
 // JavaScript 代码逻辑示例
@@ -158,9 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-![](img/b5c74425154500cbe4a6abf6e8b62cae_23.png)
 
-![](img/b5c74425154500cbe4a6abf6e8b62cae_24.png)
 
 ## 工作流程总结
 

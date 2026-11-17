@@ -4,7 +4,6 @@
 
 ## 概述
 
-![](img/f4205cebe71f10355ab0ce02d8fa4ebc_1.png)
 
 我们将使用两个主要的测试库：**Jest**（通用的JavaScript测试框架）和**React Testing Library**（专门用于测试React组件的框架）。如果你使用Create React App，这两个库已经默认安装，无需额外配置。
 

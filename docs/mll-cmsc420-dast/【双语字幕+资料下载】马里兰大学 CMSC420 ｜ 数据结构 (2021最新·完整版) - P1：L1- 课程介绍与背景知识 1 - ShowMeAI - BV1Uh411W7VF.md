@@ -64,7 +64,6 @@ normally in you know when we're holding，classes in person what i do is i write
 
 
 
-![](img/68730583d688117c2e85a5e776ba113b_5.png)
 
 on the board and these lecture slides，sort of have a summary of what i would。
 

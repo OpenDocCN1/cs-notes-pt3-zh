@@ -1,6 +1,5 @@
 # 114：编码演示-计算最大值与最小值 🎯
 
-![](img/bd3dd9ab1065413be30b8e246c91c1c0_0.png)
 
 在本节课中，我们将学习如何使用Python从数据集中找出最新的专辑。我们将通过过滤无效数据、使用`max()`函数以及`lambda`表达式来实现这一目标。
 
@@ -26,7 +25,6 @@ album_max = max(valid_albums, key=lambda x: x[‘year’])
 
 ## 输出结果
 
-![](img/bd3dd9ab1065413be30b8e246c91c1c0_2.png)
 
 在找到最新的专辑后，我们需要将其信息打印出来。
 
@@ -42,11 +40,9 @@ print(album_max[‘artist’])
 print(album_max[‘year’])
 ```
 
-![](img/bd3dd9ab1065413be30b8e246c91c1c0_4.png)
 
 运行代码后，我们得到的结果是：数据集中最新的专辑是The Beach Boys在2011年发行的《The Smile Sessions》。
 
-![](img/bd3dd9ab1065413be30b8e246c91c1c0_6.png)
 
 ## 总结
 

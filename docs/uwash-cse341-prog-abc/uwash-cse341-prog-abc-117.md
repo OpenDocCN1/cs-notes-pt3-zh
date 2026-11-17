@@ -1,12 +1,10 @@
 # 117：定义流
 
-![](img/5aec2579d8df64abcc62ab557ed5ae57_1.png)
 
 在本节课中，我们将学习如何定义自己的流。之前我们已经了解了如何使用流，现在我们将深入探讨如何创建它们。理解流的定义是有效使用它们的前提。
 
 ## 概述
 
-![](img/5aec2579d8df64abcc62ab557ed5ae57_3.png)
 
 流是一种延迟计算的数据结构，它代表一个潜在的无限序列。在Racket等语言中，流被实现为一个**thunk**（无参函数）。当调用这个thunk时，它会返回一个**序对**（pair）。这个序对的`car`部分是流的第一个元素，而`cdr`部分则是另一个**thunk**，调用这个新的thunk会返回代表剩余元素的序对，如此递归下去。
 
@@ -20,7 +18,6 @@
     (cons 1 ones)))
 ```
 
-![](img/5aec2579d8df64abcc62ab557ed5ae57_5.png)
 
 **解析**：
 *   `ones` 被定义为一个**thunk**（`(lambda () ...)`）。
@@ -36,11 +33,9 @@
 
 上一节我们定义了一个简单的常量流，本节中我们来看看如何定义一个生成递增序列的流，例如自然数序列。
 
-![](img/5aec2579d8df64abcc62ab557ed5ae57_7.png)
 
 以下是定义自然数流的一种方法：
 
-![](img/5aec2579d8df64abcc62ab557ed5ae57_9.png)
 
 ```racket
 (define nats
@@ -58,9 +53,7 @@
 
 更清晰的写法是使用嵌套的 `lambda` 来明确体现 thunk 的结构：
 
-![](img/5aec2579d8df64abcc62ab557ed5ae57_11.png)
 
-![](img/5aec2579d8df64abcc62ab557ed5ae57_12.png)
 
 ```racket
 (define nats
@@ -98,7 +91,6 @@
 ```
 *   **问题**：这不是一个 thunk，而是一个立即求值的序对。在求值这个定义时，解释器需要查找 `ones-bad1` 的值，而此时它还未定义完成，导致循环引用错误。这在采用**严格求值**（eager evaluation）策略的语言（如Racket）中是不允许的。
 
-![](img/5aec2579d8df64abcc62ab557ed5ae57_14.png)
 
 **错误示例2：过早调用 thunk**
 ```racket
@@ -112,9 +104,7 @@
 1.  流本身是一个 **thunk**。
 2.  在序对的 `cdr` 部分放置的是另一个 **thunk**，而不是调用 thunk 的结果。
 
-![](img/5aec2579d8df64abcc62ab557ed5ae57_16.png)
 
-![](img/5aec2579d8df64abcc62ab557ed5ae57_17.png)
 
 ## 总结
 

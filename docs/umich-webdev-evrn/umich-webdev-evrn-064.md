@@ -78,13 +78,11 @@ CREATE TABLE genre (
 ) ENGINE=InnoDB;
 ```
 
-![](img/dc3da283c9304fc962c6df09476e27c0_15.png)
 
 ### 4. 创建曲目表
 
 最后创建 `track` 表。曲目同时指向专辑和流派，因此它包含两个外键。
 
-![](img/dc3da283c9304fc962c6df09476e27c0_17.png)
 
 ```sql
 CREATE TABLE track (

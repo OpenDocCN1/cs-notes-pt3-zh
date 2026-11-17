@@ -84,7 +84,6 @@ an.party(); // 输出: So far 3
 ```
 每次调用`an.party()`方法时，都会执行方法内的代码：将实例自身的`x`属性加1，然后打印出当前值。由于`an`是`PartyAnimal`的一个实例，方法内的`this.x`指的就是`an.x`。
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_33.png)
 
 ---
 

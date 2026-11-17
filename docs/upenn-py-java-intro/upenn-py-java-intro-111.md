@@ -1,6 +1,5 @@
 # 111：导入与读取文件-使用CSV模块 📂
 
-![](img/ef79cd633b2f1d2973651c5e5c0733ca_1.png)
 
 在本节课中，我们将要学习如何使用Python内置的功能来读取和写入文件，特别是如何使用`csv`模块来处理CSV格式的文件。我们将从打开文件的基本操作开始，逐步深入到使用`csv.DictReader`类来读取数据。
 
@@ -14,11 +13,8 @@ open(fname, access_mode)
 ```
 其中，`fname`是文件名，包括文件路径。`access_mode`是一个可选参数，用于指定文件的打开模式，例如“只读”或“写入”。默认模式是“只读”（`'r'`）。
 
-![](img/ef79cd633b2f1d2973651c5e5c0733ca_3.png)
 
-![](img/ef79cd633b2f1d2973651c5e5c0733ca_4.png)
 
-![](img/ef79cd633b2f1d2973651c5e5c0733ca_5.png)
 
 例如，以下代码以只读模式打开位于`my_file_path`路径下的一个CSV文件：
 ```python
@@ -34,7 +30,6 @@ file = open('my_file_path/my_file.csv', 'r')
 *   `'a'`：以追加模式打开文件。光标位于文件末尾，如果文件不存在则创建新文件。
 *   `'r+'`：以读写模式打开文件。
 
-![](img/ef79cd633b2f1d2973651c5e5c0733ca_7.png)
 
 ## 使用CSV模块读取文件
 
@@ -52,7 +47,6 @@ file = open('data.csv', 'r')
 reader = csv.DictReader(file)
 ```
 
-![](img/ef79cd633b2f1d2973651c5e5c0733ca_9.png)
 
 ## 关闭文件
 
@@ -67,7 +61,6 @@ reader = csv.DictReader(file)
 file.close()  # 关闭文件对象
 ```
 
-![](img/ef79cd633b2f1d2973651c5e5c0733ca_11.png)
 
 ## 使用with语句自动管理文件
 
@@ -82,7 +75,6 @@ with open('data.csv', 'r') as csv_file:
 # 当代码块执行完毕，文件会自动关闭
 ```
 
-![](img/ef79cd633b2f1d2973651c5e5c0733ca_13.png)
 
 ## 总结
 

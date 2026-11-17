@@ -32,7 +32,6 @@ and T2 = Baz of string | Qux of T1
 
 以下是一个简单的状态机示例，它只接受形如 `[1, 2, 1, 2, ...]` 的整数列表，且必须以 `2` 结尾：
 
-![](img/ab179b3cef4735f15bfa1aaec5507b6b_6.png)
 
 ```sml
 fun match xs =
@@ -84,7 +83,6 @@ fun no_bad_T2 (Baz s) = size s > 0
 
 ## 总结
 
-![](img/ab179b3cef4735f15bfa1aaec5507b6b_8.png)
 
 ![](img/ab179b3cef4735f15bfa1aaec5507b6b_9.png)
 

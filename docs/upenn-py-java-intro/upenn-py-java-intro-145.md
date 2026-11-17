@@ -1,6 +1,5 @@
 # 145：散点图编码演示-设置Pyplot选项
 
-![](img/684dbddd41b37b977aecd881fb3383c8_0.png)
 
 在本节课中，我们将学习如何使用Matplotlib库的Pyplot模块创建和自定义散点图。我们将通过一个具体示例，展示如何在同一张图表中绘制多个数据集，并设置不同的标记、颜色和标签，最后添加坐标轴标签和图例。
 
@@ -42,7 +41,6 @@ plt.scatter(fast['stars'], fast['review_count'],
 *   `color='b'` 将标记颜色更改为蓝色。
 *   标签更新为 `'Fast Food'`。
 
-![](img/684dbddd41b37b977aecd881fb3383c8_2.png)
 
 ## 添加第三个数据集
 
@@ -50,7 +48,6 @@ plt.scatter(fast['stars'], fast['review_count'],
 
 以下是添加“早餐与早午餐”类别散点图的代码：
 
-![](img/684dbddd41b37b977aecd881fb3383c8_4.png)
 
 ```python
 plt.scatter(break['stars'], break['review_count'],
@@ -67,11 +64,9 @@ plt.scatter(break['stars'], break['review_count'],
 
 在绘制了所有数据系列之后，我们需要为图表添加坐标轴标签和图例，使图表信息更完整。
 
-![](img/684dbddd41b37b977aecd881fb3383c8_6.png)
 
 以下是添加标签和图例的代码：
 
-![](img/684dbddd41b37b977aecd881fb3383c8_8.png)
 
 ```python
 plt.xlabel('Rating')
@@ -84,7 +79,6 @@ plt.legend(loc='upper left')
 *   `plt.ylabel('Review Count')` 设置Y轴的标签为“Review Count”。
 *   `plt.legend(loc='upper left')` 添加图例，并将其位置设置在图表左上角。
 
-![](img/684dbddd41b37b977aecd881fb3383c8_10.png)
 
 ## 总结
 

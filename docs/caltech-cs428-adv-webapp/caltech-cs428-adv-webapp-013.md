@@ -282,7 +282,6 @@ export default leaderMenu;
 首先，导入 `LeaderMenu` 组件并创建一个判断函数。
 
 
-![](img/72c674e5898482865379c8508aff778e_9.png)
 
 
 ```javascript

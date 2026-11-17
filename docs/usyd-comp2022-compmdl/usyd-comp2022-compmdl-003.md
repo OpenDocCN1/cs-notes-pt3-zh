@@ -21,50 +21,33 @@
         P ↔ Q
 ```
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_1.png)
 
 **规则解释**：如果我们有一个从第i行到第j行的子证明，证明了 `P → Q`；同时有另一个从第k行到第l行的子证明，证明了 `Q → P`，那么我们就可以在第m行写下 `P ↔ Q` 并引用 `=I` 规则进行证明。
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_2.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_4.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_6.png)
 
 这个过程类似于“或消去”规则，因为它涉及创建两个子证明。我们可以在任何时刻假设P或Q，只要我们能证明它们能互相推导，就意味着P和Q本质上是等价的。
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_8.png)
 
 ## 双条件消去规则（=E）↙️
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_10.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_11.png)
 
 理解了如何引入双条件后，我们来看看如何使用它进行推导。双条件消去规则更为直接。
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_13.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_14.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_16.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_18.png)
 
 如果我们已知 `P ↔ Q`，那么我们可以从P推导出Q，或者从Q推导出P。以下是该规则的两种形式：
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_20.png)
-
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_22.png)
 
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_23.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_24.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_26.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_27.png)
+
 
 ```
 形式1:
@@ -79,57 +62,37 @@ Q
 P
 ```
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_28.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_30.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_32.png)
 
 **规则解释**：在形式1中，如果我们有 `P ↔ Q` 和 `P`，那么我们可以得到 `Q`。在形式2中，如果我们有 `P ↔ Q` 和 `Q`，那么我们可以得到 `P`。证明时，我们引用包含双条件语句和另一个条件（P或Q）的行，并使用 `=E` 规则。
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_34.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_36.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_38.png)
 
 这个规则之所以有效，是因为根据双条件的定义 `P ↔ Q` 等价于 `(P → Q) ∧ (Q → P)`。通过合取消去，我们可以分别得到 `P → Q` 和 `Q → P`，然后就可以像使用假言推理一样使用它们。
 
 ## 证明示例 📝
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_40.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_41.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_42.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_43.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_44.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_45.png)
 
 现在，让我们通过两个具体的例子来应用这些规则。
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_47.png)
 
 ### 示例一：推导双条件
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_49.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_50.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_51.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_52.png)
 
 **目标**：从前提 `(A → B) ∧ (B → C)` 和 `C → A`，证明 `A ↔ C`。
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_54.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_56.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_58.png)
 
 **证明步骤**：
 以下是详细的证明过程：
@@ -148,40 +111,27 @@ P
 12. | A // 对第10、11行使用假言推理（→E）
 13. `A ↔ C` // 对第5-9行（A→C）和第10-12行（C→A）使用双条件引入（=I）
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_60.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_62.png)
 
 **证明完成**：我们通过两个子证明分别建立了 `A → C` 和 `C → A`，从而使用 `=I` 规则得出了 `A ↔ C`。
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_64.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_65.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_67.png)
 
 ### 示例二：使用双条件消去
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_69.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_70.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_72.png)
 
 **目标**：从前提 `A ↔ (¬B ∧ C)` 和 `C ↔ (¬B ∧ ¬D)`，证明 `A ∧ ¬D`。
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_73.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_75.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_77.png)
 
 **证明步骤**：
 以下是详细的证明过程：
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_79.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_80.png)
 
 1.  `A ↔ (¬B ∧ C)` // 前提
 2.  `C ↔ (¬B ∧ ¬D)` // 前提
@@ -199,17 +149,13 @@ P
 12. A // 对第4、11行使用假言推理（→E）。因为 `(¬B ∧ C) → A` 且我们有 `¬B ∧ C`。
 13. `A ∧ ¬D` // 对第12、10行使用合取引入（∧I）
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_82.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_83.png)
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_85.png)
 
 **证明完成**：通过系统地使用双条件消去、假言推理和合取规则，我们从复杂的前提中推导出了目标 `A ∧ ¬D`。关键在于利用双条件将C与 `¬B` 和 `¬D` 联系起来。
 
 ## 练习与总结 🎯
 
-![](img/d8aac71e53b5447a58cc84cf3b92bf5b_87.png)
 
 本节课中我们一起学习了双条件逻辑的两个核心规则：
 1.  **双条件引入（=I）**：要证明 `P ↔ Q`，需要分别构造 `P → Q` 和 `Q → P` 的两个子证明。

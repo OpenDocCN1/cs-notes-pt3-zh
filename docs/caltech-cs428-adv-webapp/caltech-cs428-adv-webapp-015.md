@@ -144,7 +144,6 @@ app.get('/', serveIndex);
 
 ![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_30.png)
 
-![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_32.png)
 
 
 ```javascript

@@ -2,7 +2,6 @@
 
 ![](img/6fa6be3cfe1b9922af8dbd3d2d21e8c8_1.png)
 
-![](img/6fa6be3cfe1b9922af8dbd3d2d21e8c8_3.png)
 
 ![](img/6fa6be3cfe1b9922af8dbd3d2d21e8c8_5.png)
 
@@ -70,7 +69,6 @@ g++ -o out main.cpp age.cpp
 
 ## 课程环境设置实战
 
-![](img/6fa6be3cfe1b9922af8dbd3d2d21e8c8_25.png)
 
 为了让你能顺利开始课程实践，以下是设置COMP6771开发环境的步骤。我们推荐使用UNSW的Vlab系统。
 
@@ -106,9 +104,7 @@ code .
 
 ![](img/6fa6be3cfe1b9922af8dbd3d2d21e8c8_35.png)
 
-![](img/6fa6be3cfe1b9922af8dbd3d2d21e8c8_37.png)
 
-![](img/6fa6be3cfe1b9922af8dbd3d2d21e8c8_39.png)
 
 **第四步：配置CMake工具链**
 在VS Code中按下 `Ctrl+Shift+P`，打开命令面板，然后输入并选择“CMake: Select a Kit”。从列表中选择标记为“comp6771”的工具链。

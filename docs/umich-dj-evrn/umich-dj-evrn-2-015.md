@@ -10,7 +10,6 @@
 
 上一节我们介绍了JavaScript的基础语法，本节中我们来看看如何定义和使用函数。JavaScript函数使用 `function` 关键字定义，这与Python使用 `def` 关键字不同。
 
-![](img/cb3cf5088c1e40e258396cd03f3f8e34_7.png)
 
 函数的基本结构如下：
 ```javascript

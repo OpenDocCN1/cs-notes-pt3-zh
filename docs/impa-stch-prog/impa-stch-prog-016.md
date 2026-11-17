@@ -2,7 +2,6 @@
 
 ![](img/bad1b770e3c89a7f6e673a13da65977f_1.png)
 
-![](img/bad1b770e3c89a7f6e673a13da65977f_2.png)
 
 
 

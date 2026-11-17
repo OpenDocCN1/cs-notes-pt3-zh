@@ -32,7 +32,6 @@ struct TreeMapEntry {
 
 ---
 
-![](img/c8d5a6e714e94686b6e7884dc680b8b9_10.png)
 
 ## 二叉树的插入操作
 

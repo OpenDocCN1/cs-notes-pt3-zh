@@ -2,7 +2,6 @@
 
 在本节课中，我们将要学习如何使用散点图来可视化数据。散点图是一种强大的工具，可以帮助我们观察两个变量之间的关系，并比较不同类别在这些维度上的表现。
 
-![](img/e2a778d42e498929d194e2d8b8126d94_0.png)
 
 ## 什么是散点图？
 
@@ -18,7 +17,6 @@
 
 以下是创建数据框的示例代码：
 
-![](img/e2a778d42e498929d194e2d8b8126d94_2.png)
 
 ```python
 # 假设df是原始数据框，包含‘category0’， ‘review_count’， ‘stars’等列
@@ -27,11 +25,9 @@ fastfood_df = df[df['category0'] == 'Fast Food']
 brunch_df = df[df['category0'] == 'Breakfast & Brunch']
 ```
 
-![](img/e2a778d42e498929d194e2d8b8126d94_3.png)
 
 ## 创建散点图
 
-![](img/e2a778d42e498929d194e2d8b8126d94_4.png)
 
 数据准备完成后，接下来我们将使用这些数据框来创建散点图。
 
@@ -43,7 +39,6 @@ brunch_df = df[df['category0'] == 'Breakfast & Brunch']
 4.  **添加图例和标签**：为图表添加标题、坐标轴标签和图例，以增强可读性。
 5.  **显示图表**：最后，使用`plt.show()`显示图表。
 
-![](img/e2a778d42e498929d194e2d8b8126d94_6.png)
 
 ## 总结
 

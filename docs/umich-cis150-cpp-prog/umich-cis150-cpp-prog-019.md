@@ -1,9 +1,7 @@
 # 019：项目2 - 月球着陆器与刽子手游戏 🚀
 
-![](img/eed819226e74faba2054c16ff8e23248_0.png)
 
 
-![](img/eed819226e74faba2054c16ff8e23248_4.png)
 
 
 ![](img/eed819226e74faba2054c16ff8e23248_8.png)

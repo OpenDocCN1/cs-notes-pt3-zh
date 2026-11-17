@@ -1,6 +1,5 @@
 # 134：John Resig谈jQuery
 
-![](img/6de3e784f76807100c5c577c6d0b4163_1.png)
 
 ## 概述
 在本节特别内容中，我们将跟随jQuery的创始人John Resig，了解这一流行JavaScript库的诞生背景、设计理念和发展历程。这对于理解现代前端开发工具的演进非常有帮助。

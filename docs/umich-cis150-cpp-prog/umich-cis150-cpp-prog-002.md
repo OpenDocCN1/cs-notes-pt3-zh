@@ -142,7 +142,6 @@ int remainder = 7 % 2; // remainder 的值为 1
 
 ![](img/9e50f0e7561c8df48ddd16ee04ae5236_65.png)
 
-![](img/9e50f0e7561c8df48ddd16ee04ae5236_67.png)
 
 ---
 

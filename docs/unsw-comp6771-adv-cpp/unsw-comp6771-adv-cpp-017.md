@@ -6,12 +6,10 @@
 
 ![](img/015aec1d2084e65be62a50b75655afbc_4.png)
 
-![](img/015aec1d2084e65be62a50b75655afbc_6.png)
 
 ## 概述
 在本节课中，我们将深入学习C++模板的高级特性。我们将从模板的基础知识出发，探索如何通过默认模板参数、特化、可变参数模板等技术，更灵活、更强大地使用模板进行泛型编程。
 
-![](img/015aec1d2084e65be62a50b75655afbc_8.png)
 
 ![](img/015aec1d2084e65be62a50b75655afbc_10.png)
 
@@ -81,9 +79,7 @@ int main() {
 
 模板特化允许我们为特定的类型或类型模式提供定制化的实现，同时保持接口的一致性。其核心目的是**保持语义**，而不是改变含义。
 
-![](img/015aec1d2084e65be62a50b75655afbc_25.png)
 
-![](img/015aec1d2084e65be62a50b75655afbc_27.png)
 
 ![](img/015aec1d2084e65be62a50b75655afbc_28.png)
 
@@ -204,7 +200,6 @@ std::cout << is_void<void>::value; // 输出 1 (true)
 ![](img/015aec1d2084e65be62a50b75655afbc_46.png)
 
 
-![](img/015aec1d2084e65be62a50b75655afbc_48.png)
 
 ```cpp
 #include <iostream>
@@ -241,7 +236,6 @@ int main() {
 
 ![](img/015aec1d2084e65be62a50b75655afbc_52.png)
 
-![](img/015aec1d2084e65be62a50b75655afbc_54.png)
 
 ```cpp
 #include <iostream>
@@ -264,7 +258,6 @@ int main() {
 }
 ```
 
-![](img/015aec1d2084e65be62a50b75655afbc_56.png)
 
 ### 工作原理
 调用 `print(1, 2.0, “three”)` 时：
@@ -272,7 +265,6 @@ int main() {
 2.  匹配可变参数版本 `print<double, const char*>`，输出 `2.0`，然后递归调用 `print(“three”)`。
 3.  匹配基础版本 `print<const char*>`，输出 `three`。
 
-![](img/015aec1d2084e65be62a50b75655afbc_58.png)
 
 编译器在编译时会为每一次调用生成具体的函数实例，这虽然可能导致代码膨胀，但换来了运行时的高效。
 
@@ -332,13 +324,10 @@ Stack<T>::Stack(const Stack<U>& other) {
 
 ### 对比：非模板模板参数 vs 模板模板参数
 
-![](img/015aec1d2084e65be62a50b75655afbc_68.png)
 
 
-![](img/015aec1d2084e65be62a50b75655afbc_70.png)
 
 
-![](img/015aec1d2084e65be62a50b75655afbc_72.png)
 
 ```cpp
 // 方式1：普通模板参数，需要指定容器具体类型
@@ -395,7 +384,6 @@ f(arr); // 推导出 T = int
 
 ![](img/015aec1d2084e65be62a50b75655afbc_86.png)
 
-![](img/015aec1d2084e65be62a50b75655afbc_88.png)
 
 ```cpp
 template <typename T>

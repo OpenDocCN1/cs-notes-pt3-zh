@@ -53,7 +53,6 @@ let rec subst (v : value) (x : string) (e : expr) : expr =
 
 为了解决效率问题，我们引入**环境语义**。环境（`environment`）是一个从变量名到值（`value`）的映射。在求值时，我们携带当前环境，遇到变量时直接从环境中查找其值，而无需进行替换。
 
-![](img/26373566c56bdb122c6b2b539a054056_3.png)
 
 
 

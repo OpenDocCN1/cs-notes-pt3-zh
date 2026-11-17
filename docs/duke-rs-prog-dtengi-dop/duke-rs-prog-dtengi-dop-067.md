@@ -42,7 +42,6 @@ ENTRYPOINT [“./web_docker”]
 
 `lib.rs` 文件中的逻辑相对简单。它定义了一个公开函数，用于随机返回一种水果。因为是公开函数，所以可以在 `main.rs` 中被调用。
 
-![](img/1c3cab27cfc4d3b784002eaed0b15718_4.png)
 
 
 

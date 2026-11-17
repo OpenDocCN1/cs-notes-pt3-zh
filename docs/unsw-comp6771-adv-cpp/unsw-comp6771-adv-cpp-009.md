@@ -2,7 +2,6 @@
 
 ![](img/d918ba9e763f55bad3f71ae57e77662b_1.png)
 
-![](img/d918ba9e763f55bad3f71ae57e77662b_3.png)
 
 ## 概述
 在本节课中，我们将要学习C++中的类类型。我们将探讨作用域规则、对象的生命周期、类的定义与使用、构造函数与析构函数、常量成员函数、静态成员以及如何控制编译器自动生成的成员函数。理解这些概念对于掌握C++面向对象编程至关重要。
@@ -25,7 +24,6 @@
 
 ![](img/d918ba9e763f55bad3f71ae57e77662b_13.png)
 
-![](img/d918ba9e763f55bad3f71ae57e77662b_15.png)
 
 以下是关于作用域的几个关键点：
 *   变量名在其作用域内有效。
@@ -70,15 +68,12 @@
 
 ![](img/d918ba9e763f55bad3f71ae57e77662b_30.png)
 
-![](img/d918ba9e763f55bad3f71ae57e77662b_31.png)
 
 ![](img/d918ba9e763f55bad3f71ae57e77662b_33.png)
 
-![](img/d918ba9e763f55bad3f71ae57e77662b_35.png)
 
 ## 类的基础
 
-![](img/d918ba9e763f55bad3f71ae57e77662b_37.png)
 
 上一节我们介绍了命名空间，本节中我们深入探讨C++类的核心概念。
 
@@ -122,7 +117,6 @@ std::cout << mc.get_val(); // 调用公有成员函数
 **类定义与实现分离**：
 通常，类声明（包含成员函数原型）放在头文件（`.h`）中，而成员函数的定义则放在源文件（`.cpp`）中。在类外定义成员函数时，需要使用类名和作用域解析运算符`::`。
 
-![](img/d918ba9e763f55bad3f71ae57e77662b_52.png)
 
 ```cpp
 // person.h
@@ -142,11 +136,8 @@ const std::string& Person::get_name() const { return name_; }
 const int& Person::get_age() const { return age_; }
 ```
 
-![](img/d918ba9e763f55bad3f71ae57e77662b_54.png)
 
-![](img/d918ba9e763f55bad3f71ae57e77662b_56.png)
 
-![](img/d918ba9e763f55bad3f71ae57e77662b_58.png)
 
 ## 构造函数详解
 
@@ -154,7 +145,6 @@ const int& Person::get_age() const { return age_; }
 
 上一节我们介绍了类的基本结构，本节中我们详细学习构造函数。
 
-![](img/d918ba9e763f55bad3f71ae57e77662b_62.png)
 
 构造函数的职责是初始化对象。其执行流程如下：
 1.  按类中声明的顺序，初始化初始化列表中的数据成员。
@@ -226,7 +216,6 @@ auto a2 = Age{20}; // 正确：显式构造
 
 因此，在设计类时，所有不修改对象状态的成员函数都应该声明为`const`，以确保常量对象也能使用它们。
 
-![](img/d918ba9e763f55bad3f71ae57e77662b_76.png)
 
 ```cpp
 class Person {
@@ -249,15 +238,11 @@ int main() {
 
 ## 静态成员
 
-![](img/d918ba9e763f55bad3f71ae57e77662b_78.png)
 
 上一节我们介绍了常量成员函数，本节中我们来看看静态成员。
 
-![](img/d918ba9e763f55bad3f71ae57e77662b_80.png)
 
-![](img/d918ba9e763f55bad3f71ae57e77662b_82.png)
 
-![](img/d918ba9e763f55bad3f71ae57e77662b_84.png)
 
 ![](img/d918ba9e763f55bad3f71ae57e77662b_85.png)
 
@@ -282,7 +267,6 @@ if (User::valid_name("Santa Claus")) {
 
 ![](img/d918ba9e763f55bad3f71ae57e77662b_87.png)
 
-![](img/d918ba9e763f55bad3f71ae57e77662b_89.png)
 
 ## 控制默认成员函数
 

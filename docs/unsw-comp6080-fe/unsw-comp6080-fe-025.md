@@ -134,7 +134,6 @@ npm install express
 
 ![](img/9b2334de6b7bce29a33363e7b68f3198_66.png)
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_68.png)
 
 创建基本的服务器代码：
 
@@ -158,7 +157,6 @@ app.listen(port, () => {
 });
 ```
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_76.png)
 
 运行 `node server.js` 后，访问 `http://localhost:3000` 将会看到 “Hello World!”。
 
@@ -166,7 +164,6 @@ app.listen(port, () => {
 
 ### 步骤 2：创建 `/scrape` 路由并获取查询参数
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_81.png)
 
 我们需要创建一个 `/scrape` 路由，它通过 URL 查询参数接收 `url` 和 `tag`。
 
@@ -198,7 +195,6 @@ app.get('/scrape', (req, res) => {
 
 为了真实地统计标签，我们需要获取指定 URL 的网页内容。我们将使用 `sync-request` 库来同步地获取网页 HTML。
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_96.png)
 
 安装 `sync-request` 库：
 

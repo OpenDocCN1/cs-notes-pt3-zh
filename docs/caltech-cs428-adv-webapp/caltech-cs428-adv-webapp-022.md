@@ -101,7 +101,6 @@ app.listen(port, () => {
 
 **`config/database.js`：**
 
-![](img/6c68f1f2b6558d155ff370ad0b7cb864_22.png)
 
 ```javascript
 module.exports = {
@@ -243,7 +242,6 @@ module.exports = router;
 
 **前端测试 (`public/scripts/api-tester.js`)：**
 
-![](img/6c68f1f2b6558d155ff370ad0b7cb864_68.png)
 
 
 ![](img/6c68f1f2b6558d155ff370ad0b7cb864_72.png)
@@ -337,7 +335,6 @@ router.put('/update/:id', async (req, res) => {
 
 **`api/user-routes.js` 中的实现：**
 
-![](img/6c68f1f2b6558d155ff370ad0b7cb864_94.png)
 
 ```javascript
 router.delete('/delete/:id', async (req, res) => {
@@ -476,7 +473,6 @@ router.get('/special', verifyToken, (req, res) => {
 });
 ```
 
-![](img/6c68f1f2b6558d155ff370ad0b7cb864_127.png)
 
 
 **前端访问受保护路由：**

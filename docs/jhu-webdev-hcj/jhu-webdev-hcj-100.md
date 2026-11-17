@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 ![](img/a633c4593a2786aa3b5fc09467e5ff40_7.png)
 
-![](img/a633c4593a2786aa3b5fc09467e5ff40_8.png)
 
 
 为了验证，我们可以打开浏览器的开发者工具，切换到“Network”（网络）面板，并过滤“XHR”请求。刷新页面后，你会看到一个对 `home-snippet.html` 的Ajax请求，这证实了我们的动态加载机制正在工作。

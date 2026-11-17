@@ -71,7 +71,6 @@
 
 ![](img/fdf1c7074f05f1e9b87ea677db1f02d5_23.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_20.png)
 
 
 

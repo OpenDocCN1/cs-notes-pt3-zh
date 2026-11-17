@@ -4,7 +4,6 @@
 
 ## 概述数据集
 
-![](img/ad6786a85e8551a7b06284eeddded9c1_1.png)
 
 我们将分析的数据集是《滚石》杂志2012年评选的“史上最伟大的500张专辑”列表，其中包含了专辑的流派信息。数据文件包含以下列：
 *   `number`：专辑在榜单上的排名。
@@ -32,7 +31,6 @@ with open(‘album_list.csv‘, ‘r‘) as csv_file:
     print(reader.fieldnames)
 ```
 
-![](img/ad6786a85e8551a7b06284eeddded9c1_3.png)
 
 运行这段代码后，我们会看到`reader`的类型是`csv.DictReader`，并且打印出了文件的所有列标题。
 
@@ -47,11 +45,9 @@ with open(‘album_list.csv‘, ‘r‘) as csv_file:
         print(row)
 ```
 
-![](img/ad6786a85e8551a7b06284eeddded9c1_5.png)
 
 这段代码会打开文件，将其加载到阅读器中，然后遍历并打印文件中的每一行。每一行数据都会以一个有序字典的形式显示，其中包含列名和对应的值。
 
-![](img/ad6786a85e8551a7b06284eeddded9c1_7.png)
 
 **重要提示**：默认情况下，`csv.DictReader`对象只能被迭代一次。这是因为它是直接从文件流中读取数据，而不是将整个数据集加载到内存中。目前，最简单的解决方案是每次需要使用时都重新加载文件。
 
@@ -59,9 +55,7 @@ with open(‘album_list.csv‘, ‘r‘) as csv_file:
 
 有时我们只需要查看数据集的一部分。以下是如何使用循环和控制语句来打印前100行数据。
 
-![](img/ad6786a85e8551a7b06284eeddded9c1_9.png)
 
-![](img/ad6786a85e8551a7b06284eeddded9c1_11.png)
 
 ```python
 with open(‘album_list.csv‘, ‘r‘) as csv_file:
@@ -75,13 +69,10 @@ with open(‘album_list.csv‘, ‘r‘) as csv_file:
             break
 ```
 
-![](img/ad6786a85e8551a7b06284eeddded9c1_12.png)
 
-![](img/ad6786a85e8551a7b06284eeddded9c1_13.png)
 
 这段代码会重新加载文件，设置一个计数器，然后遍历阅读器。每打印一行，计数器减1。当计数器小于0时，循环终止。这样我们就只看到了前100行数据。
 
-![](img/ad6786a85e8551a7b06284eeddded9c1_15.png)
 
 ## 将数据复制到列表
 
@@ -119,7 +110,6 @@ print(f“Number of albums in 1974: {len(albums_1974)}“)
 
 结果显示有14张专辑在1974年发行。我们可以进一步打印这些专辑的详细信息：
 
-![](img/ad6786a85e8551a7b06284eeddded9c1_17.png)
 
 ```python
 for album in albums_1974:
@@ -135,7 +125,6 @@ print(first_10_1974)
 
 ## 进行复杂条件筛选
 
-![](img/ad6786a85e8551a7b06284eeddded9c1_19.png)
 
 现在，让我们进行一个更复杂的筛选：找出所有主要流派（`genre`）为“Rock”，并且子流派（`subgenre`）列表中包含“Pop Rock”或“Fusion”的专辑。
 

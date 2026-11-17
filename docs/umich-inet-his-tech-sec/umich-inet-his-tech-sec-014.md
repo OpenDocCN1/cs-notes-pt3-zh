@@ -1,10 +1,7 @@
 # 014：13_Doug Van Houweling与NSFNET
 
-![](img/a96e2822b2f7ea4984f672c1019bcb23_0.png)
 
-![](img/a96e2822b2f7ea4984f672c1019bcb23_1.png)
 
-![](img/a96e2822b2f7ea4984f672c1019bcb23_0.png)
 
 ![](img/a96e2822b2f7ea4984f672c1019bcb23_1.png)
 

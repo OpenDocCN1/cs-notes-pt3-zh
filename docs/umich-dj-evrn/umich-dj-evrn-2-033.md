@@ -4,9 +4,7 @@
 
 ---
 
-![](img/16efea47d2ec2815fcf84bcc32918293_1.png)
 
-![](img/16efea47d2ec2815fcf84bcc32918293_2.png)
 
 ![](img/16efea47d2ec2815fcf84bcc32918293_3.png)
 
@@ -87,7 +85,6 @@ class Membership(models.Model):
     *   `created_at` 和 `updated_at` 字段，由Django自动管理。
     *   `role` 字段，使用整数和 `choices` 参数来定义可选的用户角色。这种方式比直接存储字符串更高效，并且便于在管理界面中显示友好的名称。
 
-![](img/16efea47d2ec2815fcf84bcc32918293_15.png)
 
 ---
 

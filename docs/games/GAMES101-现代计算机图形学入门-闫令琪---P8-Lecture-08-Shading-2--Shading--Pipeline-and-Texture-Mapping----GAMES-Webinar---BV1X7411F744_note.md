@@ -114,7 +114,6 @@ void main() {
 
 现代GPU还支持几何着色器（Geometry Shader）、计算着色器（Compute Shader）等，功能更加强大。
 
-![](img/9f104bbd50a0d7c5e600ed7a64f4daa8_20.png)
 
 ---
 

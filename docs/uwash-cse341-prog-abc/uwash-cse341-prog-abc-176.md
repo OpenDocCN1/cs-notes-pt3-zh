@@ -2,7 +2,6 @@
 
 在本节课中，我们将要学习函数子类型化。这是整个课程中最反直觉的概念之一，但也是学习编程语言课程的核心内容。我们将探讨函数类型之间何时存在子类型关系，这对于理解高阶函数和面向对象编程中的方法重写至关重要。
 
-![](img/2b8765943879e8c7a91399fce3bb5b8a_1.png)
 
 ## 函数子类型化概述
 
@@ -26,7 +25,6 @@ fun dist_moved f p =
     end
 ```
 
-![](img/2b8765943879e8c7a91399fce3bb5b8a_3.png)
 
 `dist_moved` 函数接受一个函数 `f` 和一个点 `p`。它用点 `p` 调用函数 `f`，然后计算点 `p` 与 `f(p)` 之间的距离并返回。
 
@@ -45,7 +43,6 @@ val d = dist_moved flip {x=3.0, y=4.0}
 
 这里没有子类型化，因为 `flip` 的类型与 `dist_moved` 期望的 `f` 的类型完全一致。
 
-![](img/2b8765943879e8c7a91399fce3bb5b8a_5.png)
 
 ## 返回类型的协变（Covariance）
 
@@ -117,7 +114,6 @@ fun flip_x_make_green p = {x = ~(#x p), y = 0.0, color = "green"}
 (* flip_x_make_green 的类型: {x:real} -> {x:real, y:real, color:string} *)
 ```
 
-![](img/2b8765943879e8c7a91399fce3bb5b8a_7.png)
 
 `flip_x_make_green` 只要求其参数具有 `x` 字段，但返回一个具有 `x`、`y` 和 `color` 字段的记录。我们可以将它传递给 `dist_moved`：
 

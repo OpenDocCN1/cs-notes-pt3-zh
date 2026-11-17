@@ -1,6 +1,5 @@
 # 141：基于AWS Bedrock的责任AI
 
-![](img/01fbed4b2dbc558eaa3b202d14d5b4f5_1.png)
 
 ## 概述
 

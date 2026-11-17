@@ -148,7 +148,6 @@ void changeFrequency(unsigned int ocrValue) {
 *   我们重点学习了**CTC模式**和**快速PWM模式**的工作原理与应用场景。
 *   最后，我们梳理了通过C代码配置定时器以生成特定频率波形或PWM信号的关键步骤。
 
-![](img/5b16509eb0f218c24b933d66ce6d9ad0_15.png)
 
 ![](img/5b16509eb0f218c24b933d66ce6d9ad0_16.png)
 

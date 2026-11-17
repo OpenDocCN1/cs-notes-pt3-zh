@@ -151,7 +151,6 @@ NPM会寻找项目根目录下的`package.json`文件来获取配置信息。
 
 ![](img/afa810535f6f5d5fb2aff4ff22d428ca_26.png)
 
-![](img/afa810535f6f5d5fb2aff4ff22d428ca_28.png)
 
 ## 5. 迭代四：处理404“文件未找到”错误
 

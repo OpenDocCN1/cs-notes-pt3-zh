@@ -6,7 +6,6 @@
 
 ## 启动IDLE与Python Shell
 
-![](img/e1c773c4ecece92f06a52f67dd90ce74_0.png)
 
 IDLE包含一个交互式的Python解释器和一个脚本编辑器。我们将主要使用其交互式环境来即时运行代码。
 
@@ -34,19 +33,16 @@ print("today is a good day")
 
 同样，按下回车键后，这句话就会显示在控制台上。
 
-![](img/e1c773c4ecece92f06a52f67dd90ce74_2.png)
 
 ---
 
 ## 执行数学与逻辑运算
 
-![](img/e1c773c4ecece92f06a52f67dd90ce74_4.png)
 
 除了打印文本，Python Shell还是一个强大的计算器。你可以直接进行数学运算和逻辑比较。
 
 例如，进行加法运算：
 
-![](img/e1c773c4ecece92f06a52f67dd90ce74_6.png)
 
 ```python
 2 + 3
@@ -54,7 +50,6 @@ print("today is a good day")
 
 执行乘法运算：
 
-![](img/e1c773c4ecece92f06a52f67dd90ce74_8.png)
 
 ```python
 2 * 3
@@ -66,7 +61,6 @@ print("today is a good day")
 2 * 3.5
 ```
 
-![](img/e1c773c4ecece92f06a52f67dd90ce74_10.png)
 
 对于逻辑判断，Python使用比较运算符。例如，判断1是否等于2：
 
@@ -82,13 +76,11 @@ print("today is a good day")
 1 < 2
 ```
 
-![](img/e1c773c4ecece92f06a52f67dd90ce74_12.png)
 
 这个表达式会返回 `True`。
 
 最后，判断1.2是否大于或等于1.2：
 
-![](img/e1c773c4ecece92f06a52f67dd90ce74_14.png)
 
 ```python
 1.2 >= 1.2

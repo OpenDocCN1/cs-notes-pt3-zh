@@ -86,7 +86,6 @@ io::stdin()
 
 我们的游戏需要一个秘密数字。我们将使用一个名为`rand`的第三方crate来生成随机数。
 
-![](img/c81e2d16bcae0e91aac47afd71d2f6e3_7.png)
 
 首先，我们需要在项目的`Cargo.toml`文件中添加`rand`作为依赖。你可以手动编辑文件，或者使用Cargo命令：
 

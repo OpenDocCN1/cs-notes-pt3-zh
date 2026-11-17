@@ -2,7 +2,6 @@
 
 ![](img/9aa734f49d2809cc2a62ae80b43e0294_0.png)
 
-![](img/9aa734f49d2809cc2a62ae80b43e0294_2.png)
 
 ![](img/9aa734f49d2809cc2a62ae80b43e0294_4.png)
 
@@ -55,11 +54,9 @@
 
 ![](img/9aa734f49d2809cc2a62ae80b43e0294_9.png)
 
-![](img/9aa734f49d2809cc2a62ae80b43e0294_11.png)
 
 服务启动后，我们可以通过访问本地仪表盘来验证安装是否成功，并检查一项重要的PHP开发配置。
 
-![](img/9aa734f49d2809cc2a62ae80b43e0294_13.png)
 
 以下是验证和检查步骤：
 1.  打开浏览器，访问 `http://localhost`。如果看到XAMPP欢迎页面（仪表盘），则说明Apache服务器运行正常。
@@ -67,15 +64,12 @@
 3.  在PHPInfo页面中，搜索 `display_errors` 配置项。对于开发环境，此选项应设置为 **On**，以便在页面上显示错误信息，方便调试。
 4.  如果发现 `display_errors` 为 Off，则需要修改PHP配置文件。你可以通过XAMPP控制面板的Apache模块“Config”按钮，选择“PHP (php.ini)”来编辑配置文件。找到 `display_errors` 和 `display_startup_errors`，将其值改为 `On`，保存文件后，**必须重启Apache服务**才能使更改生效。
 
-![](img/9aa734f49d2809cc2a62ae80b43e0294_15.png)
 
 ## 创建并运行第一个PHP程序
 
-![](img/9aa734f49d2809cc2a62ae80b43e0294_17.png)
 
 最后，我们将创建一个简单的PHP文件，并将其放置在Apache服务器的文档根目录下，通过浏览器访问来测试整个环境。
 
-![](img/9aa734f49d2809cc2a62ae80b43e0294_19.png)
 
 以下是创建和测试步骤：
 1.  打开你喜欢的文本编辑器（例如VS Code、Sublime Text或Notepad++）。
@@ -99,7 +93,6 @@
 3.  将文件保存到XAMPP的文档根目录。具体路径为：`C:\xampp\htdocs\`。建议在该目录下为你的项目创建一个新文件夹，例如 `first`，然后将文件以 `index.php` 为名保存到 `C:\xampp\htdocs\first\` 目录下。
 4.  打开浏览器，访问 `http://localhost/first/index.php`。如果页面成功显示“Hello World from HTML”以及PHP计算出的结果“The sum of 6 and 4 is: 10”，则表明你的本地PHP开发环境已经完全配置成功。
 
-![](img/9aa734f49d2809cc2a62ae80b43e0294_21.png)
 
 ---
 

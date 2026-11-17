@@ -61,7 +61,6 @@ Forwarding    http://abc123.ngrok.io -> http://localhost:8888
 Forwarding    https://abc123.ngrok.io -> http://localhost:8888
 ```
 
-![](img/25a50ff2fc9056d7843894ec3d38ef84_12.png)
 
 
 ![](img/25a50ff2fc9056d7843894ec3d38ef84_14.png)

@@ -2,7 +2,6 @@
 
 在本节课中，我们将学习 ReactJS 的进阶概念，包括状态管理、路由导航以及如何在实际项目中处理常见的开发问题。我们将通过一个问答环节，探讨同学们在完成作业时遇到的具体挑战，并演示如何解决它们。
 
-![](img/a0329e44501b9a4d61bb7af00f2f1afc_1.png)
 
 ## 概述
 
@@ -22,9 +21,7 @@
 
 以下是前端应用中常见的几种状态类型：
 
-![](img/a0329e44501b9a4d61bb7af00f2f1afc_7.png)
 
-![](img/a0329e44501b9a4d61bb7af00f2f1afc_9.png)
 
 1.  **局部非持久化状态**：使用 `useState` 在组件内部管理。这种状态存在于组件函数的作用域内，页面刷新后即消失。
     ```javascript
@@ -35,33 +32,23 @@
 
 ![](img/a0329e44501b9a4d61bb7af00f2f1afc_11.png)
 
-![](img/a0329e44501b9a4d61bb7af00f2f1afc_13.png)
 
 3.  **持久化状态**：需要跨越页面会话保存的数据。在浏览器中，这主要通过 `localStorage` 或 `Cookies` 实现。`localStorage` 是 HTML5 规范引入的（约2008年），比传统的 `Cookies` 使用起来更方便。
 
-![](img/a0329e44501b9a4d61bb7af00f2f1afc_15.png)
 
-![](img/a0329e44501b9a4d61bb7af00f2f1afc_17.png)
 
-![](img/a0329e44501b9a4d61bb7af00f2f1afc_18.png)
 
-![](img/a0329e44501b9a4d61bb7af00f2f1afc_20.png)
 
-![](img/a0329e44501b9a4d61bb7af00f2f1afc_21.png)
 
 4.  **完整的状态管理库**：对于大型工业级应用，通常会使用专门的状态管理库，如 **Redux** 或 **MobX**。这些工具提供了更强大、可预测的状态管理机制。
 
-![](img/a0329e44501b9a4d61bb7af00f2f1afc_23.png)
 
-![](img/a0329e44501b9a4d61bb7af00f2f1afc_25.png)
 
 ## 使用 React Router Dom 进行路由
 
-![](img/a0329e44501b9a4d61bb7af00f2f1afc_27.png)
 
 在单页面应用中，路由负责管理不同 URL 对应的视图组件，而无需重新加载整个页面。`react-router-dom` 是 React 生态中最流行的路由库。
 
-![](img/a0329e44501b9a4d61bb7af00f2f1afc_29.png)
 
 上一节我们讨论了状态管理，本节中我们来看看如何管理应用中的不同视图和页面导航。
 
@@ -114,10 +101,8 @@ function App() {
 
 对于有共享布局（如导航栏）的页面，可以使用嵌套路由。父路由通过 `<Outlet />` 组件来渲染子路由的内容。
 
-![](img/a0329e44501b9a4d61bb7af00f2f1afc_31.png)
 
 
-![](img/a0329e44501b9a4d61bb7af00f2f1afc_33.png)
 
 ```jsx
 // 定义一个布局组件 SiteLayout.jsx
@@ -207,7 +192,6 @@ function Wrapper() {
 }
 ```
 
-![](img/a0329e44501b9a4d61bb7af00f2f1afc_35.png)
 
 ### 处理异步令牌获取
 

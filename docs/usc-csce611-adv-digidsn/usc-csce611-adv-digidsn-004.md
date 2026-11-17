@@ -1,6 +1,5 @@
 # 004：SystemVerilog 语法深入与工具使用 🧠
 
-![](img/1afc78e303b26428e679de47eeb6efac_1.png)
 
 在本节课中，我们将深入学习 SystemVerilog 的更多语法细节，包括多比特信号、常用运算符、常量表示以及 `always` 语句。同时，我们也将介绍用于仿真和综合的关键工具：ModelSim 和 Quartus。掌握这些内容是完成后续实验的基础。
 
@@ -26,9 +25,7 @@ module example (
 
 SystemVerilog 的运算符大多与 C/Java 类似，但专为硬件设计增加了一些特性。
 
-![](img/1afc78e303b26428e679de47eeb6efac_3.png)
 
-![](img/1afc78e303b26428e679de47eeb6efac_4.png)
 
 以下是需要特别注意的运算符：
 *   **条件运算符 (`? :`)**：它直接对应一个多路选择器（MUX），是描述数据通路的关键。
@@ -39,15 +36,12 @@ SystemVerilog 的运算符大多与 C/Java 类似，但专为硬件设计增加�
 *   **相等运算符**：`==` 和 `!=` 用于可综合代码的比较；`===` 和 `!==` 用于仿真测试台，可以比较 `X` 和 `Z` 状态。
 *   **缩减运算符**：对向量的所有位进行运算，产生一位结果。例如，`&a` 会对向量 `a` 的所有位执行与操作。
 
-![](img/1afc78e303b26428e679de47eeb6efac_6.png)
 
 对于常量，建议始终指定位宽和基数，格式为：`<位宽>'<基数><数值>`。下划线 `_` 可用于提高可读性。
 
 **公式/代码示例：常量与位拼接**
 
-![](img/1afc78e303b26428e679de47eeb6efac_8.png)
 
-![](img/1afc78e303b26428e679de47eeb6efac_10.png)
 
 ```systemverilog
 logic [7:0] data;
@@ -58,17 +52,14 @@ assign extended = { {16{imm[11]}}, imm[11:0] }; // 12位立即数符号扩展至
 // 整体表示：高16位为符号位，低12位为原始立即数
 ```
 
-![](img/1afc78e303b26428e679de47eeb6efac_12.png)
 
 ---
 
 理解了基本运算符后，我们需要一种方法来描述更复杂的行为逻辑，而不仅仅是简单的连线或表达式。这就是 `always` 语句的用武之地。
 
-![](img/1afc78e303b26428e679de47eeb6efac_14.png)
 
 ## 行为建模：`always` 语句
 
-![](img/1afc78e303b26428e679de47eeb6efac_16.png)
 
 `assign` 语句适合描述组合逻辑，但它是单行的。对于复杂的组合逻辑或需要记忆功能的时序逻辑，我们使用 `always` 语句块。
 
@@ -94,7 +85,6 @@ end
 ```
 此代码与 `assign out = (sel) ? in1 : in0;` 综合出的硬件是相同的。
 
-![](img/1afc78e303b26428e679de47eeb6efac_18.png)
 
 **代码示例：使用 case 语句实现译码器（如七段数码管）**
 ```systemverilog
@@ -109,17 +99,12 @@ always_comb begin
 end
 ```
 
-![](img/1afc78e303b26428e679de47eeb6efac_20.png)
 
-![](img/1afc78e303b26428e679de47eeb6efac_22.png)
 
 ### 使用 `always_ff` 描述时序逻辑
 
-![](img/1afc78e303b26428e679de47eeb6efac_24.png)
 
-![](img/1afc78e303b26428e679de47eeb6efac_26.png)
 
-![](img/1afc78e303b26428e679de47eeb6efac_28.png)
 
 时序逻辑依赖于时钟信号来更新状态。这是构建寄存器、计数器和状态机的核心。
 

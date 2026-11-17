@@ -1,16 +1,12 @@
 # 027：DOM 操作入门 🧩
 
-![](img/809da449ae600ad588d1294a2445252d_1.png)
 
-![](img/809da449ae600ad588d1294a2445252d_3.png)
 
 在本节课中，我们将学习文档对象模型（DOM）。我们将了解 DOM 是什么，探索它允许我们在 JavaScript 中做什么，并通过一些实时编码示例来实践。
 
-![](img/809da449ae600ad588d1294a2445252d_5.png)
 
 ## 网页构成回顾
 
-![](img/809da449ae600ad588d1294a2445252d_7.png)
 
 几乎所有网页都由 HTML、CSS 和 JavaScript 构成。
 *   **HTML** 用于定义页面的标记和结构。
@@ -29,13 +25,11 @@ DOM 代表文档对象模型。它是一个接口，允许 JavaScript 通过浏�
 
 ## DOM 的树状结构
 
-![](img/809da449ae600ad588d1294a2445252d_13.png)
 
 DOM 的一个特点是它具有树状结构。在 HTML 中，标签可以拥有子标签，形成树状结构。DOM 也是如此。
 
 以下是一个基本 HTML 及其对应 DOM 的示例：
 
-![](img/809da449ae600ad588d1294a2445252d_15.png)
 
 ```html
 <html>
@@ -55,7 +49,6 @@ DOM 树的根节点称为 **`document`**。`document` 是客户端 JavaScript �
 
 HTML 中最外层的 `<html>` 标签是 DOM 树的第一个子节点。`<body>` 标签有两个子节点：一些文本和一个 `<b>` 标签，这在 DOM 树中表示为两个子节点。
 
-![](img/809da449ae600ad588d1294a2445252d_19.png)
 
 ## DOM 数据类型
 
@@ -65,9 +58,7 @@ HTML 中最外层的 `<html>` 标签是 DOM 树的第一个子节点。`<body>` 
 
 最后是 `NodeList` 类型。它是一个类似数组的元素结构，由 `querySelectorAll` 等方法返回，我们稍后会看到。
 
-![](img/809da449ae600ad588d1294a2445252d_21.png)
 
-![](img/809da449ae600ad588d1294a2445252d_23.png)
 
 ## 深入了解 Element 类型
 
@@ -112,7 +103,6 @@ MDN 文档是查找不同类型信息的非常有用的资源。例如，`HTMLEl
 
 有几种方法可以检索 DOM 元素。本质上，当你知道元素的 ID、类名或标签类型时，可以使用这些信息来检索它们。
 
-![](img/809da449ae600ad588d1294a2445252d_31.png)
 
 以下是几种方法：
 *   **`document.getElementById(id)`**：使用元素的 ID 属性。返回单个节点，因为 ID 在 HTML 中是唯一的。
@@ -138,7 +128,6 @@ MDN 文档是查找不同类型信息的非常有用的资源。例如，`HTMLEl
 
 我们还可以设置元素的属性。例如，如果有一个按钮，可以在 JavaScript 中轻松设置属性，如添加 `disabled` 属性或 `id` 属性。
 
-![](img/809da449ae600ad588d1294a2445252d_33.png)
 
 ![](img/809da449ae600ad588d1294a2445252d_35.png)
 
@@ -165,7 +154,6 @@ MDN 文档是查找不同类型信息的非常有用的资源。例如，`HTMLEl
 *   `element.classList.toggle('className')`：切换一个类（如果存在则移除，不存在则添加）。
 *   `element.classList.contains('className')`：检查元素是否包含某个类。
 
-![](img/809da449ae600ad588d1294a2445252d_39.png)
 
 ![](img/809da449ae600ad588d1294a2445252d_41.png)
 
@@ -179,13 +167,11 @@ MDN 文档是查找不同类型信息的非常有用的资源。例如，`HTMLEl
 
 例如，要滚动到一个元素，可以先使用 `getBoundingClientRect()` 方法获取该元素的位置信息，然后调用 `window.scrollTo()`。
 
-![](img/809da449ae600ad588d1294a2445252d_43.png)
 
 `getBoundingClientRect()` 返回一个 `DOMRect` 对象，它提供了元素的大小和位置信息，例如 `top` 值表示元素顶部距离当前视口顶部的像素距离。
 
 将 `scrollTo` 的 `behavior` 参数设置为 `'smooth'` 可以实现平滑滚动动画。
 
-![](img/809da449ae600ad588d1294a2445252d_45.png)
 
 ## 总结
 

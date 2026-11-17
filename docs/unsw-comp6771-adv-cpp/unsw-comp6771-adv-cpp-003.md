@@ -10,7 +10,6 @@
 
 ![](img/5d7269e713dcb80d50ff9f1d8fc36d9d_7.png)
 
-![](img/5d7269e713dcb80d50ff9f1d8fc36d9d_9.png)
 
 在本节课中，我们将要学习C++编程语言的基础知识，包括基本类型、`auto`关键字、常量以及表达式。这些概念是构建更复杂C++程序的基石。
 
@@ -28,7 +27,6 @@
 
 C++提供了多种基本数据类型，与C语言类似，但也有一些不同之处。以下是C++中的一些基本类型：
 
-![](img/5d7269e713dcb80d50ff9f1d8fc36d9d_21.png)
 
 ![](img/5d7269e713dcb80d50ff9f1d8fc36d9d_23.png)
 
@@ -108,7 +106,6 @@ const auto meaning_of_life = 42; // 等价于 const int meaning_of_life = 42;
 
 C++中的算术表达式与C语言非常相似，包括加法(`+`)、减法(`-`)、乘法(`*`)、除法(`/`)和取模(`%`)等操作。
 
-![](img/5d7269e713dcb80d50ff9f1d8fc36d9d_45.png)
 
 ![](img/5d7269e713dcb80d50ff9f1d8fc36d9d_47.png)
 

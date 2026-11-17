@@ -1,12 +1,10 @@
 # 035：获取用户输入 🎯
 
-![](img/f90269f4d08ffb4d5b200d242642f350_0.png)
 
 在本节课中，我们将要学习如何在Python程序中获取用户的输入。这是创建交互式程序的基础，能让程序根据用户提供的信息动态运行。
 
 ## 概述
 
-![](img/f90269f4d08ffb4d5b200d242642f350_2.png)
 
 上一节我们介绍了变量的赋值和字符串格式化。本节中我们来看看如何让程序与用户进行交互，即获取用户在程序运行时输入的信息。
 
@@ -20,11 +18,9 @@
 input("提示信息")
 ```
 
-![](img/f90269f4d08ffb4d5b200d242642f350_4.png)
 
 例如，我们可以用 `input()` 来询问用户最喜欢的电影：
 
-![](img/f90269f4d08ffb4d5b200d242642f350_6.png)
 
 ```python
 input("What is your favorite movie?")
@@ -47,11 +43,9 @@ fave_singer = input("Who is your favorite singer?")
 
 ## 组合输入信息
 
-![](img/f90269f4d08ffb4d5b200d242642f350_8.png)
 
 获取用户输入后，我们通常需要处理或展示这些信息。我们可以像之前学习的那样，使用字符串格式化来组合这些变量。
 
-![](img/f90269f4d08ffb4d5b200d242642f350_10.png)
 
 以下是如何将用户输入组合成一句完整的话：
 
@@ -60,11 +54,9 @@ faves = "Your favorite movie is {} and your favorite singer is {}.".format(fave_
 print(faves)
 ```
 
-![](img/f90269f4d08ffb4d5b200d242642f350_12.png)
 
 在这段代码中，花括号 `{}` 是占位符，`.format()` 方法会将 `fave_movie` 和 `fave_singer` 的值依次插入到对应的位置。
 
-![](img/f90269f4d08ffb4d5b200d242642f350_14.png)
 
 运行完整的程序，效果如下：
 1.  程序询问 “What is your favorite movie?”，用户输入 “Believe”。

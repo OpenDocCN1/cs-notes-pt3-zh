@@ -4,15 +4,12 @@
 
 ---
 
-![](img/442bb02998a1786261ff63d4f22a0baa_1.png)
 
 ## 准备与数据加载
 
 在开始连接数据之前，我们需要导入必要的库并加载数据。
 
-![](img/442bb02998a1786261ff63d4f22a0baa_3.png)
 
-![](img/442bb02998a1786261ff63d4f22a0baa_4.png)
 
 首先，导入Pandas库，并为其设置一个简短的别名 `pd`。
 
@@ -26,7 +23,6 @@ import pandas as pd
 xls = pd.ExcelFile('Yelp.xlsx')
 ```
 
-![](img/442bb02998a1786261ff63d4f22a0baa_6.png)
 
 `xls` 变量现在是一个代表整个Excel文件的对象。要访问其中的特定工作表，我们使用 `parse` 方法。首先，我们解析名为 `Yelp data` 的工作表，并将其存储在一个名为 `df` 的DataFrame中。
 
@@ -40,13 +36,11 @@ df = xls.parse('Yelp data')
 df.head()
 ```
 
-![](img/442bb02998a1786261ff63d4f22a0baa_8.png)
 
 ---
 
 ## 连接城市数据
 
-![](img/442bb02998a1786261ff63d4f22a0baa_10.png)
 
 上一节我们加载了主要的Yelp商家数据。本节中，我们来看看如何将城市信息连接到这个主数据集上。
 
@@ -77,7 +71,6 @@ df = pd.merge(left=df, right=df_cities, how='inner', left_on='city ID', right_on
 
 执行后，新的 `df` 包含了来自 `df_cities` 的 `city` 信息。再次使用 `df.head()` 查看，可以确认城市名称已成功添加。
 
-![](img/442bb02998a1786261ff63d4f22a0baa_12.png)
 
 ---
 
@@ -102,19 +95,16 @@ df = pd.merge(left=df, right=df_states, how='inner', left_on='state ID', right_o
 
 连接完成后，我们可以检查数据形状，确认列数增加了。
 
-![](img/442bb02998a1786261ff63d4f22a0baa_14.png)
 
 ```python
 df.shape
 ```
 
-![](img/442bb02998a1786261ff63d4f22a0baa_15.png)
 
 使用 `df.head()` 查看数据，可以看到 `state` 列也已成功添加。
 
 ---
 
-![](img/442bb02998a1786261ff63d4f22a0baa_17.png)
 
 ## 查看与清理数据
 
@@ -136,13 +126,11 @@ del df['ID_x']
 del df['ID_y']
 ```
 
-![](img/442bb02998a1786261ff63d4f22a0baa_19.png)
 
 删除后，再次查看数据，这些多余的列就消失了。现在，数据集中只保留了原始的 `city ID` 和 `state ID` 列，以及我们通过连接添加的 `city` 和 `state` 信息列。
 
 ---
 
-![](img/442bb02998a1786261ff63d4f22a0baa_21.png)
 
 ## 总结
 

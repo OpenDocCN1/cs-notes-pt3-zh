@@ -131,7 +131,6 @@ subject to W_s^T p_s <= q_s
 
 ![](img/092db3c5a66108a4ebd5e3d30ae83bdf_65.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_67.png)
 
 
 因此，虽然次梯度法在某些情况下可用，但它并非求解两阶段随机规划的高效可靠工具。
@@ -169,7 +168,6 @@ m_k(x) = max_{i=0,...,k} [ f(x_i) + g_i^T (x - x_i) ]
 
 ![](img/092db3c5a66108a4ebd5e3d30ae83bdf_82.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_84.png)
 
 
 1.  选择初始点 `x_0`，设定 `k = 0`。模型初始为空或包含一个初始割。

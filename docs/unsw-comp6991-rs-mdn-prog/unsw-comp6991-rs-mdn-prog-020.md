@@ -2,9 +2,7 @@
 
 ## 概述
 
-![](img/0e9e476969b75e1bbc8784dc39e2e2cc_1.png)
 
-![](img/0e9e476969b75e1bbc8784dc39e2e2cc_3.png)
 
 在本节课中，我们将通过一系列名为“Rustlings”的编程练习来学习Rust语言的核心概念。这些练习涵盖了从变量、函数到所有权、错误处理等各个方面。我们将跟随一个实际的编码过程，逐步解决每个练习，并深入理解背后的Rust原理。
 
@@ -41,13 +39,10 @@ fn main() {
 
 ### 练习：variables2
 
-![](img/0e9e476969b75e1bbc8784dc39e2e2cc_5.png)
 
 有时，我们可能希望在不初始化变量的情况下声明它，然后在后面再赋值。但Rust要求变量在使用前必须初始化。
 
-![](img/0e9e476969b75e1bbc8784dc39e2e2cc_6.png)
 
-![](img/0e9e476969b75e1bbc8784dc39e2e2cc_8.png)
 
 ```rust
 // 修复此代码，使其能够编译
@@ -82,7 +77,6 @@ fn main() {
 
 **解决方案**： 变量遮蔽是允许的，但需要注意作用域。
 
-![](img/0e9e476969b75e1bbc8784dc39e2e2cc_10.png)
 
 ```rust
 fn main() {
@@ -92,7 +86,6 @@ fn main() {
 }
 ```
 
-![](img/0e9e476969b75e1bbc8784dc39e2e2cc_12.png)
 
 ---
 
@@ -289,12 +282,10 @@ fn parse_number(s: &str) -> Result<i32, std::num::ParseIntError> {
 }
 ```
 
-![](img/0e9e476969b75e1bbc8784dc39e2e2cc_25.png)
 
 **解决方案**： 使用 `?` 操作符可以简化错误处理。
 
 
-![](img/0e9e476969b75e1bbc8784dc39e2e2cc_27.png)
 
 ```rust
 fn main() {
@@ -306,11 +297,9 @@ fn parse_number(s: &str) -> Result<i32, std::num::ParseIntError> {
 }
 ```
 
-![](img/0e9e476969b75e1bbc8784dc39e2e2cc_29.png)
 
 ### 练习：errors2
 
-![](img/0e9e476969b75e1bbc8784dc39e2e2cc_31.png)
 
 有时，我们需要在函数中处理多个错误类型。
 
@@ -349,15 +338,12 @@ fn parse_number(s: &str) -> Result<i32, ParseIntError> {
 
 ---
 
-![](img/0e9e476969b75e1bbc8784dc39e2e2cc_33.png)
 
 ## 泛型与特质
 
-![](img/0e9e476969b75e1bbc8784dc39e2e2cc_35.png)
 
 泛型允许我们编写可以处理多种类型的代码。特质（Trait）定义了类型的行为。
 
-![](img/0e9e476969b75e1bbc8784dc39e2e2cc_37.png)
 
 ### 练习：generics1
 

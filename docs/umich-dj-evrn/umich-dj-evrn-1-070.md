@@ -59,7 +59,6 @@ cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
 mysock.send(cmd)
 ```
 
-![](img/feabf7ab5f8198d60bec031f56149c66_14.png)
 
 - **`cmd`**：这是一个字符串，包含HTTP GET请求。`\r\n\r\n`表示请求头结束。
 - **`encode()`**：将字符串转换为UTF-8格式，因为网络传输通常使用UTF-8编码。

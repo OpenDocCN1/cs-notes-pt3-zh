@@ -1,6 +1,5 @@
 # 026：超越CRUD与JOIN操作
 
-![](img/ee206d846639f3ac51fec7513163d458_0.png)
 
 ![](img/ee206d846639f3ac51fec7513163d458_0.png)
 

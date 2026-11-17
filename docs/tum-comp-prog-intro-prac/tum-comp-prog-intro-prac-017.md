@@ -84,7 +84,6 @@ System.out.println("Is the seal healthy? " + healthy); // 输出：Is the seal h
 
 ![](img/dd588cfe1b1fec2fcf5244a9ce277c50_3.png)
 
-![](img/dd588cfe1b1fec2fcf5244a9ce277c50_4.png)
 
 ---
 

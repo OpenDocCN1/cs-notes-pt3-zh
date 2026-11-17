@@ -108,7 +108,6 @@ if ($_SERVER[‘REQUEST_METHOD’] == ‘POST’ && isset($_POST[‘delete’]))
 
 ![](img/1e787e4629e2a31a470a1f29b733031b_22.png)
 
-![](img/1e787e4629e2a31a470a1f29b733031b_24.png)
 
 我们可以将添加用户和删除用户的功能集成到同一个页面，形成一个简单的用户管理界面。
 

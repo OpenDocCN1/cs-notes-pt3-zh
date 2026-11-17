@@ -12,7 +12,6 @@
 
 ![](img/6c35e162f79c1ddc68e0999a5c2b2b20_3.png)
 
-![](img/6c35e162f79c1ddc68e0999a5c2b2b20_4.png)
 
 `async/await` 语法在 ES2017 中被引入，它允许我们以更接近同步代码的风格来“消费”（使用）`Promise`。
 
@@ -48,7 +47,6 @@ async function readFirstChapter() {
 
 `await` 关键字的作用是：它会**暂停**当前 `async` 函数的执行，等待后面的 `Promise` 完成（resolve），然后返回 `Promise` 成功的结果。这使得异步代码看起来像是同步执行的。
 
-![](img/6c35e162f79c1ddc68e0999a5c2b2b20_8.png)
 
 ## 核心规则与注意事项
 
@@ -81,7 +79,6 @@ readFile(“chapter1.txt”, “utf8”)
   .then((c3) => console.log(c3));
 ```
 
-![](img/6c35e162f79c1ddc68e0999a5c2b2b20_16.png)
 
 ![](img/6c35e162f79c1ddc68e0999a5c2b2b20_18.png)
 

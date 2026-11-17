@@ -27,7 +27,6 @@
 我们已知另一个事实：
 > 哈利今天拜访了海格或邓布利多，但并非两者都拜访了。
 
-![](img/48ae3ddc6d3d1f4099070e83b3029468_12.png)
 
 
 
@@ -44,7 +43,6 @@
 
 但事实证明，我们还可以通过观察第一条陈述并进行推理，得到更多信息。第一条陈述说“如果没下雨，那么哈利拜访了海格”。这意味着在所有没下雨的情况下，我们知道哈利拜访了海格。但既然我们现在知道哈利没有拜访海格，那么这告诉我们关于初始前提的一些信息。具体来说，它告诉我们今天确实下雨了。因为我们可以推理：如果没下雨，哈利就会拜访海格；但我们确切知道哈利今天没有拜访海格。
 
-![](img/48ae3ddc6d3d1f4099070e83b3029468_20.png)
 
 
 这种基于已知信息运用逻辑进行推理，从而得出结论的过程，将是我们今天讨论的重点。我们如何让人工智能具备逻辑性，使其能够进行与我们刚才所做的相同的演绎和推理？
@@ -81,7 +79,6 @@
 *   如果 `P` 为真，则 `¬P` 为假。
 你可以将 `¬` 符号放在某个命题逻辑句子的前面，表示该句子的反面。
 
-![](img/48ae3ddc6d3d1f4099070e83b3029468_28.png)
 
 **与** (`∧`)：
 *   `P ∧ Q` 为真，仅当 `P` 为真 **并且** `Q` 也为真。
@@ -290,7 +287,6 @@
 
 使用这些句子，我可以开始得出关于世界的结论。让我们看一个例子。我打开一个名为 `puzzle.py` 的文件，我已经开始实现这种想法。我定义了人物列表和学院列表，并为每个人和学院的组合创建了一个符号。然后我添加了一些信息：我知道每个人属于一个学院，我为每个人添加了 `Or(personGryffindor, personHufflepuff, personRavenclaw, personSlytherin)`。我还知道每人只属于一个学院，所以我循环遍历每个人，然后循环遍历所有不同的学院对，并添加知识：`Implication(Symbol(f"{person}{house1}"), Not(Symbol(f"{person}{house2}")))`。另一条我需要编码的逻辑是每个学院只能有一个人，所以我循环遍历所有学院，循环遍历所有不同的人物对，并添加知识：`Implication(Symbol(f"{person1}{house}"), Not(Symbol(f"{person2}{house}")))`。
 
-![](img/48ae3ddc6d3d1f4099070e83b3029468_96.png)
 
 
 现在我可以添加给出的信息：Gilderoy在Gryffindor或Ravenclaw（`Or(gilderoyGryffindor, gilderoyRavenclaw)`），Pomona不在Slytherin（`Not(pomonaSlytherin)`），Minerva在Gryffindor（`minervaGryffindor`）。然后我循环遍历所有符号，检查知识是否蕴含该符号（通过再次调用 `model_check` 函数）。如果我知道该符号为真，我就打印出该符号。运行程序后，Python为我解决了这个谜题，得出结论：Gilderoy属于Ravenclaw，Pomona属于Hufflepuff，Minerva属于Gryffindor，Horace属于Slytherin。

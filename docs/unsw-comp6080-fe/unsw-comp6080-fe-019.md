@@ -14,14 +14,12 @@ Javascript是一种高级、多范式、解释型的脚本语言。它之所以�
 
 你已经熟悉了C语言，学习Javascript时，关注两者的差异会很有帮助。以下是主要区别：
 
-![](img/af879d0ef4b899e7e429a73a844847fb_3.png)
 
 *   **编程范式**：C是过程式语言，而Javascript是多范式语言，支持过程式、函数式和面向对象编程。
 *   **类型系统**：C是静态类型语言，而Javascript是动态类型语言，变量在声明时无需指定类型。
 *   **内存管理**：C涉及指针和手动内存管理（`malloc`/`free`），Javascript是高级语言，无需直接操作内存。
 *   **编译与解释**：C是编译型语言，需要单独的编译和运行步骤。Javascript是解释型语言，通常使用Node.js等工具直接解释执行代码，步骤合二为一。
 
-![](img/af879d0ef4b899e7e429a73a844847fb_5.png)
 
 简单来说，Javascript的语法更简洁，开发更便捷，但语言本身感觉更“庞大”，功能也更丰富。
 
@@ -330,7 +328,6 @@ if ('name' in student) {
 
 ![](img/af879d0ef4b899e7e429a73a844847fb_97.png)
 
-![](img/af879d0ef4b899e7e429a73a844847fb_99.png)
 
 
 ![](img/af879d0ef4b899e7e429a73a844847fb_101.png)
@@ -369,7 +366,6 @@ console.log(classData['Alice'].age); // 访问 Alice 的年龄: 20
 
 ![](img/af879d0ef4b899e7e429a73a844847fb_110.png)
 
-![](img/af879d0ef4b899e7e429a73a844847fb_112.png)
 
 ## 重要注意事项
 

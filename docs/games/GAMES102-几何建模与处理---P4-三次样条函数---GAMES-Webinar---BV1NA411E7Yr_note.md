@@ -5,7 +5,6 @@
 
 
 
-![](img/0d8a7a55b67596f71c6a639ebbb7f541_7.png)
 
 
 ![](img/0d8a7a55b67596f71c6a639ebbb7f541_11.png)

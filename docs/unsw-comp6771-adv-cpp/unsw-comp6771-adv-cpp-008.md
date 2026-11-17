@@ -2,7 +2,6 @@
 
 ![](img/bb50045a4e130df13b3f6c5aaff5f61f_1.png)
 
-![](img/bb50045a4e130df13b3f6c5aaff5f61f_3.png)
 
 ![](img/bb50045a4e130df13b3f6c5aaff5f61f_5.png)
 
@@ -13,7 +12,6 @@
 
 ![](img/bb50045a4e130df13b3f6c5aaff5f61f_9.png)
 
-![](img/bb50045a4e130df13b3f6c5aaff5f61f_10.png)
 
 ![](img/bb50045a4e130df13b3f6c5aaff5f61f_12.png)
 
@@ -82,7 +80,6 @@ if (it != nums.end()) {
 
 ![](img/bb50045a4e130df13b3f6c5aaff5f61f_38.png)
 
-![](img/bb50045a4e130df13b3f6c5aaff5f61f_40.png)
 
 ![](img/bb50045a4e130df13b3f6c5aaff5f61f_42.png)
 
@@ -126,9 +123,7 @@ std::for_each(s.begin(), s.end(), [](char &c) { c = ::toupper(c); });
 
 ![](img/bb50045a4e130df13b3f6c5aaff5f61f_56.png)
 
-![](img/bb50045a4e130df13b3f6c5aaff5f61f_58.png)
 
-![](img/bb50045a4e130df13b3f6c5aaff5f61f_60.png)
 
 ![](img/bb50045a4e130df13b3f6c5aaff5f61f_61.png)
 
@@ -160,7 +155,6 @@ Lambda的基本语法如下：
 
 ![](img/bb50045a4e130df13b3f6c5aaff5f61f_77.png)
 
-![](img/bb50045a4e130df13b3f6c5aaff5f61f_79.png)
 
 ![](img/bb50045a4e130df13b3f6c5aaff5f61f_80.png)
 
@@ -178,7 +172,6 @@ void add_n(std::vector<int> &v, int n) {
 
 ![](img/bb50045a4e130df13b3f6c5aaff5f61f_86.png)
 
-![](img/bb50045a4e130df13b3f6c5aaff5f61f_88.png)
 
 ![](img/bb50045a4e130df13b3f6c5aaff5f61f_90.png)
 
@@ -202,11 +195,9 @@ void add_n(std::vector<int> &v, int n) {
 
 ![](img/bb50045a4e130df13b3f6c5aaff5f61f_100.png)
 
-![](img/bb50045a4e130df13b3f6c5aaff5f61f_102.png)
 
 例如，`std::advance` 只需要输入迭代器，而 `std::binary_search` 在随机访问迭代器上具有对数复杂度，但在双向或前向迭代器上会退化为线性复杂度。
 
-![](img/bb50045a4e130df13b3f6c5aaff5f61f_104.png)
 
 ![](img/bb50045a4e130df13b3f6c5aaff5f61f_106.png)
 
@@ -214,7 +205,6 @@ void add_n(std::vector<int> &v, int n) {
 
 ---
 
-![](img/bb50045a4e130df13b3f6c5aaff5f61f_110.png)
 
 ![](img/bb50045a4e130df13b3f6c5aaff5f61f_112.png)
 
@@ -228,7 +218,6 @@ void add_n(std::vector<int> &v, int n) {
 
 ![](img/bb50045a4e130df13b3f6c5aaff5f61f_120.png)
 
-![](img/bb50045a4e130df13b3f6c5aaff5f61f_122.png)
 
 ![](img/bb50045a4e130df13b3f6c5aaff5f61f_123.png)
 

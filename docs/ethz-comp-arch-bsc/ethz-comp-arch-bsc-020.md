@@ -158,7 +158,6 @@
 
 ![](img/6c1423a89abdd7c41ddc00f26d0cd749_102.png)
 
-![](img/6c1423a89abdd7c41ddc00f26d0cd749_104.png)
 
 
 

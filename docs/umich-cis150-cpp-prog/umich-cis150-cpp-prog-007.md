@@ -1,6 +1,5 @@
 # 007：函数（第一部分）📚
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_0.png)
 
 
 ![](img/7ba12b17bbb1cd80d74bc34847e1c74f_3.png)

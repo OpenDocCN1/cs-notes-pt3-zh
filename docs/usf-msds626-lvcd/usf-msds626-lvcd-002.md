@@ -80,7 +80,6 @@ SSH使用非对称加密进行认证，比输入密码更方便、安全。你�
 
 ![](img/15adab7f9346ac744fdda4d4db73110d_21.png)
 
-![](img/15adab7f9346ac744fdda4d4db73110d_22.png)
 
 ![](img/15adab7f9346ac744fdda4d4db73110d_24.png)
 

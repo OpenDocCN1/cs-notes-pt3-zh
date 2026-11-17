@@ -95,7 +95,6 @@ PeriDyno中所有需要支持反射的类都继承自一个公共基类 `Object`
     ```
     这个宏会创建一个静态的 `ClassInfo` 对象，并在程序启动前（进入main函数之前）自动执行注册逻辑，将类名和其构造函数指针存入全局映射表。
 
-![](img/a7353a8fe01a4d4e85be5c8f65818da4_50.png)
 
 **成员变量的反射：**
 对于需要在UI中暴露和控制的成员变量（称为 `Field`），同样使用宏来声明。
@@ -140,7 +139,6 @@ DEFINE_VAR(YourType, YourVarName, “FieldDisplayName”);
 
 
 
-![](img/a7353a8fe01a4d4e85be5c8f65818da4_77.png)
 
 ```cpp
 auto emitter = scene->createNode<FluidEmitter>();
@@ -270,7 +268,6 @@ solver->connect(boundary->inFluid()); // 将求解后的流体数据连接到边
 
 
 
-![](img/a7353a8fe01a4d4e85be5c8f65818da4_159.png)
 
 
 **动态插件加载**：

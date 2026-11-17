@@ -15,7 +15,6 @@ Python与Java编程入门：1-2：编程演示 - 创建成绩转换函数 🎯
 
 现在，我们将所有这些代码放入一个用户自定义函数中。
 
-![](img/e85eb83029bbe1f03dc552ee38aabc50_1.png)
 
 ```python
 def numeric_to_letter_grade():
@@ -34,7 +33,6 @@ def numeric_to_letter_grade():
         print("F")
 ```
 
-![](img/e85eb83029bbe1f03dc552ee38aabc50_3.png)
 
 定义好函数后，我们可以通过调用它来运行函数体内的所有代码。
 
@@ -85,7 +83,6 @@ numeric_to_letter_grade(user_grade)
 
 再次运行代码，输入 `92`，程序会输出 `A`。在这个过程中，我们获取用户输入，将其转换为整数，然后将这个值作为**参数**传递给函数。函数执行时，会接收这个给定的**参数**，并运行函数体内的代码进行判断和输出。
 
-![](img/e85eb83029bbe1f03dc552ee38aabc50_5.png)
 
 ---
 

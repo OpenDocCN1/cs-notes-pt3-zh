@@ -86,11 +86,9 @@ function sqrt(x: number): number {
 
 ![](img/26c5d7975cd77b4ac458eb3afb3519a5_26.png)
 
-![](img/26c5d7975cd77b4ac458eb3afb3519a5_28.png)
 
 仅仅抛出异常还不够，我们还需要能够“捕获”并处理它们，这才是异常机制价值所在。为此，我们使用 `try...catch` 语句块。
 
-![](img/26c5d7975cd77b4ac458eb3afb3519a5_30.png)
 
 ![](img/26c5d7975cd77b4ac458eb3afb3519a5_32.png)
 

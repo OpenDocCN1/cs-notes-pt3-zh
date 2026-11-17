@@ -6,7 +6,6 @@
 ## 概述
 
 
-![](img/ebec260aa31c2af2c1d0b7e869071eed_5.png)
 
 
 
@@ -77,14 +76,12 @@ Windows Forms是.NET框架中用于构建桌面应用程序的技术。它允许
 
 ![](img/ebec260aa31c2af2c1d0b7e869071eed_40.png)
 
-![](img/ebec260aa31c2af2c1d0b7e869071eed_42.png)
 
 
 窗体应用程序是事件驱动的。程序启动后等待用户操作，当事件（如点击按钮）发生时，运行相应的代码。
 
 
 
-![](img/ebec260aa31c2af2c1d0b7e869071eed_50.png)
 
 要为按钮添加点击事件：
 1.  在设计视图中，双击按钮。这将自动切换到代码视图，并生成一个名为 `button1_Click` 的方法框架。

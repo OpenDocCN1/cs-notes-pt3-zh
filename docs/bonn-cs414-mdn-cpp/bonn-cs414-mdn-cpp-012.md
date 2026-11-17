@@ -19,7 +19,6 @@
 3.  **安装 VSCode 的 Remote - WSL 扩展**
     在VSCode中安装此扩展后，你可以在Windows的VSCode中直接打开和编辑WSL子系统里的文件。安装成功后，VSCode左下角会显示一个绿色的按钮，指示当前连接的是WSL环境。
 
-![](img/6513b6c7a34237db15db67636458bcfe_1.png)
 
 
 4.  **安装 X 服务器 (用于图形界面支持)**

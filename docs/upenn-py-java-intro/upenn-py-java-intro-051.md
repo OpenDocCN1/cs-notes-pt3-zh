@@ -33,7 +33,6 @@ print(month, "is spelled")
 
 接下来，我们遍历 `month` 字符串。在每次循环中，变量 `x` 会依次代表字符串中的一个字符。
 
-![](img/fedb41d91b5871c06733bd3b48b980ac_1.png)
 
 ```python
 for x in month:
@@ -52,7 +51,6 @@ for x in month:
 > r
 > y
 
-![](img/fedb41d91b5871c06733bd3b48b980ac_3.png)
 
 程序首先打印了 “February is spelled”，然后依次打印了月份中的每个字符，每个字符独占一行。
 
@@ -67,7 +65,6 @@ for x in month:
 
 再次运行代码，输出变为：
 
-![](img/fedb41d91b5871c06733bd3b48b980ac_5.png)
 
 > February is spelled F e b r u a r y
 

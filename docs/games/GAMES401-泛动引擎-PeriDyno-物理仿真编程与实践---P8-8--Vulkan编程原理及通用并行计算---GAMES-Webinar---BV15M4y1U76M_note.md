@@ -130,7 +130,6 @@ ArrayAdd->flush(128, n/128, a, b, n); // 类似CUDA的kernel调用<<<...>>>
 
 
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_50.png)
 
 
 

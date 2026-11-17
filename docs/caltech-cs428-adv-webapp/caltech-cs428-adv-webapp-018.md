@@ -110,7 +110,6 @@ async function startGame() {
 
 ## 创建游戏核心视图 🎲
 
-![](img/e2b69eb057e8abc59bb25d080c1911eb_37.png)
 
 
 ![](img/e2b69eb057e8abc59bb25d080c1911eb_41.png)

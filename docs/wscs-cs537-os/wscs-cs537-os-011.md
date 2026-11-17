@@ -46,7 +46,6 @@ void* thread_function(void* arg) {
 
 ![](img/b8a88378b271494f8fffe2466093286e_1.png)
 
-![](img/b8a88378b271494f8fffe2466093286e_3.png)
 
 ```c
 typedef struct __node_t {
@@ -170,7 +169,6 @@ void release(lock_t *lock) {
 
 ![](img/b8a88378b271494f8fffe2466093286e_12.png)
 
-![](img/b8a88378b271494f8fffe2466093286e_13.png)
 
 #### 1. 测试并设置 (Test-and-Set) / 原子交换 (Atomic Exchange)
 
@@ -236,7 +234,6 @@ void acquire(lock_t *lock) {
 ```
 其逻辑与Test-and-Set类似。
 
-![](img/b8a88378b271494f8fffe2466093286e_15.png)
 
 #### 3. 获取并增加 (Fetch-and-Add)
 

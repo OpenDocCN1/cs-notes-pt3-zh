@@ -2,9 +2,7 @@
 
 ![](img/19b429d67b955be61d2c4d78f317efc9_1.png)
 
-![](img/19b429d67b955be61d2c4d78f317efc9_3.png)
 
-![](img/19b429d67b955be61d2c4d78f317efc9_5.png)
 
 ![](img/19b429d67b955be61d2c4d78f317efc9_7.png)
 
@@ -43,11 +41,9 @@ assert(s == s2); // 比较的是字符串的内容（值），而不是内存地
 
 ![](img/19b429d67b955be61d2c4d78f317efc9_24.png)
 
-![](img/19b429d67b955be61d2c4d78f317efc9_26.png)
 
 当从一种类型转换为另一种类型不会丢失精度时，编译器会自动进行隐式转换，也称为**提升**。
 
-![](img/19b429d67b955be61d2c4d78f317efc9_28.png)
 
 ![](img/19b429d67b955be61d2c4d78f317efc9_29.png)
 
@@ -64,7 +60,6 @@ d = i; // 隐式将 int 转换为 double
 
 当转换可能丢失精度，或者你希望明确表达转换意图时，应使用显式类型转换。C++推荐使用 `static_cast`。
 
-![](img/19b429d67b955be61d2c4d78f317efc9_33.png)
 
 ![](img/19b429d67b955be61d2c4d78f317efc9_35.png)
 
@@ -130,13 +125,11 @@ rgb(); // 相当于 rgb(0, 0, 0)
 rgb(255); // 相当于 rgb(255, 0, 0)
 ```
 
-![](img/19b429d67b955be61d2c4d78f317efc9_56.png)
 
 需要注意的是，一旦某个参数被赋予了默认值，它之后的所有参数也必须具有默认值。
 
 ### 函数重载
 
-![](img/19b429d67b955be61d2c4d78f317efc9_58.png)
 
 ![](img/19b429d67b955be61d2c4d78f317efc9_59.png)
 
@@ -154,13 +147,10 @@ double square(double const x) { return x * x; }
 
 重载函数时，应确保所有同名函数的行为语义一致，否则应使用不同的函数名。
 
-![](img/19b429d67b955be61d2c4d78f317efc9_63.png)
 
 ## 控制流 🧭
 
-![](img/19b429d67b955be61d2c4d78f317efc9_65.png)
 
-![](img/19b429d67b955be61d2c4d78f317efc9_67.png)
 
 C++提供了常见的控制流语句，如 `if`、`switch` 和循环。
 
@@ -288,7 +278,6 @@ void print_vector(std::vector<int> const& vec) {
 
 以下是使用引用交换两个数的示例：
 
-![](img/19b429d67b955be61d2c4d78f317efc9_95.png)
 
 ```cpp
 void swap(int& a, int& b) {
@@ -375,7 +364,6 @@ int alice_age = age_map["Alice"]; // 访问
 
 简单来说，定义是一种特殊的声明，它“实现”了所声明的实体。
 
-![](img/19b429d67b955be61d2c4d78f317efc9_120.png)
 
 ![](img/19b429d67b955be61d2c4d78f317efc9_122.png)
 
@@ -393,9 +381,7 @@ int alice_age = age_map["Alice"]; // 访问
 
 C++使用**流**的概念来处理输入输出，包括文件操作。
 
-![](img/19b429d67b955be61d2c4d78f317efc9_126.png)
 
-![](img/19b429d67b955be61d2c4d78f317efc9_128.png)
 
 ![](img/19b429d67b955be61d2c4d78f317efc9_129.png)
 

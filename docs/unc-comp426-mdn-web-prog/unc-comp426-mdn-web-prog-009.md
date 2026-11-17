@@ -36,9 +36,7 @@ React采用了一种更简化的架构模型，它主要关注两个部分：**�
 const [stateVariable, setStateFunction] = useState(initialValue);
 ```
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_1.png)
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_2.png)
 
 例如，要存储一个计数器：
 ```javascript
@@ -50,13 +48,9 @@ const [counter, setCounter] = useState(0);
 *   `counter`：这是一个**不可变**的变量，是对当前状态值的引用。我们可以在UI中使用它。
 *   `setCounter`：这是一个**函数**，专门用于更新`counter`状态的值。**必须使用这个函数来更新状态**，直接修改变量`counter`不会触发UI更新。
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_4.png)
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_6.png)
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_8.png)
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_10.png)
 
 ### 一个简单的计数器示例
 
@@ -91,18 +85,14 @@ function App() {
 
 ### 关键注意事项
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_12.png)
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_13.png)
 
 *   **必须使用Setter函数**：更新状态时，必须使用`useState`提供的setter函数（如`setCounter`）。直接修改变量（如`counter = counter + 1`）**不会**触发重新渲染，会导致UI与状态不同步。
 *   **组件可以拥有多个状态**：一个组件可以多次调用`useState`来管理多个独立的状态变量。
 *   **状态在重新渲染间持久化**：当状态改变触发组件重新渲染时，React函数会从头到尾再次执行。然而，状态值会被保留，不会被重置为初始值。而函数内普通的变量声明会在每次渲染时重新计算。
 *   **重新渲染是高效的**：React使用一种称为“协调”的智能算法。当状态改变时，React只会更新DOM中真正发生变化的部分，而不是整个页面，这保证了性能。
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_15.png)
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_17.png)
 
 ## 状态与重新渲染的深入理解
 
@@ -115,13 +105,9 @@ function App() {
 
 由于组件函数在每次渲染时都会运行，我们需要理解其影响。
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_19.png)
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_21.png)
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_23.png)
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_25.png)
 
 ### 计算值与状态
 
@@ -179,7 +165,6 @@ function handleClick() {
 
 我们首先回顾了状态在Web应用中的定义，并将其与MVC架构联系起来。接着，我们探讨了React如何通过简化模型（状态 + UI）和 `useState` Hook 来优雅地管理状态。
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_27.png)
 
 我们深入了解了：
 *   如何使用 `const [state, setState] = useState(initialValue)` 语法创建和更新状态。
@@ -188,15 +173,10 @@ function handleClick() {
 *   视图可以看作是状态的函数，我们可以基于状态派生出其他值。
 *   React会智能地批量处理状态更新并高效地更新DOM。
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_29.png)
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_31.png)
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_32.png)
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_34.png)
 
-![](img/3706eb233fe7fdd62f323570d4e3a93a_36.png)
 
 ![](img/3706eb233fe7fdd62f323570d4e3a93a_38.png)
 

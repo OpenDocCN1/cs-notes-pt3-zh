@@ -1,6 +1,5 @@
 # 001：欢迎学习 PostgreSQL 🐘
 
-![](img/2fa1efb72efdd025a322c796adac9701_0.png)
 
 ![](img/2fa1efb72efdd025a322c796adac9701_0.png)
 

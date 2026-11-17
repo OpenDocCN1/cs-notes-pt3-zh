@@ -6,7 +6,6 @@
 
 ![](img/6ddd54b810e188f793bbd6c0bf09a40e_5.png)
 
-![](img/6ddd54b810e188f793bbd6c0bf09a40e_6.png)
 
 在本节课中，我们将要学习C++标准模板库（STL）中的一个核心概念：迭代器。迭代器是连接容器与算法的桥梁，它提供了一种统一的方式来访问和遍历各种容器中的元素，无论这些容器在内存中是如何组织的。
 
@@ -30,7 +29,6 @@
 
 ![](img/6ddd54b810e188f793bbd6c0bf09a40e_18.png)
 
-![](img/6ddd54b810e188f793bbd6c0bf09a40e_20.png)
 
 ![](img/6ddd54b810e188f793bbd6c0bf09a40e_21.png)
 
@@ -49,7 +47,6 @@ for (auto it = words.begin(); it != words.end(); ++it) {
 
 ## 迭代器的类型与操作
 
-![](img/6ddd54b810e188f793bbd6c0bf09a40e_27.png)
 
 STL提供了多种类型的迭代器以适应不同的遍历需求。
 
@@ -128,7 +125,6 @@ try {
 
 ## 流迭代器
 
-![](img/6ddd54b810e188f793bbd6c0bf09a40e_53.png)
 
 迭代器的概念甚至扩展到了输入/输出流。你可以创建 `std::istream_iterator` 来从输入流（如文件或标准输入）中读取数据，就像遍历容器一样。
 

@@ -4,7 +4,6 @@
 
 ---
 
-![](img/ebe7b95db82e7ad3adfc736fabc88c1f_0.png)
 
 ## 什么是Pandas模块？ 🤔
 

@@ -16,7 +16,6 @@ A-Frame是一个基于Three.js和WebGL的Web框架。Three.js是一个流行的�
 
 ![](img/7a2f83583c2eb552671755264b5cf7e4_3.png)
 
-![](img/7a2f83583c2eb552671755264b5cf7e4_4.png)
 
 A-Frame遵循**实体-组件系统（ECS）**架构，拥有丰富的开源组件库。它内置了资源管理系统，支持图像、视频、音频以及3D模型（首选GLTF格式，也支持OBJ/MTL等格式）。
 

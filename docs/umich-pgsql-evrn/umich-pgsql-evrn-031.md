@@ -114,7 +114,6 @@ PostgreSQL 有几种语法来实现类型转换。一种是双冒号 `::`，我�
 
 ## 总结
 
-![](img/e881779dd8dff4fd64d4ee299e597e2b_5.png)
 
 ![](img/e881779dd8dff4fd64d4ee299e597e2b_6.png)
 

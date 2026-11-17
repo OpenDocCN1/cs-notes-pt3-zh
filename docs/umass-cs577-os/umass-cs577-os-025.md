@@ -194,7 +194,6 @@ Docker本质上是Linux容器技术。那如何在macOS或Windows上运行呢？
 
 ![](img/f2a5bd4a6d781eaf4e2a2c405ccc6f15_33.png)
 
-![](img/f2a5bd4a6d781eaf4e2a2c405ccc6f15_31.png)
 
 ## 总结
 

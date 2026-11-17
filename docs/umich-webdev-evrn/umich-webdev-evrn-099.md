@@ -4,9 +4,7 @@
 
 ## 问题：直接响应POST请求的缺陷
 
-![](img/16bf5c019465d9e3b0ea1a484ea7984c_1.png)
 
-![](img/16bf5c019465d9e3b0ea1a484ea7984c_2.png)
 
 上一节我们介绍了模型-视图-控制器（MVC）的基本概念。本节中我们来看看一个直接处理POST请求的代码示例（`guess.php`）所存在的问题。
 
@@ -46,7 +44,6 @@ if (isset($_POST[‘guess’])) {
 
 答案是使用 **`$_SESSION`**（会话）。会话是一种在服务器端存储用户特定数据的机制，可以在同一个用户的不同请求间共享数据。
 
-![](img/16bf5c019465d9e3b0ea1a484ea7984c_4.png)
 
 **数据传递流程如下：**
 1.  在处理POST请求时，将需要传递的数据（如`$message`）存入`$_SESSION`。
@@ -64,9 +61,7 @@ if (isset($_POST[‘guess’])) {
     ```
 4.  使用这些数据来渲染最终的HTML页面。
 
-![](img/16bf5c019465d9e3b0ea1a484ea7984c_6.png)
 
-![](img/16bf5c019465d9e3b0ea1a484ea7984c_8.png)
 
 ## 代码对比：`guess.php` 与 `guess2.php`
 
@@ -80,7 +75,6 @@ if (isset($_POST[‘guess’])) {
 
 以下是`guess2.php`中模型部分的核心逻辑：
 
-![](img/16bf5c019465d9e3b0ea1a484ea7984c_10.png)
 
 ```php
 session_start(); // 启用会话支持
@@ -133,17 +127,12 @@ unset($_SESSION[‘message’]);
 6.  用户看到显示“太低”和之前输入数字“41”的结果页面。
 7.  如果此时用户刷新页面，浏览器只是重复第5步的GET请求，安全且无害。
 
-![](img/16bf5c019465d9e3b0ea1a484ea7984c_12.png)
 
 ## 核心模式总结
 
-![](img/16bf5c019465d9e3b0ea1a484ea7984c_13.png)
 
-![](img/16bf5c019465d9e3b0ea1a484ea7984c_14.png)
 
-![](img/16bf5c019465d9e3b0ea1a484ea7984c_15.png)
 
-![](img/16bf5c019465d9e3b0ea1a484ea7984c_16.png)
 
 本节课中我们一起学习了POST重定向GET（PRG）模式。这是一个在Web开发中至关重要的最佳实践，其通用模式可以总结为以下几步：
 
@@ -153,7 +142,6 @@ unset($_SESSION[‘message’]);
 3.  使用`header(‘Location: …’)`函数**发起一个重定向**（通常是重定向到自身或一个结果页面）。
 4.  立即执行`return`或`exit`，**确保脚本在重定向后停止执行**，避免任何意外的输出。
 
-![](img/16bf5c019465d9e3b0ea1a484ea7984c_18.png)
 
 ![](img/16bf5c019465d9e3b0ea1a484ea7984c_20.png)
 

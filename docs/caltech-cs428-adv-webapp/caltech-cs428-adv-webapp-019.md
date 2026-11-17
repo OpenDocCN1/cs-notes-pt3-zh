@@ -199,7 +199,6 @@ Passport通过序列化和反序列化将用户信息存入会话。我们在配
 
 
 
-![](img/517e2071587e8157cfa6c9556183a85f_86.png)
 
 ```javascript
 // controllers/users.controller.js
@@ -404,7 +403,6 @@ app.use(session({
 SESSION_SECRET=your_secret_word_here
 ```
 
-![](img/517e2071587e8157cfa6c9556183a85f_192.png)
 
 
 ```bash

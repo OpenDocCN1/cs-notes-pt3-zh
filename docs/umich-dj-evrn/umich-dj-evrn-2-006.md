@@ -151,7 +151,6 @@ class OwnerCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 ```
 
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_35.png)
 
 
 **方法解释**：

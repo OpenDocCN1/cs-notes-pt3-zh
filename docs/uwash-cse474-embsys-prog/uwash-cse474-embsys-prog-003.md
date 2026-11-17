@@ -55,7 +55,6 @@ int result = (*funcPtr)(); // 调用函数，等价于 result = funcPtr();
 
 ![](img/7804127c3476870234fc6aca7490479a_11.png)
 
-![](img/7804127c3476870234fc6aca7490479a_13.png)
 
 不允许的操作包括：
 *   两个指针相加。

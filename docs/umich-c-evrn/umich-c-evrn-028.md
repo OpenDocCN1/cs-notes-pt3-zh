@@ -50,7 +50,6 @@ printf("%d\n", pylist_index(lst, "Bob")); // 返回-1表示未找到
 pylist_del(lst);
 ```
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_10.png)
 
 主要区别在于，在C版本中，我们通过函数调用（如 `pylist_append`）来操作列表对象，并且需要手动管理内存（最后调用 `pylist_del`）。此外，查找操作 `pylist_index` 在未找到元素时会返回 `-1`，而不是像Python那样抛出异常。
 
@@ -126,7 +125,6 @@ PList_t *pylist_new(void) {
 
 接下来，我们实现 `pylist_print` 函数，目标是让输出格式与Python列表完全一致，例如：`['hello world', 'catchphrase', 'Brian']`。
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_26.png)
 
 具体要求如下：
 *   以左方括号 `[` 开始。

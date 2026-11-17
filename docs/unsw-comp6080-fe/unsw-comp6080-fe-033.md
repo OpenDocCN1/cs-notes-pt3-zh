@@ -25,7 +25,6 @@ fs.readFile('chapter1.txt', 'utf8', (err, data) => {
 // ... 为 chapter2 到 chapter5 重复类似操作
 ```
 
-![](img/8cd194b9334d8a22b1e7df0aa29617dd_5.png)
 
 ![](img/8cd194b9334d8a22b1e7df0aa29617dd_6.png)
 
@@ -59,7 +58,6 @@ Promise 是 ES6 引入的、旨在更好管理异步操作的概念。与回调�
 
 ![](img/8cd194b9334d8a22b1e7df0aa29617dd_10.png)
 
-![](img/8cd194b9334d8a22b1e7df0aa29617dd_12.png)
 
 **回调版本：**
 ```javascript
@@ -91,7 +89,6 @@ Promise 对象在创建时处于 **pending**（待定）状态。当异步操作
 
 理解如何创建 Promise 有助于深入理解其工作原理。Promise 是基于回调构建的语法糖。
 
-![](img/8cd194b9334d8a22b1e7df0aa29617dd_19.png)
 
 以下是一个将回调式函数包装成 Promise 的示例：
 
@@ -159,7 +156,6 @@ readFilePromise('chapter1.txt', 'utf8')
 
 ## Promise 组合与分支
 
-![](img/8cd194b9334d8a22b1e7df0aa29617dd_35.png)
 
 ![](img/8cd194b9334d8a22b1e7df0aa29617dd_37.png)
 

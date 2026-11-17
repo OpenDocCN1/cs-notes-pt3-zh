@@ -163,7 +163,6 @@ mod tests {
 ### 集成测试
 集成测试位于项目根目录的 `tests/` 文件夹中，它们将你的库作为一个外部crate来测试，主要用于测试公共API。每个文件都是一个独立的crate。
 
-![](img/66df70033965bd765c9c38ca16eddf09_45.png)
 
 
 ---
@@ -193,7 +192,6 @@ Rust的文档注释使用三斜杠 `///`，支持Markdown格式。`cargo doc` �
 
 ![](img/66df70033965bd765c9c38ca16eddf09_72.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_74.png)
 
 ### 编写文档注释
 ```rust

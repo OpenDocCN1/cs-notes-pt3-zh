@@ -53,7 +53,6 @@ aₖ = aₖ₋₂ + 2 * aₖ₋₁
 
 ![](img/d1e4b3d1e0d64399a70dba00aa085eea_23.png)
 
-![](img/d1e4b3d1e0d64399a70dba00aa085eea_24.png)
 
 ### 证明过程
 

@@ -224,7 +224,6 @@ outFile.close();
 
 ---
 
-![](img/c4172b75d9daff1b3143444ea32988f3_72.png)
 
 
 

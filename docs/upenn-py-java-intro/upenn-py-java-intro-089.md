@@ -4,7 +4,6 @@ Python与Java编程入门：第3章第2节：遍历与更新集合 🔄
 
 ---
 
-![](img/3c965bafaba83bfec1f4237aa6f45813_0.png)
 
 上一节我们介绍了集合的基本概念和创建方法。本节中我们来看看如何访问集合中的每一个元素。
 
@@ -20,7 +19,6 @@ for item in A:
 
 同样地，我们也可以遍历另一个集合 `B`。
 
-![](img/3c965bafaba83bfec1f4237aa6f45813_2.png)
 
 以下是遍历集合 `B` 并打印每个元素的代码示例：
 ```python
@@ -30,7 +28,6 @@ for item in B:
 
 ---
 
-![](img/3c965bafaba83bfec1f4237aa6f45813_4.png)
 
 遍历集合让我们能够查看所有内容。接下来，我们将学习如何动态地修改集合的内容。
 
@@ -48,7 +45,6 @@ A.add("new_string")
 B.remove(some_integer)
 ```
 
-![](img/3c965bafaba83bfec1f4237aa6f45813_6.png)
 
 ---
 

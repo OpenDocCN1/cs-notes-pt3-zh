@@ -70,7 +70,6 @@ JavaScript中有一个名为`alert`的函数，你向它传递一个字符串作
 
 2.  **作为HTML标签属性中的事件处理程序**：如上例所示。
 
-![](img/9e1c7e2f87eb865709bee58c75d09b73_5.png)
 
 3.  **从外部文件引入**：就像你把JavaScript放在中间一样，只是你有一个`<script>`和一个`</script>`，然后你说`src=`，然后那个文件里有一些代码。这个文件中的代码是JavaScript，开头没有`<?php`，它只是JavaScript。
     ```html

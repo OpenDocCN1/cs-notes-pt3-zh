@@ -60,7 +60,6 @@ Forwarding https://abc123.ngrok.io -> http://localhost:8888
 
 ### 第四步：测试与提交
 
-![](img/5d814955936c39f2a57056f104da7a90_12.png)
 
 
 ![](img/5d814955936c39f2a57056f104da7a90_14.png)

@@ -95,7 +95,6 @@ MapEntry* HashM_find(HashM* self, char* key, int bucket) {
 
 ![](img/411a95f9b40cfd2bc8391d1c13251770_37.png)
 
-![](img/411a95f9b40cfd2bc8391d1c13251770_38.png)
 
 ### Get 操作
 
@@ -109,7 +108,6 @@ MapEntry* HashM_find(HashM* self, char* key, int bucket) {
 
 
 
-![](img/411a95f9b40cfd2bc8391d1c13251770_44.png)
 
 ### Put 操作
 

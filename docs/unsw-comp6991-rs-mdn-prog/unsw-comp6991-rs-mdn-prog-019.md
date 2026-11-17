@@ -100,15 +100,11 @@ macro_rules! diy_vec {
 
 我们的宏需要维护两个状态：纸带（字节数组）和数据指针（索引）。我们将把它们作为参数传递给宏的递归调用。
 
-![](img/af5f59e7040901394ef4e0eae59f4f7f_19.png)
 
-![](img/af5f59e7040901394ef4e0eae59f4f7f_21.png)
 
 宏的顶层规则将匹配纯Brainfuck代码，初始化状态，然后进入递归处理。
 
-![](img/af5f59e7040901394ef4e0eae59f4f7f_23.png)
 
-![](img/af5f59e7040901394ef4e0eae59f4f7f_25.png)
 
 ```rust
 macro_rules! bf {

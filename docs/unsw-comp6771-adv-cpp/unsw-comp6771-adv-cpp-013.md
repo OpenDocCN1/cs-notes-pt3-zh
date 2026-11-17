@@ -18,17 +18,13 @@
 
 ![](img/3efd6503c9c433ea94f3548f5a7cd7bd_9.png)
 
-![](img/3efd6503c9c433ea94f3548f5a7cd7bd_11.png)
 
 ### 栈内存与堆内存
 
 到目前为止，我们主要使用栈内存。栈资源（如局部变量）在其作用域结束时会被自动销毁。然而，栈内存大小有限，且对象的生命周期受限于其作用域。
 
-![](img/3efd6503c9c433ea94f3548f5a7cd7bd_13.png)
 
-![](img/3efd6503c9c433ea94f3548f5a7cd7bd_14.png)
 
-![](img/3efd6503c9c433ea94f3548f5a7cd7bd_16.png)
 
 ![](img/3efd6503c9c433ea94f3548f5a7cd7bd_18.png)
 
@@ -36,7 +32,6 @@
 
 ![](img/3efd6503c9c433ea94f3548f5a7cd7bd_20.png)
 
-![](img/3efd6503c9c433ea94f3548f5a7cd7bd_21.png)
 
 **示例：创建堆对象**
 ```cpp
@@ -88,7 +83,6 @@ public:
 
 ### 问题：默认析构函数不足
 
-![](img/3efd6503c9c433ea94f3548f5a7cd7bd_33.png)
 
 ![](img/3efd6503c9c433ea94f3548f5a7cd7bd_35.png)
 
@@ -189,7 +183,6 @@ MyVec& operator=(const MyVec& other) {
 
 ![](img/3efd6503c9c433ea94f3548f5a7cd7bd_74.png)
 
-![](img/3efd6503c9c433ea94f3548f5a7cd7bd_76.png)
 
 上一节我们处理了拷贝的问题。但有时我们不需要拷贝，而是想“转移”资源的所有权，这时就需要移动语义。要理解移动，首先需要了解左值(Lvalue)和右值(Rvalue)。
 
@@ -200,17 +193,14 @@ MyVec& operator=(const MyVec& other) {
 
 简单区分：**能取地址的是左值，不能取地址的是右值**。
 
-![](img/3efd6503c9c433ea94f3548f5a7cd7bd_78.png)
 
 ### 移动语义与 `std::move`
 
-![](img/3efd6503c9c433ea94f3548f5a7cd7bd_80.png)
 
 移动语义允许我们将资源（如堆内存）从一个对象“转移”到另一个对象，避免昂贵的深拷贝。它对于像`std::vector`这样持有大量数据的对象尤其高效。
 
 移动构造函数和移动赋值运算符的参数类型是**右值引用** (`T&&`)。
 
-![](img/3efd6503c9c433ea94f3548f5a7cd7bd_82.png)
 
 **示例：移动构造函数**
 ```cpp
@@ -244,9 +234,7 @@ MyVec v2 = std::move(v1); // 调用移动构造函数，v1的资源被转移到v
 
 ---
 
-![](img/3efd6503c9c433ea94f3548f5a7cd7bd_92.png)
 
-![](img/3efd6503c9c433ea94f3548f5a7cd7bd_94.png)
 
 ## RAII：资源获取即初始化
 
@@ -267,7 +255,6 @@ RAII（Resource Acquisition Is Initialization）是一种编程惯用法，其�
 
 ---
 
-![](img/3efd6503c9c433ea94f3548f5a7cd7bd_102.png)
 
 ![](img/3efd6503c9c433ea94f3548f5a7cd7bd_104.png)
 

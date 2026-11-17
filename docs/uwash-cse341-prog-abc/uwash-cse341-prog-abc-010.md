@@ -56,21 +56,16 @@ val it = 2 : int
 
 这表示SML能够正确执行代码。
 
-![](img/b6940bd180c02a9ff5710658b2833d61_1.png)
 
-![](img/b6940bd180c02a9ff5710658b2833d61_2.png)
 
 ## 退出SML
 
-![](img/b6940bd180c02a9ff5710658b2833d61_3.png)
 
 完成测试后，您可以通过以下方式退出SML交互环境：
 - 在Windows上，按`Ctrl + Z`，然后按回车键。
 - 或者，输入`OS.Process.exit(OS.Process.success)`并按回车。
 
-![](img/b6940bd180c02a9ff5710658b2833d61_4.png)
 
-![](img/b6940bd180c02a9ff5710658b2833d61_5.png)
 
 ## 总结
 

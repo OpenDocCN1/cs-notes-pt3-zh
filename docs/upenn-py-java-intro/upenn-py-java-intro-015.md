@@ -2,7 +2,6 @@
 
 在本节课中，我们将要学习Python中最基础的功能之一：使用 `print` 命令向控制台输出信息。我们将从最简单的打印开始，逐步了解如何控制输出的格式。
 
-![](img/5c6c6cabf22c4abfc29ee6ccad60da18_0.png)
 
 ---
 
@@ -12,7 +11,6 @@
 
 我将输入 `print` 和一个消息。
 
-![](img/5c6c6cabf22c4abfc29ee6ccad60da18_2.png)
 
 ```python
 print("Hello")
@@ -22,7 +20,6 @@ print("Hello")
 
 我也可以使用单引号。
 
-![](img/5c6c6cabf22c4abfc29ee6ccad60da18_4.png)
 
 ```python
 print('Hello')
@@ -38,7 +35,6 @@ Python以相同的方式处理它，并将该消息打印到控制台。
 
 上一节我们介绍了如何打印单个字符串，本节中我们来看看如何将多个字符串连接在一起。
 
-![](img/5c6c6cabf22c4abfc29ee6ccad60da18_6.png)
 
 我可以使用 `print` 命令连接或链接字符和字符串。
 
@@ -48,13 +44,11 @@ Python以相同的方式处理它，并将该消息打印到控制台。
 print("Hello", "World")
 ```
 
-![](img/5c6c6cabf22c4abfc29ee6ccad60da18_8.png)
 
 如果我运行它，Python会将它们并排打印在一起，即连接或链接在一起。
 
 输出结果为：`Hello World`。
 
-![](img/5c6c6cabf22c4abfc29ee6ccad60da18_10.png)
 
 ---
 
@@ -62,7 +56,6 @@ print("Hello", "World")
 
 我可以改变 `print` 语句的结束符。
 
-![](img/5c6c6cabf22c4abfc29ee6ccad60da18_12.png)
 
 例如，输入：
 
@@ -77,7 +70,6 @@ print("Brandon")
 
 所以最终输出是：`Good morning Brandon`。
 
-![](img/5c6c6cabf22c4abfc29ee6ccad60da18_14.png)
 
 ---
 
@@ -95,13 +87,11 @@ print("Good night", "Brandon", sep=", ")
 
 所以它会打印 `Good night`，后面跟着 `", "`，然后是 `Brandon`。
 
-![](img/5c6c6cabf22c4abfc29ee6ccad60da18_16.png)
 
 输出结果为：`Good night, Brandon`。
 
 ---
 
-![](img/5c6c6cabf22c4abfc29ee6ccad60da18_18.png)
 
 ## 总结
 

@@ -127,7 +127,6 @@ if __name__ == '__main__':
 
 ![](img/a3dde32a2e306f4b105aa37c943ae8c2_75.png)
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_76.png)
 
 
 

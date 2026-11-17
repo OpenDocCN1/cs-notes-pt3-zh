@@ -10,9 +10,7 @@
 
 ## 什么是HTML？🤔
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_4.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_6.png)
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_7.png)
 
@@ -28,9 +26,7 @@ HTML代表超文本标记语言。它是构成互联网上任何网站的基本�
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_15.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_17.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_19.png)
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_20.png)
 
@@ -58,7 +54,6 @@ HTML代表超文本标记语言。它是构成互联网上任何网站的基本�
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_25.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_26.png)
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_27.png)
 
@@ -92,9 +87,7 @@ HTML代表超文本标记语言。它是构成互联网上任何网站的基本�
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_42.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_44.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_45.png)
 
 **结构示例：**
 ```html
@@ -112,9 +105,7 @@ HTML代表超文本标记语言。它是构成互联网上任何网站的基本�
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_47.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_49.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_50.png)
 
 ---
 
@@ -128,15 +119,11 @@ HTML代表超文本标记语言。它是构成互联网上任何网站的基本�
 
 上一节我们介绍了网页的基本骨架，本节中我们来看看可以在 `<body>` 标签内使用的各种内容标签。这些标签用于定义内容的结构和基本格式。
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_58.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_60.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_61.png)
 
 以下是HTML中一些最常用的布局和格式化标签：
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_63.png)
 
 *   **标题**：`<h1>` 到 `<h6>` 标签用于定义标题，`<h1>` 最大，`<h6>` 最小。它们表示内容的结构层级。
     ```html
@@ -195,21 +182,17 @@ HTML代表超文本标记语言。它是构成互联网上任何网站的基本�
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_71.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_73.png)
 
 ## 链接与媒体 🔗
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_75.png)
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_76.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_77.png)
 
 除了基本的文本和布局，HTML还能轻松地嵌入链接和多媒体内容，让网页变得丰富多彩。
 
 ### 链接（锚点标签）
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_79.png)
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_80.png)
 
@@ -219,13 +202,10 @@ HTML代表超文本标记语言。它是构成互联网上任何网站的基本�
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_84.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_86.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_87.png)
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_88.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_90.png)
 
 **核心属性：**
 *   `href`：指定链接的目标地址（URL）。
@@ -234,13 +214,9 @@ HTML代表超文本标记语言。它是构成互联网上任何网站的基本�
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_92.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_94.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_96.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_97.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_98.png)
 
 **示例：**
 ```html
@@ -260,9 +236,7 @@ HTML代表超文本标记语言。它是构成互联网上任何网站的基本�
 *   `alt`：为图像提供替代文本。如果图像无法加载，将显示此文本。这对可访问性和SEO非常重要。
 *   `width` / `height`：设置图像的宽度和高度（单位是像素）。
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_104.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_106.png)
 
 **示例：**
 ```html
@@ -322,7 +296,6 @@ HTML5引入了原生支持多媒体内容的标签。
 
 表单是网页与用户交互的核心组件，用于收集用户输入的数据，例如登录框、搜索栏、调查问卷等。
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_129.png)
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_131.png)
 
@@ -342,7 +315,6 @@ HTML5引入了原生支持多媒体内容的标签。
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_140.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_142.png)
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_143.png)
 
@@ -390,7 +362,6 @@ HTML5引入了原生支持多媒体内容的标签。
 
 ---
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_151.png)
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_153.png)
 
@@ -402,7 +373,6 @@ HTML5引入了原生支持多媒体内容的标签。
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_158.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_160.png)
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_161.png)
 
@@ -412,11 +382,8 @@ HTML5引入了原生支持多媒体内容的标签。
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_164.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_165.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_167.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_169.png)
 
 1.  **HTML（超文本标记语言）** 是构建网页内容的**结构性**语言。
 2.  **网页浏览器**充当了HTML的“编译器”，将代码渲染成可视化的页面。
@@ -427,7 +394,6 @@ HTML5引入了原生支持多媒体内容的标签。
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_171.png)
 
-![](img/cd248eb9c5afb9a81172ecfcf67a9836_172.png)
 
 ![](img/cd248eb9c5afb9a81172ecfcf67a9836_174.png)
 

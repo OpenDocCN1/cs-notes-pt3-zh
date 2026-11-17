@@ -49,7 +49,6 @@
     INSERT INTO users (name, email, password) VALUES ('Glenn', 'glenn@umich.edu', '456');
     ```
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_5.png)
 
 完成以上步骤后，你的本地数据库中就准备好了可供PDO连接和查询的数据。
 
@@ -68,7 +67,6 @@
 *   **用户名**：用于连接数据库的账户名。
 *   **密码**：对应用户的密码。
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_10.png)
 
 以下代码展示了如何建立连接：
 
@@ -121,7 +119,6 @@ while ( $row = $stmt->fetch(PDO::FETCH_ASSOC) ) {
     *   当没有更多行可获取时，`fetch()` 返回 `false`，循环结束。
 3.  `print_r($row)` 打印出每一行的数据。
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_21.png)
 
 运行这段代码，你将看到两个用户的详细信息以数组形式输出。
 

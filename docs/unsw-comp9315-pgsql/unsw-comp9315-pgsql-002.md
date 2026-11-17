@@ -6,7 +6,6 @@
 
 上一节我们介绍了课程的基本信息，本节中我们来看看考试的相关安排。
 
-![](img/4f62a9814ebbb8df757bc3db182beef9_1.png)
 
 考试期间，考生不能携带个人笔记或任何纸质材料。课程致力于无纸化，因此考试中的所有资料都将显示在屏幕上。目前屏幕上可能只显示部分内容（A），但所有必要的资料都将在学期结束前提供，以便学生充分理解。如果在考试中遇到不确定的问题，可以查阅这些笔记以获取帮助。
 
@@ -39,7 +38,6 @@ CREATE DOMAIN Wch AS float
     CHECK (VALUE >= 0.0 AND VALUE <= 100.0);
 ```
 
-![](img/4f62a9814ebbb8df757bc3db182beef9_3.png)
 
 此代码定义了一个名为 `Wch` 的新域，它基于 `float` 类型，但约束其值必须在0到100之间。随后，我们可以在定义表属性时使用这个类型：
 
@@ -65,7 +63,6 @@ CREATE TABLE Students (
 
 首先，连接到PostgreSQL（命令是 `psql`）：
 
-![](img/4f62a9814ebbb8df757bc3db182beef9_5.png)
 
 ```bash
 psql
@@ -83,46 +80,36 @@ CREATE TABLE R (x INTEGER, y INTEGER);
 \dt
 ```
 
-![](img/4f62a9814ebbb8df757bc3db182beef9_7.png)
 
-![](img/4f62a9814ebbb8df757bc3db182beef9_8.png)
 
-![](img/4f62a9814ebbb8df757bc3db182beef9_9.png)
 
 此命令会列出所有表，其中应包含刚创建的 `R` 表及其所有者信息。要查看表的详细结构（即元数据），可以使用：
 
-![](img/4f62a9814ebbb8df757bc3db182beef9_11.png)
 
 ```sql
 \d R
 ```
 
-![](img/4f62a9814ebbb8df757bc3db182beef9_13.png)
 
 这将显示表 `R` 包含两个整数列 `x` 和 `y`。这些列名和类型的信息同样被存储在系统目录中。
 
-![](img/4f62a9814ebbb8df757bc3db182beef9_15.png)
 
 因此，**DDL语句主要影响系统目录**。
 
 ## 数据操作语言（DML）与数据影响 📝
 
-![](img/4f62a9814ebbb8df757bc3db182beef9_17.png)
 
 除了DDL，另一类重要的语句是数据操作语言（DML），用于改变表中的实际数据，主要包括插入（`INSERT`）、更新（`UPDATE`）和删除（`DELETE`）。
 
-![](img/4f62a9814ebbb8df757bc3db182beef9_19.png)
 
 例如：
 *   `INSERT INTO Students VALUES (1234, 'John Doe', 2.5);` （插入单行）
 *   `UPDATE Students SET wave_height = 5.0 WHERE id = 1234;` （更新单行或多行）
 *   `DELETE FROM Enrollments WHERE student_id = 1234;` （删除一行或多行）
 
-![](img/4f62a9814ebbb8df757bc3db182beef9_21.png)
 
 DML语句的执行会直接影响表中的数据。如果这些表上建有索引，那么相应的索引也会被更新以保持一致性。执行后，PostgreSQL会返回一个状态信息。
 
-![](img/4f62a9814ebbb8df757bc3db182beef9_23.png)
 
 让我们回到之前创建的 `R` 表进行操作：
 
@@ -134,15 +121,12 @@ INSERT INTO R VALUES (10, 20);
 
 现在，可以查看表中的数据：
 
-![](img/4f62a9814ebbb8df757bc3db182beef9_25.png)
 
-![](img/4f62a9814ebbb8df757bc3db182beef9_27.png)
 
 ```sql
 SELECT * FROM R;
 ```
 
-![](img/4f62a9814ebbb8df757bc3db182beef9_29.png)
 
 我们也可以删除数据：
 

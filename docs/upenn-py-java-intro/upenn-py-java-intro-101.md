@@ -4,7 +4,6 @@
 
 ## 概述
 
-![](img/28bf1053f8034d8d2b01ae4a918c3c83_1.png)
 
 我们将创建一个名为 `open_read_file` 的函数。该函数接收一个文件名作为参数，执行以下操作：以读取模式打开文件，逐行读取内容并打印到控制台，同时统计文件的总行数，最后安全地关闭文件。通过这个练习，你将掌握Python中处理文件的基本方法。
 
@@ -38,7 +37,6 @@ def open_read_file(filename):
 
 对应的代码如下：
 
-![](img/28bf1053f8034d8d2b01ae4a918c3c83_3.png)
 
 ```python
     count = 0
@@ -49,7 +47,6 @@ def open_read_file(filename):
         count += 1
 ```
 
-![](img/28bf1053f8034d8d2b01ae4a918c3c83_5.png)
 
 循环结束后，我们打印出文件的总行数。
 
@@ -75,14 +72,12 @@ if __name__ == "__main__":
     main()
 ```
 
-![](img/28bf1053f8034d8d2b01ae4a918c3c83_7.png)
 
 运行程序后，控制台将依次输出：
 1.  文件流对象的类型（例如 `<class ‘_io.TextIOWrapper’>`）。
 2.  文件 `news.txt` 的每一行内容。
 3.  文件的总行数统计（例如 “There are 10 lines in the file.”）。
 
-![](img/28bf1053f8034d8d2b01ae4a918c3c83_9.png)
 
 ## 总结
 

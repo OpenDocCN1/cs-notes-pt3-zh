@@ -77,7 +77,6 @@ Shell是一个交互式的命令行解释器，它充当用户与操作系统之
 
 ![](img/43973a594c4db352c4ebead54b15caa1_2.png)
 
-![](img/43973a594c4db352c4ebead54b15caa1_3.png)
 
 ### 测试工具
 

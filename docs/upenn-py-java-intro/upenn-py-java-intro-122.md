@@ -6,7 +6,6 @@
 
 布尔索引的核心思想是：首先创建一个布尔序列（Series），其中每个元素的值是`True`或`False`。然后，将这个布尔序列与数据框进行比较，从而筛选出满足条件的记录。接下来，我们将通过几个具体的例子来详细讲解这个过程。
 
-![](img/5d9353a9cc05dbab9537955d56b2c3cb_1.png)
 
 ## 创建布尔条件序列
 
@@ -37,7 +36,6 @@ pits  # 输出：一个由True和False值组成的序列
 
 ## 应用布尔索引筛选数据
 
-![](img/5d9353a9cc05dbab9537955d56b2c3cb_3.png)
 
 现在，我们想用这个布尔序列来过滤数据框本身。
 
@@ -58,7 +56,6 @@ df[pits]
 
 以下是具体步骤：
 
-![](img/5d9353a9cc05dbab9537955d56b2c3cb_5.png)
 
 ```python
 # 创建条件：名称为“The Dragon Chinese Cuisine”
@@ -100,7 +97,6 @@ df[cat0_bars | cat1_bars]
 
 这段代码会返回那些`category0`或`category1`中任意一列被标记为“bars”的企业。
 
-![](img/5d9353a9cc05dbab9537955d56b2c3cb_7.png)
 
 现在，我们想进一步筛选出位于卡内基市（Carnegie）的酒吧。
 
@@ -147,7 +143,6 @@ df[(cat0_in_list | cat1_in_list) & carnegie]
 
 ## 总结
 
-![](img/5d9353a9cc05dbab9537955d56b2c3cb_9.png)
 
 本节课中，我们一起学习了如何使用布尔索引在Pandas数据框中进行高效的数据查询。我们掌握了以下核心技能：
 

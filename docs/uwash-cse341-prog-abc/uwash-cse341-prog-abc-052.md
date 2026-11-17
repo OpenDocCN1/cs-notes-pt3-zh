@@ -14,7 +14,6 @@
 
 ---
 
-![](img/859f02438a2d8b62b09e5e77a73e009f_1.png)
 
 ![](img/859f02438a2d8b62b09e5e77a73e009f_1.png)
 
@@ -102,7 +101,6 @@ fun triple_n_times (n, x) = n_times (triple, n, x)
 
 ---
 
-![](img/859f02438a2d8b62b09e5e77a73e009f_3.png)
 
 ![](img/859f02438a2d8b62b09e5e77a73e009f_3.png)
 

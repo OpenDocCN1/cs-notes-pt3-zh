@@ -40,7 +40,6 @@ int (*fp)(char, int, double);
 void (*task_ptr)();
 ```
 
-![](img/1dfef496b16c0c5ccca9bf1a9c1b2899_7.png)
 
 我们可以编写一个函数来启动由函数指针指示的任何任务：
 ```c
@@ -50,9 +49,7 @@ void start_task(void (*task_ptr)()) {
 ```
 虽然直接调用函数也能实现，但将函数指针存储在列表中并遍历执行会更有趣。
 
-![](img/1dfef496b16c0c5ccca9bf1a9c1b2899_9.png)
 
-![](img/1dfef496b16c0c5ccca9bf1a9c1b2899_11.png)
 
 ![](img/1dfef496b16c0c5ccca9bf1a9c1b2899_13.png)
 
@@ -60,7 +57,6 @@ void start_task(void (*task_ptr)()) {
 
 为了演示调度概念，我们构建了一个简单的Arduino模拟器。它通过全局变量模拟硬件状态，并在终端输出结果。
 
-![](img/1dfef496b16c0c5ccca9bf1a9c1b2899_15.png)
 
 以下是模拟器的核心全局变量，用于模拟时间、LED状态和IO引脚：
 ```c
@@ -71,13 +67,10 @@ int io_pin_states[10];
 
 模拟器提供了设置引脚、读取引脚状态和输出当前状态等基本功能。
 
-![](img/1dfef496b16c0c5ccca9bf1a9c1b2899_17.png)
 
-![](img/1dfef496b16c0c5ccca9bf1a9c1b2899_19.png)
 
 ## 基础任务循环
 
-![](img/1dfef496b16c0c5ccca9bf1a9c1b2899_21.png)
 
 我们首先实现一个基础的任务循环，其中硬编码了两个任务。
 
@@ -115,7 +108,6 @@ void task_b() {
 
 为了使调度更灵活，我们使用函数指针数组来管理任务。
 
-![](img/1dfef496b16c0c5ccca9bf1a9c1b2899_23.png)
 
 首先，声明一个函数指针数组并初始化：
 ```c
@@ -142,9 +134,7 @@ void loop() {
 
 ## 实现任务延迟
 
-![](img/1dfef496b16c0c5ccca9bf1a9c1b2899_25.png)
 
-![](img/1dfef496b16c0c5ccca9bf1a9c1b2899_27.png)
 
 接下来，我们实现一个 `sleep` 功能，允许任务主动延迟执行。
 
@@ -204,13 +194,11 @@ void task_a() {
 
 **核心提示**：考虑将复杂任务（如驱动数码管）分解为多个子任务（如数字转换、段选、位扫描），这会使调度和代码结构更清晰。
 
-![](img/1dfef496b16c0c5ccca9bf1a9c1b2899_35.png)
 
 ![](img/1dfef496b16c0c5ccca9bf1a9c1b2899_37.png)
 
 ## 总结
 
-![](img/1dfef496b16c0c5ccca9bf1a9c1b2899_39.png)
 
 ![](img/1dfef496b16c0c5ccca9bf1a9c1b2899_41.png)
 

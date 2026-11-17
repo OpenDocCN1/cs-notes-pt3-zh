@@ -20,7 +20,6 @@
 
 ![](img/9df7b47ae5867e5d643e05a5c32bae1b_2.png)
 
-![](img/9df7b47ae5867e5d643e05a5c32bae1b_3.png)
 
 ## 深入Codespaces环境 ☁️
 

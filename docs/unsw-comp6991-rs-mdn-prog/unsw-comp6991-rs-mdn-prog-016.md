@@ -164,7 +164,6 @@ pub fn get(&self, index: usize) -> Option<&T> {
 1.  **析构元素**：遍历所有有效元素（0 到 `size`），使用 `std::ptr::drop_in_place` 显式调用每个元素的析构器。
 2.  **释放内存**：使用 `std::alloc::dealloc` 释放整个内存块。
 
-![](img/f64999e9bb3be52c75cf9a34aa5850b1_21.png)
 
 ![](img/f64999e9bb3be52c75cf9a34aa5850b1_22.png)
 
@@ -236,13 +235,9 @@ FFI 允许 Rust 程序与 C 库在同一进程中交互，这非常强大但也�
 首先，需要在Rust中声明C库提供的函数和类型。这通过 `extern` 块完成。
 
 
-![](img/f64999e9bb3be52c75cf9a34aa5850b1_41.png)
 
-![](img/f64999e9bb3be52c75cf9a34aa5850b1_43.png)
 
-![](img/f64999e9bb3be52c75cf9a34aa5850b1_45.png)
 
-![](img/f64999e9bb3be52c75cf9a34aa5850b1_47.png)
 
 
 ![](img/f64999e9bb3be52c75cf9a34aa5850b1_49.png)

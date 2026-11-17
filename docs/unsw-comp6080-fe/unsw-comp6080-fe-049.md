@@ -14,7 +14,6 @@ React不仅是一个构建用户界面的框架，更应致力于构建**优秀*
 
 ---
 
-![](img/03a2b8446d64abda3de52228d31a3d13_3.png)
 
 ## 创建新的React应用
 
@@ -52,7 +51,6 @@ function App() {
 
 实际上，我们无需单独定义样式变量，可以直接在行内定义对象。这种技术被称为**内联样式**。
 
-![](img/03a2b8446d64abda3de52228d31a3d13_7.png)
 
 ```javascript
 function App() {
@@ -70,7 +68,6 @@ function App() {
 
 在JSX中，我们使用`className`属性来替代HTML的`class`属性。它接受一个字符串，用于指定类名。
 
-![](img/03a2b8446d64abda3de52228d31a3d13_9.png)
 
 ```javascript
 function App() {
@@ -124,7 +121,6 @@ function App() {
 
 ---
 
-![](img/03a2b8446d64abda3de52228d31a3d13_15.png)
 
 ## 混合使用类名和内联样式
 
@@ -180,7 +176,6 @@ function App() {
 
 ---
 
-![](img/03a2b8446d64abda3de52228d31a3d13_21.png)
 
 ## 总结
 

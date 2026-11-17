@@ -111,7 +111,6 @@ var lastName = “Charnasky”; // 编译器推断为 string
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_78.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_80.png)
 
 
 以下是获取用户输入并计算的示例：
@@ -130,7 +129,6 @@ Console.WriteLine($“Go eat your {servingsOfSalad} servings of salad.”);
 
 
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_94.png)
 
 
 

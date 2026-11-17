@@ -67,9 +67,7 @@ const countLabel = document.getElementById(‘count‘);
 > const countLabel = document.getElementById(‘count‘)!; // 确信元素存在
 > ```
 
-![](img/657b6eecf90b35fbd942ccc232198d7b_1.png)
 
-![](img/657b6eecf90b35fbd942ccc232198d7b_3.png)
 
 获取到元素后，我们可以修改它的属性来动态改变网页内容。例如，修改元素的 `innerHTML` 属性可以改变其显示的文本。
 
@@ -82,9 +80,7 @@ countLabel.innerHTML = ‘8‘;
 
 现在我们已经可以获取并修改元素了，下一步是让代码在用户交互（事件）发生时自动运行。这通过为元素添加**事件监听器**来实现。
 
-![](img/657b6eecf90b35fbd942ccc232198d7b_5.png)
 
-![](img/657b6eecf90b35fbd942ccc232198d7b_6.png)
 
 `addEventListener` 方法用于为元素绑定特定事件和对应的处理函数。它接受两个主要参数：
 1.  事件名称（字符串），例如 `‘click‘`。
@@ -106,9 +102,7 @@ incrementButton.addEventListener(‘click‘, () => {
 
 让我们结合所学，创建一个点击按钮会增加数字的计数器。
 
-![](img/657b6eecf90b35fbd942ccc232198d7b_8.png)
 
-![](img/657b6eecf90b35fbd942ccc232198d7b_10.png)
 
 1.  **HTML结构**：
     ```html

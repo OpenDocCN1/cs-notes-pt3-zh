@@ -59,9 +59,7 @@
 3.  Web服务器收到请求后进行一些处理。
 4.  服务器向你的浏览器返回一个HTTP**响应**，其中包含你请求的资源（如HTML文档）。
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_18.png)
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_20.png)
 
 这个过程与在餐厅点餐类似：你是顾客（客户端），向服务员（服务器）提出请求，服务员处理后为你提供食物（响应）。
 
@@ -71,9 +69,7 @@
 
 ## 引入Express：一个Node.js Web服务器库
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_22.png)
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_23.png)
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_25.png)
 
@@ -85,7 +81,6 @@
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_28.png)
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_30.png)
 
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_32.png)
@@ -95,7 +90,6 @@
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_36.png)
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_38.png)
 
 ```javascript
 import express from 'express';
@@ -115,7 +109,6 @@ app.listen(port, () => {
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_40.png)
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_41.png)
 
 1.  `import express from 'express';`
     *   导入Express库。
@@ -145,9 +138,7 @@ app.listen(port, () => {
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_47.png)
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_49.png)
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_51.png)
 
 当你运行上述代码时，服务器并不会像普通脚本一样执行完就退出。它会**持续运行**，就像一个在岗待命的服务员，循环等待客户的请求，直到你手动终止它（例如按 `Ctrl+C`）。
 
@@ -160,32 +151,26 @@ app.listen(port, () => {
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_54.png)
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_55.png)
 
 **重要提示：开发环境的隔离性**
 当你在VLab或自己的开发机上运行这个Express服务器时，它**仅运行在该台具体的计算机上**，并没有自动发布到公共互联网。因此：
 *   只有连接到**同一台计算机**（例如，同一个VLab服务器实例，如 `vx8`）的其他用户，才能通过 `localhost:端口号` 访问你的服务器。
 *   你在家用电脑的浏览器里输入 `localhost:3000`，访问的是你自己电脑上的服务，**无法**访问到运行在VLab上的服务器。
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_57.png)
 
 ---
 
 ## 端口冲突与解决方案
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_59.png)
 
 由于端口是计算机上的共享资源，可能会发生**端口冲突**。例如，如果你在VLab的 `vx8` 机器上运行服务器在端口 `2022`，而另一位同学也登录到 `vx8` 并试图在同一个端口 `2022` 上启动他的服务器，他就会收到“地址已被占用”的错误。
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_60.png)
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_62.png)
 
 **解决方法很简单：更改端口号。** 只需将代码中的 `const port = 2022;` 改为另一个未被占用的数字（例如 `3022`、`4000`）即可。在开发中，这是一个常见且容易解决的问题。
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_64.png)
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_65.png)
 
 ---
 
@@ -195,19 +180,14 @@ app.listen(port, () => {
 
 ## 扩展服务器：定义多个路由
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_71.png)
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_73.png)
 
 Express的强大之处在于可以轻松定义多个路由来处理不同的URL请求。以下是如何扩展我们的服务器：
 
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_75.png)
-
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_76.png)
 
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_78.png)
+
 
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_80.png)
@@ -227,7 +207,6 @@ app.get('/oh/my/god/why/is/this/url/so/long', (req, res) => {
 });
 ```
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_82.png)
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_84.png)
 
@@ -237,35 +216,26 @@ app.get('/oh/my/god/why/is/this/url/so/long', (req, res) => {
 *   `http://localhost:3000/1/2` -> 返回 “2”
 *   `http://localhost:3000/oh/my/god/why/is/this/url/so/long` -> 返回 “You found the long URL!”
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_86.png)
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_88.png)
 
 这展示了如何根据不同的URL路径提供不同的内容，这是构建Web应用API的基础。
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_90.png)
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_92.png)
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_94.png)
 
 ---
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_96.png)
 
 ![](img/5235cb1364d5cbf0d954368cf2cfbc52_98.png)
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_99.png)
 
 ## 总结
 
 本节课我们一起学习了以下核心内容：
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_101.png)
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_102.png)
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_104.png)
 
 1.  **概念区分**：理解了**网络**、**互联网**和**万维网**之间的关系。
 2.  **网络协议**：知道了HTTP协议是万维网的专用通信协议。
@@ -274,7 +244,6 @@ app.get('/oh/my/god/why/is/this/url/so/long', (req, res) => {
 5.  **关键术语**：明白了 **`localhost`**（本地主机）和 **端口** 的含义及其在开发中的作用。
 6.  **路由定义**：学会了如何使用 `app.get()` 为不同的URL路径定义处理逻辑。
 
-![](img/5235cb1364d5cbf0d954368cf2cfbc52_106.png)
 
 简而言之，一个Web服务器就是一个运行在特定计算机、监听特定端口的程序，它接收HTTP请求，并根据请求的URL等信息返回HTTP响应。Express让我们能够用JavaScript轻松地编写这样的程序。
 

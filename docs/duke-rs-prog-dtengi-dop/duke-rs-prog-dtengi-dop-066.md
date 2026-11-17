@@ -135,7 +135,6 @@ clean:
 ```
 
 
-![](img/0d7668fa5f028db97979edceec7ca078_8.png)
 
 ## 本地测试应用
 

@@ -75,7 +75,6 @@ if self.head is None:
 
 在遍历树寻找插入位置时，我们使用 `cur` 指针从根节点开始移动，并不断更新 `largest_less` 和 `smallest_greater`。
 
-![](img/f75089e0e62249d89e111e6af2a5fa6a_26.png)
 
 *   如果 `cur.key > new_key`，则向左子树移动，并更新 `smallest_greater = cur`。
 *   如果 `cur.key < new_key`，则向右子树移动，并更新 `largest_less = cur`。

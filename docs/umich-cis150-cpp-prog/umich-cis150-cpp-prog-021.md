@@ -54,7 +54,6 @@
 以下是一个简单的递归函数，用于实现倒计时：
 
 
-![](img/378e864be2b879a79d97ccd9ee77daf4_31.png)
 
 ```cpp
 void countdown(int number) {
@@ -69,7 +68,6 @@ void countdown(int number) {
 调用 `countdown(5)` 会输出：`5 4 3 2 1 Blast off!`。在调试时，你可以在调用堆栈中看到一系列 `countdown` 函数的调用，每个调用都有其独立的 `number` 参数值。
 
 
-![](img/378e864be2b879a79d97ccd9ee77daf4_35.png)
 
 
 ### 斐波那契数列示例

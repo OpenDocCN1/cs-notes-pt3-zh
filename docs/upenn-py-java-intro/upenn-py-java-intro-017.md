@@ -34,11 +34,8 @@ result = 2 ** 3  # result 的值为 8
 result = 7 % 5  # result 的值为 2
 ```
 
-![](img/dc8bb54de0c45fd56e8fc7d51263350a_1.png)
 
-![](img/dc8bb54de0c45fd56e8fc7d51263350a_1.png)
 
-![](img/dc8bb54de0c45fd56e8fc7d51263350a_2.png)
 
 ![](img/dc8bb54de0c45fd56e8fc7d51263350a_2.png)
 

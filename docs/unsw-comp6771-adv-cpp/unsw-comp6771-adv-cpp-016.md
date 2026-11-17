@@ -2,7 +2,6 @@
 
 ![](img/21104176e331387dea78d85347debcac_1.png)
 
-![](img/21104176e331387dea78d85347debcac_2.png)
 
 ![](img/21104176e331387dea78d85347debcac_4.png)
 
@@ -11,7 +10,6 @@
 
 ![](img/21104176e331387dea78d85347debcac_6.png)
 
-![](img/21104176e331387dea78d85347debcac_7.png)
 
 ![](img/21104176e331387dea78d85347debcac_9.png)
 
@@ -100,9 +98,7 @@ for (auto it = v.begin(); it != v.end(); ++it) {
 ### 容器结构定义
 首先，我们定义容器本身及其内部节点。
 
-![](img/21104176e331387dea78d85347debcac_52.png)
 
-![](img/21104176e331387dea78d85347debcac_54.png)
 
 ```cpp
 class IntStack {
@@ -122,7 +118,6 @@ public:
 };
 ```
 
-![](img/21104176e331387dea78d85347debcac_56.png)
 
 ![](img/21104176e331387dea78d85347debcac_58.png)
 
@@ -131,11 +126,9 @@ public:
 
 ![](img/21104176e331387dea78d85347debcac_60.png)
 
-![](img/21104176e331387dea78d85347debcac_62.png)
 
 以下是`IntStack::iterator`的核心实现：
 
-![](img/21104176e331387dea78d85347debcac_64.png)
 
 ![](img/21104176e331387dea78d85347debcac_66.png)
 
@@ -284,9 +277,7 @@ for (int val : s) {
 *   **双向迭代器**：在前向迭代器基础上，增加反向移动能力。需要：额外支持 `--` 和 `--(int)`。
 *   **随机访问迭代器**：提供像指针一样的随机访问能力。需要：额外支持 `+`, `-`, `+=`, `-=`, `<`, `>`, `<=`, `>=`, `[]`。
 
-![](img/21104176e331387dea78d85347debcac_105.png)
 
-![](img/21104176e331387dea78d85347debcac_107.png)
 
 ![](img/21104176e331387dea78d85347debcac_109.png)
 
@@ -294,9 +285,7 @@ for (int val : s) {
 
 我们的`IntStack::iterator`是一个**前向迭代器**。如果要升级为**双向迭代器**，需要修改数据结构为双向链表，并为迭代器添加递减操作符。
 
-![](img/21104176e331387dea78d85347debcac_113.png)
 
-![](img/21104176e331387dea78d85347debcac_115.png)
 
 ---
 
@@ -304,11 +293,9 @@ for (int val : s) {
 
 ![](img/21104176e331387dea78d85347debcac_119.png)
 
-![](img/21104176e331387dea78d85347debcac_121.png)
 
 ## 总结
 
-![](img/21104176e331387dea78d85347debcac_123.png)
 
 ![](img/21104176e331387dea78d85347debcac_125.png)
 

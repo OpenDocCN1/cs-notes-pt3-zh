@@ -23,7 +23,6 @@ decltype(i) x; // x 的类型是 int
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_5.png)
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_6.png)
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_8.png)
 
@@ -31,11 +30,9 @@ decltype(i) x; // x 的类型是 int
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_10.png)
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_12.png)
 
 `decltype`的规则较为复杂，其结果取决于传入表达式的种类。以下是核心规则摘要：
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_14.png)
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_16.png)
 
@@ -56,7 +53,6 @@ decltype(j) b = i; // b 是 int&，必须初始化
 // decltype(k) c; // k 是 int&&，规则类似
 ```
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_20.png)
 
 那么，`decltype`的实际用途是什么？一个典型的场景是在编写泛型函数时确定返回类型。
 
@@ -66,7 +62,6 @@ decltype(j) b = i; // b 是 int&，必须初始化
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_24.png)
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_25.png)
 
 ```cpp
 // 旧的写法（在某些上下文中无效）
@@ -89,7 +84,6 @@ auto find(Iterator begin, Iterator end, int index) -> decltype(*begin) {
 
 上一节我们介绍了`decltype`，本节中我们来看看类型转换。类型转换与昨天学习的类型特征（type traits）原理相似，但侧重点不同。类型特征用于查询类型的属性（例如`is_void`, `is_pointer`），而类型转换则专注于**将一个类型转换为另一个相关的类型**。
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_27.png)
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_29.png)
 
@@ -99,7 +93,6 @@ auto find(Iterator begin, Iterator end, int index) -> decltype(*begin) {
 
 **代码示例：**
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_33.png)
 
 ```cpp
 #include <type_traits>
@@ -121,7 +114,6 @@ int main() {
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_37.png)
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_38.png)
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_40.png)
 
@@ -129,19 +121,13 @@ int main() {
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_42.png)
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_44.png)
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_46.png)
 
 ---
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_48.png)
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_50.png)
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_52.png)
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_54.png)
 
 ## 绑定
 
@@ -151,7 +137,6 @@ int main() {
 
 以下是核心绑定规则：
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_56.png)
 
 *   **左值引用 (`T&`)**：只能绑定到左值。
 *   **常量左值引用 (`const T&`)**：可以绑定到左值、常量左值和右值。这是它非常实用的原因。
@@ -177,7 +162,6 @@ int main() {
 ```
 理解这些规则有助于编写更通用和高效的函数。例如，使用`const T&`作为参数可以使函数接受更广泛的输入。
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_58.png)
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_60.png)
 
@@ -216,13 +200,10 @@ int main() {
 
 **简单来说：只要其中有一个是左值引用 (`&`)，结果就是左值引用 (`&`)；只有两者都是右值引用 (`&&`) 时，结果才是右值引用 (`&&`)。**
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_80.png)
 
 **代码示例：**
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_82.png)
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_84.png)
 
 ```cpp
 using int_lref = int&;
@@ -245,15 +226,12 @@ int_rref&& d = ...; // 类型为 int&& (规则4)
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_91.png)
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_93.png)
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_95.png)
 
 ## 标准转发 (`std::forward`)
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_97.png)
 
-![](img/e82bc31b31dc2045370c217ef829b1b7_99.png)
 
 ![](img/e82bc31b31dc2045370c217ef829b1b7_101.png)
 

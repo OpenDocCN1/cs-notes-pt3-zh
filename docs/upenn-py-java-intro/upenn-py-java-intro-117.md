@@ -8,7 +8,6 @@
 
 首先，我们需要导入Pandas库，并使用其`ExcelFile`类来加载整个Yelp Excel文件。
 
-![](img/386cb22e046c744684e79111efee2525_1.png)
 
 ```python
 import pandas as pd
@@ -17,7 +16,6 @@ yelp_file = pd.ExcelFile('yelp_data.xlsx')
 
 ---
 
-![](img/386cb22e046c744684e79111efee2525_3.png)
 
 ## 读取数据到DataFrame
 
@@ -29,13 +27,11 @@ df = yelp_file.parse('Yelp Data')
 
 我们可以看到`df`的类型是一个`DataFrame`。
 
-![](img/386cb22e046c744684e79111efee2525_5.png)
 
 ---
 
 ## 查看数据的基本信息
 
-![](img/386cb22e046c744684e79111efee2525_7.png)
 
 我们可以获取数据框的行数，并通过访问`shape`属性来获取行和列的数量。
 
@@ -46,7 +42,6 @@ rows, columns = df.shape
 
 以下是获取每列中非空值数量的方法：
 
-![](img/386cb22e046c744684e79111efee2525_9.png)
 
 ```python
 value_counts = df.count()
@@ -54,13 +49,11 @@ value_counts = df.count()
 
 你可以通过访问`columns`属性来查看列标题。
 
-![](img/386cb22e046c744684e79111efee2525_11.png)
 
 ```python
 column_headers = df.columns
 ```
 
-![](img/386cb22e046c744684e79111efee2525_12.png)
 
 通过访问`dtypes`属性，可以获取每列存储的数据类型。
 
@@ -72,7 +65,6 @@ data_types = df.dtypes
 
 ## 获取数据的统计摘要
 
-![](img/386cb22e046c744684e79111efee2525_14.png)
 
 `describe`方法为数据框中的数值提供了各种汇总统计信息。
 
@@ -84,7 +76,6 @@ summary_statistics = df.describe()
 
 ## 查看数据的前几行
 
-![](img/386cb22e046c744684e79111efee2525_16.png)
 
 `head`方法默认显示数据的前五行。如果你提供一个参数，它将显示给定数量的行。例如，以下代码显示前100行数据。
 
@@ -98,13 +89,11 @@ first_100_rows = df.head(100)
 
 你可以使用`drop_duplicates`方法从数据框中删除重复项。默认情况下，此方法会查看所有列以识别并删除数据中的重复行。
 
-![](img/386cb22e046c744684e79111efee2525_18.png)
 
 ```python
 df_no_duplicates = df.drop_duplicates()
 ```
 
-![](img/386cb22e046c744684e79111efee2525_19.png)
 
 ---
 

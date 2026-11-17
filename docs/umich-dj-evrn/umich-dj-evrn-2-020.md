@@ -224,7 +224,6 @@ class CreateForm(forms.ModelForm):
 
 
 
-![](img/a1805a9eacddcae358ce378cd48505b8_14.png)
 
 ```html
 <!-- form.html -->

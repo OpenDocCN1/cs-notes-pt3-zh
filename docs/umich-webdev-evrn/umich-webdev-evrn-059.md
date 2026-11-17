@@ -102,7 +102,6 @@ INSERT INTO users (name, email) VALUES ('Caitlin', 'cait@umich.edu');
 
 当你向这样的结构中插入数据时（比如插入4），数据库需要将其放入正确的块（A块）。如果A块满了，它可能会进行“分裂”（Split），将A块分成两部分，并更新索引中的指针。虽然你不需要了解这些具体细节（这是计算机科学家解决的问题），但你需要知道B树适用于需要排序和前缀匹配的数据，尤其是字符串。
 
-![](img/2b43516abacf53e5bc0d36317c8b11fc_18.png)
 
 ## 哈希索引的工作原理
 
@@ -112,7 +111,6 @@ INSERT INTO users (name, email) VALUES ('Caitlin', 'cait@umich.edu');
 
 ## 索引的创建与调整
 
-![](img/2b43516abacf53e5bc0d36317c8b11fc_20.png)
 
 哈希和B树是两种不同的索引类型。正如我们开始时看到的，我们可以在创建表时指定希望在哪些列上建立什么类型的索引。这只是一个提示，并不改变你使用的SQL语法。
 

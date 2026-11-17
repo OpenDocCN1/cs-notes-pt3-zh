@@ -1,6 +1,5 @@
 # 112：可变对与 MCons 单元 🧩
 
-![](img/7d6ca30fbc3682cea34f7dc79dc2f00a_1.png)
 
 在本节课中，我们将学习 Racket 中的可变数据结构。我们将了解为什么标准的 `cons` 单元是不可变的，以及如何通过 `mcons` 单元来创建可以修改其内容的数据结构。理解这两种类型的区别对于编写高效且意图清晰的程序至关重要。
 
@@ -18,7 +17,6 @@
 
 首先需要明确的是，`set!` 操作符**并不能**修改 `cons` 单元的内容。它只能改变一个变量（标识符）所绑定的值。
 
-![](img/7d6ca30fbc3682cea34f7dc79dc2f00a_3.png)
 
 以下是一个示例：
 ```racket
@@ -30,7 +28,6 @@
 
 如果我们希望 `x` 和 `y` 共享的同一个数据结构内部能被修改，这在标准的 `cons` 单元上是无法实现的。Racket 的前身 Scheme 提供了 `set-car!` 和 `set-cdr!` 来做到这一点，但 Racket 为了保持不可变性的优势，**没有**提供这些操作。
 
-![](img/7d6ca30fbc3682cea34f7dc79dc2f00a_5.png)
 
 ## 引入 MCons 单元
 
@@ -48,14 +45,10 @@
 
 让我们看一个例子：
 
-![](img/7d6ca30fbc3682cea34f7dc79dc2f00a_7.png)
 
 
-![](img/7d6ca30fbc3682cea34f7dc79dc2f00a_8.png)
 
-![](img/7d6ca30fbc3682cea34f7dc79dc2f00a_9.png)
 
-![](img/7d6ca30fbc3682cea34f7dc79dc2f00a_10.png)
 
 ```racket
 (define mpr (mcons 1 (mcons #t "hi")))
@@ -77,13 +70,10 @@ mpr                      ; => (mcons 1 47)
 *   像 `length`、`map`、`list?` 这样的列表操作只能用于由 `cons` 构成的**标准不可变列表**。对 `mcons` 结构使用它们会导致错误。
 *   像 `mcar`、`set-mcar!` 这样的操作只能用于 `mcons` 单元。对标准的 `cons` 单元使用它们也会导致错误。
 
-![](img/7d6ca30fbc3682cea34f7dc79dc2f00a_12.png)
 
-![](img/7d6ca30fbc3682cea34f7dc79dc2f00a_13.png)
 
 这种分离强制程序员明确其数据结构的意图：是需要不可变的、可安全共享的数据，还是需要内部状态可变的实体。
 
-![](img/7d6ca30fbc3682cea34f7dc79dc2f00a_14.png)
 
 ## 总结
 

@@ -151,7 +151,6 @@ git push           # 推送到GitHub
 
 ### 第一个C++程序
 
-![](img/40ee3330a125bd525437ea6b86b825ec_8.png)
 
 
 让我们编写经典的"Hello World"程序：

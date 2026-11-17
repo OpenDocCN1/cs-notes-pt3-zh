@@ -64,7 +64,6 @@
 ![](img/de9ec9acf828c269a97494ae91975815_10.png)
 
 
-![](img/de9ec9acf828c269a97494ae91975815_12.png)
 
 ```javascript
 // 获取表单

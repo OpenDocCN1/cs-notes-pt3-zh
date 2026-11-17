@@ -6,7 +6,6 @@
 
 我们将从一个简单的登录页面 `login.php` 开始。这个页面接收用户输入的邮箱和密码，然后通过拼接SQL字符串的方式查询数据库。虽然这个功能看起来可以正常工作，但它隐藏着一个严重的安全风险。接下来，我们会演示攻击者如何利用这个漏洞，在不掌握正确密码的情况下登录系统。最后，我们将学习如何使用PDO（PHP Data Objects）和参数化查询来修复这个漏洞，从而构建一个安全的登录系统。
 
-![](img/ff91d4be316a8fa95b84c13b4ff866f6_1.png)
 
 ## 数据模型与登录流程
 
@@ -20,7 +19,6 @@
 
 以下是该流程的初始代码片段：
 
-![](img/ff91d4be316a8fa95b84c13b4ff866f6_3.png)
 
 ```php
 $email = $_POST['email'];
@@ -45,19 +43,15 @@ SELECT name FROM users WHERE email='c7@umich.edu' AND password='123'
 ```
 然而，攻击者可以输入精心构造的数据来改变SQL语句的本意。
 
-![](img/ff91d4be316a8fa95b84c13b4ff866f6_5.png)
 
 ## 什么是SQL注入？
 
 SQL注入是一种攻击技术，攻击者通过在应用程序的输入字段中插入恶意的SQL代码，来操纵后端数据库查询。这可能导致数据泄露、数据篡改，甚至完全控制数据库服务器。
 
-![](img/ff91d4be316a8fa95b84c13b4ff866f6_7.png)
 
-![](img/ff91d4be316a8fa95b84c13b4ff866f6_8.png)
 
 一个经典的例子是“小鲍比表”（Little Bobby Tables）漫画所描述的场景：如果学校系统未对输入进行净化处理，一个名为 `Robert’); DROP TABLE students;--` 的学生注册信息可能会执行删除整个学生表的命令。
 
-![](img/ff91d4be316a8fa95b84c13b4ff866f6_10.png)
 
 在我们的登录例子中，攻击者无需知道密码即可登录。
 
@@ -70,9 +64,7 @@ SQL注入是一种攻击技术，攻击者通过在应用程序的输入字段�
     ```
     由于 `‘1’=’1’` 这个条件永远为真，这个查询将返回用户表中的数据（通常至少是第一行），从而使攻击者绕过密码验证，成功登录。
 
-![](img/ff91d4be316a8fa95b84c13b4ff866f6_12.png)
 
-![](img/ff91d4be316a8fa95b84c13b4ff866f6_13.png)
 
 ## 演示SQL注入攻击
 
@@ -88,20 +80,15 @@ SELECT name FROM users WHERE email='c7@umich.edu' AND password='' OR '1'='1'
 
 我们已经看到了SQL注入的巨大危害，本节将介绍最有效、最根本的防御方法：使用参数化查询（也称为预处理语句）。在PHP中，这通常通过PDO扩展来实现。
 
-![](img/ff91d4be316a8fa95b84c13b4ff866f6_15.png)
 
-![](img/ff91d4be316a8fa95b84c13b4ff866f6_16.png)
 
-![](img/ff91d4be316a8fa95b84c13b4ff866f6_17.png)
 
 参数化查询的核心思想是将SQL代码与数据分离。我们不再拼接字符串，而是先定义一个包含占位符（如 `:email`）的SQL语句模板。然后，将用户输入的数据“绑定”到这些占位符上。PDO驱动程序会确保数据在插入到SQL命令之前被正确地转义和处理，从而彻底杜绝了数据被解释为代码的可能性。
 
-![](img/ff91d4be316a8fa95b84c13b4ff866f6_18.png)
 
 以下是使用PDO重写后的安全登录代码：
 
 
-![](img/ff91d4be316a8fa95b84c13b4ff866f6_20.png)
 
 ```php
 // 1. 准备SQL语句，使用命名占位符
@@ -122,7 +109,6 @@ SELECT name FROM users WHERE email=‘c7@umich.edu’ AND password=‘\‘ OR \�
 
 ## 总结
 
-![](img/ff91d4be316a8fa95b84c13b4ff866f6_22.png)
 
 ![](img/ff91d4be316a8fa95b84c13b4ff866f6_24.png)
 

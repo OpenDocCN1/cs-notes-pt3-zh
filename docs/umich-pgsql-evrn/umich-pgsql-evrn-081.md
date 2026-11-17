@@ -6,29 +6,21 @@
 
 我们将通过一个名为 `simple.py` 的示例程序，演示Python与PostgreSQL交互的核心步骤。这包括建立连接、创建游标、执行SQL命令以及处理结果集。
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_1.png)
 
 ## 准备工作
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_3.png)
 
 在开始编写代码之前，需要确保环境已准备就绪。以下是需要完成的步骤。
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_4.png)
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_6.png)
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_8.png)
 
 ### 清理现有数据库表
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_10.png)
 
 首先，建议清理可能存在的旧表，以确保演示从一个干净的状态开始。可以在 `psql` 命令行中执行以下命令：
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_12.png)
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_14.png)
 
 ```sql
 DROP TABLE IF EXISTS docs_stem CASCADE;
@@ -40,15 +32,11 @@ DROP TABLE IF EXISTS python_fun CASCADE;
 
 ### 安装Python数据库连接器
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_16.png)
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_17.png)
 
 Python需要通过 `psycopg2` 库来连接PostgreSQL。首先检查是否已安装：
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_19.png)
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_20.png)
 
 ```python
 import psycopg2
@@ -60,21 +48,16 @@ import psycopg2
 pip3 install psycopg2
 ```
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_22.png)
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_24.png)
 
 ### 获取示例代码
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_26.png)
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_27.png)
 
 示例代码可以从课程网站获取。我们将使用两个关键文件：
 1.  `simple.py`：主程序文件。
 2.  `hidden.py`：存储数据库连接机密信息的文件（如主机、用户名、密码）。
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_29.png)
 
 使用以下命令下载 `simple.py`：
 
@@ -84,7 +67,6 @@ wget https://www.pg4e.com/code/simple.py
 
 `hidden.py` 文件需要根据你的数据库连接信息自行创建。课程提供了一个模板文件 `hidden_dist.py`，你可以将其复制并修改为 `hidden.py`，填入真实的连接参数。
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_31.png)
 
 ## 代码解析：simple.py
 
@@ -92,7 +74,6 @@ wget https://www.pg4e.com/code/simple.py
 
 ### 1. 导入模块与建立连接
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_33.png)
 
 程序首先导入 `psycopg2` 和包含连接信息的 `hidden` 模块。
 
@@ -101,9 +82,7 @@ import psycopg2
 import hidden
 ```
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_35.png)
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_37.png)
 
 接着，从 `hidden` 模块读取连接秘密，并使用 `psycopg2.connect()` 函数建立数据库连接。连接参数包括主机、数据库名、用户名和密码。
 
@@ -119,7 +98,6 @@ conn = psycopg2.connect(
 )
 ```
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_39.png)
 
 ### 2. 创建游标
 
@@ -151,9 +129,7 @@ conn.commit()
 
 ### 4. 执行SQL命令：插入数据
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_41.png)
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_42.png)
 
 插入数据时，我们使用参数化查询来防止SQL注入攻击。SQL语句中的 `%s` 是占位符，实际值通过一个元组传递给 `.execute()` 方法。
 
@@ -167,7 +143,6 @@ conn.commit()
 
 ### 5. 执行SQL命令：查询数据
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_44.png)
 
 查询数据也使用 `.execute()` 方法。执行后，可以使用游标的 `.fetchone()` 方法获取一行结果，或使用 `.fetchall()` 获取所有结果。
 
@@ -182,7 +157,6 @@ else:
     print('找到行：', row)
 ```
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_46.png)
 
 `.fetchone()` 返回的是一个元组，其元素对应查询语句中的列。
 
@@ -190,7 +164,6 @@ else:
 
 当向具有 `SERIAL` 自增列的表插入数据时，可以使用 `RETURNING` 子句立即获取生成的主键ID。
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_48.png)
 
 ```python
 txt = "新插入的文本"
@@ -220,15 +193,11 @@ finally:
         conn.close()
 ```
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_50.png)
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_51.png)
 
 在示例中，程序最后故意执行了一条错误的SQL来演示异常情况。
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_52.png)
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_54.png)
 
 ```python
 sql = "这是一个错误的SQL语句；"
@@ -236,23 +205,17 @@ cur.execute(sql) # 这里会抛出异常
 conn.commit() # 由于异常，这行不会执行
 ```
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_56.png)
 
 ## 核心概念总结
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_57.png)
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_58.png)
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_60.png)
 
 上一节我们逐步解析了代码，本节中我们来总结与Python操作PostgreSQL相关的几个核心概念。
 
 以下是关键操作的模式：
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_62.png)
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_64.png)
 
 *   **连接数据库**：使用 `psycopg2.connect()` 并提供连接参数。
 *   **创建游标**：通过 `conn.cursor()` 获取操作句柄。
@@ -267,7 +230,6 @@ conn.commit() # 由于异常，这行不会执行
 
 ## 总结
 
-![](img/e26e6e3968a2a00d3bd26a927515c88e_66.png)
 
 ![](img/e26e6e3968a2a00d3bd26a927515c88e_68.png)
 

@@ -1,6 +1,5 @@
 # 044：模拟站立会议（周三）
 
-![](img/9efbc5076c38acc50269d9b4b85e9f1e_1.png)
 
 ![](img/9efbc5076c38acc50269d9b4b85e9f1e_2.png)
 

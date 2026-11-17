@@ -1,18 +1,14 @@
 # 011：第一个Java程序 - Hello World 👋
 
-![](img/0f40a4cadf0d7a4e81ff63949089010e_0.png)
 
 在本节课中，我们将学习如何在Java中编写一个简单的“Hello World”程序。这是一个经典的入门程序，用于向初学者介绍一门新编程语言的基本结构和运行方式。
 
-![](img/0f40a4cadf0d7a4e81ff63949089010e_2.png)
 
-![](img/0f40a4cadf0d7a4e81ff63949089010e_4.png)
 
 ## 概述
 
 “Hello World”程序是一个简单的程序，其功能是在屏幕上输出“Hello World”字样。由于其结构简单，它常被用作学习新编程语言的第一步。接下来，我们将一步步学习如何在Eclipse集成开发环境中创建并运行这个程序。
 
-![](img/0f40a4cadf0d7a4e81ff63949089010e_6.png)
 
 ## 创建Java项目
 
@@ -29,9 +25,7 @@
 6.  点击 **Next**，然后点击 **Finish**。
 7.  系统会询问是否创建 `module-info.java` 文件来存储项目的元信息。我们选择 **Don‘t Create**，然后点击 **Open Perspective**。
 
-![](img/0f40a4cadf0d7a4e81ff63949089010e_8.png)
 
-![](img/0f40a4cadf0d7a4e81ff63949089010e_9.png)
 
 至此，名为“Java Fundamentals”的项目已成功创建。展开项目后，可以看到一个 `src` 文件夹，所有Java程序都需要写在这个文件夹下。
 

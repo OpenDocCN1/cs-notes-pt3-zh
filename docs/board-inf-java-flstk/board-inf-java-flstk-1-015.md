@@ -1,12 +1,9 @@
 # 015：数据类型实战指南
 
-![](img/ec1cd86e7dd4cd787c5777ebdcfcd3ef_0.png)
 
-![](img/ec1cd86e7dd4cd787c5777ebdcfcd3ef_2.png)
 
 在本节课中，我们将学习如何在Java中实际操作基本数据类型和非基本数据类型。我们将通过代码示例来理解它们的声明、赋值、使用方式以及核心区别。
 
-![](img/ec1cd86e7dd4cd787c5777ebdcfcd3ef_4.png)
 
 ## 概述
 
@@ -92,14 +89,12 @@ System.out.println(point2.x + " " + point2.y); // 输出：10 25
 
 ## 总结
 
-![](img/ec1cd86e7dd4cd787c5777ebdcfcd3ef_6.png)
 
 本节课中我们一起学习了：
 1.  **基本数据类型**：包括`byte`、`int`、`float`、`char`、`boolean`等，直接存储数据值。
 2.  **非基本（引用）数据类型**：如`String`、`Date`和自定义类，变量存储的是对象的引用。
 3.  **核心区别**：基本类型赋值是**复制值**，引用类型赋值是**复制引用**。因此，通过一个引用修改对象会影响到所有指向该对象的其他引用。
 
-![](img/ec1cd86e7dd4cd787c5777ebdcfcd3ef_8.png)
 
 ![](img/ec1cd86e7dd4cd787c5777ebdcfcd3ef_10.png)
 

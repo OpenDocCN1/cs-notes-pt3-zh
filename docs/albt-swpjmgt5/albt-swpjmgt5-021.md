@@ -1,6 +1,5 @@
 # 021：回顾
 
-![](img/47e5cb8ed9addb64f3ad61c576c4c7b3_1.png)
 
 ![](img/47e5cb8ed9addb64f3ad61c576c4c7b3_1.png)
 

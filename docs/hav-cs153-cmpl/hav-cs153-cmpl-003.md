@@ -2,27 +2,21 @@
 
 在本节课中，我们将要学习如何用OCaml表示一个简单的编程语言，并初步探索C程序如何被编译成机器代码。我们将重点了解X86机器模型的基础知识，并介绍一个简化的X86子集——X86 Light。
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_1.png)
 
 ![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_3.png)
 
 ![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_5.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_6.png)
 
 ## 从简单语言到抽象语法树
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_8.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_10.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_12.png)
 
 ![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_14.png)
 
 上一讲我们概述了课程内容和政策。本节中，我们来看看如何用OCaml表示一个简单的编程语言。
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_16.png)
 
 ![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_18.png)
 
@@ -30,11 +24,8 @@
 
 ![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_22.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_24.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_26.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_28.png)
 
 假设我们有一个简单的语言，它包含表达式和命令。表达式是在整数和程序变量上进行算术运算。命令则是执行操作，例如修改内存或控制程序流程。
 
@@ -73,18 +64,12 @@
 ![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_34.png)
 
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_36.png)
-
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_38.png)
-
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_40.png)
-
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_42.png)
 
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_44.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_46.png)
+
+
+
 
 ```ocaml
 type var = string
@@ -116,49 +101,33 @@ OCaml的数据类型定义与BNF语法声明非常相似，每个构造函数对
 
 通过这种方式，我们可以运行程序并观察其结果，例如计算一个数的阶乘。
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_48.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_50.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_52.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_54.png)
 
 ## 从C程序到机器代码
 
 ![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_56.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_58.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_60.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_62.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_64.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_66.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_68.png)
 
 现在让我们转换视角，思考一个C程序如何变成机器代码。
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_70.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_71.png)
 
 ![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_73.png)
 
 ![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_75.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_77.png)
 
 一个C程序（如一个简单的求和函数）是文本，机器无法直接执行。我们使用编译器（如GCC）将其转换为更低级的表示。
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_79.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_81.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_83.png)
 
 ![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_85.png)
 
@@ -169,9 +138,7 @@ OCaml的数据类型定义与BNF语法声明非常相似，每个构造函数对
 2.  **汇编**：汇编器（如`gas`）将汇编文件转换为目标文件（`.o`），即机器代码（字节序列）。但目标文件可能包含对其他地方定义的变量或函数的引用。
 3.  **链接**：链接器将多个目标文件（包括标准库）组合在一起，解析这些引用，最终生成可执行文件。
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_87.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_88.png)
 
 通常，我们直接调用`gcc`从`.c`文件生成可执行文件，但也可以要求它输出中间产物（如汇编代码）以便学习。
 
@@ -186,29 +153,19 @@ OCaml的数据类型定义与BNF语法声明非常相似，每个构造函数对
 
 需要区分**汇编代码**（文本）和**机器代码**（比特位）。汇编器负责将文本指令转换为机器可执行的比特位。汇编器还可能处理一些伪指令，以方便编程。
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_90.png)
 
 ## X86架构与X86 Light
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_92.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_94.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_96.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_98.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_100.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_102.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_104.png)
 
 我们将要学习的是X86汇编语言，它由英特尔公司开发，已有近50年历史。为了保持向后兼容，X86指令集变得非常庞大和复杂，属于**复杂指令集计算机**。它有数百条甚至近千条不同的指令，并使用变长编码（1到17字节不等），这使得处理器设计非常复杂。
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_106.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_108.png)
 
 与之相对的是**精简指令集计算机**，它通常指令数量少，编码长度固定，处理器设计更简单。
 
@@ -233,11 +190,8 @@ X86-64有16个通用寄存器，如`%rax`、`%rbx`等，其中一些有惯用途
 
 我们使用AT&T语法：源在前，目的在后；立即数用`$`前缀，寄存器用`%`前缀；指令助记符后的`q`表示操作64位数据。
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_110.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_112.png)
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_113.png)
 
 ![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_115.png)
 
@@ -260,7 +214,6 @@ X86的算术指令包括`negq`（取负）、`addq`、`subq`、`imulq`（乘法�
 *   `shrq`：逻辑右移，左侧补0。
 *   `sarq`：算术右移，左侧复制原最高位（符号位），这可以保证对有符号数右移等价于除以2。
 
-![](img/811d7af71fa49e3aa4eb2c8e7e92f74b_117.png)
 
 ## 总结
 

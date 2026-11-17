@@ -20,7 +20,6 @@
 
 `<canvas>`元素专门用于绘制图形，通常与JavaScript结合使用。你可以将其视为一个图形容器，需要通过脚本来填充内容。
 
-![](img/62ceb0681cde594e8d7b5bbf6315ca44_2.png)
 
 以下是使用`<canvas>`时常用的几种方法：
 *   **绘制路径和形状**：例如线条、矩形、圆形。
@@ -31,15 +30,12 @@
 
 ---
 
-![](img/62ceb0681cde594e8d7b5bbf6315ca44_4.png)
 
-![](img/62ceb0681cde594e8d7b5bbf6315ca44_5.png)
 
 ## 编程实例：创建交互式画布
 
 让我们通过CodePen平台，结合HTML、CSS和JavaScript来创建一个使用`<canvas>`的交互式网页。
 
-![](img/62ceb0681cde594e8d7b5bbf6315ca44_7.png)
 
 ### HTML结构
 
@@ -113,7 +109,6 @@ function doYellow() {
 }
 ```
 
-![](img/62ceb0681cde594e8d7b5bbf6315ca44_9.png)
 
 **代码解析：**
 *   `getContext("2d")`：获取画布的2D渲染上下文，这是所有绘图操作的基础。
@@ -122,7 +117,6 @@ function doYellow() {
 *   `font`：设置或返回文本内容的当前字体属性。
 *   `fillText(text, x, y)`：在画布上绘制填充的文本。
 
-![](img/62ceb0681cde594e8d7b5bbf6315ca44_11.png)
 
 ---
 

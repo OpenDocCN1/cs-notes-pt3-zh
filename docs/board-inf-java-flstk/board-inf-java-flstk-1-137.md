@@ -1,8 +1,6 @@
 # 137：理解事件与事件监听器
 
-![](img/1a1029dec54e35e57d57c898ff99de9e_0.png)
 
-![](img/1a1029dec54e35e57d57c898ff99de9e_2.png)
 
 在本节课中，我们将要学习JavaScript中的事件与事件监听器。它们是实现网页交互功能的核心，能够响应用户的点击、输入等操作。
 
@@ -47,7 +45,6 @@ element.addEventListener('事件类型', function() {
 
 总而言之，事件是使用JavaScript创建交互式网页的基础部分，它使我们能够为用户创造动态且响应迅速的网页体验。
 
-![](img/1a1029dec54e35e57d57c898ff99de9e_4.png)
 
 ![](img/1a1029dec54e35e57d57c898ff99de9e_6.png)
 

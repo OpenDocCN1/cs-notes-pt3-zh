@@ -1,6 +1,5 @@
 # 022：类型
 
-![](img/06b00c05e8f499d412cb1406ac1fcd60_0.png)
 
 ![](img/06b00c05e8f499d412cb1406ac1fcd60_0.png)
 

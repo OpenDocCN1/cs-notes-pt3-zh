@@ -1,38 +1,29 @@
 # 061：模块类型与签名 🧩
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_0.png)
 
 在本节课中，我们将要学习OCaml中的模块类型与签名。它们是定义模块接口的强大工具，用于规定模块必须提供哪些功能，同时隐藏实现细节。
 
 ---
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_2.png)
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_3.png)
 
 ## 接口与签名
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_5.png)
 
 接口是一系列名称及其规范的集合。这些名称通常以某种方式相互关联，使得整个接口作为一个代码单元具有意义。
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_7.png)
 
 在Java中，你已经习惯了接口的概念。OCaml有一个类似的功能，称为**签名**。
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_9.png)
 
 ---
 
 ## 编写一个签名
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_11.png)
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_12.png)
 
 让我们为那些包含阶乘函数的模块编写一个签名。
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_14.png)
 
 ```ocaml
 module type Fact = sig
@@ -41,29 +32,22 @@ module type Fact = sig
 end
 ```
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_16.png)
 
 你立刻会发现，这看起来很像一个模块的定义，但有一些变化。
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_18.png)
 
 首先，我们使用 `module type` 关键字，因为这里我们指定的是**模块的类型**，而不是模块的具体值。定义该模块类型的代码块就是一个**签名**，它以关键字 `sig` 开始，以 `end` 结束。
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_19.png)
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_21.png)
 
 在签名内部，你需要提供所有值的名称、类型和行为的规范，这些值将出现在任何属于此类型的模块中。
 
 在这里，我声明必须有一个名为 `fact` 的值，其类型为 `int -> int`。并且我为它提供了一个规范注释：`fact n` 是 `n` 的阶乘。
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_23.png)
 
 请注意这里 `val` 关键字的使用。你在UTop中已经见过它：每当我们创建一个值，UTop会回应说有一个名为 `x` 的值，其类型是 `int`，以及它的具体值是什么。这里使用 `val` 关键字是同样的含义，它表示存在一个名为 `fact` 的值，其类型是 `int -> int`。只是在我们定义模块类型时，我们并不说明这个值的具体实现是什么。
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_25.png)
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_26.png)
 
 ---
 
@@ -71,7 +55,6 @@ end
 
 我可以提供具有此类型的模块。
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_28.png)
 
 ```ocaml
 module RecursiveFact : Fact = struct
@@ -80,9 +63,7 @@ module RecursiveFact : Fact = struct
 end
 ```
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_30.png)
 
-![](img/05da4a05b7ef9412a225cdff0290ee80_31.png)
 
 这个名为 `RecursiveFact` 的模块，拥有模块类型 `Fact`。它通过提供一个具有正确类型的 `fact` 定义来实现该模块。当然，类型检查器会验证类型是否正确。例如，我不能在这里返回一个字符串。
 

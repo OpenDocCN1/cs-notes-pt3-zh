@@ -1,6 +1,5 @@
 # 099：Poke the Dots 版本5解决方案
 
-![](img/c7f9ff97212a9c12fc7a98b4ef0534ac_0.png)
 
 ![](img/c7f9ff97212a9c12fc7a98b4ef0534ac_0.png)
 

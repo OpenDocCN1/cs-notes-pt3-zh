@@ -1,12 +1,9 @@
 # 006：输入输出与实用工具库
 
-![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_1.png)
 
 在本节课中，我们将学习C++标准库中的实用工具，并重点掌握文件的读写操作。这是C++核心语言部分的最后一讲，之后我们将进入面向对象编程等更高级的主题。
 
-![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_3.png)
 
-![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_4.png)
 
 ## 课程概述与进度提醒
 
@@ -101,9 +98,7 @@ auto student2 = std::make_tuple(2.9, 'B', "Jane Smith");
 auto [gpa, grade, name] = student1;
 ```
 
-![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_6.png)
 
-![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_7.png)
 
 **`chrono`库**
 用于简单的时间测量和基准测试。
@@ -117,7 +112,6 @@ auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - star
 std::cout << "操作耗时: " << duration.count() << " 毫秒" << std::endl;
 ```
 
-![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_9.png)
 
 > **注意**： 工业界迁移编译器版本可能较慢，因此你未来的工作环境可能不总是支持最新的C++标准（如C++17）。许多优秀工具在C++14和C++17中引入，而C++11已是十年前的标准。在课程中我们有选择标准的自由，但需了解这一现实。
 
@@ -162,7 +156,6 @@ int main() {
 }
 ```
 
-![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_11.png)
 
 **读取结构化文本文件**
 如果文件格式规整，可以像使用`std::cin`一样读取。
@@ -323,7 +316,6 @@ blink_led(std::chrono::milliseconds(1000)); // 明确是1000毫秒
 // blink_led(std::chrono::seconds(2)); // 编译错误！类型不匹配
 ```
 
-![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_13.png)
 
 ROS 1到ROS 2的演进也体现了这一点：ROS 1的API常使用原始`int`表示频率，而ROS 2使用了`std::chrono::milliseconds`等类型，使代码意图更清晰、更安全。
 
@@ -337,7 +329,6 @@ ROS 1到ROS 2的演进也体现了这一点：ROS 1的API常使用原始`int`表
 
 类也是一个命名空间。`public`成员构成类的对外接口，`private`成员则包含不应对外公开的实现细节。`struct`是一个所有成员默认为`public`的类。
 
-![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_15.png)
 
 ### 一个具体示例：图像类
 
@@ -352,7 +343,6 @@ linux_pic.draw_to_screen();   // 绘制到屏幕
 Image gray_version = linux_pic.to_grayscale(); // 转换为灰度图
 ```
 
-![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_17.png)
 
 **可能的类定义框架**
 ```cpp
@@ -374,7 +364,6 @@ public:
 };
 ```
 
-![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_19.png)
 
 **使用示例**
 ```cpp
@@ -387,15 +376,11 @@ if (filtered.is_empty()) {
 ```
 通过创建`Image`类型，我们的代码几乎像英语句子一样清晰地表达了意图，这是使用原始数组（如`vector<uint8_t>`）无法轻易实现的。
 
-![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_21.png)
 
 ## 总结与作业
 
-![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_23.png)
 
-![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_24.png)
 
-![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_26.png)
 
 本节课中我们一起学习了：
 1.  **C++实用工具库**： 包括`swap`、`variant`、`any`、`optional`、`tuple`、`chrono`等，它们能简化代码并提升安全性。
@@ -403,7 +388,6 @@ if (filtered.is_empty()) {
 3.  **文件系统库**： C++17引入的`<filesystem>`库，用于便捷地操作路径和目录。
 4.  **类与类型的动机**： 通过实际案例了解了创建强类型用户定义类型（类）的重要性，它能提高代码的安全性、可读性和可维护性，并介绍了类的基本概念。
 
-![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_28.png)
 
 **本周任务**：
 *   观看推荐的5分钟“视觉词袋”互动教程。
@@ -411,7 +395,6 @@ if (filtered.is_empty()) {
 *   准备迎接即将发布的作业5，它将涉及OpenCV、特征描述符以及二进制文件读写。
 *   如有需要，观看关于特征描述符的背景视频。
 
-![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_30.png)
 
 ![](img/0b6e36ce6c8d8983af47c3eeb11c6dba_32.png)
 

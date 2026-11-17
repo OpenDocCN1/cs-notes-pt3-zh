@@ -10,7 +10,6 @@
 
 ## 静态定位
 
-![](img/98aab824d4b448d096a9479cc5acb8dc_5.png)
 
 ![](img/98aab824d4b448d096a9479cc5acb8dc_7.png)
 
@@ -104,7 +103,6 @@ div {
 }
 ```
 
-![](img/98aab824d4b448d096a9479cc5acb8dc_46.png)
 
 ![](img/98aab824d4b448d096a9479cc5acb8dc_48.png)
 
@@ -114,7 +112,6 @@ div {
 
 ![](img/98aab824d4b448d096a9479cc5acb8dc_52.png)
 
-![](img/98aab824d4b448d096a9479cc5acb8dc_54.png)
 
 ![](img/98aab824d4b448d096a9479cc5acb8dc_56.png)
 

@@ -74,7 +74,6 @@ patch file_old.c < change.patch
 2.  **暂存区**：一个中间区域，用于临时存放你打算提交的变更。
 3.  **Git 仓库**：存储所有提交历史和数据的地方（位于 `.git/` 目录中）。
 
-![](img/3d436202ff018997b53475af5a316f17_1.png)
 
 文件在这三个区域间的状态流转如下图所示：
 
@@ -136,9 +135,7 @@ git add .gitignore
 git commit -m “Add .gitignore file”
 ```
 
-![](img/3d436202ff018997b53475af5a316f17_3.png)
 
-![](img/3d436202ff018997b53475af5a316f17_5.png)
 
 ### 远程仓库与提交作业
 

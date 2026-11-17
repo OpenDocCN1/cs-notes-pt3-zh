@@ -1,6 +1,5 @@
 # GAMES103-基于物理的计算机动画入门---P11-Lecture-11-Incompressible-Fluid-Dynamics-and-Eulerian-Fluids---GAMES-Webinar---BV12Q4y1S73g_note
 
-![](img/e2f523a6c97e94145cc3d57e4df9ff22_0.png)
 
 ![](img/e2f523a6c97e94145cc3d57e4df9ff22_0.png)
 
@@ -166,6 +165,5 @@
 
 这种方法在图形学中已成为模拟水和气体的标准方案，被广泛应用于电影特效和游戏开发中。下节课，我们将探讨基于拉格朗日粒子法的流体模拟。
 
-![](img/e2f523a6c97e94145cc3d57e4df9ff22_2.png)
 
 ![](img/e2f523a6c97e94145cc3d57e4df9ff22_2.png)

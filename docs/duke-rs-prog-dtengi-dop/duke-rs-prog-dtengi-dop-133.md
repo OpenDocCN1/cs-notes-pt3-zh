@@ -1,6 +1,5 @@
 # 133：外部工具包装策略
 
-![](img/04f4d8dab74c473c27dd1821b8f1be17_0.png)
 
 ![](img/04f4d8dab74c473c27dd1821b8f1be17_0.png)
 

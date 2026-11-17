@@ -1,6 +1,5 @@
 # 017：二分查找算法 🎯
 
-![](img/a8867bc089d1dbb155ff147bc971542c_1.png)
 
 ![](img/a8867bc089d1dbb155ff147bc971542c_2.png)
 
@@ -11,7 +10,6 @@
 
 ## 二分查找的概念与条件
 
-![](img/a8867bc089d1dbb155ff147bc971542c_4.png)
 
 上一节我们介绍了线性搜索，本节中我们来看看二分查找。二分查找是一种在**有序数组**中查找特定元素的算法。
 
@@ -52,7 +50,6 @@ if (target > arr[mid]) {
 
 现在，让我们用代码来实现迭代版本的二分查找。迭代法使用循环来重复执行查找步骤。
 
-![](img/a8867bc089d1dbb155ff147bc971542c_6.png)
 
 以下是迭代法实现的步骤：
 1.  初始化 `start = 0`， `end = n-1`（n为数组长度）。
@@ -62,7 +59,6 @@ if (target > arr[mid]) {
     c. 根据比较结果更新 `start` 或 `end`。
 3.  如果循环结束仍未找到，返回 `-1` 表示未找到。
 
-![](img/a8867bc089d1dbb155ff147bc971542c_8.png)
 
 **迭代法代码示例：**
 ```cpp
@@ -90,15 +86,11 @@ int binarySearchIterative(vector<int>& arr, int target) {
 }
 ```
 
-![](img/a8867bc089d1dbb155ff147bc971542c_10.png)
 
-![](img/a8867bc089d1dbb155ff147bc971542c_11.png)
 
 ---
 
-![](img/a8867bc089d1dbb155ff147bc971542c_13.png)
 
-![](img/a8867bc089d1dbb155ff147bc971542c_14.png)
 
 ## 递归法实现二分查找
 
@@ -130,7 +122,6 @@ int binarySearchRecursive(vector<int>& arr, int target, int start, int end) {
 // 调用时：binarySearchRecursive(arr, target, 0, arr.size() - 1)
 ```
 
-![](img/a8867bc089d1dbb155ff147bc971542c_16.png)
 
 ---
 
@@ -138,7 +129,6 @@ int binarySearchRecursive(vector<int>& arr, int target, int start, int end) {
 
 我们实现了两种方法的二分查找，现在来分析其效率。二分查找之所以高效，是因为它每一步都将数据规模减半。
 
-![](img/a8867bc089d1dbb155ff147bc971542c_18.png)
 
 **时间复杂度分析：**
 最坏情况下，二分查找需要执行的步骤次数是将数组长度 `n` 不断除以 2，直到结果为 1。这可以表示为 `log₂(n)`。
@@ -153,7 +143,6 @@ int binarySearchRecursive(vector<int>& arr, int target, int start, int end) {
 
 ---
 
-![](img/a8867bc089d1dbb155ff147bc971542c_20.png)
 
 ## 总结
 

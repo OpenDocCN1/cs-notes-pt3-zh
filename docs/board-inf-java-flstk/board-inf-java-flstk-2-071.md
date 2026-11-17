@@ -2,9 +2,7 @@
 
 在本节课中，我们将学习一个非常重要的概念——Spring Security。这是一个为创建安全的Java企业级应用程序提供多种安全特性（如身份验证和授权）的框架。让我们开始吧。
 
-![](img/ce68c27299574dea477114ea61e43b67_1.png)
 
-![](img/ce68c27299574dea477114ea61e43b67_2.png)
 
 ---
 
@@ -19,11 +17,9 @@ Spring Security 可以应用于Web请求方法，也支持访问单个域对象�
 
 ---
 
-![](img/ce68c27299574dea477114ea61e43b67_4.png)
 
 ## Spring Security 的优势 ✨
 
-![](img/ce68c27299574dea477114ea61e43b67_6.png)
 
 以下是使用Spring Security的主要好处：
 
@@ -65,7 +61,6 @@ Spring Security 的架构工作流程如下：
 
 本节课我们一起学习了Spring Security的基础知识。我们了解了它是一个用于身份验证和授权的框架，探讨了其主要优势，并深入解析了其核心架构的工作流程。
 
-![](img/ce68c27299574dea477114ea61e43b67_8.png)
 
 ![](img/ce68c27299574dea477114ea61e43b67_10.png)
 

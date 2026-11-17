@@ -1,6 +1,5 @@
 # 139：排序算法与效率分析 🚀
 
-![](img/b4c3306d7c6998443c0166bb7d3b34c0_0.png)
 
 在本节课中，我们将学习如何使用选择排序算法对字符串等对象进行排序，并分析不同排序方法的效率。我们将看到，对于非基本数据类型（如字符串），需要使用 `compareTo` 方法进行比较，而不是简单的 `<` 运算符。同时，我们将对比选择排序与Java内置的 `Collections.sort` 方法在性能上的巨大差异。
 
@@ -38,7 +37,6 @@ String[] cats = {"lion", "cheetah", "puma", "leopard"};
 
 现在我们已经知道如何使用 `compareTo` 方法对字符串进行排序，接下来我们分析一下排序算法的效率。
 
-![](img/b4c3306d7c6998443c0166bb7d3b34c0_2.png)
 
 我们创建了一个 `SortTimings` 类，用于比较选择排序和Java内置的 `Collections.sort` 方法在不同数据量下的性能。以下是核心的计时逻辑：
 
@@ -52,9 +50,7 @@ System.out.println("Time taken: " + duration + " milliseconds");
 
 我们分别对包含10,000、20,000直至100,000个随机字符串的列表进行排序测试。
 
-![](img/b4c3306d7c6998443c0166bb7d3b34c0_4.png)
 
-![](img/b4c3306d7c6998443c0166bb7d3b34c0_6.png)
 
 ### 性能对比结果
 
@@ -65,11 +61,9 @@ System.out.println("Time taken: " + duration + " milliseconds");
 
 这个对比清晰地表明，`Collections.sort` 使用了一种比选择排序（时间复杂度为 **O(n²)**）高效得多的算法（如归并排序，时间复杂度为 **O(n log n)**）。
 
-![](img/b4c3306d7c6998443c0166bb7d3b34c0_8.png)
 
 ### `Collections.sort` 的工作原理
 
-![](img/b4c3306d7c6998443c0166bb7d3b34c0_10.png)
 
 ![](img/b4c3306d7c6998443c0166bb7d3b34c0_11.png)
 

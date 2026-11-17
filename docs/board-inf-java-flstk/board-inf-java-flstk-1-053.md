@@ -1,16 +1,12 @@
 # 053：默认与带参构造函数 🏗️
 
-![](img/9ec8ab188e31fd121f1c5bfcefb78ff2_0.png)
 
-![](img/9ec8ab188e31fd121f1c5bfcefb78ff2_2.png)
 
 在本节课中，我们将学习Java中两种重要的构造函数：默认构造函数和带参构造函数。我们将通过一个学生类的例子，理解它们如何工作、如何创建以及如何使用。
 
-![](img/9ec8ab188e31fd121f1c5bfcefb78ff2_4.png)
 
 ---
 
-![](img/9ec8ab188e31fd121f1c5bfcefb78ff2_6.png)
 
 ## 概述
 
@@ -156,13 +152,10 @@ public class Student {
 
 ## 总结
 
-![](img/9ec8ab188e31fd121f1c5bfcefb78ff2_8.png)
 
-![](img/9ec8ab188e31fd121f1c5bfcefb78ff2_9.png)
 
 本节课中我们一起学习了Java构造函数的核心概念。我们了解到，默认构造函数由Java隐式提供，用于初始化默认值。我们可以创建自定义的默认构造函数和带参构造函数，以便更精确地控制对象的初始化状态。使用`this`关键字可以解决参数与属性同名时的歧义。最后，通过构造函数重载，我们可以为一个类提供多种初始化方式，使代码更加灵活。掌握这些知识是进行面向对象编程的重要基础。
 
-![](img/9ec8ab188e31fd121f1c5bfcefb78ff2_11.png)
 
 ![](img/9ec8ab188e31fd121f1c5bfcefb78ff2_12.png)
 

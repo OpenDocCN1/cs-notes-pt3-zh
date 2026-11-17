@@ -1,6 +1,5 @@
 # 004：3_第4.1.1a节 计划简介
 
-![](img/6cf7ba1fa16fe2c33abc1c6acacd991c_0.png)
 
 ![](img/6cf7ba1fa16fe2c33abc1c6acacd991c_0.png)
 

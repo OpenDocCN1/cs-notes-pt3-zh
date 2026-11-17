@@ -1,8 +1,6 @@
 Java全栈开发：24：Java EnumMap详解 🗺️
 
-![](img/430a8afc619651ce29bf19ee34e6ab95_1.png)
 
-![](img/430a8afc619651ce29bf19ee34e6ab95_3.png)
 
 在本节课中，我们将要学习Java集合框架中的`EnumMap`类。我们将了解它的定义、特性、创建方法以及基本操作，并通过示例代码帮助初学者理解其用法。
 
@@ -86,7 +84,6 @@ sizes.put(Size.EXTRA_LARGE, 50);
 
 ### 总结
 
-![](img/430a8afc619651ce29bf19ee34e6ab95_5.png)
 
 ![](img/430a8afc619651ce29bf19ee34e6ab95_7.png)
 

@@ -1,10 +1,8 @@
 # 047：Spring Boot入门指南 🚀
 
-![](img/527a4145c96e717eabe2869c6e53e0f0_0.png)
 
 在本节课中，我们将学习Spring Boot框架。Spring Boot是一个用于简化Java应用程序开发的框架，特别适合基于微服务的架构。我们将了解它的核心概念、优势以及基本组成部分。
 
-![](img/527a4145c96e717eabe2869c6e53e0f0_2.png)
 
 ## 概述
 
@@ -31,7 +29,6 @@ Spring Boot是一个Java框架，它让创建和运行基于微服务的Java应�
 
 ## Spring Boot的核心特性
 
-![](img/527a4145c96e717eabe2869c6e53e0f0_4.png)
 
 上一节我们了解了Spring Boot的优势，本节中我们来看看它的一些具体特性。
 

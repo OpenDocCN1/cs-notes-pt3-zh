@@ -1,10 +1,8 @@
 # 031：字符串操作与方法 🧵
 
-![](img/d578e6ccd84e62ac7ac12240274fd1da_0.png)
 
 在本节课中，我们将学习Java中字符串的声明方式以及常用的字符串操作方法。我们将通过字符串字面量、字符串对象以及内置方法来创建和操作字符串。
 
-![](img/d578e6ccd84e62ac7ac12240274fd1da_2.png)
 
 ---
 
@@ -14,7 +12,6 @@
 
 以下是两种声明方式的示例：
 
-![](img/d578e6ccd84e62ac7ac12240274fd1da_4.png)
 
 ```java
 String str1 = "Hello"; // 字符串字面量
@@ -39,7 +36,6 @@ System.out.println(str3);
 
 ---
 
-![](img/d578e6ccd84e62ac7ac12240274fd1da_6.png)
 
 ## 常用的字符串方法
 
@@ -92,11 +88,9 @@ String trimmed = stringWithSpaces.trim(); // 结果为 "Hello"
 
 运行这些代码，你可以在控制台看到每个方法对应的输出结果，从而直观地理解它们的功能。
 
-![](img/d578e6ccd84e62ac7ac12240274fd1da_8.png)
 
 ---
 
-![](img/d578e6ccd84e62ac7ac12240274fd1da_10.png)
 
 ![](img/d578e6ccd84e62ac7ac12240274fd1da_11.png)
 

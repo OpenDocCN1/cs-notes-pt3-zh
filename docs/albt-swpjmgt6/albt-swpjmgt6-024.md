@@ -1,14 +1,11 @@
 软件产品管理：6.10：恭喜您完成毕业设计项目 🎉
 
-![](img/71f75c41c45fa3bf65064f23fc21e4a2_1.png)
 
 ![](img/71f75c41c45fa3bf65064f23fc21e4a2_1.png)
 
-![](img/71f75c41c45fa3bf65064f23fc21e4a2_2.png)
 
 ![](img/71f75c41c45fa3bf65064f23fc21e4a2_2.png)
 
-![](img/71f75c41c45fa3bf65064f23fc21e4a2_3.png)
 
 ![](img/71f75c41c45fa3bf65064f23fc21e4a2_3.png)
 
@@ -28,7 +25,6 @@
 
 谢谢您，并再次祝贺。
 
-![](img/71f75c41c45fa3bf65064f23fc21e4a2_5.png)
 
 ![](img/71f75c41c45fa3bf65064f23fc21e4a2_5.png)
 

@@ -1,10 +1,8 @@
 # 043：创建Spring IOC容器 🏗️
 
-![](img/8c2cc21e3feb84bdaf1d91592cbce2e7_0.png)
 
 在本节课中，我们将学习如何创建Spring IOC容器。该容器负责实例化、配置和组装Spring Bean。我们将使用XML配置方式来完成这个演示。
 
-![](img/8c2cc21e3feb84bdaf1d91592cbce2e7_2.png)
 
 ## 概述
 
@@ -20,15 +18,12 @@ Spring IOC容器是Spring框架的核心，它管理着应用中所有对象的�
 2.  设置Group ID为 `com.panagwani.spring.ioc.container.example`。
 3.  完成项目创建。
 
-![](img/8c2cc21e3feb84bdaf1d91592cbce2e7_4.png)
 
 项目生成后，我们可以在 `src/main/java` 目录下存放Java文件，在 `pom.xml` 文件中管理依赖和配置。
 
-![](img/8c2cc21e3feb84bdaf1d91592cbce2e7_6.png)
 
 ## 配置项目与依赖
 
-![](img/8c2cc21e3feb84bdaf1d91592cbce2e7_8.png)
 
 创建项目后，需要进行一些基础配置并添加Spring依赖。
 

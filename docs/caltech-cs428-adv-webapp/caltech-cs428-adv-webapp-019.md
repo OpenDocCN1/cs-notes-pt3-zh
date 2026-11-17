@@ -35,11 +35,9 @@
 
 ## 配置Passport和用户模型
 
-![](img/517e2071587e8157cfa6c9556183a85f_16.png)
 
 首先，我们需要安装必要的依赖包。
 
-![](img/517e2071587e8157cfa6c9556183a85f_18.png)
 
 ```json
 // package.json 中添加
@@ -129,7 +127,6 @@ module.exports = passport;
 
 ![](img/517e2071587e8157cfa6c9556183a85f_40.png)
 
-![](img/517e2071587e8157cfa6c9556183a85f_42.png)
 
 ## 在应用中集成Passport
 
@@ -152,22 +149,17 @@ app.use(passport.initialize());
 app.use(passport.session());
 ```
 
-![](img/517e2071587e8157cfa6c9556183a85f_51.png)
 
-![](img/517e2071587e8157cfa6c9556183a85f_53.png)
 
 ![](img/517e2071587e8157cfa6c9556183a85f_55.png)
 
-![](img/517e2071587e8157cfa6c9556183a85f_57.png)
 
 在控制器 `users.controller.js` 中，我们重构登录路由的处理逻辑，使用Passport进行认证。
 
-![](img/517e2071587e8157cfa6c9556183a85f_59.png)
 
 
 ![](img/517e2071587e8157cfa6c9556183a85f_61.png)
 
-![](img/517e2071587e8157cfa6c9556183a85f_63.png)
 
 ![](img/517e2071587e8157cfa6c9556183a85f_65.png)
 
@@ -207,9 +199,7 @@ Passport通过序列化和反序列化将用户信息存入会话。我们在配
 
 ![](img/517e2071587e8157cfa6c9556183a85f_81.png)
 
-![](img/517e2071587e8157cfa6c9556183a85f_83.png)
 
-![](img/517e2071587e8157cfa6c9556183a85f_85.png)
 
 ![](img/517e2071587e8157cfa6c9556183a85f_86.png)
 
@@ -222,7 +212,6 @@ exports.getIndex = (req, res) => {
 
 ![](img/517e2071587e8157cfa6c9556183a85f_88.png)
 
-![](img/517e2071587e8157cfa6c9556183a85f_90.png)
 
 ![](img/517e2071587e8157cfa6c9556183a85f_92.png)
 
@@ -243,7 +232,6 @@ exports.getIndex = (req, res) => {
 
 在 `app.js` 中启用它，并在登录EJS模板中显示错误。
 
-![](img/517e2071587e8157cfa6c9556183a85f_100.png)
 
 ![](img/517e2071587e8157cfa6c9556183a85f_101.png)
 
@@ -285,7 +273,6 @@ exports.checkNotAuthenticated = (req, res, next) => {
 };
 ```
 
-![](img/517e2071587e8157cfa6c9556183a85f_115.png)
 
 然后在路由文件中应用这些中间件。
 
@@ -296,15 +283,11 @@ exports.checkNotAuthenticated = (req, res, next) => {
 ![](img/517e2071587e8157cfa6c9556183a85f_121.png)
 
 
-![](img/517e2071587e8157cfa6c9556183a85f_123.png)
 
-![](img/517e2071587e8157cfa6c9556183a85f_125.png)
 
 ![](img/517e2071587e8157cfa6c9556183a85f_127.png)
 
-![](img/517e2071587e8157cfa6c9556183a85f_129.png)
 
-![](img/517e2071587e8157cfa6c9556183a85f_130.png)
 
 ```javascript
 // routes/users.routes.js
@@ -314,15 +297,12 @@ router.get('/login', checkNotAuthenticated, usersController.getLogin);
 router.get('/register', checkNotAuthenticated, usersController.getRegister);
 ```
 
-![](img/517e2071587e8157cfa6c9556183a85f_132.png)
 
 ![](img/517e2071587e8157cfa6c9556183a85f_134.png)
 
-![](img/517e2071587e8157cfa6c9556183a85f_135.png)
 
 ## 实现登出和密码安全
 
-![](img/517e2071587e8157cfa6c9556183a85f_137.png)
 
 ![](img/517e2071587e8157cfa6c9556183a85f_139.png)
 
@@ -388,7 +368,6 @@ async add(name, email, password) {
 
 ## 使用环境变量保护密钥
 
-![](img/517e2071587e8157cfa6c9556183a85f_169.png)
 
 ![](img/517e2071587e8157cfa6c9556183a85f_171.png)
 
@@ -396,22 +375,18 @@ async add(name, email, password) {
 
 ![](img/517e2071587e8157cfa6c9556183a85f_175.png)
 
-![](img/517e2071587e8157cfa6c9556183a85f_177.png)
 
 ![](img/517e2071587e8157cfa6c9556183a85f_178.png)
 
 最后，我们使用 `dotenv` 模块将敏感信息（如会话密钥）移出代码，存入 `.env` 文件。
 
-![](img/517e2071587e8157cfa6c9556183a85f_180.png)
 
-![](img/517e2071587e8157cfa6c9556183a85f_182.png)
 
 ```json
 // package.json
 "dotenv": "^10.0.0"
 ```
 
-![](img/517e2071587e8157cfa6c9556183a85f_184.png)
 
 ![](img/517e2071587e8157cfa6c9556183a85f_186.png)
 
@@ -448,7 +423,6 @@ node_modules
 .env
 ```
 
-![](img/517e2071587e8157cfa6c9556183a85f_196.png)
 
 ## 总结
 

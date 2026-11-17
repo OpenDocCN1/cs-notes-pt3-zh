@@ -1,8 +1,6 @@
 # 065：JPA架构详解 🏗️
 
-![](img/d3ccd28a13af43662254739bdefca4d1_1.png)
 
-![](img/d3ccd28a13af43662254739bdefca4d1_3.png)
 
 在本节课中，我们将学习Java持久化API的架构，包括其核心类、接口以及它们之间的关系。理解这些组件是掌握JPA如何将Java对象映射到关系型数据库的基础。
 
@@ -16,7 +14,6 @@ Java持久化API是用于将Java对象映射到关系型数据库的Java标准�
 
 下图展示了JPA的类级别架构：
 
-![](img/d3ccd28a13af43662254739bdefca4d1_1.png)
 
 以下是架构中涉及的核心组件：
 
@@ -27,7 +24,6 @@ Java持久化API是用于将Java对象映射到关系型数据库的Java标准�
 *   **Persistence**：这个类包含一些静态方法，用于获取EntityManagerFactory实例。
 *   **Query**：此接口由每个JPA供应商实现，用于获取符合特定条件的关系对象。
 
-![](img/d3ccd28a13af43662254739bdefca4d1_5.png)
 
 ---
 

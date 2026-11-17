@@ -1,6 +1,5 @@
 # 029：1_05_introduction-to-agile-planning-for-software-products.en_subtitled - GPT中英字幕课程资源 - BV14w411a7jH
 
-![](img/b8fea3e959cbfc39ad6e68ec48a9b96a_1.png)
 
 ![](img/b8fea3e959cbfc39ad6e68ec48a9b96a_2.png)
 

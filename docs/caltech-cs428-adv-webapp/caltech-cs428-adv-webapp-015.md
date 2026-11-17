@@ -146,7 +146,6 @@ app.get('/', serveIndex);
 
 ![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_32.png)
 
-![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_33.png)
 
 ```javascript
 // 新增处理函数，用于发送联系页面
@@ -181,7 +180,6 @@ app.get('/contact.html', serveContact);
 
 ![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_48.png)
 
-![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_50.png)
 
 1.  在`app.js`中，为`/contact/send`路径设置一个POST路由。
 2.  创建一个新的处理函数（例如`contactHandler`）。
@@ -204,7 +202,6 @@ app.post('/contact/send', contactHandler);
 
 表单数据通常以查询字符串的形式在POST请求体中发送。为了在服务器端访问这些数据，我们需要使用一个名为`body-parser`的中间件。
 
-![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_52.png)
 
 以下是实现步骤：
 
@@ -226,7 +223,6 @@ app.post('/contact/send', contactHandler);
 
 ![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_64.png)
 
-![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_66.png)
 
 ```javascript
 // 导入body-parser模块
@@ -248,7 +244,6 @@ function contactHandler(request, response) {
 
 我们已经可以接收数据，现在让我们创建一个新的端点，允许客户端通过GET请求获取所有已提交的表单数据。
 
-![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_68.png)
 
 以下是实现步骤：
 
@@ -258,7 +253,6 @@ function contactHandler(request, response) {
 4.  为该路由创建一个处理函数（例如`serveSubmissions`），使用`response.json()`方法将`submissions`数组作为JSON数据发送给客户端。
 
 
-![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_70.png)
 
 ![](img/bb0d34d5369a7f8d2f73cd3eb71961cb_72.png)
 

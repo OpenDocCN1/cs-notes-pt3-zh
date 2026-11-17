@@ -1,8 +1,6 @@
 # 005：Java中的字符串
 
-![](img/0b8e1f421833ce365c370fed6eb60522_0.png)
 
-![](img/0b8e1f421833ce365c370fed6eb60522_2.png)
 
 在本节课中，我们将学习Java编程中最重要的部分之一：字符串。字符串是编程不可或缺的组成部分，Java提供了`String`类来创建和操作字符串。
 
@@ -44,7 +42,6 @@ String myString = "hello";
 
 ## 总结
 
-![](img/0b8e1f421833ce365c370fed6eb60522_4.png)
 
 ![](img/0b8e1f421833ce365c370fed6eb60522_6.png)
 

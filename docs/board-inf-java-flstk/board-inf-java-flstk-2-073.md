@@ -1,6 +1,5 @@
 # 073：Spring Security Hello World 演示 🛡️
 
-![](img/d3bcbf8768fe1b33834b6bd4b1c478d9_0.png)
 
 在本节课中，我们将学习Spring Security的基础知识，并通过一个“Hello World”级别的演示来了解其基本工作原理。我们将看到如何创建一个简单的Spring Boot应用，其中包含公开页面和受保护页面，并体验Spring Security提供的默认登录和认证流程。
 
@@ -19,7 +18,6 @@ Spring Security是一个功能强大且高度可定制的身份验证和访问�
 
 运行应用后，如果访问公开页面，可以直接看到表单并提交数据。然而，如果尝试访问受保护页面，系统会要求我们进行登录。登录成功后，才能看到受保护页面的内容。
 
-![](img/d3bcbf8768fe1b33834b6bd4b1c478d9_2.png)
 
 ## 实现步骤解析
 
@@ -69,7 +67,6 @@ public class SecurityConfig {
 
 ## 总结
 
-![](img/d3bcbf8768fe1b33834b6bd4b1c478d9_4.png)
 
 ![](img/d3bcbf8768fe1b33834b6bd4b1c478d9_6.png)
 

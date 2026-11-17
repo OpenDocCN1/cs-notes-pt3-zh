@@ -1,6 +1,5 @@
 # 037：代码审查 - 黑客游戏第二版
 
-![](img/fc15f159eea2a1247f3d651dde38bb2a_0.png)
 
 ![](img/fc15f159eea2a1247f3d651dde38bb2a_0.png)
 
@@ -52,7 +51,6 @@ from time import sleep
 
 其次，测试评估标识符的格式。目前，你所有的标识符都应该是小写，单词之间用下划线连接。
 
-![](img/fc15f159eea2a1247f3d651dde38bb2a_6.png)
 
 ![](img/fc15f159eea2a1247f3d651dde38bb2a_6.png)
 

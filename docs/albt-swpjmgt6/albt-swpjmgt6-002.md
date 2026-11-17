@@ -1,6 +1,5 @@
 # 002：简介
 
-![](img/7a50692d5aaba91c8276df66cc82575d_1.png)
 
 ![](img/7a50692d5aaba91c8276df66cc82575d_2.png)
 

@@ -1,6 +1,5 @@
 # 030：Div按钮实现 🖱️
 
-![](img/3a98326d3e725b0cbb6fdfac5e2bf0e1_0.png)
 
 在本节课中，我们将学习如何使用JavaScript与网页内容进行交互。我们将从简单的HTML和CSS示例开始，然后向这个简单的网页添加JavaScript。通过从一个基础网页入手，你将能够理解如何为其添加交互性。
 
@@ -82,7 +81,6 @@ function doChange() {
 <input type="button" value="点击我" onclick="doChange()">
 ```
 
-![](img/3a98326d3e725b0cbb6fdfac5e2bf0e1_2.png)
 
 现在，当按钮被按下时，调用的是我们定义的JavaScript函数`doChange`，从而弹出相应的警告框。这是一个开始学习事件处理的好方法。
 

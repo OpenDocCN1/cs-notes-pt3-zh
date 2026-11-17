@@ -159,7 +159,6 @@ NPM会寻找项目根目录下的`package.json`文件来获取配置信息。
 
 上一节我们学会了解析路径，本节中我们来看看当请求的文件不存在时，如何向客户端返回一个标准的404错误。
 
-![](img/afa810535f6f5d5fb2aff4ff22d428ca_32.png)
 
 我们需要使用`fs`（文件系统）模块来检查文件是否存在。
 
@@ -203,7 +202,6 @@ NPM会寻找项目根目录下的`package.json`文件来获取配置信息。
 
 ---
 
-![](img/afa810535f6f5d5fb2aff4ff22d428ca_42.png)
 
 ![](img/afa810535f6f5d5fb2aff4ff22d428ca_44.png)
 
@@ -213,7 +211,6 @@ NPM会寻找项目根目录下的`package.json`文件来获取配置信息。
 
 当文件存在时，我们需要返回成功响应。本节中我们来看看如何根据文件扩展名确定正确的MIME类型，并返回200状态码。
 
-![](img/afa810535f6f5d5fb2aff4ff22d428ca_47.png)
 
 ![](img/afa810535f6f5d5fb2aff4ff22d428ca_48.png)
 
@@ -255,7 +252,6 @@ NPM会寻找项目根目录下的`package.json`文件来获取配置信息。
     };
     ```
 
-![](img/afa810535f6f5d5fb2aff4ff22d428ca_54.png)
 
 创建一个`index.html`文件，然后访问它。服务器将返回200状态码，并告诉你它识别出这是一个`text/html`类型的文件。
 
@@ -361,7 +357,6 @@ const serveFile = (response, filename) => {
 
 我们已经处理了客户端错误（404）和成功情况（200，302）。本节中我们来看看最后一个常见的状态码——500，它表示服务器端发生了内部错误。
 
-![](img/afa810535f6f5d5fb2aff4ff22d428ca_99.png)
 
 我们将在逻辑中添加一个最终的`else`分支，作为意外情况的兜底处理。
 
@@ -402,7 +397,6 @@ const serveFile = (response, filename) => {
 
 ## 总结 🎉
 
-![](img/afa810535f6f5d5fb2aff4ff22d428ca_110.png)
 
 在本节课中，我们一起学习了如何使用纯Node.js和其核心模块构建一个静态Web服务器。我们完成了以下任务：
 

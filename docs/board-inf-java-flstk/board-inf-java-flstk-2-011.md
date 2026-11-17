@@ -1,8 +1,6 @@
 # 011：ArrayList详解
 
-![](img/c8bcba8d1fe4f590275649e58248630e_0.png)
 
-![](img/c8bcba8d1fe4f590275649e58248630e_2.png)
 
 在本节课中，我们将要学习一个实现了List接口的重要类——ArrayList。我们将了解它的特性、常用方法以及如何在代码中实际使用它。
 
@@ -94,7 +92,6 @@ public class ArrayListDemo {
 
 ## 总结
 
-![](img/c8bcba8d1fe4f590275649e58248630e_4.png)
 
 ![](img/c8bcba8d1fe4f590275649e58248630e_6.png)
 

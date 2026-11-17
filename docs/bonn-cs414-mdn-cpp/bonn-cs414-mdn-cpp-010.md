@@ -140,11 +140,9 @@ abs(3.14); // 推导出 T = double
 std::vector vec = {1, 2, 3}; // 推导出 vec 是 std::vector<int>
 ```
 
-![](img/3da6db0daf1aa034b7dcfdd778ce5232_5.png)
 
 ---
 
-![](img/3da6db0daf1aa034b7dcfdd778ce5232_7.png)
 
 ## 模板特化
 

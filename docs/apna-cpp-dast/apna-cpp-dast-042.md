@@ -12,7 +12,6 @@
 
 斐波那契数列是一个数列，其中每一项（从第三项开始）都等于前两项之和。其规则可以用以下公式描述：
 
-![](img/cbce0ab3bb42ce5d2e45559e49623453_3.png)
 
 **F(n) = F(n-1) + F(n-2)**
 
@@ -94,7 +93,6 @@ bool isSorted(int arr[], int n) {
 }
 ```
 
-![](img/cbce0ab3bb42ce5d2e45559e49623453_7.png)
 
 ### 复杂度分析
 
@@ -146,7 +144,6 @@ int binarySearch(int arr[], int size, int target) {
 }
 ```
 
-![](img/cbce0ab3bb42ce5d2e45559e49623453_11.png)
 
 ### 复杂度分析
 
@@ -155,7 +152,6 @@ int binarySearch(int arr[], int size, int target) {
 
 ---
 
-![](img/cbce0ab3bb42ce5d2e45559e49623453_11.png)
 
 ## 总结 🎯
 
@@ -167,7 +163,6 @@ int binarySearch(int arr[], int size, int target) {
 
 通过对比这三个问题，我们深刻体会到：虽然递归代码通常简洁易懂，但必须仔细分析其时间与空间复杂度。在有些情况下（如斐波那契数列的朴素递归），递归可能并非最优选择，需要考虑迭代或记忆化（Memoization）等优化技术。理解递归树是分析递归复杂度的关键工具。
 
-![](img/cbce0ab3bb42ce5d2e45559e49623453_13.png)
 
 ![](img/cbce0ab3bb42ce5d2e45559e49623453_13.png)
 

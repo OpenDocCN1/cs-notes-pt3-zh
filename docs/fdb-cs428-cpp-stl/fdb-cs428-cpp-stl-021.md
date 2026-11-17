@@ -98,10 +98,8 @@ std::for_each(vec.begin(), vec.end(),
 
 首先，回顾一下C风格函数指针的基本用法：
 
-![](img/d889eb1916173ae7b05efd39f2b79e53_1.png)
 
 
-![](img/d889eb1916173ae7b05efd39f2b79e53_3.png)
 
 ```cpp
 bool my_function(int i) { return i > 10; } // 普通函数

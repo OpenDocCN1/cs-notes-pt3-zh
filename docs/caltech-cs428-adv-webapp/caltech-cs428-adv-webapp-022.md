@@ -109,7 +109,6 @@ module.exports = {
 };
 ```
 
-![](img/6c68f1f2b6558d155ff370ad0b7cb864_24.png)
 
 **在 `app.js` 中添加连接代码：**
 
@@ -246,7 +245,6 @@ module.exports = router;
 
 ![](img/6c68f1f2b6558d155ff370ad0b7cb864_68.png)
 
-![](img/6c68f1f2b6558d155ff370ad0b7cb864_70.png)
 
 ![](img/6c68f1f2b6558d155ff370ad0b7cb864_72.png)
 
@@ -318,7 +316,6 @@ router.get('/user/:id', async (req, res) => {
 
 **`api/user-routes.js` 中的实现：**
 
-![](img/6c68f1f2b6558d155ff370ad0b7cb864_90.png)
 
 ```javascript
 router.put('/update/:id', async (req, res) => {
@@ -337,7 +334,6 @@ router.put('/update/:id', async (req, res) => {
 
 #### 删除 (Delete) - `DELETE /delete/:id`
 
-![](img/6c68f1f2b6558d155ff370ad0b7cb864_92.png)
 
 **`api/user-routes.js` 中的实现：**
 
@@ -355,7 +351,6 @@ router.delete('/delete/:id', async (req, res) => {
 
 **提示：** 在实际应用中，请为所有数据库操作添加 `try...catch` 块以进行错误处理，防止服务器因客户端错误请求而崩溃。
 
-![](img/6c68f1f2b6558d155ff370ad0b7cb864_96.png)
 
 ![](img/6c68f1f2b6558d155ff370ad0b7cb864_98.png)
 
@@ -483,7 +478,6 @@ router.get('/special', verifyToken, (req, res) => {
 
 ![](img/6c68f1f2b6558d155ff370ad0b7cb864_127.png)
 
-![](img/6c68f1f2b6558d155ff370ad0b7cb864_128.png)
 
 **前端访问受保护路由：**
 

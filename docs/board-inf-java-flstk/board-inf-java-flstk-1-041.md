@@ -1,8 +1,6 @@
 Java全栈开发：专项课程（上）：第41讲：条件与循环综合练习 - FizzBuzz
 
-![](img/0c2d4d08fbb8ecbc7916cb4f10e42434_0.png)
 
-![](img/0c2d4d08fbb8ecbc7916cb4f10e42434_2.png)
 
 在本节课中，我们将通过一个经典的编程练习——FizzBuzz问题，来总结和巩固之前学习的条件判断与循环结构知识。我们将编写一个程序，根据特定规则输出一系列结果。
 
@@ -26,7 +24,6 @@ FizzBuzz是一个常见的编程练习，它要求我们根据一组数字的特
 
 首先，我们需要创建一个Scanner对象来接收用户输入，以确定我们想要检查的数字范围上限。
 
-![](img/0c2d4d08fbb8ecbc7916cb4f10e42434_4.png)
 
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -79,7 +76,6 @@ if (i % 3 == 0 && i % 5 == 0) {
 
 ---
 
-![](img/0c2d4d08fbb8ecbc7916cb4f10e42434_6.png)
 
 ![](img/0c2d4d08fbb8ecbc7916cb4f10e42434_8.png)
 

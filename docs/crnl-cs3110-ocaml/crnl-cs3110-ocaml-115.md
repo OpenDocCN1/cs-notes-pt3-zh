@@ -106,11 +106,9 @@ let print_vector_iter v =
 
 如果你熟悉C语言或其他命令式语言中的 `printf` 函数，这会让你感到非常熟悉。它的用法很简单。
 
-![](img/2e18786c13549bd5d8ea25a42e5398fe_12.png)
 
 `printf` 函数接收一个所谓的**格式说明符**，这是一个说明如何打印参数的字符串。
 
-![](img/2e18786c13549bd5d8ea25a42e5398fe_13.png)
 
 ```ocaml
 let print_vector_printf v =
@@ -126,13 +124,11 @@ let print_vector_printf_short v =
 ```
 注意我们使用了大写的 `F`。现在我们得到了与之前相同的输出。
 
-![](img/2e18786c13549bd5d8ea25a42e5398fe_15.png)
 
 但我们是用一个非常简短的函数实现的。这不需要我们实现大量代码，从而避免了在代码中可能犯的许多错误。
 
 ---
 
-![](img/2e18786c13549bd5d8ea25a42e5398fe_17.png)
 
 ## 总结
 

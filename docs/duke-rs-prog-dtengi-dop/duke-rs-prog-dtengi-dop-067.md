@@ -44,9 +44,7 @@ ENTRYPOINT [“./web_docker”]
 
 ![](img/1c3cab27cfc4d3b784002eaed0b15718_4.png)
 
-![](img/1c3cab27cfc4d3b784002eaed0b15718_5.png)
 
-![](img/1c3cab27cfc4d3b784002eaed0b15718_7.png)
 
 **lib.rs 示例：**
 ```rust
@@ -67,7 +65,6 @@ pub fn random_fruit() -> String {
 
 在 `main` 函数中，我们注册了所有这些服务。整个过程非常直观。
 
-![](img/1c3cab27cfc4d3b784002eaed0b15718_9.png)
 
 ![](img/1c3cab27cfc4d3b784002eaed0b15718_11.png)
 

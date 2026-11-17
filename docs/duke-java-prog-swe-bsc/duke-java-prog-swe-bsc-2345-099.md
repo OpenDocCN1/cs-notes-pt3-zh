@@ -1,6 +1,5 @@
 # 099：使用HashMap统计单词出现次数 📊
 
-![](img/5cdf7bebedbe945c6ddb4da5d89191ea_0.png)
 
 在本节课中，我们将学习如何使用Java中的`HashMap`数据结构来统计一个文件中每个单词出现的次数。我们将从一个统计单词总数的程序开始，逐步将其改造为能够统计每个单词具体出现次数的程序。
 
@@ -12,9 +11,7 @@
 
 ---
 
-![](img/5cdf7bebedbe945c6ddb4da5d89191ea_2.png)
 
-![](img/5cdf7bebedbe945c6ddb4da5d89191ea_3.png)
 
 ## 从统计单词总数开始
 
@@ -41,7 +38,6 @@ public void countWords() {
 
 我们需要在方法中添加一个局部变量：一个`HashMap<String, Integer>`。在这个映射中，键（Key）是文件中出现的每个单词（字符串），值（Value）是该单词出现的次数（整数）。
 
-![](img/5cdf7bebedbe945c6ddb4da5d89191ea_5.png)
 
 首先，我们需要创建这个`HashMap`。确保已经导入了`java.util.HashMap`包。
 
@@ -118,7 +114,6 @@ for (String word : map.keySet()) {
 *   **填充映射**：通过遍历单词，使用`containsKey()`检查单词是否存在，并使用`put()`和`get()`方法来更新或添加计数。
 *   **遍历输出**：使用`keySet()`遍历所有单词，并根据阈值筛选和输出结果。
 
-![](img/5cdf7bebedbe945c6ddb4da5d89191ea_7.png)
 
 ![](img/5cdf7bebedbe945c6ddb4da5d89191ea_8.png)
 

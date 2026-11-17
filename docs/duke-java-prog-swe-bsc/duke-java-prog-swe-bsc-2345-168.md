@@ -1,6 +1,5 @@
 # 168：声明异常
 
-![](img/b0004afba36f9257adcd4e6669d4c1e7_0.png)
 
 ![](img/b0004afba36f9257adcd4e6669d4c1e7_0.png)
 

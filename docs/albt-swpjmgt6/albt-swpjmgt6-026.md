@@ -1,10 +1,7 @@
 # 026：《软件产品管理毕业项目》｜1_05_0-1-课程介绍
 
-![](img/45e37ebf3166d4a4f0a1f9a1760f0e1f_1.png)
 
-![](img/45e37ebf3166d4a4f0a1f9a1760f0e1f_2.png)
 
-![](img/45e37ebf3166d4a4f0a1f9a1760f0e1f_1.png)
 
 ![](img/45e37ebf3166d4a4f0a1f9a1760f0e1f_2.png)
 

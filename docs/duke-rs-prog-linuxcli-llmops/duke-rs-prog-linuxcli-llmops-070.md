@@ -34,7 +34,6 @@
 
 ---
 
-![](img/0ada276219ea890b9f1ea62e14bb0b45_4.png)
 
 ## 其他配置方法：Cargo Lambda
 还有其他方法需要注意，其中之一是使用**Cargo Lambda**。我们可以复制相关命令进行设置。

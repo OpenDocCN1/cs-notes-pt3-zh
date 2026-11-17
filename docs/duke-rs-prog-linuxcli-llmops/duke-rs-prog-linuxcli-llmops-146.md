@@ -1,6 +1,5 @@
 # 146：AWS CodeWhisperer实时编码（第二部分）🎯
 
-![](img/075a0900468397aac144f76c9884d334_0.png)
 
 ## 概述
 在本节课中，我们将学习如何使用AWS CodeWhisperer辅助编写一个更复杂的AWS Lambda函数。我们将扩展之前的基础函数，使其能够与AWS S3服务交互，具体实现列出账户中所有S3存储桶的功能。我们将逐步介绍如何添加依赖、编写业务逻辑以及处理异步编程模型。
@@ -139,7 +138,6 @@ async fn func(event: LambdaEvent<Value>) -> Result<Response, Error> {
     ```
 4.  函数成功执行，并在输出中列出了AWS账户中的所有S3存储桶名称。
 
-![](img/075a0900468397aac144f76c9884d334_2.png)
 
 ## 总结
 
@@ -153,7 +151,6 @@ async fn func(event: LambdaEvent<Value>) -> Result<Response, Error> {
 
 ![](img/075a0900468397aac144f76c9884d334_2.png)
 
-![](img/075a0900468397aac144f76c9884d334_4.png)
 
 ![](img/075a0900468397aac144f76c9884d334_4.png)
 

@@ -2,9 +2,7 @@
 
 ![](img/d14fb3afe8d5ec668fee5df1dca90851_1.png)
 
-![](img/d14fb3afe8d5ec668fee5df1dca90851_3.png)
 
-![](img/d14fb3afe8d5ec668fee5df1dca90851_5.png)
 
 在本节课中，我们将学习如何设计一个交通灯控制器，深入探讨有限状态机（FSM）的硬件实现，并了解摩尔（Moore）型与米利（Mealy）型状态机的权衡。此外，我们还将介绍本课程的实验安排、FPGA平台以及硬件描述语言Verilog的基础知识。
 
@@ -191,13 +189,11 @@ HDL能够方便地描述硬件结构（如连线、门电路、寄存器、时�
 
 ![](img/d14fb3afe8d5ec668fee5df1dca90851_27.png)
 
-![](img/d14fb3afe8d5ec668fee5df1dca90851_29.png)
 
 ![](img/d14fb3afe8d5ec668fee5df1dca90851_31.png)
 
 ![](img/d14fb3afe8d5ec668fee5df1dca90851_33.png)
 
-![](img/d14fb3afe8d5ec668fee5df1dca90851_34.png)
 
 ### 模块：Verilog的基本构建块
 

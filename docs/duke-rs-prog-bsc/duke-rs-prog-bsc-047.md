@@ -1,6 +1,5 @@
 # 047：函数基础总结
 
-![](img/5c50c8a9971d488dadbf93f23d8c0710_0.png)
 
 ![](img/5c50c8a9971d488dadbf93f23d8c0710_0.png)
 

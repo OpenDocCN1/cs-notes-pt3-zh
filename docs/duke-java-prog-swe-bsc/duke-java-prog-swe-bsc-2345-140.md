@@ -1,6 +1,5 @@
 # 140：Comparable接口
 
-![](img/77a693610d36b2136612c3e12bb914a8_0.png)
 
 在本节课中，我们将要学习Java中的`Comparable`接口。这个接口定义了一种“自然排序”的约定，允许我们比较和排序实现了该接口的类的对象。我们将通过具体的例子来理解其工作原理和实际应用。
 
@@ -22,7 +21,6 @@ public interface Comparable<T> {
 
 这个类型参数可以在接口定义的其余部分使用，并且会替换为传入的实际类型。对于`Comparable<QuakeEntry>`，`compareTo`方法就会接受一个`QuakeEntry`对象作为其参数。
 
-![](img/77a693610d36b2136612c3e12bb914a8_2.png)
 
 ## 泛型设计的目的
 

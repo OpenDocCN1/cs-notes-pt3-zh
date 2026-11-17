@@ -33,7 +33,6 @@ highlow-client/
 
 以下是实现主菜单的步骤：
 
-![](img/e2b69eb057e8abc59bb25d080c1911eb_6.png)
 
 ![](img/e2b69eb057e8abc59bb25d080c1911eb_8.png)
 
@@ -61,11 +60,8 @@ function mainMenu() {
 
 当用户点击“新游戏”按钮时，应用应切换到新游戏视图，允许用户设置数字范围并开始游戏。
 
-![](img/e2b69eb057e8abc59bb25d080c1911eb_11.png)
 
-![](img/e2b69eb057e8abc59bb25d080c1911eb_13.png)
 
-![](img/e2b69eb057e8abc59bb25d080c1911eb_15.png)
 
 以下是创建新游戏视图的步骤：
 
@@ -93,25 +89,18 @@ async function startGame() {
 }
 ```
 
-![](img/e2b69eb057e8abc59bb25d080c1911eb_21.png)
 
 ## 构建加入游戏视图 🔗
 
-![](img/e2b69eb057e8abc59bb25d080c1911eb_23.png)
 
 用户也可以选择加入一个已存在的游戏。我们需要创建一个视图，让用户输入游戏ID。
 
-![](img/e2b69eb057e8abc59bb25d080c1911eb_25.png)
 
-![](img/e2b69eb057e8abc59bb25d080c1911eb_27.png)
 
-![](img/e2b69eb057e8abc59bb25d080c1911eb_29.png)
 
 实现加入游戏视图的步骤如下：
 
-![](img/e2b69eb057e8abc59bb25d080c1911eb_31.png)
 
-![](img/e2b69eb057e8abc59bb25d080c1911eb_33.png)
 
 ![](img/e2b69eb057e8abc59bb25d080c1911eb_35.png)
 
@@ -123,7 +112,6 @@ async function startGame() {
 
 ![](img/e2b69eb057e8abc59bb25d080c1911eb_37.png)
 
-![](img/e2b69eb057e8abc59bb25d080c1911eb_39.png)
 
 ![](img/e2b69eb057e8abc59bb25d080c1911eb_41.png)
 
@@ -133,7 +121,6 @@ async function startGame() {
 
 以下是游戏视图的实现要点：
 
-![](img/e2b69eb057e8abc59bb25d080c1911eb_45.png)
 
 1.  在 `views.js` 的 `viewGame` 函数中，渲染游戏ID、数字范围、输入框和提交按钮。
 2.  实现提交猜测的逻辑。在 `game.js` 的 `submitGuess` 函数中，将用户的猜测发送到后端API。
@@ -178,7 +165,6 @@ async function submitGuess() {
 
 ![](img/e2b69eb057e8abc59bb25d080c1911eb_57.png)
 
-![](img/e2b69eb057e8abc59bb25d080c1911eb_59.png)
 
 ![](img/e2b69eb057e8abc59bb25d080c1911eb_61.png)
 
@@ -190,9 +176,7 @@ async function submitGuess() {
 
 ![](img/e2b69eb057e8abc59bb25d080c1911eb_63.png)
 
-![](img/e2b69eb057e8abc59bb25d080c1911eb_65.png)
 
-![](img/e2b69eb057e8abc59bb25d080c1911eb_67.png)
 
 本节课中，我们一起学习了如何为一个“猜数字”游戏构建完整的前端REST客户端。我们回顾并应用了以下核心概念：
 *   使用 `async/await` 和 `fetch` 进行异步HTTP通信。

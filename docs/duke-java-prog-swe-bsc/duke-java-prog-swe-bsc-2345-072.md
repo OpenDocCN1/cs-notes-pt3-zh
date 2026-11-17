@@ -6,7 +6,6 @@
 
 `char`是Java中的一种基本数据类型，类似于`int`、`boolean`和`double`。字符值使用单引号指定，例如 `'a'`、`'1'` 和 `' '`。而双引号，如 `"a"`，则表示字符串值。
 
-![](img/6ac0b50bf70d0f9ec9b6e4f6109f655d_1.png)
 
 `Character`类提供了许多有用的静态方法。你可能还记得`Integer.parseInt`和`Double.parseDouble`方法，它们分别属于`Integer`和`Double`类。`Character`类也以类似的方式工作。
 
@@ -34,11 +33,9 @@ char upperA = Character.toUpperCase('a'); // 结果为 'A'
 *   `Character.isDigit(char ch)`: 判断字符是否为数字。
 *   `Character.isLetter(char ch)`: 判断字符是否为字母。
 
-![](img/6ac0b50bf70d0f9ec9b6e4f6109f655d_3.png)
 
 ## 实践演示 💻
 
-![](img/6ac0b50bf70d0f9ec9b6e4f6109f655d_4.png)
 
 上一节我们介绍了`Character`类的核心方法，本节中我们通过具体代码来看看这些方法如何应用。
 
@@ -62,7 +59,6 @@ if (ch == '#') {
 
 运行结果会显示三列：原始字符、转换后的大写字符和转换后的小写字符。可以看到，数字和标点符号在转换前后保持不变；字母则会被正确转换。
 
-![](img/6ac0b50bf70d0f9ec9b6e4f6109f655d_6.png)
 
 **代码片段回顾：**
 ```java

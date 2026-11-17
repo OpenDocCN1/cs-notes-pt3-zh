@@ -1,6 +1,5 @@
 # 030：有效回文与移除所有出现 - 字符串第二部分
 
-![](img/37c25bf5a311e7914f02070b65a376bb_0.png)
 
 ![](img/37c25bf5a311e7914f02070b65a376bb_0.png)
 
@@ -92,6 +91,5 @@ string removeOccurrences(string s, string part) {
 
 理解并熟练运用这些基础算法和字符串库函数，是解决更复杂数据结构与算法问题的关键。
 
-![](img/37c25bf5a311e7914f02070b65a376bb_2.png)
 
 ![](img/37c25bf5a311e7914f02070b65a376bb_2.png)

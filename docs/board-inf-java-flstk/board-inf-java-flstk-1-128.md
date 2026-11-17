@@ -31,7 +31,6 @@ let result2 = str1.concat(" ", str2);
 console.log(result2); // 输出: Hello World
 ```
 
-![](img/0420f658f0a9bfba4e8630b866995404_5.png)
 
 ![](img/0420f658f0a9bfba4e8630b866995404_6.png)
 

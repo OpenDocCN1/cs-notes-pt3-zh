@@ -1,6 +1,5 @@
 # 032：SortedSet接口详解 🎯
 
-![](img/0047c0ad7c263bf994a711efbf80b3d5_0.png)
 
 在本节课中，我们将学习Java中的SortedSet接口及其方法。SortedSet是Set接口的一个扩展，它保证集合中的元素以排序后的顺序存储。我们将通过示例来理解其工作原理和常用方法。
 
@@ -8,7 +7,6 @@
 
 ## 概述
 
-![](img/0047c0ad7c263bf994a711efbf80b3d5_2.png)
 
 SortedSet接口位于`java.util`包中，它实现了数学上的集合概念。此接口继承了Set接口的所有方法，并增加了一个核心特性：**所有元素都以排序后的方式存储**。
 
@@ -42,7 +40,6 @@ sortedSet.add("Japan");
 sortedSet.add("India");
 ```
 
-![](img/0047c0ad7c263bf994a711efbf80b3d5_4.png)
 
 当我们打印这个集合时，会观察到两个现象：
 1.  重复的“India”只出现一次，体现了Set的去重特性。
@@ -99,7 +96,6 @@ sortedSet.removeAll(sortedSet); // 同样清空所有元素
 
 本节课中我们一起学习了Java的SortedSet接口。我们了解到SortedSet是Set的一个有序版本，它自动对元素进行排序并去除重复项。其核心实现类是TreeSet，它基于红黑树数据结构。我们通过代码示例实践了如何创建SortedSet、添加元素、遍历集合，并演示了`first`、`last`、`contains`、`remove`等关键方法的使用。SortedSet为需要有序且唯一元素集合的场景提供了便利。
 
-![](img/0047c0ad7c263bf994a711efbf80b3d5_6.png)
 
 ![](img/0047c0ad7c263bf994a711efbf80b3d5_8.png)
 

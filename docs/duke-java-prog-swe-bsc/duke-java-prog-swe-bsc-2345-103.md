@@ -14,7 +14,6 @@
 
 ![](img/12eebd68d45f825cf67c0a7b500ddac6_0.png)
 
-![](img/12eebd68d45f825cf67c0a7b500ddac6_4.png)
 
 要理解其含义，你需要查阅相关Web服务器的文档。这些特定数据来自Apache 2.4 Web服务器的访问日志。因此，你可以通过谷歌搜索“Apache 2.4 web server log file format”来获取更多信息。
 
@@ -56,7 +55,6 @@
 
 思考完数据类型后，是时候将其转化为Java代码了。下图展示了`LogEntry`类的开始部分。我们声明了一个公共类`LogEntry`，并根据刚才讨论的类型编写了字段。
 
-![](img/12eebd68d45f825cf67c0a7b500ddac6_8.png)
 
 现在你应该思考：这些字段应该是`public`还是`private`？请记住，如果一个字段是`public`，任何代码都可以访问它；如果一个字段是`private`，则只有这个特定类内部的代码可以访问它。
 

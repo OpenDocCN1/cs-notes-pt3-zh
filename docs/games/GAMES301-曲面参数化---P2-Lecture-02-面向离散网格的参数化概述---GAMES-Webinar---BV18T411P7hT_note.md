@@ -2,7 +2,6 @@
 
 ![](img/b6abd4be51a5ae12e3e76b6ebc26dd80_0.png)
 
-![](img/b6abd4be51a5ae12e3e76b6ebc26dd80_2.png)
 
 ## 概述
 
@@ -117,7 +116,6 @@
 
 ---
 
-![](img/b6abd4be51a5ae12e3e76b6ebc26dd80_4.png)
 
 ## 总结
 

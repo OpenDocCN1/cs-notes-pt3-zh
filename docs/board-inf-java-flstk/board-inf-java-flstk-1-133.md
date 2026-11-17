@@ -22,7 +22,6 @@ JavaScript可以通过选择节点并更改其属性，或完全添加和移除�
 
 以下是一个树状结构的示例，它代表了给定网页DOM的层次结构。
 
-![](img/bda2397144c1272eec6cafdbfcea039f_1.png)
 
 ![](img/bda2397144c1272eec6cafdbfcea039f_1.png)
 
@@ -45,7 +44,6 @@ JavaScript可以通过选择节点并更改其属性，或完全添加和移除�
 
 上一节我们介绍了DOM的树状结构，本节中我们来看看JavaScript如何与之交互。开发者通过访问和操作这些节点来实现动态效果。
 
-![](img/bda2397144c1272eec6cafdbfcea039f_3.png)
 
 以下是操作DOM的基本思路：
 *   **选择节点**：使用JavaScript方法（如 `document.getElementById`）找到树中的特定元素。
@@ -58,6 +56,5 @@ JavaScript可以通过选择节点并更改其属性，或完全添加和移除�
 
 在下一个视频中，我们将学习如何使用JavaScript访问和实际操作DOM。下个视频见。谢谢。
 
-![](img/bda2397144c1272eec6cafdbfcea039f_5.png)
 
 ![](img/bda2397144c1272eec6cafdbfcea039f_5.png)

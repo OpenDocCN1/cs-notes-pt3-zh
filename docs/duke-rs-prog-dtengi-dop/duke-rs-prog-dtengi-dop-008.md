@@ -118,9 +118,7 @@ git push
 
 工作流触发后，GitHub Actions会自动执行我们定义的所有步骤。我们需要查看每个步骤的执行结果是否成功。
 
-![](img/2fc5fbde4de0e19b2b000631673653f9_10.png)
 
-![](img/2fc5fbde4de0e19b2b000631673653f9_11.png)
 
 在Actions页面，我们可以看到工作流被分解为多个独立的步骤，例如构建二进制文件、代码检查（linting）、代码格式化（formatting）和运行测试（testing）。每个步骤旁边会显示成功（✓）或失败（✗）的状态。
 

@@ -1,6 +1,5 @@
 # 005：基于线性规划的顶点覆盖近似算法
 
-![](img/710a74a42aecee55a51cf3feaec2dde5_0.png)
 
 ![](img/710a74a42aecee55a51cf3feaec2dde5_0.png)
 
@@ -54,7 +53,6 @@ x_u* + x_v* ≥ 1
 
 由于 x_u* 和 x_v* 中至少有一个 ≥ 0.5，因此 z_u 和 z_v 中至少有一个等于 1。这意味着边 (u, v) 的至少一个端点被包含在输出的顶点覆盖中。
 
-![](img/710a74a42aecee55a51cf3feaec2dde5_2.png)
 
 ![](img/710a74a42aecee55a51cf3feaec2dde5_2.png)
 

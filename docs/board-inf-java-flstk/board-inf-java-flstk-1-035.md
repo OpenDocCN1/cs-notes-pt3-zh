@@ -1,10 +1,8 @@
 # 035：条件结构实战指南
 
-![](img/d59779a97f3f7b6a7adbd69df60406ed_0.png)
 
 在本节课中，我们将学习Java中条件结构的使用方法。我们将通过实际例子，了解`if`、`if-else`、`if-else-if`以及嵌套条件语句的工作原理，并探讨如何将条件语句与逻辑运算符结合使用。
 
-![](img/d59779a97f3f7b6a7adbd69df60406ed_2.png)
 
 ---
 
@@ -89,7 +87,6 @@ if (sellingPrice > costPrice) {
 我们也可以使用嵌套的`if-else`语句来实现相同的逻辑：
 
 
-![](img/d59779a97f3f7b6a7adbd69df60406ed_4.png)
 
 ```java
 float sellingPrice = 1200;
@@ -170,7 +167,6 @@ if (isLoggedIn) {
 *   我们看到了使用嵌套`if-else`实现相同逻辑的另一种方式。
 *   最后，我们结合逻辑运算符，学习了如何高效地检查多个条件。
 
-![](img/d59779a97f3f7b6a7adbd69df60406ed_6.png)
 
 ![](img/d59779a97f3f7b6a7adbd69df60406ed_8.png)
 

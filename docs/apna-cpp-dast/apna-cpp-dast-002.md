@@ -1,6 +1,5 @@
 # 002：变量、数据类型与运算符 📚
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_1.png)
 
 ![](img/6b3cc1a9ec6918dde64b75212ab80f20_2.png)
 
@@ -10,34 +9,25 @@
 
 ## 概述
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_4.png)
 
 本节课的目标是掌握C++中变量的声明与使用、理解不同的数据类型（如整数、字符、浮点数、布尔值），并学习如何使用算术、关系和逻辑运算符进行基本操作。我们还将学习如何从用户那里获取输入并输出结果。
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_6.png)
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_7.png)
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_8.png)
 
 ---
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_10.png)
 
 ## 编写第一个C++程序 👨‍💻
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_12.png)
 
 上一节我们介绍了课程大纲，本节中我们来看看如何编写并运行一个简单的C++程序。
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_14.png)
 
 一个基本的C++程序结构包含预处理指令和主函数。
 
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_16.png)
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_18.png)
 
 ```cpp
 #include <iostream>
@@ -56,7 +46,6 @@ int main() {
 让我们写一个打印“Hello World”的程序。
 
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_20.png)
 
 ```cpp
 #include <iostream>
@@ -67,23 +56,17 @@ int main() {
 }
 ```
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_22.png)
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_23.png)
 
 *   `cout` 用于向屏幕输出内容。
 *   `<<` 是流插入运算符，用于将右侧的内容发送到`cout`。
 *   每行语句以分号 `;` 结尾。
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_25.png)
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_26.png)
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_28.png)
 
 要输出多行文本，可以使用换行符 `\n`。
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_30.png)
 
 ```cpp
 cout << "Hello World\n";
@@ -101,23 +84,18 @@ cout << "from Apna College";
 
 编译并运行程序，你将在屏幕上看到输出。
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_32.png)
 
 ---
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_34.png)
 
 ## 变量与内存 🧠
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_36.png)
 
 上一节我们学会了输出文本，本节中我们来看看程序如何存储和操作数据。
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_38.png)
 
 变量是程序中用于存储数据的基本单元。你可以把变量想象成一个带标签的盒子，里面可以存放一个值。
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_40.png)
 
 **声明一个变量的语法是：**
 `数据类型 变量名;`
@@ -126,7 +104,6 @@ cout << "from Apna College";
 int age; // 声明一个名为age的整数变量
 ```
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_42.png)
 
 **给变量赋值：**
 ```cpp
@@ -140,13 +117,10 @@ float price = 99.99;
 bool isSafe = true;
 ```
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_44.png)
 
 当你在代码中写下 `int age = 25;` 时，计算机会在内存（RAM）中分配一小块空间（例如4个字节）来存储这个变量。这块空间被命名为 `age`，其中存储的值是 `25`。
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_46.png)
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_47.png)
 
 ---
 
@@ -154,13 +128,10 @@ bool isSafe = true;
 
 变量可以存储不同类型的数据，这由**数据类型**决定。C++提供了几种基本（原始）数据类型。
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_49.png)
 
 以下是主要的基本数据类型：
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_51.png)
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_53.png)
 
 1.  **整型 (`int`)**：用于存储整数（如 -10, 0, 42）。在大多数系统上占用4字节内存。
     ```cpp
@@ -174,7 +145,6 @@ bool isSafe = true;
     char symbol = '$';
     ```
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_55.png)
 
 3.  **浮点型 (`float`)**：用于存储单精度浮点数（小数），如 3.14, 99.99。占用4字节内存。
     ```cpp
@@ -194,7 +164,6 @@ bool isSafe = true;
     bool isLoggedIn = false;
     ```
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_57.png)
 
 你可以使用 `sizeof()` 运算符来查看某种数据类型或变量占用的内存大小（字节数）：
 ```cpp
@@ -202,7 +171,6 @@ cout << sizeof(int) << endl; // 通常输出 4
 cout << sizeof(grade) << endl; // 输出 1
 ```
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_59.png)
 
 ---
 
@@ -227,26 +195,20 @@ cout << sizeof(grade) << endl; // 输出 1
     int approxPrice = (int)price; // 显式将double转换为int，approxPrice变为99（丢失小数部分）
     ```
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_61.png)
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_62.png)
 
 ---
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_64.png)
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_65.png)
 
 ## 用户输入与输出 🖥️
 
 一个完整的程序通常需要与用户交互：获取输入，进行处理，然后输出结果。
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_67.png)
 
 *   **输出**：使用 `cout` 和 `<<`。
 *   **输入**：使用 `cin` 和 `>>`。
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_69.png)
 
 以下是一个获取用户年龄并输出的示例：
 
@@ -271,18 +233,15 @@ int main() {
 
 ---
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_71.png)
 
 ## 运算符 ⚙️
 
 运算符用于对变量和值执行操作。上一节我们处理了输入输出，本节我们来学习如何用运算符处理数据。
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_73.png)
 
 ### 1. 算术运算符
 用于基本的数学计算。
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_75.png)
 
 ```cpp
 int a = 10, b = 3;
@@ -310,7 +269,6 @@ cout << (x == 5);  // 等于，输出1
 cout << (x != 3);  // 不等于，输出1
 ```
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_77.png)
 
 ### 3. 逻辑运算符
 用于组合多个布尔条件。
@@ -383,7 +341,6 @@ int main() {
 }
 ```
 
-![](img/6b3cc1a9ec6918dde64b75212ab80f20_79.png)
 
 ---
 

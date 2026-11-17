@@ -1,8 +1,6 @@
 Java全栈开发：20：Java Map接口详解 🗺️
 
-![](img/d700b94113eebfa5a1afb6b8cb3d451e_0.png)
 
-![](img/d700b94113eebfa5a1afb6b8cb3d451e_2.png)
 
 在本节课中，我们将要学习Java中的Map接口。Map是一种基于键值对存储数据的集合，类似于字典。我们将了解其核心概念、实现类、常用方法以及需要注意的异常。
 

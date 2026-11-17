@@ -1,14 +1,11 @@
 # 120：破解未知语言的维吉尼亚密码 🔐
 
-![](img/55e66fb5c0d9077f03c8cfcb3dbc9381_0.png)
 
 在本节课中，我们将要学习如何扩展我们的维吉尼亚密码破解程序，使其能够处理未知语言的密文。我们将修改现有方法，并编写新的方法来支持多语言字典分析。
 
 ---
 
-![](img/55e66fb5c0d9077f03c8cfcb3dbc9381_2.png)
 
-![](img/55e66fb5c0d9077f03c8cfcb3dbc9381_3.png)
 
 ## 概述
 
@@ -16,7 +13,6 @@
 
 ## 多语言破解策略
 
-![](img/55e66fb5c0d9077f03c8cfcb3dbc9381_5.png)
 
 为了处理未知语言，我们需要一个包含多种语言单词列表的字典。对于每种语言，我们需要知道其最常见的字母（并非所有语言都是‘E’）。然后，我们可以对每种语言尝试使用相同的破解技术，找出能产生最多真实单词的密钥长度和明文。
 
@@ -28,7 +24,6 @@
 4.  **尝试所有语言**：遍历HashMap中的所有语言，对每种语言调用破解方法，并记录最佳结果。
 5.  **修改现有方法**：调整主破解方法 `breakVigenere` 和单语言破解方法 `breakForLanguage`，以支持多语言逻辑。
 
-![](img/55e66fb5c0d9077f03c8cfcb3dbc9381_7.png)
 
 ## 数据结构设计
 
@@ -43,19 +38,15 @@ HashMap<String, HashSet<String>>
 
 这个嵌套了尖括号的类型看起来有些复杂，但它完美体现了**组合**这一重要的编程原则。通过将简单的数据结构（如HashMap和HashSet）组合在一起，我们可以构建出功能强大且易于理解的复杂结构。
 
-![](img/55e66fb5c0d9077f03c8cfcb3dbc9381_9.png)
 
 ## 需要编写的新方法
 
 为了实现上述策略，我们需要编写两个新方法。
 
-![](img/55e66fb5c0d9077f03c8cfcb3dbc9381_11.png)
 
-![](img/55e66fb5c0d9077f03c8cfcb3dbc9381_12.png)
 
 ### 1. 计算单词集合中的最常见字母
 
-![](img/55e66fb5c0d9077f03c8cfcb3dbc9381_14.png)
 
 此方法接收一个 `HashSet<String>` 参数（即一种语言的单词列表），并返回该集合中出现频率最高的字符。
 
@@ -64,17 +55,13 @@ HashMap<String, HashSet<String>>
 *   统计每个字母出现的总次数。
 *   找出出现次数最多的字母。
 
-![](img/55e66fb5c0d9077f03c8cfcb3dbc9381_16.png)
 
 你已多次练习过计数和寻找最大值的算法，现在正是运用这些技能的时候。
 
-![](img/55e66fb5c0d9077f03c8cfcb3dbc9381_18.png)
 
 ### 2. 尝试所有语言
 
-![](img/55e66fb5c0d9077f03c8cfcb3dbc9381_20.png)
 
-![](img/55e66fb5c0d9077f03c8cfcb3dbc9381_21.png)
 
 此方法接收密文和一个 `HashMap<String, HashSet<String>>` 参数（即多语言字典）。它会遍历字典中的每种语言，找出解密效果最好的那一种。
 
@@ -90,7 +77,6 @@ HashMap<String, HashSet<String>>
 
 ## 需要修改的现有方法
 
-![](img/55e66fb5c0d9077f03c8cfcb3dbc9381_23.png)
 
 除了新方法，我们还需要对两个现有方法进行修改。
 
@@ -102,16 +88,13 @@ HashMap<String, HashSet<String>>
 
 ### 2. 修改 `breakForLanguage` 方法
 
-![](img/55e66fb5c0d9077f03c8cfcb3dbc9381_25.png)
 
 这是针对单一语言进行破解的核心方法。需要做一个小但关键的改动：
 *   **动态最常见字母**：之前我们固定传入字母‘E’作为最常见字母。现在，我们需要在方法内部，使用新编写的 `mostCommonCharIn` 方法，根据传入的单词集合动态计算出该语言的最常见字母，然后将这个字母传递给 `tryKeyLength` 方法。
 
 ## 总结
 
-![](img/55e66fb5c0d9077f03c8cfcb3dbc9381_27.png)
 
-![](img/55e66fb5c0d9077f03c8cfcb3dbc9381_28.png)
 
 本节课中我们一起学习了如何将维吉尼亚密码破解程序升级为支持多语言版本。我们设计了使用 `HashMap<String, HashSet<String>>` 来组织多语言字典，并规划了编写 `mostCommonCharIn` 和 `breakForAllLanguages` 两个新方法的任务。同时，我们也明确了需要修改 `breakVigenere` 和 `breakForLanguage` 两个现有方法以适应新的逻辑。
 

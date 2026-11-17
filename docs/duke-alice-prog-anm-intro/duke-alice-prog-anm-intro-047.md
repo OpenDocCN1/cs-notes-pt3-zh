@@ -2,7 +2,6 @@
 
 ![](img/8a6bcbb78e65ddae364d4709383ae657_0.png)
 
-![](img/8a6bcbb78e65ddae364d4709383ae657_1.png)
 
 在本节课中，我们将学习如何使用对象的颜色（`paint`）和透明度（`opacity`）属性，并结合内置函数来创建一个生动的动画故事。我们将跟随一只饥饿的狼寻找兔子的情节，逐步实现多个场景的动画效果。
 
@@ -39,7 +38,6 @@
 
 首先，让狼说话，然后让兔子出现并跳跃。
 
-![](img/8a6bcbb78e65ddae364d4709383ae657_3.png)
 
 *   **狼说话**：`bigBadWolf.say(“Nothing much happening today.”, duration=2)`
 *   **兔子出现**：将兔子的透明度设置为1（完全可见）：`bunny.setOpacity(1)`

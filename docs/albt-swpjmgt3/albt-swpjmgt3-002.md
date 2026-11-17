@@ -1,6 +1,5 @@
 # 002：1_客户需求和软件需求简介
 
-![](img/ac1cfcfaa4bc439bbc64ee0164160429_1.png)
 
 ![](img/ac1cfcfaa4bc439bbc64ee0164160429_2.png)
 

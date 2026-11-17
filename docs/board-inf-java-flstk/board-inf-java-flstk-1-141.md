@@ -99,7 +99,6 @@ removeButton.addEventListener('click', function() {
 *   **`parentElement.removeChild(childElement)`**：从 DOM 中移除父节点下的一个指定子节点。
 *   **`document.querySelector(selector)`**：返回文档中与指定选择器匹配的第一个元素。
 
-![](img/2f1ecfc343912d36e28a0cdeb7cc02cb_15.png)
 
 事件监听器使用 `querySelector` 方法访问相应的 DOM 元素，然后使用 `appendChild` 或 `removeChild` 方法来创建或移除元素。
 

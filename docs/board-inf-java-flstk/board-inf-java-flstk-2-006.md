@@ -1,10 +1,8 @@
 # 006：字符串操作 📝
 
-![](img/1446e815ab4b67c6d79c3fbab523cb67_0.png)
 
 在本节课中，我们将学习如何在Java中声明和操作字符串。我们将使用字符串字面量、字符串对象以及各种字符串方法来完成常见的任务。
 
-![](img/1446e815ab4b67c6d79c3fbab523cb67_2.png)
 
 ---
 
@@ -15,7 +13,6 @@
 以下是两种声明方式的示例：
 
 
-![](img/1446e815ab4b67c6d79c3fbab523cb67_4.png)
 
 ```java
 // 使用字符串字面量声明
@@ -42,7 +39,6 @@ System.out.println(str3);
 
 运行这段代码，你将看到输出结果为`HelloWorld`。
 
-![](img/1446e815ab4b67c6d79c3fbab523cb67_6.png)
 
 ---
 
@@ -109,11 +105,9 @@ System.out.println("Trimmed: '" + trimmed + "'");
 
 ---
 
-![](img/1446e815ab4b67c6d79c3fbab523cb67_8.png)
 
 ## 总结
 
-![](img/1446e815ab4b67c6d79c3fbab523cb67_10.png)
 
 ![](img/1446e815ab4b67c6d79c3fbab523cb67_11.png)
 

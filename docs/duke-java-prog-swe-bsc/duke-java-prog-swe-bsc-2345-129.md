@@ -1,6 +1,5 @@
 # 129：避免重复的接口
 
-![](img/2b3ec9b84ffd4411a18ce38eb7d42ce6_0.png)
 
 ## 概述
 在本节课中，我们将要学习如何通过使用接口来避免代码重复。我们将通过比较两个功能相似但细节不同的方法开始，然后介绍如何创建一个通用的过滤方法，并最终理解接口如何作为类型来帮助我们实现这一目标。
@@ -69,7 +68,6 @@ public ArrayList<QuakeEntry> filter(ArrayList<QuakeEntry> quakeData, Filter f) {
 ## 理解接口
 答案是，`Filter`是一个接口，而不是一个类。你可以在这里看到它的声明。
 
-![](img/2b3ec9b84ffd4411a18ce38eb7d42ce6_2.png)
 
 ```java
 public interface Filter {
@@ -88,7 +86,6 @@ public interface Filter {
 
 让我们看一个例子。以下是`MinMagFilter`，一个检查地震是否具有最小震级的类。
 
-![](img/2b3ec9b84ffd4411a18ce38eb7d42ce6_4.png)
 
 ```java
 public class MinMagFilter implements Filter {
@@ -107,7 +104,6 @@ public class MinMagFilter implements Filter {
 
 你可以看到这个类的声明写着`implements Filter`。当你这样写时，Java会检查并确保该类拥有`Filter`接口承诺的所有方法。如果缺少一个，该类将无法编译。这允许你在编写的代码中将`MinMagFilter`对象视为过滤器。
 
-![](img/2b3ec9b84ffd4411a18ce38eb7d42ce6_6.png)
 
 在这里，你可以看到这个类拥有承诺的`satisfies`方法。该方法简单地检查传入地震的震级是否大于等于存储在对象实例变量中的`magMin`（最小震级）。请注意，这个方法的主体与我们之前看到的按震级过滤的代码中的条件是多么相似。
 
@@ -124,13 +120,10 @@ ArrayList<QuakeEntry> largeQuakes = filter(quakeData, f);
 
 这个第一个赋值语句的右侧创建了一个新的`MinMagFilter`，传入了`4.0`。它创建了一个对象，其`satisfies`方法将测试地震的震级是否至少为`4.0`。该对象的类型是`MinMagFilter`。赋值语句的左侧是一个类型为`Filter`的变量。即使类型不同，这个赋值也是合法的，因为`MinMagFilter`实现了`Filter`接口。
 
-![](img/2b3ec9b84ffd4411a18ce38eb7d42ce6_8.png)
 
-![](img/2b3ec9b84ffd4411a18ce38eb7d42ce6_10.png)
 
 下一行将`f`（这是一个按震级至少为4进行过滤的对象）传递给你之前看到的通用过滤方法。如果你有另一个实现了`Filter`的类，例如`DistanceFilter`，你也可以将`DistanceFilter`的实例赋值给变量`f`。
 
-![](img/2b3ec9b84ffd4411a18ce38eb7d42ce6_12.png)
 
 ![](img/2b3ec9b84ffd4411a18ce38eb7d42ce6_14.png)
 

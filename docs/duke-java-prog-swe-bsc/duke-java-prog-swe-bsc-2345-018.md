@@ -1,6 +1,5 @@
 # 018：for-each循环 🚀
 
-![](img/ea4de499b0a80a9c0263bab58d9191fb_0.png)
 
 在本节课中，我们将学习for-each循环的工作原理。这是一种用于遍历序列（如文件中的行）的便捷循环结构。我们将通过一个具体的代码示例，逐步解析其执行过程，并理解相关的核心概念，如对象创建、方法调用和抽象原则。
 
@@ -10,11 +9,9 @@
 
 我们将分析一段使用for-each循环读取文件并打印其内容的Java代码。此过程涉及创建对象、调用方法以及理解迭代器（Iterable）的概念。我们将手动模拟代码执行，以清晰地展示每一步发生了什么。
 
-![](img/ea4de499b0a80a9c0263bab58d9191fb_2.png)
 
 ---
 
-![](img/ea4de499b0a80a9c0263bab58d9191fb_3.png)
 
 ## 代码结构与初始设置
 
@@ -55,9 +52,7 @@ public class HelloWorld {
 HelloWorld hw = new HelloWorld();
 ```
 
-![](img/ea4de499b0a80a9c0263bab58d9191fb_5.png)
 
-![](img/ea4de499b0a80a9c0263bab58d9191fb_6.png)
 
 由于`HelloWorld`类没有显式定义构造函数，Java会提供一个默认的无参数构造函数。因此，这行代码会创建一个`HelloWorld`对象。该对象没有字段，因此不包含任何可见的状态信息。
 
@@ -83,11 +78,9 @@ FileResource fr = new FileResource("file.txt");
 
 ## 理解for-each循环
 
-![](img/ea4de499b0a80a9c0263bab58d9191fb_8.png)
 
 下一行代码是一个for-each循环。
 
-![](img/ea4de499b0a80a9c0263bab58d9191fb_10.png)
 
 ```java
 for (String line : fr.lines()) {
@@ -100,7 +93,6 @@ for (String line : fr.lines()) {
 *   `:`：for-each循环的语法，常读作“in”。
 *   `fr.lines()`：这是一个表达式，其计算结果是一个**可迭代对象**。可迭代对象能提供一个值的序列。
 
-![](img/ea4de499b0a80a9c0263bab58d9191fb_12.png)
 
 为了理解`fr.lines()`的作用，我们再次查阅文档。文档指出，`fr.lines()`返回一个可迭代对象，其值按顺序对应文件中的每一行。
 

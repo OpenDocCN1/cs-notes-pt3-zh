@@ -1,34 +1,26 @@
 # 41：证明存在无穷多个质数 🔢
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_0.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_2.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_4.png)
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_5.png)
 
 在本节课中，我们将学习并证明一个重要的定理：**存在无穷多个质数**。我们将通过反证法来清晰地展示这一结论。
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_6.png)
 
 ---
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_8.png)
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_9.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_10.png)
 
 ## 概述与术语回顾
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_12.png)
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_13.png)
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_14.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_15.png)
 
 在开始证明之前，我们先回顾几个核心概念。
 
@@ -36,7 +28,6 @@
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_17.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_19.png)
 
 > 设 \( p \) 是一个大于1的正整数。如果 \( p \) 的因数只有1和 \( p \) 本身，则 \( p \) 是质数。
 
@@ -44,9 +35,7 @@
 
 例如，2、3、5都是质数。数字1不被视为质数，因为它不满足“两个不同的因数”这个条件。
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_23.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_24.png)
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_25.png)
 
@@ -54,15 +43,11 @@
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_27.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_29.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_30.png)
 
 此外，我们有一个重要的定理：**任何一个合数都可以被分解为若干个质数的乘积**。例如，\( 12 = 2 \times 2 \times 3 \)。
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_32.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_34.png)
 
 ---
 
@@ -76,7 +61,6 @@
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_39.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_40.png)
 
 上一节我们回顾了质数和合数的定义。现在，我们来思考如何证明质数有无穷多个。
 
@@ -86,15 +70,12 @@
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_43.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_44.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_46.png)
 
 然而，仅仅因为我们能不断找到新的质数，并不能在逻辑上严格证明质数的数量是**无穷**的。这只能说明我们“尚未找完”，而不能排除在某个极大的数字之后质数会“用完”的可能性。
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_47.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_49.png)
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_50.png)
 
@@ -106,21 +87,17 @@
 
 反证法的逻辑是：我们先**假设**结论不成立（即假设质数只有有限个），然后从这个假设出发进行推理。如果推理过程最终导出了一个逻辑上的矛盾（一个不可能成立的结果），那么就说明我们最初的假设是错误的。既然假设“质数有限”是错误的，那么其反面“质数无限”就必然是正确的。
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_55.png)
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_57.png)
 
 ---
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_59.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_60.png)
 
 ## 证明过程：构造矛盾
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_61.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_62.png)
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_64.png)
 
@@ -133,7 +110,6 @@
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_67.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_68.png)
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_69.png)
 
@@ -157,9 +133,7 @@
     \]
     也就是说，\( P \) 等于所有已知质数的乘积再加 1。
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_76.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_77.png)
 
 4.  **第四步：分析数字 \( P \) 的性质**
     现在，我们来分析这个新数字 \( P \)。
@@ -170,7 +144,6 @@
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_79.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_80.png)
 
 5.  **第五步：对合数 \( P \) 进行推理**
     根据合数的性质，任何合数都可以被分解为质因数的乘积。也就是说，\( P \) 必须能被某个质数整除。
@@ -188,7 +161,6 @@
     **一个整数加上一个非整数，结果不可能是一个整数。**
     因此，对于列表中的**任何一个**质数 \( p_k \)，\( P \) 除以 \( p_k \) 的余数都是1，而不是0。这意味着，**列表中的任何一个质数都无法整除 \( P \)**。
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_82.png)
 
 6.  **第六步：得出矛盾**
     我们得到了一个矛盾：
@@ -196,19 +168,15 @@
     *   另一方面，我们列出了所有可能的质数，却发现**没有一个**能整除 \( P \)。
     这就像说“\( P \) 既是合数又不是合数”，这在逻辑上是不可能的。
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_84.png)
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_85.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_87.png)
 
 7.  **第七步：结论**
     这个矛盾的根源在于我们最初的假设——**“质数只有有限个”**。既然这个假设导致了矛盾，那么它一定是错误的。
     因此，其反面必然成立：**质数有无穷多个**。
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_89.png)
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_90.png)
 
 ---
 
@@ -216,7 +184,6 @@
 
 ## 总结
 
-![](img/307945cce2bad72d0e034bf9aaab26d9_93.png)
 
 ![](img/307945cce2bad72d0e034bf9aaab26d9_94.png)
 

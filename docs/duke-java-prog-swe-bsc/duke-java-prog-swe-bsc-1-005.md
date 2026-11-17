@@ -1,8 +1,6 @@
 # 005：什么是HTML
 
-![](img/b9649c015bbddfd8a099a888f79ccf2c_0.png)
 
-![](img/b9649c015bbddfd8a099a888f79ccf2c_2.png)
 
 ## 概述
 
@@ -32,7 +30,6 @@
 
 这个地址被称为**URL**，即统一资源定位符。
 
-![](img/b9649c015bbddfd8a099a888f79ccf2c_4.png)
 
 ## 超文本标记语言
 

@@ -1,8 +1,6 @@
 Java全栈开发：26：NavigableMap接口详解 🧭
 
-![](img/bed4d1f623cd338ff2291e21973eaa92_0.png)
 
-![](img/bed4d1f623cd338ff2291e21973eaa92_2.png)
 
 在本节课中，我们将学习Java中的NavigableMap接口，并通过示例了解其方法。
 
@@ -16,7 +14,6 @@ NavigableMap<K, V> numbers = new TreeMap<>();
 ```
 其中，`K`是用于关联每个元素的唯一标识符（键），`V`是与键关联的值元素。
 
-![](img/bed4d1f623cd338ff2291e21973eaa92_4.png)
 
 在继承层次上，Map接口扩展了SortedMap接口，而SortedMap接口又扩展了NavigableMap接口。NavigableMap主要由`TreeMap`类实现。简而言之，如果你想使用NavigableMap，通常需要使用`TreeMap`类来进行操作。
 

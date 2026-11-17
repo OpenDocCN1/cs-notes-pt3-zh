@@ -46,7 +46,6 @@ AWS Config会监控AWS资源中发生的变更。具体来说，Config会以一�
 aws configservice help
 ```
 
-![](img/b1046439d3aee57a8a60383113e763ea_8.png)
 
 对于初步设置好的AWS Config系统，运行CLI查询可能是最佳的使用方式之一。
 

@@ -43,7 +43,6 @@ def test_add():
 
 ![](img/59a0a923a5a7f673fea14b9d1bafb182_9.png)
 
-![](img/59a0a923a5a7f673fea14b9d1bafb182_10.png)
 
 在确保各个单元正常工作后，我们需要验证它们组合在一起时是否能协同工作。这就是集成测试的目的。它关注不同模块或组件之间的接口和交互。
 
@@ -155,7 +154,6 @@ Feature: Calculator
 
 然后，可以使用 `pytest-bdd` 等工具将这些描述解析并转化为可执行的测试代码。
 
-![](img/59a0a923a5a7f673fea14b9d1bafb182_19.png)
 
 ---
 

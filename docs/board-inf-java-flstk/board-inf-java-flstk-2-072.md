@@ -1,10 +1,8 @@
 # 072：Spring Security 过滤器链 🔗
 
-![](img/8f931e7f69f404d56da1a196c5c1cb23_1.png)
 
 在本节课中，我们将要学习 Spring Security 的核心组件之一：过滤器链。我们将了解它的工作原理、每个过滤器的作用，以及它如何保护你的应用程序。
 
-![](img/8f931e7f69f404d56da1a196c5c1cb23_2.png)
 
 ## 概述
 
@@ -52,7 +50,6 @@ Spring Security 使用一个过滤器链来执行安全功能。这个链由一�
 
 本节课中我们一起学习了 Spring Security 的过滤器链。我们了解到，过滤器链是一系列有序的过滤器，用于处理传入的 HTTP 请求并执行安全检查。它通过依次调用每个过滤器来完成身份验证、授权等任务，是 Spring Security 保护应用程序资源的基石。
 
-![](img/8f931e7f69f404d56da1a196c5c1cb23_4.png)
 
 ![](img/8f931e7f69f404d56da1a196c5c1cb23_5.png)
 

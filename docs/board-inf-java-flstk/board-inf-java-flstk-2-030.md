@@ -1,8 +1,6 @@
 # 030：Java EnumSet类详解 🎯
 
-![](img/b5803d809892444a2adfbc546f0e44d5_0.png)
 
-![](img/b5803d809892444a2adfbc546f0e44d5_2.png)
 
 在本节课中，我们将学习Java集合框架中的EnumSet类。我们将通过示例了解其定义、特性以及各种常用方法。EnumSet是一种专为枚举类型设计的高性能集合实现。
 
@@ -16,7 +14,6 @@ EnumSet是Java集合框架中一个特殊的Set实现，它专门用于存储单
 
 上一节我们介绍了EnumSet的基本概念，本节中我们来看看它的核心特性。
 
-![](img/b5803d809892444a2adfbc546f0e44d5_4.png)
 
 *   **单一枚举类型**：EnumSet中的所有元素必须来自创建时指定的同一个枚举类型。
 *   **高性能**：内部使用位向量（bit vector）实现，因此速度非常快。
@@ -24,7 +21,6 @@ EnumSet是Java集合框架中一个特殊的Set实现，它专门用于存储单
 *   **故障安全迭代器**：使用迭代器遍历时，如果集合被修改，不会抛出`ConcurrentModificationException`。
 *   **继承体系**：其类声明为 `EnumSet<E extends Enum<E>>`，其中`E`表示具体的枚举类型。
 
-![](img/b5803d809892444a2adfbc546f0e44d5_6.png)
 
 ## 创建EnumSet
 

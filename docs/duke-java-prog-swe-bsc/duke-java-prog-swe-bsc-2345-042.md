@@ -1,6 +1,5 @@
 # 042：StorageResource类 📦
 
-![](img/8ab4e0bb018dcd2e1350be392b657429_0.png)
 
 在本节课中，我们将要学习如何使用 `StorageResource` 类来存储和管理数据集合。这是一种将数据存储在列表中的简化方法，有助于分离程序中的不同关注点。
 
@@ -12,7 +11,6 @@
 
 ---
 
-![](img/8ab4e0bb018dcd2e1350be392b657429_2.png)
 
 ## 如何使用StorageResource？ 🛠️
 
@@ -60,7 +58,6 @@ for (String s : sr.data()) {
 
 通过这个过程，我们清晰地看到了数据是如何被存储和访问的。
 
-![](img/8ab4e0bb018dcd2e1350be392b657429_4.png)
 
 ---
 

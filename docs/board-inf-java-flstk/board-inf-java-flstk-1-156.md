@@ -1,8 +1,6 @@
 # 156：什么是Angular指令
 
-![](img/938c4cdedbc8826f0cf7cfa9955f8d44_0.png)
 
-![](img/938c4cdedbc8826f0cf7cfa9955f8d44_0.png)
 
 在本节课中，我们将学习Angular指令是什么。Angular指令是强大的工具，允许你扩展HTML元素的功能、操作DOM并为你的Angular应用添加动态行为。指令是Angular的基本构建块，在创建可复用组件和增强用户体验方面起着至关重要的作用。
 
@@ -40,16 +38,11 @@ Angular提供了几个内置的结构指令，例如 `*ngIf`、`*ngFor` 和 `*ng
 
 在下一节课中，我们将学习Angular结构指令。下节课见。
 
-![](img/938c4cdedbc8826f0cf7cfa9955f8d44_2.png)
 
 🎼
 
-![](img/938c4cdedbc8826f0cf7cfa9955f8d44_4.png)
 
-![](img/938c4cdedbc8826f0cf7cfa9955f8d44_2.png)
 
-![](img/938c4cdedbc8826f0cf7cfa9955f8d44_4.png)
 
-![](img/938c4cdedbc8826f0cf7cfa9955f8d44_5.png)
 
 ![](img/938c4cdedbc8826f0cf7cfa9955f8d44_5.png)

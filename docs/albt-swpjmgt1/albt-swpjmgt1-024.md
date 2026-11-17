@@ -1,6 +1,5 @@
 # 024：学术诚信与抄袭指南
 
-![](img/e91417a7f63b3e27dbcdbbdb9672148d_1.png)
 
 ![](img/e91417a7f63b3e27dbcdbbdb9672148d_2.png)
 

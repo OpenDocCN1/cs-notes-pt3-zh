@@ -1,10 +1,8 @@
 # 025：SortedMap接口详解 📚
 
-![](img/387cb7bb00299c812b17b81bda5b401d_0.png)
 
 在本节课中，我们将要学习Java中的SortedMap接口。SortedMap是Map接口的一个子接口，它能够根据键的自然顺序或指定的比较器对映射进行排序。我们将了解其核心概念、特性、常用方法，并通过一个简单的示例来掌握其基本用法。
 
-![](img/387cb7bb00299c812b17b81bda5b401d_2.png)
 
 ---
 
@@ -89,7 +87,6 @@ System.out.println("After removal: " + numbers); // 输出: {Three=3, Two=2}
 
 ## 总结
 
-![](img/387cb7bb00299c812b17b81bda5b401d_4.png)
 
 ![](img/387cb7bb00299c812b17b81bda5b401d_6.png)
 

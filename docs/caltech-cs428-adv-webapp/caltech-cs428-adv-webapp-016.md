@@ -465,7 +465,6 @@ router.get('/:id', getGame);
 
 ### 步骤 1: 在模型中添加猜测逻辑
 
-![](img/b751a18fb4fe1305e878c78006301e72_79.png)
 
 修改 `models/game.model.js` 文件，在 `GameServer` 类中添加：
 

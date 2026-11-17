@@ -1,44 +1,31 @@
 # 22：前沿内存鲁棒性研究 (Spring 2025) 🧠
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_0.png)
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_2.png)
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_4.png)
 
 ## 概述
 在本节课中，我们将学习关于内存鲁棒性的前沿研究，特别是针对DRAM（动态随机存取存储器）中“行锤击”和“行压迫”等干扰现象的防御机制。我们将探讨几篇关键论文，它们从不同角度提出了高效、低开销的解决方案，以应对随着技术缩放而日益严重的内存干扰问题。
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_6.png)
 
 ---
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_8.png)
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_9.png)
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_11.png)
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_13.png)
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_14.png)
 
 ## 1. 空间变异感知的鲁棒性防御 🛡️
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_16.png)
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_18.png)
 
 上一节我们介绍了内存干扰的基本问题。本节中，我们来看看如何利用DRAM行之间鲁棒性的空间变异来改进现有防御方案。
 
 ### 1.1 背景与动机
 内存隔离是计算机系统中确保安全、隐私和可靠性的基本原则。它要求对一个内存地址的访问不应在其他地址上产生意外的副作用。然而，在现代DRAM芯片中，由于高密度和访问延迟等权衡，实现严格的内存隔离变得困难。
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_20.png)
 
 DRAM芯片的基本组织包括多个存储体（Bank），每个存储体内有多个子阵列（Sub-array），子阵列中的存储单元（Cell）以二维行列形式组织。访问数据需要先激活（Activate）一行，将其内容读取到行缓冲器（Row Buffer），然后进行列访问，最后预充电（Precharge）关闭该行。
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_22.png)
 
 反复快速打开和关闭相邻的DRAM行会导致邻近存储单元发生比特翻转，这种现象被称为“行锤击”（Row Hammer）。它是DRAM干扰问题的一个典型例子。
 
@@ -53,16 +40,12 @@ DRAM芯片的基本组织包括多个存储体（Bank），每个存储体内有
 *   **变异显著**：在同一存储体内，最脆弱的行和最坚固的行所需的锤击阈值可能相差数个数量级。
 *   **缺乏规律**：行的脆弱性与其物理地址（如存储体地址、行地址、行间距等）之间没有明显的、可预测的规律性模式。
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_24.png)
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_26.png)
 
 ### 1.3 核心机制：Sword
 基于上述观察，我们提出了一个关键思想：**根据受害者行的干扰脆弱性水平，动态调整现有防御方案的激进程度**。
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_28.png)
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_30.png)
 
 为此，我们提出了一种名为 **Sword**（Spatial-Variation-Aware Robustness Defenses）的新机制。Sword动态调整解决方案的阈值或参数，从而调整其预防性操作的频率。
 
@@ -71,7 +54,6 @@ DRAM芯片的基本组织包括多个存储体（Bank），每个存储体内有
 2.  **元数据存储**：每个DRAM行仅需存储少量比特（例如4比特）来标识其所属的脆弱性等级。这些元数据可以存储在内存控制器中（使用SRAM结构），也可以存储在DRAM芯片内部（利用ECC或空闲引脚）。
 3.  **动态决策**：当内存访问发生时，防御机制（如Para、BlockHammer、Hydra）根据目标行对应的脆弱性等级，使用调整后的阈值来决定是否执行预防性刷新。对于更坚固的行，减少不必要的刷新操作。
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_32.png)
 
 **公式描述**：
 设原有防御机制的刷新阈值为 `T`，行为 `i` 的脆弱性等级为 `L_i`（`L_i` 值越高代表越脆弱）。Sword调整后的阈值 `T_i'` 可以表示为：
@@ -102,9 +84,7 @@ DRAM芯片的基本组织包括多个存储体（Bank），每个存储体内有
 2.  **每攻击行计数器**：利用“攻击者只能锤击少量行”的观察，减少计数器数量，但需使用标签（Tag）进行映射。在低锤击阈值下，所需计数器数量增加，面积成本依然较高。
 3.  **少于每行计数器**：通过共享计数器或引入概率性刷新来进一步减少计数器数量。面积成本低，但在低锤击阈值下，由于预防性刷新频繁，性能和能耗开销很大。
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_34.png)
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_36.png)
 
 理想方案需要在面积、性能和能耗之间取得良好平衡，但现有方案难以同时满足。
 
@@ -116,14 +96,12 @@ Camel（Count-Min Sketch Based Row Hammer Mitigation）的目标是在高脆弱�
 *   **计数器表（Counter Table）**：使用一种称为Count-Min Sketch的流式算法，将DRAM行映射到一组低成本的哈希计数器上。它尽可能唯一地映射各行，并在计数器组达到阈值时触发对受害者行的预防性刷新。这以低成本实现了大范围的激活跟踪。
 *   **近期标签表（Recent-Tagger Table）**：为近期被频繁激活的少量DRAM行动态分配高精度的、每行专用的标签计数器。这提高了对“热行”的跟踪精度，从而减少误报和性能损失。
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_38.png)
 
 **操作流程**：
 1.  当行A被激活时，Camel同时查询计数器表（得到估计值E_hash）和近期标签表（如果匹配，则得到精确值E_tag）。
 2.  优先采用标签表提供的精确值（若存在）。
 3.  将此激活次数估计值与预防性刷新阈值比较，若达到阈值，则刷新受害者行。
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_40.png)
 
 **评估结果**：
 *   **面积**：Camel的面积开销显著低于Graphene，与Hydra相似。
@@ -136,15 +114,12 @@ Camel（Count-Min Sketch Based Row Hammer Mitigation）的目标是在高脆弱�
 ### 2.3 机制二：Abacus 🧮
 Abacus（All-Bank Activation Counters for Scalable and Low-Overhead Row Hammer Mitigation）从工作负载与内存的交互模式中获得了关键观察。
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_46.png)
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_48.png)
 
 **关键观察**：许多工作负载倾向于在相近的时间点访问不同存储体中**相同行地址**的行（称为兄弟行）。这是由于：
 1.  工作负载内存访问模式固有的空间局部性（如遍历数组）。
 2.  现代物理地址到DRAM的映射策略，它将相邻的缓存行映射到不同存储体的同一行，以利用存储体级并行性。
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_50.png)
 
 **关键思想**：使用**一个计数器来跟踪所有兄弟行（跨所有存储体）的最大激活次数**，从而将计数器数量减少为存储体数量的分之一。
 
@@ -152,9 +127,7 @@ Abacus（All-Bank Activation Counters for Scalable and Low-Overhead Row Hammer M
 
 **实现**：Abacus借鉴了Graphene的激活计数机制，并进行了扩展以实现跨存储体的兄弟行跟踪。
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_52.png)
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_54.png)
 
 **评估结果**：
 *   **性能与能耗**：Abacus在低行锤击阈值下引入了很小的性能和能耗开销，平均性能优于Hydra和Para，能耗低于它们，与Graphene相近。
@@ -162,9 +135,7 @@ Abacus（All-Bank Activation Counters for Scalable and Low-Overhead Row Hammer M
 
 **总结**：Camel和Abacus都通过创新的计数器组织方式，在低行锤击阈值下实现了面积、性能和能耗之间的良好权衡，为未来高密度、高脆弱性DRAM系统提供了可行的缓解方案。
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_56.png)
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_58.png)
 
 ---
 
@@ -172,7 +143,6 @@ Abacus（All-Bank Activation Counters for Scalable and Low-Overhead Row Hammer M
 
 前面我们探讨了学术界的解决方案。本节中，我们来看看工业界如何应对行干扰问题，特别是最新的DDR5标准中引入的机制。
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_60.png)
 
 ### 3.1 背景与演进
 早期工业界解决方案（如某些DRAM的“目标行刷新”功能）曾依赖“安全通过隐匿”的原则，但被许多研究证明可被绕过。如今，行业标准组织JEDEC正更开放地更新规范以应对干扰。
@@ -182,7 +152,6 @@ Abacus（All-Bank Activation Counters for Scalable and Low-Overhead Row Hammer M
 ### 3.2 两种工业界方案
 两种方案都基于一个关键命令：**RFM (Refresh Management)**。RFM命令允许内存控制器授予DRAM模块一段时间窗口，使其能够安全地执行预防性刷新操作，而不会被内存控制器的访问打断。
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_62.png)
 
 1.  **周期性RFM (Periodic RFM, PRFM)**：
     *   内存控制器为每个DRAM存储体维护一个激活计数器。
@@ -214,9 +183,7 @@ Abacus（All-Bank Activation Counters for Scalable and Low-Overhead Row Hammer M
 
 ## 4. 新型干扰现象：行压迫 (RowPress) 及其组合攻击 🔥
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_64.png)
 
-![](img/7f334abb35d970f23850ceddaf8f42f2_65.png)
 
 之前我们主要关注行锤击。本节中，我们将探讨一种新发现的、不同的DRAM干扰现象——“行压迫”，以及将其与行锤击结合的组合攻击。
 

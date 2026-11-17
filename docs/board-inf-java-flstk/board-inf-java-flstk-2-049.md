@@ -1,8 +1,6 @@
 # 049：Spring Boot 架构详解 🏗️
 
-![](img/520dab6e3989631a9c8b2f44a6f9749f_0.png)
 
-![](img/520dab6e3989631a9c8b2f44a6f9749f_2.png)
 
 在本节课中，我们将学习 Spring Boot 的内部架构，了解其各层如何协同工作以构建独立的生产级应用程序。
 
@@ -33,7 +31,6 @@ Spring Boot 架构主要包含四个层次，理解这些层次是掌握其工�
     *   包含所有存储逻辑。
     *   在业务对象和数据库行之间进行转换。
 
-![](img/520dab6e3989631a9c8b2f44a6f9749f_4.png)
 
 4.  **数据库层**
     *   这是实际的数据库。
@@ -56,7 +53,6 @@ Spring Boot 的流程架构与 Spring MVC 基本相同，但有一个关键区�
 
 Spring Boot 在内部整合了 Spring 的各个模块，如 Spring MVC、Spring Data 等，并利用验证类、视图类和工具类来实现上述流程。
 
-![](img/520dab6e3989631a9c8b2f44a6f9749f_6.png)
 
 ## 总结
 

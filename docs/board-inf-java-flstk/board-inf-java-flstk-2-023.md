@@ -1,12 +1,10 @@
 Java全栈开发：23：Java WeakHashMap详解
 
-![](img/1865dab61d7bbef571c25e78ed221802_0.png)
 
 在本节课中，我们将学习Java中的WeakHashMap，通过示例了解其操作，并阐明它与普通HashMap之间的区别。
 
 ---
 
-![](img/1865dab61d7bbef571c25e78ed221802_2.png)
 
 ### 概述
 
@@ -18,7 +16,6 @@ WeakHashMap是基于哈希表实现的Map接口，其特点是拥有**弱键**�
 
 以下是创建WeakHashMap的示例代码：
 
-![](img/1865dab61d7bbef571c25e78ed221802_4.png)
 
 ```java
 WeakHashMap<String, Integer> numbers = new WeakHashMap<>();

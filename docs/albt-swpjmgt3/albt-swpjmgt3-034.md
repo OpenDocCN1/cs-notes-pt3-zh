@@ -1,6 +1,5 @@
 # 034：课程介绍
 
-![](img/fc213f1af25d17b05d45acbc0d0c43be_1.png)
 
 ![](img/fc213f1af25d17b05d45acbc0d0c43be_2.png)
 

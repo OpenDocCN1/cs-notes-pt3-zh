@@ -1,12 +1,10 @@
 # 007：StringBuffer与StringBuilder详解 🔧
 
-![](img/eadc3774b4ab74f629db22c498f60882_1.png)
 
 在本节课中，我们将要学习Java中两个重要的类：`StringBuffer`和`StringBuilder`。我们将探讨它们与普通`String`类的区别，理解“可变性”的概念，并通过代码示例比较它们的性能与线程安全性。
 
 ## 概述
 
-![](img/eadc3774b4ab74f629db22c498f60882_3.png)
 
 在之前的课程中，我们讨论了`String`类及其方法。我们了解到，`String`对象是**不可变的**。这意味着一旦创建，其内容就无法被更改或修改。每次需要修改字符串时，都需要创建一个新的`String`对象。
 

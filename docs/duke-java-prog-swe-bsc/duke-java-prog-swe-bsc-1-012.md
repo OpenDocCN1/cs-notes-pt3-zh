@@ -1,6 +1,5 @@
 # 012：CSS基础 🎨
 
-![](img/c8a935bec75a1af873df64b602e8708f_0.png)
 
 ![](img/c8a935bec75a1af873df64b602e8708f_2.png)
 

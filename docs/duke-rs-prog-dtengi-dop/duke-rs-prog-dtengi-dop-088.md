@@ -1,6 +1,5 @@
 # 088：数据库选型无通用方案 📊
 
-![](img/6f8096607d3f2c9b03ef3e8b2a14cd2d_0.png)
 
 ![](img/6f8096607d3f2c9b03ef3e8b2a14cd2d_1.png)
 

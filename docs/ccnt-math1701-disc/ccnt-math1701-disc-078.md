@@ -33,47 +33,29 @@
     *   木材约束：`10x + 20y ≤ 200`
     *   非负约束：`x ≥ 0`， `y ≥ 0`
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_1.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_2.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_3.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_4.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_5.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_6.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_7.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_8.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_9.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_10.png)
 
 ## 可行域与几何直观
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_12.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_13.png)
 
 现在，我们有了一个由不等式组定义的数学模型。为了直观理解这些约束，我们可以在坐标系中画出它们。
 
 每个线性不等式（如 `5x + 4y ≤ 80`）都表示坐标系中的一个半平面（直线 `5x + 4y = 80` 的一侧）。所有约束条件所代表的半平面的**交集**，就构成了**可行域**。
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_15.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_16.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_17.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_18.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_19.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_20.png)
 
 可行域是一个凸多边形区域，其中的每一个点 `(x, y)` 都代表一个满足所有约束条件的可行生产方案。
 
@@ -96,11 +78,8 @@
 
 让我们应用这个方法来求解木匠问题。
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_22.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_23.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_24.png)
 
 首先，找出由四个约束条件边界线围成的可行域的顶点。顶点是以下直线的交点：
 
@@ -115,11 +94,8 @@
     *   解得 `x = 40/3 ≈ 13.33`， `y = 10/3 ≈ 3.33`。
     *   利润 `P = 180*(40/3) + 200*(10/3) = 3066.67`。
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_26.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_27.png)
 
-![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_28.png)
 
 ![](img/97773c7e3b8fc2d74f56a3d00fc44c7a_29.png)
 

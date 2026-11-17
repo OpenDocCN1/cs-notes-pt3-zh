@@ -52,9 +52,7 @@
 
 
 
-![](img/0ccd8ae938abc5fedec16f4d92e4bea9_1.png)
 
-![](img/0ccd8ae938abc5fedec16f4d92e4bea9_1.png)
 
 ## 形式化验证的历史与发展
 
@@ -88,15 +86,11 @@
 
 
 
-![](img/0ccd8ae938abc5fedec16f4d92e4bea9_3.png)
 
-![](img/0ccd8ae938abc5fedec16f4d92e4bea9_4.png)
 
-![](img/0ccd8ae938abc5fedec16f4d92e4bea9_3.png)
 
 其他例子包括SEL4，这是一个经过验证的微内核操作系统。
 
-![](img/0ccd8ae938abc5fedec16f4d92e4bea9_4.png)
 
 还有Verdi，它提供了一个库，在此基础上构建了一个经过验证的数据库管理系统，这项工作部分由我们自己的Greg Morrisett教授完成。
 
@@ -126,13 +120,11 @@ SEL4在这方面尤其引人注目。但在接下来的40年里，我们可能�
 
 
 
-![](img/0ccd8ae938abc5fedec16f4d92e4bea9_6.png)
 
 ## CS3110课程中的形式化验证
 
 我们在CS3110中要做什么？嗯，不会是构建一个完整的经过验证的微内核操作系统。
 
-![](img/0ccd8ae938abc5fedec16f4d92e4bea9_6.png)
 
 抱歉。我们将要做以下事情。我们将编写一些小型、纯函数式的程序。
 
@@ -166,13 +158,10 @@ SEL4在这方面尤其引人注目。但在接下来的40年里，我们可能�
 
 
 
-![](img/0ccd8ae938abc5fedec16f4d92e4bea9_8.png)
 
-![](img/0ccd8ae938abc5fedec16f4d92e4bea9_9.png)
 
 ---
 
-![](img/0ccd8ae938abc5fedec16f4d92e4bea9_8.png)
 
 ## 总结
 

@@ -48,9 +48,7 @@ import pandas as pd
 
 在Colab中，你可以直接执行Python代码。每个代码单元格都可以独立运行。
 
-![](img/16417bbc1e92c52bdce128eb5d4f1e7e_4.png)
 
-![](img/16417bbc1e92c52bdce128eb5d4f1e7e_5.png)
 
 例如，在“Ingest”阶段，你可以输入以下代码来导入Pandas库：
 
@@ -60,13 +58,11 @@ import pandas as pd
 
 每个阶段（如Ingest、EDA）的代码都可以根据需要进行隐藏或展开，这有助于保持笔记本的整洁。
 
-![](img/16417bbc1e92c52bdce128eb5d4f1e7e_7.png)
 
 ## 分享与协作
 
 将你的项目分享给团队成员、同事或潜在雇主非常重要。Colab提供了几种简便的分享方式。
 
-![](img/16417bbc1e92c52bdce128eb5d4f1e7e_9.png)
 
 **第一种方式：保存到GitHub**
 

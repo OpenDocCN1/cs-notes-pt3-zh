@@ -29,7 +29,6 @@
 3.  在扩展 `j` 的同时累加元素，计算当前子数组 `nums[i...j]` 的和。
 4.  检查当前和是否等于 `k`，如果是，则计数器加一。
 
-![](img/ee33ccc25832ab11ae4af6707b49b7e7_3.png)
 
 **以下是该方法的伪代码描述：**
 
@@ -47,7 +46,6 @@ for (int i = 0; i < n; i++) {
 return count;
 ```
 
-![](img/ee33ccc25832ab11ae4af6707b49b7e7_5.png)
 
 **复杂度分析**：
 *   **时间复杂度**：O(n²)。外层循环 `i` 运行 n 次，内层循环 `j` 平均运行 n/2 次。
@@ -81,7 +79,6 @@ return count;
 
 **这意味着**：对于当前的前缀和 `prefixSum[j]`，如果我们在之前的前缀和中，能找到值为 `(prefixSum[j] - k)` 的前缀和，那么就找到了一个以 `j` 结尾、和为 `k` 的子数组。
 
-![](img/ee33ccc25832ab11ae4af6707b49b7e7_7.png)
 
 ### 算法步骤
 
@@ -129,7 +126,6 @@ int subarraySum(vector<int>& nums, int k) {
 
 ---
 
-![](img/ee33ccc25832ab11ae4af6707b49b7e7_9.png)
 
 ![](img/ee33ccc25832ab11ae4af6707b49b7e7_10.png)
 

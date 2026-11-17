@@ -1,10 +1,8 @@
 # 029：Java HashSet 教程 🎼
 
-![](img/67d48129d971446b1aedc4b07d104a09_0.png)
 
 在本节课中，我们将学习 Java 中的 `HashSet` 类。我们将通过一个示例来了解 `HashSet` 的不同方法和操作。
 
-![](img/67d48129d971446b1aedc4b07d104a09_2.png)
 
 ## 概述
 
@@ -12,7 +10,6 @@ Java 集合框架中的 `HashSet` 类提供了哈希表数据结构的功能。�
 
 ## HashSet 的特性
 
-![](img/67d48129d971446b1aedc4b07d104a09_4.png)
 
 以下是 `HashSet` 的一些关键特性：
 
@@ -21,7 +18,6 @@ Java 集合框架中的 `HashSet` 类提供了哈希表数据结构的功能。�
 *   **允许空值**：`HashSet` 允许存储 `null` 值。
 *   **高效查找**：由于其哈希表实现，`HashSet` 在执行搜索操作时性能优异。
 
-![](img/67d48129d971446b1aedc4b07d104a09_6.png)
 
 ## HashSet 的声明
 
@@ -30,7 +26,6 @@ Java 集合框架中的 `HashSet` 类提供了哈希表数据结构的功能。�
 public class HashSet<E> extends AbstractSet<E> implements Set<E>, Cloneable, Serializable
 ```
 
-![](img/67d48129d971446b1aedc4b07d104a09_8.png)
 
 ## 常用方法
 
@@ -116,7 +111,6 @@ System.out.println(set2); // 输出: [500]
 
 ## 总结
 
-![](img/67d48129d971446b1aedc4b07d104a09_10.png)
 
 ![](img/67d48129d971446b1aedc4b07d104a09_12.png)
 

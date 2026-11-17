@@ -1,6 +1,5 @@
 # 074：凯撒密码算法到代码的转换
 
-![](img/7ff72ac032647a4054edac10b5a34918_0.png)
 
 在本节课中，我们将学习如何将之前设计的凯撒密码算法转化为实际的Java代码。我们将逐步构建一个`CaesarCipher`类，并实现其加密方法。
 
@@ -21,7 +20,6 @@ StringBuilder encrypted = new StringBuilder(input);
 String alphabet = "ABCDEFGHIJKLMNLMNOPQRSTUVWXYZ";
 ```
 
-![](img/7ff72ac032647a4054edac10b5a34918_2.png)
 
 ### 2. 计算移位后的字母表
 

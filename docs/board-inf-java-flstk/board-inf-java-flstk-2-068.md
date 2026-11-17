@@ -1,10 +1,8 @@
 # 068：使用JPA执行操作 🛠️
 
-![](img/59155540da3b9a2b3af60d31ad6b214f_0.png)
 
 在本节课中，我们将学习如何使用JPA（Java Persistence API）来执行数据库的增删改查（CRUD）操作。我们将通过一个具体的例子，了解如何创建Repository、Service和Controller层，并利用JPA的便捷功能来操作数据库，而无需编写复杂的SQL语句。
 
-![](img/59155540da3b9a2b3af60d31ad6b214f_2.png)
 
 ---
 

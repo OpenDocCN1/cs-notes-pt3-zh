@@ -1,14 +1,11 @@
 # 040：基因查找算法与循环控制
 
-![](img/c435811de2724fb25cc7d5b55e524f5d_0.png)
 
-![](img/c435811de2724fb25cc7d5b55e524f5d_0.png)
 
 在本节课中，我们将学习如何结合`while`循环和`break`语句，编写一个能够打印出DNA序列中所有基因的方法。我们将把之前视频中讨论的算法或伪代码转化为实际的Java代码。
 
 上一节我们介绍了基因查找的基本概念，本节中我们来看看如何实现一个能遍历整个DNA序列并找出所有基因的算法。
 
-![](img/c435811de2724fb25cc7d5b55e524f5d_2.png)
 
 我们有一个名为`printAllGenes`的方法，它接收一个代表DNA的字符串参数，并基于我们之前视频中设计的算法来工作。
 
@@ -51,7 +48,6 @@ startIndex = dna.indexOf(currentGene, startIndex) + currentGene.length();
 3.  计算新的`startIndex`：`dna.indexOf("ATGxxxTAA", 0)` 返回0，加上长度9，得到新的`startIndex`为9。
 4.  下一次循环从索引9开始查找，找到下一个基因`"ATGyyyTAG"`。
 
-![](img/c435811de2724fb25cc7d5b55e524f5d_4.png)
 
 现在，我们来编译并运行测试代码。测试会打印出在给定DNA序列中找到的所有基因。我们测试了多种情况，包括空字符串和包含多个基因的序列，以确保代码在各种情况下都能正确工作，不会崩溃。
 

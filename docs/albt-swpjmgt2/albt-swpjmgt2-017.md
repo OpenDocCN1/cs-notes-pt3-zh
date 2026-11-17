@@ -1,6 +1,5 @@
 # 017：Scrum敏捷实践
 
-![](img/34546bfa5947d29f5e0cb1a2c1d32532_0.png)
 
 ![](img/34546bfa5947d29f5e0cb1a2c1d32532_0.png)
 

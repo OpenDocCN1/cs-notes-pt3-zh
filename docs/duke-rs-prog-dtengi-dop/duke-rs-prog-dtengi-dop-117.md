@@ -84,7 +84,6 @@ sudo systemctl restart kibana
 
 ![](img/d1e6ef1bc025178dadf1dde19af58639_7.png)
 
-![](img/d1e6ef1bc025178dadf1dde19af58639_9.png)
 
 Logstash配置完成后，数据将流入Elasticsearch。现在，我们通过Kibana来查看和探索这些日志数据。
 
@@ -98,7 +97,6 @@ server.host: "0.0.0.0"
 
 ![](img/d1e6ef1bc025178dadf1dde19af58639_13.png)
 
-![](img/d1e6ef1bc025178dadf1dde19af58639_15.png)
 
 修改后，重启Kibana服务。
 

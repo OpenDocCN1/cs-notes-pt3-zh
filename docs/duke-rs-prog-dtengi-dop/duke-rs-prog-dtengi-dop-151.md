@@ -43,7 +43,6 @@ Cargo内置了格式化工具，简称`cargo fmt`。这个命令允许我以规�
 
 以下是修改工作流的关键步骤：
 
-![](img/cd3bf1c3ec13311bd19502822af7ff5a_5.png)
 
 我们将触发器从`on: [pull_request]`更改为允许手动触发：
 ```yaml
@@ -52,11 +51,9 @@ on:
 ```
 `workflow_dispatch`是一个手动触发器，它会在GitHub Actions的界面上生成一个“运行工作流”的按钮。
 
-![](img/cd3bf1c3ec13311bd19502822af7ff5a_7.png)
 
 完成编辑后，提交更改。
 
-![](img/cd3bf1c3ec13311bd19502822af7ff5a_9.png)
 
 ## 运行并验证自动化检查
 
@@ -68,7 +65,6 @@ on:
 
 最后，日志会显示“Process completed with exit code 1”。这证实了我们的自动化配置是成功的：当代码格式不符合规范时，CI/CD流程会失败，从而阻止不合规的代码被合并。
 
-![](img/cd3bf1c3ec13311bd19502822af7ff5a_11.png)
 
 ![](img/cd3bf1c3ec13311bd19502822af7ff5a_12.png)
 

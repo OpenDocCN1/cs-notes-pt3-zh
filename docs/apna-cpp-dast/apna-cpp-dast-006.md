@@ -1,6 +1,5 @@
 # 006：二进制数系统
 
-![](img/8f6f7153c9bc3cdf9a306b8b3e426ea9_0.png)
 
 ![](img/8f6f7153c9bc3cdf9a306b8b3e426ea9_0.png)
 
@@ -179,6 +178,5 @@ int main() {
 
 理解二进制是学习计算机如何存储和处理数据的基石，对于后续学习数据结构和算法至关重要。
 
-![](img/8f6f7153c9bc3cdf9a306b8b3e426ea9_2.png)
 
 ![](img/8f6f7153c9bc3cdf9a306b8b3e426ea9_2.png)

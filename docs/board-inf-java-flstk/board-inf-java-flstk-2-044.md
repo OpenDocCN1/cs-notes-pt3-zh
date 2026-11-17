@@ -1,8 +1,6 @@
 # 044：Spring Bean、作用域与生命周期 🚀
 
-![](img/6768ed855cc1acf4f1e89e298f2d5a8e_0.png)
 
-![](img/6768ed855cc1acf4f1e89e298f2d5a8e_2.png)
 
 在本节课中，我们将要学习Spring框架中的核心概念：Bean、Bean的作用域以及Bean的生命周期。我们将了解什么是Spring Bean，如何配置它们，以及Spring容器如何管理它们的创建、使用和销毁过程。
 
@@ -10,11 +8,9 @@
 
 ## 什么是Spring Bean？ 🤔
 
-![](img/6768ed855cc1acf4f1e89e298f2d5a8e_4.png)
 
 Spring Bean是构成Spring应用程序骨架的对象，它们由Spring IoC容器进行实例化、组装和管理。简单来说，一个Bean就是一个由Spring IoC容器管理的对象。
 
-![](img/6768ed855cc1acf4f1e89e298f2d5a8e_6.png)
 
 你可以通过XML配置文件或Java注解来配置Bean的元信息。例如，在XML中，我们使用 `<bean>` 标签来定义一个Bean；在Java注解中，我们使用 `@Bean` 注解来创建或配置Bean注入。此外，还有 `@Component`、`@Service`、`@Controller` 和 `@Repository` 等注解，它们通常用在类定义之上，以参与Spring Bean的生命周期管理。
 
@@ -43,11 +39,9 @@ Spring Bean是构成Spring应用程序骨架的对象，它们由Spring IoC容�
 
 6.  **WebSocket**：为每个WebSocket会话创建一个Bean实例。需要注意的是，此作用域在较新版本的Spring中已被标记为过时（deprecated）。
 
-![](img/6768ed855cc1acf4f1e89e298f2d5a8e_8.png)
 
 ---
 
-![](img/6768ed855cc1acf4f1e89e298f2d5a8e_10.png)
 
 ## Spring Bean的生命周期 🔄
 
@@ -72,15 +66,11 @@ Bean的生命周期由Spring容器管理。其基本流程如下：
 
 ---
 
-![](img/6768ed855cc1acf4f1e89e298f2d5a8e_12.png)
 
-![](img/6768ed855cc1acf4f1e89e298f2d5a8e_13.png)
 
 ## 总结 📝
 
-![](img/6768ed855cc1acf4f1e89e298f2d5a8e_15.png)
 
-![](img/6768ed855cc1acf4f1e89e298f2d5a8e_17.png)
 
 本节课中我们一起学习了Spring框架中关于Bean的核心知识。我们首先了解了Spring Bean是由IoC容器管理的对象。接着，我们详细探讨了Bean的几种作用域，包括单例、原型、请求、会话和应用作用域，它们决定了Bean实例的创建策略。最后，我们梳理了Bean的完整生命周期，从容器启动、实例创建、依赖注入、初始化、使用到最终销毁的各个阶段，并介绍了如何通过接口、XML配置或注解来介入生命周期的初始化和销毁环节，以执行自定义逻辑。
 

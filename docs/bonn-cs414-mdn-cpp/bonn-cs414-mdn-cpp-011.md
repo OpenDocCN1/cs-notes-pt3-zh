@@ -8,9 +8,7 @@
 
 ## 安装核心开发工具
 
-![](img/67ce1b64a4bcd30b833eaa2f1ff70fe6_1.png)
 
-![](img/67ce1b64a4bcd30b833eaa2f1ff70fe6_3.png)
 
 首先，我们需要安装一系列核心开发工具。以下是具体步骤：
 
@@ -39,11 +37,9 @@
 
 虽然此步骤对于开始构建C++代码并非绝对必要，但强烈建议完成，因为它为后续课程集成了许多有用的工具。
 
-![](img/67ce1b64a4bcd30b833eaa2f1ff70fe6_5.png)
 
 ## 安装代码编辑器
 
-![](img/67ce1b64a4bcd30b833eaa2f1ff70fe6_7.png)
 
 工具链安装完成后，你需要一个代码编辑器。推荐使用Visual Studio Code，因为在Linux上安装它非常简单。
 
@@ -59,13 +55,11 @@ sudo snap install code --classic
 
 为了获得更好的开发体验，我们需要为Visual Studio Code安装一些扩展。以下是需要安装的扩展列表：
 
-![](img/67ce1b64a4bcd30b833eaa2f1ff70fe6_9.png)
 
 *   C++扩展
 *   代码格式化工具
 *   其他基础扩展
 
-![](img/67ce1b64a4bcd30b833eaa2f1ff70fe6_11.png)
 
 你也可以使用一个脚本来自动安装所有推荐的扩展：
 1.  下载提供的扩展安装脚本。

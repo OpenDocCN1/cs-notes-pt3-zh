@@ -156,7 +156,6 @@ console.log(importedObject.name); // 输出: "Bar"
 
 ### 目标5：实现游戏结束场景
 
-![](img/e97df8272633486bf8030c3a32dc8a45_12.png)
 
 ![](img/e97df8272633486bf8030c3a32dc8a45_14.png)
 
@@ -183,7 +182,6 @@ console.log(importedObject.name); // 输出: "Bar"
 3.  **将`playGame`函数暴露到全局**：为了让HTML按钮的 `onclick` 能调用到模块内的 `playGame` 函数，需要在 `app.js` 中将其赋值给 `window` 对象的一个属性（例如 `window.playGame = playGame;`）。同时，确保 `playGame` 函数会更新 `state.trivia` 并调用 `view.playScene`。
 4.  **测试**：游戏中现在应出现“Skip”按钮，点击后能立即获取并显示一个新问题，而计时器继续运行。
 
-![](img/e97df8272633486bf8030c3a32dc8a45_20.png)
 
 ![](img/e97df8272633486bf8030c3a32dc8a45_22.png)
 

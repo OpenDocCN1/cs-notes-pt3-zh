@@ -10,7 +10,6 @@
 
 ![](img/a83d6086092e2f4cec1f5074b310d1b6_1.png)
 ![](img/a83d6086092e2f4cec1f5074b310d1b6_2.png)
-![](img/a83d6086092e2f4cec1f5074b310d1b6_3.png)
 
 ## 情况1分析
 

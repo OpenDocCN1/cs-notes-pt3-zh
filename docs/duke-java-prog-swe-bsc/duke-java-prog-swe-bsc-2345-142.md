@@ -1,6 +1,5 @@
 # 142：Comparator接口
 
-![](img/1117d480df6f793e0f594fc9d4eee9a6_0.png)
 
 在本节课中，我们将要学习Java中的`Comparator`接口。我们将了解它与`Comparable`接口的区别，学习如何编写自己的比较器，以及如何使用它来对集合进行自定义排序。
 
@@ -20,7 +19,6 @@
 
 假设有两个地震对象：`quake1`和`quake2`。
 
-![](img/1117d480df6f793e0f594fc9d4eee9a6_2.png)
 
 *   **使用 Comparable**：当你调用 `quake1.compareTo(quake2)` 时，你是在要求`quake1`对象将自己与`quake2`进行比较。`compareTo`方法位于被比较的某个对象（这里是`quake1`）内部。该方法会从自身（`quake1`）和参数（`quake2`）中获取所需信息（例如震级）并进行比较。
 *   **使用 Comparator**：现在，我们创建另一个专门用于比较的对象，例如`comparatorA`。当你调用 `comparatorA.compare(quake1, quake2)` 时，你是在要求这个`comparatorA`对象来比较这两个地震。`compare`方法的代码位于这个第三方对象内部，而不是被比较的任何一个对象中。`comparatorA`内部的代码会从两个地震对象中获取所需信息（例如位置），并根据它们到某个特定位置的距离进行比较。
@@ -29,7 +27,6 @@
 
 这就是我们解决“每个人都想用不同方式排序地震”问题的方法。每个人都可以创建一个实现`Comparator`接口的不同类并使用它。
 
-![](img/1117d480df6f793e0f594fc9d4eee9a6_4.png)
 
 ---
 
@@ -59,9 +56,7 @@ public class MagnitudeComparator implements Comparator<QuakeEntry> {
 
 `Collections.sort`方法可以接受第二个参数，即一个`Comparator`。当你向`Collections.sort`传递这第二个参数时，它将使用该比较器来确定列表中对象的排序顺序。
 
-![](img/1117d480df6f793e0f594fc9d4eee9a6_6.png)
 
-![](img/1117d480df6f793e0f594fc9d4eee9a6_7.png)
 
 ```java
 Collections.sort(quakeList, new MagnitudeComparator());

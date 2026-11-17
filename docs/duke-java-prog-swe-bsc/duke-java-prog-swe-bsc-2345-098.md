@@ -1,24 +1,20 @@
 # 098：HashMap数据结构详解 🗺️
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_0.png)
 
 在本节课中，我们将要学习一种新的数据结构——HashMap。我们将了解它如何帮助我们更高效地组织数据，并改进之前课程中提到的`GladLib`类的设计。HashMap不仅能让代码更简洁，还能在处理大量数据时显著提升性能。
 
 ## 回顾与引入
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_2.png)
 
 上一节我们介绍了使用并行数组列表来统计单词频率的方法。虽然这种方法可行，但存在设计上的缺陷，尤其是在程序规模扩大时，修改和维护会变得困难。
 
 现在，我们来看看如何使用Java的`HashMap`类来替代并行数组列表，从而获得更优的解决方案。
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_4.png)
 
 ## 理解HashMap的核心概念
 
 HashMap是一种将**键**与**值**关联起来的数据结构。在许多编程语言中，这被称为“映射”。
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_6.png)
 
 *   **键**： 可以看作是地图上的图例。通过查找图例，你能理解地图上颜色的含义。
 *   **值**： 是与键相关联的具体数据。
@@ -31,21 +27,17 @@ HashMap是一种将**键**与**值**关联起来的数据结构。在许多编�
 
 因此，调用 `map.get("rainbow")` 将返回整数值 `41`。
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_8.png)
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_9.png)
 
 **核心公式/概念：**
 `value = map.get(key)`
 这表示通过键`key`，可以从映射`map`中获取其关联的值`value`。
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_11.png)
 
 ## 从并行数组列表到HashMap
 
 以下是使用两个`ArrayList`（一个存单词，一个存次数）来统计词频的关键代码逻辑：
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_13.png)
 
 ```java
 int index = myWords.indexOf(currentWord);
@@ -77,9 +69,7 @@ if (!map.containsKey(currentWord)) {
 
 可以看到，`HashMap`用一个对象就替代了两个并行列表，代码意图更清晰。
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_15.png)
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_16.png)
 
 ## HashMap的基本操作
 
@@ -101,13 +91,10 @@ for (int k=0; k < myWords.size(); k++) {
 }
 ```
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_18.png)
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_19.png)
 
 使用`HashMap`时，我们需要遍历其所有键，然后通过键获取对应的值：
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_21.png)
 
 ```java
 for (String key : map.keySet()) {
@@ -118,15 +105,12 @@ for (String key : map.keySet()) {
 
 ## HashMap的效率优势
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_23.png)
 
 当处理的数据量很大时，效率变得至关重要。HashMap在查找速度上具有巨大优势。
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_25.png)
 
 其原理是，通过键查找值所花费的时间，**大致上与映射中键的数量无关**。也就是说，在一个有100万个键的映射中查找，和在一个只有10个键的映射中查找，速度几乎一样快。
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_27.png)
 
 相比之下，使用`ArrayList`的`indexOf`方法，在最坏情况下可能需要遍历整个列表的所有元素。
 
@@ -135,13 +119,11 @@ for (String key : map.keySet()) {
 *   **小说《红字》**: HashMap代码比ArrayList代码快大约10倍。
 *   **《圣经》英王钦定版（超过80万单词）**: ArrayList代码耗时超过20秒，而HashMap代码仅需不到0.5秒，快了**40多倍**。
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_29.png)
 
 这种效率提升使得HashMap成为处理大型数据集的理想选择。
 
 ## 总结
 
-![](img/059b632286a2b89a47d1f7fbf22a971e_31.png)
 
 本节课中我们一起学习了Java的`HashMap`数据结构。
 

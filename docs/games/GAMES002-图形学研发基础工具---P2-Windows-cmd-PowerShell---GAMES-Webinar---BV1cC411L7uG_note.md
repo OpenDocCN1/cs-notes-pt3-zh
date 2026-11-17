@@ -46,11 +46,8 @@ Windows操作系统家族主要分为以下几类：
 
 ![](img/e4b79b1c08d99d4d7b35f4048b5b3299_2.png)
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_4.png)
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_6.png)
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_8.png)
 
 大家可以跟随操作，启动电脑中的CMD或PowerShell。建议先启动CMD进行练习。
 
@@ -78,15 +75,11 @@ erase /f my_fault.txt
 ```
 其中 `erase` 是命令，`/f` 是“强制执行”选项，`my_fault.txt` 是文件名参数。
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_12.png)
 
 需要注意的是，CMD中空格和引号的规则不如Linux统一。例如，`echo` 命令会将后续所有内容（包括空格和引号）当作一个字符串原样输出，而在路径中包含空格时，又需要用引号将路径括起来。
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_14.png)
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_16.png)
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_18.png)
 
 ### 常用CMD命令对照表
 
@@ -105,9 +98,7 @@ erase /f my_fault.txt
 | `find` | 在文件中查找字符串 | `grep` |
 | `findstr` | 使用正则表达式查找 | `grep -E` |
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_20.png)
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_22.png)
 
 CMD同样支持**输出重定向**（`>`， `>>`）和**管道**（`|`），其含义与Linux中相同。
 
@@ -115,9 +106,7 @@ CMD同样支持**输出重定向**（`>`， `>>`）和**管道**（`|`），其�
 
 ![](img/e4b79b1c08d99d4d7b35f4048b5b3299_26.png)
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_28.png)
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_30.png)
 
 ## Windows权限与变量
 
@@ -161,19 +150,15 @@ set
 ```
 使用 `set` 设置的变量仅在当前CMD窗口有效。要永久修改环境变量，需使用 `setx` 命令或通过图形界面（右键“此电脑”->“属性”->“高级系统设置”->“环境变量”）进行设置。
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_34.png)
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_36.png)
 
 ## CMD脚本（批处理文件）
 
 ![](img/e4b79b1c08d99d4d7b35f4048b5b3299_38.png)
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_40.png)
 
 CMD脚本文件的后缀名为 `.bat`（batch的缩写）。
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_42.png)
 
 创建与运行步骤：
 1.  新建一个文本文件，将其后缀名从 `.txt` 改为 `.bat`。
@@ -214,11 +199,8 @@ for /l %%i in (0, 1, 5) do (
 
 ### Commandlets 与帮助系统
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_56.png)
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_58.png)
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_60.png)
 
 PowerShell的基本命令单元称为 **Commandlet**，其命名采用“动词-名词”格式，如 `Get-Process`、`Set-Variable`，可读性很强。
 
@@ -242,9 +224,7 @@ Get-Command -Name *Process
 
 ### 面向对象与管道
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_68.png)
 
-![](img/e4b79b1c08d99d4d7b35f4048b5b3299_70.png)
 
 ![](img/e4b79b1c08d99d4d7b35f4048b5b3299_72.png)
 

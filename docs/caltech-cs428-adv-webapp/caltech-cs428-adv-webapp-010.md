@@ -6,7 +6,6 @@
 
 ![](img/b21697c4376e06349a17b4b5cec15815_2.png)
 
-![](img/b21697c4376e06349a17b4b5cec15815_4.png)
 
 ## 概述
 
@@ -141,7 +140,6 @@ function printClue(status) {
 
 ![](img/b21697c4376e06349a17b4b5cec15815_23.png)
 
-![](img/b21697c4376e06349a17b4b5cec15815_25.png)
 
 以下是实现思路：
 

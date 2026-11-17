@@ -1,10 +1,7 @@
 # 011：编写一个LLVM Pass 🛠️
 
-![](img/2d9e9e868ac33aa3690ee01715576bdc_1.png)
 
-![](img/2d9e9e868ac33aa3690ee01715576bdc_2.png)
 
-![](img/2d9e9e868ac33aa3690ee01715576bdc_3.png)
 
 在本节课中，我们将学习如何编写一个LLVM Pass。我们将从创建一个简单的“空”Pass开始，逐步深入到如何遍历、分析和修改LLVM中间表示（IR），最终实现一个能调用自定义运行时库的Pass。
 
@@ -48,9 +45,7 @@ bool runOnFunction(Function &F) override {
 
 构建完成后，让我们实际运行这个Pass。
 
-![](img/2d9e9e868ac33aa3690ee01715576bdc_5.png)
 
-![](img/2d9e9e868ac33aa3690ee01715576bdc_6.png)
 
 你需要使用与构建Pass时相同的LLVM安装中的 `clang`。运行Pass需要一些特定的命令选项。
 
@@ -59,7 +54,6 @@ clang -Xclang -load -Xclang /path/to/libSkeletonPass.so main.c
 ```
 这条命令会编译 `main.c` 文件，并在编译过程中加载并运行我们的Pass。你将在输出中看到Pass打印出的函数名。恭喜你，你已经成功编译并运行了你的第一个LLVM Pass！
 
-![](img/2d9e9e868ac33aa3690ee01715576bdc_8.png)
 
 ## 探索LLVM IR的对象层次结构 🔍
 
@@ -72,7 +66,6 @@ LLVM程序作为Pass的操作对象，就是一系列C++对象。以下是最重
 *   **`BasicBlock`**： 包含在 `Function` 中，代表基本块。
 *   **`Instruction`**： 包含在 `BasicBlock` 中，代表单条指令。
 
-![](img/2d9e9e868ac33aa3690ee01715576bdc_10.png)
 
 LLVM的基础设施已经帮你完成了将代码组织成基本块、并以SSA形式连接指令的工作，这使得在其上构建工具比在原始汇编上更简单。
 
@@ -164,11 +157,9 @@ for (auto &B : F) { // 遍历函数中的每个基本块
 
 ## 总结
 
-![](img/2d9e9e868ac33aa3690ee01715576bdc_12.png)
 
 在本节课中，我们一起学习了编写LLVM Pass的完整流程：
 
-![](img/2d9e9e868ac33aa3690ee01715576bdc_14.png)
 
 1.  **搭建环境**： 获取初始代码库并使用CMake构建Pass。
 2.  **理解框架**： 认识了 `FunctionPass` 和 `runOnFunction` 方法的基本结构。

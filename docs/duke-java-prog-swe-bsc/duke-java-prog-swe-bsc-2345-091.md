@@ -1,6 +1,5 @@
 # 091：ArrayList
 
-![](img/d9cf140833e6431d463c790fde19bf79_0.png)
 
 在本节课中，我们将要学习一个名为 `ArrayList` 的新类。它是Java中一个非常重要的部分，它结合了存储资源类（StorageResource）和数组（Array）的核心特性。事实上，`ArrayList` 是 `StorageResource` 类实现的基础。
 
@@ -8,21 +7,15 @@
 
 上一节我们介绍了如何使用数组和存储资源类进行计数。本节中我们来看看一个更复杂的问题：如何统计一个文件或网页中有多少个**不同**的单词？这个问题同样出现在统计一天内访问网站的不同IP地址数量中，这是在线广告计费的关键部分。
 
-![](img/d9cf140833e6431d463c790fde19bf79_2.png)
 
-![](img/d9cf140833e6431d463c790fde19bf79_3.png)
 
-![](img/d9cf140833e6431d463c790fde19bf79_4.png)
 
 你已经见过如何统计数字化DNA中每种核苷酸的数量，也使用过数组来统计凯撒密码中每个字母字符的出现次数。这些都是统计文件中每个单词出现频率的第一步。解决该问题的一个重要部分是找出有多少个不同的单词，这样像“the”这样的单词只会被计为一个，而不是它在文档中出现的573次。
 
-![](img/d9cf140833e6431d463c790fde19bf79_5.png)
 
-![](img/d9cf140833e6431d463c790fde19bf79_7.png)
 
 如下图所示，虽然显示了数百个数字，但只有三个不同的数字：4、6和7。我们将首先探讨如何使用存储资源类来解决这个问题。
 
-![](img/d9cf140833e6431d463c790fde19bf79_9.png)
 
 ## 使用StorageResource统计单词总数
 
@@ -30,9 +23,7 @@
 
 以下是统计单词总数的基本代码框架：
 
-![](img/d9cf140833e6431d463c790fde19bf79_11.png)
 
-![](img/d9cf140833e6431d463c790fde19bf79_12.png)
 
 ```java
 // 初始化StorageResource对象
@@ -50,29 +41,21 @@ int totalWords = myWords.size();
 
 如高亮代码所示，使用 `FileResource` 或 `URLResource` 进行迭代的代码几乎完全相同。调用 `.add()` 方法可以将每个单词添加到 `StorageResource` 的实例变量 `myWords` 中。完成后，`.size()` 方法将提供读取的单词总数。
 
-![](img/d9cf140833e6431d463c790fde19bf79_14.png)
 
-![](img/d9cf140833e6431d463c790fde19bf79_15.png)
 
 ## 统计不同单词的数量
 
-![](img/d9cf140833e6431d463c790fde19bf79_16.png)
 
-![](img/d9cf140833e6431d463c790fde19bf79_17.png)
 
-![](img/d9cf140833e6431d463c790fde19bf79_18.png)
 
 正如你将看到的，修改代码来统计不同（唯一）单词的数量，而不仅仅是单词总数，也很简单。
 
-![](img/d9cf140833e6431d463c790fde19bf79_19.png)
 
 字段 `myWords` 的类型是 `StorageResource`，可以存储所有单词。`.add()` 方法会将读取的每个字符串添加到 `myWords` 中。但我们可以通过一个简单的守卫条件来确保只在单词第一次出现（即尚未存储在 `myWords` 中）时才调用 `.add()` 方法。
 
-![](img/d9cf140833e6431d463c790fde19bf79_21.png)
 
 以下是修改后的代码逻辑：
 
-![](img/d9cf140833e6431d463c790fde19bf79_22.png)
 
 ```java
 if (!myWords.contains(word)) {
@@ -80,15 +63,12 @@ if (!myWords.contains(word)) {
 }
 ```
 
-![](img/d9cf140833e6431d463c790fde19bf79_24.png)
 
 `.contains()` 方法返回一个布尔值。此处的代码利用该值确保仅当 `StorageResource` 对象 `myWords` 中不包含某个单词时，才调用 `.add()` 方法。
 
-![](img/d9cf140833e6431d463c790fde19bf79_26.png)
 
 ## StorageResource的局限性
 
-![](img/d9cf140833e6431d463c790fde19bf79_27.png)
 
 然而，`StorageResource` 类并不适合随机选择元素，而这正是我们编写故事生成代码（GladLibs）所需的关键部分。
 
@@ -110,7 +90,6 @@ for (String s : myWords) {
 
 当 `counter` 的值达到0时，此处的代码会返回一个随机字符串。如代码所示，`choice` 必须能减到0，因为它初始值小于 `myWords` 的大小，并且每次循环递减1。然而，Java编译器分析带有if语句的循环时，并不知道if语句在某个时刻必然为真。编译器会指出循环后缺少返回语句是一个错误，即使该部分代码永远不会被执行。
 
-![](img/d9cf140833e6431d463c790fde19bf79_29.png)
 
 ## 引入ArrayList
 
@@ -132,11 +111,9 @@ String randomWord = wordsArray[index];
 
 ## ArrayList基本语法
 
-![](img/d9cf140833e6431d463c790fde19bf79_31.png)
 
 `ArrayList` 类的基本语法如下所示，在下一课中你将看到它在编码示例中的使用。
 
-![](img/d9cf140833e6431d463c790fde19bf79_33.png)
 
 以下是声明和使用 `ArrayList` 的基本步骤：
 

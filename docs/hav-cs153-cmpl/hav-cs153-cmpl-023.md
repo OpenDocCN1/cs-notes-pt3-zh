@@ -55,7 +55,6 @@ class Vehicle {
 
 ![](img/8e4111571a13adcddfe73fe8486b661e_1.png)
 
-![](img/8e4111571a13adcddfe73fe8486b661e_2.png)
 
 ![](img/8e4111571a13adcddfe73fe8486b661e_4.png)
 

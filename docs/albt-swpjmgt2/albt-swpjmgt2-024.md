@@ -1,6 +1,5 @@
 # 024：课程介绍与概述
 
-![](img/b272daddceceb891be57e6056dd000ef_1.png)
 
 ![](img/b272daddceceb891be57e6056dd000ef_2.png)
 

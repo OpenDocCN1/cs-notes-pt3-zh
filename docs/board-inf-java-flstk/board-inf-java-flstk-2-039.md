@@ -1,6 +1,5 @@
 # 039：创建动态Web项目教程 🚀
 
-![](img/1ce94dbc3866a60a8e77bc43db24bf6f_0.png)
 
 在本节课中，我们将学习如何在Eclipse集成开发环境中创建一个动态Web项目。我们将从环境准备开始，逐步完成项目创建、服务器配置，并最终运行一个简单的网页。
 
@@ -8,7 +7,6 @@
 
 ## 概述
 
-![](img/1ce94dbc3866a60a8e77bc43db24bf6f_2.png)
 
 创建动态Web项目是Java Web开发的第一步。这个过程涉及在Eclipse中设置项目结构，并将其部署到Apache Tomcat应用服务器上运行。本节教程将引导你完成所有必要步骤。
 
@@ -29,7 +27,6 @@
 2.  选择 **New** (新建) -> **Other...** (其他...)。在弹出的窗口中，展开 **Web** 文件夹。
 3.  选择 **Dynamic Web Project** (动态Web项目)，然后点击 **Next** (下一步)。
 
-![](img/1ce94dbc3866a60a8e77bc43db24bf6f_0.png)
 
 ## 配置项目参数
 
@@ -84,7 +81,6 @@
 2.  服务器启动后，右键点击你的项目（例如 `DynamicWebProjectDemo`），选择 **Run As** (运行方式) -> **Run on Server** (在服务器上运行)。
 3.  选择已启动的服务器，点击 **Finish**。Eclipse内置的浏览器会打开并显示你的 `index.html` 页面，你应该能看到“Hello World!”字样。
 
-![](img/1ce94dbc3866a60a8e77bc43db24bf6f_4.png)
 
 ## （可选）配置外部浏览器
 
@@ -100,18 +96,13 @@
 
 ## 总结
 
-![](img/1ce94dbc3866a60a8e77bc43db24bf6f_4.png)
 
 本节课中我们一起学习了在Eclipse中创建和运行动态Web项目的完整流程。关键步骤包括：创建项目、配置Tomcat运行时、添加Web内容、配置服务器以及运行测试。你现在已经拥有了一个基础的Java Web开发环境，可以在此基础上进一步学习Servlet、JSP等更高级的Web技术。
 
-![](img/1ce94dbc3866a60a8e77bc43db24bf6f_6.png)
 
 请继续关注后续课程，以了解更多关于Web应用开发环境的知识。下次见！
 
-![](img/1ce94dbc3866a60a8e77bc43db24bf6f_6.png)
 
-![](img/1ce94dbc3866a60a8e77bc43db24bf6f_7.png)
 
-![](img/1ce94dbc3866a60a8e77bc43db24bf6f_9.png)
 
 ![](img/1ce94dbc3866a60a8e77bc43db24bf6f_9.png)

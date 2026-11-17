@@ -4,7 +4,6 @@
 
 ---
 
-![](img/f360494aaa062789da79efd824c7b70d_0.png)
 
 ## 概述
 
@@ -14,13 +13,11 @@
 
 ---
 
-![](img/f360494aaa062789da79efd824c7b70d_2.png)
 
 ## 使用Apache Commons CSV库
 
 上一节我们介绍了分析CSV数据的目标，本节中我们来看看实现这一目标所需的工具。你将学习Apache Commons CSV库的机制。
 
-![](img/f360494aaa062789da79efd824c7b70d_3.png)
 
 这个库的核心是`CSVParser`和`CSVRecord`类。`CSVParser`用于读取和解析CSV文件，而`CSVRecord`则代表文件中的一行数据。
 
@@ -62,7 +59,6 @@ for (CSVRecord record : records) {
 
 ---
 
-![](img/f360494aaa062789da79efd824c7b70d_5.png)
 
 ## 在Java中实现
 

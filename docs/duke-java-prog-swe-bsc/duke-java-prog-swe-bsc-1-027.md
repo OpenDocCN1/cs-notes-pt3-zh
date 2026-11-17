@@ -58,9 +58,7 @@ if (pixel.getRed() < 200) {
 
 ---
 
-![](img/ee8ec13493173e3f329f686faad6187a_1.png)
 
-![](img/ee8ec13493173e3f329f686faad6187a_2.png)
 
 ![](img/ee8ec13493173e3f329f686faad6187a_3.png)
 

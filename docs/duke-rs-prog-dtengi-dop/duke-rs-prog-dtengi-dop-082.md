@@ -262,7 +262,6 @@ cargo run
     *   集成`rust-bert`库调用Hugging Face的零样本分类模型。
 4.  **整合并运行了完整应用**：将各个模块串联，实现了从歌词文件到分类结果的端到端分析。
 
-![](img/81d8abcc7638610ad301b83de751ac32_4.png)
 
 ![](img/81d8abcc7638610ad301b83de751ac32_5.png)
 

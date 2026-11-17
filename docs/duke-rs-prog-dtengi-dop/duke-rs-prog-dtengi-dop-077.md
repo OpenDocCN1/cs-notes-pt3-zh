@@ -25,7 +25,6 @@ Firecracker是一项由AWS开发的基于服务器的技术，专门用于驱动
 
 ## 在Rust中使用PyTorch与GPU
 
-![](img/5a2c0226ebcb7841da8dda69202505b3_4.png)
 
 ![](img/5a2c0226ebcb7841da8dda69202505b3_5.png)
 

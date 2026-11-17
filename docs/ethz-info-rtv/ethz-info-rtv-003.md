@@ -1,26 +1,20 @@
 # 003：布尔检索 (1/2) 📚
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_1.png)
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_3.png)
 
 在本节课中，我们将要学习信息检索的基础——布尔检索模型。我们将从最简单的文本搜索开始，逐步抽象出文档和术语的概念，并学习如何通过布尔逻辑（AND, OR, NOT）来组合查询。最后，我们会初步了解如何评估一个检索系统的性能。
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_5.png)
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_6.png)
 
 ---
 
 ## 课程回顾与引入
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_8.png)
 
 上一周我们介绍了信息检索的基本概念。本节中，我们来看看如何具体实现一个简单的检索系统。
 
 信息检索本质上是一个数据库问题。我们处理的数据形态多样，包括论文、树、图、立方体和向量。其中，向量是处理文本、音频、视频等非结构化数据的新方法。本课程的重点是文本数据，因此我们会看到大量的向量、矩阵和线性代数应用。
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_10.png)
 
 我们今天要解决的问题是：如何从大规模的非结构化数据集合中，找到满足特定信息需求的内容。这不仅仅是搜索一个小文本文件，而是可能针对整个互联网或一个大型图书馆的所有书籍内容。
 
@@ -41,9 +35,7 @@
 
 一个直接的想法是使用文本处理器（如Word）的查找功能，或者使用命令行工具。例如，我们可以使用 `grep` 命令。
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_12.png)
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_14.png)
 
 假设我们想查找单词 “lawyer”。命令如下：
 ```bash
@@ -102,7 +94,6 @@ grep lawyer conan_doyle.txt | grep penang | grep -v silver
 
 ---
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_16.png)
 
 ## 布尔检索模型与关联矩阵
 
@@ -116,13 +107,10 @@ grep lawyer conan_doyle.txt | grep penang | grep -v silver
 用数学公式表示，这是一个从“术语×文档”的笛卡尔积到布尔值的函数：
 `f: Terms × Documents → {0, 1}`
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_18.png)
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_19.png)
 
 假设我们有6个术语（T, U, V, W, X, Y）和10个文档（D1-D10），关联矩阵可能如下所示（其中1表示包含，0表示不包含）：
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_21.png)
 
 | 术语/文档 | D1 | D2 | D3 | D4 | D5 | D6 | D7 | D8 | D9 | D10 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -140,11 +128,9 @@ grep lawyer conan_doyle.txt | grep penang | grep -v silver
 
 ---
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_23.png)
 
 ## 执行布尔查询
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_25.png)
 
 有了这个矩阵，我们就可以执行查询了。
 
@@ -160,19 +146,13 @@ grep lawyer conan_doyle.txt | grep penang | grep -v silver
 
 ---
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_27.png)
 
 ## 系统评估：精确度
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_29.png)
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_30.png)
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_31.png)
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_32.png)
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_33.png)
 
 在介绍更高效的索引方法之前，我们先简要讨论一下如何评估检索系统。这涉及到在机器学习中常见的概念：假阳性和假阴性。
 
@@ -199,17 +179,12 @@ grep lawyer conan_doyle.txt | grep penang | grep -v silver
 
 ---
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_35.png)
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_37.png)
 
 ## 总结
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_39.png)
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_40.png)
 
-![](img/a7ad3fab5c448323fe05373d6ab5181c_42.png)
 
 本节课中，我们一起学习了布尔检索模型的基础知识。我们从最简单的文本搜索工具 `grep` 出发，指出了其在大规模检索中的局限性。接着，我们建立了信息检索的抽象模型，明确了**文档**和**术语**作为核心概念，并引入了**集合**、**包**、**列表**三种抽象层次。
 

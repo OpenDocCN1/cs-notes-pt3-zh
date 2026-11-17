@@ -1,6 +1,5 @@
 # 063：灰度处理 🖼️➡️⚫⚪
 
-![](img/d7e115f6adc5fe815fd4cebc362cb03a_0.png)
 
 在本节课中，我们将学习如何将彩色图像转换为灰度图像。我们将基于之前设计的算法，在BlueJ环境中编写具体的Java代码来实现这一功能。
 
@@ -22,7 +21,6 @@ public ImageResource makeGray(ImageResource inImage) {
     ImageResource outImage = new ImageResource(inImage.getWidth(), inImage.getHeight());
 ```
 
-![](img/d7e115f6adc5fe815fd4cebc362cb03a_2.png)
 
 我们算法的第三步是遍历输出图像中的每一个像素。这需要一个 `for` 循环。
 
@@ -48,7 +46,6 @@ public ImageResource makeGray(ImageResource inImage) {
 
 计算出平均值后，我们将这个值同时设置为输出图像当前像素的红、绿、蓝通道值。
 
-![](img/d7e115f6adc5fe815fd4cebc362cb03a_4.png)
 
 ```java
         pixel.setRed(average);
@@ -58,7 +55,6 @@ public ImageResource makeGray(ImageResource inImage) {
 
 以上步骤完成了对每个像素的处理。循环结束后，我们的最后一步是返回处理好的图像。
 
-![](img/d7e115f6adc5fe815fd4cebc362cb03a_6.png)
 
 ```java
     return outImage;
@@ -69,7 +65,6 @@ public ImageResource makeGray(ImageResource inImage) {
 
 ---
 
-![](img/d7e115f6adc5fe815fd4cebc362cb03a_8.png)
 
 通常，我们通过在BlueJ主窗口创建对象并调用其方法来测试代码。但直接创建 `ImageResource` 对象进行测试有些复杂，因此我们将编写一个辅助测试方法。
 
@@ -85,7 +80,6 @@ public void testGray() {
 
 现在，我们转到BlueJ的主窗口。创建一个新的 `GrayscaleConverter` 对象。
 
-![](img/d7e115f6adc5fe815fd4cebc362cb03a_10.png)
 
 然后，调用该对象的 `testGray()` 方法。程序会弹出一个对话框，让我们选择一张图片。例如，我们可以选择一张色彩鲜艳的图片进行测试。
 

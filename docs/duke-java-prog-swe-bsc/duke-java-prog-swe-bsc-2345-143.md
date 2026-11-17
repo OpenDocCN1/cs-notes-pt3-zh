@@ -1,6 +1,5 @@
 # 143：基于距离的Comparator实现
 
-![](img/05a42f0b4bf2184267cdeaa2238b4f32_0.png)
 
 ![](img/05a42f0b4bf2184267cdeaa2238b4f32_0.png)
 

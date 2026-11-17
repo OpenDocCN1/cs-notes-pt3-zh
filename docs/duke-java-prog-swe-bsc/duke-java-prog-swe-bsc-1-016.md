@@ -25,9 +25,7 @@
 
 既然颜色被表示为数字，我们就可以对它们进行数学运算。以下是颜色加法的一个例子。
 
-![](img/2b1327de8843b0d2fbd1e8fbddd85d58_4.png)
 
-![](img/2b1327de8843b0d2fbd1e8fbddd85d58_5.png)
 
 如果我们取洋红色（Magenta）和绿色（Green）相加：
 *   洋红色的 RGB 值为：`(255, 0, 255)`
@@ -35,7 +33,6 @@
 
 ![](img/2b1327de8843b0d2fbd1e8fbddd85d58_6.png)
 
-![](img/2b1327de8843b0d2fbd1e8fbddd85d58_7.png)
 
 ![](img/2b1327de8843b0d2fbd1e8fbddd85d58_8.png)
 

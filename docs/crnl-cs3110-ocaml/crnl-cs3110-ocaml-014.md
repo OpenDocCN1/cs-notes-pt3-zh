@@ -15,11 +15,8 @@ fun x1 ... xn -> E
 
 匿名函数在编程语言领域还有一个广为人知的名称：**Lambda表达式**。这个名称来源于数学中的Lambda演算记法 `λx. E`，其含义与OCaml中的匿名函数语法完全相同。这里的 `λ` 就相当于OCaml中的 `fun` 关键字。
 
-![](img/328449b4690cc167a4bf848aa59a9fc5_1.png)
 
-![](img/328449b4690cc167a4bf848aa59a9fc5_3.png)
 
-![](img/328449b4690cc167a4bf848aa59a9fc5_4.png)
 
 Lambda表达式在各种编程语言和社区中无处不在：
 *   Python使用 `lambda` 关键字创建Lambda表达式。

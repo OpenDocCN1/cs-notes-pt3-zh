@@ -155,7 +155,6 @@ ORDER BY score DESC
 LIMIT 50;
 ```
 
-![](img/07fa1d1f02c8dff04313ff4da149f75d_28.png)
 
 ![](img/07fa1d1f02c8dff04313ff4da149f75d_29.png)
 
@@ -169,7 +168,6 @@ LIMIT 50;
 3.  以渐进的方式增加查询的复杂度，逐步添加所需字段和计算列。
 4.  最终构建一个包含数据统计的复杂查询。
 
-![](img/07fa1d1f02c8dff04313ff4da149f75d_31.png)
 
 ![](img/07fa1d1f02c8dff04313ff4da149f75d_32.png)
 

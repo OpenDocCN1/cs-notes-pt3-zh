@@ -1,6 +1,5 @@
 # 002：程序表示
 
-![](img/be21ecfddcc944f77a2df6eaf2a5ec5d_0.png)
 
 ![](img/be21ecfddcc944f77a2df6eaf2a5ec5d_0.png)
 

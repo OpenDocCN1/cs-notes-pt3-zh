@@ -35,7 +35,6 @@
 
 Git是一个分布式版本控制系统，用于管理代码的修改历史、支持多人协作开发。
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_3.png)
 
 以下是Git的核心概念与常用指令：
 
@@ -83,9 +82,7 @@ Git是一个分布式版本控制系统，用于管理代码的修改历史、�
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_16.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_18.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_20.png)
 
 ### 第三阶段：开发与调试（IDE）
 
@@ -101,23 +98,18 @@ Git是一个分布式版本控制系统，用于管理代码的修改历史、�
 
 用Visual Studio打开生成的.sln文件，即可进行编译、运行和调试。
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_31.png)
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_32.png)
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_34.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_35.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_36.png)
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_38.png)
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_40.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_41.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_43.png)
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_45.png)
 
@@ -125,27 +117,19 @@ Git是一个分布式版本控制系统，用于管理代码的修改历史、�
 
 创建一个新项目的基本方法是：在`examples/`目录下复制一个现有样例的CMake脚本和源码，修改工程名称，并重新运行CMake生成。新项目会出现在解决方案中，编译后运行会显示一个基础的GUI窗口。
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_48.png)
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_50.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_52.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_54.png)
 
 ## PeriDyno核心架构：四层模型
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_56.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_58.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_60.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_62.png)
 
 PeriDyno采用**场景(Scene) -> 节点(Node) -> 管线(Pipeline) -> 模块(Module)**的四层结构来实现高度模块化和解耦。
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_64.png)
 
 ### 1. 数据 (Field)
 
@@ -164,11 +148,9 @@ PeriDyno采用**场景(Scene) -> 节点(Node) -> 管线(Pipeline) -> 模块(Modu
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_68.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_70.png)
 
 ### 2. 模块 (Module)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_72.png)
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_74.png)
 
@@ -176,15 +158,12 @@ PeriDyno采用**场景(Scene) -> 节点(Node) -> 管线(Pipeline) -> 模块(Modu
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_77.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_78.png)
 
 模块是实现具体算法功能的最小单元。它声明所需的输入字段、输出字段和控制参数。例如，一个SPH密度计算模块会输入粒子位置和邻居信息，输出密度值。
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_79.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_81.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_83.png)
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_84.png)
 
@@ -192,22 +171,17 @@ PeriDyno采用**场景(Scene) -> 节点(Node) -> 管线(Pipeline) -> 模块(Modu
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_86.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_88.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_90.png)
 
 节点是数据（拓扑结构和场）的容器。一个节点包含：
 *   **状态字段**：描述物理对象的状态（如位置、速度）。
 *   **管线**：组织模块执行顺序的图结构。
 *   **节点输入/输出**：允许整个节点作为数据端口进行传递，简化复杂数据流的连接。
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_92.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_94.png)
 
 ### 4. 场景 (Scene) 与管线 (Pipeline)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_96.png)
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_98.png)
 
@@ -217,29 +191,22 @@ PeriDyno采用**场景(Scene) -> 节点(Node) -> 管线(Pipeline) -> 模块(Modu
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_103.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_104.png)
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_106.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_108.png)
 
 场景是节点的集合。每个节点内部包含两条核心管线：
 *   **仿真管线**：由一系列计算模块组成，按依赖关系执行，用于更新物理状态。
 *   **渲染管线**：由一系列渲染模块组成，用于将数据可视化。
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_110.png)
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_112.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_113.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_115.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_117.png)
 
 管线采用**标记(Tag)机制**：当某个模块的数据被更新后，会打上“已更新”标记。后续模块在执行前会检查输入数据的标记，仅当数据发生变化时才重新计算，避免不必要的计算开销。
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_119.png)
 
 ## 核心设计思想：解耦
 
@@ -250,44 +217,30 @@ PeriDyno采用**场景(Scene) -> 节点(Node) -> 管线(Pipeline) -> 模块(Modu
 ### 1. 仿真计算与数据解耦
 将拓扑结构（如点云、四面体网格）和其上定义的场（如速度场、应力场）与具体的仿真算法分离。同一套数据结构可以支持多种算法（如SPH、MPM），同一种算法也可应用于不同数据结构。
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_123.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_125.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_127.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_129.png)
 
 ### 2. 仿真计算与渲染解耦
 渲染管线独立于仿真管线。开发者可以灵活地为调试或展示目的，添加不同的渲染模块（如显示触点、法线、矢量场），而无需修改仿真算法本身。
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_131.png)
 
 ### 3. 仿真计算与交互解耦
 交互行为（如鼠标拾取、拖拽）被模块化。不同的交互需求可以通过替换或重载交互模块来实现，保证了交互事件能正确映射到仿真场景的世界坐标系中。
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_133.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_135.png)
 
 ### 多线程协作
 在GUI主线程、仿真线程、渲染线程并存的环境下，需要处理数据同步和读写冲突。PeriDyno的策略是将互斥锁的粒度细化到**模块级别**，而非整个场景。这样在某个模块写入数据时，只锁定该模块，其他模块仍可并行执行，最大程度减少线程阻塞。
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_137.png)
 
 ## 课程总结与展望
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_139.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_141.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_143.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_145.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_147.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_149.png)
 
 本节课我们一起学习了物理仿真的宏观背景、PeriDyno引擎的架构概览、开发环境搭建流程以及其核心的四层模型与解耦设计思想。
 
@@ -295,7 +248,6 @@ PeriDyno采用**场景(Scene) -> 节点(Node) -> 管线(Pipeline) -> 模块(Modu
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_153.png)
 
-![](img/aaaefbf2efbb53e09751d053216a6b5a_155.png)
 
 ![](img/aaaefbf2efbb53e09751d053216a6b5a_157.png)
 

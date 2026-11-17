@@ -1,12 +1,10 @@
 Java 全栈开发：12：LinkedList 数据结构详解 📚
 
-![](img/d53009eae46031eeac23f0fc7aa20634_0.png)
 
 在本节课中，我们将要学习 Java 集合框架中的 `LinkedList` 类。我们将了解它的基本概念、如何创建和使用它，以及一些常用的操作方法。
 
 ---
 
-![](img/d53009eae46031eeac23f0fc7aa20634_2.png)
 
 `LinkedList` 是一个实现了 `List` 和 `Deque` 接口的类，它构成了一个链表数据结构，其中的元素被称为节点。`LinkedList` 类默认被包含在集合框架中。
 
@@ -71,7 +69,6 @@ System.out.println("最终大小: " + linkedList.size());
 
 除了 `add`、`remove` 和 `size`，`LinkedList` 还提供了许多其他方法，例如查找元素的索引（`indexOf`）、检查是否包含某元素（`contains`）等。这些方法与 `ArrayList` 中的方法非常相似。
 
-![](img/d53009eae46031eeac23f0fc7aa20634_4.png)
 
 ![](img/d53009eae46031eeac23f0fc7aa20634_5.png)
 

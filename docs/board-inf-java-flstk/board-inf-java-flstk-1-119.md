@@ -1,8 +1,6 @@
 # 119：JavaScript简介 🚀
 
-![](img/9ded7b742699d6f68351b62add86cfec_0.png)
 
-![](img/9ded7b742699d6f68351b62add86cfec_2.png)
 
 在本节课中，我们将学习JavaScript的历史和基本介绍。
 
@@ -53,7 +51,6 @@ Web浏览器使用不同的JavaScript引擎来解释和执行JavaScript代码。
 
 本节课中我们一起学习了JavaScript的基础知识。JavaScript是一种高级动态编程语言，用于创建交互式网页和Web应用程序。它最初被称为Mocha，后来更名为LiveScript，最终出于营销目的更名为JavaScript。虽然它主要与Web开发相关，但JavaScript也可以在服务器和其他拥有JavaScript引擎的设备上使用。凭借其多功能性和普及度，JavaScript已成为现代Web开发的基础语言。
 
-![](img/9ded7b742699d6f68351b62add86cfec_4.png)
 
 ![](img/9ded7b742699d6f68351b62add86cfec_6.png)
 

@@ -284,7 +284,6 @@ export default leaderMenu;
 
 ![](img/72c674e5898482865379c8508aff778e_9.png)
 
-![](img/72c674e5898482865379c8508aff778e_10.png)
 
 ```javascript
 // 在 view.js 中

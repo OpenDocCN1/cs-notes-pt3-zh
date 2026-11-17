@@ -1,6 +1,5 @@
 # 074：P74 Spring Security Hello World 实现 🛡️
 
-![](img/f68f54a3ae77e15c221bb4d9cb2cae6c_0.png)
 
 在本节课中，我们将学习如何实现一个简单的 Spring Security “Hello World” 应用。我们将创建一个包含公共页面和受保护页面的项目，并了解 Spring Security 的基本配置和工作流程。
 
@@ -8,15 +7,12 @@
 
 在上节课中，我们演示了 Spring Security 的基本概念。本节我们将动手实现一个具体的项目。这个项目是一个 Spring Maven 项目，包含一个控制器、公共页面和受保护页面，用于展示 Spring Security 如何拦截请求并引导用户登录。
 
-![](img/f68f54a3ae77e15c221bb4d9cb2cae6c_2.png)
 
-![](img/f68f54a3ae77e15c221bb4d9cb2cae6c_3.png)
 
 ## 项目结构
 
 首先，我们来看一下项目的核心结构。项目中有一个控制器，用于处理不同的页面请求。
 
-![](img/f68f54a3ae77e15c221bb4d9cb2cae6c_0.png)
 
 在控制器中，我们定义了公共页面和受保护页面的端点。公共页面会检查一个包含新用户信息的属性。这里我们有一个 `Person` 类，它具有私有的 `name` 和 `age` 属性，并通过 getter 和 setter 方法进行访问。
 
@@ -61,7 +57,6 @@ Spring Security 会拦截每一个请求，并将其传递给 `DispatcherServlet
 
 为了方便你的学习和参考，我将提供这个项目的完整内容。你可以直接查看和使用它。
 
-![](img/f68f54a3ae77e15c221bb4d9cb2cae6c_5.png)
 
 ## 总结
 

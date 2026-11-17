@@ -65,9 +65,7 @@ void replace(ForwardIt first, ForwardIt last, const T& old_value, const T& new_v
 }
 ```
 
-![](img/ebff05a2225a24c88d15c0db37d3c137_1.png)
 
-![](img/ebff05a2225a24c88d15c0db37d3c137_3.png)
 
 `replace_if`与之类似，但使用谓词进行判断。`replace_copy`和`replace_copy_if`则涉及将结果写入输出迭代器。这些算法在结构上具有高度的对称性和并行性。
 

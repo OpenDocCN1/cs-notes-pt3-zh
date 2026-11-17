@@ -1,6 +1,5 @@
 # 001：认识讲师-Alfredo Deza 👨‍🏫
 
-![](img/62464b99f6f090f7fd7f01ce2d55bc80_0.png)
 
 ![](img/62464b99f6f090f7fd7f01ce2d55bc80_0.png)
 

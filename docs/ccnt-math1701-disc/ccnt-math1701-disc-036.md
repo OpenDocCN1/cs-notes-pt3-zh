@@ -1,26 +1,20 @@
 # 36：用反例反驳蕴含命题 🧮
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_0.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_2.png)
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_3.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_5.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_6.png)
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_7.png)
 
 在本节课中，我们将学习如何通过构造反例来证明一个蕴含命题是假的。我们将从一个具体的数学命题入手，分析其结构，并展示如何找到一个反例来推翻它。
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_9.png)
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_10.png)
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_12.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_13.png)
 
 ## 概述
 
@@ -48,7 +42,6 @@
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_27.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_28.png)
 
 上一节我们介绍了本节课的目标。本节中，我们来看看如何分析这个具体的命题。
 
@@ -62,7 +55,6 @@
 
 命题的形式是：如果 P（即 A² > B²）成立，那么 Q（即 A > B）也成立。为了判断其真假，我们可以先尝试从假设 P 出发，推导出 Q。
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_35.png)
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_36.png)
 
@@ -70,21 +62,14 @@
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_37.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_38.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_39.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_41.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_42.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_43.png)
 
 ## 寻找反例
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_45.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_47.png)
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_48.png)
 
@@ -102,7 +87,6 @@
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_56.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_57.png)
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_58.png)
 
@@ -114,35 +98,27 @@
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_62.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_64.png)
 
 接下来，我们尝试一个包含负数的例子。令 A = -4， B = 3。
 *   计算 P： (-4)² = 16， 3² = 9。因为 16 > 9，所以条件 `A² > B²` 成立。
 *   检查 Q： -4 > 3 吗？不，-4 小于 3。所以结论 `A > B` 不成立。
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_66.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_67.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_68.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_69.png)
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_70.png)
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_71.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_72.png)
 
 于是，我们找到了一个具体的整数对 (A, B) = (-4, 3)，它使得前提 P 为真，但结论 Q 为假。这就构成了原命题的一个反例。由于原命题声称“对于所有整数 A, B”该蕴含关系都成立，只要找到一个反例，就足以证明整个命题为假。
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_74.png)
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_75.png)
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_76.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_77.png)
 
 ## 反例法的原理
 
@@ -158,19 +134,13 @@
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_84.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_85.png)
 
 我们的目标是证明一个形如 **∀x (P(x) ⇒ Q(x))** 的命题是假的。这里，∀x 表示“对于所有x”，P(x)和Q(x)是关于x的谓词（即条件）。
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_86.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_87.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_88.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_90.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_91.png)
 
 根据逻辑规则，要证明一个全称量词命题为假，等价于证明其否定为真。该命题的否定是：
 **∃x ¬(P(x) ⇒ Q(x))**
@@ -188,11 +158,8 @@
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_99.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_101.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_102.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_103.png)
 
 因此，反例法的核心可以总结如下：
 要反驳 **∀x (P(x) ⇒ Q(x))**，我们需要在定义域中找到一个具体的元素（称为反例），使得：
@@ -202,17 +169,11 @@
 用公式表示，即找到元素 `a`，满足：
 **P(a) ∧ ¬Q(a)**
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_105.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_106.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_107.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_108.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_109.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_110.png)
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_111.png)
 
@@ -225,7 +186,6 @@
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_113.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_114.png)
 
 ## 总结
 
@@ -233,9 +193,7 @@
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_116.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_118.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_119.png)
 
 本节课中我们一起学习了如何用反例法反驳一个蕴含命题。关键步骤如下：
 1.  识别出命题是全称量词形式的蕴含式：**∀x (P(x) ⇒ Q(x))**。
@@ -243,11 +201,9 @@
 3.  在定义域内寻找或构造这样的具体例子。
 4.  展示该例子如何满足前提并否定结论，从而完成反驳。
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_121.png)
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_122.png)
 
-![](img/69fb15b2c5d82dbdf10986cccaee13f7_123.png)
 
 ![](img/69fb15b2c5d82dbdf10986cccaee13f7_124.png)
 

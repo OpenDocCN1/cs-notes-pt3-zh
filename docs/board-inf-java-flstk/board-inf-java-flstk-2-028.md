@@ -1,12 +1,10 @@
 # 028：Set接口详解 🎯
 
-![](img/f7e260757d15bb2a34841b7995dab40e_0.png)
 
 在本节课中，我们将学习Java集合框架中的Set接口及其实现。Set接口提供了数学集合的特性，并且不允许包含重复元素。
 
 ## 概述
 
-![](img/f7e260757d15bb2a34841b7995dab40e_2.png)
 
 Set接口是Java集合框架的一部分，它扩展了`Collection`接口。与`List`接口不同，Set不能包含重复的元素。由于Set是一个接口，我们不能直接创建它的对象。为了使用Set的功能，我们需要借助实现了Set接口的类。
 
@@ -99,7 +97,6 @@ for (Integer number : set1) {
 
 ## 总结
 
-![](img/f7e260757d15bb2a34841b7995dab40e_4.png)
 
 ![](img/f7e260757d15bb2a34841b7995dab40e_5.png)
 

@@ -57,7 +57,6 @@ OCaml对`if`表达式有严格的类型要求，这确保了程序的正确性�
 1.  如果 `e1 ==> true` 且 `e2 ==> v`，那么 `(if e1 then e2 else e3) ==> v`。
 2.  如果 `e1 ==> false` 且 `e3 ==> v`，那么 `(if e1 then e2 else e3) ==> v`。
 
-![](img/94c13c67fb90c1f231ba8619f75fa976_1.png)
 
 **类型规则：**
 如果 `e1 : bool`，`e2 : t`，且 `e3 : t`，那么 `(if e1 then e2 else e3) : t`。
@@ -66,7 +65,6 @@ OCaml对`if`表达式有严格的类型要求，这确保了程序的正确性�
 
 ## 总结
 
-![](img/94c13c67fb90c1f231ba8619f75fa976_3.png)
 
 ![](img/94c13c67fb90c1f231ba8619f75fa976_4.png)
 

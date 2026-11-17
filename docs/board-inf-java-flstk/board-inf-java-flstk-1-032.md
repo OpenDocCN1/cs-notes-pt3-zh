@@ -1,22 +1,18 @@
 Java全栈开发：07：StringBuffer与StringBuilder详解 🧵
 
-![](img/180ac47cf3362a439316b49844259284_1.png)
 
 在本节课中，我们将要学习Java中两个重要的类：`StringBuffer`和`StringBuilder`。我们将探讨它们与普通`String`类的区别，理解“可变性”的概念，并通过代码示例比较它们的性能与使用场景。
 
 ---
 
-![](img/180ac47cf3362a439316b49844259284_3.png)
 
 在上一节中，我们讨论了`String`及其方法，并了解到`String`对象是不可变的。这意味着每次修改字符串内容时，实际上都会创建一个新的`String`对象。
 
-![](img/180ac47cf3362a439316b49844259284_1.png)
 
 然而，`StringBuffer`是一个可变的类，这意味着它的内容可以被修改。它提供了一种在Java中创建可变字符串的方式，并且是线程安全的，允许多个线程同时安全地使用和修改它。
 
 为了实现线程安全的优势，`StringBuffer`的实现相对较重。与之类似但不同的另一个类是`StringBuilder`。
 
-![](img/180ac47cf3362a439316b49844259284_3.png)
 
 `StringBuffer`拥有诸如`append`、`insert`、`delete`和`reverse`等方法，这些方法允许直接修改字符串内容。接下来，让我们通过实践来理解它。
 
@@ -90,6 +86,5 @@ System.out.println("Time taken by StringBuilder: " + timeTakenByBuilder + " ms")
 *   **`StringBuilder`不是线程安全的**，但在单线程环境下性能更高。
 *   选择使用哪个类取决于你的具体需求：需要线程安全时用`StringBuffer`，追求单线程性能时用`StringBuilder`。
 
-![](img/180ac47cf3362a439316b49844259284_5.png)
 
 ![](img/180ac47cf3362a439316b49844259284_5.png)

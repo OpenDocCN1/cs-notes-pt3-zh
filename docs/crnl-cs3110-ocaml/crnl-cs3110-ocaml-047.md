@@ -33,7 +33,6 @@ map (fun x -> f x) [a; b; c]  =>  [f a; f b; f c]
 
 ---
 
-![](img/8b6d6c5105f9fc017f3edd7a7cfdda97_9.png)
 
 ![](img/8b6d6c5105f9fc017f3edd7a7cfdda97_10.png)
 

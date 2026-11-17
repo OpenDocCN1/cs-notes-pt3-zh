@@ -10,20 +10,16 @@
 
 Web服务背后有一套复杂的机制，包括用户操作、浏览器处理、服务器处理和响应等步骤。以下是一个简化的Web服务流程：
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_3.png)
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_5.png)
 
 1. 用户在浏览器上操作，如点击按钮或输入文本。
 2. 浏览器将用户操作发送到服务器。
 3. 服务器处理请求并返回响应。
 4. 浏览器将响应渲染成网页显示给用户。
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_7.png)
 
 **公式**：
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_9.png)
 
 ![](img/a3dde32a2e306f4b105aa37c943ae8c2_11.png)
 
@@ -37,22 +33,16 @@ Web服务 = 用户操作 + 浏览器处理 + 服务器处理 + 响应
 
 Web服务可以分为前端和后端两部分：
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_15.png)
 
 * **前端**：负责用户界面和交互，使用HTML、CSS和JavaScript等技术实现。
 * **后端**：负责处理业务逻辑和数据存储，使用服务器端语言和数据库等技术实现。
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_17.png)
 
 **代码**：
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_19.png)
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_21.png)
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_23.png)
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_25.png)
 
 ```html
 <!-- 前端代码 -->
@@ -68,24 +58,16 @@ Web服务可以分为前端和后端两部分：
 </html>
 ```
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_27.png)
-
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_29.png)
-
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_31.png)
 
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_33.png)
-
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_35.png)
-
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_37.png)
 
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_39.png)
 
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_41.png)
+
+
+
+
 
 ```python
 # 后端代码 (Python)
@@ -110,16 +92,12 @@ if __name__ == '__main__':
 
 ### 本地IP和公网IP的Web服务
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_53.png)
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_55.png)
 
 * **本地IP的Web服务**：部署在本地机器上，只能在本机访问。
 * **公网IP的Web服务**：部署在公网上，可以由任何机器访问。
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_57.png)
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_59.png)
 
 **应用场景**：
 
@@ -128,9 +106,7 @@ if __name__ == '__main__':
 
 ### 实例
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_61.png)
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_63.png)
 
 ![](img/a3dde32a2e306f4b105aa37c943ae8c2_65.png)
 
@@ -153,9 +129,7 @@ if __name__ == '__main__':
 
 ![](img/a3dde32a2e306f4b105aa37c943ae8c2_76.png)
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_77.png)
 
-![](img/a3dde32a2e306f4b105aa37c943ae8c2_79.png)
 
 ### 总结
 

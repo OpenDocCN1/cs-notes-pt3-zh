@@ -1,6 +1,5 @@
 **软件产品管理毕业项目：P3：第0.4节 剽窃**
 
-![](img/13ef3724ed70f731fc3ae0d3375f8cfa_1.png)
 
 ![](img/13ef3724ed70f731fc3ae0d3375f8cfa_2.png)
 

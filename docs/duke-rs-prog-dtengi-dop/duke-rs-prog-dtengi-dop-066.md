@@ -16,7 +16,6 @@
 
 首先，我们需要创建一个项目目录，并进入该目录。
 
-![](img/0d7668fa5f028db97979edceec7ca078_2.png)
 
 ```bash
 mkdir web_docker
@@ -135,13 +134,11 @@ clean:
 	rm -rf target
 ```
 
-![](img/0d7668fa5f028db97979edceec7ca078_7.png)
 
 ![](img/0d7668fa5f028db97979edceec7ca078_8.png)
 
 ## 本地测试应用
 
-![](img/0d7668fa5f028db97979edceec7ca078_9.png)
 
 在部署之前，我们需要在本地测试应用是否能够正常运行。使用以下命令启动应用：
 

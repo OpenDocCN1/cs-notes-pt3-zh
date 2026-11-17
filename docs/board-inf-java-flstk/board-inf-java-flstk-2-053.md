@@ -1,12 +1,10 @@
 # 053：实现获取用户资源的GET服务 🚀
 
-![](img/e5d4ccd3b93a9075ab1d4dc17d1c77fd_0.png)
 
 在本节课中，我们将学习如何在Spring Boot应用中实现一个GET服务，用于检索学生资源。我们将创建一个学生模型、一个控制器，并实现两个不同的GET端点：一个用于获取所有学生列表，另一个用于根据路径变量（Path Variable）获取特定学生。
 
 ---
 
-![](img/e5d4ccd3b93a9075ab1d4dc17d1c77fd_2.png)
 
 ## 概述 📋
 
@@ -122,7 +120,6 @@ public class StudentController {
 
 启动Spring Boot应用程序后，你可以使用浏览器或API测试工具（如Postman）访问以下URL来测试第一个端点：
 
-![](img/e5d4ccd3b93a9075ab1d4dc17d1c77fd_4.png)
 
 ```
 http://localhost:8080/students
@@ -130,7 +127,6 @@ http://localhost:8080/students
 
 该请求将返回一个包含所有学生对象的JSON数组。
 
-![](img/e5d4ccd3b93a9075ab1d4dc17d1c77fd_6.png)
 
 ---
 
@@ -182,7 +178,6 @@ http://localhost:8080/student/Goham/Bla
 }
 ```
 
-![](img/e5d4ccd3b93a9075ab1d4dc17d1c77fd_8.png)
 
 这演示了路径变量如何工作：它们允许你将数据作为URL路径的一部分进行传递。
 
@@ -199,7 +194,6 @@ http://localhost:8080/student/Goham/Bla
     *   我们实现了`/student/{firstName}/{lastName}`端点，使用`@PathVariable`来接收参数并返回特定的学生信息。
 4.  **测试**：我们学习了如何启动应用并测试这些API端点。
 
-![](img/e5d4ccd3b93a9075ab1d4dc17d1c77fd_10.png)
 
 目前，根据路径变量获取学生的端点只是简单地回显输入的数据。在后续课程中，我们将学习如何使用请求参数（Request Parameter）来实现类似功能，并添加逻辑来从列表中实际查找学生。
 

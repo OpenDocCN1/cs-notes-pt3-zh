@@ -1,10 +1,8 @@
 # 022：LinkedHashMap详解 📚
 
-![](img/15641c8dacb37584b900bc0cc11516c7_0.png)
 
 在本节课中，我们将学习Java集合框架中的`LinkedHashMap`。我们将了解它是什么、它与普通`HashMap`的区别、如何创建和使用它，并通过代码示例演示其核心方法。
 
-![](img/15641c8dacb37584b900bc0cc11516c7_2.png)
 
 ---
 
@@ -24,7 +22,6 @@ Java的`LinkedHashMap`接口扩展了`HashMap`类，在哈希表中存储条目�
 
 `LinkedHashMap`包含基于键的唯一元素，并且可以有一个`null`键和多个`null`值。它维护插入顺序，初始默认容量为**16**，负载因子为**0.75**。
 
-![](img/15641c8dacb37584b900bc0cc11516c7_4.png)
 
 ---
 
@@ -43,7 +40,6 @@ LinkedHashMap<Key, Value> variableName = new LinkedHashMap<>();
 
 ---
 
-![](img/15641c8dacb37584b900bc0cc11516c7_6.png)
 
 ## 代码示例与实践
 

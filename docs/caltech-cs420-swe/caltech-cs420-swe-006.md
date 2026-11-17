@@ -165,7 +165,6 @@ SonarQube 的主要功能包括：
 
 ### 与 CI/CD 集成
 
-![](img/282de5f04e4cc7925fae63a5298ac5c1_78.png)
 
 ![](img/282de5f04e4cc7925fae63a5298ac5c1_80.png)
 

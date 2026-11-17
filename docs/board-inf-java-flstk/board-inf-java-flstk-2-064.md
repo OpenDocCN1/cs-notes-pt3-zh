@@ -14,9 +14,7 @@ JPA是Java Persistence API的缩写。它是一个Java规范，用于在Java对�
 
 ---
 
-![](img/116de7b26a67bfbf341bd87b5a969212_1.png)
 
-![](img/116de7b26a67bfbf341bd87b5a969212_2.png)
 
 了解了JPA的定义后，接下来我们看看在现实应用中使用JPA有哪些优势。
 

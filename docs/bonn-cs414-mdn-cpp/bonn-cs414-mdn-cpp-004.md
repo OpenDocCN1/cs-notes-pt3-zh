@@ -203,9 +203,7 @@ int main() {
     // a 现在是 100
     ```
 
-![](img/7a5c347b7c7a48f272c964c9a8ceaf4f_1.png)
 
-![](img/7a5c347b7c7a48f272c964c9a8ceaf4f_2.png)
 
 ### 常量引用：兼顾效率与安全
 对于大型对象（如`std::string`、`std::vector`），传值会产生昂贵的拷贝开销。传引用是高效的替代方案。

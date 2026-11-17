@@ -139,7 +139,6 @@ body {
 
 ## 总结
 
-![](img/e8aed85609827974a0c1683bd7fc2b19_41.png)
 
 ![](img/e8aed85609827974a0c1683bd7fc2b19_43.png)
 

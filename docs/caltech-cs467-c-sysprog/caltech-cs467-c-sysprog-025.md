@@ -1,6 +1,5 @@
 # 025：Shell Lab 第六部分
 
-![](img/b5a1d2bdb616f494eccc717e68500565_0.png)
 
 ![](img/b5a1d2bdb616f494eccc717e68500565_0.png)
 
@@ -143,6 +142,5 @@ void do_bgfg(char **argv) {
 
 通过这些修改，我们成功通过了 trace 15（错误处理）、trace 16（综合测试）和 trace 17（外部进程信号测试）。这些工作为 shell 的稳定性和用户体验打下了重要基础。在接下来的课程中，我们将开始实现更高级的功能：输入/输出重定向。
 
-![](img/b5a1d2bdb616f494eccc717e68500565_2.png)
 
 ![](img/b5a1d2bdb616f494eccc717e68500565_2.png)

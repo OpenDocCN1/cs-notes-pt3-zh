@@ -41,7 +41,6 @@
     queue.isEmpty(); // 返回 true 或 false
     ```
 
-![](img/62fd09bd8276d8e46b534ee11d60e595_1.png)
 
 ## 代码实践：实现队列操作
 
@@ -94,11 +93,9 @@ System.out.println("Is queue empty? " + queue.isEmpty());
 
 ## 总结
 
-![](img/62fd09bd8276d8e46b534ee11d60e595_3.png)
 
 本节课中我们一起学习了Java队列的核心操作。我们了解了队列“先进先出”的特性，认识了`enqueue`（添加）、`dequeue`（移除）和`peek`（查看）等基本方法，并通过`PriorityQueue`类进行了代码实践。记住，`poll()`方法会移除元素，而`peek()`方法仅查看不移除。掌握这些操作为处理需要顺序管理的任务打下了基础。
 
-![](img/62fd09bd8276d8e46b534ee11d60e595_5.png)
 
 ![](img/62fd09bd8276d8e46b534ee11d60e595_7.png)
 

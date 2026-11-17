@@ -1,8 +1,6 @@
 # 020：算术运算符 🧮
 
-![](img/62946fc49f2f88f7af74d9de761bce89_0.png)
 
-![](img/62946fc49f2f88f7af74d9de761bce89_2.png)
 
 在本节课中，我们将要学习Java中的算术运算符。算术运算符用于对基本数据类型执行简单的数学运算和计算。
 
@@ -76,7 +74,6 @@ System.out.println(--number1); // number1先变为100，然后输出100
 
 ## 总结
 
-![](img/62946fc49f2f88f7af74d9de761bce89_4.png)
 
 ![](img/62946fc49f2f88f7af74d9de761bce89_6.png)
 

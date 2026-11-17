@@ -1,10 +1,8 @@
 Java全栈开发：24：三元运算符
 
-![](img/c61cdd70decde1e633c990c0397f4dac_0.png)
 
 在本节课中，我们将要学习Java中的三元运算符。三元运算符是`if-else`语句的一种简洁写法，它包含三个操作数，能够根据条件判断返回两个表达式中的一个结果。
 
-![](img/c61cdd70decde1e633c990c0397f4dac_2.png)
 
 上一节我们介绍了条件判断语句，本节中我们来看看如何使用三元运算符来简化代码。
 
@@ -32,7 +30,6 @@ System.out.println(result);
 
 运行这段代码，由于`isAuthenticated`被设置为`true`，因此控制台将输出“You are logged in successfully.”。
 
-![](img/c61cdd70decde1e633c990c0397f4dac_4.png)
 
 ![](img/c61cdd70decde1e633c990c0397f4dac_6.png)
 

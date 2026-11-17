@@ -1,10 +1,8 @@
 Java全栈开发：33：NavigableSet接口详解 🧭
 
-![](img/937e4ae9576df4e93afa953933bde562_0.png)
 
 在本节课中，我们将学习Java集合框架中的NavigableSet接口，并通过一个示例来了解其方法。
 
-![](img/937e4ae9576df4e93afa953933bde562_2.png)
 
 ---
 
@@ -14,12 +12,10 @@ NavigableSet接口提供了在集合元素间导航的功能。它类似于Sorte
 
 上一节我们介绍了接口的基本概念，本节中我们来看看如何通过具体示例来迭代和实现NavigableSet。
 
-![](img/937e4ae9576df4e93afa953933bde562_4.png)
 
 以下是一个使用NavigableSet的代码示例：
 
 
-![](img/937e4ae9576df4e93afa953933bde562_6.png)
 
 ```java
 import java.util.NavigableSet;
@@ -83,11 +79,9 @@ System.out.println("Set contains its first element: " + containsFirst);
 
 这就是NavigableSet的基本实现方式。在实际开发中，你可以将其用于更复杂的面向对象场景，例如存储`Employee`对象或其他实体，并进行相应的操作。
 
-![](img/937e4ae9576df4e93afa953933bde562_8.png)
 
 ---
 
-![](img/937e4ae9576df4e93afa953933bde562_10.png)
 
 ![](img/937e4ae9576df4e93afa953933bde562_11.png)
 

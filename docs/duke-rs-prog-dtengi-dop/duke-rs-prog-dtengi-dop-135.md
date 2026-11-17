@@ -1,6 +1,5 @@
 # 135：解析系统命令输出的策略 🛠️
 
-![](img/63ac50af776cc95e17218b2caa5ef4e1_0.png)
 
 ![](img/63ac50af776cc95e17218b2caa5ef4e1_0.png)
 

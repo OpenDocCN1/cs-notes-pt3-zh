@@ -20,7 +20,6 @@
 
 ### 1. 通过 ID 获取元素
 
-![](img/b5779175e54c42655c527eafc9757041_9.png)
 
 `document.getElementById()` 方法返回拥有指定 ID 的第一个元素。由于 ID 在 HTML 中应是唯一的，此方法通常返回单个元素。
 
@@ -39,7 +38,6 @@ console.log(element);
 
 ![](img/b5779175e54c42655c527eafc9757041_13.png)
 
-![](img/b5779175e54c42655c527eafc9757041_14.png)
 
 **代码示例：**
 ```javascript
@@ -86,7 +84,6 @@ console.log(firstGreenItem);
 
 ![](img/b5779175e54c42655c527eafc9757041_28.png)
 
-![](img/b5779175e54c42655c527eafc9757041_29.png)
 
 `document.querySelectorAll()` 方法返回一个包含文档中匹配指定 CSS 选择器的所有元素的 NodeList。
 

@@ -93,7 +93,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 **使用 clang-tidy：**
 假设我们在代码中定义了一个未使用的变量 `int a;`。
 
-![](img/02431c1ab731e4f694190f7b52965b8d_15.png)
 
 *   **在终端中运行：**
     ```bash

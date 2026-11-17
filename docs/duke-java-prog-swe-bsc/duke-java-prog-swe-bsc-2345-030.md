@@ -1,32 +1,22 @@
 # 030：理解概念
 
-![](img/bd356d36c195dc23c1c948eed1082dad_0.png)
 
-![](img/bd356d36c195dc23c1c948eed1082dad_0.png)
 
-![](img/bd356d36c195dc23c1c948eed1082dad_2.png)
 
 在本节课中，我们将学习一个强大的新编程结构——不定循环。我们还将学习来自Edu.duke库的另一个可迭代对象。
 
-![](img/bd356d36c195dc23c1c948eed1082dad_4.png)
 
-![](img/bd356d36c195dc23c1c948eed1082dad_2.png)
 
-![](img/bd356d36c195dc23c1c948eed1082dad_5.png)
 
 我们已经使用过Edu.duke库中的`FileResource`和`URLResource`类来解决问题。使用可迭代对象使我们能够重复访问存储在计算机文件中或通过万维网URL获取的数据。
 
-![](img/bd356d36c195dc23c1c948eed1082dad_4.png)
 
-![](img/bd356d36c195dc23c1c948eed1082dad_5.png)
 
-![](img/bd356d36c195dc23c1c948eed1082dad_7.png)
 
 我们将运用这种重复的概念，在一条DNA链中寻找所有基因。这是基因组科学家工作的一部分，也是一个可以类比为在网页中寻找所有链接，或寻找所有关于猫、龙或其他任何你想看的YouTube视频的问题。
 
 这里的核心思想是，我们将使用之前课程中开发的、用于在DNA链中寻找单个基因的算法。这是一个我们已经测试过并充满信心的算法。
 
-![](img/bd356d36c195dc23c1c948eed1082dad_7.png)
 
 我们将重复应用这个算法到整条DNA链上，以找到所有基因，而不仅仅是一个。我们还将学习一个新的可迭代对象，它允许我们存储中间结果，而不是直接打印找到的所有基因。通过存储结果，我们可以在找到可能是基因的字符串后，再去寻找特定的基因。
 
@@ -48,11 +38,8 @@
 
 我们将学习Edu.duke库中的`StorageResource`类。使用`StorageResource`对象将允许我们将选定的值添加到存储中，然后使用我们之前用过的、标准的`for`循环和可迭代对象来访问它们。
 
-![](img/bd356d36c195dc23c1c948eed1082dad_9.png)
 
-![](img/bd356d36c195dc23c1c948eed1082dad_10.png)
 
-![](img/bd356d36c195dc23c1c948eed1082dad_9.png)
 
 ![](img/bd356d36c195dc23c1c948eed1082dad_10.png)
 

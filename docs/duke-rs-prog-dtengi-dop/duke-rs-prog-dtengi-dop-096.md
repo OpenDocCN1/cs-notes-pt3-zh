@@ -6,7 +6,6 @@
 
 可见性与可追溯性并非DevOps的显性基础支柱，而是在你开始实施DevOps功能、系统和流程后产生的积极副作用之一。它们旨在帮助团队更高效地运作。我们将通过分析一个真实的Pull Request流程，来展示这些概念的实际应用。
 
-![](img/dcadb24aabe00e07b4a8bb97d9e1be79_1.png)
 
 ## 可见性与可追溯性的实践
 
@@ -49,12 +48,9 @@
 
 总而言之，这不仅是一个关于如何处理问题的范例，也是一个关于如何回溯到针对提议变更的对话和讨论的范例。
 
-![](img/dcadb24aabe00e07b4a8bb97d9e1be79_3.png)
-![](img/dcadb24aabe00e07b4a8bb97d9e1be79_4.png)
 
 ## 总结
 
-![](img/dcadb24aabe00e07b4a8bb97d9e1be79_3.png)
 
 ![](img/dcadb24aabe00e07b4a8bb97d9e1be79_4.png)
 

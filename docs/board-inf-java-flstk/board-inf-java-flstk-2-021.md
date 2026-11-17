@@ -22,7 +22,6 @@ HashMap<K, V> map = new HashMap<>();
 
 以下是HashMap中一些常用的方法，我们将在示例中具体演示它们的用法。
 
-![](img/293b0bc78fa3eba1c6a6331328402c86_1.png)
 
 *   `clear()`: 移除映射中的所有映射关系。
 *   `isEmpty()`: 检查映射中是否包含键值对。
@@ -34,7 +33,6 @@ HashMap<K, V> map = new HashMap<>();
 
 ## 示例演示
 
-![](img/293b0bc78fa3eba1c6a6331328402c86_3.png)
 
 现在，让我们通过一个具体的例子来看看这些方法是如何工作的。
 
@@ -93,13 +91,10 @@ map.clear(); // 清空所有映射
 
 执行`clear()`后，再次打印映射将为空。
 
-![](img/293b0bc78fa3eba1c6a6331328402c86_5.png)
 
-![](img/293b0bc78fa3eba1c6a6331328402c86_7.png)
 
 ## 总结
 
-![](img/293b0bc78fa3eba1c6a6331328402c86_9.png)
 
 ![](img/293b0bc78fa3eba1c6a6331328402c86_10.png)
 

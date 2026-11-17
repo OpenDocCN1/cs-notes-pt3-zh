@@ -1,8 +1,6 @@
 Java全栈开发：P36：Switch-Case语句详解 🔄
 
-![](img/abf8cdd7ce3e237da83730511571874c_0.png)
 
-![](img/abf8cdd7ce3e237da83730511571874c_2.png)
 
 在本节课中，我们将学习Java中的`switch-case`语句。与`if-else`语句不同，`switch-case`提供了多条执行路径，它根据表达式的值来匹配不同的情况，非常适合处理多选一的场景。
 
@@ -93,7 +91,6 @@ public class UserAccess {
 
 ### 总结
 
-![](img/abf8cdd7ce3e237da83730511571874c_4.png)
 
 ![](img/abf8cdd7ce3e237da83730511571874c_6.png)
 

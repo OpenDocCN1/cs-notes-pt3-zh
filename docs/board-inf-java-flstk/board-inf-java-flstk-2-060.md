@@ -1,18 +1,15 @@
 # 060：Hibernate架构详解 🏗️
 
-![](img/f117778e8c7a58fc0b77d1017f8e0314_0.png)
 
 在本节课中，我们将学习Hibernate框架的核心架构。我们将了解其分层结构、关键组件以及数据操作的完整流程。理解这些概念是高效使用Hibernate进行数据库操作的基础。
 
 ## 架构分层
 
-![](img/f117778e8c7a58fc0b77d1017f8e0314_2.png)
 
 Hibernate架构主要分为四个层次。
 
 以下是这四个层次的具体说明：
 
-![](img/f117778e8c7a58fc0b77d1017f8e0314_4.png)
 
 *   **Java应用层**：这是开发者编写业务逻辑和创建持久化对象的层面。
 *   **Hibernate框架层**：这是Hibernate的核心，提供了配置、会话管理、事务处理等功能。
@@ -29,9 +26,7 @@ Hibernate框架使用了多种对象，例如**SessionFactory**、**Session**、
 
 下图展示了Hibernate的高层架构和完整流程：
 
-![](img/f117778e8c7a58fc0b77d1017f8e0314_6.png)
 
-![](img/f117778e8c7a58fc0b77d1017f8e0314_4.png)
 
 其工作流程可以概括为：首先，你创建的任何Java应用都需要以Java实体（Entity）的形式定义持久化对象。接着，配置Hibernate属性并创建SessionFactory对象。通过SessionFactory开启一个Session，在每个Session内可以创建多个事务（Transaction）。在事务中，你可以运行所需的查询（Query）或条件（Criteria）来完成操作。请确保你的实体类拥有一个主键（Primary Key）。至于后端API的选择，正如之前提到的，你可以使用JNDI、JTA或JDBC，但在当今的实时项目中，JDBC是最常用的，我也推荐使用它。
 
@@ -51,7 +46,6 @@ Hibernate框架使用了多种对象，例如**SessionFactory**、**Session**、
 
 这就是Hibernate请求完成的完整过程。
 
-![](img/f117778e8c7a58fc0b77d1017f8e0314_8.png)
 
 ## 关键接口解析
 
@@ -67,7 +61,6 @@ Hibernate框架使用了多种对象，例如**SessionFactory**、**Session**、
 
 ## 总结
 
-![](img/f117778e8c7a58fc0b77d1017f8e0314_10.png)
 
 本节课中，我们一起学习了Hibernate的核心架构。我们首先了解了其四层结构，然后剖析了从创建实体到提交事务的完整工作流程，最后详细介绍了SessionFactory、Session等关键接口的作用。理解这些架构知识，将帮助你更好地驾驭Hibernate，构建高效、稳定的数据访问层。
 

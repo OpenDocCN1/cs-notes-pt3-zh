@@ -2,7 +2,6 @@
 
 在本节课中，我们将要学习编译器如何实现函数。我们将探讨函数在编程语言中的概念，以及如何将其映射到机器级别的汇编代码。理解函数调用机制，特别是局部状态的管理，是构建编译器的关键一步。
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_1.png)
 
 ![](img/a26ff4a9a19e7d01b6253ced42373df0_3.png)
 
@@ -25,29 +24,20 @@
 
 考虑以下两个C语言示例：
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_5.png)
 
 ![](img/a26ff4a9a19e7d01b6253ced42373df0_6.png)
 
 ![](img/a26ff4a9a19e7d01b6253ced42373df0_8.png)
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_10.png)
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_12.png)
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_14.png)
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_16.png)
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_18.png)
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_20.png)
 
 ![](img/a26ff4a9a19e7d01b6253ced42373df0_22.png)
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_24.png)
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_25.png)
 
 **示例1：全局变量**
 ```c
@@ -64,9 +54,7 @@ void g() { int x = 2; return x; }
 ```
 当调用 `f()` 时，输出是 `1 2`。因为 `f` 和 `g` 各有自己的局部变量 `x`，它们位于不同的内存位置。
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_27.png)
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_29.png)
 
 ![](img/a26ff4a9a19e7d01b6253ced42373df0_31.png)
 
@@ -76,15 +64,11 @@ void g() { int x = 2; return x; }
 
 ## 递归调用与栈帧
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_35.png)
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_37.png)
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_39.png)
 
 当函数调用自身（递归）时，局部状态的管理变得尤为重要。每个函数调用实例都需要自己独立的一套局部变量副本。
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_41.png)
 
 考虑以下递归阶乘函数：
 ```c
@@ -97,15 +81,11 @@ int factorial(int x) {
 ```
 如果 `old_x` 被声明为 `static int old_x`（静态局部变量），那么所有对 `factorial` 的调用将共享同一个 `old_x` 内存位置，导致递归计算错误。使用自动局部变量（默认）则能为每次调用分配新的 `old_x`。
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_43.png)
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_45.png)
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_47.png)
 
 为了实现为每次函数调用动态分配局部存储空间，计算机体系结构使用了**栈**。
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_49.png)
 
 以下是栈帧（Stack Frame）或激活记录（Activation Record）的关键组成部分：
 *   **参数**：调用者传递给函数的值。
@@ -122,7 +102,6 @@ int factorial(int x) {
 
 ## x86-64 汇编中的函数支持
 
-![](img/a26ff4a9a19e7d01b6253ced42373df0_51.png)
 
 x86-64架构为函数调用提供了一些特定的寄存器和指令支持：
 

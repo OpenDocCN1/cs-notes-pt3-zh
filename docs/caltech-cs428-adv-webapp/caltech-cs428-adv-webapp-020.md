@@ -370,7 +370,6 @@ io.on(‘connection‘, (socket) => {
 
 ![](img/9cfac7f54709a60a64f397cb3bb38731_85.png)
 
-![](img/9cfac7f54709a60a64f397cb3bb38731_86.png)
 
 ```javascript
 // 监听服务器广播的 ‘chat-message‘ 事件

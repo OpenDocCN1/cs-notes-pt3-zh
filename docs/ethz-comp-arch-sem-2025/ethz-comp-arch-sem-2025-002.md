@@ -1,6 +1,5 @@
 # 002：内存鲁棒性
 
-![](img/e8bcdf2cdfd3ddcd6504ddd213f52d16_0.png)
 
 ![](img/e8bcdf2cdfd3ddcd6504ddd213f52d16_0.png)
 
@@ -62,7 +61,6 @@
 
 另一篇入选的论文是这篇，同样发表在ISCA上，它对数据保持行为进行了实验性研究。
 
-![](img/e8bcdf2cdfd3ddcd6504ddd213f52d16_5.png)
 
 ## 📝 总结
 

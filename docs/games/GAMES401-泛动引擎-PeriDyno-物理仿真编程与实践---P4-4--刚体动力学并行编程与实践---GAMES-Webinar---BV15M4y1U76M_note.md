@@ -33,7 +33,6 @@
 
 碰撞检测的第一步是“宽阶段”，其目的是快速剔除掉那些明显不可能发生碰撞的物体对，从而减少后续精确检测的计算量。本节中我们来看看实现宽阶段加速的关键技术。
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_3.png)
 
 ### 包围盒技术
 
@@ -42,7 +41,6 @@
 *   **有向包围盒**：可旋转的长方体，能更紧密地包裹物体。
 *   **包围球**：用球体包裹物体。
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_5.png)
 
 在并行计算中，**轴对齐包围盒** 因其计算简单高效而被广泛使用。
 
@@ -149,65 +147,43 @@ for each internal node i in parallel:
 *   **活塞关节**：允许沿一个轴移动和绕该轴旋转，约束其余四个自由度。
 *   **铰链关节**：只允许绕一个轴旋转，约束其余五个自由度。
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_7.png)
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_9.png)
 
 ![](img/505e4fcf8c0d2f4bf82f91a397cce06f_11.png)
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_13.png)
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_15.png)
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_17.png)
 
 这些约束都可以用类似的雅可比矩阵形式 `J * v' = 0`（或 `= b`）来描述，并集成到同一个线性系统中进行求解。
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_19.png)
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_21.png)
 
 ## 课程总结与演示
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_23.png)
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_25.png)
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_27.png)
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_29.png)
 
 本节课中我们一起学习了刚体动力学并行编程的核心内容。
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_31.png)
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_33.png)
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_35.png)
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_37.png)
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_39.png)
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_41.png)
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_43.png)
 
 我们首先回顾了刚体运动的基本物理量和方程。然后，深入探讨了碰撞检测的两个阶段：**宽阶段**利用层次包围盒和Linear BVH算法在GPU上并行加速；**窄阶段**使用分离轴定理进行精确检测，并生成接触流形。最后，我们介绍了如何将接触和关节建模为速度层面的约束，并通过求解线性方程组来计算作用力，从而更新刚体状态。
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_45.png)
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_47.png)
 
 ![](img/505e4fcf8c0d2f4bf82f91a397cce06f_49.png)
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_51.png)
 
 课程还提供了两个核心算法的演示：
 1.  **Linear BVH构建可视化**：展示了GPU并行构建的层次包围盒树如何随物体运动而动态更新。
 2.  **分离轴定理检测演示**：展示两个Box碰撞时，接触流形（一组接触点）如何被实时计算并可视化。
 
-![](img/505e4fcf8c0d2f4bf82f91a397cce06f_53.png)
 
 ![](img/505e4fcf8c0d2f4bf82f91a397cce06f_55.png)
 

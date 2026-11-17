@@ -1,10 +1,8 @@
 # 068：抽象类实战演示 🏦
 
-![](img/dee62a7210d8288c23a5fdf23b60988d_0.png)
 
 在本节课中，我们将通过一个银行账户的实例，学习抽象类和抽象方法的实际应用。我们将创建一个抽象类作为基础模板，并让具体的子类来实现其定义的功能。
 
-![](img/dee62a7210d8288c23a5fdf23b60988d_2.png)
 
 ---
 
@@ -45,9 +43,7 @@ public abstract class BankAccount {
 2.  使用IDE（如Eclipse或IntelliJ IDEA）的快捷功能自动生成需要实现的方法框架。
 3.  在这些方法框架内添加具体的实现代码。
 
-![](img/dee62a7210d8288c23a5fdf23b60988d_4.png)
 
-![](img/dee62a7210d8288c23a5fdf23b60988d_5.png)
 
 ```java
 public class SavingAccount extends BankAccount {
@@ -127,11 +123,9 @@ public abstract class ABCBank {
 
 然后，我们让 `BankAccount` 类继承 `ABCBank`。由于Java不支持多继承，一个类只能直接继承一个父类，所以我们建立这样的链：`SavingAccount` -> `BankAccount` -> `ABCBank`。
 
-![](img/dee62a7210d8288c23a5fdf23b60988d_7.png)
 
 修改后的 `BankAccount` 类：
 
-![](img/dee62a7210d8288c23a5fdf23b60988d_8.png)
 
 ```java
 public abstract class BankAccount extends ABCBank {

@@ -1,6 +1,5 @@
 # 002：评审指标简介以改进软件
 
-![](img/ebaa4753f3c8428ee8e2acd26f2d8725_1.png)
 
 ![](img/ebaa4753f3c8428ee8e2acd26f2d8725_2.png)
 

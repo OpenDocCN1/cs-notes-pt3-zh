@@ -1,6 +1,5 @@
 # 169：抛出异常
 
-![](img/a8b4a18859e0bc9d3443b52ba5b46e9c_0.png)
 
 在本节课中，我们将要学习如何在Java代码中主动抛出异常。当程序遇到无法自行处理的问题时，抛出异常是一种重要的错误处理机制。
 
@@ -29,7 +28,6 @@ public String getWordAtIndex(int index) {
 throw new ExceptionType("错误信息");
 ```
 
-![](img/a8b4a18859e0bc9d3443b52ba5b46e9c_2.png)
 
 正如这里的例子所示，这个表达式通常会创建一个所需异常类型的新对象，并将任何有用的信息传递给构造函数。
 

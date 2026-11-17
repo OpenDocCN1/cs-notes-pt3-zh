@@ -1,8 +1,6 @@
 # 048：Spring、Spring Boot与Spring MVC的区别 🚀
 
-![](img/1ff2b4114054e23d62d5209253c8bfce_0.png)
 
-![](img/1ff2b4114054e23d62d5209253c8bfce_2.png)
 
 在本节课中，我们将学习Spring生态中三个核心概念：Spring框架、Spring Boot和Spring MVC之间的区别。我们将逐一分析它们的设计目的、核心特性以及适用场景，帮助你理解在何种情况下应该选择哪种技术。
 
@@ -24,11 +22,9 @@ Spring Boot是Spring框架的一个模块，它允许我们以极简或零配置
 *   **样板代码**：在Spring中，开发者需要手动集成和实现较小任务的样板代码。但在Spring Boot中，样板代码大大减少，配置本身也是极简的。
 *   **依赖管理**：开发者需要在`pom.xml`中手动为Spring项目定义依赖。但Spring Boot引入了**Starter**的概念。当你使用Spring Initializr生成应用程序时，依赖项会作为JAR包内部添加，以自动处理下载。
 
-![](img/1ff2b4114054e23d62d5209253c8bfce_4.png)
 
 接下来，我们来比较Spring Boot与Spring MVC。
 
-![](img/1ff2b4114054e23d62d5209253c8bfce_6.png)
 
 Spring Boot使得快速引导和开始开发基于Spring的REST API变得容易。它避免了大量的代码实现，隐藏了幕后的复杂性，使开发者能够快速上手并轻松开发基于Spring的应用程序。
 

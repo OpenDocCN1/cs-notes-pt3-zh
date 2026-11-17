@@ -8,7 +8,6 @@
 
 ## 概述 📋
 
-![](img/a0639f1ebd2dd71e3ec6c11c0224bc81_3.png)
 
 ![](img/a0639f1ebd2dd71e3ec6c11c0224bc81_5.png)
 
@@ -20,7 +19,6 @@
 
 ![](img/a0639f1ebd2dd71e3ec6c11c0224bc81_9.png)
 
-![](img/a0639f1ebd2dd71e3ec6c11c0224bc81_11.png)
 
 ## 项目介绍与目标 🎯
 

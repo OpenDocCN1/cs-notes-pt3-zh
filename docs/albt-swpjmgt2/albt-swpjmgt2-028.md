@@ -1,6 +1,5 @@
 # 028：5_01_2-1-2-软件工程活动
 
-![](img/deb4608097c3c2aa0ebcc9b38845adb3_1.png)
 
 ![](img/deb4608097c3c2aa0ebcc9b38845adb3_1.png)
 

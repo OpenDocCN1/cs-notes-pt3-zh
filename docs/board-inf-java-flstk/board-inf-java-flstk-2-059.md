@@ -1,10 +1,8 @@
 Java全栈开发：59：Hibernate入门指南 🚀
 
-![](img/dac27b5194ae67cbc1fd9e185e054be5_0.png)
 
 在本节课中，我们将学习Hibernate框架的基础知识。Hibernate是一个强大的Java对象关系映射工具，它简化了Java应用程序与数据库之间的交互。我们将探讨它的核心概念、工作原理以及主要特性。
 
-![](img/dac27b5194ae67cbc1fd9e185e054be5_2.png)
 
 ---
 

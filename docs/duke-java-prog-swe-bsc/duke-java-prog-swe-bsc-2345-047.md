@@ -1,6 +1,5 @@
 # 047：代码翻译
 
-![](img/e3ce87b5a12624fdaf881db3d81aa52a_0.png)
 
 ## 概述
 在本节课中，我们将学习如何将之前设计的“查找出口特定商品的国家”算法转化为实际的Java代码。我们将使用CSV解析器来读取数据文件，并实现一个方法来筛选和打印出符合条件的国家。
@@ -99,7 +98,6 @@ listExporters(parser, "coffee");
 
 完整的测试方法代码如下。注意，该方法不返回任何值，因此返回类型为`void`。
 
-![](img/e3ce87b5a12624fdaf881db3d81aa52a_2.png)
 
 ```java
 public void whoExportsCoffee() {
@@ -119,11 +117,9 @@ public void whoExportsCoffee() {
 
 如果使用完整的大型数据文件（如`exportdata.csv`），手动验证所有结果将非常繁琐。这正是我们编写程序的目的。
 
-![](img/e3ce87b5a12624fdaf881db3d81aa52a_4.png)
 
 因此，更有效的测试方法是使用一个我们已知结果的小型数据文件。例如，使用幻灯片中用过的小文件`exportsmall.csv`进行测试。
 
-![](img/e3ce87b5a12624fdaf881db3d81aa52a_5.png)
 
 调用方法后，程序输出“Madagascar”和“Malawi”。这与我们预期的正确结果一致，从而增强了我们对代码正确性的信心。这样，我们就可以确信在大型文件上运行也能得到正确结果。
 

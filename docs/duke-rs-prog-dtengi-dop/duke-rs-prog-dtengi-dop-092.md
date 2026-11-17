@@ -1,6 +1,5 @@
 # 092：引言
 
-![](img/b4c0c108d0bba9fc7a6bf94641b4e44e_0.png)
 
 ![](img/b4c0c108d0bba9fc7a6bf94641b4e44e_0.png)
 

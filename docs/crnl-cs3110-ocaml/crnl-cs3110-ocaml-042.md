@@ -45,7 +45,6 @@ let get_val default o =
 
 现在，`get_val` 的类型是 `'a -> 'a option -> 'a`。它总是能返回一个 `'a` 类型的值。当然，这里也可以使用 `function` 关键字来简化代码。
 
-![](img/b27112933d504f5f78ba8c3b0a6bab2b_5.png)
 
 ## Options的典型用途
 
@@ -80,7 +79,6 @@ let rec list_max = function
 
 但是，这里有一个编译错误。因为递归调用 `list_max t` 返回的是 `'a option` 类型，而头元素 `h` 是 `'a` 类型。我试图比较一个 `'a` 和一个 `'a option`，多态比较操作符会报错，因为这两者的类型不同。
 
-![](img/b27112933d504f5f78ba8c3b0a6bab2b_15.png)
 
 ![](img/b27112933d504f5f78ba8c3b0a6bab2b_16.png)
 
@@ -114,11 +112,9 @@ Options是空值（null）的一个有原则的替代品。Java的类型系统�
 
 所以，这个故事的寓意是：避免空指针异常，转而使用模式匹配来检查 `None`。
 
-![](img/b27112933d504f5f78ba8c3b0a6bab2b_20.png)
 
 ## 总结
 
-![](img/b27112933d504f5f78ba8c3b0a6bab2b_22.png)
 
 ![](img/b27112933d504f5f78ba8c3b0a6bab2b_23.png)
 

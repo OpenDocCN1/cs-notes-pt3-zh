@@ -30,9 +30,7 @@ Hugging Face平台另一个重要的组成部分是数据集。平台上有大�
 
 总的来说，数据集是Hugging Face平台非常有用的一个方面，并且你也可以上传自己的数据。
 
-![](img/d069af15d2ac8c4e882ccd3f4576bf98_2.png)
 
-![](img/d069af15d2ac8c4e882ccd3f4576bf98_3.png)
 
 ## Spaces应用部署 🚀
 

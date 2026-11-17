@@ -1,10 +1,8 @@
 # 031：Java LinkedHashSet 类详解
 
-![](img/fced59cfd00b6576d4132f62489aa62f_0.png)
 
 在本节课中，我们将通过示例学习 Java 中的 `LinkedHashSet` 类及其方法。
 
-![](img/fced59cfd00b6576d4132f62489aa62f_2.png)
 
 ## 概述
 
@@ -20,13 +18,11 @@
 
 `LinkedHashSet` 的类声明如下，它扩展了 `HashSet` 并实现了 `Set` 接口：
 
-![](img/fced59cfd00b6576d4132f62489aa62f_4.png)
 
 ```java
 public class LinkedHashSet<E> extends HashSet<E> implements Set<E>, Cloneable, Serializable
 ```
 
-![](img/fced59cfd00b6576d4132f62489aa62f_6.png)
 
 ## 常用方法
 
@@ -42,7 +38,6 @@ public class LinkedHashSet<E> extends HashSet<E> implements Set<E>, Cloneable, S
 
 `LinkedHashSet` 的默认初始容量是 **8**，默认负载因子是 **0.75**。它位于 `java.util` 包中。
 
-![](img/fced59cfd00b6576d4132f62489aa62f_8.png)
 
 如果你想修改初始容量和负载因子，可以在创建 `LinkedHashSet` 实例时，通过构造函数传入这些参数。
 
@@ -140,7 +135,6 @@ System.out.println("Difference: " + set2); // 输出: [6]
 
 本节课我们一起学习了 `LinkedHashSet` 类。我们了解到它是 `HashSet` 的一个有序版本，通过内部维护的双向链表来保证元素的插入顺序。我们学习了它的声明、常用方法、默认容量和负载因子，并通过详细的代码示例演示了如何创建、遍历、删除元素以及执行并集、交集和差集等集合运算。掌握 `LinkedHashSet` 对于在需要维护元素顺序的场景下使用集合非常有帮助。
 
-![](img/fced59cfd00b6576d4132f62489aa62f_10.png)
 
 ![](img/fced59cfd00b6576d4132f62489aa62f_12.png)
 

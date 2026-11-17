@@ -1,44 +1,32 @@
 # 070：递归实现斐波那契数列 🧮
 
-![](img/c4ef749e19d76f2d151c913984dba664_0.png)
 
-![](img/c4ef749e19d76f2d151c913984dba664_2.png)
 
 在本节课中，我们将学习如何使用递归方法实现斐波那契数列的计算。我们将遵循编程过程的四个步骤，通过一个具体的例子来理解递归的工作原理。
 
-![](img/c4ef749e19d76f2d151c913984dba664_3.png)
 
-![](img/c4ef749e19d76f2d151c913984dba664_5.png)
 
-![](img/c4ef749e19d76f2d151c913984dba664_6.png)
 
 ## 概述
 
-![](img/c4ef749e19d76f2d151c913984dba664_8.png)
 
 我们将以计算 `Fibonacci(4)` 为例，逐步展示递归算法的设计过程，包括理解问题、列出步骤、归纳模式以及测试算法。我们还将讨论算法在边界情况（如负数输入）下的处理。
 
-![](img/c4ef749e19d76f2d151c913984dba664_10.png)
 
 ## 第一步：通过例子理解问题
 
-![](img/c4ef749e19d76f2d151c913984dba664_12.png)
 
 首先，我们通过计算 `Fibonacci(4)` 来理解斐波那契数列的定义。根据定义，`Fibonacci(4)` 等于 `Fibonacci(3)` 加上 `Fibonacci(2)`。
 
 为了计算 `Fibonacci(3)`，我们需要知道 `Fibonacci(2)` 和 `Fibonacci(1)` 的值。
 
-![](img/c4ef749e19d76f2d151c913984dba664_14.png)
 
-![](img/c4ef749e19d76f2d151c913984dba664_15.png)
 
 而 `Fibonacci(2)` 又等于 `Fibonacci(1)` 加上 `Fibonacci(0)`。根据定义，`Fibonacci(1)` 的值为 **1**，`Fibonacci(0)` 的值为 **0**。
 
 因此，`Fibonacci(2)` 等于 **1 + 0 = 1**。
 
-![](img/c4ef749e19d76f2d151c913984dba664_17.png)
 
-![](img/c4ef749e19d76f2d151c913984dba664_18.png)
 
 接下来，我们回到计算 `Fibonacci(3)` 的表达式。其值为 `Fibonacci(2)` 加上 `Fibonacci(1)`，即 **1 + 1 = 2**。
 
@@ -77,16 +65,13 @@
 *   如果 `n == 0`，则返回 **0**。
 *   如果 `n == 1`，则返回 **1**。
 
-![](img/c4ef749e19d76f2d151c913984dba664_20.png)
 
 对于非基准情形（即 `n > 1` 的情况），我们观察其计算模式：
 1.  计算 `Fibonacci(n-1)`。
 2.  计算 `Fibonacci(n-2)`。
 3.  将上述两个结果相加。
 
-![](img/c4ef749e19d76f2d151c913984dba664_22.png)
 
-![](img/c4ef749e19d76f2d151c913984dba664_24.png)
 
 用伪代码可以表示为：
 ```c
@@ -100,11 +85,9 @@ return fib_n_minus_1 + fib_n_minus_2;
 
 ## 第四步：测试与完善算法
 
-![](img/c4ef749e19d76f2d151c913984dba664_26.png)
 
 设计出初步算法后，必须进行测试。我们测试几个案例：
 
-![](img/c4ef749e19d76f2d151c913984dba664_28.png)
 
 *   `Fibonacci(6)`：算法可以正常递归计算。
 *   `Fibonacci(1)`：算法直接返回 **1**，正确。

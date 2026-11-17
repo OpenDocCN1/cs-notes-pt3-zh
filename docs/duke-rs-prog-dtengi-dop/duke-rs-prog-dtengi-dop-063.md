@@ -102,9 +102,7 @@ nano ~/.bashrc
 
 CloudShell预装了AWS CLI，因此你可以直接通过命令行管理AWS资源，无需配置访问密钥。这是一个强大的功能，允许你以编程方式控制AWS平台。
 
-![](img/84b7999a7bd5f3c62a978f0eac362292_25.png)
 
-![](img/84b7999a7bd5f3c62a978f0eac362292_26.png)
 
 ![](img/84b7999a7bd5f3c62a978f0eac362292_27.png)
 

@@ -1,6 +1,5 @@
 # 54：集合论中的全集与补集
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_0.png)
 
 在本节课中，我们将学习集合论中的两个重要概念：**全集**和**补集**。理解全集是定义补集的基础，它们共同帮助我们更精确地描述集合之间的关系和运算。
 
@@ -14,15 +13,11 @@
 
 ![](img/fdf1c7074f05f1e9b87ea677db1f02d5_4.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_0.png)
 
 然而，请注意，在我对偶数集的定义中，是这样开始的：
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_6.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_2.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_8.png)
 
 定义是：`n` 是整数集中的一个元素，且满足某个属性为真。
 
@@ -32,19 +27,15 @@
 
 因此，集合 `A` 在其定义中，是“生活”在一个更大的集合（即整数集）之中的。
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_6.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_8.png)
 
 ![](img/fdf1c7074f05f1e9b87ea677db1f02d5_9.png)
 
 ![](img/fdf1c7074f05f1e9b87ea677db1f02d5_11.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_12.png)
 
 ---
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_13.png)
 
 ![](img/fdf1c7074f05f1e9b87ea677db1f02d5_14.png)
 
@@ -54,27 +45,18 @@
 
 ![](img/fdf1c7074f05f1e9b87ea677db1f02d5_11.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_12.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_13.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_14.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_16.png)
 
 因此，我们有了**全集**的概念。我们通常用一个外部的大方框来表示它，记作 `U`（代表 Universe，全集）。我们所讨论的所有集合都包含在这个更大的背景集合中。
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_17.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_18.png)
 
 换句话说，全集 `U` 是我们讨论任何问题时所在的更大背景，它本身就是一个大集合，而所有其他集合都是它的子集。
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_16.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_17.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_18.png)
 
 ---
 
@@ -82,7 +64,6 @@
 
 ![](img/fdf1c7074f05f1e9b87ea677db1f02d5_20.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_21.png)
 
 一旦我们知道了全集是什么，就可以进行一种新的运算。例如，假设有一个集合 `A`，它“生活”在全集 `U` 内部。
 
@@ -92,40 +73,26 @@
 
 ![](img/fdf1c7074f05f1e9b87ea677db1f02d5_20.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_25.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_21.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_23.png)
 
 ---
 
 ## 📝 补集示例
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_27.png)
 
 例如，偶数集的补集是什么？这确实取决于我的全集是什么。
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_28.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_29.png)
 
 *   如果我的全集是所有**整数**，那么偶数集的补集就是**奇数集**。因为每一个不是偶数的整数就是奇数。
-    ![](img/fdf1c7074f05f1e9b87ea677db1f02d5_27.png)
-    ![](img/fdf1c7074f05f1e9b87ea677db1f02d5_28.png)
-    ![](img/fdf1c7074f05f1e9b87ea677db1f02d5_29.png)
 
 *   但是，如果我考虑的更大全集是所有**实数**（包括像 `π` 和 `1/2` 这样的数），那么偶数集的补集就不仅包括奇数，还包括所有那些不是偶数的有理数和无理数。
-    ![](img/fdf1c7074f05f1e9b87ea677db1f02d5_31.png)
-    ![](img/fdf1c7074f05f1e9b87ea677db1f02d5_32.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_31.png)
 
 因此，你正在讨论的全集通常是根据上下文来理解的，或者有时会明确写出来。只要知道了全集是什么，你就可以计算一个集合在特定全集下的补集。
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_32.png)
 
-![](img/fdf1c7074f05f1e9b87ea677db1f02d5_34.png)
 
 ---
 

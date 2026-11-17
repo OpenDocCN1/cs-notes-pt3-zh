@@ -1,6 +1,5 @@
 # 026：引言
 
-![](img/70ca34ba562945dabb67537b658df4db_0.png)
 
 ![](img/70ca34ba562945dabb67537b658df4db_0.png)
 

@@ -28,7 +28,6 @@ if load_factor > threshold then
 
 以下是不同编程语言标准库中哈希表扩容策略的对比：
 
-![](img/142f37255d6fefca70450ccf2c1fba1a_1.png)
 
 *   **OCaml** 的哈希表在负载因子达到 **2** 时进行扩容，将其降低回 **1**。
 *   **Java** 的 `HashMap` 在负载因子达到 **0.75** 时进行扩容。
@@ -37,15 +36,12 @@ if load_factor > threshold then
 
 ## 操作复杂度分析
 
-![](img/142f37255d6fefca70450ccf2c1fba1a_1.png)
 
 经过扩容优化后，`find`（查找）和 `remove`（删除）操作的效率现在是**期望常数时间** `O(1)`。因为从期望值来看，在每个数组索引位置只需要搜索常数数量的元素。
 
-![](img/142f37255d6fefca70450ccf2c1fba1a_3.png)
 
 但是，`insert`（插入）操作仍然是个问题。它仍然是**最坏情况线性时间** `O(n)` 的操作。因为如果你刚插入一个元素就导致负载因子超过了阈值（无论阈值是多少），现在你就必须对哈希表中的所有绑定进行重新哈希，这是一个线性时间的操作。
 
-![](img/142f37255d6fefca70450ccf2c1fba1a_3.png)
 
 ## 缩容的考量
 
@@ -53,8 +49,6 @@ if load_factor > threshold then
 
 这是一个在许多教科书中都能找到的想法。但现实世界的库似乎不这么做。OCaml不这么做，Java也不这么做。我曾与一位Java `HashMap` 的实现者交谈，他说这是因为他们对哈希表的真实工作负载进行了研究，发现缩容并不是一件有用的事情。实际情况是，虽然有时哈希表可能会变得有点小，但最终用户通常会向其中添加更多元素，因此尝试进行这种缩容重新哈希只是浪费精力。
 
-![](img/142f37255d6fefca70450ccf2c1fba1a_5.png)
-![](img/142f37255d6fefca70450ccf2c1fba1a_6.png)
 
 ## 映射ADT实现对比
 
@@ -66,30 +60,21 @@ if load_factor > threshold then
 
 链式哈希表几乎集所有优点于一身。现在我们可以允许任何类型的键。只要我们有一个好的哈希函数，就能获得快速的 `find` 和 `remove` 操作。
 
-![](img/142f37255d6fefca70450ccf2c1fba1a_5.png)
 
-![](img/142f37255d6fefca70450ccf2c1fba1a_6.png)
 
-![](img/142f37255d6fefca70450ccf2c1fba1a_8.png)
 
 我们还有一个看似较慢的 `insert` 操作。在后续关于**摊还分析（Amortized Analysis）** 的视频中，我们将探讨如何解决这个问题。
 
-![](img/142f37255d6fefca70450ccf2c1fba1a_10.png)
 
 目前，让我们先继续使用这个实现。
 
-![](img/142f37255d6fefca70450ccf2c1fba1a_8.png)
 
-![](img/142f37255d6fefca70450ccf2c1fba1a_12.png)
-![](img/142f37255d6fefca70450ccf2c1fba1a_13.png)
 
 ---
 
-![](img/142f37255d6fefca70450ccf2c1fba1a_10.png)
 
 ## 总结
 
-![](img/142f37255d6fefca70450ccf2c1fba1a_12.png)
 
 ![](img/142f37255d6fefca70450ccf2c1fba1a_13.png)
 

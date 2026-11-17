@@ -1,10 +1,7 @@
 # 030：字符串处理
 
-![](img/b323bfd22ca2a0a4422bbc26bd8349df_0.png)
 
-![](img/b323bfd22ca2a0a4422bbc26bd8349df_2.png)
 
-![](img/b323bfd22ca2a0a4422bbc26bd8349df_0.png)
 
 在本节课中，我们将学习Java编程中最重要的部分之一：字符串。字符串是编程不可或缺的组成部分，Java提供了String类来创建和操作字符串。
 
@@ -51,7 +48,6 @@ String myString = "Hello";
 
 ## 总结
 
-![](img/b323bfd22ca2a0a4422bbc26bd8349df_4.png)
 
 ![](img/b323bfd22ca2a0a4422bbc26bd8349df_6.png)
 

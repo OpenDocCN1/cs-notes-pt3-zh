@@ -1,8 +1,6 @@
 # 014：变量与数据类型
 
-![](img/81b859afe5a39ab0884c8b99e3e65c59_0.png)
 
-![](img/81b859afe5a39ab0884c8b99e3e65c59_2.png)
 
 在本节课中，我们将学习Java编程语言中的两个核心概念：变量和数据类型。理解这些基础知识是编写任何Java程序的起点。
 
@@ -94,7 +92,6 @@ String name = "Java Learner";
 
 ## 总结
 
-![](img/81b859afe5a39ab0884c8b99e3e65c59_4.png)
 
 ![](img/81b859afe5a39ab0884c8b99e3e65c59_6.png)
 

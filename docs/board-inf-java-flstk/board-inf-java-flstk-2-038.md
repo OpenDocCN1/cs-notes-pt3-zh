@@ -34,7 +34,6 @@ java -version
 
 我们推荐使用Eclipse IDE进行Java开发。Eclipse支持创建各种Java项目，包括核心Java、移动应用、Web应用等。
 
-![](img/8e5f8997a730a969c7b682a67eee53e0_5.png)
 
 ![](img/8e5f8997a730a969c7b682a67eee53e0_6.png)
 

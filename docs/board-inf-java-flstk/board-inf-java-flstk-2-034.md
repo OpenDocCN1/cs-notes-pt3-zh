@@ -1,8 +1,6 @@
 # 034：TreeSet详解 🌳
 
-![](img/ce9639fe1983b4e886cd268a91eed95c_0.png)
 
-![](img/ce9639fe1983b4e886cd268a91eed95c_2.png)
 
 在本节课中，我们将要学习Java集合框架中的一个重要成员——TreeSet。TreeSet是SortedSet接口的一个关键实现，它使用树形结构来存储元素，并自动维护元素的排序。
 
@@ -14,9 +12,7 @@ TreeSet继承自AbstractSet类，并实现了NavigableSet接口。这意味着�
 
 ## TreeSet的特点
 
-![](img/ce9639fe1983b4e886cd268a91eed95c_4.png)
 
-![](img/ce9639fe1983b4e886cd268a91eed95c_5.png)
 
 以下是TreeSet的一些核心特点：
 
@@ -88,7 +84,6 @@ public class TreeSetDemo {
 
 本节课中我们一起学习了TreeSet。TreeSet是Java中一个基于树结构实现的有序集合，它高效地结合了元素的唯一性和自动排序功能。其核心实现是红黑树，这保证了基本操作（添加、删除、查找）的时间复杂度为**O(log n)**。通过实现NavigableSet接口，它还提供了丰富的导航方法。StringBuffer等类内部也利用了TreeSet的特性来去重和排序。希望通过本次讨论，你能理解在何种实际场景下应该选择使用TreeSet。
 
-![](img/ce9639fe1983b4e886cd268a91eed95c_7.png)
 
 ![](img/ce9639fe1983b4e886cd268a91eed95c_8.png)
 

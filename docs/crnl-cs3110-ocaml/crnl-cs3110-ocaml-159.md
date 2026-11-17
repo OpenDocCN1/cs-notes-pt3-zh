@@ -2,26 +2,19 @@
 
 在本节课中，我们将学习如何为我们的计算器语言添加加法运算功能。我们将从定义抽象语法树（AST）开始，逐步实现词法分析、语法分析和求值步骤，最终让 `11 + 11` 这样的表达式能够被正确计算。
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_1.png)
 
 ---
 
 上一节我们实现了整数字面量的求值，本节中我们来看看如何支持加法运算。
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_3.png)
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_4.png)
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_5.png)
 
 首先，我们需要在抽象语法树（AST）中表示加法这样的二元运算符。
 
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_7.png)
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_8.png)
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_9.png)
 
 ```ocaml
 type binop = Add | Mult
@@ -30,29 +23,21 @@ type expr =
   | Binop of binop * expr * expr
 ```
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_11.png)
 
 我们定义了一个新的类型 `binop` 来表示二元运算符，目前只包含 `Add`（加法）。`expr` 类型新增了一个 `Binop` 构造器，它包含一个运算符和左右两个子表达式。
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_13.png)
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_15.png)
 
 ---
 
 接下来，我们需要让词法分析器（Lexer）能够识别加号 `+` 字符。
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_17.png)
 
 以下是需要在词法分析规则中添加的内容：
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_18.png)
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_19.png)
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_20.png)
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_21.png)
 
 ```ocaml
 rule token = parse
@@ -61,29 +46,21 @@ rule token = parse
   ...
 ```
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_22.png)
 
 我们在词法分析规则中添加了一个分支，当遇到 `+` 字符时，返回一个名为 `PLUS` 的标记（Token）。
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_24.png)
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_25.png)
 
 ---
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_27.png)
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_28.png)
 
 然后，我们需要在语法分析器（Parser）中声明这个新的 `PLUS` 标记，并定义如何将 `表达式 + 表达式` 的结构解析成 AST。
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_29.png)
 
 以下是需要在语法分析器中添加的声明和规则：
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_31.png)
 
-![](img/27ded28b91303152d0f34b0bdbce9d2f_32.png)
 
 ```ocaml
 %token PLUS

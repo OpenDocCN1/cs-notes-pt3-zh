@@ -18,7 +18,6 @@ CREATE INDEX message_gin ON messages USING gin(to_tsvector('english', body));
 
 ---
 
-![](img/4fd243abd4c3962caf8b7cd58d968d3b_1.png)
 
 ## 理解词干提取过程
 为了理解索引是如何构建的，我们先来看看词干提取的效果。词干提取是将单词还原为其基本形式的过程。
@@ -29,17 +28,13 @@ CREATE INDEX message_gin ON messages USING gin(to_tsvector('english', body));
 SELECT to_tsvector('english', body) FROM messages LIMIT 1;
 ```
 
-![](img/4fd243abd4c3962caf8b7cd58d968d3b_3.png)
 
-![](img/4fd243abd4c3962caf8b7cd58d968d3b_5.png)
 
 执行后，我们可以看到类似`notifications`变为`notif`，`organization`变为`organ`，`please`变为`pleas`，`product`变为`product`的结果。这表明索引是基于经过词干提取和简化后的单词集合构建的。
 
 如果直接查看原始`body`内容，会发现其中包含大量标点符号和无关字符：
 
-![](img/4fd243abd4c3962caf8b7cd58d968d3b_7.png)
 
-![](img/4fd243abd4c3962caf8b7cd58d968d3b_9.png)
 
 ```sql
 SELECT body FROM messages LIMIT 1;
@@ -49,9 +44,7 @@ SELECT body FROM messages LIMIT 1;
 
 ---
 
-![](img/4fd243abd4c3962caf8b7cd58d968d3b_11.png)
 
-![](img/4fd243abd4c3962caf8b7cd58d968d3b_12.png)
 
 ## 使用全文搜索查询
 接下来，我们看看如何使用`tsquery`（全文搜索查询）进行搜索。`tsquery`会对查询词也进行词干提取，以确保与索引中的词干匹配。
@@ -82,7 +75,6 @@ SELECT id, to_tsquery('english', 'golden') @@ to_tsvector('english', body) FROM 
 
 首先，添加新列：
 
-![](img/4fd243abd4c3962caf8b7cd58d968d3b_14.png)
 
 ```sql
 ALTER TABLE messages ADD COLUMN sender TEXT;
@@ -90,9 +82,7 @@ ALTER TABLE messages ADD COLUMN sender TEXT;
 
 然后，使用`SUBSTRING`函数和正则表达式从`headers`中提取发件人信息，并更新新列：
 
-![](img/4fd243abd4c3962caf8b7cd58d968d3b_16.png)
 
-![](img/4fd243abd4c3962caf8b7cd58d968d3b_18.png)
 
 ```sql
 UPDATE messages SET sender = SUBSTRING(headers FROM 'From: ([^\n]+)');
@@ -100,7 +90,6 @@ UPDATE messages SET sender = SUBSTRING(headers FROM 'From: ([^\n]+)');
 
 现在，我们可以方便地查询邮件的主题和发件人：
 
-![](img/4fd243abd4c3962caf8b7cd58d968d3b_20.png)
 
 ```sql
 SELECT subject, sender FROM messages WHERE to_tsquery('english', 'Monday') @@ to_tsvector('english', body);
@@ -108,16 +97,13 @@ SELECT subject, sender FROM messages WHERE to_tsquery('english', 'Monday') @@ to
 
 ---
 
-![](img/4fd243abd4c3962caf8b7cd58d968d3b_22.png)
 
-![](img/4fd243abd4c3962caf8b7cd58d968d3b_23.png)
 
 ## 验证索引性能
 我们可以使用`EXPLAIN ANALYZE`命令来查看查询是否使用了我们创建的索引。
 
 对于英语全文搜索查询：
 
-![](img/4fd243abd4c3962caf8b7cd58d968d3b_25.png)
 
 ```sql
 EXPLAIN ANALYZE SELECT * FROM messages WHERE to_tsquery('english', 'Monday') @@ to_tsvector('english', body);

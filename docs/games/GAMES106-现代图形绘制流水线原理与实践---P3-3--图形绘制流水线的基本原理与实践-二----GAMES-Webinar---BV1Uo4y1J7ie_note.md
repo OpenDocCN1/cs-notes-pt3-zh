@@ -4,25 +4,18 @@
 
 ![](img/c93999a69e3717f65bb2911756bbe5a1_3.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_5.png)
 
 在本节课中，我们将继续深入学习 Vulkan 图形绘制流水线，重点探讨 Vulkan 对象的创建、内存管理以及调试工具的使用。课程内容将围绕作业讲解、核心概念解析和实践演示展开。
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_7.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_9.png)
 
 ---
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_11.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_13.png)
 
 ## 课程回顾与作业讲解 📋
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_15.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_17.png)
 
 上一节我们介绍了 Vulkan 的基础架构和绘制流程。本节中，我们首先回顾课程安排并详细讲解第一次作业的要求。
 
@@ -31,15 +24,11 @@
 *   第二课时（本节）：讲解 Vulkan 对象创建、内存管理以及调试方法和工具。
 *   第三课时（下周三）：讲解 Vulkan 多线程同步以及基于移动端的常见优化和实践。
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_19.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_21.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_23.png)
 
 以下是关于第一次作业的详细说明。
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_25.png)
 
 ![](img/c93999a69e3717f65bb2911756bbe5a1_26.png)
 
@@ -47,15 +36,12 @@
 
 ![](img/c93999a69e3717f65bb2911756bbe5a1_28.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_30.png)
 
 作业基于提供的代码框架完成。在下载代码仓库时，请使用 `git submodule update` 命令同步拉取所有第三方库。
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_32.png)
 
 ![](img/c93999a69e3717f65bb2911756bbe5a1_34.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_36.png)
 
 作业需要使用一个特定的模型文件。请将该文件下载并解压到项目的 `data` 文件夹中。该模型是一个带有骨骼动画的模型。
 
@@ -146,25 +132,19 @@ Render Pass 对象描述了单个渲染过程中涉及的附件（Attachment）�
 
 在代码框架的 `setupRenderPass` 函数中，我们定义了两个附件（颜色附件和深度附件），并设置它们在渲染前执行清除操作（`loadOp = VK_ATTACHMENT_LOAD_OP_CLEAR`），在渲染后存储结果（`storeOp = VK_ATTACHMENT_STORE_OP_STORE`）。同时，也定义了这些附件在进入和离开 Render Pass 时的布局状态。
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_52.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_54.png)
 
 **关于 Layout 的理解**：`VkImageLayout` 表示图像在不同用途下的内存布局状态。对于初学者，可以将其简单理解为图像的一种“使用状态”，例如“作为颜色附件”、“作为被采样的纹理”、“作为拷贝源”等。以状态机的方式理解比记忆具体布局更容易。
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_56.png)
 
 ### Framebuffer
 
 如果说 Render Pass 定义了渲染过程的“模板”或“流程”，那么 Framebuffer 就是根据这个模板，指定本次渲染具体使用哪些图像视图（Image View）作为附件。
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_58.png)
 
 在代码的 `setupFramebuffers` 函数中，我们为交换链（Swapchain）中的每一个图像都创建了一个 Framebuffer。每个 Framebuffer 都绑定了对应的交换链图像视图作为颜色附件，以及一个公共的深度图像视图作为深度附件。
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_60.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_62.png)
 
 ---
 
@@ -208,9 +188,7 @@ dxc -T ps_6_0 -E main -spirv -fspv-target-env=vulkan1.2 Shader.hlsl -Fo Shader.f
 
 ![](img/c93999a69e3717f65bb2911756bbe5a1_72.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_73.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_75.png)
 
 ### 管线布局与描述符集
 
@@ -228,7 +206,6 @@ dxc -T ps_6_0 -E main -spirv -fspv-target-env=vulkan1.2 Shader.hlsl -Fo Shader.f
 
 ![](img/c93999a69e3717f65bb2911756bbe5a1_77.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_79.png)
 
 ## Vulkan 内存管理 💾
 
@@ -279,9 +256,7 @@ VMA 将内存用途抽象为更易理解的类型，例如：
 
 ---
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_87.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_89.png)
 
 ## Vulkan 绘制命令记录 🖌️
 
@@ -314,7 +289,6 @@ Vulkan 的绘制是异步的。CPU 将绘制命令记录到命令缓冲区（Com
 
 Vulkan 的一个高效特性是命令缓冲区可以重用。在作业框架中，命令缓冲区在初始化时创建并记录一次。在后续每帧渲染时，只要绘制内容没有变化，就直接提交已记录好的命令缓冲区，无需 CPU 再次介入记录。这显著降低了 CPU 开销，使其能专注于逻辑、模拟等任务。
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_99.png)
 
 ![](img/c93999a69e3717f65bb2911756bbe5a1_101.png)
 
@@ -322,21 +296,15 @@ Vulkan 的一个高效特性是命令缓冲区可以重用。在作业框架中�
 
 ![](img/c93999a69e3717f65bb2911756bbe5a1_103.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_105.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_107.png)
 
 ## 调试工具与方法 🔧
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_109.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_111.png)
 
 最后，我们来介绍一些强大的 Vulkan 调试和性能分析工具。
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_113.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_115.png)
 
 ### 1. RenderDoc
 
@@ -352,7 +320,6 @@ RenderDoc 是一个功能强大的图形调试器，支持 Vulkan。
 
 ![](img/c93999a69e3717f65bb2911756bbe5a1_119.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_121.png)
 
 **局限性**：其性能分析（Profiling）功能可能不够精确。
 
@@ -364,13 +331,10 @@ RenderDoc 是一个功能强大的图形调试器，支持 Vulkan。
 
 ### 2. NVIDIA Nsight Graphics
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_128.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_130.png)
 
 对于 NVIDIA 显卡用户，Nsight Graphics 是性能分析和调试的利器。
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_132.png)
 
 **主要功能**：
 *   **精确的性能分析**：提供以微秒为单位的 GPU 时间线分析，能准确找到性能瓶颈。
@@ -383,7 +347,6 @@ RenderDoc 是一个功能强大的图形调试器，支持 Vulkan。
 *   **高通 Snapdragon Profiler**：用于在高通设备上进行图形性能分析。
 *   **Arm Mobile Studio**：包含 Graphics Analyzer 和 Performance Analyzer，适用于 Arm Mali GPU 的设备。
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_136.png)
 
 ![](img/c93999a69e3717f65bb2911756bbe5a1_138.png)
 
@@ -401,7 +364,6 @@ RenderDoc 是一个功能强大的图形调试器，支持 Vulkan。
 
 ![](img/c93999a69e3717f65bb2911756bbe5a1_146.png)
 
-![](img/c93999a69e3717f65bb2911756bbe5a1_148.png)
 
 1.  **作业详解**：明确了第一次作业的目标——实现 glTF 模型的骨骼动画、PBR 材质渲染，并通过额外通道实现色调映射。
 2.  **对象创建**：学习了 Vulkan 创建 Buffer、Image、Pipeline 等核心对象的通用模式和具体步骤。

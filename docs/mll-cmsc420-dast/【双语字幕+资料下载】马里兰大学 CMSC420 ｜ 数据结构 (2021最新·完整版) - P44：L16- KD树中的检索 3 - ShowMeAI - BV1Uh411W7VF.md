@@ -2,7 +2,6 @@
 
 ![](img/d03a6996b9c2fd4b937d35e9e9f5f5be_0.png)
 
-![](img/d03a6996b9c2fd4b937d35e9e9f5f5be_1.png)
 
 okay in this final segment on answering，kdtree queries we're going to analyze。
 

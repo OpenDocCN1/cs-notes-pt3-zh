@@ -1,6 +1,5 @@
 # 003：面向对象编程-part1
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_0.png)
 
 ![](img/afbf3e8a278ff198478d4e5c0eb42c15_2.png)
 
@@ -14,27 +13,18 @@
 
 ## 项目回顾与改进
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_8.png)
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_10.png)
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_12.png)
 
 上一节我们完成了基于控制台的税务计算器。本节中，我们将把它改造成一个图形用户界面程序，并在这个过程中引入面向对象的概念。
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_14.png)
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_16.png)
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_18.png)
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_20.png)
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_22.png)
 
 首先，我们创建了一个新的Windows窗体应用程序项目。界面上包含用于输入收入和扣除额的文本框、对应的标签以及操作按钮。
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_24.png)
 
 以下是核心的类级变量，用于在整个窗体类中跟踪总收入、总扣除额等数据：
 ```csharp
@@ -43,13 +33,10 @@ private int totalDeductions = 0;
 private int deductionsClaimed = 0;
 ```
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_26.png)
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_27.png)
 
 当用户点击“添加收入”按钮时，程序会从文本框中读取数值，更新总收入，并重新计算和显示税款。我们使用了一个辅助函数 `UpdateTaxesOwedLabel()` 来集中处理税款计算和标签更新逻辑。
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_29.png)
 
 ![](img/afbf3e8a278ff198478d4e5c0eb42c15_31.png)
 
@@ -103,13 +90,11 @@ public Rectangle(int length, int width)
 }
 ```
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_49.png)
 
 ![](img/afbf3e8a278ff198478d4e5c0eb42c15_51.png)
 
 ### 公共方法：Getter 和 Setter
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_53.png)
 
 为了允许外部代码安全地访问和修改矩形的尺寸，我们提供了公共的 Getter 和 Setter 方法。Setter 方法中包含验证逻辑，确保长和宽不为负。
 
@@ -118,7 +103,6 @@ public Rectangle(int length, int width)
 
 ![](img/afbf3e8a278ff198478d4e5c0eb42c15_57.png)
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_59.png)
 
 ```csharp
 public int GetLength() { return length; }
@@ -138,19 +122,14 @@ public override string ToString()
 }
 ```
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_61.png)
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_63.png)
 
 ![](img/afbf3e8a278ff198478d4e5c0eb42c15_65.png)
 
 此外，我们还为矩形定义了计算面积和周长的属性。这里使用了C#的表达式主体属性语法，使代码更简洁。
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_67.png)
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_69.png)
 
-![](img/afbf3e8a278ff198478d4e5c0eb42c15_71.png)
 
 ```csharp
 public int Area => length * width; // 计算面积的属性

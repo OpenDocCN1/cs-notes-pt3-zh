@@ -43,11 +43,9 @@ S = A ⊕ B
 C = A · B
 ```
 
-![](img/b4f0eda242db32e37e2e81a7390e30ae_1.png)
 
 ---
 
-![](img/b4f0eda242db32e37e2e81a7390e30ae_3.png)
 
 ## 从半加器到全加器
 

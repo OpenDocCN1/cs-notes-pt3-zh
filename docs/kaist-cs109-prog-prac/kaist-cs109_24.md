@@ -249,7 +249,6 @@ fun main(args: Array<String>) {
 
 我们将得到这个弹出窗口：
 
-![showMessage 窗口](img/453fea90b7ab9f6f3881b6d6d7f3e08c.jpg)
 
 稍微有趣的是，我们可以询问一个是/否问题，用户可以通过按下两个按钮中的一个来决定：
 

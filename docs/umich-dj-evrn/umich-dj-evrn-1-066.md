@@ -159,7 +159,6 @@ class IndexView(generic.ListView):
 
 ![](img/30a594064e054ba2f5c2e079a229c4b8_34.png)
 
-![](img/30a594064e054ba2f5c2e079a229c4b8_35.png)
 
 ![](img/30a594064e054ba2f5c2e079a229c4b8_36.png)
 

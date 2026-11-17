@@ -92,7 +92,6 @@ CREATE TABLE comment (
 通常，我们会将一系列 SQL 命令（如 `DELETE`、`INSERT`）保存到一个 `.sql` 文件中。例如，一个名为 `03_techniques_load.sql` 的文件可能包含以下内容：
 
 
-![](img/4a148343c847ec4b1de6813ef1f8c7e9_4.png)
 
 ```sql
 -- 清空 account 表并重置序列（仅用于演示，生产环境慎用）

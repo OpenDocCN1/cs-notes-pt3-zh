@@ -208,7 +208,6 @@ public static Matrix KL(Matrix A, int r) {
 
 下面的图像展示了对著名的 Mandrill 测试图像进行 KL 变换的结果，秩分别为 2、5、10、25、50 和 298。最后一个是原始图像。
 
-| ![Karhunen-Loeve transform](img/1a3e232337b11eca01548b2889d3d3fd.png) | ![Karhunen-Loeve transform](img/2d4b2821f47527aa2b169c51515abbb9.png) | ![Karhunen-Loeve transform](img/940294550393e4a0c31868baadc3b585.png) |
 | --- | --- | --- |
 | ![Karhunen-Loeve transform](img/40e596aca4c83348a41fbd74cf47c955.png) | ![Karhunen-Loeve transform](img/302383976e5ca14ace181d60bc22d312.png) | ![Karhunen-Loeve transform](img/b4dea2efbcaf8a6520a9c11dd60308c7.png) |
 

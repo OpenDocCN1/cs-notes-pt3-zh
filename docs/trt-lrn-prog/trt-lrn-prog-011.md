@@ -14,20 +14,16 @@ Python 的 `unittest` 模块提供了另一个测试框架，允许我们将测�
 
 ---
 
-![](img/7bb18c1c8810a2ef6189869eadf8e020_1.png)
 
 ## 对比 doctest 与 unittest
 
 在屏幕左侧是带有 `doctest` 的 `get_divisors` 函数。右侧是其对应的 `unittest` 版本。首先，我们将展示这两者如何实现基本相同的功能。
 
-![](img/7bb18c1c8810a2ef6189869eadf8e020_3.png)
 
 根据我们想使用的框架，我们导入相应的模块：`doctest` 或 `unittest`。
 
-![](img/7bb18c1c8810a2ef6189869eadf8e020_4.png)
 
 
-![](img/7bb18c1c8810a2ef6189869eadf8e020_6.png)
 
 ```python
 # 使用 doctest
@@ -38,7 +34,6 @@ import unittest
 
 在 `doctest` 中，我们编写的代码就像在 Python 交互式环境中输入一样，并在下一行写下预期结果。`doctest` 会自动为我们比较两者。
 
-![](img/7bb18c1c8810a2ef6189869eadf8e020_8.png)
 
 ```python
 def get_divisors(num, possible_divisors):
@@ -51,7 +46,6 @@ def get_divisors(num, possible_divisors):
 
 在 `unittest` 中，我们为每个测试编写一个单独的方法。在该方法中，我们调用要测试的函数。
 
-![](img/7bb18c1c8810a2ef6189869eadf8e020_10.png)
 
 ```python
 class TestGetDivisors(unittest.TestCase):
@@ -62,7 +56,6 @@ class TestGetDivisors(unittest.TestCase):
 
 然后，我们写下预期结果。与 `doctest` 不同，我们通过调用 `assertEqual` 方法来比较实际结果与预期结果。
 
-![](img/7bb18c1c8810a2ef6189869eadf8e020_12.png)
 
 ```python
         self.assertEqual(actual, expected)
@@ -72,15 +65,12 @@ class TestGetDivisors(unittest.TestCase):
 
 ---
 
-![](img/7bb18c1c8810a2ef6189869eadf8e020_14.png)
 
-![](img/7bb18c1c8810a2ef6189869eadf8e020_15.png)
 
 ## 执行测试
 
 到目前为止，对于 `doctest` 和 `unittest`，我们都已导入了测试模块并编写了测试代码。接下来，我们需要执行这些测试。
 
-![](img/7bb18c1c8810a2ef6189869eadf8e020_17.png)
 
 `doctest.testmod()` 会检查当前模块中的所有文档字符串，并执行它找到的测试。它会报告实际结果与预期结果之间的任何差异。
 
@@ -91,7 +81,6 @@ if __name__ == '__main__':
 
 `unittest.main()` 会检查当前模块中所有以 `test`（小写）开头的方法，这些方法属于 `TestCase` 的子类。
 
-![](img/7bb18c1c8810a2ef6189869eadf8e020_19.png)
 
 ```python
 if __name__ == '__main__':
@@ -100,7 +89,6 @@ if __name__ == '__main__':
 
 它会调用每个测试方法，并报告任何意外结果。
 
-![](img/7bb18c1c8810a2ef6189869eadf8e020_21.png)
 
 让我们运行测试模块并查看输出。
 

@@ -221,7 +221,6 @@ async fn main() -> Result<(), rocket::Error> {
 
 ![](img/ca8e9cfb69a280d42360d68e547db45c_65.png)
 
-![](img/ca8e9cfb69a280d42360d68e547db45c_67.png)
 
 ![](img/ca8e9cfb69a280d42360d68e547db45c_69.png)
 

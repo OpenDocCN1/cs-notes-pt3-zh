@@ -30,7 +30,6 @@ dd if=/dev/zero of=/tmp/bigfile bs=1G count=11
 
 ## 空间耗尽的影响
 
-![](img/a0f49224ba05af6d15f341c1a4226cbe_1.png)
 
 文件系统完全填满后，可能会产生一些不那么明显的负面影响。我们尝试重新登录系统。
 
@@ -38,11 +37,9 @@ dd if=/dev/zero of=/tmp/bigfile bs=1G count=11
 ssh user@hostname
 ```
 
-![](img/a0f49224ba05af6d15f341c1a4226cbe_3.png)
 
 可能会收到一些错误信息，但登录似乎成功了。然而，当我们尝试运行命令时，发现没有任何输出。我们检查最初登录的会话中发生了什么。
 
-![](img/a0f49224ba05af6d15f341c1a4226cbe_5.png)
 
 首先，查看标准输入、标准输出和标准错误设备。它们都指向`/proc`伪文件系统中的文件描述符。
 
@@ -94,7 +91,6 @@ rm /tmp/bigfile
 
 我们检查那个损坏的shell连接，它仍然处于损坏状态。因为仅仅删除文件并不会为当前shell神奇地分配一个正确的文件描述符。因此，我们退出该shell并重新连接。现在，一切恢复正常。
 
-![](img/a0f49224ba05af6d15f341c1a4226cbe_7.png)
 
 如果你尝试重现此场景，请确保删除创建的任何大文件，以免系统因你的练习而受到负面影响。
 
@@ -118,7 +114,6 @@ df -h
 mkdir /tmp/test_sparse
 ```
 
-![](img/a0f49224ba05af6d15f341c1a4226cbe_9.png)
 
 从`df`命令的输出中，我们可以提取出确切的可用磁盘空间大小（通常是第四列）。然后，我们使用`truncate`命令创建一个特定大小的文件。具体来说，我们将尝试创建一个比可用磁盘空间大很多倍的文件。
 
@@ -174,7 +169,6 @@ cat /tmp/test_sparse/hugefile > /tmp/test_sparse/hugefile3
 df -i
 ```
 
-![](img/a0f49224ba05af6d15f341c1a4226cbe_11.png)
 
 如果我们创建一个目录，就使用了一个inode。
 
@@ -182,7 +176,6 @@ df -i
 mkdir /tmp/manyfiles
 ```
 
-![](img/a0f49224ba05af6d15f341c1a4226cbe_13.png)
 
 创建一个文件，又使用了一个inode。
 
@@ -196,21 +189,17 @@ touch /tmp/manyfiles/file1
 
 程序内容大致如下：我们创建一个目录，然后无限循环地在目录中创建新文件，直到失败为止。
 
-![](img/a0f49224ba05af6d15f341c1a4226cbe_15.png)
 
 编译并运行这个程序。一段时间后，程序会如预期那样失败。它报告创建了923260个文件，加上那个目录，它创建了文件。注意错误信息：“No space left on device”。听起来像是磁盘满了。
 
-![](img/a0f49224ba05af6d15f341c1a4226cbe_17.png)
 
 让我们查看目录的大小。
 
-![](img/a0f49224ba05af6d15f341c1a4226cbe_19.png)
 
 ```bash
 du -sh /tmp/manyfiles
 ```
 
-![](img/a0f49224ba05af6d15f341c1a4226cbe_21.png)
 
 这个目录相当大。查看我们创建的文件。
 
@@ -220,23 +209,19 @@ ls /tmp/manyfiles | head -20
 
 注意，即使运行`ls`命令也需要很长时间，因为目录太大了。确认目录中有多少文件。
 
-![](img/a0f49224ba05af6d15f341c1a4226cbe_23.png)
 
 ```bash
 ls -f /tmp/manyfiles | wc -l
 ```
 
-![](img/a0f49224ba05af6d15f341c1a4226cbe_25.png)
 
 是的，923260个文件。现在尝试创建一个新文件。
 
-![](img/a0f49224ba05af6d15f341c1a4226cbe_27.png)
 
 ```bash
 touch /tmp/manyfiles/newfile
 ```
 
-![](img/a0f49224ba05af6d15f341c1a4226cbe_28.png)
 
 不行，无法创建，“No space left on device”。但是，我可以将文件从该目录移动到另一个目录。
 

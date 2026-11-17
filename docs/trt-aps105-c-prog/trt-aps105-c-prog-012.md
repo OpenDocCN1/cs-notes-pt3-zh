@@ -84,7 +84,6 @@ int main(void) {
 
 函数 `set_to_3` 接收一个 `int` 指针 `p`。当在 `main` 中调用 `set_to_3(&x)` 时，`p` 获得了 `x` 地址的一个副本。通过解引用 `p`（`*p`），函数就能访问并修改 `main` 函数作用域内的变量 `x`。
 
-![](img/ba52ec349bd187052107895f489ebc6c_10.png)
 
 ![](img/ba52ec349bd187052107895f489ebc6c_12.png)
 

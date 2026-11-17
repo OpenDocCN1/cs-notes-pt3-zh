@@ -1,12 +1,10 @@
 # 179：有界多态性
 
-![](img/4144c33ad9fc74113572c289f946b573_1.png)
 
 在本节课中，我们将要学习如何将泛型与子类型结合使用，这种结合被称为“有界多态性”。我们将通过一个具体的例子来理解为什么有时单独使用泛型或子类型无法满足需求，以及如何通过有界多态性来解决这个问题。
 
 ## 概述
 
-![](img/4144c33ad9fc74113572c289f946b573_3.png)
 
 上一节我们介绍了泛型和子类型各自适用的场景。本节中我们来看看一个需要将它们结合使用的例子。我们将学习如何编写一个方法，它既能处理多种类型（泛型），又能确保这些类型满足特定的约束（子类型），从而实现我们想要的功能。
 
@@ -20,7 +18,6 @@ List<Point> inCircle(List<Point> ps, Point center, double radius)
 
 现在，如果我们有一个`ColorPoint`类（它是`Point`的子类），并且我们有一个`List<ColorPoint>`，我们自然希望复用上面的`inCircle`方法来过滤彩色点。然而，Java（和C#）会拒绝这样做。
 
-![](img/4144c33ad9fc74113572c289f946b573_5.png)
 
 原因是`List<ColorPoint>`并不是`List<Point>`的子类型。这与我们之前学习的“深度子类型化”问题有关。类型检查器无法保证`inCircle`方法不会向返回的列表中添加非`ColorPoint`的`Point`对象，或者不会修改输入列表。因此，仅靠子类型化在这里行不通。
 
@@ -32,7 +29,6 @@ List<Point> inCircle(List<Point> ps, Point center, double radius)
 ```
 这样，我们可以用`Point`或`ColorPoint`来实例化类型参数`T`。调用者传入`List<Point>`就得到`List<Point>`，传入`List<ColorPoint>`就得到`List<ColorPoint>`。
 
-![](img/4144c33ad9fc74113572c289f946b573_7.png)
 
 但这里有一个根本问题：方法体需要访问点的坐标（例如`getX()`, `getY()`）来判断点是否在圆内。如果`T`是任意未知类型，方法体就无法调用`Point`特有的方法。因此，这个方法体无法通过类型检查。
 
@@ -40,7 +36,6 @@ List<Point> inCircle(List<Point> ps, Point center, double radius)
 
 我们真正需要的是结合两者的优点：使用泛型来处理不同类型的列表，同时使用子类型来约束这些类型，确保它们具有我们所需的功能。
 
-![](img/4144c33ad9fc74113572c289f946b573_9.png)
 
 这就是**有界多态性**。我们这样定义方法：
 ```java
@@ -66,13 +61,10 @@ public static <T extends Point> List<T> inCircle(List<T> ps, Point center, doubl
 }
 ```
 
-![](img/4144c33ad9fc74113572c289f946b573_11.png)
 
 ## 关于Java实现的说明
 
-![](img/4144c33ad9fc74113572c289f946b573_13.png)
 
-![](img/4144c33ad9fc74113572c289f946b573_14.png)
 
 需要指出的是，由于向后兼容性和实现上的考虑，Java的泛型系统并非完全“纯粹”。在Java中，有可能通过类型转换绕过泛型的静态检查，从而可能导致一些在更严格的泛型系统中不会出现的结果。然而，在正确使用的前提下，Java的泛型、子类型以及它们结合产生的有界多态性，仍然是构建类型安全、可复用代码的强大工具。
 

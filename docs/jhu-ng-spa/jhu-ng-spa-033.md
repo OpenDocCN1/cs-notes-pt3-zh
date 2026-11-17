@@ -54,7 +54,6 @@ console.log(filteredNumberArray);
 
 保存代码并刷新浏览器，可以看到 `filteredNumberArray` 现在只包含 6 到 10 的数字。
 
-![](img/d91bbcf3048bbd69f0d7d070e15fb4f5_7.png)
 
 我们可以让代码更优雅一些。由于我们有一个函数作为另一个函数的参数，我们可以将其提取出来，定义一个命名函数。
 
@@ -80,7 +79,6 @@ console.log(filteredNumberArray);
 
 ![](img/d91bbcf3048bbd69f0d7d070e15fb4f5_12.png)
 
-![](img/d91bbcf3048bbd69f0d7d070e15fb4f5_13.png)
 
 ![](img/d91bbcf3048bbd69f0d7d070e15fb4f5_16.png)
 
@@ -129,7 +127,6 @@ console.log(searchedShoppingList);
 
 在 HTML 模板绑定中，它的用法是：一个过滤表达式，后跟一个管道符 `|`，然后是单词 `filter`，再跟一个表达式。如果这个表达式是一个字符串，那么它将用于匹配数组的内容（数组中的字符串或具有字符串属性的对象），所有匹配的项都会被返回。
 
-![](img/d91bbcf3048bbd69f0d7d070e15fb4f5_22.png)
 
 让我们回到代码编辑器，介绍我们将要实际使用的应用程序。关闭之前的文件，打开 `index.html` 和 `app.js`。
 
@@ -192,7 +189,6 @@ angular.module('ShoppingListApp', [])
 
 ![](img/d91bbcf3048bbd69f0d7d070e15fb4f5_28.png)
 
-![](img/d91bbcf3048bbd69f0d7d070e15fb4f5_30.png)
 
 ![](img/d91bbcf3048bbd69f0d7d070e15fb4f5_30.png)
 
@@ -210,7 +206,6 @@ angular.module('ShoppingListApp', [])
 
 2.  **AngularJS 的内置 `filter` 过滤器**：AngularJS 提供了一个名为 `filter` 的过滤器（名称有些重复），它封装了我们上面讨论的数组 `filter` 函数的功能。
 
-![](img/d91bbcf3048bbd69f0d7d070e15fb4f5_32.png)
 
 3.  **过滤器的应用**：当以字符串作为参数传递给 AngularJS 的 `filter` 过滤器时，它会过滤原始集合（或数组），将数组中的所有字符串项与提供的搜索字符串进行匹配。
 
@@ -225,7 +220,6 @@ angular.module('ShoppingListApp', [])
 
 ![](img/d91bbcf3048bbd69f0d7d070e15fb4f5_32.png)
 
-![](img/d91bbcf3048bbd69f0d7d070e15fb4f5_34.png)
 
 ![](img/d91bbcf3048bbd69f0d7d070e15fb4f5_34.png)
 

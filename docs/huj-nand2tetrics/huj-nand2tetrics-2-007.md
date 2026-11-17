@@ -1,6 +1,5 @@
 # 007：逻辑门
 
-![](img/05b40af8ef0c1e35de0f31276ec39fa5_0.png)
 
 ![](img/05b40af8ef0c1e35de0f31276ec39fa5_0.png)
 

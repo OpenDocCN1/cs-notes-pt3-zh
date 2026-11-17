@@ -95,9 +95,7 @@ if SOCIAL:
 
 ## 关于其他社交平台
 
-![](img/b87ddf4170112146f702fe95f7ac038b_13.png)
 
-![](img/b87ddf4170112146f702fe95f7ac038b_15.png)
 
 选择GitHub作为示例，是因为其开发者应用注册流程相对简单直接。你也可以用同样的方式集成Twitter、Google或Facebook登录。
 

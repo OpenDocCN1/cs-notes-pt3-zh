@@ -46,11 +46,9 @@
 <label for="class2">Class II</label>
 ```
 
-![](img/39fed7f85ac1accb5bef0955b96fa136_1.png)
 
 ---
 
-![](img/39fed7f85ac1accb5bef0955b96fa136_3.png)
 
 ## 下拉选择菜单
 
@@ -102,7 +100,6 @@
 
 ---
 
-![](img/39fed7f85ac1accb5bef0955b96fa136_5.png)
 
 ## 提交按钮与小技巧
 
@@ -114,7 +111,6 @@
 
 以下是按钮的代码示例：
 
-![](img/39fed7f85ac1accb5bef0955b96fa136_7.png)
 
 ```html
 <!-- 提交按钮 -->

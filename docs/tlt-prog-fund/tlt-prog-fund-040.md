@@ -1,12 +1,10 @@
 # 040：元组 🧱
 
-![](img/e159cd58e1daa0beb965cc4739bcda45_0.png)
 
 在本节课中，我们将要学习一种新的序列类型——元组。我们将了解元组与列表的相似之处，以及它们之间最关键的区别：可变性。
 
 ## 概述
 
-![](img/e159cd58e1daa0beb965cc4739bcda45_2.png)
 
 上一节我们介绍了可变的列表。本节中我们来看看另一种序列类型：元组。元组是不可变的序列。
 
@@ -14,7 +12,6 @@
 
 元组与列表使用相同的索引和切片表示法。
 
-![](img/e159cd58e1daa0beb965cc4739bcda45_0.png)
 
 以下代码创建了一个包含三个元素的元组，并将其赋值给变量 `tup`：
 ```python
@@ -37,7 +34,6 @@ tup[1:3] # 返回 (4, -0.2)
 
 元组与列表最核心的区别在于其不可变性。这意味着元组一旦创建，其内容就不能被修改。
 
-![](img/e159cd58e1daa0beb965cc4739bcda45_2.png)
 
 尝试修改元组会导致类型错误：
 ```python
@@ -45,15 +41,12 @@ tup[0] = 5  # 会引发 TypeError: 'tuple' object does not support item assignme
 ```
 错误信息明确指出：元组对象不支持元素赋值。
 
-![](img/e159cd58e1daa0beb965cc4739bcda45_4.png)
 
 ## 元组与列表的方法对比
 
 由于元组不可变，它支持的方法比列表少得多。
 
-![](img/e159cd58e1daa0beb965cc4739bcda45_4.png)
 
-![](img/e159cd58e1daa0beb965cc4739bcda45_6.png)
 
 以下是列表和元组支持的方法对比：
 *   **列表方法**：`append`, `count`, `extend`, `index`, `insert`, `pop`, `remove`, `reverse`, `sort`。
@@ -65,7 +58,6 @@ tup[0] = 5  # 会引发 TypeError: 'tuple' object does not support item assignme
 
 元组在许多操作上与列表类似。
 
-![](img/e159cd58e1daa0beb965cc4739bcda45_6.png)
 
 我们可以遍历元组中的元素：
 ```python

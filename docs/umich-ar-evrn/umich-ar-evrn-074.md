@@ -58,7 +58,6 @@ Unity 起源于游戏开发社区，现已成长为一个对AR和VR提供强大�
 
 ### 实践示例：在Unity中重建场景
 
-![](img/ce57daaeebef3d06c38c69cbebc6b0b8_3.png)
 
 我们同样使用那张360度实验室照片在Unity中创建场景。
 

@@ -1,6 +1,5 @@
 # 043：在Rust中使用不同类型的日志
 
-![](img/6a3c23391c20c6783125dcab1b41b008_0.png)
 
 ![](img/6a3c23391c20c6783125dcab1b41b008_0.png)
 
@@ -89,7 +88,6 @@ less blocker.log
 
 ## 总结
 
-![](img/6a3c23391c20c6783125dcab1b41b008_2.png)
 
 ![](img/6a3c23391c20c6783125dcab1b41b008_3.png)
 

@@ -36,9 +36,7 @@ ngrok http 80
 
 现在，你获得了一个可以公开访问的临时地址。接下来，你需要将这个地址提交给自动评分器。
 
-![](img/60d3ac533fef997fe2f53675b2e61417_5.png)
 
-![](img/60d3ac533fef997fe2f53675b2e61417_7.png)
 
 1.  复制Ngrok提供的临时公共网址（例如 `https://xxxx-xx-xx-xx-xx.ngrok.io`）。
 2.  打开你的应用程序的特定页面，例如 `guessinggame.php?guess=12`。

@@ -2,7 +2,6 @@
 
 ![](img/b0f695027223b8c81cbce2d4fdf1f904_0.png)
 
-![](img/b0f695027223b8c81cbce2d4fdf1f904_1.png)
 
 in this next section we're going to be，talking about the various restructuring。
 

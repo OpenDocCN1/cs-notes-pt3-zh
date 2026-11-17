@@ -122,7 +122,6 @@ echo $PATH | grep "/usr/bin"
 grep -P "t+" filename
 ```
 
-![](img/ef5e82e2efc27b1dc3173fb87dbad937_3.png)
 
 ![](img/ef5e82e2efc27b1dc3173fb87dbad937_5.png)
 

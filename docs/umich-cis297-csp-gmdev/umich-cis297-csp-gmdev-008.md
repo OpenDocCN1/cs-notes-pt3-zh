@@ -2,17 +2,13 @@
 
 ![](img/ebec260aa31c2af2c1d0b7e869071eed_0.png)
 
-![](img/ebec260aa31c2af2c1d0b7e869071eed_2.png)
 
 ## 概述
 
-![](img/ebec260aa31c2af2c1d0b7e869071eed_4.png)
 
 ![](img/ebec260aa31c2af2c1d0b7e869071eed_5.png)
 
-![](img/ebec260aa31c2af2c1d0b7e869071eed_7.png)
 
-![](img/ebec260aa31c2af2c1d0b7e869071eed_9.png)
 
 在本节课中，我们将学习如何使用C#和Windows Forms来创建具有图形用户界面的桌面应用程序。我们将从控制台应用程序过渡到事件驱动的窗体程序，学习如何添加按钮、文本框、标签等控件，并响应用户的交互。
 
@@ -76,7 +72,6 @@ Windows Forms是.NET框架中用于构建桌面应用程序的技术。它允许
 
 ## 编写事件处理代码
 
-![](img/ebec260aa31c2af2c1d0b7e869071eed_36.png)
 
 ![](img/ebec260aa31c2af2c1d0b7e869071eed_38.png)
 
@@ -84,13 +79,10 @@ Windows Forms是.NET框架中用于构建桌面应用程序的技术。它允许
 
 ![](img/ebec260aa31c2af2c1d0b7e869071eed_42.png)
 
-![](img/ebec260aa31c2af2c1d0b7e869071eed_44.png)
 
 窗体应用程序是事件驱动的。程序启动后等待用户操作，当事件（如点击按钮）发生时，运行相应的代码。
 
-![](img/ebec260aa31c2af2c1d0b7e869071eed_46.png)
 
-![](img/ebec260aa31c2af2c1d0b7e869071eed_48.png)
 
 ![](img/ebec260aa31c2af2c1d0b7e869071eed_50.png)
 
@@ -118,9 +110,7 @@ private void button1_Click(object sender, EventArgs e)
 4.  在生成的方法中，判断按下的键是否是回车键，如果是，则执行与按钮点击相同的操作。
 
 
-![](img/ebec260aa31c2af2c1d0b7e869071eed_52.png)
 
-![](img/ebec260aa31c2af2c1d0b7e869071eed_54.png)
 
 ![](img/ebec260aa31c2af2c1d0b7e869071eed_55.png)
 

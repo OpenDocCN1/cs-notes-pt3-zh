@@ -75,7 +75,6 @@ public HandRank GetHandRank()
 }
 ```
 
-![](img/1e97eb832ff272c44cb012e8767b6762_15.png)
 
 ![](img/1e97eb832ff272c44cb012e8767b6762_17.png)
 
@@ -144,7 +143,6 @@ public int CompareTo(HoldEmHand? other)
 
 ---
 
-![](img/1e97eb832ff272c44cb012e8767b6762_33.png)
 
 ## 游戏状态与玩家管理
 
@@ -179,7 +177,6 @@ public class Player
 
 ![](img/1e97eb832ff272c44cb012e8767b6762_39.png)
 
-![](img/1e97eb832ff272c44cb012e8767b6762_40.png)
 
 ```csharp
 private void btnNewHand_Click(object sender, EventArgs e)
@@ -221,7 +218,6 @@ private void btnCheckCall_Click(object sender, EventArgs e)
 2.  **德州扑克手牌逻辑**：在 `HoldEmHand` 类中，通过组合数学找出最佳五张牌，并基于此进行比较。
 3.  **基础游戏流程**：涵盖了发牌、多轮下注、胜负判定等基本游戏状态管理。
 
-![](img/1e97eb832ff272c44cb012e8767b6762_42.png)
 
 虽然我们完成了一个可运行的游戏原型，但仍有许多可以扩展的地方，例如：
 *   完善所有牌型的平局决胜规则。
@@ -229,9 +225,7 @@ private void btnCheckCall_Click(object sender, EventArgs e)
 *   为牌面添加图形化显示。
 *   开发简单的计算机对手AI，通过计算胜率来做出决策。
 
-![](img/1e97eb832ff272c44cb012e8767b6762_44.png)
 
-![](img/1e97eb832ff272c44cb012e8767b6762_46.png)
 
 ![](img/1e97eb832ff272c44cb012e8767b6762_48.png)
 

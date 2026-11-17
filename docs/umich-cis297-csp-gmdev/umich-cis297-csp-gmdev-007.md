@@ -34,7 +34,6 @@
     }
     ```
 
-![](img/d9bd5b647ffe015a21ce0c3100699041_9.png)
 
 ![](img/d9bd5b647ffe015a21ce0c3100699041_11.png)
 
@@ -52,7 +51,6 @@
 
 ![](img/d9bd5b647ffe015a21ce0c3100699041_13.png)
 
-![](img/d9bd5b647ffe015a21ce0c3100699041_15.png)
 
 3.  **修改依赖类**：修改 `YatzyDice` 类，使其不再直接依赖 `Random`，而是依赖 `IRandom` 接口。通过构造函数将 `IRandom` 的实例注入。
     ```csharp
@@ -118,7 +116,6 @@ public void TestYatzyScore()
 
 ## 接口的更多优势
 
-![](img/d9bd5b647ffe015a21ce0c3100699041_22.png)
 
 ![](img/d9bd5b647ffe015a21ce0c3100699041_24.png)
 

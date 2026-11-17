@@ -168,7 +168,6 @@ w ∉ L  → M 可能拒绝或无限循环
 
   
 
-![](img/d8465bd50343ba94b39b8a0bb444b0ed_5.png)
 
 经典例子是**停机问题（Halting Problem）**：
 
@@ -202,7 +201,6 @@ HALT 是不可判定的
 
   
 
-![](img/d8465bd50343ba94b39b8a0bb444b0ed_7.png)
 
 核心思想来自**对角线法（Diagonalization）**：
 
@@ -247,13 +245,11 @@ D ≠ Mi  对所有 i
 
   
 
-![](img/d8465bd50343ba94b39b8a0bb444b0ed_9.png)
 
 ---
 
   
 
-![](img/d8465bd50343ba94b39b8a0bb444b0ed_11.png)
 
 ## 🔍 五、不可识别问题
 
@@ -277,7 +273,6 @@ D ≠ Mi  对所有 i
 
   
 
-![](img/d8465bd50343ba94b39b8a0bb444b0ed_13.png)
 
 则称 `L` 为**不可识别**。
 
@@ -291,7 +286,6 @@ D ≠ Mi  对所有 i
 
   
 
-![](img/d8465bd50343ba94b39b8a0bb444b0ed_15.png)
 
 ```text
 不可识别 ⊂ 不可判定

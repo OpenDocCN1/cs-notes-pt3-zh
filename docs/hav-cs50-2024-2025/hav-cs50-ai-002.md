@@ -2,7 +2,6 @@
 
 ![](img/6fe1efefa343c94f8ab4c61cf78bf594_1.png)
 
-![](img/6fe1efefa343c94f8ab4c61cf78bf594_3.png)
 
 ![](img/6fe1efefa343c94f8ab4c61cf78bf594_4.png)
 
@@ -138,7 +137,6 @@
 
 ![](img/6fe1efefa343c94f8ab4c61cf78bf594_63.png)
 
-![](img/6fe1efefa343c94f8ab4c61cf78bf594_64.png)
 
 ![](img/6fe1efefa343c94f8ab4c61cf78bf594_66.png)
 
@@ -176,9 +174,7 @@
 
 ![](img/6fe1efefa343c94f8ab4c61cf78bf594_87.png)
 
-![](img/6fe1efefa343c94f8ab4c61cf78bf594_89.png)
 
-![](img/6fe1efefa343c94f8ab4c61cf78bf594_90.png)
 
 例如，在迷宫问题中，一个常用的启发式函数是**曼哈顿距离**，它计算当前单元格到目标单元格在水平和垂直方向上的格子数之和（忽略墙壁）。
 
@@ -265,9 +261,7 @@ Minimax需要探索整个游戏树，对于复杂游戏（如国际象棋）这�
 
 在深度限制处，游戏尚未结束，我们需要一个**评估函数**来估计非终端状态的期望效用。评估函数的质量直接决定了AI的强弱。例如，在国际象棋中，评估函数可能会考虑棋子价值、棋盘控制、王的安全等因素。
 
-![](img/6fe1efefa343c94f8ab4c61cf78bf594_110.png)
 
-![](img/6fe1efefa343c94f8ab4c61cf78bf594_112.png)
 
 ![](img/6fe1efefa343c94f8ab4c61cf78bf594_114.png)
 

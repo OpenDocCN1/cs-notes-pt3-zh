@@ -6,9 +6,7 @@
 
 ## 动态内存分配与释放
 
-![](img/e6d154982b8a44dcdbf0ef77b8fd2046_2.png)
 
-![](img/e6d154982b8a44dcdbf0ef77b8fd2046_4.png)
 
 上一节我们介绍了使用代码模拟现实场景的优势。本节中我们来看看如何通过动态内存管理来增强程序的灵活性。
 
@@ -19,11 +17,9 @@
 int* ptr = new int; // 在堆上分配一个整数的内存
 ```
 
-![](img/e6d154982b8a44dcdbf0ef77b8fd2046_6.png)
 
 使用 `new` 分配内存后，我们必须在使用完毕后手动释放它，否则会导致内存泄漏。释放内存使用 `delete` 关键字。
 
-![](img/e6d154982b8a44dcdbf0ef77b8fd2046_8.png)
 
 **核心公式：**
 ```cpp
@@ -37,9 +33,7 @@ delete[] arrayPtr; // 释放动态数组的内存
 
 ![](img/e6d154982b8a44dcdbf0ef77b8fd2046_12.png)
 
-![](img/e6d154982b8a44dcdbf0ef77b8fd2046_14.png)
 
-![](img/e6d154982b8a44dcdbf0ef77b8fd2046_16.png)
 
 ## 指针与对象
 
@@ -78,15 +72,11 @@ jebsChair.setColor("black"); // 使用点操作符调用成员函数
 
 继承是面向对象编程的核心原则之一，它允许我们创建一个新类（子类）来继承现有类（父类）的属性和行为。这就像生物学中的遗传，子类继承了父类的特性，同时可以添加自己独有的特性。
 
-![](img/e6d154982b8a44dcdbf0ef77b8fd2046_34.png)
 
-![](img/e6d154982b8a44dcdbf0ef77b8fd2046_35.png)
 
 例如，我们可以有一个基础的 `Chair` 类。如果我们想要一个带马达的椅子，无需重写整个 `Chair` 类，只需创建一个继承自 `Chair` 的 `MotorizedChair` 类，并添加驱动功能即可。
 
-![](img/e6d154982b8a44dcdbf0ef77b8fd2046_37.png)
 
-![](img/e6d154982b8a44dcdbf0ef77b8fd2046_39.png)
 
 **核心代码示例：**
 ```cpp
@@ -105,15 +95,11 @@ public:
 };
 ```
 
-![](img/e6d154982b8a44dcdbf0ef77b8fd2046_41.png)
 
-![](img/e6d154982b8a44dcdbf0ef77b8fd2046_42.png)
 
 ## 多态性与虚函数
 
-![](img/e6d154982b8a44dcdbf0ef77b8fd2046_44.png)
 
-![](img/e6d154982b8a44dcdbf0ef77b8fd2046_46.png)
 
 ![](img/e6d154982b8a44dcdbf0ef77b8fd2046_48.png)
 

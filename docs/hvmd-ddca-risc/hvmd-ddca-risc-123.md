@@ -52,7 +52,6 @@
 
 下图展示了Pentium 3处理器的芯片布局，可以清晰地看到规整排列的一级缓存和二级缓存存储阵列。
 
-![](img/fce1c5c9ee579d8903f83b36fe8bef48_2.png)
 
 ![](img/fce1c5c9ee579d8903f83b36fe8bef48_2.png)
 

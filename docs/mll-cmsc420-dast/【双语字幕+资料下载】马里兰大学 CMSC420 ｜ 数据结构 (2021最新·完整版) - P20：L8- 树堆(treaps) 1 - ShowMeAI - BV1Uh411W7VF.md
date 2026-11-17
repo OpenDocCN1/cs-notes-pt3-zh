@@ -2,7 +2,6 @@
 
 ![](img/27eca30a9df58639d138351b35389af1_0.png)
 
-![](img/27eca30a9df58639d138351b35389af1_1.png)
 
 hello everyone，in this segment we're going to talk，about a new data structure called treaps。
 

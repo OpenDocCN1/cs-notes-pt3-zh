@@ -1,6 +1,5 @@
 # 001：欢迎学习C语言编程 👋
 
-![](img/5a1e02aabdf5a19f28c896a73bc34b52_0.png)
 
 在本节课中，我们将要学习C语言编程课程的概述，了解C语言的历史背景、重要性以及本课程的教学目标。
 
@@ -22,7 +21,6 @@ C语言被用于开发诸如Unix、Minix和Linux等操作系统。像Perl、Pyth
 
 ---
 
-![](img/5a1e02aabdf5a19f28c896a73bc34b52_2.png)
 
 ![](img/5a1e02aabdf5a19f28c896a73bc34b52_3.png)
 

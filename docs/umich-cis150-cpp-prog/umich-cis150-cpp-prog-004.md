@@ -67,7 +67,6 @@ else {
 3.  使用`if-else if`语句判断适用的关税规则（例如，小额订单免税、本国产品免税、特定国家税率）。
 4.  计算并输出关税成本。
 
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_14.png)
 
 ![](img/aca4d2d45dff76f8d9b0ad6480cab151_15.png)
 
@@ -75,21 +74,14 @@ else {
 
 **核心代码示例：**
 
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_18.png)
-
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_20.png)
-
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_22.png)
-
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_24.png)
-
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_25.png)
 
 
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_27.png)
 
 
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_29.png)
+
+
+
+
 
 ![](img/aca4d2d45dff76f8d9b0ad6480cab151_31.png)
 
@@ -232,9 +224,7 @@ cout << message << endl; // 输出: abble
 
 ![](img/aca4d2d45dff76f8d9b0ad6480cab151_75.png)
 
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_77.png)
 
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_79.png)
 
 ![](img/aca4d2d45dff76f8d9b0ad6480cab151_81.png)
 
@@ -287,13 +277,11 @@ if (fabs(result - expected) < EPSILON) {
 
 ![](img/aca4d2d45dff76f8d9b0ad6480cab151_103.png)
 
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_105.png)
 
 C++在进行逻辑与(`&&`)和逻辑或(`||`)运算时采用“短路求值”。这意味着：
 *   对于`表达式1 && 表达式2`，如果`表达式1`为`false`，则整个表达式已确定为`false`，`表达式2`将**不会被执行**。
 *   对于`表达式1 || 表达式2`，如果`表达式1`为`true`，则整个表达式已确定为`true`，`表达式2`将**不会被执行**。
 
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_107.png)
 
 这可以提高效率，并在某些情况下避免错误（例如，当`表达式2`依赖于`表达式1`为真时）。
 
@@ -315,13 +303,9 @@ if ( (x != 0) && (10 / x > 2) ) { // 如果 x 为 0，第一部分为 false，�
 
 ---
 
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_117.png)
 
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_118.png)
 
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_120.png)
 
-![](img/aca4d2d45dff76f8d9b0ad6480cab151_122.png)
 
 ## 总结
 

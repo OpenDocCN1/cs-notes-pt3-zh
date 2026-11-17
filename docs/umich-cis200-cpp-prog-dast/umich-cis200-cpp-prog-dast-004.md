@@ -2,9 +2,7 @@
 
 ![](img/438760ab0c05c1f55bc9c4cf91192229_1.png)
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_3.png)
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_5.png)
 
 ![](img/438760ab0c05c1f55bc9c4cf91192229_6.png)
 
@@ -31,9 +29,7 @@ using namespace std;
 
 ---
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_8.png)
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_10.png)
 
 ## 构建井字棋游戏类
 
@@ -89,13 +85,11 @@ string display() {
 
 `markBoard` 方法允许玩家在指定位置做标记。它需要接收行索引和列索引作为参数。在标记之前，方法会检查该位置是否为空以及游戏是否已经结束。如果条件不满足，则抛出异常。
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_12.png)
 
 ![](img/438760ab0c05c1f55bc9c4cf91192229_14.png)
 
 ![](img/438760ab0c05c1f55bc9c4cf91192229_16.png)
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_18.png)
 
 ```cpp
 void markBoard(int row, int col) {
@@ -112,7 +106,6 @@ void markBoard(int row, int col) {
 }
 ```
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_20.png)
 
 ### 检查游戏状态
 
@@ -126,9 +119,7 @@ bool isGameOver() {
 
 `isTied` 方法检查棋盘上是否还有空格。如果没有空格，则视为平局。
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_22.png)
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_24.png)
 
 ```cpp
 bool isTied() {
@@ -143,9 +134,7 @@ bool isTied() {
 }
 ```
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_26.png)
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_28.png)
 
 `hasWinner` 方法通过检查所有行、列和对角线来判断是否有玩家获胜。它将这个大问题分解为三个小问题。
 
@@ -155,9 +144,7 @@ bool hasWinner() {
 }
 ```
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_30.png)
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_32.png)
 
 以下是检查行获胜的辅助方法示例：
 
@@ -180,19 +167,15 @@ bool hasWinnerByRow() {
 }
 ```
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_42.png)
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_44.png)
 
 检查列和对角线获胜的逻辑类似，但需要更仔细地处理索引。
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_46.png)
 
 ### 获取当前玩家
 
 我们还需要一个简单的方法来告知外部代码当前轮到哪位玩家。
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_48.png)
 
 ```cpp
 char getCurrentPlayer() {
@@ -202,9 +185,7 @@ char getCurrentPlayer() {
 
 ![](img/438760ab0c05c1f55bc9c4cf91192229_50.png)
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_52.png)
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_54.png)
 
 ---
 
@@ -214,7 +195,6 @@ char getCurrentPlayer() {
 
 ![](img/438760ab0c05c1f55bc9c4cf91192229_58.png)
 
-![](img/438760ab0c05c1f55bc9c4cf91192229_59.png)
 
 ![](img/438760ab0c05c1f55bc9c4cf91192229_61.png)
 

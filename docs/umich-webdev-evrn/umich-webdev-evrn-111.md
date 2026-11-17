@@ -55,7 +55,6 @@ let htmlSnippet = '<p class="highlight">Hello World</p>';
 
 ![](img/7e3a789733130297abd4907d982914f5_3.png)
 
-![](img/7e3a789733130297abd4907d982914f5_4.png)
 
 ![](img/7e3a789733130297abd4907d982914f5_5.png)
 

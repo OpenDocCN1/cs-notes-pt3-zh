@@ -90,7 +90,6 @@ it("should be able to detect cookies", function() {
 
 保存文件后，在浏览器中打开`specrunner.html`运行测试。最初，我们发现“检测有Cookie”的测试失败了。
 
-![](img/35d234a608bd4d2caf572efbb11725dd_4.png)
 
 检查代码发现，最初的函数版本有一个逻辑错误：`return false`语句错误地放在了`for`循环内部。这导致函数在检查第一个元素后，无论结果如何都会立即返回`false`。
 
@@ -219,7 +218,6 @@ xdescribe("Odd Even Generator", function() { ... });
 
 ![](img/35d234a608bd4d2caf572efbb11725dd_23.png)
 
-![](img/35d234a608bd4d2caf572efbb11725dd_24.png)
 
 ![](img/35d234a608bd4d2caf572efbb11725dd_22.png)
 

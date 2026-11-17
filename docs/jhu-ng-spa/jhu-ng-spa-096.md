@@ -92,7 +92,6 @@ Angular 提供了 `angular-mocks` 模块来帮助我们进行 Angular 应用程�
 
 对于其他服务，你可以使用常规的 `angular.mock.inject` 方法，它们工作得很好，因为它们类似于常规服务。而 `$provide` 真正涉及的是我们之前在使用 `.config` 方法时讨论过的提供者服务，只有提供者服务才能被注入到那里。
 
-![](img/b2f88d249b3f997c2b3877eeecbfab57_10.png)
 
 ---
 

@@ -153,7 +153,6 @@ void findPythagoreanTriple(int x) {
 
 ![](img/10e2a49dc1d6e91e12becb415cb7b36a_3.png)
 
-![](img/10e2a49dc1d6e91e12becb415cb7b36a_5.png)
 
 ## 问题五：寻找最大子数组和
 

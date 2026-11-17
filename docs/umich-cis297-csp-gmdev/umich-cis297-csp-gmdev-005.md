@@ -197,7 +197,6 @@ foreach (Polygon poly in polygonList)
 
 在父类中，如果将字段标记为 `private`，子类将无法直接访问。若希望子类能直接访问父类的某些成员，同时又不向外部公开，可以使用 `protected` 访问修饰符。
 
-![](img/8f63bde97dd5b09be17f3d6ac3f25454_37.png)
 
 ```csharp
 public abstract class Polygon
@@ -277,7 +276,6 @@ public class ChildClass : ParentClass
 4.  了解了 `protected` 访问修饰符的作用，它允许子类访问父类的特定成员。
 5.  认识到应避免使用 `new` 关键字来隐藏继承的成员，而应优先使用 `override`。
 
-![](img/8f63bde97dd5b09be17f3d6ac3f25454_63.png)
 
 ![](img/8f63bde97dd5b09be17f3d6ac3f25454_65.png)
 

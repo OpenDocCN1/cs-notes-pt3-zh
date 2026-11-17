@@ -52,7 +52,6 @@ function changeHeader() {
 </script>
 ```
 
-![](img/5b287a3cedf2ed8f1d3ae0536f312b14_12.png)
 
 在这段代码中，我们简单地将`innerHTML`属性赋值为“一个很酷的标题”。这就是你看到变化的基本方式——我们正在改变元素。
 
@@ -66,7 +65,6 @@ function changeHeader() {
 
 到目前为止，我们所做的都是找到标签、修改它，然后放回去。现在，让我们尝试向DOM中添加全新的元素。这是一个稍微复杂一点的操作。
 
-![](img/5b287a3cedf2ed8f1d3ae0536f312b14_14.png)
 
 以下是实现此功能的源代码。我们有一个按钮（锚点标签），它调用`add`函数。页面上还有一个`<ul>`标签，其`id="zap"`，里面最初有一个列表项`<li>`。
 
@@ -104,9 +102,7 @@ function add() {
 
 初始状态是“第一个项目”。点击按钮几次后，它会动态地添加“项目编号 1”、“项目编号 2”等项目。这样，我们就可以从JavaScript中操作DOM的许多方面，包括改变CSS，从而改变元素的外观。
 
-![](img/5b287a3cedf2ed8f1d3ae0536f312b14_20.png)
 
-![](img/5b287a3cedf2ed8f1d3ae0536f312b14_21.png)
 
 ## 通过JavaScript控制CSS样式
 
@@ -115,7 +111,6 @@ function add() {
 我们将使用`addEventListener`来绑定事件。虽然也可以使用`onclick`，但这里我想让大家习惯一种做法：通常在文档加载的最后阶段，集中添加所有的事件监听器。这样，HTML先被显示，然后再附加交互行为。
 
 
-![](img/5b287a3cedf2ed8f1d3ae0536f312b14_23.png)
 
 ```html
 <h1 id="fun">可隐藏的标题</h1>
@@ -134,7 +129,6 @@ document.getElementById('poof').addEventListener('click', (event) => {
 </script>
 ```
 
-![](img/5b287a3cedf2ed8f1d3ae0536f312b14_25.png)
 
 在脚本中，我们首先获取`show`按钮元素，然后为其添加一个事件监听器。我们监听`click`事件，第二个参数是一个函数（这里是一个匿名函数）。这个函数只有一行代码：获取`id="fun"`的元素，并通过`.style.display`将其CSS的`display`属性设置为`'block'`（显示）。
 
@@ -142,7 +136,6 @@ document.getElementById('poof').addEventListener('click', (event) => {
 
 运行这段代码，点击“隐藏”，标题会消失；点击“显示”，标题会重新出现。这只是一个如何通过JavaScript修改CSS的简单示例。
 
-![](img/5b287a3cedf2ed8f1d3ae0536f312b14_27.png)
 
 ## 总结
 

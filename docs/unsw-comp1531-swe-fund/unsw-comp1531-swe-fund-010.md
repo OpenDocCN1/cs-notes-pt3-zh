@@ -85,7 +85,6 @@ console.log(sum(1, "2")); // 编译错误：类型不匹配
 
 ![](img/71bbe526b35bef4d46131c32b0431a03_30.png)
 
-![](img/71bbe526b35bef4d46131c32b0431a03_32.png)
 
 ![](img/71bbe526b35bef4d46131c32b0431a03_34.png)
 

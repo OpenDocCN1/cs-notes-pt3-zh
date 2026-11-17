@@ -4,19 +4,15 @@
 
 ![](img/0d752d16c37a1be222fb33c5777caf09_3.png)
 
-![](img/0d752d16c37a1be222fb33c5777caf09_4.png)
 
 ![](img/0d752d16c37a1be222fb33c5777caf09_5.png)
 
-![](img/0d752d16c37a1be222fb33c5777caf09_6.png)
 
 在本节课中，我们将要学习Django数据模型。数据模型是Django应用与数据库交互的核心，它使用一种称为“对象关系映射”的技术，让我们可以用Python对象来操作数据库，而无需编写复杂的SQL语句。
 
-![](img/0d752d16c37a1be222fb33c5777caf09_8.png)
 
 ## 回顾SQL
 
-![](img/0d752d16c37a1be222fb33c5777caf09_10.png)
 
 在之前的课程中，我们介绍了SQL（结构化查询语言）。SQL是与数据库通信的标准方式，它允许我们在一定程度上跨不同数据库进行移植。
 
@@ -43,7 +39,6 @@ CREATE TABLE Users (
 *   **数据库可移植性**：ORM代码知道如何处理SQLite、PostgreSQL和MySQL等不同数据库的差异。你可以在开发时使用SQLite，部署时切换到MySQL，而无需修改核心代码。
 *   **聚焦业务逻辑**：开发者可以更专注于数据结构和业务逻辑，而非数据库语法。
 
-![](img/0d752d16c37a1be222fb33c5777caf09_16.png)
 
 ## 定义Django模型
 
@@ -75,7 +70,6 @@ class User(models.Model):
 1.  **生成迁移文件**：在项目根目录下运行 `python manage.py makemigrations`。此命令会读取 `models.py` 中的变更，并生成一个包含具体SQL操作的Python脚本文件（如 `0001_initial.py`）。
 2.  **应用迁移**：运行 `python manage.py migrate`。此命令会执行迁移文件中定义的SQL操作，在数据库中实际创建或修改表结构。
 
-![](img/0d752d16c37a1be222fb33c5777caf09_22.png)
 
 迁移机制非常强大，它允许你在开发环境调试好数据库结构后，将同样的变更安全地应用到生产环境，即使生产环境使用的是不同的数据库。
 
@@ -83,7 +77,6 @@ class User(models.Model):
 
 ## 使用Django Shell操作数据
 
-![](img/0d752d16c37a1be222fb33c5777caf09_24.png)
 
 Django提供了一个增强的Python Shell，预加载了项目环境，方便我们测试模型操作。
 
@@ -92,13 +85,11 @@ Django提供了一个增强的Python Shell，预加载了项目环境，方便�
 python manage.py shell
 ```
 
-![](img/0d752d16c37a1be222fb33c5777caf09_26.png)
 
 在Shell中，我们可以进行数据的增删改查操作。以下是核心的CRUD操作示例：
 
 **创建数据**
 
-![](img/0d752d16c37a1be222fb33c5777caf09_28.png)
 
 ```python
 from myapp.models import User # 从你的应用导入模型
@@ -107,7 +98,6 @@ u.save() # 将对象保存到数据库，执行INSERT操作
 print(u.id) # 保存后，数据库会自动分配一个id
 ```
 
-![](img/0d752d16c37a1be222fb33c5777caf09_30.png)
 
 **查询数据**
 以下是查询数据的基本方法。
@@ -120,7 +110,6 @@ print(u.id) # 保存后，数据库会自动分配一个id
 User.objects.filter(email='k@example.com').update(name='NewName')
 ```
 
-![](img/0d752d16c37a1be222fb33c5777caf09_32.png)
 
 **删除数据**
 ```python

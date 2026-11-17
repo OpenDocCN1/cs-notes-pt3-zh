@@ -1,6 +1,5 @@
 # 045：硬件描述语言简介 🧠
 
-![](img/12d3c70d9e4c2a162d3bbdb172f7cad9_1.png)
 
 在本章中，我们将学习硬件描述语言，简称 HDL。
 
@@ -8,7 +7,6 @@
 
 ![](img/12d3c70d9e4c2a162d3bbdb172f7cad9_3.png)
 
-![](img/12d3c70d9e4c2a162d3bbdb172f7cad9_4.png)
 
 ---
 

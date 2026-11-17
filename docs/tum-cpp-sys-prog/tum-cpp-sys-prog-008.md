@@ -1,6 +1,5 @@
 # 008：继承
 
-![](img/6031cc006baab58490d3f1dbba76d548_1.png)
 
 在本节课中，我们将要学习C++面向对象编程的第二个核心支柱——继承。我们将探讨如何定义派生类、理解对象在继承层次结构中的构造与析构顺序，并初步了解继承模式的概念。
 
@@ -8,7 +7,6 @@
 
 上一节我们介绍了数据抽象，它通过类来实现。本节中我们来看看继承。
 
-![](img/6031cc006baab58490d3f1dbba76d548_3.png)
 
 面向对象编程基于三大支柱：
 1.  **数据抽象**：通过类实现。
@@ -17,7 +15,6 @@
 
 ## 定义派生类
 
-![](img/6031cc006baab58490d3f1dbba76d548_5.png)
 
 在C++中，任何类类型都可以从一个或多个基类派生。这适用于 `class` 和 `struct`。基类本身也可以有自己的基类，从而构建出任意复杂的继承层次结构。
 
@@ -31,7 +28,6 @@ class DerivedClassName : BaseSpecifierList {
 
 ## 基类指定符列表
 
-![](img/6031cc006baab58490d3f1dbba76d548_7.png)
 
 基类指定符列表位于冒号之后，包含一个或多个由逗号分隔的基类指定符。
 
@@ -42,7 +38,6 @@ class DerivedClassName : BaseSpecifierList {
 
 以下是定义派生类的几个示例：
 
-![](img/6031cc006baab58490d3f1dbba76d548_9.png)
 
 ```cpp
 class Base {};
@@ -66,7 +61,6 @@ class DerivedComplex : public virtual Base, private Derived1 {};
 
 ### 构造函数调用顺序
 
-![](img/6031cc006baab58490d3f1dbba76d548_11.png)
 
 当调用派生类的构造函数时，初始化按以下严格顺序进行：
 1.  初始化所有基类。如果存在多个基类，则按照它们在基类指定符列表中出现的顺序从左到右进行初始化。
@@ -108,17 +102,12 @@ Derived d2(1, 2);   // 调用Derived(int, int)构造函数
 对于 `d1`，虽然 `Derived()` 构造函数没有显式调用基类构造函数，但根据规则，基类 `Base` 仍会先被其默认构造函数初始化。
 对于 `d2`，`Derived(int, int)` 构造函数通过 `: Base(a)` 显式调用了 `Base(int)` 构造函数，因此基类使用该构造函数初始化。
 
-![](img/6031cc006baab58490d3f1dbba76d548_13.png)
 
-![](img/6031cc006baab58490d3f1dbba76d548_14.png)
 
-![](img/6031cc006baab58490d3f1dbba76d548_15.png)
 
 ## 总结
 
-![](img/6031cc006baab58490d3f1dbba76d548_17.png)
 
-![](img/6031cc006baab58490d3f1dbba76d548_18.png)
 
 ![](img/6031cc006baab58490d3f1dbba76d548_19.png)
 

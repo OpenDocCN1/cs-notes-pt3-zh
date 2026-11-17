@@ -64,7 +64,6 @@ angular.module('routingApp', ['ui.router'])
 
 ![](img/6cf4b1886b451ce26d80f4652e69a9f8_14.png)
 
-![](img/6cf4b1886b451ce26d80f4652e69a9f8_15.png)
 
 ```javascript
 .config(function($stateProvider, $urlRouterProvider) {
@@ -75,7 +74,6 @@ angular.module('routingApp', ['ui.router'])
 
 `$urlRouterProvider.otherwise()` 方法用于定义当没有匹配到任何已定义状态时的默认跳转路径。
 
-![](img/6cf4b1886b451ce26d80f4652e69a9f8_17.png)
 
 ![](img/6cf4b1886b451ce26d80f4652e69a9f8_19.png)
 

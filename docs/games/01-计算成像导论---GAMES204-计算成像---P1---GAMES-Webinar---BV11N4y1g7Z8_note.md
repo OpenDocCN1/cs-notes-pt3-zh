@@ -2,7 +2,6 @@
 
 ![](img/5c04f9e26ed701e263ba7dce03f862cf_0.png)
 
-![](img/5c04f9e26ed701e263ba7dce03f862cf_2.png)
 
 ## 概述
 
@@ -10,27 +9,21 @@
 
 ## 计算成像的定义
 
-![](img/5c04f9e26ed701e263ba7dce03f862cf_4.png)
 
 **计算成像**是指利用光学系统、传感器和计算算法，从真实世界中捕获信息，并通过计算或算法进行解码，最终恢复出物理世界中多维度的信息。
 
 **公式**：
 
-![](img/5c04f9e26ed701e263ba7dce03f862cf_6.png)
 
-![](img/5c04f9e26ed701e263ba7dce03f862cf_8.png)
 
 $$
 B = A \cdot X + \text{noise}
 $$
 
-![](img/5c04f9e26ed701e263ba7dce03f862cf_10.png)
 
-![](img/5c04f9e26ed701e263ba7dce03f862cf_12.png)
 
 其中，$B$ 是传感器上获取的信号，$A$ 是成像过程中的光学调制，$X$ 是物理空间中的信号，$\text{noise}$ 是噪声。
 
-![](img/5c04f9e26ed701e263ba7dce03f862cf_14.png)
 
 ![](img/5c04f9e26ed701e263ba7dce03f862cf_16.png)
 
@@ -38,11 +31,8 @@ $$
 
 ## 计算成像的应用
 
-![](img/5c04f9e26ed701e263ba7dce03f862cf_20.png)
 
-![](img/5c04f9e26ed701e263ba7dce03f862cf_22.png)
 
-![](img/5c04f9e26ed701e263ba7dce03f862cf_24.png)
 
 计算成像的应用领域非常广泛，以下列举一些典型的应用：
 
@@ -68,7 +58,6 @@ $$
 
 本课程将涵盖以下内容：
 
-![](img/5c04f9e26ed701e263ba7dce03f862cf_28.png)
 
 * **成像历史和现状**
 * **计算成像的定义和应用**

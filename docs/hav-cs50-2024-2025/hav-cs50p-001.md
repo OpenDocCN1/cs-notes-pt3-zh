@@ -1,6 +1,5 @@
 # 001：布尔表达式
 
-![](img/7af27a3ffbd98e722ebde863387af091_0.png)
 
 ![](img/7af27a3ffbd98e722ebde863387af091_0.png)
 
@@ -90,7 +89,6 @@ else:
 
 经过测试，程序在所有情况下都运行正确。
 
-![](img/7af27a3ffbd98e722ebde863387af091_2.png)
 
 ![](img/7af27a3ffbd98e722ebde863387af091_2.png)
 

@@ -24,7 +24,6 @@
 
 ---
 
-![](img/782befdaf5e37b3291ea18610247b509_13.png)
 
 ## 应用程序架构 🏗️
 
@@ -47,7 +46,6 @@
 
 ## 主列表页面 (`index.php`) 📄
 
-![](img/782befdaf5e37b3291ea18610247b509_19.png)
 
 现在，让我们深入看看`index.php`文件是如何工作的。它首先包含`pdo.php`来建立数据库连接，并启动会话。然后，它会检查并显示可能存在的闪存消息。
 
@@ -66,7 +64,6 @@ if ( isset($_SESSION['success']) ) {
 
 接着，视图部分会查询数据库并输出一个表格。在表格的“操作”列中，我们为每条记录创建编辑和删除链接，并通过URL参数（GET参数）传递该记录的主键（`user_id`）。
 
-![](img/782befdaf5e37b3291ea18610247b509_21.png)
 
 例如，生成的链接可能如下所示：
 *   `edit.php?user_id=1`
@@ -78,7 +75,6 @@ if ( isset($_SESSION['success']) ) {
 
 ![](img/782befdaf5e37b3291ea18610247b509_24.png)
 
-![](img/782befdaf5e37b3291ea18610247b509_26.png)
 
 ---
 
@@ -101,7 +97,6 @@ if ( isset($_SESSION['success']) ) {
 3.  在会话中设置成功消息：`$_SESSION[‘success’] = ‘Record added’;`。
 4.  使用`header(‘Location: index.php’)`重定向回`index.php`。
 
-![](img/782befdaf5e37b3291ea18610247b509_28.png)
 
 **重要提示**：在重定向之前输出任何内容（如调试语句）会导致错误，因为HTTP头部已经发送。调试信息应写入日志文件。
 
@@ -131,7 +126,6 @@ if ( isset($_SESSION['success']) ) {
     *   如果未找到记录（例如ID无效），则在会话中设置错误闪存消息并重定向回主页。
     *   如果找到记录，则进入视图部分，显示确认删除的表单，其中包含一个隐藏字段`<input type=”hidden” name=”user_id” value=”…”>`，用于再次传递用户ID。
 
-![](img/782befdaf5e37b3291ea18610247b509_41.png)
 
 2.  **提交表单后的POST请求（执行删除）**：
     *   检查POST数据，确认删除操作。
@@ -148,7 +142,6 @@ if ( isset($_SESSION['success']) ) {
 
 ---
 
-![](img/782befdaf5e37b3291ea18610247b509_45.png)
 
 ## 编辑记录功能 (`edit.php`) ✏️
 
@@ -185,7 +178,6 @@ $stmt->execute(array(
 
 在CRUD操作中，正确处理用户数据至关重要，这里总结一下核心策略：
 
-![](img/782befdaf5e37b3291ea18610247b509_54.png)
 
 *   **SQL注入防护**：永远使用预处理语句（Prepared Statements）来构建SQL查询。不要直接拼接用户输入到SQL字符串中。
     *   **正确做法**：`$stmt = $pdo->prepare(‘SQL语句 :placeholder’); $stmt->execute(array(‘:placeholder’ => $user_input));`

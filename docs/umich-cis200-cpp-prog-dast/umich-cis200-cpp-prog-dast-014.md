@@ -14,9 +14,7 @@
 
 ## 模板函数 ✨
 
-![](img/203e680e368e4730d31709dd3b8a58be_2.png)
 
-![](img/203e680e368e4730d31709dd3b8a58be_4.png)
 
 上一节我们概述了模板的概念，本节中我们来看看如何创建和使用模板函数。模板函数允许我们定义一个函数，其参数和返回值的类型可以是通用的。
 
@@ -45,9 +43,7 @@ void printThreeTimes(T value) {
 
 ### 使用示例
 
-![](img/203e680e368e4730d31709dd3b8a58be_14.png)
 
-![](img/203e680e368e4730d31709dd3b8a58be_16.png)
 
 以下是使用该模板函数的几个例子：
 
@@ -75,9 +71,7 @@ printThreeTimes("test");    // T 为 const char*
 为了让自定义类 `SomeClass` 能与 `printThreeTimes` 函数配合使用，我们需要为其重载输出流运算符 `<<`。
 
 
-![](img/203e680e368e4730d31709dd3b8a58be_28.png)
 
-![](img/203e680e368e4730d31709dd3b8a58be_30.png)
 
 ```cpp
 class SomeClass {
@@ -105,11 +99,9 @@ std::ostream& operator<<(std::ostream& os, const SomeClass& obj) {
 
 ### 基本语法
 
-![](img/203e680e368e4730d31709dd3b8a58be_32.png)
 
 创建一个模板类与创建模板函数类似，在类定义前使用 `template` 关键字。
 
-![](img/203e680e368e4730d31709dd3b8a58be_34.png)
 
 ```cpp
 template <typename K, typename V>
@@ -124,9 +116,7 @@ public:
 };
 ```
 
-![](img/203e680e368e4730d31709dd3b8a58be_36.png)
 
-![](img/203e680e368e4730d31709dd3b8a58be_38.png)
 
 在这个 `Association` 类中，我们使用了两个类型参数 `K`（键）和 `V`（值），使其可以存储任意类型的键值对。
 
@@ -150,15 +140,11 @@ std::cout << ver.getKey() << ": " << ver.getValue() << std::endl;
 
 模板类可以拥有多个类型参数，并且这些类型可以不同。这提供了极大的灵活性，使我们能够构建像 `std::map` 这样强大的通用容器。
 
-![](img/203e680e368e4730d31709dd3b8a58be_44.png)
 
-![](img/203e680e368e4730d31709dd3b8a58be_46.png)
 
-![](img/203e680e368e4730d31709dd3b8a58be_48.png)
 
 ---
 
-![](img/203e680e368e4730d31709dd3b8a58be_50.png)
 
 ![](img/203e680e368e4730d31709dd3b8a58be_52.png)
 

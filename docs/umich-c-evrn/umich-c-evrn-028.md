@@ -58,13 +58,10 @@ pylist_del(lst);
 
 现在，我们从列表的使用者转变为构建者。我们的任务是设计数据结构并动态分配所需内存，将实现细节封装在对象内部，这正是面向对象编程的重要思想。
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_12.png)
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_13.png)
 
 以下是实现所需的核心数据结构。
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_15.png)
 
 首先，定义链表中的节点结构 `Lnode_t`：
 ```c
@@ -90,13 +87,10 @@ typedef struct PList {
 
 ## 核心方法实现 ⚙️
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_17.png)
 
 了解了数据结构后，我们来看看如何实现列表的核心操作方法。
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_18.png)
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_19.png)
 
 ### 创建与销毁列表
 
@@ -112,9 +106,7 @@ PList_t *pylist_new(void) {
 ```
 该函数分配 `PList_t` 结构所需的内存（约20字节），并将 `head`、`tail` 初始化为 `NULL`，`count` 初始化为0。
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_21.png)
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_22.png)
 
 `pylist_del` 函数则负责安全地销毁列表并释放所有内存。这比创建要复杂，因为我们需要按正确顺序释放所有嵌套分配的内存。
 
@@ -129,7 +121,6 @@ PList_t *pylist_new(void) {
 
 对于一个包含三个节点（字符串分别为"C"、"is"、"fun"）的列表，释放顺序将是：字符串"C" -> 第一个节点 -> 字符串"is" -> 第二个节点 -> 字符串"fun" -> 第三个节点 -> 列表结构本身。
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_24.png)
 
 ### 实现Python风格的打印输出
 
@@ -145,9 +136,7 @@ PList_t *pylist_new(void) {
 
 **实现提示**： 在C语言中，不要尝试拼接字符串再来输出，因为我们无法预知字符串的长度。更有效的方法是直接使用 `printf` 在循环中逐步输出。记住，`printf` 不会自动添加换行符，除非你明确使用 `\n`。你可以通过组合使用 `printf("[")`、`printf("'%s'", cur->text)`、`printf(", ")` 等语句来实现目标格式。这大约需要10行代码。
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_28.png)
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_29.png)
 
 ### 其他实用方法
 
@@ -175,17 +164,12 @@ printf("%d\n", pylist_index(lst, "Bob"));
 pylist_del(lst);
 ```
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_31.png)
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_32.png)
 
 运行这段代码，其输出将与Python版本高度相似（除了将“Bob not found”替换为索引值 `-1`）。这表明我们已经成功在C语言中构建了一个模拟Python列表行为的对象。
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_33.png)
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_34.png)
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_35.png)
 
 ![](img/cc56c3410e8fbc79ccfde75360d6543a_36.png)
 
@@ -194,7 +178,6 @@ pylist_del(lst);
 **本节课总结**：
 我们一起学习了如何在C语言中模拟实现Python的列表类。我们设计了 `Lnode_t` 和 `PList_t` 数据结构来构建链表，并实现了 `new`、`del`、`append`、`index`、`len` 和 `print` 等核心方法。重点掌握了面向对象封装的思想以及动态内存分配与释放的正确顺序。通过这个练习，你实际上走过了Python创始人Guido van Rossum在构建列表对象时类似的思考路径。
 
-![](img/cc56c3410e8fbc79ccfde75360d6543a_40.png)
 
 ![](img/cc56c3410e8fbc79ccfde75360d6543a_42.png)
 

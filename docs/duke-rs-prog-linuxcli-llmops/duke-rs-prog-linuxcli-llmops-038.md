@@ -1,6 +1,5 @@
 # 038：发布到Python包索引(PyPI) 📦
 
-![](img/38b259beeb7203d1a5b7858db38e9187_0.png)
 
 ![](img/38b259beeb7203d1a5b7858db38e9187_0.png)
 
@@ -38,14 +37,10 @@ twine upload --repository pypi dist/*
 
 登录后，进入你的账户设置。在账户设置页面中，向下滚动直到找到“创建API令牌”的选项。点击创建后，你需要为令牌命名，并选择其作用范围（例如，它可以用于哪些特定的包）。这将帮助你正确地进行上传身份验证。
 
-![](img/38b259beeb7203d1a5b7858db38e9187_2.png)
-![](img/38b259beeb7203d1a5b7858db38e9187_3.png)
 
-![](img/38b259beeb7203d1a5b7858db38e9187_2.png)
 
 ## 测试发布流程
 
-![](img/38b259beeb7203d1a5b7858db38e9187_3.png)
 
 让我们回到我们的项目。如果你想在上传和发布前进行测试，可以使用PyPI提供的测试仓库。命令如下：
 
@@ -59,7 +54,6 @@ twine upload --repository testpypi dist/*
 
 对于全新的包，你需要做的第一件事是注册。`register`子命令的使用方式与`upload`基本相同。你需要提供你的凭证，构建好所有文件，然后运行命令以确保它在Python包索引（PyPI）中正确注册。
 
-![](img/38b259beeb7203d1a5b7858db38e9187_5.png)
 
 ## 总结
 

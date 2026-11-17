@@ -1,6 +1,5 @@
 # 025：Altera大型FPGA 🚀
 
-![](img/6dc7fa556e1fe1a778d1a84b7268afee_1.png)
 
 在本节课中，我们将继续学习现代可编程逻辑器件，重点介绍Altera公司的大型FPGA系列，包括Arria 5、Stratix 5、Arria 10和Stratix 10。
 
@@ -37,7 +36,6 @@ Arria 5采用可重编程的SRAM配置和布线，因此上电时需要外部非
 
 Altera Stratix 5同样采用可重编程的SRAM配置和布线，需要外部非易失性配置存储器。上电时，配置信息被传输到内部SRAM。
 
-![](img/6dc7fa556e1fe1a778d1a84b7268afee_3.png)
 
 以下是Stratix 5的关键规格：
 *   **逻辑单元**：最多可达950，000个，大约是Arria 5的两倍。
@@ -76,7 +74,6 @@ Altera Arria 10采用可重编程的SRAM配置和布线，需要外部非易失�
     *   10千兆以太网接口
     *   外部存储器接口（最高支持DDR4-2666）
 
-![](img/6dc7fa556e1fe1a778d1a84b7268afee_5.png)
 
 这是Arria 10 ALM的示意图，它与Cyclone 5的ALM相同，由一个8输入自适应LUT（通常配置为两个6输入LUT）驱动四个触发器寄存器构成。
 
@@ -88,7 +85,6 @@ Altera Arria 10采用可重编程的SRAM配置和布线，需要外部非易失�
 
 Altera Stratix 10采用可重编程的SRAM配置和布线，需要外部非易失性配置存储器。上电时，配置信息被传输到内部SRAM。
 
-![](img/6dc7fa556e1fe1a778d1a84b7268afee_7.png)
 
 以下是Stratix 10的关键规格：
 *   **逻辑单元**：超过550万个，是Arria 10的五倍。
@@ -133,6 +129,5 @@ Altera Stratix 10采用可重编程的SRAM配置和布线，需要外部非易�
 *   **Stratix 10**是当时正在生产的最大、最快的FPGA，拥有超过550万个逻辑单元，内核时钟速度高达1100 MHz。
 *   Altera的**HyperFlex架构**是一项革命性的变革，将在同等功耗水平下将FPGA性能进一步提高一倍。
 
-![](img/6dc7fa556e1fe1a778d1a84b7268afee_9.png)
 
 ![](img/6dc7fa556e1fe1a778d1a84b7268afee_9.png)

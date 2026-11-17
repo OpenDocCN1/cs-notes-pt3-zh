@@ -120,13 +120,10 @@ WHERE grade = 'B';
 
 ### 综合查询示例
 
-![](img/24ed62c7a76378ee38aaad7b42d3dc05_1.png)
 
 让我们运用以上操作符，构建一个查询：“找出预订了BID为101的船只的所有水手的姓名”。
 
-![](img/24ed62c7a76378ee38aaad7b42d3dc05_3.png)
 
-![](img/24ed62c7a76378ee38aaad7b42d3dc05_5.png)
 
 **思路分析**：
 1.  首先，我们需要所有水手的信息。水手数据可能分布在多个实例（如`S1`和`S2`）中，因此第一步是取并集：`Sailors_All = S1 ∪ S2`。
@@ -138,12 +135,10 @@ WHERE grade = 'B';
 **整合的关系代数表达式**：
 `π_(sname) ( σ_(bid=101) ( σ_(Sailors_All.sid = Reserves.sid) ( (S1 ∪ S2) × Reserves ) ) )`
 
-![](img/24ed62c7a76378ee38aaad7b42d3dc05_7.png)
 
 为了优化，可以将对`bid`的选择条件提前，以减少中间结果的规模：
 `π_(sname) ( σ_(Sailors_All.sid = Reserves.sid ∧ bid=101) ( (S1 ∪ S2) × Reserves ) )`
 
-![](img/24ed62c7a76378ee38aaad7b42d3dc05_9.png)
 
 ![](img/24ed62c7a76378ee38aaad7b42d3dc05_11.png)
 

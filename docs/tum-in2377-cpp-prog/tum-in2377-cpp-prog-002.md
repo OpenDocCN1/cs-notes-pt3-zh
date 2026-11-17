@@ -87,19 +87,12 @@ int result = (2 + 3) * 4; // 使用括号明确优先级
 *   `for`/`while`/`do-while`：循环。
 *   现代 `for` 循环：基于范围的循环。
 
-![](img/a2acd4a775599a35ad33423654a66b47_1.png)
 
-![](img/a2acd4a775599a35ad33423654a66b47_3.png)
 
-![](img/a2acd4a775599a35ad33423654a66b47_5.png)
 
-![](img/a2acd4a775599a35ad33423654a66b47_7.png)
 
-![](img/a2acd4a775599a35ad33423654a66b47_9.png)
 
-![](img/a2acd4a775599a35ad33423654a66b47_11.png)
 
-![](img/a2acd4a775599a35ad33423654a66b47_13.png)
 
 使用 `if` 和 `switch` 时，可以包含一个可选的初始化语句。
 

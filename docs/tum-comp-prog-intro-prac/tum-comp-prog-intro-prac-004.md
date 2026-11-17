@@ -167,7 +167,6 @@ Artemis完全支持这种交互式学习。你的辅导小组将进一步深化�
 
 本课程有三种练习类型，可以通过Artemis上练习名称的首字母快速识别：
 
-![](img/c8f9e9a7fadbea3d218a7c9c869fed52_27.png)
 
 ![](img/c8f9e9a7fadbea3d218a7c9c869fed52_28.png)
 

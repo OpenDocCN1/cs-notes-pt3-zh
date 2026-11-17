@@ -171,7 +171,6 @@ world_position = model_to_world_matrix * final_position;
 
 掌握这些基础概念和原理，是理解更复杂的动画混合、IK、状态机等技术的前提。在下节课中，我们将基于这些基础，继续探索现代游戏引擎中的高级动画系统。
 
-![](img/5d172ff50b31df98be3b7f86798e8f24_2.png)
 
 ![](img/5d172ff50b31df98be3b7f86798e8f24_3.png)
 

@@ -83,7 +83,6 @@
 
 ![](img/e9fa6a78fc0dfcc555fbc0f72162cad5_6.png)
 
-![](img/e9fa6a78fc0dfcc555fbc0f72162cad5_8.png)
 
 ![](img/e9fa6a78fc0dfcc555fbc0f72162cad5_9.png)
 

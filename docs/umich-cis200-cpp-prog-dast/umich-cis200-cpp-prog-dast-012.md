@@ -4,9 +4,7 @@
 
 在本节课中，我们将学习面向对象编程中的继承概念，并深入探讨如何为代码编写单元测试。我们将通过一个具体的例子来实践测试驱动开发，并了解如何利用现代工具自动化测试过程。
 
-![](img/99b805e078af23e749c8dc0d4f3e22e3_2.png)
 
-![](img/99b805e078af23e749c8dc0d4f3e22e3_4.png)
 
 ---
 
@@ -38,7 +36,6 @@
 
 以下是测试 `getWinnings` 函数的一个示例：
 
-![](img/99b805e078af23e749c8dc0d4f3e22e3_6.png)
 
 ```cpp
 TEST_METHOD(GetWinnings_Jackpot)
@@ -58,7 +55,6 @@ TEST_METHOD(GetWinnings_Jackpot)
 }
 ```
 
-![](img/99b805e078af23e749c8dc0d4f3e22e3_8.png)
 
 通过运行测试，我们可以得到一个清晰的通过或失败指示。如果测试失败，工具会显示预期值和实际值，帮助我们快速定位问题。
 
@@ -80,13 +76,11 @@ TEST_METHOD(GetWinnings_Jackpot)
 
 ---
 
-![](img/99b805e078af23e749c8dc0d4f3e22e3_10.png)
 
 ![](img/99b805e078af23e749c8dc0d4f3e22e3_12.png)
 
 ## 代码覆盖率
 
-![](img/99b805e078af23e749c8dc0d4f3e22e3_14.png)
 
 代码覆盖率是衡量测试完整性的一个指标，它表示有多少比例的源代码被测试执行过。理想目标是达到100%的覆盖率，这意味着每一行代码都至少被一个测试用例执行过。
 
@@ -179,9 +173,7 @@ bool operator<(const Chair& lhs, const Chair& rhs) {
 
 ---
 
-![](img/99b805e078af23e749c8dc0d4f3e22e3_58.png)
 
-![](img/99b805e078af23e749c8dc0d4f3e22e3_60.png)
 
 ## 总结
 
@@ -195,9 +187,7 @@ bool operator<(const Chair& lhs, const Chair& rhs) {
 
 此外，我们介绍了运算符重载，它允许我们为自定义类型定义直观的运算符行为，从而提升代码的可读性和易用性。
 
-![](img/99b805e078af23e749c8dc0d4f3e22e3_66.png)
 
-![](img/99b805e078af23e749c8dc0d4f3e22e3_68.png)
 
 ![](img/99b805e078af23e749c8dc0d4f3e22e3_70.png)
 

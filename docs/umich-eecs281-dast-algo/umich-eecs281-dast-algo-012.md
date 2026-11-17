@@ -1,54 +1,32 @@
 # 012：字符串与序列 🧵
 
-![](img/56a6f95de5e72dd835005dc9960b8379_1.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_3.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_5.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_6.png)
 
 在本节课中，我们将学习字符串和序列的基本概念、相关算法及其应用。我们将从字符串的定义开始，探讨如何比较字符串，最后介绍一种高效的字符串搜索算法。
 
-![](img/56a6f95de5e72dd835005dc9960b8379_8.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_9.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_10.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_11.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_12.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_13.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_15.png)
 
 ---
 
-![](img/56a6f95de5e72dd835005dc9960b8379_17.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_18.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_19.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_20.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_22.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_23.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_24.png)
 
 ## 什么是字符串？🔤
 
-![](img/56a6f95de5e72dd835005dc9960b8379_26.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_27.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_28.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_29.png)
 
 字符串是由零个或多个字符组成的序列，其中每个字符都来自一个有限的字母表。例如，英语句子就是字符串，因为它们由26个字母（大写和小写）、标点符号和空格组成。
 
@@ -88,33 +66,21 @@
 
 C++字符串支持迭代器，`begin()` 指向第一个有效字符，`end()` 指向字符串末尾之后的位置。标准模板库（STL）提供了丰富的算法来处理字符串和序列。
 
-![](img/56a6f95de5e72dd835005dc9960b8379_31.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_33.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_35.png)
 
 ---
 
-![](img/56a6f95de5e72dd835005dc9960b8379_37.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_39.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_40.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_42.png)
 
 ## 判断序列是否相等 ⚖️
 
-![](img/56a6f95de5e72dd835005dc9960b8379_44.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_45.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_46.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_48.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_50.png)
 
 STL提供了 `std::equal` 算法来判断两个序列是否相等。它的函数原型大致如下：
 ```cpp
@@ -123,15 +89,10 @@ bool equal (InputIterator1 first1, InputIterator1 last1, InputIterator2 first2);
 ```
 该算法比较由 `[first1, last1)` 定义的第一个序列和从 `first2` 开始的第二个序列。它假设第二个序列至少与第一个序列一样长。
 
-![](img/56a6f95de5e72dd835005dc9960b8379_52.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_54.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_55.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_56.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_57.png)
 
 算法逐个比较元素。如果所有对应元素都相等，则返回 `true`；如果在任何位置发现不匹配，则立即返回 `false`。
 
@@ -189,45 +150,29 @@ bool is_palindrome(const std::string& s) {
 *   对于不等比较，如果两个字符串长度不同，可以直接判断为不相等，这是一个快速的短路优化。
 *   现代CPU支持单指令多数据（SIMD）操作，可以并行比较多个字符，极大提升性能。
 
-![](img/56a6f95de5e72dd835005dc9960b8379_59.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_60.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_61.png)
 
 STL提供了 `std::lexicographical_compare` 算法来执行字典序比较，它也允许自定义比较函数和执行策略（用于并行化）。
 
-![](img/56a6f95de5e72dd835005dc9960b8379_63.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_65.png)
 
 ---
 
-![](img/56a6f95de5e72dd835005dc9960b8379_67.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_68.png)
 
 ### 应用示例：获取唯一字符串列表 🗃️
 
-![](img/56a6f95de5e72dd835005dc9960b8379_70.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_71.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_72.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_73.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_74.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_75.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_77.png)
 
 假设我们有一个包含重复字符串的列表，想要获取唯一的字符串列表。可以结合排序和 `std::unique` 算法实现：
 
-![](img/56a6f95de5e72dd835005dc9960b8379_79.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_80.png)
 
 ```cpp
 std::vector<std::string> names = // ... 可能包含重复项
@@ -237,21 +182,13 @@ names.erase(last, names.end());
 ```
 首先对字符串排序，使相同的字符串相邻。然后 `std::unique` 将重复项移到范围末尾，并返回指向唯一范围末尾的迭代器，最后删除重复项。
 
-![](img/56a6f95de5e72dd835005dc9960b8379_82.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_83.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_84.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_85.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_86.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_87.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_88.png)
 
-![](img/56a6f95de5e72dd835005dc9960b8379_89.png)
 
 ---
 

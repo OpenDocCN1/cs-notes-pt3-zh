@@ -6,7 +6,6 @@
 
 ## 概述：视图与安全责任
 
-![](img/64119f0f9e9e405ab16ed9f27fcd8ff6_1.png)
 
 作为Web应用开发者，我们有责任创建安全的应用程序。因此，我们需要关注那些表面上看似无害，实则可能引发安全问题的代码。关键在于，我们需要理解用户数据如何被处理并最终呈现在浏览器中。
 
@@ -29,9 +28,7 @@ response = f"<p>Your guess was {guess}</p>"
 
 更严重的是，这可能导致**跨站脚本攻击**。攻击者可以将一段恶意代码存入你的系统，当其他用户查看这些数据时，他们的浏览器就会执行这段代码。这段代码可以窃取用户的Cookie、调用恶意Web服务，甚至执行如修改成绩等破坏性操作。
 
-![](img/64119f0f9e9e405ab16ed9f27fcd8ff6_5.png)
 
-![](img/64119f0f9e9e405ab16ed9f27fcd8ff6_6.png)
 
 以下是一个危险的视图代码示例，它直接拼接了用户输入：
 ```python
@@ -43,7 +40,6 @@ def bad_view(request):
 ```
 如果用户提交 `guess` 的值为 `<b>test</b>`，这段HTML会被浏览器解析，从而显示为加粗的文本。如果提交的是 `<script>alert('owned')</script>`，那么JavaScript代码将会被执行。
 
-![](img/64119f0f9e9e405ab16ed9f27fcd8ff6_8.png)
 
 ## 解决方案：HTML转义
 
@@ -74,7 +70,6 @@ def safe_view(request):
 
 在 `urls.py` 中，我们可以这样定义路径：
 
-![](img/64119f0f9e9e405ab16ed9f27fcd8ff6_12.png)
 
 ```python
 from django.urls import path
@@ -100,7 +95,6 @@ def game(request, guess):  # guess 参数由Django自动从URL中提取并传入
 
 ![](img/64119f0f9e9e405ab16ed9f27fcd8ff6_14.png)
 
-![](img/64119f0f9e9e405ab16ed9f27fcd8ff6_15.png)
 
 以下是一个简单的类视图示例，用于处理GET请求：
 ```python
@@ -134,7 +128,6 @@ urlpatterns = [
 ]
 ```
 
-![](img/64119f0f9e9e405ab16ed9f27fcd8ff6_17.png)
 
 ## 使用重定向响应
 

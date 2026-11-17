@@ -14,51 +14,35 @@
 
 现在，我们打开终端模拟器，已经登录到armlab服务器，准备在shell中运行命令。
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_1.png)
 
 shell提示符本身就能提供一些信息。它通常显示机器名和当前目录。例如，`~` 符号是用户家目录的快捷方式。
 
 以下是获取系统信息的基本命令：
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_3.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_5.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_7.png)
 
 *   **`hostname`**：显示完整的机器主机名。请注意，Linux命令是**大小写敏感**的。
 *   **`whoami`**：显示当前登录的用户名。
 *   **`pwd`**：打印当前工作目录的完整路径。`pwd` 代表 **print working directory**。
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_9.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_11.png)
 
 ## 目录操作
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_13.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_15.png)
 
 Linux文件系统是一个树形结构，根目录是 `/`，子目录用斜杠分隔。
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_17.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_18.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_20.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_22.png)
 
 以下是操作目录的核心命令：
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_24.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_25.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_27.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_29.png)
 
 *   **`ls`**：列出目录内容。`ls` 代表 **list**。
     *   不加参数时，列出当前目录。
@@ -71,33 +55,23 @@ Linux文件系统是一个树形结构，根目录是 `/`，子目录用斜杠�
     *   `.` 代表当前目录。
     *   `..` 代表父目录。
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_31.png)
 
 **Tab键自动补全**是你的好帮手。输入命令或路径的前几个字母后按Tab键，系统会尝试补全。如果按两次Tab，则会列出所有可能的选项。
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_33.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_35.png)
 
 ## 创建与删除目录
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_37.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_39.png)
 
 上一节我们学会了如何查看和切换目录，本节中我们来看看如何创建和删除它们。
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_41.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_43.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_45.png)
 
 以下是管理目录的命令：
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_47.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_49.png)
 
 *   **`mkdir`**：创建新目录。`mkdir` 代表 **make directory**。
     *   `mkdir dirname`：创建单个目录。
@@ -106,9 +80,7 @@ Linux文件系统是一个树形结构，根目录是 `/`，子目录用斜杠�
     *   `rmdir dirname`：只能删除空目录，这是一种安全保护。
     *   同样可以使用 `-p` 选项删除一串空目录，例如 `rmdir -p parent/child`。
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_51.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_52.png)
 
 如果命令执行出错，可以查看帮助：
 *   `命令 --help`：例如 `mkdir --help`，会显示用法信息。
@@ -116,31 +88,20 @@ Linux文件系统是一个树形结构，根目录是 `/`，子目录用斜杠�
 
 ## 文件操作
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_54.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_56.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_58.png)
 
 现在我们已经有了一个目录，接下来看看如何操作文件。
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_60.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_62.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_64.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_66.png)
 
 以下是文件操作的基础命令：
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_68.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_69.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_71.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_73.png)
 
 *   **`cp`**：复制文件。`cp` 代表 **copy**。
     *   `cp source destination`：将源文件复制到目标位置。
@@ -152,29 +113,21 @@ Linux文件系统是一个树形结构，根目录是 `/`，子目录用斜杠�
     *   `rm filename`：默认会询问是否确认删除。
     *   使用 `rm -f filename` 可以强制删除而不询问（`-f` 代表 **force**）。
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_75.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_77.png)
 
 **注意**：在默认安全设置下，`cp` 和 `mv` 在覆盖已存在文件时也会询问确认。
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_79.png)
 
 ## 查看文件内容
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_81.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_83.png)
 
 创建了文件后，我们自然需要查看它们的内容。
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_85.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_86.png)
 
 以下是查看文件内容的常用命令：
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_88.png)
 
 *   **`cat`**：将整个文件内容打印到终端。`cat` 代表 **concatenate**。
     *   `cat filename`
@@ -192,39 +145,25 @@ Linux文件系统是一个树形结构，根目录是 `/`，子目录用斜杠�
     *   `wc filename`
     *   `wc -l filename`：只统计行数。
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_90.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_92.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_94.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_96.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_97.png)
 
 ## 输入输出重定向与管道
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_99.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_101.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_103.png)
 
 命令行强大的功能之一是将命令串联起来。你已经在CS126中接触过管道和重定向。
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_105.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_107.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_109.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_111.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_112.png)
 
 以下是核心概念和操作：
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_114.png)
 
 *   **输出重定向 `>`**：将命令的输出写入文件，而不是显示在终端。
     *   `cat file1 > file2`：将 `file1` 的内容覆盖写入 `file2`。
@@ -236,36 +175,26 @@ Linux文件系统是一个树形结构，根目录是 `/`，子目录用斜杠�
     *   `touch newfile`：如果文件不存在则创建空文件；如果存在则更新其修改时间。
     *   `> newfile`：一个常用技巧，通过重定向一个空命令（或无输出）来创建空文件。
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_116.png)
 
 **注意**：像 `cat`、`wc` 这样的命令，如果不给文件名参数，它们会等待从“标准输入”读取数据。你可以直接输入内容，然后按 `Ctrl+D` 发送EOF（End-Of-File）信号来结束输入。
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_118.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_120.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_122.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_124.png)
 
 ## 文件详细信息与权限
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_126.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_127.png)
 
 使用 `ls -l` 命令可以查看文件的详细信息。
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_129.png)
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_131.png)
 
 ```
 -rw-r--r-- 1 cmeredit users 1988 Aug 25 10:30 bashrc
 drwxr-xr-x 2 cmeredit users 4096 Aug 25 10:35 filetest
 ```
 
-![](img/f058e9e345e76f5c3c704b5304fd26b1_133.png)
 
 ![](img/f058e9e345e76f5c3c704b5304fd26b1_135.png)
 

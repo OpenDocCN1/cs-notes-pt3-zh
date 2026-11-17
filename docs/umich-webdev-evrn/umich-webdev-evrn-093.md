@@ -19,9 +19,7 @@
 以下是实现无Cookie会话的核心代码片段。其基本思路是，将会话标识符（Session ID）通过URL参数（对于GET请求）或表单隐藏字段（对于POST请求）在页面间传递，而不是存储在Cookie中。
 
 
-![](img/5a157cb1e9db681f0958a5c7c33331ac_5.png)
 
-![](img/5a157cb1e9db681f0958a5c7c33331ac_6.png)
 
 ```php
 // 关键配置：禁用Cookie用于会话，并启用URL重写

@@ -1,6 +1,5 @@
 # 021：模块1总结
 
-![](img/fd4100a65006f73edfa91c3bd010da0a_0.png)
 
 ![](img/fd4100a65006f73edfa91c3bd010da0a_0.png)
 

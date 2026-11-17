@@ -1,8 +1,6 @@
 # 056： Django中的CSRF支持 🛡️
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_1.png)
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_2.png)
 
 在本节课中，我们将学习如何在Django中实现CSRF（跨站请求伪造）保护。我们将了解为什么需要它，如果不处理它会怎样，以及如何通过手动和自动两种方式在表单中正确添加CSRF令牌。
 
@@ -16,7 +14,6 @@
 
 ---
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_6.png)
 
 ## 未启用CSRF保护的表单
 
@@ -24,7 +21,6 @@
 
 ![](img/a8a0f7d99052164338cfe898a6e75d86_8.png)
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_9.png)
 
 
 ![](img/a8a0f7d99052164338cfe898a6e75d86_11.png)
@@ -44,7 +40,6 @@ def my_first_form(request):
 
 ## 手动添加CSRF令牌
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_13.png)
 
 为了让表单正常工作，我们需要在发出的POST请求中包含CSRF令牌。以下是一种手动添加令牌的低级方法：
 
@@ -52,14 +47,11 @@ def my_first_form(request):
 2.  从Django的 `csrf` 模块获取当前请求的令牌。
 3.  将这个令牌值填入隐藏字段。
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_15.png)
 
 以下是实现代码：
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_17.png)
 
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_18.png)
 
 ```python
 from django.middleware.csrf import get_token
@@ -86,7 +78,6 @@ Django的中间件会在请求到达视图之前验证这个令牌。**只有验
 
 ---
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_20.png)
 
 ![](img/a8a0f7d99052164338cfe898a6e75d86_21.png)
 
@@ -173,7 +164,6 @@ class GuessingGameView(View):
 
 ![](img/a8a0f7d99052164338cfe898a6e75d86_30.png)
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_31.png)
 
 ```html
 <h1>猜数字游戏</h1>
@@ -190,7 +180,6 @@ class GuessingGameView(View):
 
 ### 工作流程解析
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_33.png)
 
 1.  **GET请求**：用户首次访问页面时，触发 `get()` 方法，渲染一个带有空表单和CSRF令牌的页面。
 2.  **用户交互**：用户在表单中输入数字（例如42）并点击提交。
@@ -203,11 +192,8 @@ class GuessingGameView(View):
 
 ---
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_35.png)
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_36.png)
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_38.png)
 
 ## 总结
 
@@ -221,9 +207,7 @@ class GuessingGameView(View):
 
 通过构建一个猜数游戏示例，我们实践了如何在一个功能完整的视图中集成CSRF保护、处理用户输入并给出反馈。
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_40.png)
 
-![](img/a8a0f7d99052164338cfe898a6e75d86_41.png)
 
 ![](img/a8a0f7d99052164338cfe898a6e75d86_42.png)
 

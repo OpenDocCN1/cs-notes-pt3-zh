@@ -80,7 +80,6 @@ b contains 4 at address 0x0061FF18
 接下来，我们创建一个整数数组，并观察其在内存中的布局。
 
 
-![](img/88960f0f92259fe66d7c97d5819c0fe3_16.png)
 
 ![](img/88960f0f92259fe66d7c97d5819c0fe3_17.png)
 

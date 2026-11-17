@@ -120,7 +120,6 @@ NameError： name ‘HttpsResponse’ is not defined
 1.  **对于应用无法启动（“Something went wrong”）**：使用Bash控制台，进入项目目录，运行 `python manage.py check` 命令来定位启动过程中的代码错误。
 2.  **对于运行时错误（黄色Traceback页面）**：仔细阅读Traceback信息，从底部开始找到你的代码文件及出错行，根据错误描述进行修复。善用编辑器的实时错误提示功能。
 
-![](img/a8c8e3c8be26e055827836989a4e7971_17.png)
 
 ![](img/a8c8e3c8be26e055827836989a4e7971_18.png)
 

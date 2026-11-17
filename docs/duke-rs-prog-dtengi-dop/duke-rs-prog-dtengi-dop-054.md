@@ -62,7 +62,6 @@ from sklearn.datasets import load_iris
 
 ---
 
-![](img/cc72e72c0e254c6fdb9b315786fbe125_13.png)
 
 ![](img/cc72e72c0e254c6fdb9b315786fbe125_14.png)
 

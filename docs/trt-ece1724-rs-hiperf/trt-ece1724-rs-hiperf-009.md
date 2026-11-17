@@ -232,7 +232,6 @@ let f = match f {
 
 假设我们有一个从文件中读取用户名的函数：
 
-![](img/e95802b4e94c378792c74e96d48941f5_5.png)
 
 ```rust
 use std::fs::File;

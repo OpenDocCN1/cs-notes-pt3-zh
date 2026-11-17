@@ -1,6 +1,5 @@
 # 008：在线算法 🧠
 
-![](img/4a1f349c69b2d74abf54f294f3ed3072_0.png)
 
 ![](img/4a1f349c69b2d74abf54f294f3ed3072_2.png)
 

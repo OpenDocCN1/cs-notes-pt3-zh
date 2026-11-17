@@ -11687,25 +11687,21 @@ sbrk
 ```
 p1 = malloc(4*sizeof(long))
 
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_985_0.png)
 
 ```
 ```
 p2 = malloc(5*sizeof(long))
 
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_985_1.png)
 
 ```
 ```
 p3 = malloc(6*sizeof(long))
 
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_985_2.png)
 
 ```
 ```
 free(p2)
 
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_985_3.png)
 
 ```
 ```
@@ -12645,7 +12641,6 @@ Complete read of red
 
 ![](img/b3f8b91675c485f1e811aa092ebbf3d4_1094_0.png)
 
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_1094_1.png)
 
 ![](img/b3f8b91675c485f1e811aa092ebbf3d4_1094_2.png)
 
@@ -12932,7 +12927,6 @@ DRAM、磁盘与 CPU 速度之间的差距在扩大。
   - 空间局部性
     - 地址相近的项目倾向于在时间上接近被引用
 
-![](img/b3f8b91675c485f1e811aa092ebbf3d4_1117_0.png)
 
 ![](img/b3f8b91675c485f1e811aa092ebbf3d4_1117_1.png)
 

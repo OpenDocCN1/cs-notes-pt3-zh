@@ -59,7 +59,6 @@ GET /page1.htm HTTP/1.0
 
 ![](img/5b4f3ef3a7e90f441636c78dee8ca15e_16.png)
 
-![](img/5b4f3ef3a7e90f441636c78dee8ca15e_17.png)
 
 1.  在浏览器中打开任意网页（例如 `www.drchuck.com`）。
 2.  打开开发者工具（通常通过右键点击页面并选择“检查”，或按F12键）。
@@ -68,7 +67,6 @@ GET /page1.htm HTTP/1.0
 
 通过开发者工具，你可以看到：
 
-![](img/5b4f3ef3a7e90f441636c78dee8ca15e_19.png)
 
 *   每个请求的详细信息（方法、URL、状态码）。
 *   请求头和响应头的内容。

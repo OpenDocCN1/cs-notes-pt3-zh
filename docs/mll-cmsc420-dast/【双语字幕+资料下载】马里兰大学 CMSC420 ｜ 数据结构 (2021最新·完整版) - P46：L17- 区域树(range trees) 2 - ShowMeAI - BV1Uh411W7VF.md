@@ -2,7 +2,6 @@
 
 ![](img/f243bd974521af0d404beb9b70df63aa_0.png)
 
-![](img/f243bd974521af0d404beb9b70df63aa_1.png)
 
 in this segment we're going to continue，our discussion of range trees。
 

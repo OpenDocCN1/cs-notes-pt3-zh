@@ -176,15 +176,10 @@ print(raleigh_weather.forecast[0].day)
 json_again = raleigh_weather.model_dump_json()
 ```
 
-![](img/f66cb5b4f467332cfda0602a91f30edc_4.png)
 
-![](img/f66cb5b4f467332cfda0602a91f30edc_5.png)
 
-![](img/f66cb5b4f467332cfda0602a91f30edc_6.png)
 
-![](img/f66cb5b4f467332cfda0602a91f30edc_8.png)
 
-![](img/f66cb5b4f467332cfda0602a91f30edc_9.png)
 
 ---
 

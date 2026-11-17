@@ -35,7 +35,6 @@ def my_view(request):
 
 ![](img/5ee9f9d6f7c269e1788997336852b116_7.png)
 
-![](img/5ee9f9d6f7c269e1788997336852b116_8.png)
 
 模板系统解决了这些问题，让我们能够专注于HTML结构本身。
 
@@ -52,7 +51,6 @@ def my_view(request):
 
 ![](img/5ee9f9d6f7c269e1788997336852b116_10.png)
 
-![](img/5ee9f9d6f7c269e1788997336852b116_11.png)
 
 ---
 
@@ -63,7 +61,6 @@ def my_view(request):
 以下是视图代码（`views.py`）：
 
 
-![](img/5ee9f9d6f7c269e1788997336852b116_13.png)
 
 ```python
 from django.shortcuts import render

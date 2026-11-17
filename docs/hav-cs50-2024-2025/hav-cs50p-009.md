@@ -6,19 +6,13 @@
 
 ---
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_2.png)
 
 ## 概述
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_3.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_4.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_5.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_6.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_7.png)
 
 在之前的课程中，我们学习了如何定义类和实例变量，以创建对象的模板并存储其属性。本节我们将探讨**实例方法**，它允许我们将功能（而不仅仅是数据）封装到类中。我们将学习如何定义和使用它们，包括一个名为 `__str__` 的特殊方法。
 
@@ -26,7 +20,6 @@
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_9.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_10.png)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_11.png)
 
@@ -36,16 +29,12 @@
 
 首先，让我们回顾一下如何定义一个简单的类并创建其实例。我们以一个表示“包裹”的类为例。
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_13.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_14.png)
 
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_15.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_16.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_17.png)
 
 ```python
 class Package:
@@ -64,11 +53,9 @@ for package in packages:
     print(f"Package {package.number}: {package.sender} to {package.recipient}, {package.weight}kg")
 ```
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_19.png)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_20.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_21.png)
 
 在上面的代码中，`Package` 类是一个模板，`package1` 和 `package2` 是它的两个实例。我们通过点符号（如 `package.number`）访问每个实例的变量。
 
@@ -76,11 +63,8 @@ for package in packages:
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_23.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_24.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_25.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_26.png)
 
 ## 引入实例方法
 
@@ -90,17 +74,13 @@ for package in packages:
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_28.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_29.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_30.png)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_31.png)
 
 ---
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_32.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_33.png)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_34.png)
 
@@ -110,11 +90,9 @@ for package in packages:
 
 目前，如果我们直接打印一个 `Package` 实例，输出并不直观：
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_36.png)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_37.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_38.png)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_39.png)
 
@@ -125,7 +103,6 @@ print(package1)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_40.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_41.png)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_42.png)
 
@@ -139,21 +116,16 @@ print(package1)
 
 以下是定义 `__str__` 方法的步骤：
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_48.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_49.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_51.png)
 
 1.  在类内部定义一个名为 `__str__` 的方法。
 2.  该方法必须接受 `self` 作为参数。
 3.  返回一个格式化的字符串。
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_53.png)
 
 让我们修改 `Package` 类：
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_55.png)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_57.png)
 
@@ -178,11 +150,8 @@ print(package1)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_59.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_60.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_61.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_62.png)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_63.png)
 
@@ -192,7 +161,6 @@ print(package1)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_65.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_66.png)
 
 ## 定义自定义实例方法
 
@@ -202,13 +170,9 @@ print(package1)
 
 以下是定义自定义实例方法 `calculate_cost` 的步骤：
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_68.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_69.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_70.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_71.png)
 
 1.  在类内部定义一个方法（例如 `calculate_cost`）。
 2.  第一个参数是 `self`。
@@ -216,17 +180,14 @@ print(package1)
 4.  在方法体内，使用 `self` 访问实例变量并执行计算。
 5.  使用 `return` 语句返回结果。
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_72.png)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_73.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_74.png)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_75.png)
 
 让我们在 `Package` 类中添加这个方法：
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_77.png)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_78.png)
 
@@ -260,9 +221,7 @@ print(f"{package1} costs ${shipping_cost} to ship.")
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_83.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_84.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_85.png)
 
 ---
 
@@ -270,18 +229,13 @@ print(f"{package1} costs ${shipping_cost} to ship.")
 
 现在，让我们将所学内容结合起来，创建一个完整的示例程序。
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_87.png)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_88.png)
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_89.png)
-
-![](img/2749873fe240ad6c6aff3cb9929078a9_90.png)
-
-![](img/2749873fe240ad6c6aff3cb9929078a9_91.png)
 
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_93.png)
+
+
 
 ```python
 class Package:
@@ -318,7 +272,6 @@ Package 2: Charlie to David, 5kg costs $10 to ship.
 
 ---
 
-![](img/2749873fe240ad6c6aff3cb9929078a9_95.png)
 
 ![](img/2749873fe240ad6c6aff3cb9929078a9_96.png)
 

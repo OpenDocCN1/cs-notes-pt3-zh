@@ -1,22 +1,17 @@
 # 083：梯度下降法推导 🧮
 
-![](img/6ee1191a30fccc0ebbdf3dbd2a86a1ec_1.png)
 
 在本节课中，我们将学习如何推导梯度下降算法。我们将从一个最小化问题出发，通过数学分析，最终得到梯度下降的显式迭代公式。
 
 上一节我们介绍了通过局部线性近似来逼近函数最小值的思想。本节中我们来看看如何具体求解这个近似问题，并得到梯度下降法的核心公式。
 
-![](img/6ee1191a30fccc0ebbdf3dbd2a86a1ec_3.png)
 
-![](img/6ee1191a30fccc0ebbdf3dbd2a86a1ec_4.png)
 
-![](img/6ee1191a30fccc0ebbdf3dbd2a86a1ec_5.png)
 
 ## 问题定义与近似
 
 我们需要解决以下最小化问题，以得到迭代解 \( X_{k+1} \)：
 
-![](img/6ee1191a30fccc0ebbdf3dbd2a86a1ec_7.png)
 
 \[
 X_{k+1} = \arg\min_{x} \left[ f(X_k) + \langle \nabla f(X_k), x - X_k \rangle \right]
@@ -31,7 +26,6 @@ X_{k+1} = \arg\min_{x} \left[ f(X_k) + \langle \nabla f(X_k), x - X_k \rangle \r
 
 为了求解星号问题，我们回到其定义。由于 \( f(X_k) \) 是一个常数，最小化原目标函数等价于最小化内积项，约束条件不变：
 
-![](img/6ee1191a30fccc0ebbdf3dbd2a86a1ec_9.png)
 
 \[
 \min_{x} \langle \nabla f(X_k), x - X_k \rangle
@@ -40,7 +34,6 @@ X_{k+1} = \arg\min_{x} \left[ f(X_k) + \langle \nabla f(X_k), x - X_k \rangle \r
 \text{s.t. } \| x - X_k \| \leq \alpha_k
 \]
 
-![](img/6ee1191a30fccc0ebbdf3dbd2a86a1ec_11.png)
 
 对于这个最小化问题，我们可以通过柯西-施瓦茨不等式来分析其下界。
 
@@ -63,27 +56,22 @@ X_{k+1} = \arg\min_{x} \left[ f(X_k) + \langle \nabla f(X_k), x - X_k \rangle \r
 
 以下是两个不等式取等号的条件：
 
-![](img/6ee1191a30fccc0ebbdf3dbd2a86a1ec_13.png)
 
 *   **第一个不等式（柯西-施瓦茨不等式）取等号**：当向量 \( x - X_k \) 与梯度 \( \nabla f(X_k) \) 方向相反时成立。即存在一个正数 \( c \)，使得：
     \[
     x - X_k = -c \nabla f(X_k)
     \]
 
-![](img/6ee1191a30fccc0ebbdf3dbd2a86a1ec_15.png)
 
-![](img/6ee1191a30fccc0ebbdf3dbd2a86a1ec_16.png)
 
 *   **第二个不等式（范数约束）取等号**：当 \( x - X_k \) 的范数达到其上界时成立。即：
     \[
     \| x - X_k \| = \alpha_k
     \]
 
-![](img/6ee1191a30fccc0ebbdf3dbd2a86a1ec_18.png)
 
 结合这两个条件，我们对第一个等式两边取范数，得到 \( c \| \nabla f(X_k) \| = \alpha_k \)，因此 \( c = \alpha_k \)。
 
-![](img/6ee1191a30fccc0ebbdf3dbd2a86a1ec_20.png)
 
 所以，同时满足两个等号条件的解为：
 \[
@@ -98,7 +86,6 @@ x = X_k - \alpha_k \nabla f(X_k)
 
 ## 梯度下降算法
 
-![](img/6ee1191a30fccc0ebbdf3dbd2a86a1ec_22.png)
 
 因此，我们得到了迭代算法中最小化问题的闭式解，从而推导出梯度下降算法的迭代公式：
 
@@ -106,7 +93,6 @@ x = X_k - \alpha_k \nabla f(X_k)
 X_{k+1} = X_k - \alpha_k \nabla f(X_k)
 \]
 
-![](img/6ee1191a30fccc0ebbdf3dbd2a86a1ec_24.png)
 
 这个算法被称为**梯度下降算法**。
 
@@ -120,7 +106,6 @@ X_{k+1} = X_k - \alpha_k \nabla f(X_k)
 
 ## 算法讨论
 
-![](img/6ee1191a30fccc0ebbdf3dbd2a86a1ec_26.png)
 
 在这个算法中，步长 \( \alpha_k \) 的选择是一个关键问题，对于算法的效率至关重要。有许多选择步长的技巧和策略，这通常在优化领域的高级课程中讨论。
 

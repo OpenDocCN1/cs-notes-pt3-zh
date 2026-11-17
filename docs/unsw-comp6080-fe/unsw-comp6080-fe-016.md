@@ -2,9 +2,7 @@
 
 在本节课中，我们将要学习CSS框架。CSS框架是一种工具，可以帮助我们避免在构建网页时重复编写常见的样式，从而提升开发效率和页面美观度。
 
-![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_1.png)
 
-![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_2.png)
 
 ## 什么是CSS框架？🤔
 
@@ -28,13 +26,10 @@ Bootstrap提供了一系列基础的HTML组件。你可以在代码中写入这�
 
 上一节我们介绍了CSS框架的概念，本节中我们来看看如何使用Bootstrap。
 
-![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_4.png)
 
-![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_5.png)
 
 ### 基本使用方法
 
-![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_7.png)
 
 首先，你需要在HTML页面的`<head>`部分引入Bootstrap的样式表。从Bootstrap官网可以获取一个链接，类似于：
 ```html
@@ -42,13 +37,10 @@ Bootstrap提供了一系列基础的HTML组件。你可以在代码中写入这�
 ```
 这行代码会导入Bootstrap的样式文件。引入后，页面中带有Bootstrap类名的元素就会自动应用相应的样式。
 
-![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_9.png)
 
 ### 核心机制：CSS类
 
-![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_11.png)
 
-![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_13.png)
 
 Bootstrap的强大之处在于其预设的CSS类。例如，要创建一个漂亮的蓝色主按钮，你可以这样写：
 ```html
@@ -70,9 +62,7 @@ Bootstrap的强大之处在于其预设的CSS类。例如，要创建一个漂�
 *   **模态框**：弹出对话框。
 *   **布局系统**：基于栅格系统的响应式布局工具。
 
-![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_15.png)
 
-![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_16.png)
 
 ### 动态组件与JavaScript
 
@@ -84,17 +74,13 @@ Bootstrap的强大之处在于其预设的CSS类。例如，要创建一个漂�
 
 ## 组件库的力量 💪
 
-![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_18.png)
 
-![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_19.png)
 
 像Bootstrap这样的框架也常被称为“组件库”。它们提供了一整套可即插即用的UI组件，就像搭积木一样。你可以通过组合和配置这些预设组件，快速构建出美观且功能完整的网页界面，而无需关心底层样式的复杂细节。
 
 本课程网站就大量使用了类似的组件库来构建导航栏、图标、布局和交互元素。
 
-![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_21.png)
 
-![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_22.png)
 
 ## 总结 📚
 
@@ -104,11 +90,8 @@ Bootstrap的强大之处在于其预设的CSS类。例如，要创建一个漂�
 *   使用Bootstrap需要引入其CSS文件，对于动态组件还需引入JavaScript文件。
 *   这类框架极大地提升了开发效率与页面一致性，非常适合初学者和快速原型开发。
 
-![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_24.png)
 
-![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_25.png)
 
-![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_26.png)
 
 ![](img/9ccb7edc92c7ffc76686cc9ad5c0996d_27.png)
 

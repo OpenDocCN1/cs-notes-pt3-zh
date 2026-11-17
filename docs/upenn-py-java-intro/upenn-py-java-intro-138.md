@@ -2,7 +2,6 @@
 
 在本节课中，我们将学习如何在Jupyter Notebook中使用Matplotlib库创建直方图，以直观地展示数据的分布情况。我们将从配置环境开始，逐步完成数据可视化的全过程。
 
-![](img/4aec078b1d574878e30c2fe0f4fee6dc_0.png)
 
 ---
 
@@ -14,23 +13,19 @@
 
 现在，我们可以导入Matplotlib库中的绘图模块了。
 
-![](img/4aec078b1d574878e30c2fe0f4fee6dc_2.png)
 
 ---
 
-![](img/4aec078b1d574878e30c2fe0f4fee6dc_3.png)
 
 上一节我们配置好了绘图环境，本节中我们来看看如何导入必要的库。
 
 通过以下代码导入Matplotlib的`pyplot`模块，并为其设置一个常用的别名`plt`，以简化后续的调用。
 
-![](img/4aec078b1d574878e30c2fe0f4fee6dc_5.png)
 
 ```python
 import matplotlib.pyplot as plt
 ```
 
-![](img/4aec078b1d574878e30c2fe0f4fee6dc_6.png)
 
 ---
 

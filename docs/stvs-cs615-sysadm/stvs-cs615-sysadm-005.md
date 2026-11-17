@@ -24,7 +24,6 @@ Git是一个分布式版本控制系统。GitHub是微软旗下提供Git托管�
 echo "linuxlab.cs.stevens.edu ssh-rsa <此处应放置实际的密钥指纹>" >> ~/.ssh/known_hosts
 ```
 
-![](img/8e9c71b662cfc585e62d2f8d007d5131_1.png)
 
 ### 创建SSH配置文件
 
@@ -73,7 +72,6 @@ git config --global user.name "Your Name"
     mkdir ~/coursework.git
     ```
 
-![](img/8e9c71b662cfc585e62d2f8d007d5131_3.png)
 
 2.  进入该目录并初始化为裸仓库：
 
@@ -135,7 +133,6 @@ git clone ~/coursework.git coursework
 
 配置好远程仓库后，你也可以从自己的笔记本电脑上访问和同步代码。
 
-![](img/8e9c71b662cfc585e62d2f8d007d5131_5.png)
 
 ### 从本地克隆远程仓库
 
@@ -147,13 +144,11 @@ git clone stevens:~/coursework.git local-coursework
 
 这个命令会在你的本地创建一个`local-coursework`目录，它是远程仓库的完整副本。
 
-![](img/8e9c71b662cfc585e62d2f8d007d5131_7.png)
 
 ### 在本地工作并推送
 
 现在你可以在本地进行修改：
 
-![](img/8e9c71b662cfc585e62d2f8d007d5131_9.png)
 
 1.  编辑文件，例如`week1/notes.md`。
 2.  提交更改：`git commit -am “更新第一周笔记”`
@@ -161,11 +156,9 @@ git clone stevens:~/coursework.git local-coursework
 
 ### 在远程拉取更新
 
-![](img/8e9c71b662cfc585e62d2f8d007d5131_11.png)
 
 当你回到Linux实验室的终端时，可以进入工作目录并拉取最新的更改。
 
-![](img/8e9c71b662cfc585e62d2f8d007d5131_13.png)
 
 ```bash
 cd ~/coursework

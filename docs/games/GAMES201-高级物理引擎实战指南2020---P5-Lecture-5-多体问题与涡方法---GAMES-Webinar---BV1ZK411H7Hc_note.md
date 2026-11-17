@@ -4,15 +4,11 @@
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_1.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_3.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_5.png)
 
 ---
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_7.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_9.png)
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_11.png)
 
@@ -20,9 +16,7 @@
 
 ## 课程介绍与背景
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_15.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_17.png)
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_19.png)
 
@@ -72,11 +66,9 @@
 
 我们将公式抽象后，会得到一个总电荷 `Q`（零点附近所有电荷的总和）和一系列高阶项 `q_k`。远处 `z` 点的势能可以写成 `Q` 乘以格林函数，再加上这些高阶项的累加。后面的高阶项是几何收敛的。
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_27.png)
 
 基于这个思想，我们已经可以得到一个 `O(n log n)` 的算法，这被称为 **树码算法**。其实现方式是：将空间中的粒子进行网格划分，在每个格子的中心点计算近似的 `Q` 和 `q_k`，使得远处格子的势场可以被这个中心点的展开式近似。然后，我们不断向上层网格聚合这些信息，最终得到一个粗糙的网格，其中存储的 `Q` 和 `q_k` 代表了其下所有粒子的信息。
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_29.png)
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_31.png)
 
@@ -92,7 +84,6 @@
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_39.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_41.png)
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_43.png)
 
@@ -108,27 +99,22 @@
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_53.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_55.png)
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_57.png)
 
 ---
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_59.png)
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_61.png)
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_63.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_65.png)
 
 ## 从 O(n log n) 到 O(n)：M2M 变换
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_67.png)
 
 在了解了 `O(n log n)` 的树码算法后，我们如何得到线性时间 `O(n)` 的算法呢？关键在于 **M2M（多极子到多极子）变换**。
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_69.png)
 
 假设我们已经在一个中心 `z1` 处统计出了电荷云的 `Q` 和 `q_k`，它可以精确估计远处 `z` 点的势能。现在的问题是：如何通过 `z1` 处的 `Q` 和 `q_k`，直接估计出另一个中心 `z2` 处的 `Q'` 和 `q'_k`，使得在同一个远处 `z` 点的势能可以被 `z2` 处的展开式精确表达？
 
@@ -138,9 +124,7 @@
 
 **形象理解：** 我们可以把每个小的电荷云看作一个特殊的“多极子”。M2M变换相当于把多个小多极子的信息，合并、平移到其上一层的一个大多极子身上。
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_73.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_75.png)
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_77.png)
 
@@ -150,7 +134,6 @@
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_81.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_83.png)
 
 ```python
 class Multipole:
@@ -175,25 +158,16 @@ def M2M_transform(source_multipoles):
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_89.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_91.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_93.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_95.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_97.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_99.png)
 
 当我们知道了如何将多极子变换到另一个多极子（M2M）后，另一个问题变得有趣：如果我们在一个中心 `c` 处知道了它的多极子展开（可以告诉我们远处任意点 `z` 的势能），如何将其转换成一个离 `z` 点很近的另一个点 `z1` 处的 **局部展开**？
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_101.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_103.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_105.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_107.png)
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_109.png)
 
@@ -211,7 +185,6 @@ def M2M_transform(source_multipoles):
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_119.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_121.png)
 
 进一步，如果我们已经有了一个以 `c1` 为中心的局部展开，想将其转换到另一个以 `c2` 为中心的局部展开，这涉及的就是 **L2L（局部展开到局部展开）变换**。这本质上是一个坐标变换，可以通过类似霍纳法则的方法高效计算。
 
@@ -255,7 +228,6 @@ def M2M_transform(source_multipoles):
 
 除了 FMM，还有其他快速求和方法。
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_147.png)
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_149.png)
 
@@ -267,7 +239,6 @@ P³M 方法实现起来比 FMM 相对简单，且也能达到线性时间复杂�
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_151.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_153.png)
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_155.png)
 
@@ -313,9 +284,7 @@ P³M 方法实现起来比 FMM 相对简单，且也能达到线性时间复杂�
 
 ![](img/677ea37b47e422d4caae94d7b6de0b79_168.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_170.png)
 
-![](img/677ea37b47e422d4caae94d7b6de0b79_172.png)
 
 本节课中，我们一起学习了：
 1.  **多体问题的挑战**：直接求和的 `O(n²)` 复杂度。

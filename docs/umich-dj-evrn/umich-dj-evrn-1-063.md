@@ -1,6 +1,5 @@
 # 063：Django视图
 
-![](img/2f28a1f89014b1db7424edd05afa96f6_0.png)
 
 在本节课中，我们将学习Django视图（Views）的核心概念。视图是处理Web请求并返回响应的关键组件。我们将探讨如何编写视图代码，包括使用无需编写Python代码的预定义视图，以及如何编写自定义视图函数来处理请求和响应。
 
@@ -60,7 +59,6 @@ def simple_view(request):
 
 上一节我们看到了基本的请求处理，本节中我们来看看如何从URL中提取具体的参数。这在处理用户输入时非常有用。
 
-![](img/2f28a1f89014b1db7424edd05afa96f6_8.png)
 
 当用户访问一个带有查询字符串的URL（例如`/somepath?guess=42`）时，这些参数会被存储在`request.GET`对象中。`request.GET`是一个类似字典的结构，我们可以通过键名来获取对应的值。
 
@@ -82,7 +80,6 @@ def show_guess(request):
 
 ## 课程总结
 
-![](img/2f28a1f89014b1db7424edd05afa96f6_12.png)
 
 ![](img/2f28a1f89014b1db7424edd05afa96f6_14.png)
 

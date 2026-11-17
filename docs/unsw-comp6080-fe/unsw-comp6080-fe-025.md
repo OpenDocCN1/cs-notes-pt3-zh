@@ -2,7 +2,6 @@
 
 ![](img/9b2334de6b7bce29a33363e7b68f3198_0.png)
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_2.png)
 
 在本节课中，我们将通过两个具体的编程演示，学习如何在 NodeJS 环境中使用 JavaScript。我们将了解如何读取命令行参数、处理日期、使用外部库、读写文件，以及如何创建一个简单的 HTTP 服务器。
 
@@ -18,20 +17,15 @@
 
 ### 步骤 1：设置项目与读取命令行参数
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_7.png)
 
 首先，我们需要创建一个 NodeJS 项目并读取从命令行传入的参数。
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_9.png)
 
 以下是创建项目并读取 `process.argv` 的代码示例：
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_11.png)
-
-![](img/9b2334de6b7bce29a33363e7b68f3198_13.png)
 
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_15.png)
+
 
 ```javascript
 // hello.js
@@ -44,9 +38,7 @@ for (let i = 2; i < argv.length; i++) {
 console.log(dates);
 ```
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_17.png)
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_19.png)
 
 运行脚本时，`process.argv` 的前两个元素是 NodeJS 执行路径和脚本文件路径，因此我们从索引 2 开始读取用户输入的日期。
 
@@ -62,15 +54,10 @@ npm install date-fns
 
 然后，在脚本中使用它来计算天数差：
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_21.png)
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_23.png)
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_25.png)
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_26.png)
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_28.png)
 
 ```javascript
 const { differenceInCalendarDays } = require('date-fns');
@@ -84,15 +71,11 @@ for (let dateStr of dates) {
 console.log(dateDaysSincePairs);
 ```
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_30.png)
 
 这段代码遍历日期数组，为每个日期计算与当前日期的日历天数差，并将结果存储在一个对象中。
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_32.png)
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_34.png)
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_36.png)
 
 ### 步骤 3：将结果写入 JSON 文件
 
@@ -116,23 +99,18 @@ console.log('数据已写入 dates.json 文件。');
 
 `JSON.stringify()` 方法将 JavaScript 对象转换为 JSON 字符串，然后 `fs.writeFileSync` 将其同步写入文件。
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_44.png)
 
 上一节我们完成了第一个演示，学会了基本的文件操作和库的使用。本节中我们来看看第二个更复杂的演示：创建一个简单的 HTTP 服务器。
 
 ## 演示二：创建简单的 HTTP 服务器
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_46.png)
 
 在这个演示中，我们将使用 Express 框架创建一个 HTTP 服务器。该服务器将提供一个 `/scrape` 路由，用于接收 URL 和 HTML 标签，并返回该标签在指定网页中出现的次数。
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_48.png)
 
 ![](img/9b2334de6b7bce29a33363e7b68f3198_50.png)
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_52.png)
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_54.png)
 
 ### 步骤 1：设置 Express 服务器
 
@@ -160,7 +138,6 @@ npm install express
 
 创建基本的服务器代码：
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_70.png)
 
 
 ![](img/9b2334de6b7bce29a33363e7b68f3198_72.png)
@@ -185,9 +162,7 @@ app.listen(port, () => {
 
 运行 `node server.js` 后，访问 `http://localhost:3000` 将会看到 “Hello World!”。
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_78.png)
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_79.png)
 
 ### 步骤 2：创建 `/scrape` 路由并获取查询参数
 
@@ -195,15 +170,11 @@ app.listen(port, () => {
 
 我们需要创建一个 `/scrape` 路由，它通过 URL 查询参数接收 `url` 和 `tag`。
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_83.png)
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_84.png)
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_86.png)
 
 以下是捕获查询参数的代码：
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_88.png)
 
 ```javascript
 app.get('/scrape', (req, res) => {
@@ -231,7 +202,6 @@ app.get('/scrape', (req, res) => {
 
 安装 `sync-request` 库：
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_98.png)
 
 ```bash
 npm install sync-request
@@ -239,7 +209,6 @@ npm install sync-request
 
 ![](img/9b2334de6b7bce29a33363e7b68f3198_100.png)
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_102.png)
 
 ![](img/9b2334de6b7bce29a33363e7b68f3198_104.png)
 
@@ -264,7 +233,6 @@ app.get('/scrape', (req, res) => {
 });
 ```
 
-![](img/9b2334de6b7bce29a33363e7b68f3198_106.png)
 
 这段代码获取网页的 HTML 内容，将其转换为小写，然后通过计算特定字符串（如 `<div` 或 `<div `）出现的次数来估算标签数量。请注意，这种方法在遇到复杂或格式不规范的 HTML 时可能不准确，但它演示了基本的思路。
 

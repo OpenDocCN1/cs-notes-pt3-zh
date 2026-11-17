@@ -1,6 +1,5 @@
 # 143：魁北克蒙特利尔
 
-![](img/0071be1a1c63f1099e0cbef793a468de_0.png)
 
 ![](img/0071be1a1c63f1099e0cbef793a468de_1.png)
 

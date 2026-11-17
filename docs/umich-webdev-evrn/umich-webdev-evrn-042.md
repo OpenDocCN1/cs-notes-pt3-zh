@@ -10,7 +10,6 @@
 
 ![](img/37ad47e0ad506127ee34c32c80a9ca6c_3.png)
 
-![](img/37ad47e0ad506127ee34c32c80a9ca6c_4.png)
 
 ## 文本与密码输入
 

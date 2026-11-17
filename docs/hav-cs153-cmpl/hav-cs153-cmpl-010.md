@@ -99,7 +99,6 @@ type ‘a grammar = token list -> (‘a * token list) list
 ```
 解析器函数会尝试所有可能的解析路径，并过滤出那些消耗完所有输入令牌的成功结果。
 
-![](img/b486466ab652e9e937f47d69e876304a_1.png)
 
 我们可以为文法定义构造子，例如：
 *   `char`：匹配特定字符。
@@ -116,15 +115,12 @@ type ‘a grammar = token list -> (‘a * token list) list
 *   `E -> T E’`
 *   `E’ -> ‘+’ T E’ | ‘-’ T E’ | ε`
 
-![](img/b486466ab652e9e937f47d69e876304a_7.png)
 
 这种改写能消除立即的左递归，但可能会使生成的语法分析树结构不那么直观，需要后续处理才能转换成理想的 AST。
 
 ![](img/b486466ab652e9e937f47d69e876304a_9.png)
 
-![](img/b486466ab652e9e937f47d69e876304a_11.png)
 
-![](img/b486466ab652e9e937f47d69e876304a_13.png)
 
 ---
 

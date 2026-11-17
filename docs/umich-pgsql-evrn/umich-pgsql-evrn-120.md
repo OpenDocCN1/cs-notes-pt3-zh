@@ -1,6 +1,5 @@
 # 120：19_课程总结
 
-![](img/60ea350cd47b1e5c8a44c8c5e6d54b43_0.png)
 
 ![](img/60ea350cd47b1e5c8a44c8c5e6d54b43_0.png)
 

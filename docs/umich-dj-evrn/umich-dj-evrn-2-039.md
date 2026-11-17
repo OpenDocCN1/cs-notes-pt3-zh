@@ -2,9 +2,7 @@
 
 在本节课程中，我们将详细解析一个使用Fetch、Ajax和`setTimeout`的简单聊天应用示例代码。这个示例将多个浏览器端的JavaScript概念整合在一起，演示了如何实现异步通信。
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_1.png)
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_2.png)
 
 ## 概述
 
@@ -34,13 +32,10 @@ urlpatterns = [
 
 ### 主视图函数 (`views.py`)
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_4.png)
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_6.png)
 
 主视图函数`talk`处理GET请求，简单地渲染聊天页面模板。
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_8.png)
 
 ```python
 def talk(request):
@@ -62,7 +57,6 @@ def talk(request):
 3.  引入关键的JavaScript代码。
 
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_10.png)
 
 ```html
 <form method="post">
@@ -82,7 +76,6 @@ def talk(request):
 
 ---
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_12.png)
 
 ## 数据模型与JSON API
 
@@ -131,19 +124,15 @@ def messages_json(request):
 
 **关键点**：JSON API的作用不仅仅是返回原始模型数据。它经常需要从模型中获取数据，进行加工（如转义、格式化），使其更适合前端显示，然后再以JSON形式返回。
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_14.png)
 
 ---
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_16.png)
 
 ## 核心JavaScript逻辑
 
 现在，我们进入最核心的部分：前端JavaScript如何与后端交互并动态更新页面。
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_18.png)
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_20.png)
 
 ### 消息更新函数 (`updateMessages`)
 
@@ -183,9 +172,7 @@ function updateMessages() {
 }
 ```
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_22.png)
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_23.png)
 
 **代码解析**：
 *   `fetch('/messages/')`：向JSON端点发起GET请求。
@@ -194,11 +181,8 @@ function updateMessages() {
 *   `setTimeout(updateMessages, 4000);`：在成功更新后，设置一个4秒后再次调用`updateMessages`的定时器，从而实现定期轮询。
 *   `.catch(...)`：捕获请求或处理过程中发生的任何错误，并给出提示。
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_24.png)
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_25.png)
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_26.png)
 
 **重要概念**：`response.json()`方法将接收到的JSON字符串**解析**为浏览器可以操作的JavaScript对象或数组。
 
@@ -208,11 +192,9 @@ function updateMessages() {
 
 我们已经看到了单个更新周期如何工作，现在来看看整个应用是如何启动并持续运行的。
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_28.png)
 
 ### 页面加载与初始延迟
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_30.png)
 
 当页面加载完成后，我们并不立即获取消息，而是等待一个短暂的初始延迟。
 
@@ -248,7 +230,6 @@ document.addEventListener('DOMContentLoaded', function() {
 3.  **定时轮询**：通过`setTimeout`递归调用，定期检查并更新消息。
 4.  **错误处理**：使用Promise的`.catch()`方法捕获请求异常，为用户提供反馈并停止错误状态下的轮询。
 
-![](img/249a4ce6f6138e185a6c5f82f7a17af5_32.png)
 
 **需要注意的实践**：
 *   **返回JSON数组**：本示例中，视图直接返回了一个JSON数组（`JsonResponse(results, safe=False)`）。虽然可行，但更佳实践是返回一个包含状态码和数据等信息的对象，例如：`{'status': 'ok', 'messages': results}`。

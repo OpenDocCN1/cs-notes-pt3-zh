@@ -224,7 +224,6 @@
 
 +   `pivot_wider`会将`students`数据集从以下内容转换：
 
-    ![转换前的`students`](img/b2abe2d0d26093da0fd1d68a9802293f.png)
 
     转换为以下内容：
 

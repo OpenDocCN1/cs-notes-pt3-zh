@@ -10,17 +10,13 @@
 
 首先，我们需要获取一本电子书。这里我们使用 `wget` 从Project Gutenberg下载查尔斯·狄更斯的《圣诞颂歌》，文件名为 `pg19337.txt`。
 
-![](img/a78c8161079c1752d6d2d212b802d3df_1.png)
 
-![](img/a78c8161079c1752d6d2d212b802d3df_2.png)
 
-![](img/a78c8161079c1752d6d2d212b802d3df_3.png)
 
 ```bash
 wget https://www.gutenberg.org/files/19337/19337.txt -O pg19337.txt
 ```
 
-![](img/a78c8161079c1752d6d2d212b802d3df_4.png)
 
 接下来，下载本教程所需的Python脚本 `loadbook.py` 及其依赖的实用工具库 `myutils.py`。
 
@@ -29,7 +25,6 @@ wget https://pg4e.com/code/loadbook.py
 wget https://pg4e.com/code/myutils.py
 ```
 
-![](img/a78c8161079c1752d6d2d212b802d3df_6.png)
 
 `myutils.py` 文件包含数据库连接等辅助函数。脚本运行时会使用一个名为 `hidden.py` 的配置文件来存储数据库密码等敏感信息。如果你已完成之前的课程练习，该文件应该已配置妥当。
 
@@ -37,9 +32,7 @@ wget https://pg4e.com/code/myutils.py
 
 现在，让我们深入查看 `loadbook.py` 脚本，了解其工作原理。
 
-![](img/a78c8161079c1752d6d2d212b802d3df_8.png)
 
-![](img/a78c8161079c1752d6d2d212b802d3df_9.png)
 
 脚本首先导入必要的模块，包括处理数据库连接的 `myutils` 和用于控制速度的 `time` 模块。
 
@@ -51,10 +44,8 @@ import myutils
 
 接着，脚本会检查命令行参数，以确定要加载的书籍文本文件。默认情况下，它会使用去除 `.txt` 后缀的文件名作为数据库表名。
 
-![](img/a78c8161079c1752d6d2d212b802d3df_11.png)
 
 
-![](img/a78c8161079c1752d6d2d212b802d3df_13.png)
 
 ```python
 if len(sys.argv) < 2:
@@ -77,9 +68,7 @@ except:
 
 成功打开文件后，脚本加载数据库密码并建立连接，同时创建一个游标（cursor）。游标的作用类似于PostgreSQL客户端，用于执行SQL命令。
 
-![](img/a78c8161079c1752d6d2d212b802d3df_15.png)
 
-![](img/a78c8161079c1752d6d2d212b802d3df_16.png)
 
 ```python
 secrets = hidden.secrets()
@@ -98,13 +87,10 @@ cur.execute(f'CREATE TABLE {tablename} (id SERIAL, body TEXT)')
 
 ## 处理文本并插入段落
 
-![](img/a78c8161079c1752d6d2d212b802d3df_18.png)
 
 这是脚本的核心部分。它逐行读取文本文件，并将属于同一个段落的行合并成一个长的文本字符串。
 
-![](img/a78c8161079c1752d6d2d212b802d3df_20.png)
 
-![](img/a78c8161079c1752d6d2d212b802d3df_22.png)
 
 以下是处理逻辑的关键步骤：
 1.  初始化一个空字符串 `para` 来累积当前段落的内容。
@@ -113,9 +99,7 @@ cur.execute(f'CREATE TABLE {tablename} (id SERIAL, body TEXT)')
 4.  如果遇到空行（即处理后的行长度为0），并且 `para` 中已有内容，则意味着一个段落结束。此时，将该段落插入数据库，并清空 `para` 以准备下一个段落。
 5.  如果不是空行，则将当前行内容（加上一个空格）追加到 `para` 变量中。
 
-![](img/a78c8161079c1752d6d2d212b802d3df_24.png)
 
-![](img/a78c8161079c1752d6d2d212b802d3df_25.png)
 
 ```python
 para = ''
@@ -146,9 +130,7 @@ for line in fhand:
 
 文件读取循环结束后，脚本执行最终提交并关闭游标和数据库连接。
 
-![](img/a78c8161079c1752d6d2d212b802d3df_27.png)
 
-![](img/a78c8161079c1752d6d2d212b802d3df_28.png)
 
 ```python
 conn.commit()
@@ -156,17 +138,12 @@ cur.close()
 print(f'Loaded {count} paragraphs into {tablename}.')
 ```
 
-![](img/a78c8161079c1752d6d2d212b802d3df_29.png)
 
-![](img/a78c8161079c1752d6d2d212b802d3df_30.png)
 
-![](img/a78c8161079c1752d6d2d212b802d3df_31.png)
 
 ## 运行脚本并验证结果
 
-![](img/a78c8161079c1752d6d2d212b802d3df_33.png)
 
-![](img/a78c8161079c1752d6d2d212b802d3df_34.png)
 
 在终端中运行脚本，指定要加载的书籍文件。
 
@@ -174,13 +151,10 @@ print(f'Loaded {count} paragraphs into {tablename}.')
 python3 loadbook.py pg19337.txt
 ```
 
-![](img/a78c8161079c1752d6d2d212b802d3df_36.png)
 
-![](img/a78c8161079c1752d6d2d212b802d3df_38.png)
 
 运行过程中，你会在终端看到加载进度的输出。完成后，可以连接到数据库验证数据。
 
-![](img/a78c8161079c1752d6d2d212b802d3df_40.png)
 
 ![](img/a78c8161079c1752d6d2d212b802d3df_42.png)
 

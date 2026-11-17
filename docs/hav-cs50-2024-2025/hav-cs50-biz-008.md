@@ -74,7 +74,6 @@ John,+1-949-468-2750
 
 ### 关系型数据库的优势
 
-![](img/3741fde3a9a19aa400591a39252631a8_26.png)
 
 ![](img/3741fde3a9a19aa400591a39252631a8_27.png)
 
@@ -84,7 +83,6 @@ John,+1-949-468-2750
 
 考虑一个简单的例子：一个包含学校和所在城市的数据集。
 
-![](img/3741fde3a9a19aa400591a39252631a8_31.png)
 
 | 学校 | 城市 |
 | :--- | :--- |
@@ -122,7 +120,6 @@ John,+1-949-468-2750
 | 2 | 牛津 |
 | 3 | 剑桥（英国） |
 
-![](img/3741fde3a9a19aa400591a39252631a8_45.png)
 
 ![](img/3741fde3a9a19aa400591a39252631a8_47.png)
 
@@ -225,7 +222,6 @@ CREATE TABLE phonebook(
 
 现在，让我们学习如何使用 `SELECT` 语句来查询数据。
 
-![](img/3741fde3a9a19aa400591a39252631a8_83.png)
 
 **基本查询：**
 要查看表中的所有数据，可以使用 `*` 通配符：
@@ -277,7 +273,6 @@ SELECT number FROM phonebook WHERE name = 'John';
 SELECT name FROM phonebook WHERE number = '+1-617-495-1000';
 ```
 
-![](img/3741fde3a9a19aa400591a39252631a8_98.png)
 
 ![](img/3741fde3a9a19aa400591a39252631a8_99.png)
 
@@ -293,9 +288,7 @@ SELECT number, COUNT(*) FROM phonebook GROUP BY number;
 
 ![](img/3741fde3a9a19aa400591a39252631a8_103.png)
 
-![](img/3741fde3a9a19aa400591a39252631a8_104.png)
 
-![](img/3741fde3a9a19aa400591a39252631a8_105.png)
 
 **删除数据：**
 要从电话簿中删除David的记录：
@@ -318,7 +311,6 @@ INSERT INTO phonebook (name) VALUES ('David');
 
 ![](img/3741fde3a9a19aa400591a39252631a8_111.png)
 
-![](img/3741fde3a9a19aa400591a39252631a8_112.png)
 
 **更新数据：**
 要为David更新电话号码：
@@ -358,7 +350,6 @@ SELECT * FROM phonebook ORDER BY name DESC; -- DESC 表示降序
 
 ![](img/3741fde3a9a19aa400591a39252631a8_126.png)
 
-![](img/3741fde3a9a19aa400591a39252631a8_127.png)
 
 IMDB数据库被设计成多个相互关联的表。让我们先了解其中几个表：
 
@@ -390,7 +381,6 @@ IMDB数据库被设计成多个相互关联的表。让我们先了解其中几�
     *   `show_id`：节目ID（外键，引用 `shows.id`）。
     *   `person_id`：人物ID（外键，引用 `people.id`）。
 
-![](img/3741fde3a9a19aa400591a39252631a8_135.png)
 
 ![](img/3741fde3a9a19aa400591a39252631a8_136.png)
 
@@ -406,7 +396,6 @@ IMDB数据库被设计成多个相互关联的表。让我们先了解其中几�
 
 ![](img/3741fde3a9a19aa400591a39252631a8_142.png)
 
-![](img/3741fde3a9a19aa400591a39252631a8_143.png)
 
 ![](img/3741fde3a9a19aa400591a39252631a8_145.png)
 

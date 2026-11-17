@@ -126,11 +126,9 @@ export function removeVowels(string) {
 
 ![](img/4dec13dced24710697d4380d898fbbf1_48.png)
 
-![](img/4dec13dced24710697d4380d898fbbf1_49.png)
 
 如果我们只测试了部分年份（例如2000, 2004, 2100），覆盖率报告可能会显示某些代码行（例如处理“能被400整除”的逻辑分支）未被测试。这指引我们去编写测试用例，例如测试年份2400，以确保所有逻辑路径都被执行。
 
-![](img/4dec13dced24710697d4380d898fbbf1_51.png)
 
 ![](img/4dec13dced24710697d4380d898fbbf1_53.png)
 
@@ -158,7 +156,6 @@ export function removeVowels(string) {
 
 ![](img/4dec13dced24710697d4380d898fbbf1_62.png)
 
-![](img/4dec13dced24710697d4380d898fbbf1_63.png)
 
 分支覆盖率通常能更准确地反映测试的完备性。不过，由于Jest在分支覆盖率计算上的一些特定行为，在本课程中，我们主要关注和使用语句/行覆盖率作为评估标准。
 

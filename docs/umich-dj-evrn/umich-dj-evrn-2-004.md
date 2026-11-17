@@ -8,9 +8,7 @@
 
 到目前为止，您编写的每个CRUD应用程序都允许登录用户编辑或删除所有数据行。在列表视图中，每个数据行旁边都会显示更新和删除按钮。
 
-![](img/ba1a81ab15cfef41f32e27e6092ef590_1.png)
 
-![](img/ba1a81ab15cfef41f32e27e6092ef590_2.png)
 
 真实应用程序并非如此运作。例如，在构建分类广告系统时，某些广告属于您，某些广告属于其他人。您可以查看所有广告，但不能编辑所有广告。因此，我们需要决定何时显示编辑和删除按钮，并且只对数据行的所有者显示这些按钮。同时，我们必须防止用户通过其他方式编辑或删除他人的数据。
 
@@ -20,15 +18,12 @@
 
 ## 回顾通用视图的使用 🔄
 
-![](img/ba1a81ab15cfef41f32e27e6092ef590_4.png)
 
-![](img/ba1a81ab15cfef41f32e27e6092ef590_5.png)
 
 在之前的CRUD应用程序中，我们大量使用了Django提供的通用视图，特别是`generic.ListView`。通过一系列操作，我们最终得到了一个非常简单的视图。
 
 例如，我们创建了一个`HorseListView`，它继承自`generic.ListView`。我们只需通过以下代码告知该视图使用哪个模型：
 
-![](img/ba1a81ab15cfef41f32e27e6092ef590_7.png)
 
 ```python
 class HorseListView(generic.ListView):
@@ -79,11 +74,9 @@ class HorseListView(generic.ListView):
 
 接下来，我们将探讨如何深入这些通用视图，并为它们添加我们自己的特殊功能。这将帮助我们更好地理解Django视图的工作机制，并能够根据需求进行定制。
 
-![](img/ba1a81ab15cfef41f32e27e6092ef590_20.png)
 
 ---
 
-![](img/ba1a81ab15cfef41f32e27e6092ef590_22.png)
 
 ## 总结 📝
 

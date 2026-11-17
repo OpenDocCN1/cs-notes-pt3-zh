@@ -16,7 +16,6 @@
 
 ## 概述
 
-![](img/04166cf832cf3cd5409b884aa894351f_9.png)
 
 ![](img/04166cf832cf3cd5409b884aa894351f_10.png)
 
@@ -32,7 +31,6 @@
 
 ## 从3D场景到VR场景 🎮
 
-![](img/04166cf832cf3cd5409b884aa894351f_18.png)
 
 ![](img/04166cf832cf3cd5409b884aa894351f_19.png)
 
@@ -40,7 +38,6 @@
 
 ![](img/04166cf832cf3cd5409b884aa894351f_21.png)
 
-![](img/04166cf832cf3cd5409b884aa894351f_23.png)
 
 ![](img/04166cf832cf3cd5409b884aa894351f_25.png)
 
@@ -65,9 +62,7 @@
 </html>
 ```
 
-![](img/04166cf832cf3cd5409b884aa894351f_29.png)
 
-![](img/04166cf832cf3cd5409b884aa894351f_30.png)
 
 ![](img/04166cf832cf3cd5409b884aa894351f_31.png)
 
@@ -145,7 +140,6 @@
 
 ![](img/04166cf832cf3cd5409b884aa894351f_74.png)
 
-![](img/04166cf832cf3cd5409b884aa894351f_75.png)
 
 ![](img/04166cf832cf3cd5409b884aa894351f_77.png)
 
@@ -171,11 +165,8 @@ A-Frame提供了内置的动画组件。我们可以通过`animation`属性来�
 </a-entity>
 ```
 
-![](img/04166cf832cf3cd5409b884aa894351f_81.png)
 
-![](img/04166cf832cf3cd5409b884aa894351f_82.png)
 
-![](img/04166cf832cf3cd5409b884aa894351f_84.png)
 
 ![](img/04166cf832cf3cd5409b884aa894351f_85.png)
 
@@ -189,11 +180,8 @@ A-Frame提供了内置的动画组件。我们可以通过`animation`属性来�
 *   `loop: true`： 动画循环播放。
 *   `dir: alternate`： 动画方向交替，形成来回摇摆的效果。
 
-![](img/04166cf832cf3cd5409b884aa894351f_88.png)
 
-![](img/04166cf832cf3cd5409b884aa894351f_90.png)
 
-![](img/04166cf832cf3cd5409b884aa894351f_92.png)
 
 ![](img/04166cf832cf3cd5409b884aa894351f_94.png)
 
@@ -234,7 +222,6 @@ A-Frame提供了内置的动画组件。我们可以通过`animation`属性来�
 ![](img/04166cf832cf3cd5409b884aa894351f_121.png)
 
 
-![](img/04166cf832cf3cd5409b884aa894351f_123.png)
 
 ![](img/04166cf832cf3cd5409b884aa894351f_124.png)
 
@@ -256,7 +243,6 @@ A-Frame提供了内置的动画组件。我们可以通过`animation`属性来�
 
 ![](img/04166cf832cf3cd5409b884aa894351f_127.png)
 
-![](img/04166cf832cf3cd5409b884aa894351f_129.png)
 
 ![](img/04166cf832cf3cd5409b884aa894351f_131.png)
 
@@ -298,7 +284,6 @@ A-Frame提供了内置的动画组件。我们可以通过`animation`属性来�
 
 ![](img/04166cf832cf3cd5409b884aa894351f_147.png)
 
-![](img/04166cf832cf3cd5409b884aa894351f_148.png)
 
 ---
 
@@ -324,11 +309,9 @@ A-Frame提供了内置的动画组件。我们可以通过`animation`属性来�
 
 为了让使用Cardboard等3DoF头显的用户也能进行交互，我们需要添加一个凝视光标。同时，我们为基础交互添加一个事件系统。
 
-![](img/04166cf832cf3cd5409b884aa894351f_166.png)
 
 ![](img/04166cf832cf3cd5409b884aa894351f_168.png)
 
-![](img/04166cf832cf3cd5409b884aa894351f_170.png)
 
 以下是添加凝视光标和VR大按钮的代码：
 
@@ -383,7 +366,6 @@ A-Frame提供了内置的动画组件。我们可以通过`animation`属性来�
 
 ![](img/04166cf832cf3cd5409b884aa894351f_191.png)
 
-![](img/04166cf832cf3cd5409b884aa894351f_193.png)
 
 ![](img/04166cf832cf3cd5409b884aa894351f_195.png)
 
@@ -399,7 +381,6 @@ A-Frame提供了内置的动画组件。我们可以通过`animation`属性来�
 </a-entity>
 ```
 
-![](img/04166cf832cf3cd5409b884aa894351f_199.png)
 
 ![](img/04166cf832cf3cd5409b884aa894351f_200.png)
 
@@ -429,7 +410,6 @@ A-Frame提供了内置的动画组件。我们可以通过`animation`属性来�
 
 ![](img/04166cf832cf3cd5409b884aa894351f_215.png)
 
-![](img/04166cf832cf3cd5409b884aa894351f_217.png)
 
 ![](img/04166cf832cf3cd5409b884aa894351f_219.png)
 

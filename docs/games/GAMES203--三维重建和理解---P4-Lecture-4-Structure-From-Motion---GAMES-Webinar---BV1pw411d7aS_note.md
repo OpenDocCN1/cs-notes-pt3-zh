@@ -1,6 +1,5 @@
 # GAMES203--三维重建和理解---P4-Lecture-4-Structure-From-Motion---GAMES-Webinar---BV1pw411d7aS_note
 
-![](img/33217b811ad54c2601acdb4f3b66753a_0.png)
 
 ![](img/33217b811ad54c2601acdb4f3b66753a_0.png)
 
@@ -139,6 +138,5 @@
 
 这些内容是理解现代三维重建系统的基石。下一节课，我们将探讨立体视觉，这是另一种重要的三维重建方法。
 
-![](img/33217b811ad54c2601acdb4f3b66753a_2.png)
 
 ![](img/33217b811ad54c2601acdb4f3b66753a_2.png)

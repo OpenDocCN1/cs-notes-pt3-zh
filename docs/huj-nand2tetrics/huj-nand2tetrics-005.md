@@ -94,7 +94,6 @@
 
 ## 总结
 
-![](img/1c6004031ed0f60b4d882fda0c7fe631_2.png)
 
 ![](img/1c6004031ed0f60b4d882fda0c7fe631_3.png)
 

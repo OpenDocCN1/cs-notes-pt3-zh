@@ -239,11 +239,8 @@ public class VehicleTests
 2.  **行动 (Act)**：调用要测试的方法。
 3.  **断言 (Assert)**：验证方法的结果（返回值、对象状态）是否符合预期。
 
-![](img/7a43f0ea5d1f0e428d902fcc24a56886_24.png)
 
-![](img/7a43f0ea5d1f0e428d902fcc24a56886_26.png)
 
-![](img/7a43f0ea5d1f0e428d902fcc24a56886_28.png)
 
 ### 测试驱动开发与持续集成
 
@@ -258,9 +255,7 @@ public class VehicleTests
 
 ## 项目介绍：Yahtzee游戏
 
-![](img/7a43f0ea5d1f0e428d902fcc24a56886_34.png)
 
-![](img/7a43f0ea5d1f0e428d902fcc24a56886_36.png)
 
 ![](img/7a43f0ea5d1f0e428d902fcc24a56886_38.png)
 

@@ -1,30 +1,22 @@
 # 091： Autos示例项目详解 🚗
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_1.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_3.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_4.png)
 
 在本节课中，我们将详细解析一个名为“Autos”的Django示例项目。这是一个完整的CRUD（创建、读取、更新、删除）应用，我们将通过分析其代码结构来学习Django的核心概念，包括模型、表单、视图、URL配置以及如何使用Django的通用视图来简化开发。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_6.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_8.png)
 
 ## 项目概述与运行
 
 首先，让我们了解一下这个Autos项目。这是一个管理汽车品牌（Make）和具体汽车（Auto）信息的应用。它演示了如何建立一对多的关系（一个品牌对应多辆汽车），并实现了完整的增删改查功能，所有操作都受到登录保护。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_10.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_12.png)
 
 运行项目后，访问`/autos`路径，系统会要求你先登录。登录成功后，你可以看到主界面，可以添加品牌、查看品牌列表、添加汽车等。汽车添加表单中有一个下拉菜单，其选项来自品牌表，这正是一对多关系的体现。在列表中，你可以对每条记录进行更新或删除操作。
 
 ## 核心文件结构
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_14.png)
 
 为了理解这个应用，我们需要分析四个核心文件：`models.py`、`forms.py`、`urls.py`和`views.py`。接下来，我们将逐一进行解析。
 
@@ -32,18 +24,13 @@
 
 模型文件定义了应用的数据结构。我们有两个模型：`Make`（品牌）和`Auto`（汽车）。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_16.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_18.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_20.png)
 
 **Make模型**非常简单，只有一个`name`字段，并使用了验证器确保名称至少有两个字符。`__str__`方法定义了当打印模型对象时显示的内容。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_22.png)
 
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_24.png)
 
 ```python
 from django.core.validators import MinLengthValidator
@@ -91,15 +78,12 @@ class MakeForm(ModelForm):
         fields = '__all__'
 ```
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_26.png)
 
 ### 3. URL路由 (urls.py)
 
 URL配置文件将不同的网址路径映射到对应的视图函数。Autos应用的URL模式清晰地组织了CRUD操作的路由。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_28.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_29.png)
 
 以下是主要的URL模式：
 *   `autos/`：列出所有汽车（主视图）。
@@ -112,11 +96,8 @@ URL配置文件将不同的网址路径映射到对应的视图函数。Autos应
 每个路径都通过`name`参数被赋予了易于引用的名称。
 
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_31.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_32.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_34.png)
 
 ```python
 from django.urls import path
@@ -133,45 +114,30 @@ urlpatterns = [
 ]
 ```
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_36.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_38.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_40.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_41.png)
 
 ### 4. 视图逻辑 (views.py) - 基础方式
 
 视图是处理业务逻辑的核心。我们将先看看如何“手动”编写视图来实现CRUD，然后再介绍Django提供的更简洁的“通用视图”。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_43.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_44.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_46.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_48.png)
 
 上一节我们介绍了模型和URL，本节中我们来看看视图如何运作。所有需要登录才能访问的视图都通过`LoginRequiredMixin`进行保护。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_50.png)
 
 **列表视图**：以`MainView`（汽车列表）和`MakeView`（品牌列表）为例。它们从数据库中获取所有对象，传递给模板进行渲染。`get_context_data`方法用于向模板传递额外的上下文数据，比如品牌数量。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_52.png)
-
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_54.png)
-
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_56.png)
 
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_57.png)
 
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_59.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_61.png)
+
+
 
 ```python
 from django.views import View
@@ -192,17 +158,12 @@ class MakeView(LoginRequiredMixin, View):
         return render(request, 'autos/make_list.html', ctx)
 ```
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_63.png)
 
 **创建视图**：以`MakeCreate`为例。`GET`请求时，它提供一个空表单；`POST`请求时，它验证表单数据，如果有效则保存到数据库，并重定向到成功页面。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_65.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_66.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_68.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_70.png)
 
 ```python
 class MakeCreate(LoginRequiredMixin, View):
@@ -225,9 +186,7 @@ class MakeCreate(LoginRequiredMixin, View):
 
 **更新视图**：与创建视图类似，但需要先通过主键获取要更新的现有对象。`get_object_or_404`是一个便捷函数：如果对象存在则返回，不存在则直接返回404错误页面。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_72.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_74.png)
 
 ```python
 class MakeUpdate(LoginRequiredMixin, View):
@@ -251,13 +210,10 @@ class MakeUpdate(LoginRequiredMixin, View):
         return redirect(self.success_url)
 ```
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_76.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_78.png)
 
 **删除视图**：`GET`请求显示确认删除页面，`POST`请求执行删除操作。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_80.png)
 
 ```python
 class MakeDelete(LoginRequiredMixin, View):
@@ -276,44 +232,29 @@ class MakeDelete(LoginRequiredMixin, View):
         return redirect(self.success_url)
 ```
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_82.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_83.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_85.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_87.png)
 
 ## 使用Django通用视图进行简化 ✨
 
 上面展示的视图虽然功能完整，但代码中存在大量重复模式。Django提供了基于类的通用视图（Generic Class-Based Views）来封装这些通用模式，让代码变得极其简洁。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_89.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_91.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_93.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_95.png)
 
 以下是使用通用视图重写的`Auto`模型的CRUD操作：
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_97.png)
-
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_99.png)
 
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_101.png)
 
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_103.png)
-
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_105.png)
-
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_107.png)
 
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_109.png)
+
+
+
 
 ```python
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -333,7 +274,6 @@ class AutoDelete(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('autos:all')
 ```
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_111.png)
 
 **代码解析**：
 *   `CreateView`、`UpdateView`、`DeleteView`分别对应创建、更新和删除的通用视图。
@@ -341,33 +281,22 @@ class AutoDelete(LoginRequiredMixin, DeleteView):
 *   视图会自动处理`GET`和`POST`请求、表单生成、数据验证、对象获取（`get_object_or_404`）、保存和删除等所有逻辑。
 *   它们还会根据模型名称自动寻找对应的模板（如`auto_form.html`， `auto_confirm_delete.html`），无需手动指定`template_name`。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_113.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_115.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_117.png)
 
 通过对比可以发现，通用视图将数十行代码浓缩为寥寥几行，且更易于维护。对于`Make`模型的视图，也应该采用同样的方式进行简化，而不是复制冗长的手动代码。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_119.png)
 
 ## 模板与登录配置
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_121.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_123.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_125.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_127.png)
 
 视图需要模板来呈现页面。通用视图有默认的模板命名约定，例如`<modelname>_form.html`。这些模板接收`form`或`object`等上下文变量。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_129.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_131.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_132.png)
 
 关于登录，项目配置使用了Django内置的认证系统。关键步骤包括：
 1.  在`settings.py`中启用`django.contrib.auth`应用。
@@ -375,25 +304,17 @@ class AutoDelete(LoginRequiredMixin, DeleteView):
 3.  在模板目录（如`templates/registration/`）下创建名为`login.html`的登录模板。
 4.  在需要登录的视图类中添加`LoginRequiredMixin`。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_134.png)
 
 ## 总结与作业建议 🎯
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_136.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_138.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_139.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_140.png)
 
 本节课我们一起深入学习了Django的Autos示例项目。我们分析了如何构建一个完整的CRUD应用，涵盖了从模型定义、表单创建、URL配置到视图逻辑的完整流程。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_142.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_144.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_145.png)
 
 核心收获包括：
 1.  **模型（Model）**：使用`ForeignKey`建立表间关系，利用`validators`进行数据验证。
@@ -403,15 +324,10 @@ class AutoDelete(LoginRequiredMixin, DeleteView):
     *   **更重要的是**，学会了使用Django的**通用视图**（`CreateView`， `UpdateView`， `DeleteView`）来极大地简化代码，这是Django高效开发的精髓。
 4.  **认证**：使用`LoginRequiredMixin`轻松实现视图的登录保护。
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_147.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_148.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_149.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_150.png)
 
-![](img/607c0b39ee9e4dd20c9c2c60affe5347_152.png)
 
 ![](img/607c0b39ee9e4dd20c9c2c60affe5347_153.png)
 

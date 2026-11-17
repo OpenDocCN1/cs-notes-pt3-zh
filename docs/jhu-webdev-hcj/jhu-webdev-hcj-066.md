@@ -6,7 +6,6 @@
 
 ## 优化Sublime Text工作区
 
-![](img/df374a095f026918e36f5e050d00c957_3.png)
 
 在深入学习JavaScript之前，我们先调整一下工作区，以便在Sublime Text中获得更好的体验。这样做是因为，当我们开始编辑JavaScript或CSS文件时，Sublime Text会尝试通过代码补全来帮助我们。然而，如果它认为我们整个课程的所有40个讲座文件都属于当前项目，它就会将所有文件（包括内含的CSS和JavaScript代码）加载到内存中，这可能导致编辑器运行缓慢。
 

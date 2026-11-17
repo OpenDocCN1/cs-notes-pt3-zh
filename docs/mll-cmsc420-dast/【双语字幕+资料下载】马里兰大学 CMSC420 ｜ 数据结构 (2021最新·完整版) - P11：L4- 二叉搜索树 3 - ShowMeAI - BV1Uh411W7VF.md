@@ -2,7 +2,6 @@
 
 ![](img/abf3beb052fd5bba0862600a94e97ef0_0.png)
 
-![](img/abf3beb052fd5bba0862600a94e97ef0_1.png)
 
 okay let us wrap up the material on，binary search trees，so we're going to finish up talking。
 

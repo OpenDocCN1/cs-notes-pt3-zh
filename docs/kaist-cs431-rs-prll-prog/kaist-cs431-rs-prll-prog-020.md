@@ -27,13 +27,9 @@
 
 ## 三种遍历策略
 
-![](img/0e777f4205fa44fc2d75b509f42c5f73_1.png)
 
-![](img/0e777f4205fa44fc2d75b509f42c5f73_3.png)
 
-![](img/0e777f4205fa44fc2d75b509f42c5f73_5.png)
 
-![](img/0e777f4205fa44fc2d75b509f42c5f73_7.png)
 
 有三种主要的遍历策略：
 1.  **Harris 策略**
@@ -44,7 +40,6 @@
 
 在接下来的内容中，我们将学习遍历策略以及如何执行这些操作。
 
-![](img/0e777f4205fa44fc2d75b509f42c5f73_9.png)
 
 ## 操作详解
 
@@ -73,19 +68,16 @@ if compare_and_swap(&prev.next, curr, new_node) {
 
 ### 删除操作
 
-![](img/0e777f4205fa44fc2d75b509f42c5f73_11.png)
 
 删除操作需要更多考虑，以处理与插入操作的并发。假设我们要删除 `curr` 节点（例如包含 42）。
 
 简单的想法是：将 `prev.next` 从指向 `curr` 直接 `CAS` 为指向 `curr.next`。但这可能与一个正在 `curr` 之后插入新节点的操作产生冲突，导致插入的节点丢失。
 
-![](img/0e777f4205fa44fc2d75b509f42c5f73_13.png)
 
 为了解决这个问题，删除操作分为两步：
 1.  **逻辑删除**：首先，通过某种方式（例如，将 `curr.next` 指针的最低有效位设置为 1）将 `curr` 节点标记为“逻辑上已删除”。
 2.  **物理删除**：然后，对 `prev.next` 执行 `CAS` 操作，将其从指向 `curr` 改为指向 `curr.next`。
 
-![](img/0e777f4205fa44fc2d75b509f42c5f73_15.png)
 
 **代码描述**：
 ```rust
@@ -121,9 +113,7 @@ if compare_and_swap(&curr.next, next, marked_next) {
 
 **特点**：延迟修复，但一次修复多个节点。
 
-![](img/0e777f4205fa44fc2d75b509f42c5f73_17.png)
 
-![](img/0e777f4205fa44fc2d75b509f42c5f73_19.png)
 
 ### 2. Harris-Michael 策略
 

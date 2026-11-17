@@ -27,17 +27,14 @@
 *   **登录页** (`/login`): 包含一个表单，有`email`和`password`输入框以及一个`submit`提交按钮。
 *   **仪表盘页** (`/dashboard`): 登录后显示，包含一个用于上传文件的`input`（`name="your-image"`）和一个“退出”按钮。成功上传图片后，会显示一个图片预览（`img`标签，`name="image-preview"`）。
 
-![](img/6e4bae155f2baed27a50327310d6a174_5.png)
 
 为方便Cypress选择元素，我们已为所有关键交互元素（如按钮、输入框）设置了`name`属性。
 
 ---
 
-![](img/6e4bae155f2baed27a50327310d6a174_7.png)
 
 ## 安装与配置Cypress
 
-![](img/6e4bae155f2baed27a50327310d6a174_9.png)
 
 首先，我们需要在项目中安装Cypress。如果你的项目尚未安装，可以使用以下命令：
 
@@ -47,9 +44,7 @@ yarn add cypress
 
 安装完成后，为了方便启动Cypress，可以在`package.json`文件的`scripts`部分添加一个快捷命令：
 
-![](img/6e4bae155f2baed27a50327310d6a174_11.png)
 
-![](img/6e4bae155f2baed27a50327310d6a174_12.png)
 
 ```json
 {
@@ -61,21 +56,16 @@ yarn add cypress
 
 现在，你可以通过运行 `yarn cypress:open` 来启动Cypress测试运行器。
 
-![](img/6e4bae155f2baed27a50327310d6a174_14.png)
 
 当你首次运行此命令时，Cypress会进行初始化配置，并创建 `cypress` 目录及其默认文件结构。
 
-![](img/6e4bae155f2baed27a50327310d6a174_16.png)
 
 在Cypress测试运行器界面中，选择“E2E Testing”并选择一个浏览器（**推荐使用Chrome，因为这是评分时的默认浏览器**）。然后，你可以创建一个新的测试文件，例如将其命名为 `userFlow.cy.js`。
 
-![](img/6e4bae155f2baed27a50327310d6a174_18.png)
 
 ---
 
-![](img/6e4bae155f2baed27a50327310d6a174_20.png)
 
-![](img/6e4bae155f2baed27a50327310d6a174_21.png)
 
 ## 编写“快乐路径”测试
 
@@ -95,11 +85,9 @@ describe('用户流程测试', () => {
 });
 ```
 
-![](img/6e4bae155f2baed27a50327310d6a174_27.png)
 
 ### 步骤 1: 访问主页并验证URL
 
-![](img/6e4bae155f2baed27a50327310d6a174_29.png)
 
 每个测试开始时，我们首先需要导航到应用的起始URL。
 
@@ -115,9 +103,7 @@ cy.url().should('eq', 'http://localhost:3000/');
 
 接下来，我们需要点击主页上的“登录”按钮，跳转到登录页。
 
-![](img/6e4bae155f2baed27a50327310d6a174_31.png)
 
-![](img/6e4bae155f2baed27a50327310d6a174_33.png)
 
 ```javascript
 cy.get('button[name="login-button"]').click();
@@ -148,11 +134,9 @@ cy.url().should('eq', 'http://localhost:3000/dashboard');
 *   填写完成后，找到提交按钮并点击。
 *   断言页面成功跳转至仪表盘 (`/dashboard`)。
 
-![](img/6e4bae155f2baed27a50327310d6a174_39.png)
 
 ### 步骤 4: 成功上传文件
 
-![](img/6e4bae155f2baed27a50327310d6a174_41.png)
 
 ![](img/6e4bae155f2baed27a50327310d6a174_43.png)
 
@@ -191,7 +175,6 @@ cy.get('button[name="logout-button"]').click();
 cy.url().should('eq', 'http://localhost:3000/');
 ```
 
-![](img/6e4bae155f2baed27a50327310d6a174_51.png)
 
 ---
 
@@ -201,13 +184,11 @@ cy.url().should('eq', 'http://localhost:3000/');
 
 你会看到Cypress模拟一个浏览器，逐步执行你的每一个命令：访问页面、点击按钮、输入文本、上传文件。所有断言（`should`）如果通过，测试则显示为绿色；如果有任何一步失败（例如元素未找到、URL不匹配、超时），测试将停止并报告错误。
 
-![](img/6e4bae155f2baed27a50327310d6a174_53.png)
 
 ---
 
 ## 总结
 
-![](img/6e4bae155f2baed27a50327310d6a174_55.png)
 
 本节课中我们一起学习了如何使用Cypress进行端到端UI测试。我们重点掌握了：
 
@@ -221,7 +202,6 @@ cy.url().should('eq', 'http://localhost:3000/');
 4.  **处理异步**：使用 `cy.wait()` 命令处理需要等待的UI更新或网络请求，防止测试因超时而失败。
 5.  **“快乐路径”测试**：编写了一个完整的流程测试，模拟了用户从访问到退出的关键操作。
 
-![](img/6e4bae155f2baed27a50327310d6a174_57.png)
 
 ![](img/6e4bae155f2baed27a50327310d6a174_59.png)
 

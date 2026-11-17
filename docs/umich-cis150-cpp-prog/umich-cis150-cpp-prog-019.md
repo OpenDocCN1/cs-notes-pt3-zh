@@ -2,11 +2,9 @@
 
 ![](img/eed819226e74faba2054c16ff8e23248_0.png)
 
-![](img/eed819226e74faba2054c16ff8e23248_2.png)
 
 ![](img/eed819226e74faba2054c16ff8e23248_4.png)
 
-![](img/eed819226e74faba2054c16ff8e23248_6.png)
 
 ![](img/eed819226e74faba2054c16ff8e23248_8.png)
 
@@ -101,17 +99,14 @@ void printDetails(int xTilt, int yTilt, int distance) {
 
 ### 项目2概述与要求
 
-![](img/eed819226e74faba2054c16ff8e23248_44.png)
 
 在这个项目中，我将提供一个 `main` 函数的框架。你的任务是按照严格的规范，完成一系列指定的函数。当所有函数都正确实现后，提供的 `main` 函数应该能正常运行整个游戏。
 
 ![](img/eed819226e74faba2054c16ff8e23248_46.png)
 
-![](img/eed819226e74faba2054c16ff8e23248_48.png)
 
 以下是需要你实现的函数列表及其简要说明：
 
-![](img/eed819226e74faba2054c16ff8e23248_50.png)
 
 *   `getWord()`：提示用户输入一个单词，并确保该单词至少包含4个字符。该函数返回这个隐藏单词。
 *   `displayHiddenWord(string hiddenWord, string lettersGuessed)`：接收隐藏单词和已猜字母作为参数。在一行中打印出隐藏单词的当前状态：已猜出的字母显示其本身，未猜出的字母显示为下划线 `_`。

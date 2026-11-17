@@ -1370,7 +1370,6 @@ function insert_queue(queue, item) {
 }
 ```
 
-![c3-fig-0020.jpg](img/c3-fig-0020.jpg)
 
 图 3.20 在图 3.19 的队列上使用`insert_queue(q, "d")`的结果。
 
@@ -3468,7 +3467,6 @@ const primes = pair(2,
                                         integers_starting_from(3)));
 ```
 
-这个定义并不像看起来那么简单，因为我们将测试一个数`n`是否为素数，方法是检查是否可以被小于或等于![c3-fig-5001.jpg](img/c3-fig-5001.jpg)的素数（而不是任意整数）整除：
 
 ```js
 function is_prime(n) {

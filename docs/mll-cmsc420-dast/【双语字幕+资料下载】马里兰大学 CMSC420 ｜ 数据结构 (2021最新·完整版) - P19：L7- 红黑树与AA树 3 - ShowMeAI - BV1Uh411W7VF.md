@@ -2,7 +2,6 @@
 
 ![](img/f1eec7747b01c554c957b378ecc4aa34_0.png)
 
-![](img/f1eec7747b01c554c957b378ecc4aa34_1.png)
 
 in this third segment we're going to，continue talking about red black trees。
 

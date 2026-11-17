@@ -2,7 +2,6 @@
 
 ![](img/ddffa17d4d4b9aa359570ecd120c49ff_0.png)
 
-![](img/ddffa17d4d4b9aa359570ecd120c49ff_1.png)
 
 in this segment we're going to continue，talking about avl trees。
 

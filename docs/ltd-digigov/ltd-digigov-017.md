@@ -1,6 +1,5 @@
 # 017：数字经济竞争与规制（上）
 
-![](img/b3d6d2b43ec0512bac5a91cc521d6fae_0.png)
 
 ![](img/b3d6d2b43ec0512bac5a91cc521d6fae_0.png)
 

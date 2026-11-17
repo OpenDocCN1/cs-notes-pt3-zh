@@ -78,7 +78,6 @@ bucket = array[index]
 
 ## 总结
 
-![](img/3f6e7ed494b3308192134bb97fd32512_8.png)
 
 ![](img/3f6e7ed494b3308192134bb97fd32512_9.png)
 

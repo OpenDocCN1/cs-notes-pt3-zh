@@ -2,9 +2,7 @@
 
 ![](img/46253f65124e78ae1606a0eb3c4a9214_0.png)
 
-![](img/46253f65124e78ae1606a0eb3c4a9214_2.png)
 
-![](img/46253f65124e78ae1606a0eb3c4a9214_4.png)
 
 在本节课中，我们将学习如何在Windows 10操作系统上安装XAMPP。XAMPP是一个集成了Apache、MySQL、PHP和Perl的免费开源软件包，它是搭建本地Web开发环境的理想工具。我们将从下载开始，逐步完成安装、配置，并运行一个简单的PHP程序来验证安装是否成功。
 
@@ -54,11 +52,9 @@
 
 ![](img/46253f65124e78ae1606a0eb3c4a9214_9.png)
 
-![](img/46253f65124e78ae1606a0eb3c4a9214_11.png)
 
 服务启动后，我们可以通过浏览器访问本地服务器来验证安装。
 
-![](img/46253f65124e78ae1606a0eb3c4a9214_13.png)
 
 以下是验证步骤：
 1.  打开浏览器，在地址栏输入 `http://localhost` 或 `http://localhost/dashboard/`。如果看到XAMPP的欢迎面板，说明Apache服务器运行正常。
@@ -67,15 +63,12 @@
 4.  在XAMPP中，默认通常已设置为 `On`。如需修改，可以点击控制面板中Apache模块所在行的“Config”按钮，选择“PHP (php.ini)”。在打开的配置文件中，使用 `Ctrl+F` 搜索 `display_errors`，将其值修改为 `On`，保存文件后，**必须重启Apache服务**（先Stop，再Start）才能使更改生效。
 5.  返回浏览器，刷新PHPInfo页面，再次搜索 `display_errors`，确认其状态已更新。
 
-![](img/46253f65124e78ae1606a0eb3c4a9214_15.png)
 
 ## 创建并运行第一个PHP程序
 
-![](img/46253f65124e78ae1606a0eb3c4a9214_17.png)
 
 现在，我们来创建一个简单的PHP文件，测试整个开发环境是否工作正常。
 
-![](img/46253f65124e78ae1606a0eb3c4a9214_19.png)
 
 以下是创建和测试步骤：
 1.  打开你喜欢的文本编辑器（如VS Code、Sublime Text或Notepad++）。课程演示中使用了Atom。
@@ -103,7 +96,6 @@
 5.  将刚才创建的文件以 `index.php` 为名，保存到 `C:\xampp\htdocs\first\` 目录下。
 6.  打开浏览器，访问 `http://localhost/first/index.php`。如果页面正确显示“Hello World from HTML”和PHP计算出的结果“The sum of 5 and 6 is: 11”，则说明你的本地PHP开发环境已完全配置成功。
 
-![](img/46253f65124e78ae1606a0eb3c4a9214_21.png)
 
 ---
 

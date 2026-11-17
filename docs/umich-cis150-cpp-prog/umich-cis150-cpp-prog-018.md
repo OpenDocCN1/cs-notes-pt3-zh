@@ -1,8 +1,6 @@
 # 018：派对策划程序 🎉
 
-![](img/04785d3c771cf9f526d2a80f5095a48f_0.png)
 
-![](img/04785d3c771cf9f526d2a80f5095a48f_2.png)
 
 ![](img/04785d3c771cf9f526d2a80f5095a48f_4.png)
 
@@ -101,20 +99,14 @@ if (choice == "cake") {
 
 ### 4. 询问单价并计算所需数量
 
-![](img/04785d3c771cf9f526d2a80f5095a48f_44.png)
 
 询问单个物品的价格，并计算需要购买的总数量。注意，我们需要使用 `ceil` 函数将结果向上取整，因为不能购买部分物品。
 
-![](img/04785d3c771cf9f526d2a80f5095a48f_46.png)
-
-![](img/04785d3c771cf9f526d2a80f5095a48f_48.png)
-
-![](img/04785d3c771cf9f526d2a80f5095a48f_50.png)
 
 
-![](img/04785d3c771cf9f526d2a80f5095a48f_52.png)
 
-![](img/04785d3c771cf9f526d2a80f5095a48f_54.png)
+
+
 
 ```cpp
 double pricePerItem;
@@ -126,9 +118,7 @@ itemsNeeded = ceil(itemsNeeded); // 使用ceil函数向上取整
 // 引用来源：cplusplus.com/reference/cmath/ceil/
 ```
 
-![](img/04785d3c771cf9f526d2a80f5095a48f_56.png)
 
-![](img/04785d3c771cf9f526d2a80f5095a48f_57.png)
 
 ### 5. 输出结果
 

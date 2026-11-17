@@ -12,23 +12,17 @@
 
 ---
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_8.png)
 
 ## 循环控制：`break`与`continue`
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_10.png)
 
 上一节我们介绍了`for`循环和`while`循环的基本用法。本节中，我们来看看两个可以改变循环流程的关键字：`break`和`continue`。
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_12.png)
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_14.png)
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_15.png)
 
 `break`关键字用于立即终止整个循环。无论循环条件是否满足，一旦执行到`break`，循环就会停止。
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_17.png)
 
 ```cpp
 while (true) {
@@ -40,9 +34,7 @@ while (true) {
 }
 ```
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_19.png)
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_21.png)
 
 `continue`关键字用于跳过当前循环迭代中剩余的代码，直接开始下一次迭代。
 
@@ -55,15 +47,11 @@ for (int i = 0; i < 100; i++) {
 }
 ```
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_23.png)
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_25.png)
 
 虽然`break`和`continue`提供了便利，但它们有时会使代码逻辑变得不那么直观。通常，我们可以通过调整循环条件或使用`if-else`语句来达到相同的目的。
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_27.png)
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_29.png)
 
 ---
 
@@ -80,13 +68,9 @@ for (int i = 0; i < 100; i++) {
 *   如果需要在循环结束后仍然使用某个变量的值，必须在循环外部声明该变量。
 *   应避免在不同的作用域内使用相同的变量名，这可能导致混淆和错误。
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_35.png)
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_37.png)
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_39.png)
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_41.png)
 
 ```cpp
 int number; // 在循环外部声明，作用域更广
@@ -111,9 +95,7 @@ cout << number << endl;
 
 ## 枚举类型
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_50.png)
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_52.png)
 
 枚举（`enum`）是一种用户定义的数据类型，它允许我们为整数值分配有意义的名称，从而使代码更易读、更安全。
 
@@ -157,11 +139,8 @@ cout << "Green means go!" << endl;
 5.  循环结束后，输出每个点数出现的次数。
 
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_61.png)
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_63.png)
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_65.png)
 
 ```cpp
 #include <iostream>
@@ -199,13 +178,10 @@ int main() {
 }
 ```
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_67.png)
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_69.png)
 
 随着掷骰子次数的增加（例如从10次增加到10万次），各个点数出现的次数会越来越接近，这验证了随机事件的均匀分布特性。目前，我们使用了多个独立的变量来存储计数，在后续学习了数组之后，我们可以用更简洁高效的方式重写这个程序。
 
-![](img/8a6c773aaca9051b333cb31051acb3c1_71.png)
 
 ![](img/8a6c773aaca9051b333cb31051acb3c1_73.png)
 

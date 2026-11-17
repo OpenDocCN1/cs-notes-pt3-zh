@@ -2,7 +2,6 @@
 
 ![](img/320f22928b4a938bfffe85100f04514e_0.png)
 
-![](img/320f22928b4a938bfffe85100f04514e_1.png)
 
 in this segment we're going to talk，about a new data structure called range。
 

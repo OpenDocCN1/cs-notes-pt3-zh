@@ -1,6 +1,5 @@
 # 026：Microsemi单芯片FPGA解决方案 🧩
 
-![](img/00076d9794660b43dadb6a40c5eb6439_1.png)
 
 在本节课中，我们将继续探讨现代可编程逻辑器件，这次聚焦于Microsemi公司的FPGA产品，包括Igloo、Igloo2和Accelerator系列。在深入了解具体器件之前，先了解一些关于FPGA工艺技术和互连的背景知识会很有帮助。
 
@@ -115,6 +114,5 @@ Microsemi Igloo2拥有丰富的硬IP核，包括存储器控制器、高速收�
 
 如果安全性、可靠性或低功耗是设计需求，Microsemi FPGA值得考虑。
 
-![](img/00076d9794660b43dadb6a40c5eb6439_3.png)
 
 ![](img/00076d9794660b43dadb6a40c5eb6439_3.png)

@@ -4,7 +4,6 @@
 
 ## 概述
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_1.png)
 
 本节教程将引导你完成使用PDO进行数据库操作的全过程。我们将首先设置必要的数据库环境，然后通过多个代码示例，演示如何连接数据库、执行SQL查询、处理返回的数据，以及如何组织代码以提高安全性和可维护性。
 
@@ -62,7 +61,6 @@
 
 核心操作是实例化一个PDO对象。其构造函数需要三个主要参数：
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_7.png)
 
 ![](img/61c6fbfbca3e8a551df9e832a9bafe67_8.png)
 
@@ -89,17 +87,14 @@ $pdo = new PDO('mysql:host=localhost;port=3306;dbname=misc',
 *   `dbname=misc` 指定要连接的数据库名称。
 *   `'fred'` 和 `'zap'` 是之前创建的用户名和密码。
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_12.png)
 
 如果连接信息（如密码）错误，实例化PDO对象时会抛出异常，导致脚本终止。因此，确保这些信息正确是调试的第一步。
 
 ---
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_14.png)
 
 ### 执行查询与遍历结果
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_16.png)
 
 成功连接数据库后，本节我们来看看如何执行SQL查询并处理返回的结果集。
 
@@ -116,9 +111,7 @@ while ( $row = $stmt->fetch(PDO::FETCH_ASSOC) ) {
 ?>
 ```
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_18.png)
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_19.png)
 
 **代码解释**：
 1.  `$pdo->query("SELECT * FROM users")` 执行SQL查询，并将结果集赋值给 `$stmt`。
@@ -134,19 +127,15 @@ while ( $row = $stmt->fetch(PDO::FETCH_ASSOC) ) {
 
 ---
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_23.png)
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_24.png)
 
 ### 将数据渲染为HTML表格
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_26.png)
 
 直接打印数组对用户不友好。本节我们学习如何将从数据库获取的数据格式化为美观的HTML页面。
 
 我们可以修改循环体内的代码，用echo语句生成HTML标签，从而将数据嵌入到一个表格中。
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_28.png)
 
 ```php
 <?php
@@ -165,34 +154,27 @@ echo "</table>\n";
 ?>
 ```
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_29.png)
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_30.png)
 
 **代码解释**：
 *   在循环中，我们不再使用 `print_r`，而是通过 `echo` 拼接出HTML的 `<tr>`（行）和 `<td>`（单元格）标签。
 *   `htmlentities($row['name'])` 函数用于将数据中的特殊字符转换为HTML实体，这是一种重要的安全措施，可以防止跨站脚本（XSS）攻击。
 *   最终，这段代码会生成一个包含所有用户数据的HTML表格。
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_32.png)
 
 ---
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_33.png)
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_35.png)
 
 ### 代码重构与安全优化
 
 将数据库连接信息硬编码在每个PHP文件中是一种糟糕的做法。本节我们来看看如何通过代码重构来提高安全性和可维护性。
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_37.png)
 
 最佳实践是将数据库连接代码单独放在一个配置文件中，然后在需要的页面中引入（`require`）它。这样便于统一管理密码，也减少了代码重复。
 
 **1. 创建配置文件 (`pdo.php`)**:
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_39.png)
 
 ```php
 <?php
@@ -208,7 +190,6 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 **2. 在主文件中引入配置并查询**:
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_41.png)
 
 ```php
 <?php
@@ -218,7 +199,6 @@ $stmt = $pdo->query("SELECT * FROM users");
 ?>
 ```
 
-![](img/61c6fbfbca3e8a551df9e832a9bafe67_42.png)
 
 通过这种方式，数据库凭证只存在于 `pdo.php` 这一个文件中。如果网站有上百个文件需要数据库连接，你只需修改这一个配置文件即可。即使Web目录被部分访问，数据库密码也不容易泄露。
 

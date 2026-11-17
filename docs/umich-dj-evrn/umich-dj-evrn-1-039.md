@@ -33,7 +33,6 @@ def my_view(request):
 
 ![](img/43f5809944415a97856564e3c2f35e39_7.png)
 
-![](img/43f5809944415a97856564e3c2f35e39_8.png)
 
 ---
 

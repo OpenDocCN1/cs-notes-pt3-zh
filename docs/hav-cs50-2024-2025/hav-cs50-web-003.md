@@ -14,13 +14,11 @@
 
 ![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_8.png)
 
-![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_9.png)
 
 ![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_11.png)
 
 ![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_12.png)
 
-![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_13.png)
 
 ## 什么是Git？
 
@@ -228,9 +226,7 @@ git commit -am “添加了二级标题”
 *   `<<<<<<< HEAD` 和 `=======` 之间是你的本地修改。
 *   `=======` 和 `>>>>>>>` 之间是远程（同事）的修改。
 
-![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_96.png)
 
-![](img/fc15ab32beaa65dcdbeed3fe5bc8dcc3_98.png)
 
 **解决冲突的方法是**：你需要手动编辑文件，决定保留哪种修改，或者进行融合。删除所有冲突标记（`<<<<<<<`, `=======`, `>>>>>>>`），将文件修改为你最终想要的样子。例如，你可以决定保留蓝色和两个感叹号：
 ```html

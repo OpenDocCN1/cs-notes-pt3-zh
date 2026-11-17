@@ -2,7 +2,6 @@
 
 ![](img/079876117803ece8e404e2afea3fec5f_0.png)
 
-![](img/079876117803ece8e404e2afea3fec5f_1.png)
 
 in this segment we're going to talk，about a brand new data structure called，a b tree。
 

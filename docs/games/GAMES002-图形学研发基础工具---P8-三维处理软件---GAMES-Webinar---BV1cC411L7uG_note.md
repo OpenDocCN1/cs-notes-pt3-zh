@@ -12,17 +12,13 @@
 
 在本节课中，我们将学习三维处理工具，这些工具在图形学中用于几何处理、渲染和重建。
 
-![](img/e525e3a5baf2f4ab54c3b6c12027c2fc_7.png)
 
 ## 几何处理软件
 
 ### Cloud Compare
 
-![](img/e525e3a5baf2f4ab54c3b6c12027c2fc_9.png)
 
-![](img/e525e3a5baf2f4ab54c3b6c12027c2fc_11.png)
 
-![](img/e525e3a5baf2f4ab54c3b6c12027c2fc_13.png)
 
 Cloud Compare是一款开源软件，主要用于点云处理，也支持网格处理。它具有以下特点：
 
@@ -34,9 +30,7 @@ Cloud Compare是一款开源软件，主要用于点云处理，也支持网格�
 
 MeshLab是一款开源软件，主要用于网格处理，也支持点云处理。它具有以下特点：
 
-![](img/e525e3a5baf2f4ab54c3b6c12027c2fc_15.png)
 
-![](img/e525e3a5baf2f4ab54c3b6c12027c2fc_17.png)
 
 * **开源**：C++编写，提供Python API。
 * **功能**：网格处理、简化、图包计算等。
@@ -50,11 +44,9 @@ Open3D是一个C++代码库，提供Python绑定，支持各种3D算法，包括
 
 ### Blender
 
-![](img/e525e3a5baf2f4ab54c3b6c12027c2fc_19.png)
 
 Blender是一款开源的渲染工具，具有以下特点：
 
-![](img/e525e3a5baf2f4ab54c3b6c12027c2fc_21.png)
 
 * **开源**：Python编写，提供图形化界面和Python API。
 * **功能**：复杂的渲染系统，支持各种功能。
@@ -71,7 +63,6 @@ Blender是一款开源的渲染工具，具有以下特点：
 
 CodeMap是一个开源的重建工具，用于从图像中恢复3D模型。它支持稀疏重建和稠密重建。
 
-![](img/e525e3a5baf2f4ab54c3b6c12027c2fc_23.png)
 
 ### Context Capture
 

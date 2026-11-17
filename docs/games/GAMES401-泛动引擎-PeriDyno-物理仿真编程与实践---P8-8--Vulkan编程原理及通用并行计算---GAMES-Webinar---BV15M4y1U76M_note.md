@@ -33,11 +33,9 @@ Vulkan相比其他API更底层，它将更多硬件特性暴露给开发者，�
 
 上一节我们讨论了如何选择API，本节我们将尝试使用最原始的Vulkan API来编写一个简单的并行计算程序，以此感受其复杂性。
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_2.png)
 
 我们的任务是实现两个数组A和B的求和，并将结果存入数组C。用CUDA实现这个任务对初学者来说可能只需几小时，但用原始Vulkan API实现则困难得多。
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_4.png)
 
 Vulkan的执行流程包含多个对象和步骤：
 1.  **创建Instance**：应用程序的顶层实例。
@@ -83,25 +81,19 @@ VK_PROGRAM_END
 ArrayAdd->flush(128, n/128, a, b, n); // 类似CUDA的kernel调用<<<...>>>
 ```
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_10.png)
 
 这种封装使得主机端代码量从数百行减少到数十行，显著降低了研发成本。此外，Catalina还支持`VkMultiProgram`将多个Kernel组合记录到同一个命令缓冲区中执行，以优化需要频繁切换Kernel的仿真循环性能。
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_12.png)
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_14.png)
 
 ## Vulkan后端与PeriDyno框架的集成
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_16.png)
 
 ![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_18.png)
 
 为了保持引擎框架与GPU后端的无关性，PeriDyno在架构上进行了调整。核心思路是引入中间层来屏蔽底层细节。
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_20.png)
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_22.png)
 
 ![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_24.png)
 
@@ -111,13 +103,10 @@ ArrayAdd->flush(128, n/128, a, b, n); // 类似CUDA的kernel调用<<<...>>>
 
 这种解耦设计使得拓展新的计算或渲染后端变得更加方便。
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_26.png)
 
 ## Vulkan用于仿真计算的挑战与注意事项
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_28.png)
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_30.png)
 
 尽管Vulkan能力强大，但在用于仿真计算研发时，仍面临一些挑战：
 
@@ -127,41 +116,29 @@ ArrayAdd->flush(128, n/128, a, b, n); // 类似CUDA的kernel调用<<<...>>>
 4.  **厂商实现差异**：不同硬件厂商对Vulkan特性的支持千差万别，为实现真正的跨平台，仍需做大量适配和优化工作。
 5.  **性能与易用性权衡**：Vulkan更底层，在计算密集度足够高时性能优于CUDA。但对于小规模计算或快速原型开发，其复杂的编程模型可能抵消性能优势。
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_32.png)
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_34.png)
 
 ![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_36.png)
 
 因此，Vulkan目前更适合用于对性能有极致要求、且计算规模较大的个别计算步骤的加速，而非快速开发复杂的仿真系统。
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_38.png)
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_40.png)
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_42.png)
 
 ## 案例展示与总结
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_44.png)
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_46.png)
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_48.png)
 
 ![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_50.png)
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_52.png)
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_54.png)
 
 ![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_56.png)
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_58.png)
 
 最后，我们通过一个简单的粒子发射与流动的案例，演示了Vulkan后端与PeriDyno蓝图系统的协同工作。该案例验证了从后端对接到引擎蓝图集成的整个流程是可行的。此外，PeriDyno中也提供了基于Vulkan的点、线、面基本渲染模块，以及一些未开源的尝试性案例（如刚体、浅水波、弹性体），证明了Vulkan能够完成多种物理仿真任务，只是研发代价不同。
 
-![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_60.png)
 
 ![](img/2b41ed1fb0d8c4ed3a6198eba0898af1_62.png)
 

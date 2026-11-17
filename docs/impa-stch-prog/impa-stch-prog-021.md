@@ -2,7 +2,6 @@
 
 ![](img/f0b06035e67b57bec87fe6b1da8adf8d_1.png)
 
-![](img/f0b06035e67b57bec87fe6b1da8adf8d_3.png)
 
 ![](img/f0b06035e67b57bec87fe6b1da8adf8d_5.png)
 
@@ -12,7 +11,6 @@
 
 ![](img/f0b06035e67b57bec87fe6b1da8adf8d_7.png)
 
-![](img/f0b06035e67b57bec87fe6b1da8adf8d_9.png)
 
 上一节我们介绍了在险价值。对于一个随机变量 `Z` 和风险水平 `α ∈ (0,1)`，在险价值 `VaR_α(Z)` 定义为满足以下条件的最小值 `t`：
 ```
@@ -34,15 +32,11 @@ P(Z > VaR_α(Z)) ≤ α ≤ P(Z ≥ VaR_α(Z))
 
 这个性质揭示了在险价值的一个缺点：当分布存在原子时，对于落在区间 `[P(Z > VaR_α(Z)), P(Z ≥ VaR_α(Z))]` 内的不同风险容忍度 `β`，计算出的在险价值 `VaR_β(Z)` 是相同的。这意味着在险价值无法区分风险容忍度的细微变化，这是其作为风险度量的另一个不足，此外它还不满足次可加性。
 
-![](img/f0b06035e67b57bec87fe6b1da8adf8d_17.png)
 
-![](img/f0b06035e67b57bec87fe6b1da8adf8d_19.png)
 
 ## 一致性风险度量
 
-![](img/f0b06035e67b57bec87fe6b1da8adf8d_21.png)
 
-![](img/f0b06035e67b57bec87fe6b1da8adf8d_23.png)
 
 在上一讲中，我们定义了风险度量应具备的一些良好性质：平移不变性、单调性、正齐次性和次可加性。满足这四条性质的风险度量被称为**一致性风险度量**。
 
@@ -50,17 +44,14 @@ P(Z > VaR_α(Z)) ≤ α ≤ P(Z ≥ VaR_α(Z))
 
 ![](img/f0b06035e67b57bec87fe6b1da8adf8d_25.png)
 
-![](img/f0b06035e67b57bec87fe6b1da8adf8d_27.png)
 
 ![](img/f0b06035e67b57bec87fe6b1da8adf8d_29.png)
 
 一个重要的等价关系是：对于正齐次的风险度量，**次可加性等价于凸性**。这意味着任何一致性风险度量都是凸函数，这在优化问题中是一个非常好的性质，因为凸优化通常具有良好的数学性质和求解算法。
 
-![](img/f0b06035e67b57bec87fe6b1da8adf8d_31.png)
 
 ![](img/f0b06035e67b57bec87fe6b1da8adf8d_33.png)
 
-![](img/f0b06035e67b57bec87fe6b1da8adf8d_35.png)
 
 ![](img/f0b06035e67b57bec87fe6b1da8adf8d_37.png)
 
@@ -68,7 +59,6 @@ P(Z > VaR_α(Z)) ≤ α ≤ P(Z ≥ VaR_α(Z))
 
 ![](img/f0b06035e67b57bec87fe6b1da8adf8d_39.png)
 
-![](img/f0b06035e67b57bec87fe6b1da8adf8d_41.png)
 
 为了克服在险价值的“短视”问题（即只关注分位点，而忽略分位点之外尾部损失的严重程度），我们引入**平均在险价值**。
 
@@ -92,7 +82,6 @@ AVaR_α(Z) = (1/α) E[ Z * I_{Z ≥ VaR_α(Z)} ]
 
 ![](img/f0b06035e67b57bec87fe6b1da8adf8d_45.png)
 
-![](img/f0b06035e67b57bec87fe6b1da8adf8d_47.png)
 
 我们定义函数 `g(u)`：
 ```

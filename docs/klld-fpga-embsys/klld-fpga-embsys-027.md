@@ -2,7 +2,6 @@
 
 在本节课中，我们将继续学习现代可编程逻辑器件，这次重点介绍来自Lattice公司的FPGA和CPLD产品，包括ECP5、ECP3、MachXO2、MachXO3和iCE40系列。我们将按照从大到小的顺序来了解这些器件。选择可编程逻辑器件的目标是为我们的需求找到最合适的型号。我们将运用之前建立的选择标准来评估这些器件。
 
-![](img/b5d00c7ac90fd83ed04d51c73cc24de1_1.png)
 
 ![](img/b5d00c7ac90fd83ed04d51c73cc24de1_1.png)
 
@@ -116,6 +115,5 @@ iCE40 Ultra架构包含一个由可编程I/O环绕的可编程逻辑块（PLB）
 
 总的来说，Lattice为需要低成本、低功耗、小尺寸或单芯片解决方案的应用提供了有吸引力的选择。
 
-![](img/b5d00c7ac90fd83ed04d51c73cc24de1_3.png)
 
 ![](img/b5d00c7ac90fd83ed04d51c73cc24de1_3.png)

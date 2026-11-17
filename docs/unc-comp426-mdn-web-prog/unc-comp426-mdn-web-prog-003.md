@@ -1,8 +1,6 @@
 # 003：JavaScript、TypeScript与构建系统 🚀
 
-![](img/84aa74211fa4a5921c1a94972889ad1d_1.png)
 
-![](img/84aa74211fa4a5921c1a94972889ad1d_2.png)
 
 在本节课中，我们将学习如何为网页添加功能。我们将介绍JavaScript语言，并探讨它与TypeScript的关系。我们还将了解如何将TypeScript代码转换为浏览器可以理解的JavaScript，以及构建工具和开发环境在此过程中扮演的角色。
 

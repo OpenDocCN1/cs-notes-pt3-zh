@@ -2,7 +2,6 @@
 
 ![](img/7d951d8aa46554adf74060b317e41a94_0.png)
 
-![](img/7d951d8aa46554adf74060b317e41a94_1.png)
 
 in this final segment on range trees，we're going to put all the pieces，together in order to answer。
 

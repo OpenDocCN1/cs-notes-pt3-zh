@@ -1,6 +1,5 @@
 # 076：在Macintosh上安装MAMP 🍎
 
-![](img/4c4415ebcf2fd697ff429927656dbdc1_1.png)
 
 在本节课中，我们将学习如何在Macintosh电脑上安装MAMP软件，并配置PHP开发环境，最后创建一个简单的PHP网页来验证安装是否成功。
 
@@ -44,7 +43,6 @@ MAMP是一个集成了Apache服务器、MySQL数据库和PHP的本地开发环�
 
 默认情况下，MAMP的PHP配置是为生产环境优化的，会隐藏错误信息。但对于开发来说，我们需要看到所有错误以便调试。因此，我们需要修改PHP的配置文件。
 
-![](img/4c4415ebcf2fd697ff429927656dbdc1_7.png)
 
 上一节我们启动了MAMP并查看了PHP信息，本节中我们来看看如何修改配置以开启错误显示。
 
@@ -65,14 +63,12 @@ MAMP是一个集成了Apache服务器、MySQL数据库和PHP的本地开发环�
 
 为了使新的配置生效，我们需要重启MAMP服务器。
 
-![](img/4c4415ebcf2fd697ff429927656dbdc1_9.png)
 
 1.  回到MAMP控制面板，点击“Stop Servers”按钮停止服务。
 2.  等待服务完全停止后，再次点击“Start Servers”按钮重新启动。
 3.  刷新浏览器中的PHPInfo页面。
 4.  在页面中搜索 `display_errors`，确认其状态已变为 **On**。这表示配置修改成功。
 
-![](img/4c4415ebcf2fd697ff429927656dbdc1_11.png)
 
 ## 创建第一个PHP网页
 
@@ -80,15 +76,11 @@ MAMP是一个集成了Apache服务器、MySQL数据库和PHP的本地开发环�
 
 上一节我们配置了PHP环境，本节我们将动手创建第一个程序。
 
-![](img/4c4415ebcf2fd697ff429927656dbdc1_13.png)
 
-![](img/4c4415ebcf2fd697ff429927656dbdc1_14.png)
 
 首先，我们需要知道网站文件应该放在哪里。MAMP的Web服务器根目录是 `htdocs` 文件夹。
 
-![](img/4c4415ebcf2fd697ff429927656dbdc1_16.png)
 
-![](img/4c4415ebcf2fd697ff429927656dbdc1_18.png)
 
 1.  打开“访达”，进入路径：`Macintosh HD` -> `应用程序` -> `MAMP` -> `htdocs`。所有需要通过 `localhost` 访问的网页文件都应放在这个文件夹或其子文件夹中。
 2.  为了保持项目整洁，我们在 `htdocs` 文件夹内创建一个名为 `first` 的新文件夹。

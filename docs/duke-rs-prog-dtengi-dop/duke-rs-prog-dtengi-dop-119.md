@@ -59,7 +59,6 @@ scrape_configs:
 
 ![](img/a6736d5debec587447a62ab15a5205e5_5.png)
 
-![](img/a6736d5debec587447a62ab15a5205e5_7.png)
 
 在这个配置中，`scrape_interval`设置为5秒，意味着Prometheus每5秒会向配置的目标端点抓取一次指标数据。我们定义了一个名为`axum_monitoring`的抓取任务，其目标是`host.docker.internal:8080`。使用`host.docker.internal`而不是`localhost`至关重要，因为它能让容器内的Prometheus正确访问到宿主机上运行的服务。
 
@@ -67,7 +66,6 @@ scrape_configs:
 
 配置完成后，我们需要启动所有服务并验证它们之间的连接是否正常。
 
-![](img/a6736d5debec587447a62ab15a5205e5_9.png)
 
 以下是启动和验证服务的步骤：
 

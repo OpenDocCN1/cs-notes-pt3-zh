@@ -35,7 +35,6 @@ DOM的概念由来已久。当JavaScript在1995年诞生时，DOM就已经存在
 *   在JavaScript中，我们使用`document.getElementById('person')`来获取这个`<span>`标签对应的DOM对象。
 *   获取到这个对象后，我们可以通过其`innerHTML`属性来读取或修改标签内的内容。
 
-![](img/55468c3a5087f345acdc23ad4864c413_9.png)
 
 **代码示例：查找并修改元素**
 ```javascript
@@ -48,7 +47,6 @@ element.innerHTML = 'Joseph';
 ```
 执行上述代码后，网页上原本显示“Chuck”的地方会立刻变为“Joseph”，而无需刷新页面。浏览器控制台的`console.dir()`函数可以帮助我们查看DOM对象的详细属性，是调试代码的有用工具。
 
-![](img/55468c3a5087f345acdc23ad4864c413_11.png)
 
 ## 简单的DOM交互示例
 

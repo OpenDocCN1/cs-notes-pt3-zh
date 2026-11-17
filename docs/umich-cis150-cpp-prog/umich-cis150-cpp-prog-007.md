@@ -2,7 +2,6 @@
 
 ![](img/7ba12b17bbb1cd80d74bc34847e1c74f_0.png)
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_2.png)
 
 ![](img/7ba12b17bbb1cd80d74bc34847e1c74f_3.png)
 
@@ -25,7 +24,6 @@
 
 下面是一个简单的函数示例，它总是返回整数10：
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_7.png)
 
 ```cpp
 int someNumber() {
@@ -33,13 +31,10 @@ int someNumber() {
 }
 ```
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_9.png)
 
 我们可以在 `main` 函数中调用它：`cout << someNumber();`。
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_11.png)
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_13.png)
 
 使用调试器的“步入”功能，可以进入函数内部观察其执行过程，理解代码是如何跳转和返回的。
 
@@ -49,9 +44,7 @@ int someNumber() {
 
 上一节我们介绍了一个简单的函数，本节中我们来看看如何创建更实用、可定制的函数。
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_15.png)
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_17.png)
 
 ### 生成随机数的函数
 
@@ -63,13 +56,10 @@ int getRandomNumber(int maxNumber) {
 }
 ```
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_19.png)
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_21.png)
 
 调用方式：`getRandomNumber(100)` 会返回一个1到100之间的随机数。
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_23.png)
 
 ### 不返回值的函数
 
@@ -96,11 +86,9 @@ void printTriangle(int size, char character) {
 
 ## 参数传递：传值与传引用🔗
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_25.png)
 
 在上一节创建的函数中，我们只是使用了参数的值。本节中我们来看看如何通过函数修改外部变量的值，这涉及到两种参数传递方式。
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_27.png)
 
 ![](img/7ba12b17bbb1cd80d74bc34847e1c74f_29.png)
 
@@ -133,13 +121,9 @@ int main() {
 
 如果我们希望函数能够修改外部变量的值，就需要使用**传引用**调用。在参数类型后加上 `&` 符号即可。
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_40.png)
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_42.png)
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_44.png)
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_46.png)
 
 ```cpp
 void actuallyChange(int &num) { // 注意 & 符号
@@ -170,9 +154,7 @@ string findIntercepts(double a, double b, double c, double &root1, double &root2
 }
 ```
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_51.png)
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_53.png)
 
 ---
 
@@ -222,9 +204,7 @@ int getUserInputInRange(int lower, int upper) {
 }
 ```
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_59.png)
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_61.png)
 
 这样，无论何时需要获取某个范围内的整数，只需调用此函数即可，例如 `int size = getUserInputInRange(1, 100);`。
 
@@ -257,11 +237,9 @@ char getCharFromUser(string prompt, string validChars) {
 
 ---
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_63.png)
 
 ## 常见错误与总结📝
 
-![](img/7ba12b17bbb1cd80d74bc34847e1c74f_65.png)
 
 在本节课中，我们一起学习了C++函数的基础知识。让我们回顾一下重点并看看常见的错误。
 

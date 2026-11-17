@@ -1,6 +1,5 @@
 # 119：课程总结
 
-![](img/2ad49e7a4f1c18f981bb1cc9fe4c58ae_1.png)
 
 ![](img/2ad49e7a4f1c18f981bb1cc9fe4c58ae_1.png)
 

@@ -85,15 +85,12 @@ CREATE TABLE users (
 
 定义字段长度（如128）是与数据库服务器建立的一种“契约”，它有助于优化存储效率。服务器知道无需为超过此长度的数据预留空间。
 
-![](img/9d699c11935ccd8a7d343c43328daf96_21.png)
 
 ### 查看表结构
 
 创建表后，可以使用 `DESCRIBE` 命令查看其结构。
 
-![](img/9d699c11935ccd8a7d343c43328daf96_23.png)
 
-![](img/9d699c11935ccd8a7d343c43328daf96_24.png)
 
 ```sql
 DESCRIBE users;
@@ -107,7 +104,6 @@ CRUD代表创建（Create）、读取（Read）、更新（Update）和删除（
 
 ### 插入数据（Create）
 
-![](img/9d699c11935ccd8a7d343c43328daf96_26.png)
 
 使用 `INSERT INTO` 语句向表中添加新行。
 
@@ -121,13 +117,11 @@ INSERT INTO users (name, email) VALUES ('Chuck', 'csev@umich.edu');
 
 可以一次性执行多条插入语句，只需用分号分隔。
 
-![](img/9d699c11935ccd8a7d343c43328daf96_32.png)
 
 ### 删除数据（Delete）
 
 ![](img/9d699c11935ccd8a7d343c43328daf96_34.png)
 
-![](img/9d699c11935ccd8a7d343c43328daf96_36.png)
 
 使用 `DELETE FROM` 语句从表中删除行。通常需要结合 `WHERE` 子句来指定删除哪些行，否则将删除表中的所有数据。
 

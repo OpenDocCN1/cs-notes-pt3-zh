@@ -268,7 +268,6 @@
 
 ## 用逻辑门进行计算
 
-![](img/9bd5f6161cb6607b56d2fb964d1b8794_24_0.png)
 
 ![](img/9bd5f6161cb6607b56d2fb964d1b8794_24_1.png)
 
@@ -445,7 +444,6 @@ int Out4 = [
 
 ## 状态机示例
 
-![](img/9bd5f6161cb6607b56d2fb964d1b8794_39_0.png)
 
 ## 状态机示例
 
@@ -469,7 +467,6 @@ int Out4 = [
 
 ## 状态机示例
 
-![](img/9bd5f6161cb6607b56d2fb964d1b8794_44_0.png)
 
 ## 状态机示例
 
@@ -1325,7 +1322,6 @@ Update PC
 
 Chose based on CC and ifun
 
-![](img/9bd5f6161cb6607b56d2fb964d1b8794_107_0.png)
 
 ## 执行 call
 
@@ -1564,7 +1560,6 @@ newPC
   - Though all of the state updates occur **simultaneously** at the clock rises to the next cycle.
   - A problem: `pop %esp` need to sequentially write two registers. So the register file control logic must process it.
 
-![](img/9bd5f6161cb6607b56d2fb964d1b8794_126_0.png)
 
 ## SEQ 总结
 
@@ -2779,7 +2774,6 @@ bool E_bubble =
 
 ![](img/9bd5f6161cb6607b56d2fb964d1b8794_231_1.png)
 
-![](img/9bd5f6161cb6607b56d2fb964d1b8794_231_2.png)
 
 ![](img/9bd5f6161cb6607b56d2fb964d1b8794_231_3.png)
 
@@ -9344,7 +9338,6 @@ Thread 1 (主线程)
 
 Thread 2 (对等线程)
 
-![](img/9bd5f6161cb6607b56d2fb964d1b8794_813_0.png)
 
 ![](img/9bd5f6161cb6607b56d2fb964d1b8794_813_1.png)
 
@@ -12034,7 +12027,6 @@ L4 PT：页目录
   - 即，它是否在 vm_area_struct 定义的区域内？
   - 如果不是，则发出段错误信号（例如，(1)）
 
-![](img/9bd5f6161cb6607b56d2fb964d1b8794_1028_0.png)
 
 - 操作是否合法？
   - 即，进程能否读/写此区域？
@@ -12620,7 +12612,6 @@ page1 page0 PPN:11 PPN:4 page1 page0
 
 Child Process
 
-![](img/9bd5f6161cb6607b56d2fb964d1b8794_1073_0.png)
 
 ![](img/9bd5f6161cb6607b56d2fb964d1b8794_1073_1.png)
 

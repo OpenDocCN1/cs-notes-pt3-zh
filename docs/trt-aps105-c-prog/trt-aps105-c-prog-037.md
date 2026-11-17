@@ -15,11 +15,8 @@
 
 上一节我们介绍了链表的基本操作，本节中我们来看看如何对链表进行排序。冒泡排序算法可以应用于链表，其核心思想是反复比较并交换相邻元素，直到链表完全有序。
 
-![](img/4e20ede3a88267a4d98dc4fd1bbbb88a_6.png)
 
-![](img/4e20ede3a88267a4d98dc4fd1bbbb88a_8.png)
 
-![](img/4e20ede3a88267a4d98dc4fd1bbbb88a_10.png)
 
 ![](img/4e20ede3a88267a4d98dc4fd1bbbb88a_12.png)
 
@@ -99,9 +96,7 @@ void get_names(Student students[], int num_students) {
 
 ![](img/4e20ede3a88267a4d98dc4fd1bbbb88a_16.png)
 
-![](img/4e20ede3a88267a4d98dc4fd1bbbb88a_18.png)
 
-![](img/4e20ede3a88267a4d98dc4fd1bbbb88a_20.png)
 
 **递归思路：**
 1.  **基线条件：** 如果读取到的数字是0，则打印“反向序列”提示并返回。

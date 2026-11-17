@@ -2,7 +2,6 @@
 
 ![](img/63a951aa0861a60d0afe93bd1135a649_1.png)
 
-![](img/63a951aa0861a60d0afe93bd1135a649_2.png)
 
 ![](img/63a951aa0861a60d0afe93bd1135a649_4.png)
 
@@ -140,7 +139,6 @@ storms %>%
 
 参数 `.keep_all = TRUE` 确保在去重后保留其他列的数据。
 
-![](img/63a951aa0861a60d0afe93bd1135a649_23.png)
 
 ![](img/63a951aa0861a60d0afe93bd1135a649_25.png)
 
@@ -221,9 +219,7 @@ hurricanes %>%
 假设有一个 `students` 数据集，其中 `attribute` 列的值（“major”, “GPA”）应该作为列名，而 `value` 列则是对应的值。
 
 
-![](img/63a951aa0861a60d0afe93bd1135a649_40.png)
 
-![](img/63a951aa0861a60d0afe93bd1135a649_42.png)
 
 ```r
 # 原始不整洁数据
@@ -247,11 +243,9 @@ students_tidy %>%
 
 ![](img/63a951aa0861a60d0afe93bd1135a649_46.png)
 
-![](img/63a951aa0861a60d0afe93bd1135a649_48.png)
 
 `pivot_wider()` 能够智能处理缺失值，用 `NA` 填充。
 
-![](img/63a951aa0861a60d0afe93bd1135a649_50.png)
 
 对应的 `pivot_longer()` 函数则用于将“宽”格式数据变“长”，您可以在课后自行探索。
 
@@ -261,7 +255,6 @@ students_tidy %>%
 
 ![](img/63a951aa0861a60d0afe93bd1135a649_54.png)
 
-![](img/63a951aa0861a60d0afe93bd1135a649_55.png)
 
 ## 使用 stringr 清洗字符串数据 ✨
 

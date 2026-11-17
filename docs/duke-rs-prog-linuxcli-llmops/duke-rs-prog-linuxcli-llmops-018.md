@@ -1,6 +1,5 @@
 # 018：引言
 
-![](img/5ed3326364a2ba7377dc7c7acd0b29e0_0.png)
 
 ![](img/5ed3326364a2ba7377dc7c7acd0b29e0_0.png)
 

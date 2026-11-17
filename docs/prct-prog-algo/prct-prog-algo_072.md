@@ -139,7 +139,6 @@ blue = Color(  0,   0, 255)
 
 程序 alberssquares.py 是一个`Color`和`stddraw`客户端，允许您对颜色进行实验。该程序从命令行接受两种颜色，并以 20 世纪 60 年代由色彩理论家约瑟夫·阿尔伯斯开发的格式显示颜色，彻底改变了人们对颜色的看法。
 
-> | `% python alberssquares.py 9 90 166 100 100 100` | ![](img/1dbe719d1758ff8c72c05cee68945e0f.png) |
 > | --- | --- |
 > | `% python alberssquares.py 0 174 239 147 149 252` | ![](img/b8b8601811cfb39d8d6dca866bbcd4ff.png) |
 
@@ -182,7 +181,6 @@ RGB 颜色模型具有这样的特性，当三种颜色强度相同时，所得�
 
 程序 grayscale.py 是一个过滤器，它从命令行接受一个文件名，并生成该图像的灰度版本。它创建一个新的`Picture`对象，初始化为彩色图像，然后将每个像素的颜色设置为通过在 luminance.py 中应用`toGray()`函数计算的灰度值的新`Color`。尝试在文件 mandrill.jpg、mandrill.png、darwin.jpg 和 darwin.png 上运行它。
 
-> | `% python grayscale.py mandrill.jpg` | ![](img/10def519ad8c826a3a0abf8530684d72.png) |
 > | --- | --- |
 > | `% python grayscale.py darwin.jpg` | ![](img/5229d95983a944dd348220b0c83c605a.png) |
 
@@ -204,7 +202,6 @@ RGB 颜色模型具有这样的特性，当三种颜色强度相同时，所得�
 
 程序 fade.py 是一个`Picture`、`Color`和`stddraw`客户端，使用线性插值策略实现*淡入淡出效果*。它计算*n* - 1 个中间图像，其中第*t*个图像中的每个像素都是源图像和目标图像中对应像素的加权平均值。函数`blend()`实现了插值：源颜色按 1-*t*/*n*的因子加权，目标颜色按*t*/*n*的因子加权（当*t*为 0 时，我们有源颜色；当*t*为*n*时，我们有目标颜色）。请注意，fade.py 假定图像具有相同的宽度和高度；如果您有宽度和高度不同的图像，可以使用 scale.py 为 fade.py 创建一个或两个图像的缩放版本。尝试在 mandrill.jpg、mandrill.png、darwin.jpg 和 darwin.png 的各种排列上运行它。
 
-> | `% python fade.py mandrill.png darwin.png 5` | ![](img/a4d4c259b8fd5f1ad41746050f68babd.png) | ![](img/de075ff88a7b969a73f620d4cc4249c2.png) | ![](img/99ecb4a21af3fb19e9b1567607c3ab9c.png) |
 > | --- | --- | --- | --- |
 > |  | ![](img/89d996efed976d2fa5b416912940bdc8.png) | ![](img/da7ef9440e84bdbd516f7447f7532ca3.png) | ![](img/165dfefcc29010e1c01f07a2a9ffd585.png) |
 
@@ -455,21 +452,18 @@ python split.py djia 3
 
     其中(*c*[*i*], *c*[*j*])是图像的中心。例如，这些图像展示了 30 度的旋转：
 
-    > | ![Mandrill](img/0f160a90512359f9ee968f874d8169d3.png) |  | ![Mandrill 旋转](img/bce10a9647b3216ea8ec40b90583e1d1.png) |
     > | --- | --- | --- |
 
     *解决方案*: 请查看 rotation.py。
 
 1.  **漩涡滤镜**。创建漩涡效果类似于旋转，只是角度随着到中心的距离而变化。使用与前一个练习中相同的公式，但将θ计算为(*s*[*i*], *s*[*j*])的函数，具体来说是π/256 乘以到中心的距离。例如：
 
-    > | ![Mandrill](img/0f160a90512359f9ee968f874d8169d3.png) |  | ![Mandrill 漩涡效果](img/becfbbff0bd9aab15ac04b047bbd0985.png) |
     > | --- | --- | --- |
 
     *解决方案*: 请查看 swirl.py。
 
 1.  **波浪滤镜**。编写一个类似于前两个练习中的滤镜，创建波浪效果，通过将源图像中的每个像素(*s*[*i*], *s*[*j*])的颜色复制到目标像素(*t*[*i*], *t*[*j*），其中*t*[*i*] = *s*[*i*]，*t*[*j*] = *s*[*j*] + 20 sin(2 π *s*[*j*]/64)。添加代码以将振幅（附图中的 20）和频率（附图中的 64）作为命令行参数。尝试不同的参数值。
 
-    > | ![Mandrill](img/0f160a90512359f9ee968f874d8169d3.png) |  | ![Mandrill 波浪效果](img/ea6387e51a8507c09db4afc74ce1689f.png) |
     > | --- | --- | --- |
 
     *解决方案*: 请查看 wave.py。

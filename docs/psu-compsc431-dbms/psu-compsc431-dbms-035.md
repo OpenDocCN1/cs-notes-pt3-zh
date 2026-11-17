@@ -93,7 +93,6 @@
 
 ![](img/cf42dcc195c00e2a5529f10cfb5cd059_5.png)
 
-![](img/cf42dcc195c00e2a5529f10cfb5cd059_6.png)
 
 ## 问题集五：存储与索引（第8章）
 

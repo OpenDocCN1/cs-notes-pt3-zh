@@ -1,6 +1,5 @@
 # 011：使用Python连接PostgreSQL
 
-![](img/52aace0517cb6a72fe6716c69e3ed751_1.png)
 
 在本节课中，我们将学习如何使用Python编程语言与PostgreSQL数据库进行交互。我们将从课程公告和路线图开始，然后快速回顾Python基础知识，最后重点介绍用于连接数据库的`psycopg2`模块。
 

@@ -45,7 +45,6 @@ CREATE TABLE Students (
 
 ## 连接到MySQL并创建表
 
-![](img/68d0176d18c71b1ae8a28cdb7b1a30a8_7.png)
 
 在开始编程前，我们需要连接到MySQL环境并创建基础表。
 
@@ -76,7 +75,6 @@ CREATE TABLE Students (
 
 ---
 
-![](img/68d0176d18c71b1ae8a28cdb7b1a30a8_9.png)
 
 ## 插入数据与基本查询
 
@@ -93,9 +91,7 @@ INSERT INTO Students VALUES
 
 ---
 
-![](img/68d0176d18c71b1ae8a28cdb7b1a30a8_11.png)
 
-![](img/68d0176d18c71b1ae8a28cdb7b1a30a8_13.png)
 
 ## 理解与实践外键约束
 

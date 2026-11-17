@@ -83,13 +83,11 @@ if (fd == -1) {
 
 ## 目录读取 📂
 
-![](img/bd2a1c882db7724510a8cdd51f4cced9_9.png)
 
 ![](img/bd2a1c882db7724510a8cdd51f4cced9_11.png)
 
 ![](img/bd2a1c882db7724510a8cdd51f4cced9_12.png)
 
-![](img/bd2a1c882db7724510a8cdd51f4cced9_13.png)
 
 为了列出目录内容（例如实现 `ls` 命令的功能），我们需要使用目录相关的函数。虽然它们不是纯粹的系统调用，而是库函数，但仍然属于低级接口。
 

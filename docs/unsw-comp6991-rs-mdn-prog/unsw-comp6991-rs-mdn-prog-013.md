@@ -216,7 +216,6 @@ fn main() {
 
 ![](img/9aedf169c5ff7cb375a8cc0c27b3efb2_39.png)
 
-![](img/9aedf169c5ff7cb375a8cc0c27b3efb2_41.png)
 
 对于简单的整数类型，使用互斥锁可能开销较大。Rust在`std::sync::atomic`模块中提供了原子类型（如`AtomicUsize`、`AtomicBool`等）。原子类型通过特殊的CPU指令保证其操作的不可分割性，无需锁即可安全地进行并发读写。
 

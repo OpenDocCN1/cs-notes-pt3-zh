@@ -81,7 +81,6 @@ function login(email, password) {
 
 ![](img/4a999000b3e5b67a409ca520302b7c81_35.png)
 
-![](img/4a999000b3e5b67a409ca520302b7c81_37.png)
 
 哈希函数就像一个“搅拌机”，输入任何内容，都会输出一个固定长度的、看似无规律的字符串。例如，输入 `hello` 可能会得到类似 `2cf24dba5fb0a30e...` 的哈希值。
 

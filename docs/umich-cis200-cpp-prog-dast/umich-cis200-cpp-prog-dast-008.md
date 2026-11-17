@@ -2,9 +2,7 @@
 
 ![](img/c011374b440c6856ac8fdd77bf4f4ea3_0.png)
 
-![](img/c011374b440c6856ac8fdd77bf4f4ea3_2.png)
 
-![](img/c011374b440c6856ac8fdd77bf4f4ea3_4.png)
 
 ![](img/c011374b440c6856ac8fdd77bf4f4ea3_6.png)
 
@@ -16,7 +14,6 @@
 
 ---
 
-![](img/c011374b440c6856ac8fdd77bf4f4ea3_11.png)
 
 ## 项目回顾与介绍
 
@@ -120,9 +117,7 @@ void CheckerSolver::tryJump(int curRow, int curCol, int destRow, int destCol) {
 
 循环双向链表通过引入一个不存储实际数据的 **“哑元节点”** 来解决这个问题。这个节点始终存在，它的 `next` 指针指向链表的第一个真实节点，`prev` 指针指向链表的最后一个真实节点。当链表为空时，哑元节点的 `next` 和 `prev` 都指向它自己，形成一个环。
 
-![](img/c011374b440c6856ac8fdd77bf4f4ea3_13.png)
 
-![](img/c011374b440c6856ac8fdd77bf4f4ea3_14.png)
 
 **优点**：
 *   **代码简化**：永远不需要检查 `nullptr`，因为哑元节点始终存在。

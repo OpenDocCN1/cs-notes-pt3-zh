@@ -1,6 +1,5 @@
 # 012：姜饼人赛道办公时间 🏁
 
-![](img/1ce28ba614f10b001d5a7c3d6ef3a45a_0.png)
 
 ![](img/1ce28ba614f10b001d5a7c3d6ef3a45a_0.png)
 

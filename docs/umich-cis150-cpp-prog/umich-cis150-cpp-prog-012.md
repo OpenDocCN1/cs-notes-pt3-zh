@@ -28,9 +28,7 @@
 #include <fstream>
 ```
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_12.png)
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_14.png)
 
 ![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_16.png)
 
@@ -71,11 +69,9 @@ cout << setprecision(2) << fixed << 3.14159;
 
 ![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_32.png)
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_34.png)
 
 从用户获取输入时，`cin` 会在遇到空格时停止读取。为了读取包含空格的整行文本，我们可以使用 `getline` 函数。
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_36.png)
 
 ```cpp
 string fullName;
@@ -86,13 +82,9 @@ cout << "Your name is: " << fullName;
 
 ## 字符串流
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_38.png)
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_40.png)
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_42.png)
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_44.png)
 
 有时我们需要从字符串中提取数据，或者将数据格式化为字符串。这时可以使用字符串流 `<sstream>`。
 
@@ -100,12 +92,10 @@ cout << "Your name is: " << fullName;
 
 ![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_48.png)
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_49.png)
 
 *   **`istringstream`**: 用于从字符串读取数据。
 *   **`ostringstream`**: 用于将数据格式化为字符串。
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_51.png)
 
 ![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_53.png)
 
@@ -119,19 +109,13 @@ int a, b, c;
 iss >> a >> b >> c; // a=10, b=20, c=30
 ```
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_57.png)
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_59.png)
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_61.png)
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_63.png)
 
 ## 文件输入
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_65.png)
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_67.png)
 
 ![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_69.png)
 
@@ -170,18 +154,12 @@ inputFile.close();
 ![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_79.png)
 
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_81.png)
 
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_83.png)
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_85.png)
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_87.png)
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_88.png)
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_90.png)
 
 ```cpp
 ofstream outputFile;
@@ -197,13 +175,10 @@ outputFile.close();
 
 ## 综合示例：简易库存管理系统
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_92.png)
 
 上一节我们介绍了如何读写文件，本节我们来看一个综合应用：创建一个可以读取商品列表、进行销售并更新库存文件的程序。
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_94.png)
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_96.png)
 
 假设我们有一个 `items.txt` 文件，格式如下（每件商品占三行：名称、价格、库存数量）：
 ```
@@ -220,12 +195,9 @@ Tea
 
 以下程序演示了如何读取该文件，处理用户购买，并写回更新后的库存文件。
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_98.png)
 
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_100.png)
 
-![](img/2c41e5cacb23fe0abcd3d6b0bf88f28e_102.png)
 
 ```cpp
 #include <iostream>

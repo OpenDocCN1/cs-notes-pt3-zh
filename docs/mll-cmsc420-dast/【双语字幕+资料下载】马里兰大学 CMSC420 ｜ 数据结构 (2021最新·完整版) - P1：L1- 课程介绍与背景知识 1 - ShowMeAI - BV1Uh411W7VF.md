@@ -72,7 +72,6 @@ normally write on a board now what i do，is i compress them down so everything�
 
 
 
-![](img/68730583d688117c2e85a5e776ba113b_7.png)
 
 fits in a in a tiny little space here，um finally what i'm going to do is i'm。
 

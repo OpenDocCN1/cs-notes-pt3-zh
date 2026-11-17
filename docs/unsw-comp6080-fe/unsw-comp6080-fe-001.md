@@ -4,7 +4,6 @@
 
 ![](img/440ce79ed288acddacc074a1ad80b7ef_3.png)
 
-![](img/440ce79ed288acddacc074a1ad80b7ef_4.png)
 
 在本节课中，我们将一起了解COMP6080前端编程课程的整体结构、学习目标、评估方式以及如何开始你的第一个作业。课程将涵盖HTML、CSS和JavaScript的核心知识，并带你了解现代前端开发的演变。
 
@@ -12,7 +11,6 @@
 
 ---
 
-![](img/440ce79ed288acddacc074a1ad80b7ef_8.png)
 
 ![](img/440ce79ed288acddacc074a1ad80b7ef_9.png)
 
@@ -32,7 +30,6 @@
 
 ## 为什么学习前端开发？
 
-![](img/440ce79ed288acddacc074a1ad80b7ef_13.png)
 
 ![](img/440ce79ed288acddacc074a1ad80b7ef_14.png)
 
@@ -102,13 +99,11 @@ Web技术是计算机领域发展最快的部分之一。让我们简单回顾�
 
 ![](img/440ce79ed288acddacc074a1ad80b7ef_36.png)
 
-![](img/440ce79ed288acddacc074a1ad80b7ef_38.png)
 
 本课程假设你已具备Git、HTTP、Web服务和脚本语言的基本知识。如果你是本科生，应该已经掌握；如果你是研究生或需要复习，我们提供了相关补充材料。
 
 ![](img/440ce79ed288acddacc074a1ad80b7ef_40.png)
 
-![](img/440ce79ed288acddacc074a1ad80b7ef_41.png)
 
 **学习成果**包括：
 *   编写、测试和调试前端代码。
@@ -143,9 +138,7 @@ Web技术是计算机领域发展最快的部分之一。让我们简单回顾�
 
 **关于截止日期**：根据学校政策，我们设定了提交截止日期，并在截止日期后留有宽容期。请尽量在截止日期前提交。
 
-![](img/440ce79ed288acddacc074a1ad80b7ef_49.png)
 
-![](img/440ce79ed288acddacc074a1ad80b7ef_51.png)
 
 **为什么学习“老派”JavaScript？**：理解JavaScript的基础原理和科学，对于深入掌握现代框架至关重要。许多行业反馈表明，只懂框架而不懂底层原理的开发者在解决问题时会遇到困难。
 
@@ -186,9 +179,7 @@ Web技术是计算机领域发展最快的部分之一。让我们简单回顾�
 
 课程网站上有一个“资源”页面，包含一些有用的外部链接和小游戏（例如一个学习CSS Flexbox的青蛙游戏），可以帮助你巩固知识。
 
-![](img/440ce79ed288acddacc074a1ad80b7ef_73.png)
 
-![](img/440ce79ed288acddacc074a1ad80b7ef_74.png)
 
 ![](img/440ce79ed288acddacc074a1ad80b7ef_75.png)
 
@@ -261,7 +252,6 @@ p {
 
 ---
 
-![](img/440ce79ed288acddacc074a1ad80b7ef_86.png)
 
 ![](img/440ce79ed288acddacc074a1ad80b7ef_88.png)
 
@@ -269,11 +259,9 @@ p {
 
 ## 总结与后续安排
 
-![](img/440ce79ed288acddacc074a1ad80b7ef_91.png)
 
 本节课中，我们一起学习了COMP6080前端编程课程的概览。我们探讨了学习前端的原因、前端开发者的角色、Web技术的演变历程、课程的教学与评估结构，并详细了解了第一个作业。
 
-![](img/440ce79ed288acddacc074a1ad80b7ef_93.png)
 
 **后续安排**：
 *   本周没有周三的现场讲座。

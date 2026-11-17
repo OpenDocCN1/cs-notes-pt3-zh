@@ -2,7 +2,6 @@
 
 在本节课中，我们将总结第一项作业，目标是帮助你完成AWS EC2的使用准备。你将学习如何设置环境、启动并访问EC2实例，同时运行一些为第二周课程（关于存储模型和文件系统）做准备的命令。
 
-![](img/4cb463de1f33acfc1bd439f4b6c7ad7b_1.png)
 
 ## 概述
 
@@ -37,7 +36,6 @@ aws_secret_access_key = YOUR_SECRET_KEY
 region = us-east-1
 ```
 
-![](img/4cb463de1f33acfc1bd439f4b6c7ad7b_3.png)
 
 请确保妥善保护你的配置文件，因为它包含私有的访问密钥。同时，请不要向我发送你的私有AWS凭证，它们应该保持私有。
 
@@ -63,25 +61,20 @@ INSTANCE_ID=$(aws ec2 run-instances ... | jq -r '.Instances[0].InstanceId')
 
 然后，我们可以通过使用 `aws ec2 describe-instances` 命令并将其通过管道传递给 `jq` 来检查新创建实例的主机名。
 
-![](img/4cb463de1f33acfc1bd439f4b6c7ad7b_5.png)
 
 ```
 PUBLIC_DNS=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID | jq -r '.Reservations[0].Instances[0].PublicDnsName')
 ```
 
-![](img/4cb463de1f33acfc1bd439f4b6c7ad7b_7.png)
 
-![](img/4cb463de1f33acfc1bd439f4b6c7ad7b_8.png)
 
 好了，我们得到了主机名。让我们看看实例是否已经启动并运行。使用 `ping` 命令检查。
 
-![](img/4cb463de1f33acfc1bd439f4b6c7ad7b_10.png)
 
 ```
 ping -c 4 $PUBLIC_DNS
 ```
 
-![](img/4cb463de1f33acfc1bd439f4b6c7ad7b_12.png)
 
 不，看起来还没有。让我们检查一下状态。使用 `aws ec2 describe-instance-status` 命令。
 
@@ -89,17 +82,13 @@ ping -c 4 $PUBLIC_DNS
 aws ec2 describe-instance-status --instance-ids $INSTANCE_ID
 ```
 
-![](img/4cb463de1f33acfc1bd439f4b6c7ad7b_14.png)
 
-![](img/4cb463de1f33acfc1bd439f4b6c7ad7b_15.png)
 
 看，`jq` 不是很棒吗？如果你不熟悉它，你一定要查看并练习使用它，它会很有帮助。无论如何，实例显示正在运行。让我们再ping一次。嗯，仍然不工作。
 
-![](img/4cb463de1f33acfc1bd439f4b6c7ad7b_17.png)
 
 这是EC2有点烦人的事情之一。你启动了一个实例，但你不知道它什么时候准备好。我们将在批改作业时看到一些确定它何时可用的方法。但也许你可以寻找一些其他可能有帮助的AWS命令。
 
-![](img/4cb463de1f33acfc1bd439f4b6c7ad7b_19.png)
 
 无论如何，让我们回去再检查一下我的ping。等待一段时间后，它似乎终于有响应了。所以实例现在应该已经启动并运行了。让我们登录。
 
@@ -125,17 +114,14 @@ aws ec2 terminate-instances --instance-ids $INSTANCE_ID
 
 就是这样。
 
-![](img/4cb463de1f33acfc1bd439f4b6c7ad7b_21.png)
 
 ## 作业完成状态与求助
 
-![](img/4cb463de1f33acfc1bd439f4b6c7ad7b_23.png)
 
 当你完成作业一时，你应该能够像我在这里展示的那样启动、访问和终止实例。如果你遇到问题，请确保将你的问题发送到班级邮件列表或在Slack上提问。
 
 同时，请务必写下你可能遇到的任何问题，并回答这里提出的所有问题。这里显示的链接可能帮助你完成设置。
 
-![](img/4cb463de1f33acfc1bd439f4b6c7ad7b_25.png)
 
 ## 总结
 

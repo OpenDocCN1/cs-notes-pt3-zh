@@ -14,15 +14,11 @@
 
 要创建一个Notebook，请点击右上角的“New”按钮，并选择最新版本的Python（通常是Python 3）。
 
-![](img/6419e46d3b8e57435f75f914b54cbdfc_1.png)
 
-![](img/6419e46d3b8e57435f75f914b54cbdfc_1.png)
 
 这将创建你的第一个Notebook文件。要重命名它，请点击顶部的标题。
 
-![](img/6419e46d3b8e57435f75f914b54cbdfc_3.png)
 
-![](img/6419e46d3b8e57435f75f914b54cbdfc_3.png)
 
 输入一个名称，然后点击“Rename”。
 
@@ -57,13 +53,10 @@ Notebook文件会自动保存，但如需手动保存，可以点击左侧的保
 
 要退出Jupyter Notebook，可以关闭你的Notebook文件。
 
-![](img/6419e46d3b8e57435f75f914b54cbdfc_5.png)
 
 然后点击右上角的“Quit”按钮。
 
-![](img/6419e46d3b8e57435f75f914b54cbdfc_5.png)
 
-![](img/6419e46d3b8e57435f75f914b54cbdfc_7.png)
 
 这将停止服务器并退出Jupyter Notebook。
 

@@ -56,10 +56,8 @@
 
 通过依赖注入，我们能够编写出更松耦合、更易维护和测试的代码，这是构建健壮 AngularJS 应用的关键。
 
-![](img/f605eebf36f8c1bf3f14df672c86cc98_4.png)
 
 ![](img/f605eebf36f8c1bf3f14df672c86cc98_4.png)
 
-![](img/f605eebf36f8c1bf3f14df672c86cc98_5.png)
 
 ![](img/f605eebf36f8c1bf3f14df672c86cc98_5.png)

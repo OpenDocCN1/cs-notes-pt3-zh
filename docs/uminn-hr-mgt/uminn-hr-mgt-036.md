@@ -81,9 +81,7 @@ def commercial_transaction(buyer, seller, item, agreed_price):
 
 因此，一个有用的思考方式是：将雇佣关系视为一种**自愿的契约关系**（同样是在边界之内）。这很大程度上是法律从员工侧看待它的方式。
 
-![](img/ab29049701bcb1b0802e5e6fea93c1a1_2.png)
 
-![](img/ab29049701bcb1b0802e5e6fea93c1a1_3.png)
 
 作为一名管理者，必须牢记员工可以随时辞职。这一点至关重要，因为你需要对员工的需求和偏好做出响应。
 

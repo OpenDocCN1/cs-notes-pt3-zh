@@ -75,7 +75,6 @@ app.listen(3001, () => console.log('Server running on port 3001'));
 *   在POST路由处理程序的末尾调用 `save` 函数。
 
 
-![](img/d341ce4e296d3cc2573418767c12c823_11.png)
 
 
 ![](img/d341ce4e296d3cc2573418767c12c823_13.png)

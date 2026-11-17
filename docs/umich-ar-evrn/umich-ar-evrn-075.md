@@ -112,7 +112,6 @@
 
 ![](img/f0aabe2dd50fab880d58d620e0e37f0c_14.png)
 
-![](img/f0aabe2dd50fab880d58d620e0e37f0c_16.png)
 
 ![](img/f0aabe2dd50fab880d58d620e0e37f0c_17.png)
 

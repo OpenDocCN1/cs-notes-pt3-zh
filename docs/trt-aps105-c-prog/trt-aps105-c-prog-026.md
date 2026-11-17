@@ -137,7 +137,6 @@ int sumArrayNice(int arr[], int length) {
 
 ## 汉诺塔问题
 
-![](img/d3be5b49d593855ded101e532dceae95_13.png)
 
 ![](img/d3be5b49d593855ded101e532dceae95_15.png)
 

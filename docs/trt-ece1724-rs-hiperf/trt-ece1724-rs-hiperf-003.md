@@ -57,7 +57,6 @@ let mut guess = String::new();
 
 ## 读取用户输入
 
-![](img/c81e2d16bcae0e91aac47afd71d2f6e3_1.png)
 
 现在，我们需要从用户那里获取输入。我们将使用之前导入的`std::io`模块。
 
@@ -91,7 +90,6 @@ io::stdin()
 
 首先，我们需要在项目的`Cargo.toml`文件中添加`rand`作为依赖。你可以手动编辑文件，或者使用Cargo命令：
 
-![](img/c81e2d16bcae0e91aac47afd71d2f6e3_9.png)
 
 ```bash
 cargo add rand
@@ -116,23 +114,19 @@ let secret_number = rand::thread_rng().gen_range(1..=100);
 *   `rand::thread_rng()`：这个函数返回一个特定于当前线程的随机数生成器。
 *   `.gen_range(1..=100)`：在随机数生成器上调用`gen_range`方法。参数`1..=100`是一个**范围表达式**，表示从1到100（包含两端）的闭区间。这个方法会生成并返回该范围内的一个随机整数。返回类型通常是`i32`（32位有符号整数）。
 
-![](img/c81e2d16bcae0e91aac47afd71d2f6e3_11.png)
 
 **查阅文档**：如果你不确定某个crate的函数如何使用，可以运行`cargo doc --open`命令。这会在浏览器中打开本地生成的文档，包含你的项目以及所有依赖crate的文档，非常方便。
 
 ---
 
-![](img/c81e2d16bcae0e91aac47afd71d2f6e3_13.png)
 
 ## 比较猜测与秘密数字
 
 现在我们已经有了用户的猜测（字符串）和秘密数字（整数）。我们需要比较它们。但首先，必须将用户输入的字符串转换为整数。
 
-![](img/c81e2d16bcae0e91aac47afd71d2f6e3_15.png)
 
 以下是转换和比较的代码：
 
-![](img/c81e2d16bcae0e91aac47afd71d2f6e3_17.png)
 
 ```rust
 let guess: u32 = guess.trim().parse().expect("请输入一个数字！");
@@ -162,7 +156,6 @@ match guess.cmp(&secret_number) {
 
 ---
 
-![](img/c81e2d16bcae0e91aac47afd71d2f6e3_19.png)
 
 ## 添加循环实现多次猜测
 
@@ -171,7 +164,6 @@ match guess.cmp(&secret_number) {
 以下是添加循环后的核心代码结构：
 
 
-![](img/c81e2d16bcae0e91aac47afd71d2f6e3_21.png)
 
 ```rust
 use std::io;
@@ -211,13 +203,10 @@ fn main() {
 }
 ```
 
-![](img/c81e2d16bcae0e91aac47afd71d2f6e3_23.png)
 
-![](img/c81e2d16bcae0e91aac47afd71d2f6e3_25.png)
 
 以下是循环实现的关键点：
 
-![](img/c81e2d16bcae0e91aac47afd71d2f6e3_27.png)
 
 1.  `loop`：这是一个无限循环关键字。它会一直重复执行其代码块内的内容。
 2.  **改进的错误处理**：在将字符串转换为数字的部分，我们不再使用`.expect`在出错时直接崩溃，而是使用了更完整的`match`来处理`Result`：
@@ -248,7 +237,6 @@ fn main() {
 7.  **控制流**：使用`match`表达式进行模式匹配和值比较，利用其穷尽性检查确保代码安全。使用`loop`创建无限循环，并用`break`控制循环退出。
 8.  **变量遮蔽**：在同一作用域内重用变量名，用于类型转换等场景。
 
-![](img/c81e2d16bcae0e91aac47afd71d2f6e3_29.png)
 
 ![](img/c81e2d16bcae0e91aac47afd71d2f6e3_31.png)
 

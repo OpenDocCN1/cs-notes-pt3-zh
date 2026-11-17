@@ -80,23 +80,16 @@ int main() {
 *   `std::unique_lock`：功能更丰富的锁，可延迟加锁、转移所有权。
 *   `std::scoped_lock` (C++17)：可同时锁定多个互斥锁，避免死锁。
 
-![](img/faa9cef92a6a4cf319792f2d4741202a_1.png)
 
-![](img/faa9cef92a6a4cf319792f2d4741202a_3.png)
 
 ---
 
-![](img/faa9cef92a6a4cf319792f2d4741202a_5.png)
 
 ## 条件变量：基于事件的线程协调
 
-![](img/faa9cef92a6a4cf319792f2d4741202a_7.png)
 
-![](img/faa9cef92a6a4cf319792f2d4741202a_9.png)
 
-![](img/faa9cef92a6a4cf319792f2d4741202a_11.png)
 
-![](img/faa9cef92a6a4cf319792f2d4741202a_13.png)
 
 互斥锁解决了数据访问的冲突，但线程间有时需要基于特定条件进行协调。本节中我们来看看条件变量。
 
@@ -201,11 +194,8 @@ int main() {
 
 许多STL算法（如 `std::sort`, `std::for_each`, `std::reduce`）现在接受一个额外的“执行策略”参数，指示算法可以并行或向量化执行。
 
-![](img/faa9cef92a6a4cf319792f2d4741202a_15.png)
 
-![](img/faa9cef92a6a4cf319792f2d4741202a_17.png)
 
-![](img/faa9cef92a6a4cf319792f2d4741202a_19.png)
 
 **可用的执行策略标签**：
 *   `std::execution::seq`：顺序执行（默认）。

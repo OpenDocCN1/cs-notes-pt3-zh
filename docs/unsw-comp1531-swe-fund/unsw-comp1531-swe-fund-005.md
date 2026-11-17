@@ -22,7 +22,6 @@ Node.js自带了一系列内置模块，无需通过NPM下载即可使用。例�
 
 ![](img/30048eb94109afe9681ad3efd8cd0124_9.png)
 
-![](img/30048eb94109afe9681ad3efd8cd0124_10.png)
 
 **代码示例：导入 `path` 模块**
 ```javascript
@@ -31,7 +30,6 @@ console.log(path.resolve('./m1'));
 ```
 这段代码导入了 `path` 模块，并使用其 `resolve` 函数来获取一个路径的完整绝对路径。你可以将其理解为在命令行中先 `cd` 到该目录，再执行 `pwd`。
 
-![](img/30048eb94109afe9681ad3efd8cd0124_12.png)
 
 ![](img/30048eb94109afe9681ad3efd8cd0124_14.png)
 
@@ -87,31 +85,22 @@ console.log(manyString(5, 'hello'));
 
 如果被导入的文件位于不同目录，需要在导入路径中指明。例如，`../` 表示上一级目录。
 
-![](img/30048eb94109afe9681ad3efd8cd0124_31.png)
 
-![](img/30048eb94109afe9681ad3efd8cd0124_33.png)
 
 ## 导出多个功能 🧩
 
-![](img/30048eb94109afe9681ad3efd8cd0124_35.png)
 
-![](img/30048eb94109afe9681ad3efd8cd0124_37.png)
 
 通常，一个文件会包含多个有用的函数。这时，我们可以使用“命名导出”来导出多个项目。
 
-![](img/30048eb94109afe9681ad3efd8cd0124_39.png)
 
-![](img/30048eb94109afe9681ad3efd8cd0124_41.png)
 
-![](img/30048eb94109afe9681ad3efd8cd0124_43.png)
 
 以下是导出多个函数的方法：
 
 **代码示例：命名导出多个函数**
 
-![](img/30048eb94109afe9681ad3efd8cd0124_45.png)
 
-![](img/30048eb94109afe9681ad3efd8cd0124_47.png)
 
 ```javascript
 function manyString(repeats, str) { /* ... */ }
@@ -121,21 +110,16 @@ export { manyString, addBrackets };
 ```
 注意，这里没有使用 `default` 关键字。
 
-![](img/30048eb94109afe9681ad3efd8cd0124_49.png)
 
-![](img/30048eb94109afe9681ad3efd8cd0124_51.png)
 
 ## 导入多个功能 🧠
 
-![](img/30048eb94109afe9681ad3efd8cd0124_53.png)
 
 相应地，在导入时，也需要使用花括号来指定要导入的具体项目。
 
 **代码示例：导入多个命名导出**
 
-![](img/30048eb94109afe9681ad3efd8cd0124_55.png)
 
-![](img/30048eb94109afe9681ad3efd8cd0124_57.png)
 
 ```javascript
 // 从指定文件导入多个函数
@@ -148,7 +132,6 @@ console.log(result); // 输出: [Hello] [Hello] [Hello]
 
 ## 默认导出 vs. 命名导出 ⚖️
 
-![](img/30048eb94109afe9681ad3efd8cd0124_59.png)
 
 现在我们来深入理解两种导出方式的区别和选择。
 
@@ -157,16 +140,13 @@ console.log(result); // 输出: [Hello] [Hello] [Hello]
 *   导入时可以为其指定任意名称。
 *   **公式：** `export default thing;` -> `import anyName from ‘./file.js’;`
 
-![](img/30048eb94109afe9681ad3efd8cd0124_61.png)
 
-![](img/30048eb94109afe9681ad3efd8cd0124_63.png)
 
 **命名导出 (`export { thing1, thing2 }`)**
 *   一个文件可以有多个命名导出。
 *   导入时必须使用导出时的确切名称（但可以通过“别名”重命名）。
 *   **公式：** `export { thing1, thing2 };` -> `import { thing1 as newName1, thing2 } from ‘./file.js’;`
 
-![](img/30048eb94109afe9681ad3efd8cd0124_64.png)
 
 一般来说，**更推荐使用命名导出**，原因如下：
 1.  **可扩展性**：未来添加新的导出项时，无需改变已有的导入方式。

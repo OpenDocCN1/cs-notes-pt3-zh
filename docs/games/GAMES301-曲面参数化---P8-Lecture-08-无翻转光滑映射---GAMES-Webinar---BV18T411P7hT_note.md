@@ -2,11 +2,8 @@
 
 ![](img/5842c86f4fd7ee348602e9a80f6fd2cb_0.png)
 
-![](img/5842c86f4fd7ee348602e9a80f6fd2cb_2.png)
 
-![](img/5842c86f4fd7ee348602e9a80f6fd2cb_4.png)
 
-![](img/5842c86f4fd7ee348602e9a80f6fd2cb_6.png)
 
 在本节课中，我们将要学习如何构造比三角网格上的分片线性映射更光滑的映射，并探讨如何保证这类光滑映射的无翻转性质。
 
@@ -103,11 +100,8 @@ RBF 非常光滑，但一个主要缺陷是：**由 RBF 张成的函数空间无
 
 ## 总结
 
-![](img/5842c86f4fd7ee348602e9a80f6fd2cb_8.png)
 
-![](img/5842c86f4fd7ee348602e9a80f6fd2cb_10.png)
 
-![](img/5842c86f4fd7ee348602e9a80f6fd2cb_12.png)
 
 ![](img/5842c86f4fd7ee348602e9a80f6fd2cb_14.png)
 

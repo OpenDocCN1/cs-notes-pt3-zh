@@ -6,7 +6,6 @@
 
 ## 模板语言基础
 
-![](img/931c9321510c5c5beba61b5fd553efb1_1.png)
 
 上一节我们介绍了模板的基本概念，本节中我们来看看DTL的具体语法和功能。
 
@@ -18,7 +17,6 @@ DTL使用双花括号 `{{ }}` 进行变量替换。这种语法也被许多其�
 
 DTL不仅支持变量替换，还支持逻辑控制、循环和模板继承。以下是其主要功能：
 
-![](img/931c9321510c5c5beba61b5fd553efb1_3.png)
 
 *   **变量替换与转义**：使用 `{{ variable }}`。这是最常用的功能，用于将上下文中的数据插入到HTML中。
 *   **逻辑控制**：使用 `{% if condition %} ... {% endif %}` 和 `{% else %}`。其语法类似Python，便于理解。
@@ -41,13 +39,11 @@ def simple_view(request):
 
 对应的模板 `simple.html` 就是普通的HTML文件。Django提供了一个内置的 `TemplateView` 类视图，专门用于处理这种简单场景。
 
-![](img/931c9321510c5c5beba61b5fd553efb1_5.png)
 
 ### 变量替换
 
 现在，我们向模板传递一些动态数据。以下视图向模板传递了一个键为 `‘zap’`、值为 `42` 的上下文。
 
-![](img/931c9321510c5c5beba61b5fd553efb1_7.png)
 
 ```python
 def guess_view(request):
@@ -87,7 +83,6 @@ def safe_view(request):
 
 ### 循环与条件判断
 
-![](img/931c9321510c5c5beba61b5fd553efb1_9.png)
 
 DTL可以处理列表等数据结构，并进行逻辑判断。
 
@@ -127,7 +122,6 @@ def loop_view(request):
 
 DTL支持通过点号 `.` 访问对象的属性或字典的键，从而遍历复杂的数据结构。
 
-![](img/931c9321510c5c5beba61b5fd553efb1_11.png)
 
 ```python
 def nested_view(request):

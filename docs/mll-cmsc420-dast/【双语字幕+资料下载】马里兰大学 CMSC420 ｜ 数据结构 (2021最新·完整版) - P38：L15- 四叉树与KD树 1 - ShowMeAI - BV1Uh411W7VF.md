@@ -2,7 +2,6 @@
 
 ![](img/9e4a814a445b65c02db9a39619a53a40_0.png)
 
-![](img/9e4a814a445b65c02db9a39619a53a40_1.png)
 
 in today's lecture，we're going to go in a very different，direction in particular we're going to。
 

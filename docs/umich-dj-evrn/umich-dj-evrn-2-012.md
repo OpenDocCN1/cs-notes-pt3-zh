@@ -1,24 +1,18 @@
 # 012：JavaScript概述与发展历史 🚀
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_0.png)
 
 在本节课中，我们将要学习JavaScript的基础知识及其发展历史。JavaScript是一种广泛使用的编程语言，尤其在Web开发中扮演着核心角色。我们将探讨它的起源、特点以及与其他编程语言的关系，帮助初学者理解JavaScript的基本概念和应用场景。
 
 ---
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_2.png)
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_3.png)
 
 ## JavaScript的起源与定位 🌟
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_5.png)
 
 JavaScript是另一种编程语言。如果你只了解Python，你会发现JavaScript与Python有很大不同。
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_7.png)
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_8.png)
 
 JavaScript最初是作为HTML和CSS的补充而设计的。它始于一种在浏览器内部运行的编程语言，直接在浏览器中执行。尽管它的名字类似Java，但其工作原理更接近Python。不过，JavaScript使用类似C语言的语法，是一种非常出色的语言，对许多人来说，它是首选和最喜爱的语言。因此，即使你热爱Python，也值得学习JavaScript。
 
@@ -66,7 +60,6 @@ Perl确实影响了Python，因为它易于编程。Perl真正擅长的是让几
 
 你可以添加像jQuery这样的库，使这种交互更加容易，因为文档对象模型在不同浏览器之间的可移植性有时不如我们所愿。
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_10.png)
 
 如果你继续深入，你会发现越来越多的应用程序逻辑在浏览器中构建。因此，你可以使用模板语言在浏览器中使用JavaScript编写模型和视图部分（或者控制器和视图部分），例如使用Vue或React来实现这一点。
 
@@ -76,41 +69,29 @@ JavaScript就像打开了一扇门，让你进入许多真正令人惊叹的功�
 
 ---
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_12.png)
 
 ## JavaScript的语法特点 📝
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_14.png)
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_15.png)
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_16.png)
 
 如前所述，JavaScript属于Java的语法家族，这意味着它使用分号来结束行。空格不重要，使用开括号和闭括号来开始和结束代码块。
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_18.png)
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_19.png)
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_20.png)
 
 而在Python中，你只需结束一行，并通过缩进来表示一个代码块，通过取消缩进来表示该代码块的结束。
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_22.png)
 
 我必须承认，Python不是我最喜欢的语法。它是我最喜欢的语言，因为我喜欢它的库、它的思维方式、它的面向对象模式以及许多其他方面。但我确实喜欢花括号，因为对我来说，我喜欢看到开始和结束的代码块。而在Python中，你只能看到开始，但这没关系。我只是想说，现在你将看到一些这种语法，如果你只了解Python，它会看起来非常不同。如果你了解Java，你会觉得这很熟悉。
 
 ---
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_24.png)
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_25.png)
 
 ## 总结 📚
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_26.png)
 
-![](img/f53e0479d02ad9d99019d04daab0ae0b_27.png)
 
 ![](img/f53e0479d02ad9d99019d04daab0ae0b_28.png)
 

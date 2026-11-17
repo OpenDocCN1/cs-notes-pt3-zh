@@ -2,7 +2,6 @@
 
 ![](img/116edf7b2667d28b1a4bdcc88f7c81c5_0.png)
 
-![](img/116edf7b2667d28b1a4bdcc88f7c81c5_1.png)
 
 okay in the next set of segments we're，going to talk about a new data structure。
 

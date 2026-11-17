@@ -134,7 +134,6 @@ SELECT id, REGEXP_MATCHES(content, ‘#([A-Za-z0-9_]+)’, ‘g’) FROM tweets;
 
 更重要的是，我们认识了 `REGEXP_MATCHES` 函数，它能够提取一行文本中**所有**符合模式的匹配项，并以数组形式返回，这大大扩展了模式匹配的能力。
 
-![](img/846e113b61aaaa8e71763f1a5440a1a9_5.png)
 
 ![](img/846e113b61aaaa8e71763f1a5440a1a9_6.png)
 

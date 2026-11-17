@@ -44,22 +44,17 @@ CSRF的防御策略是使用一个CSRF令牌（Token）。请注意，它与会�
 4.  浏览器自动附带上合法站点的会话Cookie（C7），向合法服务器发送POST请求。
 5.  服务器通过Cookie识别出用户是已登录的讲师C7，因此执行了修改成绩的操作，攻击成功。
 
-![](img/7f78ccfdd0e1d9a9ef33ee638e404a4e_3.png)
 
-![](img/7f78ccfdd0e1d9a9ef33ee638e404a4e_5.png)
 
 **启用CSRF防护的场景：**
 1.  合法服务器在生成表单时，除了会话Cookie，还会在表单中嵌入一个隐藏的CSRF令牌（例如：`csrf_token=‘a9b3f…’`）。
 2.  用户提交合法表单时，CSRF令牌随数据一起发送回服务器。
 3.  服务器验证会话中的令牌与POST数据中的令牌是否一致，一致则允许操作。
 
-![](img/7f78ccfdd0e1d9a9ef33ee638e404a4e_7.png)
 
 4.  对于恶意网站生成的表单，由于攻击者无法得知或伪造正确的CSRF令牌（该令牌存储在用户与合法服务器的会话中），因此当伪造的请求发出时，服务器验证令牌会失败，从而阻断攻击。
 
-![](img/7f78ccfdd0e1d9a9ef33ee638e404a4e_7.png)
 
-![](img/7f78ccfdd0e1d9a9ef33ee638e404a4e_9.png)
 
 ## Django中的CSRF防护
 
@@ -71,7 +66,6 @@ CSRF的防御策略是使用一个CSRF令牌（Token）。请注意，它与会�
 
 ![](img/7f78ccfdd0e1d9a9ef33ee638e404a4e_9.png)
 
-![](img/7f78ccfdd0e1d9a9ef33ee638e404a4e_11.png)
 
 ![](img/7f78ccfdd0e1d9a9ef33ee638e404a4e_11.png)
 

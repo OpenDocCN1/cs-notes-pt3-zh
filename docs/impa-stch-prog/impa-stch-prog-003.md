@@ -14,13 +14,11 @@
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_10.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_12.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_14.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_15.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_17.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_18.png)
 
@@ -50,49 +48,34 @@
 
 ---
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_35.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_37.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_39.png)
 
 ## 两阶段模型的基本形式
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_41.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_43.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_45.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_47.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_48.png)
 
 考虑我们之前讨论的石油生产问题。其数学模型可以抽象为以下形式：
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_50.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_52.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_54.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_55.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_57.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_59.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_60.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_62.png)
 
 我们最小化第一阶段成本与第二阶段追索成本的期望值之和。
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_64.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_66.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_68.png)
 
 **第一阶段问题（“此时此地”决策）:**
 *   决策变量：`x` （例如，决定购买多少原油）
@@ -115,7 +98,6 @@ Q(x, ξ) = min q(ξ)^T y
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_70.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_71.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_72.png)
 
@@ -125,7 +107,6 @@ Q(x, ξ) = min q(ξ)^T y
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_76.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_78.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_79.png)
 
@@ -139,13 +120,11 @@ s.t. Ax = b
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_81.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_83.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_84.png)
 
 ---
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_86.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_88.png)
 
@@ -170,25 +149,20 @@ Q(x, ξ) = max { π^T (h(ξ) - T(ξ) x) | W(ξ)^T π <= q(ξ) }
 ```
 令 `D = { π | W(ξ)^T π <= q(ξ) }`，这是对偶可行域，它是一个多面体。
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_98.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_99.png)
 
 ---
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_101.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_103.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_104.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_106.png)
 
 ### 追索函数的几何解释
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_108.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_110.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_112.png)
 
@@ -200,13 +174,11 @@ Q(x, ξ) = max_{π ∈ D} [ π^T h(ξ) - (T(ξ)^T π)^T x ]
 ```
 每个对偶可行解 `π` 对应一个关于 `x` 的仿射函数 `f_π(x) = π^T h(ξ) - (T(ξ)^T π)^T x`。`Q(x, ξ)` 就是所有这些仿射函数取最大值后形成的函数。
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_116.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_118.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_120.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_121.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_123.png)
 
@@ -225,15 +197,12 @@ Q(x, ξ) = max_{π ∈ D} [ π^T h(ξ) - (T(ξ)^T π)^T x ]
 
 ---
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_133.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_135.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_137.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_139.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_141.png)
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_143.png)
 
@@ -245,7 +214,6 @@ Q(x, ξ) = max_{π ∈ D} [ π^T h(ξ) - (T(ξ)^T π)^T x ]
 
 ![](img/3f5ba5e644a81434cedf134217ed9f20_148.png)
 
-![](img/3f5ba5e644a81434cedf134217ed9f20_150.png)
 
 追索函数的值域可能是有限的，也可能是正无穷或负无穷。这取决于对偶可行域 `D` 的性质。
 

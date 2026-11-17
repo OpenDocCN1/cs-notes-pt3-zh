@@ -83,11 +83,9 @@
 
 ## 核心构建模块总结
 
-![](img/27128c0cb66e91a5f53fc90bf40be04e_5.png)
 
 两个主要的构建模块是：
 
-![](img/27128c0cb66e91a5f53fc90bf40be04e_6.png)
 
 ![](img/27128c0cb66e91a5f53fc90bf40be04e_7.png)
 

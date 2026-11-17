@@ -10,7 +10,6 @@
 
 首先，我们需要进入一个命令行环境来操作SQLite。如果你使用的是类似PythonAnywhere的平台，可以打开命令行工具。SQLite是一个轻量级数据库，它将所有数据存储在一个文件中。
 
-![](img/a06bc6611df71b1b31470302b4487c2f_1.png)
 
 使用以下命令启动SQLite并指定数据库文件：
 ```bash
@@ -121,7 +120,6 @@ SELECT * FROM Users ORDER BY email DESC;
 
 ## 总结
 
-![](img/a06bc6611df71b1b31470302b4487c2f_12.png)
 
 本节课我们一起学习了SQL的基础知识。我们掌握了如何连接SQLite数据库，使用 `CREATE TABLE` 定义表结构，并通过 `INSERT`、`SELECT`、`UPDATE`、`DELETE` 语句进行数据的增删改查。我们还强调了 `WHERE` 子句在更新和删除操作中的关键作用，以及使用 `ORDER BY` 进行排序。
 

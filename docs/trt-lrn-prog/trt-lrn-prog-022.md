@@ -1,8 +1,6 @@
 # 022：接入 Python 语法 🧩
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_0.png)
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_2.png)
 
 在本节课中，我们将学习如何让你自己创建的新类型（类）接入 Python 的语法，例如使用 `+`、`*` 或 `==` 等运算符。我们将通过为自定义类实现“特殊方法”来实现这一点。
 
@@ -10,15 +8,11 @@
 
 在 Python 中，你已经使用过 `+` 运算符来将两个数字相加，也可以用它来连接两个字符串或合并两个列表。你还使用过其他运算符，例如，可以用 `*` 运算符将一个字符串与一个整数相乘。
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_4.png)
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_5.png)
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_7.png)
 
 本节中，我们将展示如何让你自己的新类型也能接入这些 Python 语法。
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_9.png)
 
 ## 理解特殊方法与基类
 
@@ -33,27 +27,20 @@
 
 大多数特殊方法都是在使用特定 Python 语法时被调用的。
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_11.png)
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_13.png)
 
 ## 为 CashRegister 类实现 `__eq__` 方法
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_15.png)
 
 让我们以之前课程中的 `CashRegister`（收银机）类为例。我们将为其添加一个 `__eq__` 特殊方法，该方法将在我们使用 `==` 比较两个收银机对象时被调用。
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_17.png)
 
 我们决定，如果两个收银机对象中的总金额相同，则认为它们相等。
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_19.png)
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_20.png)
 
 以下是该方法的实现思路：
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_22.png)
 
 ```python
 def __eq__(self, other):
@@ -64,15 +51,12 @@ def __eq__(self, other):
     return self.get_total() == other.get_total()
 ```
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_24.png)
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_25.png)
 
 *   `self` 是第一个参数，代表比较运算符左侧的收银机对象。
 *   `other` 是第二个参数，代表比较运算符右侧的收银机对象。
 *   方法体通过比较两个对象的 `get_total()` 方法的返回值来判断它们是否“相等”。
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_26.png)
 
 ## 通过调试器观察执行过程
 
@@ -89,15 +73,11 @@ def __eq__(self, other):
 6.  比较结果（`2 == 2`）为 `True`，因此 `cr1 == cr2` 返回 `True`。
 7.  同理，`cr3 == cr2` 会返回 `False`，因为 `3 != 2`。
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_28.png)
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_30.png)
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_32.png)
 
 ## 如果没有定义 `__eq__` 方法会怎样？
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_34.png)
 
 如果我们注释掉自定义的 `__eq__` 方法，那么 `CashRegister` 类将继承其父类 `object` 的默认 `__eq__` 方法。
 
@@ -105,13 +85,9 @@ def __eq__(self, other):
 
 这引出了一个重要的设计决策：
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_36.png)
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_37.png)
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_38.png)
 
-![](img/dc99c23c5e54f49a8dba51d0a1a41403_39.png)
 
 **每当你编写自己的类时，都需要决定如何定义两个实例之间的“相等”关系。**
 

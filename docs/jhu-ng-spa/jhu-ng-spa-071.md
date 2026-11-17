@@ -133,10 +133,8 @@ $scope.$on('namespace:eventName', function(event, data) {
 
 通过掌握事件系统，你可以构建出耦合度更低、更易于维护的AngularJS应用程序。
 
-![](img/dfeec857693179c529931987e1af4cb3_4.png)
 
 ![](img/dfeec857693179c529931987e1af4cb3_4.png)
 
-![](img/dfeec857693179c529931987e1af4cb3_5.png)
 
 ![](img/dfeec857693179c529931987e1af4cb3_5.png)

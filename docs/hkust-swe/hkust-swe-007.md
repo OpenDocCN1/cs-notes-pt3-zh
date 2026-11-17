@@ -4,7 +4,6 @@
 
 ---
 
-![](img/ab1d2df44cad5d43f38b011396050b14_1.png)
 
 ## 概述
 
@@ -34,12 +33,10 @@ class Student {
 }
 ```
 
-![](img/ab1d2df44cad5d43f38b011396050b14_3.png)
 
 **问题：**
 这种方法不可行，因为我们无法预知每个学生需要多少个成绩属性。课程数量是动态的，为每门课都定义一个属性不切实际。
 
-![](img/ab1d2df44cad5d43f38b011396050b14_5.png)
 
 ---
 
@@ -58,13 +55,10 @@ class Student {
 **问题：**
 这种方法同样不可行。虽然我们可以存储多个成绩，但我们无法知道列表中的每个成绩具体对应哪一门课程。信息失去了关联性。
 
-![](img/ab1d2df44cad5d43f38b011396050b14_7.png)
 
-![](img/ab1d2df44cad5d43f38b011396050b14_9.png)
 
 ---
 
-![](img/ab1d2df44cad5d43f38b011396050b14_11.png)
 
 ## 方案三：使用关联类
 
@@ -74,7 +68,6 @@ class Student {
 
 在我们的例子中，“学生”和“课程”之间的“选课”关联，其属性“成绩”就应该放在关联类中。
 
-![](img/ab1d2df44cad5d43f38b011396050b14_13.png)
 
 **UML表示：**
 ```
@@ -85,17 +78,14 @@ class Student {
                 - grade: String
 ```
 
-![](img/ab1d2df44cad5d43f38b011396050b14_14.png)
 
 **含义：**
 *   `Student` 和 `Course` 之间存在一个名为 `enrolls in` 的关联。
 *   `Enrollment` 是一个关联类，它拥有属性 `grade`，用于记录某位学生在某门课程上取得的成绩。
 
-![](img/ab1d2df44cad5d43f38b011396050b14_16.png)
 
 ---
 
-![](img/ab1d2df44cad5d43f38b011396050b14_18.png)
 
 ## 关联类的限制
 
@@ -110,9 +100,7 @@ class Student {
 *   一旦一对对象实例（如Kenneth和COM3111）通过关联类建立了关系，它们之间就不能再建立第二条链接。
 *   这导致无法用简单的关联类模型来记录学生多次选修同一门课程的历史成绩。
 
-![](img/ab1d2df44cad5d43f38b011396050b14_20.png)
 
-![](img/ab1d2df44cad5d43f38b011396050b14_21.png)
 
 ---
 
@@ -130,9 +118,7 @@ class Student {
                                 - grade: String
 ```
 
-![](img/ab1d2df44cad5d43f38b011396050b14_23.png)
 
-![](img/ab1d2df44cad5d43f38b011396050b14_24.png)
 
 **模型解释：**
 1.  `Course`（课程）类保持不变。
@@ -140,16 +126,13 @@ class Student {
 3.  `Student`与`Offering`之间建立“选修”关联（`takes`）。
 4.  `Student`和`Offering`之间的关联，其属性“成绩”依然由关联类`Enrollment`来记录。
 
-![](img/ab1d2df44cad5d43f38b011396050b14_26.png)
 
 **优势：**
 现在，Kenneth可以分别与“COM3111-2019秋季”和“COM3111-2020春季”这两个不同的`Offering`实例建立关联，并分别记录成绩F和A+。这样就完整保存了历史信息，并且符合UML的建模规则。
 
-![](img/ab1d2df44cad5d43f38b011396050b14_27.png)
 
 ---
 
-![](img/ab1d2df44cad5d43f38b011396050b14_29.png)
 
 ## 总结
 
@@ -161,9 +144,7 @@ class Student {
 *   我们发现了关联类的一个关键限制：**同一对对象实例之间只能存在一个关联链接**，这导致无法记录重复关系（如重修课程）的历史。
 *   最后，我们通过引入中间实体（如`Offering`类）来细化模型，从而解决了上述限制，能够完整记录所有历史信息。
 
-![](img/ab1d2df44cad5d43f38b011396050b14_31.png)
 
-![](img/ab1d2df44cad5d43f38b011396050b14_32.png)
 
 ![](img/ab1d2df44cad5d43f38b011396050b14_33.png)
 

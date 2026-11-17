@@ -41,9 +41,7 @@ public:
 
 **公式**：纯虚函数的语法是在声明末尾加上 `= 0`，例如 `virtual double getArea() const = 0;`。
 
-![](img/ab4e85c9dc37672370be7f130bebb445_8.png)
 
-![](img/ab4e85c9dc37672370be7f130bebb445_10.png)
 
 ### 实现具体子类：矩形和三角形
 
@@ -55,9 +53,7 @@ public:
 
 以下是`Rectangle`类需要实现`getArea`的示例：
 
-![](img/ab4e85c9dc37672370be7f130bebb445_16.png)
 
-![](img/ab4e85c9dc37672370be7f130bebb445_18.png)
 
 ```cpp
 class Rectangle : public Polygon {
@@ -85,13 +81,9 @@ public:
 };
 ```
 
-![](img/ab4e85c9dc37672370be7f130bebb445_20.png)
 
-![](img/ab4e85c9dc37672370be7f130bebb445_22.png)
 
-![](img/ab4e85c9dc37672370be7f130bebb445_24.png)
 
-![](img/ab4e85c9dc37672370be7f130bebb445_25.png)
 
 ![](img/ab4e85c9dc37672370be7f130bebb445_27.png)
 
@@ -141,14 +133,12 @@ public:
 
 ![](img/ab4e85c9dc37672370be7f130bebb445_41.png)
 
-![](img/ab4e85c9dc37672370be7f130bebb445_43.png)
 
 在Visual Studio等集成开发环境中，可以使用内置的测试框架（如Microsoft C++ Unit Test Framework）。测试的基本模式通常遵循“**3A原则**”：
 1.  **Arrange**：准备测试所需的数据和对象。
 2.  **Act**：执行要测试的代码。
 3.  **Assert**：验证结果是否符合预期。
 
-![](img/ab4e85c9dc37672370be7f130bebb445_45.png)
 
 ### 为三角形类编写测试
 
@@ -174,11 +164,9 @@ TEST_METHOD(TestTriangleArea) {
 
 我们还需要测试代码在非法输入时的行为，例如为矩形设置负的宽度。
 
-![](img/ab4e85c9dc37672370be7f130bebb445_47.png)
 
 以下是测试异常抛出的示例：
 
-![](img/ab4e85c9dc37672370be7f130bebb445_49.png)
 
 ![](img/ab4e85c9dc37672370be7f130bebb445_50.png)
 
@@ -202,7 +190,6 @@ TEST_METHOD(TestRectangleNegativeWidthThrows) {
 }
 ```
 
-![](img/ab4e85c9dc37672370be7f130bebb445_52.png)
 
 ![](img/ab4e85c9dc37672370be7f130bebb445_54.png)
 
@@ -210,7 +197,6 @@ TEST_METHOD(TestRectangleNegativeWidthThrows) {
 
 ### 测试驱动开发与代码覆盖率
 
-![](img/ab4e85c9dc37672370be7f130bebb445_58.png)
 
 ![](img/ab4e85c9dc37672370be7f130bebb445_59.png)
 
@@ -218,9 +204,7 @@ TEST_METHOD(TestRectangleNegativeWidthThrows) {
 
 编写测试不仅能验证当前功能的正确性，还能在未来修改代码时，快速检测是否引入了新的错误（这称为“回归测试”）。理想情况下，我们追求高的**代码覆盖率**，即测试用例执行了代码库中的大部分语句和分支。
 
-![](img/ab4e85c9dc37672370be7f130bebb445_62.png)
 
-![](img/ab4e85c9dc37672370be7f130bebb445_63.png)
 
 ![](img/ab4e85c9dc37672370be7f130bebb445_65.png)
 

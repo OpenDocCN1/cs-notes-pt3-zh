@@ -14,13 +14,11 @@ SELECT random();
 
 如果你想得到一个 0 到 100 之间的整数，可以使用 `trunc()` 函数对 `random() * 100` 的结果进行截断。
 
-![](img/8121de047e9f9f2c2e30dfba23e036b5_3.png)
 
 ```sql
 SELECT trunc(random() * 100);
 ```
 
-![](img/8121de047e9f9f2c2e30dfba23e036b5_5.png)
 
 ## 使用 `generate_series` 生成多行数据
 
@@ -30,7 +28,6 @@ SELECT trunc(random() * 100);
 SELECT generate_series(1, 5);
 ```
 
-![](img/8121de047e9f9f2c2e30dfba23e036b5_7.png)
 
 上面的查询会生成一个包含数字 1 到 5 的五行结果集。
 
@@ -40,17 +37,13 @@ SELECT generate_series(1, 5);
 SELECT 'neon' || generate_series(1, 5);
 ```
 
-![](img/8121de047e9f9f2c2e30dfba23e036b5_9.png)
 
 这类似于 Python 中的列表推导式，会生成一个包含 `neon1`, `neon2` 等元素的列表。
 
 ## 批量插入数据到表中
 
-![](img/8121de047e9f9f2c2e30dfba23e036b5_11.png)
 
-![](img/8121de047e9f9f2c2e30dfba23e036b5_12.png)
 
-![](img/8121de047e9f9f2c2e30dfba23e036b5_14.png)
 
 了解了如何生成数据后，我们可以利用它来填充数据库表。首先，创建一个简单的表。
 

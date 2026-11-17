@@ -2,13 +2,10 @@
 
 在本节课中，我们将学习两种用于构建跨平台和原生Windows应用程序的现代技术：.NET MAUI和通用Windows平台。我们将通过创建简单的“Hello World”应用来了解它们的基本工作原理、布局方式和开发体验。
 
-![](img/f4562eacfa78434f3c48d505dee8a62a_1.png)
 
-![](img/f4562eacfa78434f3c48d505dee8a62a_3.png)
 
 ## 概述
 
-![](img/f4562eacfa78434f3c48d505dee8a62a_5.png)
 
 ![](img/f4562eacfa78434f3c48d505dee8a62a_7.png)
 
@@ -18,7 +15,6 @@
 
 我们首先创建一个.NET MAUI应用。MAUI代表`.NET Multi-platform App UI`，它允许我们使用单一代码库为多个平台（如Windows、Android、iOS）构建应用。
 
-![](img/f4562eacfa78434f3c48d505dee8a62a_9.png)
 
 ### 项目结构与启动
 
@@ -152,7 +148,6 @@ UWP应用的一个优点是能更好地与Windows系统集成。例如，它会�
 
 ## 总结
 
-![](img/f4562eacfa78434f3c48d505dee8a62a_31.png)
 
 ![](img/f4562eacfa78434f3c48d505dee8a62a_33.png)
 

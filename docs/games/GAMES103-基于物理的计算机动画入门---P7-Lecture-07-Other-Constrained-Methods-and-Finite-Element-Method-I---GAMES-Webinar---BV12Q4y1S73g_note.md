@@ -2,9 +2,7 @@
 
 ![](img/8af3c57967e7f1d7e37b672333651468_0.png)
 
-![](img/8af3c57967e7f1d7e37b672333651468_2.png)
 
-![](img/8af3c57967e7f1d7e37b672333651468_3.png)
 
 在本节课中，我们将学习两种基于约束的高级模拟方法：Projective Dynamics 和 Constrained Dynamics，并初步了解有限元方法（FEM）的基本概念和线性三角形单元的力计算。
 
@@ -80,7 +78,6 @@ F = -Jᵀ * λ
 
 ![](img/8af3c57967e7f1d7e37b672333651468_5.png)
 
-![](img/8af3c57967e7f1d7e37b672333651468_7.png)
 
 ![](img/8af3c57967e7f1d7e37b672333651468_9.png)
 

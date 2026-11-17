@@ -29,13 +29,11 @@
 
 ### 大气渲染算法
 
-![](img/ec208b9ff15331ad81e283da48805fc7_2.png)
 
 * **单次散射 (Single Scattering)**: 仅考虑光线与大气中的粒子的一次散射。
 * **多次散射 (Multiple Scattering)**: 考虑光线与大气中粒子的多次散射，更真实地模拟大气效果。
 * **预计算大气 (Precomputed Atmosphere)**: 预先计算大气中的透射率和散射函数，并在运行时进行查找。
 
-![](img/ec208b9ff15331ad81e283da48805fc7_4.png)
 
 ## 云的生成和渲染
 
@@ -49,7 +47,6 @@
 
 ## 总结
 
-![](img/ec208b9ff15331ad81e283da48805fc7_6.png)
 
 ![](img/ec208b9ff15331ad81e283da48805fc7_7.png)
 

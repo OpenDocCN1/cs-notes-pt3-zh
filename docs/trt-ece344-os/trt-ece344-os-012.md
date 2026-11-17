@@ -1,6 +1,5 @@
 # 012：页表实现 🖥️
 
-![](img/2b33b9d47c007f3a9d36e6be7a0e76e8_1.png)
 
 ![](img/2b33b9d47c007f3a9d36e6be7a0e76e8_3.png)
 

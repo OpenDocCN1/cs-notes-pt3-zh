@@ -39,7 +39,6 @@ button.addEventListener('click', function(event) {
 
 ---
 
-![](img/0f8ea7cf5ae1fe89a8549fc3bf800bca_3.png)
 
 ## 实践：使用事件参数
 

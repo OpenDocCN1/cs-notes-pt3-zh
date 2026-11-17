@@ -118,15 +118,11 @@ Trainer& Trainer::operator=(const Trainer& other) {
 
 理解了如何管理类内部的资源后，我们来看看如何通过继承来建立类之间的关系。继承允许我们创建一个新类（派生类），它基于一个已存在的类（基类），并可以添加或修改功能。
 
-![](img/67b299d44f971e497bba75eb16b39af6_52.png)
 
 我们从一个简单的`Rectangle`类开始：
 
-![](img/67b299d44f971e497bba75eb16b39af6_54.png)
 
-![](img/67b299d44f971e497bba75eb16b39af6_56.png)
 
-![](img/67b299d44f971e497bba75eb16b39af6_58.png)
 
 ```cpp
 class Rectangle {
@@ -181,31 +177,21 @@ public:
 2.  构造函数通过初始化列表调用基类构造函数。
 3.  `override` 关键字明确表示此函数旨在覆盖基类的虚函数，有助于编译器检查错误。
 
-![](img/67b299d44f971e497bba75eb16b39af6_60.png)
 
 ---
 
-![](img/67b299d44f971e497bba75eb16b39af6_62.png)
 
-![](img/67b299d44f971e497bba75eb16b39af6_64.png)
 
-![](img/67b299d44f971e497bba75eb16b39af6_66.png)
 
-![](img/67b299d44f971e497bba75eb16b39af6_68.png)
 
 ## 多态性：运行时魔法 ✨
 
-![](img/67b299d44f971e497bba75eb16b39af6_70.png)
 
-![](img/67b299d44f971e497bba75eb16b39af6_72.png)
 
-![](img/67b299d44f971e497bba75eb16b39af6_74.png)
 
 多态性允许我们使用基类的指针或引用来调用派生类的方法。这是面向对象编程最强大的特性之一，但它需要与**指针**和**虚函数**配合使用才能实现运行时绑定。
 
-![](img/67b299d44f971e497bba75eb16b39af6_76.png)
 
-![](img/67b299d44f971e497bba75eb16b39af6_77.png)
 
 ![](img/67b299d44f971e497bba75eb16b39af6_78.png)
 
@@ -287,9 +273,7 @@ int main() {
 
 ![](img/67b299d44f971e497bba75eb16b39af6_107.png)
 
-![](img/67b299d44f971e497bba75eb16b39af6_109.png)
 
-![](img/67b299d44f971e497bba75eb16b39af6_111.png)
 
 ![](img/67b299d44f971e497bba75eb16b39af6_113.png)
 
@@ -309,9 +293,7 @@ int main() {
     *   固定属性：攻击力10，生命值1，射程更长。
     *   移动方式：缓慢，每次移动1个单位。
 
-![](img/67b299d44f971e497bba75eb16b39af6_121.png)
 
-![](img/67b299d44f971e497bba75eb16b39af6_123.png)
 
 ![](img/67b299d44f971e497bba75eb16b39af6_125.png)
 

@@ -1,6 +1,5 @@
 # 166：理解异常
 
-![](img/83dae4d8ed9f85f526565ac445b949db_0.png)
 
 在本节课中，我们将要学习Java中的异常。异常是程序运行时出现问题的信号。我们将了解什么是异常、为什么程序会因此崩溃，以及如何在程序中主动使用异常来处理错误情况。
 
@@ -51,13 +50,10 @@ try {
 
 ## 声明异常
 
-![](img/83dae4d8ed9f85f526565ac445b949db_2.png)
 
-![](img/83dae4d8ed9f85f526565ac445b949db_3.png)
 
 但是，你有时需要在方法签名中声明该方法可能抛出某种异常。这使用 `throws` 关键字。
 
-![](img/83dae4d8ed9f85f526565ac445b949db_5.png)
 
 ```java
 public void readFile(String filename) throws IOException {
@@ -70,9 +66,7 @@ public void readFile(String filename) throws IOException {
 
 最后，当你的代码发现出现了问题状况时，你可以主动抛出自己的异常。这使用 `throw` 关键字。
 
-![](img/83dae4d8ed9f85f526565ac445b949db_7.png)
 
-![](img/83dae4d8ed9f85f526565ac445b949db_8.png)
 
 ```java
 if (input < 0) {

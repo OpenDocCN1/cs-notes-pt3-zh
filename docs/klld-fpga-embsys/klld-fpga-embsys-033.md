@@ -1,12 +1,10 @@
 # 033：精准引脚分配
 
-![](img/0fec9f1cbae4f88eee07debc37371aa6_0.png)
 
 ![](img/0fec9f1cbae4f88eee07debc37371aa6_0.png)
 
 在本节课程中，我们将学习如何将FPGA设计中的内部信号分配到外部引脚上。引脚分配决定了你的设计如何与外部世界交互，因此正确操作至关重要。我们将学习使用引脚规划器和分配编辑器进行引脚分配，如何满足I/O标准并控制I/O属性，以及如何使用I/O分配分析器检查引脚分配。
 
-![](img/0fec9f1cbae4f88eee07debc37371aa6_2.png)
 
 以下是本视频将涵盖的内容：
 *   使用引脚规划器为设计分配引脚。
@@ -121,7 +119,6 @@
 
 ## 课程总结 📚
 
-![](img/0fec9f1cbae4f88eee07debc37371aa6_4.png)
 
 ![](img/0fec9f1cbae4f88eee07debc37371aa6_4.png)
 
@@ -132,6 +129,5 @@
 *   如何使用分配编辑器满足I/O标准并控制I/O属性。
 *   如何使用I/O分配分析器检查引脚分配。
 
-![](img/0fec9f1cbae4f88eee07debc37371aa6_6.png)
 
 ![](img/0fec9f1cbae4f88eee07debc37371aa6_6.png)

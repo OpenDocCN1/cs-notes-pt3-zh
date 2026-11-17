@@ -1,18 +1,13 @@
 # 016：快艇骰子游戏（第二部分）🎲
 
-![](img/b98197a5092690c847b07685feef4ac0_0.png)
 
-![](img/b98197a5092690c847b07685feef4ac0_2.png)
 
-![](img/b98197a5092690c847b07685feef4ac0_4.png)
 
-![](img/b98197a5092690c847b07685feef4ac0_6.png)
 
 在本节课中，我们将继续构建快艇骰子游戏的用户界面（UI），将之前创建的游戏逻辑与可视化的窗体控件连接起来。我们将学习如何创建按钮、标签和复选框，并编写代码让它们与我们的`Dice`和`Scorecard`类进行交互。
 
 ---
 
-![](img/b98197a5092690c847b07685feef4ac0_8.png)
 
 ## 创建玩家类
 
@@ -20,7 +15,6 @@
 
 首先，我们添加一个`Player`类。这个类目前非常简单，主要包含一个玩家的记分卡。
 
-![](img/b98197a5092690c847b07685feef4ac0_10.png)
 
 ```csharp
 public class Player
@@ -42,7 +36,6 @@ public class Player
 
 接下来，我们需要在窗体上放置各种控件来构建游戏界面。这是一个需要耐心但很直观的过程。
 
-![](img/b98197a5092690c847b07685feef4ac0_12.png)
 
 以下是需要在工具箱中添加的控件列表：
 *   **一个“掷骰”按钮**：用于执行掷骰动作。
@@ -50,29 +43,22 @@ public class Player
 *   **五个复选框**：用于让玩家选择“锁定”哪些骰子，防止它们在下次掷骰时被重新掷出。
 *   **多个计分按钮和标签**：用于显示各个得分项（如“一点”、“二点”等）的可能得分，并允许玩家选择记录哪个分数。
 
-![](img/b98197a5092690c847b07685feef4ac0_14.png)
 
-![](img/b98197a5092690c847b07685feef4ac0_16.png)
 
-![](img/b98197a5092690c847b07685feef4ac0_18.png)
 
 我们将这些控件拖放到窗体上，并给它们起一个清晰的名字，例如`rollButton`、`die1Label`、`holdDie1CheckBox`、`scoreOnesButton`等。
 
-![](img/b98197a5092690c847b07685feef4ac0_20.png)
 
 ---
 
-![](img/b98197a5092690c847b07685feef4ac0_22.png)
 
 ## 连接窗体代码与游戏逻辑
 
 现在，我们需要在窗体的后台代码中，将UI控件与我们之前创建的游戏逻辑类连接起来。
 
-![](img/b98197a5092690c847b07685feef4ac0_24.png)
 
 ### 初始化游戏状态
 
-![](img/b98197a5092690c847b07685feef4ac0_26.png)
 
 在窗体的构造函数中，我们需要初始化游戏所需的核心对象。
 
@@ -120,9 +106,7 @@ private void rollButton_Click(object sender, EventArgs e)
 
 当用户勾选或取消勾选“锁定”复选框时，我们需要同步设置`Dice`对象中对应骰子的锁定状态。
 
-![](img/b98197a5092690c847b07685feef4ac0_28.png)
 
-![](img/b98197a5092690c847b07685feef4ac0_30.png)
 
 ```csharp
 private void holdDie1CheckBox_CheckedChanged(object sender, EventArgs e)
@@ -134,13 +118,10 @@ private void holdDie1CheckBox_CheckedChanged(object sender, EventArgs e)
 
 ### 更新界面标签
 
-![](img/b98197a5092690c847b07685feef4ac0_32.png)
 
-![](img/b98197a5092690c847b07685feef4ac0_34.png)
 
 我们创建一个`UpdateLabels`方法来集中更新界面上的各种信息，例如剩余掷骰次数、当前玩家的可能得分等。
 
-![](img/b98197a5092690c847b07685feef4ac0_36.png)
 
 ```csharp
 private void UpdateLabels()
@@ -164,17 +145,13 @@ private void UpdateLabels()
 }
 ```
 
-![](img/b98197a5092690c847b07685feef4ac0_37.png)
 
-![](img/b98197a5092690c847b07685feef4ac0_39.png)
 
 ### 记录得分与切换玩家
 
-![](img/b98197a5092690c847b07685feef4ac0_41.png)
 
 当玩家点击某个得分按钮（如“记录一点”）时，我们需要将当前可能的分数记录到当前玩家的记分卡中，然后切换到另一位玩家。
 
-![](img/b98197a5092690c847b07685feef4ac0_43.png)
 
 ```csharp
 private void scoreOnesButton_Click(object sender, EventArgs e)
@@ -199,15 +176,12 @@ private void NextPlayer()
 }
 ```
 
-![](img/b98197a5092690c847b07685feef4ac0_45.png)
 
 ### 实现新游戏功能
 
-![](img/b98197a5092690c847b07685feef4ac0_47.png)
 
 最后，我们添加一个“新游戏”按钮，其功能是重置所有游戏状态，回到初始界面。
 
-![](img/b98197a5092690c847b07685feef4ac0_49.png)
 
 ```csharp
 private void newGameButton_Click(object sender, EventArgs e)
@@ -225,7 +199,6 @@ private void newGameButton_Click(object sender, EventArgs e)
 }
 ```
 
-![](img/b98197a5092690c847b07685feef4ac0_51.png)
 
 ---
 

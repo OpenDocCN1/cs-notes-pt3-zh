@@ -1,12 +1,9 @@
 # 003：容器 🗂️
 
-![](img/8fb9df090e5ffdebf34e4c6d6713e012_1.png)
 
 ![](img/8fb9df090e5ffdebf34e4c6d6713e012_3.png)
 
-![](img/8fb9df090e5ffdebf34e4c6d6713e012_5.png)
 
-![](img/8fb9df090e5ffdebf34e4c6d6713e012_7.png)
 
 ![](img/8fb9df090e5ffdebf34e4c6d6713e012_9.png)
 
@@ -146,19 +143,13 @@ STL容器是模板类，这意味着它们可以存储任何类型的数据。�
 
 ![](img/8fb9df090e5ffdebf34e4c6d6713e012_94.png)
 
-![](img/8fb9df090e5ffdebf34e4c6d6713e012_96.png)
 
-![](img/8fb9df090e5ffdebf34e4c6d6713e012_98.png)
 
-![](img/8fb9df090e5ffdebf34e4c6d6713e012_100.png)
 
-![](img/8fb9df090e5ffdebf34e4c6d6713e012_102.png)
 
 ![](img/8fb9df090e5ffdebf34e4c6d6713e012_103.png)
 
-![](img/8fb9df090e5ffdebf34e4c6d6713e012_104.png)
 
-![](img/8fb9df090e5ffdebf34e4c6d6713e012_106.png)
 
 理解每种容器的优缺点对于编写高效的程序至关重要。
 

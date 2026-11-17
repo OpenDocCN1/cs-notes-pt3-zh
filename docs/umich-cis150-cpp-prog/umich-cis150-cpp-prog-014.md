@@ -8,9 +8,7 @@
 
 ![](img/c4172b75d9daff1b3143444ea32988f3_3.png)
 
-![](img/c4172b75d9daff1b3143444ea32988f3_5.png)
 
-![](img/c4172b75d9daff1b3143444ea32988f3_7.png)
 
 ## 文件读写与分隔符
 
@@ -42,9 +40,7 @@ int main() {
 
 ## 从文件中读取并解析数据
 
-![](img/c4172b75d9daff1b3143444ea32988f3_13.png)
 
-![](img/c4172b75d9daff1b3143444ea32988f3_15.png)
 
 写入数据后，我们需要能够将其读回程序。这涉及到读取整行字符串，然后根据分隔符将其拆分成独立的部分。
 
@@ -54,19 +50,13 @@ int main() {
 3.  使用`find`函数在字符串中定位分隔符的位置。
 4.  使用`substr`函数根据分隔符的位置提取子字符串。
 
-![](img/c4172b75d9daff1b3143444ea32988f3_17.png)
 
-![](img/c4172b75d9daff1b3143444ea32988f3_19.png)
 
 以下是实现该过程的代码示例：
 
-![](img/c4172b75d9daff1b3143444ea32988f3_21.png)
 
-![](img/c4172b75d9daff1b3143444ea32988f3_22.png)
 
-![](img/c4172b75d9daff1b3143444ea32988f3_24.png)
 
-![](img/c4172b75d9daff1b3143444ea32988f3_26.png)
 
 ```cpp
 #include <fstream>
@@ -172,15 +162,11 @@ int main() {
 ```
 现在，无论一行中有多少个物品，代码都能正确读取并存储它们。
 
-![](img/c4172b75d9daff1b3143444ea32988f3_43.png)
 
 ---
 
-![](img/c4172b75d9daff1b3143444ea32988f3_45.png)
 
-![](img/c4172b75d9daff1b3143444ea32988f3_47.png)
 
-![](img/c4172b75d9daff1b3143444ea32988f3_49.png)
 
 ![](img/c4172b75d9daff1b3143444ea32988f3_51.png)
 
@@ -190,11 +176,8 @@ int main() {
 
 默认情况下，用`ofstream`打开文件会覆盖原有内容。如果我们想在不删除旧数据的情况下添加新内容，可以使用追加模式。
 
-![](img/c4172b75d9daff1b3143444ea32988f3_55.png)
 
-![](img/c4172b75d9daff1b3143444ea32988f3_57.png)
 
-![](img/c4172b75d9daff1b3143444ea32988f3_59.png)
 
 以下是使用追加模式打开文件的代码：
 ```cpp
@@ -205,15 +188,12 @@ outFile.close();
 ```
 运行此代码后，新的购物清单会被添加到`list.txt`文件的末尾，而不会清除“Kroger”的那条记录。
 
-![](img/c4172b75d9daff1b3143444ea32988f3_61.png)
 
 ![](img/c4172b75d9daff1b3143444ea32988f3_62.png)
 
 ![](img/c4172b75d9daff1b3143444ea32988f3_64.png)
 
-![](img/c4172b75d9daff1b3143444ea32988f3_66.png)
 
-![](img/c4172b75d9daff1b3143444ea32988f3_68.png)
 
 ---
 
@@ -246,11 +226,8 @@ outFile.close();
 
 ![](img/c4172b75d9daff1b3143444ea32988f3_72.png)
 
-![](img/c4172b75d9daff1b3143444ea32988f3_74.png)
 
-![](img/c4172b75d9daff1b3143444ea32988f3_76.png)
 
-![](img/c4172b75d9daff1b3143444ea32988f3_77.png)
 
 ## 课程总结
 

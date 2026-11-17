@@ -1,6 +1,5 @@
 # 006：-07-For循环
 
-![](img/27e27eaa3403abf6d4c673e299ac34d9_0.png)
 
 ![](img/27e27eaa3403abf6d4c673e299ac34d9_0.png)
 
@@ -92,10 +91,8 @@ names = ["马里奥", "路易吉", "黛西", "耀西", "库巴"]
 
 `for`循环是自动化重复任务的基础，理解它对你后续的编程学习至关重要。
 
-![](img/27e27eaa3403abf6d4c673e299ac34d9_2.png)
 
 ![](img/27e27eaa3403abf6d4c673e299ac34d9_2.png)
 
-![](img/27e27eaa3403abf6d4c673e299ac34d9_3.png)
 
 ![](img/27e27eaa3403abf6d4c673e299ac34d9_3.png)

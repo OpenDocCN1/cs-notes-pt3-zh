@@ -107,10 +107,8 @@ $q.all([promise1, promise2, promise3])
 
 在本节课中，我们一起学习了 Promise 的概念及其在 AngularJS 中通过 `$q` 服务的实现。我们了解了为什么 Promise 比传统的回调函数更强大，特别是在处理异步操作链、错误处理和并行执行方面。我们学习了如何创建 Promise（使用 `$q.defer()`），如何标记其完成状态（`resolve` 和 `reject`），以及调用者如何通过 `then` 方法处理成功和失败的结果。最后，我们还简要介绍了 `$q.all()` 用于并行处理多个 Promise。在下一部分，我们将回到代码编辑器，查看一些使用此 API 的具体示例。
 
-![](img/b5924f4d7df891b3fee9165f1f1e13f8_4.png)
 
 ![](img/b5924f4d7df891b3fee9165f1f1e13f8_4.png)
 
-![](img/b5924f4d7df891b3fee9165f1f1e13f8_5.png)
 
 ![](img/b5924f4d7df891b3fee9165f1f1e13f8_5.png)

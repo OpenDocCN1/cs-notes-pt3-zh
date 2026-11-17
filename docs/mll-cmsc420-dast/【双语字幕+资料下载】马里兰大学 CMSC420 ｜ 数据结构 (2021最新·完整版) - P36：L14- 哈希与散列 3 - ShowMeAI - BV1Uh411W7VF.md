@@ -2,7 +2,6 @@
 
 ![](img/c94d49980f625246ae9d14d87e739a27_0.png)
 
-![](img/c94d49980f625246ae9d14d87e739a27_1.png)
 
 let's continue our discussion of，collision resolution techniques。
 

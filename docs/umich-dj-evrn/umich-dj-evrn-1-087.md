@@ -47,14 +47,12 @@ Django提供了登录功能，但需要我们自己提供一个模板来控制�
 
 在模板中，我们可以使用 `user` 对象。但需要注意，其属性仅在用户已认证（`user.is_authenticated` 为真）时才有意义。
 
-![](img/779aa11569bb5ae4f967c575b4820733_10.png)
 
 以下是用户对象的一些常用属性：
 *   `user.username`：用户名
 *   `user.email`：用户邮箱
 *   `user.id`：用户的主键（PK）
 
-![](img/779aa11569bb5ae4f967c575b4820733_12.png)
 
 在Python视图代码中，用户信息存储在 `request` 对象中。
 
@@ -84,7 +82,6 @@ def my_view(request):
 
 第一种是手动检查。我们在视图逻辑中判断 `request.user.is_authenticated`。
 
-![](img/779aa11569bb5ae4f967c575b4820733_18.png)
 
 ```python
 from django.shortcuts import render, redirect
@@ -104,7 +101,6 @@ def manual_protect_view(request):
 
 这种方法可行，但代码略显冗余，且需要手动处理重定向逻辑。
 
-![](img/779aa11569bb5ae4f967c575b4820733_22.png)
 
 第二种，也是**推荐**的方法，是使用Django提供的 **`LoginRequiredMixin`**。这是一个“混入类”（Mixin），可以轻松地为基于类的视图添加登录要求。
 

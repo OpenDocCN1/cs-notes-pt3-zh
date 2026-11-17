@@ -155,7 +155,6 @@ DATABASES = {
 
 ![](img/d3d2d5080524ffb4df2b6b165c3a69b5_48.png)
 
-![](img/d3d2d5080524ffb4df2b6b165c3a69b5_50.png)
 
 ## 总结
 

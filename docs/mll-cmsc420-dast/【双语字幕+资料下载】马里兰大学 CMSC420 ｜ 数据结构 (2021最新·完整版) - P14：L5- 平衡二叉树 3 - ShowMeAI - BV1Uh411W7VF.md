@@ -2,7 +2,6 @@
 
 ![](img/256409039b9b7d1196e99528905bd3c7_0.png)
 
-![](img/256409039b9b7d1196e99528905bd3c7_1.png)
 
 in this last segment on avl trees，we're going to talk about deletion and。
 

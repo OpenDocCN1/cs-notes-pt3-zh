@@ -227,7 +227,6 @@ g = e * f
 
 ## 总结
 
-![](img/90a140684b4aba6c379c2f0f79eee8f9_5.png)
 
 ![](img/90a140684b4aba6c379c2f0f79eee8f9_6.png)
 

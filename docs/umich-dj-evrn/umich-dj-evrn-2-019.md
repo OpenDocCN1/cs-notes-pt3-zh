@@ -2,35 +2,26 @@
 
 在本节课中，我们将学习如何在JavaScript中构建和使用类。我们将了解类的内部工作原理，包括如何定义类、创建实例、理解构造函数以及管理多个独立的对象实例。
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_1.png)
 
 ---
 
 ## 概述
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_3.png)
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_4.png)
 
 JavaScript中的类是一种创建对象的模板。虽然ES6引入了更简洁的类语法，但理解其底层基于函数的实现方式，能帮助我们更深刻地掌握JavaScript面向对象编程的核心机制。本节将介绍如何使用`function`关键字定义类，如何使用`new`关键字创建实例，以及`this`关键字在其中的作用。
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_6.png)
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_7.png)
 
 ---
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_9.png)
 
 ## 类的定义与构造函数
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_11.png)
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_13.png)
 
 上一节我们介绍了对象的基本概念，本节中我们来看看如何在JavaScript中定义一个类。在JavaScript中，类本质上是一个特殊的函数。
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_14.png)
 
 **定义类的基本语法如下：**
 ```javascript
@@ -47,7 +38,6 @@ function PartyAnimal() {
 *   `this.x = 0;` 为实例创建了一个名为`x`的属性（成员变量），并初始化为0。
 *   `this.party = function() { ... }` 为实例创建了一个名为`party`的方法。这里使用了一个匿名函数。
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_16.png)
 
 ![](img/16fad4d178a71749f2d47b9e5a440cb0_18.png)
 
@@ -59,13 +49,11 @@ function PartyAnimal() {
 
 ## 创建类的实例
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_23.png)
 
 ![](img/16fad4d178a71749f2d47b9e5a440cb0_25.png)
 
 定义好类之后，我们需要使用`new`关键字来创建具体的对象实例。
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_27.png)
 
 **创建实例的语法如下：**
 ```javascript
@@ -100,15 +88,12 @@ an.party(); // 输出: So far 3
 
 ---
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_34.png)
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_35.png)
 
 ## 构造函数详解
 
 构造函数是类中一段特殊的代码，它在使用`new`关键字创建新实例时自动执行，用于初始化对象的状态。
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_37.png)
 
 **一个带有构造函数的类示例：**
 ```javascript
@@ -126,7 +111,6 @@ function PartyAnimal(name) {
 *   `this.name = name;` 将传入的参数赋值给实例的`name`属性。
 *   `console.log("Built " + this.name);` 这行代码让我们能直观地看到构造函数何时被执行。
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_39.png)
 
 ![](img/16fad4d178a71749f2d47b9e5a440cb0_40.png)
 
@@ -159,7 +143,6 @@ s.party(); // 输出: Sally=2
 
 ## 核心概念总结
 
-![](img/16fad4d178a71749f2d47b9e5a440cb0_45.png)
 
 ![](img/16fad4d178a71749f2d47b9e5a440cb0_46.png)
 

@@ -42,7 +42,6 @@ if ($guess === false) {
 
 ## 引入模型-视图-控制器（MVC）模式
 
-![](img/77eb364cf79ccf0bfe9380087c3af294_5.png)
 
 上一节我们分析了混合编码的弊端，本节中我们来看看如何用MVC模式来改善它。
 
@@ -57,10 +56,8 @@ MVC是一种将应用程序分为三个核心部件的设计模式：
 
 以下是如何将之前的猜数游戏重构为遵循MVC原则的代码。关键是在脚本中建立一条清晰的“分界线”。
 
-![](img/77eb364cf79ccf0bfe9380087c3af294_7.png)
 
 
-![](img/77eb364cf79ccf0bfe9380087c3af294_9.png)
 
 ```php
 <?php
@@ -109,7 +106,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </html>
 ```
 
-![](img/77eb364cf79ccf0bfe9380087c3af294_10.png)
 
 ### 代码结构解析
 
@@ -124,28 +120,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     *   它从“上下文”中读取数据（`$message`, `$oldguess`）并将其渲染到页面上。
     *   在此部分，我们避免进行数据库查询或复杂的业务逻辑计算。
 
-![](img/77eb364cf79ccf0bfe9380087c3af294_12.png)
 
-![](img/77eb364cf79ccf0bfe9380087c3af294_13.png)
 
-![](img/77eb364cf79ccf0bfe9380087c3af294_14.png)
 
 3.  **控制器的作用**：
     *   在整个脚本中，控制器是隐式存在的。它由顶部的条件逻辑（`if ($_SERVER[‘REQUEST_METHOD’] == ‘POST’)`）扮演，负责根据用户请求决定执行哪些模型逻辑。
     *   在更复杂的应用中，控制器可能会决定重定向到不同的页面（路由）。
 
-![](img/77eb364cf79ccf0bfe9380087c3af294_16.png)
 
 ### 工作流程示例
 
 *   **首次加载（GET请求）**：脚本执行模型部分，由于不是POST请求，`$message`为`false`，`$oldguess`为空。然后跳至视图部分，显示一个空的表单。
 *   **提交猜测（POST请求）**：脚本执行模型部分的所有逻辑，计算出相应的提示信息并存入`$message`，同时将用户输入存入`$oldguess`。然后进入视图部分，将信息和旧值填充到HTML表单中并显示给用户。
 
-![](img/77eb364cf79ccf0bfe9380087c3af294_18.png)
 
 ## 总结
 
-![](img/77eb364cf79ccf0bfe9380087c3af294_20.png)
 
 ![](img/77eb364cf79ccf0bfe9380087c3af294_21.png)
 

@@ -1,6 +1,5 @@
 # 018：-19-W21 Lab 11 (Bonus)
 
-![](img/b6f0a9a3f69d3fac7aabea69ad948eb8_0.png)
 
 ![](img/b6f0a9a3f69d3fac7aabea69ad948eb8_0.png)
 

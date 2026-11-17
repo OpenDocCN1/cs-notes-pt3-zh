@@ -1,6 +1,5 @@
 # 161：`main`方法详解 🚀
 
-![](img/95ff69b51292fc01577fa041170dfe4a_0.png)
 
 在本节课中，我们将要学习Java程序独立运行的起点——`main`方法。我们将了解它的作用、标准语法结构，以及如何通过它接收外部输入。
 
@@ -8,9 +7,7 @@
 
 在BlueJ这样的集成开发环境中，你可以通过点击菜单来创建对象和运行方法，无需指定程序从哪里开始。然而，当程序需要独立运行时，Java虚拟机需要一个明确的入口点来启动程序。
 
-![](img/95ff69b51292fc01577fa041170dfe4a_2.png)
 
-![](img/95ff69b51292fc01577fa041170dfe4a_3.png)
 
 这个入口点就是一个名为`main`的特殊方法。当你运行程序时，需要指定包含此`main`方法的类。
 
@@ -18,7 +15,6 @@
 
 `main`方法必须遵循一个特定的签名格式，其标准定义如下：
 
-![](img/95ff69b51292fc01577fa041170dfe4a_5.png)
 
 ```java
 public static void main(String[] args)
@@ -26,19 +22,15 @@ public static void main(String[] args)
 
 接下来，我们将逐一解析这个签名中的每个关键字。
 
-![](img/95ff69b51292fc01577fa041170dfe4a_7.png)
 
 ### 访问修饰符：`public`
 
 你已经熟悉`public`关键字，它意味着类外部的代码可以调用此方法。`main`方法必须是`public`的，因为启动程序的代码（Java虚拟机）需要从外部调用它。
 
-![](img/95ff69b51292fc01577fa041170dfe4a_9.png)
 
 ### 关键字：`static`
 
-![](img/95ff69b51292fc01577fa041170dfe4a_10.png)
 
-![](img/95ff69b51292fc01577fa041170dfe4a_11.png)
 
 下一个词是`static`。它表示该方法不属于类的某个特定实例，而是属于类本身，整个类只有一份。你很快就会学到更多关于`static`的知识，现在只需知道`main`方法必须是`static`的。
 
@@ -48,13 +40,10 @@ public static void main(String[] args)
 
 ### 方法名：`main`
 
-![](img/95ff69b51292fc01577fa041170dfe4a_13.png)
 
-![](img/95ff69b51292fc01577fa041170dfe4a_14.png)
 
 紧接着是方法名`main`。
 
-![](img/95ff69b51292fc01577fa041170dfe4a_16.png)
 
 ### 参数：`String[] args`
 
@@ -62,19 +51,15 @@ public static void main(String[] args)
 
 当你运行程序时，可以指定哪些字符串会被传入这个数组。
 
-![](img/95ff69b51292fc01577fa041170dfe4a_18.png)
 
-![](img/95ff69b51292fc01577fa041170dfe4a_19.png)
 
 ---
 
-![](img/95ff69b51292fc01577fa041170dfe4a_21.png)
 
 上一节我们介绍了`main`方法的标准签名，本节中我们来看看一个具体的例子。
 
 ## 一个`main`方法示例 🔍
 
-![](img/95ff69b51292fc01577fa041170dfe4a_23.png)
 
 让我们看一个使用`main`方法编写的程序示例。这个程序看起来熟悉吗？它是“Java编程：用软件解决问题”课程开头的“Hello Around the World”程序，但被重写为使用`main`方法。
 
@@ -87,15 +72,12 @@ public class HelloWorld {
 }
 ```
 
-![](img/95ff69b51292fc01577fa041170dfe4a_25.png)
 
 请注意，它完全符合我们在上一张幻灯片中描述的签名。
 
-![](img/95ff69b51292fc01577fa041170dfe4a_27.png)
 
 `main`方法的主体执行你想要的任何计算。在这个例子中，它读取文件`Hello_Unicode.txt`，并打印出文件中的每一行。
 
-![](img/95ff69b51292fc01577fa041170dfe4a_29.png)
 
 ## 使用命令行参数 🛠️
 
@@ -103,9 +85,7 @@ public class HelloWorld {
 
 以下是修改后的代码示例：
 
-![](img/95ff69b51292fc01577fa041170dfe4a_31.png)
 
-![](img/95ff69b51292fc01577fa041170dfe4a_32.png)
 
 ```java
 public class HelloWorld {
@@ -129,7 +109,6 @@ public class HelloWorld {
 
 `System.exit()`在适当的时候非常有用，但请仅在希望程序完全退出时使用它。它接收一个`int`型参数，表示程序运行的成功或失败。按照惯例，传入`0`表示成功，非零值表示失败。
 
-![](img/95ff69b51292fc01577fa041170dfe4a_34.png)
 
 ---
 

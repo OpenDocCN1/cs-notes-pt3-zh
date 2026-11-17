@@ -29,22 +29,17 @@
 
 现在，让我们具体看看Ticket锁是如何工作的。
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_1.png)
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_3.png)
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_5.png)
 
 Ticket锁模仿了银行或服务大厅的排队叫号系统。它使用两个原子计数器：`next_ticket`（发号机）和 `current_ticket`（当前服务号）。
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_7.png)
 
 ### 数据结构
 
 以下是Ticket锁的核心数据结构：
 
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_9.png)
 
 ```rust
 use std::sync::atomic::{AtomicUsize, Ordering};
@@ -54,11 +49,9 @@ pub struct TicketLock {
 }
 ```
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_11.png)
 
 ### 算法步骤
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_13.png)
 
 以下是Ticket锁 `lock` 和 `unlock` 操作的逻辑：
 
@@ -70,21 +63,14 @@ pub struct TicketLock {
     *   持有锁的线程在离开临界区后，将 `current_ticket` 增加1（即 `store(my_ticket + 1, Ordering::Release)`），通知下一个等待的线程。
     *   这里需要注意整型溢出回绕的问题。
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_15.png)
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_17.png)
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_19.png)
 
 ### 关键分析
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_21.png)
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_22.png)
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_24.png)
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_26.png)
 
 *   **互斥如何保证？**
     *   互斥通过 `current_ticket` 变量上的释放-获取同步来保证。`unlock` 中的 `store`（释放）与后续 `lock` 中读取 `current_ticket` 的循环（获取）同步，从而传递了数据的最新视图。
@@ -94,29 +80,21 @@ pub struct TicketLock {
     *   **等待**：每个线程在 `current_ticket` 上自旋，但只关心它是否等于自己的票号 `my_ticket`。
     *   由于票号分配是公平且顺序的，并且 `current_ticket` 严格递增，每个线程最终都会等到自己的票号被叫到。
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_28.png)
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_30.png)
 
 Ticket锁的优点是实现了公平性。缺点是API稍复杂（`lock`需要返回票号），并且所有等待线程都在**同一个 `current_ticket` 变量上自旋**，在竞争激烈时会导致严重的缓存一致性流量，影响扩展性。
 
 ---
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_32.png)
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_34.png)
 
 ## CLH锁的实现 🔗
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_36.png)
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_38.png)
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_40.png)
 
 接下来，我们研究CLH锁，它采用了一种基于隐式链表的队列方式来解决自旋位置共享的问题。
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_42.png)
 
 CLH锁的核心思想是**每个线程在其前驱线程的节点上自旋**，从而将自旋操作分散到不同的内存位置。
 
@@ -142,7 +120,6 @@ pub struct CLHLock {
 
 以下是CLH锁 `lock` 和 `unlock` 操作的逻辑：
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_44.png)
 
 1.  **初始化**：创建一个 `locked` 为 `false` 的虚拟节点，`tail` 指向它。
 2.  **获取锁 (`lock`)**：
@@ -167,7 +144,6 @@ pub struct CLHLock {
 
 ---
 
-![](img/a155ee5f78d272aaf638bef92ec960f6_46.png)
 
 ![](img/a155ee5f78d272aaf638bef92ec960f6_48.png)
 

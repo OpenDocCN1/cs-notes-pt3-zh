@@ -20,22 +20,18 @@
 
 活动图则展示了软件使用的具体步骤和流程。它类似于流程图，可以清晰地描绘出决策点（如“是/否”分支）和不同部门或模块之间的协作（称为“泳道”）。
 
-![](img/378e864be2b879a79d97ccd9ee77daf4_8.png)
 
 以下是绘制这些图表的要点：
 *   图表是沟通复杂想法的有效工具，比大段文字更直观。
 *   可以使用Microsoft Visio（实验室已安装）、Microsoft Word的形状工具或一些免费的在线工具（如Lucidchart、diagrams.net）来绘制。
 *   在活动图中，菱形代表决策点，矩形代表活动，箭头指示流程方向。
 
-![](img/378e864be2b879a79d97ccd9ee77daf4_10.png)
 
 ---
 
 ## 递归函数 🔄
 
-![](img/378e864be2b879a79d97ccd9ee77daf4_12.png)
 
-![](img/378e864be2b879a79d97ccd9ee77daf4_14.png)
 
 ![](img/378e864be2b879a79d97ccd9ee77daf4_16.png)
 
@@ -45,7 +41,6 @@
 
 一个递归函数必须包含一个**基线条件**，用于结束递归调用，否则函数将无限循环并最终导致程序崩溃。
 
-![](img/378e864be2b879a79d97ccd9ee77daf4_20.png)
 
 ### 倒计时示例
 
@@ -55,11 +50,9 @@
 
 ![](img/378e864be2b879a79d97ccd9ee77daf4_26.png)
 
-![](img/378e864be2b879a79d97ccd9ee77daf4_27.png)
 
 以下是一个简单的递归函数，用于实现倒计时：
 
-![](img/378e864be2b879a79d97ccd9ee77daf4_29.png)
 
 ![](img/378e864be2b879a79d97ccd9ee77daf4_31.png)
 
@@ -75,11 +68,9 @@ void countdown(int number) {
 ```
 调用 `countdown(5)` 会输出：`5 4 3 2 1 Blast off!`。在调试时，你可以在调用堆栈中看到一系列 `countdown` 函数的调用，每个调用都有其独立的 `number` 参数值。
 
-![](img/378e864be2b879a79d97ccd9ee77daf4_33.png)
 
 ![](img/378e864be2b879a79d97ccd9ee77daf4_35.png)
 
-![](img/378e864be2b879a79d97ccd9ee77daf4_36.png)
 
 ### 斐波那契数列示例
 

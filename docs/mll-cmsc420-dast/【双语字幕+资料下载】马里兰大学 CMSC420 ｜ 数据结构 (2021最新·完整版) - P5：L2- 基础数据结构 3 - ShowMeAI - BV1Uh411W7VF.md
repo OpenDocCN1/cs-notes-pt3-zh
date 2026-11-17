@@ -2,7 +2,6 @@
 
 ![](img/8576ccfb5de467def3b16b47fdc27f8c_0.png)
 
-![](img/8576ccfb5de467def3b16b47fdc27f8c_1.png)
 
 welcome to the third installment for the，lecture on basic data structures。
 

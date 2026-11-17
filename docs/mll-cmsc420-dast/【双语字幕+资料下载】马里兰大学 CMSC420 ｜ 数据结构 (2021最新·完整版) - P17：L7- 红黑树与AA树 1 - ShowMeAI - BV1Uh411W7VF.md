@@ -2,7 +2,6 @@
 
 ![](img/a53c15973f25bd25843965a6b45178b0_0.png)
 
-![](img/a53c15973f25bd25843965a6b45178b0_1.png)
 
 okay folks，today we're going to talk about red，black trees and the related topic of aa，trees。
 

@@ -84,7 +84,6 @@ dependencies = [
 
 ## 总结
 
-![](img/2c799b20814f69f381071f4119d3d8e1_2.png)
 
 ![](img/2c799b20814f69f381071f4119d3d8e1_3.png)
 

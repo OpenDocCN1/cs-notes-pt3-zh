@@ -1,6 +1,5 @@
 # 037：JSON与Fetch API详解 🚀
 
-![](img/0a2da5b3a9bab334b6c99c11bfda74a1_1.png)
 
 在本节课中，我们将学习如何在Django应用中处理JSON数据，并使用JavaScript的Fetch API从客户端异步获取这些数据。我们将探讨JSON的基本概念、如何在Django视图中返回JSON响应，以及使用Promise和Async/Await两种模式编写健壮的Fetch请求。
 
@@ -14,7 +13,6 @@ JSON（JavaScript Object Notation）是一种轻量级的数据交换格式，�
 
 ## JSON基础：语法与本质 🔍
 
-![](img/0a2da5b3a9bab334b6c99c11bfda74a1_3.png)
 
 JSON的本质是一种数据格式语法。它并非只能从服务器动态获取，其基础语法可以直接在JavaScript中定义。
 
@@ -33,11 +31,9 @@ console.log(who);
 
 JSON的巧妙之处在于，**我们可以将这种完全相同的语法通过网络进行发送和接收**。这使得数据序列化和反序列化变得非常直观。
 
-![](img/0a2da5b3a9bab334b6c99c11bfda74a1_5.png)
 
 ---
 
-![](img/0a2da5b3a9bab334b6c99c11bfda74a1_7.png)
 
 ## Django视图：返回JSON响应 🐍
 
@@ -64,7 +60,6 @@ def json_fun(request):
 2.  向其传递一个Python字典 `data`。
 3.  `JsonResponse` 会自动将字典序列化为JSON字符串，并正确设置HTTP响应头（如 `Content-Type: application/json`）。
 
-![](img/0a2da5b3a9bab334b6c99c11bfda74a1_9.png)
 
 当我们访问这个视图的URL时，浏览器开发者工具的“网络”(Network)选项卡会显示，响应头是 `application/json`，响应体就是序列化后的JSON文本。浏览器通常会友好地解析并格式化显示这些数据。
 
@@ -72,9 +67,7 @@ def json_fun(request):
 
 ---
 
-![](img/0a2da5b3a9bab334b6c99c11bfda74a1_11.png)
 
-![](img/0a2da5b3a9bab334b6c99c11bfda74a1_13.png)
 
 ## 使用Fetch API：Promise模式 ⚡
 
@@ -101,30 +94,23 @@ fetch(url)
 3.  第二个 `.then()` 在JSON解析成功后执行，接收解析出的 `data` 对象，供我们使用。
 4.  `.catch()` 会捕获链中任何阶段发生的错误。
 
-![](img/0a2da5b3a9bab334b6c99c11bfda74a1_15.png)
 
-![](img/0a2da5b3a9bab334b6c99c11bfda74a1_16.png)
 
-![](img/0a2da5b3a9bab334b6c99c11bfda74a1_17.png)
 
 在实际开发中，我们需要处理各种潜在错误，例如：
 *   **URL语法错误**：`fetch` 调用本身会立即失败。
 *   **404 Not Found**：服务器返回了响应，但状态码不是成功的2xx系列。
 *   **200 OK但内容非JSON**：服务器返回了HTML或其他内容，导致 `response.json()` 解析失败。
 
-![](img/0a2da5b3a9bab334b6c99c11bfda74a1_19.png)
 
-![](img/0a2da5b3a9bab334b6c99c11bfda74a1_20.png)
 
 Promise模式代码紧凑，适合处理大多数简单的异步场景。
 
-![](img/0a2da5b3a9bab334b6c99c11bfda74a1_22.png)
 
 ---
 
 ## 使用Fetch API：Async/Await模式 🧵
 
-![](img/0a2da5b3a9bab334b6c99c11bfda74a1_24.png)
 
 除了Promise链，Async/Await提供了另一种更接近同步代码风格的异步处理方式。
 
@@ -165,9 +151,7 @@ Async/Await模式代码结构更清晰，错误处理更集中，尤其在处理
     *   **Promise模式**：通过 `.then().catch()` 链式调用，代码简洁，适用于大多数场景。
     *   **Async/Await模式**：使用 `async/await` 关键字，让异步代码看起来像同步代码，流程控制更清晰，错误处理更直接。
 
-![](img/0a2da5b3a9bab334b6c99c11bfda74a1_26.png)
 
-![](img/0a2da5b3a9bab334b6c99c11bfda74a1_28.png)
 
 ![](img/0a2da5b3a9bab334b6c99c11bfda74a1_29.png)
 

@@ -1,14 +1,11 @@
 # 014：JavaScript语言特性 🧩
 
-![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_1.png)
 
 在本节课中，我们将学习JavaScript作为一种编程语言的基础语法。我们将从注释开始，逐步介绍变量、数据类型、运算符等核心概念，帮助你理解JavaScript的基本构成。
 
 ## 注释
 
-![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_3.png)
 
-![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_4.png)
 
 JavaScript支持两种风格的注释，它们分别受到不同编程语言的影响。
 
@@ -59,7 +56,6 @@ console.log(x);
 
 单引号（`'`）和双引号（`"`）在定义字符串时功能完全相同。我倾向于在JavaScript代码中尽可能使用单引号，因为双引号是HTML的属性值界定符。这样在混合编写JavaScript和HTML代码时，可以更容易地区分两者。
 
-![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_17.png)
 
 例如，在编写包含HTML的JavaScript字符串时：
 ```javascript
@@ -69,9 +65,7 @@ let htmlSnippet = '<p class="highlight">Text</p>';
 
 ### 数字常量
 
-![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_19.png)
 
-![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_20.png)
 
 JavaScript只有一种数字类型：`Number`。所有数字在内部都是浮点数，没有独立的整数类型。
 
@@ -88,13 +82,11 @@ let intPart = Math.trunc(result); // 使用 Math.trunc 截取整数部分，得�
 
 ## 运算符
 
-![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_26.png)
 
 上一节我们介绍了变量和常量，本节中我们来看看JavaScript中用于操作这些值的各种运算符。
 
 ### 算术运算符
 
-![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_28.png)
 
 基本的算术运算符与其他语言类似。
 
@@ -106,7 +98,6 @@ let intPart = Math.trunc(result); // 使用 Math.trunc 截取整数部分，得�
 *   `/`：除法
 *   `%`：取模（求余数）
 
-![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_30.png)
 
 取模运算符（`%`）非常实用，例如，可以用它来在循环中每隔一定次数执行某个操作：
 ```javascript
@@ -115,7 +106,6 @@ if (iterationCount % 100 === 0) {
 }
 ```
 
-![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_32.png)
 
 ### 副作用运算符
 
@@ -123,9 +113,7 @@ if (iterationCount % 100 === 0) {
 
 以下是常见的副作用运算符：
 
-![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_34.png)
 
-![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_36.png)
 
 *   `k++`：先使用`k`的值，然后将`k`加1。
 *   `++k`：先将`k`加1，然后使用`k`的新值。
@@ -133,11 +121,9 @@ if (iterationCount % 100 === 0) {
 
 虽然这些运算符源自C语言，在JavaScript和Java中也很常见，但为了代码清晰，我通常更倾向于使用完整的赋值语句（如 `j = j + 5`）。
 
-![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_38.png)
 
 ### 比较与逻辑运算符
 
-![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_40.png)
 
 ![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_41.png)
 
@@ -154,9 +140,7 @@ if (iterationCount % 100 === 0) {
 
 ![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_43.png)
 
-![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_44.png)
 
-![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_46.png)
 
 严格相等（`===`）和严格不相等（`!==`）非常重要，它们能避免因JavaScript自动类型转换而导致的意外结果。
 
@@ -188,7 +172,6 @@ if (!(k > 10)) { /* k 不大于 10 时执行 */ }
 
 JavaScript使用加号（`+`）进行字符串拼接，并且会自动将非字符串值转换为字符串。
 
-![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_54.png)
 
 ![](img/f2a9d4f5f84eccf4d8fba9e78f43a8ff_56.png)
 

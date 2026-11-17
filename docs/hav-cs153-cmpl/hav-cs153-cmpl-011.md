@@ -17,7 +17,6 @@
 *   存在产生式 `X -> ε`（空串）。
 *   或者存在产生式 `X -> Y1 Y2 ... Yn`，并且所有 `Yi` 都是NULLABLE的非终结符。
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_3.png)
 
 ### 2. FIRST集
 对于任意符号串γ（由终结符和非终结符组成），`FIRST(γ)` 是**所有可能作为由γ推导出的串的第一个终结符**的集合。
@@ -30,7 +29,6 @@
 *   若 `γ = tδ`（`t`为终结符），则 `t ∈ FIRST(X)`。
 *   若 `γ = Yδ`（`Y`为非终结符），则 `FIRST(Y) ⊆ FIRST(X)`。如果`Y`是NULLABLE的，则`FIRST(δ)`也需要加入`FIRST(X)`。
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_5.png)
 
 ### 3. FOLLOW集
 对于非终结符`X`，`FOLLOW(X)` 是**所有可能紧跟在由`X`推导出的串后面的终结符**的集合。
@@ -67,7 +65,6 @@ F  -> id | num | ( E )
 
 所以，`NULLABLE = {E', T'}`。
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_11.png)
 
 ### 步骤2：计算FIRST集
 
@@ -77,7 +74,6 @@ F  -> id | num | ( E )
 
 ![](img/d73b5033a85de535920e9a4ef1e84ad7_15.png)
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_17.png)
 
 ![](img/d73b5033a85de535920e9a4ef1e84ad7_19.png)
 
@@ -97,7 +93,6 @@ F  -> id | num | ( E )
 
 ![](img/d73b5033a85de535920e9a4ef1e84ad7_21.png)
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_23.png)
 
 最终FIRST集：
 *   `FIRST(F) = {id, num, (}`
@@ -107,23 +102,17 @@ F  -> id | num | ( E )
 
 ### 步骤3：计算FOLLOW集
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_25.png)
 
 我们初始化所有非终结符的FOLLOW集为空（除了约定`FOLLOW(S)`包含`EOF`）。然后根据规则迭代添加。
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_27.png)
 
 ![](img/d73b5033a85de535920e9a4ef1e84ad7_29.png)
 
 ![](img/d73b5033a85de535920e9a4ef1e84ad7_31.png)
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_33.png)
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_34.png)
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_36.png)
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_38.png)
 
 以下是FOLLOW集的构建过程：
 1.  **规则1（`A -> α X β`，将`FIRST(β)`加入`FOLLOW(X)`）**：
@@ -143,13 +132,11 @@ F  -> id | num | ( E )
 
 ![](img/d73b5033a85de535920e9a4ef1e84ad7_43.png)
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_45.png)
 
 ![](img/d73b5033a85de535920e9a4ef1e84ad7_47.png)
 
 ![](img/d73b5033a85de535920e9a4ef1e84ad7_49.png)
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_51.png)
 
 最终FOLLOW集：
 *   `FOLLOW(S) = {}` (通常不特别关注)
@@ -171,13 +158,10 @@ F  -> id | num | ( E )
 
 ![](img/d73b5033a85de535920e9a4ef1e84ad7_61.png)
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_63.png)
 
 ![](img/d73b5033a85de535920e9a4ef1e84ad7_65.png)
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_67.png)
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_68.png)
 
 现在我们有了所有必要的信息，可以构建LL(1)预测分析表`M`了。表的行是非终结符，列是终结符（包括`EOF`）。每个单元格`M[X, t]`包含当我们要解析非终结符`X`且下一个输入符号是`t`时，应该使用的产生式。
 
@@ -197,29 +181,21 @@ F  -> id | num | ( E )
 
 ![](img/d73b5033a85de535920e9a4ef1e84ad7_78.png)
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_80.png)
 
 如果最终每个单元格最多只有一个产生式，则该语法是LL(1)的，并且这个表可以用于确定性的预测分析。
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_82.png)
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_84.png)
 
 ![](img/d73b5033a85de535920e9a4ef1e84ad7_86.png)
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_88.png)
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_89.png)
 
 ![](img/d73b5033a85de535920e9a4ef1e84ad7_91.png)
 
 根据上述规则，为我们示例语法构建的预测分析表如下：
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_93.png)
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_95.png)
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_97.png)
 
 | 非终结符 | id      | num    | (        | )      | +        | -        | *      | /      | EOF     |
 | :------- | :------ | :----- | :------- | :----- | :------- | :------- | :----- | :----- | :------ |
@@ -258,7 +234,6 @@ LL(1)是更一般的LL(K)分析的特例，其中K表示向前看K个符号。K�
 
 即使是无二义性的语法，也可能不是LL(K)的。对于这些语法，我们需要更强大的分析技术，例如**LR分析**。LR分析是一种自底向上的方法，通常能处理比LL分析更广泛的语法类别，也是许多实际编译器工具（如Yacc，Bison）所采用的技术。我们将在下一讲中介绍LR分析。
 
-![](img/d73b5033a85de535920e9a4ef1e84ad7_101.png)
 
 ## 总结
 

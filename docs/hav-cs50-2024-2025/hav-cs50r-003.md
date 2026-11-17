@@ -10,7 +10,6 @@
 
 ## 识别和移除异常值
 
-![](img/5fbdff023c27189e23ec53d7f4eda959_4.png)
 
 上一节我们介绍了数据的基本概念，本节中我们来看看如何处理数据中的异常值。在统计学或数据科学中，你可能会听说过“异常值”这个概念，即落在某个标准范围之外的数据点。
 
@@ -266,11 +265,9 @@ chicks$feed == "casein"
 ```
 这将返回一个逻辑向量，指示每行饲料是否为“casein”。
 
-![](img/5fbdff023c27189e23ec53d7f4eda959_41.png)
 
 我们可以用这个逻辑向量对数据框进行子集化。
 
-![](img/5fbdff023c27189e23ec53d7f4eda959_43.png)
 
 ![](img/5fbdff023c27189e23ec53d7f4eda959_45.png)
 
@@ -358,7 +355,6 @@ formatted_options <- paste0(1:length(feed_options), ". ", feed_options)
 
 现在，使用`cat()`函数和换行符`\n`（转义字符）将格式化后的选项打印给用户。
 
-![](img/5fbdff023c27189e23ec53d7f4eda959_69.png)
 
 ![](img/5fbdff023c27189e23ec53d7f4eda959_71.png)
 
@@ -477,7 +473,6 @@ sales$value <- ifelse(sales$sale_amount > 100, "high value", "regular")
 4.  **合并数据**：使用`rbind()`函数将结构相同的多个数据框按行合并成一个更大的数据集，并学习了如何添加标识列以保留数据来源信息。
 5.  **数据分类**：使用`ifelse()`函数基于现有列的值创建新的分类列。
 
-![](img/5fbdff023c27189e23ec53d7f4eda959_83.png)
 
 ![](img/5fbdff023c27189e23ec53d7f4eda959_84.png)
 

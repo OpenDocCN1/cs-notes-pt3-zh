@@ -2,7 +2,6 @@
 
 ![](img/56c076342084ad9b399db75cdb1bd28b_0.png)
 
-![](img/56c076342084ad9b399db75cdb1bd28b_1.png)
 
 in this segment，we're going to present a few more of the，details regarding scapegoat trees。
 

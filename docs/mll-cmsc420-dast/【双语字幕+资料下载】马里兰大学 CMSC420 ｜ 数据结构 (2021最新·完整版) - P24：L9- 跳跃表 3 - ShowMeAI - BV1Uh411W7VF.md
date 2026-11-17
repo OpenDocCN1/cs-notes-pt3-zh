@@ -2,7 +2,6 @@
 
 ![](img/2b1e5cef131b5fa6b7e642d9d1b15790_0.png)
 
-![](img/2b1e5cef131b5fa6b7e642d9d1b15790_1.png)
 
 for our last segment on skipless let's，talk about the insert and delete。
 

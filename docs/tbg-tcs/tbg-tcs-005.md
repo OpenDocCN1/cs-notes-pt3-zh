@@ -23,7 +23,6 @@
 
 ## 如何使用泵引理证明语言非正则
 
-![](img/40c8f69fbcc6b8ae3a780cc25c41b5b8_3.png)
 
 ![](img/40c8f69fbcc6b8ae3a780cc25c41b5b8_5.png)
 

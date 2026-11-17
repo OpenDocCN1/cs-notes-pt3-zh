@@ -2,19 +2,15 @@
 
 在本节课中，我们将学习 JavaScript 语言的基础语法和核心特性。课程内容涵盖变量声明、数据类型、函数、控制流、循环以及一些高级概念，如一等函数和数组方法。这些基础知识是后续学习 Node.js、浏览器 JavaScript 和 React 等框架的基石。
 
-![](img/66087a5991774271c6a1069657ed2916_1.png)
 
 ## 运行 JavaScript 代码
 
 JavaScript 代码可以在两个主要环境中运行：Node.js 命令行解释器和 Web 浏览器。
 
-![](img/66087a5991774271c6a1069657ed2916_3.png)
 
-![](img/66087a5991774271c6a1069657ed2916_4.png)
 
 以下是运行代码的两种方式：
 
-![](img/66087a5991774271c6a1069657ed2916_6.png)
 
 *   **Node.js 命令行**：如果你已安装 Node.js，可以在终端中运行 `node 文件名.js` 来执行代码。
 *   **Web 浏览器**：在 HTML 文件中使用 `<script>` 标签嵌入 JavaScript 代码。代码的输出会显示在浏览器的开发者工具控制台中。
@@ -126,7 +122,6 @@ console.log(obj === "[object Object]"); // false
 条件语句 (`if`, `else`, `switch`) 和循环语句 (`for`, `while`) 与其他类 C 语言类似。
 
 
-![](img/66087a5991774271c6a1069657ed2916_8.png)
 
 ```javascript
 // if 语句

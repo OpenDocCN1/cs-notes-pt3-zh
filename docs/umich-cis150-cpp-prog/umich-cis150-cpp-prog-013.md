@@ -10,7 +10,6 @@
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_3.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_5.png)
 
 上一节我们介绍了流的基本概念。本节中，我们来看看我们一直在使用的两种标准流：`cin`（标准输入流）和 `cout`（标准输出流）。
 
@@ -36,21 +35,15 @@
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_17.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_19.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_21.png)
 
 ---
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_23.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_24.png)
 
 ## 处理整行输入 📝
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_26.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_28.png)
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_30.png)
 
@@ -80,7 +73,6 @@ getline(cin, fullName); // 获取整行输入，包括空格，直到遇到回�
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_46.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_48.png)
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_50.png)
 
@@ -98,7 +90,6 @@ getline(cin, fullName); // 获取整行输入，包括空格，直到遇到回�
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_56.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_57.png)
 
 以下是使用输入字符串流 (`istringstream`) 的步骤：
 1.  包含头文件 `<sstream>`。
@@ -124,7 +115,6 @@ getline(cin, fullName); // 获取整行输入，包括空格，直到遇到回�
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_73.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_75.png)
 
 ```cpp
 #include <sstream>
@@ -145,7 +135,6 @@ cout << "Year: " << year << ", Make: " << make << ", Model: " << model << endl;
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_81.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_83.png)
 
 ## 输出字符串流：构建字符串 🛠️
 
@@ -158,7 +147,6 @@ cout << "Year: " << year << ", Make: " << make << ", Model: " << model << endl;
 ![](img/d2cadc6e5c62aff90d8f828238d53841_89.png)
 
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_91.png)
 
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_93.png)
@@ -184,19 +172,15 @@ cout << finalString << endl; // 输出：The result is: 42 and 3.14
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_103.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_105.png)
 
 ## 文件操作：读取文件 📖
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_107.png)
 
 现在，我们进入核心部分：文件操作。使用文件可以让我们处理持久化数据，而不仅仅是在程序运行时存在于内存中的数据。
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_109.png)
 
 处理文件通常遵循三个步骤：**打开文件**、**读取/写入文件**、**关闭文件**。
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_111.png)
 
 以下是读取文件的基本步骤：
 1.  包含头文件 `<fstream>`。
@@ -207,13 +191,9 @@ cout << finalString << endl; // 输出：The result is: 42 and 3.14
 6.  使用 `.close()` 方法关闭文件。
 
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_113.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_115.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_117.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_119.png)
 
 ```cpp
 #include <fstream>
@@ -239,42 +219,31 @@ int main() {
 }
 ```
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_121.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_123.png)
 
 **重要概念：文件路径**
 *   **相对路径**：如 `"data.txt"`。程序会在其**运行目录**中寻找该文件。在集成开发环境（如Visual Studio）中运行时，这通常是项目目录。这是最常用和可移植的方式。
 *   **绝对路径**：如 `"C:\\Users\\Name\\data.txt"`（注意Windows中需要使用双反斜杠`\\`）。指定了文件的完整位置，但程序移植到其他计算机时可能失效。
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_125.png)
 
 ---
 
 ## 读取文件中的所有数据 🔄
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_127.png)
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_129.png)
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_131.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_133.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_134.png)
 
 我们通常需要读取文件中的多个数据，直到文件末尾。这可以通过循环来实现。
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_136.png)
-
-![](img/d2cadc6e5c62aff90d8f828238d53841_138.png)
-
-![](img/d2cadc6e5c62aff90d8f828238d53841_140.png)
 
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_142.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_143.png)
+
+
 
 ```cpp
 #include <fstream>
@@ -323,9 +292,7 @@ int main() {
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_151.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_153.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_155.png)
 
 本节课中我们一起学习了C++流的高级应用：
 1.  回顾了标准输入/输出流 (`cin`/`cout`)。
@@ -334,15 +301,10 @@ int main() {
 4.  重点学习了**文件输入**操作，包括如何打开文件、检查状态、读取数据（单个或全部）以及正确关闭文件。
 5.  理解了相对路径和绝对路径的区别。
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_157.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_158.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_159.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_160.png)
 
-![](img/d2cadc6e5c62aff90d8f828238d53841_161.png)
 
 ![](img/d2cadc6e5c62aff90d8f828238d53841_163.png)
 

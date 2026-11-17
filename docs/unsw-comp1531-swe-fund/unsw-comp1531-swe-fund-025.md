@@ -36,7 +36,6 @@
 
 ![](img/495efbb473eaceba9a93f967ffb7c98a_1.png)
 
-![](img/495efbb473eaceba9a93f967ffb7c98a_3.png)
 
 简单来说，耦合和内聚讨论的核心是：不同的东西应该分开，相似的东西应该在一起。
 
@@ -65,9 +64,7 @@ else:
     function_c()
 ```
 
-![](img/495efbb473eaceba9a93f967ffb7c98a_13.png)
 
-![](img/495efbb473eaceba9a93f967ffb7c98a_15.png)
 
 我们可以将其转换为控制流图。从起点开始，程序只能进入 `if` 分支或 `else` 分支。进入 `if` 分支后，总是会执行 `function_b()`；进入 `else` 分支后，总是会执行 `function_c()`。最后，两者都到达程序结束点。
 

@@ -32,7 +32,6 @@ const sum = function(a, b) {
 };
 ```
 
-![](img/385031d2a9f0b9ff6eba7402c73d3934_7.png)
 
 ![](img/385031d2a9f0b9ff6eba7402c73d3934_8.png)
 
@@ -269,11 +268,9 @@ const totalReduce = students.reduce((prevTotal, student) => prevTotal + student.
 
 高阶函数是指那些**返回另一个函数**的函数。你可以把它们想象成“函数工厂”，用于生成具有特定行为的函数。
 
-![](img/385031d2a9f0b9ff6eba7402c73d3934_111.png)
 
 假设我们需要多个功能相似但细节不同的函数：
 
-![](img/385031d2a9f0b9ff6eba7402c73d3934_113.png)
 
 ```javascript
 // 传统方式：定义多个独立函数
@@ -282,16 +279,12 @@ const congratulateMarkCredit = (name: string) => `Congratulations ${name} on you
 // ... 更多
 ```
 
-![](img/385031d2a9f0b9ff6eba7402c73d3934_115.png)
 
 我们可以使用高阶函数来生成这些函数，避免重复代码：
 
-![](img/385031d2a9f0b9ff6eba7402c73d3934_117.png)
 
 
-![](img/385031d2a9f0b9ff6eba7402c73d3934_119.png)
 
-![](img/385031d2a9f0b9ff6eba7402c73d3934_121.png)
 
 ```typescript
 // 高阶函数：生成特定祝贺语的函数

@@ -122,9 +122,7 @@ foreach (visibleInstance in instanceList) {
 
 **公式/代码示意：重心坐标插值**
 
-![](img/77ec56eb2839180024d812bbea79def6_3.png)
 
-![](img/77ec56eb2839180024d812bbea79def6_5.png)
 
 ```cpp
 // 伪代码：在Shading Pass中重建像素属性
@@ -152,9 +150,7 @@ float4 diffuse = texture2D(materialTextures[materialId].diffuse, uv);
 *   **导数计算（DDX/DDY）**：在 Shading Pass 中手动进行纹理采样时，需要计算 UV 在屏幕空间中的梯度以确定正确的 Mipmap 层级。这需要通过屏幕空间坐标和顶点 UV 反推出来。
 *   **抗锯齿**：需要额外的处理，例如结合 MSAA 或 TAA。
 
-![](img/77ec56eb2839180024d812bbea79def6_7.png)
 
-![](img/77ec56eb2839180024d812bbea79def6_9.png)
 
 ---
 
@@ -165,7 +161,6 @@ float4 diffuse = texture2D(materialTextures[materialId].diffuse, uv);
 1.  **Cluster-Based Rendering**：通过将几何细分为簇，并在 GPU 上并行进行极精细的可见性剔除，实现了从“逐个物体绘制”到“一次绘制所有可见三角形”的飞跃，解决了几何提交的效率瓶颈。
 2.  **Visibility Buffer**：通过将几何标识与着色分离，用极低成本的 Visibility Pass 应对复杂几何的重度 `overdraw`，再在 Shading Pass 中按需重建数据，解决了复杂场景下的着色效率瓶颈。
 
-![](img/77ec56eb2839180024d812bbea79def6_11.png)
 
 ![](img/77ec56eb2839180024d812bbea79def6_13.png)
 

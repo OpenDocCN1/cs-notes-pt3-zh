@@ -8,7 +8,6 @@
 
 ## 从 DISTINCT 到 GROUP BY
 
-![](img/69d134343a5b54d0d26b6ede57a23c69_1.png)
 
 上一节我们介绍了 `DISTINCT`，本节我们来看看 `GROUP BY`。首先，让我们查看一下 `pg_timezone_names` 表中有多少行数据。
 
@@ -16,7 +15,6 @@
 SELECT COUNT(*) FROM pg_timezone_names;
 ```
 
-![](img/69d134343a5b54d0d26b6ede57a23c69_3.png)
 
 执行上述查询，我们会得到 591 行数据。
 
@@ -64,7 +62,6 @@ SELECT is_dst, COUNT(is_dst) FROM pg_timezone_names WHERE is_dst = true GROUP BY
 
 有时，我们可能希望基于聚合计算的结果（如计数）进行过滤。这时就需要使用 `HAVING` 子句，它在分组**之后**对结果进行过滤。
 
-![](img/69d134343a5b54d0d26b6ede57a23c69_11.png)
 
 以下是 `HAVING` 子句的使用示例，它找出出现次数超过 10 次的时区缩写：
 

@@ -1,6 +1,5 @@
 # GAMES101-现代计算机图形学入门-闫令琪---P4-Lecture-04-Transformation-Cont----GAMES-Webinar---BV1X7411F744_note
 
-![](img/e00f79cb0a1373ea966a697860057dc6_0.png)
 
 ![](img/e00f79cb0a1373ea966a697860057dc6_0.png)
 
@@ -178,14 +177,10 @@ M_persp->ortho = [ n, 0, 0,    0   ]
 
 理解这些变换是理解现代图形渲染管线的基础。在后续课程中，我们将看到这些矩阵如何被应用到顶点上，从而将三维世界呈现在二维屏幕上。
 
-![](img/e00f79cb0a1373ea966a697860057dc6_6.png)
+
+
 
 ![](img/e00f79cb0a1373ea966a697860057dc6_8.png)
 
-![](img/e00f79cb0a1373ea966a697860057dc6_6.png)
-
-![](img/e00f79cb0a1373ea966a697860057dc6_8.png)
-
-![](img/e00f79cb0a1373ea966a697860057dc6_9.png)
 
 ![](img/e00f79cb0a1373ea966a697860057dc6_9.png)

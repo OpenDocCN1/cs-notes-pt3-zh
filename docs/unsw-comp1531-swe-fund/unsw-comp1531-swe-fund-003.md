@@ -24,7 +24,6 @@
 
 ![](img/bfa014fbf9704ee1ba1afa1cb11f9745_13.png)
 
-![](img/bfa014fbf9704ee1ba1afa1cb11f9745_15.png)
 
 ![](img/bfa014fbf9704ee1ba1afa1cb11f9745_17.png)
 
@@ -55,18 +54,14 @@ git checkout -b 新分支名
 
 假设团队中有Hayden和Kai两位开发者，他们需要各自开发不同的功能。
 
-![](img/bfa014fbf9704ee1ba1afa1cb11f9745_25.png)
 
-![](img/bfa014fbf9704ee1ba1afa1cb11f9745_27.png)
 
 **Hayden的操作（开发饮品列表）**：
 1.  从`master`分支创建并切换到新分支 `hayden/drinks-list`。
 2.  在新分支上创建 `drinks.txt` 文件并添加内容（如“Coke”）。
 3.  进行提交（`git add`, `git commit`）并首次推送到远程仓库（`git push --set-upstream origin hayden/drinks-list`）。
 
-![](img/bfa014fbf9704ee1ba1afa1cb11f9745_29.png)
 
-![](img/bfa014fbf9704ee1ba1afa1cb11f9745_31.png)
 
 **Kai的操作（开发汽车列表）**：
 1.  同样从`master`分支创建并切换到新分支 `kai/cars-list`。
@@ -116,7 +111,6 @@ git checkout -b 新分支名
 
 ## 持续同步：合并主分支到功能分支
 
-![](img/bfa014fbf9704ee1ba1afa1cb11f9745_41.png)
 
 在长期开发的功能分支上，定期将`master`分支的更新合并进来是一个好习惯。这可以：
 *   减少最终合并回`master`时出现冲突的几率和复杂度。

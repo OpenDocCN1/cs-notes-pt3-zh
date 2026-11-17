@@ -10,17 +10,13 @@
 
 上一节我们回顾了两阶段随机规划问题的模型。本节中，我们来看看求解这类问题的算法设置。
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_5.png)
 
 我们考虑具有有限个场景的两阶段线性随机规划问题。假设对于任何第一阶段决策变量 `x`，以及所有可能的不确定性实现（场景），第二阶段的追索问题都是可行的。这被称为“相对完全追索”假设。
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_7.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_9.png)
 
 问题的标准形式如下：
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_11.png)
 
 ![](img/092db3c5a66108a4ebd5e3d30ae83bdf_13.png)
 
@@ -42,9 +38,7 @@ Q(x, ξ_s) = minimize q_s^T y_s
 subject to W_s y_s = h_s - T_s x, y_s >= 0
 ```
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_21.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_23.png)
 
 其中，`ξ_s` 代表第 `s` 个场景的不确定性参数。
 
@@ -56,13 +50,9 @@ subject to W_s y_s = h_s - T_s x, y_s >= 0
 
 在算法中，一个关键步骤是计算追索函数 `Q(x, ξ_s)` 及其关于 `x` 的次梯度。
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_29.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_30.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_31.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_33.png)
 
 对于每个场景 `s`，追索问题的对偶形式为：
 ```
@@ -76,9 +66,7 @@ subject to W_s^T p_s <= q_s
 
 设 `p_{s,k}` 是在点 `x_k` 处求解上述对偶问题得到的最优乘子。那么，向量 `-T_s^T p_{s,k}` 就是追索函数 `Q(·, ξ_s)` 在点 `x_k` 处的一个次梯度。
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_38.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_39.png)
 
 因此，期望追索函数 `φ(x) = E[Q(x, ξ)]` 在点 `x_k` 处的一个次梯度 `γ_k` 可以通过对所有场景的次梯度进行概率加权平均得到：
 ```
@@ -88,13 +76,9 @@ subject to W_s^T p_s <= q_s
 
 这意味着，每次我们在一个试验点 `x_k` 求解所有第二阶段的子问题后，不仅能得到函数值 `φ(x_k)`，还能“免费”获得一个次梯度 `γ_k`。这个信息将成为我们设计优化算法的核心。
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_41.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_42.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_43.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_45.png)
 
 ## 优化算法与“黑箱”模型
 
@@ -102,11 +86,9 @@ subject to W_s^T p_s <= q_s
 
 现在，我们将问题简化为最小化一个凸的、非光滑的函数 `f(x) = c^T x + φ(x)`。我们假设拥有一个“黑箱”（或称预言机），对于任何输入点 `x`，它都能返回函数值 `f(x)` 和一个次梯度 `g ∈ ∂f(x)`。
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_49.png)
 
 ![](img/092db3c5a66108a4ebd5e3d30ae83bdf_51.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_53.png)
 
 ![](img/092db3c5a66108a4ebd5e3d30ae83bdf_54.png)
 
@@ -125,9 +107,7 @@ subject to W_s^T p_s <= q_s
 
 首先，我们审视一种最简单直接的算法：次梯度法。以下是该方法的步骤：
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_58.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_60.png)
 
 1.  选择一个初始点 `x_0`，设定迭代索引 `k = 0`。
 2.  调用黑箱，在 `x_k` 处获取函数值 `f_k` 和次梯度 `g_k`。
@@ -147,19 +127,15 @@ subject to W_s^T p_s <= q_s
 *   **理论条件与实现的矛盾**：收敛性理论要求步长平方和有限但步长和无限，这在有限精度的计算机上难以严格满足。
 *   **信息利用不足**：算法完全忽略了黑箱提供的函数值信息 `f_k`。
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_62.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_64.png)
 
 ![](img/092db3c5a66108a4ebd5e3d30ae83bdf_65.png)
 
 ![](img/092db3c5a66108a4ebd5e3d30ae83bdf_67.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_69.png)
 
 因此，虽然次梯度法在某些情况下可用，但它并非求解两阶段随机规划的高效可靠工具。
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_71.png)
 
 ![](img/092db3c5a66108a4ebd5e3d30ae83bdf_73.png)
 
@@ -183,9 +159,7 @@ m_k(x) = max_{i=0,...,k} [ f(x_i) + g_i^T (x - x_i) ]
 
 ### 算法步骤
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_75.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_77.png)
 
 ![](img/092db3c5a66108a4ebd5e3d30ae83bdf_78.png)
 
@@ -197,7 +171,6 @@ m_k(x) = max_{i=0,...,k} [ f(x_i) + g_i^T (x - x_i) ]
 
 ![](img/092db3c5a66108a4ebd5e3d30ae83bdf_84.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_85.png)
 
 1.  选择初始点 `x_0`，设定 `k = 0`。模型初始为空或包含一个初始割。
 2.  调用黑箱，在 `x_k` 处获取 `(f_k, g_k)`。
@@ -214,9 +187,7 @@ m_k(x) = max_{i=0,...,k} [ f(x_i) + g_i^T (x - x_i) ]
 
 ### 优势与特点
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_87.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_88.png)
 
 与次梯度法相比，割平面法具有显著优势：
 
@@ -225,9 +196,7 @@ m_k(x) = max_{i=0,...,k} [ f(x_i) + g_i^T (x - x_i) ]
 *   **处理约束方便**：第一阶段约束 `X` 可以直接加入主问题的线性规划中，无需复杂投影。
 *   **有限终止性**：对于像两阶段随机规划产生的**分段线性凸函数**，割平面法可以在有限步内找到精确最优解（因为最终模型会与真实函数在最优解处重合）。这正是 **L-Shaped 方法** 应用于随机线性规划时的核心原理。
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_90.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_92.png)
 
 ![](img/092db3c5a66108a4ebd5e3d30ae83bdf_94.png)
 
@@ -235,11 +204,9 @@ m_k(x) = max_{i=0,...,k} [ f(x_i) + g_i^T (x - x_i) ]
 
 ![](img/092db3c5a66108a4ebd5e3d30ae83bdf_96.png)
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_98.png)
 
 ## 总结
 
-![](img/092db3c5a66108a4ebd5e3d30ae83bdf_100.png)
 
 本节课中我们一起学习了两阶段随机规划算法的入门知识。
 

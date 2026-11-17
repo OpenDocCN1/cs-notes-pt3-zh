@@ -38,7 +38,6 @@
 
 ![](img/fb8f024423da279c5a8671bafebdcc5d_19.png)
 
-![](img/fb8f024423da279c5a8671bafebdcc5d_20.png)
 
 身份验证是证明你是谁的过程，例如通过用户名和密码登录。授权则是在你通过身份验证后，确定你可以访问哪些资源，不可以访问哪些资源。
 
@@ -54,7 +53,6 @@
 
 ![](img/fb8f024423da279c5a8671bafebdcc5d_27.png)
 
-![](img/fb8f024423da279c5a8671bafebdcc5d_28.png)
 
 以下是安全研究人员发现的最常见的10个密码示例：
 
@@ -105,7 +103,6 @@
 
 上一节我们了解了弱密码的风险，本节中我们来看看攻击者如何利用“暴力破解”来攻击系统。
 
-![](img/fb8f024423da279c5a8671bafebdcc5d_51.png)
 
 ![](img/fb8f024423da279c5a8671bafebdcc5d_52.png)
 
@@ -177,9 +174,7 @@ for passcode in product(digits, repeat=4):
 
 虽然更长的密码（如8位字符）在理论上需要极长的时间才能破解（例如，以每秒尝试一次的速度需要数百万年），但这建立在密码完全随机且攻击未被限制的基础上。
 
-![](img/fb8f024423da279c5a8671bafebdcc5d_84.png)
 
-![](img/fb8f024423da279c5a8671bafebdcc5d_85.png)
 
 ---
 
@@ -201,7 +196,6 @@ for passcode in product(digits, repeat=4):
 
 ![](img/fb8f024423da279c5a8671bafebdcc5d_95.png)
 
-![](img/fb8f024423da279c5a8671bafebdcc5d_96.png)
 
 ![](img/fb8f024423da279c5a8671bafebdcc5d_98.png)
 
@@ -237,7 +231,6 @@ for passcode in product(digits, repeat=4):
 
 ![](img/fb8f024423da279c5a8671bafebdcc5d_116.png)
 
-![](img/fb8f024423da279c5a8671bafebdcc5d_117.png)
 
 然而，简单的哈希存储仍可能受到**彩虹表攻击**。攻击者会预先计算大量常见密码的哈希值并制成表格，然后直接查表匹配窃取的哈希值。
 
@@ -263,7 +256,6 @@ for passcode in product(digits, repeat=4):
 
 上一节我们探讨了哈希，本节中我们来看看更通用的信息保护技术——加密。
 
-![](img/fb8f024423da279c5a8671bafebdcc5d_130.png)
 
 ![](img/fb8f024423da279c5a8671bafebdcc5d_132.png)
 
@@ -293,11 +285,9 @@ for passcode in product(digits, repeat=4):
 
 ![](img/fb8f024423da279c5a8671bafebdcc5d_145.png)
 
-![](img/fb8f024423da279c5a8671bafebdcc5d_147.png)
 
 ## 数据安全与隐私 🗝️
 
-![](img/fb8f024423da279c5a8671bafebdcc5d_149.png)
 
 上一节我们介绍了加密通信，本节中我们来看看如何保护静态存储的数据。
 
@@ -331,7 +321,6 @@ for passcode in product(digits, repeat=4):
 
 ---
 
-![](img/fb8f024423da279c5a8671bafebdcc5d_165.png)
 
 ## 总结与行动指南 ✅
 

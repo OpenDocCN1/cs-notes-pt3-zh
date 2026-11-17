@@ -156,9 +156,7 @@ charge.py 中 `Charge` 数据类型的实现展示了我们描述的所有特性
 
 > | `% python koch.py 0` | `% python koch.py 1` |
 > | --- | --- |
-> | ![](img/95b4bd0e366a8795e14b1ad0e26c0d19.png) | ![](img/7181ddefe6a781c1712350b5d2d5e1a2.png) |
 > | `% python koch.py 2` | `% python koch.py 3` |
-> | ![](img/119ccc25ea0479a5e92f7324c52ada37.png) | ![](img/95cfb529da35ab6cbc41843af9ed90cb.png) |
 > | `% python koch.py 4` |
 > | ![](img/33b5d7ae56636a64d37c9b8614a0c814.png) |
 
@@ -168,7 +166,6 @@ charge.py 中 `Charge` 数据类型的实现展示了我们描述的所有特性
 
 > | `% python spiral.py 3 1 1.0` | `% python spiral.py 3 10 1.2` |
 > | --- | --- |
-> | ![](img/0575d5f29c6b5e246d49cef1f2b0affe.png) | ![](img/92958299d7b40d0adf65d4144e0426e1.png) |
 > | `% python spiral.py 1440 10 1.00004` | `% python spiral.py 1440 10 1.0004` |
 > | ![](img/1290bd28c0eb356ed685a224607e8446.png) | ![](img/0382700a73ed3cb5cd83a2abcc809a98.png) |
 
@@ -184,13 +181,11 @@ charge.py 中 `Charge` 数据类型的实现展示了我们描述的所有特性
 
 > | `% python drunk.py 10000 .01` |
 > | --- |
-> | ![](img/d7216f5ba03ccd0af7818fb57b3e415a.png) |
 
 程序 drunks.py 绘制了许多这样的乌龟，它们都在四处漫步。
 
 > | `% python drunks.py 20 500 .005` | `% python drunks.py 20 1000 .005` |
 > | --- | --- |
-> | ![](img/60b9317be4ce4a29ff76d866d2a41ea7.png) | ![](img/bd7c7f76f97bb010d90b5c5e4d24e984.png) |
 > | `% python drunks.py 20 5000 .005` |
 > | ![](img/e6dcea039f2827bcbf50f8e4603b9745.png) |
 
@@ -523,13 +518,10 @@ class Charge:
 
 1.  **龙曲线**。编写一个递归客户端`dragon.py`，使用`Turtle`（在 turtle.py 中定义）绘制龙曲线（参见第 1.2 和 1.5 节的练习）。这些曲线最初由三位 NASA 物理学家发现，后来在 20 世纪 60 年代由马丁·加德纳广泛传播，并在迈克尔·克莱顿的书籍和电影《侏罗纪公园》中使用。这个练习可以用非常紧凑的代码解决，基于一对直接从第 1.2 节练习中的定义派生的相互作用递归函数。其中一个函数`dragon()`应该按预期绘制曲线；另一个函数`nogard()`应该以*相反*顺序绘制曲线。
 
-    > | ![](img/7c4d484cc7e510909e77b213809e6fa4.png) | ![](img/5fdf3c278a33a0bfcd4aae6677e4c37b.png) | ![](img/7902bc6f27da2bc21d3863503839883a.png) | ![](img/a568364f7e5c08e6d6ef8448cad7907c.png) | ![](img/f790b29cf1887a454b4f762e62735405.png) |
     > | --- | --- | --- | --- | --- |
-    > | ![](img/a1c1671b381146c58a8fd59bc1b4c74f.png) | ![](img/3e5486ed3bd923f5bf783f2499cce836.png) | ![](img/32ea2a864772e7962310eb9a58f05309.png) | ![](img/e938dc06e4812ae0d9dff59131f9f122.png) | ![](img/8bfee6e9d487a1ddb74dbdd771017bf3.png) |
 
 1.  **希尔伯特曲线**。*填充空间*曲线是一个连续曲线，在单位正方形中通过每个点。组成`Turtle`的递归客户端（如 turtle.py 中定义的）来生成这些递归模式，这些模式接近 19 世纪末数学家大卫·希尔伯特定义的填充空间曲线。参见前一个练习。您需要一对方法：`hilbert()`，遍历希尔伯特曲线，和`treblih()`，以相反顺序遍历希尔伯特曲线。
 
-    | ![一阶希尔伯特曲线](img/2c29bbc1adf069e7ab8c4210270a3150.png) | ![二阶希尔伯特曲线](img/44bd5cbbc12cbc260bb87621765fabca.png) | ![三阶希尔伯特曲线](img/6358c078ea40ea83a7c5f7314714e2ba.png) | ![四阶希尔伯特曲线](img/e9e1bd7f6ca98bfe06ebeabbe8a452d7.png) | ![五阶希尔伯特曲线](img/59b2115d08294dcadf62799141f3e212.png) |
     | --- | --- | --- | --- | --- |
 
 1.  **Gosper 岛**。组成一个`Turtle`的递归客户端（如 turtle.py 中定义的），生成这些递归模式。

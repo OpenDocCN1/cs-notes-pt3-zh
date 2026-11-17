@@ -197,7 +197,6 @@ int dup2(int oldfd, int newfd);
 ![](img/cd9b9944f21d6e9de91d952f21d62664_45.png)
 
 
-![](img/cd9b9944f21d6e9de91d952f21d62664_47.png)
 
 ![](img/cd9b9944f21d6e9de91d952f21d62664_49.png)
 

@@ -155,7 +155,6 @@ NPM会寻找项目根目录下的`package.json`文件来获取配置信息。
 
 ## 5. 迭代四：处理404“文件未找到”错误
 
-![](img/afa810535f6f5d5fb2aff4ff22d428ca_30.png)
 
 上一节我们学会了解析路径，本节中我们来看看当请求的文件不存在时，如何向客户端返回一个标准的404错误。
 
@@ -198,14 +197,12 @@ NPM会寻找项目根目录下的`package.json`文件来获取配置信息。
 
 现在，如果你请求一个不存在的文件（如 `http://localhost:3000/nonexistent.html`），服务器将返回“404 Not Found”。
 
-![](img/afa810535f6f5d5fb2aff4ff22d428ca_40.png)
 
 ---
 
 
 ![](img/afa810535f6f5d5fb2aff4ff22d428ca_44.png)
 
-![](img/afa810535f6f5d5fb2aff4ff22d428ca_45.png)
 
 ## 6. 迭代五：处理200成功并识别MIME类型
 
@@ -220,7 +217,6 @@ NPM会寻找项目根目录下的`package.json`文件来获取配置信息。
 
 ![](img/afa810535f6f5d5fb2aff4ff22d428ca_51.png)
 
-![](img/afa810535f6f5d5fb2aff4ff22d428ca_52.png)
 
 1.  **定义MIME类型映射字典**：将常见的文件扩展名映射到对应的MIME类型。
     ```javascript
@@ -353,7 +349,6 @@ const serveFile = (response, filename) => {
 
 ![](img/afa810535f6f5d5fb2aff4ff22d428ca_95.png)
 
-![](img/afa810535f6f5d5fb2aff4ff22d428ca_97.png)
 
 我们已经处理了客户端错误（404）和成功情况（200，302）。本节中我们来看看最后一个常见的状态码——500，它表示服务器端发生了内部错误。
 
@@ -391,7 +386,6 @@ const serveFile = (response, filename) => {
 
 **注意**：在正常运行的代码中，这个分支很难被触发。你可以通过故意引入逻辑错误（例如，错误地判断文件类型）来测试这个功能。这是一个重要的安全网，用于处理不可预见的服务器端问题。
 
-![](img/afa810535f6f5d5fb2aff4ff22d428ca_108.png)
 
 ---
 

@@ -22,7 +22,6 @@
 
 ## 在PHP中实现重定向
 
-![](img/ee4d01eb065a62180dbcffb109b07e7a_8.png)
 
 ![](img/ee4d01eb065a62180dbcffb109b07e7a_9.png)
 
@@ -82,7 +81,6 @@ if ($_POST[‘value’] == 1) {
 
 ![](img/ee4d01eb065a62180dbcffb109b07e7a_15.png)
 
-![](img/ee4d01eb065a62180dbcffb109b07e7a_16.png)
 
 ## 总结
 

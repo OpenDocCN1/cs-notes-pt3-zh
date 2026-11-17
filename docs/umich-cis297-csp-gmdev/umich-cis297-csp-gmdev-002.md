@@ -1,6 +1,5 @@
 # 002：C#基础入门
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_0.png)
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_2.png)
 
@@ -16,7 +15,6 @@
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_11.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_13.png)
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_15.png)
 
@@ -28,21 +26,14 @@
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_21.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_23.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_25.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_26.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_28.png)
 
 上一节我们介绍了课程的整体安排，本节中我们来看看C#语言的具体基础内容。课程将快速浏览C#的基础语法，这些内容与你可能学过的C++有诸多相似之处，但C#也提供了许多更便捷的特性。
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_30.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_32.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_33.png)
 
 以下是本课程后续几周的核心内容大纲：
 *   **基础语法**：变量、类型、运算符、控制流（if/else, switch, 循环）、数组和方法。
@@ -51,17 +42,12 @@
 *   **面向对象编程**：类、继承、多态、接口等。
 *   **高级主题**：委托、事件、Lambda表达式、文件操作等。
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_35.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_36.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_38.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_40.png)
 
 ## 变量与基本类型
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_42.png)
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_44.png)
 
@@ -69,9 +55,7 @@
 
 在C#中声明和使用变量与C++非常相似。C#提供了一系列基本（原始）类型，并且拥有方便的`var`关键字进行类型推断。
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_48.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_50.png)
 
 以下是声明不同类型变量的示例：
 ```csharp
@@ -105,13 +89,9 @@ var lastName = “Charnasky”; // 编译器推断为 string
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_54.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_56.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_58.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_60.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_62.png)
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_63.png)
 
@@ -123,13 +103,9 @@ var lastName = “Charnasky”; // 编译器推断为 string
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_69.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_71.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_73.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_74.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_76.png)
 
 从控制台获取的输入始终是字符串类型。若要进行数学运算，需要使用`Parse`方法将其转换为数值类型。
 
@@ -137,7 +113,6 @@ var lastName = “Charnasky”; // 编译器推断为 string
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_80.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_82.png)
 
 以下是获取用户输入并计算的示例：
 ```csharp
@@ -148,31 +123,22 @@ Console.WriteLine($“Go eat your {servingsOfSalad} servings of salad.”);
 ```
 更安全的做法是使用`TryParse`方法，它可以避免在输入格式错误时导致程序崩溃。我们将在讨论异常处理时详细介绍它。
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_84.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_86.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_88.png)
 
 ## 运算符与数学运算
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_90.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_92.png)
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_94.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_95.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_97.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_99.png)
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_101.png)
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_103.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_105.png)
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_107.png)
 
@@ -190,11 +156,8 @@ double power = Math.Pow(2, 5); // 计算 2 的 5 次方，结果是 32
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_109.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_111.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_113.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_115.png)
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_117.png)
 
@@ -216,7 +179,6 @@ double power = Math.Pow(2, 5); // 计算 2 的 5 次方，结果是 32
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_130.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_132.png)
 
 一个基本的`if-else`示例：
 ```csharp
@@ -258,11 +220,8 @@ switch (lastName)
 此外，C#还引入了更简洁的**switch表达式**，它可以返回值并避免繁琐的`break`语句。
 循环的语法与C++一致，`for`循环、`while`循环和`do-while`循环都可以使用。`break`和`continue`语句的作用也相同。
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_134.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_135.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_137.png)
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_139.png)
 
@@ -286,9 +245,7 @@ switch (lastName)
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_152.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_154.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_156.png)
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_158.png)
 
@@ -322,9 +279,7 @@ foreach (int score in fastestScores)
 ```
 与C++一样，访问数组边界之外的元素会引发 `IndexOutOfRangeException` 异常，导致程序崩溃，这是一种安全机制。
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_162.png)
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_164.png)
 
 ## 方法（函数）
 
@@ -407,7 +362,6 @@ int AddThreeNumbers(int first, int second, int third) => first + second + third;
     *   显示应纳税总额占**调整后总收入**的百分比。
     *   显示应纳税总额占**总收入**的百分比。
 
-![](img/60540582cab1dde6b733b6c1b0d4c6fb_181.png)
 
 ![](img/60540582cab1dde6b733b6c1b0d4c6fb_183.png)
 

@@ -34,7 +34,6 @@ BDT_remove_path(path); // 移除路径（类似 rm -r）
 BDT_to_string(); // 获取树的字符串表示
 ```
 
-![](img/e973f20321e3cb3584ba5937a51edc5e_3.png)
 
 其数据结构包含三个字段：
 *   `bool initialized`： 标记是否已初始化。
@@ -65,14 +64,12 @@ BDT_to_string(); // 获取树的字符串表示
 *   `Node* parent`： 父节点指针。
 *   `DArray* children`： 指向一个动态数组对象的指针，该数组存储其所有子节点。
 
-![](img/e973f20321e3cb3584ba5937a51edc5e_5.png)
 
 动态数组（DArray ADT）内部通常包含：
 *   `size_t length`： 当前存储的元素数量。
 *   `size_t capacity`： 数组的当前容量。
 *   `void** array`： 指向指针数组的指针，用于实际存储元素（此处为子节点指针）。
 
-![](img/e973f20321e3cb3584ba5937a51edc5e_7.png)
 
 **操作示例**：插入路径 `“/A/B”`。
 1.  从根节点开始。若根节点不存在，则创建路径为 `“A”` 的根节点，并为其初始化一个空的 `children` DArray。
@@ -119,7 +116,6 @@ BDT_to_string(); // 获取树的字符串表示
     }
     ```
 
-![](img/e973f20321e3cb3584ba5937a51edc5e_9.png)
 
 **关键设计点**：
 *   文件是叶节点，不能拥有子节点。

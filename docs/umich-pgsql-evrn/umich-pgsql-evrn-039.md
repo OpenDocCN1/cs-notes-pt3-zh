@@ -86,7 +86,6 @@ EXECUTE FUNCTION trigger_set_timestamp();
 
 ## 总结
 
-![](img/1e1b10cc730232b92a6f064c076114e2_5.png)
 
 ![](img/1e1b10cc730232b92a6f064c076114e2_6.png)
 

@@ -2,9 +2,7 @@
 
 ![](img/e1e0a6021328e1f91c111c57045d41aa_0.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_2.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_4.png)
 
 在本节课中，我们将继续学习向量（vector）的高级操作，包括如何查找最大值、计算平均值，以及实现两种基础的排序算法：选择排序和插入排序。最后，我们将通过一个井字棋游戏的例子，学习如何使用向量的向量（二维向量）来构建一个简单的游戏棋盘。
 
@@ -30,9 +28,7 @@
 2.  遍历后续的每个元素。
 3.  如果当前元素比已知的最大值更大，则更新最大值。
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_13.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_14.png)
 
 **代码实现**：
 ```cpp
@@ -76,9 +72,7 @@ double getAverage(const vector<int>& numbers) {
 3.  将该最大元素与待放置位置的元素进行交换。
 4.  将待放置位置向前移动一位，重复步骤2-3，直到所有元素排序完成。
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_16.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_18.png)
 
 **代码实现**：
 ```cpp
@@ -99,20 +93,14 @@ void selectionSort(vector<int>& numbers) {
 }
 ```
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_20.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_22.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_24.png)
 
 ### 插入排序
 插入排序通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_26.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_28.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_30.png)
 
 ![](img/e1e0a6021328e1f91c111c57045d41aa_32.png)
 
@@ -183,13 +171,9 @@ printBoard(board); // 打印最终棋盘
 ### 核心功能函数
 以下是实现游戏所需的一些关键函数：
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_36.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_38.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_40.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_42.png)
 
 **1. 打印棋盘**
 ```cpp
@@ -203,17 +187,11 @@ void printBoard(const vector<vector<char>>& board) {
 }
 ```
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_44.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_46.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_48.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_49.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_51.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_53.png)
 
 **2. 判断游戏是否结束**
 游戏结束的条件是：有一方获胜，或者棋盘已满（平局）。
@@ -223,13 +201,9 @@ bool isGameOver(const vector<vector<char>>& board) {
 }
 ```
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_55.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_57.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_59.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_61.png)
 
 ![](img/e1e0a6021328e1f91c111c57045d41aa_63.png)
 
@@ -239,7 +213,6 @@ bool isGameOver(const vector<vector<char>>& board) {
 
 ![](img/e1e0a6021328e1f91c111c57045d41aa_69.png)
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_71.png)
 
 **3. 判断是否平局**
 如果棋盘上没有任何空格，则为平局。
@@ -300,7 +273,6 @@ void markBoard(vector<vector<char>>& board, char currentPlayer) {
 }
 ```
 
-![](img/e1e0a6021328e1f91c111c57045d41aa_73.png)
 
 ---
 

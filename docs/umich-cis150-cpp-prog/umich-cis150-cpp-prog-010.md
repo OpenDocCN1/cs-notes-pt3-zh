@@ -101,9 +101,7 @@ void displayHiddenWord(string hiddenWord, string lettersGuessed) {
 }
 ```
 
-![](img/1cbd3c47fe55f0035380d791f7cc47f5_12.png)
 
-![](img/1cbd3c47fe55f0035380d791f7cc47f5_14.png)
 
 ### 获取玩家猜测的字母
 
@@ -159,7 +157,6 @@ bool isLetterInWord(char guess, string hiddenWord) {
 
 以下是 `printGallows` 函数的实现：
 
-![](img/1cbd3c47fe55f0035380d791f7cc47f5_20.png)
 
 ```cpp
 void printGallows(int incorrectGuesses) {
@@ -235,13 +232,11 @@ void printGallows(int incorrectGuesses) {
 
 ![](img/1cbd3c47fe55f0035380d791f7cc47f5_24.png)
 
-![](img/1cbd3c47fe55f0035380d791f7cc47f5_25.png)
 
 ## 项目三预告：票务管理系统
 
 在下一个项目中，我们将构建一个控制台票务管理系统。这个程序将综合运用文件操作和向量。
 
-![](img/1cbd3c47fe55f0035380d791f7cc47f5_27.png)
 
 ![](img/1cbd3c47fe55f0035380d791f7cc47f5_28.png)
 
@@ -259,28 +254,19 @@ void printGallows(int incorrectGuesses) {
 
 ## 平行向量的概念与应用
 
-![](img/1cbd3c47fe55f0035380d791f7cc47f5_32.png)
 
 在票务管理项目中，我们需要管理三种信息：票号、姓名和确认码。由于我们尚未学习结构体或类，一个实用的方法是使用三个独立的向量，但确保它们在相同索引位置的数据是关联的。
 
-![](img/1cbd3c47fe55f0035380d791f7cc47f5_34.png)
 
-![](img/1cbd3c47fe55f0035380d791f7cc47f5_36.png)
 
 以下是一个简单的示例，演示如何使用平行向量来管理球员姓名和球衣号码：
 
-![](img/1cbd3c47fe55f0035380d791f7cc47f5_38.png)
-
-![](img/1cbd3c47fe55f0035380d791f7cc47f5_40.png)
-
-![](img/1cbd3c47fe55f0035380d791f7cc47f5_42.png)
 
 
-![](img/1cbd3c47fe55f0035380d791f7cc47f5_44.png)
 
-![](img/1cbd3c47fe55f0035380d791f7cc47f5_46.png)
 
-![](img/1cbd3c47fe55f0035380d791f7cc47f5_48.png)
+
+
 
 ```cpp
 #include <iostream>
@@ -333,7 +319,6 @@ int main() {
 
 在这个例子中，`playerNames[i]` 和 `jerseyNumbers[i]` 总是指向同一个球员的信息。这就是平行向量的核心思想。
 
-![](img/1cbd3c47fe55f0035380d791f7cc47f5_50.png)
 
 ![](img/1cbd3c47fe55f0035380d791f7cc47f5_52.png)
 

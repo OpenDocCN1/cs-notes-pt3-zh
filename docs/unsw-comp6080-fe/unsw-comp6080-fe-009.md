@@ -8,7 +8,6 @@
 
 ## 为什么需要 Flexbox？
 
-![](img/79ffb9d111098a77d034f7280ff0842f_4.png)
 
 在传统布局中，若要将多个元素（例如三个盒子）水平排列并均匀分布，可能会遇到困难。例如，使用 `display: inline-block` 并设置 `width: 33%` 时，元素间的空白和边距会导致布局错乱，无法精确计算总宽度。
 
@@ -18,15 +17,12 @@ Flexbox 正是为了解决这类布局难题而设计的。它通过一个容器
 
 Flexbox 布局主要涉及两个部分：**容器**（Container）和**项目**（Items）。所有 Flexbox 属性都应用于这两者之一。
 
-![](img/79ffb9d111098a77d034f7280ff0842f_6.png)
 
 ### 1. 创建 Flex 容器
 
 要使用 Flexbox，首先需要将一个元素设置为 Flex 容器。这是通过给该元素的 CSS 添加 `display: flex;` 属性来实现的。
 
-![](img/79ffb9d111098a77d034f7280ff0842f_8.png)
 
-![](img/79ffb9d111098a77d034f7280ff0842f_9.png)
 
 ```css
 .container {
@@ -34,25 +30,18 @@ Flexbox 布局主要涉及两个部分：**容器**（Container）和**项目**�
 }
 ```
 
-![](img/79ffb9d111098a77d034f7280ff0842f_11.png)
 
-![](img/79ffb9d111098a77d034f7280ff0842f_12.png)
 
-![](img/79ffb9d111098a77d034f7280ff0842f_14.png)
 
 一旦容器被设置为 `flex`，其直接子元素就会自动成为 Flex 项目，并按照 Flexbox 的规则进行排列。
 
 ### 2. 控制排列方向：`flex-direction`
 
-![](img/79ffb9d111098a77d034f7280ff0842f_16.png)
 
-![](img/79ffb9d111098a77d034f7280ff0842f_17.png)
 
 `flex-direction` 属性定义了 Flex 项目在容器内的排列方向（主轴方向）。它是一个应用于容器的属性。
 
-![](img/79ffb9d111098a77d034f7280ff0842f_19.png)
 
-![](img/79ffb9d111098a77d034f7280ff0842f_20.png)
 
 ![](img/79ffb9d111098a77d034f7280ff0842f_22.png)
 
@@ -66,21 +55,15 @@ Flexbox 布局主要涉及两个部分：**容器**（Container）和**项目**�
 
 通过改变 `flex-direction`，你可以轻松地重新排列内容的流向。
 
-![](img/79ffb9d111098a77d034f7280ff0842f_26.png)
 
-![](img/79ffb9d111098a77d034f7280ff0842f_27.png)
 
-![](img/79ffb9d111098a77d034f7280ff0842f_29.png)
 
 ### 3. 主轴对齐：`justify-content`
 
 `justify-content` 属性定义了 Flex 项目在**主轴**（由 `flex-direction` 定义的方向）上的对齐方式。它也是一个容器属性。
 
-![](img/79ffb9d111098a77d034f7280ff0842f_31.png)
 
-![](img/79ffb9d111098a77d034f7280ff0842f_32.png)
 
-![](img/79ffb9d111098a77d034f7280ff0842f_33.png)
 
 以下是 `justify-content` 的常用取值：
 *   `flex-start`（默认）：项目向主轴起点对齐。
@@ -98,11 +81,9 @@ Flexbox 布局主要涉及两个部分：**容器**（Container）和**项目**�
 
 ### 4. 交叉轴对齐：`align-items`
 
-![](img/79ffb9d111098a77d034f7280ff0842f_37.png)
 
 `align-items` 属性定义了 Flex 项目在**交叉轴**（与主轴垂直的方向）上的对齐方式。它同样应用于容器。
 
-![](img/79ffb9d111098a77d034f7280ff0842f_39.png)
 
 以下是 `align-items` 的常用取值：
 *   `stretch`（默认）：如果项目未设置高度，它将拉伸以填满容器高度。
@@ -111,23 +92,18 @@ Flexbox 布局主要涉及两个部分：**容器**（Container）和**项目**�
 *   `center`：项目在交叉轴居中对齐。
 *   `baseline`：项目按它们的基线对齐。
 
-![](img/79ffb9d111098a77d034f7280ff0842f_41.png)
 
 为了让 `align-items` 生效，通常需要为容器设置一个明确的高度。
 
-![](img/79ffb9d111098a77d034f7280ff0842f_43.png)
 
 ### 5. 处理溢出：`flex-wrap`
 
-![](img/79ffb9d111098a77d034f7280ff0842f_45.png)
 
 默认情况下，所有 Flex 项目都会尝试排在一行（或一列）上。`flex-wrap` 属性定义了当一行（列）空间不足时，项目是否换行以及如何换行。
 
-![](img/79ffb9d111098a77d034f7280ff0842f_47.png)
 
 ![](img/79ffb9d111098a77d034f7280ff0842f_48.png)
 
-![](img/79ffb9d111098a77d034f7280ff0842f_49.png)
 
 以下是 `flex-wrap` 的取值：
 *   `nowrap`（默认）：不换行。
@@ -136,31 +112,23 @@ Flexbox 布局主要涉及两个部分：**容器**（Container）和**项目**�
 
 ![](img/79ffb9d111098a77d034f7280ff0842f_51.png)
 
-![](img/79ffb9d111098a77d034f7280ff0842f_53.png)
 
-![](img/79ffb9d111098a77d034f7280ff0842f_55.png)
 
 当使用 `flex-wrap: wrap;` 后，你可以使用 `align-content` 属性来控制多行/多列在交叉轴上的对齐方式，其取值与 `justify-content` 类似。
 
-![](img/79ffb9d111098a77d034f7280ff0842f_57.png)
 
 ## 项目（子元素）的属性
 
-![](img/79ffb9d111098a77d034f7280ff0842f_59.png)
 
 除了容器属性，Flex 项目本身也有一些重要属性。
 
-![](img/79ffb9d111098a77d034f7280ff0842f_61.png)
 
 ### 1. 分配剩余空间：`flex`
 
-![](img/79ffb9d111098a77d034f7280ff0842f_63.png)
 
 `flex` 属性是 `flex-grow`、`flex-shrink` 和 `flex-basis` 的简写。它定义了项目如何分配容器中的剩余空间。
 
-![](img/79ffb9d111098a77d034f7280ff0842f_65.png)
 
-![](img/79ffb9d111098a77d034f7280ff0842f_66.png)
 
 一个最常见的用法是 `flex: 1;`。这表示该项目会“增长”以填充可用空间。如果所有项目都设置为 `flex: 1;`，它们将等分空间。如果一个项目设置为 `flex: 2;`，而其他为 `flex: 1;`，那么前者占据的空间将是后者的两倍。
 
@@ -178,21 +146,15 @@ Flexbox 功能强大但选项较多，最佳学习方式是动手实践。你可
 1.  **CSS-Tricks 的 Flexbox 指南**：这是一个非常全面的属性参考网站，清晰地列出了容器和项目的所有属性。
 2.  **Flexbox Froggy 游戏**：一个互动式学习游戏，通过解决谜题来掌握 Flexbox 的各种属性，寓教于乐。
 
-![](img/79ffb9d111098a77d034f7280ff0842f_68.png)
 
-![](img/79ffb9d111098a77d034f7280ff0842f_69.png)
 
 ## 总结
 
-![](img/79ffb9d111098a77d034f7280ff0842f_71.png)
 
-![](img/79ffb9d111098a77d034f7280ff0842f_72.png)
 
-![](img/79ffb9d111098a77d034f7280ff0842f_74.png)
 
 本节课我们一起学习了 CSS Flexbox 布局的核心知识。我们了解到 Flexbox 通过 `display: flex` 创建一个容器，并通过 `flex-direction`、`justify-content`、`align-items` 等容器属性来控制项目的排列、对齐与分布。同时，项目自身的 `flex` 和 `order` 属性提供了更精细的空间分配和顺序控制能力。
 
-![](img/79ffb9d111098a77d034f7280ff0842f_76.png)
 
 ![](img/79ffb9d111098a77d034f7280ff0842f_78.png)
 

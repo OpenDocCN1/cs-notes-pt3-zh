@@ -1,6 +1,5 @@
 # 171：Eclipse环境下的HelloWorld 🌍
 
-![](img/1a2a2328b745ddbadead5f3fdf079124_0.png)
 
 在本节课中，我们将学习如何在Eclipse集成开发环境中编写并运行一个“Hello World”程序。这个程序会读取一个包含多种语言问候语的文件，并将它们打印出来。我们将重点了解Eclipse如何帮助我们管理代码、处理错误以及运行程序。
 
@@ -22,13 +21,10 @@ Eclipse通过红色“X”标记提示代码存在问题。第一个问题是它
 *   使用快速修复功能。
 *   选择导入 `java.nio.file.Paths`。
 
-![](img/1a2a2328b745ddbadead5f3fdf079124_2.png)
 
-![](img/1a2a2328b745ddbadead5f3fdf079124_3.png)
 
 接下来，Eclipse提示不认识 `BufferedReader` 和 `Files` 类。我们需要导入它们。
 
-![](img/1a2a2328b745ddbadead5f3fdf079124_5.png)
 
 以下是导入 `BufferedReader` 和 `Files` 的步骤：
 *   分别将光标置于 `BufferedReader` 和 `Files` 上。
@@ -41,11 +37,9 @@ Eclipse提供了两种处理方式：
 *   **添加 `throws` 声明**：将异常抛给方法的调用者处理。
 *   **使用 `try-catch` 块**：在方法内部捕获并处理异常。
 
-![](img/1a2a2328b745ddbadead5f3fdf079124_7.png)
 
 目前，我们选择添加 `throws` 声明。Eclipse会自动在方法签名后添加 `throws IOException`。至此，从文件读取并打印的方法就完成了。
 
-![](img/1a2a2328b745ddbadead5f3fdf079124_8.png)
 
 ---
 

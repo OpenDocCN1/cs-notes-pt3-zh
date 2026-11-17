@@ -2,35 +2,26 @@
 
 ![](img/77a6008ce0e4cbc90fade4ce72ba0e46_1.png)
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_3.png)
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_5.png)
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_7.png)
 
 在本节课中，我们将学习弹性体的模拟基础，包括形变、应力应变、超弹性材料模型以及线性有限元方法。同时，我们也将探索太极编程语言的一些高级特性，以帮助我们更高效地编写物理模拟程序。
 
 ---
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_9.png)
 
 ## 课程安排与作业 📋
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_11.png)
 
 上一讲我们介绍了拉格朗日视角下的物理模拟基础。本节中，我们来看看本课程的作业安排和一些后续工作。
 
 作业零已经告一段落。今天我们会继续评出几个优秀作品。
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_13.png)
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_15.png)
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_17.png)
 
 作业一今天发布，时间从6月15日到7月11日。这是一个跨度较长的区间，中间预计会空出一周，以便大家实现作业并消化课程内容。
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_19.png)
 
 ![](img/77a6008ce0e4cbc90fade4ce72ba0e46_21.png)
 
@@ -169,7 +160,6 @@ f = -∂U/∂x
 
 ![](img/77a6008ce0e4cbc90fade4ce72ba0e46_45.png)
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_47.png)
 
 使用类可以将相关的张量和函数封装在一起，提高代码的模块化和可复用性。
 
@@ -181,11 +171,9 @@ f = -∂U/∂x
 
 ![](img/77a6008ce0e4cbc90fade4ce72ba0e46_55.png)
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_57.png)
 
 ### 元编程
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_59.png)
 
 ![](img/77a6008ce0e4cbc90fade4ce72ba0e46_61.png)
 
@@ -201,29 +189,21 @@ f = -∂U/∂x
 
 ![](img/77a6008ce0e4cbc90fade4ce72ba0e46_71.png)
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_72.png)
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_74.png)
 
 *   **模板核函数**：使用 `ti.template()` 类型提示来定义可以接受多种类型参数的核函数。
 *   **维度无关编程**：使用 `ti.grouped()` 循环，可以编写适用于任意维度张量的通用核函数。
 *   **编译期分支与循环展开**：使用 `ti.static()` 进行编译期条件判断和循环展开，可以消除运行时开销，并处理太极中要求矩阵/向量下标必须是编译期常数的限制。
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_76.png)
 
 ### 可微编程
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_78.png)
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_80.png)
 
 太极支持反向模式自动微分（Reverse-Mode AutoDiff），可以自动计算标量函数关于其输入的梯度。
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_82.png)
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_84.png)
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_85.png)
 
 主要应用有两种方式：
 1.  **简化受力计算**：将弹性势能定义为标量函数，利用自动微分直接求出势能关于顶点位置的负梯度（即受力），无需手动推导。
@@ -231,19 +211,15 @@ f = -∂U/∂x
 
 使用 `ti.ad.Tape()` 可以自动记录前向计算并执行反向传播。
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_87.png)
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_89.png)
 
 ![](img/77a6008ce0e4cbc90fade4ce72ba0e46_91.png)
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_93.png)
 
 ![](img/77a6008ce0e4cbc90fade4ce72ba0e46_95.png)
 
 ### 三维可视化
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_97.png)
 
 太极内置了 `ti.GUI` 用于二维可视化。对于三维结果，助教团队开发了 `ti.export_poly()` 功能，可以将粒子或网格数据导出为 `.poly` 格式文件。该文件可以被 Houdini 等专业三维软件导入和渲染，方便大家查看三维模拟结果。
 
@@ -255,7 +231,6 @@ f = -∂U/∂x
 
 ![](img/77a6008ce0e4cbc90fade4ce72ba0e46_101.png)
 
-![](img/77a6008ce0e4cbc90fade4ce72ba0e46_103.png)
 
 ![](img/77a6008ce0e4cbc90fade4ce72ba0e46_105.png)
 

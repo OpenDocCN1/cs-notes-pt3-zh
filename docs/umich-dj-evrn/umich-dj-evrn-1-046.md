@@ -4,7 +4,6 @@
 
 ---
 
-![](img/7ac3ba1234133d5e81fca1b0a2c35d56_1.png)
 
 ## 概述：类与对象的关系
 
@@ -35,13 +34,10 @@ class PartyAnimal:
 
 方法中的 `self` 参数是一个关键概念。它是在类内部代码中，用来引用对象自身（即实例）的方式。当方法被调用时，`self` 会自动成为调用该方法的对象的别名。
 
-![](img/7ac3ba1234133d5e81fca1b0a2c35d56_3.png)
 
-![](img/7ac3ba1234133d5e81fca1b0a2c35d56_5.png)
 
 ## 创建和使用对象
 
-![](img/7ac3ba1234133d5e81fca1b0a2c35d56_7.png)
 
 定义了类之后，我们还需要用它来创建对象。这个过程称为“实例化”或“构造”。
 
@@ -59,7 +55,6 @@ an.party()
 an.party()
 ```
 
-![](img/7ac3ba1234133d5e81fca1b0a2c35d56_9.png)
 
 当我们调用 `an.party()` 时，Python 内部实际上执行的是 `PartyAnimal.party(an)`。`self` 参数就成为了 `an` 的别名。因此，在 `party` 方法内部，`self.x` 指的就是 `an` 这个对象自己的 `x` 属性。
 
@@ -78,7 +73,6 @@ an.party()
 以下是几个我们熟悉的例子：
 
 
-![](img/7ac3ba1234133d5e81fca1b0a2c35d56_13.png)
 
 ```python
 x = list() # 构造一个空的列表对象
@@ -97,7 +91,6 @@ print(y.upper()) # 调用字符串对象的 upper 方法
 
 对于我们自己创建的类，同样可以使用这些工具进行检查：
 
-![](img/7ac3ba1234133d5e81fca1b0a2c35d56_15.png)
 
 ```python
 an = PartyAnimal()
@@ -125,7 +118,6 @@ print(dir(an)) # 你会看到 ‘x‘ 和 ‘party‘ 在列表中
 5.  点运算符 `.` 用于访问对象的属性和方法。
 6.  我们一直在使用的数据类型（如列表、字符串、字典）本质上都是对象，我们一直在调用它们的方法。
 
-![](img/7ac3ba1234133d5e81fca1b0a2c35d56_19.png)
 
 ![](img/7ac3ba1234133d5e81fca1b0a2c35d56_20.png)
 

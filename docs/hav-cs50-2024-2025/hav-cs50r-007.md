@@ -143,7 +143,6 @@ average <- function(x) {
 source("average.R")
 ```
 
-![](img/69636fccd899480325fbb2bf55edefaa_29.png)
 
 ![](img/69636fccd899480325fbb2bf55edefaa_30.png)
 
@@ -185,7 +184,6 @@ install.packages("testthat")
 library(testthat)
 ```
 
-![](img/69636fccd899480325fbb2bf55edefaa_42.png)
 
 然后，我们可以使用 `test_that` 函数来组织测试。`testthat` 提供了诸如 `expect_equal`、`expect_warning` 和 `expect_error` 等函数来定义我们的期望。
 
@@ -223,7 +221,6 @@ test_that("average stops if input is non-numeric", {
 })
 ```
 
-![](img/69636fccd899480325fbb2bf55edefaa_51.png)
 
 使用 `testthat`，我们可以轻松地添加和管理多个测试用例，并且测试输出更加清晰。
 
@@ -310,7 +307,6 @@ BDD风格的测试读起来更像自然语言，描述了函数“应该”具�
 
 ## 总结
 
-![](img/69636fccd899480325fbb2bf55edefaa_72.png)
 
 本节课中我们一起学习了：
 1.  程序可能出错的多种方式以及异常的概念。

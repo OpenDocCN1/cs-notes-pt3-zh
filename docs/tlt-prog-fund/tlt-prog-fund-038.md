@@ -1,8 +1,6 @@
 # 038：写入文件 📝
 
-![](img/6c3aed95befe51bdb58a5bfc593001c2_0.png)
 
-![](img/6c3aed95befe51bdb58a5bfc593001c2_2.png)
 
 在本节课中，我们将要学习如何向文件中写入数据。写入文件的操作与读取文件几乎一样简单。我们将通过一个具体的例子，演示如何复制一个文件，并在新文件的开头添加一行文本。
 
@@ -23,11 +21,9 @@
 
 ## 文件复制与修改示例
 
-![](img/6c3aed95befe51bdb58a5bfc593001c2_4.png)
 
 我们将编写一段代码，复制一个文件，并在新复制的文件第一行添加单词 “copy”。
 
-![](img/6c3aed95befe51bdb58a5bfc593001c2_6.png)
 
 ### 获取源文件路径
 
@@ -35,13 +31,11 @@
 
 以下是导入和使用文件对话框的步骤：
 
-![](img/6c3aed95befe51bdb58a5bfc593001c2_8.png)
 
 1.  从 `tkinter` 导入 `filedialog` 子模块。
 2.  调用 `filedialog.askopenfilename()` 函数。这会弹出一个系统文件选择器，让用户选择文件。
 3.  该函数会返回一个字符串，即所选文件的完整路径。
 
-![](img/6c3aed95befe51bdb58a5bfc593001c2_10.png)
 
 ```python
 import tkinter.filedialog
@@ -76,7 +70,6 @@ to_filename = tkinter.filedialog.asksaveasfilename()
 5.  **关闭目标文件**：完成写入后，关闭文件以确保所有数据都保存到磁盘。
 
 
-![](img/6c3aed95befe51bdb58a5bfc593001c2_12.png)
 
 ```python
 # 1. 读取源文件内容
@@ -97,7 +90,6 @@ write_file.close()
 
 **重要提示**：`write` 方法在成功写入后会返回一个整数，表示写入的字符数。例如，写入 `'copy\n'` 会返回 `5`，因为 `c`, `o`, `p`, `y`, `\n` 共5个字符。这个返回值可以用来验证写入是否按预期完成。
 
-![](img/6c3aed95befe51bdb58a5bfc593001c2_14.png)
 
 ### 验证结果
 
@@ -112,7 +104,6 @@ write_file.close()
 *   操作完成后，务必使用 `close()` 方法关闭文件。
 *   通过结合 `tkinter.filedialog` 模块，可以方便地实现图形化界面下的文件选择功能，使程序更友好。
 
-![](img/6c3aed95befe51bdb58a5bfc593001c2_16.png)
 
 ![](img/6c3aed95befe51bdb58a5bfc593001c2_17.png)
 

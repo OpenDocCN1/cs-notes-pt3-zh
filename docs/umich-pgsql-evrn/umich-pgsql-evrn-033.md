@@ -53,7 +53,6 @@ SELECT make FROM racing;
 SELECT DISTINCT make FROM racing;
 ```
 
-![](img/d6e19964e48ccc864d21b970b9e80950_5.png)
 
 这条语句的意思是：“不要向我显示相同的行两次”。数据库引擎在处理查询时，会检查每一行，如果该行已经存在于结果集中，就不会再次添加。
 
@@ -69,7 +68,6 @@ SELECT DISTINCT make, model FROM racing;
 
 基本的 `DISTINCT` 适用于整个行。但有时我们只想在特定的一列上消除重复，同时还能看到其他列的信息。这时就需要 `SELECT DISTINCT ON`。
 
-![](img/d6e19964e48ccc864d21b970b9e80950_7.png)
 
 ![](img/d6e19964e48ccc864d21b970b9e80950_8.png)
 
@@ -137,7 +135,6 @@ SELECT DISTINCT make, model FROM racing;
 
 ## 总结
 
-![](img/d6e19964e48ccc864d21b970b9e80950_10.png)
 
 ![](img/d6e19964e48ccc864d21b970b9e80950_11.png)
 

@@ -18,12 +18,10 @@ Python的字典是一种非常方便的数据结构，它允许我们通过“�
 
 我们的C语言字典将基于链表实现。链表中的每个节点不再只存储一个值，而是存储一个键(key)和一个值(value)。字典本身则是一个管理这些节点的结构体。
 
-![](img/b256fa6f0fef9837b4b46376a8d3c300_2.png)
 
 以下是核心的结构体定义：
 
 
-![](img/b256fa6f0fef9837b4b46376a8d3c300_4.png)
 
 ```c
 // 字典节点结构体
@@ -48,7 +46,6 @@ typedef struct {
 
 我们将为字典实现一系列方法，包括创建、销毁、添加/更新、查找、获取长度和打印等。
 
-![](img/b256fa6f0fef9837b4b46376a8d3c300_6.png)
 
 ### 1. 创建与销毁字典
 
@@ -78,7 +75,6 @@ void Dict_delete(Dictionary* self) {
 
 *   **`DNode* Dict_find(Dictionary* self, const char* key)`**: 遍历链表，比较每个节点的`key`与传入的`key`是否相同（使用`strcmp`函数）。如果找到，则返回指向该节点的指针；如果遍历完仍未找到，则返回`NULL`。
 
-![](img/b256fa6f0fef9837b4b46376a8d3c300_8.png)
 
 ### 3. 添加或更新键值对 (`put`)
 
@@ -96,7 +92,6 @@ void Dict_delete(Dictionary* self) {
     *   将新节点添加到链表末尾（操作与链表追加节点相同）。
     *   更新字典的`count`。
 
-![](img/b256fa6f0fef9837b4b46376a8d3c300_10.png)
 
 ### 4. 获取值 (`get`)
 
@@ -124,7 +119,6 @@ void Dict_delete(Dictionary* self) {
 2.  **更新时先释放**：当更新一个已存在键的值时，在将`value`指针指向新的内存块**之前**，必须先用`free`释放它原来指向的旧内存块，否则会造成内存泄漏。
 3.  **销毁时全部释放**：在`Dict_delete`中，除了释放节点本身，还必须依次释放每个节点中`key`和`value`指针所指向的内存。
 
-![](img/b256fa6f0fef9837b4b46376a8d3c300_16.png)
 
 让我们通过一个例子可视化这个过程：
 
@@ -143,7 +137,6 @@ void Dict_delete(Dictionary* self) {
 
 ## 从链表到字典的演进
 
-![](img/b256fa6f0fef9837b4b46376a8d3c300_18.png)
 
 ![](img/b256fa6f0fef9837b4b46376a8d3c300_19.png)
 

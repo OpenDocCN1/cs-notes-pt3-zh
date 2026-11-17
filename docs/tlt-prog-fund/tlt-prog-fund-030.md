@@ -1,12 +1,10 @@
 # 030：列表方法 📚
 
-![](img/224e1dfa1429f4e85f5f7829b2cce799_1.png)
 
 在本节课中，我们将学习Python列表的各种方法。列表是Python中一种非常灵活的数据结构，而方法则是与特定对象（如列表）关联的函数。我们将通过一个收集并管理个人喜爱颜色的示例，逐一介绍列表的常用方法，包括如何添加、删除、查找和排序列表中的元素。
 
 ---
 
-![](img/224e1dfa1429f4e85f5f7829b2cce799_3.png)
 
 ## 什么是列表方法？🤔
 
@@ -37,7 +35,6 @@ colors = []
 prompt = "请输入你最喜欢的颜色之一，按回车键结束："
 ```
 
-![](img/224e1dfa1429f4e85f5f7829b2cce799_5.png)
 
 我们通过调用`input`函数并传入提示语来要求用户输入第一个颜色。
 ```python
@@ -45,7 +42,6 @@ color = input(prompt)
 ```
 假设用户输入了“blue”。此时，变量`color`指向字符串“blue”，而变量`colors`仍然指向一个空列表`[]`。
 
-![](img/224e1dfa1429f4e85f5f7829b2cce799_7.png)
 
 为了累积用户输入的信息，我们将使用一个`while`循环。只要`color`不是空字符串（即用户没有直接按回车），我们就执行循环。
 
@@ -61,7 +57,6 @@ while color != "":
 
 ---
 
-![](img/224e1dfa1429f4e85f5f7829b2cce799_9.png)
 
 ## 修改列表：添加与删除元素 🔧
 
@@ -102,7 +97,6 @@ colors.pop(2)
 
 ### 使用 `remove` 方法按值移除元素
 
-![](img/224e1dfa1429f4e85f5f7829b2cce799_11.png)
 
 `remove`方法接收一个要移除的**对象**（值），而不是索引。它会移除列表中该对象的**第一个**匹配项。
 
@@ -131,13 +125,11 @@ if "yellow" in colors:
 
 ---
 
-![](img/224e1dfa1429f4e85f5f7829b2cce799_13.png)
 
 ## 组织列表：排序与反转 🔄
 
 上一节我们学习了如何增删列表元素。本节中，我们来看看如何重新组织列表的顺序。
 
-![](img/224e1dfa1429f4e85f5f7829b2cce799_15.png)
 
 首先，让我们用`extend`方法正确地添加一些新颜色。
 ```python
@@ -145,11 +137,9 @@ colors.extend(["auburn"， "teal"， "magenta"])
 ```
 现在`colors`是：`[‘blue‘， ‘hot pink‘， ‘auburn‘， ‘teal‘， ‘magenta‘]`。
 
-![](img/224e1dfa1429f4e85f5f7829b2cce799_17.png)
 
 ### 使用 `sort` 方法排序
 
-![](img/224e1dfa1429f4e85f5f7829b2cce799_19.png)
 
 我们可以调用`colors.sort()`对列表进行**原地排序**（按字母顺序）。
 ```python
@@ -159,7 +149,6 @@ colors.sort()
 
 ### 使用 `reverse` 方法反转
 
-![](img/224e1dfa1429f4e85f5f7829b2cce799_21.png)
 
 我们可以调用`colors.reverse()`来反转列表的顺序。
 ```python
@@ -167,7 +156,6 @@ colors.reverse()
 ```
 反转后，`colors`变为：`[‘teal‘， ‘magenta‘， ‘hot pink‘， ‘blue‘， ‘auburn‘]`。
 
-![](img/224e1dfa1429f4e85f5f7829b2cce799_23.png)
 
 ---
 
@@ -177,7 +165,6 @@ colors.reverse()
 
 我们对移除“brown”感到有些愧疚，想把它放回列表中它应该在的位置。可以使用`insert`方法在特定索引处插入一个元素。
 
-![](img/224e1dfa1429f4e85f5f7829b2cce799_25.png)
 
 我们想在倒数第二个位置（索引-2）插入“brown”。
 ```python
@@ -189,7 +176,6 @@ colors.insert(-2， "brown")
 
 现在，我们觉得“hot pink”对于现在的我们来说有点太鲜艳了，想移除它。为了移除，我们需要知道它的索引。可以使用`index`方法来查找。
 
-![](img/224e1dfa1429f4e85f5f7829b2cce799_27.png)
 
 但是，和`remove`方法一样，如果查找的元素不在列表中，`index`方法也会引发`ValueError`。
 ```python

@@ -6,7 +6,6 @@
 
 表单是HTML页面或网页上的一种元素，允许用户输入数据。常见的应用场景包括调查问卷、登录或注册页面，以及求职申请表等。
 
-![](img/de9ec9acf828c269a97494ae91975815_1.png)
 
 用户输入的数据可以是多种格式，例如文本、数字、日期选择器、复选框或单选按钮。客户端或服务器可以接收用户输入到表单中的信息，并对其进行处理。
 
@@ -14,7 +13,6 @@
 
 创建HTML表单的基础是 `<form>` 元素。这个元素用于定义一个表单，其内部包含表单的内容，通常是标签和各种类型的输入元素。
 
-![](img/de9ec9acf828c269a97494ae91975815_3.png)
 
 以下是一个简单的表单示例：
 
@@ -33,7 +31,6 @@
 
 上一节我们介绍了如何编写表单的HTML代码，本节中我们来看看如何在JavaScript中读取这些表单。
 
-![](img/de9ec9acf828c269a97494ae91975815_5.png)
 
 ![](img/de9ec9acf828c269a97494ae91975815_6.png)
 
@@ -86,7 +83,6 @@ const ageRadioGroup = form.elements.age; // 返回一个集合
 
 表单元素的一个核心特性是反向引用。当你有一个表单内的输入元素时，该元素实际上有一个 `form` 属性，它存储了对包含它的表单的反向引用。
 
-![](img/de9ec9acf828c269a97494ae91975815_14.png)
 
 这意味着，从一个输入元素出发，你可以轻松地找到它所属的表单。
 
@@ -157,19 +153,14 @@ myForm.addEventListener('submit', function(event) {
 </form>
 ```
 
-![](img/de9ec9acf828c269a97494ae91975815_18.png)
 
 ### 第二步：添加提交事件监听器
 
 首先，在JavaScript中获取表单元素，并为其添加 `submit` 事件监听器。初始时，我们只弹出一个提示框。
 
-![](img/de9ec9acf828c269a97494ae91975815_20.png)
 
-![](img/de9ec9acf828c269a97494ae91975815_21.png)
 
-![](img/de9ec9acf828c269a97494ae91975815_23.png)
 
-![](img/de9ec9acf828c269a97494ae91975815_25.png)
 
 ```javascript
 const form = document.forms.createAccount;
@@ -180,13 +171,11 @@ form.addEventListener('submit', function(event) {
 });
 ```
 
-![](img/de9ec9acf828c269a97494ae91975815_27.png)
 
 ### 第三步：读取并显示表单数据
 
 在事件监听器中，我们读取各个字段的值，并将它们组合成一个字符串显示出来。
 
-![](img/de9ec9acf828c269a97494ae91975815_29.png)
 
 ```javascript
 form.addEventListener('submit', function(event) {
@@ -204,15 +193,12 @@ form.addEventListener('submit', function(event) {
 });
 ```
 
-![](img/de9ec9acf828c269a97494ae91975815_31.png)
 
 ### 第四步：添加表单验证
 
-![](img/de9ec9acf828c269a97494ae91975815_33.png)
 
 最后，我们添加一些基本的表单验证逻辑，例如检查所有字段是否已填写，以及两次输入的密码是否一致。
 
-![](img/de9ec9acf828c269a97494ae91975815_35.png)
 
 ```javascript
 form.addEventListener('submit', function(event) {
@@ -243,7 +229,6 @@ form.addEventListener('submit', function(event) {
 });
 ```
 
-![](img/de9ec9acf828c269a97494ae91975815_37.png)
 
 ![](img/de9ec9acf828c269a97494ae91975815_39.png)
 

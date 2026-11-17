@@ -128,9 +128,7 @@ add $5, %rax          # RAX = RAX + 5
 mov %rax, -8(%rbp)    # 存储到 x
 ```
 
-![](img/940acac2c340d1c6d925e8dbd2484b64_1.png)
 
-![](img/940acac2c340d1c6d925e8dbd2484b64_2.png)
 
 ---
 

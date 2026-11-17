@@ -10,7 +10,6 @@
 
 在本节课中，我们将学习如何在 AngularJS 应用中实现自定义过滤器。上一节我们介绍了创建自定义过滤器的基本流程，本节中我们来看看如何将自定义过滤器应用到实际项目中。
 
-![](img/9b4e957e1e20d3079134cdc0df9bbf0f_4.png)
 
 我们的控制器返回了一条消息：“Yaakov likes to eat healthy snacks at night”。现在，我们想通过一个自定义过滤器，将句子中的“likes”替换为“loves”。
 
@@ -79,13 +78,11 @@ $scope.sayLovesMessage = function() {
 
 ![](img/9b4e957e1e20d3079134cdc0df9bbf0f_7.png)
 
-![](img/9b4e957e1e20d3079134cdc0df9bbf0f_9.png)
 
 在本讲的第三部分，我们将探讨如何创建带有额外参数的自定义过滤器，以及如何在 HTML 模板中直接使用自定义过滤器。
 
 ![](img/9b4e957e1e20d3079134cdc0df9bbf0f_9.png)
 
-![](img/9b4e957e1e20d3079134cdc0df9bbf0f_11.png)
 
 ![](img/9b4e957e1e20d3079134cdc0df9bbf0f_11.png)
 

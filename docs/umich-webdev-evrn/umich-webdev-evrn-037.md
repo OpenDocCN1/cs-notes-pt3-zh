@@ -144,7 +144,6 @@ phpinfo();
 
 ## 总结
 
-![](img/8e793019a2ccb76b739e091f3603a6b9_12.png)
 
 ![](img/8e793019a2ccb76b739e091f3603a6b9_13.png)
 

@@ -1,32 +1,19 @@
 # 050：完整性与数字签名 🔐
 
-![](img/babcbd82c158e94b30db6f7756076255_1.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_2.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_3.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_5.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_7.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_9.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_10.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_11.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_13.png)
 
 在本节课中，我们将要学习信息安全中的另一个核心概念：**完整性**。上一节我们介绍了使用凯撒密码实现**保密性**，本节中我们来看看如何确保信息在传输过程中没有被篡改，以及如何验证信息的来源。
 
-![](img/babcbd82c158e94b30db6f7756076255_15.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_16.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_17.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_19.png)
 
 ## 从保密性到完整性
 
@@ -65,71 +52,48 @@
 4.  **用户登录**：用户再次输入密码时，系统对输入的密码进行相同的哈希计算。
 5.  **验证匹配**：系统将计算出的哈希值与数据库中存储的哈希值进行比较。如果两者匹配，则密码正确。
 
-![](img/babcbd82c158e94b30db6f7756076255_21.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_22.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_23.png)
 
 这种方法的好处是，即使数据库泄露，攻击者也只能获得密码的哈希值，而很难反向破解出原始密码，从而保护了用户在其它使用相同密码的网站上的安全。
 
-![](img/babcbd82c158e94b30db6f7756076255_25.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_26.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_27.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_28.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_29.png)
 
 ![](img/babcbd82c158e94b30db6f7756076255_30.png)
 
 ![](img/babcbd82c158e94b30db6f7756076255_31.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_32.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_33.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_35.png)
 
 正因为系统不存储明文密码，所以任何可信的系统都**不应该**、也**无法**通过邮件告诉你忘记的密码是什么，只能提供“重置密码”的功能。
 
-![](img/babcbd82c158e94b30db6f7756076255_37.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_39.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_41.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_42.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_43.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_44.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_45.png)
 
 ## 实现消息完整性：数字签名
 
-![](img/babcbd82c158e94b30db6f7756076255_47.png)
 
 现在，我们将哈希函数用于更广泛的场景：为任何消息创建**数字签名**，以验证其来源和完整性。这就像医生在电子处方上签名一样。
 
 我们从一个简单的方法开始：**使用共享密钥的签名**。
 
-![](img/babcbd82c158e94b30db6f7756076255_49.png)
 
 假设发送者（Alice）和接收者（Bob）预先在一个安全环境中约定了一个只有他们俩知道的**共享密钥**（例如 `"Santa"`）。
 
 ![](img/babcbd82c158e94b30db6f7756076255_51.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_52.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_53.png)
 
 ![](img/babcbd82c158e94b30db6f7756076255_54.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_55.png)
 
 ![](img/babcbd82c158e94b30db6f7756076255_56.png)
 
@@ -149,15 +113,12 @@
     *   如果两者**匹配**，则证明消息确实来自 Alice，且未被篡改。
     *   如果**不匹配**，则说明消息要么不是来自 Alice，要么在传输中被修改过。
 
-![](img/babcbd82c158e94b30db6f7756076255_59.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_61.png)
 
 ![](img/babcbd82c158e94b30db6f7756076255_62.png)
 
 ![](img/babcbd82c158e94b30db6f7756076255_64.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_65.png)
 
 ![](img/babcbd82c158e94b30db6f7756076255_67.png)
 
@@ -169,11 +130,8 @@
 
 ![](img/babcbd82c158e94b30db6f7756076255_72.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_74.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_76.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_77.png)
 
 让我们看一个例子：
 *   **消息**：`"eat more ovaltine"`
@@ -181,27 +139,19 @@
 *   **签名步骤**：计算 `hash("eat more ovaltineSanta")` 得到摘要 `"abc123..."`，发送 `"eat more ovaltine abc123..."`。
 *   **验证步骤**：接收后，计算 `hash("eat more ovaltineSanta")`，得到 `"abc123..."`，与接收的摘要匹配，验证成功。
 
-![](img/babcbd82c158e94b30db6f7756076255_79.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_81.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_83.png)
 
 如果攻击者将消息改为 `"eat less ovaltine"`，接收方计算 `hash("eat less ovaltineSanta")` 会得到完全不同的摘要（如 `"def456..."`），与接收的摘要 `"abc123..."` 不匹配，从而立即发现消息被篡改。
 
-![](img/babcbd82c158e94b30db6f7756076255_85.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_87.png)
 
 ![](img/babcbd82c158e94b30db6f7756076255_89.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_91.png)
 
 ![](img/babcbd82c158e94b30db6f7756076255_93.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_95.png)
 
-![](img/babcbd82c158e94b30db6f7756076255_97.png)
 
 ![](img/babcbd82c158e94b30db6f7756076255_99.png)
 

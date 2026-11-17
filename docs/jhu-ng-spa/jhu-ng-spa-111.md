@@ -97,7 +97,6 @@ angular.module('public', ['ui.router', 'common']);
 <link rel="stylesheet" href="src/common/common.css">
 ```
 
-![](img/8496904e0a2f9974d771e29779006608_4.png)
 
 ---
 

@@ -8,7 +8,6 @@
 
 ![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_4.png)
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_6.png)
 
 ---
 
@@ -16,7 +15,6 @@
 
 上一节我们介绍了向量的基本操作，本节中我们来看看如何遍历向量。有多种方法可以遍历向量中的元素，每种方法都有其适用场景。
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_8.png)
 
 ![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_9.png)
 
@@ -29,9 +27,7 @@ for (string course : classes) {
 }
 ```
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_11.png)
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_13.png)
 
 ### 2. 使用索引的for循环（可修改）
 如果你需要在遍历时修改向量中的元素，可以使用传统的索引循环。
@@ -64,7 +60,6 @@ while (it != classes.end()) {
 
 为了简化代码，可以使用 `auto` 关键字让编译器自动推断迭代器类型。
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_19.png)
 
 ```cpp
 for (auto it = classes.begin(); it != classes.end(); it++) {
@@ -72,7 +67,6 @@ for (auto it = classes.begin(); it != classes.end(); it++) {
 }
 ```
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_21.png)
 
 ---
 
@@ -91,7 +85,6 @@ for (auto it = classes.begin(); it != classes.end(); it++) {
 
 ![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_29.png)
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_31.png)
 
 ```cpp
 string input;
@@ -104,16 +97,13 @@ while (input != "quit") {
 }
 ```
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_33.png)
 
 ### 删除特定元素
 要从向量中删除特定元素，我们需要先找到该元素的位置（使用迭代器），然后调用 `erase` 方法。
 
 以下是删除特定课程的步骤：
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_35.png)
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_37.png)
 
 1.  获取用户想要删除的课程名称。
 2.  遍历向量，查找匹配的课程。
@@ -130,9 +120,7 @@ while (input != "quit") {
 ![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_45.png)
 
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_47.png)
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_49.png)
 
 ```cpp
 cout << "Which class do you want to drop? ";
@@ -158,7 +146,6 @@ if (found) {
 }
 ```
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_51.png)
 
 ![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_53.png)
 
@@ -166,29 +153,19 @@ if (found) {
 
 **重要提示**：在循环内部直接调用 `erase(it)` 会使当前迭代器失效，导致程序崩溃。因此，需要先保存迭代器，在循环外部进行删除操作。
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_57.png)
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_59.png)
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_61.png)
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_63.png)
 
 ---
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_65.png)
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_67.png)
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_69.png)
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_71.png)
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_73.png)
 
 ## 向量与数组的对比 📊
 
-![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_75.png)
 
 ![](img/0b1fc2c8dbc4dd9e9c6cc85820740939_77.png)
 

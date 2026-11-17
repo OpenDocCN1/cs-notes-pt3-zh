@@ -412,10 +412,7 @@ def fib(n):
 
 1.  **递归方块。** 编写一个程序来生成以下递归图案。方块大小的比例为 2.2:1。要绘制一个阴影方块，先绘制一个填充的灰色方块，然后是一个未填充的黑色方块。
 
-    1.  | ![](img/3b2bf18c17d241695e7c72b1d54abb1f.png) | ![](img/bddd271a2e1bf814b9073a6c4d1ae1aa.png) | ![](img/d3704e5c411090bd5e9e3e158d315978.png) | ![](img/d539c9ae3c0aec7ed41692bb48245009.png) |
     1.  | --- | --- | --- | --- |
-    1.  | ![](img/727175e355e4cf7c9335d5f3903004a5.png) | ![](img/e179f8602594f8455e69e9d8351039f9.png) | ![](img/4e10af7efce70fd87bcd369d19c126cc.png) | ![](img/c9029914d823af16649a69770372ebcb.png) |
-    1.  | ![](img/2fcd964c01a23212b71a5bef56244b6a.png) | ![](img/dd94b6bead2b8153d22c6f5f6fccacdc.png) | ![](img/45a38e30c062b54e0e0dab545aa4ca28.png) | ![](img/ab219015230363130fbb12cac87980dc.png) |
     1.  | ![](img/61d1cdd2f541784c8cb777949c8db914.png) | ![](img/740d1925a3b46e7c7c646f8829b215bb.png) | ![](img/9e2e84266b55a84bbf6421b53e6a517d.png) | ![](img/8705bb9b986f4b0e9b5819315d801bab.png) |
 
     *解决方案*: 参见 recursivesquares.py 以获取第 a 部分的解决方案。
@@ -436,7 +433,6 @@ def fib(n):
 
 1.  **谢尔宾斯基三角形。** 编写一个递归程序来绘制 *谢尔宾斯基地毯*。与 `htree.py` 一样，使用一个命令行参数来控制递归的深度。
 
-    > | ![谢尔宾斯基三角形](img/d2231325100ec61c26211e5839b71d55.png) | ![谢尔宾斯基三角形](img/63f6a256d244814fb18c0ad19703c065.png) | ![谢尔宾斯基三角形](img/71d2b85230a8775d04730055b2c5a192.png) | ![谢尔宾斯基三角形](img/43277a5f77b40f83f653c75147f3ccf0.png) |
     > | --- | --- | --- | --- |
     > | ![谢尔宾斯基三角形](img/69087765c413133b5150019d0f53328e.png) | ![谢尔宾斯基三角形](img/e9b3606121e7c5d669357ac24eced983.png) | ![谢尔宾斯基三角形](img/bcf6c1e8d347185b699e4de3de3a11c4.png) | ![谢尔宾斯基三角形](img/d5c0e79497a9b58a5daeaed449d83360.png) |
 

@@ -2,9 +2,7 @@
 
 ![](img/27ece3e0d63c101479163c0cc6621cac_0.png)
 
-![](img/27ece3e0d63c101479163c0cc6621cac_2.png)
 
-![](img/27ece3e0d63c101479163c0cc6621cac_3.png)
 
 ![](img/27ece3e0d63c101479163c0cc6621cac_5.png)
 
@@ -51,7 +49,6 @@ void selectionSort(vector<T>& list) {
 
 **空间复杂度分析**：该算法是“原地”排序，除了用于交换的临时变量外，不需要额外的存储空间，空间复杂度为 **O(1)**。
 
-![](img/27ece3e0d63c101479163c0cc6621cac_11.png)
 
 ![](img/27ece3e0d63c101479163c0cc6621cac_13.png)
 

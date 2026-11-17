@@ -1,56 +1,42 @@
 # 013：CPU调度 (02/11/20) 🖥️
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_1.png)
 
 在本节课中，我们将要学习处理器调度的核心概念。我们将首先探讨调度的目标，然后回顾一些经典的CPU调度策略，最后了解Linux（Minix）是如何实现这些概念的。
 
 ---
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_3.png)
 
 ## 调度目标 🎯
 
 上一节我们介绍了课程概述，本节中我们来看看CPU调度的目标。操作系统需要管理多个进程，决定哪个进程在何时使用CPU。进程在其生命周期中会在不同状态间转换，例如**就绪**、**运行**和**等待**。
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_5.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_6.png)
 
 *   **就绪状态**：进程已准备好执行，正在等待获得CPU时间。
 *   **运行状态**：进程正在CPU上执行。
 *   **等待状态**：进程因等待I/O操作完成而暂停执行。
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_8.png)
 
 CPU调度器的核心目标就是从所有处于**就绪状态**的进程中，决定**哪一个接下来执行**。在单处理器系统中，任何时刻只能有一个进程在执行。
 
 ---
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_10.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_11.png)
 
 ## 调度决策的层次 📊
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_13.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_14.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_15.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_16.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_18.png)
 
 在操作系统中，调度决策通常分为两类：**长期调度**和**短期调度**。
 
 ![](img/eccda023ecfa6a8c75fcf945fd2a285e_20.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_21.png)
 
 以下是两者的主要区别：
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_23.png)
 
 *   **长期调度**：负责控制进入系统执行的进程数量。它包含两个部分：
     *   **准入调度器**：检查系统资源（如内存）是否充足，以决定是否允许新进程进入。
@@ -61,58 +47,42 @@ CPU调度器的核心目标就是从所有处于**就绪状态**的进程中，�
 
 ![](img/eccda023ecfa6a8c75fcf945fd2a285e_26.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_27.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_28.png)
 
 我们本节课主要关注**CPU调度器**。
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_29.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_31.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_33.png)
 
 ---
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_35.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_37.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_38.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_39.png)
 
 ## CPU调度器的触发时机 ⏰
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_41.png)
 
 CPU调度器是操作系统内核的核心功能，它会在以下几种事件发生时被调用：
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_43.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_44.png)
 
 1.  **进程从运行状态切换到等待状态**：例如，进程执行I/O操作而阻塞。
 2.  **中断发生**：中断处理程序执行完毕后，需要决定接下来运行哪个进程。
 3.  **进程创建或终止**：系统进程数量发生变化。
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_46.png)
 
 此外，根据调度策略的不同，还有第四种触发事件：
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_48.png)
 
 *   **非抢占式调度**：一旦进程开始执行，就会一直运行直到它**主动阻塞**或**结束**。调度器不能中途打断它。
 *   **抢占式调度**：调度器可以**中断**当前正在运行的进程。这通常基于**时间片**机制实现。当一个进程用完其分配的时间片（**时间片到期**）时，它会被强制剥夺CPU，调度器再次运行以选择下一个进程。
 
 ---
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_50.png)
 
 ## 进程行为模式 🔄
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_52.png)
 
 为了设计有效的调度策略，我们需要理解进程的行为模式。进程大致可分为两类：
 
@@ -121,13 +91,9 @@ CPU调度器是操作系统内核的核心功能，它会在以下几种事件�
 
 一个进程在其生命周期中可能在这两种模式间切换。
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_54.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_55.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_57.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_58.png)
 
 ---
 
@@ -137,7 +103,6 @@ CPU调度器是操作系统内核的核心功能，它会在以下几种事件�
 
 ![](img/eccda023ecfa6a8c75fcf945fd2a285e_60.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_62.png)
 
 以下是常见的调度指标：
 
@@ -151,7 +116,6 @@ CPU调度器是操作系统内核的核心功能，它会在以下几种事件�
 
 不同的系统类型侧重不同的指标：
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_66.png)
 
 *   **批处理系统**：侧重**高吞吐量**、**低周转时间**和**高CPU利用率**。
 *   **交互式系统**：侧重**低响应时间**和**符合用户预期**。
@@ -159,9 +123,7 @@ CPU调度器是操作系统内核的核心功能，它会在以下几种事件�
 
 ---
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_68.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_70.png)
 
 ## 经典CPU调度策略 📚
 
@@ -178,9 +140,7 @@ CPU调度器是操作系统内核的核心功能，它会在以下几种事件�
 *   **优点**：实现简单。
 *   **缺点**：**平均等待时间可能很长且变化大**。如果一个长进程排在短进程前面，会导致后面的短进程等待很久（“护航效应”）。
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_75.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_77.png)
 
 ### 轮转调度
 
@@ -188,55 +148,40 @@ CPU调度器是操作系统内核的核心功能，它会在以下几种事件�
 
 ![](img/eccda023ecfa6a8c75fcf945fd2a285e_81.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_83.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_85.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_86.png)
 
 **轮转调度**是一种经典的抢占式策略。每个进程被分配一个固定的**时间片**。调度器维护一个就绪进程队列，从队首取出进程执行一个时间片，然后将其放回队尾，接着服务下一个进程。
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_87.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_89.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_91.png)
 
 *   **关键参数**：**时间片大小**。
     *   **时间片过小**：响应性好，但**上下文切换开销大**。
     *   **时间片过大**：退化为FCFS，响应性变差。
 *   **权衡**：通常选择使上下文切换开销保持在1%以下的时间片（例如10-100毫秒）。
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_93.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_94.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_95.png)
 
 ![](img/eccda023ecfa6a8c75fcf945fd2a285e_97.png)
 
 ### 最短作业优先
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_99.png)
 
 ![](img/eccda023ecfa6a8c75fcf945fd2a285e_100.png)
 
 **最短作业优先**策略选择预计运行时间最短的进程下一个执行。其抢占式版本称为**最短剩余时间优先**。
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_102.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_104.png)
 
 *   **优点**：在所有调度策略中，它能提供**最小的平均等待时间**（理论最优）。
 *   **缺点**：
     1.  需要预知或准确估计作业长度，这在实际中很难做到。
     2.  可能导致**长作业饥饿**（如果不断有短作业到达）。
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_106.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_108.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_110.png)
 
 ### 优先级调度
 
@@ -245,33 +190,24 @@ CPU调度器是操作系统内核的核心功能，它会在以下几种事件�
 *   **优先级来源**：可由用户指定（如Unix的 `nice` 命令），或由操作系统根据进程类型（如系统进程优先级更高）动态分配。
 *   **问题**：可能导致**低优先级进程饥饿**。
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_112.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_113.png)
 
 ---
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_115.png)
 
 ![](img/eccda023ecfa6a8c75fcf945fd2a285e_116.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_118.png)
 
 ## 多级反馈队列 🎪
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_120.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_121.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_122.png)
 
 ![](img/eccda023ecfa6a8c75fcf945fd2a285e_123.png)
 
 **多级反馈队列**是优先级调度的一个智能变体，它结合了之前多个策略的优点，并且是**Minix/Linux早期版本采用的核心调度算法**。
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_125.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_127.png)
 
 MLFQ有多个优先级队列，并遵循以下规则：
 
@@ -283,17 +219,13 @@ MLFQ有多个优先级队列，并遵循以下规则：
 4.  **新进程初始优先级**：新进程通常以**中等或较高优先级**开始。
 5.  **防饥饿机制**：如果一个进程在低优先级队列中等待了过长时间，系统会**临时提升其优先级**，确保它最终能获得CPU时间。
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_129.png)
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_130.png)
 
 ---
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_132.png)
 
 ## 彩票调度 🎫
 
-![](img/eccda023ecfa6a8c75fcf945fd2a285e_134.png)
 
 **彩票调度**是一种基于随机性的公平调度策略。
 

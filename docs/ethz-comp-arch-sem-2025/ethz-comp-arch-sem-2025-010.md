@@ -1,6 +1,5 @@
 # 010：PIM Is All You Need, LUT-DLA and FACIL
 
-![](img/e2c8998370952a589459a3df1a3708e4_1.png)
 
 ## 概述
 在本节课中，我们将学习大语言模型（LLM）背后的Transformer架构，分析其计算与内存瓶颈，并探讨一种名为Handense的、基于CXL（Compute Express Link）和PIM（Processing-in-Memory）技术的GPU-Free系统设计方案，旨在解决LLM推理中的挑战。
@@ -88,7 +87,6 @@ Handense就是一个基于CXL的、无需GPU的系统。它使用CXL进行内存
 
 接下来，我们将深入探讨一个CXL设备的具体构造。
 
-![](img/e2c8998370952a589459a3df1a3708e4_3.png)
 
 它看起来相当复杂，但我们将一起解析。首先，我们有CXL端口。CXL端口是与主机或机器其余部分通信的接口，CXL设备通过它与CPU通信。
 

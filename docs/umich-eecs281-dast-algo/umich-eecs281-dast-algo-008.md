@@ -19,13 +19,11 @@
 
 选择排序容器通常是因为其高效的查找能力。如果应用程序需要频繁查询而较少插入，排序容器是理想选择，因为它可以利用二分查找等算法实现快速查找。
 
-![](img/3a74d3204aaf79acf16fee5e79a0eef3_3.png)
 
 ---
 
 ![](img/3a74d3204aaf79acf16fee5e79a0eef3_5.png)
 
-![](img/3a74d3204aaf79acf16fee5e79a0eef3_7.png)
 
 ![](img/3a74d3204aaf79acf16fee5e79a0eef3_9.png)
 

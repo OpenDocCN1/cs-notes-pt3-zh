@@ -1,24 +1,20 @@
 # 070：用Python构建简单Web浏览器 🖥️
 
-![](img/feabf7ab5f8198d60bec031f56149c66_1.png)
 
 在本节中，我们将学习如何使用Python的`socket`库构建一个非常简单的Web浏览器和服务器。我们将通过编写代码来模拟浏览器向服务器发送HTTP请求并接收响应的过程。
 
 ---
 
-![](img/feabf7ab5f8198d60bec031f56149c66_3.png)
 
 ## 概述
 
 我们将创建一个Python脚本，该脚本使用`socket`库连接到远程服务器，发送一个HTTP GET请求，并接收服务器的响应。通过这个过程，你将理解网络通信的基本原理，以及如何在Python中处理网络数据。
 
-![](img/feabf7ab5f8198d60bec031f56149c66_5.png)
 
 ---
 
 ## 导入socket库
 
-![](img/feabf7ab5f8198d60bec031f56149c66_7.png)
 
 首先，我们需要导入Python的`socket`库。这个库内置在Python中，提供了网络通信的基本功能。
 
@@ -30,7 +26,6 @@ import socket
 
 ---
 
-![](img/feabf7ab5f8198d60bec031f56149c66_9.png)
 
 ## 创建和连接socket
 
@@ -46,7 +41,6 @@ mysock.connect(('data.pr4e.org', 80))
 - **`socket.socket()`**：创建一个socket对象，类似于“制作一部电话”。
 - **`mysock.connect()`**：连接到指定的域名和端口，类似于“拨打电话”。
 
-![](img/feabf7ab5f8198d60bec031f56149c66_11.png)
 
 ![](img/feabf7ab5f8198d60bec031f56149c66_12.png)
 
@@ -93,13 +87,11 @@ while True:
 
 ---
 
-![](img/feabf7ab5f8198d60bec031f56149c66_16.png)
 
 ## 关闭socket
 
 ![](img/feabf7ab5f8198d60bec031f56149c66_18.png)
 
-![](img/feabf7ab5f8198d60bec031f56149c66_19.png)
 
 接收完所有数据后，我们需要关闭socket以释放资源。
 
@@ -125,7 +117,6 @@ mysock.close()
 
 ## 总结
 
-![](img/feabf7ab5f8198d60bec031f56149c66_23.png)
 
 ![](img/feabf7ab5f8198d60bec031f56149c66_25.png)
 

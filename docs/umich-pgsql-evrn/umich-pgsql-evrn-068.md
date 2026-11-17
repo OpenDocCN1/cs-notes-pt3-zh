@@ -60,11 +60,9 @@ INSERT INTO docs (doc) VALUES
 
 ## 构建倒排索引
 
-![](img/d3d291188f9a1470e9d53a0ffdb24458_15.png)
 
 接下来是核心步骤：将文档拆分为单词，并建立单词到文档ID的映射。
 
-![](img/d3d291188f9a1470e9d53a0ffdb24458_16.png)
 
 ![](img/d3d291188f9a1470e9d53a0ffdb24458_17.png)
 

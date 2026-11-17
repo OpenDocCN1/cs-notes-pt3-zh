@@ -38,7 +38,6 @@ for (int i = 0; i < dataType.length; i++) {
 
 `array.length` 本身不能作为索引访问。如果你想访问最后一个元素，请确保总是使用 `array.length - 1`。
 
-![](img/549c690dcf1bd3841c492388cc0c8487_2.png)
 
 ![](img/549c690dcf1bd3841c492388cc0c8487_2.png)
 

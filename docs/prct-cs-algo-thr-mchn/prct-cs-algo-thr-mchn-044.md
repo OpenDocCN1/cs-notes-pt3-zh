@@ -1,6 +1,5 @@
 # 044：算术逻辑单元
 
-![](img/34f1cbffc9ccddd47a68defad578834e_0.png)
 
 ![](img/34f1cbffc9ccddd47a68defad578834e_0.png)
 
@@ -60,7 +59,6 @@
 
 这只是一个展示与门在这些情况下如何工作的例子。
 
-![](img/34f1cbffc9ccddd47a68defad578834e_2.png)
 
 ![](img/34f1cbffc9ccddd47a68defad578834e_2.png)
 
@@ -74,6 +72,5 @@
 
 下次，我们将讨论如何使用带有反馈的时序电路来构建寄存器和存储器。我们将讨论如何连接模块，然后讨论如何控制这些连接以构建一个完整的CPU，就像你计算机中的那样。
 
-![](img/34f1cbffc9ccddd47a68defad578834e_4.png)
 
 ![](img/34f1cbffc9ccddd47a68defad578834e_4.png)

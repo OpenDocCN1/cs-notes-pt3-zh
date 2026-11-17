@@ -1,6 +1,5 @@
 # 015：在线争议解决机制及其与电子商务的关联
 
-![](img/8ab4d0f299140cf43ffc98a87f5efcc6_0.png)
 
 ![](img/8ab4d0f299140cf43ffc98a87f5efcc6_0.png)
 

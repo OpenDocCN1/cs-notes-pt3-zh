@@ -62,7 +62,6 @@ void main(void) {
 
 **片段着色器 (Fragment Shader)**：
 
-![](img/0d58a8c29783fcce5ddad5b755e51885_2.png)
 
 ```glsl
 precision highp float; // 声明精度
@@ -91,7 +90,6 @@ void main(void) {
 
 ### 着色器调试技巧 🐛
 
-![](img/0d58a8c29783fcce5ddad5b755e51885_4.png)
 
 由于着色器运行在GPU上，无法直接使用`printf`。一个简单有效的调试方法是“颜色编码法”：将你想查看的中间值（如深度、法线方向）映射到`[0,1]`范围，然后作为颜色输出到`gl_FragColor`，通过观察屏幕颜色来推断数值。
 

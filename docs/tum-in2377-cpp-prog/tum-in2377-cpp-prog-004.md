@@ -53,9 +53,7 @@ int main() {
 }
 ```
 
-![](img/e0624d2b55788b18da8e80a95dcc562f_3.png)
 
-![](img/e0624d2b55788b18da8e80a95dcc562f_5.png)
 
 ### std::pair 和 std::tuple
 

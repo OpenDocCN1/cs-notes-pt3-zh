@@ -2,7 +2,6 @@
 
 ![](img/76f072d547bb656c9cf40895fe8f1d26_0.png)
 
-![](img/76f072d547bb656c9cf40895fe8f1d26_1.png)
 
 in this segment we're going to finish up，talking about splay trees by talking。
 

@@ -86,7 +86,6 @@
 
 ![](img/7fd55daa17d90b82142e01024ad36e86_6.png)
 
-![](img/7fd55daa17d90b82142e01024ad36e86_7.png)
 
 ![](img/7fd55daa17d90b82142e01024ad36e86_8.png)
 

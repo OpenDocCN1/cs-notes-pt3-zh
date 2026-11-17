@@ -18,15 +18,11 @@ PostgreSQL通过两个核心概念来实现智能全文搜索：`TSVECTOR`和`TS
 to_tsvector(‘english‘， ‘This is an English string.‘)
 ```
 
-![](img/2fd9d36bd14e2b3bd6c990e02cd0adf2_1.png)
 
-![](img/2fd9d36bd14e2b3bd6c990e02cd0adf2_3.png)
 
-![](img/2fd9d36bd14e2b3bd6c990e02cd0adf2_4.png)
 
 该函数会提取文本的特征：进行词干提取、处理大小写、消除停用词等所有我们之前手动完成的工作。它还会记录词汇的位置信息，并包含一套权重系统（例如，标题的权重可能高于正文）。最终，它生成一个代表文本核心特征的向量。
 
-![](img/2fd9d36bd14e2b3bd6c990e02cd0adf2_6.png)
 
 `TSQUERY`则代表了搜索查询。它同样应用词干提取、语言规则和停用词规则，将一个或多个搜索词转换为可以匹配`TSVECTOR`的查询对象。
 

@@ -1,6 +1,5 @@
 # 034：项目4概述 🖥️
 
-![](img/bd510c4f6eff2f6697d9bcd8b45de52b_0.png)
 
 ![](img/bd510c4f6eff2f6697d9bcd8b45de52b_1.png)
 

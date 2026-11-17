@@ -1,6 +1,5 @@
 # 12：两阶段方法的实现问题 🎯
 
-![](img/e76eee2adebdb4f9c906b28bffab2c20_1.png)
 
 ![](img/e76eee2adebdb4f9c906b28bffab2c20_3.png)
 
@@ -45,9 +44,7 @@ subject to x ∈ X
 
 如果某个迭代点 **x_i** 对于至少一个场景不在补偿函数的定义域内（即第二阶段的某个子问题不可行），我们就需要生成**可行性割**。可行性割用于限制主问题中 **x** 的搜索范围，使其位于补偿函数的定义域内，该定义域是多面体。
 
-![](img/e76eee2adebdb4f9c906b28bffab2c20_15.png)
 
-![](img/e76eee2adebdb4f9c906b28bffab2c20_16.png)
 
 因此，在每次迭代中，主问题（Master Problem）是一个线性规划：
 
@@ -82,9 +79,7 @@ subject to:
 
 ![](img/e76eee2adebdb4f9c906b28bffab2c20_20.png)
 
-![](img/e76eee2adebdb4f9c906b28bffab2c20_22.png)
 
-![](img/e76eee2adebdb4f9c906b28bffab2c20_24.png)
 
 ![](img/e76eee2adebdb4f9c906b28bffab2c20_26.png)
 
@@ -182,11 +177,9 @@ subject to:
 
 最后，我们来讨论实现此类算法的编程框架和实用建议。
 
-![](img/e76eee2adebdb4f9c906b28bffab2c20_48.png)
 
 ### 数据结构
 
-![](img/e76eee2adebdb4f9c906b28bffab2c20_50.png)
 
 建议使用一个总体的**数据结构**（例如MATLAB的struct或Python的字典）来存储问题的所有数据。这包括：
 *   确定性参数（债券回报、成本、时间周期）

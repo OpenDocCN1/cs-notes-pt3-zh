@@ -2,7 +2,6 @@
 
 ![](img/49c8f8b771c534ecc3374d051c74a99d_0.png)
 
-![](img/49c8f8b771c534ecc3374d051c74a99d_1.png)
 
 Let's continue our discussion of，Fries and digital search trees。
 

@@ -2,7 +2,6 @@
 
 ![](img/4cfe9196636b9bf2de867aafa71c55ec_0.png)
 
-![](img/4cfe9196636b9bf2de867aafa71c55ec_1.png)
 
 hey everyone let's continue our，discussion of two three trees in this。
 

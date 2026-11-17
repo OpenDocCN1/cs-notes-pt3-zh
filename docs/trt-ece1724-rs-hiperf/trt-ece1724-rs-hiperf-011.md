@@ -64,7 +64,6 @@ match v.get(2) {
 
 ### 所有权与借用规则
 
-![](img/da8faab7b76be12ee92cd785ea9660a3_3.png)
 
 在向量中，所有权和借用规则同样适用。例如，在获取了向量中某个元素的不可变引用后，不能同时修改向量：
 
@@ -140,7 +139,6 @@ scores.insert(String::from("蓝色"), 10);
 scores.insert(String::from("黄色"), 50);
 ```
 
-![](img/da8faab7b76be12ee92cd785ea9660a3_5.png)
 
 ![](img/da8faab7b76be12ee92cd785ea9660a3_7.png)
 
@@ -224,7 +222,6 @@ fn largest_char(list: &[char]) -> &char {
 }
 ```
 
-![](img/da8faab7b76be12ee92cd785ea9660a3_11.png)
 
 为了避免重复，我们可以使用泛型：
 
@@ -247,7 +244,6 @@ fn largest<T: PartialOrd>(list: &[T]) -> &T {
 我们也可以在结构体中使用泛型：
 
 
-![](img/da8faab7b76be12ee92cd785ea9660a3_13.png)
 
 ```rust
 struct Point<T> {

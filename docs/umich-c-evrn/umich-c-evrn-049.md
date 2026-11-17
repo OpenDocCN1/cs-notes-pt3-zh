@@ -128,7 +128,6 @@ Guido van Rossum 选择相信并利用 `realloc` 的可靠性，从而获得了�
 
 ![](img/ce0de5bc22ea5f30aee6dab97eeec265_2.png)
 
-![](img/ce0de5bc22ea5f30aee6dab97eeec265_3.png)
 
 ![](img/ce0de5bc22ea5f30aee6dab97eeec265_5.png)
 

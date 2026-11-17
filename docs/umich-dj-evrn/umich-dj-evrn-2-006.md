@@ -20,15 +20,12 @@
 
 ## 模型层的修改
 
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_8.png)
 
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_9.png)
 
 上一节我们介绍了视图的基本结构，本节中我们来看看如何修改模型以支持所属行功能。
 
 首先，我们需要在`Article`模型中添加一个`owner`字段。这个字段是一个外键，指向Django内置的`User`模型。以下是修改后的模型代码：
 
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_11.png)
 
 ```python
 from django.db import models
@@ -71,7 +68,6 @@ class Article(models.Model):
 ![](img/89c28e67cdf3f58cc5fa0f53318ad234_18.png)
 
 
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_20.png)
 
 ```python
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
@@ -99,11 +95,8 @@ class OwnerDeleteView(LoginRequiredMixin, DeleteView):
 
 ---
 
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_22.png)
 
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_23.png)
 
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_25.png)
 
 ### 重写 `get_queryset` 方法
 
@@ -121,7 +114,6 @@ class OwnerUpdateView(LoginRequiredMixin, UpdateView):
         return qs.filter(owner=self.request.user)
 ```
 
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_27.png)
 
 **方法解释**：
 1.  `qs = super().get_queryset()`：首先调用父类（`UpdateView`）的`get_queryset`方法，获取默认的查询集。
@@ -131,9 +123,7 @@ class OwnerUpdateView(LoginRequiredMixin, UpdateView):
 
 ---
 
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_29.png)
 
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_30.png)
 
 ### 重写 `form_valid` 方法
 
@@ -163,7 +153,6 @@ class OwnerCreateView(LoginRequiredMixin, CreateView):
 
 ![](img/89c28e67cdf3f58cc5fa0f53318ad234_35.png)
 
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_36.png)
 
 **方法解释**：
 1.  `object = form.save(commit=False)`：`form.save(commit=False)`会创建一个模型对象实例，但不会立即保存到数据库。这允许我们在保存之前修改对象的属性。
@@ -173,7 +162,6 @@ class OwnerCreateView(LoginRequiredMixin, CreateView):
 
 这样，即使用户在表单中看不到`owner`字段，新创建的文章也会自动关联到他们。
 
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_38.png)
 
 ![](img/89c28e67cdf3f58cc5fa0f53318ad234_39.png)
 
@@ -194,7 +182,6 @@ class OwnerCreateView(LoginRequiredMixin, CreateView):
 ![](img/89c28e67cdf3f58cc5fa0f53318ad234_46.png)
 
 
-![](img/89c28e67cdf3f58cc5fa0f53318ad234_48.png)
 
 ```python
 from .models import Article

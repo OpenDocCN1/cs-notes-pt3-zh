@@ -4,7 +4,6 @@
 
 在本节课中，我们将学习C++中的分支结构。分支结构允许程序根据不同的条件执行不同的代码块，这是让程序变得“智能”和交互性的关键。我们将从基础的 `if` 和 `else` 语句开始，逐步深入到更复杂的逻辑判断。
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_2.png)
 
 ---
 
@@ -16,7 +15,6 @@
 
 ![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_6.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_7.png)
 
 ---
 
@@ -24,15 +22,11 @@
 
 在C++中，**布尔表达式**是分支判断的基础。它只能产生两个结果：`true`（真）或 `false`（假）。这就像电路中的开关，只有“开”或“关”两种状态。
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_9.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_11.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_13.png)
 
 我们使用**关系运算符**来构建布尔表达式，它们用于比较两个值。
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_15.png)
 
 以下是核心的关系运算符：
 *   **大于**： `>`
@@ -42,7 +36,6 @@
 *   **等于**： `==` （注意：这是两个等号，用于比较；单个等号 `=` 是赋值运算符）
 *   **不等于**： `!=`
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_17.png)
 
 **示例公式**：
 ```cpp
@@ -50,21 +43,16 @@ moneyInPocket > 10 // 检查口袋里的钱是否大于10
 choice == 1         // 检查选择是否等于1
 ```
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_19.png)
 
 ---
 
 ## if-else 语句
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_21.png)
 
 `if-else` 语句是最基本的分支结构。它允许程序在条件为真时执行一段代码，在条件为假时执行另一段代码。
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_23.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_25.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_26.png)
 
 **基本语法**：
 ```cpp
@@ -75,21 +63,13 @@ if (条件) {
 }
 ```
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_28.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_30.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_32.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_34.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_36.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_38.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_40.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_42.png)
 
 **代码示例**：根据预算决定午餐
 ```cpp
@@ -269,11 +249,8 @@ if ( (score > 90) || (age < 18 && parentApproval) ) {
 }
 ```
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_68.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_70.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_71.png)
 
 ---
 
@@ -281,17 +258,13 @@ if ( (score > 90) || (age < 18 && parentApproval) ) {
 
 现在，我们将运用所学的分支知识来完成第一个项目。这是一个派对规划程序，它会根据客人数量和选择的食物来计算需要购买的数量和总成本。
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_73.png)
 
 ![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_75.png)
 
 ![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_76.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_77.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_79.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_81.png)
 
 以下是项目要求：
 1.  询问用户有多少客人（记得包括主人自己）。
@@ -302,11 +275,8 @@ if ( (score > 90) || (age < 18 && parentApproval) ) {
     *   这些物品的总成本。
 5.  将结果输出给用户。
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_83.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_85.png)
 
-![](img/9e7f2d9c3bb1b18eedf189643cc1c69c_87.png)
 
 **项目提交**：
 *   你需要使用GitHub Classroom创建项目仓库。

@@ -34,7 +34,6 @@ app.controller('View1Controller', ['$scope', '$stateParams', function($scope, $s
 }]);
 ```
 
-![](img/31e129da2ab0b66d3362416eddc75c50_4.png)
 
 ## URL映射规则
 

@@ -1,14 +1,10 @@
 # 033：循环遍历索引 🔄
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_0.png)
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_2.png)
 
 在本节课中，我们将学习如何使用 `for` 循环来遍历字符串和列表的**索引**，而不是直接遍历它们的元素。这将使我们能够解决一些仅靠遍历元素无法解决的问题。
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_4.png)
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_5.png)
 
 ## 为什么需要遍历索引？ 🤔
 
@@ -20,11 +16,9 @@
 
 我们的第一个任务是编写一个函数，统计一个字符串中相邻且相同的字符对的数量。
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_7.png)
 
 例如，在字符串 `"ACCFGG"` 中，有三对相邻的相同字符：`CC`、`GG` 和 `FF`。
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_9.png)
 
 ### 解决思路
 
@@ -34,11 +28,9 @@
 *   索引 `1` 的字符需要与索引 `2` 的字符比较。
 *   以此类推，直到比较索引 `-2`（倒数第二个）和索引 `-1`（最后一个）的字符。
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_11.png)
 
 我们可以用公式来描述这个过程：比较字符串在索引 `i` 和索引 `i+1` 处的字符。
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_13.png)
 
 为了生成这些 `i` 值，我们将使用 `range` 函数。我们需要 `i` 的值从 `0` 开始，一直到字符串长度减 `2`（即倒数第二个索引）。因此，循环可以这样写：
 
@@ -47,17 +39,13 @@ for i in range(len(s) - 1):
     # s[i] 将与 s[i+1] 比较
 ```
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_15.png)
 
 ### 编写函数
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_17.png)
 
 以下是实现该功能的函数 `count_adjacent_repeats`：
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_19.png)
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_21.png)
 
 ```python
 def count_adjacent_repeats(s):
@@ -71,40 +59,30 @@ def count_adjacent_repeats(s):
     return repeats                # 返回最终计数
 ```
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_23.png)
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_25.png)
 
 让我们测试一下这个函数：
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_27.png)
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_28.png)
 
 ```python
 print(count_adjacent_repeats("ACCFGG"))  # 输出：3
 print(count_adjacent_repeats("ABCCBBA")) # 输出：2
 ```
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_30.png)
 
 函数按预期工作。通过遍历索引，我们成功地比较了每一对相邻的字符。
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_32.png)
 
 ## 问题二：列表左移 🔀
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_34.png)
 
 现在，我们来看另一个需要遍历索引的问题：编写一个函数，将列表中的所有元素向左移动一位，并将第一个元素移到列表末尾。
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_36.png)
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_37.png)
 
 函数的前提条件是列表长度至少为 `1`。
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_39.png)
 
 例如，列表 `["A", "B", "C", "D"]` 经过左移后，应该变成 `["B", "C", "D", "A"]`。
 
@@ -136,7 +114,6 @@ def shift_left(L):
 
 让我们测试一下这个函数：
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_41.png)
 
 ```python
 letters = ["A", "B", "C", "D"]
@@ -144,21 +121,16 @@ shift_left(letters)
 print(letters)  # 输出：['B', 'C', 'D', 'A']
 ```
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_43.png)
 
 函数成功修改了原列表。注意，这个函数没有返回值（或者说返回 `None`），它的作用是通过修改参数来体现的。
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_45.png)
 
 ## 总结 📝
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_47.png)
 
 在本节课中，我们一起学习了如何使用 `for` 循环和 `range()` 函数来遍历序列的索引，而不仅仅是元素值。
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_49.png)
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_50.png)
 
 *   **核心概念**：当我们需要根据元素在序列中的**位置**来解决问题时（例如比较相邻项、交换位置），遍历索引是必要的方法。
 *   **关键工具**：`range(len(sequence))` 是生成索引的常用模式。通过调整 `range` 的起始和结束参数，我们可以精确控制需要遍历哪些位置。
@@ -166,7 +138,6 @@ print(letters)  # 输出：['B', 'C', 'D', 'A']
     1.  我们编写了 `count_adjacent_repeats` 函数，通过比较 `s[i]` 和 `s[i+1]` 来统计相邻重复字符。
     2.  我们编写了 `shift_left` 函数，通过操作 `L[i-1] = L[i]` 来实现列表元素的左移，并在过程中使用临时变量保存关键数据。
 
-![](img/cb17adcb4d26ea65543b9ecadd9087e0_52.png)
 
 ![](img/cb17adcb4d26ea65543b9ecadd9087e0_54.png)
 

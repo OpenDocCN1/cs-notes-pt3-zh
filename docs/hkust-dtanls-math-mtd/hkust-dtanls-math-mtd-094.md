@@ -10,11 +10,9 @@
 
 设有两个映射 **F** 和 **G**。**F** 从空间 **V₁** 映射到 **V₂**，**G** 从空间 **V₂** 映射到 **V₃**。它们的复合映射 **G ∘ F** 定义为先应用 **F**，再应用 **G**，即从 **V₁** 映射到 **V₃**。
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_1.png)
 
 对于复合映射 **G ∘ F** 在点 **x** 的微分，有如下链式法则：
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_3.png)
 
 **公式：**
 \[
@@ -26,35 +24,26 @@ D(G \circ F)(x) = DG(F(x)) \circ DF(x)
 *   \( DG(F(x)) \) 是一个从 **V₂** 到 **V₃** 的有界线性算子。
 *   符号 \( \circ \) 表示线性算子的复合。
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_5.png)
 
 这个法则表明，复合映射的微分等于内部映射在 **x** 点的微分与外部映射在 **F(x)** 点的微分的复合。形式上可以简洁地记作 \( D(G \circ F) = DG \circ DF \)，它体现了微分运算与复合运算满足一种分配律。
 
 ---
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_7.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_9.png)
 
 ### 应用示例：乘积法则推导
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_11.png)
 
 链式法则是一个强大的工具，能帮助我们计算复杂映射的微分。现在，我们来看一个具体应用：推导两个函数乘积的梯度公式。
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_13.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_15.png)
 
 设 **F₁** 和 **F₂** 是两个从希尔伯特空间 **V** 到实数 **R** 的可微函数。定义函数 **f(x) = F₁(x) * F₂(x)**，我们想求 **f** 在点 **x** 的梯度 \( \nabla f(x) \)。
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_17.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_19.png)
 
 为了使用链式法则，我们构造两个辅助映射：
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_21.png)
 
 1.  定义映射 **F: V → R²**，它将 **x** 映射为一个二维向量：
     \[
@@ -75,23 +64,15 @@ f(x) = G(F(x)) = G(F₁(x), F₂(x)) = F₁(x) \cdot F₂(x)
 Df(x) = DG(F(x)) \circ DF(x)
 \]
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_23.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_25.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_27.png)
 
 接下来，我们分别计算 \( DG \) 和 \( DF \)。
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_28.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_30.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_31.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_32.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_34.png)
 
 **计算 DG：**
 映射 **G** 是定义在 **R²** 上的函数，其微分（梯度）为：
@@ -103,11 +84,8 @@ Df(x) = DG(F(x)) \circ DF(x)
 DG(\alpha, \beta)(y) = \nabla G(\alpha, \beta) \cdot y = \beta y_1 + \alpha y_2
 \]
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_36.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_38.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_40.png)
 
 **计算 DF：**
 映射 **F** 由两个可微函数组成。根据微分的定义，对于 **z** 接近 **x**，有：
@@ -135,7 +113,6 @@ DF(x)(y) =
 \end{pmatrix}
 \]
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_42.png)
 
 **合成 Df：**
 现在将 \( DG \) 和 \( DF \) 代入链式法则。对于任意 **y ∈ V**：
@@ -153,15 +130,10 @@ Df(x)(y) &= DG(F(x)) \left( DF(x)(y) \right) \\
 \end{aligned}
 \]
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_44.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_45.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_47.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_49.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_51.png)
 
 由于 \( Df(x)(y) \) 是梯度 \( \nabla f(x) \) 与 **y** 的内积，即 \( \langle \nabla f(x), y \rangle \)，我们通过比较得到最终的乘积法则：
 
@@ -170,23 +142,16 @@ Df(x)(y) &= DG(F(x)) \left( DF(x)(y) \right) \\
 \boxed{\nabla (F₁ \cdot F₂)(x) = F₂(x) \cdot \nabla F₁(x) + F₁(x) \cdot \nabla F₂(x)}
 \]
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_53.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_55.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_57.png)
 
 ---
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_59.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_61.png)
 
 ### 总结
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_63.png)
 
-![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_65.png)
 
 ![](img/3ac91cc1b8ba1880bc6aa21657d0a3da_67.png)
 

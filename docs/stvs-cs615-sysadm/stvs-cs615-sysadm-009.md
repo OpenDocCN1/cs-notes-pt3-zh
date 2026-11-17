@@ -8,7 +8,6 @@
 
 本练习的核心目标是演示EBS卷的独立性和可移植性。我们将创建两个运行不同操作系统的EC2实例，在一个实例上初始化EBS卷并写入数据，然后将其分离并挂载到另一个实例上，最终验证数据是否成功迁移。
 
-![](img/e77bd8f53e90e9a9ccee0a75e0185a08_1.png)
 
 ## 操作步骤详解
 
@@ -40,7 +39,6 @@ new_volume() {
 newfs /dev/xbd1a
 ```
 
-![](img/e77bd8f53e90e9a9ccee0a75e0185a08_3.png)
 
 创建文件系统后，将其挂载到一个目录下，例如`/mnt`。
 
@@ -54,13 +52,10 @@ mount /dev/xbd1a /mnt
 echo “Hello from NetBSD” > /mnt/testfile.txt
 ```
 
-![](img/e77bd8f53e90e9a9ccee0a75e0185a08_5.png)
 
-![](img/e77bd8f53e90e9a9ccee0a75e0185a08_7.png)
 
 操作完成后，卸载磁盘并退出SSH连接。
 
-![](img/e77bd8f53e90e9a9ccee0a75e0185a08_9.png)
 
 ### 3. 迁移卷到第二个实例
 
@@ -68,9 +63,7 @@ echo “Hello from NetBSD” > /mnt/testfile.txt
 
 接下来，将同一个EBS卷附加到之前创建的Ubuntu实例。通过SSH连接到Ubuntu实例。
 
-![](img/e77bd8f53e90e9a9ccee0a75e0185a08_11.png)
 
-![](img/e77bd8f53e90e9a9ccee0a75e0185a08_13.png)
 
 ### 4. 在第二个实例上访问卷
 
@@ -78,7 +71,6 @@ echo “Hello from NetBSD” > /mnt/testfile.txt
 
 由于该磁盘包含的是UFS文件系统（而非Linux常用的ext4），在挂载时需要指定文件系统类型。需要注意的是，Linux内核通常**仅支持以只读模式挂载UFS文件系统**。
 
-![](img/e77bd8f53e90e9a9ccee0a75e0185a08_15.png)
 
 ```bash
 # 在Ubuntu实例上执行

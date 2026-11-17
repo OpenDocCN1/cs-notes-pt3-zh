@@ -105,7 +105,6 @@ int dot_product(int arr1[], int arr2[]) {
 
 ## 总结
 
-![](img/a6b12c2ab3b26d0f20284346f0c94502_2.png)
 
 ![](img/a6b12c2ab3b26d0f20284346f0c94502_4.png)
 

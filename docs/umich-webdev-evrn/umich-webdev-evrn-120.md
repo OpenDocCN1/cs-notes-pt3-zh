@@ -2,7 +2,6 @@
 
 ![](img/f173df46bf42f2749e0c4258932dfcbf_0.png)
 
-![](img/f173df46bf42f2749e0c4258932dfcbf_2.png)
 
 在本节课中，我们将学习如何在Windows 10操作系统上安装XAMPP。XAMPP是一个集成了Apache、MySQL、PHP和Perl的免费开源软件包，是本地Web开发环境的理想选择。我们将从下载安装包开始，完成安装配置，并运行一个简单的PHP程序来验证环境是否搭建成功。
 
@@ -53,7 +52,6 @@
 
 接下来，我们需要确保PHP的配置适合开发。一个关键的设置是 `display_errors` 变量，它控制是否在页面上显示PHP错误信息。在开发阶段，应将其设置为开启（On），以便于调试；在生产环境则应关闭（Off）。
 
-![](img/f173df46bf42f2749e0c4258932dfcbf_11.png)
 
 以下是检查与修改 `display_errors` 设置的步骤：
 1.  在XAMPP控制面板中，点击Apache一行的“Config”按钮，选择“PHP (php.ini)”。
@@ -61,19 +59,15 @@
 3.  确认其值是否为 `On`。如果需要修改，将其改为 `On` 并保存文件。
 4.  保存后，需要在控制面板中重启Apache服务以使更改生效。
 
-![](img/f173df46bf42f2749e0c4258932dfcbf_13.png)
 
-![](img/f173df46bf42f2749e0c4258932dfcbf_15.png)
 
 修改完成后，可以再次访问 `http://localhost` 并点击“PHPInfo”页面，搜索 `display_errors` 来确认设置已生效。
 
 ## 创建并运行第一个PHP程序
 
-![](img/f173df46bf42f2749e0c4258932dfcbf_17.png)
 
 环境配置妥当后，我们来创建一个简单的PHP程序进行测试。首先，需要使用一个文本编辑器（如VS Code、Sublime Text或Notepad++）编写代码。
 
-![](img/f173df46bf42f2749e0c4258932dfcbf_19.png)
 
 所有需要通过本地服务器访问的网页文件，都必须放在XAMPP的 `htdocs` 目录下（例如 `C:\xampp\htdocs`）。
 
@@ -100,7 +94,6 @@
 4.  打开浏览器，访问地址 `http://localhost/first/index.php`。
 5.  如果页面成功显示，并且包含了由PHP计算输出的结果，则说明你的XAMPP开发环境已经完全搭建成功。
 
-![](img/f173df46bf42f2749e0c4258932dfcbf_21.png)
 
 ---
 

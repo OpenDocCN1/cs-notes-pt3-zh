@@ -136,7 +136,6 @@ const PI = 3.14;
 </html> 
 ```
 
-![计数](img/64c89549e99ab509393cc39590247e3a.png)
 
 ## `querySelector`
 
@@ -178,7 +177,6 @@ heading.innerHTML = `Goodbye!`;
 </html> 
 ```
 
-![切换](img/1f80703b4c1f4f47fe7d56b5056d7841.png)
 
 ## DOM 操作
 
@@ -204,7 +202,6 @@ heading.innerHTML = `Goodbye!`;
 </html> 
 ```
 
-![计数 2](img/b883cc3aa7c8004a0d0c15bd31e845ca.png)
 
 我们可以通过在计数器达到十的倍数时显示一个弹窗来使这个页面更有趣。在这个弹窗中，我们想要格式化一个字符串以自定义消息，在 JavaScript 中我们可以使用[模板字符串](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)来完成。模板字符串要求整个表达式周围有反引号（`` ` ``），任何替换项周围有美元符号和花括号。例如，让我们改变我们的计数函数
 
@@ -342,7 +339,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </html> 
 ```
 
-![问候演示](img/316970e040165bb487974a5de366224f.png)
 
 关于上面页面的几点说明：
 
@@ -555,7 +551,6 @@ document.addEventListener('DOMContentLoaded', function() {
 }); 
 ```
 
-![任务演示](img/a7ba00bebbca3a19e44fba9d0f0d97a7.png)
 
 ## 间隔
 

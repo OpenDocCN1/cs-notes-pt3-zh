@@ -1,6 +1,5 @@
 # 023：使用MPI并行编程（第一部分）🚀
 
-![](img/3a0867452cda6105ecd19d44b96b9a8e_1.png)
 
 在本节课中，我们将要学习并行编程的核心概念，特别是消息传递接口（MPI）。我们将探讨MPI的基本原理、关键术语以及它如何支持分布式内存编程。课程将涵盖点对点通信、集体通信等核心概念，为后续的实践课程打下基础。
 
@@ -20,7 +19,6 @@ MPI_Send(&data, count, datatype, destination, tag, communicator);
 MPI_Recv(&buffer, count, datatype, source, tag, communicator, &status);
 ```
 
-![](img/3a0867452cda6105ecd19d44b96b9a8e_3.png)
 
 与共享内存编程（如OpenMP）不同，MPI要求程序员显式管理进程间的数据交换。它的优势在于可移植性高，遵循MPI标准的程序可以相对容易地在不同的HPC系统间迁移。
 
@@ -32,11 +30,9 @@ MPI_Recv(&buffer, count, datatype, source, tag, communicator, &status);
 ### 2. 秩（Rank）
 每个进程在通信域（Communicator）中被分配一个唯一的标识符，称为**秩（Rank）**。秩通常是从0开始的整数。进程通过秩来识别彼此，从而指定数据的发送目标和接收来源。
 
-![](img/3a0867452cda6105ecd19d44b96b9a8e_5.png)
 
 **核心概念**：`MPI_Comm_rank(communicator, &rank)` 用于获取当前进程的秩。
 
-![](img/3a0867452cda6105ecd19d44b96b9a8e_7.png)
 
 ### 3. 通信域（Communicator）
 **通信域**定义了一组可以互相通信的进程及其上下文。最常用的通信域是`MPI_COMM_WORLD`，它包含了所有初始启动的进程。你可以创建子通信域来定义更小的进程组，以优化特定组内的通信。
@@ -44,7 +40,6 @@ MPI_Recv(&buffer, count, datatype, source, tag, communicator, &status);
 ### 4. 点对点通信
 点对点通信涉及两个进程：一个发送者，一个接收者。这是最基本的通信模式。
 
-![](img/3a0867452cda6105ecd19d44b96b9a8e_9.png)
 
 以下是点对点通信的类型：
 *   **阻塞通信**：`MPI_Send` 和 `MPI_Recv` 会一直等待，直到通信操作安全完成才返回。这可能导致死锁，需要谨慎设计通信顺序。
@@ -63,17 +58,13 @@ MPI_Recv(&buffer, count, datatype, source, tag, communicator, &status);
 *   **归约（Reduce）**：对所有进程提供的数据进行一个操作（如求和、求最大值），并将结果存储在根进程中。
     *   `MPI_Reduce(sendbuf, recvbuf, count, datatype, operation, root, communicator)`
 
-![](img/3a0867452cda6105ecd19d44b96b9a8e_11.png)
 
-![](img/3a0867452cda6105ecd19d44b96b9a8e_13.png)
 
 ## MPI的应用动机
 
-![](img/3a0867452cda6105ecd19d44b96b9a8e_15.png)
 
 为了理解MPI的必要性，让我们看一个应用示例：模拟海洋波浪传播。我们将一个大的3D海洋区域网格分解成许多小块（域分解），每个进程负责计算其中一块的波浪高度。随着时间推移，相邻网格块的波浪会相互影响。因此，进程之间必须频繁交换边界处的波浪高度数据，这正是MPI消息传递的用武之地。
 
-![](img/3a0867452cda6105ecd19d44b96b9a8e_17.png)
 
 类似的应用广泛存在于科学和工程领域，如计算流体动力学（模拟赛车气流、风力涡轮机应力）、气候模拟、冰川崩解模拟以及大规模数据聚类分析等。这些应用都依赖MPI来实现大规模并行计算。
 
@@ -81,7 +72,6 @@ MPI_Recv(&buffer, count, datatype, source, tag, communicator, &status);
 
 需要明确的是，MPI并非用于互联网通信的网络编程库（如TCP/IP套接字编程）。它是一个为**单个HPC集群内部**的高性能、低延迟通信而优化的库，其抽象和函数专门为科学计算中常见的数值数据和通信模式设计。
 
-![](img/3a0867452cda6105ecd19d44b96b9a8e_19.png)
 
 ## 总结
 

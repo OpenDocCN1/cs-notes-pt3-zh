@@ -12,9 +12,7 @@
 
 
 
-![](img/2de81098cd5da31e7b43a29637fecfcc_5.png)
 
-![](img/2de81098cd5da31e7b43a29637fecfcc_6.png)
 
 ![](img/2de81098cd5da31e7b43a29637fecfcc_1.png)
 
@@ -34,9 +32,7 @@
 
 
 
-![](img/2de81098cd5da31e7b43a29637fecfcc_5.png)
 
-![](img/2de81098cd5da31e7b43a29637fecfcc_6.png)
 
 ![](img/2de81098cd5da31e7b43a29637fecfcc_11.png)
 
@@ -66,11 +62,8 @@ MAMP启动后，桌面上会出现其快捷方式。启动MAMP控制面板，点
 
 
 
-![](img/2de81098cd5da31e7b43a29637fecfcc_14.png)
 
-![](img/2de81098cd5da31e7b43a29637fecfcc_11.png)
 
-![](img/2de81098cd5da31e7b43a29637fecfcc_15.png)
 
 ![](img/2de81098cd5da31e7b43a29637fecfcc_17.png)
 
@@ -97,13 +90,11 @@ MAMP启动后，桌面上会出现其快捷方式。启动MAMP控制面板，点
 
 
 
-![](img/2de81098cd5da31e7b43a29637fecfcc_14.png)
 
 现在，打开浏览器，访问以下地址：`http://localhost/first/index.php`。你应该能看到显示“Hello from a web page”的页面。
 
 
 
-![](img/2de81098cd5da31e7b43a29637fecfcc_15.png)
 
 到目前为止，我们只是输出了静态HTML。接下来，让我们在PHP中执行一些代码。
 
@@ -135,9 +126,7 @@ MAMP启动后，桌面上会出现其快捷方式。启动MAMP控制面板，点
 
 
 
-![](img/2de81098cd5da31e7b43a29637fecfcc_19.png)
 
-![](img/2de81098cd5da31e7b43a29637fecfcc_19.png)
 
 然后，用Atom打开这个 `php.ini` 配置文件。在文件中搜索 `display_errors` 设置。
 
@@ -155,7 +144,6 @@ display_startup_errors = On
 
 
 
-![](img/2de81098cd5da31e7b43a29637fecfcc_21.png)
 
 由于修改了服务器配置，需要重启MAMP的Apache和MySQL服务器才能使更改生效。在MAMP控制面板中，先点击“Stop Servers”，等待停止后，再点击“Start Servers”。
 
@@ -169,17 +157,13 @@ display_startup_errors = On
 
 
 
-![](img/2de81098cd5da31e7b43a29637fecfcc_23.png)
 
 修复错误（添加上分号），保存文件，再次刷新页面，程序应恢复正常。
 
 
 
-![](img/2de81098cd5da31e7b43a29637fecfcc_21.png)
 
-![](img/2de81098cd5da31e7b43a29637fecfcc_25.png)
 
-![](img/2de81098cd5da31e7b43a29637fecfcc_23.png)
 
 在开发初期就开启错误显示功能可以节省大量调试时间，避免因只有模糊的“500错误”而不知所措。
 

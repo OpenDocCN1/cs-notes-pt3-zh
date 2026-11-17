@@ -6,7 +6,6 @@
 
 ## 下载MAMP
 
-![](img/13298febd9a063373fc9a38b377035ec_3.png)
 
 首先，我们需要从官方网站下载MAMP软件。
 
@@ -35,7 +34,6 @@
 
 启动MAMP后，控制面板会显示服务器状态和系统配置信息，例如PHP版本和配置文件的位置。对于开发工作，我们需要确保PHP能显示错误信息，这有助于调试代码。
 
-![](img/13298febd9a063373fc9a38b377035ec_7.png)
 
 默认情况下，PHP的 `display_errors` 设置是关闭的。我们需要编辑PHP的配置文件来开启它。
 
@@ -47,25 +45,19 @@
 5.  同时，可以搜索 `display_startup_errors` 并将其设置为 `On`。
 6.  保存文件。
 
-![](img/13298febd9a063373fc9a38b377035ec_9.png)
 
 修改配置文件后，必须重启MAMP服务器才能使更改生效。
 
-![](img/13298febd9a063373fc9a38b377035ec_11.png)
 
 ## 创建第一个PHP页面
 
 配置好开发环境后，现在我们来创建一个简单的PHP页面，以测试环境是否工作正常。
 
-![](img/13298febd9a063373fc9a38b377035ec_13.png)
 
-![](img/13298febd9a063373fc9a38b377035ec_14.png)
 
 Web服务器的根目录位于 `/Applications/MAMP/htdocs/`。我们在这个目录下创建的文件可以通过浏览器访问。
 
-![](img/13298febd9a063373fc9a38b377035ec_16.png)
 
-![](img/13298febd9a063373fc9a38b377035ec_18.png)
 
 以下是创建测试页面的步骤：
 1.  在 `/Applications/MAMP/htdocs/` 目录下，创建一个新文件夹，例如命名为 `first`。

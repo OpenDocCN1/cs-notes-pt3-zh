@@ -32,7 +32,6 @@ Python就是众多编程语言中的一种。为了运行Python程序，你需�
 
 ## 编写Python的工具：IDLE
 
-![](img/b57d46b3d5be2f8f6d5eeec2dad8d327_1.png)
 
 下载并安装Python后，我们将使用一个名为**IDLE**的程序来编写Python代码。IDLE是以Monty Python成员Eric Idle的名字命名的，它会随Python一同安装。
 
@@ -42,9 +41,7 @@ Python就是众多编程语言中的一种。为了运行Python程序，你需�
 
 启动后，你应该能看到一个类似下图的窗口，这表明你的Python环境已经准备就绪。
 
-![](img/b57d46b3d5be2f8f6d5eeec2dad8d327_3.png)
 
-![](img/b57d46b3d5be2f8f6d5eeec2dad8d327_5.png)
 
 ---
 

@@ -2,7 +2,6 @@
 
 ![](img/9a06e40e8b979bc0f1c8cd99bef3a101_0.png)
 
-![](img/9a06e40e8b979bc0f1c8cd99bef3a101_1.png)
 
 okay let's continue our discussion of，trips，so let's begin with the theorem。
 

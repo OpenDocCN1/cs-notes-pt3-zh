@@ -167,7 +167,6 @@ def section(request, num):
 </html> 
 ```
 
-![单页 2](img/527d6bb1c81f6b1383773e891e61cdcf.png)
 
 现在，我们已经创建了一个网站，我们可以从服务器加载新数据，而无需重新加载整个 HTML 页面！
 
@@ -499,7 +498,6 @@ function add_post(contents) {
 </html> 
 ```
 
-![移动标题](img/d40f9ac6e9e24b7be4f3fe8c43762f8f.png)
 
 现在，让我们看看设置一些中间 CSS 属性。我们可以在动画的任何百分比处指定样式。在以下示例中，我们将标题从左到右移动，然后通过仅更改上面的动画将其移回左方
 
@@ -517,7 +515,6 @@ function add_post(contents) {
 } 
 ```
 
-![前后滚动](img/264eb9573fdeff6c69a0dc3e89159919.png)
 
 如果我们想要重复动画多次，可以将`animation-iteration-count`属性更改为大于一的数字（甚至可以设置为`infinite`以实现无限动画）。我们可以设置许多[动画属性](https://www.w3schools.com/cssref/css3_pr_animation.asp)，以改变动画的不同方面。
 
@@ -549,7 +546,6 @@ document.addEventListener('DOMContentLoaded', function() {
 }) 
 ```
 
-![播放/暂停动画](img/dca0932bfcb81cfc849afdf63a13a776.png)
 
 现在，让我们看看如何将我们对动画的新知识应用到我们之前制作的帖子页面。具体来说，假设我们希望在阅读完帖子后能够隐藏帖子。让我们想象一个与刚刚创建的项目相同的 Django 项目，但有一些 HTML 和 JavaScript 的细微差别。我们将做的第一个更改是修改`add_post`函数，这次也在帖子的右侧添加了一个按钮：
 
@@ -584,7 +580,6 @@ document.addEventListener('click', event => {
 }); 
 ```
 
-![简单的隐藏](img/f1ded33c4614e12e0848d8166b281395.png)
 
 我们现在可以看到我们已经实现了隐藏按钮，但它看起来并没有可能那么漂亮。也许我们希望帖子在移除之前先淡出并缩小。为了做到这一点，我们首先创建一个 CSS 动画。下面的动画将花费 75%的时间将`opacity`从 1 变为 0，这本质上使得帖子缓慢淡出。然后，它将剩余的时间将所有与`height`相关的属性移动到 0，有效地将帖子缩小到无。
 

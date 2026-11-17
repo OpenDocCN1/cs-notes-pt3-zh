@@ -2,17 +2,12 @@
 
 ## 概述
 
-![](img/884dafbbae170b473d885c73da857f4b_1.png)
 
-![](img/884dafbbae170b473d885c73da857f4b_2.png)
 
 在本节课中，我们将学习如何使用Python代码将Mbox格式的邮件数据加载到PostgreSQL数据库中。这是一个相对复杂的示例，涉及数据清洗、解析和数据库操作，我们将逐步解析其工作原理。
 
-![](img/884dafbbae170b473d885c73da857f4b_4.png)
 
-![](img/884dafbbae170b473d885c73da857f4b_5.png)
 
-![](img/884dafbbae170b473d885c73da857f4b_6.png)
 
 ## 代码结构与数据源
 
@@ -35,7 +30,6 @@ python gmane.py
 
 程序采用分批提交的策略，每处理50条记录提交一次，每处理100条记录暂停片刻。这样设计既保证了效率，也方便用户随时中断（例如按 `Ctrl+C`）而不丢失已提交的数据。
 
-![](img/884dafbbae170b473d885c73da857f4b_8.png)
 
 ## 程序重启机制
 
@@ -43,31 +37,22 @@ python gmane.py
 
 例如，如果数据库中已有400条记录，重启程序后，它会自动从ID 401开始获取新邮件。如果需要完全重新开始，则需要手动删除 `messages` 表。
 
-![](img/884dafbbae170b473d885c73da857f4b_10.png)
 
-![](img/884dafbbae170b473d885c73da857f4b_12.png)
 
 ## 核心代码解析
 
-![](img/884dafbbae170b473d885c73da857f4b_14.png)
 
-![](img/884dafbbae170b473d885c73da857f4b_16.png)
 
 上一节我们介绍了程序的运行和重启机制，本节中我们来看看其核心代码结构，主要集中在 `gmane.py` 文件中。
 
-![](img/884dafbbae170b473d885c73da857f4b_18.png)
 
 ### 工具函数封装
 
-![](img/884dafbbae170b473d885c73da857f4b_20.png)
 
-![](img/884dafbbae170b473d885c73da857f4b_21.png)
 
-![](img/884dafbbae170b473d885c73da857f4b_22.png)
 
 程序开头导入了自定义工具模块 `myutils`。这个模块封装了一些常用的数据库操作，例如执行查询并返回单个值，这简化了主程序中的代码。
 
-![](img/884dafbbae170b473d885c73da857f4b_23.png)
 
 ```python
 # 示例：使用 myutils 查询单个值
@@ -83,17 +68,14 @@ count = myutils.query_value(conn, "SELECT COUNT(*) FROM messages")
 3.  **用户中断**：捕获 `KeyboardInterrupt` 异常（即 `Ctrl+C`），确保在退出前提交所有已完成的数据库操作。
 4.  **通用异常**：捕获其他所有异常并打印错误信息，便于调试。
 
-![](img/884dafbbae170b473d885c73da857f4b_25.png)
 
 这些健壮性特性是代码在迭代开发中逐步完善的，初学者在编写自己的脚本时，也可以参考这种逐步增强错误处理的思路。
 
 ### 邮件数据解析
 
-![](img/884dafbbae170b473d885c73da857f4b_27.png)
 
 获取到邮件原始文本后，程序开始进行关键的解析工作。Mbox格式的邮件以 `From `（后面有一个空格）开头，作为分隔符。
 
-![](img/884dafbbae170b473d885c73da857f4b_29.png)
 
 以下是解析步骤：
 
@@ -102,7 +84,6 @@ count = myutils.query_value(conn, "SELECT COUNT(*) FROM messages")
 3.  **解析日期**：这是最复杂的部分。程序查找 `Date:` 头部，并尝试使用Python内置的 `dateutil.parser` 库将其解析并转换为标准的ISO格式（如 `2023-10-27T10:30:00`），以便存入数据库的 `TIMESTAMP` 字段。相关逻辑封装在 `parsedate` 函数中。
 4.  **提取主题**：从 `Subject:` 头部行提取邮件主题，并进行清理（如去除首尾空格、转换为小写）。
 
-![](img/884dafbbae170b473d885c73da857f4b_31.png)
 
 ### 数据插入
 
@@ -116,7 +97,6 @@ INSERT INTO messages (id, sender, sent_at, subject, headers, body) VALUES (%s, %
 
 ## 总结
 
-![](img/884dafbbae170b473d885c73da857f4b_33.png)
 
 ![](img/884dafbbae170b473d885c73da857f4b_35.png)
 

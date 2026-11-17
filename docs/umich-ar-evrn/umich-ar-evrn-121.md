@@ -10,7 +10,6 @@
 
 在本节课中，我们将学习如何使用A-Frame和WebXR技术创建无标记增强现实（AR）体验。我们将从基础场景开始，逐步添加3D模型、动画、光照，并最终实现基于平面检测的物体放置功能。
 
-![](img/68dbc4bc4cf08c5695a755fbe87a81b9_7.png)
 
 ## 概述
 
@@ -18,13 +17,10 @@
 
 ![](img/68dbc4bc4cf08c5695a755fbe87a81b9_11.png)
 
-![](img/68dbc4bc4cf08c5695a755fbe87a81b9_13.png)
 
-![](img/68dbc4bc4cf08c5695a755fbe87a81b9_15.png)
 
 我们将创建一个无标记AR场景，允许用户在真实环境中放置和查看3D对象。课程将涵盖场景设置、模型加载、光照调整以及使用最新的WebXR功能进行平面检测和物体放置。
 
-![](img/68dbc4bc4cf08c5695a755fbe87a81b9_17.png)
 
 ![](img/68dbc4bc4cf08c5695a755fbe87a81b9_19.png)
 
@@ -40,11 +36,9 @@
 
 ![](img/68dbc4bc4cf08c5695a755fbe87a81b9_28.png)
 
-![](img/68dbc4bc4cf08c5695a755fbe87a81b9_30.png)
 
 首先，我们从标准的A-Frame模板开始，并移除天空盒，以创建一个适合AR的基础场景。
 
-![](img/68dbc4bc4cf08c5695a755fbe87a81b9_32.png)
 
 ![](img/68dbc4bc4cf08c5695a755fbe87a81b9_34.png)
 
@@ -112,9 +106,7 @@
 
 ![](img/68dbc4bc4cf08c5695a755fbe87a81b9_76.png)
 
-![](img/68dbc4bc4cf08c5695a755fbe87a81b9_78.png)
 
-![](img/68dbc4bc4cf08c5695a755fbe87a81b9_80.png)
 
 ## 配置光照与阴影
 
@@ -160,7 +152,6 @@ navigator.xr.requestSession('immersive-ar', { requiredFeatures: ['hit-test'] }).
 
 ![](img/68dbc4bc4cf08c5695a755fbe87a81b9_99.png)
 
-![](img/68dbc4bc4cf08c5695a755fbe87a81b9_101.png)
 
 ## 在HoloLens上测试
 

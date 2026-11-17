@@ -2,9 +2,7 @@
 
 ![](img/18f4df9a22525f5089feeef6143207f3_0.png)
 
-![](img/18f4df9a22525f5089feeef6143207f3_2.png)
 
-![](img/18f4df9a22525f5089feeef6143207f3_4.png)
 
 ![](img/18f4df9a22525f5089feeef6143207f3_5.png)
 
@@ -52,7 +50,6 @@
 
 服务成功启动后，我们可以通过访问本地仪表盘来验证安装。同时，确保PHP的配置适合开发环境。
 
-![](img/18f4df9a22525f5089feeef6143207f3_11.png)
 
 以下是验证和检查步骤：
 1.  打开浏览器，访问 `http://localhost`。如果看到XAMPP的欢迎仪表盘页面，说明Apache服务器运行正常。
@@ -62,17 +59,13 @@
 5.  在打开的配置文件中，使用 `Ctrl+F` 搜索 `display_errors`，将其值修改为 `On`。同时，也可以检查 `display_startup_errors` 的设置。
 6.  保存配置文件后，必须在XAMPP控制面板中重启Apache服务器（先Stop，再Start），修改才能生效。
 
-![](img/18f4df9a22525f5089feeef6143207f3_13.png)
 
-![](img/18f4df9a22525f5089feeef6143207f3_15.png)
 
 ## 创建并运行第一个PHP程序
 
-![](img/18f4df9a22525f5089feeef6143207f3_17.png)
 
 环境配置妥当后，本节中我们来看看如何编写一个简单的PHP程序，并通过本地服务器运行它。
 
-![](img/18f4df9a22525f5089feeef6143207f3_19.png)
 
 以下是创建和测试步骤：
 1.  打开你喜欢的文本编辑器（例如VS Code、Sublime Text或Notepad++）。
@@ -97,7 +90,6 @@
 4.  将文件以 `index.php` 为名保存在 `first` 文件夹中，完整路径为 `C:\xampp\htdocs\first\index.php`。
 5.  打开浏览器，访问 `http://localhost/first/index.php`。如果页面正确显示了HTML标题和PHP计算出的结果，说明你的本地开发环境已经成功搭建并可以运行PHP程序了。
 
-![](img/18f4df9a22525f5089feeef6143207f3_21.png)
 
 ## 总结
 

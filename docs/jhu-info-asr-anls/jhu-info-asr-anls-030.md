@@ -8,16 +8,13 @@
 
 首先，我们来介绍HTTP头部中一个名为`Host`的字段。这个字段用于指定服务器的域名。
 
-![](img/a53e84dba7cd7495984c97cc8ca96461_1.png)
 
-![](img/a53e84dba7cd7495984c97cc8ca96461_2.png)
 
 **公式/代码示例：**
 ```
 Host: www.example.com
 ```
 
-![](img/a53e84dba7cd7495984c97cc8ca96461_3.png)
 
 当一台Web服务器托管了多个网站（即虚拟主机）时，`Host`字段就变得至关重要。服务器需要根据这个字段来判断客户端想要访问的是哪个具体的网站。如果`Host`字段配置错误，服务器通常会返回一个错误，提示你使用了不正确的域名。
 
@@ -34,7 +31,6 @@ Host: www.example.com
 Referer: https://www.google.com/search?q=example
 ```
 
-![](img/a53e84dba7cd7495984c97cc8ca96461_5.png)
 
 `Referer`字段记录了引荐来源的URL。网站可以利用这个信息进行多种判断，例如：
 *   **访问控制**：某些网站（如过去的《纽约时报》）曾用它来验证用户是否通过特定路径（如内部合作伙伴页面）访问，以此进行简易的访问控制。
@@ -57,7 +53,6 @@ Set-Cookie: sessionid=abc123; Expires=Wed, 09 Jun 2021 10:18:14 GMT
 *   **维持会话状态**：跟踪用户在单次访问或多次访问中的状态与偏好。
 *   **用户身份验证**：经典的“记住我”功能就是通过`Cookie`实现的，它避免了用户每次访问都需要重新输入凭证。
 
-![](img/a53e84dba7cd7495984c97cc8ca96461_7.png)
 
 本质上，`Cookie`使得服务器能够“记住”用户，从而提供个性化的体验。
 
@@ -78,7 +73,6 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 
 这个字段有助于服务器进行兼容性配置和基本的用户群体分析。
 
-![](img/a53e84dba7cd7495984c97cc8ca96461_9.png)
 
 ---
 
@@ -96,7 +90,6 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 
 ---
 
-![](img/a53e84dba7cd7495984c97cc8ca96461_11.png)
 
 ### 常见HTTP状态码 📊
 
@@ -115,7 +108,6 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 
 ---
 
-![](img/a53e84dba7cd7495984c97cc8ca96461_13.png)
 
 ### 关键的响应头字段 🔑
 
@@ -131,7 +123,6 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 
 ### 关于401状态码的安全警示 ⚠️
 
-![](img/a53e84dba7cd7495984c97cc8ca96461_15.png)
 
 最后，我们特别讨论一下`401 Unauthorized`状态码。它表示访问资源需要身份验证。
 
@@ -146,7 +137,6 @@ Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=  (这是 "username:password" 的Ba
 
 ---
 
-![](img/a53e84dba7cd7495984c97cc8ca96461_17.png)
 
 ### 总结 📝
 

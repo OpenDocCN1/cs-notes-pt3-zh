@@ -2,7 +2,6 @@
 
 ![](img/b1646209262f85640d4f940f9d4ad9d8_0.png)
 
-![](img/b1646209262f85640d4f940f9d4ad9d8_1.png)
 
 in this last segment on b trees we're，going to talk about how to perform。
 

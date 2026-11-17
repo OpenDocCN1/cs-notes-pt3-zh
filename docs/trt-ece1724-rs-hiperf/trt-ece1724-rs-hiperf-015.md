@@ -92,15 +92,10 @@ impl Animal for Dog { fn make_sound(&self) { println!("Woof!"); } }
 impl Animal for Cat { fn make_sound(&self) { println!("Meow!"); } }
 ```
 
-![](img/933652f421013b9bfde6f6d2a3ddbe4f_4.png)
 
-![](img/933652f421013b9bfde6f6d2a3ddbe4f_5.png)
 
-![](img/933652f421013b9bfde6f6d2a3ddbe4f_6.png)
 
-![](img/933652f421013b9bfde6f6d2a3ddbe4f_7.png)
 
-![](img/933652f421013b9bfde6f6d2a3ddbe4f_9.png)
 
 我们可能尝试这样写：
 ```rust
@@ -109,11 +104,9 @@ let animals: Vec<dyn Animal> = vec![Dog{name: "Buddy".into()}, Cat{lives: 9}]; /
 
 但这会导致编译错误。错误信息指出：`dyn Animal` 是一个 **DST（动态大小类型）**，它在编译时没有已知的大小。而Rust的 `Vec<T>` 要求其元素类型 `T` 必须实现 `Sized` trait（即大小在编译时已知）。
 
-![](img/933652f421013b9bfde6f6d2a3ddbe4f_11.png)
 
 解决方案就是使用 `Box<T>`。`Box<dyn Animal>` 的大小是已知的（一个指针的大小），因此可以放入向量中。
 
-![](img/933652f421013b9bfde6f6d2a3ddbe4f_13.png)
 
 ```rust
 let animals: Vec<Box<dyn Animal>> = vec![
@@ -125,9 +118,7 @@ for animal in animals {
 }
 ```
 
-![](img/933652f421013b9bfde6f6d2a3ddbe4f_15.png)
 
-![](img/933652f421013b9bfde6f6d2a3ddbe4f_17.png)
 
 通过将 trait 对象放入 `Box`，我们成功地将不同类型的值（`Dog` 和 `Cat`）存储在了同一个向量中，并在运行时调用了各自正确的 `make_sound` 方法。这为库的设计提供了极大的灵活性。
 

@@ -20,7 +20,6 @@
 
 我们从一个 `map entry` 开始。这个结构构成了链表中的节点。
 
-![](img/4384fdb5c426dd9847b6f20605a58cfd_2.png)
 
 *   `key` 是一个字符串。
 *   `value` 是一个整数（为了简化示例）。
@@ -29,7 +28,6 @@
 
 这里的关键是，`prev` 和 `next` 前面有**双下划线**（`__`）。这意味着它们是**私有**的。我们决定 `key` 和 `value` 是**公共**的，就像Python的做法一样，不在它们前面加双下划线，并在心里记住调用代码允许使用它们。
 
-![](img/4384fdb5c426dd9847b6f20605a58cfd_4.png)
 
 ```c
 struct map_entry {
@@ -44,16 +42,13 @@ struct map_entry {
 
 ## 定义主类结构：Map
 
-![](img/4384fdb5c426dd9847b6f20605a58cfd_6.png)
 
 `map` 结构体大部分看起来很简单。
 
-![](img/4384fdb5c426dd9847b6f20605a58cfd_7.png)
 
 *   我们有 `head`、`tail` 和 `count`。你已经维护它们一段时间了。
 *   这些是**私有属性**，所以我们用双下划线重命名它们。
 
-![](img/4384fdb5c426dd9847b6f20605a58cfd_9.png)
 
 然后，我们有一系列**公共方法**，共有五个。关键点在于，这些是**指向函数的指针**。
 
@@ -61,7 +56,6 @@ struct map_entry {
 
 最终，这并不是把代码放在这里（像JavaScript那样）。它实际上是一个64位的数字，即一个指向函数起始地址的指针。函数的方法签名必须匹配，所以我们在这里定义了方法签名。但在分配时，我们实际上是为 `put`、`get`、`size`、`dump` 和 `del` 各分配了一个指针。
 
-![](img/4384fdb5c426dd9847b6f20605a58cfd_11.png)
 
 ```c
 struct map {
@@ -83,7 +77,6 @@ struct map {
 
 ---
 
-![](img/4384fdb5c426dd9847b6f20605a58cfd_13.png)
 
 ## 构造函数
 
@@ -111,7 +104,6 @@ struct map *map_create() {
 
 这展示了 `map` 结构体本身的大小：`head` 是一个64位指针，`tail` 是一个64位指针，`count` 可能是一个64位或32位整数，`put`、`get`、`size`、`dump` 和 `del` 都是64位指针。所以 `map` 结构体本身大约在10个字（words）或更少，这再次关系到效率。
 
-![](img/4384fdb5c426dd9847b6f20605a58cfd_15.png)
 
 ---
 
@@ -123,7 +115,6 @@ struct map *map_create() {
 
 `__map_dump` 方法很简单。`self` 是指向 map 的指针，它有 `__head` 和 `__next`。我们只需遍历直到 `cur` 等于 `NULL`。
 
-![](img/4384fdb5c426dd9847b6f20605a58cfd_17.png)
 
 注意，我们没有给 `cur` 加双下划线，因为它只是这个函数内部的自动变量，与外部世界无关。你会注意到我们直接访问 `__head` 和 `__next`，因为我们在类内部。所以，在类的方法中访问私有属性是完全合法的，这很正常，我们不必隐藏它们。
 
@@ -143,7 +134,6 @@ void __map_dump(struct map *self) {
 
 像大多数删除操作一样，关键是画出结构图，找出哪些部分是动态分配的（来自 `malloc`），然后确保调用 `free` 释放它们。
 
-![](img/4384fdb5c426dd9847b6f20605a58cfd_19.png)
 
 我们只需遍历链表。同样，我们在类内部，所以可以愉快地使用双下划线属性。遍历时，顺序很重要：我们先释放 `key`（记住，这是一个我们 `malloc` 的字符串指针），我们不需要释放 `value`，因为它实际上是 `map_entry` 结构体的一部分。然后我们前进到下一个节点，再释放当前的 `map_entry` 本身。
 
@@ -182,7 +172,6 @@ int __map_get(struct map *self, char *key, int default_value) {
 }
 ```
 
-![](img/4384fdb5c426dd9847b6f20605a58cfd_21.png)
 
 ### Map Put 方法
 
@@ -222,7 +211,6 @@ void __map_put(struct map *self, char *key, int value) {
 
 ![](img/4384fdb5c426dd9847b6f20605a58cfd_23.png)
 
-![](img/4384fdb5c426dd9847b6f20605a58cfd_24.png)
 
 ![](img/4384fdb5c426dd9847b6f20605a58cfd_26.png)
 

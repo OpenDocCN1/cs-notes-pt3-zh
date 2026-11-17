@@ -29,13 +29,9 @@ void printTuple(const Tuple<Ts...>& tuple) {
 ### 实现可变参数函数
 实现可变参数函数通常使用尾递归或折叠表达式。
 
-![](img/693757ace94b29e69cf93abb031a21e3_1.png)
 
-![](img/693757ace94b29e69cf93abb031a21e3_3.png)
 
-![](img/693757ace94b29e69cf93abb031a21e3_5.png)
 
-![](img/693757ace94b29e69cf93abb031a21e3_7.png)
 
 以下是使用尾递归的实现方法：
 ```cpp

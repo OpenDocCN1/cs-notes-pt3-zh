@@ -66,9 +66,7 @@ Rust是一门相对年轻的编程语言，始于2015年（大约10年前），�
 
 ![](img/7a80aded2b624b1308a0f060d732f873_3.png)
 
-![](img/7a80aded2b624b1308a0f060d732f873_4.png)
 
-![](img/7a80aded2b624b1308a0f060d732f873_5.png)
 
 ![](img/7a80aded2b624b1308a0f060d732f873_6.png)
 

@@ -24,13 +24,10 @@
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_13.png)
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_15.png)
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_16.png)
 
 上一节我们完成了基础的交互场景。本节中，我们来看看如何为场景添加一个逼真的环境。
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_18.png)
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_20.png)
 
@@ -133,7 +130,6 @@
 
 以下是添加一个可掉落小球的示例：
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_61.png)
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_63.png)
 
@@ -201,9 +197,7 @@
 
 ---
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_93.png)
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_94.png)
 
 ## 实现传送与控制器交互 🎮
 
@@ -223,7 +217,6 @@ A-Frame的`teleport-controls`组件允许用户通过手柄指定传送点进行
 ### 超级手部交互（抓取物体）
 `super-hands`组件提供了强大的抓取、触摸、拖放等交互能力。我们需要引入一系列相关库。
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_100.png)
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_102.png)
 
@@ -241,7 +234,6 @@ A-Frame的`teleport-controls`组件允许用户通过手柄指定传送点进行
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_113.png)
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_115.png)
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/wmurphyrd/aframe-super-hands-component@v3.1.0/dist/super-hands.min.js"></script>
@@ -256,14 +248,10 @@ A-Frame的`teleport-controls`组件允许用户通过手柄指定传送点进行
 
 然后，为可抓取的物体添加`grabbable`属性，并为手柄控制器添加`super-hands`和`collider`等混入属性（mixins）。
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_122.png)
-
-![](img/285b3d0d8cd79b90331f1aa8449fcace_124.png)
 
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_126.png)
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_128.png)
+
 
 ```html
 <!-- 可抓取的食物 -->
@@ -275,23 +263,16 @@ A-Frame的`teleport-controls`组件允许用户通过手柄指定传送点进行
 </a-entity>
 ```
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_130.png)
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_132.png)
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_134.png)
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_136.png)
 
 这样，用户就可以用手柄抓住“食物”小球，并投掷给长颈鹿了。
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_137.png)
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_139.png)
 
 ---
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_141.png)
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_143.png)
 
@@ -301,7 +282,6 @@ A-Frame的`teleport-controls`组件允许用户通过手柄指定传送点进行
 
 在VR中，用户界面需要以三维形式融入环境。常见的做法有“抬头显示器”（HUD）和“控制器附着菜单”。
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_147.png)
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_148.png)
 
@@ -310,13 +290,10 @@ A-Frame的`teleport-controls`组件允许用户通过手柄指定传送点进行
 ### 抬头显示器（HUD）
 HUD将UI元素（如分数、状态）固定在摄像机前方，始终处于用户视野内。
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_151.png)
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_153.png)
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_154.png)
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_156.png)
 
 ```html
 <a-entity camera look-controls>
@@ -339,7 +316,6 @@ HUD将UI元素（如分数、状态）固定在摄像机前方，始终处于用
 
 ---
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_168.png)
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_169.png)
 
@@ -353,7 +329,6 @@ HUD将UI元素（如分数、状态）固定在摄像机前方，始终处于用
 
 ![](img/285b3d0d8cd79b90331f1aa8449fcace_177.png)
 
-![](img/285b3d0d8cd79b90331f1aa8449fcace_179.png)
 
 虽然本节主要针对高端VR头显，但许多功能经过简化也能在Cardboard上运行。最关键的区别是Cardboard没有手柄，交互主要依靠凝视和点击。
 

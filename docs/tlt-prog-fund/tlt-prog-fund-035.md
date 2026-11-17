@@ -1,12 +1,10 @@
 # 035：嵌套列表 📚
 
-![](img/9e6df4d49dc525323cbde54b6043cac3_0.png)
 
 在本节课中，我们将要学习一种特殊的列表结构——**嵌套列表**。我们将了解什么是嵌套列表，如何访问其中的元素，并编写一个函数来计算嵌套列表中数值的平均值。
 
 ---
 
-![](img/9e6df4d49dc525323cbde54b6043cac3_2.png)
 
 ## 什么是嵌套列表？ 📦
 
@@ -18,7 +16,6 @@
 grades = [['assignment1', 80], ['assignment2', 90], ['assignment3', 70]]
 ```
 
-![](img/9e6df4d49dc525323cbde54b6043cac3_4.png)
 
 列表 `grades` 的长度是 3，因为它有三个项。而每一项本身又是一个包含两个元素的列表。
 
@@ -34,7 +31,6 @@ grades[1]  # 结果是列表 ['assignment2', 90]
 grades[2]  # 结果是列表 ['assignment3', 70]
 ```
 
-![](img/9e6df4d49dc525323cbde54b6043cac3_6.png)
 
 这些内部列表（或称为项）的长度都是 2。我们可以通过将索引 0 处的列表传递给 `len` 函数来验证：
 
@@ -46,7 +42,6 @@ len(grades[0])  # 结果是 2
 
 ## 使用循环遍历嵌套列表 🔄
 
-![](img/9e6df4d49dc525323cbde54b6043cac3_8.png)
 
 访问 `grades` 中元素的另一种方法是使用 `for` 循环，就像列表元素是字符串或整数时一样。
 
@@ -57,13 +52,11 @@ for item in grades:
 
 打印出的每个 `item` 都将是一个包含两个元素的列表。由于 `grades` 的每一项都是一个列表，它也可以被进一步索引。
 
-![](img/9e6df4d49dc525323cbde54b6043cac3_10.png)
 
 ---
 
 ## 双重索引访问内部值 🎯
 
-![](img/9e6df4d49dc525323cbde54b6043cac3_12.png)
 
 因为索引 `grades[0]` 得到一个包含字符串 `'assignment1'` 和成绩 `80` 的列表，所以我们可以使用第二个索引来访问每个部分。
 
@@ -72,7 +65,6 @@ grades[0][0]  # 结果是 'assignment1'
 grades[0][1]  # 结果是 80
 ```
 
-![](img/9e6df4d49dc525323cbde54b6043cac3_14.png)
 
 类似地，对于 `grades` 中索引 1 处的元素：
 
@@ -81,7 +73,6 @@ grades[1][0]  # 结果是 'assignment2'
 grades[1][1]  # 结果是 90
 ```
 
-![](img/9e6df4d49dc525323cbde54b6043cac3_16.png)
 
 对于索引 2 处的元素：
 
@@ -92,7 +83,6 @@ grades[2][1]  # 结果是 70
 
 ---
 
-![](img/9e6df4d49dc525323cbde54b6043cac3_18.png)
 
 ## 编写函数：计算平均成绩 📊
 
@@ -118,11 +108,9 @@ def calculate_average(assignment_grades):
 
 `for` 循环执行完毕后，我们将总和 `total` 除以成绩的数量（即列表 `assignment_grades` 的长度），然后返回这个平均值。
 
-![](img/9e6df4d49dc525323cbde54b6043cac3_20.png)
 
 让我们运行一个示例调用：
 
-![](img/9e6df4d49dc525323cbde54b6043cac3_21.png)
 
 ```python
 grades = [['assignment1', 80], ['assignment2', 90], ['assignment3', 70]]

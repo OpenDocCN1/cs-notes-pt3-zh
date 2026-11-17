@@ -32,39 +32,28 @@ LEAQ IND, DEST
 
 X86架构中，栈从高内存地址开始，向低内存地址增长。栈指针寄存器 `RSP` 指向栈顶。
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_13.png)
 
 以下是直接操作栈的两个指令：
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_15.png)
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_17.png)
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_19.png)
 
 *   **PUSH SRC**：将栈指针 `RSP` 递减一个四字（8字节），然后在新的栈顶位置存入源操作数 `SRC` 的值。
 *   **POP DEST**：从栈顶读取值，存入目标操作数 `DEST`，然后将栈指针 `RSP` 递增一个四字。
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_21.png)
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_23.png)
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_25.png)
 
 ## 条件标志与控制流
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_27.png)
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_29.png)
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_30.png)
 
 处理器包含多个标志位，在X86 Light中我们主要关注三个：
 *   **溢出标志 (OF)**：当有符号整数运算结果超出64位寄存器表示范围时置1。
 *   **符号标志 (SF)**：当运算结果为负数时置1（等于结果的最高位）。
 *   **零标志 (ZF)**：当运算结果为零时置1。
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_32.png)
 
 通过比较两个操作数 `SRC1` 和 `SRC2`（计算 `SRC1 - SRC2` 并设置标志位），我们可以根据这些标志判断它们的关系。
 
@@ -94,9 +83,7 @@ X86汇编代码由**带标签的代码块**组成。标签代表代码位置，�
 
 了解了X86指令后，我们来看看如何在OCaml中表示它们。以下是核心数据结构的定义：
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_34.png)
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_36.png)
 
 首先，定义标签和四字类型：
 ```ocaml
@@ -144,7 +131,6 @@ type instr = opcode * arg list
 type 'a labeled = { lbl : label; global : bool; value : 'a }
 ```
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_38.png)
 
 一个完整的汇编程序由代码段（文本段）和数据段组成：
 ```ocaml
@@ -153,9 +139,7 @@ type prog = { text : instr list labeled list;
 and data = Quad of quad | Asciz of string
 ```
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_40.png)
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_42.png)
 
 利用这些定义，我们可以编写OCaml代码来构建和打印汇编程序，甚至可以将其编译成可执行文件，正如课堂演示的阶乘计算程序一样。
 
@@ -182,9 +166,7 @@ and data = Quad of quad | Asciz of string
 
 64位X86（System V AMD64 ABI）调用约定与32位类似，但细节更多，例如栈对齐要求和“红区”概念。
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_48.png)
 
-![](img/73f6ec77e7f9e91311fa53aa2a02f1a6_50.png)
 
 ## 总结
 

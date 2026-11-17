@@ -133,7 +133,6 @@ echo json_encode($rows); // 编码并输出JSON
 *   **服务器端渲染**：源代码中包含完整的、已填充数据的HTML表格。
 *   **客户端渲染（JSON）**：源代码中的表格体是空的，数据是在页面加载后由JavaScript动态添加的。
 
-![](img/4111cd997d6ccf7c84f350ce6a8749ea_25.png)
 
 ![](img/4111cd997d6ccf7c84f350ce6a8749ea_27.png)
 

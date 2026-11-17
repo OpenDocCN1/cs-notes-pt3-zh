@@ -39,10 +39,8 @@
 
 最后，我们需要能够编写可测试的代码，即编写足够小的代码块，使其易于测试，而无需一次性处理整个系统。
 
-![](img/da4f8e1bcad67df9a970a675d133f3f4_4.png)
 
 ![](img/da4f8e1bcad67df9a970a675d133f3f4_4.png)
 
-![](img/da4f8e1bcad67df9a970a675d133f3f4_5.png)
 
 ![](img/da4f8e1bcad67df9a970a675d133f3f4_5.png)

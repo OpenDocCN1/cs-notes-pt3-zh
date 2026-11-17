@@ -98,7 +98,6 @@ class Node<Key, Value> {
 
 下图展示了卡塔兰分布的形状，清晰表明了其不平衡性。
 
-![](img/2dfa0aad12a760231bf1c58b47c36645_2.png)
 
 ![](img/2dfa0aad12a760231bf1c58b47c36645_2.png)
 

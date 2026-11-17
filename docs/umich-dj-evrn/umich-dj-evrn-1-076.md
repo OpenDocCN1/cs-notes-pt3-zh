@@ -68,7 +68,6 @@ def cookie_demo(request):
 
 ![](img/9adafa944b3e0d9ce049e62f18116dd1_16.png)
 
-![](img/9adafa944b3e0d9ce049e62f18116dd1_17.png)
 
 会话是存储在服务器上的数据，用于在同一个用户的不同请求之间保持状态。Cookie最常见的用途之一就是为会话提供支持：服务器将唯一的会话ID（通常是一个长的随机字符串）存储在浏览器的Cookie中。当浏览器发送请求时，会附带这个会话ID Cookie，服务器通过这个ID找到对应的会话数据。
 

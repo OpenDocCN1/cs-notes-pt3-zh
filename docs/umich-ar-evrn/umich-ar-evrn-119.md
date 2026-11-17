@@ -72,18 +72,13 @@
 
 本节课中，我们一起学习了一个完整的AR教育演示案例。从**触发发射**到**完成登月**，我们看到了AR如何通过**简单的交互**（如触摸虚拟物体）来引导用户、讲述复杂故事，并将抽象的科学和历史概念转化为**身临其境的体验**。这个演示充分体现了AR在提升学习沉浸感和理解深度方面的巨大潜力。
 
-![](img/c0efee2e40ec673538f25bec3222e62a_7.png)
 
 ![](img/c0efee2e40ec673538f25bec3222e62a_7.png)
 
-![](img/c0efee2e40ec673538f25bec3222e62a_8.png)
 
-![](img/c0efee2e40ec673538f25bec3222e62a_8.png)
 
-![](img/c0efee2e40ec673538f25bec3222e62a_9.png)
 
 ![](img/c0efee2e40ec673538f25bec3222e62a_9.png)
 
-![](img/c0efee2e40ec673538f25bec3222e62a_10.png)
 
 ![](img/c0efee2e40ec673538f25bec3222e62a_10.png)

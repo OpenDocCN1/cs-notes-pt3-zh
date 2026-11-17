@@ -2,7 +2,6 @@
 
 ![](img/6fd630df18ef8be921ebbea0afd081fa_0.png)
 
-![](img/6fd630df18ef8be921ebbea0afd081fa_2.png)
 
 ![](img/6fd630df18ef8be921ebbea0afd081fa_4.png)
 
@@ -16,9 +15,7 @@
 
 上一节我们介绍了类的实例属性和方法。本节中我们来看看属于类本身，而不是任何特定实例的成员：静态成员。
 
-![](img/6fd630df18ef8be921ebbea0afd081fa_8.png)
 
-![](img/6fd630df18ef8be921ebbea0afd081fa_10.png)
 
 ![](img/6fd630df18ef8be921ebbea0afd081fa_12.png)
 

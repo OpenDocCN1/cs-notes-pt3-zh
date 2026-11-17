@@ -55,9 +55,7 @@
 
 ## 学术诚信政策
 
-![](img/20a14b9e8d38982a349bb3e24b67d85a_9.png)
 
-![](img/20a14b9e8d38982a349bb3e24b67d85a_11.png)
 
 合作讨论想法和算法是允许且鼓励的。但是，直接共享代码是严格禁止的，这构成抄袭。
 
@@ -78,7 +76,6 @@
 
 所有课堂代码示例都将发布在我的公开GitHub仓库中：`https://github.com/your-repo-link`。课程录像也会更新在那里。
 
-![](img/20a14b9e8d38982a349bb3e24b67d85a_15.png)
 
 我们将使用Git和GitHub提交作业。我会通过GitHub Classroom为每次作业创建私有仓库，确保代码安全且便于我查看。
 
@@ -121,31 +118,23 @@ namespace HelloWorld
 Console.WriteLine("Hello, World!");
 ```
 
-![](img/20a14b9e8d38982a349bb3e24b67d85a_21.png)
 
 编写代码后，可以点击运行按钮或按`F5`键进行调试和运行。程序将在控制台输出“Hello, World!”。
 
-![](img/20a14b9e8d38982a349bb3e24b67d85a_23.png)
 
-![](img/20a14b9e8d38982a349bb3e24b67d85a_25.png)
 
 ### 使用Git提交代码
 
-![](img/20a14b9e8d38982a349bb3e24b67d85a_27.png)
 
 项目创建后，Git会检测到文件变化。你可以使用GitHub Desktop或命令行来提交代码：
 
-![](img/20a14b9e8d38982a349bb3e24b67d85a_29.png)
 
-![](img/20a14b9e8d38982a349bb3e24b67d85a_31.png)
 
 1.  在GitHub Desktop中，填写提交摘要（例如“Initial commit: Hello World”）。
 2.  点击“提交到main”。
 3.  点击“推送origin”将本地提交同步到GitHub云端仓库。
 
-![](img/20a14b9e8d38982a349bb3e24b67d85a_33.png)
 
-![](img/20a14b9e8d38982a349bb3e24b67d85a_35.png)
 
 这样，你的代码就安全地托管在云端，并且我可以直接通过GitHub链接查看你的代码，非常方便。
 

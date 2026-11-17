@@ -56,7 +56,6 @@ $scope.showNumberOfWatchers = function() {
 $scope.onceCounter = 0;
 ```
 
-![](img/c63954500e105e32f04726dd4e4c986b_11.png)
 
 ![](img/c63954500e105e32f04726dd4e4c986b_11.png)
 
@@ -76,7 +75,6 @@ $scope.countOnce = function() {
 };
 ```
 
-![](img/c63954500e105e32f04726dd4e4c986b_14.png)
 
 ![](img/c63954500e105e32f04726dd4e4c986b_14.png)
 
@@ -169,13 +167,11 @@ $scope.$watch('onceCounter', function(newValue, oldValue) {
 
 ![](img/c63954500e105e32f04726dd4e4c986b_25.png)
 
-![](img/c63954500e105e32f04726dd4e4c986b_24.png)
 
 保存代码。刷新页面后，你会看到两组初始化日志。
 
 现在点击“Number of watchers”按钮，观察者数量显示为2。
 
-![](img/c63954500e105e32f04726dd4e4c986b_27.png)
 
 点击“Increment Counter”按钮，你会看到控制台输出 `counter` 的旧值和新值（例如：0 -> 1）。每次点击，值都会更新并触发观察者函数。
 
@@ -185,10 +181,8 @@ $scope.$watch('onceCounter', function(newValue, oldValue) {
 
 本节课中我们一起学习了如何使用 `$watch` 函数手动设置观察者，并观察了属性变化如何触发脏检查。在下一部分，我们将探讨更多由 AngularJS 自动为我们设置观察者的机制。
 
-![](img/c63954500e105e32f04726dd4e4c986b_29.png)
 
 ![](img/c63954500e105e32f04726dd4e4c986b_29.png)
 
-![](img/c63954500e105e32f04726dd4e4c986b_30.png)
 
 ![](img/c63954500e105e32f04726dd4e4c986b_30.png)

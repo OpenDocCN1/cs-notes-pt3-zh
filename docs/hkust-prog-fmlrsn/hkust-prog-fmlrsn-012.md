@@ -1,6 +1,5 @@
 # 012：Coq进阶训练
 
-![](img/66519e63353acdfbde4f3889e3a12870_0.png)
 
 ![](img/66519e63353acdfbde4f3889e3a12870_0.png)
 

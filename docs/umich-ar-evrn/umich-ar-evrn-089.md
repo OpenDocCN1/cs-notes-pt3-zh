@@ -61,7 +61,6 @@ SteamVR 是一个非常流行的虚拟现实平台/工具包，它很好地抽�
 
 ### Vuforia 📱
 
-![](img/2e1d1af95b377b1b9e1ce70d872eece1_3.png)
 
 如果你已经是Unity的爱好者，Vuforia 可能是一个不错的选择。它主要用于基于标记的AR，也提供一些对ARCore、ARKit和HoloLens的支持，可以实现从基于标记到无标记AR的无缝切换。
 

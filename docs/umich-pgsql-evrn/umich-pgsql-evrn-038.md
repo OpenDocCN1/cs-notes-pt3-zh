@@ -10,7 +10,6 @@
 
 在在线应用中，并发是一个关键概念。它指的是多个客户端（例如两个独立的终端）同时连接到同一个数据库服务器并执行操作。
 
-![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_1.png)
 
 ![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_5.png)
 
@@ -32,7 +31,6 @@
 
 ![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_14.png)
 
-![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_16.png)
 
 ![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_5.png)
 ![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_6.png)
@@ -51,13 +49,11 @@ INSERT INTO fav (post_id, account_id, howmuch) VALUES (1, 1, 1);
 
 执行 `SELECT * FROM fav;` 可以看到结果。
 
-![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_20.png)
 
 ![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_8.png)
 
 如果再次执行相同的 `INSERT` 语句，会因为违反唯一约束而报错。我们在创建 `fav` 表时，在 `(post_id, account_id)` 上设置了唯一约束。
 
-![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_10.png)
 
 因此，当记录已存在时，我们需要执行更新操作。
 
@@ -71,10 +67,8 @@ UPDATE fav SET howmuch = howmuch + 1 WHERE post_id = 1 AND account_id = 1 RETURN
 
 ![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_24.png)
 
-![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_25.png)
 
 ![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_14.png)
-![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_16.png)
 
 ![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_27.png)
 
@@ -99,11 +93,9 @@ DO UPDATE SET howmuch = fav.howmuch + 1; -- 冲突时执行更新
 
 ![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_29.png)
 
-![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_30.png)
 
 ![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_32.png)
 
-![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_33.png)
 
 ![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_20.png)
 
@@ -122,7 +114,6 @@ DO UPDATE SET howmuch = fav.howmuch + 1; -- 冲突时执行更新
 
 ![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_22.png)
 ![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_24.png)
-![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_25.png)
 
 ## 显式事务控制
 
@@ -172,7 +163,6 @@ COMMIT; -- 或 ROLLBACK;
 ![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_57.png)
 
 ![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_29.png)
-![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_30.png)
 ![](img/57c7865ee47e8bc2ece69a06c5d1b4ab_32.png)
 
 ### 死锁与超时

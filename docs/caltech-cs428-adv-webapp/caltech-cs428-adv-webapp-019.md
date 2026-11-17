@@ -125,7 +125,6 @@ passport.deserializeUser((id, done) => {
 module.exports = passport;
 ```
 
-![](img/517e2071587e8157cfa6c9556183a85f_40.png)
 
 
 ## 在应用中集成Passport
@@ -158,7 +157,6 @@ app.use(passport.session());
 
 
 
-![](img/517e2071587e8157cfa6c9556183a85f_61.png)
 
 
 ![](img/517e2071587e8157cfa6c9556183a85f_65.png)
@@ -210,7 +208,6 @@ exports.getIndex = (req, res) => {
 };
 ```
 
-![](img/517e2071587e8157cfa6c9556183a85f_88.png)
 
 
 ![](img/517e2071587e8157cfa6c9556183a85f_92.png)
@@ -228,7 +225,6 @@ exports.getIndex = (req, res) => {
 "express-flash": "^0.0.2"
 ```
 
-![](img/517e2071587e8157cfa6c9556183a85f_98.png)
 
 在 `app.js` 中启用它，并在登录EJS模板中显示错误。
 
@@ -255,7 +251,6 @@ exports.getIndex = (req, res) => {
 
 ![](img/517e2071587e8157cfa6c9556183a85f_111.png)
 
-![](img/517e2071587e8157cfa6c9556183a85f_113.png)
 
 ```javascript
 // middlewares/auth.js
@@ -285,7 +280,6 @@ exports.checkNotAuthenticated = (req, res, next) => {
 
 
 
-![](img/517e2071587e8157cfa6c9556183a85f_127.png)
 
 
 
@@ -353,7 +347,6 @@ exports.postLogout = (req, res) => {
 
 ![](img/517e2071587e8157cfa6c9556183a85f_165.png)
 
-![](img/517e2071587e8157cfa6c9556183a85f_167.png)
 
 ```javascript
 // users.model.js
@@ -373,10 +366,8 @@ async add(name, email, password) {
 
 ![](img/517e2071587e8157cfa6c9556183a85f_173.png)
 
-![](img/517e2071587e8157cfa6c9556183a85f_175.png)
 
 
-![](img/517e2071587e8157cfa6c9556183a85f_178.png)
 
 最后，我们使用 `dotenv` 模块将敏感信息（如会话密钥）移出代码，存入 `.env` 文件。
 
@@ -415,7 +406,6 @@ SESSION_SECRET=your_secret_word_here
 
 ![](img/517e2071587e8157cfa6c9556183a85f_192.png)
 
-![](img/517e2071587e8157cfa6c9556183a85f_194.png)
 
 ```bash
 # .gitignore

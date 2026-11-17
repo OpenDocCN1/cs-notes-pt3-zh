@@ -88,7 +88,6 @@ AngularJS 内置的 jqLite 提供了一组有限的 jQuery 方法。我们可以
 以下是使用 jqLite 显示和隐藏警告的函数：
 
 
-![](img/01362f14bf3008d1b0be6c5ee5d72392_19.png)
 
 ```javascript
 function displayCookieWarning() {
@@ -101,7 +100,6 @@ function removeCookieWarning() {
 }
 ```
 
-![](img/01362f14bf3008d1b0be6c5ee5d72392_21.png)
 
 ![](img/01362f14bf3008d1b0be6c5ee5d72392_22.png)
 

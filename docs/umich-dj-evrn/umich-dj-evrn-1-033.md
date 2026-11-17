@@ -14,7 +14,6 @@
 
 ![](img/62ffef858791cf1e23e84bf8f96827a5_3.png)
 
-![](img/62ffef858791cf1e23e84bf8f96827a5_4.png)
 
 ![](img/62ffef858791cf1e23e84bf8f96827a5_1.png)
 
@@ -34,13 +33,11 @@ cd dj4e-samples
 
 然后使用`git pull`命令从GitHub获取最新的代码。这样，如果我修复了示例代码中的任何错误，你总能获得最新版本。
 
-![](img/62ffef858791cf1e23e84bf8f96827a5_10.png)
 
 ![](img/62ffef858791cf1e23e84bf8f96827a5_6.png)
 
 我已经执行过这个命令了。接下来，我需要切换到我的虚拟环境。你可能会注意到我之前没有激活虚拟环境，现在激活了。这是因为下一个命令是`pip`命令，最好在虚拟环境中运行，以免影响系统全局的Python安装。
 
-![](img/62ffef858791cf1e23e84bf8f96827a5_12.png)
 
 ![](img/62ffef858791cf1e23e84bf8f96827a5_8.png)
 
@@ -116,7 +113,6 @@ python manage.py shell
 
 在Shell中，你可以输入Python命令，但这些命令是在Django环境中执行的，不仅仅是纯Python，而是预加载了所有Django应用程序的Python环境。所以启动需要一点时间。
 
-![](img/62ffef858791cf1e23e84bf8f96827a5_23.png)
 
 ![](img/62ffef858791cf1e23e84bf8f96827a5_23.png)
 
@@ -171,7 +167,6 @@ print(u.id)    # 输出：5
 
 她是第五个。至此，我已经有五个模型对象被持久化存储到数据库中了。
 
-![](img/62ffef858791cf1e23e84bf8f96827a5_31.png)
 
 ![](img/62ffef858791cf1e23e84bf8f96827a5_31.png)
 
@@ -242,7 +237,6 @@ print(updated_user)
 
 ![](img/62ffef858791cf1e23e84bf8f96827a5_42.png)
 ![](img/62ffef858791cf1e23e84bf8f96827a5_43.png)
-![](img/62ffef858791cf1e23e84bf8f96827a5_44.png)
 
 ![](img/62ffef858791cf1e23e84bf8f96827a5_42.png)
 
@@ -264,7 +258,6 @@ print(users_desc)
 
 ![](img/62ffef858791cf1e23e84bf8f96827a5_46.png)
 
-![](img/62ffef858791cf1e23e84bf8f96827a5_48.png)
 
 以上就是在Python Shell中可以执行的一些操作。要退出Shell，请输入：
 ```python
@@ -273,7 +266,6 @@ quit()
 
 ![](img/62ffef858791cf1e23e84bf8f96827a5_48.png)
 
-![](img/62ffef858791cf1e23e84bf8f96827a5_50.png)
 
 ---
 

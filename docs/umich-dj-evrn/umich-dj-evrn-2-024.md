@@ -8,11 +8,9 @@ JavaScript不仅是一种编程语言，在浏览器中运行时，它还承担�
 
 ## 浏览器中的执行时机
 
-![](img/ab6c59ac2912179caf8a14ddc9c496da_1.png)
 
 JavaScript代码可以在多个不同的时机被触发执行。以下是主要的几种情况：
 
-![](img/ab6c59ac2912179caf8a14ddc9c496da_3.png)
 
 *   **文档解析时**：当浏览器解析HTML遇到`<script>`标签时，会暂停解析并立即执行其中的JavaScript代码。
 *   **用户界面事件触发时**：例如用户点击（`click`）、调整窗口大小（`resize`）等。
@@ -23,7 +21,6 @@ JavaScript代码可以在多个不同的时机被触发执行。以下是主要�
 
 ## 代码执行方式解析
 
-![](img/ab6c59ac2912179caf8a14ddc9c496da_5.png)
 
 上一节我们介绍了JavaScript的执行时机，本节中我们来看看几种具体的代码执行方式及其原理。
 
@@ -112,17 +109,12 @@ setTimeout(myFunc, 5000); // 注意：myFunc后没有括号()
 *   `myFunc()`：带括号表示**调用函数**，会立即执行函数体并返回其返回值。
 *   `myFunc`：不带括号表示**函数引用**，它是一个代表函数本身的值，可以像变量一样被传递。
 
-![](img/ab6c59ac2912179caf8a14ddc9c496da_19.png)
 
-![](img/ab6c59ac2912179caf8a14ddc9c496da_20.png)
 
-![](img/ab6c59ac2912179caf8a14ddc9c496da_21.png)
 
 `setTimeout`需要接收一个函数引用作为参数，以便在将来调用它。如果错误地写成`setTimeout(myFunc(), 5000)`，则会立即执行`myFunc`，并将其返回值（可能是`undefined`）传给`setTimeout`，导致计时器设置失败。`console.log(myFunc)`的输出直接展示了这个函数对象。
 
-![](img/ab6c59ac2912179caf8a14ddc9c496da_22.png)
 
-![](img/ab6c59ac2912179caf8a14ddc9c496da_24.png)
 
 ## 总结
 

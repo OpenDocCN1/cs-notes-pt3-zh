@@ -2,7 +2,6 @@
 
 ![](img/251a70599dd3e1615fe5aa6f904de42d_0.png)
 
-![](img/251a70599dd3e1615fe5aa6f904de42d_1.png)
 
 hello everyone today we're going to talk，about abl trees，we're going to talk about basic，definitions。
 

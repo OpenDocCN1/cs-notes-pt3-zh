@@ -1,6 +1,5 @@
 # 060：基于任务的并发
 
-![](img/eabae40d4cbb88bc2e066d392e63832d_0.png)
 
 ![](img/eabae40d4cbb88bc2e066d392e63832d_0.png)
 
@@ -203,6 +202,5 @@ public class CompletableFutureExercise {
 
 掌握这些概念有助于你构建更高效、响应更快的应用程序，充分利用现代多核处理器的计算能力。
 
-![](img/eabae40d4cbb88bc2e066d392e63832d_2.png)
 
 ![](img/eabae40d4cbb88bc2e066d392e63832d_2.png)

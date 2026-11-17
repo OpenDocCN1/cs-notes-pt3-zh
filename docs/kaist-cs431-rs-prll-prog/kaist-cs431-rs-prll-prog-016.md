@@ -4,36 +4,25 @@
 
 ## 概述
 
-![](img/c601eb537c652afd698b09f60225460d_1.png)
 
 在之前的课程中，我们学习了自旋锁、票锁和CH锁。今天，我们将学习名为MCS锁和MCS Parking锁的变体。MCS锁是CH锁的一个改进版本，它试图解决NUMA（非统一内存访问）架构下的性能问题，特别是内存分配与释放的局部性问题。MCS Parking锁则在MCS锁的基础上，让未获得锁的线程进入睡眠状态，以节省CPU时间和能耗。
 
-![](img/c601eb537c652afd698b09f60225460d_3.png)
 
-![](img/c601eb537c652afd698b09f60225460d_5.png)
 
 ## MCS锁的核心思想
 
-![](img/c601eb537c652afd698b09f60225460d_7.png)
 
-![](img/c601eb537c652afd698b09f60225460d_9.png)
 
-![](img/c601eb537c652afd698b09f60225460d_11.png)
 
 MCS锁与CH锁类似，也使用链表来管理等待锁的线程。其关键改进在于：每个线程创建并操作的节点，最终由同一个线程负责释放。这与CH锁不同，在CH锁中，一个线程分配的节点可能由下一个线程释放，这可能影响内存分配器的性能。
 
-![](img/c601eb537c652afd698b09f60225460d_13.png)
 
 MCS锁的基本数据结构如下：
 
-![](img/c601eb537c652afd698b09f60225460d_15.png)
 
 
-![](img/c601eb537c652afd698b09f60225460d_17.png)
 
-![](img/c601eb537c652afd698b09f60225460d_18.png)
 
-![](img/c601eb537c652afd698b09f60225460d_20.png)
 
 ```rust
 struct Node {
@@ -45,54 +34,39 @@ struct McsLock {
 }
 ```
 
-![](img/c601eb537c652afd698b09f60225460d_22.png)
 
 每个尝试获取锁的线程都会创建一个新的`Node`。`locked`字段表示该线程是否可以获得锁（`false`表示可以），`next`指向链表中的下一个节点。锁本身（`McsLock`）仅维护一个指向链表尾部的指针`tail`。
 
-![](img/c601eb537c652afd698b09f60225460d_24.png)
 
-![](img/c601eb537c652afd698b09f60225460d_26.png)
 
 ## MCS锁的获取与释放流程
 
-![](img/c601eb537c652afd698b09f60225460d_28.png)
 
 以下是MCS锁工作流程的逐步分析。
 
-![](img/c601eb537c652afd698b09f60225460d_30.png)
 
-![](img/c601eb537c652afd698b09f60225460d_32.png)
 
-![](img/c601eb537c652afd698b09f60225460d_34.png)
 
 ### 场景一：第一个线程（A）获取锁
 
-![](img/c601eb537c652afd698b09f60225460d_36.png)
 
-![](img/c601eb537c652afd698b09f60225460d_38.png)
 
 初始时，锁的`tail`指针为`null`。
 
-![](img/c601eb537c652afd698b09f60225460d_40.png)
 
-![](img/c601eb537c652afd698b09f60225460d_42.png)
 
 1.  线程A调用`lock`函数。
 2.  它创建一个新节点`node_a`，其`locked`字段初始化为`true`（表示尚未获得锁），`next`为`null`。
 3.  线程A通过原子交换操作，将锁的`tail`指针从`null`设置为指向`node_a`。交换操作返回之前的`tail`值（即`null`），赋值给变量`prev`。
 4.  由于`prev`为`null`，线程A意识到自己是第一个请求锁的线程，因此它成功获取锁，函数返回。此时，`node_a.locked`仍为`true`，但这不影响持有锁的线程A。
 
-![](img/c601eb537c652afd698b09f60225460d_44.png)
 
 ### 场景二：第二个线程（B）在A持有锁时尝试获取
 
-![](img/c601eb537c652afd698b09f60225460d_46.png)
 
-![](img/c601eb537c652afd698b09f60225460d_48.png)
 
 此时，`tail`指针指向`node_a`。
 
-![](img/c601eb537c652afd698b09f60225460d_50.png)
 
 1.  线程B调用`lock`函数。
 2.  它创建新节点`node_b`（`locked = true`, `next = null`）。
@@ -100,15 +74,11 @@ struct McsLock {
 4.  由于`prev`不为`null`，线程B知道自己需要等待。它执行 `prev.next.store(node_b, Release)`，将`node_a`的`next`指针指向`node_b`，从而将自己加入等待队列。
 5.  接着，线程B在一个循环中自旋，等待自身的`node_b.locked`变为`false`：`while node_b.locked.load(Acquire) { }`。
 
-![](img/c601eb537c652afd698b09f60225460d_52.png)
 
-![](img/c601eb537c652afd698b09f60225460d_54.png)
 
-![](img/c601eb537c652afd698b09f60225460d_56.png)
 
 ### 场景三：线程A释放锁，线程B获取锁
 
-![](img/c601eb537c652afd698b09f60225460d_58.png)
 
 1.  线程A调用`unlock`函数，传入它自己的令牌`node_a`。
 2.  它首先读取`node_a.next`。如果`next`不为`null`（即指向`node_b`），则说明有线程在等待。
@@ -116,11 +86,8 @@ struct McsLock {
 4.  这个操作使得正在自旋的线程B的`while`循环条件变为假，线程B得以退出循环，从`lock`函数返回，从而成功获取锁。
 5.  线程A随后可以安全地释放（`drop`）其节点`node_a`。
 
-![](img/c601eb537c652afd698b09f60225460d_60.png)
 
-![](img/c601eb537c652afd698b09f60225460d_62.png)
 
-![](img/c601eb537c652afd698b09f60225460d_64.png)
 
 ### 场景四：线程B释放锁时无等待者
 
@@ -129,17 +96,12 @@ struct McsLock {
 3.  线程B尝试使用**比较并交换**操作，将`tail`指针从指向`node_b`重置为`null`。如果操作成功，说明在检查`next`之后、执行CAS之前，没有新的线程加入等待队列，锁完全空闲。
 4.  线程B随后释放其节点`node_b`。
 
-![](img/c601eb537c652afd698b09f60225460d_66.png)
 
-![](img/c601eb537c652afd698b09f60225460d_68.png)
 
-![](img/c601eb537c652afd698b09f60225460d_69.png)
 
 如果在步骤3的CAS操作执行时，恰好有新线程C尝试获取锁并成功将`tail`指向了自己，那么线程B的CAS操作会失败。此时，线程B会回到步骤2，重新加载`node_b.next`（此时已被线程C的`lock`操作设置为指向`node_c`），然后执行场景三中的步骤，将`node_c.locked`设为`false`以唤醒线程C。
 
-![](img/c601eb537c652afd698b09f60225460d_71.png)
 
-![](img/c601eb537c652afd698b09f60225460d_73.png)
 
 ## MCS锁与CH锁的关键区别
 
@@ -180,7 +142,6 @@ MCS Parking锁是MCS锁的一个变体，其核心思想是：当线程无法立
 
 因此，正确的顺序保证了被唤醒的线程一定能看到`locked`为`false`的状态。
 
-![](img/c601eb537c652afd698b09f60225460d_75.png)
 
 ## 内存顺序详解
 

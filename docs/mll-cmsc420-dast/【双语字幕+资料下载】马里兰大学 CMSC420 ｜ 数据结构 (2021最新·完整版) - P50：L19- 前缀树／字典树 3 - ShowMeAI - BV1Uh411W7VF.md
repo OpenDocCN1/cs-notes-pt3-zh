@@ -2,7 +2,6 @@
 
 ![](img/3c453f5a89cf5981893e54489c9a3ed7_0.png)
 
-![](img/3c453f5a89cf5981893e54489c9a3ed7_1.png)
 
 in this segment we're going to continue，talking about digital search trees and。
 

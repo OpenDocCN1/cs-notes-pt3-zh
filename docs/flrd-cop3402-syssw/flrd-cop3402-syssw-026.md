@@ -64,7 +64,6 @@
 
 ![](img/817c485046cbd9a100e6fc49e9e71fef_9.png)
 
-![](img/817c485046cbd9a100e6fc49e9e71fef_11.png)
 
 ![](img/817c485046cbd9a100e6fc49e9e71fef_13.png)
 
@@ -109,13 +108,11 @@ Simple IR的算术运算对应特定的x86汇编指令：
 
 x86汇编通常使用双操作数指令，如 `addq %rbx, %rax` 表示 `rax = rax + rbx`。
 
-![](img/817c485046cbd9a100e6fc49e9e71fef_17.png)
 
 ## 分支逻辑实现
 
 ![](img/817c485046cbd9a100e6fc49e9e71fef_19.png)
 
-![](img/817c485046cbd9a100e6fc49e9e71fef_21.png)
 
 ![](img/817c485046cbd9a100e6fc49e9e71fef_22.png)
 
@@ -142,13 +139,11 @@ jle .label           # 如果rax <= 10，跳转到.label
 *   **解引用赋值**：`deref x t1` 将 `t1` 的值写入 `x` 所指向的地址。对应汇编需要先加载地址，再存储值，例如 `movq (%rax), %rbx` 然后 `movq %rbx, (%rcx)`。
 *   **指针变量访问**：如果变量本身存储的是地址，那么直接使用该值进行内存访问。
 
-![](img/817c485046cbd9a100e6fc49e9e71fef_24.png)
 
 关键语法：
 *   `movq (%rax), %rbx`：将 `rax` 寄存器中值所代表的内存地址处的数据，加载到 `rbx`。
 *   `movq %rbx, (%rax)`：将 `rbx` 中的值，存储到 `rax` 寄存器中值所代表的内存地址处。
 
-![](img/817c485046cbd9a100e6fc49e9e71fef_26.png)
 
 ---
 

@@ -1,6 +1,5 @@
 # 004：数值
 
-![](img/daf7e752addae24d114c906c9e04fa1e_0.png)
 
 ![](img/daf7e752addae24d114c906c9e04fa1e_0.png)
 
@@ -174,7 +173,6 @@
 
 让我们回到代码中。
 
-![](img/daf7e752addae24d114c906c9e04fa1e_2.png)
 
 ![](img/daf7e752addae24d114c906c9e04fa1e_2.png)
 

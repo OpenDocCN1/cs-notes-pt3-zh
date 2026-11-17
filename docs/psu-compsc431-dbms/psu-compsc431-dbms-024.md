@@ -19,9 +19,7 @@
 
 ---
 
-![](img/f914ddc5876808955acd34ad139da803_1.png)
 
-![](img/f914ddc5876808955acd34ad139da803_3.png)
 
 ![](img/f914ddc5876808955acd34ad139da803_5.png)
 

@@ -87,7 +87,6 @@ Next.js是一个全功能的React框架，它集成了React、路由、TypeScrip
 
 ## 动手创建Next.js应用 🛠️
 
-![](img/493ca5626ac965db42cd554084d2a462_11.png)
 
 ![](img/493ca5626ac965db42cd554084d2a462_12.png)
 
@@ -112,9 +111,7 @@ Next.js是一个全功能的React框架，它集成了React、路由、TypeScrip
     *   **是否使用App Router：务必选择 `否`**，本课程使用Pages Router。
     *   是否启用Turbopack：可选
 
-![](img/493ca5626ac965db42cd554084d2a462_18.png)
 
-![](img/493ca5626ac965db42cd554084d2a462_20.png)
 
 ### 项目结构与基于文件的路由
 

@@ -2,7 +2,6 @@
 
 ![](img/9330e579430d47a9583ed0dd4373c5ac_0.png)
 
-![](img/9330e579430d47a9583ed0dd4373c5ac_1.png)
 
 in this segment we're going to continue，talking about trees we're going to。
 

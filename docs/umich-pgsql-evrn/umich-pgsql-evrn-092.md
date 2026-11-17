@@ -8,7 +8,6 @@
 
 ## 序列化：将Python对象转换为JSON字符串
 
-![](img/db907075d6d89b909b79ee181fc4c27b_1.png)
 
 首先，我们来看如何将Python的内部数据结构序列化为JSON字符串。这个过程涉及创建一个数据结构，然后将其转换为可以存储或传输的字符串格式。
 
@@ -26,7 +25,6 @@ json_string = json.dumps(data, indent=4)
 print(json_string)
 ```
 
-![](img/db907075d6d89b909b79ee181fc4c27b_3.png)
 
 这段代码创建了一个嵌套的字典结构，然后使用 `json.dumps()` 函数将其转换为格式美观的JSON字符串。`indent=4` 参数使输出的JSON带有缩进，便于人类阅读。
 
@@ -36,10 +34,8 @@ print(json_string)
 
 以下是如何将JSON字符串加载回Python对象的示例：
 
-![](img/db907075d6d89b909b79ee181fc4c27b_5.png)
 
 
-![](img/db907075d6d89b909b79ee181fc4c27b_7.png)
 
 ```python
 import json
@@ -65,15 +61,12 @@ print('Hide:', info['email']['hide'])
 
 ## 处理JSON数组
 
-![](img/db907075d6d89b909b79ee181fc4c27b_9.png)
 
 JSON不仅可以表示对象，也可以表示数组（在Python中对应列表）。处理方式与此前类似。
 
 以下是序列化和反序列化包含列表的JSON数据的示例：
 
-![](img/db907075d6d89b909b79ee181fc4c27b_11.png)
 
-![](img/db907075d6d89b909b79ee181fc4c27b_12.png)
 
 ```python
 # 序列化列表
@@ -93,7 +86,6 @@ for item in my_list:
 
 ## 与XML处理的对比
 
-![](img/db907075d6d89b909b79ee181fc4c27b_14.png)
 
 为了更好地理解JSON的优势，我们可以将其与XML的处理方式进行简单对比。在Python中解析XML通常需要使用特定的库（如 `xml.etree.ElementTree`），并将数据解析为一棵节点树，然后通过查询方法来提取数据。
 

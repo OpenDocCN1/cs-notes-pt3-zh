@@ -12,39 +12,30 @@
 
 ---
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_2.png)
 
 ## 动画的定义与历史
 
 动画最初的定义是“赋予生命”，即让静态物体动起来。它作为一种交流和艺术表达工具，更侧重于美学效果而非物理准确性。在计算机图形学中，动画可理解为在不同时间点具有不同几何形状的模型序列。
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_4.png)
 
 动画的形成依赖于人眼的视觉暂留效应。常见的帧率标准包括电影的24 FPS、视频的30 FPS、游戏的60 FPS以及虚拟现实要求的90 FPS。
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_6.png)
 
 ![](img/67c59d3a9154dfaefe30bbafed3093fa_8.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_10.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_12.png)
 
 ### 动画发展里程碑
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_13.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_15.png)
 
 ![](img/67c59d3a9154dfaefe30bbafed3093fa_17.png)
 
 ![](img/67c59d3a9154dfaefe30bbafed3093fa_19.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_21.png)
 
 以下是动画发展过程中的几个关键里程碑：
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_23.png)
 
 *   **早期探索**：古代壁画已包含动态狩猎场景的序列图像，体现了动画的基本思想。
 *   **机械动画**：使用旋转圆盘等机械装置，通过窗口观察序列图像，形成早期动画。
@@ -56,7 +47,6 @@
     *   《玩具总动员》（1995年）：第一部完全由计算机生成的剧场版动画电影。
 *   **现代动画**：如《冰雪奇缘2》（2019年），集成了复杂的物理模拟、细节渲染和特效。
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_25.png)
 
 ![](img/67c59d3a9154dfaefe30bbafed3093fa_27.png)
 
@@ -66,15 +56,11 @@
 
 ![](img/67c59d3a9154dfaefe30bbafed3093fa_31.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_33.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_35.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_37.png)
 
 ## 关键帧动画 🖼️
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_39.png)
 
 ![](img/67c59d3a9154dfaefe30bbafed3093fa_41.png)
 
@@ -90,11 +76,9 @@
 
 ## 物理模拟 ⚙️
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_43.png)
 
 上一节我们介绍了基于艺术创作的关键帧动画，本节中我们来看看另一种基于物理规律的方法——物理模拟。
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_45.png)
 
 ![](img/67c59d3a9154dfaefe30bbafed3093fa_47.png)
 
@@ -108,11 +92,9 @@
 
 ![](img/67c59d3a9154dfaefe30bbafed3093fa_53.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_55.png)
 
 质点弹簧系统是物理模拟中一个简单而强大的模型，由一系列通过弹簧连接的质点构成。它可以用来模拟绳子、布料、头发等多种物体。
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_57.png)
 
 一个基础的弹簧单元连接两个质点 **a** 和 **b**。根据胡克定律，弹簧产生的力与它的形变成正比，方向试图使其恢复原长。
 
@@ -180,21 +162,14 @@ f_damping = -k_d * ( (ḃ - ȧ) · ((b - a) / |b - a|) ) * ((b - a) / |b - a|)
 
 ![](img/67c59d3a9154dfaefe30bbafed3093fa_59.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_61.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_63.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_65.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_67.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_69.png)
 
 通过为每个粒子（个体）编程实现这些基于局部邻居的规则，整个系统就能呈现出逼真的群体运动。
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_71.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_73.png)
 
 ![](img/67c59d3a9154dfaefe30bbafed3093fa_75.png)
 
@@ -202,13 +177,10 @@ f_damping = -k_d * ( (ḃ - ȧ) · ((b - a) / |b - a|) ) * ((b - a) / |b - a|)
 
 ## 运动学 🤖
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_77.png)
 
 运动学描述物体的运动而不考虑其原因（力）。在计算机动画中，运动学分为正向运动学和逆向运动学。
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_79.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_81.png)
 
 ### 正向运动学
 
@@ -238,23 +210,17 @@ p = L1 * [cos(θ1), sin(θ1)] + L2 * [cos(θ1+θ2), sin(θ1+θ2)]
 
 ---
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_91.png)
 
 ## 绑定与动作捕捉 🎭
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_93.png)
 
 ### 绑定
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_95.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_97.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_99.png)
 
 绑定是为虚拟角色创建控制系统（控制点）的过程，使动画师能够像操纵木偶一样方便地操控角色做出各种姿态和表情。这通常涉及设置骨骼层次结构、蒙皮权重以及设计直观的控制曲线/控制器。
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_101.png)
 
 ![](img/67c59d3a9154dfaefe30bbafed3093fa_103.png)
 
@@ -262,28 +228,22 @@ p = L1 * [cos(θ1), sin(θ1)] + L2 * [cos(θ1+θ2), sin(θ1+θ2)]
 
 ![](img/67c59d3a9154dfaefe30bbafed3093fa_105.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_107.png)
 
 动作捕捉是一种技术，通过记录真实演员的运动数据，并将其映射到虚拟角色上，以快速生成逼真的动画。
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_109.png)
 
 以下是几种主要的动作捕捉技术：
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_111.png)
 
 *   **光学式**：在演员身上粘贴反光标记点，使用多台高速摄像机追踪标记点的三维运动。这是最主流的方法，但存在遮挡问题。
 *   **惯性式**：在演员身上佩戴陀螺仪、加速度计等传感器，直接测量肢体运动。不受遮挡影响，但可能存在累积误差。
 *   **机械式**：使用外骨骼机械装置直接测量关节角度。精度高，但会限制演员活动。
 *   **视觉式**：仅使用普通摄像机，通过计算机视觉算法从视频中估计人体姿态。成本低，但精度和鲁棒性通常是挑战。
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_113.png)
 
 动作捕捉能极大提高动画制作效率，并获取高度真实的运动数据，但获取的数据通常需要动画师进行清理、调整和艺术化加工。
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_115.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_117.png)
 
 ---
 
@@ -291,15 +251,12 @@ p = L1 * [cos(θ1), sin(θ1)] + L2 * [cos(θ1+θ2), sin(θ1+θ2)]
 
 ![](img/67c59d3a9154dfaefe30bbafed3093fa_119.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_121.png)
 
 ![](img/67c59d3a9154dfaefe30bbafed3093fa_123.png)
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_125.png)
 
 一个完整的现代三维动画电影制作流程包含多个环节：
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_127.png)
 
 以下是动画电影从构思到成品的典型生产管线：
 
@@ -319,7 +276,6 @@ p = L1 * [cos(θ1), sin(θ1)] + L2 * [cos(θ1+θ2), sin(θ1+θ2)]
 
 本节课中我们一起学习了计算机动画的基础知识。我们从动画的定义和历史出发，探讨了关键帧动画这一传统方法，并深入了解了基于物理规律的模拟技术，包括质点弹簧系统和粒子系统。接着，我们学习了描述关节链运动的运动学（正向与逆向），以及业界广泛使用的绑定和动作捕捉技术。最后，我们概述了一个完整的动画电影制作流程。
 
-![](img/67c59d3a9154dfaefe30bbafed3093fa_129.png)
 
 ![](img/67c59d3a9154dfaefe30bbafed3093fa_131.png)
 

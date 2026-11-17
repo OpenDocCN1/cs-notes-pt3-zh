@@ -1,6 +1,5 @@
 # 057：科赫雪花示例
 
-![](img/522b59d59b46c3a2d24d9b3ad4d70aa3_0.png)
 
 ![](img/522b59d59b46c3a2d24d9b3ad4d70aa3_0.png)
 
@@ -192,6 +191,5 @@ public static int powerOf10(int n) {
 
 理解科赫雪花的实现，有助于深化对递归、坐标系变换以及数学与编程结合的认识。
 
-![](img/522b59d59b46c3a2d24d9b3ad4d70aa3_2.png)
 
 ![](img/522b59d59b46c3a2d24d9b3ad4d70aa3_2.png)

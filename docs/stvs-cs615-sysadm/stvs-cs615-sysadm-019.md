@@ -4,7 +4,6 @@
 
 上一节我们介绍了在 NetBSD 上使用 `resize_ffs` 工具调整文件系统。本节中，我们来看看在 Linux 系统上完成相同任务的过程。尽管工具不同，但只要工具支持，其核心概念和基本步骤在不同操作系统间是相通的。
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_1.png)
 
 ## 概述与准备 📋
 
@@ -19,30 +18,23 @@
 
 ## 步骤一：启动实例并附加磁盘 🚀
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_3.png)
 
 我们使用 AWS 命令行工具启动一个 Debian 实例，创建一个新卷，并将其附加到该实例。
 
 实例启动并运行后，我们通过 SSH 以管理员用户身份登录，准备操作新增的磁盘。
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_5.png)
 
 ## 步骤二：分区与创建文件系统 🗂️
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_7.png)
 
 首先，我们使用 `fdisk` 工具对新磁盘进行分区。磁盘设备通常为 `/dev/nvme1n1`。
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_9.png)
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_11.png)
 
 以下是使用 `fdisk` 创建分区的关键命令序列：
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_13.png)
 
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_15.png)
 
 ```bash
 # 启动 fdisk 对指定磁盘进行操作
@@ -59,13 +51,10 @@ sudo fdisk /dev/nvme1n1
 # 输入 ‘w’ 将更改写入磁盘
 ```
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_17.png)
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_19.png)
 
 操作完成后，使用 `lsblk` 命令确认分区创建成功。
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_21.png)
 
 接下来，在每个分区上创建 ext2 文件系统：
 
@@ -78,10 +67,8 @@ sudo mkfs.ext2 /dev/nvme1n1p2
 
 我们至少挂载第一个分区，并在其上创建一个文件，以证明后续调整操作不会破坏数据。
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_23.png)
 
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_25.png)
 
 ```bash
 # 创建挂载点并挂载分区
@@ -95,7 +82,6 @@ sudo touch /mnt/test/our_test_file.txt
 
 ## 步骤四：扩展文件系统 ⬆️
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_27.png)
 
 要调整文件系统大小，首先必须卸载它。与在 NetBSD 上类似，我们需要先调整分区大小，然后才能扩展文件系统。
 
@@ -109,7 +95,6 @@ sudo touch /mnt/test/our_test_file.txt
 
 操作完成后，重新挂载分区并检查：
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_29.png)
 
 ```bash
 sudo mount /dev/nvme1n1p1 /mnt/test
@@ -117,23 +102,18 @@ lsblk /dev/nvme1n1p1
 ls /mnt/test/
 ```
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_31.png)
 
 此时应显示文件系统大小约为 1 GB，且之前创建的文件仍然存在。
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_33.png)
 
 ## 步骤五：收缩文件系统 ⬇️
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_35.png)
 
 现在，我们来收缩文件系统。同样，任何文件系统操作都需要先卸载。
 
 以下是收缩文件系统的步骤：
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_37.png)
 
-![](img/6e1e1052ab0b6c945f559886f6d9fb00_39.png)
 
 1.  卸载文件系统：`sudo umount /mnt/test`
 2.  尝试使用 `resize2fs` 收缩文件系统到 256 MB：`sudo resize2fs /dev/nvme1n1p1 256M`。工具会提示需要先运行 `e2fsck`。

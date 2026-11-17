@@ -6,7 +6,6 @@
 
 ![](img/84dfb47be7e35e8c419bfa1eae2faa09_4.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_6.png)
 
 在本节答疑会中，我们将聚焦于专项课程的第三门课程——开发课程，特别是使用A-Frame框架进行WebXR开发。我们将回顾课程作业要求，并通过一个太阳系示例项目，演示如何从构思到实现一个完整的3D、VR及AR场景。本节内容旨在为初学者提供清晰的指引和实用的技巧。
 
@@ -20,7 +19,6 @@
 
 这门课程专注于开发，涵盖了多种平台，包括Unity、Unreal Engine以及WebXR（使用A-Frame）。课程旨在教授如何在不同平台上进行XR开发，而不仅仅是学习某个特定工具。今天的答疑会将重点讨论A-Frame，并展示如何完成课程中的作业。
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_10.png)
 
 课程作业主要包含三个部分：
 1.  **构建3D场景**：创建一个基础的3D环境。
@@ -33,11 +31,8 @@
 
 接下来，我们将深入了解A-Frame，并逐步构建一个太阳系示例项目。
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_15.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_17.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_18.png)
 
 ![](img/84dfb47be7e35e8c419bfa1eae2faa09_20.png)
 
@@ -79,9 +74,7 @@ A-Frame是一个基于HTML的WebXR框架，它让构建3D和XR体验变得像编
 *   **Windows系统**：`Ctrl + Alt + I`
 *   **Mac系统**：`Ctrl + Option + I`
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_41.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_42.png)
 
 激活后，你可以选择场景中的物体，查看其属性（如位置、旋转、材质），甚至直接修改这些属性。虽然修改不会永久保存，但这是一个极佳的学习和调试方式。
 
@@ -93,7 +86,6 @@ A-Frame是一个基于HTML的WebXR框架，它让构建3D和XR体验变得像编
 
 ![](img/84dfb47be7e35e8c419bfa1eae2faa09_46.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_47.png)
 
 ![](img/84dfb47be7e35e8c419bfa1eae2faa09_49.png)
 
@@ -118,7 +110,6 @@ A-Frame是一个基于HTML的WebXR框架，它让构建3D和XR体验变得像编
 </html>
 ```
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_53.png)
 
 ![](img/84dfb47be7e35e8c419bfa1eae2faa09_55.png)
 
@@ -126,7 +117,6 @@ A-Frame是一个基于HTML的WebXR框架，它让构建3D和XR体验变得像编
 
 ![](img/84dfb47be7e35e8c419bfa1eae2faa09_58.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_60.png)
 
 这个模板包含了A-Frame库，并定义了一个简单的场景，其中有一个立方体、一个球体、一个平面和天空背景。
 
@@ -138,7 +128,6 @@ A-Frame是一个基于HTML的WebXR框架，它让构建3D和XR体验变得像编
 
 ![](img/84dfb47be7e35e8c419bfa1eae2faa09_65.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_66.png)
 
 ## 项目实战：构建太阳系3D场景 🌞
 
@@ -152,23 +141,17 @@ A-Frame是一个基于HTML的WebXR框架，它让构建3D和XR体验变得像编
 
 ![](img/84dfb47be7e35e8c419bfa1eae2faa09_70.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_71.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_72.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_74.png)
 
 1.  **灵感来源**：参考NASA的太阳系模拟器等现有体验。
 2.  **绘制草图**：简单勾勒出场景布局，例如太阳在中心，地球绕太阳公转，月球绕地球公转。
 3.  **定义目标**：明确场景中需要包含的元素，例如3D模型、光照、动画和交互。
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_76.png)
 
 ![](img/84dfb47be7e35e8c419bfa1eae2faa09_77.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_79.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_81.png)
 
 ### 第二步：搭建基础场景
 
@@ -190,9 +173,7 @@ A-Frame是一个基于HTML的WebXR框架，它让构建3D和XR体验变得像编
 
 ![](img/84dfb47be7e35e8c419bfa1eae2faa09_89.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_91.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_93.png)
 
 ```html
 <a-sphere id="earth" radius="0.5" src="assets/earth-day.jpg">
@@ -211,9 +192,7 @@ A-Frame是一个基于HTML的WebXR框架，它让构建3D和XR体验变得像编
 
 为了增加场景的趣味性和完成作业要求，我们可以添加一些交互功能。
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_97.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_99.png)
 
 以下是实现的一些关键交互：
 
@@ -223,7 +202,6 @@ A-Frame是一个基于HTML的WebXR框架，它让构建3D和XR体验变得像编
 
 ![](img/84dfb47be7e35e8c419bfa1eae2faa09_101.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_103.png)
 
 ![](img/84dfb47be7e35e8c419bfa1eae2faa09_105.png)
 
@@ -233,7 +211,6 @@ A-Frame是一个基于HTML的WebXR框架，它让构建3D和XR体验变得像编
 
 ![](img/84dfb47be7e35e8c419bfa1eae2faa09_107.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_108.png)
 
 ## 进阶：将3D场景转换为VR与AR体验 🥽
 
@@ -245,7 +222,6 @@ A-Frame是一个基于HTML的WebXR框架，它让构建3D和XR体验变得像编
 
 我们已经完成了一个功能丰富的3D太阳系场景，接下来看看如何将其升级为VR和AR体验。
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_115.png)
 
 ![](img/84dfb47be7e35e8c419bfa1eae2faa09_117.png)
 
@@ -271,21 +247,15 @@ A-Frame是一个基于HTML的WebXR框架，它让构建3D和XR体验变得像编
 
 以下是需要添加的关键组件：
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_132.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_134.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_135.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_136.png)
 
 1.  **相机设备**：使用`<a-entity camera="active: true”>`和`<a-entity oculus-go-controls>`等组件来配置VR相机和控制器。
 2.  **移动机制**：集成`teleport-controls`组件，允许用户通过瞬移在场景中自由移动。
 3.  **手部交互**：使用`super-hands`等组件，让用户可以用虚拟手抓取、移动场景中的物体（例如行星）。这通常还需要添加物理引擎组件来处理碰撞。
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_137.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_139.png)
 
 ![](img/84dfb47be7e35e8c419bfa1eae2faa09_141.png)
 
@@ -301,15 +271,12 @@ A-Frame是一个基于HTML的WebXR框架，它让构建3D和XR体验变得像编
 
 ![](img/84dfb47be7e35e8c419bfa1eae2faa09_147.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_148.png)
 
 ### 创建AR版本
 
 ![](img/84dfb47be7e35e8c419bfa1eae2faa09_149.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_151.png)
 
-![](img/84dfb47be7e35e8c419bfa1eae2faa09_152.png)
 
 A-Frame支持两种主要的WebAR方式：基于标记的AR（使用AR.js）和无标记的AR（使用8th Wall或A-Frame的AR模块）。
 

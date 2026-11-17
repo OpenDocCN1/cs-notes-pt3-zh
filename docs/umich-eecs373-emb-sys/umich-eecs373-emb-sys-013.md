@@ -4,7 +4,6 @@
 
 ![](img/5f717c1ef0b22bce3215704c5acea887_3.png)
 
-![](img/5f717c1ef0b22bce3215704c5acea887_4.png)
 
 在本节课中，我们将要学习模拟信号的基础知识，包括模拟到数字转换（ADC）和数字到模拟转换（DAC）的核心概念、工作原理以及在实际系统中的应用。
 
@@ -24,11 +23,8 @@
 
 ![](img/5f717c1ef0b22bce3215704c5acea887_10.png)
 
-![](img/5f717c1ef0b22bce3215704c5acea887_12.png)
 
-![](img/5f717c1ef0b22bce3215704c5acea887_13.png)
 
-![](img/5f717c1ef0b22bce3215704c5acea887_15.png)
 
 ![](img/5f717c1ef0b22bce3215704c5acea887_17.png)
 

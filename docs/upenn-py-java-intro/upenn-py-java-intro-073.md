@@ -1,6 +1,5 @@
 # 073：编程演示-元音单词计数器 🧮
 
-![](img/9689a3be56cbdfe762612779f6869ee4_1.png)
 
 在本节课中，我们将学习如何编写一个Python程序，该程序能够统计字符串中的元音字母数量以及句子中的单词数量。我们将从创建两个独立的功能开始，然后通过代码重构将它们合并到一个更通用的函数中，以提高代码的复用性和清晰度。
 
@@ -72,7 +71,6 @@ def word_counter(sentence):
 
 观察 `vowel_counter` 和 `word_counter` 函数，我们发现它们具有相似的结构：都是遍历一个字符串，并统计其中符合特定条件的字符数量。
 
-![](img/9689a3be56cbdfe762612779f6869ee4_3.png)
 
 为了提高代码的复用性，我们可以创建一个通用的函数 `count_instance_of_str`。
 
@@ -87,7 +85,6 @@ def count_instance_of_str(string1, string2):
     return count
 ```
 
-![](img/9689a3be56cbdfe762612779f6869ee4_5.png)
 
 现在，我们可以利用这个通用函数来重写（重构）之前的两个专用函数。
 
@@ -107,11 +104,9 @@ def word_counter(sentence):
     return word_count
 ```
 
-![](img/9689a3be56cbdfe762612779f6869ee4_7.png)
 
 最后，更新 `main` 函数以同时或分别调用这两个功能，程序的核心逻辑就完成了。
 
-![](img/9689a3be56cbdfe762612779f6869ee4_9.png)
 
 ## 总结
 

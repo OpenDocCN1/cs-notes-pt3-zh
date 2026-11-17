@@ -43,9 +43,7 @@ INSERT INTO email (email) VALUES ('glenn1@umich.edu');
 
 以下是使用 `substring` 函数进行提取的示例：
 
-![](img/cb2f2797e7920d708b29abc2eb4ab3da_5.png)
 
-![](img/cb2f2797e7920d708b29abc2eb4ab3da_6.png)
 
 *   `SELECT substring(email FROM '[0-9]+') FROM email WHERE email ~ '[0-9]';`：此查询从包含数字的电子邮件地址中提取出第一个连续的数字序列。`[0-9]+` 中的 `+` 表示匹配一个或多个数字。
 *   `SELECT DISTINCT substring(email FROM '.+@(.+)$') FROM email;`：此查询提取所有电子邮件地址的域名部分（`@` 符号之后的内容），并使用 `DISTINCT` 去除重复项。模式 `.` 匹配任意字符，`+` 表示一个或多个，括号 `()` 内的部分 `(.+)` 表示要提取的内容。
@@ -58,7 +56,6 @@ INSERT INTO email (email) VALUES ('glenn1@umich.edu');
 
 首先，我们创建一个推文表并插入一些示例数据。
 
-![](img/cb2f2797e7920d708b29abc2eb4ab3da_8.png)
 
 ```sql
 CREATE TABLE tw (id SERIAL, tweet TEXT);
@@ -67,13 +64,11 @@ INSERT INTO tw (tweet) VALUES ('I love #sql and #umsi');
 INSERT INTO tw (tweet) VALUES ('This is #umsi and #python');
 ```
 
-![](img/cb2f2797e7920d708b29abc2eb4ab3da_10.png)
 
 使用 `SELECT * FROM tw;` 可以查看所有推文。
 
 以下是处理标签数据的示例：
 
-![](img/cb2f2797e7920d708b29abc2eb4ab3da_12.png)
 
 *   `SELECT * FROM tw WHERE tweet ~ '#sql';`：此查询简单地查找包含 `#sql` 标签的推文。
 *   `SELECT regexp_matches(tweet, '#([A-Za-z0-9_]+)', 'g') FROM tw;`：此查询使用 `regexp_matches` 函数从每条推文中提取所有格式正确的标签。模式 `#([A-Za-z0-9_]+)` 匹配以 `#` 开头，后跟一个或多个字母、数字或下划子的序列，括号内的部分会被提取出来。标志 `'g'` 表示全局匹配（提取所有出现，而不仅仅是第一个）。这个函数会为每条匹配的推文生成多行结果。

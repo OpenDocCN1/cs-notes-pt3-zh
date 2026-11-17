@@ -2,7 +2,6 @@
 
 在本节课中，我们将学习如何在Django应用中处理图片上传与展示。我们将通过一个CRUD（增删改查）应用示例，详细解析从模型定义、表单处理、视图逻辑到前端展示的完整流程。
 
-![](img/a1805a9eacddcae358ce378cd48505b8_1.png)
 
 ![](img/a1805a9eacddcae358ce378cd48505b8_2.png)
 
@@ -14,17 +13,13 @@
 
 ## 模型定义：存储图片数据
 
-![](img/a1805a9eacddcae358ce378cd48505b8_4.png)
 
 上一节我们介绍了课程目标，本节中我们来看看数据是如何存储的。一切从模型开始，它定义了数据的结构。
 
 在`models.py`中，我们定义了一个`Pic`模型，它包含几个关键字段来存储图片信息：
 
-![](img/a1805a9eacddcae358ce378cd48505b8_6.png)
 
-![](img/a1805a9eacddcae358ce378cd48505b8_7.png)
 
-![](img/a1805a9eacddcae358ce378cd48505b8_8.png)
 
 ```python
 from django.db import models
@@ -227,9 +222,7 @@ class CreateForm(forms.ModelForm):
 以下是`form.html`模板的关键部分：
 
 
-![](img/a1805a9eacddcae358ce378cd48505b8_10.png)
 
-![](img/a1805a9eacddcae358ce378cd48505b8_12.png)
 
 ![](img/a1805a9eacddcae358ce378cd48505b8_14.png)
 
@@ -260,31 +253,23 @@ $(document).ready(function(){
 </script>
 ```
 
-![](img/a1805a9eacddcae358ce378cd48505b8_16.png)
 
 **关键点**：
 *   **`enctype="multipart/form-data"`**：表单必须设置此属性才能正确上传文件。
 *   **客户端验证**：使用JavaScript在文件上传前检查大小，提供即时反馈，提升用户体验。但**服务器端验证（`clean`方法中）是必须的**，因为客户端验证可以被绕过。
 
-![](img/a1805a9eacddcae358ce378cd48505b8_18.png)
 
 ### 图片详情页与点击放大
 
-![](img/a1805a9eacddcae358ce378cd48505b8_20.png)
 
-![](img/a1805a9eacddcae358ce378cd48505b8_22.png)
 
 在`detail.html`中，我们展示图片并实现一个简单的点击放大效果。
 
-![](img/a1805a9eacddcae358ce378cd48505b8_24.png)
 
 
-![](img/a1805a9eacddcae358ce378cd48505b8_25.png)
 
 
-![](img/a1805a9eacddcae358ce378cd48505b8_27.png)
 
-![](img/a1805a9eacddcae358ce378cd48505b8_29.png)
 
 ```html
 <!-- detail.html -->
@@ -310,29 +295,21 @@ $(document).ready(function(){
 2.  `overlay`是一个覆盖全屏的固定定位层，背景是半透明灰色，里面包含一张大图。
 3.  给`overlay`层本身也设置`onclick`事件，点击任何位置（包括图片和背景）就将其隐藏（`display: ‘none‘`）。
 
-![](img/a1805a9eacddcae358ce378cd48505b8_31.png)
 
 这是一种利用CSS和少量JavaScript实现模态框效果的简单方法。
 
-![](img/a1805a9eacddcae358ce378cd48505b8_33.png)
 
 ---
 
-![](img/a1805a9eacddcae358ce378cd48505b8_35.png)
 
-![](img/a1805a9eacddcae358ce378cd48505b8_37.png)
 
 ## 总结
 
-![](img/a1805a9eacddcae358ce378cd48505b8_39.png)
 
-![](img/a1805a9eacddcae358ce378cd48505b8_40.png)
 
-![](img/a1805a9eacddcae358ce378cd48505b8_41.png)
 
 本节课中我们一起学习了在Django应用中集成图片处理功能的完整流程。我们回顾一下关键步骤：
 
-![](img/a1805a9eacddcae358ce378cd48505b8_43.png)
 
 1.  **模型层**：使用`BinaryField`存储图片二进制数据，并用`CharField`记录对应的`content_type`。
 2.  **表单层**：创建自定义`ModelForm`，重写`clean()`方法进行服务器端文件验证，并重写`save()`方法将文件数据正确存入模型实例。
@@ -344,7 +321,6 @@ $(document).ready(function(){
     *   可以添加JavaScript进行客户端文件大小验证以提升体验。
     *   利用CSS和JavaScript实现简单的图片点击放大预览功能。
 
-![](img/a1805a9eacddcae358ce378cd48505b8_45.png)
 
 ![](img/a1805a9eacddcae358ce378cd48505b8_47.png)
 

@@ -28,7 +28,6 @@ std::thread thread_object(callable_function, arg1, arg2, ...);
 ```
 传递给构造函数的参数会被转发给可调用对象。一旦函数执行完毕并返回，该线程就会终止。
 
-![](img/7770c707f909ac38cd761f28c53303f2_1.png)
 
 也可以使用默认构造函数创建一个空的、未关联任何执行线程的 `std::thread` 对象。
 
@@ -43,7 +42,6 @@ std::thread thread_object(callable_function, arg1, arg2, ...);
 以下是创建和运行线程的一个简单示例：
 
 
-![](img/7770c707f909ac38cd761f28c53303f2_3.png)
 
 ```cpp
 #include <thread>
@@ -84,7 +82,6 @@ int main() {
 *   一个线程写入，同时另一个线程读取。
 *   多个线程同时写入。
 
-![](img/7770c707f909ac38cd761f28c53303f2_5.png)
 
 **任何存在冲突的未同步操作，在C++中都属于未定义行为。** 这意味着程序可能崩溃、产生错误结果或出现其他不可预测的行为。
 

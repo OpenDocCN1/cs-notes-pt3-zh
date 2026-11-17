@@ -1,11 +1,9 @@
 # 008：模块与测试 📦🧪
 
-![](img/66df70033965bd765c9c38ca16eddf09_1.png)
 
 ## 概述
 在本节课中，我们将要学习Rust中关于代码组织和验证的两个核心概念：**模块系统**和**测试**。我们将了解如何将代码拆分为多个文件和模块，如何控制代码的可见性，以及如何为代码编写单元测试和文档测试，以确保其正确性。
 
-![](img/66df70033965bd765c9c38ca16eddf09_3.png)
 
 ---
 
@@ -77,7 +75,6 @@ Rust中所有项默认是**私有的**。使用`pub`关键字可以控制其可�
 
 ![](img/66df70033965bd765c9c38ca16eddf09_19.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_21.png)
 
 ```rust
 // 在 src/lib.rs 中
@@ -168,7 +165,6 @@ mod tests {
 
 ![](img/66df70033965bd765c9c38ca16eddf09_45.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_47.png)
 
 ---
 
@@ -184,25 +180,16 @@ mod tests {
 
 上一节我们介绍了验证代码逻辑的单元测试，本节中我们来看看另一种特殊的测试——文档测试，它同时保证了文档示例的正确性。
 
-![](img/66df70033965bd765c9c38ca16eddf09_56.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_58.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_60.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_62.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_64.png)
 
 Rust的文档注释使用三斜杠 `///`，支持Markdown格式。`cargo doc` 命令可以生成美观的HTML文档。
 
-![](img/66df70033965bd765c9c38ca16eddf09_66.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_68.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_70.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_71.png)
 
 ![](img/66df70033965bd765c9c38ca16eddf09_72.png)
 
@@ -223,22 +210,16 @@ pub fn add_two(a: i32, b: i32) -> i32 {
 }
 ```
 
-![](img/66df70033965bd765c9c38ca16eddf09_76.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_78.png)
 
 ![](img/66df70033965bd765c9c38ca16eddf09_80.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_82.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_84.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_86.png)
 
 ### 文档测试
 在文档注释的代码块中编写的示例，会被Rust自动识别为**文档测试**。当你运行 `cargo test` 时，这些示例也会被编译和执行，确保你的文档永远与代码同步。
 
-![](img/66df70033965bd765c9c38ca16eddf09_88.png)
 
 ![](img/66df70033965bd765c9c38ca16eddf09_90.png)
 
@@ -248,19 +229,13 @@ pub fn add_two(a: i32, b: i32) -> i32 {
 
 ![](img/66df70033965bd765c9c38ca16eddf09_95.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_97.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_99.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_101.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_102.png)
 
 你可以使用 `#` 开头的行在文档中隐藏一些辅助代码，这些代码在文档中不可见，但测试时会包含。
 
-![](img/66df70033965bd765c9c38ca16eddf09_104.png)
 
-![](img/66df70033965bd765c9c38ca16eddf09_105.png)
 
 ![](img/66df70033965bd765c9c38ca16eddf09_107.png)
 

@@ -8,19 +8,13 @@
 
 上一节我们介绍了基于向量和点积的检索模型。本节中我们来看看如何利用数据库技术来高效地处理这些向量运算。
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_1.png)
 
 随着大语言模型（LLM）和ChatGPT的兴起，向量计算变得极其重要。因此，数据库工程师设计了专门的**向量数据库**，就像为表格、树、图设计数据库一样。
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_3.png)
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_5.png)
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_7.png)
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_9.png)
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_11.png)
 
 以下是一个使用PostgreSQL扩展创建向量表的SQL示例。它创建了一个表，其中一列可以存储向量。
 
@@ -31,23 +25,16 @@ CREATE TABLE docs (
 );
 ```
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_13.png)
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_14.png)
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_15.png)
 
 这段代码创建了一个包含两列的表：`id`是文档编号，`tfidf_vector`是一个包含10000个分量的向量，每个分量对应一个词的TF-IDF值。可以将其理解为每一行存储一个文档的TF-IDF向量。
 
 将向量存入SQL表后，查询变得非常有趣，因为向量扩展提供了额外的运算符。
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_17.png)
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_18.png)
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_19.png)
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_20.png)
 
 ## 使用SQL进行向量距离计算
 
@@ -115,38 +102,26 @@ LIMIT 10;
 **1. 忽略停用词**
 停用词（如“and”、“the”）的IDF值很低，对最终分数贡献微乎其微，但其倒排记录表非常长。忽略它们可以避免大量不必要的累加操作。
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_22.png)
 
 **2. 文档预选**
 我们不必为集合中的每个文档计算分数。可以只预选那些可能相关的文档（例如，包含较多查询词的文档）进行计算。这被称为**近似Top-K检索**。
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_24.png)
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_25.png)
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_27.png)
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_28.png)
 
 由于TF-IDF模型本身就是对现实世界相关性的一种近似，因此这种近似检索通常是可接受的。
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_29.png)
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_31.png)
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_33.png)
 
 ## 高级优化技巧工具箱
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_35.png)
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_37.png)
 
 以下是业界常用的一些高级优化技巧：
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_38.png)
 
-![](img/22e78fe2a9c20797d5e7de94d8b8edc1_39.png)
 
 **冠军列表法**
 为每个词的倒排记录表，不按文档ID排序，而是按词项频率 `tf_t,d` **降序**排列。我们只保留每个词项频率最高的前 `R` 个文档（即“冠军”），并仅在这些文档中计算分数。参数 `R` 可以根据词的稀有度动态调整。

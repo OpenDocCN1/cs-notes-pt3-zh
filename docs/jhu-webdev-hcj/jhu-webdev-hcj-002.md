@@ -114,10 +114,8 @@ browser-sync start --server --directory --files "*"
 
 😊
 
-![](img/ecae520f1e9aae72fe62f4af54eea5bb_3.png)
 
 ![](img/ecae520f1e9aae72fe62f4af54eea5bb_3.png)
 
-![](img/ecae520f1e9aae72fe62f4af54eea5bb_4.png)
 
 ![](img/ecae520f1e9aae72fe62f4af54eea5bb_4.png)

@@ -88,7 +88,6 @@
 以下是一个典型的第一个程序，它会在屏幕上输出“Hello World”：
 
 
-![](img/e57a1cf804bb43d7092be5d08050f562_3.png)
 
 ```c
 #include <stdio.h>

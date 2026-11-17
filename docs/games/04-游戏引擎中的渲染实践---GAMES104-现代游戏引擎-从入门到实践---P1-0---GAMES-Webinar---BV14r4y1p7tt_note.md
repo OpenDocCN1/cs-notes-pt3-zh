@@ -110,7 +110,6 @@ GPU（Graphics Processing Unit）是现代渲染的基石。它的强大算力�
 
 ### 基于GPU的裁剪
 
-![](img/22d23f05c6f746d6e6eb817bbb36e4d6_2.png)
 
 随着GPU能力增强，许多裁剪工作可以移交GPU完成：
 *   **遮挡查询（Occlusion Query）**：将简化包围盒提交给GPU，GPU返回一个布尔值表示是否可见。
@@ -120,7 +119,6 @@ GPU（Graphics Processing Unit）是现代渲染的基石。它的强大算力�
 
 ## 🚀 第四部分：现代渲染管线的发展趋势
 
-![](img/22d23f05c6f746d6e6eb817bbb36e4d6_4.png)
 
 游戏渲染技术持续演进，主要趋势如下：
 
@@ -131,7 +129,6 @@ GPU（Graphics Processing Unit）是现代渲染的基石。它的强大算力�
     *   允许更精细的裁剪（如只裁剪掉角色的一只手）。
     *   虚幻引擎5的**Nanite**虚拟化几何系统是这一方向的杰出代表。
 
-![](img/22d23f05c6f746d6e6eb817bbb36e4d6_6.png)
 
 ## 🛠️ 课程总结与作业
 
@@ -146,7 +143,6 @@ GPU（Graphics Processing Unit）是现代渲染的基石。它的强大算力�
 
 **第一次作业**：下载并编译小引擎，成功运行后截图提交。目标是熟悉游戏引擎项目的基本结构和搭建流程。
 
-![](img/22d23f05c6f746d6e6eb817bbb36e4d6_8.png)
 
 ![](img/22d23f05c6f746d6e6eb817bbb36e4d6_10.png)
 

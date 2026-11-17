@@ -1,6 +1,5 @@
 # 012：SPI与I2C串行总线 🚀
 
-![](img/348c43aaec3cb5f1066981eae67c444c_1.png)
 
 在本节课中，我们将要学习两种在嵌入式系统中至关重要的串行通信协议：SPI（串行外设接口）和I2C（内部集成电路）。我们将了解它们的工作原理、硬件连接方式、各自的优缺点以及典型应用场景。
 
@@ -14,45 +13,30 @@
 
 ![](img/348c43aaec3cb5f1066981eae67c444c_5.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_6.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_8.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_9.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_10.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_11.png)
 
 SPI是一种同步、全双工的串行通信总线，广泛应用于芯片间通信。它采用主从架构，由控制器（主设备）发起并控制所有通信。
 
-![](img/348c43aaec3cb5f1066981eae67c444c_13.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_15.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_17.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_19.png)
 
 ![](img/348c43aaec3cb5f1066981eae67c444c_21.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_22.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_23.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_25.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_27.png)
 
 ### 基本概念与连接
 
-![](img/348c43aaec3cb5f1066981eae67c444c_29.png)
 
 ![](img/348c43aaec3cb5f1066981eae67c444c_31.png)
 
 ![](img/348c43aaec3cb5f1066981eae67c444c_33.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_34.png)
 
 SPI通常使用四根线（加上共地）进行通信：
 *   **SCLK (Serial Clock)**： 由控制器产生的时钟信号。
@@ -112,80 +96,51 @@ I2C是一种半双工、同步、多主从的串行通信总线。它仅使用�
 
 ![](img/348c43aaec3cb5f1066981eae67c444c_36.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_38.png)
 
 ### 基本概念与连接
 
-![](img/348c43aaec3cb5f1066981eae67c444c_40.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_42.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_44.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_46.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_48.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_50.png)
 
 I2C的两根线分别是：
 *   **SDA (Serial Data Line)**： 双向数据线。
 *   **SCL (Serial Clock Line)**： 时钟线，由主设备产生。
 
-![](img/348c43aaec3cb5f1066981eae67c444c_52.png)
 
 所有设备都并联在这两根总线上。每个I2C设备都有一个唯一的7位、10位或16位地址。总线通过**上拉电阻**连接到电源电压(VCC)。设备内部使用**开漏输出**驱动总线，这意味着它们只能将总线拉低（输出0），而不能主动拉高（输出1）。总线的高电平状态由上拉电阻来维持。
 
-![](img/348c43aaec3cb5f1066981eae67c444c_54.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_56.png)
 
 **公式/代码描述：**
 总线上的逻辑电平可以表示为：`总线电平 = !(设备A拉低 || 设备B拉低 || ...) * VCC`。只要有一个设备输出0，总线即为低电平；所有设备都输出1（高阻态）时，总线由上拉电阻拉至高电平。
 
-![](img/348c43aaec3cb5f1066981eae67c444c_57.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_59.png)
 
 ![](img/348c43aaec3cb5f1066981eae67c444c_61.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_63.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_64.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_66.png)
 
 ### 通信过程与数据帧
 
-![](img/348c43aaec3cb5f1066981eae67c444c_68.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_70.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_72.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_74.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_76.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_77.png)
 
 I2C通信由主设备控制，遵循严格的帧格式。
 
-![](img/348c43aaec3cb5f1066981eae67c444c_79.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_81.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_83.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_85.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_87.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_88.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_90.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_92.png)
 
 以下是通信的关键步骤：
 1.  **起始条件(S)**： 当SCL为高电平时，SDA线出现一个从高到低的跳变。
@@ -194,15 +149,11 @@ I2C通信由主设备控制，遵循严格的帧格式。
 4.  **数据帧**： 在收到ACK后，主设备（写操作）或从设备（读操作）开始发送8位数据。每发送完8位数据，接收方必须发送一个ACK位。
 5.  **停止条件(P)**： 当SCL为高电平时，SDA线出现一个从低到高的跳变。
 
-![](img/348c43aaec3cb5f1066981eae67c444c_94.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_95.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_96.png)
 
 ![](img/348c43aaec3cb5f1066981eae67c444c_98.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_99.png)
 
 ### 总线速度与上拉电阻
 
@@ -212,7 +163,6 @@ I2C总线的最大速度受限于总线电容(C_bus)和上拉电阻(R_pullup)构
 
 ![](img/348c43aaec3cb5f1066981eae67c444c_101.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_103.png)
 
 **优点：**
 *   只需要两根线，极大地节省了引脚和PCB空间。
@@ -220,15 +170,11 @@ I2C总线的最大速度受限于总线电容(C_bus)和上拉电阻(R_pullup)构
 *   具有硬件应答机制，通信更可靠。
 *   有标准的地址分配，设备兼容性好。
 
-![](img/348c43aaec3cb5f1066981eae67c444c_105.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_106.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_108.png)
 
 ![](img/348c43aaec3cb5f1066981eae67c444c_110.png)
 
-![](img/348c43aaec3cb5f1066981eae67c444c_112.png)
 
 ![](img/348c43aaec3cb5f1066981eae67c444c_114.png)
 

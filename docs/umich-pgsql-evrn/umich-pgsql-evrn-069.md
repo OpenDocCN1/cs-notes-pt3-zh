@@ -18,7 +18,6 @@
 
 我们将手动创建一个优化的倒排索引。这个过程包括添加停用词表、词干映射表，并在构建索引和查询时应用这些规则。
 
-![](img/bfdfee65ddb31621d4dad8ae9fcd68c9_1.png)
 
 ### 1. 创建停用词表
 
@@ -83,13 +82,10 @@ GROUP BY processed_word;
 
 这个查询会生成一个倒排索引，其中每个词条（已小写、去除停用词并提取词干）都关联着包含它的文档ID列表。
 
-![](img/bfdfee65ddb31621d4dad8ae9fcd68c9_3.png)
 
-![](img/bfdfee65ddb31621d4dad8ae9fcd68c9_4.png)
 
 ## 在PostgreSQL中使用内置功能
 
-![](img/bfdfee65ddb31621d4dad8ae9fcd68c9_6.png)
 
 手动实现帮助我们理解了原理，但PostgreSQL提供了强大的内置全文搜索功能，可以更简便地实现上述优化。
 
@@ -108,11 +104,8 @@ PostgreSQL通过`tsvector`（文本搜索向量）和`tsquery`（文本搜索查
 例如，为`docs`表创建一个支持英文全文搜索的索引：
 
 
-![](img/bfdfee65ddb31621d4dad8ae9fcd68c9_8.png)
 
-![](img/bfdfee65ddb31621d4dad8ae9fcd68c9_9.png)
 
-![](img/bfdfee65ddb31621d4dad8ae9fcd68c9_10.png)
 
 ```sql
 -- 添加一个存储预处理文本的列

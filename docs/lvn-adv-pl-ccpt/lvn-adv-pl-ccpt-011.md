@@ -27,7 +27,6 @@
 
 ### 使用元组空间实现队列
 
-![](img/a44fe752a509e030fa49f145eedbcb62_9.png)
 
 ![](img/a44fe752a509e030fa49f145eedbcb62_11.png)
 

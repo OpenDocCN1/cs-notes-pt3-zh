@@ -4,9 +4,7 @@
 
 在本节课中，我们将要学习两种重要的数据结构：栈（Stack）和队列（Queue）。我们将了解它们的基本概念、操作、实现方式以及性能特点。通过对比不同的实现方法，你将理解如何根据具体需求选择合适的数据结构。
 
-![](img/b2126b3ac604e611deb65ec0b95636fa_3.png)
 
-![](img/b2126b3ac604e611deb65ec0b95636fa_5.png)
 
 ---
 
@@ -23,9 +21,7 @@
 *   **`peek()` 或 `top()`**: 返回栈顶的元素但不移除它。
 *   **`isEmpty()`**: 检查栈是否为空。
 
-![](img/b2126b3ac604e611deb65ec0b95636fa_7.png)
 
-![](img/b2126b3ac604e611deb65ec0b95636fa_8.png)
 
 ![](img/b2126b3ac604e611deb65ec0b95636fa_10.png)
 
@@ -94,7 +90,6 @@ public:
 
 ### 队列的核心操作
 
-![](img/b2126b3ac604e611deb65ec0b95636fa_22.png)
 
 ![](img/b2126b3ac604e611deb65ec0b95636fa_24.png)
 
@@ -158,16 +153,13 @@ public:
 
 ![](img/b2126b3ac604e611deb65ec0b95636fa_44.png)
 
-![](img/b2126b3ac604e611deb65ec0b95636fa_46.png)
 
-![](img/b2126b3ac604e611deb65ec0b95636fa_48.png)
 
 ![](img/b2126b3ac604e611deb65ec0b95636fa_50.png)
 
 
 ![](img/b2126b3ac604e611deb65ec0b95636fa_52.png)
 
-![](img/b2126b3ac604e611deb65ec0b95636fa_54.png)
 
 ![](img/b2126b3ac604e611deb65ec0b95636fa_56.png)
 
@@ -273,24 +265,17 @@ public:
 
 本节课中我们一起学习了栈和队列这两种基础且重要的数据结构。
 
-![](img/b2126b3ac604e611deb65ec0b95636fa_74.png)
 
-![](img/b2126b3ac604e611deb65ec0b95636fa_76.png)
 
-![](img/b2126b3ac604e611deb65ec0b95636fa_78.png)
 
-![](img/b2126b3ac604e611deb65ec0b95636fa_80.png)
 
 *   **栈** 是一种LIFO结构，核心操作是 `push`、`pop` 和 `peek`。我们使用 `vector` 可以轻松实现一个高效的栈。
 *   **队列** 是一种FIFO结构，核心操作是 `enqueue`、`dequeue` 和 `front`。直接使用 `vector` 实现出队操作效率低下。
 *   我们探讨了三种队列实现：低效的简单实现、高效的循环数组实现以及最优的链表实现。**链表实现**在时间复杂度和灵活性上通常是最佳选择。
 *   理解这些数据结构的**抽象**（即它们提供什么操作）与**具体实现**（即如何实现这些操作以保障性能）之间的区别至关重要。作为使用者，你关心接口；作为设计者，你关心如何实现高效的接口。
 
-![](img/b2126b3ac604e611deb65ec0b95636fa_82.png)
 
-![](img/b2126b3ac604e611deb65ec0b95636fa_84.png)
 
-![](img/b2126b3ac604e611deb65ec0b95636fa_86.png)
 
 ![](img/b2126b3ac604e611deb65ec0b95636fa_87.png)
 

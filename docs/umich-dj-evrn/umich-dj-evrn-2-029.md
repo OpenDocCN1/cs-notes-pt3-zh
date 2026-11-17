@@ -32,13 +32,11 @@
 <script type="module" src="./16_dj4e_greet.js"></script>
 ```
 
-![](img/79c552fe4d5a2f07c4fbb87f68b35112_8.png)
 
 `<script>`标签引入的JavaScript代码会将`<dj4e-greeting>`这个自定义标签添加到浏览器中。一旦导入，我们就可以使用这个标签了。另一个小脚本则用于动态更改标签的`name`属性。
 
 ## 理解Web Components的实现
 
-![](img/79c552fe4d5a2f07c4fbb87f68b35112_10.png)
 
 自定义元素的概念在浏览器中已经存在一段时间了。虽然你可以直接编写自定义元素，但过程会比较冗长。因此，我们使用一个名为`lit-element`的小型库，它基于面向对象编程，提供了许多基础功能，让我们无需重复编写样板代码。
 
